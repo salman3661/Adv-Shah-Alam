@@ -65,18 +65,18 @@ const Footer = () => {
                         </h4>
                         <div className="space-y-3 mb-6">
                             <a
-                                href="tel:+8801712345678"
+                                href="tel:+8801955802007"
                                 className="flex items-center gap-2 text-slate-500 dark:text-gray-400 hover:text-gold-dark dark:hover:text-gold transition-colors text-sm"
                             >
                                 <Phone size={16} className="icon-phone" />
-                                +880 1712-345678
+                                +8801955802007
                             </a>
                         </div>
 
                         {/* Social Icons */}
                         <div className="flex gap-3">
                             <a
-                                href="https://wa.me/8801712345678"
+                                href="https://wa.me/8801955802007"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-10 h-10 rounded-xl bg-white dark:bg-navy-light flex items-center justify-center hover:scale-110 transition-transform shadow-sm"
@@ -85,7 +85,7 @@ const Footer = () => {
                                 <MessageCircle size={18} className="icon-whatsapp" />
                             </a>
                             <a
-                                href="https://facebook.com/advocate.shahalam"
+                                href="https://www.facebook.com/advmd.shahalamfb"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-10 h-10 rounded-xl bg-white dark:bg-navy-light flex items-center justify-center hover:scale-110 transition-transform shadow-sm"

@@ -6,18 +6,18 @@ const Chambers = () => {
     const chambers = [
         {
             name: 'Supreme Court Chamber',
-            address: 'Room 205, SCBA Bhaban, Shahbag, Dhaka-1000',
-            phone: '+880 1712-345678',
-            hours: 'Sun-Thu: 10:00 AM - 5:00 PM',
-            mapUrl: 'https://maps.google.com/?q=Supreme+Court+Bar+Association+Dhaka',
+            address: 'Room 02, SCBA Bhaban, Shahbag, Dhaka-1000',
+            phone: '+8801955802007',
+            hours: 'Sun-Thu: 9:00 AM - 5:00 PM',
+            mapUrl: 'https://maps.app.goo.gl/QiUBeTLhxs3etUHT7',
             isPrimary: true,
         },
         {
             name: 'Evening Chamber',
-            address: 'House 12, Road 5, Dhanmondi, Dhaka-1205',
-            phone: '+880 1712-345678',
-            hours: 'Sun-Thu: 6:00 PM - 9:00 PM',
-            mapUrl: 'https://maps.google.com/?q=Dhanmondi+Dhaka',
+            address: 'House 46, Road 6/B, Sector 12, Uttara, Dhaka-1230',
+            phone: '+8801712655546',
+            hours: 'Sun-Sat: 6:00 PM - 11:00 PM',
+            mapUrl: 'https://maps.app.goo.gl/QebF9RVMYmzWGTrh7',
             isPrimary: false,
         },
     ];

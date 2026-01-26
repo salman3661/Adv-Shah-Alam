@@ -44,7 +44,7 @@ const Hero = () => {
                     >
                         {/* Profile Image */}
                         <img
-                            src="/images/hero/profile-shah-alam.png"
+                            src="/images/hero/hero-md-shah-alam.png"
                             alt="Advocate Md. Shah Alam - Supreme Court Lawyer"
                             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                             onError={(e) => {
@@ -61,7 +61,7 @@ const Hero = () => {
                             transition={{ delay: 0.5, type: 'spring', stiffness: 200 }}
                             className="absolute bottom-6 right-6 bg-gold text-navy font-bold px-5 py-2 rounded-lg text-sm shadow-lg border border-white/20 backdrop-blur-md"
                         >
-                            20+ Years Exp.
+                            12+ Years Exp.
                         </motion.div>
                     </motion.div>
                 </motion.div>
@@ -90,13 +90,13 @@ const Hero = () => {
 
                     {/* Description */}
                     <p className="text-slate-600 dark:text-gray-300 text-lg leading-relaxed max-w-lg mx-auto md:mx-0 mb-8 font-light transition-colors duration-500">
-                        Criminal & Civil Litigation Specialist with 20+ years of experience defending rights and securing futures with unwavering dedication.
+                        Criminal & Civil Litigation Specialist with 12+ years of experience defending rights and securing futures with unwavering dedication.
                     </p>
 
                     {/* CTA Buttons */}
                     <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                         <motion.a
-                            href="https://wa.me/8801712345678"
+                            href="https://wa.me/8801955802007"
                             target="_blank"
                             rel="noopener noreferrer"
                             whileHover={{ scale: 1.03 }}
