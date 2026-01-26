@@ -129,15 +129,6 @@ const Chambers = () => {
                             </div>
 
                             {/* Map Link */}
-                            <a
-                                href={chamber.mapUrl}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="mt-6 inline-flex items-center gap-2 text-gold-dark dark:text-gold hover:text-gold-hover font-medium text-sm transition-colors"
-                            >
-                                <ExternalLink size={16} />
-                                View on Google Maps
-                            </a>
                         </motion.div>
                     ))}
                 </div>

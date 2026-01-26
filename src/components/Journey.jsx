@@ -18,13 +18,13 @@ const Journey = () => {
             icon: <Gavel size={24} />,
         },
         {
-            year: '2008',
+            year: '2025',
             title: 'High Court',
             desc: 'Admitted to the Bar Council as a High Court practitioner.',
             icon: <BookOpen size={24} />,
         },
         {
-            year: '2003',
+            year: '2018',
             title: 'Legal Practice',
             desc: 'Started career at Dhaka District Court in civil litigation.',
             icon: <Share2 size={24} />,

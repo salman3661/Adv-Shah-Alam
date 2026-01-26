@@ -105,8 +105,9 @@ const Contact = () => {
                                             Main Office
                                         </p>
                                         <p className="text-navy dark:text-white font-medium">
-                                            Room 205, SCBA Bhaban, Shahbag, Dhaka
-                                        </p>
+                                            Lawyers’ Association Building
+                                            4th Floor, (Hall Room) 6/7, Court House Street
+                                            Kotwali, Dhaka-1100                                       </p>
                                     </div>
                                 </div>
                             </div>
