@@ -133,26 +133,6 @@ const Chambers = () => {
                     ))}
                 </div>
 
-                {/* Map Embed */}
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: 0.3 }}
-                    className="mt-12 rounded-2xl overflow-hidden shadow-xl border border-slate-200 dark:border-slate-700/50"
-                >
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.0234567890123!2d90.3950567!3d23.7340123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8f0c1abcdef%3A0x1234567890abcdef!2sSupreme%20Court%20of%20Bangladesh!5e0!3m2!1sen!2sbd!4v1700000000000!5m2!1sen!2sbd"
-                        width="100%"
-                        height="350"
-                        style={{ border: 0 }}
-                        allowFullScreen=""
-                        loading="lazy"
-                        referrerPolicy="no-referrer-when-downgrade"
-                        title="Supreme Court Location Map"
-                        className="w-full"
-                    ></iframe>
-                </motion.div>
             </div>
         </section>
     );
