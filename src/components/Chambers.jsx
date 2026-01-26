@@ -9,7 +9,7 @@ const Chambers = () => {
             address: 'Room 02, SCBA Bhaban, Shahbag, Dhaka-1000',
             phone: '+8801955802007',
             hours: 'Sun-Thu: 9:00 AM - 5:00 PM',
-            mapUrl: 'https://maps.app.goo.gl/QiUBeTLhxs3etUHT7',
+            mapUrl: 'https://maps.google.com/?q=Supreme+Court+Bar+Association+Dhaka',
             isPrimary: true,
         },
         {
@@ -17,7 +17,7 @@ const Chambers = () => {
             address: 'House 46, Road 6/B, Sector 12, Uttara, Dhaka-1230',
             phone: '+8801712655546',
             hours: 'Sun-Sat: 6:00 PM - 11:00 PM',
-            mapUrl: 'https://maps.app.goo.gl/QebF9RVMYmzWGTrh7',
+            mapUrl: 'https://maps.google.com/?q=Sector+12+Uttara+Dhaka',
             isPrimary: false,
         },
     ];
@@ -64,75 +64,87 @@ const Chambers = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: index * 0.15 }}
-                            className={`glass-card p-8 relative overflow-hidden ${chamber.isPrimary ? 'border-t-4 border-t-gold' : ''}`}
+                            className={`glass-card p-8 relative overflow-hidden flex flex-col justify-between ${chamber.isPrimary ? 'border-t-4 border-t-gold' : ''}`}
                         >
-                            {/* Primary Badge */}
-                            {chamber.isPrimary && (
-                                <div className="absolute top-4 right-4">
-                                    <span className="px-3 py-1 bg-gold/10 text-gold-dark dark:text-gold text-xs font-bold rounded-full">
-                                        Primary
-                                    </span>
-                                </div>
-                            )}
+                            <div>
+                                {/* Primary Badge */}
+                                {chamber.isPrimary && (
+                                    <div className="absolute top-4 right-4">
+                                        <span className="px-3 py-1 bg-gold/10 text-gold-dark dark:text-gold text-xs font-bold rounded-full">
+                                            Primary
+                                        </span>
+                                    </div>
+                                )}
 
-                            {/* Chamber Name */}
-                            <h3 className="text-xl font-bold text-navy dark:text-white mb-6 pr-16">
-                                {chamber.name}
-                            </h3>
+                                {/* Chamber Name */}
+                                <h3 className="text-xl font-bold text-navy dark:text-white mb-6 pr-16">
+                                    {chamber.name}
+                                </h3>
 
-                            {/* Details */}
-                            <div className="space-y-4">
-                                <div className="flex items-start gap-3">
-                                    <div className="w-10 h-10 rounded-xl bg-navy/5 dark:bg-white/10 flex items-center justify-center flex-shrink-0">
-                                        <MapPin size={18} className="text-gold-dark dark:text-gold" />
+                                {/* Details */}
+                                <div className="space-y-4">
+                                    <div className="flex items-start gap-3">
+                                        <div className="w-10 h-10 rounded-xl bg-navy/5 dark:bg-white/10 flex items-center justify-center flex-shrink-0">
+                                            <MapPin size={18} className="text-gold-dark dark:text-gold" />
+                                        </div>
+                                        <div>
+                                            <p className="text-sm font-medium text-slate-400 dark:text-gray-500 uppercase tracking-wider mb-1">
+                                                Address
+                                            </p>
+                                            <p className="text-slate-600 dark:text-gray-300">
+                                                {chamber.address}
+                                            </p>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <p className="text-sm font-medium text-slate-400 dark:text-gray-500 uppercase tracking-wider mb-1">
-                                            Address
-                                        </p>
-                                        <p className="text-slate-600 dark:text-gray-300">
-                                            {chamber.address}
-                                        </p>
-                                    </div>
-                                </div>
 
-                                <div className="flex items-start gap-3">
-                                    <div className="w-10 h-10 rounded-xl bg-navy/5 dark:bg-white/10 flex items-center justify-center flex-shrink-0">
-                                        <Phone size={18} className="text-gold-dark dark:text-gold" />
+                                    <div className="flex items-start gap-3">
+                                        <div className="w-10 h-10 rounded-xl bg-navy/5 dark:bg-white/10 flex items-center justify-center flex-shrink-0">
+                                            <Phone size={18} className="text-gold-dark dark:text-gold" />
+                                        </div>
+                                        <div>
+                                            <p className="text-sm font-medium text-slate-400 dark:text-gray-500 uppercase tracking-wider mb-1">
+                                                Phone
+                                            </p>
+                                            <a
+                                                href={`tel:${chamber.phone}`}
+                                                className="text-slate-600 dark:text-gray-300 hover:text-gold transition-colors"
+                                            >
+                                                {chamber.phone}
+                                            </a>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <p className="text-sm font-medium text-slate-400 dark:text-gray-500 uppercase tracking-wider mb-1">
-                                            Phone
-                                        </p>
-                                        <a
-                                            href={`tel:${chamber.phone}`}
-                                            className="text-slate-600 dark:text-gray-300 hover:text-gold transition-colors"
-                                        >
-                                            {chamber.phone}
-                                        </a>
-                                    </div>
-                                </div>
 
-                                <div className="flex items-start gap-3">
-                                    <div className="w-10 h-10 rounded-xl bg-navy/5 dark:bg-white/10 flex items-center justify-center flex-shrink-0">
-                                        <Clock size={18} className="text-gold-dark dark:text-gold" />
-                                    </div>
-                                    <div>
-                                        <p className="text-sm font-medium text-slate-400 dark:text-gray-500 uppercase tracking-wider mb-1">
-                                            Hours
-                                        </p>
-                                        <p className="text-slate-600 dark:text-gray-300">
-                                            {chamber.hours}
-                                        </p>
+                                    <div className="flex items-start gap-3">
+                                        <div className="w-10 h-10 rounded-xl bg-navy/5 dark:bg-white/10 flex items-center justify-center flex-shrink-0">
+                                            <Clock size={18} className="text-gold-dark dark:text-gold" />
+                                        </div>
+                                        <div>
+                                            <p className="text-sm font-medium text-slate-400 dark:text-gray-500 uppercase tracking-wider mb-1">
+                                                Hours
+                                            </p>
+                                            <p className="text-slate-600 dark:text-gray-300">
+                                                {chamber.hours}
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
-                            {/* Map Link */}
+                            {/* Updated Map Link Section */}
+                            <div className="mt-8 pt-6 border-t border-slate-100 dark:border-white/5">
+                                <a
+                                    href={chamber.mapUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-2 text-gold-dark dark:text-gold hover:gap-3 transition-all font-semibold text-sm group"
+                                >
+                                    View on Google Maps
+                                    <ExternalLink size={16} className="group-hover:translate-x-1 transition-transform" />
+                                </a>
+                            </div>
                         </motion.div>
                     ))}
                 </div>
-
             </div>
         </section>
     );
