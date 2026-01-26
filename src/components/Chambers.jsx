@@ -17,7 +17,7 @@ const Chambers = () => {
             address: 'House 46, Road 6/B, Sector 12, Uttara, Dhaka-1230',
             phone: '+8801712655546',
             hours: 'Sun-Sat: 6:00 PM - 11:00 PM',
-            mapUrl: 'https://maps.google.com/?q=Sector+12+Uttara+Dhaka',
+            mapUrl: 'https://maps.app.goo.gl/QebF9RVMYmzWGTrh7',
             isPrimary: false,
         },
     ];

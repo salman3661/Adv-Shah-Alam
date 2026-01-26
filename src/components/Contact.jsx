@@ -76,8 +76,8 @@ const Contact = () => {
                                         <p className="text-sm font-medium text-slate-400 dark:text-gray-500 uppercase tracking-wider mb-1">
                                             Phone
                                         </p>
-                                        <a href="tel:+8801712345678" className="text-navy dark:text-white font-medium hover:text-gold transition-colors">
-                                            +880 1712-345678
+                                        <a href="tel:+8801712655546" className="text-navy dark:text-white font-medium hover:text-gold transition-colors">
+                                            +880 1712-655546
                                         </a>
                                     </div>
                                 </div>
