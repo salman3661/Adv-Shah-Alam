@@ -1,87 +1,167 @@
 import React from 'react';
-import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { MapPin, Phone, Clock, ExternalLink } from 'lucide-react';
 
 const Chambers = () => {
-    // Combined Chambers + Contact
-    const locations = [
-        { title: "Supreme Court Chamber", address: "Room 205, SCBA Bhaban, Shahbag, Dhaka", phone: "+880 1712-345678" },
-        { title: "Evening Chamber", address: "House 12, Road 5, Dhanmondi, Dhaka", phone: "+880 1712-345678" }
+    const chambers = [
+        {
+            name: 'Supreme Court Chamber',
+            address: 'Room 205, SCBA Bhaban, Shahbag, Dhaka-1000',
+            phone: '+880 1712-345678',
+            hours: 'Sun-Thu: 10:00 AM - 5:00 PM',
+            mapUrl: 'https://maps.google.com/?q=Supreme+Court+Bar+Association+Dhaka',
+            isPrimary: true,
+        },
+        {
+            name: 'Evening Chamber',
+            address: 'House 12, Road 5, Dhanmondi, Dhaka-1205',
+            phone: '+880 1712-345678',
+            hours: 'Sun-Thu: 6:00 PM - 9:00 PM',
+            mapUrl: 'https://maps.google.com/?q=Dhanmondi+Dhaka',
+            isPrimary: false,
+        },
     ];
 
     return (
-        <section id="contact" className="py-24">
+        <section id="chambers" className="py-24 relative overflow-hidden">
+            {/* Background Decoration */}
+            <div className="absolute right-0 top-1/4 w-1/3 h-1/2 bg-gold/5 blur-3xl rounded-full -z-10"></div>
+
             <div className="container mx-auto px-6 max-w-6xl">
-                <div className="grid lg:grid-cols-2 gap-12">
-
-                    {/* Contact Info & Map */}
-                    <div className="space-y-8">
-                        <div>
-                            <h2 className="text-3xl font-serif font-bold text-navy dark:text-white mb-6">Chambers & Locations</h2>
-                            <div className="space-y-6">
-                                {locations.map((loc, idx) => (
-                                    <motion.div
-                                        key={idx}
-                                        initial={{ opacity: 0, x: -20 }}
-                                        whileInView={{ opacity: 1, x: 0 }}
-                                        transition={{ delay: idx * 0.1 }}
-                                        className="glass-card p-6 border-l-4 border-l-navy dark:border-l-gold"
-                                    >
-                                        <h3 className="font-bold text-lg text-navy dark:text-white">{loc.title}</h3>
-                                        <div className="flex items-center gap-2 text-slate-600 dark:text-slate-300 text-sm mt-2">
-                                            <MapPin size={16} className="text-gold" />
-                                            {loc.address}
-                                        </div>
-                                        <div className="flex items-center gap-2 text-slate-600 dark:text-slate-300 text-sm mt-1">
-                                            <Phone size={16} className="text-gold" />
-                                            {loc.phone}
-                                        </div>
-                                    </motion.div>
-                                ))}
-                            </div>
-                        </div>
-
-                        <div className="w-full h-64 rounded-xl overflow-hidden shadow-lg border border-slate-200 dark:border-slate-700">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.1234!2d90.4!3d23.7!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDQyJzAwLjAiTiA5MMKwMjQnMDAuMCJF!5e0!3m2!1sen!2sbd!4v1600000000000!5m2!1sen!2sbd"
-                                width="100%"
-                                height="100%"
-                                style={{ border: 0 }}
-                                allowFullScreen=""
-                                loading="lazy"
-                                title="Map"
-                            ></iframe>
-                        </div>
-                    </div>
-
-                    {/* Contact Form */}
-                    <div className="glass-card p-8 md:p-10">
-                        <h2 className="text-2xl font-serif font-bold text-navy dark:text-white mb-2">
-                            Request Consultation
-                        </h2>
-                        <p className="text-slate-500 mb-6 text-sm">Fill out the form below to start a conversation.</p>
-
-                        <form className="space-y-5">
-                            <div className="space-y-1">
-                                <label className="text-xs font-bold text-navy dark:text-gold uppercase tracking-wider">Name</label>
-                                <input type="text" className="w-full bg-white dark:bg-navy-light/50 border border-slate-200 dark:border-navy-light px-4 py-3 rounded-lg text-navy dark:text-white focus:outline-none focus:border-gold transition-colors" placeholder="Full Name" />
-                            </div>
-                            <div className="space-y-1">
-                                <label className="text-xs font-bold text-navy dark:text-gold uppercase tracking-wider">Phone</label>
-                                <input type="tel" className="w-full bg-white dark:bg-navy-light/50 border border-slate-200 dark:border-navy-light px-4 py-3 rounded-lg text-navy dark:text-white focus:outline-none focus:border-gold transition-colors" placeholder="Phone Number" />
-                            </div>
-                            <div className="space-y-1">
-                                <label className="text-xs font-bold text-navy dark:text-gold uppercase tracking-wider">Details</label>
-                                <textarea rows="4" className="w-full bg-white dark:bg-navy-light/50 border border-slate-200 dark:border-navy-light px-4 py-3 rounded-lg text-navy dark:text-white focus:outline-none focus:border-gold transition-colors resize-none" placeholder="Describe your case..."></textarea>
-                            </div>
-
-                            <button type="submit" className="w-full bg-gold hover:bg-navy text-navy hover:text-white font-bold py-4 rounded-lg shadow-lg transition-all duration-300">
-                                Submit Inquiry
-                            </button>
-                        </form>
-                    </div>
-
+                {/* Section Header */}
+                <div className="text-center mb-16">
+                    <motion.span
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="text-gold-dark dark:text-gold text-xs font-bold tracking-[0.2em] uppercase block mb-3"
+                    >
+                        Visit Our Offices
+                    </motion.span>
+                    <motion.h2
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.1 }}
+                        className="text-3xl md:text-5xl font-serif font-bold text-navy dark:text-white mb-4"
+                    >
+                        Chamber Locations
+                    </motion.h2>
+                    <motion.div
+                        initial={{ scaleX: 0 }}
+                        whileInView={{ scaleX: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.2 }}
+                        className="w-24 h-1 bg-gold mx-auto rounded-full"
+                    ></motion.div>
                 </div>
+
+                <div className="grid lg:grid-cols-2 gap-8">
+                    {chambers.map((chamber, index) => (
+                        <motion.div
+                            key={index}
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5, delay: index * 0.15 }}
+                            className={`glass-card p-8 relative overflow-hidden ${chamber.isPrimary ? 'border-t-4 border-t-gold' : ''}`}
+                        >
+                            {/* Primary Badge */}
+                            {chamber.isPrimary && (
+                                <div className="absolute top-4 right-4">
+                                    <span className="px-3 py-1 bg-gold/10 text-gold-dark dark:text-gold text-xs font-bold rounded-full">
+                                        Primary
+                                    </span>
+                                </div>
+                            )}
+
+                            {/* Chamber Name */}
+                            <h3 className="text-xl font-bold text-navy dark:text-white mb-6 pr-16">
+                                {chamber.name}
+                            </h3>
+
+                            {/* Details */}
+                            <div className="space-y-4">
+                                <div className="flex items-start gap-3">
+                                    <div className="w-10 h-10 rounded-xl bg-navy/5 dark:bg-white/10 flex items-center justify-center flex-shrink-0">
+                                        <MapPin size={18} className="text-gold-dark dark:text-gold" />
+                                    </div>
+                                    <div>
+                                        <p className="text-sm font-medium text-slate-400 dark:text-gray-500 uppercase tracking-wider mb-1">
+                                            Address
+                                        </p>
+                                        <p className="text-slate-600 dark:text-gray-300">
+                                            {chamber.address}
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div className="flex items-start gap-3">
+                                    <div className="w-10 h-10 rounded-xl bg-navy/5 dark:bg-white/10 flex items-center justify-center flex-shrink-0">
+                                        <Phone size={18} className="text-gold-dark dark:text-gold" />
+                                    </div>
+                                    <div>
+                                        <p className="text-sm font-medium text-slate-400 dark:text-gray-500 uppercase tracking-wider mb-1">
+                                            Phone
+                                        </p>
+                                        <a
+                                            href={`tel:${chamber.phone}`}
+                                            className="text-slate-600 dark:text-gray-300 hover:text-gold transition-colors"
+                                        >
+                                            {chamber.phone}
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div className="flex items-start gap-3">
+                                    <div className="w-10 h-10 rounded-xl bg-navy/5 dark:bg-white/10 flex items-center justify-center flex-shrink-0">
+                                        <Clock size={18} className="text-gold-dark dark:text-gold" />
+                                    </div>
+                                    <div>
+                                        <p className="text-sm font-medium text-slate-400 dark:text-gray-500 uppercase tracking-wider mb-1">
+                                            Hours
+                                        </p>
+                                        <p className="text-slate-600 dark:text-gray-300">
+                                            {chamber.hours}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Map Link */}
+                            <a
+                                href={chamber.mapUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="mt-6 inline-flex items-center gap-2 text-gold-dark dark:text-gold hover:text-gold-hover font-medium text-sm transition-colors"
+                            >
+                                <ExternalLink size={16} />
+                                View on Google Maps
+                            </a>
+                        </motion.div>
+                    ))}
+                </div>
+
+                {/* Map Embed */}
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.3 }}
+                    className="mt-12 rounded-2xl overflow-hidden shadow-xl border border-slate-200 dark:border-slate-700/50"
+                >
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.0234567890123!2d90.3950567!3d23.7340123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8f0c1abcdef%3A0x1234567890abcdef!2sSupreme%20Court%20of%20Bangladesh!5e0!3m2!1sen!2sbd!4v1700000000000!5m2!1sen!2sbd"
+                        width="100%"
+                        height="350"
+                        style={{ border: 0 }}
+                        allowFullScreen=""
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                        title="Supreme Court Location Map"
+                        className="w-full"
+                    ></iframe>
+                </motion.div>
             </div>
         </section>
     );

@@ -1,99 +1,179 @@
 import React from 'react';
-import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { MapPin, Phone, Mail, Send } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 
 const Contact = () => {
-    const locations = [
-        { title: "Supreme Court Chamber", address: "Room 205, SCBA Bhaban, Shahbag, Dhaka", phone: "+880 1712-345678" },
-        { title: "Evening Chamber", address: "House 12, Road 5, Dhanmondi, Dhaka", phone: "+880 1712-345678" }
-    ];
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        // Form submission logic here
+        alert('Thank you for your inquiry. We will contact you shortly.');
+    };
 
     return (
         <>
             <Helmet>
-                <title>Contact & Chambers | Adv. Md. Shah Alam</title>
-                <meta name="description" content="Contact Advocate Md. Shah Alam. Chamber locations in Shahbag and Dhanmondi, Dhaka." />
+                <title>Contact | Adv. Md. Shah Alam</title>
+                <meta name="description" content="Contact Advocate Md. Shah Alam for legal consultation. Supreme Court Chamber in Shahbag, Dhaka." />
             </Helmet>
-            <section id="contact" className="py-12 min-h-screen">
+            <section id="contact" className="py-24 min-h-screen section-alt">
                 <div className="container mx-auto px-6 max-w-6xl">
 
+                    {/* Section Header */}
                     <div className="text-center mb-16">
-                        <span className="text-gold text-xs font-bold tracking-[0.2em] uppercase block mb-3">
+                        <motion.span
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            className="text-gold-dark dark:text-gold text-xs font-bold tracking-[0.2em] uppercase block mb-3"
+                        >
                             Get in Touch
-                        </span>
-                        <h2 className="text-3xl md:text-5xl font-serif font-bold text-navy dark:text-white mb-6">Chambers & Locations</h2>
+                        </motion.span>
+                        <motion.h2
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.1 }}
+                            className="text-3xl md:text-5xl font-serif font-bold text-navy dark:text-white mb-4"
+                        >
+                            Contact Us
+                        </motion.h2>
+                        <motion.div
+                            initial={{ scaleX: 0 }}
+                            whileInView={{ scaleX: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.2 }}
+                            className="w-24 h-1 bg-gold mx-auto rounded-full"
+                        ></motion.div>
                     </div>
 
                     <div className="grid lg:grid-cols-2 gap-12">
 
-                        {/* Contact Info & Map */}
-                        <div className="space-y-8 order-2 lg:order-1">
+                        {/* Contact Information */}
+                        <motion.div
+                            initial={{ opacity: 0, x: -30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            className="space-y-6"
+                        >
                             <div>
-                                <div className="space-y-6">
-                                    {locations.map((loc, idx) => (
-                                        <motion.div
-                                            key={idx}
-                                            initial={{ opacity: 0, x: -20 }}
-                                            whileInView={{ opacity: 1, x: 0 }}
-                                            transition={{ delay: idx * 0.1 }}
-                                            className="glass-card p-6 border-l-4 border-l-gold hover:bg-white/80 dark:hover:bg-navy-light/50 transition-colors"
-                                        >
-                                            <h3 className="font-bold text-xl text-navy dark:text-white">{loc.title}</h3>
-                                            <div className="flex items-center gap-3 text-slate-600 dark:text-slate-300 text-sm mt-3">
-                                                <MapPin size={18} className="text-gold" />
-                                                {loc.address}
-                                            </div>
-                                            <div className="flex items-center gap-3 text-slate-600 dark:text-slate-300 text-sm mt-2">
-                                                <Phone size={18} className="text-gold" />
-                                                {loc.phone}
-                                            </div>
-                                        </motion.div>
-                                    ))}
+                                <h3 className="text-2xl font-serif font-bold text-navy dark:text-white mb-6">
+                                    Let's Discuss Your Case
+                                </h3>
+                                <p className="text-slate-600 dark:text-gray-300 leading-relaxed mb-8">
+                                    Whether you're facing criminal charges, civil disputes, or need legal advice,
+                                    we're here to help. Reach out for a confidential consultation.
+                                </p>
+                            </div>
+
+                            {/* Contact Cards */}
+                            <div className="space-y-4">
+                                <div className="glass-card p-5 flex items-center gap-4">
+                                    <div className="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center flex-shrink-0">
+                                        <Phone size={22} className="text-gold-dark dark:text-gold" />
+                                    </div>
+                                    <div>
+                                        <p className="text-sm font-medium text-slate-400 dark:text-gray-500 uppercase tracking-wider mb-1">
+                                            Phone
+                                        </p>
+                                        <a href="tel:+8801712345678" className="text-navy dark:text-white font-medium hover:text-gold transition-colors">
+                                            +880 1712-345678
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div className="glass-card p-5 flex items-center gap-4">
+                                    <div className="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center flex-shrink-0">
+                                        <Mail size={22} className="text-gold-dark dark:text-gold" />
+                                    </div>
+                                    <div>
+                                        <p className="text-sm font-medium text-slate-400 dark:text-gray-500 uppercase tracking-wider mb-1">
+                                            Email
+                                        </p>
+                                        <a href="mailto:advocate@shahalam.com" className="text-navy dark:text-white font-medium hover:text-gold transition-colors">
+                                            advocate@shahalam.com
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div className="glass-card p-5 flex items-center gap-4">
+                                    <div className="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center flex-shrink-0">
+                                        <MapPin size={22} className="text-gold-dark dark:text-gold" />
+                                    </div>
+                                    <div>
+                                        <p className="text-sm font-medium text-slate-400 dark:text-gray-500 uppercase tracking-wider mb-1">
+                                            Main Office
+                                        </p>
+                                        <p className="text-navy dark:text-white font-medium">
+                                            Room 205, SCBA Bhaban, Shahbag, Dhaka
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-
-                            <div className="w-full h-80 rounded-2xl overflow-hidden shadow-xl border border-slate-200 dark:border-slate-700">
-                                <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.1234!2d90.4!3d23.7!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDQyJzAwLjAiTiA5MMKwMjQnMDAuMCJF!5e0!3m2!1sen!2sbd!4v1600000000000!5m2!1sen!2sbd"
-                                    width="100%"
-                                    height="100%"
-                                    style={{ border: 0 }}
-                                    allowFullScreen=""
-                                    loading="lazy"
-                                    title="Map"
-                                ></iframe>
-                            </div>
-                        </div>
+                        </motion.div>
 
                         {/* Contact Form */}
-                        <div className="order-1 lg:order-2">
-                            <div className="glass-card p-8 md:p-10 sticky top-24">
-                                <h2 className="text-2xl font-serif font-bold text-navy dark:text-white mb-2">
+                        <motion.div
+                            initial={{ opacity: 0, x: 30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.2 }}
+                        >
+                            <div className="glass-card p-8 md:p-10">
+                                <h3 className="text-2xl font-serif font-bold text-navy dark:text-white mb-2">
                                     Request Consultation
-                                </h2>
-                                <p className="text-slate-500 mb-8 text-sm">Fill out the form below to start a conversation regarding your legal matters.</p>
+                                </h3>
+                                <p className="text-slate-500 dark:text-gray-400 mb-8 text-sm">
+                                    Fill out the form below to start a conversation regarding your legal matters.
+                                </p>
 
-                                <form className="space-y-6">
+                                <form onSubmit={handleSubmit} className="space-y-6">
                                     <div className="space-y-2">
-                                        <label className="text-xs font-bold text-navy dark:text-gold uppercase tracking-wider">Name</label>
-                                        <input type="text" className="w-full bg-white dark:bg-navy-dark/50 border border-slate-200 dark:border-navy-light px-4 py-3 rounded-lg text-navy dark:text-white focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold transition-all" placeholder="Full Name" />
-                                    </div>
-                                    <div className="space-y-2">
-                                        <label className="text-xs font-bold text-navy dark:text-gold uppercase tracking-wider">Phone</label>
-                                        <input type="tel" className="w-full bg-white dark:bg-navy-dark/50 border border-slate-200 dark:border-navy-light px-4 py-3 rounded-lg text-navy dark:text-white focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold transition-all" placeholder="Phone Number" />
-                                    </div>
-                                    <div className="space-y-2">
-                                        <label className="text-xs font-bold text-navy dark:text-gold uppercase tracking-wider">Details</label>
-                                        <textarea rows="4" className="w-full bg-white dark:bg-navy-dark/50 border border-slate-200 dark:border-navy-light px-4 py-3 rounded-lg text-navy dark:text-white focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold transition-all resize-none" placeholder="Briefly describe your case..."></textarea>
+                                        <label className="text-xs font-bold text-navy dark:text-gold-dark uppercase tracking-wider">
+                                            Name
+                                        </label>
+                                        <input
+                                            type="text"
+                                            required
+                                            className="w-full bg-white dark:bg-navy-dark/50 border border-slate-200 dark:border-navy-light px-4 py-3 rounded-xl text-navy dark:text-white focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/20 transition-all placeholder:text-slate-400"
+                                            placeholder="Full Name"
+                                        />
                                     </div>
 
-                                    <button type="submit" className="w-full bg-gold hover:bg-gold-hover text-navy font-bold py-4 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+                                    <div className="space-y-2">
+                                        <label className="text-xs font-bold text-navy dark:text-gold-dark uppercase tracking-wider">
+                                            Phone
+                                        </label>
+                                        <input
+                                            type="tel"
+                                            required
+                                            className="w-full bg-white dark:bg-navy-dark/50 border border-slate-200 dark:border-navy-light px-4 py-3 rounded-xl text-navy dark:text-white focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/20 transition-all placeholder:text-slate-400"
+                                            placeholder="Phone Number"
+                                        />
+                                    </div>
+
+                                    <div className="space-y-2">
+                                        <label className="text-xs font-bold text-navy dark:text-gold-dark uppercase tracking-wider">
+                                            Case Details
+                                        </label>
+                                        <textarea
+                                            rows="4"
+                                            required
+                                            className="w-full bg-white dark:bg-navy-dark/50 border border-slate-200 dark:border-navy-light px-4 py-3 rounded-xl text-navy dark:text-white focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/20 transition-all resize-none placeholder:text-slate-400"
+                                            placeholder="Briefly describe your case..."
+                                        ></textarea>
+                                    </div>
+
+                                    <button
+                                        type="submit"
+                                        className="w-full btn-gold py-4 rounded-xl shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
+                                    >
+                                        <Send size={18} />
                                         Submit Inquiry
                                     </button>
                                 </form>
                             </div>
-                        </div>
+                        </motion.div>
 
                     </div>
                 </div>

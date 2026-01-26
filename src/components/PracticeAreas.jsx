@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Scale, Users, Gavel, BookOpen, Shield, FileText, Briefcase, Landmark } from 'lucide-react';
+import { Scale, Users, Gavel, BookOpen, Shield, FileText } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
 const PracticeAreas = () => {
@@ -43,16 +43,37 @@ const PracticeAreas = () => {
                 <title>Practice Areas | Adv. Md. Shah Alam</title>
                 <meta name="description" content="Legal expertise in Criminal Law, Civil Litigation, Writ Jurisdiction, and Corporate Law." />
             </Helmet>
-            <section id="practice-areas" className="py-24 min-h-screen">
+            <section id="practice-areas" className="py-24 min-h-screen section-alt">
                 <div className="container mx-auto px-6">
+                    {/* Section Header */}
                     <div className="text-center mb-16">
-                        <span className="text-gold text-xs font-bold tracking-[0.2em] uppercase block mb-3">
+                        <motion.span
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            className="text-gold-dark dark:text-gold text-xs font-bold tracking-[0.2em] uppercase block mb-3"
+                        >
                             Areas of Practice
-                        </span>
-                        <h2 className="text-4xl md:text-5xl font-serif font-bold text-navy dark:text-white mb-4">Legal Expertise</h2>
-                        <div className="w-24 h-1 bg-gold mx-auto rounded-full"></div>
+                        </motion.span>
+                        <motion.h2
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.1 }}
+                            className="text-4xl md:text-5xl font-serif font-bold text-navy dark:text-white mb-4"
+                        >
+                            Legal Expertise
+                        </motion.h2>
+                        <motion.div
+                            initial={{ scaleX: 0 }}
+                            whileInView={{ scaleX: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.2 }}
+                            className="w-24 h-1 bg-gold mx-auto rounded-full"
+                        ></motion.div>
                     </div>
 
+                    {/* Services Grid */}
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {services.map((service, index) => (
                             <motion.div
@@ -63,13 +84,17 @@ const PracticeAreas = () => {
                                 viewport={{ once: true }}
                                 className="glass-card p-8 group text-center flex flex-col items-center"
                             >
-                                <div className="w-16 h-16 bg-navy/5 dark:bg-white/10 rounded-full flex items-center justify-center text-navy dark:text-gold mb-6 group-hover:bg-gold group-hover:text-navy transition-colors duration-300 shadow-sm">
+                                {/* Icon */}
+                                <div className="w-16 h-16 bg-navy/5 dark:bg-white/10 rounded-2xl flex items-center justify-center text-navy dark:text-gold mb-6 group-hover:bg-gold group-hover:text-navy transition-colors duration-300 shadow-sm">
                                     {service.icon}
                                 </div>
 
-                                <h3 className="text-xl font-bold text-navy dark:text-white mb-3 group-hover:text-gold transition-colors duration-300">
+                                {/* Title */}
+                                <h3 className="text-xl font-bold text-navy dark:text-white mb-3 group-hover:text-gold-dark dark:group-hover:text-gold transition-colors duration-300">
                                     {service.title}
                                 </h3>
+
+                                {/* Description */}
                                 <p className="text-slate-500 dark:text-slate-300 leading-relaxed text-sm">
                                     {service.desc}
                                 </p>

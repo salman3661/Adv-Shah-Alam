@@ -1,0 +1,238 @@
+{
+    "seoPrompts": {
+        "autoGenerate": true,
+        "categories": [
+            {
+                "category": "Location-Based Legal Services",
+                "keywords": [
+                    "lawyer in Dhaka",
+                    "lawyer in Uttara",
+                    "lawyer in Gazipur",
+                    "lawyer in Tongi",
+                    "advocate Dhaka Bangladesh",
+                    "Supreme Court lawyer Dhaka",
+                    "best lawyer in Dhaka",
+                    "top advocate Dhaka",
+                    "legal consultant Dhaka",
+                    "attorney Dhaka Bangladesh"
+                ],
+                "questions": [
+                    "How to find a good lawyer in Dhaka?",
+                    "Who is the best advocate in Dhaka?",
+                    "Where can I find a Supreme Court lawyer in Dhaka?",
+                    "How much does a lawyer cost in Dhaka Bangladesh?",
+                    "What are the best law firms in Dhaka?"
+                ]
+            },
+            {
+                "category": "Court-Specific Services",
+                "keywords": [
+                    "Supreme Court advocate Dhaka",
+                    "Supreme Court lawyer Bangladesh",
+                    "Metro Sessions Court lawyer",
+                    "APP Metro Sessions Court Dhaka",
+                    "Assistant Public Prosecutor Dhaka",
+                    "criminal court lawyer Dhaka",
+                    "civil court advocate Bangladesh",
+                    "High Court lawyer Dhaka",
+                    "Appellate Division lawyer"
+                ],
+                "questions": [
+                    "Who practices at Supreme Court of Bangladesh?",
+                    "How to appeal to Supreme Court Bangladesh?",
+                    "What does an APP do at Metro Sessions Court?",
+                    "Who can represent me at Supreme Court Dhaka?"
+                ]
+            },
+            {
+                "category": "Specialization Areas",
+                "keywords": [
+                    "criminal lawyer Dhaka",
+                    "civil litigation lawyer Bangladesh",
+                    "family law advocate Dhaka",
+                    "corporate lawyer Bangladesh",
+                    "land dispute lawyer Dhaka",
+                    "property lawyer Bangladesh",
+                    "divorce lawyer Dhaka",
+                    "contract lawyer Bangladesh",
+                    "bail lawyer Dhaka",
+                    "appeal lawyer Supreme Court"
+                ],
+                "questions": [
+                    "What does a criminal lawyer do in Dhaka?",
+                    "How to file a civil case in Bangladesh?",
+                    "Who handles land disputes in Dhaka?",
+                    "What is the process for divorce in Bangladesh?",
+                    "How to get bail in criminal cases Dhaka?"
+                ]
+            },
+            {
+                "category": "Services Offered",
+                "keywords": [
+                    "legal consultation Dhaka",
+                    "legal advice Bangladesh",
+                    "court representation Dhaka",
+                    "legal document preparation",
+                    "case filing assistance Dhaka",
+                    "legal research services",
+                    "client counseling lawyer",
+                    "litigation support Dhaka",
+                    "legal opinion Bangladesh",
+                    "law firm services Dhaka"
+                ],
+                "questions": [
+                    "How much does legal consultation cost in Dhaka?",
+                    "What documents do I need for court case filing?",
+                    "Can I get legal advice online in Bangladesh?",
+                    "How long does a court case take in Dhaka?",
+                    "What is the consultation fee for lawyers in Dhaka?"
+                ]
+            },
+            {
+                "category": "Credentials & Experience",
+                "keywords": [
+                    "LL.M lawyer Dhaka",
+                    "Bar Council enrolled advocate",
+                    "20 years experience lawyer Dhaka",
+                    "Dhaka International University lawyer",
+                    "Metro Police Ideal Law College",
+                    "Gazipur Law College graduate",
+                    "experienced advocate Bangladesh",
+                    "senior lawyer Supreme Court",
+                    "APP experience lawyer"
+                ],
+                "questions": [
+                    "How many years of experience should a lawyer have?",
+                    "What qualifications does a Supreme Court lawyer need?",
+                    "Is Bar Council enrollment mandatory for lawyers?",
+                    "What is an LL.M degree in law?"
+                ]
+            },
+            {
+                "category": "Case Types",
+                "keywords": [
+                    "murder case lawyer Dhaka",
+                    "theft case advocate",
+                    "fraud case lawyer Bangladesh",
+                    "assault case legal help",
+                    "property dispute lawyer",
+                    "inheritance case advocate",
+                    "business dispute lawyer",
+                    "employment law advocate",
+                    "consumer rights lawyer",
+                    "writ petition lawyer"
+                ],
+                "questions": [
+                    "How to file a murder case in Bangladesh?",
+                    "What to do if accused of theft in Dhaka?",
+                    "How to resolve property disputes legally?",
+                    "Can a lawyer help with inheritance claims?",
+                    "What is a writ petition in Bangladesh?"
+                ]
+            },
+            {
+                "category": "Emergency Legal Help",
+                "keywords": [
+                    "urgent lawyer Dhaka",
+                    "emergency legal help Bangladesh",
+                    "24/7 lawyer consultation",
+                    "immediate legal assistance",
+                    "bail lawyer emergency Dhaka",
+                    "arrest legal help Dhaka",
+                    "police case lawyer urgent",
+                    "same day legal consultation"
+                ],
+                "questions": [
+                    "What to do if arrested in Dhaka?",
+                    "How to get emergency legal help in Bangladesh?",
+                    "Can I call a lawyer at night in Dhaka?",
+                    "How fast can I get bail in Dhaka?"
+                ]
+            },
+            {
+                "category": "Client Education",
+                "keywords": [
+                    "legal rights Bangladesh",
+                    "court procedure Dhaka",
+                    "how to file case Bangladesh",
+                    "legal process explained",
+                    "Bangladesh law basics",
+                    "citizen legal rights",
+                    "accused rights Bangladesh",
+                    "victim rights Dhaka"
+                ],
+                "questions": [
+                    "What are my legal rights in Bangladesh?",
+                    "How does the court system work in Dhaka?",
+                    "What should I know before hiring a lawyer?",
+                    "Can I represent myself in court Bangladesh?",
+                    "What are the stages of a criminal trial?"
+                ]
+            }
+        ],
+        "metaKeywords": [
+            "Advocate Md Shah Alam",
+            "Supreme Court Bangladesh",
+            "lawyer Dhaka",
+            "criminal lawyer",
+            "civil litigation",
+            "APP Metro Sessions Court",
+            "legal consultation Dhaka",
+            "Bangladesh advocate",
+            "LL.M lawyer",
+            "20 years legal experience"
+        ],
+        "structuredData": {
+            "@context": "https://schema.org",
+            "@type": "Attorney",
+            "name": "Advocate Md. Shah Alam",
+            "image": "/images/hero/profile-shah-alam.png",
+            "url": "https://advocate-shah-alam.com",
+            "telephone": "+880-1712-345678",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Supreme Court Bar Association",
+                "addressLocality": "Dhaka",
+                "addressRegion": "Dhaka Division",
+                "addressCountry": "Bangladesh"
+            },
+            "priceRange": "$$",
+            "areaServed": {
+                "@type": "City",
+                "name": "Dhaka"
+            },
+            "knowsAbout": [
+                "Criminal Law",
+                "Civil Litigation",
+                "Supreme Court Practice",
+                "Legal Research",
+                "Client Counseling"
+            ],
+            "alumniOf": [
+                {
+                    "@type": "CollegeOrUniversity",
+                    "name": "Dhaka International University",
+                    "degree": "LL.M"
+                },
+                {
+                    "@type": "CollegeOrUniversity",
+                    "name": "Metro Police Ideal Law College",
+                    "degree": "LL.B"
+                },
+                {
+                    "@type": "CollegeOrUniversity",
+                    "name": "Gazipur Law College",
+                    "degree": "LL.B"
+                }
+            ],
+            "memberOf": {
+                "@type": "Organization",
+                "name": "Bangladesh Bar Council"
+            },
+            "worksFor": {
+                "@type": "Court",
+                "name": "Supreme Court of Bangladesh"
+            }
+        }
+    }
+}
