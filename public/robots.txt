@@ -1,32 +1,61 @@
-# robots.txt for Advocate Md. Shah Alam Portfolio
-User-agent: *
-Allow: /
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Home Page -->
+  <url>
+    <loc>https://www.advmdshahalam.me/</loc>
+    <lastmod>2026-01-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.png</image:loc>
+      <image:caption>Advocate Md. Shah Alam - Supreme Court Lawyer</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Education Page -->
+  <url>
+    <loc>https://www.advmdshahalam.me/education</loc>
+    <lastmod>2026-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Main Sections (anchors) -->
+  <url>
+    <loc>https://www.advmdshahalam.me/#about</loc>
+    <lastmod>2026-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.advmdshahalam.me/#practice-areas</loc>
+    <lastmod>2026-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.advmdshahalam.me/#timeline</loc>
+    <lastmod>2026-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.advmdshahalam.me/#chambers</loc>
+    <lastmod>2026-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.advmdshahalam.me/#contact</loc>
+    <lastmod>2026-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
 
-# Sitemap location
-Sitemap: https://advocate-shah-alam.com/sitemap.xml
-
-# Crawl delay (polite)
-Crawl-delay: 1
-
-# Allow all pages
-Allow: /
-Allow: /education
-Allow: /seo-prompts.json
-
-# Disallow admin/config files (if any)
-Disallow: /api/
-Disallow: /*.json$ # Except seo-prompts.json which is allowed above
-
-# Allow search engines to index images
-Allow: /images/
-Allow: /public/
-
-# Preferred user agents
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Slurp
-Allow: /
+</urlset>
