@@ -445,3 +445,43 @@ body[data-theme="dark"] .status-current {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* ═══════════════════════════════════════════════
+   MOBILE OVERLAP FIXES — max-width 768px only
+   Desktop layout is NOT affected.
+   ═══════════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  /* Reserve bottom space so fixed call bar never hides scrollable content */
+  body {
+    padding-bottom: 68px;
+  }
+
+  /* Reserve top space so the floating pill nav never covers the hero */
+  main {
+    padding-top: 72px;
+  }
+
+  /* Ensure call bar is always on top */
+  .mobile-call-bar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+  }
+
+  /* Lift WhatsApp button above the call bar (68px bar + 16px gap) */
+  .whatsapp-float {
+    position: fixed;
+    right: 16px;
+    bottom: 84px;
+    z-index: 1100;
+  }
+
+  /* Nav pill always on top of everything */
+  .site-header,
+  nav[class*="fixed"] {
+    z-index: 1200;
+  }
+}

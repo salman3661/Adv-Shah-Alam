@@ -9,7 +9,7 @@ const MobileCallButton = () => {
             initial={{ y: 100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 1.2, type: 'spring', stiffness: 200 }}
-            className="fixed bottom-0 left-0 right-0 z-50 md:hidden flex items-center justify-center gap-3 py-4 font-bold text-sm text-white shadow-2xl"
+            className="mobile-call-bar fixed bottom-0 left-0 right-0 z-[1000] md:hidden flex items-center justify-center gap-3 py-4 font-bold text-sm text-white shadow-2xl"
             style={{ background: 'var(--btn-primary-bg)' }}
             aria-label="Call Advocate Md. Shah Alam"
         >

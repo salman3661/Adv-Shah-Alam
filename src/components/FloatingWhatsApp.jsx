@@ -13,7 +13,7 @@ const FloatingWhatsApp = () => {
             transition={{ delay: 1, type: 'spring', stiffness: 200 }}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
-            className="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow"
+            className="whatsapp-float fixed bottom-6 right-6 z-[1100] w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow"
             style={{ background: 'var(--wa-green)' }}
             aria-label="Contact via WhatsApp"
         >
