@@ -8,7 +8,8 @@ const Education = () => {
         <>
             <Helmet>
                 <title>Education & Career Journey | Adv. Md. Shah Alam</title>
-                <meta name="description" content="Complete educational background and professional career timeline of Advocate Md. Shah Alam." />
+                <meta name="description" content="Explore the full academic background and professional career timeline of Advocate Md. Shah Alam – LL.M lawyer with 20+ years of legal service in Bangladesh." />
+                <link rel="canonical" href="https://www.advmdshahalam.me/education" />
             </Helmet>
 
             <motion.div

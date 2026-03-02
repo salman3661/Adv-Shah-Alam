@@ -6,6 +6,7 @@ const TaxLawyer = () => (
     <ServicePage
         metaTitle="Income Tax & VAT Lawyer in Dhaka | Advocate Md. Shah Alam"
         metaDesc="Expert income tax lawyer in Bangladesh. Advocate Md. Shah Alam handles NBR tax disputes, income tax cases, VAT matters, and tax appeal process before the Taxes Appellate Tribunal in Dhaka."
+        canonicalUrl="https://www.advmdshahalam.me/services/tax-lawyer"
         h1="Income Tax & VAT Lawyer in Dhaka – Bangladesh Tax Law Expert"
         intro="Advocate Md. Shah Alam is a knowledgeable <strong>income tax lawyer in Bangladesh</strong>, providing comprehensive legal representation in tax disputes, NBR assessments, VAT matters, and tax appeal proceedings. With extensive experience before the Taxes Appellate Tribunal and the High Court Division in revenue cases, Adv. Shah Alam helps individuals and businesses protect their financial interests."
         coverage={[

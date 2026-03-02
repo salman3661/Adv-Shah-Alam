@@ -6,6 +6,7 @@ const CriminalLawyer = () => (
     <ServicePage
         metaTitle="Criminal Lawyer in Uttara, Dhaka | Advocate Md. Shah Alam"
         metaDesc="Looking for a criminal lawyer in Uttara, Dhaka? Advocate Md. Shah Alam provides expert criminal defense — FIR cases, bail, trial representation, and appeals in all courts across Bangladesh."
+        canonicalUrl="https://www.advmdshahalam.me/services/criminal-lawyer"
         h1="Criminal Lawyer in Uttara – Expert Criminal Defense in Dhaka"
         intro="Advocate Md. Shah Alam is an experienced <strong>criminal lawyer in Uttara, Dhaka</strong> with 20+ years of proven expertise in criminal defense, FIR matters, bail applications, and trial representation before Sessions Courts and the Supreme Court of Bangladesh. Whether you face a misdemeanor or serious criminal charge, Adv. Shah Alam delivers strategic, results-driven legal defense."
         coverage={[

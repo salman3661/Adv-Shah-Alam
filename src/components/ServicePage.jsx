@@ -9,13 +9,14 @@ import { Link } from 'react-router-dom';
  * Hero always dark (uses --hero-* vars that don't change with theme).
  * Coverage/FAQ/CTA use body CSS vars (theme-aware).
  */
-const ServicePage = ({ metaTitle, metaDesc, h1, intro, coverage, faqItems, ctaText, contextNote }) => {
+const ServicePage = ({ metaTitle, metaDesc, canonicalUrl, h1, intro, coverage, faqItems, ctaText, contextNote }) => {
     return (
         <>
             <Helmet>
                 <title>{metaTitle}</title>
                 <meta name="description" content={metaDesc} />
                 <meta name="robots" content="index, follow" />
+                {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
             </Helmet>
 
             {/* Hero — intentionally always dark charcoal */}
