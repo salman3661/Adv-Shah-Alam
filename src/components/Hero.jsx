@@ -40,6 +40,7 @@ const Hero = () => {
                                 src="/images/hero/hero-md-shah-alam.png"
                                 alt="Advocate Md. Shah Alam – Experienced Lawyer in Uttara, Dhaka"
                                 loading="eager"
+                                fetchpriority="high"
                                 decoding="async"
                                 width="600"
                                 height="750"
