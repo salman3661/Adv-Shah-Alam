@@ -34,15 +34,22 @@ const Hero = () => {
                         className="relative w-full max-w-sm lg:max-w-md aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl group"
                         style={{ border: '3px solid var(--card-border)' }}
                     >
-                        <img
-                            src="/images/hero/hero-md-shah-alam.png"
-                            alt="Advocate Md. Shah Alam – Experienced Lawyer in Uttara, Dhaka"
-                            className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
-                            onError={(e) => {
-                                e.target.onerror = null;
-                                e.target.src = 'https://placehold.co/600x800/1D4ED8/FFFFFF?text=Adv.+Shah+Alam';
-                            }}
-                        />
+                        <picture>
+                            <source srcSet="/images/hero/hero-md-shah-alam.webp" type="image/webp" />
+                            <img
+                                src="/images/hero/hero-md-shah-alam.png"
+                                alt="Advocate Md. Shah Alam – Experienced Lawyer in Uttara, Dhaka"
+                                loading="eager"
+                                decoding="async"
+                                width="600"
+                                height="750"
+                                className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                                onError={(e) => {
+                                    e.target.onerror = null;
+                                    e.target.src = 'https://placehold.co/600x800/1D4ED8/FFFFFF?text=Adv.+Shah+Alam';
+                                }}
+                            />
+                        </picture>
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
 
                         {/* Experience Badge */}

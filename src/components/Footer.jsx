@@ -92,11 +92,13 @@ const Footer = () => {
                         </div>
                         <div className="flex gap-2 mb-5">
                             <a href="https://wa.me/8801955802007" target="_blank" rel="noopener noreferrer"
+                                aria-label="Chat on WhatsApp"
                                 className="w-9 h-9 rounded-xl flex items-center justify-center hover:scale-110 transition-transform shadow-sm"
                                 style={{ background: 'var(--card-bg)', border: '1px solid var(--card-border)' }}>
                                 <MessageCircle size={16} className="icon-whatsapp" />
                             </a>
                             <a href="https://www.facebook.com/advmd.shahalamfb" target="_blank" rel="noopener noreferrer"
+                                aria-label="Follow us on Facebook"
                                 className="w-9 h-9 rounded-xl flex items-center justify-center hover:scale-110 transition-transform shadow-sm"
                                 style={{ background: 'var(--card-bg)', border: '1px solid var(--card-border)' }}>
                                 <Facebook size={16} className="icon-facebook" />
