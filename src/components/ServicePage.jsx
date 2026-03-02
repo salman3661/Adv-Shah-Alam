@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
  * Hero always dark (uses --hero-* vars that don't change with theme).
  * Coverage/FAQ/CTA use body CSS vars (theme-aware).
  */
-const ServicePage = ({ metaTitle, metaDesc, h1, intro, coverage, faqItems, ctaText }) => {
+const ServicePage = ({ metaTitle, metaDesc, h1, intro, coverage, faqItems, ctaText, contextNote }) => {
     return (
         <>
             <Helmet>
@@ -81,6 +81,11 @@ const ServicePage = ({ metaTitle, metaDesc, h1, intro, coverage, faqItems, ctaTe
                             </motion.div>
                         ))}
                     </div>
+                    {contextNote && (
+                        <p className="mt-6 text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
+                            {contextNote}
+                        </p>
+                    )}
                 </div>
             </section>
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import ServicePage from '../../components/ServicePage';
 
 const TaxLawyer = () => (
@@ -19,6 +20,15 @@ const TaxLawyer = () => (
             'Tax ombudsman complaints',
             'Income tax exemption and return filing advice',
         ]}
+        contextNote={
+            <>
+                When a tax dispute progresses beyond the Taxes Appellate Tribunal, the case may be referred to the High Court Division or even the Appellate Division on substantial questions of law. In such situations, Adv. Shah Alam's experience in{' '}
+                <Link to="/services/supreme-court-lawyer" style={{ color: 'var(--accent)', textDecoration: 'underline' }}>
+                    Supreme Court representation
+                </Link>{' '}
+                ensures your tax appeal is argued with the highest level of legal precision at the apex court of Bangladesh.
+            </>
+        }
         faqItems={[
             {
                 q: 'How do I file an income tax appeal in Bangladesh?',

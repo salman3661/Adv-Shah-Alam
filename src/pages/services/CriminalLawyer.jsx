@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import ServicePage from '../../components/ServicePage';
 
 const CriminalLawyer = () => (
@@ -19,6 +20,19 @@ const CriminalLawyer = () => (
             'Anticipatory bail petitions in High Court',
             'Pre-arrest legal consultation and rights protection',
         ]}
+        contextNote={
+            <>
+                When facing criminal charges, securing bail at the earliest opportunity is critical — our dedicated{' '}
+                <Link to="/services/bail-lawyer" style={{ color: 'var(--accent)', textDecoration: 'underline' }}>
+                    bail lawyer in Dhaka
+                </Link>{' '}
+                service handles both bailable and non-bailable applications with urgency. For criminal matters that escalate to the higher judiciary, Adv. Shah Alam also provides experienced{' '}
+                <Link to="/services/supreme-court-lawyer" style={{ color: 'var(--accent)', textDecoration: 'underline' }}>
+                    Supreme Court representation
+                </Link>{' '}
+                before the Appellate Division of Bangladesh.
+            </>
+        }
         faqItems={[
             {
                 q: 'What should I do if an FIR is filed against me in Bangladesh?',

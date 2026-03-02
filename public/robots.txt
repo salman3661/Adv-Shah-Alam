@@ -1,61 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-  
-  <!-- Home Page -->
-  <url>
-    <loc>https://www.advmdshahalam.me/</loc>
-    <lastmod>2026-01-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-    <image:image>
-      <image:loc>https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.png</image:loc>
-      <image:caption>Advocate Md. Shah Alam - Supreme Court Lawyer</image:caption>
-    </image:image>
-  </url>
-  
-  <!-- Education Page -->
-  <url>
-    <loc>https://www.advmdshahalam.me/education</loc>
-    <lastmod>2026-01-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- Main Sections (anchors) -->
-  <url>
-    <loc>https://www.advmdshahalam.me/#about</loc>
-    <lastmod>2026-01-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.advmdshahalam.me/#practice-areas</loc>
-    <lastmod>2026-01-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.advmdshahalam.me/#timeline</loc>
-    <lastmod>2026-01-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.advmdshahalam.me/#chambers</loc>
-    <lastmod>2026-01-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.advmdshahalam.me/#contact</loc>
-    <lastmod>2026-01-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+<url>
+  <loc>https://www.advmdshahalam.me/</loc>
+  <lastmod>2025-03-02</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>1.0</priority>
+</url>
+
+<url>
+  <loc>https://www.advmdshahalam.me/criminal-lawyer-uttara</loc>
+  <lastmod>2025-03-02</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.9</priority>
+</url>
+
+<url>
+  <loc>https://www.advmdshahalam.me/divorce-lawyer-uttara</loc>
+  <lastmod>2025-03-02</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.9</priority>
+</url>
+
+<url>
+  <loc>https://www.advmdshahalam.me/land-property-lawyer-uttara</loc>
+  <lastmod>2025-03-02</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://www.advmdshahalam.me/bail-lawyer-dhaka</loc>
+  <lastmod>2025-03-02</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://www.advmdshahalam.me/supreme-court-lawyer-bangladesh</loc>
+  <lastmod>2025-03-02</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://www.advmdshahalam.me/tax-vat-lawyer-dhaka</loc>
+  <lastmod>2025-03-02</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://www.advmdshahalam.me/education</loc>
+  <lastmod>2025-03-02</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.5</priority>
+</url>
 
 </urlset>

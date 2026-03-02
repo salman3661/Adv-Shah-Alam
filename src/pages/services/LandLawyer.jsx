@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import ServicePage from '../../components/ServicePage';
 
 const LandLawyer = () => (
@@ -19,6 +20,19 @@ const LandLawyer = () => (
             'RS/BS khatian, CS record, and survey disputes',
             'Property boundary and wall cases',
         ]}
+        contextNote={
+            <>
+                Two of the most common steps in any property transaction are mutation and registration. Our detailed guide on the{' '}
+                <Link to="/blog/mutation-process-bangladesh" style={{ color: 'var(--accent)', textDecoration: 'underline' }}>
+                    mutation process in Bangladesh
+                </Link>{' '}
+                explains how to transfer land records to your name, while the step-by-step{' '}
+                <Link to="/blog/property-registration-process" style={{ color: 'var(--accent)', textDecoration: 'underline' }}>
+                    property registration process
+                </Link>{' '}
+                covers deed registration, stamp duties, and required documentation at the Sub-Registrar office.
+            </>
+        }
         faqItems={[
             {
                 q: 'How do I solve a land dispute case in Bangladesh?',
@@ -26,7 +40,7 @@ const LandLawyer = () => (
             },
             {
                 q: 'What is a partition suit and when is it needed?',
-                a: 'A partition suit is filed when co-owners of a property (usually siblings or joint family members) cannot agree on how to divide inherited property. The court will determine each party\'s share and order physical or monetary partition.',
+                a: "A partition suit is filed when co-owners of a property (usually siblings or joint family members) cannot agree on how to divide inherited property. The court will determine each party's share and order physical or monetary partition.",
             },
             {
                 q: 'How long does a land dispute case take in Bangladesh?',

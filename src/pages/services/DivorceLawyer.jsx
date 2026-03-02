@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import ServicePage from '../../components/ServicePage';
 
 const DivorceLawyer = () => (
@@ -19,6 +20,15 @@ const DivorceLawyer = () => (
             'Judicial separation proceedings',
             'Marriage registration and documentation',
         ]}
+        contextNote={
+            <>
+                Child custody arrangements are among the most sensitive outcomes of any divorce. Bangladesh family law defines clear guidelines on guardianship rights — learn more in our detailed guide on{' '}
+                <Link to="/blog/child-custody-law-bangladesh" style={{ color: 'var(--accent)', textDecoration: 'underline' }}>
+                    child custody law in Bangladesh
+                </Link>
+                , which covers the rights of both parents and how courts determine the best interest of the child.
+            </>
+        }
         faqItems={[
             {
                 q: 'What is the divorce procedure in Bangladesh for Muslims?',
