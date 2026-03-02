@@ -28,16 +28,18 @@ const Academics = () => {
                 <title>Academic Background | Adv. Md. Shah Alam</title>
                 <meta name="description" content="Academic qualifications and degrees of Advocate Md. Shah Alam." />
             </Helmet>
-            <section id="academics" className="py-24 min-h-screen bg-soft-gray dark:bg-navy relative">
-                <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10"></div>
-
+            <section id="academics" className="py-24 min-h-screen relative" style={{ background: 'var(--bg)' }}>
                 <div className="container mx-auto px-6 max-w-5xl relative z-10">
                     <div className="text-center mb-16">
-                        <span className="text-gold text-xs font-bold tracking-[0.2em] uppercase block mb-3">
-                            Education & Qualifications
+                        <span className="label-accent block mb-3">
+                            Education &amp; Qualifications
                         </span>
-                        <h2 className="text-3xl md:text-5xl font-serif font-bold text-navy dark:text-white mb-4">Academic Background</h2>
-                        <div className="w-24 h-1 bg-gold mx-auto rounded-full"></div>
+                        <h2 className="text-3xl md:text-5xl font-serif font-bold mb-4"
+                            style={{ color: 'var(--text)', fontFamily: "'Playfair Display', serif" }}>
+                            Academic Background
+                        </h2>
+                        <div className="w-24 h-1 mx-auto rounded-full"
+                            style={{ background: 'var(--accent)' }}></div>
                     </div>
 
                     <div className="grid md:grid-cols-3 gap-8">
@@ -48,14 +50,23 @@ const Academics = () => {
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
                                 viewport={{ once: true }}
-                                className="glass-card p-10 text-center border-t-4 border-t-gold hover:translate-y-[-10px] transition-transform duration-300"
+                                className="glass-card p-10 text-center hover:translate-y-[-10px] transition-transform duration-300"
+                                style={{ borderTop: '4px solid var(--accent)' }}
                             >
-                                <div className="w-16 h-16 mx-auto bg-navy/5 dark:bg-white/10 rounded-full flex items-center justify-center text-gold mb-6 shadow-inner">
+                                <div className="w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-6 shadow-inner"
+                                    style={{ background: 'var(--accent-subtle)', color: 'var(--accent)' }}>
                                     <GraduationCap size={32} />
                                 </div>
-                                <h3 className="text-xl font-bold text-navy dark:text-white mb-2">{item.degree}</h3>
-                                <p className="text-slate-500 dark:text-slate-300 font-medium mb-4">{item.inst}</p>
-                                <span className="inline-block px-4 py-1 rounded-full bg-gold/10 text-gold font-bold text-sm">
+                                <h3 className="text-xl font-bold mb-2"
+                                    style={{ color: 'var(--text)' }}>
+                                    {item.degree}
+                                </h3>
+                                <p className="font-medium mb-4"
+                                    style={{ color: 'var(--text-secondary)' }}>
+                                    {item.inst}
+                                </p>
+                                <span className="inline-block px-4 py-1 rounded-full font-bold text-sm"
+                                    style={{ background: 'var(--accent-subtle)', color: 'var(--accent)' }}>
                                     {item.year}
                                 </span>
                             </motion.div>

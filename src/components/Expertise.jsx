@@ -27,14 +27,18 @@ const Expertise = () => {
     ];
 
     return (
-        <section id="expertise" className="py-24">
+        <section id="expertise" className="py-24" style={{ background: 'var(--bg)' }}>
             <div className="container mx-auto px-6">
                 <div className="text-center mb-16">
-                    <span className="text-gold text-xs font-bold tracking-[0.2em] uppercase block mb-3">
+                    <span className="label-accent block mb-3">
                         Areas of Practice
                     </span>
-                    <h2 className="text-4xl md:text-5xl font-serif font-bold text-navy dark:text-white mb-4">Legal Expertise</h2>
-                    <div className="w-24 h-1 bg-gold mx-auto rounded-full"></div>
+                    <h2 className="text-4xl md:text-5xl font-serif font-bold mb-4"
+                        style={{ color: 'var(--text)', fontFamily: "'Playfair Display', serif" }}>
+                        Legal Expertise
+                    </h2>
+                    <div className="w-24 h-1 mx-auto rounded-full"
+                        style={{ background: 'var(--accent)' }}></div>
                 </div>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -47,14 +51,17 @@ const Expertise = () => {
                             viewport={{ once: true }}
                             className="glass-card p-8 group text-center"
                         >
-                            <div className="w-16 h-16 mx-auto bg-navy/5 dark:bg-white/10 rounded-full flex items-center justify-center text-navy dark:text-gold mb-6 group-hover:bg-gold group-hover:text-navy transition-colors duration-300">
+                            <div className="w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-6 transition-all duration-300 group-hover:scale-110"
+                                style={{ background: 'var(--accent-subtle)', color: 'var(--accent)' }}>
                                 {service.icon}
                             </div>
 
-                            <h3 className="text-xl font-bold text-navy dark:text-white mb-3 group-hover:text-gold transition-colors duration-300">
+                            <h3 className="text-xl font-bold mb-3 transition-colors duration-300"
+                                style={{ color: 'var(--text)' }}>
                                 {service.title}
                             </h3>
-                            <p className="text-slate-500 dark:text-slate-300 leading-relaxed text-sm">
+                            <p className="leading-relaxed text-sm"
+                                style={{ color: 'var(--text-muted)' }}>
                                 {service.desc}
                             </p>
                         </motion.div>

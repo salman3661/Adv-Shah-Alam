@@ -4,94 +4,136 @@ import { MessageCircle, ArrowRight } from 'lucide-react';
 
 const Hero = () => {
     return (
-        <section id="home" className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-soft-gray dark:bg-navy transition-colors duration-500">
-            {/* Background Gradients (Same as before) */}
-            <div className="absolute inset-0 z-0 opacity-0 dark:opacity-100 transition-opacity duration-500"
-                style={{ background: 'linear-gradient(135deg, #0b1e44 0%, #13274f 100%)' }}></div>
-            <div className="absolute inset-0 z-0 opacity-100 dark:opacity-0 transition-opacity duration-500"
-                style={{ background: 'linear-gradient(120deg, #f8f9fa 0%, #f0f2f5 50%, #e8eaef 100%)' }}></div>
+        <section
+            id="home"
+            className="relative min-h-screen flex items-center pt-20 overflow-hidden transition-colors duration-300"
+            style={{ background: 'var(--bg)' }}
+        >
+            {/* Subtle background orbs */}
+            <div className="absolute top-1/4 right-1/3 w-96 h-96 rounded-full -z-0 pointer-events-none"
+                style={{ background: 'radial-gradient(circle, var(--accent-subtle) 0%, transparent 70%)' }}></div>
+            <div className="absolute bottom-1/4 left-1/4 w-64 h-64 rounded-full -z-0 pointer-events-none"
+                style={{ background: 'radial-gradient(circle, var(--accent-subtle) 0%, transparent 70%)' }}></div>
 
-            <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-5 dark:opacity-10 z-0 mix-blend-soft-light pointer-events-none"></div>
+            {/* Dark-mode hero gradient overlay */}
+            <div className="absolute inset-0 z-0 pointer-events-none dark:opacity-100 opacity-0 transition-opacity duration-500"
+                style={{ background: 'linear-gradient(135deg, #0b1220 0%, #0f1b2d 100%)' }}></div>
 
             <div className="container mx-auto px-6 relative z-10 w-full grid md:grid-cols-2 gap-12 items-center">
 
-                {/* Left: Profile Photo (Updated for Full Size) */}
+                {/* Profile Photo */}
                 <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
+                    initial={{ opacity: 0, scale: 0.92 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.8 }}
                     className="flex justify-center md:justify-end order-1 md:order-2"
                 >
                     <motion.div
-                        animate={{ y: [0, -15, 0] }}
+                        animate={{ y: [0, -12, 0] }}
                         transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                        className="relative w-full max-w-sm lg:max-w-md aspect-[4/5] rounded-2xl overflow-hidden border-4 border-gold/20 shadow-2xl group"
+                        className="relative w-full max-w-sm lg:max-w-md aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl group"
+                        style={{ border: '3px solid var(--card-border)' }}
                     >
-                        {/* Profile Image - Fixed Height to Full/Aspect Ratio */}
                         <img
                             src="/images/hero/hero-md-shah-alam.png"
-                            alt="Advocate Md. Shah Alam"
+                            alt="Advocate Md. Shah Alam – Experienced Lawyer in Uttara, Dhaka"
                             className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                             onError={(e) => {
                                 e.target.onerror = null;
-                                e.target.src = 'https://placehold.co/600x800/1e2e5b/c9a44d?text=Adv+Shah+Alam';
+                                e.target.src = 'https://placehold.co/600x800/1D4ED8/FFFFFF?text=Adv.+Shah+Alam';
                             }}
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-transparent to-transparent"></div>
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
 
                         {/* Experience Badge */}
                         <motion.div
                             initial={{ scale: 0 }}
                             animate={{ scale: 1 }}
                             transition={{ delay: 0.5, type: 'spring', stiffness: 200 }}
-                            className="absolute bottom-6 right-6 bg-gold text-navy font-bold px-5 py-2 rounded-lg text-sm shadow-lg border border-white/20 backdrop-blur-md"
+                            className="absolute bottom-6 right-6 font-bold px-5 py-2 rounded-lg text-sm shadow-lg backdrop-blur-md"
+                            style={{ background: 'var(--accent)', color: '#fff' }}
                         >
-                            12+ Years Exp.
+                            20+ Years Exp.
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ scale: 0 }}
+                            animate={{ scale: 1 }}
+                            transition={{ delay: 0.7, type: 'spring', stiffness: 200 }}
+                            className="absolute top-6 left-6 font-semibold px-3 py-1.5 rounded-lg text-xs shadow-lg backdrop-blur-md"
+                            style={{ background: 'rgba(0,0,0,0.55)', color: 'var(--gold)', border: '1px solid rgba(198,167,94,0.3)' }}
+                        >
+                            ⚖️ Supreme Court
                         </motion.div>
                     </motion.div>
                 </motion.div>
 
-                {/* Right: Headline & Content */}
+                {/* Text Side */}
                 <motion.div
                     initial={{ opacity: 0, x: -50 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
                     className="text-center md:text-left order-2 md:order-1"
                 >
-                    <div className="inline-block px-4 py-1.5 rounded-full border border-gold/30 bg-navy/5 dark:bg-white/5 backdrop-blur-sm mb-6">
-                        <span className="text-gold-dark dark:text-gold text-xs font-bold uppercase tracking-[0.2em]">
-                            Supreme Court of Bangladesh
+                    <div className="inline-block px-4 py-1.5 rounded-full mb-6"
+                        style={{ border: '1px solid var(--card-border)', background: 'var(--surface)' }}>
+                        <span className="label-accent">
+                            Advocate · Supreme Court of Bangladesh
                         </span>
                     </div>
 
-                    <h1 className="text-4xl md:text-5xl lg:text-7xl font-serif font-bold text-[#1a1430] dark:text-white leading-tight mb-4">
-                        Adv. Md. Shah Alam
-                        <span className="block text-2xl md:text-3xl text-gold-dark dark:text-gold mt-2 font-sans font-light">
-                            Supreme Court, Dhaka
-                        </span>
+                    {/* SEO H1 */}
+                    <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold leading-tight mb-5"
+                        style={{ color: 'var(--text)', fontFamily: "'Playfair Display', Georgia, serif" }}>
+                        Experienced Lawyer in Uttara –{' '}
+                        <span style={{ color: 'var(--accent)' }}>Advocate Md. Shah Alam</span>
                     </h1>
 
-                    <p className="text-slate-600 dark:text-gray-300 text-lg leading-relaxed max-w-lg mx-auto md:mx-0 mb-8 font-light">
-                        Criminal & Civil Litigation Specialist with 12+ years of experience defending rights and securing futures with unwavering dedication.
+                    {/* SEO Subheading */}
+                    <p className="text-lg md:text-xl leading-relaxed max-w-xl mx-auto md:mx-0 mb-4 font-medium"
+                        style={{ color: 'var(--text-2)' }}>
+                        Providing Legal Representation in Criminal, Divorce, Land, Bail, Tax &amp; Supreme Court Matters in Dhaka &amp; Bangladesh.
+                    </p>
+
+                    {/* Keyword-rich intro */}
+                    <p className="text-sm md:text-base leading-relaxed max-w-lg mx-auto md:mx-0 mb-8"
+                        style={{ color: 'var(--text-muted)' }}>
+                        As a trusted <strong style={{ color: 'var(--text-2)' }}>lawyer in Uttara</strong> and <strong style={{ color: 'var(--text-2)' }}>advocate in Uttara</strong>, Adv. Shah Alam offers expert criminal, divorce, land, bail, Supreme Court, and income tax legal services in Dhaka. 20+ years of proven courtroom excellence.
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                         <motion.a
                             href="https://wa.me/8801955802007"
                             target="_blank"
-                            className="flex items-center justify-center gap-2 btn-gold py-4 px-8 shadow-lg rounded-full"
+                            rel="noopener noreferrer"
+                            whileHover={{ scale: 1.04 }}
+                            whileTap={{ scale: 0.96 }}
+                            className="btn-whatsapp text-sm"
                         >
-                            <MessageCircle size={20} />
+                            <MessageCircle size={18} />
                             WhatsApp Consult
                         </motion.a>
 
                         <motion.a
                             href="#contact"
-                            className="flex items-center justify-center gap-2 btn-outline-gold py-4 px-8 rounded-full border border-gold text-gold"
+                            whileHover={{ scale: 1.04 }}
+                            whileTap={{ scale: 0.96 }}
+                            className="btn-outline flex items-center justify-center gap-2 py-3.5 px-7 text-sm"
                         >
                             Request Consultation
-                            <ArrowRight size={20} />
+                            <ArrowRight size={18} />
                         </motion.a>
+                    </div>
+
+                    {/* Speciality tags */}
+                    <div className="flex flex-wrap gap-2 justify-center md:justify-start mt-7">
+                        {['Criminal Law', 'Divorce Cases', 'Land Disputes', 'Bail Matters', 'Supreme Court'].map((tag) => (
+                            <span key={tag}
+                                className="text-xs px-3 py-1.5 rounded-full font-medium"
+                                style={{ border: '1px solid var(--card-border)', color: 'var(--text-muted)', background: 'var(--surface)' }}>
+                                {tag}
+                            </span>
+                        ))}
                     </div>
                 </motion.div>
             </div>

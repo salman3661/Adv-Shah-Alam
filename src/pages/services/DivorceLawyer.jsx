@@ -1,0 +1,40 @@
+import React from 'react';
+import ServicePage from '../../components/ServicePage';
+
+const DivorceLawyer = () => (
+    <ServicePage
+        metaTitle="Divorce & Family Lawyer in Uttara, Dhaka | Advocate Md. Shah Alam"
+        metaDesc="Expert divorce and family lawyer in Uttara. Advocate Md. Shah Alam handles Muslim divorce procedure in Bangladesh, child custody, khula, and family court matters in Dhaka."
+        h1="Divorce & Family Lawyer in Uttara – Bangladesh Family Law Expert"
+        intro="Advocate Md. Shah Alam is a compassionate and knowledgeable <strong>divorce lawyer in Uttara, Dhaka</strong>, handling all aspects of family law including Muslim divorce procedure in Bangladesh, khula, child custody, maintenance, and dower (mahr) disputes. With sensitivity to the emotional weight of family matters, Adv. Shah Alam provides clear guidance and strong representation in family courts."
+        coverage={[
+            'Muslim divorce (talaq) — notice drafting and Union Parishad procedure',
+            'Khula and mutual consent divorce procedures',
+            'Family court representation (Dhaka & Gazipur)',
+            'Child custody and guardianship disputes',
+            'Maintenance (nafaqa) and alimony cases',
+            'Dower (mahr) recovery and enforcement',
+            'Restitution of conjugal rights cases',
+            'Hindu and Christian personal law matters',
+            'Judicial separation proceedings',
+            'Marriage registration and documentation',
+        ]}
+        faqItems={[
+            {
+                q: 'What is the divorce procedure in Bangladesh for Muslims?',
+                a: 'A Muslim husband can pronounce talaq and must send a written notice within 30 days to the Union Parishad/City Corporation chairman and the wife. An arbitration council is formed, and the divorce becomes effective 90 days from notice if reconciliation fails. A wife may seek khula (divorce by mutual agreement) or file in family court on valid grounds.',
+            },
+            {
+                q: 'How long does a divorce case take in Bangladesh?',
+                a: 'A mutual consent divorce (khula) can be completed in 90 days. Contested family court cases typically take 1–3 years depending on complexity, cooperation of parties, and court schedule.',
+            },
+            {
+                q: 'Who gets child custody after divorce in Bangladesh?',
+                a: 'Under Muslim Family Law, the mother generally retains custody (hizanat) of children until a son turns 7 and a daughter reaches puberty. After that, the father may gain custody unless otherwise determined by the court based on the best interest of the child.',
+            },
+        ]}
+        ctaText="Speak to a Divorce Lawyer in Uttara"
+    />
+);
+
+export default DivorceLawyer;

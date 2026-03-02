@@ -15,13 +15,16 @@ const Education = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                className="pt-28 min-h-screen bg-gradient-to-br from-soft-white via-navy-light/10 to-soft-white dark:from-navy-dark dark:via-navy dark:to-navy-dark"
+                className="pt-28 min-h-screen"
+                style={{ background: 'var(--bg)' }}
             >
                 <div className="container mx-auto px-6 mb-12 text-center">
-                    <h1 className="text-4xl md:text-5xl font-serif font-bold text-navy dark:text-white mb-4">
+                    <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4"
+                        style={{ color: 'var(--text)', fontFamily: "'Playfair Display', serif" }}>
                         Full Professional History
                     </h1>
-                    <p className="text-slate-600 dark:text-gray-300 max-w-2xl mx-auto">
+                    <p className="max-w-2xl mx-auto"
+                        style={{ color: 'var(--text-secondary)' }}>
                         A comprehensive timeline of academic achievements, professional milestones, and legal service to the nation.
                     </p>
                 </div>

@@ -3,15 +3,13 @@ import { motion } from 'framer-motion';
 import { MessageCircle, Facebook, Scale, Briefcase } from 'lucide-react';
 
 const Milestones = () => {
-    // Milestones Data
-    // Icon Colors: WhatsApp (Green), Facebook (Blue), Main (Gray/Navy)
     const milestones = [
         {
             title: 'Advocate',
             subtitle: 'Supreme Court of Bangladesh',
             year: '2008 – Present',
             icon: <Scale size={24} />,
-            type: 'court', // gray
+            type: 'court',
             link: '#',
         },
         {
@@ -27,43 +25,43 @@ const Milestones = () => {
             subtitle: 'Direct Legal Support (WhatsApp)',
             year: 'Available Daily',
             icon: <MessageCircle size={24} />,
-            type: 'whatsapp', // green
-            link: 'https://wa.me/your-number',
+            type: 'whatsapp',
+            link: 'https://wa.me/8801955802007',
         },
         {
             title: 'Social Presence',
             subtitle: 'Legal Awareness & Community',
             year: 'Active',
             icon: <Facebook size={24} />,
-            type: 'facebook', // blue
-            link: 'https://facebook.com/your-profile',
+            type: 'facebook',
+            link: 'https://www.facebook.com/advmd.shahalamfb',
         },
     ];
 
-    const getIconStyle = (type, theme) => {
-        // Returns classes for the icon container based on type
-        // Note: Tailwind v4 usage assumed based on project
+    const getIconStyle = (type) => {
         switch (type) {
             case 'whatsapp':
-                return 'bg-green-100 text-green-600 dark:bg-green-900/30 dark:text-green-400';
+                return { background: 'rgba(37,211,102,0.12)', color: '#25D366' };
             case 'facebook':
-                return 'bg-blue-100 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400';
+                return { background: 'rgba(24,119,242,0.12)', color: '#1877F2' };
             default:
-                return 'bg-slate-200 text-slate-700 dark:bg-white/10 dark:text-gray-300';
+                return { background: 'var(--accent-subtle)', color: 'var(--accent)' };
         }
     };
 
     return (
-        <section id="milestones" className="py-24 relative overflow-hidden">
+        <section id="milestones" className="py-24 relative overflow-hidden" style={{ background: 'var(--bg)' }}>
             {/* Background Decoration */}
-            <div className="absolute left-0 top-1/4 w-1/3 h-1/2 bg-gold/5 blur-3xl rounded-full -z-10"></div>
+            <div className="absolute left-0 top-1/4 w-1/3 h-1/2 blur-3xl rounded-full -z-10 pointer-events-none"
+                style={{ background: 'var(--accent-subtle)' }}></div>
 
             <div className="container mx-auto px-6 max-w-6xl">
                 <div className="text-center mb-16">
-                    <span className="text-gold text-xs font-bold tracking-[0.2em] uppercase block mb-3">
+                    <span className="label-accent block mb-3">
                         Career Progression
                     </span>
-                    <h2 className="text-3xl md:text-5xl font-serif font-bold text-navy dark:text-white">
+                    <h2 className="text-3xl md:text-5xl font-serif font-bold"
+                        style={{ color: 'var(--text)', fontFamily: "'Playfair Display', serif" }}>
                         Professional Milestones
                     </h2>
                 </div>
@@ -79,28 +77,39 @@ const Milestones = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
-                            className="group relative flex flex-col items-center text-center p-8 rounded-2xl glass-card hover:shadow-xl transition-all duration-300 border border-white/20 dark:border-white/5"
+                            className="group relative flex flex-col items-center text-center p-8 rounded-2xl glass-card hover:shadow-xl transition-all duration-300 overflow-hidden"
                         >
                             {/* Icon Box */}
-                            <div className={`w-14 h-14 rounded-full flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110 shadow-sm ${getIconStyle(item.type)}`}>
+                            <div
+                                className="w-14 h-14 rounded-full flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110 shadow-sm"
+                                style={getIconStyle(item.type)}
+                            >
                                 {item.icon}
                             </div>
 
                             {/* Content */}
                             <div className="space-y-2">
-                                <h3 className="text-xl font-bold text-navy dark:text-white group-hover:text-gold transition-colors">
+                                <h3 className="text-xl font-bold transition-colors"
+                                    style={{ color: 'var(--text)' }}>
                                     {item.title}
                                 </h3>
-                                <p className="text-sm font-bold text-slate-600 dark:text-slate-300">
+                                <p className="text-sm font-bold"
+                                    style={{ color: 'var(--text-secondary)' }}>
                                     {item.subtitle}
                                 </p>
-                                <p className="text-xs font-medium text-slate-400 uppercase tracking-widest mt-4 border-t border-slate-200 dark:border-white/10 pt-4 inline-block w-full">
+                                <p className="text-xs font-medium uppercase tracking-widest mt-4 pt-4 inline-block w-full"
+                                    style={{
+                                        color: 'var(--text-muted)',
+                                        borderTop: '1px solid var(--card-border)'
+                                    }}>
                                     {item.year}
                                 </p>
                             </div>
 
                             {/* Hover Bottom Bar */}
-                            <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-gold to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            <div className="absolute bottom-0 left-0 w-full h-1 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                                style={{ background: `linear-gradient(to right, transparent, var(--accent), transparent)` }}>
+                            </div>
                         </motion.a>
                     ))}
                 </div>

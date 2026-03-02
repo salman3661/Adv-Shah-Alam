@@ -1,7 +1,9 @@
 import React from 'react';
 import Hero from '../components/Hero';
 import About from '../components/About';
-import PracticeAreas from '../components/PracticeAreas';
+import Services from '../components/Services';
+import FAQ from '../components/FAQ';
+import BlogPreview from '../components/BlogPreview';
 import Timeline from '../components/Timeline';
 import Chambers from '../components/Chambers';
 import Contact from '../components/Contact';
@@ -11,8 +13,9 @@ const Home = () => {
         <>
             <Hero />
             <About />
-            <PracticeAreas />
-            <Timeline isHome={true} />
+            <Services />
+            <FAQ />
+            <BlogPreview />
             <Chambers />
             <Contact />
         </>

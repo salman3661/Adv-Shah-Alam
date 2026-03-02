@@ -51,7 +51,7 @@ const PracticeAreas = () => {
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            className="text-gold-dark dark:text-gold text-xs font-bold tracking-[0.2em] uppercase block mb-3"
+                            className="label-accent block mb-3"
                         >
                             Areas of Practice
                         </motion.span>
@@ -60,7 +60,8 @@ const PracticeAreas = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.1 }}
-                            className="text-4xl md:text-5xl font-serif font-bold text-navy dark:text-white mb-4"
+                            className="text-4xl md:text-5xl font-serif font-bold mb-4"
+                            style={{ color: 'var(--text)', fontFamily: "'Playfair Display', serif" }}
                         >
                             Legal Expertise
                         </motion.h2>
@@ -69,7 +70,8 @@ const PracticeAreas = () => {
                             whileInView={{ scaleX: 1 }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.2 }}
-                            className="w-24 h-1 bg-gold mx-auto rounded-full"
+                            className="w-24 h-1 mx-auto rounded-full"
+                            style={{ background: 'var(--accent)' }}
                         ></motion.div>
                     </div>
 
@@ -85,17 +87,20 @@ const PracticeAreas = () => {
                                 className="glass-card p-8 group text-center flex flex-col items-center"
                             >
                                 {/* Icon */}
-                                <div className="w-16 h-16 bg-navy/5 dark:bg-white/10 rounded-2xl flex items-center justify-center text-navy dark:text-gold mb-6 group-hover:bg-gold group-hover:text-navy transition-colors duration-300 shadow-sm">
+                                <div className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 transition-all duration-300 shadow-sm group-hover:scale-110"
+                                    style={{ background: 'var(--accent-subtle)', color: 'var(--accent)' }}>
                                     {service.icon}
                                 </div>
 
                                 {/* Title */}
-                                <h3 className="text-xl font-bold text-navy dark:text-white mb-3 group-hover:text-gold-dark dark:group-hover:text-gold transition-colors duration-300">
+                                <h3 className="text-xl font-bold mb-3"
+                                    style={{ color: 'var(--text)' }}>
                                     {service.title}
                                 </h3>
 
                                 {/* Description */}
-                                <p className="text-slate-500 dark:text-slate-300 leading-relaxed text-sm">
+                                <p className="leading-relaxed text-sm"
+                                    style={{ color: 'var(--text-muted)' }}>
                                     {service.desc}
                                 </p>
                             </motion.div>

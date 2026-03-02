@@ -33,17 +33,17 @@ export const ThemeProvider = ({ children }) => {
         return () => mediaQuery.removeEventListener('change', handleChange);
     }, []);
 
-    // Apply theme class to document
+    // Apply theme: data-theme on body (CSS vars) + .dark on html (Tailwind dark: variants)
     useEffect(() => {
-        const root = window.document.body;
         const html = window.document.documentElement;
+        const body = window.document.body;
 
         if (theme === 'dark') {
             html.classList.add('dark');
-            root.classList.add('dark');
+            body.setAttribute('data-theme', 'dark');
         } else {
             html.classList.remove('dark');
-            root.classList.remove('dark');
+            body.setAttribute('data-theme', 'light');
         }
 
         // Persist the theme choice

@@ -1,0 +1,40 @@
+import React from 'react';
+import ServicePage from '../../components/ServicePage';
+
+const LandLawyer = () => (
+    <ServicePage
+        metaTitle="Land & Property Lawyer in Uttara, Dhaka | Advocate Md. Shah Alam"
+        metaDesc="Experienced land dispute lawyer in Uttara, Dhaka. Advocate Md. Shah Alam resolves land disputes, mutation, property registration, and land fraud cases across Bangladesh courts."
+        h1="Land & Property Lawyer in Uttara – Land Dispute Expert in Dhaka"
+        intro="Advocate Md. Shah Alam is a trusted <strong>land dispute lawyer in Uttara, Dhaka</strong>, skilled in resolving complex land and property cases across Bangladesh. From title disputes and illegal possession to mutation fraud and property registration — Adv. Shah Alam provides expert legal counsel and strong courtroom representation to protect your property rights."
+        coverage={[
+            'Title suit and declaration of land ownership',
+            'Partition suit for joint family/shared property',
+            'Khas land, waqf, and government land matters',
+            'Property mutation (namjari) disputes',
+            'Property registration and document verification',
+            'Land fraud and forgery of deed cases',
+            'Eviction and illegal possession cases',
+            'Deed cancellation and injunction applications',
+            'RS/BS khatian, CS record, and survey disputes',
+            'Property boundary and wall cases',
+        ]}
+        faqItems={[
+            {
+                q: 'How do I solve a land dispute case in Bangladesh?',
+                a: 'Land disputes are typically resolved through civil courts by filing a title suit, partition suit, or injunction application. Key documents include deed of sale, mutation records, RS/BS khatian, and possession evidence. A land dispute lawyer can review your documents, advise on the best legal strategy, and represent you in civil court.',
+            },
+            {
+                q: 'What is a partition suit and when is it needed?',
+                a: 'A partition suit is filed when co-owners of a property (usually siblings or joint family members) cannot agree on how to divide inherited property. The court will determine each party\'s share and order physical or monetary partition.',
+            },
+            {
+                q: 'How long does a land dispute case take in Bangladesh?',
+                a: 'A straightforward title or partition suit may take 2–5 years in the civil court. With proper documentation, aggressive pleading, and an experienced property lawyer, many cases can be resolved faster through injunctions or out-of-court settlements.',
+            },
+        ]}
+        ctaText="Consult a Land Dispute Lawyer in Uttara"
+    />
+);
+
+export default LandLawyer;
