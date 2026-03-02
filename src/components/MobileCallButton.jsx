@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 const MobileCallButton = () => {
     return (
         <motion.a
-            href="tel:+8801955802007"
+            href="tel:+8801712655546"
             initial={{ y: 100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 1.2, type: 'spring', stiffness: 200 }}

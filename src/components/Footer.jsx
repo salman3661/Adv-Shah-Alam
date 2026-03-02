@@ -48,11 +48,11 @@ const Footer = () => {
                         </p>
                         <div className="flex items-start gap-2 text-xs mb-2" style={{ color: 'var(--text-muted)' }}>
                             <MapPin size={12} className="mt-0.5 flex-shrink-0" style={{ color: 'var(--gold)' }} />
-                            Mantrust Nazma Monzil, Sector 12, Uttara West, Dhaka-1230
+                            Ainjeebi Samity Bhaban, 4th Floor, 6/7 Court House Street, Kotwali, Dhaka-1100
                         </div>
                         <div className="flex items-center gap-2 text-xs" style={{ color: 'var(--text-muted)' }}>
                             <Phone size={12} className="flex-shrink-0" style={{ color: 'var(--gold)' }} />
-                            +880 1955-802007
+                            +880 1712-655546
                         </div>
                     </div>
 
@@ -83,8 +83,8 @@ const Footer = () => {
                     <div>
                         <h4 className="font-bold text-xs uppercase tracking-wider mb-4" style={{ color: 'var(--text)' }}>Connect With Us</h4>
                         <div className="space-y-2 mb-5">
-                            <a href="tel:+8801955802007" className="flex items-center gap-2 text-sm" style={{ color: 'var(--text-2)' }}>
-                                <Phone size={14} style={{ color: 'var(--accent)' }} />+880 1955-802007
+                            <a href="tel:+8801712655546" className="flex items-center gap-2 text-sm" style={{ color: 'var(--text-2)' }}>
+                                <Phone size={14} style={{ color: 'var(--accent)' }} />+880 1712-655546
                             </a>
                             <a href="mailto:shahalam0332@gmail.com" className="flex items-center gap-2 text-sm" style={{ color: 'var(--text-2)' }}>
                                 <Mail size={14} style={{ color: 'var(--accent)' }} />shahalam0332@gmail.com
