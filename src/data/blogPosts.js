@@ -121,8 +121,8 @@ const posts = [
             { question: 'What happens if bail is refused?', answer: 'You can appeal to a higher court — Sessions Court if refused by a Magistrate, or the High Court Division if refused at Sessions level.' },
             { question: 'What is a surety in bail?', answer: 'A surety is a person who guarantees the accused will appear in court. The surety may need to provide property documents as security.' },
             { question: 'Can police arrest someone on bail?', answer: 'Police can re-arrest if a new FIR is filed, bail conditions are violated, or a warrant is issued by a court.' },
-            { question: 'How much does getting bail typically cost?', answer: 'Lawyer fees vary. Court fees are minimal. You should avoid paying unofficial amounts to any party other than your lawyer's declared fee.' },
-    ],
+            { question: 'How much does getting bail typically cost?', answer: 'Lawyer fees vary. Court fees are minimal. You should avoid paying unofficial amounts to any party other than your lawyer\'s declared fee.' },
+        ],
         relatedServiceLinks: [
             { text: 'Bail Lawyer Dhaka', to: '/bail-lawyer-dhaka' },
             { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-uttara' },
@@ -690,6 +690,729 @@ const posts = [
             { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-uttara' },
         ],
     },
+
+    /* ── 7 ── */
+    {
+        slug: 'anticipatory-bail-bangladesh',
+        title: 'Anticipatory Bail in Bangladesh: How to Apply Before Arrest',
+        metaDescription: 'Step-by-step guide to anticipatory bail in Bangladesh — who can apply, which court to approach, required documents, and how a criminal lawyer in Dhaka can help.',
+        keywords: ['anticipatory bail Bangladesh', 'pre-arrest bail Bangladesh', 'anticipatory bail application Bangladesh', 'Sessions Court bail Bangladesh', 'High Court bail Bangladesh', 'criminal lawyer Dhaka', 'bail before arrest Bangladesh', 'CrPC anticipatory bail'],
+        publishedDate: PUBLISHED,
+        heroIntro: 'If you have reason to believe you are about to be arrested, anticipatory bail in Bangladesh allows you to seek protection from custody before the arrest actually happens. Acting quickly and with the right legal guidance is critical.',
+        toc: [
+            'What Is Anticipatory Bail?',
+            'Who Can Apply for Anticipatory Bail?',
+            'Which Court Hears Anticipatory Bail?',
+            'Grounds for Seeking Anticipatory Bail',
+            'Documents Required',
+            'The Hearing Process',
+            'Conditions Attached to Anticipatory Bail',
+            'When Anticipatory Bail Is Rejected',
+        ],
+        sections: [
+            {
+                h2: 'What Is Anticipatory Bail?',
+                content: `<p>Anticipatory bail is a legal protection that allows a person who apprehends arrest in a non-bailable offence to apply to a court for bail <strong>before</strong> they are actually arrested. If granted, the moment they are taken into custody (if at all), they are immediately released on the terms set by the court.</p>
+<p>The concept exists to prevent misuse of arrest power — whether by police acting on a false complaint or by rivals using criminal cases as intimidation. It is particularly relevant in Bangladesh where FIRs (First Information Reports) can sometimes be filed for collateral purposes. Seek advice from a <a href="/bail-lawyer-dhaka" style="color:var(--accent)">bail lawyer in Dhaka</a> at the earliest sign of trouble.</p>`,
+            },
+            {
+                h2: 'Who Can Apply for Anticipatory Bail?',
+                content: `<p>Any person who has reasonable grounds to believe they are about to be arrested in connection with a non-bailable offence may apply for anticipatory bail. Common scenarios include:</p>
+<ul>
+<li>An FIR has been filed naming the person</li>
+<li>There is news or credible information that police are seeking to arrest them</li>
+<li>A case involving business/property dispute where criminal complaints are filed as a pressure tactic</li>
+<li>Family disputes where one party files a false criminal complaint</li>
+</ul>
+<p>The applicant must have a genuine apprehension of arrest — not a mere suspicion without basis.</p>`,
+            },
+            {
+                h2: 'Which Court Hears Anticipatory Bail?',
+                content: `<p>In Bangladesh, anticipatory bail applications are heard by:</p>
+<ul>
+<li><strong>Sessions Court (Sessions Judge):</strong> The primary forum for anticipatory bail at the district level.</li>
+<li><strong>High Court Division:</strong> If the Sessions Court refuses or in serious matters involving complex legal questions, the application may be made directly to the High Court Division.</li>
+</ul>
+<p>For urgent matters in Dhaka, filing in the High Court Division is sometimes faster than the district Sessions Court. An experienced <a href="/criminal-lawyer-uttara" style="color:var(--accent)">criminal lawyer in Uttara or Dhaka</a> will advise which forum is most appropriate given your situation.</p>`,
+            },
+            {
+                h2: 'Grounds for Seeking Anticipatory Bail',
+                content: `<p>Courts consider several factors when deciding an anticipatory bail application:</p>
+<ul>
+<li>Nature and gravity of the accusation</li>
+<li>The applicant's criminal record (if any)</li>
+<li>Possibility of the applicant fleeing justice</li>
+<li>Whether the accusation appears to be motivated by malice or collateral pressure</li>
+<li>Whether the applicant has been cooperating with the investigation</li>
+<li>Risk to the investigation if bail is granted (e.g., tampering with evidence)</li>
+</ul>
+<p>A well-prepared bail petition clearly addresses each of these factors in the applicant's favour.</p>`,
+            },
+            {
+                h2: 'Documents Required',
+                content: `<p>For an anticipatory bail application, the following are typically needed:</p>
+<ul>
+<li>Copy of the FIR (obtained from the concerned police station or through a lawyer)</li>
+<li>National Identity Card of the applicant</li>
+<li>Affidavit setting out the facts and grounds for the application</li>
+<li>Any supporting documents (e.g., evidence showing the complaint is false or motivated)</li>
+<li>Character references or employment/business documents</li>
+</ul>
+<p>Your lawyer will draft the application and organise all documents. Speed is important — file the application as soon as you learn of a potential arrest.</p>`,
+            },
+            {
+                h2: 'The Hearing Process',
+                content: `<p>After filing, the court typically:</p>
+<ol>
+<li>Reads the application and supporting documents.</li>
+<li>Issues notice to the State (prosecution/police) for their response.</li>
+<li>Hears arguments from both sides.</li>
+<li>Grants or refuses the anticipatory bail.</li>
+</ol>
+<p>In urgent cases, courts may grant an <strong>interim anticipatory bail</strong> immediately — before full hearing — to protect the applicant from arrest while the matter is heard. This is a crucial safety net and should always be requested upfront.</p>`,
+            },
+            {
+                h2: 'Conditions Attached to Anticipatory Bail',
+                content: `<p>Anticipatory bail is rarely granted without conditions. Common conditions include:</p>
+<ul>
+<li>The applicant must cooperate with the investigation and appear for questioning when required</li>
+<li>The applicant must not leave the country without court permission</li>
+<li>The applicant must not contact witnesses or victims</li>
+<li>Surety bond of a specified amount</li>
+</ul>
+<p>Violation of these conditions can lead to cancellation of bail and immediate arrest. Always strictly comply with every condition set by the court.</p>`,
+            },
+            {
+                h2: 'When Anticipatory Bail Is Rejected',
+                content: `<p>If the Sessions Court rejects the anticipatory bail application, the applicant can immediately approach the <strong>High Court Division</strong> with a fresh application. The High Court may grant anticipatory bail or an interim stay even where the Sessions Court refused.</p>
+<p>If the High Court also refuses, the matter may — in appropriate cases — be brought before the <strong>Appellate Division</strong> of the Supreme Court. This level requires a <a href="/supreme-court-lawyer-bangladesh" style="color:var(--accent)">Supreme Court advocate</a> with experience in criminal appellate practice.</p>`,
+            },
+        ],
+        faqs: [
+            { question: 'Is anticipatory bail a right in Bangladesh?', answer: 'No. It is a discretionary relief granted by the court after considering the facts and circumstances of each case.' },
+            { question: 'Can I apply for anticipatory bail without an FIR being filed?', answer: 'Yes, if you have credible reason to believe arrest is imminent — for example, if police have visited your home or a complaint has been publicly filed.' },
+            { question: 'How quickly can anticipatory bail be granted?', answer: 'An interim anticipatory bail can sometimes be granted on the same day of filing in urgent cases. Full hearing typically concludes within 2–5 hearing dates.' },
+            { question: 'What happens if I am arrested despite an anticipatory bail order?', answer: 'Show the bail order to the arresting officer. They are legally bound to release you immediately on the terms of the order.' },
+            { question: 'Does anticipatory bail expire?', answer: 'Courts usually set a time limit or tie it to the investigation stage. Regular bail must be obtained once charge sheet is filed.' },
+            { question: 'Can police still question me if I have anticipatory bail?', answer: 'Yes. Bail conditions usually require cooperation with the investigation. You must appear for questioning as directed.' },
+            { question: 'Can anticipatory bail be cancelled?', answer: 'Yes. If you violate bail conditions or the court finds it was obtained by misrepresentation, bail can be cancelled.' },
+            { question: 'How much does anticipatory bail cost?', answer: 'Court fees are modest. Lawyer fees vary based on complexity and the court level. Avoid paying any unofficial amounts.' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Bail Lawyer Dhaka', to: '/bail-lawyer-dhaka' },
+            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-uttara' },
+            { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
+        ],
+    },
+
+    /* ── 8 ── */
+    {
+        slug: 'court-marriage-procedure-bangladesh',
+        title: 'Court Marriage Procedure in Bangladesh: Complete Legal Guide',
+        category: 'Family Law',
+        readTime: '6 min read',
+        metaTitle: 'Court Marriage Procedure in Bangladesh – Complete Legal Guide',
+        metaDescription: 'How to register a court marriage in Bangladesh — Kabinnama, required documents, procedure for Muslims and non-Muslims, and legal validity explained.',
+        keywords: ['court marriage Bangladesh', 'marriage registration Bangladesh', 'Kabinnama Bangladesh', 'Muslim marriage Bangladesh', 'nikah registration Bangladesh', 'divorce lawyer Dhaka', 'marriage certificate Bangladesh', 'Special Marriage Act Bangladesh'],
+        publishedDate: PUBLISHED,
+        heroIntro: 'A "court marriage" in Bangladesh refers to a legally registered marriage, sometimes without a traditional ceremony. Whether you are a Muslim couple completing a nikah, or partners from different religions seeking a civil marriage, understanding the correct legal procedure is essential.',
+        toc: [
+            'What Is Court Marriage in Bangladesh?',
+            'Conditions for a Valid Muslim Marriage',
+            'How to Register a Muslim Marriage (Kabinnama)',
+            'Inter-Religion and Non-Muslim Marriages',
+            'Required Documents for Marriage Registration',
+            'Role of the Kazi and Marriage Registrar',
+            'Void and Voidable Marriages Under Bangladesh Law',
+            'Legal Benefits of a Registered Marriage',
+        ],
+        sections: [
+            {
+                h2: 'What Is Court Marriage in Bangladesh?',
+                content: `<p>The term "court marriage" is commonly used in Bangladesh to mean a marriage registered under the law — typically in the presence of a Kazi (nikah registrar) for Muslims, or through a civil register for non-Muslims — rather than or in addition to a religious ceremony. It emphasises the legal registration aspect over the social/religious ceremony.</p>
+<p>Court marriages are sometimes preferred by couples who are marrying without family consent, inter-religion couples, or couples who need the immediate legal validity of marriage for visa, property, or other purposes. For expert legal guidance, consult a <a href="/divorce-lawyer-uttara" style="color:var(--accent)">family lawyer in Uttara, Dhaka</a>.</p>`,
+            },
+            {
+                h2: 'Conditions for a Valid Muslim Marriage',
+                content: `<p>Under Muslim personal law as applied in Bangladesh, a valid nikah requires:</p>
+<ul>
+<li><strong>Offer and acceptance (Ijab-Qabul):</strong> The marriage proposal and acceptance must be exchanged in one sitting, in the presence of witnesses.</li>
+<li><strong>Two competent witnesses:</strong> Two adult Muslim male witnesses, or one male and two female witnesses.</li>
+<li><strong>Mahr (dower):</strong> The groom specifies and agrees to pay a stated amount of mahr to the bride.</li>
+<li><strong>Free consent of both parties:</strong> A marriage entered under coercion or fraud is voidable.</li>
+<li><strong>Legal capacity:</strong> Both parties must be of legal age (18 for females, 21 for males under the Child Marriage Restraint Act 2017, with some legal complexity in practice).</li>
+</ul>`,
+            },
+            {
+                h2: 'How to Register a Muslim Marriage (Kabinnama)',
+                content: `<p>Muslim marriages in Bangladesh must be registered under the Muslim Marriages and Divorces (Registration) Act 1974. The process is:</p>
+<ol>
+<li>Contact a licensed Kazi (Nikah Registrar) for the area.</li>
+<li>Fix the date, time, and place of the nikah.</li>
+<li>Provide required documents (see below).</li>
+<li>The Kazi officiates the nikah and records the Kabinnama (marriage register).</li>
+<li>Both parties and two witnesses sign the Kabinnama.</li>
+<li>Each party receives a certified copy of the Kabinnama.</li>
+</ol>
+<p>The Kabinnama is the official legal proof of marriage. Retain your original copy carefully — it is required for divorce proceedings, visa applications, inheritance claims, and many other legal matters.</p>`,
+            },
+            {
+                h2: 'Inter-Religion and Non-Muslim Marriages',
+                content: `<p>Bangladesh does not have a comprehensive civil marriage law for inter-religion couples (unlike a "Special Marriage Act" as in neighbouring India). Options for non-Muslim or inter-faith couples include:</p>
+<ul>
+<li><strong>Christian marriages</strong> are registered under the Christian Marriage Act 1872 through a licensed church or minister.</li>
+<li><strong>Hindu marriages</strong> are governed by custom and personal law. Although a formal registration system exists in some areas, it is not universally implemented.</li>
+<li><strong>Inter-faith marriages</strong> are legally complex in Bangladesh and may require conversion of one party, or other legal solutions that vary by circumstance.</li>
+</ul>
+<p>Consult a <a href="/divorce-lawyer-uttara" style="color:var(--accent)">family lawyer in Dhaka</a> for advice specific to your situation.</p>`,
+            },
+            {
+                h2: 'Required Documents for Marriage Registration',
+                content: `<p>For a Muslim marriage (Kabinnama), both parties typically need to provide:</p>
+<ul>
+<li>National Identity Cards (NID) of bride and groom</li>
+<li>Birth certificates (to confirm age)</li>
+<li>Passport-size photographs</li>
+<li>Divorce certificate (if either party was previously married)</li>
+<li>Death certificate of former spouse (if widowed)</li>
+<li>NID of two witnesses</li>
+<li>Guardian's NID (if bride is under 18 — subject to legal restrictions)</li>
+</ul>
+<p>The Kazi may request additional documents depending on the specific circumstances of the marriage.</p>`,
+            },
+            {
+                h2: 'Role of the Kazi and Marriage Registrar',
+                content: `<p>A Kazi is a licensed official appointed by the government under the Muslim Marriages and Divorces (Registration) Act 1974. They are responsible for:</p>
+<ul>
+<li>Verifying the identity and legal eligibility of both parties</li>
+<li>Officiating the nikah ceremony</li>
+<li>Completing and signing the Kabinnama register</li>
+<li>Maintaining the marriage register and issuing certified copies</li>
+</ul>
+<p>Using an unlicensed Kazi or failing to register the marriage creates legal problems — particularly for the wife — as an unregistered marriage is harder to prove in court for maintenance, divorce, or inheritance claims.</p>`,
+            },
+            {
+                h2: 'Void and Voidable Marriages Under Bangladesh Law',
+                content: `<p>Under Muslim personal law, certain marriages are void (they never had legal effect) and others are voidable (they can be annulled):</p>
+<ul>
+<li><strong>Void marriages:</strong> Marriages within prohibited degrees of relationship; marriage with a woman still in her iddat period; a Muslim man marrying more than four wives simultaneously.</li>
+<li><strong>Voidable marriages:</strong> Marriage without the bride's free consent; marriage of a minor.</li>
+</ul>
+<p>A void marriage cannot be ratified; children of such a marriage may still have inheritance rights under certain interpretations. Voidable marriages can be avoided (cancelled) by the aggrieved party through legal proceedings.</p>`,
+            },
+            {
+                h2: 'Legal Benefits of a Registered Marriage',
+                content: `<p>Registering your marriage in Bangladesh provides critical legal protections:</p>
+<ul>
+<li>The wife can claim her full mahr (dower) on paper rather than relying on oral testimony</li>
+<li>Either party can easily prove the marriage for court proceedings, visa applications, and inheritance</li>
+<li>Children of the marriage have clear legitimate status</li>
+<li>Divorce proceedings are simplified when the marriage is registered</li>
+<li>Overseas visa applications for spousal accompanying require a registered marriage certificate</li>
+</ul>
+<p>Never overlook marriage registration. If your marriage was conducted without proper registration, a lawyer can advise on options to regularise the record.</p>`,
+            },
+        ],
+        faqs: [
+            { question: 'Is a marriage valid in Bangladesh without a Kazi?', answer: 'A nikah performed before witnesses is Islamically valid but legally unregistered. Without Kabinnama registration, proving the marriage in court or for official purposes is much harder.' },
+            { question: 'Can two people of different religions marry in Bangladesh?', answer: 'It is legally complex. There is no general civil marriage law in Bangladesh for inter-faith couples. Legal advice specific to your situation is strongly recommended.' },
+            { question: 'What is the minimum age for marriage in Bangladesh?', answer: 'Under the Child Marriage Restraint Act 2017, the minimum age is 18 for females and 21 for males, with some legal nuances in exceptional circumstances.' },
+            { question: 'Can a married person get married again in Bangladesh?', answer: 'A Muslim man may marry up to four wives with prior written permission from the first wife and the Union Parishad chairman under the MFLO 1961. A second marriage without permission is an offence.' },
+            { question: 'How do I get a copy of my Kabinnama if I lost it?', answer: 'Contact the Kazi who performed the nikah. They maintain registers and can issue a certified copy. If the Kazi is unavailable, the district marriage registrar may have records.' },
+            { question: 'Can we do court marriage without family consent?', answer: 'Adults can legally marry without parental consent in Bangladesh. However, the Kazi will verify ages and may ask questions to ensure consent is free.' },
+            { question: 'Is a marriage abroad recognised in Bangladesh?', answer: 'Generally yes, if it was validly performed under the law of the country where it took place and is consistent with Bangladesh public policy.' },
+            { question: 'What is the mahr and does it have to be paid immediately?', answer: 'Mahr is the wife\'s financial right specified in the Kabinnama. It can be prompt (payable immediately) or deferred (payable on demand or divorce).' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Divorce Lawyer Uttara', to: '/divorce-lawyer-uttara' },
+            { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
+        ],
+    },
+
+    /* ── 9 ── */
+    {
+        slug: 'wife-rights-after-divorce-bangladesh',
+        title: 'Wife\'s Legal Rights After Divorce in Bangladesh',
+        category: 'Family Law',
+        readTime: '7 min read',
+        metaTitle: "Wife's Rights After Divorce in Bangladesh – Legal Guide",
+        metaDescription: "A divorced wife's rights in Bangladesh — mahr, maintenance, child custody, property, and how to enforce these rights through the Family Court.",
+        keywords: ["wife rights after divorce Bangladesh", "divorced woman rights Bangladesh", "maintenance after divorce Bangladesh", "mahr Bangladesh", "iddat maintenance Bangladesh", "divorce lawyer Dhaka", "Family Court Bangladesh", "women's rights Bangladesh law"],
+        publishedDate: PUBLISHED,
+        heroIntro: 'Divorce can leave a woman financially vulnerable and uncertain about her legal standing. Understanding what rights a wife retains after divorce in Bangladesh — from mahr and maintenance to custody and property — is essential for protecting yourself and your children.',
+        toc: [
+            'Overview of a Divorced Wife\'s Rights',
+            'Right to Mahr (Dower)',
+            'Iddat Maintenance',
+            'Longer-Term Maintenance Rights',
+            'Child Custody and Child Maintenance',
+            'Matrimonial Property Rights',
+            'Right to Remarry',
+            'How to Enforce Your Rights Through Court',
+        ],
+        sections: [
+            {
+                h2: "Overview of a Divorced Wife's Rights",
+                content: `<p>Under Bangladesh law, a divorced Muslim wife has several important financial and custodial rights that her husband cannot simply ignore. These rights arise from the marriage contract (Kabinnama), Islamic personal law, the Muslim Family Laws Ordinance 1961, and Family Court jurisdiction.</p>
+<p>Many women are unaware of these rights or are discouraged from asserting them. Legal advice from a <a href="/divorce-lawyer-uttara" style="color:var(--accent)">family lawyer in Dhaka or Uttara</a> can help you understand and enforce every right you are entitled to — without fear or pressure.</p>`,
+            },
+            {
+                h2: 'Right to Mahr (Dower)',
+                content: `<p>Mahr is the most fundamental financial right of a Muslim wife. It is stated in the Kabinnama (marriage contract) as either prompt (mu'ajjal) or deferred (mu'wajjal). Upon divorce:</p>
+<ul>
+<li><strong>Prompt mahr</strong> is immediately payable if not already paid.</li>
+<li><strong>Deferred mahr</strong> becomes due upon demand or upon divorce — whichever comes first.</li>
+</ul>
+<p>The wife can sue in Family Court for recovery of mahr. The court will enforce the Kabinnama and order payment. In a khula divorce where the wife initiates the divorce, she may waive part or all of her mahr as consideration for the divorce — but this must be done voluntarily, not under duress.</p>`,
+            },
+            {
+                h2: 'Iddat Maintenance',
+                content: `<p>After divorce, a Muslim wife is entitled to <strong>iddat maintenance</strong> for the period of iddat — approximately three menstrual cycles (or until delivery if pregnant). During this period:</p>
+<ul>
+<li>The husband must provide full financial maintenance (food, shelter, clothing)</li>
+<li>The wife may live in the matrimonial home during iddat if she chooses</li>
+<li>If the wife is pregnant, maintenance continues until delivery</li>
+</ul>
+<p>Failure to pay iddat maintenance is enforceable by Family Court order. The court can direct payment of arrears plus ongoing maintenance.</p>`,
+            },
+            {
+                h2: 'Longer-Term Maintenance Rights',
+                content: `<p>After iddat, a Muslim wife's right to maintenance from her ex-husband generally ends under classical Islamic law — unless the Kabinnama specified longer maintenance rights or the wife has special circumstances.</p>
+<p>However, Bangladesh Family Courts have shown increasing willingness to award post-iddat maintenance where the wife is in financial hardship and has no independent income, particularly where she has been out of the workforce to care for children. This area of law is evolving through court decisions and policy reforms.</p>
+<p>A woman who earns below subsistence level after divorce should consult a <a href="/divorce-lawyer-uttara" style="color:var(--accent)">divorce lawyer in Dhaka</a> to explore all available remedies.</p>`,
+            },
+            {
+                h2: 'Child Custody and Child Maintenance',
+                content: `<p>Divorce does not affect a mother's right to <strong>hizanat</strong> (primary custody) of young children. The mother retains custody of young children regardless of divorce, subject to the welfare principle applied by courts.</p>
+<p>Crucially, <strong>child maintenance</strong> is always the father's financial obligation — regardless of who has custody. The Family Court can determine a specific monthly amount of child maintenance. Key points:</p>
+<ul>
+<li>Maintenance must cover food, clothing, education, healthcare, and shelter</li>
+<li>The amount can be revised by court order as circumstances change</li>
+<li>Failure to pay maintenance is enforceable by the court</li>
+</ul>`,
+            },
+            {
+                h2: 'Matrimonial Property Rights',
+                content: `<p>Bangladesh does not have a community of property system (unlike some Western jurisdictions). Each spouse retains individually owned property. However:</p>
+<ul>
+<li>Property <strong>registered in the wife's name</strong> remains hers after divorce</li>
+<li>Joint investments or business assets may require a civil suit for partition</li>
+<li>Bride's <strong>dowry (stridhan)</strong> — jewellery and gifts received at marriage — is the wife's personal property and must be returned</li>
+<li>If the husband owes money under the Kabinnama, the wife can sue for that amount</li>
+</ul>
+<p>Domestic violence-related property claims may also arise under the Domestic Violence (Prevention and Protection) Act 2010.</p>`,
+            },
+            {
+                h2: 'Right to Remarry',
+                content: `<p>A divorced Muslim woman has a full right to remarry after her iddat period ends (approximately 3 months after divorce). There is no legal prohibition on remarriage after iddat. The woman should:</p>
+<ul>
+<li>Obtain a certified copy of the divorce certificate from the Union Parishad Chairman</li>
+<li>Ensure the divorce was properly completed under the MFLO 1961 (full 90-day period)</li>
+<li>Have this certificate available for the new Kabinnama registration</li>
+</ul>
+<p>Remarriage without a valid divorce certificate — or before iddat ends — creates legal complications and voidability issues.</p>`,
+            },
+            {
+                h2: 'How to Enforce Your Rights Through Court',
+                content: `<p>If your ex-husband refuses to pay mahr, maintenance, or return your stridhan, you can enforce your rights through the <strong>Family Court</strong>. The process involves:</p>
+<ol>
+<li>Filing a plaint (suit) in Family Court with the help of a lawyer</li>
+<li>Seeking an interim order for immediate maintenance if you are in financial difficulty</li>
+<li>Presenting your Kabinnama, divorce certificate, and other supporting documents</li>
+<li>The court orders payment; non-compliance can lead to the husband's arrest for contempt</li>
+</ol>
+<p>Do not accept verbal promises — get everything in writing and enforce through proper legal channels. Contact a <a href="/divorce-lawyer-uttara" style="color:var(--accent)">family law expert in Uttara or Dhaka</a> for immediate assistance.</p>`,
+            },
+        ],
+        faqs: [
+            { question: 'How long does a wife have to claim mahr after divorce?', answer: 'There is no specific limitation period under personal law, but court suits are generally subject to the Limitation Act. It is best to claim promptly after divorce.' },
+            { question: 'Can a husband refuse to pay mahr?', answer: 'No. Mahr is a legally enforceable right. A divorced wife can sue in Family Court and obtain a decree for payment.' },
+            { question: 'Does a wife get any share of the husband\'s property after divorce?', answer: 'Not automatically. Bangladesh does not have community property law. However, dowry gifts (stridhan) and any assets in the wife\'s name belong to her.' },
+            { question: 'What is the iddat period after divorce in Bangladesh?', answer: 'Approximately three menstrual cycles, or around 90 days. If the wife is pregnant, iddat extends until delivery.' },
+            { question: 'Can a wife claim maintenance after iddat in Bangladesh?', answer: 'Under classical law, maintenance ends after iddat. However, child maintenance from the father continues indefinitely. Post-iddat spousal maintenance awards are possible in some circumstances.' },
+            { question: 'Who pays for children\'s education after divorce?', answer: 'The father is responsible for child maintenance including education costs, regardless of who has custody.' },
+            { question: 'Can I take my children abroad after divorce?', answer: 'Only with the other parent\'s consent or a court order. Unauthorised removal of children from Bangladesh is unlawful.' },
+            { question: 'What happens if my husband ignores a court maintenance order?', answer: 'He can be held in contempt of court, which may result in monetary penalties or imprisonment until the order is complied with.' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Divorce Lawyer Uttara', to: '/divorce-lawyer-uttara' },
+            { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
+            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-uttara' },
+        ],
+    },
+
+    /* ── 10 ── */
+    {
+        slug: 'mutation-process-bangladesh',
+        title: 'Mutation Process (Namjari) in Bangladesh: Step-by-Step Guide',
+        category: 'Property Law',
+        readTime: '7 min read',
+        metaTitle: 'Mutation Process in Bangladesh (Namjari) – Step-by-Step Guide',
+        metaDescription: 'Learn the land mutation (namjari) process in Bangladesh — required documents, steps, fees, and common pitfalls explained by Advocate Md. Shah Alam, Dhaka.',
+        keywords: ['mutation process Bangladesh', 'namjari Bangladesh', 'land mutation Dhaka', 'how to do mutation Bangladesh', 'land record update Bangladesh', 'property lawyer Dhaka', 'DCO office Bangladesh', 'land transfer Bangladesh'],
+        publishedDate: PUBLISHED,
+        heroIntro: 'After purchasing or inheriting land in Bangladesh, updating the land record in your name — a process called mutation or namjari — is one of the most important legal steps you can take. Without mutation, your ownership is not properly reflected in government records.',
+        toc: [
+            'What Is Mutation (Namjari)?',
+            'Why Mutation Is Important',
+            'Types of Mutation in Bangladesh',
+            'Step-by-Step Mutation Procedure',
+            'Documents Required for Mutation',
+            'Fees and Timelines',
+            'Common Problems and How to Avoid Them',
+            'What to Do If Mutation Is Refused',
+        ],
+        sections: [
+            {
+                h2: 'What Is Mutation (Namjari)?',
+                content: `<p>Mutation (known as <strong>namjari</strong> in Bangla) is the process of updating the land revenue records (khatian) in your name after you have acquired land through purchase, inheritance, gift, or court decree. It is administered by the Union Land Office (under the Assistant Commissioner of Land / ACL) at the local level.</p>
+<p>Mutation creates a new khatian entry in your name, replacing or modifying the previous owner's record. This is the government's official recognition of your ownership in the land revenue register.</p>`,
+            },
+            {
+                h2: 'Why Mutation Is Important',
+                content: `<p>Mutation is not just a formality — it has major practical and legal consequences:</p>
+<ul>
+<li>Without mutation, your name does not appear in government land records as owner.</li>
+<li>You cannot pay land revenue (khajna) in your own name, which affects your standing as owner.</li>
+<li>Banks require a mutated khatian for mortgage or loan purposes.</li>
+<li>Further sale or transfer of the land requires a clear mutation record.</li>
+<li>In court cases, the mutated record is powerful evidence of ownership.</li>
+</ul>
+<p>Delay in mutation can create complications — especially if a third party attempts to fraudulently mutate the land in their own name. For complex mutation cases, consult a <a href="/land-property-lawyer-uttara" style="color:var(--accent)">land lawyer in Uttara or Dhaka</a>.</p>`,
+            },
+            {
+                h2: 'Types of Mutation in Bangladesh',
+                content: `<p>Mutation can arise from:</p>
+<ul>
+<li><strong>Sale mutation:</strong> After purchasing land through a registered deed.</li>
+<li><strong>Inheritance mutation:</strong> After the death of a landowner, heirs mutate land in their names based on inheritance shares.</li>
+<li><strong>Gift mutation:</strong> After a valid heba or gift of land.</li>
+<li><strong>Court decree mutation:</strong> Following a court order declaring ownership (e.g., after a title suit).</li>
+<li><strong>Partition mutation:</strong> After a partition suit divides jointly owned land.</li>
+</ul>
+<p>The procedure and documents required vary by the type of mutation.</p>`,
+            },
+            {
+                h2: 'Step-by-Step Mutation Procedure',
+                content: `<p>The standard mutation process in Bangladesh involves:</p>
+<ol>
+<li><strong>Visit the Union Land Office</strong> (or AC Land office) for the area where the land is located.</li>
+<li><strong>Submit a mutation application</strong> (namjari darkhast) with all required documents.</li>
+<li>The Land Office issues a <strong>notice</strong> to the previous owner and adjoining plot owners to raise any objections.</li>
+<li>An <strong>inspection/hearing</strong> is held at the local level (tauzi inspection).</li>
+<li>The Assistant Commissioner (Land) reviews the case and, if satisfied, <strong>approves the mutation</strong>.</li>
+<li>A new <strong>khatian</strong> is issued in the applicant's name.</li>
+</ol>
+<p>The process may take 2–6 months. Follow up regularly and use a lawyer if faced with obstruction or delay.</p>`,
+            },
+            {
+                h2: 'Documents Required for Mutation',
+                content: `<p>For a sale mutation, you typically need:</p>
+<ul>
+<li>Certified copy of the registered sale deed</li>
+<li>Previous owner's khatian (CS/SA/RS) and DCR (demand certificate)</li>
+<li>Porcha (land plot information sheet)</li>
+<li>National Identity Card of the applicant</li>
+<li>Up-to-date khajna (revenue) receipt</li>
+<li>Mutation application form (available at the Land Office)</li>
+<li>Court fee stamps (as prescribed)</li>
+</ul>
+<p>For inheritance mutation, add the death certificate of the deceased owner and a legal heirship certificate (obtained from court). A lawyer can help verify you have all documents before submission to avoid rejection.</p>`,
+            },
+            {
+                h2: 'Fees and Timelines',
+                content: `<p>Government fees for mutation are modest — primarily court fee stamps and an inspection fee. The amounts are set by government schedule and are relatively small. Unofficial payments are not required and should be avoided.</p>
+<p>The official processing time is supposed to be completed within a specific number of days under administrative rules, but in practice mutation often takes 2–6 months depending on the complexity and the workload of the local Land Office. Approach a <a href="/land-property-lawyer-uttara" style="color:var(--accent)">property lawyer in Dhaka</a> if the process stalls without explanation.</p>`,
+            },
+            {
+                h2: 'Common Problems and How to Avoid Them',
+                content: `<p>Common reasons mutation is delayed or rejected:</p>
+<ul>
+<li>Incomplete or missing documents</li>
+<li>Objection filed by the previous owner or a third party claiming rival title</li>
+<li>Discrepancy in land area or description between the deed and khatian</li>
+<li>Outstanding khajna (land revenue) dues</li>
+<li>Errors in the registered deed (e.g., incorrect CS/RS plot numbers)</li>
+</ul>
+<p>To avoid these problems, verify all documents with a lawyer before submitting the mutation application. If an objection is filed, you have the right to respond and present your evidence at the AC Land hearing.</p>`,
+            },
+            {
+                h2: 'What to Do If Mutation Is Refused',
+                content: `<p>If the AC Land refuses your mutation application, you can:</p>
+<ol>
+<li>File an appeal to the <strong>Additional Deputy Commissioner (Revenue)</strong> — the first appellate authority.</li>
+<li>Further appeal to the <strong>Revenue Appellate Tribunal</strong> or the <strong>Divisional Commissioner</strong>.</li>
+<li>File a <strong>writ petition</strong> in the High Court Division if the refusal is illegal or arbitrary.</li>
+</ol>
+<p>Do not give up after a refusal from the Land Office. Many such refusals are overturned on appeal when proper documentation and legal argument are presented. Contact a <a href="/land-property-lawyer-uttara" style="color:var(--accent)">land and property lawyer in Dhaka</a> immediately for assistance.</p>`,
+            },
+        ],
+        faqs: [
+            { question: 'Is mutation proof of ownership?', answer: 'Mutation is strong evidence of ownership but is not conclusive. A registered deed and khatian together constitute strong proof. A fraudulent mutation can be challenged in court.' },
+            { question: 'How long does mutation take in Bangladesh?', answer: 'Officially the process should be completed within a set number of days, but in practice it takes 2–6 months. Complex cases or those with objections take longer.' },
+            { question: 'Can someone mutate land in their name fraudulently?', answer: 'Fraudulent mutation does happen. If you discover this, immediately file an objection with the Land Office and consider a legal action for cancellation of mutation and declaration of title.' },
+            { question: 'Do heirs need mutation separately?', answer: 'Yes. When a landowner dies, each heir must have the land mutated in their name to have their share officially recorded. An inheritance mutation is typically done jointly for all heirs at once.' },
+            { question: 'What is the difference between CS, SA, and RS khatian?', answer: 'These are land records from different government survey periods: CS (Cadastral Survey, colonial era), SA (State Acquisition survey, 1950s), and RS (Revisional Survey, more recent). Each shows ownership at that time.' },
+            { question: 'Can I sell land without mutation?', answer: 'Technically possible if you have a registered deed, but buyers and banks typically require a mutated khatian. Mutation significantly simplifies any future sale.' },
+            { question: 'What is DCR in mutation?', answer: 'DCR (Dakhilanama-cum-Receipt) is a document confirming payment of khajna (land revenue). It is required as part of the mutation file.' },
+            { question: 'Do I need a lawyer for mutation?', answer: 'For straightforward cases, you can apply yourself. For cases involving objections, inheritance disputes, or refusals, a land lawyer is strongly recommended.' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Land & Property Lawyer Uttara', to: '/land-property-lawyer-uttara' },
+            { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
+        ],
+    },
+
+    /* ── 11 ── */
+    {
+        slug: 'property-registration-process-bangladesh',
+        title: 'Property Registration Process in Bangladesh: Full Legal Guide',
+        category: 'Property Law',
+        readTime: '8 min read',
+        metaTitle: 'Property Registration Process in Bangladesh – Full Legal Guide',
+        metaDescription: 'Complete guide to property deed registration in Bangladesh — stamp duty, required documents, Sub-Registrar procedure, and how a property lawyer in Dhaka can help.',
+        keywords: ['property registration Bangladesh', 'deed registration Bangladesh', 'stamp duty Bangladesh', 'Sub-Registrar Bangladesh', 'sale deed Bangladesh', 'land lawyer Dhaka', 'property transfer Bangladesh', 'Registration Act Bangladesh'],
+        publishedDate: PUBLISHED,
+        heroIntro: 'Registering a property deed is the final and most critical step in any land or property transaction in Bangladesh. A registered deed is the primary legal evidence of ownership and protects you from future disputes.',
+        toc: [
+            'Why Property Registration Is Mandatory',
+            'Types of Deeds That Must Be Registered',
+            'Stamp Duty in Bangladesh',
+            'Step-by-Step Registration Procedure',
+            'Documents Required for Registration',
+            'Role of the Sub-Registrar',
+            'Common Mistakes to Avoid',
+            'Post-Registration Steps',
+        ],
+        sections: [
+            {
+                h2: 'Why Property Registration Is Mandatory',
+                content: `<p>Under the <strong>Registration Act 1908</strong>, any transaction that transfers or creates an interest in immovable property (land or building) worth more than Tk 100 must be registered. An unregistered deed of sale is invalid as evidence of title in court and cannot be enforced.</p>
+<p>Registration converts a private agreement into a public document permanently recorded in the Sub-Registrar's office. This record is accessible to anyone — which is why it provides a reliable public notice of who owns which property. For expert assistance in Dhaka or Uttara, contact a <a href="/land-property-lawyer-uttara" style="color:var(--accent)">property lawyer in Uttara</a>.</p>`,
+            },
+            {
+                h2: 'Types of Deeds That Must Be Registered',
+                content: `<p>Compulsory registration is required for:</p>
+<ul>
+<li>Sale deeds (baina or kabala)</li>
+<li>Gift deeds (heba)</li>
+<li>Mortgage deeds (baibdak)</li>
+<li>Exchange deeds</li>
+<li>Partition deeds (for family property division)</li>
+<li>Long-term lease deeds (generally over one year)</li>
+<li>Power of Attorney (if relating to land transactions)</li>
+</ul>
+<p>Deeds that do not meet the registration threshold, short-term leases, and wills are exempt from compulsory registration (wills are voluntary).</p>`,
+            },
+            {
+                h2: 'Stamp Duty in Bangladesh',
+                content: `<p>Stamp duty must be paid on a deed before or at the time of registration. In Bangladesh, stamp duty on property sales is calculated based on the <strong>deed value or government circle rate</strong> (whichever is higher), and includes:</p>
+<ul>
+<li><strong>Stamp duty:</strong> Varies by property type and location (urban vs. rural). For Dhaka urban areas this has historically been a percentage of the assessed value.</li>
+<li><strong>Registration fee:</strong> A separate fee payable at the Sub-Registrar office.</li>
+<li><strong>Local government tax:</strong> E.g., Dhaka City Corporation or municipality fees on the deed value.</li>
+</ul>
+<p>Undervaluing a deed to reduce stamp duty is illegal and can result in the deed being impounded and criminal proceedings. Always declare the true value. A <a href="/land-property-lawyer-uttara" style="color:var(--accent)">property lawyer</a> can calculate your precise stamp duty obligation.</p>`,
+            },
+            {
+                h2: 'Step-by-Step Registration Procedure',
+                content: `<p>The standard registration process in Bangladesh:</p>
+<ol>
+<li><strong>Prepare the deed:</strong> Engage a legal drafter (usually a lawyer or licensed deed writer) to prepare the sale deed with all required details.</li>
+<li><strong>Purchase stamp papers:</strong> Buy non-judicial stamp papers of the required value from authorised vendors.</li>
+<li><strong>Print the deed</strong> on the stamp papers.</li>
+<li><strong>Attend the Sub-Registrar office</strong> with all parties (seller, buyer) and two witnesses on the scheduled date.</li>
+<li>The Sub-Registrar verifies identities (NID), reads the deed, and both parties sign/thumb-print before them.</li>
+<li>The Sub-Registrar registers the deed and assigns it a <strong>registration number and volume page</strong>.</li>
+<li>Collect the certified copy of the registered deed. The original (banam dakhil) is returned after registration stamp is affixed.</li>
+</ol>`,
+            },
+            {
+                h2: 'Documents Required for Registration',
+                content: `<p>For a standard property sale, bring:</p>
+<ul>
+<li>Prepared deed on stamp paper</li>
+<li>Previous registered deed / title document of the seller</li>
+<li>Seller's and buyer's National Identity Cards (originals + copies)</li>
+<li>Two witnesses with their NIDs</li>
+<li>Up-to-date khajna (land revenue) receipt</li>
+<li>Mutation record (khatian in seller's name)</li>
+<li>Power of Attorney (if someone is attending on behalf of a party)</li>
+<li>Recent passport-size photographs (seller and buyer)</li>
+<li>Advance Income Tax (AIT) clearance if applicable</li>
+</ul>`,
+            },
+            {
+                h2: 'Role of the Sub-Registrar',
+                content: `<p>The Sub-Registrar is a government official responsible for registering all deeds within their jurisdiction. They do not verify the truth of the claims in a deed — they only authenticate that the parties appeared before them willingly and signed the document. Key points:</p>
+<ul>
+<li>Both parties must appear in person (or through power of attorney) — photo ID is required</li>
+<li>The Sub-Registrar can refuse registration if stamp duty is underpaid or documents are deficient</li>
+<li>Registration creates a publicly searchable permanent record</li>
+</ul>
+<p>Before registration, always verify the seller's title carefully — registered deed does not guarantee good title if the seller was not the true owner.</p>`,
+            },
+            {
+                h2: 'Common Mistakes to Avoid',
+                content: `<p>Errors that delay or invalidate registration:</p>
+<ul>
+<li>Incorrect plot or khatian numbers in the deed</li>
+<li>Stamp duty undervaluation (can lead to deed impounding)</li>
+<li>Missing or expired documents on registration day</li>
+<li>Failure to have witnesses present</li>
+<li>Not verifying the seller's chain of title before registration</li>
+<li>Buying without confirming mutation is in the seller's name</li>
+</ul>
+<p>An experienced <a href="/land-property-lawyer-uttara" style="color:var(--accent)">property lawyer in Dhaka</a> can conduct due diligence, prepare a legally sound deed, and accompany you to the Sub-Registrar office to avoid all these pitfalls.</p>`,
+            },
+            {
+                h2: 'Post-Registration Steps',
+                content: `<p>Registration of the deed is not the end of the process. After registration you should:</p>
+<ol>
+<li>Apply for <strong>mutation (namjari)</strong> at the Union Land Office to update the khatian in your name.</li>
+<li>Obtain an up-to-date <strong>khajna receipt</strong> in your name to prove you are the revenue-paying owner.</li>
+<li>Update all other records — for urban properties, update the holding tax record at the City Corporation or municipality.</li>
+<li>Store your registered deed, mutation khatian, and khajna receipts safely — ideally both physical and scanned copies.</li>
+</ol>
+<p>For high-value properties, consider having your title verified by a <a href="/supreme-court-lawyer-bangladesh" style="color:var(--accent)">Supreme Court advocate specialising in property law</a> before and after registration.</p>`,
+            },
+        ],
+        faqs: [
+            { question: 'Is a sale agreement (baina) the same as registration?', answer: 'No. A baina (agreement to sell) is a pre-registration contract. The actual registered sale deed must be executed and registered for legal transfer of title.' },
+            { question: 'What happens if I buy without registering the deed?', answer: 'An unregistered deed cannot be used as evidence of title in court. You may lose the land to a subsequent registered buyer or face title disputes.' },
+            { question: 'How much stamp duty do I pay for property in Dhaka?', answer: 'Stamp duty varies by area and property value. For Dhaka urban properties it can be a significant percentage of the declared value. Consult a property lawyer for the current rates.' },
+            { question: 'Can someone forge a registered deed?', answer: 'Forging a registered deed is a serious criminal offence. Registration records are maintained centrally and any forgery can be detected and challenged through court.' },
+            { question: 'How do I search property records before purchase?', answer: 'You can search Sub-Registrar records by deed number or party name. A lawyer can conduct a thorough title search on your behalf before you commit to a purchase.' },
+            { question: 'Can I register a deed online in Bangladesh?', answer: 'Bangladesh is piloting e-registration in some areas. As of 2026, physical attendance at the Sub-Registrar office is still generally required.' },
+            { question: 'What is Power of Attorney in property registration?', answer: 'If a party cannot attend in person, they may give a notarised Power of Attorney to a representative to sign the deed and attend registration on their behalf.' },
+            { question: 'Do I need a lawyer for property registration?', answer: 'Legally not mandatory, but strongly recommended. A lawyer drafts a sound deed, verifies the title, calculates stamp duty accurately, and avoids common costly errors.' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Land & Property Lawyer Uttara', to: '/land-property-lawyer-uttara' },
+            { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
+            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-uttara' },
+        ],
+    },
+
+    /* ── 12 ── */
+    {
+        slug: 'fir-after-what-to-do-bangladesh',
+        title: 'FIR Filed Against You in Bangladesh: What to Do Next',
+        category: 'Criminal Law',
+        readTime: '7 min read',
+        metaTitle: 'FIR Filed Against You in Bangladesh – What to Do Next',
+        metaDescription: 'If an FIR has been filed against you in Bangladesh, know your rights, when to get bail, how to challenge a false FIR, and how a criminal lawyer in Dhaka can help.',
+        keywords: ['FIR Bangladesh', 'First Information Report Bangladesh', 'false FIR Bangladesh', 'FIR filed against me Bangladesh', 'criminal lawyer Dhaka', 'bail after FIR Bangladesh', 'quash FIR Bangladesh', 'police complaint Bangladesh'],
+        publishedDate: PUBLISHED,
+        heroIntro: 'Finding out that a First Information Report (FIR) has been lodged against you in Bangladesh is alarming. How you respond in the hours and days immediately after can significantly affect the outcome of the case.',
+        toc: [
+            'What Is an FIR and When Is It Filed?',
+            'Your Legal Rights After an FIR',
+            'Immediate Steps to Take',
+            'When Should You Seek Bail?',
+            'Can a False FIR Be Challenged?',
+            'How Police Investigation Proceeds After FIR',
+            'Charge Sheet and Cognisance by Court',
+            'Building Your Defence Early',
+        ],
+        sections: [
+            {
+                h2: 'What Is an FIR and When Is It Filed?',
+                content: `<p>An FIR (First Information Report) is a formal complaint lodged with the police that triggers a criminal investigation. Under the <strong>Code of Criminal Procedure 1898</strong>, a police officer must register an FIR when a cognisable offence (an offence for which police can arrest without warrant) is reported.</p>
+<p>An FIR is filed by the complainant (the person who alleges the crime) at the concerned police station. This sets the criminal law machinery in motion — the police are then obligated to investigate. Importantly, an FIR is only the starting point of an investigation; it is not proof of guilt. If an FIR has been filed against you in Dhaka or elsewhere, immediately contact a <a href="/criminal-lawyer-uttara" style="color:var(--accent)">criminal lawyer in Uttara or Dhaka</a>.</p>`,
+            },
+            {
+                h2: 'Your Legal Rights After an FIR',
+                content: `<p>Even after an FIR is lodged against you, you retain fundamental constitutional and legal rights:</p>
+<ul>
+<li><strong>Right to know the charges:</strong> You are entitled to know what offence you are accused of.</li>
+<li><strong>Right to legal representation:</strong> You have the right to engage and consult a lawyer at every stage of the process.</li>
+<li><strong>Right against self-incrimination:</strong> You cannot be compelled to be a witness against yourself (Article 35(4), Constitution of Bangladesh).</li>
+<li><strong>Right to bail:</strong> For bailable offences, bail is automatic. For non-bailable offences, you can apply to the court.</li>
+<li><strong>Right to fair trial:</strong> You are presumed innocent until proven guilty by a competent court.</li>
+</ul>`,
+            },
+            {
+                h2: 'Immediate Steps to Take',
+                content: `<p>If you learn that an FIR has been filed against you, immediately:</p>
+<ol>
+<li><strong>Engage a lawyer</strong> — this is the single most important step. A criminal lawyer will advise you on your specific situation within hours.</li>
+<li><strong>Do not approach the complainant</strong> — any contact can be misinterpreted as witness tampering.</li>
+<li><strong>Secure your documents:</strong> Preserve any evidence that supports your innocence — messages, receipts, CCTV footage, witnesses.</li>
+<li><strong>Apply for anticipatory bail</strong> if you fear arrest — especially in non-bailable cases.</li>
+<li>Do <strong>not</strong> make public statements about the case on social media.</li>
+</ol>
+<p>Acting quickly and calmly is essential. Panicking or making hasty decisions can worsen your situation.</p>`,
+            },
+            {
+                h2: 'When Should You Seek Bail?',
+                content: `<p>Bail strategy depends on whether the offence in the FIR is bailable or non-bailable:</p>
+<ul>
+<li><strong>Bailable offence:</strong> You are entitled to bail. If arrested, the police must release you on bail. If they do not, apply immediately to the Magistrate Court.</li>
+<li><strong>Non-bailable offence:</strong> Bail is discretionary. Apply to the Magistrate or Sessions Court. If refused, apply to the High Court Division.</li>
+<li><strong>Anticipatory bail:</strong> If you have not yet been arrested, apply to the Sessions Court or High Court for anticipatory bail protection before any arrest occurs.</li>
+</ul>
+<p>A <a href="/bail-lawyer-dhaka" style="color:var(--accent)">bail lawyer in Dhaka</a> can file bail applications with urgency and argue your case effectively before the court.</p>`,
+            },
+            {
+                h2: 'Can a False FIR Be Challenged?',
+                content: `<p>Yes. If an FIR has been filed falsely or maliciously, there are legal remedies:</p>
+<ul>
+<li><strong>Anticipatory bail application:</strong> Raises the issue of false FIR as a ground before the court.</li>
+<li><strong>Writ petition (High Court Division):</strong> You can petition the High Court to quash (cancel) the FIR if it is frivolous, motivated by malice, or does not disclose a cognisable offence on its face.</li>
+<li><strong>Counter-complaint:</strong> If the FIR is made maliciously, you may have grounds to file a counter-complaint for filing a false report under Section 211 of the Penal Code.</li>
+</ul>
+<p>Courts in Bangladesh are vigilant against misuse of criminal process. A well-argued quashing petition can terminate a false case before it reaches trial.</p>`,
+            },
+            {
+                h2: 'How Police Investigation Proceeds After FIR',
+                content: `<p>After an FIR is registered, the police officer in charge investigates:</p>
+<ul>
+<li>Visits the scene (if relevant) and collects physical evidence</li>
+<li>Records statements from the complainant, witnesses, and (voluntarily) the accused</li>
+<li>May arrest the accused (in a cognisable case) and apply for remand for interrogation</li>
+<li>Prepares the investigation report</li>
+</ul>
+<p>During investigation, you are not required to make any statement to police without your lawyer present. Exercise this right. Anything you say voluntarily to police may be used against you. For remand hearings, an experienced <a href="/criminal-lawyer-uttara" style="color:var(--accent)">criminal lawyer</a> will oppose unnecessarily long remand periods.</p>`,
+            },
+            {
+                h2: 'Charge Sheet and Cognisance by Court',
+                content: `<p>Once the investigation is complete (typically within a prescribed period), the Investigating Officer submits either:</p>
+<ul>
+<li><strong>Charge Sheet (accusation report):</strong> Recommends prosecution of the accused. The Magistrate then takes cognisance of the offence and the case proceeds to trial.</li>
+<li><strong>Final Report (acquittal report):</strong> Recommends no action, usually when evidence is insufficient. The case may close, though the complainant can challenge this.</li>
+</ul>
+<p>After a charge sheet is filed, the accused must appear before the Magistrate. Your lawyer will handle all court appearances and interlocutory applications (bail renewal, discharge etc.) on your behalf.</p>`,
+            },
+            {
+                h2: 'Building Your Defence Early',
+                content: `<p>The earlier you start building your defence, the stronger it will be. From the moment you learn of the FIR:</p>
+<ul>
+<li>Identify and preserve all relevant evidence supporting your innocence</li>
+<li>Ensure alibi witnesses are available and their accounts are documented</li>
+<li>Obtain CCTV footage, call records, or digital evidence before it is lost</li>
+<li>Brief your lawyer fully and frankly — lawyer-client communications are privileged</li>
+</ul>
+<p>If the matter may involve the <a href="/supreme-court-lawyer-bangladesh" style="color:var(--accent)">High Court or Supreme Court</a>, engage a lawyer who practices at those levels. An FIR is the start of a process — with the right legal support, many such cases are resolved or dismissed long before reaching trial.</p>`,
+            },
+        ],
+        faqs: [
+            { question: 'Can police arrest me without a warrant after an FIR?', answer: 'In cognisable offences (serious crimes), yes — police can arrest without a warrant. In non-cognisable offences, they need a Magistrate\'s warrant.' },
+            { question: 'Do I have to answer police questions after an FIR?', answer: 'You may be called for questioning but you are not obligated to make any self-incriminating statement. Always have your lawyer present during any questioning.' },
+            { question: 'How do I find out if an FIR has been filed against me?', answer: 'Your lawyer can check with the concerned police station through official channels. An FIR is a public document once registered.' },
+            { question: 'Can an FIR be cancelled or withdrawn?', answer: 'The complainant can seek to withdraw the FIR, but police are not bound to stop investigation. A High Court quashing petition is the most reliable route to cancel a false FIR.' },
+            { question: 'What is remand and can I oppose it?', answer: 'Remand is police custody for investigation. Your lawyer can oppose remand applications before the Magistrate and argue for limiting or refusing remand.' },
+            { question: 'How long can police keep me in custody after FIR arrest?', answer: 'Police can detain you for up to 24 hours and must produce you before a Magistrate. The Magistrate can then grant judicial custody or remand.' },
+            { question: 'What happens if I am falsely accused?', answer: 'A lawyer can immediately apply for anticipatory bail, oppose remand, and file a writ petition to quash the FIR. You may also file a counter-complaint for false accusation.' },
+            { question: 'Should I negotiate with the complainant directly?', answer: 'Never negotiate directly without your lawyer\'s guidance. Any direct contact risks being portrayed as pressure or inducement, which can weaken your case.' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-uttara' },
+            { text: 'Bail Lawyer Dhaka', to: '/bail-lawyer-dhaka' },
+            { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
+        ],
+    },
 ];
 
 export default posts;
+
