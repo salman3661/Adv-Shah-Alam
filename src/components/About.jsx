@@ -25,7 +25,7 @@ const AnimatedCounter = ({ value, suffix }) => {
 
 const About = () => {
     const stats = [
-        { icon: Clock, value: 20, suffix: '+', label: 'Years Experience' },
+        { icon: Clock, value: 7, suffix: '+', label: 'Years Experience' },
         { icon: Scale, value: 5000, suffix: '+', label: 'Cases Handled' },
         { icon: Trophy, value: 95, suffix: '%', label: 'Success Rate' },
         { icon: Users, value: 3000, suffix: '+', label: 'Happy Clients' },

@@ -1,8 +1,7 @@
 import React from 'react';
 import { Phone } from 'lucide-react';
 
-// No Framer Motion slide-in — renders immediately at bottom to prevent
-// the 1.2-second slide-up 'pop' that caused layout reflow on first paint.
+// Static render — no entrance animation, no pulse ring.
 const MobileCallButton = () => {
     return (
         <a
@@ -11,14 +10,7 @@ const MobileCallButton = () => {
             style={{ background: 'var(--btn-primary-bg)' }}
             aria-label="Call Advocate Md. Shah Alam"
         >
-            {/* Pulse ring */}
-            <span className="relative flex items-center justify-center w-6 h-6">
-                <span
-                    className="absolute inline-flex h-full w-full rounded-full animate-ping opacity-40"
-                    style={{ background: 'rgba(255,255,255,0.5)' }}
-                />
-                <Phone size={16} className="relative text-white" />
-            </span>
+            <Phone size={16} className="text-white" />
             Call Advocate Shah Alam
         </a>
     );

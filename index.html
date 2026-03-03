@@ -6,6 +6,24 @@
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- Anti-FOUC: set theme BEFORE any paint — runs before fonts/styles load -->
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem('theme');
+        var systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var isDark = stored ? stored === 'dark' : systemDark;
+        var theme = isDark ? 'dark' : 'light';
+        document.documentElement.classList.add('no-theme-transition');
+        document.documentElement.setAttribute('data-theme', theme);
+        document.documentElement.classList.toggle('dark', isDark);
+        requestAnimationFrame(function () {
+          document.documentElement.classList.remove('no-theme-transition');
+        });
+      } catch (e) { }
+    })();
+  </script>
+
   <!-- Preload LCP hero image — browser fetches before JS executes -->
   <link rel="preload" as="image" href="/images/hero/hero-md-shah-alam.webp" type="image/webp" />
 
@@ -152,30 +170,6 @@
 </head>
 
 <body>
-  <!-- Anti-FOUC: set theme on body+html BEFORE React renders — zero flash -->
-  <script>
-    (function () {
-      try {
-        var stored = localStorage.getItem('theme');
-        var systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-        var isDark = stored ? stored === 'dark' : systemDark;
-        var theme = isDark ? 'dark' : 'light';
-
-        // Kill transitions for first paint only
-        document.documentElement.classList.add('no-theme-transition');
-
-        // Apply to both elements — must match what ThemeContext does
-        document.documentElement.setAttribute('data-theme', theme);
-        document.body.setAttribute('data-theme', theme);
-        if (isDark) document.documentElement.classList.add('dark');
-
-        // Re-enable transitions after the first frame
-        requestAnimationFrame(function () {
-          document.documentElement.classList.remove('no-theme-transition');
-        });
-      } catch (e) { }
-    })();
-  </script>
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
 </body>
