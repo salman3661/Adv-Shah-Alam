@@ -141,4 +141,86 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Bangla Blog Listing -->
+  <url>
+    <loc>https://www.advmdshahalam.me/bn/blog</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Bangla Blog Posts -->
+  <url>
+    <loc>https://www.advmdshahalam.me/bn/blog/bail-process-bangladesh-bn</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.advmdshahalam.me/bn/blog/divorce-procedure-bangladesh-bn</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.advmdshahalam.me/bn/blog/land-dispute-case-bangladesh-bn</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.advmdshahalam.me/bn/blog/income-tax-case-procedure-bangladesh-bn</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.advmdshahalam.me/bn/blog/cheque-dishonour-case-law-bangladesh-bn</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.advmdshahalam.me/bn/blog/child-custody-law-bangladesh-bn</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.advmdshahalam.me/bn/blog/anticipatory-bail-bangladesh-bn</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.advmdshahalam.me/bn/blog/court-marriage-procedure-bangladesh-bn</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.advmdshahalam.me/bn/blog/fir-filing-process-bangladesh-bn</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.advmdshahalam.me/bn/blog/property-registration-process-bangladesh-bn</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.advmdshahalam.me/bn/blog/land-mutation-procedure-bangladesh-bn</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.advmdshahalam.me/bn/blog/criminal-defence-strategy-bangladesh-bn</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>

@@ -12,6 +12,8 @@ import Home from './pages/Home';
 const Education = lazy(() => import('./pages/Education'));
 const Blog = lazy(() => import('./pages/Blog'));
 const BlogPost = lazy(() => import('./pages/BlogPost'));
+const BlogBn = lazy(() => import('./pages/BlogBn'));
+const BlogPostBn = lazy(() => import('./pages/BlogPostBn'));
 const CriminalLawyer = lazy(() => import('./pages/services/CriminalLawyer'));
 const DivorceLawyer = lazy(() => import('./pages/services/DivorceLawyer'));
 const LandLawyer = lazy(() => import('./pages/services/LandLawyer'));
@@ -55,6 +57,10 @@ function App() {
                 {/* Blog */}
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/blog/:slug" element={<BlogPost />} />
+
+                {/* Bangla Blog */}
+                <Route path="/bn/blog" element={<BlogBn />} />
+                <Route path="/bn/blog/:slug" element={<BlogPostBn />} />
               </Routes>
             </Suspense>
           </Layout>

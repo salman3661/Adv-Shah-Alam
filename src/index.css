@@ -454,7 +454,7 @@ body[data-theme="dark"] .status-current {
 
   /* Reserve bottom space so fixed call bar never hides scrollable content */
   body {
-    padding-bottom: 68px;
+    padding-bottom: 90px;
   }
 
   /* Reserve top space so the floating pill nav never covers the hero */
@@ -471,11 +471,11 @@ body[data-theme="dark"] .status-current {
     z-index: 1000;
   }
 
-  /* Lift WhatsApp button above the call bar (68px bar + 16px gap) */
+  /* Lift WhatsApp button above the call bar (bar height ~60px + 50px gap) */
   .whatsapp-float {
     position: fixed;
     right: 16px;
-    bottom: 84px;
+    bottom: 110px;
     z-index: 1100;
   }
 
@@ -483,5 +483,14 @@ body[data-theme="dark"] .status-current {
   .site-header,
   nav[class*="fixed"] {
     z-index: 1200;
+  }
+
+  /* Blog container — consistent padding on narrow screens */
+  .blog-container {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }

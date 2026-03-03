@@ -130,13 +130,24 @@ const BlogPost = () => {
             {/* ── Hero ── */}
             <section className="pt-28 pb-14 relative overflow-hidden" style={{ background: 'var(--hero-bg)' }}>
                 <div className="container mx-auto px-6 max-w-4xl relative z-10">
-                    <Link
-                        to="/blog"
-                        className="inline-flex items-center gap-2 text-sm font-medium opacity-70 hover:opacity-100 mb-6 transition-opacity"
-                        style={{ color: 'var(--hero-text-2)' }}
-                    >
-                        <ArrowLeft size={15} /> Back to Blog
-                    </Link>
+                    <div className="flex items-center justify-between mb-6 flex-wrap gap-3">
+                        <Link
+                            to="/blog"
+                            className="inline-flex items-center gap-2 text-sm font-medium opacity-70 hover:opacity-100 transition-opacity"
+                            style={{ color: 'var(--hero-text-2)' }}
+                        >
+                            <ArrowLeft size={15} /> Back to Blog
+                        </Link>
+                        {post.bnSlug && (
+                            <Link
+                                to={`/bn/blog/${post.bnSlug}`}
+                                className="inline-flex items-center gap-1 text-xs font-semibold px-3 py-1.5 rounded-full border transition-all hover:opacity-80"
+                                style={{ color: 'var(--accent)', borderColor: 'var(--accent)' }}
+                            >
+                                🇧🇩 বাংলায় পড়ুন
+                            </Link>
+                        )}
+                    </div>
                     <div className="flex items-center gap-3 mb-5">
                         <span
                             className="text-xs font-bold px-3 py-1 rounded-full"
