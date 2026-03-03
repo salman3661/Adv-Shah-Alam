@@ -100,7 +100,7 @@ const BlogBn = () => {
             </Helmet>
 
             {/* Hero */}
-            <section className="pt-28 pb-10" style={{ background: 'var(--bg)' }}>
+            <section className="pt-24 md:pt-28 pb-10" style={{ background: 'var(--bg)' }}>
                 <div className="container mx-auto px-6 max-w-4xl text-center">
                     <div
                         className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold mb-5"

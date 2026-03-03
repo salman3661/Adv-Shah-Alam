@@ -104,7 +104,7 @@ const Footer = () => {
                                 <Facebook size={16} className="icon-facebook" />
                             </a>
                         </div>
-                        <a href="https://g.page/r/advmdshahalam" target="_blank" rel="noopener noreferrer"
+                        <a href="https://maps.app.goo.gl/M3NXMwW3xkp2TE3h8" target="_blank" rel="noopener noreferrer"
                             className="inline-flex items-center gap-1.5 text-xs px-3 py-2 rounded-full transition-colors hover:opacity-80"
                             style={{ border: '1px solid var(--card-border)', color: 'var(--text-2)' }}>
                             ⭐ Google Business Profile
@@ -119,13 +119,6 @@ const Footer = () => {
                         <p className="text-xs mb-1" style={{ color: 'var(--text-muted)' }}>
                             © {currentYear} Advocate Md. Shah Alam. All Rights Reserved.
                         </p>
-                        <div className="flex flex-wrap justify-center md:justify-start gap-3 text-xs" style={{ color: 'var(--text-muted)' }}>
-                            <Link to="/privacy" className="hover:underline decoration-dotted">Privacy Policy</Link>
-                            <span>·</span>
-                            <Link to="/sitemap" className="hover:underline decoration-dotted">Sitemap</Link>
-                            <span>·</span>
-                            <Link to="/blog" className="hover:underline decoration-dotted">Blog</Link>
-                        </div>
                     </div>
 
                     <button onClick={toggleTheme}

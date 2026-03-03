@@ -100,7 +100,7 @@ const Blog = () => {
 
             {/* Hero */}
             <section
-                className="pt-28 pb-16 relative overflow-hidden"
+                className="pt-24 md:pt-28 pb-16 relative overflow-hidden"
                 style={{ background: 'var(--hero-bg)' }}
             >
                 <div className="container mx-auto px-6 max-w-5xl relative z-10 text-center">
@@ -121,7 +121,7 @@ const Blog = () => {
             </section>
 
             {/* Filters + Search */}
-            <section className="py-8 sticky top-20 z-30" style={{ background: 'var(--nav-bg)', backdropFilter: 'blur(16px)', borderBottom: '1px solid var(--divider)' }}>
+            <section className="py-4 md:py-6 sticky top-[68px] z-40" style={{ background: 'var(--nav-bg)', backdropFilter: 'blur(16px)', borderBottom: '1px solid var(--divider)' }}>
                 <div className="container mx-auto px-6 max-w-5xl flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between">
                     {/* Category chips */}
                     <div className="flex flex-wrap gap-2">
