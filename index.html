@@ -152,6 +152,20 @@
 </head>
 
 <body>
+  <!-- Anti-FOUC: apply theme BEFORE React renders to prevent flash -->
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem('theme');
+        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var theme = stored || (prefersDark ? 'dark' : 'light');
+        document.body.setAttribute('data-theme', theme);
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark');
+        }
+      } catch (e) {}
+    })();
+  </script>
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
 </body>

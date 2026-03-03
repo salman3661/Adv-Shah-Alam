@@ -99,8 +99,9 @@ const Services = () => {
 
                             <Link to={service.link}
                                 className="inline-flex items-center gap-1.5 text-sm font-semibold hover:gap-2.5 transition-all duration-200"
-                                style={{ color: 'var(--accent)' }}>
-                                Learn More <ArrowRight size={15} />
+                                style={{ color: 'var(--accent)' }}
+                                aria-label={`View details for ${service.title}`}>
+                                Explore Service <ArrowRight size={15} />
                             </Link>
                         </motion.div>
                     ))}

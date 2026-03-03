@@ -194,8 +194,8 @@ const BlogPostBn = () => {
                                         {sec.h2}
                                     </h2>
                                     <div
-                                        className="prose-bn text-base leading-relaxed"
-                                        style={{ color: 'var(--text-secondary)' }}
+                                        className="prose-bn text-base"
+                                        style={{ color: 'var(--text-secondary)', lineHeight: '1.8', wordBreak: 'break-word', overflowWrap: 'anywhere' }}
                                         dangerouslySetInnerHTML={{ __html: sec.content }}
                                     />
                                 </div>
@@ -220,80 +220,82 @@ const BlogPostBn = () => {
                         </div>
 
                         {/* Sidebar */}
-                        <aside className="space-y-6">
-                            {/* CTA */}
-                            <div
-                                className="glass-card p-6 text-center"
-                                style={{ borderRadius: '1rem', borderTop: '3px solid var(--accent)' }}
-                            >
-                                <p className="text-sm font-semibold mb-4" style={{ color: 'var(--text)' }}>
-                                    বিনামূল্যে আইনি পরামর্শ নিন
-                                </p>
-                                <a
-                                    href="tel:+8801312178944"
-                                    className="btn-primary w-full flex items-center justify-center gap-2 mb-3 text-sm"
-                                >
-                                    <Phone size={15} /> এখনই ফোন করুন
-                                </a>
-                                <a
-                                    href="https://wa.me/8801312178944"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="btn-whatsapp w-full flex items-center justify-center gap-2 text-sm"
-                                >
-                                    <MessageCircle size={15} /> WhatsApp
-                                </a>
-                            </div>
-
-                            {/* Related service links */}
-                            {post.relatedServiceLinks && post.relatedServiceLinks.length > 0 && (
+                        <aside className="space-y-6 lg:w-72 shrink-0">
+                            <div className="lg:sticky lg:top-28">
+                                {/* CTA */}
                                 <div
-                                    className="glass-card p-6"
-                                    style={{ borderRadius: '1rem' }}
+                                    className="glass-card p-6 text-center"
+                                    style={{ borderRadius: '1rem', borderTop: '3px solid var(--accent)' }}
                                 >
-                                    <p className="text-xs font-bold uppercase mb-4" style={{ color: 'var(--accent)', letterSpacing: '0.1em' }}>
-                                        সেবা সমূহ
+                                    <p className="text-sm font-semibold mb-4" style={{ color: 'var(--text)' }}>
+                                        বিনামূল্যে আইনি পরামর্শ নিন
                                     </p>
-                                    <div className="space-y-2">
-                                        {post.relatedServiceLinks.map((link, i) => (
-                                            <Link
-                                                key={i}
-                                                to={link.to}
-                                                className="flex items-center gap-2 text-sm py-2 px-3 rounded-lg transition-all hover:bg-opacity-80"
-                                                style={{
-                                                    color: 'var(--text-secondary)',
-                                                    background: 'var(--surface)',
-                                                    borderRadius: '0.5rem',
-                                                }}
-                                            >
-                                                <ExternalLink size={13} style={{ color: 'var(--accent)', flexShrink: 0 }} />
-                                                {link.text}
-                                            </Link>
-                                        ))}
-                                    </div>
+                                    <a
+                                        href="tel:+8801312178944"
+                                        className="btn-primary w-full flex items-center justify-center gap-2 mb-3 text-sm"
+                                    >
+                                        <Phone size={15} /> এখনই ফোন করুন
+                                    </a>
+                                    <a
+                                        href="https://wa.me/8801312178944"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="btn-whatsapp w-full flex items-center justify-center gap-2 text-sm"
+                                    >
+                                        <MessageCircle size={15} /> WhatsApp
+                                    </a>
                                 </div>
-                            )}
 
-                            {/* Related posts */}
-                            {related.length > 0 && (
-                                <div className="glass-card p-6" style={{ borderRadius: '1rem' }}>
-                                    <p className="text-xs font-bold uppercase mb-4" style={{ color: 'var(--accent)', letterSpacing: '0.1em' }}>
-                                        সম্পর্কিত নিবন্ধ
-                                    </p>
-                                    <div className="space-y-3">
-                                        {related.map(r => (
-                                            <Link
-                                                key={r.slug}
-                                                to={`/bn/blog/${r.slug}`}
-                                                className="block text-sm font-medium hover:opacity-80 transition-opacity"
-                                                style={{ color: 'var(--text-secondary)' }}
-                                            >
-                                                → {r.title}
-                                            </Link>
-                                        ))}
+                                {/* Related service links */}
+                                {post.relatedServiceLinks && post.relatedServiceLinks.length > 0 && (
+                                    <div
+                                        className="glass-card p-6"
+                                        style={{ borderRadius: '1rem' }}
+                                    >
+                                        <p className="text-xs font-bold uppercase mb-4" style={{ color: 'var(--accent)', letterSpacing: '0.1em' }}>
+                                            সেবা সমূহ
+                                        </p>
+                                        <div className="space-y-2">
+                                            {post.relatedServiceLinks.map((link, i) => (
+                                                <Link
+                                                    key={i}
+                                                    to={link.to}
+                                                    className="flex items-center gap-2 text-sm py-2 px-3 rounded-lg transition-all hover:bg-opacity-80"
+                                                    style={{
+                                                        color: 'var(--text-secondary)',
+                                                        background: 'var(--surface)',
+                                                        borderRadius: '0.5rem',
+                                                    }}
+                                                >
+                                                    <ExternalLink size={13} style={{ color: 'var(--accent)', flexShrink: 0 }} />
+                                                    {link.text}
+                                                </Link>
+                                            ))}
+                                        </div>
                                     </div>
-                                </div>
-                            )}
+                                )}
+
+                                {/* Related posts */}
+                                {related.length > 0 && (
+                                    <div className="glass-card p-6" style={{ borderRadius: '1rem' }}>
+                                        <p className="text-xs font-bold uppercase mb-4" style={{ color: 'var(--accent)', letterSpacing: '0.1em' }}>
+                                            সম্পর্কিত নিবন্ধ
+                                        </p>
+                                        <div className="space-y-3">
+                                            {related.map(r => (
+                                                <Link
+                                                    key={r.slug}
+                                                    to={`/bn/blog/${r.slug}`}
+                                                    className="block text-sm font-medium hover:opacity-80 transition-opacity"
+                                                    style={{ color: 'var(--text-secondary)' }}
+                                                >
+                                                    → {r.title}
+                                                </Link>
+                                            ))}
+                                        </div>
+                                    </div>
+                                )}
+                            </div>
                         </aside>
                     </div>
                 </div>

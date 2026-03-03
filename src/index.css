@@ -449,37 +449,96 @@ body[data-theme="dark"] .status-current {
 /* ═══════════════════════════════════════════════
    MOBILE OVERLAP FIXES — max-width 768px only
    Desktop layout is NOT affected.
+   CSS variable = single source of truth for bar height.
    ═══════════════════════════════════════════════ */
+
+/* Bangla article typography — improved readability */
+.prose-bn {
+  line-height: 1.8;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.prose-bn p {
+  margin-bottom: 1rem;
+}
+
+.prose-bn ul,
+.prose-bn ol {
+  padding-left: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.prose-bn li {
+  margin-bottom: 0.4rem;
+}
+
+.prose-bn strong {
+  color: var(--text);
+  font-weight: 700;
+}
+
+/* Prose for English posts */
+.prose-content {
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.prose-content p {
+  margin-bottom: 1rem;
+}
+
+.prose-content ul,
+.prose-content ol {
+  padding-left: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.prose-content li {
+  margin-bottom: 0.4rem;
+}
+
+.prose-content strong {
+  color: var(--text);
+  font-weight: 700;
+}
+
 @media (max-width: 768px) {
+
+  /* ─ Single source of truth for the bottom bar height ─ */
+  :root {
+    --mobile-bar-height: 72px;
+  }
 
   /* Reserve bottom space so fixed call bar never hides scrollable content */
   body {
-    padding-bottom: 90px;
+    padding-bottom: calc(var(--mobile-bar-height) + 24px + env(safe-area-inset-bottom, 0px));
   }
 
-  /* Reserve top space so the floating pill nav never covers the hero */
-  main {
-    padding-top: 72px;
-  }
-
-  /* Ensure call bar is always on top */
+  /* Ensure call bar is always on top and respects safe-area */
   .mobile-call-bar {
     position: fixed;
     left: 0;
     right: 0;
     bottom: 0;
+    bottom: env(safe-area-inset-bottom, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
     z-index: 1000;
+    height: var(--mobile-bar-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  /* Lift WhatsApp button above the call bar (bar height ~60px + 50px gap) */
+  /* Lift WhatsApp button above the call bar using the CSS var */
   .whatsapp-float {
     position: fixed;
     right: 16px;
-    bottom: 110px;
+    bottom: calc(var(--mobile-bar-height) + 16px + env(safe-area-inset-bottom, 0px));
     z-index: 1100;
   }
 
-  /* Nav pill always on top of everything */
+  /* Nav always on top of everything */
   .site-header,
   nav[class*="fixed"] {
     z-index: 1200;
@@ -492,5 +551,12 @@ body[data-theme="dark"] .status-current {
     margin-right: auto;
     padding-left: 16px;
     padding-right: 16px;
+  }
+
+  /* Prevent horizontal scroll on mobile */
+  html,
+  body {
+    overflow-x: hidden;
+    max-width: 100vw;
   }
 }
