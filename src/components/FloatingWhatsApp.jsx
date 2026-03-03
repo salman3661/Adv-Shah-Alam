@@ -8,7 +8,7 @@ const FloatingWhatsApp = () => {
             href={waLink()}
             target="_blank"
             rel="noopener noreferrer"
-            className="whatsapp-float w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-200 active:scale-95"
+            className="whatsapp-float w-14 h-14 rounded-full flex items-center justify-center shadow-lg"
             style={{ background: 'var(--wa-green)' }}
             aria-label="Contact via WhatsApp"
         >

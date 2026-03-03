@@ -507,6 +507,40 @@ body[data-theme="dark"] .status-current {
 }
 
 /* ============================================================
+   MICRO-ANIMATIONS — WhatsApp float & Mobile call bar phone icon
+   Pure CSS keyframes only. No layout shift. No z-index / size changes.
+   Suppressed globally by the prefers-reduced-motion block at EOF.
+   ============================================================ */
+
+/* WhatsApp breathing: scale 1 → 1.02 → 1 */
+@keyframes wa-breathe {
+
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.28);
+  }
+
+  50% {
+    transform: scale(1.02);
+    box-shadow: 0 10px 26px rgba(37, 211, 102, 0.38);
+  }
+}
+
+/* Phone icon soft pulse: scale 1 → 1.05 → 1 */
+@keyframes phone-pulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* ============================================================
    Floating WhatsApp + Mobile Call bar positioning
    whatsapp-float is ALWAYS position:fixed — never in document flow.
    Desktop default: right 20px, bottom 24px.
@@ -518,6 +552,40 @@ body[data-theme="dark"] .status-current {
   bottom: 24px;
   z-index: 1100;
   pointer-events: auto;
+  /* Breathing animation — 3 s, ease-in-out, infinite */
+  animation: wa-breathe 3s ease-in-out infinite;
+  /* Smooth hover / active transitions */
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  /* Prevent sub-pixel jitter during animation */
+  will-change: transform, box-shadow;
+}
+
+/* Desktop only: lift on hover */
+@media (hover: hover) and (pointer: fine) {
+  .whatsapp-float:hover {
+    animation-play-state: paused;
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 12px 30px rgba(37, 211, 102, 0.42);
+  }
+}
+
+/* Tap / click feedback */
+.whatsapp-float:active {
+  animation-play-state: paused;
+  transform: scale(0.97);
+  transition-duration: 0.12s;
+}
+
+/* Phone icon inside mobile call bar */
+.phone-icon-animate {
+  display: inline-flex;
+  animation: phone-pulse 2.5s ease-in-out infinite;
+  will-change: transform;
+}
+
+.mobile-call-bar:active .phone-icon-animate {
+  animation-play-state: paused;
+  transform: scale(0.97);
 }
 
 @media (max-width: 768px) {

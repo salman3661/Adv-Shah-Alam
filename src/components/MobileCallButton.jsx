@@ -11,7 +11,7 @@ const MobileCallButton = () => {
             style={{ background: 'var(--btn-primary-bg)' }}
             aria-label="Call Advocate Md. Shah Alam"
         >
-            <Phone size={16} className="text-white" />
+            <span className="phone-icon-animate"><Phone size={16} className="text-white" /></span>
             Call Advocate Shah Alam
         </a>
     );

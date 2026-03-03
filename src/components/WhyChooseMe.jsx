@@ -12,7 +12,7 @@ const WhyChooseMe = () => {
     ];
 
     const stats = [
-        { icon: Award, value: '20+', label: 'Years Experience' },
+        { icon: Award, value: '7+', label: 'Years Experience' },
         { icon: BookOpen, value: 'High', label: 'Success Rate', offset: true },
         { icon: Users, value: '500+', label: 'Happy Clients', negativeOffset: true },
         { icon: CheckCircle, value: '100%', label: 'Transparency' },
