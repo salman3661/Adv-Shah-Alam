@@ -152,18 +152,32 @@
 </head>
 
 <body>
-  <!-- Anti-FOUC: apply theme BEFORE React renders to prevent flash -->
+  <!-- Anti-FOUC: apply theme synchronously before React renders -->
   <script>
     (function () {
       try {
-        var stored = localStorage.getItem('theme');
-        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-        var theme = stored || (prefersDark ? 'dark' : 'light');
-        document.body.setAttribute('data-theme', theme);
-        if (theme === 'dark') {
-          document.documentElement.classList.add('dark');
-        }
-      } catch (e) {}
+        const stored = localStorage.getItem("theme"); // "dark" | "light" | null
+        const systemDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+        const isDark = stored ? stored === "dark" : systemDark;
+
+        // Suppress CSS transitions on first paint to prevent theme flash
+        document.documentElement.classList.add("no-theme-transition");
+
+        // Apply theme before React renders
+        if (isDark) document.documentElement.classList.add("dark");
+        else document.documentElement.classList.remove("dark");
+
+        // Set data-theme on both <html> and <body> for compatibility
+        const theme = isDark ? "dark" : "light";
+        document.documentElement.dataset.theme = theme;
+        document.documentElement.setAttribute("data-theme", theme);
+
+        // Remove transition suppressor after first paint
+        requestAnimationFrame(function () {
+          document.documentElement.classList.remove("no-theme-transition");
+        });
+      } catch (e) { }
     })();
   </script>
   <div id="root"></div>

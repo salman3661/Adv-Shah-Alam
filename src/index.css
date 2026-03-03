@@ -61,7 +61,11 @@ body {
 }
 
 /* ── DARK THEME ── */
-body[data-theme="dark"] {
+/* Both selectors fire: html[data-theme] is set by the FOUC script before React
+   renders; body[data-theme] is set by ThemeContext after hydration. Both point
+   to the same CSS variables so the page is always styled correctly. */
+body[data-theme="dark"],
+html[data-theme="dark"] body {
   --bg: #0B1220;
   --surface: #0F1B2D;
   --card-bg: rgba(15, 27, 45, 0.72);
@@ -90,10 +94,22 @@ body[data-theme="dark"] {
   --divider: rgba(148, 163, 184, 0.12);
 }
 
+
 /* == HTML base ================================================================ */
 html {
   scroll-behavior: smooth;
 }
+
+/* Kill ALL transitions on first paint to prevent theme-color flash.
+   The inline FOUC script adds this class, then removes it on the next
+   requestAnimationFrame — so animations work normally after first paint. */
+.no-theme-transition *,
+.no-theme-transition *::before,
+.no-theme-transition *::after {
+  transition: none !important;
+  animation-duration: 0.001s !important;
+}
+
 
 ::selection {
   background-color: var(--accent);
