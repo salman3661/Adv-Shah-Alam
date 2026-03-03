@@ -2650,7 +2650,376 @@ const posts = [
             { text: 'Tax & VAT Lawyer Dhaka', to: '/tax-vat-lawyer-dhaka' },
         ],
     },
+
+    /* ── BATCH 1 — Pair 1 ── */
+    {
+        slug: 'arrest-without-warrant-bangladesh',
+        title: 'Arrest Without Warrant in Bangladesh – What Are Your Rights?',
+        category: 'Criminal Law',
+        readTime: '8 min read',
+        metaTitle: 'Arrest Without Warrant Bangladesh – Know Your Rights',
+        metaDescription: 'What happens when police arrest you without a warrant in Bangladesh? Know your legal rights under the CrPC, how to challenge unlawful arrest, and when to call a lawyer.',
+        keywords: ['arrest without warrant Bangladesh', 'police arrest rights Bangladesh', 'unlawful arrest Bangladesh', 'CrPC arrest Bangladesh', 'criminal lawyer Dhaka', 'police power arrest Bangladesh', 'habeas corpus Bangladesh', 'Section 54 CrPC Bangladesh'],
+        publishedDate: '2026-03-04',
+        heroIntro: 'A knock at the door. Officers in uniform. No warrant shown. Thousands of people in Bangladesh face arrest every year without any warrant being presented. Many do not know they have rights — rights that can be enforced if you act quickly and correctly.',
+        toc: [
+            'Can Police Arrest Without a Warrant in Bangladesh?',
+            'Legal Grounds for Warrantless Arrest (Section 54 CrPC)',
+            'Your Rights During Arrest in Bangladesh',
+            'The Right to Know the Grounds of Arrest',
+            'Rights During Police Custody',
+            'How to Challenge an Unlawful Arrest',
+            'Habeas Corpus: Securing Release from Illegal Detention',
+            'Real-Life Scenario: Wrongful Arrest in a Family Dispute',
+        ],
+        sections: [
+            {
+                h2: 'Can Police Arrest Without a Warrant in Bangladesh?',
+                content: `<p>Yes — but only in specific circumstances defined by law. In Bangladesh, the power of police to arrest without a warrant is governed by the <strong>Code of Criminal Procedure 1898 (CrPC)</strong>, primarily Section 54. Police cannot arrest simply on suspicion or personal discretion; there must be a legally recognisable ground.</p>
+<p>A warrant is a written court order directing police to arrest a named person. When there is no warrant, police must be able to point to one of the situations listed under Section 54 to justify the arrest. If they cannot, the arrest is unlawful — and you have remedies. Contact a <a href="/criminal-lawyer-uttara" style="color:var(--accent)">criminal lawyer in Dhaka or Uttara</a> immediately if you believe an arrest was unlawful.</p>`,
+            },
+            {
+                h2: 'Legal Grounds for Warrantless Arrest (Section 54 CrPC)',
+                content: `<p>Section 54 of the CrPC permits police to arrest without a warrant in the following situations:</p>
+<ul>
+<li><strong>Cognisable offence:</strong> A person suspected of committing or about to commit a cognisable offence (serious crimes like murder, robbery, or rape where police can act without a magistrate's order).</li>
+<li><strong>Known offender:</strong> A person who is a proclaimed offender under any law.</li>
+<li><strong>Possession of stolen property:</strong> A person found in possession of stolen goods or implements of housebreaking.</li>
+<li><strong>Arrest by another officer:</strong> A person for whom another police officer has a warrant.</li>
+<li><strong>Escape:</strong> A person who has escaped from lawful custody.</li>
+<li><strong>Concern in a cognisable case:</strong> A person concerned in or against whom a reasonable complaint is made.</li>
+</ul>
+<p>It is important to note that Section 54 has been a subject of significant court scrutiny in Bangladesh. The High Court Division has repeatedly held that police cannot use Section 54 as a blanket power to arrest anyone at will.</p>`,
+            },
+            {
+                h2: 'Your Rights During Arrest in Bangladesh',
+                content: `<p>The Bangladesh Constitution and CrPC provide explicit rights to every arrested person:</p>
+<ul>
+<li><strong>Article 33(1) of the Constitution:</strong> Every arrested person must be informed as soon as possible of the grounds of their arrest.</li>
+<li><strong>Right to a lawyer:</strong> You have the right to consult and be defended by a legal practitioner of your choice.</li>
+<li><strong>Produced before a Magistrate (Section 61 CrPC):</strong> Police must produce an arrested person before a Magistrate within <strong>24 hours</strong> of arrest (excluding travel time). This is a constitutional right under Article 33(2).</li>
+<li><strong>No torture:</strong> The Constitution prohibits torture and cruel treatment. Any police officer who physically mistreats an arrested person commits a criminal offence.</li>
+</ul>
+<p>These rights exist whether or not a warrant was issued. Knowing them and asserting them firmly — without being aggressive — can protect you significantly.</p>`,
+            },
+            {
+                h2: 'The Right to Know the Grounds of Arrest',
+                content: `<p>One of the most important protections is the right to be told <em>why</em> you are being arrested. Under Article 33(1) of the Bangladesh Constitution, an arrested person must be told the grounds of their arrest "as soon as may be." Police cannot simply say "come with us" without providing a reason.</p>
+<p>Practically, when arrested:</p>
+<ol>
+<li>Calmly ask: "On what grounds am I being arrested?" and "Is there a warrant or an FIR?"</li>
+<li>Do not physically resist — this can lead to additional charges.</li>
+<li>Note the names and badge numbers of arresting officers if possible.</li>
+<li>Immediately inform a family member or trusted person.</li>
+<li>Ask them to contact a <a href="/bail-lawyer-dhaka" style="color:var(--accent)">bail lawyer in Dhaka</a> urgently.</li>
+</ol>`,
+            },
+            {
+                h2: 'Rights During Police Custody',
+                content: `<p>Once in custody, your rights continue:</p>
+<ul>
+<li><strong>Right to see a lawyer privately</strong> — police cannot deny this right, though in practice pressure may be applied. Insist firmly.</li>
+<li><strong>Right to medical examination</strong> — if you allege you have been tortured or are unwell. Demand this before being lodged in a cell.</li>
+<li><strong>Right to inform relatives</strong> — police are required to inform a family member or nominated person of your arrest and place of custody.</li>
+<li><strong>Remand (Section 167 CrPC):</strong> If the investigation cannot be completed within 24 hours, police must produce you before a Magistrate who may remand you to custody for further investigation. Remand orders can be challenged — a lawyer can file an application opposing remand.</li>
+</ul>`,
+            },
+            {
+                h2: 'How to Challenge an Unlawful Arrest',
+                content: `<p>If you believe your arrest had no legal basis, there are several avenues:</p>
+<ul>
+<li><strong>Object at the time of arrest:</strong> Clearly state that the arrest is unlawful and that you are not committing any offence.</li>
+<li><strong>Apply for bail:</strong> Even for a warrantless arrest, an accused must be produced before a Magistrate who can grant bail if the offence is bailable — or the accused can apply for bail on non-bailable charges.</li>
+<li><strong>File a complaint against the officer:</strong> A false arrest can result in a complaint to the Superintendent of Police, the Police Commission, or a criminal complaint under Section 220 of the Penal Code against the officer.</li>
+<li><strong>Writ petition before the High Court Division:</strong> For a fundamentally unlawful arrest or detention, a writ of habeas corpus or a writ petition under Article 102 of the Constitution can bring immediate judicial scrutiny.</li>
+</ul>`,
+            },
+            {
+                h2: 'Habeas Corpus: Securing Release from Illegal Detention',
+                content: `<p>If a person is detained unlawfully and bail is unavailable or denied, a <strong>writ of habeas corpus</strong> filed before the High Court Division of the Bangladesh Supreme Court is the most powerful remedy. The writ literally demands the authority to "produce the body" — i.e., to justify the detention before the court.</p>
+<p>The High Court Division can:</p>
+<ul>
+<li>Order the immediate release of the detained person</li>
+<li>Examine whether the detention is lawful</li>
+<li>Order production of the detainee in court</li>
+<li>Initiate contempt proceedings if the order is not complied with</li>
+</ul>
+<p>Habeas corpus is an emergency remedy and courts treat it with urgency. An experienced <a href="/supreme-court-lawyer-bangladesh" style="color:var(--accent)">Supreme Court lawyer in Bangladesh</a> should be contacted without delay if someone is unlawfully held.</p>`,
+            },
+            {
+                h2: 'Real-Life Scenario: Wrongful Arrest in a Family Dispute',
+                content: `<p>Consider this common situation: A father and adult son have a property dispute. The son's wife files a false FIR alleging that the father threatened her. Based on this complaint, police arrive at the father's home one evening and take him to the station without showing any warrant or arrest order.</p>
+<p>What should happen next:</p>
+<ol>
+<li>The father's family immediately contacts a bail lawyer in Dhaka.</li>
+<li>The lawyer verifies whether an FIR was actually filed and what offence is alleged.</li>
+<li>If the offence is non-bailable, an anticipatory bail application is filed urgently or, post-arrest, a regular bail application is filed before the Magistrate.</li>
+<li>If the arrest was made without any FIR or legal basis, a habeas corpus petition is filed in the High Court Division.</li>
+<li>A counter GD or complaint is filed documenting the false complaint.</li>
+</ol>
+<p>This is exactly the kind of situation where having a lawyer on speed-dial makes the difference between spending a weekend in a police cell and being home the same evening.</p>`,
+            },
+        ],
+        faqs: [
+            { question: 'Can police in Bangladesh arrest anyone without a warrant?', answer: 'No. Police can only arrest without a warrant in specific situations defined under Section 54 of the CrPC — such as when a cognisable offence has been committed or is about to be committed.' },
+            { question: 'What should I do if police arrest me without a warrant?', answer: 'Remain calm, ask for the grounds of arrest, do not physically resist, inform a family member immediately, and contact a criminal lawyer as soon as possible.' },
+            { question: 'Must police produce me before a Magistrate within 24 hours?', answer: 'Yes. This is a constitutional right under Article 33(2). Police must produce an arrested person before the nearest Magistrate within 24 hours of arrest (excluding travel time).' },
+            { question: 'Can I sue police for unlawful arrest?', answer: 'Yes. You can file a criminal complaint or a civil suit for wrongful confinement. A writ petition before the High Court Division can also address unlawful police action.' },
+            { question: 'What is Section 54 of the CrPC?', answer: 'Section 54 of the CrPC is the primary provision allowing police to arrest without a warrant in Bangladesh. It lists specific grounds and is not a blanket power.' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-uttara' },
+            { text: 'Bail Lawyer Dhaka', to: '/bail-lawyer-dhaka' },
+            { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
+        ],
+    },
+
+    /* ── BATCH 1 — Pair 2 ── */
+    {
+        slug: 'how-to-file-gd-bangladesh-police-station',
+        title: 'How to File a GD in Bangladesh Police Station – Complete Guide',
+        category: 'Criminal Law',
+        readTime: '7 min read',
+        metaTitle: 'How to File a GD in Bangladesh Police Station – Full Guide',
+        metaDescription: 'Step-by-step guide to filing a General Diary (GD) at any police station in Bangladesh — when to file, what to write, how to get a certified copy, and when to file an FIR instead.',
+        keywords: ['how to file GD Bangladesh', 'General Diary Bangladesh police', 'GD vs FIR Bangladesh', 'police station complaint Bangladesh', 'criminal lawyer Dhaka', 'GD filing procedure Bangladesh', 'police GD Bangladesh', 'First Information Report Bangladesh'],
+        publishedDate: '2026-03-05',
+        heroIntro: 'Lost a phone. Received a threat. Someone broke into your property. Whatever the incident, the General Diary (GD) at a police station is often the first official record you should create. Yet many people in Bangladesh do not know the difference between a GD and an FIR, or how to write one correctly.',
+        toc: [
+            'What Is a General Diary (GD) in Bangladesh?',
+            'GD vs FIR: Key Differences',
+            'When Should You File a GD?',
+            'Step-by-Step: Filing a GD at a Police Station',
+            'What to Write in a GD Application',
+            'Obtaining a Certified Copy of the GD',
+            'What Happens After a GD Is Filed?',
+            'Real-Life Scenario: Filing a GD for Property Threat',
+        ],
+        sections: [
+            {
+                h2: 'What Is a General Diary (GD) in Bangladesh?',
+                content: `<p>A General Diary — commonly called a GD — is an official register maintained at every police station in Bangladesh. It records all incidents, complaints, and events reported to the police that do not immediately warrant a criminal investigation. Under the <strong>Police Regulations of Bengal 1943 (PRB)</strong> and the <strong>Code of Criminal Procedure 1898 (CrPC)</strong>, every police station is required to maintain this diary, and officers on duty must record all reported incidents.</p>
+<p>A GD entry creates an official time-stamped record with the police. It is not a criminal complaint in the same way an FIR is, but it is a legal document that can be used as evidence in court proceedings. It tells the world: "On this date and time, this person reported this incident to this police station." A <a href="/criminal-lawyer-uttara" style="color:var(--accent)">criminal lawyer in Dhaka</a> can advise whether your situation calls for a GD or something stronger.</p>`,
+            },
+            {
+                h2: 'GD vs FIR: Key Differences',
+                content: `<p>Many people confuse a GD with an FIR (First Information Report). They are fundamentally different:</p>
+<ul>
+<li><strong>GD (General Diary):</strong> Records an incident without necessarily triggering investigation. No obligation on police to register a case. Used for lost items, minor threats, preventive records, or incidents where evidence is insufficient for an FIR.</li>
+<li><strong>FIR (First Information Report / Ejahar):</strong> A formal complaint of a cognisable offence that <em>requires</em> police to register a case and begin investigation. Once an FIR is filed, police must investigate and submit a charge sheet or final report.</li>
+</ul>
+<p>In practice, police often prefer to record incidents as GDs instead of FIRs — sometimes lawfully (when the offence is not cognisable) and sometimes to avoid investigative responsibility. If a cognisable offence has occurred and police refuse to file an FIR, you can approach the Magistrate under Section 190 of the CrPC to take cognisance directly.</p>`,
+            },
+            {
+                h2: 'When Should You File a GD?',
+                content: `<p>File a GD when:</p>
+<ul>
+<li><strong>Lost documents or valuables:</strong> Passport, NID, mobile phone, important papers — a GD helps establish the loss for insurance claims, re-issuance, or if the items are found by criminals.</li>
+<li><strong>Threats or harassment:</strong> Someone has verbally threatened you or sent threatening messages but has not yet acted. A GD creates a trail.</li>
+<li><strong>Minor incidents:</strong> Small altercations, boundary disputes, neighbourhood arguments where no serious offence occurred but you want a record.</li>
+<li><strong>Preventive purposes:</strong> Before land/property dealings where disputes are anticipated, filing a GD creates a timestamp of your awareness.</li>
+<li><strong>As a pre-cursor to an FIR:</strong> Sometimes a GD is filed first and upgraded to an FIR if the situation escalates.</li>
+</ul>
+<p>You should file an FIR directly when a cognisable offence — murder, robbery, theft, assault, cyber crime — has clearly occurred and you want police to investigate.</p>`,
+            },
+            {
+                h2: 'Step-by-Step: Filing a GD at a Police Station',
+                content: `<p>Filing a GD in Bangladesh is generally straightforward:</p>
+<ol>
+<li><strong>Go to the nearest police station</strong> — typically the thana (police station) with jurisdiction over where the incident occurred.</li>
+<li><strong>Ask for the Officer on Duty (OOD)</strong> — the duty officer is responsible for recording GD entries. They are on duty 24 hours a day.</li>
+<li><strong>Present your identity</strong> — bring your National Identity Card (NID) or passport. Police will require your identity details.</li>
+<li><strong>Describe the incident clearly</strong> — either verbally (the officer will write it) or by submitting a written application (which is better for accuracy).</li>
+<li><strong>Review what is written</strong> — if the officer writes it, ask to see what has been entered before signing or confirming.</li>
+<li><strong>Obtain the GD number</strong> — insist on receiving the GD number and date. This is your primary reference.</li>
+<li><strong>Request a certified copy</strong> — you are entitled to a copy of the GD entry. Sometimes there is a small fee.</li>
+</ol>
+<p>If the duty officer refuses to record your complaint, ask to speak to the Officer in Charge (OC). If still refused, note the officer's name and badge number and consult a <a href="/criminal-lawyer-uttara" style="color:var(--accent)">criminal lawyer in Uttara or Dhaka</a> about your options.</p>`,
+            },
+            {
+                h2: 'What to Write in a GD Application',
+                content: `<p>A well-written GD application should include:</p>
+<ul>
+<li><strong>Your full name, address, NID number, and contact number</strong></li>
+<li><strong>Date and time of the incident</strong></li>
+<li><strong>Location where the incident occurred</strong></li>
+<li><strong>Clear factual description</strong> — what happened, in what sequence, who was involved</li>
+<li><strong>Any identifying details</strong> of the other party (name, address, phone number if known)</li>
+<li><strong>What you are requesting</strong> — for example, that the police record this complaint as a preventive measure, or that they investigate</li>
+<li><strong>List of any supporting documents or evidence</strong> attached (screenshots of threatening messages, photos of damage, etc.)</li>
+</ul>
+<p>Keep your language factual and avoid unnecessary emotional statements. A clear, dated, factual record is most useful in court.</p>`,
+            },
+            {
+                h2: 'Obtaining a Certified Copy of the GD',
+                content: `<p>After the GD is filed, you have the right to obtain a certified copy. This copy is crucial — it bears the police station seal, the GD serial number, and the signature of the duty officer. It can be used in:</p>
+<ul>
+<li>Court proceedings as a document of first report</li>
+<li>Insurance claims (e.g., for stolen mobile phones or car accidents)</li>
+<li>Proving to government offices that a loss of documents has been reported</li>
+<li>Support for a future FIR if the situation escalates</li>
+</ul>
+<p>To obtain the copy, submit a written application to the OC of the police station. There may be a nominal fee under the relevant government fee schedule. If the station refuses to provide a copy, this too can be challenged through the Magistrate's court.</p>`,
+            },
+            {
+                h2: 'What Happens After a GD Is Filed?',
+                content: `<p>Unlike an FIR, a GD does not automatically trigger an investigation. However:</p>
+<ul>
+<li>If police find the report indicative of a cognisable offence, they may convert it into a case (suo moto).</li>
+<li>If the situation escalates, you can return to the station and request conversion to an FIR.</li>
+<li>You can also take the GD number to a Magistrate and apply under Section 190 CrPC for the Magistrate to take cognisance of the offence directly.</li>
+<li>In some matters (like missing persons), police are required to register a case regardless of whether the incident is characterised as a GD or FIR.</li>
+</ul>
+<p>The GD remains part of the official station diary and cannot be deleted or modified. This permanence is its greatest value as evidence.</p>`,
+            },
+            {
+                h2: 'Real-Life Scenario: Filing a GD for Property Threat',
+                content: `<p>Rahima Begum owns a plot of land in Uttara that a neighbouring builder is trying to encroach upon. The builder's workers show up one day and verbally threaten her family, telling them to vacate the land. No physical violence occurred, but the threats were serious.</p>
+<p>Rahima goes to the local police station and files a GD recording the threat, naming the builder and his workers. She submits a written application, attaches screenshots of threatening WhatsApp messages from the builder, and obtains the GD number and a certified copy.</p>
+<p>Three weeks later, when the builder's workers physically encroach and she files an FIR, the earlier GD establishes a pattern of harassment and supports her version of events. It also contradicts any claim by the builder that this is the first incident between them. Her lawyer <a href="/land-property-lawyer-uttara" style="color:var(--accent)">at the land law firm in Uttara</a> uses the GD effectively in both the injunction application and the FIR investigation.</p>`,
+            },
+        ],
+        faqs: [
+            { question: 'Is there a fee for filing a GD in Bangladesh?', answer: 'Filing a GD is free. There may be a small fee to obtain a certified copy of the GD entry, prescribed by government fee schedules.' },
+            { question: 'Can police refuse to file a GD?', answer: 'Police should not refuse to record a GD for any genuine incident. If they do, ask to speak to the Officer in Charge (OC) and later escalate to the Superintendent of Police or a Magistrate if needed.' },
+            { question: 'How is a GD different from an FIR?', answer: 'A GD records an incident without obligating police to investigate. An FIR triggers mandatory investigation by police. A GD can later be converted to an FIR if circumstances change.' },
+            { question: 'Can a GD be used as evidence in court?', answer: 'Yes. A certified copy of a GD entry is a primary document and admissible as evidence in criminal and civil proceedings.' },
+            { question: 'What if police try to write something different from what I reported?', answer: 'Ask to read the entry before it is finalised. If inaccurate, insist on correction. Keep a note of what you reported. Consult a lawyer if the GD is recorded incorrectly.' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-uttara' },
+            { text: 'Bail Lawyer Dhaka', to: '/bail-lawyer-dhaka' },
+            { text: 'Land & Property Lawyer Uttara', to: '/land-property-lawyer-uttara' },
+        ],
+    },
+
+    /* ── BATCH 1 — Pair 3 ── */
+    {
+        slug: 'anticipatory-bail-high-court-bangladesh',
+        title: 'Anticipatory Bail from High Court Bangladesh – Full Procedure',
+        category: 'Criminal Law',
+        readTime: '8 min read',
+        metaTitle: 'Anticipatory Bail from High Court Bangladesh – Full Process',
+        metaDescription: 'Complete guide to obtaining anticipatory bail from the High Court Division in Bangladesh — eligibility, procedure, documents, timeline, and why you need an expert lawyer.',
+        keywords: ['anticipatory bail High Court Bangladesh', 'High Court anticipatory bail Bangladesh', 'pre-arrest bail High Court Dhaka', 'anticipatory bail procedure Bangladesh', 'bail lawyer Dhaka', 'Supreme Court bail Bangladesh', 'High Court Division bail Bangladesh', 'criminal lawyer Bangladesh'],
+        publishedDate: '2026-03-06',
+        heroIntro: 'When the Sessions Court has rejected your anticipatory bail application — or when the case is too sensitive or complex to start at district level — the High Court Division of the Bangladesh Supreme Court becomes your shield. Obtaining anticipatory bail here requires precise legal strategy and experienced advocacy.',
+        toc: [
+            'What Is Anticipatory Bail from the High Court?',
+            'When Should You Go Directly to the High Court?',
+            'Legal Basis for High Court Anticipatory Bail',
+            'Step-by-Step Procedure at the High Court Division',
+            'Documents Required for High Court Bail Application',
+            'What the Court Examines',
+            'Timeline: How Long Does It Take?',
+            'Conditions and Their Importance',
+        ],
+        sections: [
+            {
+                h2: 'What Is Anticipatory Bail from the High Court?',
+                content: `<p>Anticipatory bail from the High Court Division of the Bangladesh Supreme Court is a pre-arrest protection order that prevents police from detaining the applicant in connection with a specified criminal case. While Sessions Courts also have anticipatory bail jurisdiction, the High Court Division's order carries greater authority, is harder to circumvent by police, and is the appropriate forum in certain situations.</p>
+<p>This form of bail is distinct from the regular anticipatory bail guide we have published separately. Here, the focus is specifically on the <a href="/supreme-court-lawyer-bangladesh" style="color:var(--accent)">High Court Division procedure</a> — its unique requirements, the types of cases best suited to this forum, and what a skilled lawyer must do to succeed.</p>`,
+            },
+            {
+                h2: 'When Should You Go Directly to the High Court?',
+                content: `<p>You should file anticipatory bail directly at the High Court Division in the following situations:</p>
+<ul>
+<li><strong>Sessions Court has already rejected</strong> the anticipatory bail application — the High Court is the natural next step.</li>
+<li><strong>The case involves complex legal questions</strong> — constitutional issues, multi-district FIRs, or cases touching on fundamental rights.</li>
+<li><strong>The matter is politically or publicly sensitive</strong> — where local courts may face pressure.</li>
+<li><strong>Urgency is extreme</strong> — in Dhaka, the High Court Division can sometimes act faster than a district Sessions Court, especially for interim protection.</li>
+<li><strong>The FIR names multiple accused</strong> across different districts — the High Court has jurisdiction over the entire country.</li>
+</ul>
+<p>Your <a href="/bail-lawyer-dhaka" style="color:var(--accent)">bail lawyer in Dhaka</a> will assess which forum is strategically better for your specific facts.</p>`,
+            },
+            {
+                h2: 'Legal Basis for High Court Anticipatory Bail',
+                content: `<p>The High Court Division's power to grant anticipatory bail flows from multiple sources:</p>
+<ul>
+<li><strong>Article 102 of the Constitution:</strong> The High Court Division's inherent writ jurisdiction allows it to protect persons from unlawful or oppressive arrest.</li>
+<li><strong>Section 498 of the CrPC:</strong> Expressly empowers "any court" — including the High Court Division — to grant bail.</li>
+<li><strong>Section 561A CrPC:</strong> The High Court Division's inherent powers to make orders necessary to prevent abuse of the process of court or to secure the ends of justice.</li>
+</ul>
+<p>Bangladesh Supreme Court case law has consistently affirmed the High Court Division's power to grant anticipatory bail in appropriate cases, particularly where lower court orders are inadequate or where the accusation is prima facie motivated by malice.</p>`,
+            },
+            {
+                h2: 'Step-by-Step Procedure at the High Court Division',
+                content: `<p>The procedure for obtaining anticipatory bail from the High Court Division involves these steps:</p>
+<ol>
+<li><strong>Retain a High Court-enrolled lawyer</strong> — only lawyers enrolled to appear before the Supreme Court's High Court Division can file and argue this application.</li>
+<li><strong>Prepare the bail petition</strong> — a detailed application setting out: the FIR details (case number, police station, sections alleged), factual background, grounds for believing the accusation is false or motivated, why arrest would cause irreparable harm, and why the applicant is not a flight risk.</li>
+<li><strong>File in the Criminal Miscellaneous jurisdiction</strong> — the application is filed as a Criminal Miscellaneous Petition in the High Court Registry. A court fee is payable.</li>
+<li><strong>Request interim anticipatory bail</strong> — simultaneously with filing, request urgent interim bail (stay of arrest) until the full hearing. Many courts grant this on the first day of filing if the application is strong.</li>
+<li><strong>First hearing / filing date</strong> — the case is placed before a bench of the High Court Division. The State (prosecution) is given notice.</li>
+<li><strong>Full hearing</strong> — both sides argue. Your lawyer presents the legal grounds; the State advocates for denial.</li>
+<li><strong>Order</strong> — the court grants or refuses. Conditions are typically attached if bail is granted.</li>
+</ol>`,
+            },
+            {
+                h2: 'Documents Required for High Court Bail Application',
+                content: `<p>A well-supported application needs:</p>
+<ul>
+<li>Certified copy of the FIR (obtained from the relevant police station through a lawyer)</li>
+<li>NID and passport of the applicant</li>
+<li>Sworn affidavit by the applicant detailing all material facts</li>
+<li>Sessions Court order (if bail was rejected there — this becomes part of the High Court record)</li>
+<li>Supporting evidence: messages, CCTV footage, alibi documents, bank records, character certificates</li>
+<li>Vakalatnama (power of attorney for the lawyer)</li>
+<li>Any Court fee receipts</li>
+</ul>
+<p>The affidavit is crucial — it must be truthful, complete, and clear. The court will not look favourably on an application where material facts are suppressed.</p>`,
+            },
+            {
+                h2: 'What the Court Examines',
+                content: `<p>The High Court Division assesses anticipatory bail applications by weighing:</p>
+<ul>
+<li><strong>Nature and gravity of the accusation</strong> — is this a minor offence or a serious crime involving death, terrorism, or rape?</li>
+<li><strong>The applicant's criminal history</strong> — a first-time accused with no prior record fares better.</li>
+<li><strong>Prima facie merits of the FIR</strong> — does the accusation appear credible or does it seem to be an exaggerated or false complaint?</li>
+<li><strong>Flight risk</strong> — ties to the community, family, business, employment; possession of a passport and travel history.</li>
+<li><strong>Risk of evidence tampering</strong> — would releasing the applicant allow them to influence witnesses?</li>
+<li><strong>Balance of convenience</strong> — would the harm to an innocent person from pre-trial detention outweigh the State's interest in custody?</li>
+</ul>
+<p>The strongest applications are those where the FIR appears motivated, no prior criminal record exists, the applicant has strong community ties, and credible exculpatory evidence is placed on record.</p>`,
+            },
+            {
+                h2: 'Timeline: How Long Does It Take?',
+                content: `<p>Timeline varies, but a practical guide is:</p>
+<ul>
+<li><strong>Same-day interim protection:</strong> In urgent matters, an interim stay of arrest (interim anticipatory bail) can be granted by the court on the day of filing — often within hours — if the duty bench is satisfied the application requires urgent attention.</li>
+<li><strong>Full hearing:</strong> Typically 1–4 weeks after filing, depending on the court's docket.</li>
+<li><strong>If interim bail is granted:</strong> The applicant is protected from arrest while the main application is decided.</li>
+</ul>
+<p>Speed is of the essence. Do not wait until police have arrived at your door. Engage a <a href="/bail-lawyer-dhaka" style="color:var(--accent)">bail lawyer in Dhaka</a> the moment you learn of a potential arrest.</p>`,
+            },
+            {
+                h2: 'Conditions and Their Importance',
+                content: `<p>The High Court Division almost always attaches conditions to anticipatory bail. Common conditions include:</p>
+<ul>
+<li>Surrender of passport or prohibition on leaving Bangladesh</li>
+<li>Reporting to the concerned police station on specified dates</li>
+<li>Cooperating fully with the investigation</li>
+<li>Not approaching or communicating with prosecution witnesses</li>
+<li>Surety bond of a specified amount</li>
+</ul>
+<p>These conditions must be strictly complied with. Violation — even technical violation — allows the State to seek cancellation of bail. Your lawyer will guide you on what compliance requires in practice. Any question about conditions should be clarified with your lawyer before the bail order is acted upon.</p>`,
+            },
+        ],
+        faqs: [
+            { question: 'Can I apply for anticipatory bail directly at the High Court without going to the Sessions Court first?', answer: 'Yes. The law does not require you to first exhaust the Sessions Court remedy. In appropriate cases — urgency, complexity, sensitivity — you may file directly at the High Court Division.' },
+            { question: 'How long does anticipatory bail from the High Court remain valid?', answer: 'The court specifies the validity period — usually until the charge sheet is filed and bail is obtained from the trial court, or for a fixed period. Extension can be sought if needed.' },
+            { question: 'What if the High Court also refuses anticipatory bail?', answer: 'You can challenge the refusal before the Appellate Division of the Supreme Court. Alternatively, if arrested, a regular bail application can be filed before the trial court.' },
+            { question: 'Does the High Court anticipatory bail protect me from arrest in all districts?', answer: 'Yes. A High Court Division order has countrywide effect. Police in any district are bound to respect and comply with the order.' },
+            { question: 'Can anticipatory bail be cancelled?', answer: 'Yes — if you violate conditions or if the State shows new material that was not before the court when bail was granted. Strict compliance is essential.' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Bail Lawyer Dhaka', to: '/bail-lawyer-dhaka' },
+            { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
+            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-uttara' },
+        ],
+    },
 ];
 
 export default posts;
+
 
