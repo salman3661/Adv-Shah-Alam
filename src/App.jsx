@@ -1,5 +1,5 @@
 import React, { lazy, Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { ThemeProvider } from './context/ThemeContext';
 import Layout from './components/Layout';
@@ -61,6 +61,14 @@ function App() {
                 {/* Bangla Blog */}
                 <Route path="/bn/blog" element={<BlogBn />} />
                 <Route path="/bn/blog/:slug" element={<BlogPostBn />} />
+
+                {/* BN service redirects — sidebar links in BN posts resolve to EN service pages */}
+                <Route path="/bn/services/criminal-lawyer" element={<Navigate to="/services/criminal-lawyer" replace />} />
+                <Route path="/bn/services/divorce-lawyer" element={<Navigate to="/services/divorce-lawyer" replace />} />
+                <Route path="/bn/services/land-lawyer" element={<Navigate to="/services/land-lawyer" replace />} />
+                <Route path="/bn/services/bail-lawyer" element={<Navigate to="/services/bail-lawyer" replace />} />
+                <Route path="/bn/services/supreme-court-lawyer" element={<Navigate to="/services/supreme-court-lawyer" replace />} />
+                <Route path="/bn/services/tax-lawyer" element={<Navigate to="/services/tax-lawyer" replace />} />
               </Routes>
             </Suspense>
           </Layout>

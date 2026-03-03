@@ -94,9 +94,9 @@ const BlogBn = () => {
                 <html lang="bn" />
                 <title>আইনি ব্লগ বাংলা | অ্যাডভোকেট মো. শাহ আলম</title>
                 <meta name="description" content="বাংলাদেশের আইন বিষয়ক বাংলা ব্লগ — জামিন, তালাক, জমি বিরোধ, কর মামলা ও আরও অনেক বিষয়ে বিশেষজ্ঞ পরামর্শ।" />
-                <link rel="canonical" href="https://advshahalamlaw.com/bn/blog" />
-                <link rel="alternate" hrefLang="en" href="https://advshahalamlaw.com/blog" />
-                <link rel="alternate" hrefLang="bn" href="https://advshahalamlaw.com/bn/blog" />
+                <link rel="canonical" href="https://advmdshahalam.me/bn/blog" />
+                <link rel="alternate" hrefLang="en" href="https://advmdshahalam.me/blog" />
+                <link rel="alternate" hrefLang="bn" href="https://advmdshahalam.me/bn/blog" />
             </Helmet>
 
             {/* Hero */}

@@ -77,8 +77,8 @@ const BlogPostBn = () => {
         inLanguage: 'bn',
         author: { '@type': 'Person', name: 'অ্যাডভোকেট মো. শাহ আলম' },
         publisher: { '@type': 'Organization', name: 'Advocate Md. Shah Alam', url: 'https://advshahalamlaw.com' },
-        url: `https://advshahalamlaw.com/bn/blog/${post.slug}`,
-        mainEntityOfPage: `https://advshahalamlaw.com/bn/blog/${post.slug}`,
+        url: `https://advmdshahalam.me/bn/blog/${post.slug}`,
+        mainEntityOfPage: `https://advmdshahalam.me/bn/blog/${post.slug}`,
         keywords: post.keywords.join(', '),
     };
 
@@ -99,15 +99,15 @@ const BlogPostBn = () => {
                 <title>{post.metaTitle}</title>
                 <meta name="description" content={post.metaDescription} />
                 <meta name="keywords" content={post.keywords.join(', ')} />
-                <link rel="canonical" href={`https://advshahalamlaw.com/bn/blog/${post.slug}`} />
+                <link rel="canonical" href={`https://advmdshahalam.me/bn/blog/${post.slug}`} />
                 {post.enSlug && (
-                    <link rel="alternate" hrefLang="en" href={`https://advshahalamlaw.com/blog/${post.enSlug}`} />
+                    <link rel="alternate" hrefLang="en" href={`https://advmdshahalam.me/blog/${post.enSlug}`} />
                 )}
-                <link rel="alternate" hrefLang="bn" href={`https://advshahalamlaw.com/bn/blog/${post.slug}`} />
+                <link rel="alternate" hrefLang="bn" href={`https://advmdshahalam.me/bn/blog/${post.slug}`} />
                 <meta property="og:title" content={post.metaTitle} />
                 <meta property="og:description" content={post.metaDescription} />
                 <meta property="og:type" content="article" />
-                <meta property="og:url" content={`https://advshahalamlaw.com/bn/blog/${post.slug}`} />
+                <meta property="og:url" content={`https://advmdshahalam.me/bn/blog/${post.slug}`} />
                 <script type="application/ld+json">{JSON.stringify(blogPostingSchema)}</script>
                 <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
             </Helmet>

@@ -1630,7 +1630,7 @@ const postsBn = [
 
     /* ── ১৮ ── */
     {
-        slug: 'child-custody-law-bangladesh-bn',
+        slug: 'child-custody-law-2026-bn',
         enSlug: 'child-custody-law-bangladesh',
         title: 'বাংলাদেশে সন্তানের হেফাজত আইন: সম্পূর্ণ আইনি গাইড',
         category: 'পারিবারিক আইন',

@@ -100,7 +100,7 @@ const BlogPreview = () => {
                                         {article.category}
                                     </span>
                                     <span className="flex items-center gap-1 text-xs" style={{ color: 'var(--text-muted)' }}>
-                                        <Clock size={11} /> {article.readTime} read
+                                        <Clock size={11} /> {article.readTime}{lang === 'en' ? ' read' : ''}
                                     </span>
                                 </div>
 
