@@ -3018,8 +3018,822 @@ const posts = [
             { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-uttara' },
         ],
     },
+
+    /* ── BATCH 2 — Pair 4 ── */
+    {
+        slug: 'divorce-from-court-bangladesh-muslim-law',
+        title: 'Divorce from Court in Bangladesh – Muslim Law Procedure',
+        category: 'Family Law',
+        readTime: '9 min read',
+        metaTitle: 'Divorce from Court Bangladesh – Muslim Law Procedure',
+        metaDescription: 'Full guide to obtaining a court divorce in Bangladesh under Muslim law — talaq, khula, judicial divorce, required documents, court procedure, and what to expect.',
+        keywords: ['divorce from court Bangladesh', 'Muslim divorce procedure Bangladesh', 'talaq Bangladesh', 'khula Bangladesh', 'judicial divorce Bangladesh', 'family lawyer Dhaka', 'divorce lawyer Uttara', 'Muslim Family Laws Ordinance Bangladesh'],
+        publishedDate: '2026-03-07',
+        heroIntro: 'Divorce is one of the most significant legal events in a person\'s life. In Bangladesh, Muslim divorce law is a layered system where talaq, khula, and judicial divorce each follow their own procedure. Getting it right the first time — legally, documentarily, procedurally — prevents years of future disputes over maintenance, custody, and property.',
+        toc: [
+            'Types of Divorce Under Muslim Law in Bangladesh',
+            'Talaq: Divorce Initiated by the Husband',
+            'The Arbitration Council Process After Talaq',
+            'Khula: Divorce Initiated by the Wife',
+            'Judicial Divorce: When Khula Is Refused',
+            'Step-by-Step: Filing for Divorce in Bangladesh',
+            'Documents Needed for a Divorce Case',
+            'What About Maintenance (Nafaqa) and Dower (Mehr)?',
+        ],
+        sections: [
+            {
+                h2: 'Types of Divorce Under Muslim Law in Bangladesh',
+                content: `<p>Muslim divorce law in Bangladesh is governed primarily by the <strong>Muslim Family Laws Ordinance 1961 (MFLO)</strong>, the <strong>Muslim Marriages and Divorces (Registration) Act 1974</strong>, and principles of Muslim personal law. There are three main pathways:</p>
+<ul>
+<li><strong>Talaq:</strong> Divorce pronounced by the husband.</li>
+<li><strong>Khula:</strong> Divorce sought by the wife, usually with the return of some or all of the dower (mehr).</li>
+<li><strong>Judicial Divorce (Faskh):</strong> Divorce through a court order, available to a wife when the husband refuses talaq and she has valid grounds.</li>
+</ul>
+<p>Each has a different procedure, different timescales, and different financial implications. An experienced <a href="/divorce-lawyer-uttara" style="color:var(--accent)">family lawyer in Uttara or Dhaka</a> will advise which route best fits your circumstances.</p>`,
+            },
+            {
+                h2: 'Talaq: Divorce Initiated by the Husband',
+                content: `<p>Under the MFLO 1961, a husband wishing to divorce must follow a specific procedure. Simply saying "talaq" three times is legally insufficient in Bangladesh — the statutory process must be followed:</p>
+<ol>
+<li><strong>Written notice of talaq:</strong> The husband must give written notice of talaq to the Chairman of the local Union Parishad (or Pourashava/City Corporation ward). A copy must simultaneously be sent to the wife.</li>
+<li><strong>Arbitration Council:</strong> Within 30 days of receiving the notice, the Chairman constitutes an Arbitration Council with representatives of both parties to attempt reconciliation.</li>
+<li><strong>90-day waiting period (iddat):</strong> If reconciliation fails, the talaq becomes effective at the end of 90 days from the date the Chairman received notice.</li>
+<li><strong>Registration:</strong> The divorce should be registered under the 1974 Act.</li>
+</ol>
+<p>A talaq that bypasses this procedure is a criminal offence for the husband under Section 6(5) of the MFLO — punishable by imprisonment up to one year and/or a fine. Courts and the Arbitration Council take procedural compliance seriously.</p>`,
+            },
+            {
+                h2: 'The Arbitration Council Process After Talaq',
+                content: `<p>The Arbitration Council is a key feature of Bangladesh's Muslim divorce system. Its purpose is to give both parties a structured opportunity to reconcile before the divorce becomes irrevocable.</p>
+<ul>
+<li>The Chairman summons both parties (or their representatives).</li>
+<li>The Council may meet multiple times within the 90-day period.</li>
+<li>Either party may appoint an authorised representative to attend.</li>
+<li>If reconciliation is achieved, it is recorded and the talaq is withdrawn.</li>
+<li>If no reconciliation is achieved by the 90th day, the talaq becomes final and a divorce certificate is issued.</li>
+</ul>
+<p>During iddat, the husband is obligated to maintain the wife. The wife's right to maintenance during iddat is an enforceable legal right — non-payment is actionable in the Family Court.</p>`,
+            },
+            {
+                h2: 'Khula: Divorce Initiated by the Wife',
+                content: `<p>Khula is a wife-initiated divorce in which the wife typically returns part or all of her dower (mehr) in exchange for the husband's agreement to the divorce. It requires the husband's consent — making it a negotiated dissolution.</p>
+<p>The process generally works as follows:</p>
+<ol>
+<li>The wife communicates her desire for khula to the husband, usually through a lawyer's letter or directly.</li>
+<li>Negotiations take place over whether and how much mehr to return (the husband may waive the return).</li>
+<li>If the husband agrees, a khulnama (khula deed) is executed and registered.</li>
+<li>Notice is sent to the Arbitration Council following the same MFLO procedure as talaq.</li>
+<li>The divorce is registered under the 1974 Act.</li>
+</ol>
+<p>If the husband refuses khula and the wife has valid grounds, she can seek judicial divorce (faskh) through the Family Court.</p>`,
+            },
+            {
+                h2: 'Judicial Divorce: When Khula Is Refused',
+                content: `<p>A wife may seek judicial dissolution of marriage (faskh) through the Family Court under the <strong>Dissolution of Muslim Marriages Act 1939</strong> on specified grounds including:</p>
+<ul>
+<li>Husband's whereabouts unknown for four years</li>
+<li>Husband failed to provide maintenance for two years</li>
+<li>Husband imprisoned for seven or more years</li>
+<li>Husband suffering from a venereal disease</li>
+<li>Husband treating the wife with cruelty (physical or mental)</li>
+<li>Other grounds recognised under Muslim law</li>
+</ul>
+<p>The process involves filing a plaint in the Family Court, serving notice on the husband, hearings, and if the grounds are proven, an order of dissolution. This is the court-directed path and can take months to over a year depending on the complexity and whether the husband contests the case. Your <a href="/divorce-lawyer-uttara" style="color:var(--accent)">divorce lawyer in Dhaka or Uttara</a> will advise on the strength of your grounds and prepare the case accordingly.</p>`,
+            },
+            {
+                h2: 'Step-by-Step: Filing for Divorce in Bangladesh',
+                content: `<p>For a contested or court-based divorce, the general procedure is:</p>
+<ol>
+<li><strong>Consult a family lawyer</strong> to identify the appropriate form of divorce and gather evidence.</li>
+<li><strong>Prepare the plaint/petition</strong> setting out the factual basis, legal grounds, and relief sought (dissolution, maintenance, custody, dower recovery).</li>
+<li><strong>File in the Family Court</strong> of the area where the marriage took place, where the wife resides, or where the husband resides.</li>
+<li><strong>Court fee and stamp duty</strong> are paid at the time of filing.</li>
+<li><strong>Summons is served on the respondent</strong> (husband).</li>
+<li><strong>Hearings</strong> — the judge may attempt mediation first; if unsuccessful, evidence is recorded.</li>
+<li><strong>Judgment and decree</strong> — if the court is satisfied, a decree of dissolution is passed.</li>
+<li><strong>Registration</strong> of the divorce deed after the decree.</li>
+</ol>`,
+            },
+            {
+                h2: 'Documents Needed for a Divorce Case',
+                content: `<p>Depending on the type of divorce, you will need some or all of:</p>
+<ul>
+<li>Original Nikah-nama (marriage contract) or a certified copy</li>
+<li>NID cards of both parties</li>
+<li>Birth certificates of children (if any)</li>
+<li>Proof of dower (mehr) payment or agreement</li>
+<li>Bank statements or evidence of financial status (for maintenance claims)</li>
+<li>Written proof of cruelty, desertion, or other grounds (medical reports, police GD, witnesses)</li>
+<li>Passport (if applicable, to show residence)</li>
+<li>Previous correspondence or legal notices sent to the husband</li>
+</ul>
+<p>The Nikah-nama is the most critical document. If you cannot locate the original, a certified copy from the Nikah Registrar (Kazi's office) can be obtained — your lawyer will assist.</p>`,
+            },
+            {
+                h2: 'What About Maintenance (Nafaqa) and Dower (Mehr)?',
+                content: `<p>Divorce proceedings in Bangladesh almost always intersect with claims for maintenance and dower. These are separate legal rights that can be asserted simultaneously:</p>
+<ul>
+<li><strong>Iddat maintenance:</strong> During the 90-day post-talaq period, a husband must maintain the wife. Failure to pay is enforceable in the Family Court.</li>
+<li><strong>Deferred mehr:</strong> Any unpaid portion of the dower (the amount agreed in the Nikah-nama and typically recorded as "deferred") becomes immediately payable upon divorce. This is a debt owed by the husband.</li>
+<li><strong>Child maintenance:</strong> Post-divorce, the father is responsible for the maintenance of children regardless of which parent has custody — up to age 16 for sons and until marriage for daughters, or per court order.</li>
+<li><strong>Mut'a:</strong> Reasonable compensation ('consolation gift') may be claimed in certain circumstances.</li>
+</ul>
+<p>Filing for divorce, maintenance, and dower recovery simultaneously in the Family Court is generally the most efficient approach. <a href="/divorce-lawyer-uttara" style="color:var(--accent)">Contact our family law team</a> to understand what you are entitled to before agreeing to any settlement.</p>`,
+            },
+            {
+                h2: 'Real-Life Scenario: Khula After Domestic Abuse',
+                content: `<p>Sultana has been married for six years. Her husband has been physically abusive and she wants to end the marriage. The husband initially refuses to give talaq. Sultana consults a family lawyer in Dhaka who advises the following strategy:</p>
+<ol>
+<li>File a suit for dissolution of marriage in the Family Court on grounds of cruelty (citing medical reports and a GD she filed after the last incident).</li>
+<li>Simultaneously apply for an injunction preventing the husband from interfering with her residence.</li>
+<li>File a claim for unpaid deferred mehr (a substantial sum in her Nikah-nama) and child maintenance for their two sons.</li>
+</ol>
+<p>Once the husband is served and realises the legal exposure, he agrees to khula without the return of mehr (which the lawyer negotiated). The khulnama is executed, registered, and the Family Court case is withdrawn. Sultana is divorced within three months with her mehr intact and a maintenance order for her sons in place.</p>`,
+            },
+        ],
+        faqs: [
+            { question: 'Can a Muslim wife get a divorce if her husband refuses?', answer: 'Yes. A wife can seek khula (with husband\'s agreement) or judicial dissolution (faskh) through the Family Court under the Dissolution of Muslim Marriages Act 1939 if valid grounds exist.' },
+            { question: 'How long does divorce take in Bangladesh?', answer: 'A talaq by mutual agreement can be finalised in 90 days. A contested court divorce typically takes 6 months to 2 years depending on the complexity and court schedule.' },
+            { question: 'Must a husband give three talaqs to divorce?', answer: 'No. Under the MFLO 1961, even a single talaq triggers the statutory procedure. Pronouncing three talaqs at once does not accelerate the process and may create legal complications.' },
+            { question: 'What happens to mehr (dower) on divorce?', answer: 'Unpaid deferred mehr becomes immediately recoverable upon divorce. The wife can file a suit in the Family Court to recover it if the husband refuses to pay.' },
+            { question: 'Can I file for divorce and maintenance in the same case?', answer: 'Yes. In Bangladesh\'s Family Court, claims for dissolution, maintenance, and dower recovery can all be consolidated in a single suit, which is generally the most practical approach.' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Divorce Lawyer Uttara', to: '/divorce-lawyer-uttara' },
+            { text: 'Family Lawyer Dhaka', to: '/divorce-lawyer-uttara' },
+            { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
+        ],
+    },
+
+    /* ── BATCH 2 — Pair 5 ── */
+    {
+        slug: 'how-to-register-land-bangladesh',
+        title: 'How to Register Land in Bangladesh – Step-by-Step Guide',
+        category: 'Property Law',
+        readTime: '9 min read',
+        metaTitle: 'Land Registration Bangladesh – Complete Step-by-Step Guide',
+        metaDescription: 'Step-by-step guide to registering land or property in Bangladesh — deed preparation, stamp duty, Sub-Registrar office procedure, required documents, and avoiding fraud.',
+        keywords: ['land registration Bangladesh', 'property registration Bangladesh', 'deed registration Bangladesh', 'stamp duty Bangladesh land', 'Sub-Registrar Bangladesh', 'land lawyer Uttara', 'property transfer Bangladesh', 'mutation Bangladesh land'],
+        publishedDate: '2026-03-08',
+        heroIntro: 'In Bangladesh, land is the most common subject of legal disputes. A poorly executed or unregistered transfer is the single biggest risk in any property transaction. This guide walks you through the complete, legally correct process of registering land or property in Bangladesh — from deed drafting to mutation — so your title is beyond challenge.',
+        toc: [
+            'Why Land Registration Is Mandatory in Bangladesh',
+            'The Legal Framework: Registration Act 1908',
+            'Step 1: Verify the Title Before You Buy',
+            'Step 2: Prepare the Sale Deed',
+            'Step 3: Calculate and Pay Stamp Duty',
+            'Step 4: Present the Deed at the Sub-Registrar Office',
+            'Step 5: Mutation (Namjari) After Registration',
+            'Common Frauds in Land Transactions and How to Avoid Them',
+        ],
+        sections: [
+            {
+                h2: 'Why Land Registration Is Mandatory in Bangladesh',
+                content: `<p>Under the <strong>Registration Act 1908</strong> and the <strong>Transfer of Property Act 1882</strong>, any transfer of immovable property (land or buildings) worth more than Tk. 100 must be registered to be legally valid. An unregistered sale deed does not create legal title — it is unenforceable in a court of law and cannot be used to prove ownership.</p>
+<p>Registration at the Sub-Registrar's office creates a public record that:</p>
+<ul>
+<li>Legally transfers title from seller to buyer</li>
+<li>Creates government-verifiable documentation of the transaction</li>
+<li>Protects against double-selling (selling the same plot to two buyers)</li>
+<li>Is a prerequisite for mutation (adding your name to the government land register)</li>
+</ul>
+<p>A <a href="/land-property-lawyer-uttara" style="color:var(--accent)">property lawyer in Uttara or Dhaka</a> should advise on the transaction before any money changes hands.</p>`,
+            },
+            {
+                h2: 'The Legal Framework: Registration Act 1908',
+                content: `<p>The primary laws governing land registration in Bangladesh are:</p>
+<ul>
+<li><strong>Registration Act 1908:</strong> Mandates compulsory registration of property transfers and regulates the Sub-Registrar's role.</li>
+<li><strong>Transfer of Property Act 1882:</strong> Governs how property may lawfully be transferred, including sale, gift, and mortgage.</li>
+<li><strong>Stamp Act 1899:</strong> Requires instruments (deeds) to bear the correct stamp duty before registration.</li>
+<li><strong>State Acquisition and Tenancy Act 1950 (SAT Act):</strong> Governs agricultural land, tenancy rights, and the mutation process.</li>
+<li><strong>Land Registration Rules:</strong> Procedural rules for deed execution and registration.</li>
+</ul>
+<p>Recent digitalisation reforms have introduced online deed submission in many districts. Your lawyer will advise on the current local process.</p>`,
+            },
+            {
+                h2: 'Step 1: Verify the Title Before You Buy',
+                content: `<p>Never sign or pay for land before completing due diligence. Title verification involves:</p>
+<ul>
+<li><strong>Chain of title search:</strong> Review all deeds going back at least 25–30 years from the Sub-Registrar's record room. Each seller must prove they received valid title from the previous owner.</li>
+<li><strong>CS, SA, and RS Khatiyan (land records):</strong> Verify the government land survey records (CS, SA, RS, and the recently introduced BS Khatiyan) match the seller's claimed ownership.</li>
+<li><strong>Mutation (Namjari) check:</strong> Confirm the last buyer's name was mutation-entered in the Union Land Office's record.</li>
+<li><strong>Encumbrance check:</strong> Confirm no mortgage, lien, legal proceeding, or court stay order is registered against the property.</li>
+<li><strong>Physical inspection:</strong> Visit the site to confirm boundaries, actual possession, and the absence of hidden structures or encroachments.</li>
+</ul>
+<p>Shortcutting this step is the most common source of catastrophic land fraud in Bangladesh.</p>`,
+            },
+            {
+                h2: 'Step 2: Prepare the Sale Deed',
+                content: `<p>The sale deed (baina/kabala) is the legal document that transfers ownership. It must be drafted correctly. Essential elements include:</p>
+<ul>
+<li>Full names, addresses, and NID numbers of both buyer and seller</li>
+<li>Complete property description: Mouza, JL number, Dag number, Khatian number, area, and boundaries</li>
+<li>Consideration (sale price) stated clearly</li>
+<li>Seller's declaration of clear title and right to sell</li>
+<li>References to supporting Khatian entries</li>
+<li>Witnesses' details</li>
+<li>Date and place of execution</li>
+</ul>
+<p>Deed drafting should be done by or reviewed by a qualified <a href="/land-property-lawyer-uttara" style="color:var(--accent)">land lawyer</a>. Errors in property description are among the most litigated issues in Bangladeshi property law — a single wrong boundary figure can generate years of court battles.</p>`,
+            },
+            {
+                h2: 'Step 3: Calculate and Pay Stamp Duty',
+                content: `<p>Bangladesh imposes stamp duty on land transfer deeds. The current applicable rate (as of 2025) is:</p>
+<ul>
+<li><strong>Stamp duty:</strong> Typically 1.5% of the deed value (or government valuation, whichever is higher)</li>
+<li><strong>Registration fee:</strong> 1% of the deed value</li>
+<li><strong>Local government surcharge:</strong> An additional percentage depending on the area</li>
+<li><strong>E-tax (income tax on property transfer):</strong> For transfers above certain thresholds</li>
+</ul>
+<p>Stamp duty must be paid before execution of the deed. Revenue stamps or electronic payment is used depending on the district. <strong>Undervaluing the deed to reduce stamp duty is a criminal offence</strong> and can result in the cancellation of the registration and prosecution. Pay the correct amount — the short-term saving is never worth the long-term risk.</p>`,
+            },
+            {
+                h2: 'Step 4: Present the Deed at the Sub-Registrar Office',
+                content: `<p>Registration takes place at the Sub-Registrar's office with jurisdiction over the area where the property is located. The process involves:</p>
+<ol>
+<li><strong>Book an appointment</strong> — most modern Sub-Registrar offices now use appointment systems.</li>
+<li><strong>Both parties must be present</strong> — buyer, seller, and ideally their lawyer. Representatives can attend with a registered power of attorney.</li>
+<li><strong>Present the deed and supporting documents</strong> — stamped deed, NID cards, Khatian copies, tax clearance certificates.</li>
+<li><strong>Deed is read aloud</strong> — the Sub-Registrar (or their clerk) reads the deed to ensure both parties understand and consent.</li>
+<li><strong>Biometric verification</strong> — thumbprints and/or photograph of both parties are now required in most districts.</li>
+<li><strong>Registration number is assigned</strong> — the deed is entered into the register and a certified copy is available after a few days.</li>
+</ol>
+<p>The original registered deed is returned to the buyer. Keep it safely — along with all Khatian records and the stamp duty receipt.</p>`,
+            },
+            {
+                h2: 'Step 5: Mutation (Namjari) After Registration',
+                content: `<p>Registration alone does not update the government land record (Khatiyan). After registration, the buyer must apply for <strong>mutation (Namjari)</strong> at the Union Land Office (or Pourashava or City Corporation office for urban land).</p>
+<p>Mutation process:</p>
+<ol>
+<li>File a mutation application with the registered deed, Khatian copy, and payment of mutation fee.</li>
+<li>A field survey is conducted to verify the property details.</li>
+<li>If no objections are raised, the mutation order is passed and the buyer's name is entered in the Khatian.</li>
+<li>Land development tax (khajna) payment is updated.</li>
+</ol>
+<p>Mutation is not optional — without it, the buyer cannot pay land tax, which creates complications in future sales and legal proceedings. It also signals actual legal possession to government records. Your <a href="/land-property-lawyer-uttara" style="color:var(--accent)">land lawyer</a> can handle the entire mutation process on your behalf.</p>`,
+            },
+            {
+                h2: 'Common Frauds in Land Transactions and How to Avoid Them',
+                content: `<p>Bangladesh's land sector has a high incidence of fraud. The most common schemes include:</p>
+<ul>
+<li><strong>Double selling:</strong> A seller sells the same plot to two different buyers. Complete your registration quickly after signing a baina (advance deed).</li>
+<li><strong>Forged Khatians or deeds:</strong> Fraudsters present fake government records. Always verify directly at the AC Land office and Sub-Registrar's record room.</li>
+<li><strong>Selling land under litigation:</strong> The land is subject to a pending court case that the seller conceals. Search for court cases involving the Dag number before purchase.</li>
+<li><strong>Power of attorney fraud:</strong> A person without authority presents a fraudulent or revoked power of attorney to sell land. Verify the authenticity of any PoA with the Sub-Registrar who registered it.</li>
+<li><strong>Benami transactions:</strong> Land held in another person's name to evade detection — purchasing such land creates title risk.</li>
+</ul>
+<p>The cost of a thorough title search and a lawyer's fee is a fraction of what litigation over a fraudulent purchase will cost. Never skip due diligence.</p>`,
+            },
+        ],
+        faqs: [
+            { question: 'Is an unregistered sale deed valid in Bangladesh?', answer: 'No. Under the Registration Act 1908, an unregistered sale deed for property worth over Tk. 100 is legally invalid and unenforceable. Registration is mandatory.' },
+            { question: 'What is the stamp duty on land registration in Bangladesh?', answer: 'Stamp duty is typically around 1.5% of the deed value, plus a 1% registration fee, plus surcharges. Exact rates vary by location and deed type — your lawyer or the Sub-Registrar office will confirm the current rates.' },
+            { question: 'What is mutation (Namjari) and why is it important?', answer: 'Mutation is updating the government land register (Khatiyan) to reflect the new owner\'s name. Without mutation, you cannot pay land tax or prove possession in government records.' },
+            { question: 'How long does land registration take in Bangladesh?', answer: 'On the day of registration at the Sub-Registrar\'s office, the process typically takes a few hours. The certified copy is usually available within a few days. Mutation takes additional weeks to months.' },
+            { question: 'Can I register land on behalf of someone else?', answer: 'Yes, with a valid registered Power of Attorney authorising you to execute and register deeds on their behalf. The PoA itself must be registered at the Sub-Registrar\'s office.' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Land & Property Lawyer Uttara', to: '/land-property-lawyer-uttara' },
+            { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
+            { text: 'Tax & VAT Lawyer Dhaka', to: '/tax-vat-lawyer-dhaka' },
+        ],
+    },
+
+    /* ── BATCH 2 — Pair 6 ── */
+    {
+        slug: 'defamation-law-bangladesh',
+        title: 'Defamation Law in Bangladesh – Civil and Criminal Remedies',
+        category: 'Civil Law',
+        readTime: '8 min read',
+        metaTitle: 'Defamation Law Bangladesh – Civil & Criminal Remedies Guide',
+        metaDescription: 'A complete guide to defamation law in Bangladesh — criminal defamation under the Penal Code, civil suits, online defamation under the Cyber Security Act, and how to file a complaint.',
+        keywords: ['defamation law Bangladesh', 'criminal defamation Bangladesh', 'civil defamation Bangladesh', 'libel Bangladesh', 'slander Bangladesh', 'online defamation Bangladesh', 'Cyber Security Act defamation', 'defamation lawyer Dhaka'],
+        publishedDate: '2026-03-09',
+        heroIntro: 'A false accusation posted online. A malicious rumour spread in your community. A rival\'s statement to your employer that destroys your career. Defamation in Bangladesh carries both criminal and civil consequences — and with social media, the scale of reputational damage can be instant and devastating. Knowing your remedies is the first step to protection.',
+        toc: [
+            'What Is Defamation Under Bangladesh Law?',
+            'Criminal Defamation: Sections 499–502 of the Penal Code',
+            'Exceptions to Criminal Defamation',
+            'Civil Defamation: Suing for Damages',
+            'Online Defamation and the Cyber Security Act 2023',
+            'How to File a Defamation Complaint in Bangladesh',
+            'Defences Available to the Accused',
+            'Real-Life Scenario: Defamation via WhatsApp Group',
+        ],
+        sections: [
+            {
+                h2: 'What Is Defamation Under Bangladesh Law?',
+                content: `<p>Defamation is the act of making a false statement of fact that damages the reputation of another person. In Bangladesh, defamation has two legal dimensions:</p>
+<ul>
+<li><strong>Criminal defamation:</strong> Governed by Sections 499–502 of the <strong>Bangladesh Penal Code 1860 (BPC)</strong>. A criminal offence punishable by imprisonment and/or a fine. The complaint is filed with the Magistrate's court.</li>
+<li><strong>Civil defamation (tort of defamation):</strong> A civil wrong for which the victim can claim monetary compensation (damages) in a civil court.</li>
+</ul>
+<p>Additionally, online defamation is addressed under the <strong>Cyber Security Act 2023 (CSA)</strong>, which carries its own distinct remedies and penalties. Both tracks can be pursued simultaneously in appropriate cases.</p>`,
+            },
+            {
+                h2: 'Criminal Defamation: Sections 499–502 of the Penal Code',
+                content: `<p>Section 499 of the BPC defines defamation as making or publishing any imputation that harms the reputation of a person, by words (spoken or written), signs, or visible representations, intending to harm or knowing it will harm that person's reputation.</p>
+<p>Key elements that must be proven:</p>
+<ul>
+<li><strong>The statement was made:</strong> spoken, written, or communicated in any form.</li>
+<li><strong>The statement referred to the complainant:</strong> it must be about the specific person claiming to be defamed.</li>
+<li><strong>The statement was published or communicated to at least one third party.</strong></li>
+<li><strong>The statement harmed the reputation</strong> of the complainant.</li>
+<li><strong>The accused had the intention or knowledge</strong> that the statement would cause harm.</li>
+</ul>
+<p><strong>Punishment (Section 500 BPC):</strong> Simple imprisonment up to 2 years, or fine, or both.</p>
+<p><strong>Section 501:</strong> Printing or engraving defamatory matter — same punishment.</p>
+<p><strong>Section 502:</strong> Sale of printed defamatory material — same punishment.</p>`,
+            },
+            {
+                h2: 'Exceptions to Criminal Defamation',
+                content: `<p>Section 499 provides 10 exceptions — statements that cannot constitute criminal defamation even if reputationally damaging. The most commonly invoked are:</p>
+<ul>
+<li><strong>Truth for public good:</strong> The statement is true and its publication is for the public benefit.</li>
+<li><strong>Fair comment on public figures:</strong> Opinion on the conduct of a public servant in their public functions is not defamation.</li>
+<li><strong>Court reports:</strong> Fair reporting of court proceedings.</li>
+<li><strong>Literary criticism:</strong> Fair criticism of published books, works of art, or public performances.</li>
+<li><strong>Caution given in good faith:</strong> A warning given in good faith to a person about one's own interests or society's interest.</li>
+</ul>
+<p>These exceptions are only valid if the statement is genuinely within their scope. A defendant claiming "fair comment" who actually acted maliciously will not succeed. Courts examine the intent carefully.</p>`,
+            },
+            {
+                h2: 'Civil Defamation: Suing for Damages',
+                content: `<p>A civil defamation suit is different from a criminal complaint and pursues monetary compensation rather than punishment. In a civil suit:</p>
+<ul>
+<li>The standard of proof is on the <strong>balance of probabilities</strong> (lower than the criminal standard of beyond reasonable doubt).</li>
+<li>The plaintiff proves that the defendant made a defamatory statement, it was published to a third party, and it caused reputational damage.</li>
+<li>The court may award <strong>general damages</strong> (presumed harm to reputation), <strong>special damages</strong> (provable financial loss), and in serious cases, <strong>aggravated damages</strong>.</li>
+<li>An injunction can be sought to prevent repeated publication of the defamatory statement.</li>
+</ul>
+<p>Civil defamation suits in Bangladesh are filed before the Civil Courts. The limitation period for filing a civil defamation suit is generally <strong>one year</strong> from the date of publication. Act promptly — delay weakens your case and may bar your claim. Consult a <a href="/criminal-lawyer-uttara" style="color:var(--accent)">civil litigation lawyer in Dhaka</a> without delay.</p>`,
+            },
+            {
+                h2: 'Online Defamation and the Cyber Security Act 2023',
+                content: `<p>The Cyber Security Act 2023 (which replaced the much-criticised Digital Security Act 2018) addresses online defamation under Section 29. This provision makes it an offence to publish, broadcast, or transmit material on the internet that is defamatory within the meaning of the Penal Code.</p>
+<p>Key features of Section 29 CSA:</p>
+<ul>
+<li><strong>Offence:</strong> Publishing defamatory content online (social media, websites, messaging apps).</li>
+<li><strong>Punishment:</strong> Imprisonment up to 2 years, fine up to Tk. 5 lakh, or both.</li>
+<li><strong>Non-bailable in serious cases</strong> involving wider public harm.</li>
+<li><strong>Investigation:</strong> By the Cyber Security Authority or designated police units with digital forensics capability.</li>
+</ul>
+<p>This section is particularly relevant for defamatory Facebook posts, WhatsApp messages sent to groups, YouTube videos, and online news articles. Screenshots of the defamatory content must be preserved immediately — content is often deleted once a complaint is filed. Also consider filing a civil suit alongside the criminal complaint.</p>`,
+            },
+            {
+                h2: 'How to File a Defamation Complaint in Bangladesh',
+                content: `<p>Depending on the type of defamation:</p>
+<p><strong>For criminal defamation (Penal Code):</strong></p>
+<ol>
+<li>Gather evidence: Screenshots, witness statements, copies of publications, recordings.</li>
+<li>File a complaint (Naraji) before the Chief Metropolitan Magistrate (CMM) or Chief Judicial Magistrate (CJM) of the relevant area.</li>
+<li>The Magistrate examines the complaint and may direct police investigation or issue process against the accused directly.</li>
+<li>A case is registered and the accused is summoned.</li>
+</ol>
+<p><strong>For online defamation (Cyber Security Act):</strong></p>
+<ol>
+<li>Preserve all digital evidence (screenshots, URLs, timestamps).</li>
+<li>File a complaint with the Cyber Security Authority or the Cyber Unit of the police.</li>
+<li>Alternatively, file a complaint before the Cyber Tribunal established under the CSA.</li>
+</ol>
+<p><strong>For civil defamation:</strong></p>
+<ol>
+<li>File a plaint in the Civil Court claiming damages.</li>
+<li>Simultaneously apply for an injunction to stop further publication.</li>
+</ol>
+<p>An experienced <a href="/criminal-lawyer-uttara" style="color:var(--accent)">defamation lawyer in Dhaka</a> will advise on the optimal combination of remedies for your specific situation.</p>`,
+            },
+            {
+                h2: 'Defences Available to the Accused',
+                content: `<p>If you are accused of defamation, the following defences are available in Bangladesh:</p>
+<ul>
+<li><strong>Truth:</strong> In criminal defamation, truth is a defence if the statement was made for public good. In civil defamation, truth (justification) is an absolute defence.</li>
+<li><strong>Fair comment:</strong> A genuine opinion on a matter of public interest, based on true facts, made without malice.</li>
+<li><strong>Privilege:</strong> Statements made in Parliament, court proceedings, or official government reports enjoy absolute privilege. Statements made in good faith in certain other contexts (e.g., a reference letter) may enjoy qualified privilege.</li>
+<li><strong>Consent:</strong> If the complainant consented to the publication, there is no defamation.</li>
+<li><strong>Absence of publication:</strong> If the statement was never communicated to a third party, there is no actionable defamation.</li>
+</ul>
+<p>Each defence must be supported by evidence and argued specifically. Generic claims of "I was just telling the truth" without corroborating evidence rarely succeed in court.</p>`,
+            },
+            {
+                h2: 'Real-Life Scenario: Defamation via WhatsApp Group',
+                content: `<p>A business competitor of Rahim sends messages to a WhatsApp group of 50 business contacts, falsely claiming that Rahim's company has defrauded clients and defaulted on contracts. The message includes fabricated screenshots of bank transactions. Rahim's business suffers immediate losses as clients cancel meetings.</p>
+<p>Rahim takes the following steps with his lawyer:</p>
+<ol>
+<li>Screenshots of the WhatsApp messages (with timestamps and group member list) are preserved immediately.</li>
+<li>Affidavits are collected from two group members confirming they received the messages.</li>
+<li>A complaint is filed before the Cyber Tribunal under Section 29 CSA for online defamation.</li>
+<li>Simultaneously, a civil suit is filed in the Civil Court claiming damages of Tk. 50 lakh based on provable loss of business (supported by cancelled contracts and client correspondence).</li>
+<li>The civil court grants an interim injunction directing the defendant not to publish any further statements about Rahim's business.</li>
+</ol>
+<p>The cyber complaint results in the defendant being summoned and eventually entering into a settlement that includes a public retraction, damages, and a private apology. Acting quickly and with a two-track legal strategy made all the difference.</p>`,
+            },
+        ],
+        faqs: [
+            { question: 'Is defamation a criminal offence in Bangladesh?', answer: 'Yes. Under Sections 499–502 of the Bangladesh Penal Code, criminal defamation is punishable by up to 2 years simple imprisonment, a fine, or both.' },
+            { question: 'Can I sue someone for defamation on social media in Bangladesh?', answer: 'Yes. Online defamation is addressed under Section 29 of the Cyber Security Act 2023 and can also be prosecuted under the Penal Code. A civil suit for damages can be filed simultaneously.' },
+            { question: 'Is truth a defence to defamation in Bangladesh?', answer: 'In criminal defamation, truth is a defence only if the statement was made for public good. In civil defamation, truth (justification) is an absolute defence regardless of motive.' },
+            { question: 'What is the time limit for filing a defamation case in Bangladesh?', answer: 'For civil defamation, the limitation period is generally one year from publication. For criminal defamation, consult a lawyer immediately — delay affects both the legal and practical strength of your case.' },
+            { question: 'Can I claim both criminal punishment and civil damages for the same defamatory statement?', answer: 'Yes. Criminal and civil defamation actions are independent. You can pursue both tracks simultaneously — criminal for punishment and civil for monetary compensation.' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-uttara' },
+            { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
+            { text: 'Bail Lawyer Dhaka', to: '/bail-lawyer-dhaka' },
+        ],
+    },
+
+    /* ── BATCH 3 — Pair 7 ── */
+    {
+        slug: 'cheque-dishonour-bangladesh-section-138',
+        title: 'Cheque Dishonour in Bangladesh – Section 138 NI Act Guide',
+        category: 'Criminal Law',
+        readTime: '8 min read',
+        metaTitle: 'Cheque Dishonour Bangladesh – Section 138 NI Act Full Guide',
+        metaDescription: 'Complete guide to cheque dishonour cases in Bangladesh under Section 138 of the Negotiable Instruments Act — how to file, procedure, punishment, and defences.',
+        keywords: ['cheque dishonour Bangladesh', 'Section 138 NI Act Bangladesh', 'cheque bounce case Bangladesh', 'dishonoured cheque procedure Bangladesh', 'criminal lawyer Dhaka', 'negotiable instruments act Bangladesh', 'cheque case lawyer Uttara'],
+        publishedDate: '2026-03-10',
+        heroIntro: 'A dishonoured cheque is not just a banking inconvenience — in Bangladesh it is a criminal offence. Section 138 of the Negotiable Instruments Act 1881 provides a powerful mechanism to hold the cheque issuer criminally liable and recover the money owed. But the procedure is technical and time-sensitive. Missing a single deadline can forfeit your right to sue.',
+        toc: [
+            'What Is Cheque Dishonour Under Bangladesh Law?',
+            'The Legal Framework: Section 138 NI Act 1881',
+            'When Is a Cheque Dishonour Case Valid?',
+            'Step-by-Step: How to File a Section 138 Case',
+            'The 30-Day Legal Notice Requirement',
+            'Documents You Need to File the Case',
+            'Punishment If the Accused Is Convicted',
+            'Defences Available to the Drawer',
+        ],
+        sections: [
+            {
+                h2: 'What Is Cheque Dishonour Under Bangladesh Law?',
+                content: `<p>A cheque is dishonoured when a bank returns it unpaid. Reasons include: insufficient funds, account closed, payment stopped by the drawer, signature mismatch, or post-dated cheque presented early. While dishonour for technical reasons (e.g., date format) may not attract criminal liability, dishonour for <strong>insufficiency of funds or where the amount exceeds the amount arranged</strong> triggers criminal liability under Section 138 of the Negotiable Instruments Act 1881 (NI Act).</p>
+<p>This is one of Bangladesh's most commonly filed criminal cases — particularly in commercial disputes, loan recoveries, and business transactions where cheques are used as security. An experienced <a href="/criminal-lawyer-uttara" style="color:var(--accent)">criminal lawyer in Dhaka</a> can file and prosecute a Section 138 case efficiently.</p>`,
+            },
+            {
+                h2: 'The Legal Framework: Section 138 NI Act 1881',
+                content: `<p>Section 138 of the Negotiable Instruments Act 1881 (as applicable in Bangladesh) provides:</p>
+<ul>
+<li>A person who draws a cheque for discharge of a debt or liability commits an offence if the cheque is dishonoured.</li>
+<li>The dishonour must be due to <strong>insufficient funds</strong> or the amount exceeding the amount arranged.</li>
+<li>Conviction carries punishment of <strong>imprisonment up to one year, or fine up to three times the cheque amount, or both</strong>.</li>
+<li>The offence is cognisable in the Magistrate's court.</li>
+</ul>
+<p>Sections 139–142 provide additional related provisions — including the presumption that a cheque was issued for discharge of a liability (reversing the burden of proof to the accused), time limits for filing, and conditions precedent.</p>`,
+            },
+            {
+                h2: 'When Is a Cheque Dishonour Case Valid?',
+                content: `<p>Not every dishonoured cheque gives rise to a Section 138 criminal case. The following conditions must all be satisfied:</p>
+<ul>
+<li><strong>The cheque was for discharge of a legally enforceable debt or liability</strong> — not a gift, donation, or illegal transaction.</li>
+<li><strong>The bank dishonoured the cheque for insufficiency of funds</strong> (or exceeding arranged amount) — not for a purely technical reason such as a date error or signature mismatch unrelated to funds.</li>
+<li><strong>The payee sent a legally valid 30-day notice</strong> to the drawer demanding payment within 30 days of receiving the dishonour memo from the bank.</li>
+<li><strong>The drawer failed to pay</strong> within 30 days of receiving the notice.</li>
+<li><strong>The case was filed within 30 days of the notice period expiry</strong> — this is a firm deadline. Missing it bars the case.</li>
+</ul>
+<p>If any condition is not met, the Magistrate will reject the complaint. Accuracy in the notice and timing is critical.</p>`,
+            },
+            {
+                h2: 'Step-by-Step: How to File a Section 138 Case',
+                content: `<p>The procedure to initiate a cheque dishonour case in Bangladesh:</p>
+<ol>
+<li><strong>Present the cheque to the bank</strong> and obtain the dishonour memo (return memo) specifying the reason for dishonour.</li>
+<li><strong>Send the 30-day legal notice</strong> to the drawer within a reasonable time of receiving the dishonour memo — by registered post or courier with receipt. The notice must demand payment of the cheque amount as a condition to avoid prosecution.</li>
+<li><strong>If the drawer fails to pay within 30 days</strong> of the notice, file a complaint (naraji petition) before the Chief Metropolitan Magistrate (CMM) in Dhaka or the Chief Judicial Magistrate (CJM) of the relevant district.</li>
+<li><strong>The Magistrate examines the complaint</strong> and may summon the accused if the case appears prima facie valid.</li>
+<li><strong>Trial proceeds</strong> with the accused given an opportunity to present defences. The burden shifts to the accused to disprove the presumption raised under Section 139.</li>
+<li><strong>Conviction or acquittal.</strong></li>
+</ol>`,
+            },
+            {
+                h2: 'The 30-Day Legal Notice Requirement',
+                content: `<p>The legal notice is the most technically critical step. It must:</p>
+<ul>
+<li>Be sent <strong>in writing</strong> to the drawer at their last known address.</li>
+<li><strong>Demand payment</strong> of the cheque amount clearly.</li>
+<li>Be sent by <strong>registered post</strong> or a method that creates a documented proof of receipt.</li>
+<li>Give the drawer <strong>30 days to make payment</strong> from receipt of the notice.</li>
+<li>Contain accurate details of the cheque (number, date, amount, bank).</li>
+</ul>
+<p>Any defect in the notice — wrong address, insufficient demand, or lack of proof of delivery — can be used by the defence to get the case dismissed. Your lawyer should draft and send the notice to ensure it is legally airtight. Keep the original postal receipts and the bank's dishonour memo carefully — they are the core exhibits in the trial.</p>`,
+            },
+            {
+                h2: 'Documents You Need to File the Case',
+                content: `<p>Gather the following before filing:</p>
+<ul>
+<li>Original dishonoured cheque</li>
+<li>Bank's dishonour/return memo (specifying reason)</li>
+<li>Copy of the 30-day legal notice sent to the drawer</li>
+<li>Proof of delivery of the notice (registered post receipt, courier acknowledgement)</li>
+<li>NID of the complainant</li>
+<li>Any underlying agreement, contract, or document evidencing the debt</li>
+<li>Bank statements showing the transaction</li>
+</ul>
+<p>The original cheque is the primary exhibit. Keep it safe and present the original at every hearing — do not allow the original to be misplaced or damaged.</p>`,
+            },
+            {
+                h2: 'Punishment If the Accused Is Convicted',
+                content: `<p>Upon conviction under Section 138, the Court may order:</p>
+<ul>
+<li><strong>Imprisonment up to 1 year</strong></li>
+<li><strong>Fine up to three times the cheque amount</strong></li>
+<li><strong>Both imprisonment and fine</strong></li>
+</ul>
+<p>In practice, courts frequently impose both a fine (equivalent to the cheque amount or more) and a period of imprisonment (often suspended or reduced on appeal). The accused may also be ordered to pay compensation to the complainant. The prospect of criminal conviction often pressures accused persons to settle and pay before trial — making these cases powerful recovery tools even before judgment.</p>`,
+            },
+            {
+                h2: 'Defences Available to the Drawer',
+                content: `<p>If you are the drawer (accused), the following defences may be available:</p>
+<ul>
+<li><strong>No legally enforceable debt:</strong> The cheque was not issued for a genuine debt or liability but as a gift, blank security, or under duress.</li>
+<li><strong>Cheque was stolen or forged:</strong> You did not issue the cheque voluntarily.</li>
+<li><strong>Procedural defects:</strong> The notice was defective, not properly received, or the case was filed after the 30-day deadline.</li>
+<li><strong>Payment already made:</strong> The amount was paid before the case was filed.</li>
+<li><strong>Post-dating without liability:</strong> The cheque was post-dated expressly as a future guarantee for an obligation that never arose.</li>
+</ul>
+<p>The key advantage for the complainant under Section 139 is the <strong>presumption</strong> that the cheque was issued for a debt — which means the drawer must prove otherwise. A weak defence without clear evidence rarely succeeds. <a href="/criminal-lawyer-uttara" style="color:var(--accent)">Contact a criminal defence lawyer</a> immediately if you are served with a Section 138 notice.</p>`,
+            },
+            {
+                h2: 'Real-Life Scenario: Business Partner Dishonours a Cheque',
+                content: `<p>Karim lent Tk. 10 lakh to a business partner who gave him a post-dated cheque as repayment. On the agreed date, Karim presented the cheque and the bank returned it marked "insufficient funds."</p>
+<p>Karim's lawyer took the following steps:</p>
+<ol>
+<li>Obtained the bank's dishonour memo and preserved the original cheque.</li>
+<li>Sent a registered legal notice the next day, demanding payment within 30 days.</li>
+<li>The drawer paid nothing by the 30th day.</li>
+<li>Filed a Section 138 complaint before the CMM Dhaka within 25 days of the notice expiry.</li>
+<li>At the first hearing, the Magistrate found the complaint prima facie valid and issued a summons.</li>
+</ol>
+<p>Faced with a criminal summons and the prospect of conviction, the drawer contacted Karim's lawyer and agreed to a full settlement — paying the Tk. 10 lakh plus compensation. The case was withdrawn by mutual consent.</p>`,
+            },
+        ],
+        faqs: [
+            { question: 'Is cheque dishonour a criminal offence in Bangladesh?', answer: 'Yes. Under Section 138 of the Negotiable Instruments Act 1881, cheque dishonour due to insufficient funds is a criminal offence punishable by up to one year imprisonment or a fine of up to three times the cheque amount, or both.' },
+            { question: 'What is the time limit to file a cheque dishonour case?', answer: 'The complainant must send a 30-day legal notice after the dishonour, then file the case within 30 days of the notice period expiring. Missing this deadline bars the criminal case.' },
+            { question: 'Do I need a lawyer to file a Section 138 case?', answer: 'While technically anyone can file, it is strongly advisable to use a lawyer. The notice must be legally precise and the case filed within strict time limits — any error can get the case dismissed at the threshold.' },
+            { question: 'Can I file both a criminal case and a civil money recovery suit for the same cheque?', answer: 'Yes. A Section 138 criminal case and a civil suit for recovery of the cheque amount are independent remedies. Both can be pursued simultaneously.' },
+            { question: 'What if the drawer pays after the case is filed?', answer: 'If the drawer pays the full amount owed, the complainant can withdraw the criminal case. Courts are generally amenable to withdrawal upon proof of full payment and settlement.' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-uttara' },
+            { text: 'Bail Lawyer Dhaka', to: '/bail-lawyer-dhaka' },
+            { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
+        ],
+    },
+
+    /* ── BATCH 3 — Pair 8 ── */
+    {
+        slug: 'child-custody-bangladesh-muslim-law',
+        title: 'Child Custody in Bangladesh – Muslim Law Rights and Procedure',
+        category: 'Family Law',
+        readTime: '8 min read',
+        metaTitle: 'Child Custody Bangladesh – Muslim Law Rights & Court Process',
+        metaDescription: 'Complete guide to child custody in Bangladesh under Muslim law — who gets custody, at what age, how courts decide, and how to file a guardianship petition.',
+        keywords: ['child custody Bangladesh', 'Muslim law custody Bangladesh', 'guardianship Bangladesh', 'hizanat Bangladesh', 'custody lawyer Dhaka', 'family court Bangladesh child', 'divorce custody Bangladesh', 'child guardianship Uttara'],
+        publishedDate: '2026-03-11',
+        heroIntro: 'After a divorce or separation, child custody becomes the most emotionally and legally charged issue for parents. In Bangladesh, child custody for Muslims is governed by Muslim personal law and the Guardians and Wards Act 1890. Understanding the rules — who gets custody, for how long, and how courts intervene — is essential for protecting both your rights and your child\'s welfare.',
+        toc: [
+            'Custody vs. Guardianship: The Distinction Under Muslim Law',
+            'Hizanat: The Mother\'s Right to Physical Custody',
+            'At What Age Does Custody Transfer?',
+            'When Can a Mother\'s Custody Be Forfeited?',
+            'Guardianship: The Father\'s Continuing Role',
+            'How Courts Decide: The Welfare Principle',
+            'How to File a Guardianship Petition in the Family Court',
+            'Visitation Rights for the Non-Custodial Parent',
+        ],
+        sections: [
+            {
+                h2: 'Custody vs. Guardianship: The Distinction Under Muslim Law',
+                content: `<p>Under Muslim law applicable in Bangladesh, two distinct concepts govern children after parental separation:</p>
+<ul>
+<li><strong>Hizanat (physical custody):</strong> The right to have the child live with and be cared for physically. Under classical Muslim law (primarily Hanafi school followed in Bangladesh), hizanat belongs to the <strong>mother</strong> up to specified ages, regardless of who caused the divorce.</li>
+<li><strong>Wilayat (guardianship):</strong> The legal right to manage the child\'s property, give consent to marriage, and make major life decisions. This generally belongs to the <strong>father</strong> throughout.</li>
+</ul>
+<p>In practice, these two rights can coexist — the mother has the child physically, but the father remains the legal guardian. A <a href="/divorce-lawyer-uttara" style="color:var(--accent)">family lawyer in Dhaka</a> can help you understand which right is at stake in your situation.</p>`,
+            },
+            {
+                h2: 'Hizanat: The Mother\'s Right to Physical Custody',
+                content: `<p>Under Hanafi Muslim law (which governs most Bangladeshi Muslims), the mother\'s right to hizanat is automatic upon separation or divorce — <strong>she does not need to apply for it</strong>. The father cannot remove the child from the mother\'s care during the hizanat period without court order.</p>
+<p>Key principles:</p>
+<ul>
+<li>The mother\'s right to hizanat applies regardless of who initiated the divorce or whether the divorce was contested.</li>
+<li>The mother\'s right exists even if she remarries — with an exception for sons over 7 and daughters over the pubescent age under classical law, though courts now primarily apply the welfare principle.</li>
+<li>The father retains the right of access (visitation) during the hizanat period.</li>
+<li>The father must pay maintenance (nafaqa) for the children regardless of who has physical custody.</li>
+</ul>`,
+            },
+            {
+                h2: 'At What Age Does Custody Transfer?',
+                content: `<p>Under classical Hanafi law as applied historically in Bangladesh:</p>
+<ul>
+<li><strong>Sons:</strong> Mother\'s hizanat ends when the son reaches <strong>7 years of age</strong>.</li>
+<li><strong>Daughters:</strong> Mother\'s hizanat ends when the daughter reaches <strong>puberty</strong>.</li>
+</ul>
+<p>However, Bangladesh\'s Family Courts do <strong>not apply these ages rigidly</strong>. The controlling principle is the <strong>welfare of the child</strong> under Section 17 of the Guardians and Wards Act 1890. Courts regularly grant continuing custody to mothers of children well past these ages if it serves the child\'s best interests — particularly for daughters. Age is a factor, not a determinative rule.</p>`,
+            },
+            {
+                h2: 'When Can a Mother\'s Custody Be Forfeited?',
+                content: `<p>The mother\'s right to hizanat can be lost in certain circumstances recognised by Muslim law and Bangladeshi courts:</p>
+<ul>
+<li><strong>Remarriage to a stranger:</strong> Under classical law, if the mother remarries a man who is not the child\'s mahram (close relative), hizanat ends. Courts assess whether the remarriage is in the child\'s interest.</li>
+<li><strong>Moral unfitness:</strong> Proven immoral conduct, neglect, or abuse.</li>
+<li><strong>Residence far from the father:</strong> Moving the child to a distant location that undermines the father\'s access rights.</li>
+<li><strong>Conversion from Islam:</strong> Changing religion may affect custody rights under classical law, though modern courts apply it less strictly.</li>
+</ul>
+<p>Forfeiture must be proven to the court — it is not automatic. Courts are cautious about removing children from a primary carer. Strong evidence is required.</p>`,
+            },
+            {
+                h2: 'Guardianship: The Father\'s Continuing Role',
+                content: `<p>Even when the mother has physical custody, the <strong>father remains the natural guardian</strong> of the minor child under Muslim law and Section 19 of the Guardians and Wards Act 1890. This means:</p>
+<ul>
+<li>The father gives consent to the child\'s marriage.</li>
+<li>The father manages the child\'s property and assets.</li>
+<li>The father must pay maintenance for the child regardless of custody arrangements.</li>
+<li>Major educational and medical decisions may require the father\'s consent.</li>
+</ul>
+<p>The father can apply to the Family Court for custody if the mother\'s hizanat period has ended or if she has forfeited her right. The father must demonstrate that custody with him serves the child\'s welfare.</p>`,
+            },
+            {
+                h2: 'How Courts Decide: The Welfare Principle',
+                content: `<p>Bangladesh\'s Family Courts apply the <strong>welfare of the child</strong> as the paramount criterion in all custody and guardianship disputes — overriding classical age rules when necessary. Factors considered include:</p>
+<ul>
+<li>The child\'s age and gender</li>
+<li>The child\'s expressed wishes (especially for older children)</li>
+<li>Each parent\'s financial and physical capacity to care for the child</li>
+<li>Moral fitness and character of each parent</li>
+<li>Continuity of existing arrangements (disrupting a settled routine harms children)</li>
+<li>Proximity to school and access to education</li>
+<li>The child\'s relationship with siblings</li>
+<li>Risk of alienation from the non-custodial parent</li>
+</ul>
+<p>Courts also appoint a guardian ad litem or conduct welfare inquiries in disputed cases. A well-prepared welfare report supporting your position significantly strengthens your case.</p>`,
+            },
+            {
+                h2: 'How to File a Guardianship Petition in the Family Court',
+                content: `<p>If custody is disputed or the non-custodial parent refuses to return the child, the procedure is:</p>
+<ol>
+<li><strong>Engage a family lawyer</strong> to assess your grounds and gather welfare evidence.</li>
+<li><strong>File a guardianship petition</strong> under the Guardians and Wards Act 1890 before the Family Court of the area where the child ordinarily resides.</li>
+<li><strong>Apply for interim custody</strong> simultaneously if the child is currently with the other parent and you believe immediate return is in the child\'s welfare.</li>
+<li><strong>Serve the petition on the respondent.</strong></li>
+<li><strong>The court may conduct a welfare inquiry</strong> and/or hear the child (if of sufficient age and maturity).</li>
+<li><strong>Hearings and evidence.</strong></li>
+<li><strong>Final order</strong> on custody/guardianship, with a visitation schedule for the non-custodial parent.</li>
+</ol>
+<p><a href="/divorce-lawyer-uttara" style="color:var(--accent)">Our family law team</a> handles custody petitions from initial filing through to final orders and handles cross-border custody issues where children have been taken abroad.</p>`,
+            },
+            {
+                h2: 'Visitation Rights for the Non-Custodial Parent',
+                content: `<p>The non-custodial parent (usually the father during the hizanat period) has the right to <strong>access and visitation</strong> — this is a right of the child as much as the parent. Courts regularly specify:</p>
+<ul>
+<li>Days and hours of weekly or fortnightly visitation</li>
+<li>Holiday and Eid access schedules</li>
+<li>Vacation periods with each parent</li>
+<li>Communication rights (phone, video call)</li>
+</ul>
+<p>Unreasonably denying the non-custodial parent access can be raised before the Family Court as a violation of the custody order and may result in variation of the custody arrangement. Conversely, a non-custodial parent who misuses access — for example, by attempting to remove the child — faces contempt and potential criminal proceedings.</p>`,
+            },
+        ],
+        faqs: [
+            { question: 'Who gets child custody after divorce in Bangladesh?', answer: 'Under Muslim law, the mother has the primary right to physical custody (hizanat) — for sons up to age 7 and daughters until puberty under classical law. However, courts apply the welfare of the child as the overriding principle and may extend or modify these ages.' },
+            { question: 'Can a father get custody of a young child in Bangladesh?', answer: 'Yes, if the mother has forfeited her hizanat right (through remarriage to a stranger, proven unfitness, etc.) or if the court finds custody with the father better serves the child\'s welfare.' },
+            { question: 'Does the mother automatically get custody after divorce?', answer: 'For young children, yes — Muslim law gives the mother hizanat without needing to apply for it. The father cannot take the child without a court order during the hizanat period.' },
+            { question: 'What happens if a parent takes the child abroad without the other\'s consent?', answer: 'This can constitute contempt of court (if there is a custody order) and potentially child abduction under Bangladeshi law. Apply immediately to the Family Court for a recovery order and alert immigration authorities.' },
+            { question: 'Can a non-Muslim child custody case be filed in a Family Court?', answer: 'Yes. The Guardians and Wards Act 1890 applies to all children in Bangladesh regardless of religion. Non-Muslim custody cases are governed by this Act and the welfare principle.' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Divorce Lawyer Uttara', to: '/divorce-lawyer-uttara' },
+            { text: 'Family Lawyer Dhaka', to: '/divorce-lawyer-uttara' },
+            { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
+        ],
+    },
+
+    /* ── BATCH 3 — Pair 9 ── */
+    {
+        slug: 'writ-petition-bangladesh-high-court',
+        title: 'How to File a Writ Petition in Bangladesh High Court – Full Guide',
+        category: 'Civil Law',
+        readTime: '9 min read',
+        metaTitle: 'Writ Petition Bangladesh High Court – Complete Guide 2025',
+        metaDescription: 'Complete guide to filing a writ petition in Bangladesh High Court — types of writs, grounds, procedure, documents, and how to enforce constitutional rights under Article 102.',
+        keywords: ['writ petition Bangladesh', 'High Court writ Bangladesh', 'Article 102 Bangladesh', 'mandamus Bangladesh', 'certiorari Bangladesh', 'habeas corpus Bangladesh', 'fundamental rights Bangladesh', 'writ lawyer Dhaka'],
+        publishedDate: '2026-03-12',
+        heroIntro: 'When a government authority acts unlawfully, exceeds its powers, or violates your fundamental rights — the writ jurisdiction of the Bangladesh High Court Division is your constitutional remedy. A writ petition can stop an illegal order, compel a public authority to act, or secure the release of an unlawfully detained person. But the procedure is technical and requires an advocate enrolled in the Supreme Court.',
+        toc: [
+            'What Is a Writ Petition in Bangladesh?',
+            'Constitutional Basis: Article 102 of the Constitution',
+            'The Five Types of Writs Available',
+            'Grounds for Filing a Writ Petition',
+            'Who Can File a Writ Petition?',
+            'Step-by-Step: Filing a Writ Petition in the High Court',
+            'Documents Required for a Writ Petition',
+            'Timeframe and What to Expect',
+        ],
+        sections: [
+            {
+                h2: 'What Is a Writ Petition in Bangladesh?',
+                content: `<p>A writ petition is a formal application to the High Court Division of the Bangladesh Supreme Court asking it to exercise its constitutional supervisory power over inferior courts, tribunals, or public authorities. Unlike ordinary appeals (which challenge decisions on merits), writ petitions challenge the <strong>legality, jurisdiction, or constitutionality</strong> of a decision or action.</p>
+<p>Writ petitions are governed by <strong>Article 102 of the Constitution of Bangladesh</strong> and the High Court Division Rules. They are filed before the High Court Division sitting in Dhaka. Only advocates enrolled in the Supreme Court of Bangladesh (High Court Division) can appear in writ proceedings. <a href="/supreme-court-lawyer-bangladesh" style="color:var(--accent)">Our Supreme Court lawyers in Bangladesh</a> handle all types of writ petitions.</p>`,
+            },
+            {
+                h2: 'Constitutional Basis: Article 102 of the Constitution',
+                content: `<p>Article 102 of the Constitution of Bangladesh empowers the High Court Division to:</p>
+<ul>
+<li>Issue directions or orders to any person performing functions in connection with the affairs of the Republic or a statutory public authority.</li>
+<li>Issue directions in the nature of habeas corpus, mandamus, certiorari, prohibition, or quo warranto.</li>
+<li>Enforce the fundamental rights guaranteed in Part III of the Constitution (Articles 26–47).</li>
+</ul>
+<p>This jurisdiction is <strong>original</strong> — meaning the High Court Division hears these matters at first instance, not on appeal. Its power extends to actions by all government ministries, departments, statutory bodies, public officials, and inferior courts throughout Bangladesh.</p>`,
+            },
+            {
+                h2: 'The Five Types of Writs Available',
+                content: `<p>Bangladesh courts recognise five types of writ in the Article 102 jurisdiction:</p>
+<ul>
+<li><strong>Habeas Corpus:</strong> "You have the body." Challenges unlawful detention. Orders the detaining authority to produce the detained person before the court and justify the detention. Used in arbitrary arrest, illegal police custody, and enforced disappearance cases.</li>
+<li><strong>Mandamus:</strong> "We command." Orders a public authority to perform a legal duty it is obligated to perform but has failed to do — e.g., issuing a licence, registering a document, making a payment.</li>
+<li><strong>Certiorari:</strong> Orders an inferior court or tribunal to send its record to the High Court for review, to quash a decision made without jurisdiction, in excess of jurisdiction, or in violation of natural justice.</li>
+<li><strong>Prohibition:</strong> Prevents an inferior court or tribunal from proceeding further in a matter where it lacks jurisdiction or is acting in excess of its jurisdiction. Acts prospectively — before a final decision.</li>
+<li><strong>Quo Warranto:</strong> "By what authority?" Challenges the right of a person to hold a public or corporate office without legal authority.</li>
+</ul>`,
+            },
+            {
+                h2: 'Grounds for Filing a Writ Petition',
+                content: `<p>Common grounds for filing a writ petition in Bangladesh include:</p>
+<ul>
+<li><strong>Violation of fundamental rights</strong> (Articles 26–47): freedom of speech, right to life, right to equality, right to property, protection from ex post facto law, etc.</li>
+<li><strong>Ultra vires (excess of jurisdiction):</strong> The authority acted beyond the power granted by its enabling statute.</li>
+<li><strong>Breach of natural justice:</strong> The affected party was not given notice or a hearing before an adverse decision.</li>
+<li><strong>Malice or bad faith:</strong> The action was taken for an improper purpose.</li>
+<li><strong>Error apparent on the face of the record:</strong> A serious, obvious legal error in the decision.',</li>
+<li><strong>Unconstitutionality:</strong> A law or order violates the Constitution.</li>
+<li><strong>Failure to perform a statutory duty:</strong> A public authority refuses to carry out a legal obligation.</li>
+</ul>`,
+            },
+            {
+                h2: 'Who Can File a Writ Petition?',
+                content: `<p>Any person <strong>aggrieved</strong> by the unlawful action or inaction of a public authority may file a writ petition. "Aggrieved" is construed broadly — it includes individuals, companies, NGOs, and representative organisations. In public interest litigation (PIL), even a person not directly affected may file if the matter involves public interest.</p>
+<p>The respondents must be a person, court, or authority performing <strong>public functions</strong> under the Constitution or statute. Writ petitions cannot be filed against purely private parties — for disputes with individuals or private companies, ordinary civil litigation is the correct path.</p>`,
+            },
+            {
+                h2: 'Step-by-Step: Filing a Writ Petition in the High Court',
+                content: `<p>The procedure for filing a writ petition in the Bangladesh High Court Division:</p>
+<ol>
+<li><strong>Engage a Supreme Court advocate</strong> — only advocates enrolled in the High Court Division can file and argue writ petitions. Choose one with experience in constitutional or administrative law.</li>
+<li><strong>Prepare the petition</strong> — states the facts, the impugned action or inaction, the legal grounds, and the relief sought. Supporting affidavit sworn by the petitioner.</li>
+<li><strong>File in the Administrative Bench</strong> or Constitutional Bench of the High Court Division — depending on the nature of the writ.</li>
+<li><strong>Pay court fees</strong> at the time of filing.</li>
+<li><strong>Apply for interim relief</strong> — simultaneously with filing, apply for a Rule Nisi (a call on the respondent to show cause why the writ should not be granted) and, in urgent cases, an interim stay of the impugned action.</li>
+<li><strong>Rule Nisi is issued</strong> — the court summons the respondent to show cause.</li>
+<li><strong>Hearing and arguments</strong> — both parties argue; the court may call for records.</li>
+<li><strong>Absolute Rule or discharge</strong> — if the petitioner succeeds, the Rule is made absolute and the writ is granted. If not, the Rule is discharged.</li>
+</ol>`,
+            },
+            {
+                h2: 'Documents Required for a Writ Petition',
+                content: `<p>Essential documents include:</p>
+<ul>
+<li>Petition setting out facts and grounds</li>
+<li>Affidavit in support sworn by the petitioner</li>
+<li>Certified copy of the impugned order or decision (if challenging a specific decision)</li>
+<li>Copies of all relevant notices, correspondence, or communications from the authority</li>
+<li>NID of the petitioner; registration certificate if the petitioner is a company</li>
+<li>Any prior representations made to the authority and their responses</li>
+<li>Supporting legal documents (contracts, licences, property deeds, etc.) relevant to the facts</li>
+<li>Court fee stamps</li>
+</ul>
+<p>For habeas corpus petitions (unlawful detention), the petition can be filed by a relative or even a concerned third party — and the court has power to respond very quickly, sometimes on the same day.</p>`,
+            },
+            {
+                h2: 'Timeframe and What to Expect',
+                content: `<p>There is no strict limitation period for writ petitions under Article 102, but delay weakens a petitioner\'s case. Courts have held that unreasonable delay without explanation can be a ground to dismiss a writ petition. Filing promptly after the cause of action arises is strongly advisable.</p>
+<p>Typical timelines:</p>
+<ul>
+<li><strong>Interim stay/Rule Nisi:</strong> Often obtained on the first day of filing in urgent cases — sometimes within hours.</li>
+<li><strong>Full hearing:</strong> Several months to one or more years depending on the complexity and the court\'s schedule.</li>
+<li><strong>Habeas corpus:</strong> Emergency procedures allow the court to hear habeas corpus matters on the same day in urgent cases of unlawful detention.</li>
+</ul>
+<p>If the Rule is made absolute, the respondent authority must comply with the High Court\'s order. Non-compliance constitutes contempt of court — a serious matter. <a href="/supreme-court-lawyer-bangladesh" style="color:var(--accent)">Contact our Supreme Court team</a> to evaluate whether your case qualifies for writ jurisdiction.</p>`,
+            },
+        ],
+        faqs: [
+            { question: 'What is the difference between a writ petition and an appeal?', answer: 'An appeal challenges the merits of a lower court\'s decision. A writ petition challenges the legality, jurisdiction, or constitutionality of a public authority\'s action — not the correctness of the decision on facts.' },
+            { question: 'Can I file a writ petition against a private company?', answer: 'Generally no. Writ jurisdiction in Bangladesh applies to public authorities and persons performing public functions. Disputes with purely private parties must go through ordinary civil courts.' },
+            { question: 'How quickly can a writ petition be filed in Bangladesh?', answer: 'A writ petition can be filed and presented to a bench on the same day in urgent cases. Interim stays and Rule Nisi orders can be obtained very quickly — sometimes within hours of filing.' },
+            { question: 'Is habeas corpus available in Bangladesh?', answer: 'Yes. Habeas corpus is available under Article 102 of the Constitution. The High Court Division can order the release of a person who is unlawfully detained, and the court responds urgently to genuine habeas corpus applications.' },
+            { question: 'Who can be respondent in a writ petition?', answer: 'Public authorities, government ministries, departments, statutory bodies, and public officials. In some cases, quasi-public or licensed bodies performing public functions can also be respondents.' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
+            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-uttara' },
+            { text: 'Bail Lawyer Dhaka', to: '/bail-lawyer-dhaka' },
+        ],
+    },
 ];
 
 export default posts;
+
+
 
 
