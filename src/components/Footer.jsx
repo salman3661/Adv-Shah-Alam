@@ -1,5 +1,6 @@
 import React from 'react';
 import { Facebook, MessageCircle, Phone, Sun, Moon, MapPin, Mail } from 'lucide-react';
+import { CALL_DISPLAY, telLink, waLink } from '../data/contactInfo';
 import { Link } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
 
@@ -83,15 +84,15 @@ const Footer = () => {
                     <div>
                         <h4 className="font-bold text-xs uppercase tracking-wider mb-4" style={{ color: 'var(--text)' }}>Connect With Us</h4>
                         <div className="space-y-2 mb-5">
-                            <a href="tel:+8801712655546" className="flex items-center gap-2 text-sm" style={{ color: 'var(--text-2)' }}>
-                                <Phone size={14} style={{ color: 'var(--accent)' }} />+880 1712-655546
+                            <a href={telLink()} className="flex items-center gap-2 text-sm" style={{ color: 'var(--text-2)' }}>
+                                <Phone size={14} style={{ color: 'var(--accent)' }} />{CALL_DISPLAY}
                             </a>
                             <a href="mailto:shahalam0332@gmail.com" className="flex items-center gap-2 text-sm" style={{ color: 'var(--text-2)' }}>
                                 <Mail size={14} style={{ color: 'var(--accent)' }} />shahalam0332@gmail.com
                             </a>
                         </div>
                         <div className="flex gap-2 mb-5">
-                            <a href="https://wa.me/8801955802007" target="_blank" rel="noopener noreferrer"
+                            <a href={waLink()} target="_blank" rel="noopener noreferrer"
                                 aria-label="Chat on WhatsApp"
                                 className="w-9 h-9 rounded-xl flex items-center justify-center hover:scale-110 transition-transform shadow-sm"
                                 style={{ background: 'var(--card-bg)', border: '1px solid var(--card-border)' }}>

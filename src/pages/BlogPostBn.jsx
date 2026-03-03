@@ -6,6 +6,7 @@ import {
     Phone, MessageCircle, ExternalLink, BookOpen
 } from 'lucide-react';
 import postsBn from '../data/blogPostsBn';
+import { CALL_NUMBER, CALL_DISPLAY, WA_NUMBER, WA_DISPLAY, waLink, telLink } from '../data/contactInfo';
 
 const FAQItem = ({ question, answer }) => {
     const [open, setOpen] = useState(false);
@@ -231,13 +232,13 @@ const BlogPostBn = () => {
                                         বিনামূল্যে আইনি পরামর্শ নিন
                                     </p>
                                     <a
-                                        href="tel:+8801312178944"
+                                        href={telLink()}
                                         className="btn-primary w-full flex items-center justify-center gap-2 mb-3 text-sm"
                                     >
                                         <Phone size={15} /> এখনই ফোন করুন
                                     </a>
                                     <a
-                                        href="https://wa.me/8801312178944"
+                                        href={waLink()}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="btn-whatsapp w-full flex items-center justify-center gap-2 text-sm"

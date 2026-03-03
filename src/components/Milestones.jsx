@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { WA_NUMBER } from '../data/contactInfo';
 import { MessageCircle, Facebook, Scale, Briefcase } from 'lucide-react';
 
 const Milestones = () => {
@@ -26,7 +27,7 @@ const Milestones = () => {
             year: 'Available Daily',
             icon: <MessageCircle size={24} />,
             type: 'whatsapp',
-            link: 'https://wa.me/8801955802007',
+            link: `https://wa.me/${WA_NUMBER}`,
         },
         {
             title: 'Social Presence',

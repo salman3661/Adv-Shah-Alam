@@ -1,10 +1,11 @@
 import React from 'react';
+import { waLink } from '../data/contactInfo';
 import { MessageCircle } from 'lucide-react';
 
 const FloatingWhatsApp = () => {
     return (
         <a
-            href="https://wa.me/8801955802007"
+            href={waLink()}
             target="_blank"
             rel="noopener noreferrer"
             className="whatsapp-float w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-200 active:scale-95"

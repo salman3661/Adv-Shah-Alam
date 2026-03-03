@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { MapPin, Phone, Mail, Send, MessageCircle } from 'lucide-react';
+import { MapPin, Phone, MessageCircle, Mail, Send } from 'lucide-react';
+import { CALL_NUMBER, CALL_DISPLAY, waLink } from '../data/contactInfo';
 import { motion } from 'framer-motion';
 
 const Contact = () => {
@@ -9,11 +10,11 @@ const Contact = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         const text = `*New Case Inquiry*%0A%0A*Name:* ${formData.name}%0A*Phone:* ${formData.phone}%0A*Details:* ${formData.message}`;
-        window.open(`https://wa.me/8801955802007?text=${text}`, '_blank');
+        window.open(waLink(text), '_blank');
     };
 
     const contactInfo = [
-        { icon: Phone, label: 'Phone', value: '+880 1712-655546', href: 'tel:+8801712655546' },
+        { icon: Phone, label: 'Phone', value: CALL_DISPLAY, href: `tel:${CALL_NUMBER}` },
         { icon: Mail, label: 'Email', value: 'shahalam0332@gmail.com', href: 'mailto:shahalam0332@gmail.com' },
         { icon: MapPin, label: 'Office Address', value: 'House 46, Road 6/B, Sector 12, Uttara, Dhaka-1230', href: 'https://maps.google.com/?q=Sector+12+Uttara+West+Dhaka' },
     ];
@@ -61,7 +62,7 @@ const Contact = () => {
                             </motion.a>
                         ))}
 
-                        <a href="https://wa.me/8801955802007" target="_blank" rel="noopener noreferrer"
+                        <a href={waLink()} target="_blank" rel="noopener noreferrer"
                             className="btn-whatsapp w-full justify-center text-sm">
                             <MessageCircle size={17} /> WhatsApp Direct Message
                         </a>

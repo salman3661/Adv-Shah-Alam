@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { waLink } from '../data/contactInfo';
 import { ChevronDown } from 'lucide-react';
 
 const faqs = [
@@ -75,7 +76,7 @@ const FAQ = () => {
                                         <div className="px-6 pb-6">
                                             <div className="w-full h-px mb-4" style={{ background: 'var(--card-border)' }}></div>
                                             <p className="text-sm leading-relaxed" style={{ color: 'var(--text-2)' }}>{faq.a}</p>
-                                            <a href="https://wa.me/8801955802007" target="_blank" rel="noopener noreferrer"
+                                            <a href={waLink()} target="_blank" rel="noopener noreferrer"
                                                 className="inline-flex items-center gap-1.5 text-xs font-semibold mt-4 hover:underline"
                                                 style={{ color: 'var(--accent)' }}>
                                                 Get expert advice on this →

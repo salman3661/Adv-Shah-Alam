@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { waLink } from '../data/contactInfo';
 import { Scale, Users, Home, Shield, Landmark, FileText, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -111,7 +112,7 @@ const Services = () => {
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }}
                     className="text-center mt-12">
                     <p className="text-sm mb-4" style={{ color: 'var(--text-muted)' }}>Not sure which service you need?</p>
-                    <a href="https://wa.me/8801955802007" target="_blank" rel="noopener noreferrer"
+                    <a href={waLink()} target="_blank" rel="noopener noreferrer"
                         className="btn-primary inline-flex items-center gap-2 py-3.5 px-8 shadow-lg text-sm">
                         Get Free Consultation
                     </a>

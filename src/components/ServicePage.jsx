@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
+import { telLink, waLink } from '../data/contactInfo';
 import { MessageCircle, Phone, CheckCircle, ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -52,11 +53,11 @@ const ServicePage = ({ metaTitle, metaDesc, canonicalUrl, h1, intro, coverage, f
 
                     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.35 }}
                         className="flex flex-col sm:flex-row gap-4 mt-8">
-                        <a href="https://wa.me/8801955802007" target="_blank" rel="noopener noreferrer"
+                        <a href={waLink()} target="_blank" rel="noopener noreferrer"
                             className="btn-whatsapp text-sm">
                             <MessageCircle size={17} /> WhatsApp Consultation
                         </a>
-                        <a href="tel:+8801955802007"
+                        <a href={telLink()}
                             className="btn-secondary text-sm"
                             style={{ borderColor: 'var(--hero-border)', color: 'var(--hero-text-2)' }}>
                             <Phone size={17} /> Call Now
@@ -126,7 +127,7 @@ const ServicePage = ({ metaTitle, metaDesc, canonicalUrl, h1, intro, coverage, f
                             Contact Advocate Md. Shah Alam in Uttara, Dhaka today. Call, WhatsApp, or visit our office.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <a href="https://wa.me/8801955802007" target="_blank" rel="noopener noreferrer"
+                            <a href={waLink()} target="_blank" rel="noopener noreferrer"
                                 className="btn-whatsapp text-sm">
                                 <MessageCircle size={17} /> WhatsApp Now
                             </a>

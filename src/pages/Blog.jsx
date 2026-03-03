@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { Search, Clock, ChevronRight, BookOpen } from 'lucide-react';
 import blogPosts from '../data/blogPosts';
+import { telLink, waLink } from '../data/contactInfo';
 
 const CATEGORIES = ['All', 'Criminal Law', 'Family Law', 'Property Law', 'Tax Law', 'Civil Law'];
 
@@ -196,11 +197,11 @@ const Blog = () => {
                         with Advocate Md. Shah Alam.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="tel:+8801955802007" className="btn-primary">
+                        <a href={telLink()} className="btn-primary">
                             📞 Call Now
                         </a>
                         <a
-                            href="https://wa.me/8801955802007"
+                            href={waLink()}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="btn-whatsapp"

@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { waLink } from '../data/contactInfo';
 import { MessageCircle, ArrowRight } from 'lucide-react';
 
 const Hero = () => {
@@ -111,7 +112,7 @@ const Hero = () => {
 
                     <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                         <motion.a
-                            href="https://wa.me/8801955802007"
+                            href={waLink()}
                             target="_blank"
                             rel="noopener noreferrer"
                             whileHover={{ scale: 1.04 }}

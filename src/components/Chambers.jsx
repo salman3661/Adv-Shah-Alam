@@ -1,15 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { CALL_NUMBER, WA_NUMBER } from '../data/contactInfo';
 import { motion } from 'framer-motion';
 import { MapPin, Phone, Clock, ExternalLink } from 'lucide-react';
 import PhoneLink from './PhoneLink';
 
-const PRIMARY_PHONE = '+8801712655546';
+
 
 const chambers = [
     {
         name: 'Judge Court Chamber (Primary)',
         address: 'Ainjeebi Samity Bhaban, 4th Floor (Hall Room), 6/7 Court House Street, Kotwali, Dhaka-1100',
-        phone: PRIMARY_PHONE,
+        phone: CALL_NUMBER,
         hours: 'Sun–Thu: 9:00 AM – 5:00 PM',
         mapUrl: 'https://maps.google.com/?q=6+Court+House+Street+Kotwali+Dhaka', // TODO: replace with exact link
         isPrimary: true,
@@ -17,7 +18,7 @@ const chambers = [
     {
         name: 'Metropolitan P.P Office — Dhaka (APP)',
         address: '4, Court House Street, Robboti Mansion, Kotwali, Dhaka-1100',
-        phone: PRIMARY_PHONE,
+        phone: CALL_NUMBER,
         hours: 'Sun–Thu: 9:00 AM – 5:00 PM',
         mapUrl: 'https://maps.google.com/?q=4+Court+House+Street+Kotwali+Dhaka', // TODO: replace with exact link
         isPrimary: false,
@@ -25,7 +26,7 @@ const chambers = [
     {
         name: 'Supreme Court Chamber',
         address: 'Room 02, SCBA Bhaban, Shahbag, Dhaka-1000',
-        phone: '+8801955802007',
+        phone: '+' + WA_NUMBER,
         hours: 'Sun–Thu: 9:00 AM – 5:00 PM',
         mapUrl: 'https://maps.google.com/?q=Supreme+Court+Bar+Association+Dhaka',
         isPrimary: false,
@@ -33,7 +34,7 @@ const chambers = [
     {
         name: 'Evening Chamber — Uttara',
         address: 'House 46, Road 6/B, Sector 12, Uttara, Dhaka-1230',
-        phone: PRIMARY_PHONE,
+        phone: CALL_NUMBER,
         hours: 'Sun–Sat: 6:00 PM – 11:00 PM',
         mapUrl: 'https://maps.app.goo.gl/QebF9RVMYmzWGTrh7',
         isPrimary: false,

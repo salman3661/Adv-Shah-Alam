@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { waLink } from '../data/contactInfo';
 import { Helmet } from 'react-helmet-async';
 import { ArrowLeft, FileText } from 'lucide-react';
 
@@ -61,7 +62,7 @@ const BlogPlaceholder = ({ title, description, metaTitle, metaDesc }) => {
                         </p>
                         <div className="flex flex-col sm:flex-row gap-3 mt-2">
                             <a
-                                href="https://wa.me/8801955802007"
+                                href={waLink()}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="btn-whatsapp text-sm"

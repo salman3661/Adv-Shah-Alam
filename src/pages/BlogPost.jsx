@@ -5,7 +5,8 @@ import {
     ArrowLeft, Clock, ChevronDown, ChevronUp,
     Phone, MessageCircle, ExternalLink, BookOpen
 } from 'lucide-react';
-import blogPosts from '../data/blogPosts';
+import posts from '../data/blogPosts';
+import { telLink, waLink } from '../data/contactInfo';
 
 /* ─── FAQ Accordion Item ─────────────────────────────── */
 const FAQItem = ({ question, answer }) => {
@@ -42,7 +43,7 @@ const FAQItem = ({ question, answer }) => {
 /* ─── Main Component ─────────────────────────────────── */
 const BlogPost = () => {
     const { slug } = useParams();
-    const post = blogPosts.find(p => p.slug === slug);
+    const post = posts.find(p => p.slug === slug);
 
     /* ── 404 fallback ── */
     if (!post) {
@@ -73,7 +74,7 @@ const BlogPost = () => {
     }
 
     /* ── Related posts (same category, exclude current) ── */
-    const related = blogPosts
+    const related = posts
         .filter(p => p.category === post.category && p.slug !== post.slug)
         .slice(0, 3);
 
@@ -292,11 +293,11 @@ const BlogPost = () => {
                                     Contact Advocate Md. Shah Alam for expert legal counsel in Dhaka &amp; Uttara.
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                                    <a href="tel:+8801955802007" className="btn-primary flex items-center gap-2">
+                                    <a href={telLink()} className="btn-primary flex items-center gap-2">
                                         <Phone size={16} /> Call Now
                                     </a>
                                     <a
-                                        href="https://wa.me/8801955802007?text=I%20need%20legal%20advice"
+                                        href={waLink('I need legal advice')}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="btn-whatsapp flex items-center gap-2"
