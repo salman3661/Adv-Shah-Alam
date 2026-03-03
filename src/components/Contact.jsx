@@ -9,13 +9,13 @@ const Contact = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         const text = `*New Case Inquiry*%0A%0A*Name:* ${formData.name}%0A*Phone:* ${formData.phone}%0A*Details:* ${formData.message}`;
-        window.open(`https://wa.me/8801712655546?text=${text}`, '_blank');
+        window.open(`https://wa.me/8801955802007?text=${text}`, '_blank');
     };
 
     const contactInfo = [
-        { icon: Phone, label: 'Phone / WhatsApp', value: '+880 1712-655546', href: 'tel:+8801712655546' },
+        { icon: Phone, label: 'Phone', value: '+880 1712-655546', href: 'tel:+8801712655546' },
         { icon: Mail, label: 'Email', value: 'shahalam0332@gmail.com', href: 'mailto:shahalam0332@gmail.com' },
-        { icon: MapPin, label: 'Office Address', value: 'Mantrust Nazma Monzil, Sector 12, Uttara West, Dhaka-1230', href: 'https://maps.google.com/?q=Sector+12+Uttara+West+Dhaka' },
+        { icon: MapPin, label: 'Office Address', value: 'House 46, Road 6/B, Sector 12, Uttara, Dhaka-1230', href: 'https://maps.google.com/?q=Sector+12+Uttara+West+Dhaka' },
     ];
 
     const inputClass = "w-full px-4 py-3 rounded-xl text-sm outline-none transition-all duration-200";
@@ -61,7 +61,7 @@ const Contact = () => {
                             </motion.a>
                         ))}
 
-                        <a href="https://wa.me/8801712655546" target="_blank" rel="noopener noreferrer"
+                        <a href="https://wa.me/8801955802007" target="_blank" rel="noopener noreferrer"
                             className="btn-whatsapp w-full justify-center text-sm">
                             <MessageCircle size={17} /> WhatsApp Direct Message
                         </a>
