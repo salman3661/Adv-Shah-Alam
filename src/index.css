@@ -592,33 +592,41 @@ body[data-theme="dark"] .status-current {
 
   /* ─ Single source of truth for the bottom bar height ─ */
   :root {
-    --mobile-bar-height: 56px;
+    --mobile-bar-height: 52px;
   }
 
   /* Reserve bottom space so fixed call bar never hides scrollable content */
   body {
-    padding-bottom: calc(var(--mobile-bar-height) + 12px + env(safe-area-inset-bottom, 0px));
+    padding-bottom: calc(var(--mobile-bar-height) + 20px + env(safe-area-inset-bottom, 0px));
   }
 
-  /* Ensure call bar is always on top and respects safe-area */
+  /* ── Floating pill CTA ── */
   .mobile-call-bar {
     position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    left: 14px;
+    right: 14px;
+    bottom: calc(10px + env(safe-area-inset-bottom, 0px));
     z-index: 1000;
     height: var(--mobile-bar-height);
-    padding: 0 14px;
-    padding-bottom: env(safe-area-inset-bottom, 0px);
+    padding: 0 20px;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 9999px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  /* Dark mode: stronger shadow + white-alpha border */
+  body[data-theme="dark"] .mobile-call-bar {
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.15);
   }
 
   /* Lift WhatsApp button above the call bar using the CSS var */
   .whatsapp-float {
     right: 16px;
-    bottom: calc(var(--mobile-bar-height) + 14px + env(safe-area-inset-bottom, 0px));
+    bottom: calc(var(--mobile-bar-height) + 28px + env(safe-area-inset-bottom, 0px));
   }
 
   /* Nav always on top of everything */

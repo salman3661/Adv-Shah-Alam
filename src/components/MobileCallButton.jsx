@@ -7,7 +7,7 @@ const MobileCallButton = () => {
     return (
         <a
             href={telLink()}
-            className="mobile-call-bar fixed bottom-0 left-0 right-0 z-[1000] md:hidden flex items-center justify-center gap-3 font-bold text-sm text-white shadow-2xl"
+            className="mobile-call-bar md:hidden flex items-center justify-center gap-3 font-bold text-sm text-white"
             style={{ background: 'var(--btn-primary-bg)' }}
             aria-label="Call Advocate Md. Shah Alam"
         >
