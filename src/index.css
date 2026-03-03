@@ -57,15 +57,16 @@ body {
   overflow-x: hidden;
   background-color: var(--bg);
   color: var(--text);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  /* NOTE: no transition here — body bg/color transition was causing the
+     green/flash artefact on theme toggle. Individual components
+     (cards, sections) still animate via their own transition rules. */
 }
 
 /* ── DARK THEME ── */
-/* Both selectors fire: html[data-theme] is set by the FOUC script before React
-   renders; body[data-theme] is set by ThemeContext after hydration. Both point
-   to the same CSS variables so the page is always styled correctly. */
-body[data-theme="dark"],
-html[data-theme="dark"] body {
+/* Single source: body[data-theme="dark"] only.
+   html[data-theme] is synced by ThemeContext.applyThemeToDom() but CSS vars
+   are scoped here so there is never a conflict. */
+body[data-theme="dark"] {
   --bg: #0B1220;
   --surface: #0F1B2D;
   --card-bg: rgba(15, 27, 45, 0.72);
@@ -74,14 +75,12 @@ html[data-theme="dark"] body {
   --text: #E5E7EB;
   --text-secondary: #CBD5E1;
   --text-2: #CBD5E1;
-  /* alias kept for legacy references */
   --text-muted: #94A3B8;
 
   --accent: #60A5FA;
   --accent-hover: #3B82F6;
   --accent-subtle: rgba(96, 165, 250, 0.1);
   --btn-primary-bg: #60A5FA;
-  /* alias for MobileCallButton */
 
   --gold: #C6A75E;
 
@@ -93,6 +92,7 @@ html[data-theme="dark"] body {
 
   --divider: rgba(148, 163, 184, 0.12);
 }
+
 
 
 /* == HTML base ================================================================ */

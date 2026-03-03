@@ -2,48 +2,56 @@ import React, { createContext, useContext, useEffect, useRef, useState } from 'r
 
 const ThemeContext = createContext();
 
-export const ThemeProvider = ({ children }) => {
-    // Track whether user has manually toggled (vs auto-detected from system)
-    const manualOverride = useRef(!!localStorage.getItem('theme'));
-
-    // Initialize theme: check localStorage first, then system preference
-    const [theme, setTheme] = useState(() => {
+// Reads the current theme preference without side effects
+function getInitialTheme() {
+    try {
         const stored = localStorage.getItem('theme');
-        if (stored) return stored;
-        if (typeof window !== 'undefined' && window.matchMedia) {
-            return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-        }
-        return 'light';
-    });
+        if (stored === 'dark' || stored === 'light') return stored;
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) return 'dark';
+    } catch (_) { }
+    return 'light';
+}
 
-    // Listen for system preference changes — only applies if user has NOT manually overridden
-    useEffect(() => {
-        const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-        const handleChange = (e) => {
-            if (!manualOverride.current) {
-                setTheme(e.matches ? 'dark' : 'light');
-            }
-        };
-        mediaQuery.addEventListener('change', handleChange);
-        return () => mediaQuery.removeEventListener('change', handleChange);
-    }, []);
+// Applies theme to ALL relevant DOM elements in one place — called by both
+// the initial effect and every toggle so html + body always stay in sync.
+function applyThemeToDom(theme) {
+    const isDark = theme === 'dark';
+    const html = document.documentElement;
+    const body = document.body;
 
-    // Apply theme to DOM: data-theme on body (CSS vars) + .dark on html (Tailwind dark: variants)
+    // .dark class — used by Tailwind dark: variants
+    html.classList.toggle('dark', isDark);
+
+    // data-theme — used by our CSS var selectors (body[data-theme="dark"])
+    body.setAttribute('data-theme', theme);
+
+    // Also sync html data-theme so FOUC-set attribute never goes stale
+    html.setAttribute('data-theme', theme);
+}
+
+export const ThemeProvider = ({ children }) => {
+    const manualOverride = useRef(!!localStorage.getItem('theme'));
+    const [theme, setTheme] = useState(getInitialTheme);
+
+    // Sync to DOM whenever theme changes
     useEffect(() => {
-        const html = document.documentElement;
-        const body = document.body;
-        if (theme === 'dark') {
-            html.classList.add('dark');
-            body.setAttribute('data-theme', 'dark');
-        } else {
-            html.classList.remove('dark');
-            body.setAttribute('data-theme', 'light');
-        }
-        // Only persist to localStorage if user has manually chosen
+        applyThemeToDom(theme);
         if (manualOverride.current) {
             localStorage.setItem('theme', theme);
         }
     }, [theme]);
+
+    // Track OS-level preference changes — honour only if user hasn't manually picked
+    useEffect(() => {
+        const mq = window.matchMedia('(prefers-color-scheme: dark)');
+        const onChange = (e) => {
+            if (!manualOverride.current) {
+                setTheme(e.matches ? 'dark' : 'light');
+            }
+        };
+        mq.addEventListener('change', onChange);
+        return () => mq.removeEventListener('change', onChange);
+    }, []);
 
     const toggleTheme = () => {
         manualOverride.current = true;

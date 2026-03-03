@@ -152,30 +152,26 @@
 </head>
 
 <body>
-  <!-- Anti-FOUC: apply theme synchronously before React renders -->
+  <!-- Anti-FOUC: set theme on body+html BEFORE React renders — zero flash -->
   <script>
     (function () {
       try {
-        const stored = localStorage.getItem("theme"); // "dark" | "light" | null
-        const systemDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+        var stored = localStorage.getItem('theme');
+        var systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var isDark = stored ? stored === 'dark' : systemDark;
+        var theme = isDark ? 'dark' : 'light';
 
-        const isDark = stored ? stored === "dark" : systemDark;
+        // Kill transitions for first paint only
+        document.documentElement.classList.add('no-theme-transition');
 
-        // Suppress CSS transitions on first paint to prevent theme flash
-        document.documentElement.classList.add("no-theme-transition");
+        // Apply to both elements — must match what ThemeContext does
+        document.documentElement.setAttribute('data-theme', theme);
+        document.body.setAttribute('data-theme', theme);
+        if (isDark) document.documentElement.classList.add('dark');
 
-        // Apply theme before React renders
-        if (isDark) document.documentElement.classList.add("dark");
-        else document.documentElement.classList.remove("dark");
-
-        // Set data-theme on both <html> and <body> for compatibility
-        const theme = isDark ? "dark" : "light";
-        document.documentElement.dataset.theme = theme;
-        document.documentElement.setAttribute("data-theme", theme);
-
-        // Remove transition suppressor after first paint
+        // Re-enable transitions after the first frame
         requestAnimationFrame(function () {
-          document.documentElement.classList.remove("no-theme-transition");
+          document.documentElement.classList.remove('no-theme-transition');
         });
       } catch (e) { }
     })();

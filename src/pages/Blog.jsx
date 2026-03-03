@@ -121,7 +121,7 @@ const Blog = () => {
             </section>
 
             {/* Filters + Search */}
-            <section className="py-8 sticky top-16 z-30" style={{ background: 'var(--nav-bg)', backdropFilter: 'blur(16px)', borderBottom: '1px solid var(--divider)' }}>
+            <section className="py-8 sticky top-20 z-30" style={{ background: 'var(--nav-bg)', backdropFilter: 'blur(16px)', borderBottom: '1px solid var(--divider)' }}>
                 <div className="container mx-auto px-6 max-w-5xl flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between">
                     {/* Category chips */}
                     <div className="flex flex-wrap gap-2">
