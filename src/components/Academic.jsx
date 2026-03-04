@@ -5,19 +5,19 @@ import { GraduationCap } from 'lucide-react';
 const Academic = () => {
     const education = [
         {
-            inst: 'Dhaka University',
+            inst: 'Dhaka International University - DIU',
             degree: 'Master of Laws (LLM)',
-            year: '2004',
+            year: '2019',
         },
         {
-            inst: 'Dhaka University',
+            inst: 'Metro Police Ideal Law College, Dhaka',
             degree: 'Bachelor of Laws (LLB)',
-            year: '2003',
+            year: '2014',
         },
         {
             inst: 'Bangladesh Bar Council',
             degree: 'Advocate Enrollment',
-            year: '2003',
+            year: '2010',
         },
     ];
 
