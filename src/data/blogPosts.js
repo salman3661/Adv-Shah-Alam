@@ -3830,6 +3830,393 @@ const posts = [
             { text: 'Bail Lawyer Dhaka', to: '/bail-lawyer-dhaka' },
         ],
     },
+
+    /* ── 13 ── */
+    {
+        slug: 'consumer-rights-law-bangladesh',
+        title: 'Consumer Rights Law in Bangladesh: How to File a Complaint',
+        category: 'Consumer Law',
+        readTime: '7 min read',
+        metaTitle: 'Consumer Rights Law in Bangladesh – Complaint Guide',
+        metaDescription: 'Know your consumer rights in Bangladesh — how to file a complaint under the Consumer Rights Protection Act 2009, who enforces the law, and what compensation you can claim.',
+        keywords: ['consumer rights Bangladesh', 'consumer complaint Bangladesh', 'Consumer Rights Protection Act 2009', 'DNCRP Bangladesh', 'product liability Bangladesh', 'consumer court Bangladesh', 'consumer protection lawyer Dhaka', 'defective product Bangladesh'],
+        publishedDate: '2026-03-08',
+        heroIntro: 'From defective products to false advertising and unfair trade practices, consumers in Bangladesh have powerful legal protections. Understanding the Consumer Rights Protection Act 2009 and how to enforce it can save you money and hold businesses accountable.',
+        toc: [
+            'Consumer Rights Legal Framework in Bangladesh',
+            'What is a Consumer Under Bangladesh Law?',
+            'Acts That Violate Consumer Rights',
+            'The Directorate of National Consumer Rights Protection (DNCRP)',
+            'How to File a Consumer Complaint',
+            'Penalties for Violations',
+            'Taking Your Case to Court',
+            'Practical Tips for Consumers',
+        ],
+        sections: [
+            {
+                h2: 'Consumer Rights Legal Framework in Bangladesh',
+                content: `<p>Consumer protection in Bangladesh is primarily governed by the <strong>Consumer Rights Protection Act 2009 (CRPA)</strong> and its accompanying rules. The Act establishes a comprehensive framework for protecting buyers of goods and services from unfair practices, substandard products, false advertising, and price gouging.</p>
+<p>The Act was a landmark development in Bangladeshi law, creating dedicated enforcement machinery and criminal penalties for traders, manufacturers, and service providers who exploit consumers. A <a href="/tax-vat-lawyer-dhaka" style="color:var(--accent)">lawyer experienced in commercial law in Dhaka</a> can advise whether your situation falls under the Act.</p>`,
+            },
+            {
+                h2: 'What is a Consumer Under Bangladesh Law?',
+                content: `<p>Under the CRPA 2009, a "consumer" is any person who:</p>
+<ul>
+<li>Purchases goods or services for personal use (not for resale or commercial use)</li>
+<li>Uses goods or services purchased by another person with that person's permission</li>
+<li>Avails any service in exchange for payment</li>
+</ul>
+<p>The Act protects both individual buyers and households. Businesses purchasing for resale are generally not considered consumers under the Act and must rely on commercial contract law for disputes with their suppliers.</p>`,
+            },
+            {
+                h2: 'Acts That Violate Consumer Rights',
+                content: `<p>The CRPA 2009 defines a wide range of prohibited acts, including:</p>
+<ul>
+<li><strong>Adulteration:</strong> Mixing impure or harmful substances in food or other products</li>
+<li><strong>False weight or measure:</strong> Selling goods with inaccurate weights or measurements</li>
+<li><strong>Misleading advertising:</strong> Use of false, deceptive, or exaggerated claims about a product's quality, price, or benefit</li>
+<li><strong>Overpricing above MRP:</strong> Charging above the maximum retail price printed on packaged goods</li>
+<li><strong>Selling expired goods:</strong> Offering for sale products past their expiry date</li>
+<li><strong>Defective services:</strong> Providing a service of a quality lower than what was promised or reasonably expected</li>
+<li><strong>Withholding receipts:</strong> Refusing to issue a receipt or voucher to a consumer on request</li>
+</ul>
+<p>Each of these violations carries specific penalties under the Act.</p>`,
+            },
+            {
+                h2: 'The Directorate of National Consumer Rights Protection (DNCRP)',
+                content: `<p>The <strong>Directorate of National Consumer Rights Protection (DNCRP)</strong> — under the Ministry of Commerce — is the primary regulatory and enforcement authority. The DNCRP:</p>
+<ul>
+<li>Conducts market inspections and raids against violators</li>
+<li>Receives and investigates consumer complaints</li>
+<li>Initiates criminal proceedings against offenders</li>
+<li>Operates at both the national level and through divisional and district offices</li>
+</ul>
+<p>Consumers in Dhaka can approach the DNCRP's main office or its district offices in person, or submit complaints online through the DNCRP portal. The DNCRP has the authority to impose fines, order compensation, and refer serious cases to the Magistrate Court for criminal prosecution.</p>`,
+            },
+            {
+                h2: 'How to File a Consumer Complaint',
+                content: `<p>Filing a complaint in Bangladesh follows a straightforward process:</p>
+<ol>
+<li><strong>Gather evidence:</strong> Keep the receipt, packaging, product, photos, or any communication with the seller that supports your complaint.</li>
+<li><strong>Contact the seller first:</strong> Attempt informal resolution. If the seller refuses, document this refusal.</li>
+<li><strong>File with DNCRP:</strong> Submit your complaint to the DNCRP in writing or via their online portal. Complaint forms are available at DNCRP offices. There is no filing fee.</li>
+<li><strong>Complaint investigation:</strong> The DNCRP will investigate and may summon the trader or business for a hearing.</li>
+<li><strong>Resolution or referral:</strong> If the DNCRP finds a violation, it may issue a fine, direct compensation, or refer the case for prosecution.</li>
+</ol>
+<p>Complaints can also be filed directly with the local Magistrate Court in cases of serious violations — for example, selling adulterated food products.</p>`,
+            },
+            {
+                h2: 'Penalties for Violations',
+                content: `<p>The CRPA 2009 imposes substantial penalties for violations. Key penalties include:</p>
+<ul>
+<li><strong>Adulteration of food/medicines:</strong> Imprisonment up to <strong>3 years</strong> and/or a fine of Tk. 2,00,000</li>
+<li><strong>False advertising:</strong> Imprisonment up to <strong>1 year</strong> and/or a fine of Tk. 2,00,000</li>
+<li><strong>Overpricing:</strong> Fine up to Tk. 50,000</li>
+<li><strong>Selling expired goods:</strong> Imprisonment up to <strong>1 year</strong> and/or a fine of Tk. 50,000</li>
+<li><strong>Withholding receipts:</strong> Fine up to Tk. 50,000</li>
+</ul>
+<p>In addition to criminal penalties, consumers can claim <strong>compensation for actual damages</strong> through the civil courts. A portion of fines collected may be awarded to the aggrieved consumer as compensation.</p>`,
+            },
+            {
+                h2: 'Taking Your Case to Court',
+                content: `<p>Beyond the DNCRP, consumers have the right to pursue civil remedies in court. Options include:</p>
+<ul>
+<li><strong>Civil suit for damages:</strong> A consumer who suffers loss due to a defective product or service can file a civil suit claiming compensation for the actual loss suffered, including medical costs, lost income, and emotional distress in appropriate cases.</li>
+<li><strong>Product liability:</strong> Manufacturers and importers can be held liable if a product defect causes injury or damage.</li>
+<li><strong>Criminal complaint:</strong> For serious violations (adulteration, food fraud), a private complaint can be filed in the Magistrate Court independently of DNCRP proceedings.</li>
+</ul>
+<p>Consumer cases can be complex when large businesses are involved. Consult a <a href="/criminal-lawyer-uttara" style="color:var(--accent)">lawyer experienced in consumer and commercial matters</a> before proceeding to litigation.</p>`,
+            },
+            {
+                h2: 'Practical Tips for Consumers',
+                content: `<p>To protect yourself as a consumer in Bangladesh:</p>
+<ul>
+<li>Always demand and keep receipts for purchases</li>
+<li>Check expiry dates on food and medicine before buying</li>
+<li>Verify MRP printed on packaged goods against the charged price</li>
+<li>Read terms and conditions for services (especially banks, telecoms, and e-commerce)</li>
+<li>Report violations to the DNCRP — your complaint helps prevent the same wrong from being done to others</li>
+<li>Photograph defective products before returning them — evidence is crucial</li>
+</ul>
+<p>If a business refuses to address a legitimate complaint, do not hesitate to escalate to the DNCRP or consult an <a href="/supreme-court-lawyer-bangladesh" style="color:var(--accent)">experienced lawyer</a> about your legal options.</p>`,
+            },
+        ],
+        faqs: [
+            { question: 'Is there a time limit to file a consumer complaint in Bangladesh?', answer: 'Complaints to the DNCRP should be filed as soon as possible after the incident. For civil claims, the general limitation period under the Limitation Act applies — typically 3 years from the date of the cause of action.' },
+            { question: 'Can I get compensation for a defective product in Bangladesh?', answer: 'Yes. Under the CRPA 2009 and civil law, you can claim compensation from the seller or manufacturer for loss or injury caused by a defective product.' },
+            { question: 'What if a restaurant serves expired or adulterated food?', answer: 'This is a criminal offence under the CRPA 2009 and the Pure Food Ordinance. You can file a complaint with the DNCRP or directly with the Magistrate Court.' },
+            { question: 'Can I complain about false advertising in Bangladesh?', answer: 'Yes. The CRPA 2009 prohibits misleading advertisements. You can file a complaint with the DNCRP against any business that uses deceptive claims about their product or service.' },
+            { question: 'Do I need a lawyer to file a DNCRP complaint?', answer: 'No. DNCRP complaints can be filed by the consumer themselves without a lawyer. However, for court proceedings — civil suits or criminal complaints — legal representation is advisable.' },
+            { question: 'What if the shopkeeper refuses to give me a receipt?', answer: 'Refusing to issue a receipt is a violation of the CRPA 2009. You can report this to the DNCRP, which can impose a fine on the business.' },
+            { question: 'Are online purchases covered under consumer protection law?', answer: 'Yes. E-commerce transactions are covered. The government has issued the Digital Commerce Policy which, alongside the CRPA, provides protections for online buyers in Bangladesh.' },
+            { question: 'What if a service provider (e.g., phone company) cheats me?', answer: 'Service providers are subject to the CRPA 2009. You can also complain to the relevant regulator — for telecoms, the Bangladesh Telecommunication Regulatory Commission (BTRC).' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-uttara' },
+            { text: 'Tax & VAT Lawyer Dhaka', to: '/tax-vat-lawyer-dhaka' },
+            { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
+        ],
+    },
+
+    /* ── 14 ── */
+    {
+        slug: 'cyber-crime-digital-security-act-bangladesh',
+        title: 'Cyber Crime & Digital Security Act Bangladesh: Legal Guide',
+        category: 'Cyber Law',
+        readTime: '8 min read',
+        metaTitle: 'Cyber Crime & Digital Security Act Bangladesh – Legal Guide',
+        metaDescription: 'Understand cyber crime law and the Digital Security Act 2018 in Bangladesh — offences, penalties, who can be accused, defences, and how a lawyer can help.',
+        keywords: ['cyber crime Bangladesh', 'Digital Security Act 2018 Bangladesh', 'cyber law Bangladesh', 'DSA Bangladesh', 'online defamation Bangladesh', 'hacking case Bangladesh', 'cyber lawyer Dhaka', 'Cyber Security Act 2023 Bangladesh'],
+        publishedDate: '2026-03-09',
+        heroIntro: 'Digital technology has opened new legal frontiers in Bangladesh. Whether you are accused under the Digital Security Act or a victim of online fraud, hacking, or cyberbullying, understanding cyber law in Bangladesh is more important than ever.',
+        toc: [
+            'Cyber Law Framework in Bangladesh',
+            'Key Offences Under the Digital Security Act 2018',
+            'Offences Under Other Laws (ICT Act, Penal Code)',
+            'Who Can Be Charged? Jurisdictional Issues',
+            'Rights of the Accused in Cyber Cases',
+            'How to File a Cyber Crime Complaint',
+            'Bail and Arrest in Cyber Cases',
+            'How a Lawyer Can Help',
+        ],
+        sections: [
+            {
+                h2: 'Cyber Law Framework in Bangladesh',
+                content: `<p>Bangladesh has developed its cyber law framework over multiple legislative stages:</p>
+<ul>
+<li><strong>Information and Communication Technology (ICT) Act 2006</strong> (amended 2013): The original cyber law, now partially superseded but still in force for some offences.</li>
+<li><strong>Digital Security Act 2018 (DSA)</strong>: Replaced key sections of the ICT Act and established the Digital Security Agency. The DSA attracted significant international criticism over freedom of expression concerns.</li>
+<li><strong>Cyber Security Act 2023 (CSA)</strong>: Enacted in late 2023, the CSA replaced the DSA, reducing some maximum sentences and adjusting certain offences — though the core structure remains similar.</li>
+</ul>
+<p>Bangladesh also has provisions in the <strong>Penal Code 1860</strong>, the <strong>Pornography Control Act 2012</strong>, and the <strong>Money Laundering Prevention Act</strong> that cover cyber-related crimes. A <a href="/criminal-lawyer-uttara" style="color:var(--accent)">criminal lawyer in Dhaka</a> experienced in digital law can guide you through the applicable statute.</p>`,
+            },
+            {
+                h2: 'Key Offences Under the Digital Security Act 2018',
+                content: `<p>The DSA (and now the CSA) covers a wide range of digital offences:</p>
+<ul>
+<li><strong>Illegal access to computer systems (hacking):</strong> Unauthorised access to another's computer, server, or network — punishable by up to <strong>7 years</strong> imprisonment.</li>
+<li><strong>Identity theft and digital fraud:</strong> Using someone's digital identity to commit fraud — up to <strong>5 years</strong> imprisonment.</li>
+<li><strong>Publishing obscene or pornographic content:</strong> Especially material involving minors — severe penalties apply.</li>
+<li><strong>Online defamation:</strong> Publishing false information damaging someone's reputation online — up to <strong>3 years</strong> (under CSA 2023).</li>
+<li><strong>Spreading false information harmful to the state or public order.</strong></li>
+<li><strong>Cyber terrorism:</strong> Using digital means to threaten or attack critical infrastructure — up to <strong>14 years</strong> imprisonment or life imprisonment in the most serious cases.</li>
+<li><strong>Electronic financial fraud:</strong> Misappropriating funds through electronic means.</li>
+</ul>
+<p>Each offence has specific elements that must be proven. Not all online disputes constitute criminal cyber offences — a careful legal assessment is essential.</p>`,
+            },
+            {
+                h2: 'Offences Under Other Laws (ICT Act, Penal Code)',
+                content: `<p>Several cyber-related offences are still prosecutable under the older ICT Act 2006 or the Penal Code 1860:</p>
+<ul>
+<li><strong>Section 57 ICT Act (2006/2013):</strong> Although repealed, cases filed under Section 57 before the DSA's commencement continue to be tried. Section 57 criminalised publication of "offensive," "false," or "obscene" content online.</li>
+<li><strong>Cheating by personation (Section 419 Penal Code):</strong> Creating a fake social media profile to impersonate someone.</li>
+<li><strong>Extortion (Section 383 Penal Code):</strong> Threatening to publish embarrassing content unless money is paid (sextortion, revenge porn threats).</li>
+<li><strong>Electronic financial transactions fraud:</strong> Mobile banking fraud (bKash, Nagad scams) may attract prosecution under both cyber law and financial regulations.</li>
+</ul>`,
+            },
+            {
+                h2: 'Who Can Be Charged? Jurisdictional Issues',
+                content: `<p>A person can be charged under Bangladesh cyber law even if:</p>
+<ul>
+<li>They reside outside Bangladesh, if the offence affects a person or entity in Bangladesh</li>
+<li>They use a foreign server, VPN, or disguised identity — technical investigation can often trace the origin</li>
+<li>They are a company — corporate entities can also be charged</li>
+</ul>
+<p>Cases are investigated by the <strong>Police Cyber Support for Women (PCSW)</strong> (for gender-based cyber abuse), the <strong>Cyber Crime Division of the Detective Branch (DB)</strong> in Dhaka, and specialised units in the Criminal Investigation Department (CID). Cases are tried in <strong>Cyber Tribunals</strong> established at divisional level.</p>`,
+            },
+            {
+                h2: 'Rights of the Accused in Cyber Cases',
+                content: `<p>If you are accused in a cyber case in Bangladesh, you have the following rights:</p>
+<ul>
+<li>The right to be informed of the specific offence and section charged</li>
+<li>The right to legal representation from the moment of arrest</li>
+<li>The right to apply for bail (though cyber offences under the DSA/CSA are largely <strong>non-bailable</strong> — bail must be sought from the Sessions Court or High Court)</li>
+<li>The right to challenge the investigation and evidence in court</li>
+<li>The right to present a defence, including challenging digital evidence on technical grounds</li>
+</ul>
+<p>Digital evidence is often challenged on grounds of tampering, improper collection, or lack of a proper chain of custody. An <a href="/bail-lawyer-dhaka" style="color:var(--accent)">experienced criminal lawyer in Dhaka</a> can raise these technical defences.</p>`,
+            },
+            {
+                h2: 'How to File a Cyber Crime Complaint',
+                content: `<p>If you are a victim of a cyber crime in Bangladesh, you can:</p>
+<ol>
+<li><strong>File a General Diary (GD)</strong> at your local police station, describing the offence and providing any evidence you have.</li>
+<li><strong>Contact the Cyber Support for Women (PCSW):</strong> For harassment, cyberbullying, or non-consensual sharing of intimate images — call the hotline or visit the web portal.</li>
+<li><strong>File an FIR directly at the Cyber Crime Division:</strong> The detective branch's cyber crime unit in Dhaka accepts complaints directly for serious cases.</li>
+<li><strong>Apply to the Cyber Tribunal:</strong> In some cases, a direct complaint to the Cyber Tribunal is possible.</li>
+</ol>
+<p>Preserve all evidence — screenshots (with timestamps), URLs, email headers, transaction records, and any communications from the perpetrator. Evidence that is not preserved early is often lost.</p>`,
+            },
+            {
+                h2: 'Bail and Arrest in Cyber Cases',
+                content: `<p>Most serious offences under the DSA/CSA are <strong>non-bailable</strong>, meaning bail cannot be obtained as of right from the Magistrate Court. Instead, bail applications must be made to the:</p>
+<ul>
+<li><strong>Sessions Court (Cyber Tribunal or District Sessions Judge)</strong></li>
+<li><strong>High Court Division</strong> if the Sessions Court refuses</li>
+</ul>
+<p>Police can arrest without a warrant for cognisable cyber offences and must produce the accused before a Magistrate within 24 hours. Remand (police custody for investigation) is commonly sought in cyber cases — an accused has the right to resist unnecessary remand through their lawyer. If you or a family member has been arrested in a cyber case, contact a <a href="/bail-lawyer-dhaka" style="color:var(--accent)">bail lawyer in Dhaka</a> immediately.</p>`,
+            },
+            {
+                h2: 'How a Lawyer Can Help',
+                content: `<p>Whether you are the victim or the accused in a cyber case, legal representation is essential:</p>
+<ul>
+<li><strong>For victims:</strong> A lawyer can help you file an effective complaint, preserve evidence properly, and pursue both criminal and civil remedies simultaneously.</li>
+<li><strong>For the accused:</strong> A lawyer can challenge the FIR, obtain bail, scrutinise the legality of the digital evidence, and build a defence on technical and legal grounds.</li>
+<li><strong>For businesses:</strong> A lawyer can advise on cyber compliance, data protection obligations, and response to regulatory investigations.</li>
+</ul>
+<p>Advocate Md. Shah Alam's team handles criminal defence matters including cyber crime cases at all levels of the Bangladesh judiciary. <a href="/criminal-lawyer-uttara" style="color:var(--accent)">Contact us</a> for a confidential consultation.</p>`,
+            },
+        ],
+        faqs: [
+            { question: 'Is the Digital Security Act 2018 still in force in Bangladesh?', answer: 'It was effectively replaced by the Cyber Security Act 2023. However, cases filed under the DSA before the CSA\'s commencement continue to be tried under the DSA.' },
+            { question: 'What is the punishment for hacking in Bangladesh?', answer: 'Unauthorised access to a computer system (hacking) carries imprisonment up to 7 years and/or a fine under the Digital Security Act / Cyber Security Act 2023.' },
+            { question: 'Can I be charged for something I posted on Facebook in Bangladesh?', answer: 'Yes. Publishing content on Facebook or other social media that violates the Cyber Security Act (defamation, false information, obscenity, etc.) can result in a criminal case.' },
+            { question: 'What if someone creates a fake Facebook profile in my name?', answer: 'Identity theft and impersonation online are criminal offences under both the Cyber Security Act and the Penal Code. File a complaint with the cyber crime unit or a GD at your police station.' },
+            { question: 'Are cyber crime cases bailable in Bangladesh?', answer: 'Most serious cyber offences under the DSA/CSA are non-bailable. Bail must be sought from the Sessions Court or High Court Division, not the Magistrate.' },
+            { question: 'How can I report online harassment in Bangladesh?', answer: 'You can contact the Police Cyber Support for Women (for women and children), the cyber crime division of the detective branch, or file a GD at your local police station. A lawyer can help draft an effective complaint.' },
+            { question: 'What if I am wrongly accused of a cyber crime?', answer: 'You have the right to challenge the FIR, seek bail, and contest the digital evidence in court. Contact an experienced criminal lawyer in Dhaka immediately after arrest or upon receiving legal notice.' },
+            { question: 'Can a company be held liable for cyber crime in Bangladesh?', answer: 'Yes. Companies and their directors can face liability under the Cyber Security Act for offences committed using company resources or systems.' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-uttara' },
+            { text: 'Bail Lawyer Dhaka', to: '/bail-lawyer-dhaka' },
+            { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
+        ],
+    },
+
+    /* ── 15 ── */
+    {
+        slug: 'labour-law-worker-rights-bangladesh',
+        title: 'Labour Law & Worker Rights in Bangladesh: A Complete Guide',
+        category: 'Labour Law',
+        readTime: '8 min read',
+        metaTitle: 'Labour Law & Worker Rights in Bangladesh – Complete Guide',
+        metaDescription: 'Understand labour law in Bangladesh — worker rights, termination rules, compensation, trade unions, and how to file a complaint with the Labour Court. Expert guide.',
+        keywords: ['labour law Bangladesh', 'worker rights Bangladesh', 'Bangladesh Labour Act 2006', 'wrongful termination Bangladesh', 'labour court Bangladesh', 'gratuity Bangladesh', 'trade union Bangladesh', 'employment lawyer Dhaka'],
+        publishedDate: '2026-03-10',
+        heroIntro: 'Bangladesh has one of the largest workforces in Asia. Whether you are an employee facing unfair dismissal, a factory worker denied gratuity, or an employer managing a redundancy, understanding the Bangladesh Labour Act 2006 is essential for protecting your legal position.',
+        toc: [
+            'Overview of Labour Law in Bangladesh',
+            'Key Rights of Workers Under the Labour Act',
+            'Employment Contracts and Appointment Letters',
+            'Termination of Employment: Rules and Notice',
+            'Gratuity, Provident Fund, and Leave Encashment',
+            'Industrial Disputes and the Labour Court',
+            'Trade Unions in Bangladesh',
+            'Special Protections: Women Workers and Minors',
+        ],
+        sections: [
+            {
+                h2: 'Overview of Labour Law in Bangladesh',
+                content: `<p>The primary legislation governing employment in Bangladesh is the <strong>Bangladesh Labour Act 2006 (BLA 2006)</strong>, substantially amended in 2013 and 2018. It covers a wide range of employment matters including:</p>
+<ul>
+<li>Employment contracts, appointment, and service conditions</li>
+<li>Working hours, wages, and overtime</li>
+<li>Termination, dismissal, and retrenchment</li>
+<li>Maternity benefits, sick leave, and annual leave</li>
+<li>Gratuity and provident fund</li>
+<li>Safety, health, and welfare in the workplace</li>
+<li>Trade unions and collective bargaining</li>
+</ul>
+<p>Separate rules apply to government employees (governed by Service Rules), home-based workers, and the export-oriented garments sector (EPZ Labour Act applies to Export Processing Zones). Consult an <a href="/criminal-lawyer-uttara" style="color:var(--accent)">experienced employment lawyer in Dhaka</a> for sector-specific advice.</p>`,
+            },
+            {
+                h2: 'Key Rights of Workers Under the Labour Act',
+                content: `<p>The Bangladesh Labour Act 2006 guarantees workers the following rights:</p>
+<ul>
+<li><strong>Minimum wage:</strong> Wages must not fall below the minimum wage set by the National Minimum Wage Board for each sector.</li>
+<li><strong>Payment on time:</strong> Wages must be paid by the 7th working day of the following month.</li>
+<li><strong>Maximum working hours:</strong> Workers cannot generally be required to work more than <strong>8 hours per day</strong> or <strong>48 hours per week</strong>. Overtime (at 200% of the basic wage rate) must be paid for additional hours.</li>
+<li><strong>Annual leave:</strong> Workers are entitled to one day of paid leave for every 18 days worked.</li>
+<li><strong>Sick leave:</strong> 14 days of sick leave with full wages per year.</li>
+<li><strong>Festival leave:</strong> 11 days per year for gazetted public holidays.</li>
+<li><strong>Casual leave:</strong> 10 days per year.</li>
+</ul>
+<p>Any clause in an employment contract that provides <em>less</em> than these statutory minimums is unenforceable — the law sets a floor, not a ceiling.</p>`,
+            },
+            {
+                h2: 'Employment Contracts and Appointment Letters',
+                content: `<p>Under the BLA 2006, every employer is required to issue an <strong>appointment letter</strong> at the time of employment, specifying:</p>
+<ul>
+<li>Nature of work and designation</li>
+<li>Basic wage and allowances</li>
+<li>Working hours and leave entitlements</li>
+<li>Period of probation (if applicable)</li>
+<li>Notice period for termination</li>
+</ul>
+<p>Failure to issue an appointment letter is itself a violation of the Labour Act. Employees who did not receive one can raise this in a labour court proceeding. For workers employed for more than <strong>3 months</strong> (non-probationary), more stringent rules apply to termination.</p>`,
+            },
+            {
+                h2: 'Termination of Employment: Rules and Notice',
+                content: `<p>The BLA 2006 distinguishes between different types of severance:</p>
+<ul>
+<li><strong>Notice of termination:</strong> A permanent worker must be given <strong>120 days' notice</strong> (or pay in lieu) if terminated without cause. For monthly-rated workers, 30 days' notice applies during probation.</li>
+<li><strong>Dismissal for misconduct:</strong> Requires a formal inquiry — the worker must be given a charge sheet, an opportunity to respond, and a departmental inquiry before any dismissal order is passed.</li>
+<li><strong>Retrenchment (reduction in workforce):</strong> Requires one month's notice and compensation at the rate of 30 days' wages for each completed year of service.</li>
+<li><strong>Lay-off:</strong> Workers cannot be indefinitely laid off without compensation. Rules for lay-off compensation are specified under the Act.</li>
+</ul>
+<p>Wrongful termination (dismissal without following due procedure) entitles the worker to reinstatement or compensation through the Labour Court. If you have been dismissed without proper process, contact a <a href="/criminal-lawyer-uttara" style="color:var(--accent)">labour law expert in Dhaka</a> immediately.</p>`,
+            },
+            {
+                h2: 'Gratuity, Provident Fund, and Leave Encashment',
+                content: `<p>Workers employed for <strong>5 or more continuous years</strong> are entitled to <strong>gratuity</strong> upon retirement, resignation, termination, or death:</p>
+<ul>
+<li>Gratuity rate: <strong>30 days' basic wage</strong> for each completed year of service (as per 2018 amendment)</li>
+<li>If the worker has a provident fund, the employer's contribution plus accumulated interest is also payable</li>
+</ul>
+<p>Workers dismissed for gross misconduct may forfeit gratuity. However, the Labour Court can review whether the grounds for forfeiture were justified.</p>
+<p>Workers who have accumulated earned leave that they did not take are entitled to <strong>leave encashment</strong> — cash payment for unused leave — calculated at the daily wage rate. Failure to pay gratuity or leave encashment within the prescribed period is an offence under the Act.</p>`,
+            },
+            {
+                h2: 'Industrial Disputes and the Labour Court',
+                content: `<p>Labour disputes in Bangladesh are resolved through a tiered system:</p>
+<ol>
+<li><strong>Bipartite negotiation:</strong> Employer and worker (or their representatives) attempt to resolve the dispute internally.</li>
+<li><strong>Conciliation by the Department of Labour:</strong> If negotiation fails, either party can apply to the Chief Inspector of Factories and Establishments or the Labour Department for conciliation.</li>
+<li><strong>Labour Court:</strong> If conciliation fails, the dispute is referred to the Labour Court. Bangladesh has District Labour Courts in major cities including Dhaka. The court can order reinstatement, back wages, compensation, or a combination.</li>
+<li><strong>Labour Appellate Tribunal:</strong> Appeals from the Labour Court go to the Labour Appellate Tribunal.</li>
+</ol>
+<p>There is a specific limitation period for labour disputes — delayed claims can be rejected. Act promptly and consult a lawyer as soon as a dispute arises.</p>`,
+            },
+            {
+                h2: 'Trade Unions in Bangladesh',
+                content: `<p>Workers in Bangladesh have the right to form and join trade unions under the BLA 2006. Key rules:</p>
+<ul>
+<li>A trade union requires a minimum of <strong>30% of total workers</strong> in a workplace or sector to register</li>
+<li>Unions must be registered with the Department of Labour</li>
+<li>Collective bargaining agents (CBA) are elected to negotiate with management</li>
+<li>Unfair labour practices — such as victimising union leaders, threatening workers who join unions, or discriminating in employment — are prohibited</li>
+</ul>
+<p>Anti-union discrimination is a serious violation and can be brought before the Labour Court. Workers who suffer adverse action because of trade union membership can seek reinstatement and compensation.</p>`,
+            },
+            {
+                h2: 'Special Protections: Women Workers and Minors',
+                content: `<p>The BLA 2006 provides enhanced protections for women workers:</p>
+<ul>
+<li><strong>Maternity leave:</strong> 8 weeks before and 8 weeks after delivery (total 16 weeks) with full wages — for workers employed for at least 6 months</li>
+<li><strong>Maternity benefit:</strong> Payable regardless of whether the worker takes maternity leave, if eligible</li>
+<li><strong>Night work restrictions:</strong> Women cannot generally be required to work between 10 PM and 6 AM without consent and specified safety arrangements</li>
+<li><strong>Protection from harassment:</strong> Employers are required to establish anti-harassment committees in workplaces with 25 or more female workers</li>
+</ul>
+<p>Child labour is strictly regulated. Employment of children under 14 years in industrial work is prohibited. Young persons (14–18 years) can work in non-hazardous work with restrictions on hours and type of work. Violations carry criminal penalties. For urgent labour law advice, <a href="/supreme-court-lawyer-bangladesh" style="color:var(--accent)">contact a lawyer</a> today.</p>`,
+            },
+        ],
+        faqs: [
+            { question: 'What is the minimum notice period for termination in Bangladesh?', answer: 'For a permanent worker, the employer must give 120 days\' notice (or wages in lieu). During probation, 30 days\' notice applies for monthly-rated workers.' },
+            { question: 'Am I entitled to gratuity in Bangladesh?', answer: 'Yes, if you have completed 5 or more continuous years of service. The rate is 30 days\' basic wage per completed year of service.' },
+            { question: 'Can I sue my employer for wrongful dismissal in Bangladesh?', answer: 'Yes. If your dismissal did not follow the Labour Act\'s procedural requirements (charge sheet, inquiry, notice), you can file a case in the Labour Court claiming reinstatement or compensation.' },
+            { question: 'How many hours per week can an employer legally require?', answer: 'A maximum of 48 hours per week (8 hours per day). Overtime beyond this must be paid at 200% of the basic wage rate.' },
+            { question: 'What should I do if my employer refuses to pay my salary on time?', answer: 'File a complaint with the Department of Labour or the Labour Inspector. Non-payment of wages within the prescribed deadline is an offence under the Bangladesh Labour Act.' },
+            { question: 'Is maternity leave paid in Bangladesh?', answer: 'Yes. Eligible female workers (employed 6+ months) are entitled to 16 weeks of fully paid maternity leave (8 weeks before and 8 weeks after delivery).' },
+            { question: 'How do I file a complaint with the Labour Court in Bangladesh?', answer: 'File a written complaint (application) with the Labour Court in your district, stating the facts and the relief claimed. If the dispute went through conciliation and failed, attach the failure-of-conciliation certificate.' },
+            { question: 'Can my employer terminate me without giving reasons?', answer: 'Not without proper procedure. Termination without misconduct requires 120 days\' notice. Termination for misconduct requires a formal inquiry. Procedurally defective dismissal is actionable in the Labour Court.' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-uttara' },
+            { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
+            { text: 'Tax & VAT Lawyer Dhaka', to: '/tax-vat-lawyer-dhaka' },
+        ],
+    },
 ];
 
 export default posts;
