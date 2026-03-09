@@ -357,112 +357,6 @@ const posts = [
         ],
     },
 
-    /* ── 4 ── */
-    {
-        slug: 'income-tax-case-procedure-bangladesh',
-        title: 'Income Tax Case Procedure in Bangladesh: A Taxpayer\'s Guide',
-        category: 'Tax Law',
-        readTime: '7 min read',
-        metaTitle: 'Income Tax Case Procedure in Bangladesh – Taxpayer Guide',
-        metaDescription: 'Understand income tax assessment, dispute resolution, and appeal procedures in Bangladesh. Practical guide for individuals and businesses by a tax lawyer in Dhaka.',
-        keywords: ['income tax case Bangladesh', 'tax dispute Bangladesh', 'NBR tax appeal Bangladesh', 'income tax assessment Bangladesh', 'tax lawyer Dhaka', 'Income Tax Ordinance 1984', 'tax tribunal Bangladesh', 'tax appeal procedure Bangladesh'],
-        publishedDate: PUBLISHED,
-        heroIntro: 'Disputes with the National Board of Revenue (NBR) can be daunting. Whether you are facing a re-assessment, a penalty, or a demand notice, understanding the income tax case procedure in Bangladesh helps you protect your financial interests.',
-        toc: [
-            'Income Tax Law Framework in Bangladesh',
-            'Types of Tax Disputes',
-            'Responding to a Tax Notice',
-            'Assessment and Re-Assessment Procedure',
-            'Filing an Appeal Before the Commissioner (Appeals)',
-            'Taxes Appellate Tribunal (TAT)',
-            'High Court Division and Supreme Court',
-            'Avoiding Tax Disputes: Preventive Tips',
-        ],
-        sections: [
-            {
-                h2: 'Income Tax Law Framework in Bangladesh',
-                content: `<p>Income tax in Bangladesh is governed by the <strong>Income Tax Ordinance 1984</strong> (as amended repeatedly), the <strong>Income Tax Rules 1984</strong>, and annual Finance Acts. The National Board of Revenue (NBR) administers income tax through Deputy Commissioners of Taxes (DCT) posted across Bangladesh.</p>
-<p>Since 2023, Bangladesh has also enacted the <strong>Income Tax Act 2023</strong> which gradually replaces the 1984 Ordinance. Taxpayers must be aware which law applies to the taxable year concerned. For complex tax matters, a <a href="/tax-vat-lawyer-dhaka" style="color:var(--accent)">tax and VAT lawyer in Dhaka</a> will clarify the applicable provisions.</p>`,
-            },
-            {
-                h2: 'Types of Tax Disputes',
-                content: `<p>Common income tax disputes in Bangladesh include:</p>
-<ul>
-<li><strong>Addition to income:</strong> DCT adds unexplained cash credit, unexplained investment, or disallows expenses.</li>
-<li><strong>Penalty proceedings:</strong> For late filing, concealment of income, or fraud.</li>
-<li><strong>TDS/advance tax disputes:</strong> Disagreements over withholding tax obligations.</li>
-<li><strong>Re-assessment notices:</strong> DCT reopening closed assessments due to new information.</li>
-<li><strong>Prosecution cases:</strong> In serious cases, the NBR may pursue criminal prosecution for tax evasion.</li>
-</ul>
-<p>Each type requires a different legal response, from a written objection to a formal appeal or writ petition.</p>`,
-            },
-            {
-                h2: 'Responding to a Tax Notice',
-                content: `<p>When you receive a notice from the DCT, time is critical. Do not ignore any tax notice: the deadlines are strictly enforced.</p>
-<ol>
-<li>Read the notice carefully to identify the assessment year, the amount in dispute, and the deadline for response.</li>
-<li>Gather all supporting documents — salary slips, bank statements, investment records, purchase invoices, TDS certificates.</li>
-<li>Draft a written response (submission) addressing all points raised by the DCT, with supporting documents attached.</li>
-<li>Submit within the specified deadline. Keep acknowledged copies of everything submitted.</li>
-</ol>
-<p>A well-drafted first-level response can resolve many disputes at the DCT stage without the need for formal appeals.</p>`,
-            },
-            {
-                h2: 'Assessment and Re-Assessment Procedure',
-                content: `<p>Under the Income Tax Ordinance 1984, the DCT may complete a <strong>best-judgement assessment</strong> if a return is not filed or is incomplete. The DCT may also <strong>re-open assessment</strong> within six years from the end of the tax year if new information reveals unreported income.</p>
-<p>During assessment, the DCT issues a notice under Section 83 requesting information, books of accounts, and explanations. Failure to respond may result in an ex-parte assessment — meaning the DCT will make additions based on available information only, which is almost always unfavourable to the taxpayer.</p>`,
-            },
-            {
-                h2: 'Filing an Appeal Before the Commissioner (Appeals)',
-                content: `<p>If you disagree with the DCT's assessment order, you may appeal to the <strong>Commissioner of Taxes (Appeals)</strong> — the first appellate authority. The appeal must be filed within <strong>45 days</strong> of receiving the assessment order.</p>
-<p>Key requirements:</p>
-<ul>
-<li>File the appeal in the prescribed form with a court fee</li>
-<li>Pay the undisputed portion of the tax demand</li>
-<li>Attach a copy of the assessment order and grounds of appeal</li>
-</ul>
-<p>The Commissioner may admit, modify, or set aside the DCT's order. This is a crucial stage — a well-argued appeal often resolves disputes without proceeding to the Tribunal.</p>`,
-            },
-            {
-                h2: 'Taxes Appellate Tribunal (TAT)',
-                content: `<p>If not satisfied with the Commissioner (Appeals) order, either the taxpayer or the Revenue may appeal to the <strong>Taxes Appellate Tribunal (TAT)</strong>. The TAT is a quasi-judicial forum with Dhaka and Chittagong benches.</p>
-<p>Appeals to the TAT must be filed within <strong>60 days</strong> of the Commissioner's order. TAT proceedings are more formal and evidence-based. An experienced <a href="/tax-vat-lawyer-dhaka" style="color:var(--accent)">tax lawyer in Dhaka</a> is virtually essential at this stage to present legal arguments and cross-examine witnesses if required.</p>`,
-            },
-            {
-                h2: 'High Court Division and Supreme Court',
-                content: `<p>Questions of law decided by the TAT may be challenged by a <strong>Reference Application</strong> to the High Court Division of the Bangladesh Supreme Court. The reference must involve a substantial question of law, not just factual disagreement.</p>
-<p>In extraordinary cases — for example, if assessment proceedings are conducted in breach of natural justice — a writ petition under Article 102 of the Constitution may also be filed before the High Court Division. These are complex proceedings that require counsel experienced in <a href="/supreme-court-lawyer-bangladesh" style="color:var(--accent)">Supreme Court practice in Bangladesh</a>.</p>`,
-            },
-            {
-                h2: 'Avoiding Tax Disputes: Preventive Tips',
-                content: `<p>Prevention is always better than litigation. Key steps to avoid income tax disputes in Bangladesh:</p>
-<ul>
-<li>File your income tax return on time every year (deadline: 30 November for individuals)</li>
-<li>Maintain proper books of accounts and supporting vouchers</li>
-<li>Ensure all bank deposits and investments are properly explained</li>
-<li>Obtain TDS certificates from all employers and clients</li>
-<li>Consult a tax lawyer or chartered accountant before large financial transactions</li>
-</ul>
-<p>For ongoing compliance advice or to resolve an existing dispute, contact a <a href="/tax-vat-lawyer-dhaka" style="color:var(--accent)">tax and VAT lawyer in Dhaka</a> for a consultation.</p>`,
-            },
-        ],
-        faqs: [
-            { question: 'What should I do if I get a tax notice from NBR?', answer: 'Do not ignore it. Note the deadline, gather supporting documents, and consult a tax lawyer or accountant. A timely written response can often resolve the matter.' },
-            { question: 'How long do I have to file an income tax appeal in Bangladesh?', answer: '45 days from the date of the DCT assessment order to appeal to the Commissioner (Appeals). Missing this deadline can be fatal to your case.' },
-            { question: 'What is best-judgement assessment?', answer: 'If a taxpayer does not file a return or respond to notices, the DCT estimates income based on available information and issues an assessment. It is almost always higher than actual income.' },
-            { question: 'Can the NBR prosecute me for non-payment of tax?', answer: 'Yes. In cases of wilful evasion or fraud, the NBR can initiate prosecution proceedings under the Income Tax Ordinance, which may result in fines or imprisonment.' },
-            { question: 'What is the Taxes Appellate Tribunal?', answer: 'The TAT is the second-level appellate authority for income tax disputes in Bangladesh, above the Commissioner (Appeals) and below the High Court Division.' },
-            { question: 'Is tax avoidance legal in Bangladesh?', answer: 'Tax planning within the law is legal. Tax evasion — concealing income or providing false information — is illegal and carries criminal penalties.' },
-            { question: 'How long does a tax appeal typically take?', answer: 'Commissioner (Appeals) level: 6–18 months. TAT: 1–3 years. High Court references may take several more years.' },
-            { question: 'Do I need a lawyer for a tax appeal?', answer: 'While not legally mandatory, having an experienced tax lawyer significantly improves outcomes, especially at the TAT and High Court levels.' },
-        ],
-        relatedServiceLinks: [
-            { text: 'Tax & VAT Lawyer Dhaka', to: '/tax-vat-lawyer-dhaka' },
-            { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
-            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-uttara' },
-        ],
-    },
-
     /* ── 5 ── */
     {
         slug: 'cheque-dishonour-case-law-bangladesh',
@@ -694,6 +588,7 @@ const posts = [
     /* ── 7 ── */
     {
         slug: 'anticipatory-bail-bangladesh',
+        category: 'Criminal Law',
         title: 'Anticipatory Bail in Bangladesh: How to Apply Before Arrest',
         metaDescription: 'Step-by-step guide to anticipatory bail in Bangladesh — who can apply, which court to approach, required documents, and how a criminal lawyer in Dhaka can help.',
         keywords: ['anticipatory bail Bangladesh', 'pre-arrest bail Bangladesh', 'anticipatory bail application Bangladesh', 'Sessions Court bail Bangladesh', 'High Court bail Bangladesh', 'criminal lawyer Dhaka', 'bail before arrest Bangladesh', 'CrPC anticipatory bail'],
@@ -2033,7 +1928,7 @@ const posts = [
 
     /* ── 18 ── */
     {
-        slug: 'child-custody-law-bangladesh',
+        slug: 'child-custody-2026-bangladesh',
         title: 'Child Custody Laws in Bangladesh: A Complete Legal Guide',
         category: 'Family Law',
         readTime: '8 min read',
@@ -2147,142 +2042,6 @@ const posts = [
         ],
         relatedServiceLinks: [
             { text: 'Divorce Lawyer Uttara', to: '/divorce-lawyer-uttara' },
-            { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
-        ],
-    },
-
-    /* ── 19 ── */
-    {
-        slug: 'income-tax-notice-response-bangladesh',
-        title: 'How to Respond to an Income Tax Notice in Bangladesh (2026)',
-        category: 'Tax Law',
-        readTime: '8 min read',
-        metaTitle: 'Respond to Income Tax Notice Bangladesh – Expert Guide 2026',
-        metaDescription: 'Received an income tax notice in Bangladesh? Learn what each type of notice means, how to respond correctly, avoid penalties, and get help from a tax lawyer in Dhaka.',
-        keywords: ['income tax notice Bangladesh', 'tax notice response Bangladesh', 'NBR notice Bangladesh', 'income tax lawyer Dhaka', 'tax assessment Bangladesh', 'tax audit Bangladesh', 'Income Tax Act 2023 Bangladesh', 'avoid tax penalty Bangladesh'],
-        publishedDate: PUBLISHED,
-        heroIntro: 'Receiving an income tax notice from the National Board of Revenue (NBR) can be stressful. But ignoring it is far worse than responding incorrectly. Understanding what the notice means and responding properly — ideally with a tax lawyer\'s guidance — can save you from substantial penalties.',
-        toc: [
-            'Types of Income Tax Notices in Bangladesh',
-            'The Income Tax Act 2023: Key Changes',
-            'What to Do First When You Receive a Notice',
-            'Responding to an Assessment Notice',
-            'Tax Audit: What to Expect',
-            'Disputing a Tax Demand',
-            'Penalties for Non-Compliance',
-            'When to Engage a Tax Lawyer',
-        ],
-        sections: [
-            {
-                h2: 'Types of Income Tax Notices in Bangladesh',
-                content: `<p>The NBR issues different types of notices for different purposes. Identifying the type is the first step:</p>
-<ul>
-<li><strong>Return filing notice:</strong> Reminding or requiring you to file your income tax return for a specific year.</li>
-<li><strong>Assessment notice:</strong> Informing you that the DCT (Deputy Commissioner of Taxes) is assessing your income and tax liability for a particular year.</li>
-<li><strong>Show cause notice:</strong> Asking you to explain why a penalty or additional tax should not be imposed.</li>
-<li><strong>Audit/scrutiny notice:</strong> Selecting your return for detailed examination. Information and documents will be requested.</li>
-<li><strong>Demand notice:</strong> Stating that you owe a specific amount of tax and demanding payment.</li>
-<li><strong>Search and seizure notice:</strong> Authorising inspection of your books or premises (rare, but serious).</li>
-</ul>
-<p>Each notice has different response requirements and deadlines. Contact a <a href="/tax-vat-lawyer-dhaka" style="color:var(--accent)">tax lawyer in Dhaka</a> immediately upon receipt of any NBR notice.</p>`,
-            },
-            {
-                h2: 'The Income Tax Act 2023: Key Changes',
-                content: `<p>Bangladesh replaced the Income Tax Ordinance 1984 with the <strong>Income Tax Act 2023</strong>, which took full effect from the 2023-24 assessment year. Key changes relevant to taxpayers receiving notices include:</p>
-<ul>
-<li>Rationalised tax slabs and revised exemption thresholds</li>
-<li>Stricter documentation requirements for business expenditure</li>
-<li>New provisions on digital income and e-commerce taxation</li>
-<li>Enhanced penalties for undisclosed income</li>
-<li>Revised appeal procedure before the Tax Appellate Tribunal</li>
-</ul>
-<p>If your notice relates to assessment years before 2023-24, the Income Tax Ordinance 1984 may still apply. A tax lawyer familiar with both regimes can advise correctly.</p>`,
-            },
-            {
-                h2: 'What to Do First When You Receive a Notice',
-                content: `<p>When you receive an income tax notice:</p>
-<ol>
-<li><strong>Do not panic — but do not ignore it.</strong> Every notice has a response deadline. Missing it has serious consequences.</li>
-<li><strong>Read the notice carefully</strong> to identify: the assessment year concerned, the type of notice, the specific information/documents requested, and the deadline for response.</li>
-<li><strong>Gather your records</strong> for the year in question — income statements, bank statements, investment proofs, business records, TDS certificates.</li>
-<li><strong>Engage a tax lawyer or chartered accountant</strong> immediately. Even if your affairs are straightforward, professional assistance ensures your response is complete and legally sound.</li>
-<li><strong>Never ignore a deadline.</strong> If you genuinely cannot respond in time, apply for an extension with stated reasons before the deadline expires.</li>
-</ol>`,
-            },
-            {
-                h2: 'Responding to an Assessment Notice',
-                content: `<p>An assessment notice typically requires you to:</p>
-<ul>
-<li>Appear before the DCT on a specified date with your books and records</li>
-<li>Provide explanations for income, deductions, or investments that the DCT is questioning</li>
-<li>Submit documentary evidence supporting your return</li>
-</ul>
-<p>Your response should be:</p>
-<ul>
-<li><strong>Complete</strong> — address every point raised in the notice</li>
-<li><strong>Documented</strong> — every claim should be backed by supporting documents</li>
-<li><strong>Legally reasoned</strong> — where the law supports your position, cite the relevant sections</li>
-<li><strong>Submitted in writing</strong> — always obtain acknowledgement of submission</li>
-</ul>
-<p>A <a href="/tax-vat-lawyer-dhaka" style="color:var(--accent)">tax lawyer</a> will prepare a comprehensive written response and accompany you to the DCT hearing if necessary.</p>`,
-            },
-            {
-                h2: 'Tax Audit: What to Expect',
-                content: `<p>If your return is selected for scrutiny (audit), the DCT will examine your income, expenses, investments, and supporting documents in detail. Prepare for:</p>
-<ul>
-<li>Requests for bank statements, transaction records, and business accounts going back several years</li>
-<li>Questions about unexplained deposits or cash transactions</li>
-<li>Verification of investment claims (life insurance, provident fund, DPS)</li>
-<li>Cross-checking with third-party information (TDS data from employers, banks)</li>
-</ul>
-<p>During a tax audit, it is essential to avoid volunteering information beyond what is asked, to present documents in an organised manner, and to have legal representation to ensure your rights are protected throughout the process.</p>`,
-            },
-            {
-                h2: 'Disputing a Tax Demand',
-                content: `<p>If you disagree with a tax assessment or demand, you have the right to appeal. The appeals process under the Income Tax Act 2023:</p>
-<ol>
-<li><strong>Appeal to the Commissioner of Taxes (Appeals)</strong> — must be filed within 45 days of the assessment order. Pay 10% of the disputed tax as a precondition.</li>
-<li><strong>Appeal to the Taxes Appellate Tribunal</strong> — second-tier appeal for unresolved disputes.</li>
-<li><strong>High Court reference</strong> — on questions of law, a reference can be made to the High Court Division.</li>
-</ol>
-<p>Do not simply pay a disputed demand without taking legal advice. If your objection has merit, an appeal can reverse or significantly reduce the demand. A tax lawyer can assess your chances of success before advising whether to appeal or negotiate a settlement.</p>`,
-            },
-            {
-                h2: 'Penalties for Non-Compliance',
-                content: `<p>Failing to respond to NBR notices or comply with tax obligations can result in serious consequences:</p>
-<ul>
-<li>Penalty for failure to file return: a specified daily penalty for each day of default</li>
-<li>Interest on unpaid taxes at prescribed rates</li>
-<li>Best-judgement assessment: the DCT estimates your income based on available information, which almost always results in a higher tax demand than your actual liability</li>
-<li>Prosecution for serious tax evasion, potentially resulting in imprisonment</li>
-<li>Attachment of bank accounts or assets for recovery of tax debts</li>
-</ul>
-<p>Timely, proper response to all notices is always the cheapest and safest approach.</p>`,
-            },
-            {
-                h2: 'When to Engage a Tax Lawyer',
-                content: `<p>While a chartered accountant handles routine filing, a <strong>tax lawyer</strong> is essential in these situations:</p>
-<ul>
-<li>You have received a show cause notice or penalty notice</li>
-<li>The assessment involves a significant disputed amount</li>
-<li>You are facing an audit involving multiple years</li>
-<li>You need to file a tax appeal before the Commissioner or Tribunal</li>
-<li>You are facing potential prosecution for tax offences</li>
-<li>Your business is subject to a VAT audit simultaneously</li>
-</ul>
-<p>Contact <a href="/tax-vat-lawyer-dhaka" style="color:var(--accent)">Advocate Md. Shah Alam</a> — a specialist tax and VAT lawyer in Dhaka — for expert representation before the NBR, Tax Appellate Tribunal, and High Court.</p>`,
-            },
-        ],
-        faqs: [
-            { question: 'What happens if I ignore an income tax notice in Bangladesh?', answer: 'Ignoring a notice leads to ex-parte assessment (assessment done without your input), which typically results in a higher demand. It can also trigger penalties, interest, and in serious cases, prosecution.' },
-            { question: 'Can I respond to a tax notice online in Bangladesh?', answer: 'NBR has been expanding its online tax services (e-TIN, e-filing). Some responses can be submitted digitally, but for formal hearings, physical attendance or representation may be required. Check the specific notice requirements.' },
-            { question: 'How long do I have to respond to an income tax notice in Bangladesh?', answer: 'Deadlines vary by notice type, but are typically 15–45 days. Always check the specific date mentioned in the notice and never assume more time is available.' },
-            { question: 'Is it possible to negotiate with the NBR?', answer: 'In some situations, compromise and settlement options exist, particularly for older tax disputes. A tax lawyer can assess whether your case is suitable for settlement and negotiate on your behalf.' },
-            { question: 'What documents do I need to respond to a tax notice?', answer: 'Typically: income certificates, bank statements, investment proofs, salary slips, business accounts, rent receipts, TDS certificates, and any deduction-supporting documents for the assessment year in question.' },
-            { question: 'Can a tax demand be stayed (stopped) while I appeal?', answer: 'Yes. You can apply for stay of demand while the appeal is pending, preventing the NBR from taking coercive recovery action (bank attachment etc.) until the appeal is decided.' },
-        ],
-        relatedServiceLinks: [
-            { text: 'Tax & VAT Lawyer Dhaka', to: '/tax-vat-lawyer-dhaka' },
             { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
         ],
     },
@@ -2647,7 +2406,7 @@ const posts = [
         relatedServiceLinks: [
             { text: 'Land & Property Lawyer Uttara', to: '/land-property-lawyer-uttara' },
             { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
-            { text: 'Tax & VAT Lawyer Dhaka', to: '/tax-vat-lawyer-dhaka' },
+            { text: 'Corporate Lawyer Dhaka', to: '/services/corporate-lawyer' },
         ],
     },
 
@@ -3296,7 +3055,7 @@ const posts = [
         relatedServiceLinks: [
             { text: 'Land & Property Lawyer Uttara', to: '/land-property-lawyer-uttara' },
             { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
-            { text: 'Tax & VAT Lawyer Dhaka', to: '/tax-vat-lawyer-dhaka' },
+            { text: 'Corporate Lawyer Dhaka', to: '/services/corporate-lawyer' },
         ],
     },
 
@@ -3835,7 +3594,7 @@ const posts = [
     {
         slug: 'consumer-rights-law-bangladesh',
         title: 'Consumer Rights Law in Bangladesh: How to File a Complaint',
-        category: 'Consumer Law',
+        category: 'Civil Law',
         readTime: '7 min read',
         metaTitle: 'Consumer Rights Law in Bangladesh – Complaint Guide',
         metaDescription: 'Know your consumer rights in Bangladesh — how to file a complaint under the Consumer Rights Protection Act 2009, who enforces the law, and what compensation you can claim.',
@@ -3953,7 +3712,7 @@ const posts = [
         ],
         relatedServiceLinks: [
             { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-uttara' },
-            { text: 'Tax & VAT Lawyer Dhaka', to: '/tax-vat-lawyer-dhaka' },
+            { text: 'Corporate Lawyer Dhaka', to: '/services/corporate-lawyer' },
             { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
         ],
     },
@@ -4088,7 +3847,7 @@ const posts = [
     {
         slug: 'labour-law-worker-rights-bangladesh',
         title: 'Labour Law & Worker Rights in Bangladesh: A Complete Guide',
-        category: 'Labour Law',
+        category: 'Civil Law',
         readTime: '8 min read',
         metaTitle: 'Labour Law & Worker Rights in Bangladesh – Complete Guide',
         metaDescription: 'Understand labour law in Bangladesh — worker rights, termination rules, compensation, trade unions, and how to file a complaint with the Labour Court. Expert guide.',
@@ -4214,7 +3973,7 @@ const posts = [
         relatedServiceLinks: [
             { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-uttara' },
             { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
-            { text: 'Tax & VAT Lawyer Dhaka', to: '/tax-vat-lawyer-dhaka' },
+            { text: 'Corporate Lawyer Dhaka', to: '/services/corporate-lawyer' },
         ],
     },
     /* ── 16 ── */
@@ -4625,7 +4384,7 @@ const posts = [
     {
         slug: 'digital-security-act-bangladesh-legal-rights',
         title: 'Digital Security Act Bangladesh: Arrest, Bail & Your Legal Rights',
-        category: 'Criminal Law',
+        category: 'Cyber Law',
         readTime: '8 min read',
         metaTitle: 'Digital Security Act Bangladesh – Arrest, Bail & Legal Rights',
         metaDescription: 'Arrested under the Digital Security Act in Bangladesh? Know your legal rights, bail procedure, common DSA offences, and how to challenge a case. Expert guide by a criminal lawyer in Dhaka.',
@@ -5813,299 +5572,6 @@ const posts = [
         relatedServiceLinks: [
             { text: 'Family Lawyer Uttara', to: '/divorce-family-lawyer-uttara' },
             { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-uttara' },
-            { text: 'Supreme Court Lawyer', to: '/supreme-court-lawyer-dhaka' },
-        ],
-    },
-
-    /* ── 36 ── */
-    {
-        slug: 'nbr-tax-raid-seizure-response-bangladesh',
-        title: 'NBR Tax Raid & Seizure: How to Legally Respond in Bangladesh',
-        category: 'Tax Law',
-        readTime: '7 min read',
-        metaTitle: 'NBR Tax Raid Bangladesh – How to Legally Respond',
-        metaDescription: 'Complete guide to NBR tax raids and seizures in Bangladesh — legal authority for raids, your rights during a tax investigation, how to respond, protecting documents, and role of a tax lawyer in Dhaka.',
-        keywords: ['NBR tax raid Bangladesh', 'tax raid Bangladesh', 'NBR seizure Bangladesh', 'income tax investigation Bangladesh', 'tax lawyer Dhaka', 'NBR search procedure Bangladesh'],
-        publishedDate: '2026-03-22',
-        heroIntro: 'A knock on the door from the National Board of Revenue (NBR) with an order for a tax raid is a frightening experience for any business owner or taxpayer. Bangladesh\'s income tax laws give NBR considerable powers to search premises and seize documents and assets. Understanding what the law allows — and what it prohibits — is your first line of defence.',
-        toc: [
-            'NBR\'s Legal Authority to Conduct Tax Raids',
-            'When Can NBR Conduct a Raid?',
-            'What Can NBR Search and Seize?',
-            'Your Rights During an NBR Tax Raid',
-            'Immediate Steps During an NBR Raid',
-            'Challenging an Unlawful NBR Search',
-            'After the Raid: Responding to the Investigation',
-            'Role of a Tax Lawyer During NBR Investigations',
-        ],
-        sections: [
-            {
-                h2: 'NBR\'s Legal Authority to Conduct Tax Raids',
-                content: `<p>The National Board of Revenue (NBR) derives its power to search and seize from the <strong>Income Tax Ordinance 1984 (ITO 1984)</strong>, primarily <strong>Sections 117–122</strong>. These sections authorize the Commissioner of Taxes or an authorized income tax officer to:</p>
-<ul>
-<li>Enter and search any building, place, vessel, vehicle, or aircraft.</li>
-<li>Search any person found therein.</li>
-<li>Break open locks if access is refused.</li>
-<li>Seize any books of accounts, documents, cash, and valuables found during the search.</li>
-</ul>
-<p>NBR officers must have a valid written <strong>search warrant or authorization</strong> from a competent authority before conducting a raid — oral authorization or unofficial notices are not sufficient. If you are facing a tax investigation, immediately contact a <a href="/tax-lawyer-dhaka" style="color:var(--accent)">tax lawyer in Dhaka</a>.</p>`,
-            },
-            {
-                h2: 'When Can NBR Conduct a Raid?',
-                content: `<p>The ITO 1984 limits raids to situations where there is <strong>reason to believe</strong> that:</p>
-<ul>
-<li>Any person has undisclosed income or assets not returned in their tax declaration.</li>
-<li>Books of accounts or documents will be tampered with, falsified, or destroyed if notice is given.</li>
-<li>Cash or valuables representing undisclosed income are present at the premises.</li>
-</ul>
-<p>In practice, raids are triggered by: informant reports, discrepancies in filed returns, intelligence gathered during other investigations, or sector-wide campaigns (e.g., targeting specific industries or professions).</p>`,
-            },
-            {
-                h2: 'Your Rights During an NBR Tax Raid',
-                content: `<p>Despite NBR's broad powers, taxpayers retain important rights during a raid:</p>
-<ul>
-<li><strong>Right to see the search warrant:</strong> Demand to see and read the written authorization before allowing entry. Note the authorizing officer's name, designation, and the scope of the authorization.</li>
-<li><strong>Right to have a witness present:</strong> Insist on having at least two independent witnesses (panchas) present during the search — this is required by law.</li>
-<li><strong>Right to a copy of the panchanama:</strong> A panchanama (record of search) documenting all seized items must be prepared and you must be given a copy.</li>
-<li><strong>Right to legal representation:</strong> You can request time to contact your lawyer before answering questions. However, officers are not legally required to wait indefinitely.</li>
-<li><strong>Right to make submissions:</strong> You may submit explanations in writing for any apparent discrepancy found during the raid.</li>
-</ul>`,
-            },
-            {
-                h2: 'Immediate Steps During an NBR Raid',
-                content: `<p>Practical steps to protect yourself during an NBR raid:</p>
-<ol>
-<li><strong>Stay calm and cooperative</strong> — obstruction or physical interference is illegal and harmful to your position.</li>
-<li><strong>Immediately call your tax lawyer</strong> — notify them before answering any substantive questions.</li>
-<li><strong>Check the authorization document</strong> — note officer names, authorization scope, and issuing authority.</li>
-<li><strong>Ensure witnesses are present</strong> — request independent witnesses as required by law.</li>
-<li><strong>Document the raid</strong> — note time started, items examined, items seized, questions asked. Video record if officers permit (do not do so covertly).</li>
-<li><strong>Review the panchanama carefully</strong> before signing — object to any inaccuracies in writing.</li>
-<li><strong>Do not volunteer information</strong> beyond what is required — answer questions factually and concisely.</li>
-</ol>`,
-            },
-            {
-                h2: 'After the Raid: Responding to the Investigation',
-                content: `<p>After an NBR raid, a formal investigation and assessment process begins:</p>
-<ul>
-<li>The seized documents will be examined by the tax officer.</li>
-<li>You will receive a notice to explain discrepancies or undisclosed income found during the search.</li>
-<li>The officer may issue a <strong>revised assessment</strong> adding undisclosed income and resulting tax demand.</li>
-<li>You can challenge the revised assessment through the <strong>appeal process</strong> — before the Appellate Joint Commissioner, Appellate Tribunal, and eventually the High Court Division.</li>
-</ul>
-<p>Every step of the post-raid investigation must be handled with legal precision. A <a href="/tax-lawyer-dhaka" style="color:var(--accent)">tax lawyer in Dhaka</a> can review seized documents, prepare explanations, and represent you through the appeals process.</p>`,
-            },
-        ],
-        faqs: [
-            { question: 'Can NBR raid my business without a warrant?', answer: 'No. NBR officers must have a written authorization (effectively a search warrant) from a competent authority under the Income Tax Ordinance 1984 before conducting a search. Demand to see this before allowing entry.' },
-            { question: 'Can I refuse entry during an NBR raid?', answer: 'Refusing entry to authorized NBR officers constitutes obstruction and is illegal. You can demand to see the authorization and have your lawyer present, but you cannot physically block authorized officers.' },
-            { question: 'What should I do first if NBR arrives to conduct a raid?', answer: 'Stay calm, ask to see the written authorization, immediately call your tax lawyer, and ensure witnesses are present. Do not answer substantive questions until your lawyer arrives if possible.' },
-            { question: 'Can seized documents be returned?', answer: 'Yes. Documents can be returned after copies are made by the NBR, or when the investigation is concluded and the documents are no longer needed as evidence. Apply to the Commissioner for return of documents.' },
-            { question: 'Can I challenge a NBR raid that was conducted without proper authorization?', answer: 'Yes. If the raid was conducted without proper written authorization or exceeded the scope of the authorization, you can challenge the search and any resulting assessment through legal proceedings.' },
-        ],
-        relatedServiceLinks: [
-            { text: 'Tax Lawyer Dhaka', to: '/tax-lawyer-dhaka' },
-            { text: 'Supreme Court Lawyer', to: '/supreme-court-lawyer-dhaka' },
-        ],
-    },
-
-
-    /* ── 37 ── */
-    {
-        slug: 'company-tax-registration-tin-bangladesh',
-        title: 'Company Tax Registration & TIN Certificate in Bangladesh: Complete Guide',
-        category: 'Tax Law',
-        readTime: '7 min read',
-        metaTitle: 'Company Tax Registration & TIN Certificate Bangladesh – Complete Guide',
-        metaDescription: 'Step-by-step guide to company tax registration and TIN certificate in Bangladesh — who needs a TIN, online registration through NBR, required documents, and ongoing tax compliance obligations.',
-        keywords: ['company tax registration Bangladesh', 'TIN certificate Bangladesh', 'business TIN Bangladesh', 'NBR tax registration Bangladesh', 'tax lawyer Dhaka', 'company TIN registration guide'],
-        publishedDate: '2026-03-23',
-        heroIntro: 'Every business in Bangladesh — whether a sole proprietorship, partnership, private limited company, or NGO — is required to obtain a Taxpayer Identification Number (TIN) and register for tax purposes with the National Board of Revenue (NBR). Failure to register exposes businesses to penalties and bars them from obtaining trade licenses, government contracts, and bank facilities.',
-        toc: [
-            'What is a TIN in Bangladesh?',
-            'Who Must Register for TIN?',
-            'Business Entities That Require TIN',
-            'Step-by-Step TIN Registration Process',
-            'Documents Required for TIN Registration',
-            'Online TIN Registration via NBR e-TIN',
-            'TIN and Annual Tax Return Filing',
-            'Penalties for Operating Without a TIN',
-        ],
-        sections: [
-            {
-                h2: 'What is a TIN in Bangladesh?',
-                content: `<p>A <strong>Taxpayer Identification Number (TIN)</strong> is a unique 12-digit number issued by the National Board of Revenue (NBR) to identify taxpayers — both individuals and businesses. In Bangladesh, TIN is required for almost every significant financial and administrative activity, including:</p>
-<ul>
-<li>Opening a business bank account</li>
-<li>Obtaining a trade license from the city corporation</li>
-<li>Filing any regulatory document with RJSC (Registrar of Joint Stock Companies)</li>
-<li>Bidding on government tenders and contracts</li>
-<li>Importing goods (required by customs)</li>
-<li>Registering commercial property</li>
-</ul>
-<p>If you need assistance with tax registration or compliance, consult a <a href="/tax-lawyer-dhaka" style="color:var(--accent)">tax lawyer in Dhaka</a> experienced in Bangladesh NBR procedures.</p>`,
-            },
-            {
-                h2: 'Business Entities That Require TIN',
-                content: `<p>The following must register for TIN with NBR:</p>
-<ul>
-<li>All private and public limited companies registered with RJSC</li>
-<li>Proprietorships and partnerships with business income</li>
-<li>Firms registered under the Partnership Act 1932</li>
-<li>NGOs and non-profit organizations receiving foreign funds</li>
-<li>Any person whose income exceeds the taxable threshold</li>
-<li>Any person who purchases a motor vehicle, obtains a credit card, participates in a BO (beneficiary owner) account, or registers immovable property above a threshold</li>
-</ul>`,
-            },
-            {
-                h2: 'Step-by-Step TIN Registration Process',
-                content: `<p>The TIN registration process in Bangladesh:</p>
-<ol>
-<li><strong>Visit the NBR e-TIN portal:</strong> Go to <a href="https://etinbd.nbr.gov.bd" style="color:var(--accent)">etinbd.nbr.gov.bd</a> — Bangladesh's online TIN registration system.</li>
-<li><strong>Create an account:</strong> Register using your mobile number and NID (for individuals) or company documents (for companies).</li>
-<li><strong>Fill in the registration form:</strong> For companies, enter the company name, RJSC registration number, registered address, directors' NID numbers, and nature of business.</li>
-<li><strong>Upload required documents:</strong> Upload scanned copies of required documents.</li>
-<li><strong>Submit the application:</strong> Review and submit. The system generates a TIN certificate file immediately for approved applications.</li>
-<li><strong>Print the TIN certificate:</strong> Download and print the TIN certificate — it is valid from the date of issue.</li>
-</ol>`,
-            },
-            {
-                h2: 'Documents Required for TIN Registration',
-                content: `<p>For a <strong>private limited company</strong>:</p>
-<ul>
-<li>Certificate of Incorporation from RJSC</li>
-<li>Memorandum and Articles of Association</li>
-<li>National ID cards (NID) of all directors</li>
-<li>Company's registered office address proof</li>
-<li>Bank account statement or letter (if already opened)</li>
-</ul>
-<p>For an <strong>individual/proprietorship</strong>:</p>
-<ul>
-<li>NID card or passport</li>
-<li>Trade license</li>
-<li>Office/business address proof</li>
-</ul>`,
-            },
-            {
-                h2: 'TIN and Annual Tax Return Filing',
-                content: `<p>Obtaining a TIN creates an ongoing obligation to file annual tax returns with NBR, even if income is below the taxable threshold. Key deadlines:</p>
-<ul>
-<li><strong>Individual taxpayers:</strong> Annual return due by 30 November each year for the income year ending 30 June.</li>
-<li><strong>Company taxpayers:</strong> Return due within 6 months of the end of the accounting year (date flexible based on accounting period).</li>
-</ul>
-<p>Failure to file returns by the deadline incurs penalties and eventually triggers a tax authority summons and assessment proceeding. A tax lawyer can manage your ongoing compliance obligations efficiently.</p>`,
-            },
-            {
-                h2: 'Penalties for Operating Without a TIN',
-                content: `<p>Under the Income Tax Ordinance 1984, operating a business without a TIN exposes the business owner to:</p>
-<ul>
-<li>Penalties for non-registration</li>
-<li>Withholding of government contracts and tenders</li>
-<li>Refusal of trade license renewal by city corporation</li>
-<li>Assessment of deemed income by the tax officer</li>
-</ul>
-<p>Retrospective TIN registration and filing of belated returns with penalty is still better than continuing to operate without registration. <a href="/tax-lawyer-dhaka" style="color:var(--accent)">Contact a tax lawyer in Dhaka</a> to regularize your tax position quickly.</p>`,
-            },
-        ],
-        faqs: [
-            { question: 'How long does TIN registration take in Bangladesh?', answer: 'Online TIN registration via the NBR e-TIN system is typically instant or within 24 hours. The TIN certificate is available immediately after approval.' },
-            { question: 'Does a company need separate TIN from its directors?', answer: 'Yes. Each company requires its own TIN as a legal entity. Each director as an individual taxpayer also requires their personal TIN.' },
-            { question: 'Is TIN the same as VAT registration in Bangladesh?', answer: 'No. TIN (income tax) and VAT registration are separate. Businesses with turnover above the VAT registration threshold must also separately register for VAT with NBR.' },
-            { question: 'Can a TIN be cancelled?', answer: 'Yes. A TIN can be cancelled upon dissolution of the company or cessation of taxable activity, after filing all outstanding returns and settling all dues.' },
-            { question: 'Do I need a TIN to open a business bank account in Bangladesh?', answer: 'Yes. All banks in Bangladesh require TIN documentation as part of the account opening process for business accounts.' },
-        ],
-        relatedServiceLinks: [
-            { text: 'Tax Lawyer Dhaka', to: '/tax-lawyer-dhaka' },
-            { text: 'Supreme Court Lawyer', to: '/supreme-court-lawyer-dhaka' },
-        ],
-    },
-
-    /* ── 38 ── */
-    {
-        slug: 'withholding-tax-tds-dispute-bangladesh',
-        title: 'Withholding Tax (TDS) Disputes in Bangladesh: A Business Owner\'s Guide',
-        category: 'Tax Law',
-        readTime: '7 min read',
-        metaTitle: 'Withholding Tax TDS Dispute Bangladesh – Business Legal Guide',
-        metaDescription: 'Guide to withholding tax (TDS) disputes in Bangladesh — how source tax works, common wrongful deduction scenarios, how to claim refunds, and appeal rights against incorrect TDS assessments.',
-        keywords: ['withholding tax Bangladesh', 'TDS Bangladesh', 'source tax Bangladesh', 'withholding tax dispute Bangladesh', 'tax lawyer Dhaka', 'TDS refund Bangladesh'],
-        publishedDate: '2026-03-24',
-        heroIntro: 'Withholding tax — also called Tax Deducted at Source (TDS) in Bangladesh — requires the payer of certain income types to deduct tax at the source and deposit it with the government before making payment to the recipient. While designed for compliance, the system frequently gives rise to disputes: wrongful deductions, excessive rates applied, non-credit of TDS by NBR, and double taxation. This guide helps business owners understand their rights.',
-        toc: [
-            'How Withholding Tax (TDS) Works in Bangladesh',
-            'Income Types Subject to TDS in Bangladesh',
-            'TDS Rates Under Income Tax Act 2023',
-            'Common TDS Disputes Businesses Face',
-            'Claiming TDS Credit Against Your Tax Liability',
-            'What If Too Much TDS Was Deducted?',
-            'Challenging a Wrongful TDS Deduction',
-            'Role of a Tax Lawyer in TDS Disputes',
-        ],
-        sections: [
-            {
-                h2: 'How Withholding Tax (TDS) Works in Bangladesh',
-                content: `<p>In Bangladesh, the <strong>Income Tax Act 2023</strong> (which replaced the Income Tax Ordinance 1984) requires "responsible persons" — typically businesses, employers, and government entities — to deduct tax at source on specified income payments before disbursing the net amount to the recipient.</p>
-<p>The deducted amount must be:</p>
-<ul>
-<li>Deposited with the government treasury by the 15th of the following month.</li>
-<li>Reported to NBR via TDS return filing.</li>
-<li>A TDS certificate issued to the payee to enable them to claim credit against their own tax liability.</li>
-</ul>
-<p>A <a href="/tax-lawyer-dhaka" style="color:var(--accent)">tax lawyer in Dhaka</a> can advise on applicable TDS rates and ensure your business is compliant.</p>`,
-            },
-            {
-                h2: 'Common TDS Disputes Businesses Face',
-                content: `<p>Business owners commonly encounter these TDS-related disputes:</p>
-<ul>
-<li><strong>Wrong TDS rate applied:</strong> The deducting entity applied a higher TDS rate than legally required for the type of income.</li>
-<li><strong>TDS deducted despite exemption:</strong> TDS deducted from income that is legally exempt from deduction (e.g., income earned by recognized provident funds, certain NGOs).</li>
-<li><strong>TDS certificate not issued:</strong> The deducting entity failed to issue TDS certificates, preventing the recipient from claiming credit.</li>
-<li><strong>NBR refusing to grant TDS credit:</strong> Despite having TDS certificates, the tax officer refuses to recognize them during assessment.</li>
-<li><strong>Double TDS on single transaction:</strong> TDS deducted at multiple points in a supply chain on the same transaction value.</li>
-</ul>`,
-            },
-            {
-                h2: 'Claiming TDS Credit Against Your Tax Liability',
-                content: `<p>TDS deducted on your income is a tax payment on your behalf. At the time of filing your annual tax return, you claim TDS credit:</p>
-<ol>
-<li>Collect all TDS certificates from deductors throughout the year.</li>
-<li>Compile total TDS deducted across all income sources.</li>
-<li>Include TDS figures in your annual tax return.</li>
-<li>The TDS amount is deducted from your total tax liability — if TDS exceeds your final tax, you are entitled to a refund.</li>
-</ol>
-<p>Keep original TDS certificates safely — they are the primary evidence of TDS paid on your behalf.</p>`,
-            },
-            {
-                h2: 'What If Too Much TDS Was Deducted?',
-                content: `<p>If total TDS deducted throughout the year exceeds your final assessed tax liability, you are entitled to a <strong>tax refund</strong> from NBR. The process:</p>
-<ul>
-<li>File your annual tax return claiming the refund amount.</li>
-<li>The Taxes Circle Officer will assess and process the refund claim.</li>
-<li>Refunds are typically processed within 3–6 months after assessment completion.</li>
-</ul>
-<p>In practice, refund processing from NBR can be significantly delayed. A tax lawyer can monitor the refund process and follow up with the tax authority to expedite payment.</p>`,
-            },
-            {
-                h2: 'Challenging a Wrongful TDS Deduction',
-                content: `<p>If TDS was wrongfully deducted — at an incorrect rate or on exempt income — your options are:</p>
-<ul>
-<li><strong>Negotiate with the deducting entity:</strong> Request them to correct the deduction rate or refund the excess. This is the fastest solution if they cooperated.</li>
-<li><strong>Apply for a TDS exemption certificate:</strong> NBR can issue certificates exempting certain payees from TDS deduction — proactively applying for this prevents future incorrect deductions.</li>
-<li><strong>Appeal during income tax assessment:</strong> Raise the wrongful TDS issue during your annual tax assessment proceedings.</li>
-<li><strong>File a refund claim:</strong> Claim the excess TDS back through the formal refund procedure.</li>
-</ul>
-<p>Advocate Md. Shah Alam's tax law practice has experience representing businesses in TDS disputes before NBR and the Tax Appellate Tribunal. <a href="/tax-lawyer-dhaka" style="color:var(--accent)">Contact our Dhaka office</a> for advice.</p>`,
-            },
-        ],
-        faqs: [
-            { question: 'What is the penalty for failing to deduct TDS in Bangladesh?', answer: 'Failure to deduct TDS makes the deducting person personally liable for the unpaid tax plus penalties under the Income Tax Act 2023. Additionally, the deducted-but-not-deposited amount is treated as its own offence.' },
-            { question: 'Can I claim a TDS refund if I am below the taxable income threshold?', answer: 'Yes. If TDS deducted exceeds your final tax assessment (which may be nil if you are below the taxable threshold), you are entitled to a full refund. File your return and claim the refund formally.' },
-            { question: 'Do I need TDS certificates to claim TDS credit?', answer: 'Yes. TDS certificates issued by the deducting entity are the primary evidence for claiming TDS credit in your tax return. Collect them from all deductors immediately.' },
-            { question: 'Can TDS be deducted on every type of income?', answer: 'No. TDS applies only to specific income types listed in the Income Tax Act 2023 — including salary, rent, commission, contractor payments, professional fees, and interest. Not all income types are subject to TDS.' },
-            { question: 'What if the deducting party refuses to issue a TDS certificate?', answer: 'Failure to issue TDS certificates is a legal violation. Report the non-issuance to the Taxes Circle Officer, who has authority to direct the deducting party to issue the certificate.' },
-        ],
-        relatedServiceLinks: [
-            { text: 'Tax Lawyer Dhaka', to: '/tax-lawyer-dhaka' },
             { text: 'Supreme Court Lawyer', to: '/supreme-court-lawyer-dhaka' },
         ],
     },
