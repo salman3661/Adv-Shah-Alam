@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { waLink } from '../data/contactInfo';
 import { MessageCircle, ArrowRight } from 'lucide-react';
+import heroContent from '../content/hero.json';
 
 const Hero = () => {
     return (
@@ -39,7 +40,7 @@ const Hero = () => {
                             <source srcSet="/images/hero/hero-md-shah-alam.webp" type="image/webp" />
                             <img
                                 src="/images/hero/hero-md-shah-alam.png"
-                                alt="Advocate Md. Shah Alam – Experienced Lawyer in Uttara, Dhaka"
+                                alt={heroContent.photoAlt}
                                 loading="eager"
                                 fetchpriority="high"
                                 decoding="async"
@@ -62,7 +63,7 @@ const Hero = () => {
                             className="absolute bottom-6 right-6 font-bold px-5 py-2 rounded-lg text-sm shadow-lg backdrop-blur-md"
                             style={{ background: 'var(--accent)', color: '#fff' }}
                         >
-                            Experienced Lawyer.
+                             {heroContent.photoBadgeBottom}
                         </motion.div>
 
                         <motion.div
@@ -72,7 +73,7 @@ const Hero = () => {
                             className="absolute top-6 left-6 font-semibold px-3 py-1.5 rounded-lg text-xs shadow-lg backdrop-blur-md"
                             style={{ background: 'rgba(0,0,0,0.55)', color: 'var(--gold)', border: '1px solid rgba(198,167,94,0.3)' }}
                         >
-                            ⚖️ Supreme Court
+                             {heroContent.photoBadgeTop}
                         </motion.div>
                     </motion.div>
                 </motion.div>
@@ -87,27 +88,27 @@ const Hero = () => {
                     <div className="inline-block px-4 py-1.5 rounded-full mb-6"
                         style={{ border: '1px solid var(--card-border)', background: 'var(--surface)' }}>
                         <span className="label-accent">
-                            Advocate · Supreme Court of Bangladesh
+                             {heroContent.labelBadge}
                         </span>
                     </div>
 
                     {/* SEO H1 */}
                     <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold leading-tight mb-5"
                         style={{ color: 'var(--text)', fontFamily: "'Playfair Display', Georgia, serif" }}>
-                        Experienced Lawyer in Uttara –{' '}
-                        <span style={{ color: 'var(--accent)' }}>Advocate Md. Shah Alam</span>
+                         {heroContent.headline}{' '}
+                        <span style={{ color: 'var(--accent)' }}>{heroContent.headlineAccent}</span>
                     </h1>
 
                     {/* SEO Subheading */}
                     <p className="text-lg md:text-xl leading-relaxed max-w-xl mx-auto md:mx-0 mb-4 font-medium"
                         style={{ color: 'var(--text-2)' }}>
-                        Providing Legal Representation in Criminal, Divorce, Land, Bail, Company &amp; Corporate, and Supreme Court Matters in Dhaka &amp; Bangladesh.
+                         {heroContent.subheading}
                     </p>
 
                     {/* Keyword-rich intro */}
                     <p className="text-sm md:text-base leading-relaxed max-w-lg mx-auto md:mx-0 mb-8"
                         style={{ color: 'var(--text-muted)' }}>
-                        As a trusted <strong style={{ color: 'var(--text-2)' }}>lawyer in Uttara</strong> and <strong style={{ color: 'var(--text-2)' }}>advocate in Uttara</strong>, Adv. Shah Alam offers expert criminal, divorce, land, bail, Supreme Court, and company &amp; corporate legal services in Dhaka. Experienced Lawyer with proven courtroom excellence.
+                         <span dangerouslySetInnerHTML={{ __html: heroContent.description }} />
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
@@ -120,7 +121,7 @@ const Hero = () => {
                             className="btn-whatsapp text-sm"
                         >
                             <MessageCircle size={18} />
-                            WhatsApp Consult
+                             {heroContent.cta1Label}
                         </motion.a>
 
                         <motion.a
@@ -129,14 +130,14 @@ const Hero = () => {
                             whileTap={{ scale: 0.96 }}
                             className="btn-outline flex items-center justify-center gap-2 py-3.5 px-7 text-sm"
                         >
-                            Request Consultation
+                             {heroContent.cta2Label}
                             <ArrowRight size={18} />
                         </motion.a>
                     </div>
 
                     {/* Speciality tags */}
                     <div className="flex flex-wrap gap-2 justify-center md:justify-start mt-7">
-                        {['Criminal Law', 'Divorce Cases', 'Land Disputes', 'Bail Matters', 'Supreme Court'].map((tag) => (
+                         {heroContent.tags.map((tag) => (
                             <span key={tag}
                                 className="text-xs px-3 py-1.5 rounded-full font-medium"
                                 style={{ border: '1px solid var(--card-border)', color: 'var(--text-muted)', background: 'var(--surface)' }}>

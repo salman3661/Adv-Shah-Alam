@@ -4,16 +4,10 @@ import { Helmet } from 'react-helmet-async';
 import { Search, Clock, ChevronRight, BookOpen } from 'lucide-react';
 import blogPosts, { isPublished } from '../data/blogPosts';
 import { telLink, waLink } from '../data/contactInfo';
+import seo from '../content/seo.json';
 
-const CATEGORIES = ['All', 'Criminal Law', 'Family Law', 'Property Law', 'Company & Corporate Law', 'Civil Law'];
-
-const categoryColors = {
-    'Criminal Law': '#EF4444',
-    'Family Law': '#8B5CF6',
-    'Property Law': '#10B981',
-    'Company & Corporate Law': '#F59E0B',
-    'Civil Law': '#3B82F6',
-};
+const CATEGORIES = seo.categoriesEn;
+const categoryColors = seo.categoryColors;
 
 const BlogCard = ({ post }) => (
     <article

@@ -1,0 +1,121 @@
+[
+  {
+    "collection": "blog_posts",
+    "meta": {
+      "icon": "article",
+      "note": "English blog posts",
+      "display_template": "{{title}} ({{status}})",
+      "sort_field": "publishedDate"
+    },
+    "schema": { "name": "blog_posts" },
+    "fields": [
+      { "field": "id",             "type": "uuid",    "meta": { "hidden": true, "readonly": true } },
+      { "field": "status",         "type": "string",  "meta": { "width": "half", "interface": "select-dropdown", "options": { "choices": [{ "text": "Published", "value": "published" }, { "text": "Draft", "value": "draft" }, { "text": "Scheduled", "value": "scheduled" }] }, "display": "labels" }, "schema": { "default_value": "draft" } },
+      { "field": "language",       "type": "string",  "meta": { "width": "half", "interface": "select-dropdown", "options": { "choices": [{ "text": "English", "value": "en" }, { "text": "Bangla", "value": "bn" }] } }, "schema": { "default_value": "en" } },
+      { "field": "pairId",         "type": "string",  "meta": { "note": "Shared ID linking EN and BN versions, e.g. 'bail-2026-03-02'", "width": "half" } },
+      { "field": "slug",           "type": "string",  "meta": { "width": "half", "interface": "input", "note": "URL-safe, no spaces. EN: bail-process-bangladesh | BN: bail-process-bangladesh-bn" }, "schema": { "is_unique": true } },
+      { "field": "enSlug",         "type": "string",  "meta": { "width": "half", "note": "BN posts only — slug of EN counterpart" } },
+      { "field": "title",          "type": "string",  "meta": { "required": true } },
+      { "field": "category",       "type": "string",  "meta": { "width": "half", "interface": "select-dropdown", "options": { "choices": [{ "text": "Criminal Law", "value": "Criminal Law" }, { "text": "Family Law", "value": "Family Law" }, { "text": "Property Law", "value": "Property Law" }, { "text": "Company & Corporate Law", "value": "Company & Corporate Law" }, { "text": "Civil Law", "value": "Civil Law" }, { "text": "Cyber Law", "value": "Cyber Law" }, { "text": "Legal Procedures", "value": "Legal Procedures" }, { "text": "ফৌজদারি আইন", "value": "ফৌজদারি আইন" }, { "text": "পারিবারিক আইন", "value": "পারিবারিক আইন" }, { "text": "সম্পত্তি আইন", "value": "সম্পত্তি আইন" }, { "text": "সাইবার আইন", "value": "সাইবার আইন" }, { "text": "আইনি পদ্ধতি", "value": "আইনি পদ্ধতি" }, { "text": "দেওয়ানি আইন", "value": "দেওয়ানি আইন" }] } } },
+      { "field": "readTime",       "type": "string",  "meta": { "width": "half", "note": "e.g. '7 min read'" } },
+      { "field": "publishedDate",  "type": "date",    "meta": { "width": "half", "interface": "datetime" } },
+      { "field": "scheduledDate",  "type": "timestamp","meta": { "width": "half", "interface": "datetime", "note": "Set this + status=scheduled to auto-publish" } },
+      { "field": "metaTitle",      "type": "string",  "meta": { "note": "60 characters max", "interface": "input" } },
+      { "field": "metaDescription","type": "text",    "meta": { "note": "160 characters max", "interface": "input-multiline" } },
+      { "field": "keywords",       "type": "json",    "meta": { "interface": "tags", "note": "Press Enter to add a keyword" } },
+      { "field": "heroIntro",      "type": "text",    "meta": { "interface": "input-multiline" } },
+      { "field": "toc",            "type": "json",    "meta": { "interface": "list", "note": "Table of contents headings (in order)" } },
+      { "field": "sections",       "type": "json",    "meta": { "interface": "list", "note": "Blog sections — each has h2 and content (HTML)", "options": { "template": "{{ h2 }}" } } },
+      { "field": "faqs",           "type": "json",    "meta": { "interface": "list", "note": "FAQ items — question and answer pairs", "options": { "template": "{{ question }}" } } },
+      { "field": "relatedServiceLinks", "type": "json", "meta": { "interface": "list", "note": "Sidebar links — text and path", "options": { "template": "{{ text }}" } } },
+      { "field": "featuredImage",  "type": "uuid",    "meta": { "interface": "file-image", "note": "Used as og:image and blog card thumbnail" } },
+      { "field": "featuredImageAlt","type": "string", "meta": { "note": "Alt text for featured image (required for SEO)" } },
+      { "field": "canonicalUrl",   "type": "string",  "meta": { "note": "Auto-built from slug. Override only if needed." } },
+      { "field": "ogTitle",        "type": "string",  "meta": { "note": "Defaults to metaTitle if blank" } },
+      { "field": "ogDescription",  "type": "text",    "meta": { "note": "Defaults to metaDescription if blank" } },
+      { "field": "date_created",   "type": "timestamp","meta": { "hidden": true, "readonly": true, "special": ["date-created"] } },
+      { "field": "date_updated",   "type": "timestamp","meta": { "hidden": true, "readonly": true, "special": ["date-updated"] } }
+    ]
+  },
+
+  {
+    "collection": "services",
+    "meta": {
+      "icon": "gavel",
+      "note": "Service pages — one record per service",
+      "display_template": "{{h1}} ({{status}})"
+    },
+    "schema": { "name": "services" },
+    "fields": [
+      { "field": "id",           "type": "uuid",   "meta": { "hidden": true, "readonly": true } },
+      { "field": "status",       "type": "string", "meta": { "width": "half", "interface": "select-dropdown", "options": { "choices": [{ "text": "Published", "value": "published" }, { "text": "Draft", "value": "draft" }] } }, "schema": { "default_value": "published" } },
+      { "field": "slug",         "type": "string", "meta": { "width": "half", "note": "e.g. criminal-lawyer" }, "schema": { "is_unique": true } },
+      { "field": "h1",           "type": "string", "meta": { "required": true } },
+      { "field": "intro",        "type": "text",   "meta": { "interface": "input-rich-text-html", "note": "Supports <strong> for keyword bolding" } },
+      { "field": "coverage",     "type": "json",   "meta": { "interface": "list", "note": "Bullet points in the 'What We Cover' section" } },
+      { "field": "contextNote",  "type": "text",   "meta": { "interface": "input-rich-text-html", "note": "Optional paragraph below coverage (may include internal links)" } },
+      { "field": "faqItems",     "type": "json",   "meta": { "interface": "list", "note": "FAQ items for this service", "options": { "template": "{{ q }}" } } },
+      { "field": "ctaText",      "type": "string", "meta": { "note": "CTA button text e.g. 'Talk to a Criminal Lawyer'" } },
+      { "field": "metaTitle",    "type": "string", "meta": { "note": "60 characters max" } },
+      { "field": "metaDesc",     "type": "text",   "meta": { "note": "160 characters max" } },
+      { "field": "canonicalUrl", "type": "string", "meta": { "note": "Full URL e.g. https://www.advmdshahalam.me/services/criminal-lawyer" } },
+      { "field": "featuredImage","type": "uuid",   "meta": { "interface": "file-image" } },
+      { "field": "featuredImageAlt","type": "string","meta": {} },
+      { "field": "date_updated", "type": "timestamp","meta": { "hidden": true, "readonly": true, "special": ["date-updated"] } }
+    ]
+  },
+
+  {
+    "collection": "site_settings",
+    "meta": {
+      "icon": "settings",
+      "note": "Global site settings — only one record exists",
+      "singleton": true
+    },
+    "schema": { "name": "site_settings" },
+    "fields": [
+      { "field": "id",                  "type": "integer", "meta": { "hidden": true } },
+      { "field": "callNumber",          "type": "string",  "meta": { "note": "+8801712655546 (with + and country code)" } },
+      { "field": "callDisplay",         "type": "string",  "meta": { "note": "+880 1712-655546 (human-readable)" } },
+      { "field": "whatsappNumber",      "type": "string",  "meta": { "note": "8801955802007 (no +, wa.me format)" } },
+      { "field": "whatsappDisplay",     "type": "string",  "meta": { "note": "+880 1955-802007 (human-readable)" } },
+      { "field": "whatsappDefaultMsg",  "type": "string",  "meta": { "note": "Pre-filled WhatsApp message" } },
+      { "field": "chamberAddress",      "type": "text" },
+      { "field": "googleMapsEmbed",     "type": "text",    "meta": { "note": "Full Google Maps iframe src URL" } },
+      { "field": "googleMapsLink",      "type": "string",  "meta": { "note": "Google Maps share link" } },
+      { "field": "lawyerName",          "type": "string" },
+      { "field": "barEnrollmentNumber","type": "string" },
+      { "field": "yearsExperience",     "type": "integer" },
+      { "field": "email",               "type": "string" },
+      { "field": "officeHours",         "type": "string",  "meta": { "note": "e.g. Sat–Thu 9am–9pm" } },
+      { "field": "siteTagline",         "type": "string" },
+      { "field": "footerCopyrightText", "type": "string" },
+      { "field": "googleAnalyticsId",   "type": "string",  "meta": { "note": "e.g. G-XXXXXXXXXX" } }
+    ]
+  },
+
+  {
+    "collection": "homepage_content",
+    "meta": {
+      "icon": "home",
+      "note": "Homepage section content — only one record exists",
+      "singleton": true
+    },
+    "schema": { "name": "homepage_content" },
+    "fields": [
+      { "field": "id",                 "type": "integer", "meta": { "hidden": true } },
+      { "field": "heroHeadline",       "type": "string",  "meta": { "note": "Main H1 heading in the hero" } },
+      { "field": "heroSubheadline",    "type": "string",  "meta": { "note": "Bold subtitle below headline" } },
+      { "field": "heroBodyText",       "type": "text",    "meta": { "note": "Paragraph text in hero (supports <strong>)" } },
+      { "field": "heroCTA1Label",      "type": "string",  "meta": { "width": "half", "note": "Primary CTA button text" } },
+      { "field": "heroCTA2Label",      "type": "string",  "meta": { "width": "half", "note": "Secondary CTA button text" } },
+      { "field": "heroImage",          "type": "uuid",    "meta": { "interface": "file-image" } },
+      { "field": "servicesSectionTitle","type": "string" },
+      { "field": "faqSectionTitle",    "type": "string" },
+      { "field": "faqs",               "type": "json",    "meta": { "interface": "list", "note": "Homepage FAQ items", "options": { "template": "{{ q }}" } } },
+      { "field": "aboutHeading",       "type": "string" },
+      { "field": "aboutBody",          "type": "text",    "meta": { "interface": "input-rich-text-html" } },
+      { "field": "date_updated",       "type": "timestamp","meta": { "hidden": true, "readonly": true, "special": ["date-updated"] } }
+    ]
+  }
+]

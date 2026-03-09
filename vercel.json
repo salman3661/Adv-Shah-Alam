@@ -34,7 +34,7 @@
   ],
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/((?!admin|api).*)",
       "destination": "/"
     }
   ],

@@ -3,57 +3,16 @@ import { motion } from 'framer-motion';
 import { waLink } from '../data/contactInfo';
 import { Scale, Users, Home, Shield, Landmark, FileText, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import serviceCardsData from '../content/services.json';
 
-const services = [
-    {
-        icon: Shield,
-        title: 'Criminal Lawyer in Uttara',
-        desc: 'Expert criminal defense for FIR cases, bail applications, trial representation, and criminal case handling in Dhaka courts.',
-        link: '/services/criminal-lawyer',
-        iconColor: 'rgba(239,68,68,0.12)',
-        iconText: '#EF4444',
-    },
-    {
-        icon: Users,
-        title: 'Divorce & Family Lawyer in Uttara',
-        desc: 'Handle divorce procedure in Bangladesh, child custody, Muslim family law, mutual divorce, and all family court matters.',
-        link: '/services/divorce-lawyer',
-        iconColor: 'rgba(236,72,153,0.12)',
-        iconText: '#EC4899',
-    },
-    {
-        icon: Home,
-        title: 'Land & Property Lawyer in Uttara',
-        desc: 'Resolve land dispute cases, property mutation, registration, land fraud, and title deed matters in Bangladesh courts.',
-        link: '/services/land-lawyer',
-        iconColor: 'rgba(34,197,94,0.12)',
-        iconText: '#22C55E',
-    },
-    {
-        icon: Scale,
-        title: 'Bail Lawyer in Dhaka',
-        desc: 'Fast bail applications, anticipatory bail, High Court bail matters, and urgent bail proceedings across Bangladesh courts.',
-        link: '/services/bail-lawyer',
-        iconColor: 'rgba(59,130,246,0.12)',
-        iconText: '#3B82F6',
-    },
-    {
-        icon: Landmark,
-        title: 'Supreme Court Lawyer Bangladesh',
-        desc: 'Expert representation in High Court Division cases, writ petitions, appellate matters, and constitutional litigation.',
-        link: '/services/supreme-court-lawyer',
-        iconColor: 'rgba(124,58,237,0.12)',
-        iconText: '#7C3AED',
-    },
-    {
-        icon: FileText,
-        title: 'Company & Corporate Law',
-        desc: 'Business formation, company disputes, partnerships, corporate compliance, and commercial legal matters.',
-        link: '/services/company-corporate-lawyer',
-        iconColor: 'rgba(217,119,6,0.12)',
-        iconText: '#D97706',
-    },
-];
+// Map icon name strings to Lucide components
+const ICON_MAP = { Shield, Users, Home, Scale, Landmark, FileText };
+
+// Resolve icon components from content data (items array from JSON)
+const services = serviceCardsData.items.map(s => ({
+    ...s,
+    icon: ICON_MAP[s.icon] ?? FileText,
+}));
 
 const Services = () => {
     return (

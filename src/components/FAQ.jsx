@@ -2,29 +2,8 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { waLink } from '../data/contactInfo';
 import { ChevronDown } from 'lucide-react';
-
-const faqs = [
-    {
-        q: 'How to get bail in Bangladesh?',
-        a: 'To get bail in Bangladesh, a bail application must be filed in the appropriate court — either a Sessions Court, Metropolitan Sessions Court, or the High Court Division, depending on the nature of the charge. An experienced bail lawyer in Dhaka will prepare and file the application, present valid grounds (no flight risk, clean record, health conditions), and argue before the judge. For non-bailable offences, the High Court bail process is often required. Contact Adv. Shah Alam for urgent bail matters.',
-    },
-    {
-        q: 'What is divorce procedure in Bangladesh?',
-        a: 'For Muslims, a husband may issue a talaq notice under the Muslim Family Laws Ordinance 1961, which must be sent to the Union Parishad/City Corporation chairman and the spouse. A wife may seek divorce via khula (mutual consent) or through family court on grounds like cruelty or desertion. For Hindus and Christians, separate personal laws apply. All divorce procedures require proper legal documentation and often court proceedings. A divorce lawyer in Uttara can guide you through the complete process.',
-    },
-    {
-        q: 'How long does a criminal case take in Bangladesh?',
-        a: 'Simple cases in Magistrate Courts may conclude in 6–18 months. Sessions Court cases often take 2–5 years depending on complexity, number of witnesses, and court schedule. Cases reaching the High Court Division can take longer. Prompt legal action, strong evidence preparation, and an experienced criminal lawyer in Uttara can help accelerate the process.',
-    },
-    {
-        q: 'How to solve land dispute cases in Bangladesh?',
-        a: 'Land disputes in Bangladesh are resolved through civil courts by filing a title suit, partition suit, or declaration suit. Supporting documents include deed of sale, mutation records, RS/BS khatian, and possession evidence. An experienced land dispute lawyer in Uttara can assess your documents, represent you in court, and pursue swift resolution.',
-    },
-    {
-        q: 'What does a Company & Corporate lawyer do in Bangladesh?',
-        a: 'A company and corporate lawyer in Bangladesh helps with business formation under the Companies Act 1994, drafting partnership agreements, shareholder disputes, corporate compliance, and commercial contract review. Advocate Shah Alam advises businesses and entrepreneurs across Dhaka on protecting their commercial interests.',
-    },
-];
+import faqData from '../content/faq.json';
+const faqs = faqData.items;
 
 const FAQ = () => {
     const [openIndex, setOpenIndex] = useState(null);

@@ -1,0 +1,25 @@
+{
+  "advocateName": "Advocate Md. Shah Alam",
+  "advocateShortName": "Adv. Md. Shah Alam",
+  "court": "Supreme Court of Bangladesh",
+  "yearsExperience": 20,
+  "tagline": "Supreme Court of Bangladesh",
+  "chamberAddress": "Ainjeebi Samity Bhaban, 4th Floor, 6/7 Court House Street, Kotwali, Dhaka-1100",
+  "practiceAddress": "Mantrust Nazma Monzil, Sector 12, Uttara West, Dhaka-1230",
+  "officeHours": "Sat – Thu: 9:00 AM – 9:00 PM",
+  "email": "shahalam0332@gmail.com",
+  "facebookUrl": "https://www.facebook.com/advmd.shahalamfb",
+  "googleMapsUrl": "https://maps.app.goo.gl/M3NXMwW3xkp2TE3h8",
+  "googleMapsEmbed": null,
+  "footerBio": "Trusted advocate in Uttara, Dhaka with 20+ years of legal excellence across criminal, civil, and family law.",
+  "copyrightText": "© {year} Advocate Md. Shah Alam. All Rights Reserved.",
+  "googleBusinessLabel": "⭐ Google Business Profile",
+  "footerServiceLinks": [
+    { "name": "Criminal Lawyer in Uttara",  "path": "/services/criminal-lawyer" },
+    { "name": "Divorce & Family Lawyer",    "path": "/services/divorce-lawyer" },
+    { "name": "Land & Property Lawyer",     "path": "/services/land-lawyer" },
+    { "name": "Bail Lawyer in Dhaka",       "path": "/services/bail-lawyer" },
+    { "name": "Supreme Court Lawyer",       "path": "/services/supreme-court-lawyer" },
+    { "name": "Company & Corporate Law",    "path": "/services/company-corporate-lawyer" }
+  ]
+}
