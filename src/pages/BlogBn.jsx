@@ -2,7 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { Search, Clock, ChevronRight, BookOpen } from 'lucide-react';
-import postsBn from '../data/blogPostsBn';
+import postsBn, { isPublishedBn } from '../data/blogPostsBn';
 
 const CATEGORIES = ['সব', 'ফৌজদারি আইন', 'পারিবারিক আইন', 'সম্পত্তি আইন', 'কর আইন', 'দেওয়ানী আইন'];
 
@@ -73,7 +73,7 @@ const BlogBn = () => {
     const [searchQuery, setSearchQuery] = useState('');
 
     const filtered = useMemo(() => {
-        let posts = postsBn;
+        let posts = postsBn.filter(isPublishedBn);
         if (activeCategory !== 'সব') {
             posts = posts.filter(p => p.category === activeCategory);
         }

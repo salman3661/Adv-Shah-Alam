@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { BookOpen, ArrowRight, Clock } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import blogPosts from '../data/blogPosts';
-import blogPostsBn from '../data/blogPostsBn';
+import blogPosts, { isPublished } from '../data/blogPosts';
+import blogPostsBn, { isPublishedBn } from '../data/blogPostsBn';
 
-// Pull the 3 newest posts from each dataset
-const latestEn = blogPosts.slice(0, 3);
-const latestBn = blogPostsBn.slice(0, 3);
+// Pull the 3 newest published posts from each dataset
+const latestEn = blogPosts.filter(isPublished).slice(0, 3);
+const latestBn = blogPostsBn.filter(isPublishedBn).slice(0, 3);
 
 const categoryColors = {
     'Criminal Law': { bg: 'rgba(59,130,246,0.1)', color: '#3B82F6' },

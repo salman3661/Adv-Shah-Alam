@@ -5,7 +5,7 @@ import {
     ArrowLeft, Clock, ChevronDown, ChevronUp,
     Phone, MessageCircle, ExternalLink, BookOpen
 } from 'lucide-react';
-import postsBn from '../data/blogPostsBn';
+import postsBn, { isPublishedBn } from '../data/blogPostsBn';
 import { CALL_NUMBER, CALL_DISPLAY, WA_NUMBER, WA_DISPLAY, waLink, telLink } from '../data/contactInfo';
 
 const FAQItem = ({ question, answer }) => {
@@ -56,6 +56,33 @@ const BlogPostBn = () => {
                             </h1>
                             <p className="text-sm max-w-sm" style={{ color: 'var(--text-muted)' }}>
                                 আপনি যে নিবন্ধটি খুঁজছেন তা পাওয়া যায়নি।
+                            </p>
+                            <Link to="/bn/blog" className="btn-primary text-sm">← ব্লগে ফিরুন</Link>
+                        </div>
+                    </div>
+                </section>
+            </>
+        );
+    }
+
+    /* ── Coming Soon (future-dated post) ── */
+    if (!isPublishedBn(post)) {
+        return (
+            <>
+                <Helmet>
+                    <html lang="bn" />
+                    <title>আসছে শীঘ্রই | অ্যাডভোকেট মো. শাহ আলম</title>
+                    <meta name="robots" content="noindex, nofollow" />
+                </Helmet>
+                <section className="pt-28 pb-20" style={{ background: 'var(--bg)' }}>
+                    <div className="container mx-auto px-6 max-w-2xl text-center">
+                        <div className="glass-card inline-flex flex-col items-center gap-5 px-10 py-14">
+                            <Clock size={44} style={{ color: 'var(--accent)' }} />
+                            <h1 className="text-2xl font-serif font-bold" style={{ color: 'var(--text)', fontFamily: "'Playfair Display', serif" }}>
+                                নিবন্ধটি শীঘ্রই আসছে
+                            </h1>
+                            <p className="text-sm max-w-sm" style={{ color: 'var(--text-muted)' }}>
+                                এই নিবন্ধটি ভবিষ্যতে প্রকাশিত হবে। শীঘ্রই ফিরে আসুন।
                             </p>
                             <Link to="/bn/blog" className="btn-primary text-sm">← ব্লগে ফিরুন</Link>
                         </div>

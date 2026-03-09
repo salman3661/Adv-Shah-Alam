@@ -5,7 +5,7 @@ import {
     ArrowLeft, Clock, ChevronDown, ChevronUp,
     Phone, MessageCircle, ExternalLink, BookOpen
 } from 'lucide-react';
-import posts from '../data/blogPosts';
+import posts, { isPublished } from '../data/blogPosts';
 import { telLink, waLink } from '../data/contactInfo';
 
 /* ─── FAQ Accordion Item ─────────────────────────────── */
@@ -73,6 +73,37 @@ const BlogPost = () => {
         );
     }
 
+    /* ── Coming Soon (future-dated post) ── */
+    if (!isPublished(post)) {
+        return (
+            <>
+                <Helmet>
+                    <title>Coming Soon | Advocate Md. Shah Alam</title>
+                    <meta name="robots" content="noindex, nofollow" />
+                </Helmet>
+                <section className="pt-28 pb-20" style={{ background: 'var(--bg)' }}>
+                    <div className="container mx-auto px-6 max-w-2xl text-center">
+                        <div className="glass-card inline-flex flex-col items-center gap-5 px-10 py-14">
+                            <Clock size={44} style={{ color: 'var(--accent)' }} />
+                            <h1
+                                className="text-2xl font-serif font-bold"
+                                style={{ color: 'var(--text)', fontFamily: "'Playfair Display', serif" }}
+                            >
+                                Article Coming Soon
+                            </h1>
+                            <p className="text-sm max-w-sm" style={{ color: 'var(--text-muted)' }}>
+                                This article is scheduled for future publication. Check back soon.
+                            </p>
+                            <Link to="/blog" className="btn-primary text-sm">
+                                ← Back to Blog
+                            </Link>
+                        </div>
+                    </div>
+                </section>
+            </>
+        );
+    }
+
     /* ── Related posts (same category, exclude current) ── */
     const related = posts
         .filter(p => p.category === post.category && p.slug !== post.slug)
@@ -124,6 +155,12 @@ const BlogPost = () => {
                 <meta property="og:description" content={post.metaDescription} />
                 <meta property="og:type" content="article" />
                 <meta property="og:url" content={`https://www.advmdshahalam.me/blog/${post.slug}`} />
+                {/* hreflang — EN self + BN pair (when available) */}
+                <link rel="alternate" hrefLang="en" href={`https://www.advmdshahalam.me/blog/${post.slug}`} />
+                <link rel="alternate" hrefLang="x-default" href={`https://www.advmdshahalam.me/blog/${post.slug}`} />
+                {post.bnSlug && (
+                    <link rel="alternate" hrefLang="bn" href={`https://www.advmdshahalam.me/bn/blog/${post.bnSlug}`} />
+                )}
                 <script type="application/ld+json">{JSON.stringify(blogPostingSchema)}</script>
                 <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
             </Helmet>

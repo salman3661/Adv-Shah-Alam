@@ -2,7 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { Search, Clock, ChevronRight, BookOpen } from 'lucide-react';
-import blogPosts from '../data/blogPosts';
+import blogPosts, { isPublished } from '../data/blogPosts';
 import { telLink, waLink } from '../data/contactInfo';
 
 const CATEGORIES = ['All', 'Criminal Law', 'Family Law', 'Property Law', 'Tax Law', 'Civil Law'];
@@ -74,7 +74,7 @@ const Blog = () => {
     const [searchQuery, setSearchQuery] = useState('');
 
     const filtered = useMemo(() => {
-        let posts = blogPosts;
+        let posts = blogPosts.filter(isPublished);
         if (activeCategory !== 'All') {
             posts = posts.filter(p => p.category === activeCategory);
         }

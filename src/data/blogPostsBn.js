@@ -3209,9 +3209,20 @@ const postsBn = [
 
 export default postsBn;
 
-
-
-
+/**
+ * Returns true if the post's publishedDate is today or in the past (Asia/Dhaka TZ).
+ */
+export const isPublishedBn = (post) => {
+    try {
+        const now = new Date(
+            new Date().toLocaleString('en-US', { timeZone: 'Asia/Dhaka' })
+        );
+        const pub = new Date(post.publishedDate + 'T00:00:00');
+        return pub <= now;
+    } catch {
+        return true;
+    }
+};
 
 
 

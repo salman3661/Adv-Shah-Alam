@@ -31,6 +31,8 @@ const Footer = () => {
         { name: 'Contact', id: 'contact' },
     ];
 
+    const advocatePageLink = { name: 'About the Advocate', path: '/advocate-md-shah-alam' };
+
     const linkClass = "block text-sm transition-colors duration-200 hover:opacity-100 opacity-70 hover:underline decoration-dotted";
 
     return (
@@ -65,6 +67,9 @@ const Footer = () => {
                                 <a key={link.id} href={`#${link.id}`} onClick={(e) => scrollTo(e, link.id)}
                                     className={linkClass} style={{ color: 'var(--text-2)' }}>{link.name}</a>
                             ))}
+                            <Link to={advocatePageLink.path} className={linkClass} style={{ color: 'var(--text-2)' }}>
+                                {advocatePageLink.name}
+                            </Link>
                         </nav>
                     </div>
 

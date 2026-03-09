@@ -20,6 +20,7 @@ const LandLawyer = lazy(() => import('./pages/services/LandLawyer'));
 const BailLawyer = lazy(() => import('./pages/services/BailLawyer'));
 const SupremeCourtLawyer = lazy(() => import('./pages/services/SupremeCourtLawyer'));
 const TaxLawyer = lazy(() => import('./pages/services/TaxLawyer'));
+const AdvocatePage = lazy(() => import('./pages/AdvocatePage'));
 
 // Minimal fallback — keeps layout stable while the chunk loads
 const PageFallback = () => (
@@ -37,6 +38,7 @@ function App() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/education" element={<Education />} />
+                <Route path="/advocate-md-shah-alam" element={<AdvocatePage />} />
 
                 {/* Service Pages — canonical routes */}
                 <Route path="/services/criminal-lawyer" element={<CriminalLawyer />} />

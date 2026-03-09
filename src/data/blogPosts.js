@@ -4221,6 +4221,18 @@ const posts = [
 
 export default posts;
 
-
-
-
+/**
+ * Returns true if the post's publishedDate is today or in the past.
+ * Uses Asia/Dhaka timezone so scheduling aligns with Bangladesh time.
+ */
+export const isPublished = (post) => {
+    try {
+        const now = new Date(
+            new Date().toLocaleString('en-US', { timeZone: 'Asia/Dhaka' })
+        );
+        const pub = new Date(post.publishedDate + 'T00:00:00');
+        return pub <= now;
+    } catch {
+        return true; // fail-open: if date is missing, show the post
+    }
+};
