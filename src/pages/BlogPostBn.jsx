@@ -102,12 +102,42 @@ const BlogPostBn = () => {
         headline: post.title,
         description: post.metaDescription,
         datePublished: post.publishedDate,
+        dateModified: post.publishedDate,
         inLanguage: 'bn',
-        author: { '@type': 'Person', name: 'অ্যাডভোকেট মো. শাহ আলম' },
-        publisher: { '@type': 'Organization', name: 'Advocate Md. Shah Alam', url: 'https://advshahalamlaw.com' },
-        url: `https://advmdshahalam.me/bn/blog/${post.slug}`,
-        mainEntityOfPage: `https://advmdshahalam.me/bn/blog/${post.slug}`,
+        author: {
+            '@type': 'Person',
+            name: 'অ্যাডভোকেট মো. শাহ আলম',
+            alternateName: 'Advocate Md. Shah Alam',
+            jobTitle: 'Advocate – Supreme Court of Bangladesh',
+            url: 'https://www.advmdshahalam.me/advocate-md-shah-alam',
+            sameAs: ['https://www.facebook.com/advmd.shahalamfb'],
+        },
+        publisher: {
+            '@type': 'Organization',
+            name: 'Advocate Md. Shah Alam Law Chambers',
+            url: 'https://www.advmdshahalam.me',
+            logo: {
+                '@type': 'ImageObject',
+                url: 'https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.png',
+            },
+        },
+        url: `https://www.advmdshahalam.me/bn/blog/${post.slug}`,
+        mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': `https://www.advmdshahalam.me/bn/blog/${post.slug}`,
+        },
+        image: 'https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.png',
         keywords: post.keywords.join(', '),
+    };
+
+    const breadcrumbSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'হোম', item: 'https://www.advmdshahalam.me/' },
+            { '@type': 'ListItem', position: 2, name: 'বাংলা ব্লগ', item: 'https://www.advmdshahalam.me/bn/blog' },
+            { '@type': 'ListItem', position: 3, name: post.title, item: `https://www.advmdshahalam.me/bn/blog/${post.slug}` },
+        ],
     };
 
     const faqSchema = {
@@ -127,16 +157,25 @@ const BlogPostBn = () => {
                 <title>{post.metaTitle}</title>
                 <meta name="description" content={post.metaDescription} />
                 <meta name="keywords" content={post.keywords.join(', ')} />
-                <link rel="canonical" href={`https://advmdshahalam.me/bn/blog/${post.slug}`} />
+                <link rel="canonical" href={`https://www.advmdshahalam.me/bn/blog/${post.slug}`} />
                 {post.enSlug && (
-                    <link rel="alternate" hrefLang="en" href={`https://advmdshahalam.me/blog/${post.enSlug}`} />
+                    <link rel="alternate" hrefLang="en" href={`https://www.advmdshahalam.me/blog/${post.enSlug}`} />
                 )}
-                <link rel="alternate" hrefLang="bn" href={`https://advmdshahalam.me/bn/blog/${post.slug}`} />
+                <link rel="alternate" hrefLang="bn" href={`https://www.advmdshahalam.me/bn/blog/${post.slug}`} />
+                <link rel="alternate" hrefLang="x-default" href={`https://www.advmdshahalam.me/bn/blog/${post.slug}`} />
                 <meta property="og:title" content={post.metaTitle} />
                 <meta property="og:description" content={post.metaDescription} />
                 <meta property="og:type" content="article" />
-                <meta property="og:url" content={`https://advmdshahalam.me/bn/blog/${post.slug}`} />
+                <meta property="og:url" content={`https://www.advmdshahalam.me/bn/blog/${post.slug}`} />
+                <meta property="og:image" content="https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.png" />
+                <meta property="og:site_name" content="Advocate Md. Shah Alam" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content={post.metaTitle} />
+                <meta name="twitter:description" content={post.metaDescription} />
+                <meta name="twitter:image" content="https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.png" />
+                <meta name="author" content="অ্যাডভোকেট মো. শাহ আলম" />
                 <script type="application/ld+json">{JSON.stringify(blogPostingSchema)}</script>
+                <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
                 <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
             </Helmet>
 

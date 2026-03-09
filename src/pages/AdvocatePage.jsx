@@ -81,7 +81,7 @@ const personSchema = {
     name: 'Advocate Md. Shah Alam',
     alternateName: 'Adv. Md. Shah Alam',
     description:
-        'Experienced advocate practising at the Supreme Court of Bangladesh, Metro Sessions Court Dhaka, and all subordinate courts. 20+ years specialising in criminal, family, property, and tax law.',
+        'Experienced advocate practising at the Supreme Court of Bangladesh, Metro Sessions Court Dhaka, and all subordinate courts. 7+ years specialising in criminal, family, property, and tax law.',
     url: 'https://www.advmdshahalam.me/advocate-md-shah-alam',
     image: 'https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.png',
     jobTitle: 'Advocate',

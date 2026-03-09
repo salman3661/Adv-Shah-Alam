@@ -11,6 +11,46 @@ import { Link } from 'react-router-dom';
  * Coverage/FAQ/CTA use body CSS vars (theme-aware).
  */
 const ServicePage = ({ metaTitle, metaDesc, canonicalUrl, h1, intro, coverage, faqItems, ctaText, contextNote }) => {
+
+    const breadcrumbSchema = canonicalUrl ? {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.advmdshahalam.me/' },
+            { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.advmdshahalam.me/#services' },
+            { '@type': 'ListItem', position: 3, name: h1, item: canonicalUrl },
+        ],
+    } : null;
+
+    const legalServiceSchema = canonicalUrl ? {
+        '@context': 'https://schema.org',
+        '@type': 'LegalService',
+        name: h1,
+        description: metaDesc,
+        url: canonicalUrl,
+        provider: {
+            '@type': 'Person',
+            name: 'Advocate Md. Shah Alam',
+            jobTitle: 'Advocate',
+            url: 'https://www.advmdshahalam.me/advocate-md-shah-alam',
+        },
+        areaServed: [
+            { '@type': 'City', name: 'Uttara' },
+            { '@type': 'City', name: 'Dhaka' },
+            { '@type': 'Country', name: 'Bangladesh' },
+        ],
+    } : null;
+
+    const faqSchema = faqItems?.length > 0 ? {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: faqItems.map(faq => ({
+            '@type': 'Question',
+            name: faq.q,
+            acceptedAnswer: { '@type': 'Answer', text: faq.a },
+        })),
+    } : null;
+
     return (
         <>
             <Helmet>
@@ -18,6 +58,22 @@ const ServicePage = ({ metaTitle, metaDesc, canonicalUrl, h1, intro, coverage, f
                 <meta name="description" content={metaDesc} />
                 <meta name="robots" content="index, follow" />
                 {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+                {/* OpenGraph */}
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content={metaTitle} />
+                <meta property="og:description" content={metaDesc} />
+                {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
+                <meta property="og:image" content="https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.png" />
+                <meta property="og:site_name" content="Advocate Md. Shah Alam" />
+                {/* Twitter Card */}
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content={metaTitle} />
+                <meta name="twitter:description" content={metaDesc} />
+                <meta name="twitter:image" content="https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.png" />
+                {/* JSON-LD */}
+                {breadcrumbSchema && <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>}
+                {legalServiceSchema && <script type="application/ld+json">{JSON.stringify(legalServiceSchema)}</script>}
+                {faqSchema && <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>}
             </Helmet>
 
             {/* Hero — intentionally always dark charcoal */}

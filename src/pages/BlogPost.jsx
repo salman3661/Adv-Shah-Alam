@@ -116,18 +116,45 @@ const BlogPost = () => {
         headline: post.title,
         description: post.metaDescription,
         datePublished: post.publishedDate,
+        dateModified: post.publishedDate,
+        inLanguage: 'en',
         author: {
             '@type': 'Person',
             name: 'Advocate Md. Shah Alam',
+            jobTitle: 'Advocate – Supreme Court of Bangladesh',
+            url: 'https://www.advmdshahalam.me/advocate-md-shah-alam',
+            sameAs: [
+                'https://www.facebook.com/advmd.shahalamfb',
+                'https://maps.app.goo.gl/M3NXMwW3xkp2TE3h8',
+            ],
         },
         publisher: {
             '@type': 'Organization',
-            name: 'Advocate Md. Shah Alam',
+            name: 'Advocate Md. Shah Alam Law Chambers',
             url: 'https://www.advmdshahalam.me',
+            logo: {
+                '@type': 'ImageObject',
+                url: 'https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.png',
+            },
         },
         url: `https://www.advmdshahalam.me/blog/${post.slug}`,
-        mainEntityOfPage: `https://www.advmdshahalam.me/blog/${post.slug}`,
+        mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': `https://www.advmdshahalam.me/blog/${post.slug}`,
+        },
+        image: 'https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.png',
         keywords: post.keywords.join(', '),
+    };
+
+    /* ── JSON-LD: BreadcrumbList ── */
+    const breadcrumbSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.advmdshahalam.me/' },
+            { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.advmdshahalam.me/blog' },
+            { '@type': 'ListItem', position: 3, name: post.title, item: `https://www.advmdshahalam.me/blog/${post.slug}` },
+        ],
     };
 
     /* ── JSON-LD: FAQPage ── */
@@ -155,6 +182,13 @@ const BlogPost = () => {
                 <meta property="og:description" content={post.metaDescription} />
                 <meta property="og:type" content="article" />
                 <meta property="og:url" content={`https://www.advmdshahalam.me/blog/${post.slug}`} />
+                <meta property="og:image" content="https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.png" />
+                <meta property="og:site_name" content="Advocate Md. Shah Alam" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content={post.metaTitle} />
+                <meta name="twitter:description" content={post.metaDescription} />
+                <meta name="twitter:image" content="https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.png" />
+                <meta name="author" content="Advocate Md. Shah Alam" />
                 {/* hreflang — EN self + BN pair (when available) */}
                 <link rel="alternate" hrefLang="en" href={`https://www.advmdshahalam.me/blog/${post.slug}`} />
                 <link rel="alternate" hrefLang="x-default" href={`https://www.advmdshahalam.me/blog/${post.slug}`} />
@@ -162,6 +196,7 @@ const BlogPost = () => {
                     <link rel="alternate" hrefLang="bn" href={`https://www.advmdshahalam.me/bn/blog/${post.bnSlug}`} />
                 )}
                 <script type="application/ld+json">{JSON.stringify(blogPostingSchema)}</script>
+                <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
                 <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
             </Helmet>
 

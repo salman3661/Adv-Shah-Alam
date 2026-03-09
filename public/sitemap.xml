@@ -30,38 +30,45 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Main Sections -->
+  <!-- Service Pages (indexable standalone URLs) -->
   <url>
-    <loc>https://www.advmdshahalam.me/#about</loc>
-    <lastmod>2026-01-26</lastmod>
+    <loc>https://www.advmdshahalam.me/services/criminal-lawyer</loc>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://www.advmdshahalam.me/#practice-areas</loc>
-    <lastmod>2026-01-26</lastmod>
+    <loc>https://www.advmdshahalam.me/services/divorce-lawyer</loc>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://www.advmdshahalam.me/#timeline</loc>
-    <lastmod>2026-01-26</lastmod>
+    <loc>https://www.advmdshahalam.me/services/land-lawyer</loc>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://www.advmdshahalam.me/#chambers</loc>
-    <lastmod>2026-01-26</lastmod>
+    <loc>https://www.advmdshahalam.me/services/bail-lawyer</loc>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://www.advmdshahalam.me/#contact</loc>
-    <lastmod>2026-01-26</lastmod>
+    <loc>https://www.advmdshahalam.me/services/supreme-court-lawyer</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.advmdshahalam.me/services/tax-lawyer</loc>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>

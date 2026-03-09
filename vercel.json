@@ -1,8 +1,63 @@
 {
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "advmdshahalam.me" }],
+      "destination": "https://www.advmdshahalam.me/$1",
+      "permanent": true
+    },
+    {
+      "source": "/bn/blog/",
+      "destination": "/bn/blog",
+      "permanent": true
+    },
+    {
+      "source": "/blog/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/education/",
+      "destination": "/education",
+      "permanent": true
+    },
+    {
+      "source": "/services/:slug/",
+      "destination": "/services/:slug",
+      "permanent": true
+    },
+    {
+      "source": "/advocate-md-shah-alam/",
+      "destination": "/advocate-md-shah-alam",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/(.*)",
       "destination": "/"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+      ]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/(sitemap.xml|robots.txt)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=86400" }
+      ]
     }
   ]
 }
