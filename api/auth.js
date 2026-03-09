@@ -1,29 +1,30 @@
 /**
- * api/auth.js — GitHub OAuth redirect handler (Vercel Serverless Function)
- * ─────────────────────────────────────────────────────────────────────────
- * Decap CMS calls GET /api/auth to start the GitHub OAuth flow.
- * This function redirects the user to GitHub's authorization page.
+ * api/auth.js — GitHub OAuth redirect (Vercel Serverless Function / CommonJS)
  *
- * Required environment variables in Vercel dashboard:
+ * Decap CMS calls GET /api/auth to start the OAuth flow.
+ * This redirects the browser to GitHub's authorization page.
+ *
+ * Required Vercel environment variables:
  *   OAUTH_CLIENT_ID      — from your GitHub OAuth App
  *   OAUTH_CLIENT_SECRET  — from your GitHub OAuth App
- * ─────────────────────────────────────────────────────────────────────────
  */
 
-export default function handler(req, res) {
-    const { OAUTH_CLIENT_ID } = process.env;
+module.exports = function handler(req, res) {
+    const clientId = process.env.OAUTH_CLIENT_ID;
 
-    if (!OAUTH_CLIENT_ID) {
-        return res.status(500).json({
-            error: 'OAUTH_CLIENT_ID environment variable is not set. See Vercel dashboard → Settings → Environment Variables.',
-        });
+    if (!clientId) {
+        res.setHeader('Content-Type', 'text/plain');
+        return res.status(500).send(
+            'OAUTH_CLIENT_ID is not set.\n' +
+            'Go to Vercel dashboard → Settings → Environment Variables and add it.'
+        );
     }
 
     const params = new URLSearchParams({
-        client_id:    OAUTH_CLIENT_ID,
+        client_id:    clientId,
         scope:        'repo,user',
-        redirect_uri: `${req.headers['x-forwarded-proto'] || 'https'}://${req.headers.host}/api/callback`,
+        redirect_uri: 'https://www.advmdshahalam.me/api/callback',
     });
 
-    res.redirect(302, `https://github.com/login/oauth/authorize?${params}`);
-}
+    return res.redirect(302, `https://github.com/login/oauth/authorize?${params}`);
+};

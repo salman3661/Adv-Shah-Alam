@@ -6,53 +6,39 @@
       "destination": "https://www.advmdshahalam.me/$1",
       "permanent": true
     },
-    {
-      "source": "/bn/blog/",
-      "destination": "/bn/blog",
-      "permanent": true
-    },
-    {
-      "source": "/blog/",
-      "destination": "/blog",
-      "permanent": true
-    },
-    {
-      "source": "/education/",
-      "destination": "/education",
-      "permanent": true
-    },
-    {
-      "source": "/services/:slug/",
-      "destination": "/services/:slug",
-      "permanent": true
-    },
-    {
-      "source": "/advocate-md-shah-alam/",
-      "destination": "/advocate-md-shah-alam",
-      "permanent": true
-    }
+    { "source": "/bn/blog/",               "destination": "/bn/blog",               "permanent": true },
+    { "source": "/blog/",                  "destination": "/blog",                  "permanent": true },
+    { "source": "/education/",             "destination": "/education",             "permanent": true },
+    { "source": "/services/:slug/",        "destination": "/services/:slug",        "permanent": true },
+    { "source": "/advocate-md-shah-alam/", "destination": "/advocate-md-shah-alam","permanent": true }
   ],
   "rewrites": [
-    {
-      "source": "/admin",
-      "destination": "/admin/index.html"
-    },
-    {
-      "source": "/admin/:path*",
-      "destination": "/admin/:path*"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/"
-    }
+    { "source": "/admin",      "destination": "/admin/index.html" },
+    { "source": "/admin/:path*", "destination": "/admin/:path*"   },
+    { "source": "/api/:path*",   "destination": "/api/:path*"     },
+    { "source": "/(.*)",         "destination": "/"               }
   ],
   "headers": [
     {
-      "source": "/(.*)",
+      "source": "/admin/config.yml",
+      "headers": [
+        { "key": "Content-Type",  "value": "text/yaml; charset=utf-8" },
+        { "key": "Cache-Control", "value": "no-cache" }
+      ]
+    },
+    {
+      "source": "/api/(.*)",
       "headers": [
         { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "DENY" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+        { "key": "Cache-Control",          "value": "no-store" }
+      ]
+    },
+    {
+      "source": "/((?!api).*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options",        "value": "SAMEORIGIN" },
+        { "key": "Referrer-Policy",        "value": "strict-origin-when-cross-origin" }
       ]
     },
     {

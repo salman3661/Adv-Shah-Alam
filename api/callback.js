@@ -1,86 +1,147 @@
 /**
- * api/callback.js — GitHub OAuth callback handler (Vercel Serverless Function)
- * ──────────────────────────────────────────────────────────────────────────────
- * GitHub redirects here after the user authorises the OAuth app.
- * This function exchanges the one-time code for an access token
- * and passes it back to the Decap CMS popup window via postMessage.
+ * api/callback.js — GitHub OAuth callback (Vercel Serverless Function / CommonJS)
  *
- * Required environment variables in Vercel dashboard:
+ * GitHub redirects here after the user authorises the OAuth App.
+ * Exchanges the one-time code for an access token and relays it
+ * to the Decap CMS popup window via postMessage.
+ *
+ * Required Vercel environment variables:
  *   OAUTH_CLIENT_ID      — from your GitHub OAuth App
  *   OAUTH_CLIENT_SECRET  — from your GitHub OAuth App
- * ──────────────────────────────────────────────────────────────────────────────
  */
 
-export default async function handler(req, res) {
-    const { OAUTH_CLIENT_ID, OAUTH_CLIENT_SECRET } = process.env;
+const https = require('https');
+
+module.exports = async function handler(req, res) {
+    const clientId     = process.env.OAUTH_CLIENT_ID;
+    const clientSecret = process.env.OAUTH_CLIENT_SECRET;
     const { code, error, error_description } = req.query;
 
+    // ── Error from GitHub ────────────────────────────────────────────
     if (error) {
-        return res.status(200).send(renderScript('error', null, error_description || error));
+        return res.status(200).send(page('error', '', error_description || error));
     }
 
+    // ── Missing code ─────────────────────────────────────────────────
     if (!code) {
-        return res.status(400).send(renderScript('error', null, 'Missing OAuth code'));
+        return res.status(200).send(page('error', '', 'No OAuth code received from GitHub.'));
     }
 
-    if (!OAUTH_CLIENT_ID || !OAUTH_CLIENT_SECRET) {
-        return res.status(500).send(renderScript('error', null, 'OAuth credentials not configured in Vercel'));
+    // ── Missing env vars ─────────────────────────────────────────────
+    if (!clientId || !clientSecret) {
+        return res.status(200).send(
+            page('error', '',
+                'OAuth credentials missing in Vercel. ' +
+                'Add OAUTH_CLIENT_ID and OAUTH_CLIENT_SECRET in Vercel → Settings → Environment Variables.'
+            )
+        );
     }
 
+    // ── Exchange code for access token ───────────────────────────────
     try {
-        // Exchange code for access token
-        const tokenRes = await fetch('https://github.com/login/oauth/access_token', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                Accept: 'application/json',
-            },
-            body: JSON.stringify({
-                client_id:     OAUTH_CLIENT_ID,
-                client_secret: OAUTH_CLIENT_SECRET,
-                code,
-            }),
+        const body = JSON.stringify({
+            client_id:     clientId,
+            client_secret: clientSecret,
+            code,
         });
 
-        const data = await tokenRes.json();
+        const tokenData = await post('https://github.com/login/oauth/access_token', body);
 
-        if (data.error || !data.access_token) {
-            return res.status(200).send(
-                renderScript('error', null, data.error_description || 'Failed to get access token')
-            );
+        if (tokenData.error || !tokenData.access_token) {
+            const msg = tokenData.error_description || tokenData.error || 'GitHub did not return an access token.';
+            return res.status(200).send(page('error', '', msg));
         }
 
-        // Signal success to the Decap CMS popup window
-        return res.status(200).send(renderScript('success', data.access_token));
+        // ── Success — send token to CMS popup ───────────────────────────
+        return res.status(200).send(page('success', tokenData.access_token));
 
     } catch (err) {
-        return res.status(200).send(renderScript('error', null, err.message));
+        return res.status(200).send(page('error', '', 'Token exchange failed: ' + err.message));
     }
+};
+
+// ── Helpers ───────────────────────────────────────────────────────────
+
+/**
+ * Simple HTTPS POST returning parsed JSON.
+ * Uses the built-in `https` module (no external dependencies needed).
+ */
+function post(url, body) {
+    return new Promise((resolve, reject) => {
+        const u = new URL(url);
+        const options = {
+            hostname: u.hostname,
+            path:     u.pathname,
+            method:   'POST',
+            headers: {
+                'Content-Type':   'application/json',
+                'Content-Length': Buffer.byteLength(body),
+                'Accept':         'application/json',
+            },
+        };
+        const req = https.request(options, (res) => {
+            let data = '';
+            res.on('data', (chunk) => { data += chunk; });
+            res.on('end', () => {
+                try { resolve(JSON.parse(data)); }
+                catch (e) { reject(new Error('Invalid JSON from GitHub: ' + data)); }
+            });
+        });
+        req.on('error', reject);
+        req.write(body);
+        req.end();
+    });
 }
 
 /**
- * Renders the postMessage page that sends the token to the CMS popup.
- * Decap CMS expects:  postMessage("authorization:github:success:TOKEN", origin)
+ * Renders the postMessage relay page.
+ *
+ * Decap CMS listens for:
+ *   authorization:github:success:{"token":"...","provider":"github"}
+ *   authorization:github:error:message
  */
-function renderScript(status, token, errorMsg = '') {
+function page(status, token, errorMsg) {
     const message = status === 'success'
-        ? `authorization:github:${status}:${JSON.stringify({ token, provider: 'github' })}`
-        : `authorization:github:${status}:${errorMsg}`;
+        ? 'authorization:github:success:' + JSON.stringify({ token: token, provider: 'github' })
+        : 'authorization:github:error:' + (errorMsg || 'Unknown error');
+
+    const displayMsg = status === 'success'
+        ? 'Login successful. This window will close automatically.'
+        : '<b>Login error:</b><br>' + (errorMsg || '');
 
     return `<!doctype html>
-<html>
-<head><title>Authenticating…</title></head>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>${status === 'success' ? 'Authenticated' : 'Auth Error'}</title>
+  <style>
+    body { font-family: system-ui; background: #0f172a; color: #e2e8f0;
+           display: flex; align-items: center; justify-content: center;
+           min-height: 100vh; margin: 0; text-align: center; }
+    .box { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+           border-radius: 12px; padding: 40px; max-width: 400px; }
+    .icon { font-size: 2.5rem; margin-bottom: 12px; }
+    p { color: #94a3b8; font-size: 0.9rem; margin-top: 8px; }
+  </style>
+</head>
 <body>
-<p style="font-family:system-ui;text-align:center;padding:40px;color:#64748b">
-  ${status === 'success' ? 'Login successful. Closing…' : `Error: ${errorMsg}`}
-</p>
+<div class="box">
+  <div class="icon">${status === 'success' ? '✅' : '❌'}</div>
+  <div>${displayMsg}</div>
+  <p>${status === 'success' ? 'Redirecting to admin dashboard…' : 'Close this window and try again.'}</p>
+</div>
 <script>
-  (function() {
-    const msg = ${JSON.stringify(message)};
-    if (window.opener) {
-      window.opener.postMessage(msg, '*');
+  (function () {
+    var msg = ${JSON.stringify(message)};
+    try {
+      if (window.opener && !window.opener.closed) {
+        window.opener.postMessage(msg, 'https://www.advmdshahalam.me');
+      }
+    } catch (e) {
+      // Fallback: try with wildcard origin
+      try { window.opener.postMessage(msg, '*'); } catch (_) {}
     }
-    setTimeout(() => window.close(), 1200);
+    setTimeout(function () { window.close(); }, 1500);
   })();
 </script>
 </body>
