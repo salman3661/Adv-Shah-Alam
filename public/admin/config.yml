@@ -1,264 +1,454 @@
-# ══════════════════════════════════════════════════════════════════
-# Decap CMS Configuration
-# Advocate Md. Shah Alam — advmdshahalam.me
-# ══════════════════════════════════════════════════════════════════
-
 backend:
   name: github
-  repo: YOUR_GITHUB_USERNAME/YOUR_REPO_NAME   # ← REPLACE THIS
+  repo: salman3661/Adv-Shah-Alam
   branch: main
-  base_url: https://www.advmdshahalam.me       # ← Your live site URL
+  base_url: https://www.advmdshahalam.me
   auth_endpoint: api/auth
 
-# Media uploaded via CMS goes to public/images/uploads/
 media_folder: public/images/uploads
 public_folder: /images/uploads
 
-# Show drafts + unpublished in the editor
 publish_mode: editorial_workflow
 
 site_url: https://www.advmdshahalam.me
 display_url: https://www.advmdshahalam.me
-logo_url: https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.webp
 
 slug:
   encoding: ascii
   clean_accents: true
   sanitize_replacement: "-"
 
-# ──────────────────────────────────────────────────────────────────
-# COLLECTIONS
-# ──────────────────────────────────────────────────────────────────
 collections:
-  # ── 1. English Blog Posts ──────────────────────────────────────
   - name: posts_en
-    label: "📝 English Blog Posts"
+    label: "English Blog Posts"
     label_singular: "English Post"
     folder: src/content/posts/en
     create: true
     slug: "{{slug}}"
     identifier_field: slug
-    summary: "{{title}} — {{category}} — {{publishedDate}}"
-    sortable_fields: [publishedDate, title, category]
-    view_filters:
-      - label: Drafts
-        field: draft
-        pattern: true
-      - label: Published
-        field: draft
-        pattern: false
+    summary: "{{title}} | {{category}} | {{publishedDate}}"
+    sortable_fields:
+      - publishedDate
+      - title
+      - category
     fields:
-      - { label: "Status (Draft?)", name: draft, widget: boolean, default: false, hint: "ON = Draft (hidden from site). OFF = Published (live)." }
-      - { label: "Slug (URL)", name: slug, widget: string, hint: "URL-safe, lowercase, hyphens only. e.g. bail-process-bangladesh. DO NOT change after publishing — it will break existing links." }
-      - { label: "Title", name: title, widget: string }
-      - { label: "Category", name: category, widget: select, options: ["Criminal Law", "Family Law", "Property Law", "Company & Corporate Law", "Civil Law", "Cyber Law", "Legal Procedures"], default: "Criminal Law" }
-      - { label: "Published Date", name: publishedDate, widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
-      - { label: "Read Time", name: readTime, widget: string, default: "7 min read" }
-      - { label: "Pair ID (links to BN version)", name: pairId, widget: string, required: false, hint: "Must match the BN post's pairId. e.g. bail-2026-03-02" }
-      - label: "SEO"
-        name: seo
-        widget: object
-        collapsed: true
-        fields:
-          - { label: "Meta Title (max 60 chars)", name: metaTitle, widget: string }
-          - { label: "Meta Description (max 160 chars)", name: metaDescription, widget: text }
-          - { label: "Keywords", name: keywords, widget: list, allow_add: true }
-          - { label: "Canonical URL (leave blank for auto)", name: canonicalUrl, widget: string, required: false }
-          - { label: "OG Image (leave blank to use featured image)", name: ogImage, widget: image, required: false }
-      - { label: "Featured Image", name: featuredImage, widget: image, required: false }
-      - { label: "Featured Image Alt Text", name: featuredImageAlt, widget: string, required: false }
-      - { label: "Hero Intro (opening paragraph)", name: heroIntro, widget: text }
+      - label: "Draft (hidden from site)"
+        name: draft
+        widget: boolean
+        default: false
+        hint: "ON = Draft. OFF = Published and live."
+      - label: "Slug (URL path)"
+        name: slug
+        widget: string
+        hint: "Lowercase, hyphens only. e.g. bail-process-bangladesh. Do NOT change after publishing."
+      - label: "Title"
+        name: title
+        widget: string
+      - label: "Category"
+        name: category
+        widget: select
+        options:
+          - Criminal Law
+          - Family Law
+          - Property Law
+          - "Company & Corporate Law"
+          - Civil Law
+          - Cyber Law
+          - Legal Procedures
+        default: "Criminal Law"
+      - label: "Published Date"
+        name: publishedDate
+        widget: datetime
+        format: "YYYY-MM-DD"
+        date_format: "YYYY-MM-DD"
+        time_format: false
+      - label: "Read Time"
+        name: readTime
+        widget: string
+        default: "7 min read"
+      - label: "Pair ID (links EN to BN version)"
+        name: pairId
+        widget: string
+        required: false
+        hint: "Must match the BN post pairId. e.g. bail-2026-03-02"
+      - label: "Meta Title (max 60 chars)"
+        name: metaTitle
+        widget: string
+      - label: "Meta Description (max 160 chars)"
+        name: metaDescription
+        widget: text
+      - label: "Keywords"
+        name: keywords
+        widget: list
+        allow_add: true
+      - label: "Canonical URL (leave blank = auto)"
+        name: canonicalUrl
+        widget: string
+        required: false
+      - label: "Featured Image"
+        name: featuredImage
+        widget: image
+        required: false
+      - label: "Featured Image Alt Text"
+        name: featuredImageAlt
+        widget: string
+        required: false
+      - label: "Hero Intro (opening paragraph)"
+        name: heroIntro
+        widget: text
       - label: "Table of Contents"
         name: toc
         widget: list
         allow_add: true
-        field: { label: "Heading", name: item, widget: string }
+        field:
+          label: "Heading"
+          name: item
+          widget: string
       - label: "Sections"
         name: sections
         widget: list
         allow_add: true
         summary: "{{fields.h2}}"
         fields:
-          - { label: "H2 Heading", name: h2, widget: string }
-          - { label: "Content (HTML allowed)", name: content, widget: markdown }
+          - label: "H2 Heading"
+            name: h2
+            widget: string
+          - label: "Content (HTML allowed)"
+            name: content
+            widget: markdown
       - label: "FAQs"
         name: faqs
         widget: list
         allow_add: true
         summary: "{{fields.question}}"
         fields:
-          - { label: "Question", name: question, widget: string }
-          - { label: "Answer", name: answer, widget: text }
-      - label: "Related Links (sidebar)"
+          - label: "Question"
+            name: question
+            widget: string
+          - label: "Answer"
+            name: answer
+            widget: text
+      - label: "Related Service Links (sidebar)"
         name: relatedServiceLinks
         widget: list
         allow_add: true
         required: false
         summary: "{{fields.text}}"
         fields:
-          - { label: "Link Text", name: text, widget: string }
-          - { label: "Path (e.g. /services/criminal-lawyer)", name: to, widget: string }
+          - label: "Link Text"
+            name: text
+            widget: string
+          - label: "Path (e.g. /services/criminal-lawyer)"
+            name: to
+            widget: string
 
-  # ── 2. Bangla Blog Posts ───────────────────────────────────────
   - name: posts_bn
-    label: "📝 বাংলা ব্লগ পোস্ট"
-    label_singular: "বাংলা পোস্ট"
+    label: "Bangla Blog Posts"
+    label_singular: "Bangla Post"
     folder: src/content/posts/bn
     create: true
     slug: "{{slug}}"
     identifier_field: slug
-    summary: "{{title}} — {{category}} — {{publishedDate}}"
-    sortable_fields: [publishedDate, title, category]
+    summary: "{{title}} | {{publishedDate}}"
     fields:
-      - { label: "ড্রাফট?", name: draft, widget: boolean, default: false, hint: "ON = ড্রাফট। OFF = প্রকাশিত।" }
-      - { label: "স্লাগ (URL)", name: slug, widget: string, hint: "প্রকাশের পরে পরিবর্তন করবেন না" }
-      - { label: "শিরোনাম", name: title, widget: string }
-      - { label: "ইংরেজি স্লাগ (enSlug)", name: enSlug, widget: string, required: false, hint: "যুক্ত ইংরেজি পোস্টের slug, e.g. bail-process-bangladesh" }
-      - { label: "Pair ID", name: pairId, widget: string, required: false, hint: "ইংরেজি পোস্টের pairId এর মতো হওয়া আবশ্যক" }
-      - { label: "বিভাগ", name: category, widget: select, options: ["ফৌজদারি আইন", "পারিবারিক আইন", "সম্পত্তি আইন", "দেওয়ানি আইন", "সাইবার আইন", "আইনি পদ্ধতি"], default: "ফৌজদারি আইন" }
-      - { label: "প্রকাশের তারিখ", name: publishedDate, widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
-      - { label: "পড়ার সময়", name: readTime, widget: string, default: "৭ মিনিট" }
-      - label: "SEO"
-        name: seo
-        widget: object
-        collapsed: true
-        fields:
-          - { label: "মেটা টাইটেল (সর্বোচ্চ ৬০ অক্ষর)", name: metaTitle, widget: string }
-          - { label: "মেটা বিবরণ (সর্বোচ্চ ১৬০ অক্ষর)", name: metaDescription, widget: text }
-          - { label: "কীওয়ার্ড", name: keywords, widget: list, allow_add: true }
-          - { label: "Canonical URL (ফাঁকা রাখুন)", name: canonicalUrl, widget: string, required: false }
-      - { label: "ফিচার্ড ছবি", name: featuredImage, widget: image, required: false }
-      - { label: "ছবির alt লেখা", name: featuredImageAlt, widget: string, required: false }
-      - { label: "হিরো ইন্ট্রো (প্রথম অনুচ্ছেদ)", name: heroIntro, widget: text }
-      - label: "সূচিপত্র"
+      - label: "Draft"
+        name: draft
+        widget: boolean
+        default: false
+      - label: "Slug (URL)"
+        name: slug
+        widget: string
+        hint: "Do not change after publishing"
+      - label: "Title (Bangla)"
+        name: title
+        widget: string
+      - label: "English Slug (enSlug)"
+        name: enSlug
+        widget: string
+        required: false
+        hint: "Slug of the paired English post"
+      - label: "Pair ID"
+        name: pairId
+        widget: string
+        required: false
+        hint: "Must match the EN post pairId"
+      - label: "Category"
+        name: category
+        widget: select
+        options:
+          - "Criminal Law BN"
+          - "Family Law BN"
+          - "Property Law BN"
+          - "Civil Law BN"
+          - "Cyber Law BN"
+          - "Legal Procedures BN"
+        default: "Criminal Law BN"
+        hint: "These map to Bangla categories on the site"
+      - label: "Published Date"
+        name: publishedDate
+        widget: datetime
+        format: "YYYY-MM-DD"
+        date_format: "YYYY-MM-DD"
+        time_format: false
+      - label: "Read Time (Bangla)"
+        name: readTime
+        widget: string
+        default: "7 min"
+      - label: "Meta Title (max 60 chars)"
+        name: metaTitle
+        widget: string
+      - label: "Meta Description (max 160 chars)"
+        name: metaDescription
+        widget: text
+      - label: "Keywords"
+        name: keywords
+        widget: list
+        allow_add: true
+      - label: "Featured Image"
+        name: featuredImage
+        widget: image
+        required: false
+      - label: "Featured Image Alt"
+        name: featuredImageAlt
+        widget: string
+        required: false
+      - label: "Hero Intro"
+        name: heroIntro
+        widget: text
+      - label: "Table of Contents"
         name: toc
         widget: list
         allow_add: true
-        field: { label: "শিরোনাম", name: item, widget: string }
-      - label: "অনুচ্ছেদসমূহ"
+        field:
+          label: "Heading"
+          name: item
+          widget: string
+      - label: "Sections"
         name: sections
         widget: list
         allow_add: true
         summary: "{{fields.h2}}"
         fields:
-          - { label: "H2 শিরোনাম", name: h2, widget: string }
-          - { label: "বিষয়বস্তু (HTML সমর্থিত)", name: content, widget: markdown }
-      - label: "FAQ"
+          - label: "H2 Heading"
+            name: h2
+            widget: string
+          - label: "Content"
+            name: content
+            widget: markdown
+      - label: "FAQs"
         name: faqs
         widget: list
         allow_add: true
         summary: "{{fields.question}}"
         fields:
-          - { label: "প্রশ্ন", name: question, widget: string }
-          - { label: "উত্তর", name: answer, widget: text }
-      - label: "সম্পর্কিত লিংক"
+          - label: "Question"
+            name: question
+            widget: string
+          - label: "Answer"
+            name: answer
+            widget: text
+      - label: "Related Service Links"
         name: relatedServiceLinks
         widget: list
         allow_add: true
         required: false
-        summary: "{{fields.text}}"
         fields:
-          - { label: "লিংক টেক্সট", name: text, widget: string }
-          - { label: "পাথ", name: to, widget: string }
+          - label: "Link Text"
+            name: text
+            widget: string
+          - label: "Path"
+            name: to
+            widget: string
 
-  # ── 3. Homepage Content ────────────────────────────────────────
   - name: homepage
-    label: "🏠 Homepage"
+    label: "Homepage"
     files:
       - label: "Hero Section"
         name: hero
         file: src/content/hero.json
         fields:
-          - { label: "Label Badge", name: labelBadge, widget: string }
-          - { label: "Headline", name: headline, widget: string }
-          - { label: "Headline Accent (gold text)", name: headlineAccent, widget: string }
-          - { label: "Subheading", name: subheading, widget: text }
-          - { label: "Description (HTML allowed)", name: description, widget: text }
-          - { label: "CTA 1 Label (WhatsApp button)", name: cta1Label, widget: string }
-          - { label: "CTA 2 Label (Consultation button)", name: cta2Label, widget: string }
-          - label: "Tags (shown below CTAs)"
+          - label: "Label Badge"
+            name: labelBadge
+            widget: string
+          - label: "Headline"
+            name: headline
+            widget: string
+          - label: "Headline Accent (gold text)"
+            name: headlineAccent
+            widget: string
+          - label: "Subheading"
+            name: subheading
+            widget: text
+          - label: "Description (HTML allowed)"
+            name: description
+            widget: text
+          - label: "CTA 1 Label (WhatsApp button)"
+            name: cta1Label
+            widget: string
+          - label: "CTA 2 Label (Consultation button)"
+            name: cta2Label
+            widget: string
+          - label: "Tags (below CTAs)"
             name: tags
             widget: list
             allow_add: true
-            field: { label: "Tag", name: item, widget: string }
-          - { label: "Photo Badge — Bottom Right", name: photoBadgeBottom, widget: string }
-          - { label: "Photo Badge — Top Left", name: photoBadgeTop, widget: string }
-          - { label: "Photo Alt Text (SEO)", name: photoAlt, widget: string }
+            field:
+              label: "Tag"
+              name: item
+              widget: string
+          - label: "Photo Badge Bottom Right"
+            name: photoBadgeBottom
+            widget: string
+          - label: "Photo Badge Top Left"
+            name: photoBadgeTop
+            widget: string
+          - label: "Photo Alt Text (SEO)"
+            name: photoAlt
+            widget: string
 
       - label: "FAQ Items"
         name: faq
         file: src/content/faq.json
         fields:
-          - label: " "
+          - label: "FAQ List"
             name: items
             widget: list
             allow_add: true
             summary: "{{fields.q}}"
             fields:
-              - { label: "Question", name: q, widget: string }
-              - { label: "Answer", name: a, widget: text }
+              - label: "Question"
+                name: q
+                widget: string
+              - label: "Answer"
+                name: a
+                widget: text
 
       - label: "Service Cards"
         name: services
         file: src/content/services.json
         fields:
-          - label: " "
+          - label: "Service Cards"
             name: items
             widget: list
             allow_add: true
             summary: "{{fields.title}}"
             fields:
-              - { label: "Title", name: title, widget: string }
-              - { label: "Description", name: desc, widget: text }
-              - { label: "Link Path (e.g. /services/criminal-lawyer)", name: link, widget: string }
-              - { label: "Icon Name", name: icon, widget: select, options: [Shield, Users, Home, Scale, Landmark, FileText, Briefcase] }
-              - { label: "Icon Background Color", name: iconBg, widget: string, hint: "e.g. rgba(239,68,68,0.12)" }
-              - { label: "Icon Color (hex)", name: iconColor, widget: string, hint: "e.g. #EF4444" }
+              - label: "Title"
+                name: title
+                widget: string
+              - label: "Description"
+                name: desc
+                widget: text
+              - label: "Link Path (e.g. /services/criminal-lawyer)"
+                name: link
+                widget: string
+              - label: "Icon Name"
+                name: icon
+                widget: select
+                options:
+                  - Shield
+                  - Users
+                  - Home
+                  - Scale
+                  - Landmark
+                  - FileText
+                  - Briefcase
+              - label: "Icon Background Color"
+                name: iconBg
+                widget: string
+                hint: "e.g. rgba(239,68,68,0.12)"
+              - label: "Icon Color (hex)"
+                name: iconColor
+                widget: string
+                hint: "e.g. #EF4444"
 
-  # ── 4. Contact & Site Info ─────────────────────────────────────
   - name: settings
-    label: "📞 Contact & Settings"
+    label: "Settings"
     files:
-      - label: "Site Info"
+      - label: "Contact & Site Info"
         name: siteInfo
         file: src/content/siteInfo.json
         fields:
-          - { label: "Advocate Full Name", name: advocateName, widget: string }
-          - { label: "Advocate Short Name", name: advocateShortName, widget: string }
-          - { label: "Court", name: court, widget: string }
-          - { label: "Years Experience", name: yearsExperience, widget: number }
-          - { label: "Chamber Address", name: chamberAddress, widget: text, hint: "Shown in footer and contact section" }
-          - { label: "Practice Address (Uttara)", name: practiceAddress, widget: text, required: false }
-          - { label: "Office Hours", name: officeHours, widget: string }
-          - { label: "Email", name: email, widget: string }
-          - { label: "Facebook URL", name: facebookUrl, widget: string }
-          - { label: "Google Maps Share URL", name: googleMapsUrl, widget: string }
-          - { label: "Footer Bio Text", name: footerBio, widget: text }
+          - label: "Advocate Full Name"
+            name: advocateName
+            widget: string
+          - label: "Advocate Short Name"
+            name: advocateShortName
+            widget: string
+          - label: "Court"
+            name: court
+            widget: string
+          - label: "Years Experience"
+            name: yearsExperience
+            widget: number
+          - label: "Chamber Address"
+            name: chamberAddress
+            widget: text
+            hint: "Shown in footer and contact section"
+          - label: "Practice Address (Uttara)"
+            name: practiceAddress
+            widget: text
+            required: false
+          - label: "Office Hours"
+            name: officeHours
+            widget: string
+          - label: "Email"
+            name: email
+            widget: string
+          - label: "Facebook URL"
+            name: facebookUrl
+            widget: string
+          - label: "Google Maps Share URL"
+            name: googleMapsUrl
+            widget: string
+          - label: "Footer Bio Text"
+            name: footerBio
+            widget: text
           - label: "Footer Service Links"
             name: footerServiceLinks
             widget: list
             allow_add: true
             summary: "{{fields.name}}"
             fields:
-              - { label: "Display Name", name: name, widget: string }
-              - { label: "Path", name: path, widget: string }
+              - label: "Display Name"
+                name: name
+                widget: string
+              - label: "Path"
+                name: path
+                widget: string
 
-      - label: "SEO & Categories"
+      - label: "SEO Settings"
         name: seo
         file: src/content/seo.json
         fields:
-          - { label: "Site Name", name: siteName, widget: string }
-          - { label: "Site URL", name: siteUrl, widget: string }
-          - { label: "Default Meta Title", name: defaultTitle, widget: string }
-          - { label: "Default Meta Description", name: defaultDesc, widget: text }
-          - { label: "Default OG Image URL", name: defaultOgImage, widget: string }
+          - label: "Site Name"
+            name: siteName
+            widget: string
+          - label: "Site URL"
+            name: siteUrl
+            widget: string
+          - label: "Default Meta Title"
+            name: defaultTitle
+            widget: string
+          - label: "Default Meta Description"
+            name: defaultDesc
+            widget: text
+          - label: "Default OG Image URL"
+            name: defaultOgImage
+            widget: string
           - label: "English Blog Categories"
             name: categoriesEn
             widget: list
             allow_add: true
-            field: { label: "Category", name: item, widget: string }
+            field:
+              label: "Category"
+              name: item
+              widget: string
           - label: "Bangla Blog Categories"
             name: categoriesBn
             widget: list
             allow_add: true
-            field: { label: "Category", name: item, widget: string }
+            field:
+              label: "Category"
+              name: item
+              widget: string

@@ -34,7 +34,15 @@
   ],
   "rewrites": [
     {
-      "source": "/((?!admin|api).*)",
+      "source": "/admin",
+      "destination": "/admin/index.html"
+    },
+    {
+      "source": "/admin/:path*",
+      "destination": "/admin/:path*"
+    },
+    {
+      "source": "/(.*)",
       "destination": "/"
     }
   ],
