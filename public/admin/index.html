@@ -6,46 +6,298 @@
   <meta name="robots" content="noindex, nofollow" />
   <title>Admin — Adv. Shah Alam</title>
   <style>
-    /* ── Loading screen shown before Decap CMS boots ───────────── */
-    body { margin: 0; font-family: 'Inter', system-ui, sans-serif; background: #0f172a; color: #e2e8f0; }
+    body { margin: 0; font-family: system-ui, sans-serif; background: #0f172a; color: #e2e8f0; }
     #cms-loading {
       position: fixed; inset: 0;
       display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px;
       background: linear-gradient(135deg, #0b1220 0%, #0f1b2d 100%);
     }
     #cms-loading .logo {
-      font-size: 2rem; font-weight: 800; letter-spacing: -1px;
+      font-size: 2rem; font-weight: 800;
       background: linear-gradient(135deg, #c6a75e, #f0d080);
       -webkit-background-clip: text; -webkit-text-fill-color: transparent;
     }
     #cms-loading .sub { font-size: 0.85rem; color: #64748b; }
     #cms-loading .spinner {
       width: 36px; height: 36px; border-radius: 50%;
-      border: 3px solid rgba(198,167,94,0.15);
-      border-top-color: #c6a75e;
+      border: 3px solid rgba(198,167,94,0.2); border-top-color: #c6a75e;
       animation: spin 0.8s linear infinite;
     }
     @keyframes spin { to { transform: rotate(360deg); } }
   </style>
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
-  <div id="cms-loading">
-    <div class="logo">⚖️ Admin Panel</div>
-    <div class="sub">Advocate Md. Shah Alam — Content Dashboard</div>
-    <div class="spinner"></div>
-  </div>
 
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+<div id="cms-loading">
+  <div class="logo">⚖️ Admin Panel</div>
+  <div class="sub">Advocate Md. Shah Alam — Content Dashboard</div>
+  <div class="spinner"></div>
+</div>
 
-  <script>
-    // Hide loading screen once CMS is mounted
-    window.addEventListener('load', () => {
-      setTimeout(() => {
-        const el = document.getElementById('cms-loading');
-        if (el) el.style.display = 'none';
-      }, 800);
-    });
-  </script>
+<!-- Step 1: Tell Decap CMS to wait for manual init -->
+<script>window.CMS_MANUAL_INIT = true;</script>
+
+<!-- Step 2: Load the Decap CMS bundle -->
+<script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+
+<!-- Step 3: Initialise with fully inlined config (no config.yml fetch needed) -->
+<script>
+(function () {
+  var BASE_URL = 'https://www.advmdshahalam.me';
+
+  var config = {
+    backend: {
+      name: 'github',
+      repo: 'salman3661/Adv-Shah-Alam',   // ← your GitHub repo
+      branch: 'main',
+      base_url: BASE_URL,
+      auth_endpoint: 'api/auth'
+    },
+
+    media_folder: 'public/images/uploads',
+    public_folder: '/images/uploads',
+    publish_mode: 'editorial_workflow',
+    site_url: BASE_URL,
+    display_url: BASE_URL,
+
+    slug: {
+      encoding: 'ascii',
+      clean_accents: true,
+      sanitize_replacement: '-'
+    },
+
+    collections: [
+
+      // ── 1. English Blog Posts ────────────────────────────────────
+      {
+        name: 'posts_en',
+        label: 'English Blog Posts',
+        label_singular: 'English Post',
+        folder: 'src/content/posts/en',
+        create: true,
+        slug: '{{slug}}',
+        identifier_field: 'slug',
+        summary: '{{title}} | {{category}} | {{publishedDate}}',
+        sortable_fields: ['publishedDate', 'title', 'category'],
+        fields: [
+          { label: 'Draft (hidden from site)', name: 'draft', widget: 'boolean', default: false,
+            hint: 'ON = Draft. OFF = Published and live.' },
+          { label: 'Slug (URL path)', name: 'slug', widget: 'string',
+            hint: 'Lowercase, hyphens only. Do NOT change after publishing.' },
+          { label: 'Title', name: 'title', widget: 'string' },
+          { label: 'Category', name: 'category', widget: 'select',
+            options: ['Criminal Law','Family Law','Property Law','Company & Corporate Law','Civil Law','Cyber Law','Legal Procedures'],
+            default: 'Criminal Law' },
+          { label: 'Published Date', name: 'publishedDate', widget: 'datetime',
+            format: 'YYYY-MM-DD', date_format: 'YYYY-MM-DD', time_format: false },
+          { label: 'Read Time', name: 'readTime', widget: 'string', default: '7 min read' },
+          { label: 'Pair ID (links EN to BN version)', name: 'pairId', widget: 'string', required: false,
+            hint: 'Must match the BN post pairId. e.g. bail-2026-03-02' },
+          { label: 'Meta Title (max 60 chars)', name: 'metaTitle', widget: 'string' },
+          { label: 'Meta Description (max 160 chars)', name: 'metaDescription', widget: 'text' },
+          { label: 'Keywords', name: 'keywords', widget: 'list', allow_add: true },
+          { label: 'Canonical URL (leave blank = auto)', name: 'canonicalUrl', widget: 'string', required: false },
+          { label: 'Featured Image', name: 'featuredImage', widget: 'image', required: false },
+          { label: 'Featured Image Alt Text', name: 'featuredImageAlt', widget: 'string', required: false },
+          { label: 'Hero Intro (opening paragraph)', name: 'heroIntro', widget: 'text' },
+          { label: 'Table of Contents', name: 'toc', widget: 'list', allow_add: true,
+            field: { label: 'Heading', name: 'item', widget: 'string' } },
+          { label: 'Sections', name: 'sections', widget: 'list', allow_add: true,
+            summary: '{{fields.h2}}',
+            fields: [
+              { label: 'H2 Heading', name: 'h2', widget: 'string' },
+              { label: 'Content (HTML allowed)', name: 'content', widget: 'markdown' }
+            ]},
+          { label: 'FAQs', name: 'faqs', widget: 'list', allow_add: true,
+            summary: '{{fields.question}}',
+            fields: [
+              { label: 'Question', name: 'question', widget: 'string' },
+              { label: 'Answer', name: 'answer', widget: 'text' }
+            ]},
+          { label: 'Related Service Links', name: 'relatedServiceLinks', widget: 'list',
+            allow_add: true, required: false,
+            fields: [
+              { label: 'Link Text', name: 'text', widget: 'string' },
+              { label: 'Path (e.g. /services/criminal-lawyer)', name: 'to', widget: 'string' }
+            ]}
+        ]
+      },
+
+      // ── 2. Bangla Blog Posts ─────────────────────────────────────
+      {
+        name: 'posts_bn',
+        label: 'Bangla Blog Posts',
+        label_singular: 'Bangla Post',
+        folder: 'src/content/posts/bn',
+        create: true,
+        slug: '{{slug}}',
+        identifier_field: 'slug',
+        summary: '{{title}} | {{publishedDate}}',
+        fields: [
+          { label: 'Draft', name: 'draft', widget: 'boolean', default: false },
+          { label: 'Slug (URL)', name: 'slug', widget: 'string',
+            hint: 'Do not change after publishing' },
+          { label: 'Title (Bangla)', name: 'title', widget: 'string' },
+          { label: 'English Slug (enSlug)', name: 'enSlug', widget: 'string', required: false,
+            hint: 'Slug of the paired English post' },
+          { label: 'Pair ID', name: 'pairId', widget: 'string', required: false },
+          { label: 'Category', name: 'category', widget: 'select',
+            options: ['Criminal Law BN','Family Law BN','Property Law BN','Civil Law BN','Cyber Law BN','Legal Procedures BN'],
+            default: 'Criminal Law BN' },
+          { label: 'Published Date', name: 'publishedDate', widget: 'datetime',
+            format: 'YYYY-MM-DD', date_format: 'YYYY-MM-DD', time_format: false },
+          { label: 'Read Time (Bangla)', name: 'readTime', widget: 'string', default: '7 min' },
+          { label: 'Meta Title', name: 'metaTitle', widget: 'string' },
+          { label: 'Meta Description', name: 'metaDescription', widget: 'text' },
+          { label: 'Keywords', name: 'keywords', widget: 'list', allow_add: true },
+          { label: 'Featured Image', name: 'featuredImage', widget: 'image', required: false },
+          { label: 'Featured Image Alt', name: 'featuredImageAlt', widget: 'string', required: false },
+          { label: 'Hero Intro', name: 'heroIntro', widget: 'text' },
+          { label: 'Table of Contents', name: 'toc', widget: 'list', allow_add: true,
+            field: { label: 'Heading', name: 'item', widget: 'string' } },
+          { label: 'Sections', name: 'sections', widget: 'list', allow_add: true,
+            summary: '{{fields.h2}}',
+            fields: [
+              { label: 'H2 Heading', name: 'h2', widget: 'string' },
+              { label: 'Content', name: 'content', widget: 'markdown' }
+            ]},
+          { label: 'FAQs', name: 'faqs', widget: 'list', allow_add: true,
+            summary: '{{fields.question}}',
+            fields: [
+              { label: 'Question', name: 'question', widget: 'string' },
+              { label: 'Answer', name: 'answer', widget: 'text' }
+            ]},
+          { label: 'Related Links', name: 'relatedServiceLinks', widget: 'list',
+            allow_add: true, required: false,
+            fields: [
+              { label: 'Link Text', name: 'text', widget: 'string' },
+              { label: 'Path', name: 'to', widget: 'string' }
+            ]}
+        ]
+      },
+
+      // ── 3. Homepage ──────────────────────────────────────────────
+      {
+        name: 'homepage',
+        label: 'Homepage',
+        files: [
+          {
+            label: 'Hero Section',
+            name: 'hero',
+            file: 'src/content/hero.json',
+            fields: [
+              { label: 'Label Badge', name: 'labelBadge', widget: 'string' },
+              { label: 'Headline', name: 'headline', widget: 'string' },
+              { label: 'Headline Accent (gold text)', name: 'headlineAccent', widget: 'string' },
+              { label: 'Subheading', name: 'subheading', widget: 'text' },
+              { label: 'Description (HTML allowed)', name: 'description', widget: 'text' },
+              { label: 'CTA 1 Label (WhatsApp)', name: 'cta1Label', widget: 'string' },
+              { label: 'CTA 2 Label (Consultation)', name: 'cta2Label', widget: 'string' },
+              { label: 'Tags (below CTAs)', name: 'tags', widget: 'list', allow_add: true,
+                field: { label: 'Tag', name: 'item', widget: 'string' } },
+              { label: 'Photo Badge Bottom Right', name: 'photoBadgeBottom', widget: 'string' },
+              { label: 'Photo Badge Top Left', name: 'photoBadgeTop', widget: 'string' },
+              { label: 'Photo Alt Text (SEO)', name: 'photoAlt', widget: 'string' }
+            ]
+          },
+          {
+            label: 'FAQ Items',
+            name: 'faq',
+            file: 'src/content/faq.json',
+            fields: [
+              { label: 'FAQ List', name: 'items', widget: 'list', allow_add: true,
+                summary: '{{fields.q}}',
+                fields: [
+                  { label: 'Question', name: 'q', widget: 'string' },
+                  { label: 'Answer', name: 'a', widget: 'text' }
+                ]}
+            ]
+          },
+          {
+            label: 'Service Cards',
+            name: 'services',
+            file: 'src/content/services.json',
+            fields: [
+              { label: 'Service Cards', name: 'items', widget: 'list', allow_add: true,
+                summary: '{{fields.title}}',
+                fields: [
+                  { label: 'Title', name: 'title', widget: 'string' },
+                  { label: 'Description', name: 'desc', widget: 'text' },
+                  { label: 'Link Path', name: 'link', widget: 'string',
+                    hint: 'e.g. /services/criminal-lawyer' },
+                  { label: 'Icon Name', name: 'icon', widget: 'select',
+                    options: ['Shield','Users','Home','Scale','Landmark','FileText','Briefcase'] },
+                  { label: 'Icon Background', name: 'iconBg', widget: 'string' },
+                  { label: 'Icon Color (hex)', name: 'iconColor', widget: 'string' }
+                ]}
+            ]
+          }
+        ]
+      },
+
+      // ── 4. Settings ──────────────────────────────────────────────
+      {
+        name: 'settings',
+        label: 'Settings',
+        files: [
+          {
+            label: 'Contact & Site Info',
+            name: 'siteInfo',
+            file: 'src/content/siteInfo.json',
+            fields: [
+              { label: 'Advocate Full Name', name: 'advocateName', widget: 'string' },
+              { label: 'Advocate Short Name', name: 'advocateShortName', widget: 'string' },
+              { label: 'Court', name: 'court', widget: 'string' },
+              { label: 'Years Experience', name: 'yearsExperience', widget: 'number' },
+              { label: 'Chamber Address', name: 'chamberAddress', widget: 'text' },
+              { label: 'Practice Address (Uttara)', name: 'practiceAddress', widget: 'text', required: false },
+              { label: 'Office Hours', name: 'officeHours', widget: 'string' },
+              { label: 'Email', name: 'email', widget: 'string' },
+              { label: 'Facebook URL', name: 'facebookUrl', widget: 'string' },
+              { label: 'Google Maps URL', name: 'googleMapsUrl', widget: 'string' },
+              { label: 'Footer Bio Text', name: 'footerBio', widget: 'text' },
+              { label: 'Footer Service Links', name: 'footerServiceLinks', widget: 'list',
+                allow_add: true, summary: '{{fields.name}}',
+                fields: [
+                  { label: 'Display Name', name: 'name', widget: 'string' },
+                  { label: 'Path', name: 'path', widget: 'string' }
+                ]}
+            ]
+          },
+          {
+            label: 'SEO Settings',
+            name: 'seo',
+            file: 'src/content/seo.json',
+            fields: [
+              { label: 'Site Name', name: 'siteName', widget: 'string' },
+              { label: 'Site URL', name: 'siteUrl', widget: 'string' },
+              { label: 'Default Meta Title', name: 'defaultTitle', widget: 'string' },
+              { label: 'Default Meta Description', name: 'defaultDesc', widget: 'text' },
+              { label: 'Default OG Image URL', name: 'defaultOgImage', widget: 'string' },
+              { label: 'English Blog Categories', name: 'categoriesEn', widget: 'list',
+                allow_add: true, field: { label: 'Category', name: 'item', widget: 'string' } },
+              { label: 'Bangla Blog Categories', name: 'categoriesBn', widget: 'list',
+                allow_add: true, field: { label: 'Category', name: 'item', widget: 'string' } }
+            ]
+          }
+        ]
+      }
+
+    ] // end collections
+  }; // end config
+
+  // Mount Decap CMS with the inline config
+  CMS.init({ config: config });
+
+  // Hide loading overlay once mounted
+  window.addEventListener('load', function () {
+    setTimeout(function () {
+      var el = document.getElementById('cms-loading');
+      if (el) el.style.display = 'none';
+    }, 800);
+  });
+})();
+</script>
+
 </body>
 </html>
