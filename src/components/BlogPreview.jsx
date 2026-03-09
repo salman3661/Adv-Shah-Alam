@@ -15,11 +15,15 @@ const categoryColors = {
     'Property Law': { bg: 'rgba(34,197,94,0.1)', color: '#22C55E' },
     'Tax Law': { bg: 'rgba(217,119,6,0.1)', color: '#D97706' },
     'Civil Law': { bg: 'rgba(124,58,237,0.1)', color: '#7C3AED' },
+    'Cyber Law': { bg: 'rgba(6,182,212,0.1)', color: '#06B6D4' },
+    'Legal Procedures': { bg: 'rgba(16,185,129,0.1)', color: '#10B981' },
     'ফৌজদারি আইন': { bg: 'rgba(59,130,246,0.1)', color: '#3B82F6' },
     'পারিবারিক আইন': { bg: 'rgba(236,72,153,0.1)', color: '#EC4899' },
     'সম্পত্তি আইন': { bg: 'rgba(34,197,94,0.1)', color: '#22C55E' },
     'কর আইন': { bg: 'rgba(217,119,6,0.1)', color: '#D97706' },
     'দেওয়ানী আইন': { bg: 'rgba(124,58,237,0.1)', color: '#7C3AED' },
+    'সাইবার আইন': { bg: 'rgba(6,182,212,0.1)', color: '#06B6D4' },
+    'আইনি পদ্ধতি': { bg: 'rgba(16,185,129,0.1)', color: '#10B981' },
 };
 
 const BlogPreview = () => {

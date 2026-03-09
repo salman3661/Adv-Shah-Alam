@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Scale, Users, Gavel, BookOpen, Shield, FileText } from 'lucide-react';
+import { Scale, Users, Gavel, BookOpen, Shield, FileText, Laptop } from 'lucide-react';
 
 const PracticeAreas = () => {
     const services = [
@@ -33,6 +33,11 @@ const PracticeAreas = () => {
             icon: <FileText size={32} />,
             title: 'Writ Jurisdiction',
             desc: 'Filing writs in the High Court Division to protect fundamental rights.',
+        },
+        {
+            icon: <Laptop size={32} />,
+            title: 'Cyber Law',
+            desc: 'Digital Security Act cases, online fraud, Facebook defamation, cyber blackmail, and mobile banking fraud — before Cyber Tribunals and Special Courts.',
         }
     ];
 

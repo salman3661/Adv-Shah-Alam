@@ -6470,6 +6470,1276 @@ const posts = [
         ],
     },
 
+
+    /* ── 43 ── */
+    {
+        slug: 'cyber-crime-complaint-bangladesh',
+        bnSlug: 'cyber-crime-abiyog-bangladesh',
+        title: 'How to File a Cyber Crime Complaint in Bangladesh: Step-by-Step Guide',
+        category: 'Cyber Law',
+        readTime: '8 min read',
+        metaTitle: 'Cyber Crime Complaint Bangladesh – How to File and What to Expect',
+        metaDescription: 'Complete guide to filing a cyber crime complaint in Bangladesh — where to report, required evidence, the Cyber Tribunal process, and how a cyber law lawyer in Dhaka can help you.',
+        keywords: ['cyber crime complaint Bangladesh', 'cyber tribunal Bangladesh', 'CIRT Bangladesh', 'police cyber crime unit Bangladesh', 'digital security act case Bangladesh', 'cyber law lawyer Dhaka'],
+        publishedDate: '2026-03-29',
+        heroIntro: 'Cyber crime in Bangladesh is rising sharply — from online fraud and Facebook defamation to hacking, blackmail, and mobile banking theft. If you or your business has been victimized, knowing exactly where to report and how to build your case is the difference between justice and an unresolved complaint. This guide walks you through every step.',
+        toc: [
+            'What Counts as Cyber Crime in Bangladesh?',
+            'Which Laws Govern Cyber Crime in Bangladesh?',
+            'Where to File a Cyber Crime Complaint',
+            'Cyber Crime Unit (CCU) – How It Works',
+            'Evidence You Must Collect Before Filing',
+            'Filing at the Cyber Tribunal',
+            'What Happens After You File?',
+            'Why You Need a Cyber Law Lawyer',
+        ],
+        sections: [
+            {
+                h2: 'What Counts as Cyber Crime in Bangladesh?',
+                content: `<p>Bangladesh law recognizes a wide range of cyber crimes under the <strong>Digital Security Act 2018 (DSA)</strong> and the <strong>Information and Communication Technology (ICT) Act 2006</strong>. Common cyber crimes include:</p>
+<ul>
+<li>Online harassment, stalking, and threats</li>
+<li>Facebook or social media defamation</li>
+<li>Hacking and unauthorized computer access</li>
+<li>Mobile banking fraud (bKash, Nagad, Rocket)</li>
+<li>Online financial scams and e-commerce fraud</li>
+<li>Cyber blackmail and sextortion</li>
+<li>Data theft and identity fraud</li>
+<li>Spreading misinformation or false news online</li>
+</ul>
+<p>If you are unsure whether your situation qualifies, consult a <a href="/criminal-lawyer-dhaka-uttara" style="color:var(--accent)">cyber law lawyer in Uttara or Dhaka</a> before filing.</p>`,
+            },
+            {
+                h2: 'Which Laws Govern Cyber Crime in Bangladesh?',
+                content: `<p>Two primary statutes apply:</p>
+<ul>
+<li><strong>Digital Security Act 2018 (DSA):</strong> The principal cyber crime law. Covers hacking (Section 17), spreading false information (Section 25), online defamation (Section 29), cyber terrorism (Section 27), and pornography/blackmail (Section 26). Penalties range from imprisonment to fines — some offences carry up to 14 years' imprisonment.</li>
+<li><strong>ICT Act 2006 (as amended 2013):</strong> Still applicable for older cases. Section 57 was widely used before DSA but has been partially repealed.</li>
+</ul>
+<p>The <strong>Penal Code 1860</strong> also applies for cheating (Section 420), defamation (Sections 499–500), and criminal intimidation (Section 506) when the conduct is online.</p>`,
+            },
+            {
+                h2: 'Where to File a Cyber Crime Complaint',
+                content: `<p>You have three parallel routes — many victims use all three simultaneously:</p>
+<ol>
+<li><strong>Local Police Station:</strong> File a General Diary (GD) or FIR at the nearest thana. For cyber-specific cases, the officer should route it to the Cyber Crime Unit (CCU).</li>
+<li><strong>Cyber Crime Unit (CCU), CID:</strong> The Criminal Investigation Department's dedicated cyber unit at Dhaka investigates complex digital crimes. Visit CID HQ, Malibagh, Dhaka, or contact them online via the BD police portal.</li>
+<li><strong>CIRT Bangladesh:</strong> For national cyber security incidents — more relevant for businesses and government entities. File at cirt.gov.bd.</li>
+</ol>
+<p><strong>Important:</strong> For offences under the Digital Security Act, you may also file a complaint directly before the <strong>Cyber Tribunal</strong>, which has been established under the DSA.</p>`,
+            },
+            {
+                h2: 'Evidence You Must Collect Before Filing',
+                content: `<p>Strong evidence dramatically increases the chances of a successful case. Collect and preserve:</p>
+<ul>
+<li><strong>Screenshots:</strong> Full-page screenshots of offending posts, messages, or profiles — include the URL bar in the screenshot.</li>
+<li><strong>URLs and links</strong> to the offending content.</li>
+<li><strong>Transaction records:</strong> For financial fraud — bank statements, bKash/Nagad transaction history, SMS confirmations.</li>
+<li><strong>Call/message logs:</strong> Phone records, WhatsApp/Messenger screenshots, email headers.</li>
+<li><strong>Witness information:</strong> Names of people who also saw or received the content.</li>
+<li><strong>Date and time records</strong> of each incident.</li>
+</ul>
+<p>A <a href="/criminal-lawyer-dhaka-uttara" style="color:var(--accent)">cyber law lawyer</a> can advise on obtaining a court order to preserve digital evidence before it is deleted.</p>`,
+            },
+            {
+                h2: 'Filing at the Cyber Tribunal',
+                content: `<p>Bangladesh has a dedicated <strong>Cyber Tribunal</strong> established under the Digital Security Act 2018. The court sits in Dhaka and has exclusive jurisdiction over DSA cases. Filing process:</p>
+<ol>
+<li>Submit a written complaint (narazi petition) to the Cyber Tribunal judge through your lawyer.</li>
+<li>The judge may order the Cyber Crime Unit to investigate.</li>
+<li>If a charge sheet is filed by police, the trial proceeds before the Cyber Tribunal.</li>
+<li>Interim relief — such as removal of defamatory content — can be sought through court orders during the trial.</li>
+</ol>
+<p>Cases at the Cyber Tribunal are typically faster than regular criminal courts, though the timeline depends on the complexity of the case.</p>`,
+            },
+            {
+                h2: 'Why You Need a Cyber Law Lawyer',
+                content: `<p>Filing a cyber crime complaint without legal guidance often results in delayed investigations, rejected complaints, or improperly preserved evidence. An experienced <a href="/criminal-lawyer-dhaka-uttara" style="color:var(--accent)">cyber law lawyer in Dhaka</a> will:</p>
+<ul>
+<li>Advise which law best fits your case.</li>
+<li>Draft a clear, legally sound complaint.</li>
+<li>File simultaneously in the police station and Cyber Tribunal if needed.</li>
+<li>Apply for court orders to remove harmful content.</li>
+<li>Track investigation progress and apply pressure when stalled.</li>
+</ul>
+<p>Advocate Md. Shah Alam has experience in cyber crime cases before Bangladesh courts. <a href="/" style="color:var(--accent)">Contact us in Uttara, Dhaka</a> for a confidential consultation.</p>`,
+            },
+        ],
+        faqs: [
+            { question: 'Can I file a cyber crime complaint online in Bangladesh?', answer: 'You can submit a complaint through the Bangladesh Police portal (police.gov.bd) or the CIRT website for initial reporting. However, for DSA cases and formal FIRs, a physical visit to the police station or Cyber Tribunal is required.' },
+            { question: 'How long does a cyber crime investigation take in Bangladesh?', answer: 'Investigations can take anywhere from a few weeks for straightforward fraud cases to several months for complex hacking or organised fraud cases. A lawyer can monitor progress and push for timely action.' },
+            { question: 'Can I file a case if the perpetrator is outside Bangladesh?', answer: 'Yes. If the victim is in Bangladesh and the harm occurred here, Bangladesh courts have jurisdiction regardless of where the offender is located. International cooperation for enforcement is an additional challenge.' },
+            { question: 'What is the difference between a GD and an FIR for cyber crime?', answer: 'A General Diary (GD) is a preliminary record. An FIR (First Information Report) formally starts the criminal investigation. For serious cyber crimes — hacking, blackmail, fraud — file an FIR, not just a GD.' },
+            { question: 'Can the court order Facebook or Google to remove content?', answer: 'Yes. The Cyber Tribunal can issue orders directing platforms to remove defamatory or illegal content. This is typically a faster remedy than waiting for the platform\'s internal review process.' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-dhaka-uttara' },
+            { text: 'Supreme Court Lawyer', to: '/supreme-court-lawyer-dhaka' },
+        ],
+    },
+
+    /* ── 44 ── */
+    {
+        slug: 'how-to-file-fir-bangladesh',
+        bnSlug: 'fir-kivabe-korben-bangladesh',
+        title: 'How to File an FIR in Bangladesh: Police Complaint Guide',
+        category: 'Legal Procedures',
+        readTime: '7 min read',
+        metaTitle: 'How to File FIR in Bangladesh – Step-by-Step Police Complaint Guide',
+        metaDescription: 'Learn how to file an FIR (First Information Report) in Bangladesh — what information to include, police obligations, GD vs FIR difference, and what to do if police refuse to take your complaint.',
+        keywords: ['how to file FIR Bangladesh', 'FIR vs GD Bangladesh', 'police GD Bangladesh', 'criminal case filing Dhaka', 'FIR refusal Bangladesh', 'criminal lawyer Uttara Dhaka'],
+        publishedDate: '2026-03-30',
+        heroIntro: 'An FIR — First Information Report — is the document that officially sets a criminal investigation in motion in Bangladesh. It is the gateway to the entire criminal justice process. Understanding how to file an FIR correctly, what rights protect you if police refuse, and how to avoid common mistakes can make the difference between justice and a dead-end complaint.',
+        toc: [
+            'What is an FIR in Bangladesh?',
+            'FIR vs. General Diary (GD): Key Difference',
+            'Which Offences Require an FIR?',
+            'How to File an FIR: Step-by-Step',
+            'What the Police Must Do After Receiving an FIR',
+            'What If Police Refuse to Register an FIR?',
+            'FIR Checklist: What to Include',
+            'Common Mistakes When Filing an FIR',
+        ],
+        sections: [
+            {
+                h2: 'What is an FIR in Bangladesh?',
+                content: `<p>An <strong>FIR (First Information Report)</strong> is the formal written report filed with the police when a cognizable offence has been committed. It is governed by the <strong>Code of Criminal Procedure 1898 (Section 154)</strong>, which requires the officer in charge of a police station to record any information relating to a cognizable offence in writing.</p>
+<p>Once an FIR is filed, the police have a legal obligation to investigate — they cannot simply ignore it. The FIR becomes the foundation of the entire criminal case, so accuracy and completeness are critical. If you need help preparing or filing an FIR, an experienced <a href="/criminal-lawyer-dhaka-uttara" style="color:var(--accent)">criminal lawyer in Dhaka</a> can guide the process.</p>`,
+            },
+            {
+                h2: 'FIR vs. General Diary (GD): Key Difference',
+                content: `<p>These two terms are often confused in Bangladesh:</p>
+<ul>
+<li><strong>General Diary (GD):</strong> A preliminary record of an incident. Filed when you are unsure of the offence, when evidence is weak, or for minor incidents. A GD does <em>not</em> automatically trigger a formal investigation.</li>
+<li><strong>FIR:</strong> Filed for serious, cognizable offences. Triggers a mandatory police investigation. FIRs are numbered and are court records.</li>
+</ul>
+<p>For serious crimes — assault, fraud, theft, harassment, cyber crime — always insist on an <strong>FIR</strong>, not just a GD. Police sometimes pressure victims to accept only a GD to reduce workload.</p>`,
+            },
+            {
+                h2: 'How to File an FIR: Step-by-Step',
+                content: `<p>Filing an FIR at a Bangladesh police thana:</p>
+<ol>
+<li><strong>Visit the police station</strong> in whose jurisdiction the offence occurred — or where you reside if jurisdiction is unclear.</li>
+<li><strong>Request to speak with the Officer in Charge (OC).</strong></li>
+<li><strong>Narrate the incident clearly:</strong> What happened, when, where, who did it, and what evidence you have.</li>
+<li><strong>The officer records your statement</strong> in the First Information Report book. Ensure all details are correct.</li>
+<li><strong>Read the FIR before signing</strong> — errors in an FIR can weaken your case later.</li>
+<li><strong>Obtain a free copy</strong> of the FIR immediately. This is your legal right (CrPC Section 154).</li>
+</ol>
+<p>You may also <strong>send an FIR by post</strong> to the police station — this creates a reliable timestamp if police delay recording.</p>`,
+            },
+            {
+                h2: 'What the Police Must Do After Receiving an FIR',
+                content: `<p>Under CrPC, once an FIR is registered, the officer in charge must:</p>
+<ul>
+<li>Assign the case to an investigating officer (IO).</li>
+<li>Begin investigation within 24 hours.</li>
+<li>Submit a First Charge Sheet (if evidence is found) or Final Report (if no evidence) to the Magistrate within the statutory period.</li>
+<li>Provide the complainant regular updates when requested.</li>
+</ul>
+<p>If police are slow to act, a <a href="/criminal-lawyer-dhaka-uttara" style="color:var(--accent)">criminal lawyer</a> can apply to the Magistrate or High Court to direct the investigation.</p>`,
+            },
+            {
+                h2: 'What If Police Refuse to Register an FIR?',
+                content: `<p>Police refusing to register an FIR is a common problem in Bangladesh. Your legal options:</p>
+<ul>
+<li><strong>Send a written FIR by registered post</strong> to the police station — which automatically triggers recording obligations.</li>
+<li><strong>Complaint to the SP (Superintendent of Police)</strong> of the district.</li>
+<li><strong>File a Narazi petition</strong> directly before the Chief Metropolitan Magistrate or Chief Judicial Magistrate — the Magistrate can order a police investigation.</li>
+<li><strong>File a writ petition</strong> in the High Court Division directing the police to investigate — in extreme cases of refusal.</li>
+</ul>
+<p>Advocate Md. Shah Alam regularly handles cases where police inaction required Magistrate or High Court intervention. <a href="/" style="color:var(--accent)">Contact our Uttara office</a> if your complaint is being ignored.</p>`,
+            },
+        ],
+        faqs: [
+            { question: 'Can I file an FIR in any police station in Bangladesh?', answer: 'Ideally, the FIR should be filed at the police station with jurisdiction over the area where the offence occurred. If that station is far, you may file at the nearest station and it will be transferred. Do not let jurisdictional confusion delay filing.' },
+            { question: 'Is there a time limit to file an FIR in Bangladesh?', answer: 'There is no strict deadline in the CrPC for FIR filing in most cases. However, for some offences, limitation periods may apply. Courts are more sceptical of FIRs filed after a very long delay — so file as soon as possible.' },
+            { question: 'Do I need a lawyer to file an FIR?', answer: 'Legally, no. Any person can file an FIR directly at a police station. However, a lawyer ensures the FIR is precise, includes all legally required details, and that you receive a copy immediately.' },
+            { question: 'What is a Narazi petition?', answer: 'If you are dissatisfied with a police Final Report or the police fail to register your FIR, you can file a Narazi (protest) petition before the Magistrate asking the court to take cognizance of the offence independently.' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-dhaka-uttara' },
+            { text: 'Supreme Court Lawyer', to: '/supreme-court-lawyer-dhaka' },
+        ],
+    },
+
+    /* ── 45 ── */
+    {
+        slug: 'mobile-banking-fraud-legal-action-bangladesh',
+        bnSlug: 'mobile-banking-pratarana-ain-bangladesh',
+        title: 'Mobile Banking Fraud in Bangladesh: Legal Action Against bKash, Nagad Scams',
+        category: 'Cyber Law',
+        readTime: '8 min read',
+        metaTitle: 'Mobile Banking Fraud Bangladesh – Legal Action Against bKash Nagad Scams',
+        metaDescription: 'Victim of bKash or Nagad fraud in Bangladesh? Learn your legal options — filing an FIR, DSA complaint, recovering money, and how a cyber law lawyer in Dhaka can help you act fast.',
+        keywords: ['mobile banking fraud Bangladesh', 'bKash fraud Bangladesh', 'Nagad fraud Bangladesh', 'cyber fraud lawyer Dhaka', 'digital security act fraud', 'mobile money scam Bangladesh'],
+        publishedDate: '2026-03-31',
+        heroIntro: 'Mobile banking fraud — particularly involving bKash, Nagad, and Rocket — has become one of the most common financial crimes in Bangladesh. Fraudsters use SIM swapping, phishing, fake customer service calls, and social engineering to empty mobile wallets in minutes. If you have been victimised, swift legal action is critical — money recovery becomes significantly harder with each passing hour.',
+        toc: [
+            'Common Types of Mobile Banking Fraud in Bangladesh',
+            'Which Laws Apply to Mobile Banking Fraud?',
+            'Immediate Steps After Mobile Banking Fraud',
+            'How to File a Complaint: Step-by-Step',
+            'Can You Recover Your Money?',
+            'DSA and Penal Code: Which Case to File?',
+            'Role of a Cyber Law Lawyer',
+        ],
+        sections: [
+            {
+                h2: 'Common Types of Mobile Banking Fraud in Bangladesh',
+                content: `<p>Mobile banking fraud in Bangladesh typically takes one of these forms:</p>
+<ul>
+<li><strong>Fake customer service calls:</strong> Fraudsters impersonate bKash/Nagad agents, claim your account is being blocked, and ask for your PIN or OTP.</li>
+<li><strong>SIM swap fraud:</strong> The fraudster convinces the telecom operator to transfer your SIM to their device, gaining access to OTPs.</li>
+<li><strong>Phishing links:</strong> Fake bKash or Nagad websites/apps steal your login credentials.</li>
+<li><strong>Online marketplace fraud:</strong> For items sold on Facebook or local platforms, payment is initiated and then reversed.</li>
+<li><strong>Lottery and prize scams:</strong> Victims are told they have won a prize and asked to send money for "processing fees".</li>
+</ul>`,
+            },
+            {
+                h2: 'Immediate Steps After Mobile Banking Fraud',
+                content: `<p>Act within the first few hours for the best chance of recovery:</p>
+<ol>
+<li><strong>Call bKash (16247), Nagad (16167) or Rocket (16216) immediately</strong> and report the fraud — request a transaction freeze or reversal.</li>
+<li><strong>Screenshot all transaction records</strong> from your mobile banking app.</li>
+<li><strong>Note the fraudster's mobile number</strong> if you have it.</li>
+<li><strong>Contact your telecom operator</strong> if you suspect SIM swap.</li>
+<li><strong>File a GD or FIR</strong> at the nearest police station — include the fraudster's number and all transaction details.</li>
+<li><strong>Contact a cyber law lawyer</strong> immediately — a court order can freeze the recipient account before funds are withdrawn.</li>
+</ol>`,
+            },
+            {
+                h2: 'How to File a Complaint: Step-by-Step',
+                content: `<p>For mobile banking fraud in Bangladesh, file complaints at multiple levels simultaneously:</p>
+<ol>
+<li><strong>Mobile Banking Provider:</strong> File a fraud complaint through their helpline and follow up in writing. Ask for all transaction records (sender, receiver, timestamps).</li>
+<li><strong>Police Station (FIR):</strong> File an FIR under Penal Code Section 420 (cheating) and DSA Section 24 (online fraud). Attach transaction screenshots, fraudster's number, and your statement.</li>
+<li><strong>Bangladesh Bank:</strong> If a bank account was involved in the transfer chain, Bangladesh Bank's Financial Intelligence Unit (FIU) can freeze funds.</li>
+<li><strong>Cyber Tribunal:</strong> For DSA-specific complaints, file directly or through your lawyer before the Cyber Tribunal in Dhaka.</li>
+</ol>
+<p>A <a href="/criminal-lawyer-dhaka-uttara" style="color:var(--accent)">cyber law lawyer in Dhaka</a> can draft all these complaints simultaneously and obtain emergency court orders to freeze suspect accounts.</p>`,
+            },
+            {
+                h2: 'Can You Recover Your Money?',
+                content: `<p>Money recovery is possible but time-sensitive:</p>
+<ul>
+<li>If funds have not yet been withdrawn from the recipient's mobile wallet, an emergency court order can freeze the account and direct the MFS provider to reverse the transaction.</li>
+<li>If already withdrawn as cash, tracing is much harder — though not impossible with police digital forensics.</li>
+<li>Bangladesh Bank has issued directives requiring licensed MFS providers to cooperate with fraud investigations.</li>
+</ul>
+<p>Courts in Bangladesh have granted emergency injunctions freezing mobile wallet accounts within 24–48 hours in fraud cases. Speed is everything. <a href="/" style="color:var(--accent)">Contact Advocate Md. Shah Alam in Uttara</a> immediately for emergency legal intervention.</p>`,
+            },
+            {
+                h2: 'DSA and Penal Code: Which Case to File?',
+                content: `<p>Both laws apply simultaneously — and you should use both:</p>
+<ul>
+<li><strong>Penal Code 1860, Section 420:</strong> Cheating and dishonestly inducing delivery of property — up to 7 years' imprisonment.</li>
+<li><strong>Digital Security Act 2018, Section 24:</strong> Online fraud and cheating — up to 7 years' imprisonment and BDT 5 lakh fine, or both.</li>
+</ul>
+<p>Filing under both laws strengthens your case. DSA cases go to the Cyber Tribunal (faster process); Penal Code cases go to regular Magistrate courts. An experienced <a href="/criminal-lawyer-dhaka-uttara" style="color:var(--accent)">Uttara cyber lawyer</a> will structure your complaint to maximize legal pressure.</p>`,
+            },
+        ],
+        faqs: [
+            { question: 'What is the success rate for mobile banking fraud cases in Bangladesh?', answer: 'Cases where the fraudster\'s mobile number is identified, and complaints are filed within 24-48 hours, have a significantly higher recovery rate. Cases with strong digital evidence (transaction logs, call records) are most successful.' },
+            { question: 'Can I get my money back if it was already withdrawn?', answer: 'Once cash is withdrawn, recovery is difficult. However, courts can order asset recovery proceedings against identified fraudsters, and Bangladesh Bank fraud liability guidelines may require MFS providers to contribute to compensation in certain circumstances.' },
+            { question: 'Will bKash or Nagad refund my money automatically?', answer: 'Not automatically for fraud cases. You must file a formal complaint with the provider. If you can demonstrate the transaction was unauthorized, and they cooperate with police, funds in their system may be frozen and returned through a court order.' },
+            { question: 'What if the fraudster used a fake SIM?', answer: 'Police can obtain call data records (CDR) from the telecom operator to trace the physical location where the SIM was activated and used. CCTV evidence and tower location data have been used successfully in Bangladesh fraud cases.' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-dhaka-uttara' },
+            { text: 'Civil Lawyer Dhaka', to: '/civil-lawyer-dhaka' },
+        ],
+    },
+
+
+    /* ── 46 ── */
+    {
+        slug: 'facebook-defamation-case-bangladesh',
+        bnSlug: 'facebook-manhani-mamla-bangladesh',
+        title: 'Facebook Defamation Case in Bangladesh: Your Legal Options',
+        category: 'Cyber Law',
+        readTime: '8 min read',
+        metaTitle: 'Facebook Defamation Bangladesh – Legal Action and Case Filing Guide',
+        metaDescription: 'Someone spreading false information about you on Facebook in Bangladesh? Learn how to file a defamation case under the DSA and Penal Code, get content removed, and claim damages.',
+        keywords: ['Facebook defamation Bangladesh', 'social media defamation Bangladesh', 'DSA defamation case Bangladesh', 'online reputation lawyer Dhaka', 'defamation case filing Bangladesh', 'cyber law lawyer Uttara'],
+        publishedDate: '2026-04-01',
+        heroIntro: 'False posts, doctored images, and malicious content on Facebook can destroy reputations, damage careers, and cause profound emotional harm. Bangladesh law provides real legal remedies — criminal prosecution under the Digital Security Act, civil damages claims, and court orders compelling Facebook to remove harmful content. This guide explains your options.',
+        toc: [
+            'What is Online Defamation Under Bangladesh Law?',
+            'Facebook Defamation: DSA Section 29 Explained',
+            'Defamation Under the Penal Code 1860',
+            'Criminal vs. Civil Defamation: Which Route to Take?',
+            'How to Get Defamatory Content Removed from Facebook',
+            'Evidence You Need to Build a Strong Case',
+            'Filing Your Defamation Case: Step-by-Step',
+            'Defences the Accused May Raise',
+        ],
+        sections: [
+            {
+                h2: 'What is Online Defamation Under Bangladesh Law?',
+                content: `<p>Defamation is the publication of a false statement that damages another person's reputation. When this happens on Facebook, WhatsApp, or any digital platform in Bangladesh, it becomes <strong>online defamation</strong> — covered by both the <strong>Digital Security Act 2018</strong> and the <strong>Penal Code 1860</strong>.</p>
+<p>Online defamation in Bangladesh includes:</p>
+<ul>
+<li>False factual posts claiming you committed crimes or unethical acts.</li>
+<li>Doctored or manipulated photos circulated to harm your reputation.</li>
+<li>Fake screenshots of conversations or messages.</li>
+<li>False accusations circulated in Facebook groups or WhatsApp broadcast lists.</li>
+<li>Malicious reviews or comments on business pages designed to destroy credibility.</li>
+</ul>
+<p>Opinion, satire, and truthful statements are generally not defamatory. If you believe you have been defamed, consult a <a href="/criminal-lawyer-dhaka-uttara" style="color:var(--accent)">cyber law lawyer in Uttara or Dhaka</a> to assess your case.</p>`,
+            },
+            {
+                h2: 'Facebook Defamation: DSA Section 29 Explained',
+                content: `<p><strong>Digital Security Act 2018, Section 29</strong> specifically criminalises online defamation. It states that publishing defamatory content about any person through a computer, digital device, or network is a criminal offence punishable by:</p>
+<ul>
+<li>Up to <strong>3 years' imprisonment</strong>, and/or</li>
+<li>A fine of up to <strong>BDT 5 lakh</strong> (approximately USD 4,500)</li>
+</ul>
+<p>For a repeat offence, the punishment doubles to 6 years and BDT 10 lakh. DSA cases go to the <strong>Cyber Tribunal in Dhaka</strong>, which has exclusive jurisdiction over digital crimes. The Cyber Tribunal can also issue interim orders to remove defamatory content before the trial concludes.</p>`,
+            },
+            {
+                h2: 'Criminal vs. Civil Defamation: Which Route to Take?',
+                content: `<p>In Bangladesh, defamation victims can pursue both criminal and civil routes simultaneously:</p>
+<ul>
+<li><strong>Criminal Route (DSA Section 29 / Penal Code Sections 499–500):</strong> The goal is prosecution and punishment of the offender — imprisonment and/or fine. Filed via FIR at the police station or complaint to the Cyber Tribunal.</li>
+<li><strong>Civil Route (Tort of Defamation):</strong> The goal is compensation — monetary damages for harm to your reputation, business losses, and emotional suffering. Filed before a civil court.</li>
+</ul>
+<p>Most victims file criminal cases first to get content removed quickly, then pursue civil damages separately. An experienced <a href="/criminal-lawyer-dhaka-uttara" style="color:var(--accent)">Dhaka defamation lawyer</a> can manage both tracks simultaneously.</p>`,
+            },
+            {
+                h2: 'How to Get Defamatory Content Removed from Facebook',
+                content: `<p>There are two parallel routes to content removal:</p>
+<ol>
+<li><strong>Facebook's Internal Reporting:</strong> Report the post directly through Facebook's interface. This is free and immediate but often slow and unreliable for serious defamation cases.</li>
+<li><strong>Court Order:</strong> The Cyber Tribunal can issue an order directing Facebook (through its Bangladesh node) to remove specific content. This is legally binding and faster for cases where Facebook ignores internal reports.</li>
+</ol>
+<p>Courts in Bangladesh have issued content removal orders in defamation cases. <a href="/" style="color:var(--accent)">Contact Advocate Md. Shah Alam</a> in Uttara to initiate urgent court proceedings to remove harmful content.</p>`,
+            },
+            {
+                h2: 'Evidence You Need to Build a Strong Case',
+                content: `<p>Before filing a defamation case in Bangladesh, collect and preserve:</p>
+<ul>
+<li><strong>Full-page screenshots</strong> including the URL, the poster's profile name/photo, date and time of posting.</li>
+<li><strong>The direct URL</strong> of the defamatory post or content.</li>
+<li><strong>Screenshots of shares, comments, and reactions</strong> — to demonstrate spread and harm.</li>
+<li><strong>Evidence of identity</strong> of the poster — if known (their Facebook profile, phone number linked to the account).</li>
+<li><strong>Proof of harm:</strong> screenshots of messages from affected people, business loss records, medical reports for psychological harm.</li>
+</ul>
+<p>A lawyer can apply to court to compel Facebook to disclose the account data linked to an anonymous defamer — this is a powerful remedy when the attacker tries to hide behind a fake account.</p>`,
+            },
+        ],
+        faqs: [
+            { question: 'Can I file a defamation case if the person used a fake Facebook account?', answer: 'Yes. The Cyber Tribunal can order Facebook to disclose account registration data, IP addresses, and device information linked to the fake account. The police cyber unit can also trace the real identity through digital forensics.' },
+            { question: 'Is sharing someone else\'s defamatory Facebook post also a crime?', answer: 'Potentially yes. A person who knowingly shares defamatory content about another person may also be liable — both criminally under the DSA and civilly for the continued damage caused by the share.' },
+            { question: 'How long does a Facebook defamation case take in Bangladesh?', answer: 'Getting a content removal order can be achieved within weeks. The full criminal trial at the Cyber Tribunal typically takes 1–3 years. Civil damages cases in regular courts often take longer.' },
+            { question: 'Can I claim compensation for business losses caused by Facebook defamation?', answer: 'Yes. In a civil defamation suit, you can claim damages for loss of business revenue, loss of contracts, emotional distress, and reputational harm if you can establish these losses were caused by the defamatory content.' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-dhaka-uttara' },
+            { text: 'Civil Lawyer Dhaka', to: '/civil-lawyer-dhaka' },
+        ],
+    },
+
+    /* ── 47 ── */
+    {
+        slug: 'digital-security-act-rights-defences-bangladesh',
+        bnSlug: 'digital-nirapatta-ain-odhikar-bangladesh',
+        title: 'Digital Security Act Bangladesh: Your Rights When Accused',
+        category: 'Cyber Law',
+        readTime: '8 min read',
+        metaTitle: 'Digital Security Act Bangladesh – Rights and Defences When Accused',
+        metaDescription: 'Accused under Bangladesh\'s Digital Security Act 2018? Know your legal rights, grounds to challenge the case, bail procedures, and how to build your defence with a DSA lawyer in Dhaka.',
+        keywords: ['digital security act Bangladesh', 'DSA case Bangladesh', 'DSA arrest Bangladesh', 'DSA bail Bangladesh', 'cyber law lawyer Dhaka', 'DSA defence Bangladesh'],
+        publishedDate: '2026-04-02',
+        heroIntro: 'The Digital Security Act 2018 (DSA) is Bangladesh\'s principal cyber crime legislation — but it has also been widely criticized for being misused to suppress dissent, silence journalists, and target ordinary citizens over social media posts. If you or a family member has been arrested or threatened under the DSA, knowing your legal rights is the most critical first step.',
+        toc: [
+            'What is the Digital Security Act 2018?',
+            'Key Sections Under Which People Are Charged',
+            'DSA Arrests: What Is and Is Not Allowed',
+            'Your Rights After a DSA Arrest',
+            'Bail in DSA Cases: How to Apply',
+            'Common Defences Against DSA Charges',
+            'DSA Misuse: When to Challenge the Case',
+            'Role of a DSA Lawyer',
+        ],
+        sections: [
+            {
+                h2: 'What is the Digital Security Act 2018?',
+                content: `<p>The <strong>Digital Security Act 2018 (DSA)</strong> was enacted by Bangladesh Parliament in September 2018, replacing key provisions of the ICT Act 2006. It aims to address cyber crime but contains provisions critics argue are too broadly worded. The DSA establishes:</p>
+<ul>
+<li>The <strong>Cyber Tribunal</strong> with exclusive jurisdiction over DSA offences.</li>
+<li>A <strong>Digital Security Agency</strong> to coordinate national cyber security.</li>
+<li>Wide police powers to arrest without warrant for many offences.</li>
+</ul>
+<p>If you have received a DSA notice or your family member has been arrested, contact a <a href="/criminal-lawyer-dhaka-uttara" style="color:var(--accent)">cyber law lawyer in Dhaka</a> immediately.</p>`,
+            },
+            {
+                h2: 'Key Sections Under Which People Are Charged',
+                content: `<p>The most commonly invoked DSA sections include:</p>
+<ul>
+<li><strong>Section 17:</strong> Attacking critical information infrastructure — up to 14 years' imprisonment.</li>
+<li><strong>Section 19:</strong> Hacking — up to 14 years.</li>
+<li><strong>Section 25:</strong> Publishing offensive, menacing, or false information — up to 5 years.</li>
+<li><strong>Section 26:</strong> Publishing sexually offensive content — up to 7 years.</li>
+<li><strong>Section 27:</strong> Cyber terrorism — up to 14 years.</li>
+<li><strong>Section 28:</strong> Damaging religious sentiments — up to 7 years.</li>
+<li><strong>Section 29:</strong> Online defamation — up to 3 years.</li>
+<li><strong>Section 31:</strong> Content that deteriorates law and order — up to 7 years.</li>
+</ul>
+<p>Sections 25, 28, 29, and 31 are the most commonly misused in Bangladesh's political and social context.</p>`,
+            },
+            {
+                h2: 'DSA Arrests: What Is and Is Not Allowed',
+                content: `<p>The DSA gives police broad arrest powers, but with important limitations:</p>
+<ul>
+<li>Police can arrest <strong>without a warrant</strong> for all non-bailable DSA offences if they reasonably believe the offence is being committed.</li>
+<li>However, they must present the arrested person before a Magistrate within <strong>24 hours</strong> — this is a constitutional requirement.</li>
+<li>If arrested without warrant, police must <strong>record the reasons</strong> in writing.</li>
+</ul>
+<p>If you believe a DSA arrest was unlawful, your lawyer can challenge it before the High Court through a <strong>habeas corpus writ petition</strong>.</p>`,
+            },
+            {
+                h2: 'Bail in DSA Cases: How to Apply',
+                content: `<p>Most DSA offences are <strong>non-bailable</strong> — meaning bail requires a court order, not an automatic right. Bail in DSA cases:</p>
+<ul>
+<li>Filed before the <strong>Cyber Tribunal</strong> judge who has jurisdiction over the case.</li>
+<li>The court considers: flight risk, evidence tampering risk, and the gravity of the offence.</li>
+<li>If Cyber Tribunal denies bail, the accused can appeal to the <strong>High Court Division</strong>.</li>
+<li>The High Court has regularly granted bail in DSA cases where the accusations were vague or politically motivated.</li>
+</ul>
+<p>Immediately after a DSA arrest, a lawyer should file an urgent bail application. <a href="/" style="color:var(--accent)">Contact Advocate Md. Shah Alam in Uttara</a> for emergency DSA bail proceedings.</p>`,
+            },
+            {
+                h2: 'Common Defences Against DSA Charges',
+                content: `<p>Depending on the facts, effective DSA defences include:</p>
+<ul>
+<li><strong>Truth defence (for defamation/Section 29 cases):</strong> If the statement made was true, it is not defamatory.</li>
+<li><strong>Opinion, satire, or fair comment:</strong> Genuine opinion or satire on matters of public interest is protected by the constitutional right to freedom of expression.</li>
+<li><strong>Lack of intent:</strong> Many DSA sections require criminal intent — proving the content was shared accidentally or without awareness of its impact can be a defence.</li>
+<li><strong>No publication:</strong> If the content was a private message, not a public post, defamation charges may not apply.</li>
+<li><strong>Procedural challenge:</strong> If the police violated arrest procedures or the FIR contains false facts, the case can be challenged.</li>
+</ul>
+<p>An experienced <a href="/criminal-lawyer-dhaka-uttara" style="color:var(--accent)">DSA lawyer in Dhaka</a> will evaluate your case and build the strongest available defence.</p>`,
+            },
+        ],
+        faqs: [
+            { question: 'Can a DSA case be settled out of court?', answer: 'Some DSA cases (particularly under sections involving public interest) can be resolved through compromise between parties. However, the court must approve the settlement, and in cases involving state security, settlement is not usually an option.' },
+            { question: 'What happens if I am acquitted in a DSA case?', answer: 'An acquittal means you are cleared of all charges. You may also seek costs and damages from the person who filed a false or malicious complaint — through a separate civil malicious prosecution case.' },
+            { question: 'Can the government recover a deleted post to use as evidence?', answer: 'Yes. Digital forensics teams can often recover deleted posts, messages, and files from devices. Posts deleted from social media may still be retrievable from server logs through court orders.' },
+            { question: 'Is the DSA being replaced in Bangladesh?', answer: 'As of 2024-2025, significant pressure exists to reform or replace the DSA with a more rights-respecting Cyber Security Act. The legal landscape is evolving — consult a current DSA lawyer for the latest status.' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-dhaka-uttara' },
+            { text: 'Supreme Court Lawyer', to: '/supreme-court-lawyer-dhaka' },
+        ],
+    },
+
+    /* ── 48 ── */
+    {
+        slug: 'how-to-file-legal-notice-bangladesh',
+        bnSlug: 'aini-notice-dakhil-bangladesh',
+        title: 'How to Send a Legal Notice in Bangladesh: Purpose, Format, and Process',
+        category: 'Legal Procedures',
+        readTime: '7 min read',
+        metaTitle: 'Legal Notice Bangladesh – How to Send, Format, and What to Expect',
+        metaDescription: 'Learn what a legal notice is in Bangladesh, when to send one, how it is formatted, the correct delivery method, and what happens if the recipient ignores it.',
+        keywords: ['legal notice Bangladesh', 'demand notice Bangladesh', 'lawyer notice Bangladesh', 'civil dispute notice Dhaka', 'legal notice format Bangladesh', 'send legal notice Bangladesh'],
+        publishedDate: '2026-04-03',
+        heroIntro: 'A legal notice is often the first and most powerful step in resolving a dispute in Bangladesh — without going to court. Whether you are dealing with an unpaid debt, a contract breach, a property encroachment, or a consumer complaint, a properly drafted legal notice puts the other party on formal notice that you are prepared to take legal action. Many disputes are resolved at this stage alone.',
+        toc: [
+            'What is a Legal Notice in Bangladesh?',
+            'When Should You Send a Legal Notice?',
+            'Is a Legal Notice Legally Required Before Filing a Case?',
+            'How to Draft a Legal Notice',
+            'How to Deliver a Legal Notice',
+            'What Happens After Sending a Legal Notice?',
+            'What If the Recipient Ignores Your Legal Notice?',
+            'Cost of Sending a Legal Notice',
+        ],
+        sections: [
+            {
+                h2: 'What is a Legal Notice in Bangladesh?',
+                content: `<p>A <strong>legal notice</strong> is a formal written communication sent by one party to another, stating their legal grievance and demanding a specific action (payment, cessation of an act, compliance with a contract, etc.) within a defined time period — failing which legal action will be initiated.</p>
+<p>In Bangladesh, legal notices serve multiple purposes:</p>
+<ul>
+<li>Formally documenting that the aggrieved party put the other on notice.</li>
+<li>Creating a paper trail before filing a lawsuit.</li>
+<li>Giving the other side an opportunity to remedy the situation before costly litigation.</li>
+<li>In some cases (contract law, employment disputes), they are <strong>legally required</strong> before filing a case.</li>
+</ul>
+<p>A well-drafted legal notice from an experienced <a href="/civil-lawyer-dhaka" style="color:var(--accent)">civil lawyer in Dhaka</a> carries significant weight — signalling seriousness and often prompting early resolution.</p>`,
+            },
+            {
+                h2: 'When Should You Send a Legal Notice?',
+                content: `<p>Common situations requiring a legal notice in Bangladesh:</p>
+<ul>
+<li><strong>Unpaid loans or debts:</strong> Before filing a money suit or recovery case.</li>
+<li><strong>Contract breach:</strong> Before filing a specific performance or damages suit.</li>
+<li><strong>Property disputes:</strong> Before filing an eviction, trespass, or declaration suit.</li>
+<li><strong>Employment disputes:</strong> Wrongful termination, unpaid salary, or benefit disputes.</li>
+<li><strong>Consumer disputes:</strong> Against sellers, service providers, or landlords.</li>
+<li><strong>Defamation:</strong> Before filing a defamation suit, giving the accused a chance to retract.</li>
+<li><strong>Insurance claims:</strong> When an insurer wrongfully denies a claim.</li>
+</ul>`,
+            },
+            {
+                h2: 'How to Draft a Legal Notice',
+                content: `<p>A legally effective legal notice in Bangladesh must include:</p>
+<ol>
+<li><strong>Sender's details:</strong> Full name, address, and contact information.</li>
+<li><strong>Recipient's details:</strong> Full name and address of the person or entity being notified.</li>
+<li><strong>Date of notice.</strong></li>
+<li><strong>Statement of facts:</strong> Clear, chronological narration of the dispute and the basis of your claim.</li>
+<li><strong>Legal basis:</strong> Reference to the relevant law, contract clause, or right being invoked.</li>
+<li><strong>Specific demand:</strong> Precisely what you are demanding — payment amount, action to stop, etc.</li>
+<li><strong>Time limit:</strong> A clear deadline — typically 7, 15, or 30 days — for compliance.</li>
+<li><strong>Consequences:</strong> Statement that failure to comply will result in legal action in the appropriate court.</li>
+<li><strong>Signature of the sender or their lawyer.</strong></li>
+</ol>
+<p>Notices signed by a lawyer on official letterhead have significantly more impact than notices sent directly by the aggrieved party. <a href="/" style="color:var(--accent)">Contact Advocate Md. Shah Alam in Uttara</a> to draft your legal notice.</p>`,
+            },
+            {
+                h2: 'How to Deliver a Legal Notice',
+                content: `<p>Proper delivery creates a verifiable record. Methods:</p>
+<ul>
+<li><strong>Registered post with acknowledgement due (AD):</strong> The most commonly used and legally reliable method. The signed AD card proves receipt.</li>
+<li><strong>Courier delivery with proof of receipt.</strong></li>
+<li><strong>Email with read receipt:</strong> Increasingly accepted, especially for commercial disputes.</li>
+<li><strong>Hand delivery with acknowledgement receipt</strong> signed by the recipient.</li>
+</ul>
+<p><strong>Do not</strong> rely solely on WhatsApp or regular email for important legal notices — these may not be accepted as proof of service in court.</p>`,
+            },
+            {
+                h2: 'What If the Recipient Ignores Your Legal Notice?',
+                content: `<p>If the recipient ignores the legal notice or sends an unsatisfactory reply within the stipulated time, you proceed to file a case in the appropriate court:</p>
+<ul>
+<li><strong>Money disputes:</strong> Artha Rin Adalat (loan recovery court) or civil court depending on the amount and nature.</li>
+<li><strong>Property disputes:</strong> Civil court.</li>
+<li><strong>Contract or service disputes:</strong> Civil court.</li>
+<li><strong>Employment disputes:</strong> Labour court.</li>
+</ul>
+<p>The filed legal notice becomes important evidence in court — demonstrating that you gave the other party a fair opportunity to resolve before litigation.</p>`,
+            },
+        ],
+        faqs: [
+            { question: 'Is a legal notice mandatory before filing a civil case in Bangladesh?', answer: 'It depends on the type of case. For some disputes — such as employment and certain contract matters — advance notice is legally required. For others, it is strongly advisable even when not mandatory, as courts view it favourably.' },
+            { question: 'Can I send a legal notice myself without a lawyer?', answer: 'Yes, legally. However, a notice drafted and signed by a lawyer on official letterhead carries significantly more persuasive weight and legal precision. Self-drafted notices often lack the precise legal language needed to create proper legal obligations.' },
+            { question: 'What is the cost of sending a legal notice in Bangladesh?', answer: 'Lawyer fees for drafting a legal notice in Bangladesh typically range from BDT 2,000 to BDT 10,000+ depending on the complexity. Registered post fees are minimal. Contact Advocate Md. Shah Alam in Uttara for specific fee information.' },
+            { question: 'Can I sue for defamation based on the reply to my legal notice?', answer: 'Yes. If the other party\'s reply to your legal notice itself contains defamatory statements, those statements can form the basis of a separate or additional defamation claim.' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Civil Lawyer Dhaka', to: '/civil-lawyer-dhaka' },
+            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-dhaka-uttara' },
+        ],
+    },
+
+
+    /* ── 49 ── */
+    {
+        slug: 'online-harassment-cyberstalking-law-bangladesh',
+        bnSlug: 'online-horani-cyberstalking-ain-bangladesh',
+        title: 'Online Harassment and Cyberstalking Law in Bangladesh: What Victims Can Do',
+        category: 'Cyber Law',
+        readTime: '8 min read',
+        metaTitle: 'Online Harassment Law Bangladesh – Legal Action Against Cyberstalking',
+        metaDescription: 'Being harassed, stalked, or threatened online in Bangladesh? Learn your legal rights under the Digital Security Act, how to file a complaint, and how to get court protection orders.',
+        keywords: ['online harassment law Bangladesh', 'cyberstalking Bangladesh', 'digital security act harassment', 'cyber crime lawyer Dhaka', 'online threats Bangladesh law', 'harassment complaint Bangladesh'],
+        publishedDate: '2026-04-04',
+        heroIntro: 'Online harassment in Bangladesh has reached alarming levels — threatening messages, relentless tagging, fake profiles circulating personal information, and digital stalking that invades every aspect of a victim\'s life. If you are being harassed online, Bangladesh law provides criminal charges, protective orders, and emergency relief. This guide explains your rights and legal options.',
+        toc: [
+            'What is Online Harassment Under Bangladesh Law?',
+            'What is Cyberstalking and Is It a Crime in Bangladesh?',
+            'Laws That Protect Victims of Online Harassment',
+            'How to Document Online Harassment',
+            'Filing a Complaint: Your Options',
+            'Can You Get a Protection Order?',
+            'What If the Harasser is Anonymous?',
+        ],
+        sections: [
+            {
+                h2: 'What is Online Harassment Under Bangladesh Law?',
+                content: `<p>Online harassment includes any pattern of digital behaviour intended to frighten, distress, intimidate, humiliate, or control another person. Under Bangladesh law, this covers:</p>
+<ul>
+<li>Repeated threatening or abusive messages.</li>
+<li>Creating fake accounts to impersonate or mock the victim.</li>
+<li>Spreading intimate images or private information.</li>
+<li>Coordinated harassment by groups (dogpiling or mass tagging).</li>
+<li>Repeated unwanted contact after being asked to stop.</li>
+<li>Monitoring a person\'s movements, location, or activity online.</li>
+</ul>
+<p>If you are experiencing any of these, you have legal remedies available in Bangladesh courts. Contact a <a href="/criminal-lawyer-dhaka-uttara" style="color:var(--accent)">cyber law lawyer in Uttara or Dhaka</a> immediately.</p>`,
+            },
+            {
+                h2: 'Laws That Protect Victims of Online Harassment',
+                content: `<p>Multiple laws provide protection:</p>
+<ul>
+<li><strong>Digital Security Act 2018, Section 25:</strong> Sending offensive, menacing, or false information through digital means — up to 5 years' imprisonment.</li>
+<li><strong>DSA Section 29:</strong> Online defamation accompanying the harassment — up to 3 years.</li>
+<li><strong>DSA Section 26:</strong> Distributing intimate images (revenge porn, sextortion) — up to 7 years.</li>
+<li><strong>Penal Code 1860, Section 506:</strong> Criminal intimidation — up to 7 years for threats of grievous harm.</li>
+<li><strong>Penal Code Section 354A (as applicable):</strong> Sexual harassment including in digital spaces.</li>
+</ul>
+<p>Bangladesh also has general provisions under the Women and Children Repression Prevention Act 2000 that cover harassment through digital means.</p>`,
+            },
+            {
+                h2: 'How to Document Online Harassment',
+                content: `<p>Proper documentation is critical before filing any complaint. Do this immediately:</p>
+<ul>
+<li><strong>Screenshot everything</strong> — messages, posts, profiles, notifications. Include timestamps and URLs.</li>
+<li><strong>Do not delete or block immediately</strong> — blocking destroys evidence. Screenshot first, then block.</li>
+<li><strong>Record dates and times</strong> of each incident in a written log.</li>
+<li><strong>Save any phone numbers or email addresses</strong> used to contact you.</li>
+<li><strong>Preserve digital evidence</strong> — do not edit or alter screenshots, as this can undermine their credibility in court.</li>
+</ul>
+<p>A <a href="/criminal-lawyer-dhaka-uttara" style="color:var(--accent)">cyber law lawyer</a> can apply to court for an order preserving digital evidence from platforms before it disappears.</p>`,
+            },
+            {
+                h2: 'Can You Get a Protection Order?',
+                content: `<p>Yes. Bangladesh courts can issue interim orders (injunctions) requiring the harasser to:</p>
+<ul>
+<li>Cease all contact with the victim.</li>
+<li>Delete posts, profiles, or content used to harass.</li>
+<li>Stay away from the victim's physical locations.</li>
+</ul>
+<p>In urgent cases — particularly threats of violence or ongoing distribution of intimate images — the court can grant emergency interim relief within days. <a href="/" style="color:var(--accent)">Contact Advocate Md. Shah Alam in Uttara</a> for emergency court proceedings.</p>`,
+            },
+        ],
+        faqs: [
+            { question: 'Can I get the harasser\'s identity from their fake account?', answer: 'Yes. Through a court order, you can compel the platform (Facebook, Instagram, etc.) to disclose account registration data, IP addresses, and linked phone numbers. Police digital forensics can also trace anonymous accounts.' },
+            { question: 'What if the harasser is in another city or country?', answer: 'Bangladesh courts have jurisdiction over cyber harassment directed at Bangladesh residents regardless of where the harasser is located. International enforcement is an additional step but domestic court orders against platforms are immediately enforceable.' },
+            { question: 'What should I do if I receive threats of violence online?', answer: 'Treat it as an emergency. Screenshot the threats and contact the police immediately for a safety assessment. Also engage a lawyer to seek an emergency court order. Do not assume online threats are just words.' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-dhaka-uttara' },
+            { text: 'Supreme Court Lawyer', to: '/supreme-court-lawyer-dhaka' },
+        ],
+    },
+
+    /* ── 50 ── */
+    {
+        slug: 'stay-order-bangladesh-court',
+        bnSlug: 'sthagitadesh-bangladesh-adalat',
+        title: 'How to Get a Stay Order in Bangladesh Courts: Purpose and Process',
+        category: 'Legal Procedures',
+        readTime: '7 min read',
+        metaTitle: 'Stay Order Bangladesh – How to Get One from Court and What It Does',
+        metaDescription: 'Learn what a stay order is in Bangladesh, when to apply for one, how the application process works, and what the conditions are — explained by a civil lawyer.',
+        keywords: ['stay order Bangladesh', 'court stay order Bangladesh', 'injunction stay Bangladesh', 'property stay order Dhaka', 'interim stay Bangladesh', 'civil lawyer Uttara'],
+        publishedDate: '2026-04-05',
+        heroIntro: 'A stay order from a Bangladesh court is one of the most powerful legal tools available — it can immediately halt construction on disputed land, stop a sale of assets, freeze enforcement of a contract, or suspend an eviction. Understanding when and how to apply, and the legal conditions the court uses to decide, is essential for anyone facing an urgent property or contractual dispute.',
+        toc: [
+            'What is a Stay Order in Bangladesh?',
+            'When Can You Apply for a Stay Order?',
+            'Types of Stay Orders in Bangladesh',
+            'Conditions the Court Uses to Decide',
+            'How to Apply for a Stay Order: Step-by-Step',
+            'What Happens After a Stay Order Is Granted?',
+            'Can a Stay Order Be Vacated?',
+        ],
+        sections: [
+            {
+                h2: 'What is a Stay Order in Bangladesh?',
+                content: `<p>A <strong>stay order</strong> (also called an interim injunction) is a court order that temporarily stops a party from taking a specific action — pending final disposal of the main case. In Bangladesh, stay orders are governed by:</p>
+<ul>
+<li><strong>Order 39 of the Code of Civil Procedure 1908 (CPC):</strong> For civil cases — temporary injunctions.</li>
+<li><strong>Section 151, CPC:</strong> Inherent power of courts to prevent abuse of process.</li>
+</ul>
+<p>Examples of what a stay order can stop: construction on disputed land, transfer of a property, enforcement of a court decree, eviction from property, publication of defamatory material, or a company resolution.</p>
+<p>A <a href="/civil-lawyer-dhaka" style="color:var(--accent)">civil lawyer in Dhaka</a> can file an urgent stay order application within days of filing the main suit.</p>`,
+            },
+            {
+                h2: 'Conditions the Court Uses to Decide',
+                content: `<p>To grant a stay order, Bangladesh courts apply the three-pronged test:</p>
+<ol>
+<li><strong>Prima facie case:</strong> Does the applicant have a reasonably strong legal argument on the merits of the main case?</li>
+<li><strong>Balance of convenience:</strong> Would the applicant suffer more harm if the stay is refused than the respondent would suffer if it is granted?</li>
+<li><strong>Irreparable injury:</strong> If the stay is not granted, would the harm to the applicant be impossible or very difficult to remedy later through money?</li>
+</ol>
+<p>All three conditions must generally be satisfied. In urgent cases — such as imminent sale of disputed land — courts can grant an ex parte (one-sided) stay order on the same day of the application.</p>`,
+            },
+            {
+                h2: 'How to Apply for a Stay Order: Step-by-Step',
+                content: `<p>The process:</p>
+<ol>
+<li><strong>File the main case</strong> (title suit, injunction suit, civil suit, etc.).</li>
+<li><strong>File a stay application (interlocutory application)</strong> simultaneously — typically as Form No. 37 or equivalent in the relevant court.</li>
+<li><strong>Submit supporting affidavit</strong> detailing the urgency, the potential harm, and the prima facie basis of the claim.</li>
+<li>The court may <strong>hear the application ex parte</strong> (without the other side) if there is proven urgency.</li>
+<li>If granted, the stay order is served on the other party and registered with relevant authorities (e.g., sub-registry for land stays).</li>
+<li>A <strong>return date</strong> is fixed for the other side to show cause why the stay should not continue.</li>
+</ol>
+<p>Speed matters enormously in stay applications. <a href="/" style="color:var(--accent)">Contact Advocate Md. Shah Alam in Uttara</a> for urgent stay order filings.</p>`,
+            },
+        ],
+        faqs: [
+            { question: 'Can a stay order be obtained on the same day?', answer: 'Yes. In urgent cases — particularly where the other party is about to take irreversible action (such as selling land or demolishing a building) — courts can grant an urgent ex parte stay order on the day of application.' },
+            { question: 'How long does a stay order last in Bangladesh?', answer: 'Interim stay orders last until the court decides to modify or vacate them. They typically remain in force until the main case is decided — which can take months or years. The other side can apply to vacate the stay at any time.' },
+            { question: 'What is the difference between a stay order and an injunction?', answer: 'In Bangladesh practice, terms are often used interchangeably. Technically, a "stay order" suspends proceedings or a specific act, while an "injunction" prohibits a party from doing something. An interim injunction under Order 39 CPC is what most people mean by a stay order in property disputes.' },
+            { question: 'Can a stay order be obtained against a government authority?', answer: 'Yes. Writ jurisdiction allows stay orders against government actions — this is handled through High Court writ petitions. For ordinary civil disputes, regular civil courts issue stay orders.' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Civil Lawyer Dhaka', to: '/civil-lawyer-dhaka' },
+            { text: 'Land & Property Lawyer', to: '/land-property-lawyer-dhaka' },
+        ],
+    },
+
+    /* ── 51 ── */
+    {
+        slug: 'power-of-attorney-types-registration-bangladesh',
+        bnSlug: 'power-of-attorney-nibondhon-bangladesh',
+        title: 'Power of Attorney in Bangladesh: Types, Registration, and Legal Risks',
+        category: 'Legal Procedures',
+        readTime: '7 min read',
+        metaTitle: 'Power of Attorney Bangladesh – Types, Registration Process, and Legal Guide',
+        metaDescription: 'Complete guide to Power of Attorney (POA) in Bangladesh — general vs. special POA, mandatory registration, NRB POA authentication, common fraud risks, and how to revoke a POA.',
+        keywords: ['power of attorney Bangladesh', 'POA registration Bangladesh', 'general power of attorney Bangladesh', 'special POA Dhaka', 'NRB power of attorney Bangladesh', 'raksha attorney Bangladesh'],
+        publishedDate: '2026-04-06',
+        heroIntro: 'A Power of Attorney (POA) is one of the most used and most misused legal documents in Bangladesh — whether managing property on behalf of an overseas family member, authorising someone to handle court cases, or conducting property transactions. Getting the type of POA right, registering it correctly, and knowing the fraud risks can save enormous legal headaches later.',
+        toc: [
+            'What is a Power of Attorney in Bangladesh?',
+            'General vs. Special Power of Attorney',
+            'When is POA Registration Mandatory?',
+            'How to Register a Power of Attorney',
+            'NRB Power of Attorney: Overseas Authentication',
+            'Common POA Fraud in Bangladesh',
+            'How to Revoke a Power of Attorney',
+        ],
+        sections: [
+            {
+                h2: 'What is a Power of Attorney in Bangladesh?',
+                content: `<p>A <strong>Power of Attorney (POA)</strong> is a legal document authorizing one person (the <em>agent</em> or <em>attorney-in-fact</em>) to act on behalf of another (the <em>principal</em>) in legal, financial, or property matters. In Bangladesh, POAs are governed by:</p>
+<ul>
+<li><strong>Powers of Attorney Act 2012</strong></li>
+<li><strong>Registration Act 1908</strong></li>
+<li><strong>Transfer of Property Act 1882</strong></li>
+</ul>
+<p>A properly executed POA can authorise the agent to buy/sell land, file court cases, sign contracts, manage bank accounts, and engage in almost any legal act — within the scope defined in the document. Consult a <a href="/civil-lawyer-dhaka" style="color:var(--accent)">civil lawyer in Dhaka</a> before granting broad powers to any agent.</p>`,
+            },
+            {
+                h2: 'General vs. Special Power of Attorney',
+                content: `<p>The two core types differ in scope:</p>
+<ul>
+<li><strong>General Power of Attorney (GPA):</strong> Grants the agent broad authority over the principal's affairs — typically covering all property transactions, legal proceedings, and financial matters. GPAs are often used by NRBs (Non-Resident Bangladeshis) to manage affairs back home.</li>
+<li><strong>Special Power of Attorney (SPA):</strong> Restricts the agent to a specific, defined act — for example, "to execute the sale deed for Plot No. X" or "to appear in Case No. Y." An SPA expires once the specific purpose is fulfilled.</li>
+</ul>
+<p><strong>Key rule:</strong> For property transactions, always use a Special POA specifying the exact property and transaction. Broad GPAs are a major source of fraud in Bangladesh.</p>`,
+            },
+            {
+                h2: 'When is POA Registration Mandatory?',
+                content: `<p>Under the Registration Act, POAs are mandatory to register when they relate to:</p>
+<ul>
+<li>Transfer of immovable property (land, flat, building).</li>
+<li>Receiving consideration (payment) for property.</li>
+<li>Filing suits relating to immovable property.</li>
+</ul>
+<p>Unregistered POAs for property transactions are legally invalid and will not be accepted by the Sub-Registrar's office for executing deeds. Registration fees apply based on the value of the property or transaction covered.</p>`,
+            },
+            {
+                h2: 'NRB Power of Attorney: Overseas Authentication',
+                content: `<p>For Bangladeshis abroad (NRBs), the POA must go through additional authentication steps:</p>
+<ol>
+<li>Draft the POA in Bangladesh or abroad.</li>
+<li>Have it notarized by a local notary or court in the foreign country.</li>
+<li>Get it authenticated (apostilled or attested) at the Bangladeshi Embassy or High Commission in that country.</li>
+<li>Upon arrival in Bangladesh, submit it to the Sub-District (Upazila) Land Registry for local verification if property matters are involved.</li>
+</ol>
+<p>Countries that are signatories to the Hague Apostille Convention can use apostille stamps; others require full embassy attestation. <a href="/" style="color:var(--accent)">Advocate Md. Shah Alam in Uttara</a> assists NRB families with the full POA authentication and registration process.</p>`,
+            },
+            {
+                h2: 'Common POA Fraud in Bangladesh',
+                content: `<p>POA fraud is rampant in Bangladesh. Common schemes include:</p>
+<ul>
+<li><strong>Forged POAs:</strong> Fake documents presented to Sub-Registrars to sell land without the owner's knowledge.</li>
+<li><strong>Broad GPAs exploited:</strong> An agent with a General POA sells or mortgages property that was not intended to be touched.</li>
+<li><strong>POAs from deceased persons:</strong> Using old POAs after the principal has died — legally void but fraudulently misused.</li>
+</ul>
+<p>If you suspect your POA has been forged or misused, take immediate legal action — file FIR and apply for a court injunction to halt any resultant transaction.</p>`,
+            },
+        ],
+        faqs: [
+            { question: 'Can a Power of Attorney be used after the principal dies?', answer: 'No. A POA automatically terminates on the death of the principal. Any act performed by the agent after the principal\'s death is invalid and potentially fraudulent. Heirs should immediately cancel any outstanding POAs upon a principal\'s death.' },
+            { question: 'Can someone revoke a Power of Attorney in Bangladesh?', answer: 'Yes. A POA can be revoked by the principal at any time (unless it is an "irrevocable POA" coupled with an interest). Revocation should be in writing, registered, and notice given to third parties who relied on the POA.' },
+            { question: 'Can an NRB in Canada or UK grant a POA for Bangladesh property?', answer: 'Yes. The NRB executes the POA abroad, has it notarized locally, authenticates it at the Bangladesh Embassy, and it becomes valid in Bangladesh after local verification. Most major cities have Bangladesh Embassies or High Commissions to assist with this.' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Civil Lawyer Dhaka', to: '/civil-lawyer-dhaka' },
+            { text: 'Land & Property Lawyer', to: '/land-property-lawyer-dhaka' },
+        ],
+    },
+
+
+    /* ── 52 ── */
+    {
+        slug: 'online-fraud-cheating-case-bangladesh',
+        bnSlug: 'online-pratarana-mamla-bangladesh',
+        title: 'Online Fraud and Cheating Case Under Bangladesh Law: Your Legal Options',
+        category: 'Cyber Law',
+        readTime: '8 min read',
+        metaTitle: 'Online Fraud Bangladesh – Legal Action for E-commerce and Digital Cheating',
+        metaDescription: 'Cheated online in Bangladesh? Learn how to file a case for e-commerce fraud, advance fee scams, and digital cheating under the Penal Code and Digital Security Act.',
+        keywords: ['online fraud legal action Bangladesh', 'e-commerce fraud Bangladesh', 'digital cheating case Bangladesh', 'penal code 420 Bangladesh', 'online scam Bangladesh', 'cyber fraud lawyer Dhaka'],
+        publishedDate: '2026-04-07',
+        heroIntro: 'Online fraud is surging in Bangladesh — fake e-commerce shops, advance fee scams, fake job offers, and investment fraud are causing significant financial losses. Bangladesh law provides multiple legal routes to pursue both criminal prosecution and civil recovery of your money. This guide walks you through your options.',
+        toc: [
+            'What is Online Fraud Under Bangladesh Law?',
+            'Common Types of Online Fraud in Bangladesh',
+            'Laws That Apply to Online Fraud',
+            'Criminal vs. Civil Routes',
+            'How to File a Fraud Case',
+            'Can You Recover Your Money?',
+        ],
+        sections: [
+            {
+                h2: 'What is Online Fraud Under Bangladesh Law?',
+                content: `<p>Online fraud involves using digital channels — websites, social media, messaging apps — to deceive a person into parting with money or valuables under false pretences. Under Bangladesh law, this falls under:</p>
+<ul>
+<li><strong>Penal Code 1860, Section 420:</strong> Cheating and dishonestly inducing delivery of property — up to 7 years' imprisonment and fine.</li>
+<li><strong>Digital Security Act 2018, Section 25:</strong> Publishing false, menacing, or offensive information through digital means — up to 5 years.</li>
+<li><strong>DSA Section 24:</strong> Identity theft and impersonation online — up to 5 years.</li>
+</ul>
+<p>Contact a <a href="/criminal-lawyer-dhaka-uttara" style="color:var(--accent)">cyber law lawyer in Dhaka</a> to determine which laws apply to your specific fraud situation.</p>`,
+            },
+            {
+                h2: 'Common Types of Online Fraud in Bangladesh',
+                content: `<p>The most reported online fraud types in Bangladesh include:</p>
+<ul>
+<li><strong>Fake e-commerce shops:</strong> Facebook pages or websites that take payment and never deliver goods.</li>
+<li><strong>Advance fee scams:</strong> Promises of large sums of money, lottery wins, or job offers requiring upfront payment.</li>
+<li><strong>Investment fraud:</strong> Fake investment platforms (cryptocurrency, stock trading) promising unrealistic returns.</li>
+<li><strong>Impersonation fraud:</strong> Scammers posing as government officials, bank employees, or trusted persons to extract money.</li>
+<li><strong>Romance scams:</strong> Building fake romantic relationships online to eventually extort money.</li>
+<li><strong>Fake job offers:</strong> Charging fees for non-existent jobs, especially targeting overseas employment seekers.</li>
+</ul>`,
+            },
+            {
+                h2: 'How to File a Fraud Case',
+                content: `<p>Steps to take after falling victim to online fraud:</p>
+<ol>
+<li><strong>Collect and preserve all evidence:</strong> Screenshots of conversations, payment receipts, the website/page URL, bank transfer records, and any contact information used by the fraudster.</li>
+<li><strong>File an FIR at your nearest police station</strong> under sections 420 of the Penal Code and relevant DSA provisions.</li>
+<li><strong>Report to the Cyber Crime Unit</strong> of the Bangladesh Police (Cyber Support for Women Desk for women victims) or file directly at the Cyber Tribunal.</li>
+<li><strong>Report to your bank immediately</strong> if you made a bank transfer — they may be able to freeze the recipient's account if you act within 24-48 hours.</li>
+<li><strong>File a civil suit</strong> for recovery of the fraudulently obtained money.</li>
+</ol>
+<p><a href="/" style="color:var(--accent)">Contact Advocate Md. Shah Alam in Uttara</a> for immediate legal action on online fraud cases.</p>`,
+            },
+            {
+                h2: 'Can You Recover Your Money?',
+                content: `<p>Recovery is possible but depends on speed of action:</p>
+<ul>
+<li><strong>Bank transfers (within 24-48 hours):</strong> Contact your bank and the fraudster's bank immediately to request a freeze. Courts can compel banks to reverse fraudulent transactions if acted upon quickly.</li>
+<li><strong>Mobile banking fraud (bKash/Nagad):</strong> Report immediately to the MFS provider — they have fraud departments and can sometimes reverse transactions if the money has not been withdrawn.</li>
+<li><strong>Court recovery order:</strong> Once a criminal case is filed and assets of the fraudster are identified, courts can order attachment and recovery.</li>
+</ul>
+<p>The single most important factor in financial recovery is speed — every hour of delay reduces the chance of recovery significantly.</p>`,
+            },
+        ],
+        faqs: [
+            { question: 'Can I get my money back from a Facebook page scam?', answer: 'If the Facebook page operator can be identified and their bank account or MFS wallet traced, courts can order recovery. Reporting to police quickly and engaging a lawyer for an urgent court order gives the best chance of recovery.' },
+            { question: 'Is it worth filing a case for a small fraud amount?', answer: 'Even small amounts should be reported — patterns of fraud by the same operator can be established across multiple complaints, making prosecution much stronger. Filing a case also creates an official record that supports insurance or tax claims.' },
+            { question: 'Can I sue a fake e-commerce website anonymously?', answer: 'You can file an FIR. The police or Cyber Tribunal can compel Facebook, domain registrars, and payment processors to reveal the owner\'s identity through court orders.' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-dhaka-uttara' },
+            { text: 'Civil Lawyer Dhaka', to: '/civil-lawyer-dhaka' },
+        ],
+    },
+
+    /* ── 53 ── */
+    {
+        slug: 'cyber-blackmail-sextortion-bangladesh',
+        bnSlug: 'cyber-blackmail-aini-pratikaar-bangladesh',
+        title: 'Cyber Blackmail and Sextortion in Bangladesh: Legal Remedies and What to Do',
+        category: 'Cyber Law',
+        readTime: '8 min read',
+        metaTitle: 'Cyber Blackmail Bangladesh – Sextortion and Online Blackmail Legal Guide',
+        metaDescription: 'Being blackmailed online in Bangladesh? Learn what to do about sextortion, intimate image threats, and cyber blackmail — DSA protections, how to file a case, and emergency options.',
+        keywords: ['cyber blackmail Bangladesh', 'sextortion Bangladesh', 'online blackmail DSA', 'revenge porn Bangladesh law', 'intimate image threat Bangladesh', 'cyber law lawyer Dhaka'],
+        publishedDate: '2026-04-08',
+        heroIntro: 'Cyber blackmail and sextortion — where criminals threaten to distribute intimate images or private information unless money or more images are provided — are among the most psychologically damaging cyber crimes. Bangladesh law treats this severely. If you are a victim, this is a criminal matter requiring immediate legal action, not silence or compliance.',
+        toc: [
+            'What is Cyber Blackmail and Sextortion?',
+            'Why You Must Never Pay the Blackmailer',
+            'Bangladesh Laws That Apply',
+            'Immediate Steps to Take',
+            'Filing a Criminal Case',
+            'Emergency Relief: Removing Your Images Online',
+        ],
+        sections: [
+            {
+                h2: 'What is Cyber Blackmail and Sextortion?',
+                content: `<p><strong>Cyber blackmail</strong> involves a criminal threatening to reveal damaging information (true or false) about a victim unless money or demands are met. <strong>Sextortion</strong> is a specific form where the threat involves intimate, nude, or sexual images — either obtained consensually in a past relationship, through hacking, or through deception (fake romantic relationships).</p>
+<p>In Bangladesh, sextortion often follows a pattern:</p>
+<ol>
+<li>Victim is befriended on social media by a fake profile.</li>
+<li>Victim is persuaded to share intimate images or engage in video calls.</li>
+<li>Recordings are made without consent and used to demand money.</li>
+</ol>
+<p>This is a serious criminal offence. If you are a victim, contact a <a href="/criminal-lawyer-dhaka-uttara" style="color:var(--accent)">cyber law lawyer in Dhaka</a> immediately and do not comply with demands.</p>`,
+            },
+            {
+                h2: 'Why You Must Never Pay the Blackmailer',
+                content: `<p>Paying does not stop extortion — it makes it worse. Every payment:</p>
+<ul>
+<li>Confirms to the criminal that you are vulnerable and will pay.</li>
+<li>Leads to escalating demands — more money, more images.</li>
+<li>Provides the criminal with more funds to continue operating.</li>
+</ul>
+<p>The only effective response is immediate legal action that removes their leverage and puts them at risk of prosecution.</p>`,
+            },
+            {
+                h2: 'Bangladesh Laws That Apply',
+                content: `<p>Multiple laws criminalise cyber blackmail and sextortion in Bangladesh:</p>
+<ul>
+<li><strong>DSA Section 26:</strong> Publishing sexually explicit material without consent — up to <strong>7 years</strong> imprisonment and BDT 5 lakh fine. Repeat offence: 14 years and BDT 10 lakh.</li>
+<li><strong>DSA Section 25:</strong> Threatening with defamatory or offensive digital content — up to 5 years.</li>
+<li><strong>Penal Code Section 384:</strong> Extortion — up to 3 years' imprisonment.</li>
+<li><strong>Penal Code Section 503:</strong> Criminal intimidation — up to 2 years.</li>
+<li><strong>Women and Children Repression Prevention Act 2000:</strong> Sexual harassment through any medium including digital.</li>
+</ul>`,
+            },
+            {
+                h2: 'Immediate Steps to Take',
+                content: `<p>If you are being blackmailed online, take these steps immediately:</p>
+<ol>
+<li><strong>Do not pay</strong> under any circumstances.</li>
+<li><strong>Do not delete anything yet</strong> — screenshot and preserve all communications: threats, payment demands, the blackmailer's profile, any images shared.</li>
+<li><strong>Block the blackmailer</strong> on all platforms after preserving evidence.</li>
+<li><strong>Report to the platform</strong> (Facebook, WhatsApp, etc.) to get their account suspended.</li>
+<li><strong>Contact a lawyer immediately</strong> for emergency court relief and police report guidance.</li>
+<li><strong>Report to Bangladesh Police's Cyber Support for Women desk</strong> or any cyber crime unit.</li>
+</ol>
+<p><a href="/" style="color:var(--accent)">Contact Advocate Md. Shah Alam in Uttara</a> immediately for confidential legal assistance in cyber blackmail cases.</p>`,
+            },
+        ],
+        faqs: [
+            { question: 'Will my images be published if I file a police case?', answer: 'Filing a police case is the most effective way to STOP further distribution. An urgent court order can compel Facebook or other platforms to remove content immediately. Police are legally required to maintain victim confidentiality in these cases.' },
+            { question: 'The blackmailer says they are from abroad. Can I still take legal action?', answer: 'Yes. Bangladesh courts have jurisdiction over crimes that affect Bangladesh residents regardless of where the perpetrator is located. Platforms must comply with Bangladesh court orders.' },
+            { question: 'My images were shared without my knowledge. Can I sue the person who shared them?', answer: 'Absolutely. Under DSA Section 26, distributing intimate images without consent carries up to 7 years imprisonment. This applies even if the images were originally shared consensually — consent to share privately does not mean consent to distribute publicly.' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-dhaka-uttara' },
+            { text: 'Supreme Court Lawyer', to: '/supreme-court-lawyer-dhaka' },
+        ],
+    },
+
+    /* ── 54 ── */
+    {
+        slug: 'hacking-unauthorized-computer-access-bangladesh',
+        bnSlug: 'haking-computer-aboidho-probesh-bangladesh',
+        title: 'Hacking and Unauthorized Computer Access Under Bangladesh Law',
+        category: 'Cyber Law',
+        readTime: '7 min read',
+        metaTitle: 'Hacking Law Bangladesh – Unauthorized Computer Access and Legal Consequences',
+        metaDescription: 'Complete guide to hacking laws in Bangladesh — what constitutes unauthorized computer access, penalties under the DSA and ICT Act, and how to report a hacking incident.',
+        keywords: ['hacking law Bangladesh', 'computer crime Bangladesh', 'unauthorized system access Bangladesh', 'DSA hacking Bangladesh', 'cyber crime lawyer Dhaka', 'ICT act Bangladesh hacking'],
+        publishedDate: '2026-04-09',
+        heroIntro: 'Hacking — gaining unauthorized access to a computer system, network, or digital account — is a serious criminal offence in Bangladesh under the Digital Security Act 2018. This guide explains what the law covers, the penalties, how to report a hacking incident, and your legal options as a victim.',
+        toc: [
+            'What is Hacking Under Bangladesh Law?',
+            'DSA Section 19: Unauthorized Computer Access',
+            'What Counts as Hacking Under the DSA?',
+            'Penalties for Hacking in Bangladesh',
+            'Steps to Take If You Are a Hacking Victim',
+            'Hacking vs. White Hat Security Testing',
+        ],
+        sections: [
+            {
+                h2: 'What is Hacking Under Bangladesh Law?',
+                content: `<p>Hacking refers to gaining access to a computer, network, server, or digital account without authorization or exceeding the authorization you legitimately have. Bangladesh law covers hacking under:</p>
+<ul>
+<li><strong>Digital Security Act 2018, Section 19 (Unauthorized Access):</strong> Up to 14 years' imprisonment and BDT 1 crore fine.</li>
+<li><strong>DSA Section 17 (Attacking Critical Infrastructure):</strong> Hacking power grids, financial systems, or government networks — up to 14 years.</li>
+<li><strong>ICT Act 2006, Section 54:</strong> Hacking provisions (still applicable for older cases).</li>
+</ul>
+<p>If your account, website, or business system has been hacked, contact a <a href="/criminal-lawyer-dhaka-uttara" style="color:var(--accent)">cyber law lawyer in Dhaka</a> for guidance on filing a case and securing your systems.</p>`,
+            },
+            {
+                h2: 'What Counts as Hacking Under the DSA?',
+                content: `<p>DSA Section 19 covers unauthorized access to any computer, computer system, computer network, or any program, information, or data of any person. This includes:</p>
+<ul>
+<li>Logging into someone's email, social media, or bank account without permission.</li>
+<li>Installing malware, ransomware, or spyware on another's device.</li>
+<li>Intercepting communications or data transmissions without authorization.</li>
+<li>If the access is for committing any other offence (fraud, blackmail, espionage), the punishment escalates significantly.</li>
+<li>Hacking computer systems containing personal data triggers both DSA and potential data protection liability.</li>
+</ul>`,
+            },
+            {
+                h2: 'Steps to Take If You Are a Hacking Victim',
+                content: `<p>If you or your business has been hacked:</p>
+<ol>
+<li><strong>Isolate the affected system</strong> — disconnect from the network immediately to prevent further damage or data exfiltration.</li>
+<li><strong>Do not turn off the device</strong> if forensic evidence collection is being considered — a powered system preserves more evidence than one that was shut down.</li>
+<li><strong>Preserve logs</strong> — server logs, access logs, error messages are critical evidence.</li>
+<li><strong>Report to police</strong> and file an FIR under DSA Section 19. The Cyber Crime Unit can conduct technical investigations.</li>
+<li><strong>Notify affected parties</strong> — if customer or employee data was accessed, a data breach notification may be a legal or ethical obligation.</li>
+<li><strong>Engage a cyber lawyer</strong> to manage the legal response and any civil claims against the hacker.</li>
+</ol>
+<p><a href="/" style="color:var(--accent)">Contact Advocate Md. Shah Alam in Uttara</a> for hacking cases involving business systems or personal data breaches.</p>`,
+            },
+            {
+                h2: 'Hacking vs. White Hat Security Testing',
+                content: `<p>White hat or ethical hacking — security testing of systems you own or have been explicitly authorised to test — is not a crime. The key legal distinction is:</p>
+<ul>
+<li><strong>Authorization:</strong> Testing with written authorization from the system owner is lawful. Without it, the same acts are criminal hacking regardless of intent.</li>
+<li><strong>Scope:</strong> Even authorized testers can face liability if they exceed their agreed scope.</li>
+</ul>
+<p>Companies hiring penetration testers in Bangladesh should obtain a written security testing agreement to clearly define the legal scope of the engagement.</p>`,
+            },
+        ],
+        faqs: [
+            { question: 'Is it illegal to access someone\'s Facebook account even with their shared password?', answer: 'It depends on the circumstances. If the account owner revokes consent and you continue accessing it, this can constitute unauthorized access. Regular sharing of an account is a grey area — but accessing someone\'s account to spy on or control them is illegal regardless of how access was obtained.' },
+            { question: 'Can a business sue a former employee for hacking after leaving?', answer: 'Yes. Former employees who retain or misuse system access after termination can face DSA Section 19 prosecution and civil liability for any damages caused by unauthorized access.' },
+            { question: 'What if the hacker is from a foreign country?', answer: 'Bangladesh can still prosecute foreign hackers who target Bangladesh-based systems through Mutual Legal Assistance Treaties (MLATs) for international cooperation, and can pursue local assets of foreign entities operating in Bangladesh.' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-dhaka-uttara' },
+            { text: 'Supreme Court Lawyer', to: '/supreme-court-lawyer-dhaka' },
+        ],
+    },
+
+
+    /* ── 55 ── */
+    {
+        slug: 'data-privacy-personal-data-protection-bangladesh',
+        bnSlug: 'data-privacy-bangla-ain-bangladesh',
+        title: 'Data Privacy and Personal Data Protection in Bangladesh: What the Law Says',
+        category: 'Cyber Law',
+        readTime: '7 min read',
+        metaTitle: 'Data Privacy Law Bangladesh – Personal Data Protection Rights and Breaches',
+        metaDescription: 'What does Bangladesh law say about your personal data? Understand data privacy rights, how to respond to a data breach, and the developing data protection legal framework.',
+        keywords: ['data privacy Bangladesh', 'personal data protection Bangladesh', 'data breach law Bangladesh', 'privacy rights Bangladesh', 'DSA data protection', 'cyber law lawyer Dhaka'],
+        publishedDate: '2026-04-10',
+        heroIntro: 'As Bangladesh increasingly moves toward a digital economy, personal data — from medical records to financial information to online activity — is being collected and stored at an unprecedented scale. Bangladesh\'s legal framework for data privacy is still developing, but existing DSA provisions and international principles already provide important protections. This guide explains your rights.',
+        toc: [
+            'What is Personal Data Under Bangladesh Law?',
+            'Current Legal Framework for Data Privacy in Bangladesh',
+            'DSA Provisions Relating to Data Privacy',
+            'What is a Data Breach and What Are Your Rights?',
+            'The Proposed Bangladesh Data Protection Act',
+            'Your Rights When Your Data Is Misused',
+        ],
+        sections: [
+            {
+                h2: 'What is Personal Data Under Bangladesh Law?',
+                content: `<p>Personal data refers to any information that can identify a living individual — directly or indirectly. This includes:</p>
+<ul>
+<li>Name, address, phone number, email address.</li>
+<li>National ID number (NID), passport number.</li>
+<li>Financial account information, credit card numbers.</li>
+<li>Medical records, health conditions.</li>
+<li>Biometric data (fingerprints, facial recognition).</li>
+<li>Online identifiers — IP addresses, browsing history, cookies.</li>
+<li>Location data.</li>
+</ul>
+<p>If your personal data has been improperly collected, shared, or exposed, a <a href="/criminal-lawyer-dhaka-uttara" style="color:var(--accent)">cyber law lawyer in Dhaka</a> can advise on your remedies.</p>`,
+            },
+            {
+                h2: 'DSA Provisions Relating to Data Privacy',
+                content: `<p>While Bangladesh has no standalone data protection law yet, the DSA provides some protections:</p>
+<ul>
+<li><strong>DSA Section 19 (Unauthorized Access):</strong> Accessing a system to obtain personal data without permission is a criminal offence — up to 14 years.</li>
+<li><strong>DSA Section 23 (Identity Information):</strong> Wrongfully collecting, selling, or using another person's identity information for fraudulent purposes — up to 5 years and BDT 5 lakh fine.</li>
+<li><strong>DSA Section 24 (Identity Theft):</strong> Using another person's identity information without permission — up to 5 years and BDT 5 lakh fine.</li>
+</ul>
+<p>Additionally, certain sector-specific rules apply: Bangladesh Bank guidelines govern financial data, the Health sector has separate patient data obligations, and telecom providers are bound by BTRC (Bangladesh Telecommunication Regulatory Commission) rules on subscriber data.</p>`,
+            },
+            {
+                h2: 'What is a Data Breach and What Are Your Rights?',
+                content: `<p>A data breach occurs when personal data is accessed, disclosed, or lost without authorisation — through hacking, employee misconduct, or poor security. If you are affected by a data breach in Bangladesh, you can:</p>
+<ul>
+<li><strong>File an FIR</strong> if the breach was the result of hacking (DSA Section 19).</li>
+<li><strong>File a complaint</strong> with relevant sector regulators (Bangladesh Bank, BTRC, etc.).</li>
+<li><strong>File a civil suit</strong> against the organisation responsible for negligently failing to protect your data, claiming damages for any harm caused.</li>
+<li><strong>Seek an injunction</strong> to prevent further use or distribution of the breached data.</li>
+</ul>`,
+            },
+            {
+                h2: 'The Proposed Bangladesh Data Protection Act',
+                content: `<p>Bangladesh has been developing a dedicated Data Protection Act (DPA) — modelled on international frameworks including the EU's GDPR. Key anticipated provisions include:</p>
+<ul>
+<li>Explicit consent requirements before collecting personal data.</li>
+<li>Right to access your own data held by organisations.</li>
+<li>Right to correct inaccurate data.</li>
+<li>Right to request deletion of data (right to be forgotten).</li>
+<li>Mandatory data breach notification obligations on organizations.</li>
+</ul>
+<p>As of 2025, the DPA is in draft stage. Organisations operating in Bangladesh should begin preparing compliance frameworks now. <a href="/" style="color:var(--accent)">Contact Advocate Md. Shah Alam in Uttara</a> for guidance on current DSA-based data protections and emerging DPA compliance.</p>`,
+            },
+        ],
+        faqs: [
+            { question: 'Can I demand that a company delete my personal data in Bangladesh?', answer: 'Under current law, there is no explicit statutory right to deletion (right to be forgotten). However, you can demand under contract law or in some cases invoke general legal principles if data was collected without valid consent or is being misused. This right is expected in the upcoming Data Protection Act.' },
+            { question: 'What should I do if my NID data was leaked?', answer: 'Report it to the Election Commission Bangladesh (which manages NID data) and the relevant national cybersecurity authority. You can also file an FIR if you can identify the source of the breach as criminal (unauthorized system access). Monitor your accounts closely for identity theft.' },
+            { question: 'Is selling a customer database illegal in Bangladesh?', answer: 'Selling identity information for fraudulent use is currently covered by DSA Section 23. More general restrictions on data selling are expected in the upcoming Data Protection Act. Currently, sector-specific rules apply (e.g., telecom subscriber data cannot be sold under BTRC rules).' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-dhaka-uttara' },
+            { text: 'Civil Lawyer Dhaka', to: '/civil-lawyer-dhaka' },
+        ],
+    },
+
+    /* ── 56 ── */
+    {
+        slug: 'affidavit-bangladesh-types-process',
+        bnSlug: 'holofnama-bangladesh-prokriya',
+        title: 'Affidavit in Bangladesh: Purpose, Types, and How to Make One',
+        category: 'Legal Procedures',
+        readTime: '6 min read',
+        metaTitle: 'Affidavit Bangladesh – Types, Uses, and How to Prepare and Register',
+        metaDescription: 'What is an affidavit in Bangladesh? Learn the different types, when you need one, how to prepare it, who can witness it, and how to get it registered or notarized.',
+        keywords: ['affidavit Bangladesh', 'sworn affidavit Bangladesh', 'notary affidavit Dhaka', 'affidavit registration Bangladesh', 'hathshapata Bangladesh', 'legal affidavit lawyer Uttara'],
+        publishedDate: '2026-04-11',
+        heroIntro: 'An affidavit is a sworn written statement of facts — one of the most commonly used legal documents in Bangladesh for court proceedings, government applications, property matters, and personal declarations. Understanding when you need one, what it must contain, and how to get it properly sworn and registered can save significant time and confusion.',
+        toc: [
+            'What is an Affidavit in Bangladesh?',
+            'Common Uses of Affidavits',
+            'Types of Affidavits in Bangladesh',
+            'Who Can Witness/Administer an Affidavit?',
+            'How to Prepare an Affidavit',
+            'Affidavit Registration: When Is It Required?',
+            'What Happens If You Submit a False Affidavit?',
+        ],
+        sections: [
+            {
+                h2: 'What is an Affidavit in Bangladesh?',
+                content: `<p>An <strong>affidavit</strong> (হলফনামা in Bangla) is a written statement of facts that the maker swears under oath to be true. It is used as evidence in court proceedings and for a wide range of official purposes. Key characteristics:</p>
+<ul>
+<li>Must be signed by the <strong>deponent</strong> (the person making the statement).</li>
+<li>Must be sworn before a <strong>Notary Public, Oath Commissioner, or Magistrate</strong> — who administers the oath.</li>
+<li>Once sworn, the deponent is legally bound — making a false affidavit is perjury under the Penal Code.</li>
+</ul>
+<p>An experienced <a href="/civil-lawyer-dhaka" style="color:var(--accent)">civil lawyer in Dhaka</a> can prepare a legally sound affidavit for your specific purpose.</p>`,
+            },
+            {
+                h2: 'Common Uses of Affidavits',
+                content: `<p>Affidavits are required or useful in numerous situations in Bangladesh:</p>
+<ul>
+<li><strong>Court proceedings:</strong> As evidence, in support of interlocutory applications (stay orders, injunctions), or as a substitute for oral testimony in some matters.</li>
+<li><strong>Name change:</strong> A sworn affidavit published in a national newspaper is the primary method of legally changing one\'s name in Bangladesh.</li>
+<li><strong>Age declaration:</strong> Where no birth certificate exists, an affidavit can establish age for official purposes.</li>
+<li><strong>Property matters:</strong> Confirming ownership, possession, or family relationships in the absence of formal documents.</li>
+<li><strong>Government/visa applications:</strong> Many embassies and government offices require sworn affidavits for specific declarations.</li>
+<li><strong>Academic purposes:</strong> Declaring equivalence of qualifications or name discrepancies in certificates.</li>
+</ul>`,
+            },
+            {
+                h2: 'How to Prepare an Affidavit',
+                content: `<p>A legally valid affidavit in Bangladesh must contain:</p>
+<ol>
+<li><strong>Heading:</strong> Court name (if court-related) or general heading.</li>
+<li><strong>Deponent\'s identification:</strong> Full name, father\'s name, address, and NID number.</li>
+<li><strong>Statement of facts:</strong> Clearly numbered paragraphs stating each fact. Use plain, precise language.</li>
+<li><strong>Verification clause:</strong> A declaration that the contents are true to the best of the deponent\'s knowledge.</li>
+<li><strong>Deponent\'s signature.</strong></li>
+<li><strong>Jurat clause:</strong> The section completed by the oath-administering official recording that the oath was administered, the date, and their signature and official seal.</li>
+</ol>
+<p><a href="/" style="color:var(--accent)">Contact Advocate Md. Shah Alam in Uttara</a> to have your affidavit professionally drafted and sworn.</p>`,
+            },
+            {
+                h2: 'What Happens If You Submit a False Affidavit?',
+                content: `<p>Making a false statement in an affidavit sworn under oath constitutes <strong>perjury</strong> under the Penal Code 1860 (Section 191-193) — punishable by up to <strong>7 years' imprisonment</strong>. If the false affidavit is used to defraud or commit another crime, additional charges apply. Never include anything in an affidavit that you do not know to be true.</p>`,
+            },
+        ],
+        faqs: [
+            { question: 'Can I prepare my own affidavit without a lawyer?', answer: 'You can draft the content yourself, but the affidavit must be sworn before an authorized official (Notary Public, Oath Commissioner, or Magistrate). It is strongly advisable to have a lawyer draft it to ensure legal precision, especially for court proceedings.' },
+            { question: 'How long does it take to get an affidavit sworn in Dhaka?', answer: 'A simple affidavit can typically be sworn within the same day — visit a Notary Public with your draft, NID, and the official will administer the oath and stamp the document. For registered affidavits, the Sub-Registrar\'s office adds a further step.' },
+            { question: 'Is an affidavit the same as a power of attorney?', answer: 'No. An affidavit is a sworn statement of facts. A power of attorney authorises another person to act on your behalf. They are entirely different documents used for different purposes, though both require signing before authorized officials.' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Civil Lawyer Dhaka', to: '/civil-lawyer-dhaka' },
+            { text: 'Land & Property Lawyer', to: '/land-property-lawyer-dhaka' },
+        ],
+    },
+
+    /* ── 57 ── */
+    {
+        slug: 'challenge-court-order-revision-review-bangladesh',
+        bnSlug: 'adalat-adesh-challenge-revision-bangladesh',
+        title: 'How to Challenge a Court Order in Bangladesh: Revision, Review, and Appeal',
+        category: 'Legal Procedures',
+        readTime: '8 min read',
+        metaTitle: 'Challenge Court Order Bangladesh – Revision, Review, and Appeal Guide',
+        metaDescription: 'Disagree with a court order in Bangladesh? Learn the difference between revision, review, and appeal — when to use each, time limits, and how to file with a Supreme Court lawyer.',
+        keywords: ['revision petition Bangladesh', 'review petition Bangladesh', 'challenge court order Bangladesh', 'appeal vs revision Bangladesh', 'court order challenge Dhaka', 'Supreme Court lawyer Bangladesh'],
+        publishedDate: '2026-04-12',
+        heroIntro: 'Receiving an adverse court order is not the end of your legal road in Bangladesh. The law provides several mechanisms to challenge court orders — revision, review, and appeal — each with distinct criteria, time limits, and courts. Choosing the right mechanism at the right time is critical to protecting your legal rights.',
+        toc: [
+            'The Three Routes to Challenge a Court Order',
+            'What is an Appeal in Bangladesh?',
+            'What is a Revision Petition?',
+            'What is a Review Petition?',
+            'Comparison: Appeal vs. Revision vs. Review',
+            'Time Limits for Filing',
+            'Filing at the High Court and Supreme Court',
+        ],
+        sections: [
+            {
+                h2: 'The Three Routes to Challenge a Court Order',
+                content: `<p>In Bangladesh, court orders can be challenged through three main mechanisms:</p>
+<ul>
+<li><strong>Appeal:</strong> A superior court rehears the case on merit — both facts and law.</li>
+<li><strong>Revision:</strong> A superior court examines only whether the lower court had jurisdiction and whether it followed proper legal procedure — not a rehearing on facts.</li>
+<li><strong>Review:</strong> The same court that passed the order is asked to reconsider it based on specific grounds.</li>
+</ul>
+<p>Selecting the correct route depends on the nature of the order, the court that passed it, and the grounds of challenge. A <a href="/supreme-court-lawyer-dhaka" style="color:var(--accent)">Supreme Court lawyer in Dhaka</a> is essential for High Court and Appellate Division challenges.</p>`,
+            },
+            {
+                h2: 'What is an Appeal in Bangladesh?',
+                content: `<p>An <strong>appeal</strong> is the most comprehensive challenge — the superior court effectively re-examines the case, both the factual findings and the application of law. Key features:</p>
+<ul>
+<li>Available as a <strong>right</strong> in most cases (statutory right of appeal).</li>
+<li>Goes to a higher court: District Court appeal from Magistrate Court, High Court appeal from District Court, Appellate Division from High Court.</li>
+<li>Can challenge findings of fact, evaluation of evidence, and legal errors.</li>
+<li>For criminal cases: the State can also appeal against acquittals.</li>
+</ul>`,
+            },
+            {
+                h2: 'What is a Revision Petition?',
+                content: `<p>A <strong>revision petition</strong> under Section 115 of the Code of Civil Procedure (CPC) or Section 439 of the Code of Criminal Procedure (CrPC) allows the High Court to examine whether a subordinate court:</p>
+<ul>
+<li>Acted without jurisdiction or exceeded its jurisdiction.</li>
+<li>Failed to exercise jurisdiction it should have exercised.</li>
+<li>Acted with material irregularity or illegality in the exercise of jurisdiction.</li>
+</ul>
+<p><strong>Important:</strong> Revision is not a second appeal. The High Court in revision does not re-examine factual findings — it only examines jurisdictional and procedural errors. A revision cannot be used merely because you disagree with the decision on facts.</p>`,
+            },
+            {
+                h2: 'What is a Review Petition?',
+                content: `<p>A <strong>review petition</strong> (Order 47 CPC) asks the same court that passed the order to reconsider it. Grounds for review are limited:</p>
+<ul>
+<li>Discovery of new and important evidence not previously available.</li>
+<li>A mistake or error apparent on the face of the record.</li>
+<li>Any other sufficient reason.</li>
+</ul>
+<p>Review is the narrowest remedy — courts rarely grant review unless there is a clear error on the face of the judgment. It is not a mechanism to relitigate the case or introduce new arguments that could have been raised originally.</p>`,
+            },
+            {
+                h2: 'Time Limits for Filing',
+                content: `<p>Time limits under the Limitation Act 1908 are strict — missing the deadline usually ends your right to challenge:</p>
+<ul>
+<li><strong>Civil appeal to District Court:</strong> 30 days from the decree.</li>
+<li><strong>Civil appeal to High Court:</strong> 90 days.</li>
+<li><strong>Criminal appeal:</strong> 60 days from the date of conviction or sentence.</li>
+<li><strong>Revision (civil):</strong> 90 days from the order.</li>
+<li><strong>Revision (criminal):</strong> No strict limitation but delay must be explained.</li>
+<li><strong>Review:</strong> 30 days from the date of decree/order.</li>
+</ul>
+<p>Limitation can be condoned (extended) if you show sufficient cause for the delay — but courts are strict and delays must be genuinely explained. Act immediately after an adverse order.</p>
+<p><a href="/" style="color:var(--accent)">Contact Advocate Md. Shah Alam in Uttara</a> immediately upon receiving an adverse court order — delay costs legal rights.</p>`,
+            },
+        ],
+        faqs: [
+            { question: 'Can I file both a review and a revision on the same order?', answer: 'Generally no — you should use the appropriate remedy. Filing a review and then a revision (or vice versa) can complicate your case. Choose the right mechanism based on the nature of the error with guidance from a lawyer.' },
+            { question: 'What is a writ petition and is it different from revision?', answer: 'Yes. A writ petition before the High Court under Articles 102 of Bangladesh Constitution challenges the constitutional validity of actions or laws, or enforces fundamental rights. Revision challenges ordinary procedural or jurisdictional errors in lower court orders. Both are different tools for different situations.' },
+            { question: 'Can I get a stay of the lower court order while filing revision?', answer: 'Yes. When filing a revision or appeal, you can simultaneously apply for a stay of the lower court order (execution of the decree). Courts often grant a conditional stay pending hearing of the revision or appeal.' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Supreme Court Lawyer', to: '/supreme-court-lawyer-dhaka' },
+            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-dhaka-uttara' },
+        ],
+    },
+
 ];
 
 export default posts;
