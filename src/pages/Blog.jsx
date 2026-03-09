@@ -5,13 +5,13 @@ import { Search, Clock, ChevronRight, BookOpen } from 'lucide-react';
 import blogPosts, { isPublished } from '../data/blogPosts';
 import { telLink, waLink } from '../data/contactInfo';
 
-const CATEGORIES = ['All', 'Criminal Law', 'Family Law', 'Property Law', 'Tax Law', 'Civil Law'];
+const CATEGORIES = ['All', 'Criminal Law', 'Family Law', 'Property Law', 'Company & Corporate Law', 'Civil Law'];
 
 const categoryColors = {
     'Criminal Law': '#EF4444',
     'Family Law': '#8B5CF6',
     'Property Law': '#10B981',
-    'Tax Law': '#F59E0B',
+    'Company & Corporate Law': '#F59E0B',
     'Civil Law': '#3B82F6',
 };
 
@@ -94,7 +94,7 @@ const Blog = () => {
                 <title>Legal Blog – Bangladesh Law Guide | Advocate Md. Shah Alam</title>
                 <meta
                     name="description"
-                    content="Expert legal articles on criminal, family, property &amp; tax law in Bangladesh by Advocate Md. Shah Alam. Guides on bail, divorce, land disputes and more."
+                    content="Expert legal articles on criminal, family, property &amp; company law in Bangladesh by Advocate Md. Shah Alam. Guides on bail, divorce, land disputes and more."
                 />
                 <link rel="canonical" href="https://www.advmdshahalam.me/blog" />
             </Helmet>
@@ -116,7 +116,7 @@ const Blog = () => {
                     </h1>
                     <p className="text-lg max-w-2xl mx-auto leading-relaxed" style={{ color: 'var(--hero-text-2)' }}>
                         Practical, plain-language legal guides on Bangladesh law — criminal, family,
-                        property, and tax matters — written by Advocate Md. Shah Alam.
+                        property, and company matters — written by Advocate Md. Shah Alam.
                     </p>
                 </div>
             </section>

@@ -19,7 +19,7 @@ const Footer = () => {
         { name: 'Land & Property Lawyer', path: '/services/land-lawyer' },
         { name: 'Bail Lawyer in Dhaka', path: '/services/bail-lawyer' },
         { name: 'Supreme Court Lawyer', path: '/services/supreme-court-lawyer' },
-        { name: 'Income Tax & VAT Lawyer', path: '/services/tax-lawyer' },
+        { name: 'Company & Corporate Law', path: '/services/company-corporate-lawyer' },
     ];
 
     const quickLinks = [

@@ -20,6 +20,7 @@ const LandLawyer = lazy(() => import('./pages/services/LandLawyer'));
 const BailLawyer = lazy(() => import('./pages/services/BailLawyer'));
 const SupremeCourtLawyer = lazy(() => import('./pages/services/SupremeCourtLawyer'));
 const TaxLawyer = lazy(() => import('./pages/services/TaxLawyer'));
+const CompanyCorporateLawyer = lazy(() => import('./pages/services/CompanyCorporateLawyer'));
 const AdvocatePage = lazy(() => import('./pages/AdvocatePage'));
 
 // Minimal fallback — keeps layout stable while the chunk loads
@@ -47,6 +48,7 @@ function App() {
                 <Route path="/services/bail-lawyer" element={<BailLawyer />} />
                 <Route path="/services/supreme-court-lawyer" element={<SupremeCourtLawyer />} />
                 <Route path="/services/tax-lawyer" element={<TaxLawyer />} />
+                <Route path="/services/company-corporate-lawyer" element={<CompanyCorporateLawyer />} />
 
                 {/* Short-slug aliases used by blog internal links */}
                 <Route path="/criminal-lawyer-uttara" element={<CriminalLawyer />} />
@@ -71,6 +73,8 @@ function App() {
                 <Route path="/bn/services/bail-lawyer" element={<Navigate to="/services/bail-lawyer" replace />} />
                 <Route path="/bn/services/supreme-court-lawyer" element={<Navigate to="/services/supreme-court-lawyer" replace />} />
                 <Route path="/bn/services/tax-lawyer" element={<Navigate to="/services/tax-lawyer" replace />} />
+                <Route path="/bn/services/company-corporate-lawyer" element={<Navigate to="/services/company-corporate-lawyer" replace />} />
+                <Route path="/bn/advocate-md-shah-alam" element={<Navigate to="/advocate-md-shah-alam" replace />} />
               </Routes>
             </Suspense>
           </Layout>

@@ -68,9 +68,9 @@ const serviceLinks = [
         desc: 'High Court & Appellate Division practice.',
     },
     {
-        name: 'Income Tax & VAT Lawyer',
-        path: '/services/tax-lawyer',
-        desc: 'NBR disputes, appeals, TAT & High Court tax cases.',
+        name: 'Company & Corporate Law',
+        path: '/services/company-corporate-lawyer',
+        desc: 'Business formation, company disputes, partnerships & commercial matters.',
     },
 ];
 
@@ -81,7 +81,7 @@ const personSchema = {
     name: 'Advocate Md. Shah Alam',
     alternateName: 'Adv. Md. Shah Alam',
     description:
-        'Experienced advocate practising at the Supreme Court of Bangladesh, Metro Sessions Court Dhaka, and all subordinate courts. 7+ years specialising in criminal, family, property, and tax law.',
+        'Experienced advocate practising at the Supreme Court of Bangladesh, Metro Sessions Court Dhaka, and all subordinate courts. 7+ years specialising in criminal, family, property, and company & corporate law.',
     url: 'https://www.advmdshahalam.me/advocate-md-shah-alam',
     image: 'https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.png',
     jobTitle: 'Advocate',
@@ -113,7 +113,7 @@ const personSchema = {
         'Bail Law Bangladesh',
         'Family Law Bangladesh',
         'Property Law Bangladesh',
-        'Tax Law Bangladesh',
+        'Company & Corporate Law Bangladesh',
         'Supreme Court Practice Bangladesh',
     ],
     alumniOf: [
@@ -142,7 +142,7 @@ const legalServiceSchema = {
     email: 'shahalam0332@gmail.com',
     image: 'https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.png',
     description:
-        'Full-service legal practice in Uttara and Dhaka, Bangladesh. Criminal, family, property, and tax law.',
+        'Full-service legal practice in Uttara and Dhaka, Bangladesh. Criminal, family, property, and company & corporate law.',
     address: {
         '@type': 'PostalAddress',
         streetAddress: 'Mantrust Nazma Monzil, Sector 12, Uttara West',
@@ -228,12 +228,12 @@ const faqPageFaqs = [
     {
         question: 'Who is Advocate Md. Shah Alam?',
         answer:
-            'Advocate Md. Shah Alam is an experienced lawyer based in Uttara, Dhaka, Bangladesh, practising at the Supreme Court of Bangladesh and the Metro Sessions Court, Dhaka. He has 20+ years of experience in criminal, family, property, and tax law.',
+            'Advocate Md. Shah Alam is an experienced lawyer based in Uttara, Dhaka, Bangladesh, practising at the Supreme Court of Bangladesh and the Metro Sessions Court, Dhaka. He has 20+ years of experience in criminal, family, property, and company & corporate law.',
     },
     {
         question: 'What areas of law does Advocate Shah Alam specialise in?',
         answer:
-            'His primary practice areas are criminal law (including bail, FIR cases, and trials), family law (divorce, custody, maintenance), land & property law (title suits, partition, injunctions), bail applications, Supreme Court practice, and income tax & VAT disputes.',
+            'His primary practice areas are criminal law (including bail, FIR cases, and trials), family law (divorce, custody, maintenance), land & property law (title suits, partition, injunctions), bail applications, Supreme Court practice, and company & corporate matters.',
     },
     {
         question: 'Where does Advocate Shah Alam practise?',
@@ -248,7 +248,7 @@ const faqPageFaqs = [
     {
         question: 'Can Advocate Shah Alam handle Supreme Court cases?',
         answer:
-            'Yes. Advocate Shah Alam is enrolled to practise at the Supreme Court of Bangladesh, including both the High Court Division and the Appellate Division. He handles criminal appeals, writ petitions, tax references, and other appellate matters.',
+            'Yes. Advocate Shah Alam is enrolled to practise at the Supreme Court of Bangladesh, including both the High Court Division and the Appellate Division. He handles criminal appeals, writ petitions, company law references, and other appellate matters.',
     },
     {
         question: 'Does Advocate Shah Alam handle cases outside Uttara?',
@@ -332,7 +332,7 @@ const AdvocatePage = () => {
                     <p className="text-base leading-relaxed max-w-2xl mb-8" style={{ color: 'var(--hero-text-2)' }}>
                         With over 20 years of experience, Advocate Md. Shah Alam is a trusted legal authority
                         in Uttara and across Dhaka, providing expert counsel in criminal, family, property, and
-                        tax law at all court levels in Bangladesh.
+                        company & corporate law at all court levels in Bangladesh.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4">
                         <a href={waLink('I need legal advice')} target="_blank" rel="noopener noreferrer"
@@ -363,7 +363,7 @@ const AdvocatePage = () => {
                                 { label: 'Profession', value: 'Advocate (Lawyer)' },
                                 { label: 'Enrolment', value: 'Bangladesh Bar Council' },
                                 { label: 'Primary Courts', value: 'Supreme Court of Bangladesh · Metro Sessions Court, Dhaka' },
-                                { label: 'Main Practice Areas', value: 'Criminal · Family · Property · Tax Law' },
+                                { label: 'Main Practice Areas', value: 'Criminal · Family · Property · Company Law' },
                                 { label: 'Service Locations', value: 'Uttara · Dhaka (all courts)' },
                                 { label: 'Experience', value: '20+ years of legal practice' },
                                 { label: 'Phone (Call)', value: '+880 1712-655546' },
@@ -418,7 +418,7 @@ const AdvocatePage = () => {
                                     His practice has a strong local presence serving clients in Uttara and across Dhaka,
                                     with a particular reputation in criminal defence (especially bail and FIR matters),
                                     family law disputes (divorce, custody, maintenance), land and property litigation,
-                                    and income tax & VAT disputes before the NBR and the Taxes Appellate Tribunal.
+                                    and company & corporate matters.
                                 </p>
                             </div>
                         </div>

@@ -47,9 +47,9 @@ const services = [
     },
     {
         icon: FileText,
-        title: 'Income Tax & VAT Lawyer in Dhaka',
-        desc: 'Expert handling of tax disputes, income tax cases, VAT matters, NBR disputes, and the tax appeal process.',
-        link: '/services/tax-lawyer',
+        title: 'Company & Corporate Law',
+        desc: 'Business formation, company disputes, partnerships, corporate compliance, and commercial legal matters.',
+        link: '/services/company-corporate-lawyer',
         iconColor: 'rgba(217,119,6,0.12)',
         iconText: '#D97706',
     },

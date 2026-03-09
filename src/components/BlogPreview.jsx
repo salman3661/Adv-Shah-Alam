@@ -13,7 +13,7 @@ const categoryColors = {
     'Criminal Law': { bg: 'rgba(59,130,246,0.1)', color: '#3B82F6' },
     'Family Law': { bg: 'rgba(236,72,153,0.1)', color: '#EC4899' },
     'Property Law': { bg: 'rgba(34,197,94,0.1)', color: '#22C55E' },
-    'Tax Law': { bg: 'rgba(217,119,6,0.1)', color: '#D97706' },
+    'Company & Corporate Law': { bg: 'rgba(217,119,6,0.1)', color: '#D97706' },
     'Civil Law': { bg: 'rgba(124,58,237,0.1)', color: '#7C3AED' },
     'Cyber Law': { bg: 'rgba(6,182,212,0.1)', color: '#06B6D4' },
     'Legal Procedures': { bg: 'rgba(16,185,129,0.1)', color: '#10B981' },

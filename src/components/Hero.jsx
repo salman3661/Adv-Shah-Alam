@@ -101,13 +101,13 @@ const Hero = () => {
                     {/* SEO Subheading */}
                     <p className="text-lg md:text-xl leading-relaxed max-w-xl mx-auto md:mx-0 mb-4 font-medium"
                         style={{ color: 'var(--text-2)' }}>
-                        Providing Legal Representation in Criminal, Divorce, Land, Bail, Tax &amp; Supreme Court Matters in Dhaka &amp; Bangladesh.
+                        Providing Legal Representation in Criminal, Divorce, Land, Bail, Company &amp; Corporate, and Supreme Court Matters in Dhaka &amp; Bangladesh.
                     </p>
 
                     {/* Keyword-rich intro */}
                     <p className="text-sm md:text-base leading-relaxed max-w-lg mx-auto md:mx-0 mb-8"
                         style={{ color: 'var(--text-muted)' }}>
-                        As a trusted <strong style={{ color: 'var(--text-2)' }}>lawyer in Uttara</strong> and <strong style={{ color: 'var(--text-2)' }}>advocate in Uttara</strong>, Adv. Shah Alam offers expert criminal, divorce, land, bail, Supreme Court, and income tax legal services in Dhaka. Experienced Lawyer with proven courtroom excellence.
+                        As a trusted <strong style={{ color: 'var(--text-2)' }}>lawyer in Uttara</strong> and <strong style={{ color: 'var(--text-2)' }}>advocate in Uttara</strong>, Adv. Shah Alam offers expert criminal, divorce, land, bail, Supreme Court, and company &amp; corporate legal services in Dhaka. Experienced Lawyer with proven courtroom excellence.
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">

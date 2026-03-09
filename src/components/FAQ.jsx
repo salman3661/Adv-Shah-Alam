@@ -21,8 +21,8 @@ const faqs = [
         a: 'Land disputes in Bangladesh are resolved through civil courts by filing a title suit, partition suit, or declaration suit. Supporting documents include deed of sale, mutation records, RS/BS khatian, and possession evidence. An experienced land dispute lawyer in Uttara can assess your documents, represent you in court, and pursue swift resolution.',
     },
     {
-        q: 'How to file income tax appeal in Bangladesh?',
-        a: 'If you disagree with a tax assessment order from the NBR, you can file an appeal before the Taxes Appellate Tribunal within 45 days of receiving the order. Further appeal to the High Court Division is available on legal questions. An income tax lawyer in Bangladesh with NBR knowledge can significantly improve your chances of a successful appeal.',
+        q: 'What does a Company & Corporate lawyer do in Bangladesh?',
+        a: 'A company and corporate lawyer in Bangladesh helps with business formation under the Companies Act 1994, drafting partnership agreements, shareholder disputes, corporate compliance, and commercial contract review. Advocate Shah Alam advises businesses and entrepreneurs across Dhaka on protecting their commercial interests.',
     },
 ];
 
