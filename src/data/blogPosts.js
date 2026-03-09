@@ -4374,6 +4374,2102 @@ const posts = [
             { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
         ],
     },
+
+    /* ── 23 ── */
+    {
+        slug: 'police-remand-rights-bangladesh',
+        title: 'Police Remand Rights in Bangladesh: What You Must Know',
+        category: 'Criminal Law',
+        readTime: '7 min read',
+        metaTitle: 'Police Remand Rights in Bangladesh – Know Your Legal Rights',
+        metaDescription: 'Everything you need to know about police remand in Bangladesh — legal basis, your rights in custody, how to challenge unlawful remand, and how a criminal lawyer in Dhaka can help.',
+        keywords: ['police remand Bangladesh', 'remand rights Bangladesh', 'police custody Bangladesh', 'CrPC remand procedure', 'criminal lawyer Dhaka', 'unlawful detention Bangladesh', 'remand order Bangladesh', 'legal rights in custody Bangladesh'],
+        publishedDate: '2026-03-09',
+        heroIntro: 'When police take someone into custody and apply for remand — permission to detain and question them beyond 24 hours — the accused and their family are often left frightened and uninformed. Understanding your legal rights during police remand in Bangladesh can make the difference between lawful process and unchecked abuse.',
+        toc: [
+            'What Is Police Remand in Bangladesh?',
+            'Legal Basis for Remand Under CrPC',
+            'Maximum Remand Period Allowed',
+            'Your Rights While in Police Custody',
+            'How Courts Decide Remand Applications',
+            'How to Challenge an Unlawful Remand',
+            'Role of a Lawyer During Remand',
+            'Protecting Yourself from Custodial Abuse',
+        ],
+        sections: [
+            {
+                h2: 'What Is Police Remand in Bangladesh?',
+                content: `<p>Police remand — formally called <strong>police custody remand</strong> — is when a court authorises police to keep an arrested person in their physical custody for further interrogation, beyond the standard 24-hour period within which every arrested person must be produced before a Magistrate.</p>
+<p>Remand is applied for by police when they believe the accused has information critical to the investigation that cannot be obtained otherwise. It is one of the most misused provisions in Bangladesh criminal procedure, making it essential that accused persons and their families understand the legal limits and available protections. Contact a <a href="/criminal-lawyer-uttara" style="color:var(--accent)">criminal lawyer in Uttara or Dhaka</a> the moment remand is applied for.</p>`,
+            },
+            {
+                h2: 'Legal Basis for Remand Under CrPC',
+                content: `<p>Remand is governed by <strong>Section 167 of the Code of Criminal Procedure 1898 (CrPC)</strong>. Under this section:</p>
+<ul>
+<li>Police may produce the accused before the Magistrate within 24 hours of arrest and apply for further custody.</li>
+<li>The Magistrate may authorise police custody for up to <strong>15 days total</strong> during an investigation — not necessarily in a single order.</li>
+<li>After 15 days, police custody is not permitted; the accused must be placed in judicial custody (jail) if investigation continues.</li>
+<li>If investigation is not completed within <strong>60 days</strong> (for offences punishable with death or life imprisonment) or <strong>30 days</strong> (for other offences), the accused is entitled to bail as a right under the proviso to Section 167(2).</li>
+</ul>
+<p>These are hard limits — courts cannot lawfully authorise police remand beyond these periods.</p>`,
+            },
+            {
+                h2: 'Maximum Remand Period Allowed',
+                content: `<p>Under Section 167 CrPC as applicable in Bangladesh, the key remand time limits are:</p>
+<ul>
+<li><strong>24 hours:</strong> Police must produce the accused before the nearest Magistrate within 24 hours of arrest (excluding travel time).</li>
+<li><strong>15 days:</strong> Maximum total period of police custody remand during investigation.</li>
+<li><strong>30/60 days:</strong> If charge sheet is not filed within this period, the accused acquires an enforceable right to bail.</li>
+</ul>
+<p>It is illegal for police to hold an accused person beyond 24 hours without a Magistrate's remand order. An advocate can immediately apply to the Magistrate to challenge any unlawful extension of custody.</p>`,
+            },
+            {
+                h2: 'Your Rights While in Police Custody',
+                content: `<p>Bangladesh law and constitutional provisions guarantee several rights to a person in police custody:</p>
+<ul>
+<li><strong>Right to be informed of grounds of arrest</strong> (Article 33 of the Constitution).</li>
+<li><strong>Right to consult a lawyer</strong> of your choice without delay.</li>
+<li><strong>Right to be produced before a Magistrate</strong> within 24 hours.</li>
+<li><strong>Right to be free from torture and inhuman treatment</strong> — the Constitution and Torture and Custodial Death (Prevention) Act 2013 prohibit custodial torture.</li>
+<li><strong>Right to medical examination</strong> if you allege physical abuse.</li>
+<li><strong>Right to notify family</strong> members of your arrest and location of custody.</li>
+</ul>
+<p>Any statement given under compulsion or torture is legally unreliable and may be challenged in court. <a href="/bail-lawyer-dhaka" style="color:var(--accent)">Contact a bail lawyer in Dhaka</a> immediately if remand is sought for a family member.</p>`,
+            },
+            {
+                h2: 'How Courts Decide Remand Applications',
+                content: `<p>When police apply for remand, the Magistrate must assess whether:</p>
+<ul>
+<li>There is a reasonable connection between the accused and the alleged offence.</li>
+<li>Police custody is genuinely necessary for the investigation (e.g., recovery of weapons, discovery of evidence).</li>
+<li>Judicial custody (jail) cannot serve the investigative purpose equally well.</li>
+<li>The accused has already provided a statement voluntarily.</li>
+</ul>
+<p>A skilled defence lawyer can appear before the Magistrate and argue against granting remand or for reducing the remand period. Courts are empowered to deny remand applications — they are not automatic approvals.</p>`,
+            },
+            {
+                h2: 'How to Challenge an Unlawful Remand',
+                content: `<p>If a remand order has been granted improperly or police are detaining someone without a valid order, legal challenges include:</p>
+<ul>
+<li><strong>Habeas Corpus petition</strong> — A writ of habeas corpus filed before the High Court Division of the Bangladesh Supreme Court can secure immediate release if detention is unlawful. This is one of the most powerful and fast-acting remedies available.</li>
+<li><strong>Application before the Magistrate</strong> — The accused's lawyer may appear before the same Magistrate to contest a remand order or request its cancellation.</li>
+<li><strong>Revision application</strong> — Against a Magistrate's remand order to the Sessions Judge.</li>
+</ul>
+<p>Act without delay. Every hour of unlawful custody matters. A <a href="/supreme-court-lawyer-bangladesh" style="color:var(--accent)">Supreme Court lawyer in Bangladesh</a> can file habeas corpus on an emergency basis.</p>`,
+            },
+            {
+                h2: 'Role of a Lawyer During Remand',
+                content: `<p>The moment police apply for remand, having a lawyer present makes a decisive difference. A criminal lawyer in Dhaka will:</p>
+<ul>
+<li>Appear before the Magistrate to oppose the remand application or request reduced custody.</li>
+<li>Ensure the accused's rights are stated on the record.</li>
+<li>File for bail simultaneously — a bail application can be heard even while remand is pending.</li>
+<li>Request a medical examination if the accused shows signs of physical abuse.</li>
+<li>File a habeas corpus petition in the High Court if the detention is unlawful.</li>
+</ul>
+<p>Advocate Md. Shah Alam has represented clients at remand hearings across Dhaka including urgent matters in the High Court Division. If someone you know is facing remand, <a href="/criminal-lawyer-uttara" style="color:var(--accent)">contact a criminal lawyer in Uttara</a> without waiting.</p>`,
+            },
+            {
+                h2: 'Protecting Yourself from Custodial Abuse',
+                content: `<p>Custodial abuse, while prohibited by law, is a known risk in Bangladesh. Practical steps to protect yourself or a family member:</p>
+<ul>
+<li>Ensure a lawyer is present at the Magistrate hearing when remand is applied for.</li>
+<li>Request a medical examination before police custody begins, to document baseline condition.</li>
+<li>Document the names of officers involved in the arrest and remand proceedings.</li>
+<li>File a complaint with the National Human Rights Commission of Bangladesh if custodial abuse is alleged.</li>
+<li>Any confession made under duress during remand can be challenged at trial as involuntary and inadmissible.</li>
+</ul>
+<p>The law is on your side — but only if it is actively enforced by a qualified advocate.</p>`,
+            },
+        ],
+        faqs: [
+            { question: 'Can police keep someone in custody for more than 24 hours without remand?', answer: 'No. Under Section 61 CrPC, an arrested person must be produced before the nearest Magistrate within 24 hours. Detention beyond that without a remand order is unlawful.' },
+            { question: 'What is the maximum remand period in Bangladesh?', answer: 'Police custody remand cannot exceed 15 days in total during investigation under Section 167 CrPC. After that, only judicial custody (jail) is permitted.' },
+            { question: 'Can a lawyer be present during police interrogation on remand?', answer: 'The right to consult a lawyer is guaranteed, though police interrogation sessions are not usually attended by lawyers in practice. Your lawyer can seek court directions to be present if abuse is suspected.' },
+            { question: 'Can a remand order be challenged?', answer: 'Yes. A habeas corpus petition to the High Court Division, a revision application to the Sessions Judge, or an application to the same Magistrate can challenge a remand order.' },
+            { question: 'What is habeas corpus in Bangladesh?', answer: 'It is a writ filed in the High Court Division ordering the authorities to produce a detained person in court and justify the detention. It is the fastest remedy for unlawful custody.' },
+            { question: 'Can bail be applied for while remand is pending?', answer: 'Yes. A bail application can be filed simultaneously. Obtaining bail will end police custody and move the accused to freedom or judicial custody.' },
+            { question: 'What should family members do when someone is taken for remand?', answer: 'Immediately contact a criminal lawyer in Dhaka. Note the police station, case number, and officer names. The lawyer will appear at the Magistrate hearing and explore all available remedies.' },
+            { question: 'Is a confession given during remand admissible in court?', answer: 'Under Section 164 CrPC, a confessional statement recorded by a Magistrate (not police) may be admissible. Statements made to police during remand are generally inadmissible as evidence of guilt under Section 25 of the Evidence Act.' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-uttara' },
+            { text: 'Bail Lawyer Dhaka', to: '/bail-lawyer-dhaka' },
+            { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
+        ],
+    },
+
+    /* ── 24 ── */
+    {
+        slug: 'criminal-appeal-procedure-bangladesh',
+        title: 'Criminal Appeal Procedure in Bangladesh: How to Challenge a Conviction',
+        category: 'Criminal Law',
+        readTime: '8 min read',
+        metaTitle: 'Criminal Appeal in Bangladesh – How to Challenge a Conviction',
+        metaDescription: 'A complete guide to the criminal appeal procedure in Bangladesh — grounds for appeal, which court to approach, time limits, and how an experienced lawyer can overturn a wrongful conviction.',
+        keywords: ['criminal appeal Bangladesh', 'appeal against conviction Bangladesh', 'Sessions Court appeal Bangladesh', 'High Court criminal appeal', 'criminal lawyer Dhaka', 'conviction appeal Bangladesh', 'appeal against acquittal Bangladesh', 'revisional jurisdiction Bangladesh'],
+        publishedDate: '2026-03-10',
+        heroIntro: 'A criminal conviction is not always the final word. Bangladesh law provides a clear appellate process through which a convicted person — or even the prosecution — can challenge court decisions. Understanding how criminal appeals work can mean the difference between justice and a wrongful conviction standing unchallenged.',
+        toc: [
+            'What Is a Criminal Appeal in Bangladesh?',
+            'Who Can File a Criminal Appeal?',
+            'Hierarchy of Criminal Courts in Bangladesh',
+            'Grounds for Filing a Criminal Appeal',
+            'Time Limits for Filing Appeals',
+            'How to File a Criminal Appeal',
+            'Stay of Sentence While Appeal is Pending',
+            'Revision and Reference Jurisdiction',
+        ],
+        sections: [
+            {
+                h2: 'What Is a Criminal Appeal in Bangladesh?',
+                content: `<p>A criminal appeal is a formal legal challenge filed before a higher court, asking it to review and overturn or modify a lower court's decision. In Bangladesh, the right to appeal is created entirely by statute — primarily the <strong>Code of Criminal Procedure 1898 (CrPC)</strong> in Chapter XXXI (Sections 404–431).</p>
+<p>Appeals exist to correct errors of law or fact made by lower courts. They serve as a critical safeguard against wrongful convictions and disproportionate sentences. If you or someone you know has been convicted at a lower court, consulting a <a href="/criminal-lawyer-uttara" style="color:var(--accent)">criminal lawyer in Uttara or Dhaka</a> immediately is the most important first step.</p>`,
+            },
+            {
+                h2: 'Who Can File a Criminal Appeal?',
+                content: `<p>The following parties may file criminal appeals in Bangladesh:</p>
+<ul>
+<li><strong>The convicted person</strong> — against conviction and/or sentence.</li>
+<li><strong>The complainant</strong> — against an acquittal (in some cases with leave of court).</li>
+<li><strong>The State (Government)</strong> — through the public prosecutor, against an acquittal or inadequate sentence.</li>
+<li><strong>A person aggrieved</strong> — against certain orders affecting their interests (e.g., compensation orders, forfeiture).</li>
+</ul>
+<p>An appeal by the accused must be filed within the prescribed limitation period. A lawyer must review the judgment carefully to identify the strongest grounds of appeal immediately after conviction.</p>`,
+            },
+            {
+                h2: 'Hierarchy of Criminal Courts in Bangladesh',
+                content: `<p>Understanding which court hears which appeal is essential:</p>
+<ul>
+<li><strong>Magistrate Court decisions</strong> → Appeal lies to the <strong>Sessions Court (Sessions Judge)</strong>.</li>
+<li><strong>Sessions Court decisions</strong> → Appeal lies to the <strong>High Court Division</strong> of the Bangladesh Supreme Court.</li>
+<li><strong>High Court Division decisions</strong> → Appeal lies (with leave) to the <strong>Appellate Division</strong> of the Bangladesh Supreme Court.</li>
+<li><strong>Special Tribunal decisions</strong> → The specific statute creating the tribunal specifies the appellate forum (e.g., Speedy Trial Tribunal appeals go to the High Court Division).</li>
+</ul>
+<p>For High Court and Appellate Division appeals, an experienced <a href="/supreme-court-lawyer-bangladesh" style="color:var(--accent)">Supreme Court lawyer in Bangladesh</a> is essential.</p>`,
+            },
+            {
+                h2: 'Grounds for Filing a Criminal Appeal',
+                content: `<p>A criminal appeal may be based on one or more of the following grounds:</p>
+<ul>
+<li><strong>Error of law:</strong> The lower court misapplied or misinterpreted a legal provision.</li>
+<li><strong>Error of fact:</strong> The court's factual findings were not supported by the evidence on record.</li>
+<li><strong>Improper admission or rejection of evidence:</strong> The court admitted inadmissible evidence or refused admissible evidence that was material to the outcome.</li>
+<li><strong>Procedural irregularity:</strong> The trial was conducted in violation of mandatory procedural requirements (e.g., failure to frame proper charges, denial of the right to be heard).</li>
+<li><strong>Disproportionate sentence:</strong> The sentence was excessive or inadequate relative to the offence and circumstances.</li>
+<li><strong>Newly discovered evidence:</strong> Material evidence unavailable at trial has now come to light.</li>
+</ul>
+<p>Identifying the strongest grounds is a technical legal exercise requiring careful review of the trial record, witness depositions, and the judgment. Do not delay — time limits are strict.</p>`,
+            },
+            {
+                h2: 'Time Limits for Filing Appeals',
+                content: `<p>Appeals must be filed within the periods specified in the Limitation Act 1908 and the CrPC. Key limitation periods:</p>
+<ul>
+<li><strong>Appeal from Magistrate to Sessions Court:</strong> 30 days from the date of the judgment or order.</li>
+<li><strong>Appeal from Sessions Court to High Court Division:</strong> 60 days from the date of the Sessions Court judgment.</li>
+<li><strong>Appeal to Appellate Division:</strong> As specified by the Appellate Division's own rules — typically within 30 days of the High Court judgment, with the need to obtain leave to appeal.</li>
+</ul>
+<p>Courts have discretion to condone delay (extend the limitation period) if sufficient cause is shown, but this is not guaranteed. <strong>File immediately after conviction</strong> — every day of delay weakens the application for condonation of delay.</p>`,
+            },
+            {
+                h2: 'How to File a Criminal Appeal',
+                content: `<p>Filing a criminal appeal in Bangladesh involves these steps:</p>
+<ol>
+<li>Obtain a certified copy of the lower court's judgment and order — this is mandatory for filing the appeal.</li>
+<li>Instruct a <a href="/criminal-lawyer-uttara" style="color:var(--accent)">criminal lawyer in Dhaka</a> experienced in appellate practice.</li>
+<li>Draft the memorandum of appeal, setting out the grounds of challenge in clear legal terms.</li>
+<li>File the appeal petition with the prescribed court fee in the appropriate appellate court.</li>
+<li>The appellate court issues notice to the respondent (State or complainant).</li>
+<li>Both sides file written submissions; oral arguments are then heard.</li>
+<li>The court delivers its judgment — allowing the appeal (setting aside conviction), dismissing it, or modifying the sentence.</li>
+</ol>
+<p>The quality of the memorandum of appeal — the written document setting out the grounds — is critically important. A poorly drafted appeal often fails regardless of merit.</p>`,
+            },
+            {
+                h2: 'Stay of Sentence While Appeal is Pending',
+                content: `<p>A convicted person who has filed an appeal may apply for a stay (suspension) of the sentence while the appeal is being heard. The appellate court can order:</p>
+<ul>
+<li><strong>Suspension of sentence</strong> — the accused is released on bail pending hearing of the appeal.</li>
+<li><strong>Stay of conviction</strong> — the legal effects of the conviction (e.g., disqualification from employment, forfeiture of property) are suspended pending appeal.</li>
+</ul>
+<p>Courts grant stays based on the prima facie strength of the appeal grounds and whether the accused poses a flight or public safety risk. An experienced advocate will file the stay application simultaneously with the appeal petition to minimise time spent in custody.</p>`,
+            },
+            {
+                h2: 'Revision and Reference Jurisdiction',
+                content: `<p>Beyond formal appeals, two additional avenues exist for challenging criminal decisions:</p>
+<ul>
+<li><strong>Criminal Revision (Sections 435–440 CrPC):</strong> A higher court may call for and examine the records of any lower court's proceeding to correct illegality, impropriety, or irregular exercise of jurisdiction. Revision is available even where no formal appeal right exists.</li>
+<li><strong>Reference (Section 432 CrPC):</strong> A Sessions Judge who disagrees with a Magistrate's sentence or who identifies a legal question may refer the matter to the High Court Division for its opinion.</li>
+</ul>
+<p>Revision is particularly useful where a lower court has committed a clear jurisdictional error or gross injustice that falls outside a standard appeal ground. Consult a <a href="/supreme-court-lawyer-bangladesh" style="color:var(--accent)">Supreme Court advocate</a> to determine the most appropriate remedy for your specific situation.</p>`,
+            },
+        ],
+        faqs: [
+            { question: 'How long do I have to appeal a criminal conviction in Bangladesh?', answer: 'Appeals from a Magistrate must be filed within 30 days; from a Sessions Court to the High Court Division within 60 days. File immediately after conviction to preserve your right.' },
+            { question: 'Can I get bail while my criminal appeal is pending?', answer: 'Yes. You can apply for suspension of sentence (bail pending appeal) when filing the appeal. The appellate court decides based on the merits of the appeal and flight risk.' },
+            { question: 'Can the prosecution appeal an acquittal?', answer: 'Yes. The State, through the public prosecutor, can appeal an acquittal to a higher court. A private complainant may also appeal an acquittal with leave of the court in certain cases.' },
+            { question: 'What is the difference between an appeal and a revision in criminal law?', answer: 'An appeal is a right conferred by statute against a specific judgment. Revision is a higher court\'s supervisory power to correct illegality or impropriety in any lower court proceeding, even without a formal appeal right.' },
+            { question: 'Does filing an appeal automatically stay the sentence?', answer: 'No. Filing an appeal does not automatically suspend a sentence. You must separately apply for a stay (suspension of sentence) which the court may or may not grant.' },
+            { question: 'Can new evidence be presented in a criminal appeal?', answer: 'Generally, an appellate court reviews the record of the lower court only. Introducing entirely new evidence at the appeal stage is limited and requires special leave from the court.' },
+            { question: 'Can I appeal a conviction if I pleaded guilty?', answer: 'Yes, but the grounds are limited. You may argue that the guilty plea was not free and voluntary, that you were not properly advised of the consequences, or that the sentence was excessive.' },
+            { question: 'How long does a criminal appeal take in Bangladesh?', answer: 'Sessions Court appeals: 6 months–2 years. High Court Division appeals: 1–5 years depending on the nature of the case and court backlog. Expedited hearing can be requested for urgent cases.' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-uttara' },
+            { text: 'Bail Lawyer Dhaka', to: '/bail-lawyer-dhaka' },
+            { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
+        ],
+    },
+
+    /* ── 25 ── */
+    {
+        slug: 'digital-security-act-bangladesh-legal-rights',
+        title: 'Digital Security Act Bangladesh: Arrest, Bail & Your Legal Rights',
+        category: 'Criminal Law',
+        readTime: '8 min read',
+        metaTitle: 'Digital Security Act Bangladesh – Arrest, Bail & Legal Rights',
+        metaDescription: 'Arrested under the Digital Security Act in Bangladesh? Know your legal rights, bail procedure, common DSA offences, and how to challenge a case. Expert guide by a criminal lawyer in Dhaka.',
+        keywords: ['Digital Security Act Bangladesh', 'DSA case Bangladesh', 'social media arrest Bangladesh', 'cyber law Bangladesh', 'criminal lawyer Dhaka', 'DSA bail Bangladesh', 'freedom of expression Bangladesh', 'online speech Bangladesh law'],
+        publishedDate: '2026-03-11',
+        heroIntro: 'The Digital Security Act 2018 (DSA) has become one of the most contentious and frequently invoked laws in Bangladesh. Journalists, activists, opposition figures, and ordinary citizens have faced arrest under its broad provisions. Knowing your legal rights under the DSA is no longer optional — it is essential.',
+        toc: [
+            'What Is the Digital Security Act 2018?',
+            'Common Offences Under the DSA',
+            'Are DSA Offences Bailable or Non-Bailable?',
+            'Arrest Procedure Under the DSA',
+            'How to Get Bail in a DSA Case',
+            'Challenging a DSA Case: Legal Strategies',
+            'Cyber Tribunal: Where DSA Cases Are Tried',
+            'The Cyber Security Act 2023: Key Changes',
+        ],
+        sections: [
+            {
+                h2: 'What Is the Digital Security Act 2018?',
+                content: `<p>The <strong>Digital Security Act 2018 (DSA)</strong> was enacted by Bangladesh Parliament to address cybercrime, digital fraud, and threats to national security conducted through digital means. However, its broad and vaguely worded provisions — particularly those criminalising online speech — have drawn significant criticism from human rights organisations, press freedom groups, and legal experts.</p>
+<p>The DSA has been used to prosecute individuals for social media posts, online news articles, cartoons, and criticism of public figures. In 2023, the government passed the <strong>Cyber Security Act 2023 (CSA)</strong> to replace the DSA, with some modifications — though many provisions remain similar. Persons arrested under DSA cases filed before the CSA's commencement are still tried under the DSA. Contact a <a href="/criminal-lawyer-uttara" style="color:var(--accent)">criminal lawyer in Dhaka</a> immediately if you or someone you know has been arrested under either law.</p>`,
+            },
+            {
+                h2: 'Common Offences Under the DSA',
+                content: `<p>The Digital Security Act 2018 criminalises a wide range of conduct. Most frequently invoked sections include:</p>
+<ul>
+<li><strong>Section 17:</strong> Attacking digital devices or systems — up to 14 years imprisonment.</li>
+<li><strong>Section 21:</strong> Publishing content damaging the image of the Liberation War, Father of the Nation, or the national anthem — up to 14 years (non-bailable).</li>
+<li><strong>Section 25:</strong> Publishing false, obscene, or defamatory information via digital means — up to 3 years or fine (bailable).</li>
+<li><strong>Section 28:</strong> Publishing content that hurts religious sentiment — up to 5 years (non-bailable).</li>
+<li><strong>Section 29:</strong> Publishing defamatory content online — up to 3 years or fine (bailable).</li>
+<li><strong>Section 31:</strong> Creating or spreading content that disturbs national unity, financial activities, or provokes disorder — up to 7 years (non-bailable).</li>
+<li><strong>Section 32:</strong> Hacking or obtaining government secrets using digital devices — up to 14 years (non-bailable).</li>
+</ul>
+<p>The distinction between bailable and non-bailable offences is critical — it determines whether bail is a right or subject to judicial discretion.</p>`,
+            },
+            {
+                h2: 'Are DSA Offences Bailable or Non-Bailable?',
+                content: `<p>DSA offences are divided into bailable and non-bailable categories:</p>
+<ul>
+<li><strong>Bailable sections</strong> (Sections 25, 29, 48): Bail is a right and must be granted by the court.</li>
+<li><strong>Non-bailable sections</strong> (Sections 17, 19, 21, 27, 28, 31, 32, 33, 34): Bail is discretionary. The accused must apply and convince the court that bail should be granted.</li>
+</ul>
+<p>In practice, prosecutors frequently invoke non-bailable sections — even where the alleged conduct fits bailable provisions — which leads to extended pre-trial custody. A skilled <a href="/bail-lawyer-dhaka" style="color:var(--accent)">bail lawyer in Dhaka</a> can challenge the invocation of non-bailable sections and argue for bail before the Cyber Tribunal or High Court Division.</p>`,
+            },
+            {
+                h2: 'Arrest Procedure Under the DSA',
+                content: `<p>Under the DSA, police have broader powers of arrest than under the general CrPC:</p>
+<ul>
+<li><strong>Warrantless arrest:</strong> Police may arrest without a warrant for cognisable offences under the DSA — these include most non-bailable sections.</li>
+<li><strong>Production before Magistrate/Cyber Tribunal:</strong> The arrested person must be produced before a Magistrate or the Cyber Tribunal within 24 hours.</li>
+<li><strong>Remand:</strong> Police may apply for custody remand under Section 54 of the DSA for investigation — subject to the court's approval.</li>
+<li><strong>Search and seizure:</strong> Police may seize digital devices (phones, laptops, hard drives) during or after arrest.</li>
+</ul>
+<p>If you are arrested under the DSA, <strong>do not make any statement to police without your lawyer present</strong>. Exercise your right to remain silent beyond providing your identity.</p>`,
+            },
+            {
+                h2: 'How to Get Bail in a DSA Case',
+                content: `<p>Obtaining bail in a DSA case — especially for non-bailable sections — requires a strong legal strategy. Steps include:</p>
+<ol>
+<li>Immediately instruct a criminal lawyer with experience in digital security cases and Cyber Tribunal practice.</li>
+<li>Apply for bail before the Cyber Tribunal where the case is pending.</li>
+<li>If the Tribunal refuses bail, apply to the <strong>High Court Division</strong> — which has broader discretion to grant bail in non-bailable DSA cases.</li>
+<li>In arguements, highlight: the accused's ties to the community, no flight risk, lack of prior criminal record, the disproportionate severity of the charge relative to the alleged act, and whether the alleged content is genuinely harmful or merely critical speech.</li>
+</ol>
+<p>Bail in DSA cases — particularly at the Cyber Tribunal level — is often denied at first hearing. Persisting through to the High Court Division is frequently necessary. An experienced <a href="/supreme-court-lawyer-bangladesh" style="color:var(--accent)">Supreme Court lawyer in Bangladesh</a> is often required for High Court bail in DSA cases.</p>`,
+            },
+            {
+                h2: 'Challenging a DSA Case: Legal Strategies',
+                content: `<p>Beyond bail, several legal strategies can be used to challenge a DSA case:</p>
+<ul>
+<li><strong>Quashing the FIR/case:</strong> A writ petition to the High Court Division seeking to quash the DSA case entirely — on grounds that the alleged conduct does not constitute an offence, or that the case is being used to suppress lawful speech.</li>
+<li><strong>Jurisdictional challenge:</strong> Arguing that the Cyber Tribunal lacks territorial or subject-matter jurisdiction over the alleged act.</li>
+<li><strong>Constitutional challenge:</strong> Arguing that the specific DSA section violates the right to freedom of expression under Article 39 of the Bangladesh Constitution.</li>
+<li><strong>Challenging digital evidence:</strong> Contesting the authenticity, chain of custody, and integrity of the digital evidence produced by prosecution.</li>
+<li><strong>Defence at trial:</strong> Challenging the prosecution's witnesses, disputing authorship of the alleged content, or arguing lack of criminal intent (mens rea).</li>
+</ul>
+<p>The legal strategy must be tailored to the specific facts of each case. Contact a <a href="/criminal-lawyer-uttara" style="color:var(--accent)">criminal lawyer in Dhaka or Uttara</a> for a case-specific assessment.</p>`,
+            },
+            {
+                h2: 'Cyber Tribunal: Where DSA Cases Are Tried',
+                content: `<p>DSA cases are tried at the <strong>Cyber Tribunal</strong> — a specialised court established under the DSA to handle all digital security offences. Key facts about the Cyber Tribunal:</p>
+<ul>
+<li>Bangladesh has Cyber Tribunals in Dhaka and will establish them in other divisions as caseload demands.</li>
+<li>The Cyber Tribunal judge has the powers of a Sessions Judge for trial purposes.</li>
+<li>Appeals from Cyber Tribunal conviction go directly to the High Court Division.</li>
+<li>Bail applications not resolved at Tribunal level go to the High Court Division.</li>
+</ul>
+<p>The volume of DSA cases before the Cyber Tribunal means that trials often proceed slowly. Maintaining strong legal representation throughout is critical to protecting the accused's rights at each stage.</p>`,
+            },
+            {
+                h2: 'The Cyber Security Act 2023: Key Changes',
+                content: `<p>The <strong>Cyber Security Act 2023 (CSA)</strong> replaced the DSA effective from late 2023. Key changes under the CSA:</p>
+<ul>
+<li>Some provisions that were non-bailable under the DSA are now bailable under the CSA (e.g., Section 29 — online defamation).</li>
+<li>Maximum penalties for some offences have been reduced.</li>
+<li>Harsher penalties for certain offences against women and children have been introduced.</li>
+<li>The core structure — Cyber Tribunal, police powers, digital evidence rules — remains largely unchanged.</li>
+</ul>
+<p>Cases filed under the DSA before the CSA's commencement continue to be tried under the DSA. New cases filed after the CSA's commencement are governed by the CSA. An experienced lawyer will advise which law governs your specific case and what the best legal strategy is under that framework.</p>`,
+            },
+        ],
+        faqs: [
+            { question: 'Can I be arrested under the DSA for a Facebook post?', answer: 'Yes. Bangladesh police have arrested many individuals for social media posts citing DSA Sections 25, 28, or 31. Whether the arrest is lawful depends on the specific content and section invoked.' },
+            { question: 'Is the Digital Security Act still in force?', answer: 'The DSA was replaced by the Cyber Security Act 2023 for new cases. However, all cases filed while the DSA was in force continue to be tried under the DSA.' },
+            { question: 'How do I get bail in a DSA/Cyber Security Act case?', answer: 'Apply immediately to the Cyber Tribunal. If refused, escalate to the High Court Division. A lawyer experienced in DSA cases is essential for a successful bail application.' },
+            { question: 'Can a DSA case be quashed?', answer: 'Yes. The High Court Division can quash a DSA case if it finds that the alleged conduct does not constitute an offence or the case represents an abuse of process.' },
+            { question: 'Are journalists protected from DSA cases?', answer: 'The law applies to all persons equally. Journalists have faced disproportionate DSA prosecution. The Cyber Security Act 2023 includes some provisions intended to protect journalistic activity, though their practical effect remains to be tested.' },
+            { question: 'What is the punishment for Section 31 of the DSA?', answer: 'Publishing content that disturbs national unity or provokes disorder carries up to 7 years imprisonment (non-bailable) and/or a large fine under DSA Section 31.' },
+            { question: 'Can I be prosecuted for sharing someone else\'s post?', answer: 'Sharing content that constitutes an offence under the DSA can potentially attract liability. Legal advice specific to your situation is strongly recommended.' },
+            { question: 'What should I do if police contact me about a DSA complaint?', answer: 'Do not make any statement without consulting a lawyer first. Contact a criminal lawyer in Dhaka immediately to assess your exposure and take protective legal steps.' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-uttara' },
+            { text: 'Bail Lawyer Dhaka', to: '/bail-lawyer-dhaka' },
+            { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
+        ],
+    },
+
+    /* ── 26 ── */
+    {
+        slug: 'narcotics-case-law-bangladesh',
+        title: 'Narcotics Case Law in Bangladesh: Defence Rights & Bail Procedure',
+        category: 'Criminal Law',
+        readTime: '8 min read',
+        metaTitle: 'Narcotics Case in Bangladesh – Defence Rights & Bail Guide',
+        metaDescription: 'Facing a narcotics case in Bangladesh? Understand the Narcotics Control Act 1990, types of drug offences, bail procedure, mandatory minimum sentences, and how a criminal lawyer in Dhaka can help.',
+        keywords: ['narcotics case Bangladesh', 'drug case bail Bangladesh', 'Narcotics Control Act 1990', 'narcotics lawyer Dhaka', 'drug offence Bangladesh', 'BNCA 1990 Bangladesh', 'narcotics tribunal Bangladesh', 'drug possession Bangladesh'],
+        publishedDate: '2026-03-12',
+        heroIntro: 'Narcotics cases in Bangladesh carry some of the harshest penalties in the legal system — including the death penalty in extreme cases. If you or a family member is accused under the Narcotics Control Act 1990, understanding your legal rights and defence options immediately is absolutely critical.',
+        toc: [
+            'Narcotics Law Framework in Bangladesh',
+            'Types of Narcotics Offences and Penalties',
+            'Bailable vs. Non-Bailable Narcotics Offences',
+            'Arrest and Remand in Narcotics Cases',
+            'Bail in Narcotics Cases: Is It Possible?',
+            'Key Legal Defences in Narcotics Cases',
+            'Narcotics Tribunal: Where Cases Are Tried',
+            'Role of a Lawyer in Narcotics Cases',
+        ],
+        sections: [
+            {
+                h2: 'Narcotics Law Framework in Bangladesh',
+                content: `<p>Narcotics offences in Bangladesh are primarily governed by the <strong>Narcotics Control Act 1990 (NCA 1990)</strong>, the <strong>Bangladesh Narcotics Control Act (BNCA)</strong> as amended, and related regulations issued by the Department of Narcotics Control under the Home Ministry. The law takes an extremely serious view of drug-related offences — reflecting a zero-tolerance policy towards production, trafficking, and distribution of controlled substances.</p>
+<p>The Act covers a broad range of activities including production, processing, transportation, import, export, sale, purchase, storage, possession, and consumption of narcotics. Penalties vary significantly depending on the type and quantity of substance involved and the nature of the accused's role. If someone you know has been arrested, contact a <a href="/criminal-lawyer-uttara" style="color:var(--accent)">criminal lawyer in Dhaka or Uttara</a> without delay.</p>`,
+            },
+            {
+                h2: 'Types of Narcotics Offences and Penalties',
+                content: `<p>The NCA 1990 categorises offences based on the type of narcotic and the conduct involved. Key categories and penalties include:</p>
+<ul>
+<li><strong>Production, processing, transportation, or trafficking of hard drugs</strong> (heroin, cocaine, etc.): Death penalty or life imprisonment, depending on quantity.</li>
+<li><strong>Financing narcotics trafficking:</strong> Life imprisonment or death.</li>
+<li><strong>Sale or supply of narcotics:</strong> 2 years to life imprisonment depending on the substance and quantity.</li>
+<li><strong>Possession of narcotics:</strong> Penalties range from 6 months to life imprisonment or death depending on quantity and type.</li>
+<li><strong>Possession of alcohol without permit:</strong> Up to 2 years imprisonment.</li>
+<li><strong>Consumption of narcotics:</strong> Up to 6 months imprisonment for first offence — treated more leniently than trafficking.</li>
+</ul>
+<p>The quantity of substance seized is the most critical factor in determining the applicable penalty. Courts have strictly applied the mandatory minimum sentences specified in the Act.</p>`,
+            },
+            {
+                h2: 'Bailable vs. Non-Bailable Narcotics Offences',
+                content: `<p>Under the NCA 1990, a distinction is made between bailable and non-bailable offences:</p>
+<ul>
+<li><strong>Non-bailable:</strong> Trafficking, production, financing, and large-quantity possession offences. Bail is at the court's discretion and denied in many serious cases at the trial court level.</li>
+<li><strong>Bailable:</strong> Minor possession and consumption offences — bail is a right.</li>
+</ul>
+<p>In practice, police frequently charge accused persons with the most serious sections even in ambiguous cases. A skilled <a href="/bail-lawyer-dhaka" style="color:var(--accent)">bail lawyer in Dhaka</a> will challenge the section invoked and argue that the facts support a less serious, bailable characterisation of the offence.</p>`,
+            },
+            {
+                h2: 'Arrest and Remand in Narcotics Cases',
+                content: `<p>Narcotics cases typically follow this arrest sequence:</p>
+<ol>
+<li>Police or the Department of Narcotics Control (DNC) officials conduct a raid, search, or seizure.</li>
+<li>The accused is arrested and produced before the competent court within 24 hours.</li>
+<li>Police apply for remand to further interrogate the accused — in narcotics cases, remand is frequently sought and often granted at first hearing.</li>
+<li>A case (FIR) is registered at the nearest police station or by DNC officers.</li>
+<li>Investigation is conducted, often involving forensic testing of seized substances.</li>
+<li>After investigation, a charge sheet (accusation report) is filed before the tribunal.</li>
+</ol>
+<p>Forensic testing — confirming that the seized substance is indeed a controlled narcotic — is a critical step. The defence should scrutinise the chain of custody of the forensic sample and the integrity of the testing process.</p>`,
+            },
+            {
+                h2: 'Bail in Narcotics Cases: Is It Possible?',
+                content: `<p>Bail in serious narcotics cases is one of the most difficult to obtain in Bangladesh's criminal justice system. However, it is not impossible. Courts — including the Narcotics Tribunal and the High Court Division — have granted bail in narcotics cases where:</p>
+<ul>
+<li>The accused has been in custody for an extended period without trial progressing.</li>
+<li>The quantity of substance seized is small and does not support the most serious charges.</li>
+<li>The accused is elderly, seriously ill, or has dependents who will suffer acute hardship.</li>
+<li>There is a strong prima facie argument that the accused was wrongly implicated (e.g., framed, substance planted).</li>
+<li>The investigation is largely complete and there is no risk of evidence tampering.</li>
+</ul>
+<p>Applications refused at the Narcotics Tribunal level can be taken to the <a href="/supreme-court-lawyer-bangladesh" style="color:var(--accent)">High Court Division</a>. Perseverance and quality of legal argument are key to success in narcotics bail applications.</p>`,
+            },
+            {
+                h2: 'Key Legal Defences in Narcotics Cases',
+                content: `<p>A skilled criminal lawyer will explore all available defences, which may include:</p>
+<ul>
+<li><strong>Challenge to recovery:</strong> Disputing whether the substance was actually found in the accused's possession, custody, or knowledge — especially where the accused was merely present in a vehicle or property where narcotics were found.</li>
+<li><strong>Forensic evidence challenge:</strong> Questioning the reliability of the forensic analysis — chain of custody, testing methodology, delays in forensic report.</li>
+<li><strong>Unlawful search and seizure:</strong> Arguing that police conducted the search without proper authorisation, as tainted searches may invalidate the evidence.</li>
+<li><strong>Lack of knowledge:</strong> The accused was unaware that the substance was a narcotic — particularly relevant in carrier/mule cases.</li>
+<li><strong>Entrapment:</strong> Police or informants induced the accused into committing the offence.</li>
+<li><strong>Planted evidence:</strong> Common in contested cases — corroborated by the accused's alibi, absence of trace narcotics, or credibility issues with police witnesses.</li>
+</ul>
+<p>Building a strong defence requires early intervention by a competent advocate who can examine the case materials, identify weaknesses in the prosecution case, and develop a coherent defence strategy.</p>`,
+            },
+            {
+                h2: 'Narcotics Tribunal: Where Cases Are Tried',
+                content: `<p>Narcotics cases under the NCA 1990 are tried before the <strong>Narcotics Tribunal (Dravya Nirvar Adalat)</strong> established in each district. Key features:</p>
+<ul>
+<li>The Tribunal has exclusive jurisdiction over serious narcotics offences.</li>
+<li>It operates under a special procedure designed to expedite trials.</li>
+<li>Appeals from the Narcotics Tribunal go to the High Court Division.</li>
+<li>The Tribunal judge has wide sentencing powers — including the death penalty for the most serious trafficking offences.</li>
+</ul>
+<p>Given the stakes, legal representation before the Narcotics Tribunal is as important as it gets. A specialist criminal advocate who regularly appears before the Tribunal will understand the procedural nuances and how to maximise the defendant's chances.</p>`,
+            },
+            {
+                h2: 'Role of a Lawyer in Narcotics Cases',
+                content: `<p>The role of a criminal lawyer in a narcotics case extends far beyond appearing in court. From the moment of arrest, a lawyer should:</p>
+<ul>
+<li>Attend the remand hearing and challenge remand or reduce its duration.</li>
+<li>Examine the case diary, FIR, and forensic report for procedural errors and evidentiary weaknesses.</li>
+<li>File bail applications at every appropriate level — Tribunal, then High Court Division.</li>
+<li>Obtain certified copies of all documents and cross-examine prosecution witnesses effectively at trial.</li>
+<li>If convicted, immediately evaluate the grounds for appeal and apply for suspension of sentence.</li>
+</ul>
+<p>Advocate Md. Shah Alam has represented clients in criminal cases in Dhaka courts for over 7 years, including matters before specialised tribunals. If you are dealing with a narcotics case, <a href="/criminal-lawyer-uttara" style="color:var(--accent)">contact our office in Uttara, Dhaka</a> for an immediate consultation.</p>`,
+            },
+        ],
+        faqs: [
+            { question: 'Is bail possible in a narcotics case in Bangladesh?', answer: 'Bail is very difficult in serious narcotics cases (trafficking, large-quantity possession) but not impossible. Small-quantity possession and consumption cases are bailable. The High Court Division can grant bail where the Tribunal refuses.' },
+            { question: 'What is the punishment for drug possession in Bangladesh?', answer: 'Penalties depend on the type and quantity of drug. Small quantities may attract 6 months to 2 years. Large quantities of hard drugs can result in life imprisonment or death under the Narcotics Control Act 1990.' },
+            { question: 'Can I be convicted if drugs were found in a shared vehicle?', answer: 'Being present in a vehicle where drugs are found does not automatically make you guilty. The prosecution must prove knowledge and possession. A skilled lawyer will challenge this type of circumstantial evidence.' },
+            { question: 'What if forensic testing was delayed or irregular?', answer: 'Delays and irregularities in the forensic testing chain of custody are valid defence points. Your lawyer should scrutinise the forensic report and challenge its reliability if applicable.' },
+            { question: 'Can a narcotics conviction be appealed?', answer: 'Yes. Appeals from the Narcotics Tribunal go to the High Court Division, and further to the Appellate Division with leave. Death penalty convictions are subject to mandatory confirmation by the High Court Division.' },
+            { question: 'What should I do if a family member is arrested for narcotics?', answer: 'Contact a criminal lawyer immediately. Do not let the accused make any statement to police without a lawyer present. Appear at the remand hearing to oppose or minimize custody.' },
+            { question: 'Does the quantity of drugs affect sentencing?', answer: 'Yes. Quantity is the most important factor. Courts have convicted persons of minor offences where the quantity was small, even when charged with trafficking.' },
+            { question: 'Are DNC raids different from police raids?', answer: 'Both police and DNC officers have arrest and search powers under the NCA 1990. DNC raids are specific to narcotics matters and DNC officers are trained narcotics investigators.' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-uttara' },
+            { text: 'Bail Lawyer Dhaka', to: '/bail-lawyer-dhaka' },
+            { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
+        ],
+    },
+
+    /* ── 27 ── */
+    {
+        slug: 'power-of-attorney-land-transfer-bangladesh',
+        title: 'Power of Attorney for Land Transfer in Bangladesh: Complete Legal Guide',
+        category: 'Property Law',
+        readTime: '7 min read',
+        metaTitle: 'Power of Attorney for Land Transfer in Bangladesh – Legal Guide',
+        metaDescription: 'How to use a power of attorney (POA) for land transfer in Bangladesh — types, registration requirements, risks of misuse, irrevocable POA, and legal advice for NRBs from a property lawyer in Dhaka.',
+        keywords: ['power of attorney land Bangladesh', 'POA registration Bangladesh', 'land transfer by attorney Bangladesh', 'irrevocable power of attorney', 'NRB property Bangladesh', 'property lawyer Dhaka', 'power of attorney Bangladesh law', 'attorney registration Sub-Registrar'],
+        publishedDate: '2026-03-13',
+        heroIntro: 'Thousands of Non-Resident Bangladeshis (NRBs) and property owners in Bangladesh rely on Power of Attorney to manage land transactions from a distance. But a poorly drafted or improperly registered POA can be misused, invalidated, or used to defraud the principal. Understanding the legal framework is essential before you sign.',
+        toc: [
+            'What Is a Power of Attorney in Bangladesh Law?',
+            'Types of Power of Attorney for Land',
+            'Irrevocable vs. Revocable Power of Attorney',
+            'Registration Requirements for a Land POA',
+            'How to Execute a POA from Abroad (NRBs)',
+            'What an Attorney Can and Cannot Do',
+            'Risks of Misuse and How to Protect Yourself',
+            'Cancelling a Power of Attorney',
+        ],
+        sections: [
+            {
+                h2: 'What Is a Power of Attorney in Bangladesh Law?',
+                content: `<p>A <strong>Power of Attorney (POA)</strong> is a legal document through which one person (the <em>principal</em> or <em>donor</em>) authorises another person (the <em>attorney</em> or <em>donee</em>) to act on their behalf in specified legal matters. In the context of land and property, a POA authorises the attorney to sign deeds, execute sale agreements, receive payments, or take possession of land on the principal's behalf.</p>
+<p>In Bangladesh, Powers of Attorney relating to immovable property must comply with the <strong>Power of Attorney Act 2012</strong>, the <strong>Registration Act 1908</strong>, and the <strong>Stamp Act 1899</strong>. An improperly executed or unregistered POA cannot be used for property transactions. For guidance specific to your situation, consult a <a href="/land-property-lawyer-uttara" style="color:var(--accent)">land and property lawyer in Dhaka or Uttara</a>.</p>`,
+            },
+            {
+                h2: 'Types of Power of Attorney for Land',
+                content: `<p>There are two broad types of Power of Attorney relevant to land transactions in Bangladesh:</p>
+<ul>
+<li><strong>General Power of Attorney (GPA):</strong> Grants broad authority to the attorney to handle a wide range of matters on behalf of the principal — including executing sale deeds, managing tenants, collecting rents, and registering documents.</li>
+<li><strong>Special Power of Attorney (SPA):</strong> Authorises the attorney for a specific, defined purpose — such as executing a single sale deed for a particular plot on a specific date. The SPA expires once the specific act is completed.</li>
+</ul>
+<p>For property transactions of significant value, a Special Power of Attorney is generally safer — it limits the attorney's authority to a defined transaction and reduces the risk of misuse.</p>`,
+            },
+            {
+                h2: 'Irrevocable vs. Revocable Power of Attorney',
+                content: `<p>A standard Power of Attorney is revocable — the principal can cancel it at any time before the attorney acts under it. An <strong>Irrevocable Power of Attorney</strong> is one that the principal expressly states cannot be revoked — typically because it is given as security for a financial obligation or is coupled with an interest.</p>
+<ul>
+<li><strong>Irrevocable POA:</strong> Remains valid even after the principal's death or mental incapacity (in some circumstances). Often used in property development agreements where the developer needs certainty that the POA will not be withdrawn mid-project.</li>
+<li><strong>Revocable POA:</strong> Can be cancelled by the principal at any time by executing a Deed of Revocation and registering it at the Sub-Registrar's office.</li>
+</ul>
+<p>An irrevocable POA must be carefully drafted to specify exactly what acts are covered. Courts will scrutinise irrevocable POAs carefully where disputes arise. Always take legal advice before granting an irrevocable POA over valuable property.</p>`,
+            },
+            {
+                h2: 'Registration Requirements for a Land POA',
+                content: `<p>Under the Power of Attorney Act 2012 and the Registration Act 1908, a Power of Attorney for immovable property transactions <strong>must be registered</strong> at the Sub-Registrar's office. Key requirements:</p>
+<ul>
+<li>The document must be executed on proper stamp paper of the value prescribed by the Stamp Act.</li>
+<li>Both the principal and attorney may need to appear before the Sub-Registrar (or the principal may execute before a notary if abroad).</li>
+<li>For POAs executed abroad, attestation by the Bangladesh Embassy or High Commission in the country of execution is required before registration in Bangladesh.</li>
+<li>The POA must include: full identity details of both parties, specific property description, exact powers granted, duration (if limited), and the principal's NID or passport details.</li>
+</ul>
+<p>An unregistered POA cannot be used to transfer title to immovable property in Bangladesh. It may still have contractual force between the parties but cannot create a registered deed of sale or mortgage in the principal's name.</p>`,
+            },
+            {
+                h2: 'How to Execute a POA from Abroad (NRBs)',
+                content: `<p>Non-Resident Bangladeshis (NRBs) frequently issue Powers of Attorney to manage property in Bangladesh from abroad. The standard procedure is:</p>
+<ol>
+<li>Draft the Power of Attorney document — ideally by a licensed lawyer in Bangladesh who understands the legal requirements.</li>
+<li>Send the draft to the NRB abroad for review.</li>
+<li>The NRB executes (signs) the document before a Notary Public in the country of residence.</li>
+<li>The NRB attests the document before the <strong>Bangladesh Embassy or High Commission</strong> in that country — this step is mandatory for use in Bangladesh.</li>
+<li>The original attested document is sent to Bangladesh (by courier or through a trusted person).</li>
+<li>The attorney registers the POA at the relevant <strong>Sub-Registrar's office</strong> in Bangladesh, on the appropriate stamp paper.</li>
+</ol>
+<p>The entire process typically takes 2–4 weeks. For urgent land transactions, it is possible to expedite Embassy attestation at some missions. Contact a <a href="/land-property-lawyer-uttara" style="color:var(--accent)">property lawyer in Dhaka</a> to prepare the correct document before the NRB executes.</p>`,
+            },
+            {
+                h2: 'What an Attorney Can and Cannot Do',
+                content: `<p>A POA attorney's authority is strictly limited to what is expressly stated in the document. An attorney can:</p>
+<ul>
+<li>Execute and register sale deeds, gift deeds, and mortgage documents (if expressly authorised).</li>
+<li>Collect rent, manage tenants, and receive payments on behalf of the principal.</li>
+<li>Appear before land offices and courts as representative of the principal.</li>
+<li>Execute agreements for sale (baina) and complete the transaction.</li>
+</ul>
+<p>An attorney <strong>cannot</strong>:</p>
+<ul>
+<li>Transfer the property to themselves (self-dealing is prohibited and voidable).</li>
+<li>Make gifts of the principal's property (unless expressly authorised).</li>
+<li>Execute a Will on behalf of the principal — a Will is a personal act.</li>
+<li>Act beyond the scope of the POA's express terms.</li>
+</ul>
+<p>Any act of the attorney that exceeds their authority under the POA is void and can be challenged in court by the principal or their heirs.</p>`,
+            },
+            {
+                h2: 'Risks of Misuse and How to Protect Yourself',
+                content: `<p>Power of Attorney fraud — particularly involving land — is regrettably common in Bangladesh. Known misuse patterns include:</p>
+<ul>
+<li>An attorney selling the property to a third party for their personal benefit without informing the principal.</li>
+<li>Using a forged or expired POA to transfer property.</li>
+<li>Granting multiple POAs to different persons for the same property.</li>
+<li>An attorney accepting a lower price for the property and pocketing the difference.</li>
+</ul>
+<p>To protect yourself as a principal:</p>
+<ul>
+<li>Issue a Special POA for specific transactions only — not a broad General POA.</li>
+<li>Set a short duration with an explicit expiry date.</li>
+<li>Require the attorney to report and provide documentation of every transaction.</li>
+<li>Conduct periodic checks of the land mutation records and Registration Office records to detect any unauthorised transfers.</li>
+<li>Consider requiring that any sale proceeds be deposited directly into your bank account abroad.</li>
+</ul>
+<p>If you discover that your POA has been misused, immediately <a href="/land-property-lawyer-uttara" style="color:var(--accent)">consult a land and property lawyer</a> to cancel the POA, challenge the fraudulent deed, and file the appropriate legal actions.</p>`,
+            },
+            {
+                h2: 'Cancelling a Power of Attorney',
+                content: `<p>To revoke a registered Power of Attorney in Bangladesh:</p>
+<ol>
+<li>Execute a <strong>Deed of Revocation</strong> on appropriate stamp paper, clearly identifying the original POA (registration number, date, Sub-Registrar's office).</li>
+<li>Register the Deed of Revocation at the same Sub-Registrar's office where the original POA was registered.</li>
+<li>Serve written notice of revocation on the attorney personally (by registered post with acknowledgement).</li>
+<li>Inform any third parties (banks, courts, etc.) who may be relying on the POA of its revocation.</li>
+</ol>
+<p>From the date of registration of the Deed of Revocation, the attorney has no further authority to act under the cancelled POA. Any act done after valid notice of revocation is void and unenforceable against the principal. If the attorney refuses to cooperate, a court injunction can be obtained preventing them from acting further on the revoked POA.</p>`,
+            },
+        ],
+        faqs: [
+            { question: 'Does a Power of Attorney for land need to be registered in Bangladesh?', answer: 'Yes. A POA for immovable property transactions must be registered at the Sub-Registrar\'s office. An unregistered POA cannot be used to create or transfer property rights through a registered deed.' },
+            { question: 'Can an NRB grant a Power of Attorney from abroad?', answer: 'Yes. The NRB must execute the POA before a Notary Public, then have it attested by the Bangladesh Embassy or High Commission. The attested document is then registered at a Sub-Registrar\'s office in Bangladesh.' },
+            { question: 'Is an irrevocable Power of Attorney binding in Bangladesh?', answer: 'An irrevocable POA coupled with an interest is binding and cannot be cancelled by the principal alone. Courts will enforce it, but scrutinise its terms strictly.' },
+            { question: 'What happens if the principal dies while a POA is in force?', answer: 'A regular POA is automatically revoked by the death of the principal. An irrevocable POA coupled with an interest may survive the principal\'s death in limited circumstances. The principal\'s heirs should be notified and legal advice sought.' },
+            { question: 'Can an attorney sell property to themselves?', answer: 'No. Self-dealing by an attorney is prohibited and the transaction is voidable by the principal or their estate. Courts will not uphold such transactions.' },
+            { question: 'How long is a Power of Attorney valid in Bangladesh?', answer: 'A POA is valid until it is revoked, the purpose is completed, or the principal dies (for revocable POAs). A time-limited POA expires on the specified date. Always specify an expiry date for security.' },
+            { question: 'Can I cancel a Power of Attorney if the attorney is misusing it?', answer: 'Yes. Execute and register a Deed of Revocation immediately and serve notice on the attorney. Then take legal action to undo any unauthorized transactions the attorney has already completed.' },
+            { question: 'Do I need a lawyer to draft a Power of Attorney?', answer: 'Legally you don\'t have to, but given the risks involved in property POAs, professional legal drafting is strongly recommended to ensure the document is correctly worded, registered, and limited to safe parameters.' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Land & Property Lawyer Uttara', to: '/land-property-lawyer-uttara' },
+            { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
+            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-uttara' },
+        ],
+    },
+
+    /* ── 28 ── */
+    {
+        slug: 'flat-apartment-purchase-legal-checklist-bangladesh',
+        title: 'Flat & Apartment Purchase Legal Checklist in Bangladesh',
+        category: 'Property Law',
+        readTime: '8 min read',
+        metaTitle: 'Flat & Apartment Purchase Legal Checklist Bangladesh – Buyer\'s Guide',
+        metaDescription: 'Before buying a flat in Bangladesh, follow this complete legal checklist — RAJUK approval, developer agreement, land title verification, registration, and how a property lawyer in Dhaka protects your investment.',
+        keywords: ['flat purchase legal checklist Bangladesh', 'apartment buying Bangladesh', 'RAJUK approval Bangladesh', 'developer agreement Bangladesh', 'property lawyer Dhaka', 'flat registration Bangladesh', 'real estate legal guide Bangladesh', 'apartment deed Bangladesh'],
+        publishedDate: '2026-03-14',
+        heroIntro: 'Buying a flat or apartment in Dhaka is one of the biggest financial decisions most people will make in their lifetime. Yet thousands of buyers sign developer agreements and pay large deposits without proper legal verification — and face devastating consequences when titles are disputed or buildings lack approvals. This checklist will help you buy safely.',
+        toc: [
+            'Why Legal Due Diligence Is Essential for Flat Buyers',
+            'Step 1: Verify the Land Title of the Project',
+            'Step 2: Check RAJUK and Government Approvals',
+            'Step 3: Review the Developer Agreement Carefully',
+            'Step 4: Understand Payment Schedule and Penalties',
+            'Step 5: Check the Deed of Agreement (Baina)',
+            'Step 6: Ensure Proper Registration of the Deed',
+            'Step 7: Post-Purchase — Mutation and Utility Transfer',
+        ],
+        sections: [
+            {
+                h2: 'Why Legal Due Diligence Is Essential for Flat Buyers',
+                content: `<p>Bangladesh's real estate market — particularly in Dhaka and Uttara — has grown dramatically over the past two decades. With this growth has come a significant number of disputes: developers selling flats on land they do not own, buildings constructed without RAJUK approval, buyer agreements weighted entirely in the developer's favour, and titles disputed by the original landowners or heirs.</p>
+<p>Legal due diligence before signing any agreement or making any payment is not optional — it is essential self-protection. A <a href="/land-property-lawyer-uttara" style="color:var(--accent)">property lawyer in Dhaka or Uttara</a> can conduct a full title search and agreement review for a fraction of the financial risk involved in buying blind.</p>`,
+            },
+            {
+                h2: 'Step 1: Verify the Land Title of the Project',
+                content: `<p>Before anything else, verify that the developer actually owns or has the legal right to develop the land where the project is being built. Request and verify:</p>
+<ul>
+<li><strong>Original deed of purchase</strong> — the registered deed by which the developer or landowner acquired the plot.</li>
+<li><strong>Khatian (CS/SA/RS)</strong> — the government land records showing registered title. Does the name on the khatian match the developer's or landowner's claim?</li>
+<li><strong>Mutation record</strong> — confirm the land is mutated in the current owner's name at the AC Land office.</li>
+<li><strong>Encumbrance certificate</strong> — has the land been mortgaged to a bank? This is a critical red flag — if the land is mortgaged, your flat may be seized if the developer defaults on the bank loan.</li>
+<li><strong>No-objection from all co-owners</strong> — if the land has multiple owners (common in inherited land), all co-owners must have given their consent to the development.</li>
+</ul>
+<p>This step requires a legal professional to examine documents at the Sub-Registrar's office and AC Land office. Do not rely on photocopies provided by the developer — always verify originals.</p>`,
+            },
+            {
+                h2: 'Step 2: Check RAJUK and Government Approvals',
+                content: `<p>Any building in Dhaka city or its surrounding planned areas must have approval from <strong>RAJUK (Rajdhani Unnayan Kartripakkha)</strong> — the planning authority for Dhaka. Verification checklist:</p>
+<ul>
+<li><strong>Building Plan Approval:</strong> Obtain the RAJUK-approved building plan (naksha). Verify the number of floors approved matches what is being sold to you. Developers sometimes sell flats on floors not approved by RAJUK.</li>
+<li><strong>Land Use Permission:</strong> The land must be zoned for residential use in the RAJUK Detailed Area Plan (DAP).</li>
+<li><strong>Environmental Clearance:</strong> For larger projects, environmental clearance from DoE may be required.</li>
+<li><strong>Bangladesh National Building Code (BNBC) Compliance:</strong> The building must be designed to comply with safety, structural, and fire safety standards.</li>
+</ul>
+<p>Buildings without RAJUK approval are legally at risk of demolition orders. Your flat in an unapproved building cannot be registered and will have no legal title. Always demand to see the original RAJUK approval, not just the developer's verbal assurance.</p>`,
+            },
+            {
+                h2: 'Step 3: Review the Developer Agreement Carefully',
+                content: `<p>The developer agreement (often called the "flat purchase agreement" or "apartment booking form") is a legally binding contract. Most standard developer agreements are drafted entirely in the developer's favour. Key issues to review:</p>
+<ul>
+<li><strong>Apartment specification:</strong> Is the flat size (in square feet/meter), floor number, facing direction, and finishing specification clearly described?</li>
+<li><strong>Delivery date and penalty:</strong> What is the promised handover date? What happens if the developer delays? Is there a meaningful penalty for delay, or is the developer absolved by a vague force majeure clause?</li>
+<li><strong>Price escalation clause:</strong> Can the developer unilaterally increase the price? Under what circumstances?</li>
+<li><strong>Termination rights:</strong> What are the buyer's rights if the developer fails to complete? Can you cancel and get a full refund — with interest?</li>
+<li><strong>Common areas and facilities:</strong> Are the promised amenities (car parking, generator, lift, gym) part of the contractual obligation or merely "subject to availability"?</li>
+<li><strong>Title transfer:</strong> When and how will the registered deed be executed in the buyer's name?</li>
+</ul>
+<p>Never sign a developer agreement without having a property lawyer review it. Many buyers lose lakhs of taka because of unfair contract terms they did not understand at the time of signing.</p>`,
+            },
+            {
+                h2: 'Step 4: Understand Payment Schedule and Penalties',
+                content: `<p>Developer agreements typically involve instalments paid over the construction period. Critical payment issues:</p>
+<ul>
+<li>Understand exactly what you are paying at each stage and what construction milestone it corresponds to.</li>
+<li>Ensure receipts (money receipts on company letterhead) are issued for every payment.</li>
+<li>Understand the penalty for late payment — many agreements charge 18–24% per annum on overdue amounts, which can be punitive.</li>
+<li>Understand your right to withhold final payment until you receive vacant possession of the completed flat in the agreed specification.</li>
+<li>Do not make large payments before any construction has begun — the risk of project abandonment is highest at the pre-construction stage.</li>
+</ul>
+<p>Keep a complete paper trail of all payments made, all receipts received, and all correspondence with the developer. This documentation will be critical if a dispute later arises.</p>`,
+            },
+            {
+                h2: 'Step 5: Check the Deed of Agreement (Baina)',
+                content: `<p>The <strong>Deed of Agreement (Baina Nama)</strong> is the formal pre-sale agreement that is registered at the Sub-Registrar's office. This step is often skipped by buyers — a major mistake. Registering a Baina:</p>
+<ul>
+<li>Creates a legal record of your agreement and payment.</li>
+<li>Prevents the developer from selling the same flat to another buyer.</li>
+<li>Gives you the right to seek specific performance (court order compelling completion of the sale) if the developer refuses to hand over the flat.</li>
+</ul>
+<p>Under the Registration Act 1908, an agreement for the sale of immovable property above a certain value must be registered to be enforceable in court. An unregistered Baina has very limited legal protection. Your property lawyer should ensure the Baina is properly drafted and registered promptly after you agree to purchase.</p>`,
+            },
+            {
+                h2: 'Step 6: Ensure Proper Registration of the Deed',
+                content: `<p>Once the flat is complete and ready for handover, the final step is registration of the <strong>Sale Deed (Kabala)</strong> at the Sub-Registrar's office. This creates your formal registered title. Requirements:</p>
+<ul>
+<li>Pay the required <strong>stamp duty</strong> and registration fees based on the declared value of the flat.</li>
+<li>The deed must be drafted by a licensed lawyer and signed by both the seller and buyer (or their attorneys).</li>
+<li>Both parties must appear before the Sub-Registrar for registration.</li>
+<li>The deed must describe the flat precisely — apartment number, floor, building name, plot number, and mouza information.</li>
+<li>After registration, keep the original registered deed in a safe place — it is your primary evidence of ownership.</li>
+</ul>
+<p>Never accept delivery of a flat without ensuring the registered deed is in your name. Taking possession without a registered deed leaves you legally vulnerable. A <a href="/land-property-lawyer-uttara" style="color:var(--accent)">property lawyer in Dhaka</a> will handle the entire registration process on your behalf.</p>`,
+            },
+            {
+                h2: 'Step 7: Post-Purchase — Mutation and Utility Transfer',
+                content: `<p>After registration, two important post-purchase steps must be completed:</p>
+<ul>
+<li><strong>Mutation (Namjari):</strong> Apply to the AC Land office to update the land records in your name. Without mutation, government records will still reflect the developer or original landowner as the registered holder.</li>
+<li><strong>Utility Transfer:</strong> Transfer electricity (DESCO/DPDC), gas, and water connections to your name. Some utilities require the registered deed and a no-objection from the previous holder.</li>
+<li><strong>Society Registration:</strong> For apartment buildings, the buyers collectively form an apartment owners' association under the applicable laws. This association manages common areas, maintenance, and building services. Ensure your rights as a member are clearly established.</li>
+</ul>
+<p>These post-purchase steps are frequently overlooked but are important for establishing complete legal control over your property. Completing them soon after registration protects you from future administrative complications.</p>`,
+            },
+        ],
+        faqs: [
+            { question: 'What is RAJUK approval and why does it matter when buying a flat?', answer: 'RAJUK is Dhaka\'s urban planning authority. A building without RAJUK-approved plans may face demolition orders and cannot have flats registered as legal property. Always verify RAJUK approval before buying.' },
+            { question: 'Can I buy a flat if the land is mortgaged to a bank?', answer: 'It is very risky. If the developer defaults on the bank loan, the bank can seize the land — including your flat. Always check for bank encumbrances and require the developer to obtain a no-objection from the bank before you buy.' },
+            { question: 'Do I need a lawyer to buy a flat in Bangladesh?', answer: 'It is not legally mandatory but strongly recommended. A property lawyer will verify title, check RAJUK approvals, review the developer agreement, and ensure proper registration — protecting an investment worth lakhs or crores of taka.' },
+            { question: 'What is a Baina Nama and is it important?', answer: 'A Baina Nama is a pre-sale agreement registered at the Sub-Registrar\'s office. It protects you from the developer selling the same flat to another buyer and gives you the right to sue for specific performance if they default.' },
+            { question: 'How much stamp duty applies to flat purchase in Bangladesh?', answer: 'Stamp duty and registration fees are calculated as a percentage of the declared value of the property. Rates vary and are updated periodically. Your lawyer will advise the exact amount before registration.' },
+            { question: 'What happens if the developer delays handover?', answer: 'If your agreement includes a penalty clause for delay, you can enforce it. If not, you may sue for damages in Civil Court or seek specific performance. A well-drafted agreement with a real penalty clause is the best protection.' },
+            { question: 'Can I transfer a flat to someone else before registration?', answer: 'You can assign your rights under the developer agreement by way of a novation or assignment — but you need the developer\'s consent. Once the flat is registered in your name, you can sell it through a normal registered deed.' },
+            { question: 'Is it safe to buy a flat in an under-construction building?', answer: 'It can be safe if proper due diligence is done: verified land title, RAJUK approval, reputable developer, registered Baina, and phased payment linked to construction milestones. Without these checks, pre-construction purchases carry significant risk.' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Land & Property Lawyer Uttara', to: '/land-property-lawyer-uttara' },
+            { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
+            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-uttara' },
+        ],
+    },
+
+    /* ── 29 ── */
+    {
+        slug: 'heba-gift-deed-law-bangladesh',
+        title: 'Heba (Gift Deed) Law in Bangladesh: How to Transfer Property to Family',
+        category: 'Property Law',
+        readTime: '7 min read',
+        metaTitle: 'Heba Gift Deed Law Bangladesh – Property Transfer to Family',
+        metaDescription: 'Complete guide to Heba (gift deed) law in Bangladesh — conditions for a valid Heba, registration requirements, how to challenge a fraudulent gift deed, and role of a property lawyer in Dhaka.',
+        keywords: ['heba gift deed Bangladesh', 'gift deed Bangladesh', 'property transfer to family Bangladesh', 'heba registration Bangladesh', 'property lawyer Dhaka', 'gift deed cancellation Bangladesh'],
+        publishedDate: '2026-03-15',
+        heroIntro: 'Heba — the Islamic gift of property — is one of the most common methods by which Bangladeshi families transfer land and property to children, spouses, or relatives during the owner\'s lifetime. But a legally defective Heba can be challenged, cancelled, and become the source of bitter family disputes. Understanding what makes a Heba valid is essential before transferring any property.',
+        toc: [
+            'What is Heba in Bangladesh Law?',
+            'Legal Requirements for a Valid Heba',
+            'What Property Can Be Gifted by Heba?',
+            'Heba vs. Will (Wasiyyat): Key Differences',
+            'Registration of Heba Deed in Bangladesh',
+            'When Can a Heba Be Revoked or Challenged?',
+            'Heba and Gift Tax Implications',
+            'Role of a Property Lawyer in Heba Transfers',
+        ],
+        sections: [
+            {
+                h2: 'What is Heba in Bangladesh Law?',
+                content: `<p><strong>Heba</strong> (Arabic: هبة) is an immediate, unconditional gift of property made by one person (the donor, or <em>wahib</em>) to another (the donee, or <em>mawhublahu</em>) during the donor's lifetime, with the intention of permanently transferring ownership. Unlike a Will, Heba takes effect immediately and does not wait for the donor's death.</p>
+<p>In Bangladesh, Heba is governed by principles of Muslim personal law (primarily from the Hedaya and Fatawa-e-Alamgiri), as well as the <strong>Transfer of Property Act 1882</strong> and <strong>Registration Act 1908</strong>. For non-Muslims, gifts of immovable property are known simply as "Gift Deeds" governed by the Transfer of Property Act. Before making any gift of property, consult a <a href="/land-property-lawyer-uttara" style="color:var(--accent)">property lawyer in Dhaka</a> to ensure the transfer is legally secure.</p>`,
+            },
+            {
+                h2: 'Legal Requirements for a Valid Heba',
+                content: `<p>Under Muslim law in Bangladesh, three elements are required for a valid Heba:</p>
+<ol>
+<li><strong>Declaration (Ijab):</strong> A clear and unambiguous offer to make the gift by the donor.</li>
+<li><strong>Acceptance (Qabul):</strong> Clear acceptance of the gift by the donee (or their guardian if a minor).</li>
+<li><strong>Delivery of Possession (Qabza):</strong> The donor must deliver actual or constructive possession of the property to the donee. Without possession, the Heba is incomplete and can be revoked.</li>
+</ol>
+<p>For immovable property (land, flat, building), the Heba must also be:</p>
+<ul>
+<li><strong>Registered</strong> at the Sub-Registrar's office under the Registration Act 1908 — unregistered gifts of immovable property are void against third parties and in court.</li>
+<li>Made on adequate <strong>stamp paper</strong> under the Stamp Act 1899.</li>
+</ul>`,
+            },
+            {
+                h2: 'What Property Can Be Gifted by Heba?',
+                content: `<p>A donor can make Heba of any property that lawfully belongs to them, including:</p>
+<ul>
+<li>Agricultural land (জমি)</li>
+<li>Residential plots and buildings</li>
+<li>Apartments and flats</li>
+<li>Commercial property</li>
+<li>Shares in jointly-owned property (with proper documentation of the share)</li>
+</ul>
+<p><strong>Limitations:</strong> A person cannot make Heba of more than one-third of their estate without the consent of heirs if they are on their deathbed (<em>Maraz ul Maut</em>). Such deathbed gifts are treated partly as a will and are limited to one-third of the estate — similar to the rule for Wasiyyat.</p>`,
+            },
+            {
+                h2: 'Heba vs. Will (Wasiyyat): Key Differences',
+                content: `<p>Many families confuse Heba with a Will. The key distinctions:</p>
+<table style="width:100%;border-collapse:collapse">
+<tr style="background:var(--surface-2)"><th style="padding:8px;text-align:left">Aspect</th><th style="padding:8px;text-align:left">Heba (Gift)</th><th style="padding:8px;text-align:left">Wasiyyat (Will)</th></tr>
+<tr><td style="padding:8px">When effective</td><td style="padding:8px">Immediately during donor's lifetime</td><td style="padding:8px">Only after death</td></tr>
+<tr><td style="padding:8px">Limit on disposal</td><td style="padding:8px">Can gift entire property (during health)</td><td style="padding:8px">Max 1/3 of estate without heir consent</td></tr>
+<tr><td style="padding:8px">Revocability</td><td style="padding:8px">Generally irrevocable after possession — exceptions apply</td><td style="padding:8px">Freely revocable before death</td></tr>
+<tr><td style="padding:8px">Registration required</td><td style="padding:8px">Yes, for immovable property</td><td style="padding:8px">Recommended but not mandatory</td></tr>
+</table>`,
+            },
+            {
+                h2: 'Registration of Heba Deed in Bangladesh',
+                content: `<p>The Heba deed must be registered at the Sub-Registrar's office. The process:</p>
+<ol>
+<li>Draft the Heba deed on stamp paper of the prescribed value (value calculated on the market value of the property).</li>
+<li>Both donor and donee (or their authorized attorneys) must appear before the Sub-Registrar.</li>
+<li>Pay registration fees and stamp duty.</li>
+<li>Present supporting documents: original title deed, mutation records, NID cards of both parties.</li>
+<li>Collect the registered Heba deed — this is the donee's primary evidence of ownership.</li>
+</ol>
+<p>After registration, the donee should apply for <strong>mutation (Namjari)</strong> to update the land records in their name. A <a href="/land-property-lawyer-uttara" style="color:var(--accent)">property lawyer</a> can handle the entire process seamlessly.</p>`,
+            },
+            {
+                h2: 'When Can a Heba Be Revoked or Challenged?',
+                content: `<p>Under Muslim law, a donor can revoke Heba in limited circumstances — primarily before the donee takes possession, or with court permission in cases of:</p>
+<ul>
+<li>Gift to a stranger (non-relative) — revocable before or after possession with court order.</li>
+<li>Gift to a spouse — revocable if the marriage ends.</li>
+</ul>
+<p><strong>A Heba generally cannot be revoked once possession has been delivered</strong> if the gift was made to:</p>
+<ul>
+<li>A direct blood relative (parent, child, sibling)</li>
+<li>A spouse (during marriage)</li>
+<li>In consideration of marriage (mehr-related gifts)</li>
+</ul>
+<p>Fraudulent or coerced Heba deeds can be challenged in Civil Court. Common grounds include: donor lacked mental capacity, signature forged, donor was under undue influence, or property was gifted twice to different people. If you suspect a fraudulent Heba was registered on your property, contact an <a href="/land-property-lawyer-uttara" style="color:var(--accent)">Uttara property lawyer</a> immediately.</p>`,
+            },
+            {
+                h2: 'Role of a Property Lawyer in Heba Transfers',
+                content: `<p>A Dhaka property lawyer plays a critical role in ensuring your Heba is valid, irreversible, and challenge-proof:</p>
+<ul>
+<li>Verify clean title before the gift — ensure no encumbrance, mortgage, or competing claim exists on the property.</li>
+<li>Draft the Heba deed precisely — ambiguous deeds are prime targets for litigation.</li>
+<li>Handle Sub-Registrar registration and collect the registered deed.</li>
+<li>Apply for mutation (Namjari) to update government land records.</li>
+<li>Advise on gift tax implications and stamp duty optimization.</li>
+</ul>
+<p>Advocate Md. Shah Alam has handled numerous Heba and gift deed registrations across Dhaka and Uttara. <a href="/land-property-lawyer-uttara" style="color:var(--accent)">Contact our office</a> for a consultation before your property transfer.</p>`,
+            },
+        ],
+        faqs: [
+            { question: 'Can a parent gift property to one child through Heba without giving shares to other children?', answer: 'Yes. A living donor can gift any or all of their property to any person during their lifetime. Unlike inheritance, Heba is not automatically shared among all heirs. However, unfair Heba may cause family disputes and potential legal challenges if made during terminal illness.' },
+            { question: 'Is Heba registration mandatory in Bangladesh?', answer: 'Yes — for immovable property (land, flat, building). Unregistered Heba is void against third parties and unenforceable in court for immovable property under the Registration Act 1908.' },
+            { question: 'Can a Heba be made without the donee knowing?', answer: 'No. Valid Heba requires the donee\'s acceptance (Qabul). A gift without the donee\'s knowledge and acceptance is not legally complete.' },
+            { question: 'What is Heba-bil-Ewaz?', answer: 'Heba-bil-Ewaz (gift for consideration) is a transfer that appears to be a gift but involves consideration (payment or exchange). It is treated like a sale for registration and stamp duty purposes.' },
+            { question: 'Can Heba be made of mortgaged property?', answer: 'Heba of mortgaged property is permitted but the mortgage liability accompanies the property to the donee unless the donor discharges the mortgage first.' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Property Lawyer Uttara', to: '/land-property-lawyer-uttara' },
+            { text: 'Supreme Court Lawyer', to: '/supreme-court-lawyer-dhaka' },
+        ],
+    },
+
+    /* ── 30 ── */
+    {
+        slug: 'artha-rin-adalat-loan-recovery-bangladesh',
+        title: 'Loan Recovery Case (Artha Rin Adalat) in Bangladesh: Legal Guide',
+        category: 'Civil Law',
+        readTime: '7 min read',
+        metaTitle: 'Artha Rin Adalat Loan Recovery Bangladesh – Legal Guide',
+        metaDescription: 'Complete guide to the Artha Rin Adalat (Money Loan Court) in Bangladesh — who can file, procedure, attachment of property, decree execution, and how to defend against a bank loan recovery suit.',
+        keywords: ['Artha Rin Adalat Bangladesh', 'loan recovery Bangladesh', 'money loan court Bangladesh', 'bank loan default Bangladesh', 'civil lawyer Dhaka', 'Artha Rin Adalat Ain 2003'],
+        publishedDate: '2026-03-16',
+        heroIntro: 'When a borrower defaults on a bank or financial institution loan in Bangladesh, the lender\'s primary remedy is a suit in the Artha Rin Adalat (Money Loan Court). Established under the Artha Rin Adalat Ain 2003, this specialized court handles billions of taka in pending loan recovery cases. Whether you are a creditor seeking recovery or a borrower defending a suit, understanding this court is essential.',
+        toc: [
+            'What is the Artha Rin Adalat?',
+            'Who Can File in Artha Rin Adalat?',
+            'Jurisdiction and Territorial Coverage',
+            'Step-by-Step Artha Rin Adalat Procedure',
+            'Attachment of Property Before Judgment',
+            'Defending Against an Artha Rin Adalat Suit',
+            'Decree Execution in Artha Rin Adalat',
+            'Appeal from Artha Rin Adalat Decisions',
+        ],
+        sections: [
+            {
+                h2: 'What is the Artha Rin Adalat?',
+                content: `<p>The <strong>Artha Rin Adalat</strong> (Money Loan Court) is a specialized civil court established under the <strong>Artha Rin Adalat Ain 2003</strong> to handle loan recovery suits by banks and financial institutions. Before this law, lenders had to pursue recovery through regular civil courts — a process that could take decades. The Artha Rin Adalat creates a faster, streamlined procedure specifically for financial institutions.</p>
+<p>If you are a defaulting borrower served with an Artha Rin Adalat summons — or a creditor considering filing a suit — consult an experienced <a href="/civil-lawyer-dhaka" style="color:var(--accent)">civil lawyer in Dhaka</a> without delay.</p>`,
+            },
+            {
+                h2: 'Who Can File in Artha Rin Adalat?',
+                content: `<p>Only specific entities can file suits in Artha Rin Adalat:</p>
+<ul>
+<li>Scheduled banks (all commercial banks licensed by Bangladesh Bank)</li>
+<li>Financial institutions licensed under the Financial Institutions Act 1993</li>
+<li>Non-banking financial institutions (NBFIs)</li>
+<li>Leasing companies</li>
+</ul>
+<p><strong>Regular businesses and individuals cannot file in Artha Rin Adalat</strong> even if owed money. For personal loans between individuals, the remedy is a regular Money Suit in the Civil Court under the Code of Civil Procedure.</p>`,
+            },
+            {
+                h2: 'Step-by-Step Artha Rin Adalat Procedure',
+                content: `<p>The Artha Rin Adalat process from filing to decree:</p>
+<ol>
+<li><strong>Pre-suit notice:</strong> The bank must serve a demand notice to the borrower before filing.</li>
+<li><strong>Filing the plaint:</strong> The bank files a suit in the Artha Rin Adalat of the district where the defendant resides or the contract was executed.</li>
+<li><strong>Summons issued:</strong> The court issues summons to all defendants (borrower and guarantors).</li>
+<li><strong>Written statement:</strong> The defendant must file a written statement within 8 weeks of receiving summons — failure to do so results in the suit proceeding ex parte.</li>
+<li><strong>Interim orders:</strong> The court may order attachment of assets at this stage.</li>
+<li><strong>Trial and evidence:</strong> Both parties present evidence. The Artha Rin Adalat Ain limits frivolous adjournments.</li>
+<li><strong>Decree:</strong> If the claim is proven, the court passes a money decree for the principal plus interest.</li>
+<li><strong>Execution:</strong> The bank executes the decree through sale of attached property.</li>
+</ol>`,
+            },
+            {
+                h2: 'Attachment of Property Before Judgment',
+                content: `<p>One of the most powerful (and feared) provisions of the Artha Rin Adalat Ain is the power to <strong>attach the borrower's property before passing the final decree</strong>. The court can order:</p>
+<ul>
+<li>Attachment of bank accounts</li>
+<li>Attachment of land and buildings (prevents sale during proceedings)</li>
+<li>Attachment of vehicles, machinery, and business assets</li>
+<li>Receiver appointed over a business to protect assets</li>
+</ul>
+<p>Attachment orders can be applied ex parte (without hearing the borrower first) in urgent cases. A defendant facing attachment must respond immediately — contact a <a href="/civil-lawyer-dhaka" style="color:var(--accent)">civil lawyer</a> to apply to vacate the attachment order.</p>`,
+            },
+            {
+                h2: 'Defending Against an Artha Rin Adalat Suit',
+                content: `<p>Borrowers have legitimate defences — but these must be raised promptly in the written statement:</p>
+<ul>
+<li><strong>Dispute the loan amount:</strong> Challenge the calculation of interest, penalties, and charges.</li>
+<li><strong>Payment already made:</strong> Produce receipts for payments that were not credited by the bank.</li>
+<li><strong>Procedural defects:</strong> Missing pre-suit notice, wrong court jurisdiction, or wrong party named.</li>
+<li><strong>Limitation period:</strong> The bank's claim may be time-barred if filed too late.</li>
+<li><strong>Execution of security:</strong> Argue that the mortgaged security was sufficient to cover the loan and demand its execution first.</li>
+</ul>
+<p><strong>Important:</strong> Under the Artha Rin Adalat Ain, a defendant who wants to defend the suit may be required to deposit a portion of the claimed amount in court as a condition for filing a written statement. An experienced lawyer can challenge this requirement where appropriate.</p>`,
+            },
+            {
+                h2: 'Appeal from Artha Rin Adalat Decisions',
+                content: `<p>A decree or order of the Artha Rin Adalat can be appealed to the <strong>High Court Division</strong> of the Supreme Court within 60 days of the order. However:</p>
+<ul>
+<li>An appellant (borrower) may be required to deposit 50% of the decreed amount before the appeal is admitted.</li>
+<li>This deposit requirement can be waived in exceptional circumstances — an experienced Supreme Court lawyer can apply for this.</li>
+</ul>
+<p>Appeals in Artha Rin matters are handled exclusively by the High Court Division. Advocate Md. Shah Alam represents clients in both Artha Rin Adalat proceedings and High Court appeals. <a href="/civil-lawyer-dhaka" style="color:var(--accent)">Contact us</a> for urgent assistance.</p>`,
+            },
+        ],
+        faqs: [
+            { question: 'Can an individual (not a bank) file a loan recovery case in Artha Rin Adalat?', answer: 'No. Artha Rin Adalat exclusively handles suits by scheduled banks and licensed financial institutions. For individual-to-individual loan recovery, file a Money Suit in the Civil Court.' },
+            { question: 'What happens if I ignore an Artha Rin Adalat summons?', answer: 'If you fail to file a written statement within the time limit, the court will proceed ex parte — hearing only the bank\'s side — and is likely to pass a decree against you. Respond to summons immediately.' },
+            { question: 'Can a bank attach my property before winning the case?', answer: 'Yes. The Artha Rin Adalat Ain allows pre-judgment attachment of the defendant\'s assets. A lawyer can apply to vacate or limit an attachment order.' },
+            { question: 'Is there a time limit for banks to file Artha Rin suits?', answer: 'Yes. Banks must file within the limitation period — generally 3 years from the date of default for most loan types. A lawyer should check if the bank\'s suit is time-barred.' },
+            { question: 'Can I negotiate a settlement with the bank after the suit is filed?', answer: 'Yes. Settlement is possible at any stage of Artha Rin proceedings. Many banks prefer negotiated settlement over lengthy litigation. A lawyer can negotiate on your behalf.' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Civil Lawyer Dhaka', to: '/civil-lawyer-dhaka' },
+            { text: 'Supreme Court Lawyer', to: '/supreme-court-lawyer-dhaka' },
+        ],
+    },
+
+    /* ── 31 ── */
+    {
+        slug: 'contract-breach-specific-performance-bangladesh',
+        title: 'Contract Breach and Specific Performance Suit in Bangladesh',
+        category: 'Civil Law',
+        readTime: '7 min read',
+        metaTitle: 'Contract Breach & Specific Performance Bangladesh – Civil Suit Guide',
+        metaDescription: 'When a contract is breached in Bangladesh — remedies explained: damages, specific performance, injunction, and rescission. Civil lawyer guide for businesses and property buyers in Dhaka.',
+        keywords: ['contract breach Bangladesh', 'specific performance Bangladesh', 'breach of contract remedy Bangladesh', 'civil suit Bangladesh', 'civil lawyer Dhaka', 'Specific Relief Act Bangladesh'],
+        publishedDate: '2026-03-17',
+        heroIntro: 'A binding contract that one party refuses to honour creates critical legal consequences in Bangladesh. Whether it\'s a developer refusing to execute a sale deed, a supplier abandoning a commercial contract, or a business partner walking away from a joint venture agreement — the law provides remedies. Knowing which remedy applies to your situation determines the speed and outcome of your legal action.',
+        toc: [
+            'Contract Law in Bangladesh: The Basics',
+            'What Constitutes a Breach of Contract?',
+            'Remedies for Breach of Contract in Bangladesh',
+            'Damages: When Money Compensation Applies',
+            'Specific Performance: Enforcing the Contract Itself',
+            'When Can Specific Performance Be Refused?',
+            'Injunction to Prevent Further Breach',
+            'How to File a Contract Breach Suit in Bangladesh',
+        ],
+        sections: [
+            {
+                h2: 'Contract Law in Bangladesh: The Basics',
+                content: `<p>Contract law in Bangladesh is governed primarily by the <strong>Contract Act 1872</strong> — a comprehensive law that defines valid contracts, conditions for enforceability, and consequences of breach. For property-related contracts (sale deeds, lease agreements, development agreements), the <strong>Transfer of Property Act 1882</strong> and <strong>Specific Relief Act 1877</strong> also apply.</p>
+<p>A valid contract requires: offer, acceptance, consideration, capacity of parties, free consent, and lawful object. Any breach of a valid contract entitles the aggrieved party to seek legal remedies. Contact an experienced <a href="/civil-lawyer-dhaka" style="color:var(--accent)">civil lawyer in Dhaka</a> to assess which remedy applies to your situation.</p>`,
+            },
+            {
+                h2: 'What Constitutes a Breach of Contract?',
+                content: `<p>A breach occurs when one party fails to fulfil their contractual obligations without a legally recognized excuse. Types of breach:</p>
+<ul>
+<li><strong>Actual breach:</strong> The party has clearly and definitively failed to perform when performance was due.</li>
+<li><strong>Anticipatory breach:</strong> A party communicates (expressly or through conduct) that they will not perform before the performance date arrives.</li>
+<li><strong>Partial breach:</strong> The party performs some but not all of their obligations.</li>
+<li><strong>Material breach:</strong> A breach that goes to the root of the contract, entitling the other party to treat the contract as discharged and sue for remedies.</li>
+</ul>`,
+            },
+            {
+                h2: 'Remedies for Breach of Contract in Bangladesh',
+                content: `<p>The Contract Act 1872 and Specific Relief Act 1877 provide several remedies for breach:</p>
+<ol>
+<li><strong>Damages</strong> — monetary compensation for loss suffered (most common remedy).</li>
+<li><strong>Specific Performance</strong> — court orders the breaching party to perform the contract as agreed.</li>
+<li><strong>Injunction</strong> — court order preventing the breaching party from doing something that violates the contract.</li>
+<li><strong>Rescission</strong> — the contract is cancelled, and parties are restored to their original positions.</li>
+<li><strong>Quantum Meruit</strong> — payment for the reasonable value of work already performed before the breach.</li>
+</ol>`,
+            },
+            {
+                h2: 'Specific Performance: Enforcing the Contract Itself',
+                content: `<p>Specific performance is a particularly powerful remedy in Bangladesh for property contracts. Under the <strong>Specific Relief Act 1877 (Sections 12–30)</strong>, a court can order a party to actually perform the contract — for example, to execute the registered sale deed for a property.</p>
+<p>Specific performance is typically available when:</p>
+<ul>
+<li>The subject matter is unique — primarily land, buildings, and rare goods that cannot simply be purchased elsewhere.</li>
+<li>Monetary compensation would be inadequate to remedy the loss.</li>
+<li>A valid and enforceable contract exists between the parties.</li>
+<li>The plaintiff was ready and willing to perform their side of the contract.</li>
+</ul>
+<p>In Dhaka property disputes, specific performance suits are extremely common — where a developer or seller has taken payment but refuses to execute the deed. A <a href="/civil-lawyer-dhaka" style="color:var(--accent)">Dhaka civil lawyer</a> experienced in property suits is essential for these cases.</p>`,
+            },
+            {
+                h2: 'When Can Specific Performance Be Refused?',
+                content: `<p>The court has discretion to refuse specific performance even where it would otherwise be available:</p>
+<ul>
+<li>Contract is inequitable — terms were grossly unfair to the defendant.</li>
+<li>Plaintiff has not performed or was not ready to perform their obligations.</li>
+<li>Contract is uncertain or incomplete in its material terms.</li>
+<li>Performance would require excessive court supervision.</li>
+<li>The plaintiff unduly delayed (doctrine of laches) — typically over 3 years from the breach.</li>
+<li>For contracts involving personal service (courts cannot compel a person to personally serve another).</li>
+</ul>`,
+            },
+            {
+                h2: 'How to File a Contract Breach Suit in Bangladesh',
+                content: `<p>The general process for filing a contract breach suit:</p>
+<ol>
+<li><strong>Send a legal notice:</strong> Before filing, send a formal demand notice to the breaching party — this demonstrates good faith and may prompt settlement.</li>
+<li><strong>Determine the appropriate court:</strong> Value of claim determines whether to file in Assistant Judge Court, Senior Assistant Judge Court, Joint District Judge Court, or District Judge Court.</li>
+<li><strong>File the plaint:</strong> With supporting documents — the contract, correspondence, evidence of breach, and evidence of your readiness to perform.</li>
+<li><strong>Apply for interim relief:</strong> Alongside the plaint, apply for a temporary injunction preventing the defendant from disposing of the subject property during the suit.</li>
+<li><strong>Trial:</strong> Present oral and documentary evidence. The court passes judgment.</li>
+<li><strong>Execution:</strong> Enforce the decree — either collect damages or compel performance via court bailiff.</li>
+</ol>
+<p><strong>Limitation period:</strong> Most contract breach suits must be filed within 3 years of the breach. Missing the limitation period is fatal to your claim — act promptly.</p>`,
+            },
+        ],
+        faqs: [
+            { question: 'Can I claim both damages and specific performance in the same suit?', answer: 'Generally no — you must elect one primary remedy. However, you can claim specific performance and in the alternative, damages if specific performance is refused by the court.' },
+            { question: 'How long does a specific performance suit take in Bangladesh?', answer: 'Civil suits in Bangladesh can take 3–7 years or longer, depending on the court\'s workload and complexity of the case. Interim injunctions can provide immediate protection while the case is pending.' },
+            { question: 'Do I need a written contract to sue for breach?', answer: 'Not always — oral contracts can be legally binding in Bangladesh for most matters. However, for immovable property transactions above a certain value, a written and registered agreement is required. Proving an oral contract is difficult.' },
+            { question: 'What is the limitation period for a contract breach suit?', answer: 'Generally 3 years from the date of breach under the Limitation Act 1908. For specific performance of a contract to sell property, the period is also 3 years from the date the plaintiff first refused the defendant\'s demand to perform.' },
+            { question: 'Can I get an urgent court order to stop someone from breaching a contract?', answer: 'Yes. You can apply for a temporary injunction (under Order 39 CPC) at the same time as filing the suit to prevent the defendant from acting contrary to the contract while the case is pending.' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Civil Lawyer Dhaka', to: '/civil-lawyer-dhaka' },
+            { text: 'Property Lawyer Uttara', to: '/land-property-lawyer-uttara' },
+            { text: 'Supreme Court Lawyer', to: '/supreme-court-lawyer-dhaka' },
+        ],
+    },
+
+    /* ── 32 ── */
+    {
+        slug: 'injunction-procedure-bangladesh',
+        title: 'Injunction Procedure in Bangladesh: How to Stop Illegal Action by Court Order',
+        category: 'Civil Law',
+        readTime: '7 min read',
+        metaTitle: 'Injunction Procedure Bangladesh – Stop Illegal Action by Court Order',
+        metaDescription: 'Complete guide to injunction procedure in Bangladesh — types of injunctions (temporary, perpetual, mandatory), how to apply, conditions the court considers, and role of a civil lawyer in Dhaka.',
+        keywords: ['injunction procedure Bangladesh', 'temporary injunction Bangladesh', 'interim injunction Bangladesh', 'civil injunction Dhaka', 'civil lawyer Dhaka', 'court injunction order Bangladesh'],
+        publishedDate: '2026-03-18',
+        heroIntro: 'Someone is constructing on your land. A business partner is about to sell shared assets without your consent. A former employee is breaching a non-compete clause. In each of these situations, money compensation after the fact may be useless — you need the action stopped now. An injunction is a court order that compels a party to do something (mandatory injunction) or prevents them from doing something (prohibitory injunction). This guide explains how to obtain one in Bangladesh.',
+        toc: [
+            'What is an Injunction in Bangladesh Law?',
+            'Types of Injunctions Available in Bangladesh',
+            'Temporary vs. Perpetual Injunction',
+            'Conditions the Court Considers for an Injunction',
+            'How to Apply for a Temporary Injunction in Bangladesh',
+            'Ex Parte Injunction: Emergency Relief',
+            'Consequences of Breaching an Injunction Order',
+            'Civil Lawyer\'s Role in Injunction Applications',
+        ],
+        sections: [
+            {
+                h2: 'What is an Injunction in Bangladesh Law?',
+                content: `<p>An injunction is a judicial order requiring a party to do (or refrain from doing) a specific act. In Bangladesh, injunctions are governed by the <strong>Specific Relief Act 1877 (Sections 52–57)</strong> for perpetual injunctions, and the <strong>Code of Civil Procedure 1908 (Order 39)</strong> for temporary injunctions.</p>
+<p>Injunctions are equitable remedies — courts grant them at their discretion when they determine that ordinary monetary remedies would be inadequate or that irreparable harm would result without the order. Contact a <a href="/civil-lawyer-dhaka" style="color:var(--accent)">civil lawyer in Dhaka</a> immediately if you need urgent injunctive relief.</p>`,
+            },
+            {
+                h2: 'Types of Injunctions Available in Bangladesh',
+                content: `<p>Bangladesh courts issue two broad categories of injunction:</p>
+<ul>
+<li><strong>Prohibitory (Restrictive) Injunction:</strong> Prevents the defendant from doing something — the most common type. E.g., stop selling disputed property, stop using a trademark, stop construction on land in dispute.</li>
+<li><strong>Mandatory Injunction:</strong> Orders the defendant to do something positive — e.g., restore possession of property, remove an illegal structure built in violation of a court order. Courts grant mandatory injunctions more rarely and only in clear cases.</li>
+</ul>`,
+            },
+            {
+                h2: 'Temporary vs. Perpetual Injunction',
+                content: `<p>These differ in duration and purpose:</p>
+<ul>
+<li><strong>Temporary (Interim) Injunction:</strong> Granted at the beginning of a case to preserve the status quo until the final hearing. It is not a final determination of rights — just a holding order. Governed by Order 39 CPC.</li>
+<li><strong>Perpetual Injunction:</strong> Granted at the end of a suit as a final remedy, permanently restraining the defendant. Governed by the Specific Relief Act 1877.</li>
+</ul>
+<p>Most urgent situations require a <strong>temporary injunction</strong> first. The court will fix a date for both sides to be heard to determine if the injunction should continue through the trial.</p>`,
+            },
+            {
+                h2: 'Conditions the Court Considers for an Injunction',
+                content: `<p>Bangladesh courts apply the <strong>three-pronged test</strong> before granting a temporary injunction. The plaintiff must establish all three:</p>
+<ol>
+<li><strong>Prima Facie Case:</strong> There is a serious question to be tried — the plaintiff's claim appears to have merit on preliminary examination.</li>
+<li><strong>Balance of Convenience:</strong> The harm to the plaintiff if the injunction is refused outweighs the harm to the defendant if the injunction is granted.</li>
+<li><strong>Irreparable Injury:</strong> The plaintiff would suffer harm that cannot be adequately compensated by money damages if the injunction is not granted.</li>
+</ol>
+<p>The applicant typically must provide an undertaking as to damages — a promise to compensate the defendant for losses if the injunction is later found to have been wrongly granted.</p>`,
+            },
+            {
+                h2: 'How to Apply for a Temporary Injunction in Bangladesh',
+                content: `<p>The procedure for obtaining a temporary injunction:</p>
+<ol>
+<li><strong>File the main suit:</strong> A temporary injunction cannot be obtained standalone — it is an interlocutory application within a main civil suit.</li>
+<li><strong>File the injunction application:</strong> Simultaneously or very soon after filing the suit, file an application under Order 39 CPC stating the grounds for urgency and the three-pronged test.</li>
+<li><strong>Affidavit in support:</strong> Attach a sworn affidavit verifying the facts and the urgency of the situation.</li>
+<li><strong>Court hearing:</strong> The court can hear both parties (inter partes) or issue an ex parte order if the case is urgent.</li>
+<li><strong>Show Cause:</strong> If an ex parte order is granted, the defendant is given a date to appear and show cause why the injunction should not continue.</li>
+</ol>
+<p>A <a href="/civil-lawyer-dhaka" style="color:var(--accent)">Dhaka civil lawyer</a> can prepare and file an injunction application on an emergency basis — sometimes within a single day when the urgency is dire.</p>`,
+            },
+            {
+                h2: 'Consequences of Breaching an Injunction Order',
+                content: `<p>Breach of a court injunction order is treated as <strong>contempt of court</strong> in Bangladesh — a serious matter with significant consequences:</p>
+<ul>
+<li>Imprisonment for a term determined by the court</li>
+<li>Fine imposed by the court</li>
+<li>Attachment and sale of assets</li>
+<li>In property cases: the breaching construction may be ordered demolished</li>
+</ul>
+<p>If someone is defying an existing court injunction order against you, apply immediately to the court that issued the order to initiate contempt proceedings. <a href="/civil-lawyer-dhaka" style="color:var(--accent)">Our civil lawyers</a> handle urgent contempt applications in Dhaka civil courts.</p>`,
+            },
+        ],
+        faqs: [
+            { question: 'How quickly can I get an emergency injunction in Bangladesh?', answer: 'In urgent cases, a court can issue an ex parte temporary injunction on the same day the application is filed. The defendant is then given notice and a date to contest the order.' },
+            { question: 'Can I get an injunction without filing a full lawsuit?', answer: 'No. A temporary injunction is an interlocutory application within a main civil suit. You must file the suit and apply for the injunction simultaneously or shortly after.' },
+            { question: 'What if someone ignores a court injunction against them?', answer: 'Non-compliance with a court injunction constitutes contempt of court. Apply to the court that issued the order for contempt proceedings, which can result in the defendant\'s imprisonment and/or fine.' },
+            { question: 'Can I get an injunction to stop a bank from recovering a loan?', answer: 'It is very difficult to obtain injunctions against banks executing security for loans. Courts are generally reluctant to prevent legitimate banking operations. However, injunctions may be available in cases of clear procedural error.' },
+            { question: 'How long does a temporary injunction last?', answer: 'A temporary injunction remains in force until the final disposal of the suit, unless vacated earlier by the court on an application by either party.' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Civil Lawyer Dhaka', to: '/civil-lawyer-dhaka' },
+            { text: 'Property Lawyer Uttara', to: '/land-property-lawyer-uttara' },
+            { text: 'Supreme Court Lawyer', to: '/supreme-court-lawyer-dhaka' },
+        ],
+    },
+
+
+    /* ── 33 ── */
+    {
+        slug: 'child-adoption-law-bangladesh',
+        title: 'Child Adoption Law in Bangladesh: What the Law Actually Says',
+        category: 'Family Law',
+        readTime: '7 min read',
+        metaTitle: 'Child Adoption Law Bangladesh – What You Must Know',
+        metaDescription: 'Child adoption law in Bangladesh explained — why formal adoption is not available under Muslim law, how Guardianship under Guardians and Wards Act works, and the Kafala alternative. Family lawyer guide.',
+        keywords: ['child adoption Bangladesh', 'adoption Bangladesh law', 'Guardians and Wards Act Bangladesh', 'kafala Bangladesh', 'family lawyer Dhaka', 'child guardianship Bangladesh'],
+        publishedDate: '2026-03-19',
+        heroIntro: 'Many couples in Bangladesh wish to adopt a child and are surprised to discover that formal adoption — as understood in Western countries — is not legally available under Islamic law, which governs Muslim personal matters in Bangladesh. However, the law does provide legal mechanisms that achieve many of the same outcomes. Understanding what is and is not possible is the essential first step.',
+        toc: [
+            'Does Bangladesh Allow Formal Adoption?',
+            'Why Muslim Law Does Not Permit Adoption',
+            'Kafala: The Islamic Alternative',
+            'Guardianship Under Guardians and Wards Act 1890',
+            'How to Apply for Legal Guardianship',
+            'Adoption by Non-Muslims in Bangladesh',
+            'Inheritance Rights of Adopted/Guardian Children',
+            'International Adoption from Bangladesh',
+        ],
+        sections: [
+            {
+                h2: 'Does Bangladesh Allow Formal Adoption?',
+                content: `<p>The short answer is: <strong>not for Muslims</strong>. Bangladesh does not have a civil adoption law that applies to Muslims. Under Islamic jurisprudence (which governs Muslim personal law in Bangladesh), formal adoption — where a child is legally treated as the biological child and heir of the adopting parents — is not recognized.</p>
+<p>However, <strong>non-Muslims</strong> (Hindus, Christians, and Buddhists) in Bangladesh can adopt through specific personal laws. And for both Muslims and non-Muslims, the <strong>Guardians and Wards Act 1890</strong> provides a mechanism for legal guardianship that gives significant parental rights without formal adoption. Consult a <a href="/divorce-family-lawyer-uttara" style="color:var(--accent)">family lawyer in Dhaka</a> for advice specific to your circumstances.</p>`,
+            },
+            {
+                h2: 'Kafala: The Islamic Alternative',
+                content: `<p><strong>Kafala</strong> (كفالة) is the Islamic concept recognized in Sharia law that most closely resembles adoption. A <em>kafil</em> (guardian) takes a child under their care and protection without the child becoming their legal heir. Key features of Kafala:</p>
+<ul>
+<li>The child retains their birth name and family lineage.</li>
+<li>The kafil provides care, support, and education for the child.</li>
+<li>The child does not automatically inherit from the kafil (though the kafil can make a will leaving up to one-third of their estate to the child).</li>
+<li>The child's biological parents (if known) retain nominal legal status.</li>
+</ul>
+<p>Kafala is a moral and religious obligation recognized in Islam but does not require court registration in Bangladesh.</p>`,
+            },
+            {
+                h2: 'Guardianship Under Guardians and Wards Act 1890',
+                content: `<p>For most practical purposes, Bangladeshi couples who wish to care for a child can apply to the Family Court for <strong>legal guardianship</strong> under the Guardians and Wards Act 1890. This is the primary legal framework for both Muslims and non-Muslims. A court-appointed guardian has the legal right to:</p>
+<ul>
+<li>Make decisions about the child's education, medical treatment, and welfare.</li>
+<li>Obtain a passport for the child.</li>
+<li>Represent the child in legal matters.</li>
+<li>Take the child abroad with court permission.</li>
+</ul>
+<p>Guardianship is <strong>not the same as adoption</strong> — the child does not become the guardian's legal heir by default. But it provides significant legal recognition of the guardian-child relationship.</p>`,
+            },
+            {
+                h2: 'How to Apply for Legal Guardianship',
+                content: `<p>The process for obtaining guardianship of a child in Bangladesh:</p>
+<ol>
+<li>File a guardianship petition in the Family Court of the district where the child resides.</li>
+<li>State the grounds for guardianship — the child's parents are deceased, have consented, or are unable to care for the child.</li>
+<li>The court appoints a guardian ad litem and may call for a welfare report on the child.</li>
+<li>Both parents (if alive and locatable) must be given notice and an opportunity to object.</li>
+<li>If satisfied that guardianship is in the child's best interest, the court passes an order appointing the guardians.</li>
+<li>The guardian must report periodically to the court on the child's welfare.</li>
+</ol>
+<p>The entire process can take 3–6 months. A <a href="/divorce-family-lawyer-uttara" style="color:var(--accent)">family lawyer</a> will handle the petition and represent you before the Family Court.</p>`,
+            },
+            {
+                h2: 'Adoption by Non-Muslims in Bangladesh',
+                content: `<p>Non-Muslims in Bangladesh can adopt through their respective personal laws:</p>
+<ul>
+<li><strong>Hindus:</strong> The Hindu Adoptions and Maintenance Act (not yet enacted in Bangladesh — Hindu personal law on adoption applies through custom and case law). A formally adopted Hindu child has inheritance rights.</li>
+<li><strong>Christians:</strong> Christian personal law does not formally recognize adoption either — Guardians and Wards Act guardianship is the practical route.</li>
+<li><strong>Buddhists:</strong> Similarly, guardianship under the Guardians and Wards Act is the standard approach.</li>
+</ul>
+<p>The practical reality is that for all communities in Bangladesh, court-appointed guardianship is the most legally secure approach to caring for a child who is not one's own.</p>`,
+            },
+            {
+                h2: 'Inheritance Rights of Adopted/Guardian Children',
+                content: `<p>This is the most significant practical limitation of the Bangladeshi system:</p>
+<ul>
+<li>A guardian child under the Guardians and Wards Act does not automatically inherit from the guardian's estate under Muslim or other personal law inheritance rules.</li>
+<li>The guardian can make a <strong>will (Wasiyyat)</strong> leaving up to one-third of their estate to the ward child.</li>
+<li>The guardian can also gift property during their lifetime through Heba to provide for the child.</li>
+<li>For fully legally secure provision for the child, guardians should consult a lawyer to plan their estate properly.</li>
+</ul>`,
+            },
+        ],
+        faqs: [
+            { question: 'Can a Muslim couple in Bangladesh legally adopt a child?', answer: 'Not through formal adoption under Islamic law. However, they can obtain legal guardianship under the Guardians and Wards Act 1890 and can provide for the child through a will and lifetime gifts.' },
+            { question: 'Can I give an adopted/ward child my last name?', answer: 'The child retains their birth name under Islamic law. However, in practice, parents may informally use a family name for the child in school and social settings. The official legal name must reflect the biological parentage.' },
+            { question: 'Can foreigners adopt children from Bangladesh?', answer: 'International adoption from Bangladesh is extremely rare and has no clear legal framework. The government strictly regulates any international placement of children. It is effectively not a viable option at this time.' },
+            { question: 'What is the fastest way to get legal guardianship?', answer: 'File a guardianship petition in Family Court with the assistance of a family lawyer. If there is no opposition, the case can be resolved in 3–6 months.' },
+            { question: 'Can the biological parents take back the child after guardianship is granted?', answer: 'Biological parents can apply to the court to revoke or vary the guardianship order. The court will consider the child\'s best interests in determining the matter.' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Family Lawyer Uttara', to: '/divorce-family-lawyer-uttara' },
+            { text: 'Supreme Court Lawyer', to: '/supreme-court-lawyer-dhaka' },
+        ],
+    },
+
+    /* ── 34 ── */
+    {
+        slug: 'polygamy-law-bangladesh-second-marriage',
+        title: 'Polygamy Law in Bangladesh: Second Marriage Rights & Legal Consequences',
+        category: 'Family Law',
+        readTime: '7 min read',
+        metaTitle: 'Polygamy Law Bangladesh – Second Marriage Legal Guide',
+        metaDescription: 'Bangladesh polygamy law explained — MFLO 1961, permission requirements for second marriage, consequences of marrying without first wife\'s consent, and wife\'s legal options. Family lawyer guide.',
+        keywords: ['polygamy law Bangladesh', 'second marriage Bangladesh', 'MFLO 1961 polygamy', 'second wife Bangladesh legal', 'family lawyer Dhaka', 'first wife rights Bangladesh polygamy'],
+        publishedDate: '2026-03-20',
+        heroIntro: 'While Islamic law permits a Muslim man to marry up to four wives under specific conditions, Bangladesh law has imposed restrictions through the Muslim Family Laws Ordinance 1961 (MFLO). Understanding these restrictions — and the serious legal consequences of ignoring them — is essential for any man considering a second marriage and for first wives asserting their legal rights.',
+        toc: [
+            'Polygamy Under Islamic Law and Bangladesh Legislation',
+            'MFLO 1961: The Permission Requirement',
+            'Who Sits on the Arbitration Council?',
+            'Consequences of Marrying Without Permission',
+            'First Wife\'s Rights When Husband Seeks Second Marriage',
+            'Can the First Wife Prevent the Second Marriage?',
+            'Divorce Rights Triggered by Second Marriage',
+            'Maintenance and Dower After Second Marriage',
+        ],
+        sections: [
+            {
+                h2: 'MFLO 1961: The Permission Requirement',
+                content: `<p>The <strong>Muslim Family Laws Ordinance 1961 (MFLO)</strong> — which applies to all Muslim men in Bangladesh — requires that a man obtain <strong>prior written permission</strong> from the Arbitration Council before contracting a second (or subsequent) marriage. Key provisions:</p>
+<ul>
+<li>The man must submit a written application to the Chairman of the Union Parishad (or equivalent local authority) where he resides.</li>
+<li>The application must state reasons for seeking a second marriage and confirm the existing wife's written consent.</li>
+<li>The Chairman convenes an <strong>Arbitration Council</strong> consisting of one representative of each party (the husband and the first wife).</li>
+<li>The Council determines whether the second marriage is necessary and just.</li>
+<li>Only after receiving a <strong>Certificate of Permission</strong> from the Council may the second Nikah proceed.</li>
+</ul>
+<p>For legal advice on your specific situation, consult a <a href="/divorce-family-lawyer-uttara" style="color:var(--accent)">family lawyer in Dhaka</a>.</p>`,
+            },
+            {
+                h2: 'Consequences of Marrying Without Permission',
+                content: `<p>If a man contracts a second marriage <strong>without the Arbitration Council's permission</strong>, the consequences under MFLO 1961 are severe:</p>
+<ul>
+<li><strong>Criminal offence:</strong> Punishable by up to one year imprisonment, a fine of Tk. 10,000, or both.</li>
+<li><strong>Immediate payment of full dower:</strong> The entire unpaid dower (mehr) of the first wife becomes immediately payable.</li>
+<li><strong>First wife's right to divorce:</strong> The first wife acquires an immediate right to divorce through Talaq-e-Tafwid (delegated divorce) if this was included in the Nikahnama, or through Khula or judicial divorce.</li>
+</ul>
+<p>Importantly, the second marriage itself is <strong>not void</strong> under Bangladesh law — it remains a valid marriage — but the man faces the above legal consequences for proceeding without permission.</p>`,
+            },
+            {
+                h2: 'First Wife\'s Rights When Husband Seeks Second Marriage',
+                content: `<p>The first wife has several legal protections and options:</p>
+<ul>
+<li><strong>Right to participate in the Arbitration Council:</strong> She must be notified and given the opportunity to appoint a representative.</li>
+<li><strong>Right to object:</strong> Her objection carries significant weight — the Council is unlikely to grant permission without good reason shown by the husband.</li>
+<li><strong>Right to immediate divorce:</strong> If a divorce right was delegated to her in the Nikahnama (Kabinname), she can exercise it immediately upon the second marriage.</li>
+<li><strong>Right to full unpaid dower:</strong> The remainder of the dower becomes immediately payable upon the second marriage contracted without permission.</li>
+<li><strong>Right to maintenance:</strong> The first wife retains her right to maintenance even if the husband takes a second wife — provided she is obedient and not in breach of marital duties.</li>
+</ul>`,
+            },
+            {
+                h2: 'Can the First Wife Prevent the Second Marriage?',
+                content: `<p>The first wife cannot obtain a court injunction preventing the second Nikah ceremony itself — courts generally do not intervene in private religious ceremonies. However, she can:</p>
+<ul>
+<li>Participate in the Arbitration Council and vigorously oppose the grant of permission.</li>
+<li>File a criminal complaint if the husband proceeds without permission.</li>
+<li>Immediately file for divorce on the grounds of the unauthorized second marriage.</li>
+<li>Demand full payment of her dower.</li>
+</ul>
+<p>A <a href="/divorce-family-lawyer-uttara" style="color:var(--accent)">Dhaka family lawyer</a> can help a first wife assert all these rights promptly and effectively.</p>`,
+            },
+            {
+                h2: 'Maintenance and Dower After Second Marriage',
+                content: `<p>Financial rights after a second marriage:</p>
+<ul>
+<li><strong>Maintenance:</strong> A husband with multiple wives must treat them with justice — providing equal maintenance is a duty under Islamic law. Failure to maintain either wife is grounds for divorce through court.</li>
+<li><strong>Dower (Mehr):</strong> Each wife retains her individual dower right. The second marriage does not reduce or eliminate the first wife's dower.</li>
+<li><strong>Inheritance:</strong> Both wives and all children from all marriages have inheritance rights from the husband's estate under Muslim personal law.</li>
+</ul>
+<p>If you are a first wife facing this situation, contact an Uttara family lawyer to protect your financial rights immediately.</p>`,
+            },
+        ],
+        faqs: [
+            { question: 'Is second marriage legal in Bangladesh without the first wife\'s consent?', answer: 'Second marriage without Arbitration Council permission is a criminal offence under MFLO 1961 — but the marriage itself is not void. The man faces imprisonment, fine, and immediate obligation to pay full first-wife\'s dower.' },
+            { question: 'Can the first wife get a divorce if her husband marries again?', answer: 'Yes. If she has delegated divorce rights in the Nikahnama, she can exercise them immediately. Otherwise, she can pursue Khula or judicial divorce — the second unauthorized marriage is strong grounds.' },
+            { question: 'Does the MFLO apply to all Muslim men in Bangladesh?', answer: 'Yes, MFLO 1961 applies to all Muslim citizens of Bangladesh. There are very limited exceptions.' },
+            { question: 'What if the second marriage was performed abroad (e.g., in Malaysia or the Middle East)?', answer: 'MFLO technically applies to Bangladeshi Muslim citizens abroad. However, enforcement against overseas marriages is practically challenging. First wives should seek legal advice on their options.' },
+            { question: 'Can a husband grant the first wife divorce rights in the Nikahnama before the second marriage question arises?', answer: 'Yes. Including delegated divorce rights (Talaq-e-Tafwid) in the Nikahnama at the time of the first marriage is a standard legal protection that gives the wife autonomy if the husband takes a second wife.' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Family Lawyer Uttara', to: '/divorce-family-lawyer-uttara' },
+            { text: 'Supreme Court Lawyer', to: '/supreme-court-lawyer-dhaka' },
+        ],
+    },
+
+    /* ── 35 ── */
+    {
+        slug: 'domestic-violence-protection-order-bangladesh',
+        title: 'Domestic Violence Protection Order in Bangladesh: How to Apply',
+        category: 'Family Law',
+        readTime: '7 min read',
+        metaTitle: 'Domestic Violence Protection Order Bangladesh – How to Apply',
+        metaDescription: 'Complete guide to domestic violence protection orders in Bangladesh under the Domestic Violence (Prevention and Protection) Act 2010 — who can apply, how to file, types of orders, and role of a family lawyer.',
+        keywords: ['domestic violence protection order Bangladesh', 'domestic violence law Bangladesh 2010', 'protection order family court Bangladesh', 'family lawyer Dhaka', 'shelter domestic abuse Bangladesh', 'DV Act Bangladesh'],
+        publishedDate: '2026-03-21',
+        heroIntro: 'Domestic violence — whether physical, sexual, emotional, or economic — is a recognized legal harm in Bangladesh under the Domestic Violence (Prevention and Protection) Act 2010. Victims have the right to immediate legal protection through court orders that can remove the abuser from the home, restrict their movements, and provide financial support. If you or someone you know is in an abusive situation, this guide explains the legal steps available.',
+        toc: [
+            'The Domestic Violence Act 2010 in Bangladesh',
+            'Who is Protected Under the Act?',
+            'What Constitutes Domestic Violence Under Bangladesh Law?',
+            'Types of Protection Orders Available',
+            'How to Apply for a Protection Order',
+            'Emergency Protection Orders: Immediate Relief',
+            'What Happens After a Protection Order is Granted?',
+            'Criminal Complaints Alongside Protection Orders',
+        ],
+        sections: [
+            {
+                h2: 'The Domestic Violence Act 2010 in Bangladesh',
+                content: `<p>The <strong>Domestic Violence (Prevention and Protection) Act 2010</strong> is Bangladesh's primary legislation addressing domestic abuse. It provides civil remedies — protection orders, residence orders, and monetary relief — that are separate from (though can be combined with) criminal action. The Act is administered through designated courts, typically the Executive Magistrate or Family Court.</p>
+<p>If you or a family member is in immediate danger, contact the police (999) or a <a href="/divorce-family-lawyer-uttara" style="color:var(--accent)">family lawyer in Dhaka</a> immediately. Legal protection is available quickly under this Act.</p>`,
+            },
+            {
+                h2: 'What Constitutes Domestic Violence Under Bangladesh Law?',
+                content: `<p>The Act covers several forms of domestic violence:</p>
+<ul>
+<li><strong>Physical violence:</strong> Assault, battery, causing bodily harm, or threatening physical violence.</li>
+<li><strong>Sexual violence:</strong> Sexual assault or coercion within the domestic relationship.</li>
+<li><strong>Psychological/emotional violence:</strong> Harassment, intimidation, threats, controlling behaviour.</li>
+<li><strong>Economic violence:</strong> Depriving the victim of financial resources, forcing them from the matrimonial home, preventing employment.</li>
+<li><strong>Dowry-related violence:</strong> Harassment, threats, or violence related to dowry demands.</li>
+</ul>`,
+            },
+            {
+                h2: 'Types of Protection Orders Available',
+                content: `<p>The courts can issue several types of orders under the Act:</p>
+<ul>
+<li><strong>Protection Order:</strong> Prohibits the respondent from committing any act of domestic violence, intimidating the victim, or contacting the victim in any manner.</li>
+<li><strong>Residence Order:</strong> Allows the victim to remain in the matrimonial home and orders the respondent to leave, or grants alternative accommodation.</li>
+<li><strong>Monetary Relief Order:</strong> Orders the respondent to pay compensation for medical expenses, loss of earnings, and other expenses arising from the violence.</li>
+<li><strong>Custody Order (Interim):</strong> Awards temporary custody of children to the victim during proceedings.</li>
+</ul>`,
+            },
+            {
+                h2: 'How to Apply for a Protection Order',
+                content: `<p>The application process for a domestic violence protection order:</p>
+<ol>
+<li><strong>File an application:</strong> Submit a written complaint to the Executive Magistrate (First Class) or the appropriate court in the judicial district where the victim resides or where the violence occurred.</li>
+<li><strong>Medical evidence:</strong> Obtain a medical examination certificate documenting injuries — this is critical evidence.</li>
+<li><strong>Supporting documents:</strong> Gather relevant documents — marriage certificate, photographs, written threats, medical reports, witness statements.</li>
+<li><strong>Court hearing:</strong> The court will summon the respondent. In urgent cases, an interim order can be issued the same day without hearing the respondent first.</li>
+<li><strong>Final order:</strong> After hearing both parties, the court passes a final protection order if the complaint is substantiated.</li>
+</ol>
+<p>A <a href="/divorce-family-lawyer-uttara" style="color:var(--accent)">Dhaka family lawyer</a> can prepare and file the application and represent you in court — protecting you from having to face the abuser alone in court.</p>`,
+            },
+            {
+                h2: 'Emergency Protection Orders: Immediate Relief',
+                content: `<p>In cases of immediate danger, the court can issue an <strong>interim (emergency) protection order</strong> on the same day of filing — even without hearing the respondent. The respondent is served notice later and given a date to contest the order. This provides immediate legal protection to victims in acute danger.</p>
+<p>Additionally, the police have the power to provide immediate assistance to DV victims and can accompany the victim to retrieve personal belongings from a shared residence.</p>`,
+            },
+            {
+                h2: 'Criminal Complaints Alongside Protection Orders',
+                content: `<p>Protection orders under the DV Act are civil remedies. Victims can also simultaneously file:</p>
+<ul>
+<li><strong>Criminal complaint under Sections 326, 323, 506 Penal Code</strong> for physical assault and threats.</li>
+<li><strong>Case under Nari O Shishu Nirjatan Daman Ain 2000</strong> for dowry-related violence and sexual offences.</li>
+<li><strong>Case under Sections 4 and 6 of the Dowry Prohibition Act 1980</strong> for dowry demands and related violence.</li>
+</ul>
+<p>Filing parallel civil (protection order) and criminal (police case) proceedings provides maximum legal protection. Both tracks can be pursued simultaneously. Contact our <a href="/divorce-family-lawyer-uttara" style="color:var(--accent)">Uttara family law office</a> for a confidential consultation.</p>`,
+            },
+        ],
+        faqs: [
+            { question: 'How quickly can I get a protection order in Bangladesh?', answer: 'In urgent cases, an interim protection order can be issued the same day the application is filed, without the respondent being heard first. Regular final orders take several weeks after both parties are heard.' },
+            { question: 'Can I remain in the matrimonial home after getting a protection order?', answer: 'Yes. A residence order under the DV Act 2010 can require the abuser to leave the matrimonial home and allow the victim to remain, even if the property belongs to the husband.' },
+            { question: 'What is the punishment for violating a domestic violence protection order?', answer: 'Violation of a protection order is a criminal offence under the DV Act, punishable by imprisonment and/or fine. Repeat violations carry enhanced penalties.' },
+            { question: 'Can men also apply for domestic violence protection orders?', answer: 'The DV Act 2010 is primarily oriented toward women and children as victims. However, protections may extend to any person in a domestic relationship who faces violence.' },
+            { question: 'Do I need a lawyer to apply for a protection order?', answer: 'It is not legally required but strongly recommended. A family lawyer can ensure the application is properly drafted, evidence is organized, and you are protected from having to face the respondent alone in court.' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Family Lawyer Uttara', to: '/divorce-family-lawyer-uttara' },
+            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-uttara' },
+            { text: 'Supreme Court Lawyer', to: '/supreme-court-lawyer-dhaka' },
+        ],
+    },
+
+    /* ── 36 ── */
+    {
+        slug: 'nbr-tax-raid-seizure-response-bangladesh',
+        title: 'NBR Tax Raid & Seizure: How to Legally Respond in Bangladesh',
+        category: 'Tax Law',
+        readTime: '7 min read',
+        metaTitle: 'NBR Tax Raid Bangladesh – How to Legally Respond',
+        metaDescription: 'Complete guide to NBR tax raids and seizures in Bangladesh — legal authority for raids, your rights during a tax investigation, how to respond, protecting documents, and role of a tax lawyer in Dhaka.',
+        keywords: ['NBR tax raid Bangladesh', 'tax raid Bangladesh', 'NBR seizure Bangladesh', 'income tax investigation Bangladesh', 'tax lawyer Dhaka', 'NBR search procedure Bangladesh'],
+        publishedDate: '2026-03-22',
+        heroIntro: 'A knock on the door from the National Board of Revenue (NBR) with an order for a tax raid is a frightening experience for any business owner or taxpayer. Bangladesh\'s income tax laws give NBR considerable powers to search premises and seize documents and assets. Understanding what the law allows — and what it prohibits — is your first line of defence.',
+        toc: [
+            'NBR\'s Legal Authority to Conduct Tax Raids',
+            'When Can NBR Conduct a Raid?',
+            'What Can NBR Search and Seize?',
+            'Your Rights During an NBR Tax Raid',
+            'Immediate Steps During an NBR Raid',
+            'Challenging an Unlawful NBR Search',
+            'After the Raid: Responding to the Investigation',
+            'Role of a Tax Lawyer During NBR Investigations',
+        ],
+        sections: [
+            {
+                h2: 'NBR\'s Legal Authority to Conduct Tax Raids',
+                content: `<p>The National Board of Revenue (NBR) derives its power to search and seize from the <strong>Income Tax Ordinance 1984 (ITO 1984)</strong>, primarily <strong>Sections 117–122</strong>. These sections authorize the Commissioner of Taxes or an authorized income tax officer to:</p>
+<ul>
+<li>Enter and search any building, place, vessel, vehicle, or aircraft.</li>
+<li>Search any person found therein.</li>
+<li>Break open locks if access is refused.</li>
+<li>Seize any books of accounts, documents, cash, and valuables found during the search.</li>
+</ul>
+<p>NBR officers must have a valid written <strong>search warrant or authorization</strong> from a competent authority before conducting a raid — oral authorization or unofficial notices are not sufficient. If you are facing a tax investigation, immediately contact a <a href="/tax-lawyer-dhaka" style="color:var(--accent)">tax lawyer in Dhaka</a>.</p>`,
+            },
+            {
+                h2: 'When Can NBR Conduct a Raid?',
+                content: `<p>The ITO 1984 limits raids to situations where there is <strong>reason to believe</strong> that:</p>
+<ul>
+<li>Any person has undisclosed income or assets not returned in their tax declaration.</li>
+<li>Books of accounts or documents will be tampered with, falsified, or destroyed if notice is given.</li>
+<li>Cash or valuables representing undisclosed income are present at the premises.</li>
+</ul>
+<p>In practice, raids are triggered by: informant reports, discrepancies in filed returns, intelligence gathered during other investigations, or sector-wide campaigns (e.g., targeting specific industries or professions).</p>`,
+            },
+            {
+                h2: 'Your Rights During an NBR Tax Raid',
+                content: `<p>Despite NBR's broad powers, taxpayers retain important rights during a raid:</p>
+<ul>
+<li><strong>Right to see the search warrant:</strong> Demand to see and read the written authorization before allowing entry. Note the authorizing officer's name, designation, and the scope of the authorization.</li>
+<li><strong>Right to have a witness present:</strong> Insist on having at least two independent witnesses (panchas) present during the search — this is required by law.</li>
+<li><strong>Right to a copy of the panchanama:</strong> A panchanama (record of search) documenting all seized items must be prepared and you must be given a copy.</li>
+<li><strong>Right to legal representation:</strong> You can request time to contact your lawyer before answering questions. However, officers are not legally required to wait indefinitely.</li>
+<li><strong>Right to make submissions:</strong> You may submit explanations in writing for any apparent discrepancy found during the raid.</li>
+</ul>`,
+            },
+            {
+                h2: 'Immediate Steps During an NBR Raid',
+                content: `<p>Practical steps to protect yourself during an NBR raid:</p>
+<ol>
+<li><strong>Stay calm and cooperative</strong> — obstruction or physical interference is illegal and harmful to your position.</li>
+<li><strong>Immediately call your tax lawyer</strong> — notify them before answering any substantive questions.</li>
+<li><strong>Check the authorization document</strong> — note officer names, authorization scope, and issuing authority.</li>
+<li><strong>Ensure witnesses are present</strong> — request independent witnesses as required by law.</li>
+<li><strong>Document the raid</strong> — note time started, items examined, items seized, questions asked. Video record if officers permit (do not do so covertly).</li>
+<li><strong>Review the panchanama carefully</strong> before signing — object to any inaccuracies in writing.</li>
+<li><strong>Do not volunteer information</strong> beyond what is required — answer questions factually and concisely.</li>
+</ol>`,
+            },
+            {
+                h2: 'After the Raid: Responding to the Investigation',
+                content: `<p>After an NBR raid, a formal investigation and assessment process begins:</p>
+<ul>
+<li>The seized documents will be examined by the tax officer.</li>
+<li>You will receive a notice to explain discrepancies or undisclosed income found during the search.</li>
+<li>The officer may issue a <strong>revised assessment</strong> adding undisclosed income and resulting tax demand.</li>
+<li>You can challenge the revised assessment through the <strong>appeal process</strong> — before the Appellate Joint Commissioner, Appellate Tribunal, and eventually the High Court Division.</li>
+</ul>
+<p>Every step of the post-raid investigation must be handled with legal precision. A <a href="/tax-lawyer-dhaka" style="color:var(--accent)">tax lawyer in Dhaka</a> can review seized documents, prepare explanations, and represent you through the appeals process.</p>`,
+            },
+        ],
+        faqs: [
+            { question: 'Can NBR raid my business without a warrant?', answer: 'No. NBR officers must have a written authorization (effectively a search warrant) from a competent authority under the Income Tax Ordinance 1984 before conducting a search. Demand to see this before allowing entry.' },
+            { question: 'Can I refuse entry during an NBR raid?', answer: 'Refusing entry to authorized NBR officers constitutes obstruction and is illegal. You can demand to see the authorization and have your lawyer present, but you cannot physically block authorized officers.' },
+            { question: 'What should I do first if NBR arrives to conduct a raid?', answer: 'Stay calm, ask to see the written authorization, immediately call your tax lawyer, and ensure witnesses are present. Do not answer substantive questions until your lawyer arrives if possible.' },
+            { question: 'Can seized documents be returned?', answer: 'Yes. Documents can be returned after copies are made by the NBR, or when the investigation is concluded and the documents are no longer needed as evidence. Apply to the Commissioner for return of documents.' },
+            { question: 'Can I challenge a NBR raid that was conducted without proper authorization?', answer: 'Yes. If the raid was conducted without proper written authorization or exceeded the scope of the authorization, you can challenge the search and any resulting assessment through legal proceedings.' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Tax Lawyer Dhaka', to: '/tax-lawyer-dhaka' },
+            { text: 'Supreme Court Lawyer', to: '/supreme-court-lawyer-dhaka' },
+        ],
+    },
+
+
+    /* ── 37 ── */
+    {
+        slug: 'company-tax-registration-tin-bangladesh',
+        title: 'Company Tax Registration & TIN Certificate in Bangladesh: Complete Guide',
+        category: 'Tax Law',
+        readTime: '7 min read',
+        metaTitle: 'Company Tax Registration & TIN Certificate Bangladesh – Complete Guide',
+        metaDescription: 'Step-by-step guide to company tax registration and TIN certificate in Bangladesh — who needs a TIN, online registration through NBR, required documents, and ongoing tax compliance obligations.',
+        keywords: ['company tax registration Bangladesh', 'TIN certificate Bangladesh', 'business TIN Bangladesh', 'NBR tax registration Bangladesh', 'tax lawyer Dhaka', 'company TIN registration guide'],
+        publishedDate: '2026-03-23',
+        heroIntro: 'Every business in Bangladesh — whether a sole proprietorship, partnership, private limited company, or NGO — is required to obtain a Taxpayer Identification Number (TIN) and register for tax purposes with the National Board of Revenue (NBR). Failure to register exposes businesses to penalties and bars them from obtaining trade licenses, government contracts, and bank facilities.',
+        toc: [
+            'What is a TIN in Bangladesh?',
+            'Who Must Register for TIN?',
+            'Business Entities That Require TIN',
+            'Step-by-Step TIN Registration Process',
+            'Documents Required for TIN Registration',
+            'Online TIN Registration via NBR e-TIN',
+            'TIN and Annual Tax Return Filing',
+            'Penalties for Operating Without a TIN',
+        ],
+        sections: [
+            {
+                h2: 'What is a TIN in Bangladesh?',
+                content: `<p>A <strong>Taxpayer Identification Number (TIN)</strong> is a unique 12-digit number issued by the National Board of Revenue (NBR) to identify taxpayers — both individuals and businesses. In Bangladesh, TIN is required for almost every significant financial and administrative activity, including:</p>
+<ul>
+<li>Opening a business bank account</li>
+<li>Obtaining a trade license from the city corporation</li>
+<li>Filing any regulatory document with RJSC (Registrar of Joint Stock Companies)</li>
+<li>Bidding on government tenders and contracts</li>
+<li>Importing goods (required by customs)</li>
+<li>Registering commercial property</li>
+</ul>
+<p>If you need assistance with tax registration or compliance, consult a <a href="/tax-lawyer-dhaka" style="color:var(--accent)">tax lawyer in Dhaka</a> experienced in Bangladesh NBR procedures.</p>`,
+            },
+            {
+                h2: 'Business Entities That Require TIN',
+                content: `<p>The following must register for TIN with NBR:</p>
+<ul>
+<li>All private and public limited companies registered with RJSC</li>
+<li>Proprietorships and partnerships with business income</li>
+<li>Firms registered under the Partnership Act 1932</li>
+<li>NGOs and non-profit organizations receiving foreign funds</li>
+<li>Any person whose income exceeds the taxable threshold</li>
+<li>Any person who purchases a motor vehicle, obtains a credit card, participates in a BO (beneficiary owner) account, or registers immovable property above a threshold</li>
+</ul>`,
+            },
+            {
+                h2: 'Step-by-Step TIN Registration Process',
+                content: `<p>The TIN registration process in Bangladesh:</p>
+<ol>
+<li><strong>Visit the NBR e-TIN portal:</strong> Go to <a href="https://etinbd.nbr.gov.bd" style="color:var(--accent)">etinbd.nbr.gov.bd</a> — Bangladesh's online TIN registration system.</li>
+<li><strong>Create an account:</strong> Register using your mobile number and NID (for individuals) or company documents (for companies).</li>
+<li><strong>Fill in the registration form:</strong> For companies, enter the company name, RJSC registration number, registered address, directors' NID numbers, and nature of business.</li>
+<li><strong>Upload required documents:</strong> Upload scanned copies of required documents.</li>
+<li><strong>Submit the application:</strong> Review and submit. The system generates a TIN certificate file immediately for approved applications.</li>
+<li><strong>Print the TIN certificate:</strong> Download and print the TIN certificate — it is valid from the date of issue.</li>
+</ol>`,
+            },
+            {
+                h2: 'Documents Required for TIN Registration',
+                content: `<p>For a <strong>private limited company</strong>:</p>
+<ul>
+<li>Certificate of Incorporation from RJSC</li>
+<li>Memorandum and Articles of Association</li>
+<li>National ID cards (NID) of all directors</li>
+<li>Company's registered office address proof</li>
+<li>Bank account statement or letter (if already opened)</li>
+</ul>
+<p>For an <strong>individual/proprietorship</strong>:</p>
+<ul>
+<li>NID card or passport</li>
+<li>Trade license</li>
+<li>Office/business address proof</li>
+</ul>`,
+            },
+            {
+                h2: 'TIN and Annual Tax Return Filing',
+                content: `<p>Obtaining a TIN creates an ongoing obligation to file annual tax returns with NBR, even if income is below the taxable threshold. Key deadlines:</p>
+<ul>
+<li><strong>Individual taxpayers:</strong> Annual return due by 30 November each year for the income year ending 30 June.</li>
+<li><strong>Company taxpayers:</strong> Return due within 6 months of the end of the accounting year (date flexible based on accounting period).</li>
+</ul>
+<p>Failure to file returns by the deadline incurs penalties and eventually triggers a tax authority summons and assessment proceeding. A tax lawyer can manage your ongoing compliance obligations efficiently.</p>`,
+            },
+            {
+                h2: 'Penalties for Operating Without a TIN',
+                content: `<p>Under the Income Tax Ordinance 1984, operating a business without a TIN exposes the business owner to:</p>
+<ul>
+<li>Penalties for non-registration</li>
+<li>Withholding of government contracts and tenders</li>
+<li>Refusal of trade license renewal by city corporation</li>
+<li>Assessment of deemed income by the tax officer</li>
+</ul>
+<p>Retrospective TIN registration and filing of belated returns with penalty is still better than continuing to operate without registration. <a href="/tax-lawyer-dhaka" style="color:var(--accent)">Contact a tax lawyer in Dhaka</a> to regularize your tax position quickly.</p>`,
+            },
+        ],
+        faqs: [
+            { question: 'How long does TIN registration take in Bangladesh?', answer: 'Online TIN registration via the NBR e-TIN system is typically instant or within 24 hours. The TIN certificate is available immediately after approval.' },
+            { question: 'Does a company need separate TIN from its directors?', answer: 'Yes. Each company requires its own TIN as a legal entity. Each director as an individual taxpayer also requires their personal TIN.' },
+            { question: 'Is TIN the same as VAT registration in Bangladesh?', answer: 'No. TIN (income tax) and VAT registration are separate. Businesses with turnover above the VAT registration threshold must also separately register for VAT with NBR.' },
+            { question: 'Can a TIN be cancelled?', answer: 'Yes. A TIN can be cancelled upon dissolution of the company or cessation of taxable activity, after filing all outstanding returns and settling all dues.' },
+            { question: 'Do I need a TIN to open a business bank account in Bangladesh?', answer: 'Yes. All banks in Bangladesh require TIN documentation as part of the account opening process for business accounts.' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Tax Lawyer Dhaka', to: '/tax-lawyer-dhaka' },
+            { text: 'Supreme Court Lawyer', to: '/supreme-court-lawyer-dhaka' },
+        ],
+    },
+
+    /* ── 38 ── */
+    {
+        slug: 'withholding-tax-tds-dispute-bangladesh',
+        title: 'Withholding Tax (TDS) Disputes in Bangladesh: A Business Owner\'s Guide',
+        category: 'Tax Law',
+        readTime: '7 min read',
+        metaTitle: 'Withholding Tax TDS Dispute Bangladesh – Business Legal Guide',
+        metaDescription: 'Guide to withholding tax (TDS) disputes in Bangladesh — how source tax works, common wrongful deduction scenarios, how to claim refunds, and appeal rights against incorrect TDS assessments.',
+        keywords: ['withholding tax Bangladesh', 'TDS Bangladesh', 'source tax Bangladesh', 'withholding tax dispute Bangladesh', 'tax lawyer Dhaka', 'TDS refund Bangladesh'],
+        publishedDate: '2026-03-24',
+        heroIntro: 'Withholding tax — also called Tax Deducted at Source (TDS) in Bangladesh — requires the payer of certain income types to deduct tax at the source and deposit it with the government before making payment to the recipient. While designed for compliance, the system frequently gives rise to disputes: wrongful deductions, excessive rates applied, non-credit of TDS by NBR, and double taxation. This guide helps business owners understand their rights.',
+        toc: [
+            'How Withholding Tax (TDS) Works in Bangladesh',
+            'Income Types Subject to TDS in Bangladesh',
+            'TDS Rates Under Income Tax Act 2023',
+            'Common TDS Disputes Businesses Face',
+            'Claiming TDS Credit Against Your Tax Liability',
+            'What If Too Much TDS Was Deducted?',
+            'Challenging a Wrongful TDS Deduction',
+            'Role of a Tax Lawyer in TDS Disputes',
+        ],
+        sections: [
+            {
+                h2: 'How Withholding Tax (TDS) Works in Bangladesh',
+                content: `<p>In Bangladesh, the <strong>Income Tax Act 2023</strong> (which replaced the Income Tax Ordinance 1984) requires "responsible persons" — typically businesses, employers, and government entities — to deduct tax at source on specified income payments before disbursing the net amount to the recipient.</p>
+<p>The deducted amount must be:</p>
+<ul>
+<li>Deposited with the government treasury by the 15th of the following month.</li>
+<li>Reported to NBR via TDS return filing.</li>
+<li>A TDS certificate issued to the payee to enable them to claim credit against their own tax liability.</li>
+</ul>
+<p>A <a href="/tax-lawyer-dhaka" style="color:var(--accent)">tax lawyer in Dhaka</a> can advise on applicable TDS rates and ensure your business is compliant.</p>`,
+            },
+            {
+                h2: 'Common TDS Disputes Businesses Face',
+                content: `<p>Business owners commonly encounter these TDS-related disputes:</p>
+<ul>
+<li><strong>Wrong TDS rate applied:</strong> The deducting entity applied a higher TDS rate than legally required for the type of income.</li>
+<li><strong>TDS deducted despite exemption:</strong> TDS deducted from income that is legally exempt from deduction (e.g., income earned by recognized provident funds, certain NGOs).</li>
+<li><strong>TDS certificate not issued:</strong> The deducting entity failed to issue TDS certificates, preventing the recipient from claiming credit.</li>
+<li><strong>NBR refusing to grant TDS credit:</strong> Despite having TDS certificates, the tax officer refuses to recognize them during assessment.</li>
+<li><strong>Double TDS on single transaction:</strong> TDS deducted at multiple points in a supply chain on the same transaction value.</li>
+</ul>`,
+            },
+            {
+                h2: 'Claiming TDS Credit Against Your Tax Liability',
+                content: `<p>TDS deducted on your income is a tax payment on your behalf. At the time of filing your annual tax return, you claim TDS credit:</p>
+<ol>
+<li>Collect all TDS certificates from deductors throughout the year.</li>
+<li>Compile total TDS deducted across all income sources.</li>
+<li>Include TDS figures in your annual tax return.</li>
+<li>The TDS amount is deducted from your total tax liability — if TDS exceeds your final tax, you are entitled to a refund.</li>
+</ol>
+<p>Keep original TDS certificates safely — they are the primary evidence of TDS paid on your behalf.</p>`,
+            },
+            {
+                h2: 'What If Too Much TDS Was Deducted?',
+                content: `<p>If total TDS deducted throughout the year exceeds your final assessed tax liability, you are entitled to a <strong>tax refund</strong> from NBR. The process:</p>
+<ul>
+<li>File your annual tax return claiming the refund amount.</li>
+<li>The Taxes Circle Officer will assess and process the refund claim.</li>
+<li>Refunds are typically processed within 3–6 months after assessment completion.</li>
+</ul>
+<p>In practice, refund processing from NBR can be significantly delayed. A tax lawyer can monitor the refund process and follow up with the tax authority to expedite payment.</p>`,
+            },
+            {
+                h2: 'Challenging a Wrongful TDS Deduction',
+                content: `<p>If TDS was wrongfully deducted — at an incorrect rate or on exempt income — your options are:</p>
+<ul>
+<li><strong>Negotiate with the deducting entity:</strong> Request them to correct the deduction rate or refund the excess. This is the fastest solution if they cooperated.</li>
+<li><strong>Apply for a TDS exemption certificate:</strong> NBR can issue certificates exempting certain payees from TDS deduction — proactively applying for this prevents future incorrect deductions.</li>
+<li><strong>Appeal during income tax assessment:</strong> Raise the wrongful TDS issue during your annual tax assessment proceedings.</li>
+<li><strong>File a refund claim:</strong> Claim the excess TDS back through the formal refund procedure.</li>
+</ul>
+<p>Advocate Md. Shah Alam's tax law practice has experience representing businesses in TDS disputes before NBR and the Tax Appellate Tribunal. <a href="/tax-lawyer-dhaka" style="color:var(--accent)">Contact our Dhaka office</a> for advice.</p>`,
+            },
+        ],
+        faqs: [
+            { question: 'What is the penalty for failing to deduct TDS in Bangladesh?', answer: 'Failure to deduct TDS makes the deducting person personally liable for the unpaid tax plus penalties under the Income Tax Act 2023. Additionally, the deducted-but-not-deposited amount is treated as its own offence.' },
+            { question: 'Can I claim a TDS refund if I am below the taxable income threshold?', answer: 'Yes. If TDS deducted exceeds your final tax assessment (which may be nil if you are below the taxable threshold), you are entitled to a full refund. File your return and claim the refund formally.' },
+            { question: 'Do I need TDS certificates to claim TDS credit?', answer: 'Yes. TDS certificates issued by the deducting entity are the primary evidence for claiming TDS credit in your tax return. Collect them from all deductors immediately.' },
+            { question: 'Can TDS be deducted on every type of income?', answer: 'No. TDS applies only to specific income types listed in the Income Tax Act 2023 — including salary, rent, commission, contractor payments, professional fees, and interest. Not all income types are subject to TDS.' },
+            { question: 'What if the deducting party refuses to issue a TDS certificate?', answer: 'Failure to issue TDS certificates is a legal violation. Report the non-issuance to the Taxes Circle Officer, who has authority to direct the deducting party to issue the certificate.' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Tax Lawyer Dhaka', to: '/tax-lawyer-dhaka' },
+            { text: 'Supreme Court Lawyer', to: '/supreme-court-lawyer-dhaka' },
+        ],
+    },
+
+    /* ── 39 ── */
+    {
+        slug: 'nrb-overseas-divorce-bangladesh',
+        title: 'Overseas / NRB Divorce in Bangladesh: Legal Process for Non-Resident Bangladeshis',
+        category: 'Family Law',
+        readTime: '8 min read',
+        metaTitle: 'NRB Overseas Divorce Bangladesh – Legal Guide for Non-Residents',
+        metaDescription: 'Complete guide to divorce for Non-Resident Bangladeshis (NRB) — initiating divorce from abroad, power of attorney for divorce proceedings, recognition of foreign divorce decrees, and family lawyer assistance in Dhaka.',
+        keywords: ['NRB divorce Bangladesh', 'overseas divorce Bangladesh', 'non-resident Bangladeshi divorce', 'divorce from abroad Bangladesh', 'family lawyer Dhaka', 'foreign divorce recognition Bangladesh'],
+        publishedDate: '2026-03-25',
+        heroIntro: 'For the millions of Non-Resident Bangladeshis (NRBs) living abroad, marital breakdown creates a unique legal challenge: navigating Bangladesh\'s divorce and family law system from a distance. Whether the marriage was registered in Bangladesh or abroad, and whether you need to initiate or respond to divorce proceedings — this guide explains the process for NRBs.',
+        toc: [
+            'Which Law Governs NRB Divorce?',
+            'Divorce Initiated by NRB Husband (Talaq) from Abroad',
+            'Divorce Initiated by NRB Wife from Abroad',
+            'Using Power of Attorney for Divorce Proceedings in Bangladesh',
+            'Family Court Case Without Being Present in Bangladesh',
+            'Recognition of Foreign Divorce Decrees in Bangladesh',
+            'Child Custody for NRB Parents',
+            'Property Division for NRBs in Bangladesh',
+        ],
+        sections: [
+            {
+                h2: 'Which Law Governs NRB Divorce?',
+                content: `<p>For Muslim Bangladeshis abroad, the <strong>Muslim Family Laws Ordinance 1961 (MFLO)</strong> governs divorce — regardless of where you currently live. This means:</p>
+<ul>
+<li>A Talaq pronounced by an NRB husband must still comply with MFLO notification requirements to the Chairman of the relevant Union Parishad.</li>
+<li>A wife's right to seek judicial divorce through Khula or other grounds applies through Bangladesh family courts.</li>
+<li>The 90-day reconciliation period before Talaq becomes effective applies even if both parties are abroad.</li>
+</ul>
+<p>For non-Muslim Bangladeshis abroad, the applicable personal law (Hindu, Christian, etc.) applies. Consult a <a href="/divorce-family-lawyer-uttara" style="color:var(--accent)">family lawyer in Dhaka</a> to understand which law governs your specific situation.</p>`,
+            },
+            {
+                h2: 'Divorce Initiated by NRB Husband (Talaq) from Abroad',
+                content: `<p>An NRB Muslim husband pronouncing Talaq from abroad must:</p>
+<ol>
+<li>Send a written notice of Talaq to the Chairman of the Union Parishad of his last known address in Bangladesh (or the Union Parishad where his wife resides).</li>
+<li>Send a copy of the notice to the wife.</li>
+<li>The Chairman will convene an Arbitration Council to attempt reconciliation.</li>
+<li>If reconciliation fails, the Talaq becomes effective after 90 days from the date of notice to the Chairman.</li>
+</ol>
+<p>A Talaq pronounced verbally or through WhatsApp/social media <strong>without</strong> the formal MFLO notice is not legally effective as a divorce in Bangladesh, even if considered effective in the country where the husband resides.</p>`,
+            },
+            {
+                h2: 'Using Power of Attorney for Divorce Proceedings in Bangladesh',
+                content: `<p>NRBs who cannot or do not wish to travel to Bangladesh for divorce proceedings can appoint an <strong>attorney-in-fact</strong> through a notarized and apostilled Power of Attorney to:</p>
+<ul>
+<li>File divorce petitions on their behalf in Bangladesh family courts.</li>
+<li>Attend court hearings and represent the NRB party.</li>
+<li>Sign documents related to the divorce, child custody, and property settlement.</li>
+<li>Receive court orders and notices.</li>
+</ul>
+<p>The POA must be properly executed in the country of residence (notarized), apostilled (for countries under the Hague Convention), and then attested at the Bangladesh diplomatic mission before being used in Bangladesh courts. Our family lawyers can advise on the exact requirements based on your country of residence.</p>`,
+            },
+            {
+                h2: 'Family Court Case Without Being Present in Bangladesh',
+                content: `<p>With a properly executed Power of Attorney, an NRB party can <strong>complete the entire divorce process</strong> without returning to Bangladesh. Their appointed attorney will:</p>
+<ul>
+<li>File the petition in the Family Court.</li>
+<li>Attend all hearing dates.</li>
+<li>Present evidence and submissions.</li>
+<li>Represent the party during mediation or reconciliation attempts.</li>
+<li>Receive the final court decree and divorce certificate.</li>
+</ul>
+<p>This saves significant travel costs and time for NRBs. <a href="/divorce-family-lawyer-uttara" style="color:var(--accent)">Advocate Md. Shah Alam</a> regularly handles divorce cases on behalf of NRB clients through Power of Attorney representation.</p>`,
+            },
+            {
+                h2: 'Recognition of Foreign Divorce Decrees in Bangladesh',
+                content: `<p>If a divorce was obtained in a foreign court (UK, USA, Malaysia, etc.), the question arises: is it recognized in Bangladesh?</p>
+<ul>
+<li>Bangladesh courts generally recognize foreign divorce decrees if the divorce was obtained in a country where the parties were domiciled or habitually resident, and the proceedings complied with principles of natural justice.</li>
+<li>However, registration of the foreign divorce with the relevant authority in Bangladesh is advisable to ensure it is effective for all purposes (re-marriage, inheritance, property).</li>
+<li>A foreign divorce that violates MFLO procedure — for example, a Talaq pronounced and made effective in one day without the 90-day period — may not be fully recognized for Bangladesh law purposes.</li>
+</ul>
+<p>Get legal advice on the validity of your foreign divorce before taking further steps in Bangladesh.</p>`,
+            },
+        ],
+        faqs: [
+            { question: 'Can I get a divorce in Bangladesh without coming back from abroad?', answer: 'Yes. By executing a Power of Attorney in favour of a family lawyer in Bangladesh, the entire court process can be handled on your behalf. You do not need to physically return to Bangladesh.' },
+            { question: 'Does a divorce in the UK automatically end my Bangladesh marriage?', answer: 'Not automatically. A UK divorce decree must go through the recognition process under Bangladesh law. Consult a Dhaka family lawyer to regularize the position of your Bangladesh marriage after a foreign divorce.' },
+            { question: 'If my husband divorced me abroad, can I challenge it?', answer: 'Yes. If the divorce was obtained without following MFLO procedures, or without proper notice to you, you may be able to challenge it as invalid under Bangladesh law. Seek legal advice promptly.' },
+            { question: 'Can NRB women initiate Khula divorce from abroad?', answer: 'Yes. A Power of Attorney can be used to authorize a lawyer to file Khula proceedings on behalf of an NRB wife in a Bangladesh family court.' },
+            { question: 'What happens to my dower (mehr) if we divorce while I am abroad?', answer: 'Your dower right is preserved regardless of where the divorce occurs. The unprompted dower becomes immediately payable at the time of Talaq. You can file a suit for recovery of dower in Bangladesh through an attorney.' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Family Lawyer Uttara', to: '/divorce-family-lawyer-uttara' },
+            { text: 'Supreme Court Lawyer', to: '/supreme-court-lawyer-dhaka' },
+        ],
+    },
+
+    /* ── 40 ── */
+    {
+        slug: 'warrant-vs-summons-bangladesh',
+        title: 'Warrant vs. Summons in Bangladesh: What Is the Difference?',
+        category: 'Criminal Law',
+        readTime: '6 min read',
+        metaTitle: 'Warrant vs Summons Bangladesh – Key Differences Explained',
+        metaDescription: 'Understand the difference between an arrest warrant and court summons in Bangladesh — legal definitions, when each is issued, how to respond, and what to do if a warrant is issued against you.',
+        keywords: ['warrant vs summons Bangladesh', 'arrest warrant Bangladesh', 'court summons Bangladesh', 'criminal lawyer Dhaka', 'warrant procedure Bangladesh', 'CrPC Bangladesh summons'],
+        publishedDate: '2026-03-26',
+        heroIntro: 'Receiving a legal notice from a Bangladesh court can be alarming — especially when you are not sure whether it is a summons requiring your appearance or a warrant authorizing your arrest. These are fundamentally different legal instruments with very different consequences. Confusing them can lead to serious mistakes.',
+        toc: [
+            'What is a Court Summons in Bangladesh?',
+            'What is an Arrest Warrant in Bangladesh?',
+            'Key Differences: Summons vs. Warrant',
+            'When Does a Court Issue a Summons vs. a Warrant?',
+            'What to Do if You Receive a Summons',
+            'What to Do if an Arrest Warrant is Issued Against You',
+            'Non-Bailable vs. Bailable Warrants',
+            'Getting an Arrest Warrant Cancelled (Recall)',
+        ],
+        sections: [
+            {
+                h2: 'What is a Court Summons in Bangladesh?',
+                content: `<p>A <strong>summons</strong> is a formal court document issued under the <strong>Code of Criminal Procedure 1898 (CrPC)</strong> that directs a person to appear before the court on a specific date. A summons:</p>
+<ul>
+<li>Does not authorize the police to arrest the person.</li>
+<li>Is served through the court bailiff or police, but the person retains their freedom.</li>
+<li>Requires compliance — failing to appear without a valid reason is a contempt of court and may lead to a warrant being issued.</li>
+<li>Is typically used in summons-triable cases (less serious offences) or to call witnesses.</li>
+</ul>
+<p>If you receive a summons, respond through a <a href="/criminal-lawyer-uttara" style="color:var(--accent)">criminal lawyer in Dhaka</a> — do not simply ignore it.</p>`,
+            },
+            {
+                h2: 'What is an Arrest Warrant in Bangladesh?',
+                content: `<p>An <strong>arrest warrant</strong> is a written court order authorizing the police to <strong>arrest and bring</strong> a specific person before the court. A warrant:</p>
+<ul>
+<li>Gives police the legal authority to apprehend the named person wherever found.</li>
+<li>Must specify the name/description of the person, the offence, and be signed by the issuing Magistrate.</li>
+<li>Remains in force until executed (the person is arrested) or the court recalls it.</li>
+<li>Can be made bailable or non-bailable by the issuing Magistrate.</li>
+</ul>`,
+            },
+            {
+                h2: 'Key Differences: Summons vs. Warrant',
+                content: `<table style="width:100%;border-collapse:collapse">
+<tr style="background:var(--surface-2)"><th style="padding:8px;text-align:left">Feature</th><th style="padding:8px;text-align:left">Summons</th><th style="padding:8px;text-align:left">Arrest Warrant</th></tr>
+<tr><td style="padding:8px">Police authority to arrest?</td><td style="padding:8px">❌ No</td><td style="padding:8px">✅ Yes</td></tr>
+<tr><td style="padding:8px">Person remains free?</td><td style="padding:8px">✅ Yes</td><td style="padding:8px">⚠️ Can be arrested</td></tr>
+<tr><td style="padding:8px">Signed by?</td><td style="padding:8px">Court official</td><td style="padding:8px">Magistrate only</td></tr>
+<tr><td style="padding:8px">Issued in what cases?</td><td style="padding:8px">Summons-triable or witness appearance</td><td style="padding:8px">Warrant cases or failure to comply with summons</td></tr>
+<tr><td style="padding:8px">Consequence of ignoring?</td><td style="padding:8px">Warrant may be issued</td><td style="padding:8px">Forcible arrest</td></tr>
+</table>`,
+            },
+            {
+                h2: 'Non-Bailable vs. Bailable Warrants',
+                content: `<p>Warrants may be classified as:</p>
+<ul>
+<li><strong>Bailable Warrant:</strong> The officer executing the warrant must release the arrested person on bail upon their furnishing security. This is the less severe type.</li>
+<li><strong>Non-Bailable Warrant:</strong> The arrested person must be produced before the court — no bail can be granted at the point of arrest by the police. Only the court can grant bail. This is the most serious type and requires immediate legal action.</li>
+</ul>
+<p>If you learn that a non-bailable warrant has been issued against you, contact a <a href="/criminal-lawyer-uttara" style="color:var(--accent)">criminal lawyer</a> immediately to apply to the court to recall the warrant before it is executed.</p>`,
+            },
+            {
+                h2: 'Getting an Arrest Warrant Cancelled (Recall)',
+                content: `<p>A person against whom a warrant has been issued can apply to the court to <strong>recall (cancel) the warrant</strong> before it is executed. The process:</p>
+<ol>
+<li>File a petition to the issuing court explaining why the warrant was issued (typically: failure to attend a previous hearing).</li>
+<li>Provide a valid explanation for the non-appearance (illness, unawareness of the case, etc.).</li>
+<li>Offer an undertaking to appear on all future dates.</li>
+<li>The court may recall the warrant and instead direct the person to appear on a fixed date.</li>
+</ol>
+<p>Acting quickly through a lawyer before the warrant is executed is critical — once arrested under a non-bailable warrant, obtaining bail becomes significantly more complicated.</p>`,
+            },
+        ],
+        faqs: [
+            { question: 'Can police arrest me based on a summons?', answer: 'No. A summons alone does not authorize arrest. However, if you fail to comply with a summons, the court may issue an arrest warrant. At that point, police can arrest you.' },
+            { question: 'How do I know if a warrant has been issued against me?', answer: 'Warrants are not always publicly advertised. You should check court records if you suspect a case has been filed against you. Many people discover warrants only when police arrive. Regular check-ins with a criminal lawyer if you have any ongoing legal matter is advisable.' },
+            { question: 'What should I do if I receive a summons?', answer: 'Do not ignore it. Engage a criminal lawyer who will appear on your behalf for the specified date or apply for an exemption from personal attendance if appropriate.' },
+            { question: 'Can I apply for anticipatory bail if I know a warrant may be issued?', answer: 'Yes. If you have reason to believe a warrant is imminent, you can apply for anticipatory bail (bail before arrest) under Section 498 CrPC. This is the best protective step to take.' },
+            { question: 'Can summons be issued for civil cases too?', answer: 'Yes. In civil proceedings, summons are issued to defendants and witnesses under the Code of Civil Procedure 1908. Failure to comply with a civil court summons also has serious consequences.' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-uttara' },
+            { text: 'Supreme Court Lawyer', to: '/supreme-court-lawyer-dhaka' },
+        ],
+    },
+
+    /* ── 41 ── */
+    {
+        slug: 'khas-land-claim-bangladesh',
+        title: 'Khas Land in Bangladesh: What It Is and How to Claim It',
+        category: 'Property Law',
+        readTime: '7 min read',
+        metaTitle: 'Khas Land Bangladesh – What It Is and How to Claim It',
+        metaDescription: 'Complete guide to khas land in Bangladesh — definition, government allotment process, who is eligible, how encroachers are dealt with, and role of a property lawyer for khas land claims in Dhaka.',
+        keywords: ['khas land Bangladesh', 'government khas land claim Bangladesh', 'khas land allotment Bangladesh', 'khas land encroachment', 'property lawyer Dhaka', 'khas land distribution Bangladesh'],
+        publishedDate: '2026-03-27',
+        heroIntro: 'Khas land — government-owned land that is not permanently assigned to any individual — is one of the most contested categories of property in Bangladesh. From riverbed lands newly formed by accretion to urban government plots, khas land disputes involve intricate procedures, powerful political interests, and considerable potential for fraud. Understanding what khas land is and how the allotment system works is essential for anyone navigating these claims.',
+        toc: [
+            'What is Khas Land in Bangladesh?',
+            'Types of Khas Land in Bangladesh',
+            'Who Can Apply for Khas Land Allotment?',
+            'How the Khas Land Allotment Process Works',
+            'Khas Land and Char (Riverbed) Accretion',
+            'Dealing with Khas Land Encroachment',
+            'Legal Disputes Over Khas Land',
+            'Role of a Property Lawyer in Khas Land Matters',
+        ],
+        sections: [
+            {
+                h2: 'What is Khas Land in Bangladesh?',
+                content: `<p><strong>Khas land</strong> (খাস জমি) literally means "government's own land" — land that is vested in the government and managed by the Department of Land (Ministry of Land). In Bangladesh, it includes:</p>
+<ul>
+<li>Agricultural land that has been vested in the government after previous owners' rights were extinguished (e.g., through the Enemy Property Act, Vested Property Act, or court decree).</li>
+<li>Newly formed char lands (chars) arising from river accretion.</li>
+<li>Government forestland, beels, haors, and waterlogged areas.</li>
+<li>Urban government plots not yet permanently assigned.</li>
+</ul>
+<p>Khas land cannot be privately owned without a formal government allotment (bandabast). Unauthorized occupation is illegal. Yet in practice, khas land is among the most encroached-upon categories of land in Bangladesh. Consult a <a href="/land-property-lawyer-uttara" style="color:var(--accent)">property lawyer in Dhaka</a> before taking any action related to khas land.</p>`,
+            },
+            {
+                h2: 'Who Can Apply for Khas Land Allotment?',
+                content: `<p>The government prioritizes khas land allotment for the most vulnerable landless households. Eligibility criteria typically include:</p>
+<ul>
+<li>Landless or near-landless rural families (possessing less than 0.5 acres of cultivable land).</li>
+<li>Freedom fighter families.</li>
+<li>Disaster-affected families who lost their home land to river erosion.</li>
+<li>Certain industrial or development projects may receive government khas land on lease for specific purposes.</li>
+</ul>
+<p>Urban khas land allocation rules are different and typically involve government schemes or court-supervised redistribution.</p>`,
+            },
+            {
+                h2: 'How the Khas Land Allotment Process Works',
+                content: `<p>The standard khas land allotment (bandabast) process:</p>
+<ol>
+<li>Applications are submitted to the Upazila Land Office (for agricultural khas land) or the District Commissioner's office.</li>
+<li>The Land Reforms Board or District Land Allotment Committee reviews applications and investigates eligibility.</li>
+<li>Field survey of the khas land is conducted to confirm it is free of encumbrance and available.</li>
+<li>Allotment is made by formal order (bandabast patra) granting occupancy right to the eligible family.</li>
+<li>The allottee must pay nominal bandabast charges and register the allotment document.</li>
+<li>The allotment creates an occupancy right — not full ownership title — which after a period of uninterrupted occupation can be converted to full ownership through further proceedings.</li>
+</ol>`,
+            },
+            {
+                h2: 'Khas Land and Char (Riverbed) Accretion',
+                content: `<p>A particularly complex khas land situation arises with <strong>newly accreted char land</strong> formed when rivers recede. The legal rules:</p>
+<ul>
+<li>Land that was once part of a recorded plot and was lost to river erosion, then re-emerges, may be reconstituted in the name of the original owner (or their heirs) — this is called <em>diluvion and alluvion</em>.</li>
+<li>If the original recorded plot owners cannot be identified, the re-emerged land is treated as government khas land.</li>
+<li>In practice, newly emerged char lands attract intense illegal occupancy activity — often by politically connected individuals — before the legal situation is resolved.</li>
+</ul>
+<p>Property lawyers experienced in land law can trace ownership histories and assert original owners' rights to char land before khas designation is finalized.</p>`,
+            },
+            {
+                h2: 'Legal Disputes Over Khas Land',
+                content: `<p>Khas land disputes typically take two forms:</p>
+<ul>
+<li><strong>Challenging wrongful khas classification:</strong> Where private land has been incorrectly classified as khas through administrative error, the owner can file a petition to the Revenue Officer and ultimately to the High Court through writ jurisdiction to correct the record.</li>
+<li><strong>Eviction of illegal encroachers:</strong> The government can initiate eviction proceedings against unauthorized occupiers of khas land. Private landowners whose adjacent khas land is encroached may assist the government in eviction proceedings.</li>
+</ul>
+<p>Both types of disputes require a knowledgeable <a href="/land-property-lawyer-uttara" style="color:var(--accent)">property lawyer</a> familiar with land revenue procedures and Bangladesh land laws.</p>`,
+            },
+        ],
+        faqs: [
+            { question: 'Can someone buy khas land directly from the government?', answer: 'Khas land is not sold outright — it is allotted (bandabast) to eligible persons. An allottee receives occupancy rights, which after fulfilling conditions may be converted to full ownership title.' },
+            { question: 'Can owners of land that was submerged and re-emerged claim it back?', answer: 'Yes, under the principle of diluvion and alluvion, original recorded owners (or their heirs) have rights to land that was submerged and then re-emerged at the same location. Legal proceedings to establish this right are necessary.' },
+            { question: 'What happens to people illegally occupying khas land?', answer: 'The district administration has authority to evict illegal occupiers without filing a court case — through administrative eviction proceedings. However, actual eviction enforcement varies significantly in practice.' },
+            { question: 'Can I buy land from someone who has a khas land allotment?', answer: 'An allottee with occupancy rights can transfer their interest in some cases after fulfilling conditions, but direct purchase of khas land allotments without proper legal due diligence carries enormous risk. Always verify title independently.' },
+            { question: 'My ancestral land was classified as khas by mistake — what can I do?', answer: 'File a complaint with the Land Revenue Officer providing documentation of original title (CS or SA records, mutation history). If not resolved administratively, file a writ petition in the High Court Division to correct the land records.' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Property Lawyer Uttara', to: '/land-property-lawyer-uttara' },
+            { text: 'Supreme Court Lawyer', to: '/supreme-court-lawyer-dhaka' },
+        ],
+    },
+
+    /* ── 42 ── */
+    {
+        slug: 'supreme-court-writ-petition-bangladesh',
+        title: 'Supreme Court Writ Petition in Bangladesh: When and How to File',
+        category: 'Civil Law',
+        readTime: '8 min read',
+        metaTitle: 'Supreme Court Writ Petition Bangladesh – When and How to File',
+        metaDescription: 'Complete guide to filing a writ petition at the Bangladesh Supreme Court High Court Division under Article 102 — types of writs, who can file, procedure, and role of a Supreme Court lawyer.',
+        keywords: ['Supreme Court writ petition Bangladesh', 'Article 102 writ Bangladesh', 'High Court Division writ Bangladesh', 'fundamental rights writ Bangladesh', 'Supreme Court lawyer Bangladesh', 'writ procedure Bangladesh'],
+        publishedDate: '2026-03-28',
+        heroIntro: 'When your fundamental rights are violated — by a government authority, public official, or quasi-governmental body — Bangladesh\'s Constitution provides a powerful remedy: the writ petition filed directly in the High Court Division of the Supreme Court. Unlike ordinary civil suits that can take years, writ jurisdiction offers a faster, higher-level remedy that can compel government bodies to act or refrain from acting. This guide explains the five types of writs and exactly how to file one.',
+        toc: [
+            'Constitutional Basis: Article 102 of the Bangladesh Constitution',
+            'Who Can File a Writ Petition?',
+            'The Five Types of Writs in Bangladesh',
+            'Habeas Corpus: The Most Urgent Writ',
+            'Mandamus: Compelling Government Action',
+            'Certiorari and Prohibition: Controlling Lower Authorities',
+            'Quo Warranto: Challenging Public Office',
+            'Step-by-Step Writ Petition Filing Procedure',
+        ],
+        sections: [
+            {
+                h2: 'Constitutional Basis: Article 102 of the Bangladesh Constitution',
+                content: `<p>The power to issue writs is vested in the <strong>High Court Division of the Supreme Court of Bangladesh</strong> under <strong>Article 102</strong> of the Constitution. The High Court Division can issue writs when — on application by an aggrieved person — it is satisfied that:</p>
+<ul>
+<li>A person's fundamental rights (Articles 26–47A of the Constitution) have been violated.</li>
+<li>A public authority has acted illegally or in excess of its legal power (ultra vires).</li>
+<li>A person is unlawfully detained.</li>
+<li>A public authority has failed to perform a legal duty.</li>
+<li>A person holding public office lacks lawful authority.</li>
+</ul>
+<p>Writ jurisdiction in Bangladesh is constitutional — making it one of the most powerful legal remedies available. An experienced <a href="/supreme-court-lawyer-dhaka" style="color:var(--accent)">Supreme Court lawyer in Bangladesh</a> is essential for writ proceedings.</p>`,
+            },
+            {
+                h2: 'The Five Types of Writs in Bangladesh',
+                content: `<p>Bangladesh courts recognize five types of writs (as in common law tradition):</p>
+<ul>
+<li><strong>Habeas Corpus</strong> — Release an unlawfully detained person.</li>
+<li><strong>Mandamus</strong> — Compel a public authority to perform a legal duty.</li>
+<li><strong>Certiorari</strong> — Quash an illegal decision of a lower court or authority.</li>
+<li><strong>Prohibition</strong> — Prevent a lower court or authority from exceeding its jurisdiction.</li>
+<li><strong>Quo Warranto</strong> — Challenge a person's right to hold public office.</li>
+</ul>`,
+            },
+            {
+                h2: 'Habeas Corpus: The Most Urgent Writ',
+                content: `<p><em>Habeas Corpus</em> (Latin: "you shall have the body") is filed when a person is <strong>unlawfully detained</strong> — whether by the police, prison authority, or any private person acting under claimed government authority. It is the most urgent writ:</p>
+<ul>
+<li>The High Court can issue an immediate rule (notice to the detaining authority) on the day of filing.</li>
+<li>The detaining authority must produce the person before court and justify the detention.</li>
+<li>If the detention is unlawful, the court orders immediate release.</li>
+</ul>
+<p>Habeas Corpus is commonly used against: illegal police detention beyond 24 hours, remand without court order, and illegal imprisonment. This is the primary remedy for families of persons illegally detained by authorities.</p>`,
+            },
+            {
+                h2: 'Mandamus: Compelling Government Action',
+                content: `<p><em>Mandamus</em> (Latin: "we command") compels a public body or official to perform a <strong>legal duty</strong> they are refusing or failing to carry out. Common uses in Bangladesh:</p>
+<ul>
+<li>Compelling NBR to issue a tax refund refused without basis.</li>
+<li>Requiring a government authority to process a pending licence application.</li>
+<li>Ordering a university to issue a degree certificate illegally withheld.</li>
+<li>Directing a government ministry to implement a law or policy it is ignoring.</li>
+</ul>
+<p>The petitioner must show: a legal right to the action demanded, a legal duty on the respondent to perform it, and a clear refusal or failure to do so.</p>`,
+            },
+            {
+                h2: 'Step-by-Step Writ Petition Filing Procedure',
+                content: `<p>The writ filing process in Bangladesh's High Court Division:</p>
+<ol>
+<li><strong>Prepare the writ petition:</strong> A formal document setting out the facts, the legal grounds, and the relief sought. Drafted by the petitioner's advocate.</li>
+<li><strong>File the petition at the High Court registry:</strong> With supporting affidavit and all relevant documentary evidence.</li>
+<li><strong>Court issues a Rule:</strong> The court issues a Rule Nisi — an order directing the respondent authority to show cause why the relief should not be granted. This is the critical first order.</li>
+<li><strong>Service on respondents:</strong> The Rule is served on all government respondents by court process.</li>
+<li><strong>Hearing on Return:</strong> Both sides appear. The petitioner argues for the Rule to be made absolute; the respondent argues for it to be discharged.</li>
+<li><strong>Final order:</strong> The court either makes the Rule Absolute (granting relief) or Discharges the Rule (rejecting the petition).</li>
+</ol>
+<p>An <a href="/supreme-court-lawyer-dhaka" style="color:var(--accent)">experienced Supreme Court advocate</a> is essential — writ proceedings have strict procedural requirements and the arguments are complex.</p>`,
+            },
+        ],
+        faqs: [
+            { question: 'How quickly can a writ petition be heard?', answer: 'The High Court can issue an urgent Rule on the same day the writ is filed in genuinely urgent matters (particularly Habeas Corpus). Regular writ hearings on merit take several months to years.' },
+            { question: 'Can I file a writ against a private company?', answer: 'Generally no. Writ jurisdiction under Article 102 is against public bodies and persons performing public functions. Disputes with private companies are resolved through ordinary civil courts.' },
+            { question: 'What is the difference between this writ petition and the existing writ petition article on your site?', answer: 'The existing article covers general High Court writ relief. This guide focuses specifically on Supreme Court Article 102 jurisdiction — the constitutional basis, all five writs, and when to escalate beyond ordinary civil remedies to High Court Division.' },
+            { question: 'Can a foreigner file a writ petition in Bangladesh?', answer: 'Yes. Writ jurisdiction extends to any person aggrieved by unlawful action within Bangladesh, including foreigners. However, certain fundamental rights writs are available only to citizens.' },
+            { question: 'Can a writ be filed against an NBR tax assessment?', answer: 'Yes, though courts generally require the petitioner to first exhaust the available statutory appeal remedies before coming to writ jurisdiction. In exceptional cases involving jurisdictional errors or fundamental right violations, the High Court can intervene at any stage.' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Supreme Court Lawyer', to: '/supreme-court-lawyer-dhaka' },
+            { text: 'Civil Lawyer Dhaka', to: '/civil-lawyer-dhaka' },
+        ],
+    },
+
 ];
 
 export default posts;
