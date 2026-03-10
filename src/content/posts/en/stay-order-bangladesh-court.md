@@ -1,0 +1,47 @@
+---
+draft: false
+slug: "stay-order-bangladesh-court"
+title: "How to Get a Stay Order in Bangladesh Courts: Purpose and Process"
+category: "Legal Procedures"
+publishedDate: "2026-04-05"
+readTime: "7 min read"
+metaTitle: "Stay Order Bangladesh – How to Get One from Court and What It Does"
+metaDescription: "Learn what a stay order is in Bangladesh, when to apply for one, how the application process works, and what the conditions are — explained by a civil lawyer."
+keywords:
+  - "stay order Bangladesh"
+  - "court stay order Bangladesh"
+  - "injunction stay Bangladesh"
+  - "property stay order Dhaka"
+  - "interim stay Bangladesh"
+  - "civil lawyer Uttara"
+heroIntro: "A stay order from a Bangladesh court is one of the most powerful legal tools available — it can immediately halt construction on disputed land, stop a sale of assets, freeze enforcement of a contract, or suspend an eviction. Understanding when and how to apply, and the legal conditions the court uses to decide, is essential for anyone facing an urgent property or contractual dispute."
+toc:
+  - "What is a Stay Order in Bangladesh?"
+  - "When Can You Apply for a Stay Order?"
+  - "Types of Stay Orders in Bangladesh"
+  - "Conditions the Court Uses to Decide"
+  - "How to Apply for a Stay Order: Step-by-Step"
+  - "What Happens After a Stay Order Is Granted?"
+  - "Can a Stay Order Be Vacated?"
+sections:
+  - h2: "What is a Stay Order in Bangladesh?"
+    content: "<p>A <strong>stay order</strong> (also called an interim injunction) is a court order that temporarily stops a party from taking a specific action — pending final disposal of the main case. In Bangladesh, stay orders are governed by:</p>\n<ul>\n<li><strong>Order 39 of the Code of Civil Procedure 1908 (CPC):</strong> For civil cases — temporary injunctions.</li>\n<li><strong>Section 151, CPC:</strong> Inherent power of courts to prevent abuse of process.</li>\n</ul>\n<p>Examples of what a stay order can stop: construction on disputed land, transfer of a property, enforcement of a court decree, eviction from property, publication of defamatory material, or a company resolution.</p>\n<p>A <a href=\"/civil-lawyer-dhaka\" style=\"color:var(--accent)\">civil lawyer in Dhaka</a> can file an urgent stay order application within days of filing the main suit.</p>"
+  - h2: "Conditions the Court Uses to Decide"
+    content: "<p>To grant a stay order, Bangladesh courts apply the three-pronged test:</p>\n<ol>\n<li><strong>Prima facie case:</strong> Does the applicant have a reasonably strong legal argument on the merits of the main case?</li>\n<li><strong>Balance of convenience:</strong> Would the applicant suffer more harm if the stay is refused than the respondent would suffer if it is granted?</li>\n<li><strong>Irreparable injury:</strong> If the stay is not granted, would the harm to the applicant be impossible or very difficult to remedy later through money?</li>\n</ol>\n<p>All three conditions must generally be satisfied. In urgent cases — such as imminent sale of disputed land — courts can grant an ex parte (one-sided) stay order on the same day of the application.</p>"
+  - h2: "How to Apply for a Stay Order: Step-by-Step"
+    content: "<p>The process:</p>\n<ol>\n<li><strong>File the main case</strong> (title suit, injunction suit, civil suit, etc.).</li>\n<li><strong>File a stay application (interlocutory application)</strong> simultaneously — typically as Form No. 37 or equivalent in the relevant court.</li>\n<li><strong>Submit supporting affidavit</strong> detailing the urgency, the potential harm, and the prima facie basis of the claim.</li>\n<li>The court may <strong>hear the application ex parte</strong> (without the other side) if there is proven urgency.</li>\n<li>If granted, the stay order is served on the other party and registered with relevant authorities (e.g., sub-registry for land stays).</li>\n<li>A <strong>return date</strong> is fixed for the other side to show cause why the stay should not continue.</li>\n</ol>\n<p>Speed matters enormously in stay applications. <a href=\"/\" style=\"color:var(--accent)\">Contact Advocate Md. Shah Alam in Uttara</a> for urgent stay order filings.</p>"
+faqs:
+  - question: "Can a stay order be obtained on the same day?"
+    answer: "Yes. In urgent cases — particularly where the other party is about to take irreversible action (such as selling land or demolishing a building) — courts can grant an urgent ex parte stay order on the day of application."
+  - question: "How long does a stay order last in Bangladesh?"
+    answer: "Interim stay orders last until the court decides to modify or vacate them. They typically remain in force until the main case is decided — which can take months or years. The other side can apply to vacate the stay at any time."
+  - question: "What is the difference between a stay order and an injunction?"
+    answer: "In Bangladesh practice, terms are often used interchangeably. Technically, a \"stay order\" suspends proceedings or a specific act, while an \"injunction\" prohibits a party from doing something. An interim injunction under Order 39 CPC is what most people mean by a stay order in property disputes."
+  - question: "Can a stay order be obtained against a government authority?"
+    answer: "Yes. Writ jurisdiction allows stay orders against government actions — this is handled through High Court writ petitions. For ordinary civil disputes, regular civil courts issue stay orders."
+relatedServiceLinks:
+  - text: "Civil Lawyer Dhaka"
+    to: "/civil-lawyer-dhaka"
+  - text: "Land & Property Lawyer"
+    to: "/land-property-lawyer-dhaka"
+---

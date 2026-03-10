@@ -1,0 +1,46 @@
+---
+draft: false
+slug: "cyber-blackmail-sextortion-bangladesh"
+title: "Cyber Blackmail and Sextortion in Bangladesh: Legal Remedies and What to Do"
+category: "Cyber Law"
+publishedDate: "2026-04-08"
+readTime: "8 min read"
+metaTitle: "Cyber Blackmail Bangladesh – Sextortion and Online Blackmail Legal Guide"
+metaDescription: "Being blackmailed online in Bangladesh? Learn what to do about sextortion, intimate image threats, and cyber blackmail — DSA protections, how to file a case, and emergency options."
+keywords:
+  - "cyber blackmail Bangladesh"
+  - "sextortion Bangladesh"
+  - "online blackmail DSA"
+  - "revenge porn Bangladesh law"
+  - "intimate image threat Bangladesh"
+  - "cyber law lawyer Dhaka"
+heroIntro: "Cyber blackmail and sextortion — where criminals threaten to distribute intimate images or private information unless money or more images are provided — are among the most psychologically damaging cyber crimes. Bangladesh law treats this severely. If you are a victim, this is a criminal matter requiring immediate legal action, not silence or compliance."
+toc:
+  - "What is Cyber Blackmail and Sextortion?"
+  - "Why You Must Never Pay the Blackmailer"
+  - "Bangladesh Laws That Apply"
+  - "Immediate Steps to Take"
+  - "Filing a Criminal Case"
+  - "Emergency Relief: Removing Your Images Online"
+sections:
+  - h2: "What is Cyber Blackmail and Sextortion?"
+    content: "<p><strong>Cyber blackmail</strong> involves a criminal threatening to reveal damaging information (true or false) about a victim unless money or demands are met. <strong>Sextortion</strong> is a specific form where the threat involves intimate, nude, or sexual images — either obtained consensually in a past relationship, through hacking, or through deception (fake romantic relationships).</p>\n<p>In Bangladesh, sextortion often follows a pattern:</p>\n<ol>\n<li>Victim is befriended on social media by a fake profile.</li>\n<li>Victim is persuaded to share intimate images or engage in video calls.</li>\n<li>Recordings are made without consent and used to demand money.</li>\n</ol>\n<p>This is a serious criminal offence. If you are a victim, contact a <a href=\"/criminal-lawyer-dhaka-uttara\" style=\"color:var(--accent)\">cyber law lawyer in Dhaka</a> immediately and do not comply with demands.</p>"
+  - h2: "Why You Must Never Pay the Blackmailer"
+    content: "<p>Paying does not stop extortion — it makes it worse. Every payment:</p>\n<ul>\n<li>Confirms to the criminal that you are vulnerable and will pay.</li>\n<li>Leads to escalating demands — more money, more images.</li>\n<li>Provides the criminal with more funds to continue operating.</li>\n</ul>\n<p>The only effective response is immediate legal action that removes their leverage and puts them at risk of prosecution.</p>"
+  - h2: "Bangladesh Laws That Apply"
+    content: "<p>Multiple laws criminalise cyber blackmail and sextortion in Bangladesh:</p>\n<ul>\n<li><strong>DSA Section 26:</strong> Publishing sexually explicit material without consent — up to <strong>7 years</strong> imprisonment and BDT 5 lakh fine. Repeat offence: 14 years and BDT 10 lakh.</li>\n<li><strong>DSA Section 25:</strong> Threatening with defamatory or offensive digital content — up to 5 years.</li>\n<li><strong>Penal Code Section 384:</strong> Extortion — up to 3 years' imprisonment.</li>\n<li><strong>Penal Code Section 503:</strong> Criminal intimidation — up to 2 years.</li>\n<li><strong>Women and Children Repression Prevention Act 2000:</strong> Sexual harassment through any medium including digital.</li>\n</ul>"
+  - h2: "Immediate Steps to Take"
+    content: "<p>If you are being blackmailed online, take these steps immediately:</p>\n<ol>\n<li><strong>Do not pay</strong> under any circumstances.</li>\n<li><strong>Do not delete anything yet</strong> — screenshot and preserve all communications: threats, payment demands, the blackmailer's profile, any images shared.</li>\n<li><strong>Block the blackmailer</strong> on all platforms after preserving evidence.</li>\n<li><strong>Report to the platform</strong> (Facebook, WhatsApp, etc.) to get their account suspended.</li>\n<li><strong>Contact a lawyer immediately</strong> for emergency court relief and police report guidance.</li>\n<li><strong>Report to Bangladesh Police's Cyber Support for Women desk</strong> or any cyber crime unit.</li>\n</ol>\n<p><a href=\"/\" style=\"color:var(--accent)\">Contact Advocate Md. Shah Alam in Uttara</a> immediately for confidential legal assistance in cyber blackmail cases.</p>"
+faqs:
+  - question: "Will my images be published if I file a police case?"
+    answer: "Filing a police case is the most effective way to STOP further distribution. An urgent court order can compel Facebook or other platforms to remove content immediately. Police are legally required to maintain victim confidentiality in these cases."
+  - question: "The blackmailer says they are from abroad. Can I still take legal action?"
+    answer: "Yes. Bangladesh courts have jurisdiction over crimes that affect Bangladesh residents regardless of where the perpetrator is located. Platforms must comply with Bangladesh court orders."
+  - question: "My images were shared without my knowledge. Can I sue the person who shared them?"
+    answer: "Absolutely. Under DSA Section 26, distributing intimate images without consent carries up to 7 years imprisonment. This applies even if the images were originally shared consensually — consent to share privately does not mean consent to distribute publicly."
+relatedServiceLinks:
+  - text: "Criminal Lawyer Uttara"
+    to: "/criminal-lawyer-dhaka-uttara"
+  - text: "Supreme Court Lawyer"
+    to: "/supreme-court-lawyer-dhaka"
+---

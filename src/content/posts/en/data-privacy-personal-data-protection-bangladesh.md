@@ -1,0 +1,46 @@
+---
+draft: false
+slug: "data-privacy-personal-data-protection-bangladesh"
+title: "Data Privacy and Personal Data Protection in Bangladesh: What the Law Says"
+category: "Cyber Law"
+publishedDate: "2026-04-10"
+readTime: "7 min read"
+metaTitle: "Data Privacy Law Bangladesh – Personal Data Protection Rights and Breaches"
+metaDescription: "What does Bangladesh law say about your personal data? Understand data privacy rights, how to respond to a data breach, and the developing data protection legal framework."
+keywords:
+  - "data privacy Bangladesh"
+  - "personal data protection Bangladesh"
+  - "data breach law Bangladesh"
+  - "privacy rights Bangladesh"
+  - "DSA data protection"
+  - "cyber law lawyer Dhaka"
+heroIntro: "As Bangladesh increasingly moves toward a digital economy, personal data — from medical records to financial information to online activity — is being collected and stored at an unprecedented scale. Bangladesh's legal framework for data privacy is still developing, but existing DSA provisions and international principles already provide important protections. This guide explains your rights."
+toc:
+  - "What is Personal Data Under Bangladesh Law?"
+  - "Current Legal Framework for Data Privacy in Bangladesh"
+  - "DSA Provisions Relating to Data Privacy"
+  - "What is a Data Breach and What Are Your Rights?"
+  - "The Proposed Bangladesh Data Protection Act"
+  - "Your Rights When Your Data Is Misused"
+sections:
+  - h2: "What is Personal Data Under Bangladesh Law?"
+    content: "<p>Personal data refers to any information that can identify a living individual — directly or indirectly. This includes:</p>\n<ul>\n<li>Name, address, phone number, email address.</li>\n<li>National ID number (NID), passport number.</li>\n<li>Financial account information, credit card numbers.</li>\n<li>Medical records, health conditions.</li>\n<li>Biometric data (fingerprints, facial recognition).</li>\n<li>Online identifiers — IP addresses, browsing history, cookies.</li>\n<li>Location data.</li>\n</ul>\n<p>If your personal data has been improperly collected, shared, or exposed, a <a href=\"/criminal-lawyer-dhaka-uttara\" style=\"color:var(--accent)\">cyber law lawyer in Dhaka</a> can advise on your remedies.</p>"
+  - h2: "DSA Provisions Relating to Data Privacy"
+    content: "<p>While Bangladesh has no standalone data protection law yet, the DSA provides some protections:</p>\n<ul>\n<li><strong>DSA Section 19 (Unauthorized Access):</strong> Accessing a system to obtain personal data without permission is a criminal offence — up to 14 years.</li>\n<li><strong>DSA Section 23 (Identity Information):</strong> Wrongfully collecting, selling, or using another person's identity information for fraudulent purposes — up to 5 years and BDT 5 lakh fine.</li>\n<li><strong>DSA Section 24 (Identity Theft):</strong> Using another person's identity information without permission — up to 5 years and BDT 5 lakh fine.</li>\n</ul>\n<p>Additionally, certain sector-specific rules apply: Bangladesh Bank guidelines govern financial data, the Health sector has separate patient data obligations, and telecom providers are bound by BTRC (Bangladesh Telecommunication Regulatory Commission) rules on subscriber data.</p>"
+  - h2: "What is a Data Breach and What Are Your Rights?"
+    content: "<p>A data breach occurs when personal data is accessed, disclosed, or lost without authorisation — through hacking, employee misconduct, or poor security. If you are affected by a data breach in Bangladesh, you can:</p>\n<ul>\n<li><strong>File an FIR</strong> if the breach was the result of hacking (DSA Section 19).</li>\n<li><strong>File a complaint</strong> with relevant sector regulators (Bangladesh Bank, BTRC, etc.).</li>\n<li><strong>File a civil suit</strong> against the organisation responsible for negligently failing to protect your data, claiming damages for any harm caused.</li>\n<li><strong>Seek an injunction</strong> to prevent further use or distribution of the breached data.</li>\n</ul>"
+  - h2: "The Proposed Bangladesh Data Protection Act"
+    content: "<p>Bangladesh has been developing a dedicated Data Protection Act (DPA) — modelled on international frameworks including the EU's GDPR. Key anticipated provisions include:</p>\n<ul>\n<li>Explicit consent requirements before collecting personal data.</li>\n<li>Right to access your own data held by organisations.</li>\n<li>Right to correct inaccurate data.</li>\n<li>Right to request deletion of data (right to be forgotten).</li>\n<li>Mandatory data breach notification obligations on organizations.</li>\n</ul>\n<p>As of 2025, the DPA is in draft stage. Organisations operating in Bangladesh should begin preparing compliance frameworks now. <a href=\"/\" style=\"color:var(--accent)\">Contact Advocate Md. Shah Alam in Uttara</a> for guidance on current DSA-based data protections and emerging DPA compliance.</p>"
+faqs:
+  - question: "Can I demand that a company delete my personal data in Bangladesh?"
+    answer: "Under current law, there is no explicit statutory right to deletion (right to be forgotten). However, you can demand under contract law or in some cases invoke general legal principles if data was collected without valid consent or is being misused. This right is expected in the upcoming Data Protection Act."
+  - question: "What should I do if my NID data was leaked?"
+    answer: "Report it to the Election Commission Bangladesh (which manages NID data) and the relevant national cybersecurity authority. You can also file an FIR if you can identify the source of the breach as criminal (unauthorized system access). Monitor your accounts closely for identity theft."
+  - question: "Is selling a customer database illegal in Bangladesh?"
+    answer: "Selling identity information for fraudulent use is currently covered by DSA Section 23. More general restrictions on data selling are expected in the upcoming Data Protection Act. Currently, sector-specific rules apply (e.g., telecom subscriber data cannot be sold under BTRC rules)."
+relatedServiceLinks:
+  - text: "Criminal Lawyer Uttara"
+    to: "/criminal-lawyer-dhaka-uttara"
+  - text: "Civil Lawyer Dhaka"
+    to: "/civil-lawyer-dhaka"
+---

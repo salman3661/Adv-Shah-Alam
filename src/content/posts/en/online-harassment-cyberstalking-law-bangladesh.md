@@ -1,0 +1,47 @@
+---
+draft: false
+slug: "online-harassment-cyberstalking-law-bangladesh"
+title: "Online Harassment and Cyberstalking Law in Bangladesh: What Victims Can Do"
+category: "Cyber Law"
+publishedDate: "2026-04-04"
+readTime: "8 min read"
+metaTitle: "Online Harassment Law Bangladesh – Legal Action Against Cyberstalking"
+metaDescription: "Being harassed, stalked, or threatened online in Bangladesh? Learn your legal rights under the Digital Security Act, how to file a complaint, and how to get court protection orders."
+keywords:
+  - "online harassment law Bangladesh"
+  - "cyberstalking Bangladesh"
+  - "digital security act harassment"
+  - "cyber crime lawyer Dhaka"
+  - "online threats Bangladesh law"
+  - "harassment complaint Bangladesh"
+heroIntro: "Online harassment in Bangladesh has reached alarming levels — threatening messages, relentless tagging, fake profiles circulating personal information, and digital stalking that invades every aspect of a victim's life. If you are being harassed online, Bangladesh law provides criminal charges, protective orders, and emergency relief. This guide explains your rights and legal options."
+toc:
+  - "What is Online Harassment Under Bangladesh Law?"
+  - "What is Cyberstalking and Is It a Crime in Bangladesh?"
+  - "Laws That Protect Victims of Online Harassment"
+  - "How to Document Online Harassment"
+  - "Filing a Complaint: Your Options"
+  - "Can You Get a Protection Order?"
+  - "What If the Harasser is Anonymous?"
+sections:
+  - h2: "What is Online Harassment Under Bangladesh Law?"
+    content: "<p>Online harassment includes any pattern of digital behaviour intended to frighten, distress, intimidate, humiliate, or control another person. Under Bangladesh law, this covers:</p>\n<ul>\n<li>Repeated threatening or abusive messages.</li>\n<li>Creating fake accounts to impersonate or mock the victim.</li>\n<li>Spreading intimate images or private information.</li>\n<li>Coordinated harassment by groups (dogpiling or mass tagging).</li>\n<li>Repeated unwanted contact after being asked to stop.</li>\n<li>Monitoring a person's movements, location, or activity online.</li>\n</ul>\n<p>If you are experiencing any of these, you have legal remedies available in Bangladesh courts. Contact a <a href=\"/criminal-lawyer-dhaka-uttara\" style=\"color:var(--accent)\">cyber law lawyer in Uttara or Dhaka</a> immediately.</p>"
+  - h2: "Laws That Protect Victims of Online Harassment"
+    content: "<p>Multiple laws provide protection:</p>\n<ul>\n<li><strong>Digital Security Act 2018, Section 25:</strong> Sending offensive, menacing, or false information through digital means — up to 5 years' imprisonment.</li>\n<li><strong>DSA Section 29:</strong> Online defamation accompanying the harassment — up to 3 years.</li>\n<li><strong>DSA Section 26:</strong> Distributing intimate images (revenge porn, sextortion) — up to 7 years.</li>\n<li><strong>Penal Code 1860, Section 506:</strong> Criminal intimidation — up to 7 years for threats of grievous harm.</li>\n<li><strong>Penal Code Section 354A (as applicable):</strong> Sexual harassment including in digital spaces.</li>\n</ul>\n<p>Bangladesh also has general provisions under the Women and Children Repression Prevention Act 2000 that cover harassment through digital means.</p>"
+  - h2: "How to Document Online Harassment"
+    content: "<p>Proper documentation is critical before filing any complaint. Do this immediately:</p>\n<ul>\n<li><strong>Screenshot everything</strong> — messages, posts, profiles, notifications. Include timestamps and URLs.</li>\n<li><strong>Do not delete or block immediately</strong> — blocking destroys evidence. Screenshot first, then block.</li>\n<li><strong>Record dates and times</strong> of each incident in a written log.</li>\n<li><strong>Save any phone numbers or email addresses</strong> used to contact you.</li>\n<li><strong>Preserve digital evidence</strong> — do not edit or alter screenshots, as this can undermine their credibility in court.</li>\n</ul>\n<p>A <a href=\"/criminal-lawyer-dhaka-uttara\" style=\"color:var(--accent)\">cyber law lawyer</a> can apply to court for an order preserving digital evidence from platforms before it disappears.</p>"
+  - h2: "Can You Get a Protection Order?"
+    content: "<p>Yes. Bangladesh courts can issue interim orders (injunctions) requiring the harasser to:</p>\n<ul>\n<li>Cease all contact with the victim.</li>\n<li>Delete posts, profiles, or content used to harass.</li>\n<li>Stay away from the victim's physical locations.</li>\n</ul>\n<p>In urgent cases — particularly threats of violence or ongoing distribution of intimate images — the court can grant emergency interim relief within days. <a href=\"/\" style=\"color:var(--accent)\">Contact Advocate Md. Shah Alam in Uttara</a> for emergency court proceedings.</p>"
+faqs:
+  - question: "Can I get the harasser's identity from their fake account?"
+    answer: "Yes. Through a court order, you can compel the platform (Facebook, Instagram, etc.) to disclose account registration data, IP addresses, and linked phone numbers. Police digital forensics can also trace anonymous accounts."
+  - question: "What if the harasser is in another city or country?"
+    answer: "Bangladesh courts have jurisdiction over cyber harassment directed at Bangladesh residents regardless of where the harasser is located. International enforcement is an additional step but domestic court orders against platforms are immediately enforceable."
+  - question: "What should I do if I receive threats of violence online?"
+    answer: "Treat it as an emergency. Screenshot the threats and contact the police immediately for a safety assessment. Also engage a lawyer to seek an emergency court order. Do not assume online threats are just words."
+relatedServiceLinks:
+  - text: "Criminal Lawyer Uttara"
+    to: "/criminal-lawyer-dhaka-uttara"
+  - text: "Supreme Court Lawyer"
+    to: "/supreme-court-lawyer-dhaka"
+---
