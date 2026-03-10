@@ -99,6 +99,10 @@ function post(url, body) {
  * Decap CMS listens for:
  *   authorization:github:success:{"token":"...","provider":"github"}
  *   authorization:github:error:message
+ *
+ * IMPORTANT: targetOrigin MUST be '*' — Decap CMS opens the popup from its own
+ * internal handler and the postMessage must reach the opener regardless of the
+ * exact origin (same-origin with wildcard is safe and is what Decap uses internally).
  */
 function page(status, token, errorMsg) {
     const message = status === 'success'
@@ -133,15 +137,31 @@ function page(status, token, errorMsg) {
 <script>
   (function () {
     var msg = ${JSON.stringify(message)};
-    try {
-      if (window.opener && !window.opener.closed) {
-        window.opener.postMessage(msg, 'https://www.advmdshahalam.me');
+
+    // Send the auth result to the opener (Decap CMS admin window).
+    // Must use '*' as targetOrigin — Decap CMS requires this for its internal
+    // message listener to accept the token. A specific origin would silently
+    // drop the message if there is any mismatch.
+    function sendToOpener() {
+      try {
+        if (window.opener && !window.opener.closed) {
+          window.opener.postMessage(msg, '*');
+          return true;
+        }
+      } catch (e) {
+        // opener may be cross-origin in unusual redirect scenarios; ignore
       }
-    } catch (e) {
-      // Fallback: try with wildcard origin
-      try { window.opener.postMessage(msg, '*'); } catch (_) {}
+      return false;
     }
-    setTimeout(function () { window.close(); }, 1500);
+
+    // Fire immediately (document is already parsed by the time this runs)
+    sendToOpener();
+
+    // Fire again after 200 ms in case the opener's listener wasn't ready yet
+    setTimeout(sendToOpener, 200);
+
+    // Close this popup after 800 ms — enough time for both sends to complete
+    setTimeout(function () { window.close(); }, 800);
   })();
 </script>
 </body>
