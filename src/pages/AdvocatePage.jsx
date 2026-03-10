@@ -81,10 +81,9 @@ const personSchema = {
     name: 'Advocate Md. Shah Alam',
     alternateName: 'Adv. Md. Shah Alam',
     description:
-        'Experienced advocate practising at the Supreme Court of Bangladesh, Metro Sessions Court Dhaka, and all subordinate courts. 7+ years specialising in criminal, family, property, and company & corporate law.',
+        'Experienced advocate practising at the Supreme Court of Bangladesh, Metro Sessions Court Dhaka, and all subordinate courts. 10+ years specialising in criminal, family, property, and company & corporate law.',
     url: 'https://www.advmdshahalam.me/advocate-md-shah-alam',
-    image: 'https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.png',
-    jobTitle: 'Advocate',
+    image: 'https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.webp'
     worksFor: {
         '@type': 'LegalService',
         name: 'Supreme Court of Bangladesh',
@@ -96,7 +95,7 @@ const personSchema = {
     },
     address: {
         '@type': 'PostalAddress',
-        streetAddress: 'Mantrust Nazma Monzil, Sector 12, Uttara West',
+        streetAddress: 'House 46, Road 6/B, Sector 12, Uttara, Dhaka-1230',
         addressLocality: 'Dhaka',
         postalCode: '1230',
         addressCountry: 'BD',
@@ -140,12 +139,12 @@ const legalServiceSchema = {
     url: 'https://www.advmdshahalam.me',
     telephone: '+8801712655546',
     email: 'shahalam0332@gmail.com',
-    image: 'https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.png',
+    image: 'https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.webp',
     description:
         'Full-service legal practice in Uttara and Dhaka, Bangladesh. Criminal, family, property, and company & corporate law.',
     address: {
         '@type': 'PostalAddress',
-        streetAddress: 'Mantrust Nazma Monzil, Sector 12, Uttara West',
+        streetAddress: 'House 46, Road 6/B, Sector 12, Uttara, Dhaka-1230',
         addressLocality: 'Dhaka',
         postalCode: '1230',
         addressCountry: 'BD',
@@ -196,11 +195,11 @@ const organizationSchema = {
     '@type': 'Organization',
     name: 'Advocate Md. Shah Alam Law Chambers',
     url: 'https://www.advmdshahalam.me',
-    logo: 'https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.png',
+    logo: 'https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.webp',
     foundingDate: '2003',
     address: {
         '@type': 'PostalAddress',
-        streetAddress: 'Mantrust Nazma Monzil, Sector 12, Uttara West',
+        streetAddress: 'House 46, Road 6/B, Sector 12, Uttara, Dhaka-1230',
         addressLocality: 'Dhaka',
         addressCountry: 'BD',
     },
@@ -228,7 +227,7 @@ const faqPageFaqs = [
     {
         question: 'Who is Advocate Md. Shah Alam?',
         answer:
-            'Advocate Md. Shah Alam is an experienced lawyer based in Uttara, Dhaka, Bangladesh, practising at the Supreme Court of Bangladesh and the Metro Sessions Court, Dhaka. He has 20+ years of experience in criminal, family, property, and company & corporate law.',
+            'Advocate Md. Shah Alam is an experienced lawyer based in Uttara, Dhaka, Bangladesh, practising at the Supreme Court of Bangladesh and the Metro Sessions Court, Dhaka. He has 10+ years of experience in criminal, family, property, and company & corporate law.',
     },
     {
         question: 'What areas of law does Advocate Shah Alam specialise in?',
@@ -295,7 +294,7 @@ const AdvocatePage = () => {
                 />
                 <meta property="og:url" content="https://www.advmdshahalam.me/advocate-md-shah-alam" />
                 <meta property="og:type" content="profile" />
-                <meta property="og:image" content="https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.png" />
+                <meta property="og:image" content="https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.webp" />
                 <script type="application/ld+json">{JSON.stringify(personSchema)}</script>
                 <script type="application/ld+json">{JSON.stringify(legalServiceSchema)}</script>
                 <script type="application/ld+json">{JSON.stringify(organizationSchema)}</script>
@@ -330,7 +329,7 @@ const AdvocatePage = () => {
                         Lawyer in Uttara, Dhaka · Supreme Court of Bangladesh
                     </p>
                     <p className="text-base leading-relaxed max-w-2xl mb-8" style={{ color: 'var(--hero-text-2)' }}>
-                        With over 20 years of experience, Advocate Md. Shah Alam is a trusted legal authority
+                        With over 10 years of experience, Advocate Md. Shah Alam is a trusted legal authority
                         in Uttara and across Dhaka, providing expert counsel in criminal, family, property, and
                         company & corporate law at all court levels in Bangladesh.
                     </p>
@@ -365,7 +364,7 @@ const AdvocatePage = () => {
                                 { label: 'Primary Courts', value: 'Supreme Court of Bangladesh · Metro Sessions Court, Dhaka' },
                                 { label: 'Main Practice Areas', value: 'Criminal · Family · Property · Company Law' },
                                 { label: 'Service Locations', value: 'Uttara · Dhaka (all courts)' },
-                                { label: 'Experience', value: '20+ years of legal practice' },
+                                { label: 'Experience', value: '10+ years of legal practice' },
                                 { label: 'Phone (Call)', value: '+880 1712-655546' },
                                 { label: 'WhatsApp', value: '+880 1955-802007' },
                             ].map((fact, i) => (
@@ -633,7 +632,7 @@ const AdvocatePage = () => {
                         >
                             <MapPin size={13} className="flex-shrink-0 mt-0.5" style={{ color: 'var(--gold)' }} />
                             <span>
-                                Mantrust Nazma Monzil, Sector 12, Uttara West, Dhaka-1230, Bangladesh
+                                House 46, Road 6/B, Sector 12, Uttara, Dhaka-1230
                                 <br />
                                 Also: Ainjeebi Samity Bhaban, 4th Floor, 6/7 Court House Street, Kotwali, Dhaka-1100
                             </span>
