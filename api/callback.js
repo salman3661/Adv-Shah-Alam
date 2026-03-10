@@ -96,13 +96,16 @@ function post(url, body) {
 /**
  * Renders the postMessage relay page.
  *
- * Decap CMS listens for:
- *   authorization:github:success:{"token":"...","provider":"github"}
- *   authorization:github:error:message
+ * Decap CMS requires a two-step handshake BEFORE the token is sent:
  *
- * IMPORTANT: targetOrigin MUST be '*' — Decap CMS opens the popup from its own
- * internal handler and the postMessage must reach the opener regardless of the
- * exact origin (same-origin with wildcard is safe and is what Decap uses internally).
+ *   Step 1 — Popup  → Admin:  "authorizing:github"
+ *   Step 2 — Admin  → Popup:  "authorizing:github"  (echo/acknowledgment)
+ *   Step 3 — Popup  → Admin:  "authorization:github:success:{token,provider}"
+ *
+ * Source: decap-cms-lib-auth/src/netlify-auth.js → handshakeCallback()
+ * The admin window only registers its token listener AFTER receiving the
+ * handshake ping. If the popup sends the token directly (without the ping)
+ * the admin is still in handshake-listening mode and silently drops the token.
  */
 function page(status, token, errorMsg) {
     const message = status === 'success'
@@ -136,32 +139,38 @@ function page(status, token, errorMsg) {
 </div>
 <script>
   (function () {
-    var msg = ${JSON.stringify(message)};
+    var authMessage  = ${JSON.stringify(message)};
+    var isSuccess    = ${JSON.stringify(status === 'success')};
+    var handshakeMsg = 'authorizing:github';
 
-    // Send the auth result to the opener (Decap CMS admin window).
-    // Must use '*' as targetOrigin — Decap CMS requires this for its internal
-    // message listener to accept the token. A specific origin would silently
-    // drop the message if there is any mismatch.
-    function sendToOpener() {
+    function postToOpener(msg) {
       try {
         if (window.opener && !window.opener.closed) {
           window.opener.postMessage(msg, '*');
-          return true;
         }
-      } catch (e) {
-        // opener may be cross-origin in unusual redirect scenarios; ignore
-      }
-      return false;
+      } catch (e) { /* should not happen — same domain */ }
     }
 
-    // Fire immediately (document is already parsed by the time this runs)
-    sendToOpener();
-
-    // Fire again after 200 ms in case the opener's listener wasn't ready yet
-    setTimeout(sendToOpener, 200);
-
-    // Close this popup after 800 ms — enough time for both sends to complete
-    setTimeout(function () { window.close(); }, 800);
+    if (isSuccess) {
+      // ── Decap CMS two-step handshake (REQUIRED) ───────────────────
+      // Step 1: Popup sends "authorizing:github" to admin window.
+      // Step 2: Admin echoes "authorizing:github" back to popup.
+      // Step 3: Popup receives echo → sends real token to admin.
+      // Without step 1-2, admin is still in handshake-listen mode and
+      // silently drops the token message.
+      window.addEventListener('message', function handler(e) {
+        if (e.data === handshakeMsg) {
+          window.removeEventListener('message', handler, false);
+          postToOpener(authMessage);
+          setTimeout(function () { window.close(); }, 500);
+        }
+      }, false);
+      postToOpener(handshakeMsg); // kick off step 1
+    } else {
+      // Error path — no handshake needed
+      postToOpener(authMessage);
+      setTimeout(function () { window.close(); }, 2500);
+    }
   })();
 </script>
 </body>
