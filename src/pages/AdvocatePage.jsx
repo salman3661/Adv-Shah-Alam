@@ -367,7 +367,7 @@ const AdvocatePage = () => {
                                 },
 
                                 { label: 'Main Practice Areas', value: 'Criminal · Family · Property · Company Law' },
-                                { label: 'Service Locations', value: 'Uttara · Dhaka (all courts)' },
+                                { label: 'Service Locations', value: 'Uttara · Dhaka · Bangladesh (all courts)' },
                                 { label: 'Experience', value: '10+ years of legal practice' },
                                 { label: 'Phone (Call)', value: '+880 1712-655546' },
                                 { label: 'WhatsApp', value: '+880 1955-802007' },
