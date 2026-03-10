@@ -380,7 +380,7 @@ const AdvocatePage = () => {
                                         {fact.label}
                                     </span>
                                     <span className="text-sm font-medium" style={{ color: 'var(--text)' }}>
-                                        {fact.value}
+                                        {whitespace - pre - line}
                                     </span>
                                 </div>
                             ))}
@@ -433,7 +433,7 @@ const AdvocatePage = () => {
                             <div className="glass-card p-6 rounded-2xl" style={{ borderTop: '3px solid var(--accent)' }}>
                                 <Award size={22} className="mb-3" style={{ color: 'var(--accent)' }} />
                                 <h3 className="font-bold text-base mb-2" style={{ color: 'var(--text)' }}>
-                                    20+ Years of Excellence
+                                    10+ Years of Excellence
                                 </h3>
                                 <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
                                     Consistent track record in criminal defence, family disputes, and appellate practice
