@@ -364,9 +364,9 @@ const AdvocatePage = () => {
                                 {
                                     label: 'Primary Courts',
                                     value: [
-                                        'Supreme Court of Bangladesh',
-                                        'Metro Sessions Court, Dhaka',
-                                        'Judge Court, Dhaka'
+                                        '· Supreme Court of Bangladesh',
+                                        '· Metro Sessions Court, Dhaka',
+                                        '· Judge Court, Dhaka'
                                     ]
                                 }, { label: 'Main Practice Areas', value: 'Criminal · Family · Property · Company Law' },
                                 { label: 'Service Locations', value: 'Uttara · Dhaka (all courts)' },
@@ -380,7 +380,7 @@ const AdvocatePage = () => {
                                         {fact.label}
                                     </span>
                                     <span className="text-sm font-medium" style={{ color: 'var(--text)' }}>
-                                        {whitespace - pre - line}
+                                        {fact.value}
                                     </span>
                                 </div>
                             ))}
