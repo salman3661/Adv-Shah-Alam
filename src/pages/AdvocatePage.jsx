@@ -83,7 +83,7 @@ const personSchema = {
     description:
         'Experienced advocate practising at the Supreme Court of Bangladesh, Metro Sessions Court Dhaka, and all subordinate courts. 10+ years specialising in criminal, family, property, and company & corporate law.',
     url: 'https://www.advmdshahalam.me/advocate-md-shah-alam',
-    image: 'https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.webp'
+    image: 'https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.webp',
     worksFor: {
         '@type': 'LegalService',
         name: 'Supreme Court of Bangladesh',
