@@ -361,8 +361,14 @@ const AdvocatePage = () => {
                                 { label: 'Full Name', value: 'Advocate Md. Shah Alam' },
                                 { label: 'Profession', value: 'Advocate (Lawyer)' },
                                 { label: 'Enrolment', value: 'Bangladesh Bar Council' },
-                                { label: 'Primary Courts', value: 'Supreme Court of Bangladesh      · Metro Sessions Court, Dhaka           · Judge Court, Dhaka' },
-                                { label: 'Main Practice Areas', value: 'Criminal · Family · Property · Company Law' },
+                                {
+                                    label: 'Primary Courts',
+                                    value: [
+                                        'Supreme Court of Bangladesh',
+                                        'Metro Sessions Court, Dhaka',
+                                        'Judge Court, Dhaka'
+                                    ]
+                                }, { label: 'Main Practice Areas', value: 'Criminal · Family · Property · Company Law' },
                                 { label: 'Service Locations', value: 'Uttara · Dhaka (all courts)' },
                                 { label: 'Experience', value: '10+ years of legal practice' },
                                 { label: 'Phone (Call)', value: '+880 1712-655546' },
