@@ -4,6 +4,7 @@ import { waLink } from '../data/contactInfo';
 import { MessageCircle, ArrowRight } from 'lucide-react';
 import heroContent from '../content/hero.json';
 
+
 const Hero = () => {
     return (
         <section
@@ -30,10 +31,9 @@ const Hero = () => {
                     transition={{ duration: 0.8 }}
                     className="flex justify-center md:justify-end order-1 md:order-2"
                 >
-                    <motion.div
-                        animate={{ y: [0, -12, 0] }}
-                        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                        className="relative w-full max-w-sm lg:max-w-md aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl group"
+                    {/* CSS float animation replaces framer y:[0,-12,0] — GPU-composited, no layout paint */}
+                    <div
+                        className="hero-float relative w-full max-w-sm lg:max-w-md aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl group"
                         style={{ border: '3px solid var(--card-border)' }}
                     >
                         <picture>
@@ -75,7 +75,7 @@ const Hero = () => {
                         >
                              {heroContent.photoBadgeTop}
                         </motion.div>
-                    </motion.div>
+                    </div>
                 </motion.div>
 
                 {/* Text Side */}

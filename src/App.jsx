@@ -50,13 +50,7 @@ function App() {
                 <Route path="/services/tax-lawyer" element={<TaxLawyer />} />
                 <Route path="/services/company-corporate-lawyer" element={<CompanyCorporateLawyer />} />
 
-                {/* Short-slug aliases used by blog internal links */}
-                <Route path="/criminal-lawyer-uttara" element={<CriminalLawyer />} />
-                <Route path="/divorce-lawyer-uttara" element={<DivorceLawyer />} />
-                <Route path="/land-property-lawyer-uttara" element={<LandLawyer />} />
-                <Route path="/bail-lawyer-dhaka" element={<BailLawyer />} />
-                <Route path="/supreme-court-lawyer-bangladesh" element={<SupremeCourtLawyer />} />
-                <Route path="/tax-vat-lawyer-dhaka" element={<TaxLawyer />} />
+                {/* Short-slug aliases — now 301-redirected in vercel.json before React loads */}
 
                 {/* Blog */}
                 <Route path="/blog" element={<Blog />} />

@@ -3,8 +3,8 @@ import ServicePage from '../../components/ServicePage';
 
 const SupremeCourtLawyer = () => (
     <ServicePage
-        metaTitle="Supreme Court Lawyer in Bangladesh | Advocate Md. Shah Alam"
-        metaDesc="Experienced Supreme Court lawyer in Bangladesh. Advocate Md. Shah Alam handles High Court Division cases, writ petitions, appellate matters, and constitutional litigation in Dhaka."
+        metaTitle="Supreme Court Lawyer in Bangladesh | Appellate Division & Writ – Advocate Md. Shah Alam"
+        metaDesc="Experienced Supreme Court lawyer Bangladesh for appeals, writ petitions & constitutional matters. Advocate Md. Shah Alam practises at the Appellate & High Court Divisions."
         canonicalUrl="https://www.advmdshahalam.me/services/supreme-court-lawyer"
         h1="Supreme Court Lawyer Bangladesh – High Court & Appellate Expert"
         intro="Advocate Md. Shah Alam is a seasoned <strong>Supreme Court lawyer in Bangladesh</strong>, practicing at the High Court Division and Appellate Division of the Supreme Court of Bangladesh. He handles writ petitions, constitutional matters, criminal appeals, civil appellate cases, and all High Court Division proceedings with precision and expertise built over two decades of practice."

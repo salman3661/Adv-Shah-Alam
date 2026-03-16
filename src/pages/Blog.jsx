@@ -85,10 +85,10 @@ const Blog = () => {
     return (
         <>
             <Helmet>
-                <title>Legal Blog – Bangladesh Law Guide | Advocate Md. Shah Alam</title>
+                <title>Bangladesh Law Blog – Legal Guides by Advocate Md. Shah Alam, Uttara Dhaka</title>
                 <meta
                     name="description"
-                    content="Expert legal articles on criminal, family, property &amp; company law in Bangladesh by Advocate Md. Shah Alam. Guides on bail, divorce, land disputes and more."
+                    content="Free legal guides on bail, divorce, land disputes, cheque dishonour &amp; child custody in Bangladesh. Written by experienced lawyer Advocate Md. Shah Alam of Uttara, Dhaka."
                 />
                 <link rel="canonical" href="https://www.advmdshahalam.me/blog" />
             </Helmet>

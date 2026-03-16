@@ -18,7 +18,8 @@ body {
   --text-secondary: #334155;
   --text-2: #334155;
   /* alias kept for legacy references */
-  --text-muted: #64748B;
+  --text-muted: #4B5563;
+
 
   --accent: #1D4ED8;
   --accent-hover: #1E40AF;
@@ -507,10 +508,21 @@ body[data-theme="dark"] .status-current {
 }
 
 /* ============================================================
-   MICRO-ANIMATIONS — WhatsApp float & Mobile call bar phone icon
-   Pure CSS keyframes only. No layout shift. No z-index / size changes.
+   MICRO-ANIMATIONS — Hero float, WhatsApp, Mobile call bar
+   All use transform/opacity only — GPU-composited, no layout paint.
    Suppressed globally by the prefers-reduced-motion block at EOF.
    ============================================================ */
+
+/* Hero photo gentle float — pure CSS, GPU-composited (transform only) */
+@keyframes hero-float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-12px); }
+}
+
+.hero-float {
+  animation: hero-float 6s ease-in-out infinite;
+  will-change: transform;
+}
 
 /* WhatsApp breathing: scale 1 → 1.02 → 1 */
 @keyframes wa-breathe {

@@ -6,6 +6,12 @@
       "destination": "https://www.advmdshahalam.me/$1",
       "permanent": true
     },
+    { "source": "/criminal-lawyer-uttara",         "destination": "/services/criminal-lawyer",         "permanent": true },
+    { "source": "/divorce-lawyer-uttara",           "destination": "/services/divorce-lawyer",           "permanent": true },
+    { "source": "/land-property-lawyer-uttara",     "destination": "/services/land-lawyer",              "permanent": true },
+    { "source": "/bail-lawyer-dhaka",               "destination": "/services/bail-lawyer",              "permanent": true },
+    { "source": "/supreme-court-lawyer-bangladesh", "destination": "/services/supreme-court-lawyer",     "permanent": true },
+    { "source": "/tax-vat-lawyer-dhaka",            "destination": "/services/tax-lawyer",               "permanent": true },
     { "source": "/bn/blog/",               "destination": "/bn/blog",               "permanent": true },
     { "source": "/blog/",                  "destination": "/blog",                  "permanent": true },
     { "source": "/education/",             "destination": "/education",             "permanent": true },

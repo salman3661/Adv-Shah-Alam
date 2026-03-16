@@ -4,8 +4,8 @@ import ServicePage from '../../components/ServicePage';
 
 const CompanyCorporateLawyer = () => (
     <ServicePage
-        metaTitle="Company & Corporate Lawyer in Dhaka | Advocate Md. Shah Alam"
-        metaDesc="Expert company and corporate lawyer in Bangladesh. Advocate Md. Shah Alam handles business formation, company disputes, shareholder matters, partnership agreements, and commercial legal issues in Dhaka."
+        metaTitle="Corporate & Company Lawyer in Dhaka | Business Law – Advocate Md. Shah Alam"
+        metaDesc="Company registration, contract disputes, RJSC matters & cheque dishonour cases in Bangladesh. Trusted corporate lawyer in Dhaka with 20+ years business law expertise."
         canonicalUrl="https://www.advmdshahalam.me/services/company-corporate-lawyer"
         h1="Company & Corporate Lawyer in Dhaka – Bangladesh Business Law Expert"
         intro="Advocate Md. Shah Alam provides comprehensive <strong>company and corporate legal services in Bangladesh</strong>, advising businesses, entrepreneurs, and investors on formation, compliance, disputes, and commercial transactions under the Companies Act 1994. With strong courtroom experience and practical business insight, Adv. Shah Alam helps protect your commercial interests at every stage."

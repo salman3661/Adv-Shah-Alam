@@ -4,8 +4,8 @@ import ServicePage from '../../components/ServicePage';
 
 const DivorceLawyer = () => (
     <ServicePage
-        metaTitle="Divorce & Family Lawyer in Uttara, Dhaka | Advocate Md. Shah Alam"
-        metaDesc="Expert divorce and family lawyer in Uttara. Advocate Md. Shah Alam handles Muslim divorce procedure in Bangladesh, child custody, khula, and family court matters in Dhaka."
+        metaTitle="Divorce Lawyer in Uttara, Dhaka | Muslim Divorce, Khula & Custody – Adv. Shah Alam"
+        metaDesc="Expert divorce lawyer in Uttara for Muslim talaq, khula, child custody & maintenance in Bangladesh family courts. Compassionate, fast, experienced. WhatsApp now."
         canonicalUrl="https://www.advmdshahalam.me/services/divorce-lawyer"
         h1="Divorce & Family Lawyer in Uttara – Bangladesh Family Law Expert"
         intro="Advocate Md. Shah Alam is a compassionate and knowledgeable <strong>divorce lawyer in Uttara, Dhaka</strong>, handling all aspects of family law including Muslim divorce procedure in Bangladesh, khula, child custody, maintenance, and dower (mahr) disputes. With sensitivity to the emotional weight of family matters, Adv. Shah Alam provides clear guidance and strong representation in family courts."
