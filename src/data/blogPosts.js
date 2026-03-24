@@ -7214,8 +7214,8 @@ const posts = [
         title: 'How to Hire a Criminal Lawyer in Bangladesh: A Complete Guide',
         category: 'Criminal Law',
         readTime: '7 min read',
-        metaTitle: 'How to Hire a Criminal Lawyer in Bangladesh – Complete Guide',
-        metaDescription: 'Facing a criminal case in Bangladesh? Learn how to choose, hire and work with a qualified criminal lawyer in Dhaka. What to look for, questions to ask, and what it costs.',
+        metaTitle: 'Need Urgent Help? Top Criminal Lawyer in Dhaka',
+        metaDescription: 'Facing legal trouble in Dhaka? Hire an experienced criminal lawyer in Uttara today for bail, fraud, or defense. Fast, confidential legal solutions.',
         keywords: ['hire criminal lawyer Bangladesh', 'criminal lawyer Dhaka', 'how to find a lawyer Bangladesh', 'criminal defence lawyer Bangladesh', 'best criminal lawyer Uttara'],
         publishedDate: '2026-03-24',
         heroIntro: 'A criminal charge in Bangladesh can be life-altering. Whether you face an FIR, arrest, or ongoing trial, hiring the right criminal lawyer is the single most important decision you will make. This guide walks you through the process step by step.',
@@ -7230,7 +7230,7 @@ const posts = [
         sections: [
             {
                 h2: 'Why You Need a Specialist Criminal Lawyer',
-                content: `<p>Criminal law in Bangladesh is governed by the <strong>Penal Code 1860</strong>, the <strong>Code of Criminal Procedure 1898</strong>, and dozens of special laws including the Digital Security Act, Narcotics Control Act, and the Women and Children Repression Prevention Act. A general civil lawyer may lack the courtroom experience, police-station relationships, and procedural knowledge that a criminal case demands.</p>
+                content: `<p>Criminal law in Bangladesh is governed by the <strong>Penal Code 1860</strong>, the <strong>Code of Criminal Procedure 1898</strong>, and dozens of special laws including the Digital Security Act, Narcotics Control Act, and the Women and Children Repression Prevention Act. A general civil lawyer may lack the courtroom experience, police-station relationships, and procedural knowledge that a criminal case demands. Understanding <a href="/blog/company-registration-cost-bangladesh" style="color:var(--accent); font-weight:500;">corporate legal compliance for business owners</a> is also critical. In some situations, <a href="/blog/writ-petition-high-court-guide-bangladesh" style="color:var(--accent); font-weight:500;">quashing criminal proceedings via writ</a> can provide immediate relief. This is especially relevant when <a href="/blog/how-to-file-divorce-petition-bangladesh" style="color:var(--accent); font-weight:500;">defending against false dowry cases</a> in family disputes.</p>
 <p>A specialist criminal lawyer in Dhaka can apply for <a href="/services/bail-lawyer" style="color:var(--accent)">urgent bail</a>, challenge an FIR at the earliest stage, and build a defence strategy before the prosecution consolidates its case against you.</p>`,
             },
             {
@@ -7313,8 +7313,8 @@ const posts = [
         title: 'How to File a Divorce Petition in Bangladesh: Step-by-Step Guide',
         category: 'Family Law',
         readTime: '8 min read',
-        metaTitle: 'How to File a Divorce Petition in Bangladesh – Step-by-Step Guide',
-        metaDescription: 'Complete guide to filing a divorce petition in Bangladesh — required documents, court process, fees, timeline, and how a divorce lawyer in Dhaka can help.',
+        metaTitle: 'File Divorce Fast: Top Family Lawyer in Dhaka',
+        metaDescription: 'Thinking of divorce? Get discreet, fast, and urgent legal help from our experienced family lawyer in Uttara, Dhaka. Settle your disputes smoothly.',
         keywords: ['file divorce petition Bangladesh', 'divorce case Bangladesh', 'family court Bangladesh', 'how to divorce in Bangladesh', 'divorce lawyer Dhaka'],
         publishedDate: '2026-03-24',
         heroIntro: 'Filing a divorce petition in Bangladesh involves specific legal procedures that differ based on religion and the type of divorce sought. This guide explains the complete process — from documentation to court filing — so you can proceed with confidence.',
@@ -7330,7 +7330,7 @@ const posts = [
         sections: [
             {
                 h2: 'Divorce Options in Bangladesh: Which Applies to You?',
-                content: `<p>Your divorce procedure depends on your religion and marital circumstances:</p>
+                content: `<p>Your divorce procedure depends on your religion and marital circumstances: You should also consider the rules for <a href="/blog/land-registration-fees-process-bangladesh" style="color:var(--accent); font-weight:500;">transferring property ownership legally</a> if joint assets exist.</p>
 <ul>
 <li><strong>Muslim Talaq (husband-initiated)</strong>: Written notice to the Union Parishad/City Corporation Chairman, followed by 90-day reconciliation period.</li>
 <li><strong>Khula (wife-initiated)</strong>: Wife returns mahr (dower) and applies through Chairman or family court.</li>
@@ -7421,8 +7421,8 @@ const posts = [
         title: 'Land Registration Fees and Process in Bangladesh: Complete Guide 2025',
         category: 'Property Law',
         readTime: '8 min read',
-        metaTitle: 'Land Registration Fees & Process Bangladesh 2025 – Complete Guide',
-        metaDescription: 'How to register land in Bangladesh — stamp duty, registration fees, required documents, Sub-Registrar process, and how a property lawyer can help you avoid costly mistakes.',
+        metaTitle: 'Secure Land Registration Lawyer in Uttara, Dhaka',
+        metaDescription: 'Don\'t lose your property! Get expert legal solutions for land registration, vetting, and mutation from a trusted civil lawyer in Dhaka. Call now!',
         keywords: ['land registration fees Bangladesh', 'property registration Bangladesh', 'stamp duty Bangladesh', 'deed registration Bangladesh', 'land lawyer Dhaka'],
         publishedDate: '2026-03-24',
         heroIntro: 'Land registration in Bangladesh is a multi-step process involving stamp duty, registration fees, and visits to the Sub-Registrar office. Understanding the costs and steps in advance can save you significant money and prevent fraud.',
@@ -7438,7 +7438,7 @@ const posts = [
         sections: [
             {
                 h2: 'What is Land Registration in Bangladesh?',
-                content: `<p>Land registration is the formal recording of property ownership with the government through the Sub-Registrar's office under the <strong>Registration Act 1908</strong>. Without a registered deed, a property transaction is invalid and unenforceable. Registration transfers legal title from seller to buyer and creates a permanent public record.</p>
+                content: `<p>Land registration is the formal recording of property ownership with the government through the Sub-Registrar's office under the <strong>Registration Act 1908</strong>. Without a registered deed, a property transaction is invalid and unenforceable. Registration transfers legal title from seller to buyer and creates a permanent public record. This applies whether you are an individual or <a href="/blog/company-registration-cost-bangladesh" style="color:var(--accent); font-weight:500;">registering a real estate company structure</a>. It is also crucial when <a href="/blog/how-to-file-divorce-petition-bangladesh" style="color:var(--accent); font-weight:500;">dividing joint property after marriage dissolution</a>. For major disputes, <a href="/blog/writ-petition-high-court-guide-bangladesh" style="color:var(--accent); font-weight:500;">challenging illegal land acquisition in court</a> might be necessary.</p>
 <p>An unregistered sale is one of the most common causes of land disputes in Bangladesh. Always register with the help of a qualified <a href="/services/land-lawyer" style="color:var(--accent)">land and property lawyer</a>.</p>`,
             },
             {
@@ -7524,8 +7524,8 @@ const posts = [
         title: 'Company Registration Cost and Process in Bangladesh (2025)',
         category: 'Company & Corporate Law',
         readTime: '7 min read',
-        metaTitle: 'Company Registration Cost & Process in Bangladesh 2025',
-        metaDescription: 'How much does it cost to register a company in Bangladesh in 2025? RJSC fees, government charges, required documents, timeline and how a company lawyer in Dhaka can help.',
+        metaTitle: 'Affordable Company Registration Lawyer Dhaka',
+        metaDescription: 'Start your business fast! Contact our corporate lawyer in Uttara, Dhaka for a quick, hassle-free company registration and RJSC filing today.',
         keywords: ['company registration Bangladesh', 'RJSC fees Bangladesh', 'register private limited company Bangladesh', 'company registration cost Dhaka', 'corporate lawyer Bangladesh'],
         publishedDate: '2026-03-24',
         heroIntro: 'Registering a company in Bangladesh through the Registrar of Joint Stock Companies and Firms (RJSC) is a structured process. Understanding the real costs — government fees, stamp duties, and professional fees — helps you budget accurately and avoid delays.',
@@ -7541,7 +7541,7 @@ const posts = [
         sections: [
             {
                 h2: 'Types of Companies You Can Register in Bangladesh',
-                content: `<p>Under the <strong>Companies Act 1994</strong>, the most common business structures are:</p>
+                content: `<p>Under the <strong>Companies Act 1994</strong>, the most common business structures are: Failing to comply may result in <a href="/blog/hire-criminal-lawyer-bangladesh" style="color:var(--accent); font-weight:500;">criminal liability in corporate fraud</a>. Additionally, if you are <a href="/blog/land-registration-fees-process-bangladesh" style="color:var(--accent); font-weight:500;">acquiring commercial land for your startup</a>, ensure proper vetting.</p>
 <ul>
 <li><strong>Private Limited Company (Ltd.)</strong>: 2–50 shareholders, limited liability. Most popular structure for SMEs and startups.</li>
 <li><strong>Public Limited Company (PLC)</strong>: 7+ shareholders, can raise capital from the public, requires more compliance.</li>
@@ -7616,8 +7616,8 @@ const posts = [
         title: 'Writ Petition in High Court Bangladesh: A Complete Guide',
         category: 'Legal Procedures',
         readTime: '8 min read',
-        metaTitle: 'Writ Petition High Court Bangladesh – Complete Guide 2025',
-        metaDescription: 'How to file a writ petition in the High Court Division of Bangladesh Supreme Court — types of writ, grounds, process, time limits, costs, and when to hire a Supreme Court lawyer.',
+        metaTitle: 'High Court Writ Petition Expert in Dhaka',
+        metaDescription: 'Rights violated? Get immediate legal solutions with our Supreme Court lawyer in Dhaka. File your writ petition fast with Advocate Md. Shah Alam.',
         keywords: ['writ petition Bangladesh', 'writ petition High Court Bangladesh', 'Article 102 Bangladesh Constitution', 'habeas corpus Bangladesh', 'mandamus Bangladesh', 'Supreme Court lawyer Dhaka'],
         publishedDate: '2026-03-24',
         heroIntro: 'A writ petition is one of the most powerful legal remedies in Bangladesh — it allows a citizen to challenge illegal government actions, enforce fundamental rights, and seek release from unlawful detention directly in the High Court Division of the Supreme Court.',
@@ -7633,7 +7633,7 @@ const posts = [
         sections: [
             {
                 h2: 'What is a Writ Petition in Bangladesh?',
-                content: `<p>A writ petition is an application filed directly in the <strong>High Court Division of the Supreme Court of Bangladesh</strong> under Article 102 of the Constitution. It is used to challenge the actions of public authorities, enforce fundamental rights guaranteed by Part III of the Constitution, or seek specific legal remedies that ordinary courts cannot provide.</p>
+                content: `<p>A writ petition is an application filed directly in the <strong>High Court Division of the Supreme Court of Bangladesh</strong> under Article 102 of the Constitution. It is used to challenge the actions of public authorities, enforce fundamental rights guaranteed by Part III of the Constitution, or seek specific legal remedies that ordinary courts cannot provide. Before proceeding, <a href="/blog/hire-criminal-lawyer-bangladesh" style="color:var(--accent); font-weight:500;">consulting a criminal defense advocate</a> is highly recommended.</p>
 <p>Unlike regular civil or criminal cases that start in lower courts, a writ petition begins in the High Court. It requires a specialised <a href="/services/supreme-court-lawyer" style="color:var(--accent)">Supreme Court lawyer in Bangladesh</a> with experience in constitutional law.</p>`,
             },
             {
