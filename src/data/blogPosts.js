@@ -1,4 +1,4 @@
-// src/data/blogPosts.js
+﻿// src/data/blogPosts.js
 // Posts 1–6 (posts 7–12 appended below)
 
 const PUBLISHED = '2026-03-02';
@@ -41,7 +41,7 @@ const posts = [
 <li><strong>Interim Bail:</strong> A temporary, short-duration bail granted pending the hearing of the main bail application.</li>
 <li><strong>Bail on Bond:</strong> Release secured by a personal surety bond or monetary guarantee.</li>
 </ul>
-<p>Choosing the correct type of bail depends on the stage of the case, the nature of the offence, and whether an arrest has already taken place. A qualified <a href="/bail-lawyer-dhaka" style="color:var(--accent)">bail lawyer in Dhaka</a> can advise which application is most appropriate.</p>`,
+<p>Choosing the correct type of bail depends on the stage of the case, the nature of the offence, and whether an arrest has already taken place. A qualified <a href="/services/bail-lawyer" style="color:var(--accent)">bail lawyer in Dhaka</a> can advise which application is most appropriate.</p>`,
             },
             {
                 h2: 'Who Can Apply for Bail?',
@@ -63,7 +63,7 @@ const posts = [
 <li>The prosecution is given an opportunity to oppose the application.</li>
 <li>The judge considers arguments from both sides and delivers an order.</li>
 </ol>
-<p>In urgent situations — particularly when police custody is imminent — an interim bail may be sought at very short notice. Contact a <a href="/criminal-lawyer-uttara" style="color:var(--accent)">criminal lawyer in Uttara</a> immediately if someone in your family has been arrested.</p>`,
+<p>In urgent situations — particularly when police custody is imminent — an interim bail may be sought at very short notice. Contact a <a href="/services/criminal-lawyer" style="color:var(--accent)">criminal lawyer in Uttara</a> immediately if someone in your family has been arrested.</p>`,
             },
             {
                 h2: 'Documents Required for Bail',
@@ -99,7 +99,7 @@ const posts = [
 <li>The accused has previously violated bail conditions</li>
 <li>The investigation is ongoing and custody is necessary</li>
 </ul>
-<p>Even in such cases, bail may be obtained from the High Court Division of the Bangladesh Supreme Court. An experienced <a href="/supreme-court-lawyer-bangladesh" style="color:var(--accent)">Supreme Court lawyer in Bangladesh</a> can handle these complex applications.</p>`,
+<p>Even in such cases, bail may be obtained from the High Court Division of the Bangladesh Supreme Court. An experienced <a href="/services/supreme-court-lawyer" style="color:var(--accent)">Supreme Court lawyer in Bangladesh</a> can handle these complex applications.</p>`,
             },
             {
                 h2: 'Role of a Lawyer in Bail Applications',
@@ -110,7 +110,7 @@ const posts = [
 <li>Counter the prosecution's arguments effectively</li>
 <li>Handle procedural requirements quickly to minimise detention</li>
 </ul>
-<p>Advocate Md. Shah Alam has handled bail applications at all court levels across Dhaka, including the Magistrate Court, Sessions Court, and the High Court Division. If you or a family member needs urgent legal help, <a href="/bail-lawyer-dhaka" style="color:var(--accent)">contact a bail lawyer in Dhaka</a> immediately.</p>`,
+<p>Advocate Md. Shah Alam has handled bail applications at all court levels across Dhaka, including the Magistrate Court, Sessions Court, and the High Court Division. If you or a family member needs urgent legal help, <a href="/services/bail-lawyer" style="color:var(--accent)">contact a bail lawyer in Dhaka</a> immediately.</p>`,
             },
         ],
         faqs: [
@@ -124,9 +124,9 @@ const posts = [
             { question: 'How much does getting bail typically cost?', answer: 'Lawyer fees vary. Court fees are minimal. You should avoid paying unofficial amounts to any party other than your lawyer\'s declared fee.' },
         ],
         relatedServiceLinks: [
-            { text: 'Bail Lawyer Dhaka', to: '/bail-lawyer-dhaka' },
-            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-uttara' },
-            { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
+            { text: 'Bail Lawyer Dhaka', to: '/services/bail-lawyer' },
+            { text: 'Criminal Lawyer Uttara', to: '/services/criminal-lawyer' },
+            { text: 'Supreme Court Lawyer Bangladesh', to: '/services/supreme-court-lawyer' },
         ],
     },
 
@@ -166,7 +166,7 @@ const posts = [
 <li><strong>Mubarat:</strong> Divorce by mutual agreement of both parties.</li>
 <li><strong>Judicial Divorce (Faskh):</strong> Granted by the Family Court on grounds such as cruelty, desertion, or failure to maintain.</li>
 </ul>
-<p>Each type has a different procedure. Consulting a <a href="/divorce-lawyer-uttara" style="color:var(--accent)">divorce lawyer in Uttara</a> ensures you choose and follow the correct route.</p>`,
+<p>Each type has a different procedure. Consulting a <a href="/services/divorce-lawyer" style="color:var(--accent)">divorce lawyer in Uttara</a> ensures you choose and follow the correct route.</p>`,
             },
             {
                 h2: 'Talaq: How It Works',
@@ -229,7 +229,7 @@ const posts = [
 <li><strong>Child Maintenance:</strong> The father is obligated to maintain children regardless of custody. The Family Court sets the amount.</li>
 <li><strong>Matrimonial Property:</strong> Bangladesh does not have a community property regime. Each spouse retains separately owned property. The court may award additional maintenance in cases of hardship.</li>
 </ul>
-<p>For expert guidance on your rights, consult a <a href="/divorce-lawyer-uttara" style="color:var(--accent)">family law lawyer in Uttara, Dhaka</a>.</p>`,
+<p>For expert guidance on your rights, consult a <a href="/services/divorce-lawyer" style="color:var(--accent)">family law lawyer in Uttara, Dhaka</a>.</p>`,
             },
         ],
         faqs: [
@@ -243,9 +243,9 @@ const posts = [
             { question: 'Can foreigners divorce in Bangladesh courts?', answer: 'Yes, if the marriage was solemnised in Bangladesh or both parties are resident in Bangladesh. The applicable personal law will govern the procedure.' },
         ],
         relatedServiceLinks: [
-            { text: 'Divorce Lawyer Uttara', to: '/divorce-lawyer-uttara' },
-            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-uttara' },
-            { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
+            { text: 'Divorce Lawyer Uttara', to: '/services/divorce-lawyer' },
+            { text: 'Criminal Lawyer Uttara', to: '/services/criminal-lawyer' },
+            { text: 'Supreme Court Lawyer Bangladesh', to: '/services/supreme-court-lawyer' },
         ],
     },
 
@@ -274,7 +274,7 @@ const posts = [
             {
                 h2: 'Why Land Disputes Are Common in Bangladesh',
                 content: `<p>Bangladesh is one of the most densely populated countries in the world. Land is scarce, and its value has risen sharply in urban centres like Dhaka and Uttara. Combined with fragmented record-keeping, outdated land registries, and inheritance divisions across multiple generations, the conditions for disputes are widespread.</p>
-<p>Common triggers include: fraudulent sale deeds, forced possession by powerful third parties, disputed inheritance shares, boundary disagreements between neighbours, and government acquisition of private land. Each of these requires a different legal strategy. A skilled <a href="/land-property-lawyer-uttara" style="color:var(--accent)">land lawyer in Uttara</a> can assess your situation and recommend the correct course.</p>`,
+<p>Common triggers include: fraudulent sale deeds, forced possession by powerful third parties, disputed inheritance shares, boundary disagreements between neighbours, and government acquisition of private land. Each of these requires a different legal strategy. A skilled <a href="/services/land-lawyer" style="color:var(--accent)">land lawyer in Uttara</a> can assess your situation and recommend the correct course.</p>`,
             },
             {
                 h2: 'Types of Land Disputes',
@@ -303,7 +303,7 @@ const posts = [
             {
                 h2: 'Partition of Land Among Heirs',
                 content: `<p>When a landowner dies, their heirs become co-owners of the property. Disputes often arise when some heirs occupy or sell portions without consent of others. A <strong>Partition Suit</strong> under the Partition Act 1893 allows a co-sharer to demand formal division of jointly held property.</p>
-<p>The court appoints a commissioner to survey and physically divide the land. If physical division is not possible, the court may order a sale and division of proceeds. Islamic inheritance principles (as codified in applicable Bangladeshi law) determine each heir's share. An <a href="/land-property-lawyer-uttara" style="color:var(--accent)">experienced property lawyer in Dhaka</a> can represent your interests throughout this process.</p>`,
+<p>The court appoints a commissioner to survey and physically divide the land. If physical division is not possible, the court may order a sale and division of proceeds. Islamic inheritance principles (as codified in applicable Bangladeshi law) determine each heir's share. An <a href="/services/land-lawyer" style="color:var(--accent)">experienced property lawyer in Dhaka</a> can represent your interests throughout this process.</p>`,
             },
             {
                 h2: 'Injunction to Stop Encroachment',
@@ -337,7 +337,7 @@ const posts = [
             {
                 h2: 'How Long Do Land Cases Take?',
                 content: `<p>Land cases in Bangladesh are notoriously slow due to the volume of cases in civil courts. A declaration suit at the Assistant Judge level may take anywhere from <strong>3 to 8 years</strong> at first instance, with further time for appeals to the District Court and High Court Division.</p>
-<p>Interim relief (injunctions) can be obtained much faster — often within weeks. Out-of-court mediation and compromise deeds can also resolve some disputes faster. For complex title cases involving the High Court, consult a <a href="/supreme-court-lawyer-bangladesh" style="color:var(--accent)">Supreme Court lawyer in Bangladesh</a> for appellate matters.</p>`,
+<p>Interim relief (injunctions) can be obtained much faster — often within weeks. Out-of-court mediation and compromise deeds can also resolve some disputes faster. For complex title cases involving the High Court, consult a <a href="/services/supreme-court-lawyer" style="color:var(--accent)">Supreme Court lawyer in Bangladesh</a> for appellate matters.</p>`,
             },
         ],
         faqs: [
@@ -351,9 +351,9 @@ const posts = [
             { question: 'How do I handle an illegal occupier on my property?', answer: 'File a possession recovery suit with an application for interim injunction. A court order can direct the occupier to vacate pending trial.' },
         ],
         relatedServiceLinks: [
-            { text: 'Land & Property Lawyer Uttara', to: '/land-property-lawyer-uttara' },
-            { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
-            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-uttara' },
+            { text: 'Land & Property Lawyer Uttara', to: '/services/land-lawyer' },
+            { text: 'Supreme Court Lawyer Bangladesh', to: '/services/supreme-court-lawyer' },
+            { text: 'Criminal Lawyer Uttara', to: '/services/criminal-lawyer' },
         ],
     },
 
@@ -382,7 +382,7 @@ const posts = [
             {
                 h2: 'Is Cheque Dishonour a Criminal Offence in Bangladesh?',
                 content: `<p>Yes. Under <strong>Section 138 of the Negotiable Instruments Act 1881</strong> (as amended in Bangladesh), the dishonour of a cheque for insufficient funds or other reasons related to the drawer's account is a criminal offence. The law was strengthened through subsequent amendments to deter the practice of issuing cheques without adequate funds.</p>
-<p>The purpose of this provision is to maintain faith in commercial transactions. Cheques are used extensively in business dealings in Bangladesh, and their dishonour disrupts commerce. Courts in Dhaka and across Bangladesh handle thousands of cheque dishonour cases annually. If your cheque has bounced, you should consult a <a href="/criminal-lawyer-uttara" style="color:var(--accent)">criminal lawyer in Uttara or Dhaka</a> immediately.</p>`,
+<p>The purpose of this provision is to maintain faith in commercial transactions. Cheques are used extensively in business dealings in Bangladesh, and their dishonour disrupts commerce. Courts in Dhaka and across Bangladesh handle thousands of cheque dishonour cases annually. If your cheque has bounced, you should consult a <a href="/services/criminal-lawyer" style="color:var(--accent)">criminal lawyer in Uttara or Dhaka</a> immediately.</p>`,
             },
             {
                 h2: 'Key Provisions of Section 138 NI Act',
@@ -427,7 +427,7 @@ const posts = [
 <li>Postal receipt and delivery acknowledgement</li>
 <li>A sworn statement (affidavit) setting out the facts</li>
 </ul>
-<p>The Magistrate will examine the complaint, and if satisfied that an offence is prima facie made out, will issue a summons to the accused drawer. A <a href="/bail-lawyer-dhaka" style="color:var(--accent)">bail lawyer in Dhaka</a> can assist accused persons in obtaining bail promptly after summons is issued.</p>`,
+<p>The Magistrate will examine the complaint, and if satisfied that an offence is prima facie made out, will issue a summons to the accused drawer. A <a href="/services/bail-lawyer" style="color:var(--accent)">bail lawyer in Dhaka</a> can assist accused persons in obtaining bail promptly after summons is issued.</p>`,
             },
             {
                 h2: 'Court Proceedings and Punishment',
@@ -454,7 +454,7 @@ const posts = [
 <li>The complaint was filed outside the limitation period</li>
 <li>The cheque was materially altered after issue</li>
 </ul>
-<p>These are technical defences that require careful legal analysis. Contact an <a href="/criminal-lawyer-uttara" style="color:var(--accent)">experienced criminal lawyer in Uttara or Dhaka</a> to assess what defences apply in your case.</p>`,
+<p>These are technical defences that require careful legal analysis. Contact an <a href="/services/criminal-lawyer" style="color:var(--accent)">experienced criminal lawyer in Uttara or Dhaka</a> to assess what defences apply in your case.</p>`,
             },
         ],
         faqs: [
@@ -468,9 +468,9 @@ const posts = [
             { question: 'How do I get bail in a cheque dishonour case?', answer: 'Cheque dishonour cases are bailable offences. Bail is usually granted by the Magistrate Court as of right, often on the same day of summons appearance.' },
         ],
         relatedServiceLinks: [
-            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-uttara' },
-            { text: 'Bail Lawyer Dhaka', to: '/bail-lawyer-dhaka' },
-            { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
+            { text: 'Criminal Lawyer Uttara', to: '/services/criminal-lawyer' },
+            { text: 'Bail Lawyer Dhaka', to: '/services/bail-lawyer' },
+            { text: 'Supreme Court Lawyer Bangladesh', to: '/services/supreme-court-lawyer' },
         ],
     },
 
@@ -504,7 +504,7 @@ const posts = [
 <li><strong>Muslim Personal Law (Shariat Application Act 1937):</strong> Governs custody rights (hizanat) for Muslims based on Islamic jurisprudence.</li>
 <li><strong>Family Courts Ordinance 1985:</strong> Family Courts have exclusive jurisdiction over custody, guardianship, and related matrimonial matters.</li>
 </ul>
-<p>The ultimate guiding principle in all custody decisions in Bangladesh is the <strong>welfare of the child</strong>, regardless of what the religious personal law provides. Contact a <a href="/divorce-lawyer-uttara" style="color:var(--accent)">family law expert in Uttara</a> for advice specific to your situation.</p>`,
+<p>The ultimate guiding principle in all custody decisions in Bangladesh is the <strong>welfare of the child</strong>, regardless of what the religious personal law provides. Contact a <a href="/services/divorce-lawyer" style="color:var(--accent)">family law expert in Uttara</a> for advice specific to your situation.</p>`,
             },
             {
                 h2: 'What Is Hizanat (Maternal Custody)?',
@@ -548,7 +548,7 @@ const posts = [
                 h2: 'Custody Disputes: Filing a Petition',
                 content: `<p>To initiate a custody dispute, the parent must file a <strong>Guardianship Petition</strong> or a suit in the Family Court. The main steps are:</p>
 <ol>
-<li>Instruct a <a href="/divorce-lawyer-uttara" style="color:var(--accent)">family lawyer in Dhaka/Uttara</a> to draft a petition.</li>
+<li>Instruct a <a href="/services/divorce-lawyer" style="color:var(--accent)">family lawyer in Dhaka/Uttara</a> to draft a petition.</li>
 <li>File in the Family Court of the area where the child ordinarily resides.</li>
 <li>The court issues notice to the other parent.</li>
 <li>An interim custody or visitation order may be requested pending the full hearing.</li>
@@ -565,7 +565,7 @@ const posts = [
             {
                 h2: 'International Child Custody Issues',
                 content: `<p>Cases where one parent takes a child out of Bangladesh without the other parent's consent or a court order are complex. Bangladesh is not a Hague Convention signatory on child abduction, which means international recovery mechanisms are limited.</p>
-<p>However, the High Court Division has jurisdiction to issue orders preventing removal of children from Bangladesh, ordering return of children wrongfully taken abroad, and directing immigration authorities to place children on the watch list. Act immediately if you believe your child may be taken out of the country. Consult a <a href="/supreme-court-lawyer-bangladesh" style="color:var(--accent)">Supreme Court lawyer in Bangladesh</a> for urgent relief.</p>`,
+<p>However, the High Court Division has jurisdiction to issue orders preventing removal of children from Bangladesh, ordering return of children wrongfully taken abroad, and directing immigration authorities to place children on the watch list. Act immediately if you believe your child may be taken out of the country. Consult a <a href="/services/supreme-court-lawyer" style="color:var(--accent)">Supreme Court lawyer in Bangladesh</a> for urgent relief.</p>`,
             },
         ],
         faqs: [
@@ -579,9 +579,9 @@ const posts = [
             { question: 'Is child support separate from custody in Bangladesh?', answer: 'Yes. Maintenance (child support) is the father\'s obligation regardless of who has custody. It can be determined by the Family Court separately from custody proceedings.' },
         ],
         relatedServiceLinks: [
-            { text: 'Divorce Lawyer Uttara', to: '/divorce-lawyer-uttara' },
-            { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
-            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-uttara' },
+            { text: 'Divorce Lawyer Uttara', to: '/services/divorce-lawyer' },
+            { text: 'Supreme Court Lawyer Bangladesh', to: '/services/supreme-court-lawyer' },
+            { text: 'Criminal Lawyer Uttara', to: '/services/criminal-lawyer' },
         ],
     },
 
@@ -608,7 +608,7 @@ const posts = [
             {
                 h2: 'What Is Anticipatory Bail?',
                 content: `<p>Anticipatory bail is a legal protection that allows a person who apprehends arrest in a non-bailable offence to apply to a court for bail <strong>before</strong> they are actually arrested. If granted, the moment they are taken into custody (if at all), they are immediately released on the terms set by the court.</p>
-<p>The concept exists to prevent misuse of arrest power — whether by police acting on a false complaint or by rivals using criminal cases as intimidation. It is particularly relevant in Bangladesh where FIRs (First Information Reports) can sometimes be filed for collateral purposes. Seek advice from a <a href="/bail-lawyer-dhaka" style="color:var(--accent)">bail lawyer in Dhaka</a> at the earliest sign of trouble.</p>`,
+<p>The concept exists to prevent misuse of arrest power — whether by police acting on a false complaint or by rivals using criminal cases as intimidation. It is particularly relevant in Bangladesh where FIRs (First Information Reports) can sometimes be filed for collateral purposes. Seek advice from a <a href="/services/bail-lawyer" style="color:var(--accent)">bail lawyer in Dhaka</a> at the earliest sign of trouble.</p>`,
             },
             {
                 h2: 'Who Can Apply for Anticipatory Bail?',
@@ -628,7 +628,7 @@ const posts = [
 <li><strong>Sessions Court (Sessions Judge):</strong> The primary forum for anticipatory bail at the district level.</li>
 <li><strong>High Court Division:</strong> If the Sessions Court refuses or in serious matters involving complex legal questions, the application may be made directly to the High Court Division.</li>
 </ul>
-<p>For urgent matters in Dhaka, filing in the High Court Division is sometimes faster than the district Sessions Court. An experienced <a href="/criminal-lawyer-uttara" style="color:var(--accent)">criminal lawyer in Uttara or Dhaka</a> will advise which forum is most appropriate given your situation.</p>`,
+<p>For urgent matters in Dhaka, filing in the High Court Division is sometimes faster than the district Sessions Court. An experienced <a href="/services/criminal-lawyer" style="color:var(--accent)">criminal lawyer in Uttara or Dhaka</a> will advise which forum is most appropriate given your situation.</p>`,
             },
             {
                 h2: 'Grounds for Seeking Anticipatory Bail',
@@ -680,7 +680,7 @@ const posts = [
             {
                 h2: 'When Anticipatory Bail Is Rejected',
                 content: `<p>If the Sessions Court rejects the anticipatory bail application, the applicant can immediately approach the <strong>High Court Division</strong> with a fresh application. The High Court may grant anticipatory bail or an interim stay even where the Sessions Court refused.</p>
-<p>If the High Court also refuses, the matter may — in appropriate cases — be brought before the <strong>Appellate Division</strong> of the Supreme Court. This level requires a <a href="/supreme-court-lawyer-bangladesh" style="color:var(--accent)">Supreme Court advocate</a> with experience in criminal appellate practice.</p>`,
+<p>If the High Court also refuses, the matter may — in appropriate cases — be brought before the <strong>Appellate Division</strong> of the Supreme Court. This level requires a <a href="/services/supreme-court-lawyer" style="color:var(--accent)">Supreme Court advocate</a> with experience in criminal appellate practice.</p>`,
             },
         ],
         faqs: [
@@ -694,9 +694,9 @@ const posts = [
             { question: 'How much does anticipatory bail cost?', answer: 'Court fees are modest. Lawyer fees vary based on complexity and the court level. Avoid paying any unofficial amounts.' },
         ],
         relatedServiceLinks: [
-            { text: 'Bail Lawyer Dhaka', to: '/bail-lawyer-dhaka' },
-            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-uttara' },
-            { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
+            { text: 'Bail Lawyer Dhaka', to: '/services/bail-lawyer' },
+            { text: 'Criminal Lawyer Uttara', to: '/services/criminal-lawyer' },
+            { text: 'Supreme Court Lawyer Bangladesh', to: '/services/supreme-court-lawyer' },
         ],
     },
 
@@ -725,7 +725,7 @@ const posts = [
             {
                 h2: 'What Is Court Marriage in Bangladesh?',
                 content: `<p>The term "court marriage" is commonly used in Bangladesh to mean a marriage registered under the law — typically in the presence of a Kazi (nikah registrar) for Muslims, or through a civil register for non-Muslims — rather than or in addition to a religious ceremony. It emphasises the legal registration aspect over the social/religious ceremony.</p>
-<p>Court marriages are sometimes preferred by couples who are marrying without family consent, inter-religion couples, or couples who need the immediate legal validity of marriage for visa, property, or other purposes. For expert legal guidance, consult a <a href="/divorce-lawyer-uttara" style="color:var(--accent)">family lawyer in Uttara, Dhaka</a>.</p>`,
+<p>Court marriages are sometimes preferred by couples who are marrying without family consent, inter-religion couples, or couples who need the immediate legal validity of marriage for visa, property, or other purposes. For expert legal guidance, consult a <a href="/services/divorce-lawyer" style="color:var(--accent)">family lawyer in Uttara, Dhaka</a>.</p>`,
             },
             {
                 h2: 'Conditions for a Valid Muslim Marriage',
@@ -759,7 +759,7 @@ const posts = [
 <li><strong>Hindu marriages</strong> are governed by custom and personal law. Although a formal registration system exists in some areas, it is not universally implemented.</li>
 <li><strong>Inter-faith marriages</strong> are legally complex in Bangladesh and may require conversion of one party, or other legal solutions that vary by circumstance.</li>
 </ul>
-<p>Consult a <a href="/divorce-lawyer-uttara" style="color:var(--accent)">family lawyer in Dhaka</a> for advice specific to your situation.</p>`,
+<p>Consult a <a href="/services/divorce-lawyer" style="color:var(--accent)">family lawyer in Dhaka</a> for advice specific to your situation.</p>`,
             },
             {
                 h2: 'Required Documents for Marriage Registration',
@@ -819,8 +819,8 @@ const posts = [
             { question: 'What is the mahr and does it have to be paid immediately?', answer: 'Mahr is the wife\'s financial right specified in the Kabinnama. It can be prompt (payable immediately) or deferred (payable on demand or divorce).' },
         ],
         relatedServiceLinks: [
-            { text: 'Divorce Lawyer Uttara', to: '/divorce-lawyer-uttara' },
-            { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
+            { text: 'Divorce Lawyer Uttara', to: '/services/divorce-lawyer' },
+            { text: 'Supreme Court Lawyer Bangladesh', to: '/services/supreme-court-lawyer' },
         ],
     },
 
@@ -849,7 +849,7 @@ const posts = [
             {
                 h2: "Overview of a Divorced Wife's Rights",
                 content: `<p>Under Bangladesh law, a divorced Muslim wife has several important financial and custodial rights that her husband cannot simply ignore. These rights arise from the marriage contract (Kabinnama), Islamic personal law, the Muslim Family Laws Ordinance 1961, and Family Court jurisdiction.</p>
-<p>Many women are unaware of these rights or are discouraged from asserting them. Legal advice from a <a href="/divorce-lawyer-uttara" style="color:var(--accent)">family lawyer in Dhaka or Uttara</a> can help you understand and enforce every right you are entitled to — without fear or pressure.</p>`,
+<p>Many women are unaware of these rights or are discouraged from asserting them. Legal advice from a <a href="/services/divorce-lawyer" style="color:var(--accent)">family lawyer in Dhaka or Uttara</a> can help you understand and enforce every right you are entitled to — without fear or pressure.</p>`,
             },
             {
                 h2: 'Right to Mahr (Dower)',
@@ -874,7 +874,7 @@ const posts = [
                 h2: 'Longer-Term Maintenance Rights',
                 content: `<p>After iddat, a Muslim wife's right to maintenance from her ex-husband generally ends under classical Islamic law — unless the Kabinnama specified longer maintenance rights or the wife has special circumstances.</p>
 <p>However, Bangladesh Family Courts have shown increasing willingness to award post-iddat maintenance where the wife is in financial hardship and has no independent income, particularly where she has been out of the workforce to care for children. This area of law is evolving through court decisions and policy reforms.</p>
-<p>A woman who earns below subsistence level after divorce should consult a <a href="/divorce-lawyer-uttara" style="color:var(--accent)">divorce lawyer in Dhaka</a> to explore all available remedies.</p>`,
+<p>A woman who earns below subsistence level after divorce should consult a <a href="/services/divorce-lawyer" style="color:var(--accent)">divorce lawyer in Dhaka</a> to explore all available remedies.</p>`,
             },
             {
                 h2: 'Child Custody and Child Maintenance',
@@ -916,7 +916,7 @@ const posts = [
 <li>Presenting your Kabinnama, divorce certificate, and other supporting documents</li>
 <li>The court orders payment; non-compliance can lead to the husband's arrest for contempt</li>
 </ol>
-<p>Do not accept verbal promises — get everything in writing and enforce through proper legal channels. Contact a <a href="/divorce-lawyer-uttara" style="color:var(--accent)">family law expert in Uttara or Dhaka</a> for immediate assistance.</p>`,
+<p>Do not accept verbal promises — get everything in writing and enforce through proper legal channels. Contact a <a href="/services/divorce-lawyer" style="color:var(--accent)">family law expert in Uttara or Dhaka</a> for immediate assistance.</p>`,
             },
         ],
         faqs: [
@@ -930,9 +930,9 @@ const posts = [
             { question: 'What happens if my husband ignores a court maintenance order?', answer: 'He can be held in contempt of court, which may result in monetary penalties or imprisonment until the order is complied with.' },
         ],
         relatedServiceLinks: [
-            { text: 'Divorce Lawyer Uttara', to: '/divorce-lawyer-uttara' },
-            { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
-            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-uttara' },
+            { text: 'Divorce Lawyer Uttara', to: '/services/divorce-lawyer' },
+            { text: 'Supreme Court Lawyer Bangladesh', to: '/services/supreme-court-lawyer' },
+            { text: 'Criminal Lawyer Uttara', to: '/services/criminal-lawyer' },
         ],
     },
 
@@ -973,7 +973,7 @@ const posts = [
 <li>Further sale or transfer of the land requires a clear mutation record.</li>
 <li>In court cases, the mutated record is powerful evidence of ownership.</li>
 </ul>
-<p>Delay in mutation can create complications — especially if a third party attempts to fraudulently mutate the land in their own name. For complex mutation cases, consult a <a href="/land-property-lawyer-uttara" style="color:var(--accent)">land lawyer in Uttara or Dhaka</a>.</p>`,
+<p>Delay in mutation can create complications — especially if a third party attempts to fraudulently mutate the land in their own name. For complex mutation cases, consult a <a href="/services/land-lawyer" style="color:var(--accent)">land lawyer in Uttara or Dhaka</a>.</p>`,
             },
             {
                 h2: 'Types of Mutation in Bangladesh',
@@ -1017,7 +1017,7 @@ const posts = [
             {
                 h2: 'Fees and Timelines',
                 content: `<p>Government fees for mutation are modest — primarily court fee stamps and an inspection fee. The amounts are set by government schedule and are relatively small. Unofficial payments are not required and should be avoided.</p>
-<p>The official processing time is supposed to be completed within a specific number of days under administrative rules, but in practice mutation often takes 2–6 months depending on the complexity and the workload of the local Land Office. Approach a <a href="/land-property-lawyer-uttara" style="color:var(--accent)">property lawyer in Dhaka</a> if the process stalls without explanation.</p>`,
+<p>The official processing time is supposed to be completed within a specific number of days under administrative rules, but in practice mutation often takes 2–6 months depending on the complexity and the workload of the local Land Office. Approach a <a href="/services/land-lawyer" style="color:var(--accent)">property lawyer in Dhaka</a> if the process stalls without explanation.</p>`,
             },
             {
                 h2: 'Common Problems and How to Avoid Them',
@@ -1039,7 +1039,7 @@ const posts = [
 <li>Further appeal to the <strong>Revenue Appellate Tribunal</strong> or the <strong>Divisional Commissioner</strong>.</li>
 <li>File a <strong>writ petition</strong> in the High Court Division if the refusal is illegal or arbitrary.</li>
 </ol>
-<p>Do not give up after a refusal from the Land Office. Many such refusals are overturned on appeal when proper documentation and legal argument are presented. Contact a <a href="/land-property-lawyer-uttara" style="color:var(--accent)">land and property lawyer in Dhaka</a> immediately for assistance.</p>`,
+<p>Do not give up after a refusal from the Land Office. Many such refusals are overturned on appeal when proper documentation and legal argument are presented. Contact a <a href="/services/land-lawyer" style="color:var(--accent)">land and property lawyer in Dhaka</a> immediately for assistance.</p>`,
             },
         ],
         faqs: [
@@ -1053,8 +1053,8 @@ const posts = [
             { question: 'Do I need a lawyer for mutation?', answer: 'For straightforward cases, you can apply yourself. For cases involving objections, inheritance disputes, or refusals, a land lawyer is strongly recommended.' },
         ],
         relatedServiceLinks: [
-            { text: 'Land & Property Lawyer Uttara', to: '/land-property-lawyer-uttara' },
-            { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
+            { text: 'Land & Property Lawyer Uttara', to: '/services/land-lawyer' },
+            { text: 'Supreme Court Lawyer Bangladesh', to: '/services/supreme-court-lawyer' },
         ],
     },
 
@@ -1083,7 +1083,7 @@ const posts = [
             {
                 h2: 'Why Property Registration Is Mandatory',
                 content: `<p>Under the <strong>Registration Act 1908</strong>, any transaction that transfers or creates an interest in immovable property (land or building) worth more than Tk 100 must be registered. An unregistered deed of sale is invalid as evidence of title in court and cannot be enforced.</p>
-<p>Registration converts a private agreement into a public document permanently recorded in the Sub-Registrar's office. This record is accessible to anyone — which is why it provides a reliable public notice of who owns which property. For expert assistance in Dhaka or Uttara, contact a <a href="/land-property-lawyer-uttara" style="color:var(--accent)">property lawyer in Uttara</a>.</p>`,
+<p>Registration converts a private agreement into a public document permanently recorded in the Sub-Registrar's office. This record is accessible to anyone — which is why it provides a reliable public notice of who owns which property. For expert assistance in Dhaka or Uttara, contact a <a href="/services/land-lawyer" style="color:var(--accent)">property lawyer in Uttara</a>.</p>`,
             },
             {
                 h2: 'Types of Deeds That Must Be Registered',
@@ -1107,7 +1107,7 @@ const posts = [
 <li><strong>Registration fee:</strong> A separate fee payable at the Sub-Registrar office.</li>
 <li><strong>Local government tax:</strong> E.g., Dhaka City Corporation or municipality fees on the deed value.</li>
 </ul>
-<p>Undervaluing a deed to reduce stamp duty is illegal and can result in the deed being impounded and criminal proceedings. Always declare the true value. A <a href="/land-property-lawyer-uttara" style="color:var(--accent)">property lawyer</a> can calculate your precise stamp duty obligation.</p>`,
+<p>Undervaluing a deed to reduce stamp duty is illegal and can result in the deed being impounded and criminal proceedings. Always declare the true value. A <a href="/services/land-lawyer" style="color:var(--accent)">property lawyer</a> can calculate your precise stamp duty obligation.</p>`,
             },
             {
                 h2: 'Step-by-Step Registration Procedure',
@@ -1158,7 +1158,7 @@ const posts = [
 <li>Not verifying the seller's chain of title before registration</li>
 <li>Buying without confirming mutation is in the seller's name</li>
 </ul>
-<p>An experienced <a href="/land-property-lawyer-uttara" style="color:var(--accent)">property lawyer in Dhaka</a> can conduct due diligence, prepare a legally sound deed, and accompany you to the Sub-Registrar office to avoid all these pitfalls.</p>`,
+<p>An experienced <a href="/services/land-lawyer" style="color:var(--accent)">property lawyer in Dhaka</a> can conduct due diligence, prepare a legally sound deed, and accompany you to the Sub-Registrar office to avoid all these pitfalls.</p>`,
             },
             {
                 h2: 'Post-Registration Steps',
@@ -1169,7 +1169,7 @@ const posts = [
 <li>Update all other records — for urban properties, update the holding tax record at the City Corporation or municipality.</li>
 <li>Store your registered deed, mutation khatian, and khajna receipts safely — ideally both physical and scanned copies.</li>
 </ol>
-<p>For high-value properties, consider having your title verified by a <a href="/supreme-court-lawyer-bangladesh" style="color:var(--accent)">Supreme Court advocate specialising in property law</a> before and after registration.</p>`,
+<p>For high-value properties, consider having your title verified by a <a href="/services/supreme-court-lawyer" style="color:var(--accent)">Supreme Court advocate specialising in property law</a> before and after registration.</p>`,
             },
         ],
         faqs: [
@@ -1183,9 +1183,9 @@ const posts = [
             { question: 'Do I need a lawyer for property registration?', answer: 'Legally not mandatory, but strongly recommended. A lawyer drafts a sound deed, verifies the title, calculates stamp duty accurately, and avoids common costly errors.' },
         ],
         relatedServiceLinks: [
-            { text: 'Land & Property Lawyer Uttara', to: '/land-property-lawyer-uttara' },
-            { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
-            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-uttara' },
+            { text: 'Land & Property Lawyer Uttara', to: '/services/land-lawyer' },
+            { text: 'Supreme Court Lawyer Bangladesh', to: '/services/supreme-court-lawyer' },
+            { text: 'Criminal Lawyer Uttara', to: '/services/criminal-lawyer' },
         ],
     },
 
@@ -1214,7 +1214,7 @@ const posts = [
             {
                 h2: 'What Is an FIR and When Is It Filed?',
                 content: `<p>An FIR (First Information Report) is a formal complaint lodged with the police that triggers a criminal investigation. Under the <strong>Code of Criminal Procedure 1898</strong>, a police officer must register an FIR when a cognisable offence (an offence for which police can arrest without warrant) is reported.</p>
-<p>An FIR is filed by the complainant (the person who alleges the crime) at the concerned police station. This sets the criminal law machinery in motion — the police are then obligated to investigate. Importantly, an FIR is only the starting point of an investigation; it is not proof of guilt. If an FIR has been filed against you in Dhaka or elsewhere, immediately contact a <a href="/criminal-lawyer-uttara" style="color:var(--accent)">criminal lawyer in Uttara or Dhaka</a>.</p>`,
+<p>An FIR is filed by the complainant (the person who alleges the crime) at the concerned police station. This sets the criminal law machinery in motion — the police are then obligated to investigate. Importantly, an FIR is only the starting point of an investigation; it is not proof of guilt. If an FIR has been filed against you in Dhaka or elsewhere, immediately contact a <a href="/services/criminal-lawyer" style="color:var(--accent)">criminal lawyer in Uttara or Dhaka</a>.</p>`,
             },
             {
                 h2: 'Your Legal Rights After an FIR',
@@ -1247,7 +1247,7 @@ const posts = [
 <li><strong>Non-bailable offence:</strong> Bail is discretionary. Apply to the Magistrate or Sessions Court. If refused, apply to the High Court Division.</li>
 <li><strong>Anticipatory bail:</strong> If you have not yet been arrested, apply to the Sessions Court or High Court for anticipatory bail protection before any arrest occurs.</li>
 </ul>
-<p>A <a href="/bail-lawyer-dhaka" style="color:var(--accent)">bail lawyer in Dhaka</a> can file bail applications with urgency and argue your case effectively before the court.</p>`,
+<p>A <a href="/services/bail-lawyer" style="color:var(--accent)">bail lawyer in Dhaka</a> can file bail applications with urgency and argue your case effectively before the court.</p>`,
             },
             {
                 h2: 'Can a False FIR Be Challenged?',
@@ -1268,7 +1268,7 @@ const posts = [
 <li>May arrest the accused (in a cognisable case) and apply for remand for interrogation</li>
 <li>Prepares the investigation report</li>
 </ul>
-<p>During investigation, you are not required to make any statement to police without your lawyer present. Exercise this right. Anything you say voluntarily to police may be used against you. For remand hearings, an experienced <a href="/criminal-lawyer-uttara" style="color:var(--accent)">criminal lawyer</a> will oppose unnecessarily long remand periods.</p>`,
+<p>During investigation, you are not required to make any statement to police without your lawyer present. Exercise this right. Anything you say voluntarily to police may be used against you. For remand hearings, an experienced <a href="/services/criminal-lawyer" style="color:var(--accent)">criminal lawyer</a> will oppose unnecessarily long remand periods.</p>`,
             },
             {
                 h2: 'Charge Sheet and Cognisance by Court',
@@ -1288,7 +1288,7 @@ const posts = [
 <li>Obtain CCTV footage, call records, or digital evidence before it is lost</li>
 <li>Brief your lawyer fully and frankly — lawyer-client communications are privileged</li>
 </ul>
-<p>If the matter may involve the <a href="/supreme-court-lawyer-bangladesh" style="color:var(--accent)">High Court or Supreme Court</a>, engage a lawyer who practices at those levels. An FIR is the start of a process — with the right legal support, many such cases are resolved or dismissed long before reaching trial.</p>`,
+<p>If the matter may involve the <a href="/services/supreme-court-lawyer" style="color:var(--accent)">High Court or Supreme Court</a>, engage a lawyer who practices at those levels. An FIR is the start of a process — with the right legal support, many such cases are resolved or dismissed long before reaching trial.</p>`,
             },
         ],
         faqs: [
@@ -1302,9 +1302,9 @@ const posts = [
             { question: 'Should I negotiate with the complainant directly?', answer: 'Never negotiate directly without your lawyer\'s guidance. Any direct contact risks being portrayed as pressure or inducement, which can weaken your case.' },
         ],
         relatedServiceLinks: [
-            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-uttara' },
-            { text: 'Bail Lawyer Dhaka', to: '/bail-lawyer-dhaka' },
-            { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
+            { text: 'Criminal Lawyer Uttara', to: '/services/criminal-lawyer' },
+            { text: 'Bail Lawyer Dhaka', to: '/services/bail-lawyer' },
+            { text: 'Supreme Court Lawyer Bangladesh', to: '/services/supreme-court-lawyer' },
         ],
     },
 
@@ -1333,7 +1333,7 @@ const posts = [
             {
                 h2: 'What Is Bail Under Bangladesh Law?',
                 content: `<p>Bail is the conditional release of an accused person from police or judicial custody while their case proceeds through the courts. Under the <strong>Code of Criminal Procedure 1898 (CrPC)</strong>, bail is a right in some situations and a discretionary remedy in others. The court or police officer granting bail sets conditions — typically a bail bond with a surety — to ensure the accused appears for future hearings.</p>
-<p>Bail does not mean the case is over or that you are declared innocent. It simply means you are permitted to remain free during the court proceedings. For immediate assistance anywhere in Dhaka or Uttara, contact a <a href="/bail-lawyer-dhaka" style="color:var(--accent)">bail lawyer in Dhaka</a>.</p>`,
+<p>Bail does not mean the case is over or that you are declared innocent. It simply means you are permitted to remain free during the court proceedings. For immediate assistance anywhere in Dhaka or Uttara, contact a <a href="/services/bail-lawyer" style="color:var(--accent)">bail lawyer in Dhaka</a>.</p>`,
             },
             {
                 h2: 'Bailable vs Non-Bailable Offences',
@@ -1342,7 +1342,7 @@ const posts = [
 <li><strong>Bailable offences:</strong> Relatively minor offences listed in the First Schedule of the CrPC. Police or a Magistrate <em>must</em> grant bail as a matter of right if requested. Examples include simple assault, minor property offences, and many other non-serious crimes.</li>
 <li><strong>Non-bailable offences:</strong> Serious crimes such as murder, rape, robbery, and most offences under the Narcotics Control Act and Digital Security Act. Bail is not automatic — it requires a court application and the judge has discretion to refuse.</li>
 </ul>
-<p>If you are unsure whether your case involves a bailable or non-bailable offence, a <a href="/criminal-lawyer-uttara" style="color:var(--accent)">criminal lawyer in Uttara or Dhaka</a> can review the FIR and advise you within hours.</p>`,
+<p>If you are unsure whether your case involves a bailable or non-bailable offence, a <a href="/services/criminal-lawyer" style="color:var(--accent)">criminal lawyer in Uttara or Dhaka</a> can review the FIR and advise you within hours.</p>`,
             },
             {
                 h2: 'Types of Bail Available in Bangladesh',
@@ -1375,12 +1375,12 @@ const posts = [
 <li>The application sets out why you fear arrest and why you should be protected</li>
 <li>The court may grant interim protection and schedule a fuller hearing</li>
 </ul>
-<p>Act early. A <a href="/bail-lawyer-dhaka" style="color:var(--accent)">bail lawyer in Dhaka</a> can file an anticipatory bail application on the same day you contact them.</p>`,
+<p>Act early. A <a href="/services/bail-lawyer" style="color:var(--accent)">bail lawyer in Dhaka</a> can file an anticipatory bail application on the same day you contact them.</p>`,
             },
             {
                 h2: 'Bail at the High Court Division',
                 content: `<p>When Magistrate and Sessions Courts refuse bail, the High Court Division of the Supreme Court of Bangladesh is the next and most powerful forum. The High Court has broad inherent jurisdiction to grant bail in any case.</p>
-<p>A <a href="/supreme-court-lawyer-bangladesh" style="color:var(--accent)">Supreme Court advocate</a> will file a bail rule application under Section 498 CrPC or under Article 102 of the Constitution. The High Court may:</p>
+<p>A <a href="/services/supreme-court-lawyer" style="color:var(--accent)">Supreme Court advocate</a> will file a bail rule application under Section 498 CrPC or under Article 102 of the Constitution. The High Court may:</p>
 <ul>
 <li>Issue a rule calling on the State to show cause why bail should not be granted</li>
 <li>Grant interim bail pending hearing of the rule</li>
@@ -1410,7 +1410,7 @@ const posts = [
 <li>Is accused of a very serious offence (murder, rape, terrorism)</li>
 <li>Has previous criminal convictions</li>
 </ul>
-<p>A skilled lawyer counters each ground by presenting evidence of strong community ties, absence of prior criminal history, arguing that witnesses are already examined and cannot be tampered with, and demonstrating weaknesses in the prosecution's case. Never attempt to obtain bail without legal representation — the arguments made at a bail hearing significantly affect the outcome. Contact <a href="/criminal-lawyer-uttara" style="color:var(--accent)">Advocate Md. Shah Alam</a> for urgent bail assistance in Dhaka and Uttara.</p>`,
+<p>A skilled lawyer counters each ground by presenting evidence of strong community ties, absence of prior criminal history, arguing that witnesses are already examined and cannot be tampered with, and demonstrating weaknesses in the prosecution's case. Never attempt to obtain bail without legal representation — the arguments made at a bail hearing significantly affect the outcome. Contact <a href="/services/criminal-lawyer" style="color:var(--accent)">Advocate Md. Shah Alam</a> for urgent bail assistance in Dhaka and Uttara.</p>`,
             },
         ],
         faqs: [
@@ -1423,9 +1423,9 @@ const posts = [
             { question: 'Can bail be cancelled after it is granted?', answer: 'Yes. The prosecution can apply to cancel bail if you violate conditions, tamper with witnesses, or if new evidence emerges. Courts cancel bail when the grounds for it no longer exist.' },
         ],
         relatedServiceLinks: [
-            { text: 'Bail Lawyer Dhaka', to: '/bail-lawyer-dhaka' },
-            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-uttara' },
-            { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
+            { text: 'Bail Lawyer Dhaka', to: '/services/bail-lawyer' },
+            { text: 'Criminal Lawyer Uttara', to: '/services/criminal-lawyer' },
+            { text: 'Supreme Court Lawyer Bangladesh', to: '/services/supreme-court-lawyer' },
         ],
     },
 
@@ -1455,7 +1455,7 @@ const posts = [
             {
                 h2: 'Types of Divorce Under Bangladesh Law',
                 content: `<p>In Bangladesh, Muslim personal law governs divorce for the Muslim majority, under the <strong>Muslim Family Laws Ordinance 1961 (MFLO)</strong>. Divorce for non-Muslims is governed by their respective personal laws (Christian Divorce Act 1869, Hindu personal law etc.). This guide focuses primarily on Muslim divorce law, which applies to the majority of Bangladeshi citizens.</p>
-<p>Muslim divorce in Bangladesh takes three main forms: Talaq (husband-initiated), Khula (wife-initiated), and Mubarat (mutual consent). Each has a different process, legal consequences, and timeline. A <a href="/divorce-lawyer-uttara" style="color:var(--accent)">divorce lawyer in Dhaka or Uttara</a> can advise which route is best for your situation.</p>`,
+<p>Muslim divorce in Bangladesh takes three main forms: Talaq (husband-initiated), Khula (wife-initiated), and Mubarat (mutual consent). Each has a different process, legal consequences, and timeline. A <a href="/services/divorce-lawyer" style="color:var(--accent)">divorce lawyer in Dhaka or Uttara</a> can advise which route is best for your situation.</p>`,
             },
             {
                 h2: 'Talaq: Husband-Initiated Divorce',
@@ -1478,7 +1478,7 @@ const posts = [
 <li>The agreed terms are documented and the divorce notice must similarly be sent to the Union Parishad Chairman.</li>
 <li>The same 90-day reconciliation period applies.</li>
 </ol>
-<p>If the husband refuses khula, the wife's alternative is to file a divorce suit in Family Court seeking a <strong>judicial divorce</strong> on specific legal grounds. A <a href="/divorce-lawyer-uttara" style="color:var(--accent)">family lawyer</a> specialising in women's rights can assist in this situation.</p>`,
+<p>If the husband refuses khula, the wife's alternative is to file a divorce suit in Family Court seeking a <strong>judicial divorce</strong> on specific legal grounds. A <a href="/services/divorce-lawyer" style="color:var(--accent)">family lawyer</a> specialising in women's rights can assist in this situation.</p>`,
             },
             {
                 h2: 'Mutual Consent Divorce',
@@ -1497,7 +1497,7 @@ const posts = [
 <li>Husband's impotence at the time of marriage</li>
 <li>Husband taking a second wife without proper permission (MFLO 1961)</li>
 </ul>
-<p>File a plaint at the Family Court in the district where you or your husband resides. For cases in Dhaka Metropolitan area including Uttara, the relevant Family Court is in Dhaka. See: <a href="/divorce-lawyer-uttara" style="color:var(--accent)">Divorce lawyer Uttara Dhaka</a>.</p>`,
+<p>File a plaint at the Family Court in the district where you or your husband resides. For cases in Dhaka Metropolitan area including Uttara, the relevant Family Court is in Dhaka. See: <a href="/services/divorce-lawyer" style="color:var(--accent)">Divorce lawyer Uttara Dhaka</a>.</p>`,
             },
             {
                 h2: 'The 90-Day Reconciliation Period',
@@ -1540,7 +1540,7 @@ const posts = [
 <li><strong>Talaq by husband:</strong> Also a minimum of 90 days from written notice to Chairman.</li>
 <li><strong>Judicial divorce (Family Court):</strong> Six months to several years depending on court workload and whether the matter is contested.</li>
 </ul>
-<p>The 90-day minimum is fixed by law and cannot be shortened. For contested cases, engaging an experienced <a href="/divorce-lawyer-uttara" style="color:var(--accent)">family lawyer in Dhaka</a> significantly reduces delays and protects your rights throughout the process.</p>`,
+<p>The 90-day minimum is fixed by law and cannot be shortened. For contested cases, engaging an experienced <a href="/services/divorce-lawyer" style="color:var(--accent)">family lawyer in Dhaka</a> significantly reduces delays and protects your rights throughout the process.</p>`,
             },
         ],
         faqs: [
@@ -1553,8 +1553,8 @@ const posts = [
             { question: 'Can a non-Muslim get divorced in Bangladesh?', answer: 'Yes, but under different laws. Christians use the Christian Divorce Act 1869 (requires specific grounds and court proceedings). Hindus have limited formal divorce options under personal law in Bangladesh.' },
         ],
         relatedServiceLinks: [
-            { text: 'Divorce Lawyer Uttara', to: '/divorce-lawyer-uttara' },
-            { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
+            { text: 'Divorce Lawyer Uttara', to: '/services/divorce-lawyer' },
+            { text: 'Supreme Court Lawyer Bangladesh', to: '/services/supreme-court-lawyer' },
         ],
     },
 
@@ -1584,7 +1584,7 @@ const posts = [
             {
                 h2: 'Why Land Disputes Are So Common in Bangladesh',
                 content: `<p>Bangladesh has one of the highest population densities in the world, combined with a land record system that has multiple layers from different survey periods (CS, SA, RS, BS surveys). Gaps, overlaps, and outdated records — combined with historically weak enforcement of land rights — create a fertile environment for disputes.</p>
-<p>Common root causes include: improperly registered deeds, fraudulent sales by non-owners, disputed inheritance among heirs, boundary encroachments, and false mutation of land records. A <a href="/land-property-lawyer-uttara" style="color:var(--accent)">property lawyer in Dhaka or Uttara</a> can identify which type of dispute you face and which legal avenue will resolve it fastest.</p>`,
+<p>Common root causes include: improperly registered deeds, fraudulent sales by non-owners, disputed inheritance among heirs, boundary encroachments, and false mutation of land records. A <a href="/services/land-lawyer" style="color:var(--accent)">property lawyer in Dhaka or Uttara</a> can identify which type of dispute you face and which legal avenue will resolve it fastest.</p>`,
             },
             {
                 h2: 'Types of Land Disputes',
@@ -1607,7 +1607,7 @@ const posts = [
 <li>Mutation record in your name</li>
 <li>Evidence of possession and payment of khajna (land revenue)</li>
 </ul>
-<p>Courts examine the entire chain of title. A break in the chain — or evidence that the seller did not own what they sold — can result in losing the case. For complex title disputes, consult a <a href="/supreme-court-lawyer-bangladesh" style="color:var(--accent)">Supreme Court advocate with property law expertise</a>.</p>`,
+<p>Courts examine the entire chain of title. A break in the chain — or evidence that the seller did not own what they sold — can result in losing the case. For complex title disputes, consult a <a href="/services/supreme-court-lawyer" style="color:var(--accent)">Supreme Court advocate with property law expertise</a>.</p>`,
             },
             {
                 h2: 'Possession Suit: Recovering Unlawfully Taken Land',
@@ -1655,7 +1655,7 @@ const posts = [
 <li><strong>Contested title suits:</strong> 3–10 years in the District Civil Court, with possible appeals to the High Court and Supreme Court</li>
 <li><strong>Partition suits:</strong> 2–5 years typically</li>
 </ul>
-<p>An experienced <a href="/land-property-lawyer-uttara" style="color:var(--accent)">land lawyer in Dhaka</a> who knows the local courts can significantly reduce the timeline through skilled case management and early applications for interim relief (such as injunctions to prevent further encroachment while the case proceeds).</p>`,
+<p>An experienced <a href="/services/land-lawyer" style="color:var(--accent)">land lawyer in Dhaka</a> who knows the local courts can significantly reduce the timeline through skilled case management and early applications for interim relief (such as injunctions to prevent further encroachment while the case proceeds).</p>`,
             },
             {
                 h2: 'How to Strengthen Your Case from Day One',
@@ -1666,7 +1666,7 @@ const posts = [
 <li>Identity witnesses who know your historical possession of the land.</li>
 <li>Do <em>not</em> make any payment to the encroacher or sign any informal agreement without legal advice.</li>
 <li>Apply for an interim injunction early to freeze the situation while litigation proceeds.</li>
-<li>Engage a <a href="/land-property-lawyer-uttara" style="color:var(--accent)">property lawyer in Uttara or Dhaka</a> who has specific experience in land court cases.</li>
+<li>Engage a <a href="/services/land-lawyer" style="color:var(--accent)">property lawyer in Uttara or Dhaka</a> who has specific experience in land court cases.</li>
 </ol>`,
             },
         ],
@@ -1679,8 +1679,8 @@ const posts = [
             { question: 'Can I claim compensation for lost use of my land during litigation?', answer: 'Yes. You can claim "mesne profits" — compensation for the benefit derived by the wrongful occupier during the period of wrongful possession. This is calculated based on the market rental value of the land.' },
         ],
         relatedServiceLinks: [
-            { text: 'Land & Property Lawyer Uttara', to: '/land-property-lawyer-uttara' },
-            { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
+            { text: 'Land & Property Lawyer Uttara', to: '/services/land-lawyer' },
+            { text: 'Supreme Court Lawyer Bangladesh', to: '/services/supreme-court-lawyer' },
         ],
     },
 
@@ -1709,7 +1709,7 @@ const posts = [
             {
                 h2: 'What Is Cheque Dishonour Under Bangladesh Law?',
                 content: `<p>Under the <strong>Negotiable Instruments Act 1881 (NI Act)</strong>, issuing a cheque without sufficient funds — or stopping payment without reasonable cause — is a criminal offence in Bangladesh. Section 138 of the NI Act creates criminal liability for the drawer (the person who issued the cheque) when the cheque is dishonoured.</p>
-<p>This law was created to protect the credibility of the banking and commercial system. Cheque dishonour cases are heard by the Magistrate Courts and are among the most common commercial litigation matters in Dhaka and throughout Bangladesh. If you need urgent assistance, contact a <a href="/criminal-lawyer-uttara" style="color:var(--accent)">criminal lawyer in Uttara or Dhaka</a>.</p>`,
+<p>This law was created to protect the credibility of the banking and commercial system. Cheque dishonour cases are heard by the Magistrate Courts and are among the most common commercial litigation matters in Dhaka and throughout Bangladesh. If you need urgent assistance, contact a <a href="/services/criminal-lawyer" style="color:var(--accent)">criminal lawyer in Uttara or Dhaka</a>.</p>`,
             },
             {
                 h2: 'Grounds for Cheque Dishonour',
@@ -1745,7 +1745,7 @@ const posts = [
 <li>Warn that a criminal complaint will be filed if payment is not made</li>
 <li>Be sent by <strong>registered post with acknowledgement due</strong> to the drawer's last known address</li>
 </ul>
-<p>A poorly drafted legal notice — or one sent by ordinary mail — can seriously damage your case. Have your <a href="/criminal-lawyer-uttara" style="color:var(--accent)">criminal lawyer</a> draft and send the notice correctly.</p>`,
+<p>A poorly drafted legal notice — or one sent by ordinary mail — can seriously damage your case. Have your <a href="/services/criminal-lawyer" style="color:var(--accent)">criminal lawyer</a> draft and send the notice correctly.</p>`,
             },
             {
                 h2: 'Filing the Criminal Complaint',
@@ -1786,7 +1786,7 @@ const posts = [
             {
                 h2: 'Settling a Cheque Dishonour Case',
                 content: `<p>Most cheque dishonour cases are resolved by payment of the outstanding amount, often with additional costs and interest. Settlement can happen at any stage — before complaint, after summons, or even during trial.</p>
-<p>A negotiated settlement often serves both parties well — the complainant recovers their money and the accused avoids a criminal conviction. Courts encourage settlement in these cases. A lawyer can negotiate favourable settlement terms while protecting your rights. Contact a <a href="/criminal-lawyer-uttara" style="color:var(--accent)">criminal lawyer in Dhaka</a> for both prosecution and defence of cheque dishonour cases.</p>`,
+<p>A negotiated settlement often serves both parties well — the complainant recovers their money and the accused avoids a criminal conviction. Courts encourage settlement in these cases. A lawyer can negotiate favourable settlement terms while protecting your rights. Contact a <a href="/services/criminal-lawyer" style="color:var(--accent)">criminal lawyer in Dhaka</a> for both prosecution and defence of cheque dishonour cases.</p>`,
             },
         ],
         faqs: [
@@ -1798,8 +1798,8 @@ const posts = [
             { question: 'What if multiple cheques bounce from the same person?', answer: 'Each dishonoured cheque generates a separate cause of action. You can file separate cases for each cheque, or a consolidated case if the circumstances permit.' },
         ],
         relatedServiceLinks: [
-            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-uttara' },
-            { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
+            { text: 'Criminal Lawyer Uttara', to: '/services/criminal-lawyer' },
+            { text: 'Supreme Court Lawyer Bangladesh', to: '/services/supreme-court-lawyer' },
         ],
     },
 
@@ -1835,7 +1835,7 @@ const posts = [
 <li>Retention of core cybercrime provisions — hacking, identity theft, financial fraud, etc.</li>
 <li>Provisions around online content and defamation remain, though with some modifications</li>
 </ul>
-<p>The CSA 2023 is still evolving through interpretation. If you have a matter under this Act, consult a <a href="/criminal-lawyer-uttara" style="color:var(--accent)">criminal lawyer in Dhaka</a> familiar with the latest developments.</p>`,
+<p>The CSA 2023 is still evolving through interpretation. If you have a matter under this Act, consult a <a href="/services/criminal-lawyer" style="color:var(--accent)">criminal lawyer in Dhaka</a> familiar with the latest developments.</p>`,
             },
             {
                 h2: 'Key Offences Under the Cyber Security Act 2023',
@@ -1880,7 +1880,7 @@ const posts = [
 <li>Advance fee fraud and romance scams</li>
 <li>Fraudulent e-commerce transactions</li>
 </ul>
-<p>Victims should immediately contact their bank, file a police report at the local station (which may forward to the specialized Cyber Crime Unit), and engage a lawyer. Speed is critical — many fraudulent transactions can be reversed if action is taken quickly. Contact a <a href="/criminal-lawyer-uttara" style="color:var(--accent)">cyber law expert in Dhaka</a> immediately.</p>`,
+<p>Victims should immediately contact their bank, file a police report at the local station (which may forward to the specialized Cyber Crime Unit), and engage a lawyer. Speed is critical — many fraudulent transactions can be reversed if action is taken quickly. Contact a <a href="/services/criminal-lawyer" style="color:var(--accent)">cyber law expert in Dhaka</a> immediately.</p>`,
             },
             {
                 h2: 'How to File a Cybercrime Complaint in Bangladesh',
@@ -1890,7 +1890,7 @@ const posts = [
 <li><strong>File a General Diary (GD)</strong> at your local police station to create an official record.</li>
 <li><strong>File a formal complaint</strong> at the specialized <strong>Bangladesh Police Cyber Crime Unit</strong> in Dhaka, or online through the national cyber complaint portal.</li>
 <li>Alternatively, <strong>file directly</strong> with the Magistrate Court if police are unresponsive.</li>
-<li>Engage a <a href="/criminal-lawyer-uttara" style="color:var(--accent)">criminal lawyer</a> to draft the complaint and guide the process.</li>
+<li>Engage a <a href="/services/criminal-lawyer" style="color:var(--accent)">criminal lawyer</a> to draft the complaint and guide the process.</li>
 </ol>
 <p>For serious matters (large financial fraud, hacking of business systems), the Cyber Tribunal established under Bangladesh law has jurisdiction over CSA 2023 offences.</p>`,
             },
@@ -1908,7 +1908,7 @@ const posts = [
             {
                 h2: 'Bail and Remand in Cyber Cases',
                 content: `<p>Under the DSA 2018, many cyber offences were non-bailable — leading to lengthy pre-trial detention. The CSA 2023 made several categories bailable, which is a significant protection for the accused.</p>
-<p>However, serious offences (e.g., hacking critical infrastructure, large-scale fraud) may still be non-bailable. If you or a family member faces arrest under the CSA 2023, contact a <a href="/bail-lawyer-dhaka" style="color:var(--accent)">bail lawyer in Dhaka</a> immediately to assess bail eligibility and file an urgent application if needed. For cases referred to the High Court, a <a href="/supreme-court-lawyer-bangladesh" style="color:var(--accent)">Supreme Court advocate</a> can seek bail from the High Court Division.</p>`,
+<p>However, serious offences (e.g., hacking critical infrastructure, large-scale fraud) may still be non-bailable. If you or a family member faces arrest under the CSA 2023, contact a <a href="/services/bail-lawyer" style="color:var(--accent)">bail lawyer in Dhaka</a> immediately to assess bail eligibility and file an urgent application if needed. For cases referred to the High Court, a <a href="/services/supreme-court-lawyer" style="color:var(--accent)">Supreme Court advocate</a> can seek bail from the High Court Division.</p>`,
             },
         ],
         faqs: [
@@ -1920,9 +1920,9 @@ const posts = [
             { question: 'Can I record phone calls as evidence in a cyber case?', answer: 'Recording calls for personal use and as evidence preservation may be permitted, but using them requires careful legal handling. Your lawyer can advise on admissibility of digital evidence in Bangladeshi courts.' },
         ],
         relatedServiceLinks: [
-            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-uttara' },
-            { text: 'Bail Lawyer Dhaka', to: '/bail-lawyer-dhaka' },
-            { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
+            { text: 'Criminal Lawyer Uttara', to: '/services/criminal-lawyer' },
+            { text: 'Bail Lawyer Dhaka', to: '/services/bail-lawyer' },
+            { text: 'Supreme Court Lawyer Bangladesh', to: '/services/supreme-court-lawyer' },
         ],
     },
 
@@ -1952,7 +1952,7 @@ const posts = [
             {
                 h2: 'The Fundamental Principle: Child\'s Welfare First',
                 content: `<p>Bangladesh courts — applying both Islamic personal law principles and the <strong>Guardians and Wards Act 1890</strong> — make child custody decisions based primarily on the <strong>welfare of the child</strong>. No parent has an absolute right that overrides the child's best interests.</p>
-<p>This welfare principle considers the child's physical safety, emotional security, educational needs, religious upbringing, and continuity of care. If you are facing a custody dispute, a <a href="/divorce-lawyer-uttara" style="color:var(--accent)">family lawyer in Dhaka</a> can assess your situation and advise on how courts in your jurisdiction typically apply these principles.</p>`,
+<p>This welfare principle considers the child's physical safety, emotional security, educational needs, religious upbringing, and continuity of care. If you are facing a custody dispute, a <a href="/services/divorce-lawyer" style="color:var(--accent)">family lawyer in Dhaka</a> can assess your situation and advise on how courts in your jurisdiction typically apply these principles.</p>`,
             },
             {
                 h2: 'Hizanat: Mother\'s Right to Custody',
@@ -2010,7 +2010,7 @@ const posts = [
 <li>Phone/video call access on specified days</li>
 <li>Supervised visits (in cases with a history of concern)</li>
 </ul>
-<p>Denying the other parent their court-ordered access without good reason is <strong>contempt of court</strong> — a serious legal offence. Keep records if access is being blocked and discuss with your <a href="/divorce-lawyer-uttara" style="color:var(--accent)">family lawyer</a> immediately.</p>`,
+<p>Denying the other parent their court-ordered access without good reason is <strong>contempt of court</strong> — a serious legal offence. Keep records if access is being blocked and discuss with your <a href="/services/divorce-lawyer" style="color:var(--accent)">family lawyer</a> immediately.</p>`,
             },
             {
                 h2: 'Taking a Child Abroad: What the Law Says',
@@ -2028,7 +2028,7 @@ const posts = [
 <li>Attend all court hearings — absence without excuse reflects poorly.</li>
 <li>Cooperate fully with any welfare officer investigation ordered by the court.</li>
 </ol>
-<p>Never deny the other parent access in violation of court orders while your case is pending — it will harm your credibility. Contact <a href="/divorce-lawyer-uttara" style="color:var(--accent)">Advocate Md. Shah Alam</a>, an experienced family lawyer in Dhaka and Uttara, for immediate custody case assistance.</p>`,
+<p>Never deny the other parent access in violation of court orders while your case is pending — it will harm your credibility. Contact <a href="/services/divorce-lawyer" style="color:var(--accent)">Advocate Md. Shah Alam</a>, an experienced family lawyer in Dhaka and Uttara, for immediate custody case assistance.</p>`,
             },
         ],
         faqs: [
@@ -2041,8 +2041,8 @@ const posts = [
             { question: 'Does a mother lose custody if she works outside the home?', answer: 'No. A mother working outside the home is not a ground for losing custody. Courts look at the overall care arrangement, including who cares for the child when the mother is not home.' },
         ],
         relatedServiceLinks: [
-            { text: 'Divorce Lawyer Uttara', to: '/divorce-lawyer-uttara' },
-            { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
+            { text: 'Divorce Lawyer Uttara', to: '/services/divorce-lawyer' },
+            { text: 'Supreme Court Lawyer Bangladesh', to: '/services/supreme-court-lawyer' },
         ],
     },
 
@@ -2072,7 +2072,7 @@ const posts = [
             {
                 h2: 'What Is a Writ Petition in Bangladesh?',
                 content: `<p>A writ petition is an application to the <strong>High Court Division of the Supreme Court</strong> of Bangladesh asking it to exercise its supervisory jurisdiction over actions of government authorities, lower courts, or tribunals. Writs are extraordinary remedies — meaning they are available only when no other adequate legal remedy exists or when the matter involves a fundamental right violation.</p>
-<p>Writs are powerful tools because the High Court stands above all government departments and administrative bodies. Its orders must be obeyed by all state organs, and non-compliance constitutes contempt of court. If you are considering a writ petition, consult a <a href="/supreme-court-lawyer-bangladesh" style="color:var(--accent)">Supreme Court advocate in Bangladesh</a> first to assess your prospects.</p>`,
+<p>Writs are powerful tools because the High Court stands above all government departments and administrative bodies. Its orders must be obeyed by all state organs, and non-compliance constitutes contempt of court. If you are considering a writ petition, consult a <a href="/services/supreme-court-lawyer" style="color:var(--accent)">Supreme Court advocate in Bangladesh</a> first to assess your prospects.</p>`,
             },
             {
                 h2: 'Constitutional Basis: Article 102',
@@ -2099,7 +2099,7 @@ const posts = [
 <li>Continued detention despite bail having been granted</li>
 <li>Detention without any legal basis (e.g., enforced disappearance)</li>
 </ul>
-<p>Habeas corpus petitions are treated with the utmost urgency by the High Court — hearings can be arranged within 24 hours in genuine emergencies. If someone you know is unlawfully detained, contact a <a href="/supreme-court-lawyer-bangladesh" style="color:var(--accent)">Supreme Court lawyer</a> immediately.</p>`,
+<p>Habeas corpus petitions are treated with the utmost urgency by the High Court — hearings can be arranged within 24 hours in genuine emergencies. If someone you know is unlawfully detained, contact a <a href="/services/supreme-court-lawyer" style="color:var(--accent)">Supreme Court lawyer</a> immediately.</p>`,
             },
             {
                 h2: 'Mandamus: Compelling a Government Authority to Act',
@@ -2148,7 +2148,7 @@ const posts = [
 <li>Prevent demolition of a building, termination of employment, or implementation of a contested decision</li>
 <li>Direct immediate release of a detained person</li>
 </ul>
-<p>These interim orders can completely change the practical situation while the legal dispute is fully argued. This is why writ jurisdiction is so valued — and why selecting an experienced <a href="/supreme-court-lawyer-bangladesh" style="color:var(--accent)">Supreme Court advocate</a> who knows how to move the High Court quickly is essential.</p>`,
+<p>These interim orders can completely change the practical situation while the legal dispute is fully argued. This is why writ jurisdiction is so valued — and why selecting an experienced <a href="/services/supreme-court-lawyer" style="color:var(--accent)">Supreme Court advocate</a> who knows how to move the High Court quickly is essential.</p>`,
             },
         ],
         faqs: [
@@ -2160,8 +2160,8 @@ const posts = [
             { question: 'Can a writ be filed to challenge an FIR or criminal case?', answer: 'Yes. A writ petition can be filed to quash an FIR or criminal proceeding if it is made maliciously, frivolously, or does not disclose a cognisable offence. This is one of the most common uses of writ jurisdiction in criminal matters.' },
         ],
         relatedServiceLinks: [
-            { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
-            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-uttara' },
+            { text: 'Supreme Court Lawyer Bangladesh', to: '/services/supreme-court-lawyer' },
+            { text: 'Criminal Lawyer Uttara', to: '/services/criminal-lawyer' },
         ],
     },
 
@@ -2191,7 +2191,7 @@ const posts = [
             {
                 h2: 'What Is Domestic Violence Under Bangladesh Law?',
                 content: `<p>The <strong>Domestic Violence (Prevention and Protection) Act 2010</strong> defines domestic violence broadly to include any physical, psychological, sexual, or economic abuse committed by a family member against another family member in a shared domestic space. This law was a landmark step in Bangladesh's legal framework for protecting women and children.</p>
-<p>Importantly, the Act does not require the parties to be married — it covers all persons in a domestic relationship within a shared household, including in-laws, parents, siblings, and unmarried partners in some contexts. If you or someone you know is experiencing domestic abuse, a <a href="/divorce-lawyer-uttara" style="color:var(--accent)">family lawyer in Dhaka</a> can advise on the fastest route to protection.</p>`,
+<p>Importantly, the Act does not require the parties to be married — it covers all persons in a domestic relationship within a shared household, including in-laws, parents, siblings, and unmarried partners in some contexts. If you or someone you know is experiencing domestic abuse, a <a href="/services/divorce-lawyer" style="color:var(--accent)">family lawyer in Dhaka</a> can advise on the fastest route to protection.</p>`,
             },
             {
                 h2: 'Types of Domestic Violence Covered by the Act',
@@ -2261,7 +2261,7 @@ const posts = [
             {
                 h2: 'Criminal Remedies Alongside the Act',
                 content: `<p>The Domestic Violence Act operates alongside — not instead of — the regular criminal law. Serious acts of physical violence can also be prosecuted as criminal assault, causing grievous hurt, or under the <strong>Nari O Shishu Nirjatan Daman Ain 2000 (Women and Children Repression Prevention Act)</strong>, which provides far heavier criminal penalties for serious domestic violence against women.</p>
-<p>A skilled <a href="/divorce-lawyer-uttara" style="color:var(--accent)">family and criminal lawyer</a> can advise which combination of legal remedies — civil protection order, criminal complaint, or Family Court proceedings — is best suited to your specific situation and safety needs.</p>`,
+<p>A skilled <a href="/services/divorce-lawyer" style="color:var(--accent)">family and criminal lawyer</a> can advise which combination of legal remedies — civil protection order, criminal complaint, or Family Court proceedings — is best suited to your specific situation and safety needs.</p>`,
             },
             {
                 h2: 'Support Resources for Victims',
@@ -2272,7 +2272,7 @@ const posts = [
 <li><strong>Shelter homes:</strong> Government-run shelter homes (Nari Nirjatan Protirodh Cell) in divisional cities for victims who need to leave their home.</li>
 <li><strong>Legal aid:</strong> State-funded legal aid is available for victims who cannot afford a private lawyer, administered through District Legal Aid Committees.</li>
 </ul>
-<p>You do not have to face this alone. Reach out to a <a href="/divorce-lawyer-uttara" style="color:var(--accent)">family lawyer in Dhaka or Uttara</a> for confidential guidance on your legal rights and options.</p>`,
+<p>You do not have to face this alone. Reach out to a <a href="/services/divorce-lawyer" style="color:var(--accent)">family lawyer in Dhaka or Uttara</a> for confidential guidance on your legal rights and options.</p>`,
             },
         ],
         faqs: [
@@ -2284,9 +2284,9 @@ const posts = [
             { question: 'Can I withdraw a domestic violence complaint I have already filed?', answer: 'You may apply to withdraw, but the court may choose to continue proceedings if it believes the public interest or the victim\'s safety requires it. Discuss with your lawyer before deciding to withdraw any case.' },
         ],
         relatedServiceLinks: [
-            { text: 'Divorce Lawyer Uttara', to: '/divorce-lawyer-uttara' },
-            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-uttara' },
-            { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
+            { text: 'Divorce Lawyer Uttara', to: '/services/divorce-lawyer' },
+            { text: 'Criminal Lawyer Uttara', to: '/services/criminal-lawyer' },
+            { text: 'Supreme Court Lawyer Bangladesh', to: '/services/supreme-court-lawyer' },
         ],
     },
 
@@ -2315,7 +2315,7 @@ const posts = [
             {
                 h2: 'Muslim Inheritance Law: The Faraid System',
                 content: `<p>For Muslims in Bangladesh — the majority of the population — inheritance is governed by <strong>Muslim personal law</strong>, specifically the system of <em>faraid</em> (obligatory shares prescribed by Islamic law). These rules apply automatically upon death regardless of what the deceased may have said verbally during their lifetime.</p>
-<p>The faraid system divides heirs into two main categories: <strong>Quranic heirs (Sharers)</strong> who receive fixed fractional shares, and <strong>Agnatic heirs (Residuaries)</strong> who take the remainder after the Sharers have received their portions. A <a href="/land-property-lawyer-uttara" style="color:var(--accent)">property lawyer in Dhaka</a> can help calculate precise shares for each heir in your family situation.</p>`,
+<p>The faraid system divides heirs into two main categories: <strong>Quranic heirs (Sharers)</strong> who receive fixed fractional shares, and <strong>Agnatic heirs (Residuaries)</strong> who take the remainder after the Sharers have received their portions. A <a href="/services/land-lawyer" style="color:var(--accent)">property lawyer in Dhaka</a> can help calculate precise shares for each heir in your family situation.</p>`,
             },
             {
                 h2: 'Shares of Major Heirs Under Muslim Law',
@@ -2370,7 +2370,7 @@ const posts = [
 <li>The court issues notice and verifies the list of heirs.</li>
 <li>A heirship certificate is issued — typically within a few weeks to a few months depending on the court's workload.</li>
 </ol>
-<p>All major heirs must cooperate in the process. If there is a dispute about who the legal heirs are — for example, claims of secret marriage or disputed paternity — the matter escalates to contested litigation. A <a href="/land-property-lawyer-uttara" style="color:var(--accent)">property lawyer</a> can manage this process efficiently.</p>`,
+<p>All major heirs must cooperate in the process. If there is a dispute about who the legal heirs are — for example, claims of secret marriage or disputed paternity — the matter escalates to contested litigation. A <a href="/services/land-lawyer" style="color:var(--accent)">property lawyer</a> can manage this process efficiently.</p>`,
             },
             {
                 h2: 'Common Inheritance Disputes and How to Avoid Them',
@@ -2404,8 +2404,8 @@ const posts = [
             { question: 'How long do I have to file an inheritance claim?', answer: 'Limitation periods apply to inheritance suits. Generally, a suit for a declaration of inheritance rights should be filed within the applicable limitation period from the time of dispossession or refusal of your share — consult a lawyer promptly.' },
         ],
         relatedServiceLinks: [
-            { text: 'Land & Property Lawyer Uttara', to: '/land-property-lawyer-uttara' },
-            { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
+            { text: 'Land & Property Lawyer Uttara', to: '/services/land-lawyer' },
+            { text: 'Supreme Court Lawyer Bangladesh', to: '/services/supreme-court-lawyer' },
             { text: 'Corporate Lawyer Dhaka', to: '/services/corporate-lawyer' },
         ],
     },
@@ -2435,7 +2435,7 @@ const posts = [
             {
                 h2: 'Can Police Arrest Without a Warrant in Bangladesh?',
                 content: `<p>Yes — but only in specific circumstances defined by law. In Bangladesh, the power of police to arrest without a warrant is governed by the <strong>Code of Criminal Procedure 1898 (CrPC)</strong>, primarily Section 54. Police cannot arrest simply on suspicion or personal discretion; there must be a legally recognisable ground.</p>
-<p>A warrant is a written court order directing police to arrest a named person. When there is no warrant, police must be able to point to one of the situations listed under Section 54 to justify the arrest. If they cannot, the arrest is unlawful — and you have remedies. Contact a <a href="/criminal-lawyer-uttara" style="color:var(--accent)">criminal lawyer in Dhaka or Uttara</a> immediately if you believe an arrest was unlawful.</p>`,
+<p>A warrant is a written court order directing police to arrest a named person. When there is no warrant, police must be able to point to one of the situations listed under Section 54 to justify the arrest. If they cannot, the arrest is unlawful — and you have remedies. Contact a <a href="/services/criminal-lawyer" style="color:var(--accent)">criminal lawyer in Dhaka or Uttara</a> immediately if you believe an arrest was unlawful.</p>`,
             },
             {
                 h2: 'Legal Grounds for Warrantless Arrest (Section 54 CrPC)',
@@ -2470,7 +2470,7 @@ const posts = [
 <li>Do not physically resist — this can lead to additional charges.</li>
 <li>Note the names and badge numbers of arresting officers if possible.</li>
 <li>Immediately inform a family member or trusted person.</li>
-<li>Ask them to contact a <a href="/bail-lawyer-dhaka" style="color:var(--accent)">bail lawyer in Dhaka</a> urgently.</li>
+<li>Ask them to contact a <a href="/services/bail-lawyer" style="color:var(--accent)">bail lawyer in Dhaka</a> urgently.</li>
 </ol>`,
             },
             {
@@ -2503,7 +2503,7 @@ const posts = [
 <li>Order production of the detainee in court</li>
 <li>Initiate contempt proceedings if the order is not complied with</li>
 </ul>
-<p>Habeas corpus is an emergency remedy and courts treat it with urgency. An experienced <a href="/supreme-court-lawyer-bangladesh" style="color:var(--accent)">Supreme Court lawyer in Bangladesh</a> should be contacted without delay if someone is unlawfully held.</p>`,
+<p>Habeas corpus is an emergency remedy and courts treat it with urgency. An experienced <a href="/services/supreme-court-lawyer" style="color:var(--accent)">Supreme Court lawyer in Bangladesh</a> should be contacted without delay if someone is unlawfully held.</p>`,
             },
             {
                 h2: 'Real-Life Scenario: Wrongful Arrest in a Family Dispute',
@@ -2527,9 +2527,9 @@ const posts = [
             { question: 'What is Section 54 of the CrPC?', answer: 'Section 54 of the CrPC is the primary provision allowing police to arrest without a warrant in Bangladesh. It lists specific grounds and is not a blanket power.' },
         ],
         relatedServiceLinks: [
-            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-uttara' },
-            { text: 'Bail Lawyer Dhaka', to: '/bail-lawyer-dhaka' },
-            { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
+            { text: 'Criminal Lawyer Uttara', to: '/services/criminal-lawyer' },
+            { text: 'Bail Lawyer Dhaka', to: '/services/bail-lawyer' },
+            { text: 'Supreme Court Lawyer Bangladesh', to: '/services/supreme-court-lawyer' },
         ],
     },
 
@@ -2558,7 +2558,7 @@ const posts = [
             {
                 h2: 'What Is a General Diary (GD) in Bangladesh?',
                 content: `<p>A General Diary — commonly called a GD — is an official register maintained at every police station in Bangladesh. It records all incidents, complaints, and events reported to the police that do not immediately warrant a criminal investigation. Under the <strong>Police Regulations of Bengal 1943 (PRB)</strong> and the <strong>Code of Criminal Procedure 1898 (CrPC)</strong>, every police station is required to maintain this diary, and officers on duty must record all reported incidents.</p>
-<p>A GD entry creates an official time-stamped record with the police. It is not a criminal complaint in the same way an FIR is, but it is a legal document that can be used as evidence in court proceedings. It tells the world: "On this date and time, this person reported this incident to this police station." A <a href="/criminal-lawyer-uttara" style="color:var(--accent)">criminal lawyer in Dhaka</a> can advise whether your situation calls for a GD or something stronger.</p>`,
+<p>A GD entry creates an official time-stamped record with the police. It is not a criminal complaint in the same way an FIR is, but it is a legal document that can be used as evidence in court proceedings. It tells the world: "On this date and time, this person reported this incident to this police station." A <a href="/services/criminal-lawyer" style="color:var(--accent)">criminal lawyer in Dhaka</a> can advise whether your situation calls for a GD or something stronger.</p>`,
             },
             {
                 h2: 'GD vs FIR: Key Differences',
@@ -2593,7 +2593,7 @@ const posts = [
 <li><strong>Obtain the GD number</strong> — insist on receiving the GD number and date. This is your primary reference.</li>
 <li><strong>Request a certified copy</strong> — you are entitled to a copy of the GD entry. Sometimes there is a small fee.</li>
 </ol>
-<p>If the duty officer refuses to record your complaint, ask to speak to the Officer in Charge (OC). If still refused, note the officer's name and badge number and consult a <a href="/criminal-lawyer-uttara" style="color:var(--accent)">criminal lawyer in Uttara or Dhaka</a> about your options.</p>`,
+<p>If the duty officer refuses to record your complaint, ask to speak to the Officer in Charge (OC). If still refused, note the officer's name and badge number and consult a <a href="/services/criminal-lawyer" style="color:var(--accent)">criminal lawyer in Uttara or Dhaka</a> about your options.</p>`,
             },
             {
                 h2: 'What to Write in a GD Application',
@@ -2635,7 +2635,7 @@ const posts = [
                 h2: 'Real-Life Scenario: Filing a GD for Property Threat',
                 content: `<p>Rahima Begum owns a plot of land in Uttara that a neighbouring builder is trying to encroach upon. The builder's workers show up one day and verbally threaten her family, telling them to vacate the land. No physical violence occurred, but the threats were serious.</p>
 <p>Rahima goes to the local police station and files a GD recording the threat, naming the builder and his workers. She submits a written application, attaches screenshots of threatening WhatsApp messages from the builder, and obtains the GD number and a certified copy.</p>
-<p>Three weeks later, when the builder's workers physically encroach and she files an FIR, the earlier GD establishes a pattern of harassment and supports her version of events. It also contradicts any claim by the builder that this is the first incident between them. Her lawyer <a href="/land-property-lawyer-uttara" style="color:var(--accent)">at the land law firm in Uttara</a> uses the GD effectively in both the injunction application and the FIR investigation.</p>`,
+<p>Three weeks later, when the builder's workers physically encroach and she files an FIR, the earlier GD establishes a pattern of harassment and supports her version of events. It also contradicts any claim by the builder that this is the first incident between them. Her lawyer <a href="/services/land-lawyer" style="color:var(--accent)">at the land law firm in Uttara</a> uses the GD effectively in both the injunction application and the FIR investigation.</p>`,
             },
         ],
         faqs: [
@@ -2646,9 +2646,9 @@ const posts = [
             { question: 'What if police try to write something different from what I reported?', answer: 'Ask to read the entry before it is finalised. If inaccurate, insist on correction. Keep a note of what you reported. Consult a lawyer if the GD is recorded incorrectly.' },
         ],
         relatedServiceLinks: [
-            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-uttara' },
-            { text: 'Bail Lawyer Dhaka', to: '/bail-lawyer-dhaka' },
-            { text: 'Land & Property Lawyer Uttara', to: '/land-property-lawyer-uttara' },
+            { text: 'Criminal Lawyer Uttara', to: '/services/criminal-lawyer' },
+            { text: 'Bail Lawyer Dhaka', to: '/services/bail-lawyer' },
+            { text: 'Land & Property Lawyer Uttara', to: '/services/land-lawyer' },
         ],
     },
 
@@ -2677,7 +2677,7 @@ const posts = [
             {
                 h2: 'What Is Anticipatory Bail from the High Court?',
                 content: `<p>Anticipatory bail from the High Court Division of the Bangladesh Supreme Court is a pre-arrest protection order that prevents police from detaining the applicant in connection with a specified criminal case. While Sessions Courts also have anticipatory bail jurisdiction, the High Court Division's order carries greater authority, is harder to circumvent by police, and is the appropriate forum in certain situations.</p>
-<p>This form of bail is distinct from the regular anticipatory bail guide we have published separately. Here, the focus is specifically on the <a href="/supreme-court-lawyer-bangladesh" style="color:var(--accent)">High Court Division procedure</a> — its unique requirements, the types of cases best suited to this forum, and what a skilled lawyer must do to succeed.</p>`,
+<p>This form of bail is distinct from the regular anticipatory bail guide we have published separately. Here, the focus is specifically on the <a href="/services/supreme-court-lawyer" style="color:var(--accent)">High Court Division procedure</a> — its unique requirements, the types of cases best suited to this forum, and what a skilled lawyer must do to succeed.</p>`,
             },
             {
                 h2: 'When Should You Go Directly to the High Court?',
@@ -2689,7 +2689,7 @@ const posts = [
 <li><strong>Urgency is extreme</strong> — in Dhaka, the High Court Division can sometimes act faster than a district Sessions Court, especially for interim protection.</li>
 <li><strong>The FIR names multiple accused</strong> across different districts — the High Court has jurisdiction over the entire country.</li>
 </ul>
-<p>Your <a href="/bail-lawyer-dhaka" style="color:var(--accent)">bail lawyer in Dhaka</a> will assess which forum is strategically better for your specific facts.</p>`,
+<p>Your <a href="/services/bail-lawyer" style="color:var(--accent)">bail lawyer in Dhaka</a> will assess which forum is strategically better for your specific facts.</p>`,
             },
             {
                 h2: 'Legal Basis for High Court Anticipatory Bail',
@@ -2749,7 +2749,7 @@ const posts = [
 <li><strong>Full hearing:</strong> Typically 1–4 weeks after filing, depending on the court's docket.</li>
 <li><strong>If interim bail is granted:</strong> The applicant is protected from arrest while the main application is decided.</li>
 </ul>
-<p>Speed is of the essence. Do not wait until police have arrived at your door. Engage a <a href="/bail-lawyer-dhaka" style="color:var(--accent)">bail lawyer in Dhaka</a> the moment you learn of a potential arrest.</p>`,
+<p>Speed is of the essence. Do not wait until police have arrived at your door. Engage a <a href="/services/bail-lawyer" style="color:var(--accent)">bail lawyer in Dhaka</a> the moment you learn of a potential arrest.</p>`,
             },
             {
                 h2: 'Conditions and Their Importance',
@@ -2772,9 +2772,9 @@ const posts = [
             { question: 'Can anticipatory bail be cancelled?', answer: 'Yes — if you violate conditions or if the State shows new material that was not before the court when bail was granted. Strict compliance is essential.' },
         ],
         relatedServiceLinks: [
-            { text: 'Bail Lawyer Dhaka', to: '/bail-lawyer-dhaka' },
-            { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
-            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-uttara' },
+            { text: 'Bail Lawyer Dhaka', to: '/services/bail-lawyer' },
+            { text: 'Supreme Court Lawyer Bangladesh', to: '/services/supreme-court-lawyer' },
+            { text: 'Criminal Lawyer Uttara', to: '/services/criminal-lawyer' },
         ],
     },
 
@@ -2808,7 +2808,7 @@ const posts = [
 <li><strong>Khula:</strong> Divorce sought by the wife, usually with the return of some or all of the dower (mehr).</li>
 <li><strong>Judicial Divorce (Faskh):</strong> Divorce through a court order, available to a wife when the husband refuses talaq and she has valid grounds.</li>
 </ul>
-<p>Each has a different procedure, different timescales, and different financial implications. An experienced <a href="/divorce-lawyer-uttara" style="color:var(--accent)">family lawyer in Uttara or Dhaka</a> will advise which route best fits your circumstances.</p>`,
+<p>Each has a different procedure, different timescales, and different financial implications. An experienced <a href="/services/divorce-lawyer" style="color:var(--accent)">family lawyer in Uttara or Dhaka</a> will advise which route best fits your circumstances.</p>`,
             },
             {
                 h2: 'Talaq: Divorce Initiated by the Husband',
@@ -2857,7 +2857,7 @@ const posts = [
 <li>Husband treating the wife with cruelty (physical or mental)</li>
 <li>Other grounds recognised under Muslim law</li>
 </ul>
-<p>The process involves filing a plaint in the Family Court, serving notice on the husband, hearings, and if the grounds are proven, an order of dissolution. This is the court-directed path and can take months to over a year depending on the complexity and whether the husband contests the case. Your <a href="/divorce-lawyer-uttara" style="color:var(--accent)">divorce lawyer in Dhaka or Uttara</a> will advise on the strength of your grounds and prepare the case accordingly.</p>`,
+<p>The process involves filing a plaint in the Family Court, serving notice on the husband, hearings, and if the grounds are proven, an order of dissolution. This is the court-directed path and can take months to over a year depending on the complexity and whether the husband contests the case. Your <a href="/services/divorce-lawyer" style="color:var(--accent)">divorce lawyer in Dhaka or Uttara</a> will advise on the strength of your grounds and prepare the case accordingly.</p>`,
             },
             {
                 h2: 'Step-by-Step: Filing for Divorce in Bangladesh',
@@ -2897,7 +2897,7 @@ const posts = [
 <li><strong>Child maintenance:</strong> Post-divorce, the father is responsible for the maintenance of children regardless of which parent has custody — up to age 16 for sons and until marriage for daughters, or per court order.</li>
 <li><strong>Mut'a:</strong> Reasonable compensation ('consolation gift') may be claimed in certain circumstances.</li>
 </ul>
-<p>Filing for divorce, maintenance, and dower recovery simultaneously in the Family Court is generally the most efficient approach. <a href="/divorce-lawyer-uttara" style="color:var(--accent)">Contact our family law team</a> to understand what you are entitled to before agreeing to any settlement.</p>`,
+<p>Filing for divorce, maintenance, and dower recovery simultaneously in the Family Court is generally the most efficient approach. <a href="/services/divorce-lawyer" style="color:var(--accent)">Contact our family law team</a> to understand what you are entitled to before agreeing to any settlement.</p>`,
             },
             {
                 h2: 'Real-Life Scenario: Khula After Domestic Abuse',
@@ -2918,9 +2918,9 @@ const posts = [
             { question: 'Can I file for divorce and maintenance in the same case?', answer: 'Yes. In Bangladesh\'s Family Court, claims for dissolution, maintenance, and dower recovery can all be consolidated in a single suit, which is generally the most practical approach.' },
         ],
         relatedServiceLinks: [
-            { text: 'Divorce Lawyer Uttara', to: '/divorce-lawyer-uttara' },
-            { text: 'Family Lawyer Dhaka', to: '/divorce-lawyer-uttara' },
-            { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
+            { text: 'Divorce Lawyer Uttara', to: '/services/divorce-lawyer' },
+            { text: 'Family Lawyer Dhaka', to: '/services/divorce-lawyer' },
+            { text: 'Supreme Court Lawyer Bangladesh', to: '/services/supreme-court-lawyer' },
         ],
     },
 
@@ -2956,7 +2956,7 @@ const posts = [
 <li>Protects against double-selling (selling the same plot to two buyers)</li>
 <li>Is a prerequisite for mutation (adding your name to the government land register)</li>
 </ul>
-<p>A <a href="/land-property-lawyer-uttara" style="color:var(--accent)">property lawyer in Uttara or Dhaka</a> should advise on the transaction before any money changes hands.</p>`,
+<p>A <a href="/services/land-lawyer" style="color:var(--accent)">property lawyer in Uttara or Dhaka</a> should advise on the transaction before any money changes hands.</p>`,
             },
             {
                 h2: 'The Legal Framework: Registration Act 1908',
@@ -2994,7 +2994,7 @@ const posts = [
 <li>Witnesses' details</li>
 <li>Date and place of execution</li>
 </ul>
-<p>Deed drafting should be done by or reviewed by a qualified <a href="/land-property-lawyer-uttara" style="color:var(--accent)">land lawyer</a>. Errors in property description are among the most litigated issues in Bangladeshi property law — a single wrong boundary figure can generate years of court battles.</p>`,
+<p>Deed drafting should be done by or reviewed by a qualified <a href="/services/land-lawyer" style="color:var(--accent)">land lawyer</a>. Errors in property description are among the most litigated issues in Bangladeshi property law — a single wrong boundary figure can generate years of court battles.</p>`,
             },
             {
                 h2: 'Step 3: Calculate and Pay Stamp Duty',
@@ -3030,7 +3030,7 @@ const posts = [
 <li>If no objections are raised, the mutation order is passed and the buyer's name is entered in the Khatian.</li>
 <li>Land development tax (khajna) payment is updated.</li>
 </ol>
-<p>Mutation is not optional — without it, the buyer cannot pay land tax, which creates complications in future sales and legal proceedings. It also signals actual legal possession to government records. Your <a href="/land-property-lawyer-uttara" style="color:var(--accent)">land lawyer</a> can handle the entire mutation process on your behalf.</p>`,
+<p>Mutation is not optional — without it, the buyer cannot pay land tax, which creates complications in future sales and legal proceedings. It also signals actual legal possession to government records. Your <a href="/services/land-lawyer" style="color:var(--accent)">land lawyer</a> can handle the entire mutation process on your behalf.</p>`,
             },
             {
                 h2: 'Common Frauds in Land Transactions and How to Avoid Them',
@@ -3053,8 +3053,8 @@ const posts = [
             { question: 'Can I register land on behalf of someone else?', answer: 'Yes, with a valid registered Power of Attorney authorising you to execute and register deeds on their behalf. The PoA itself must be registered at the Sub-Registrar\'s office.' },
         ],
         relatedServiceLinks: [
-            { text: 'Land & Property Lawyer Uttara', to: '/land-property-lawyer-uttara' },
-            { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
+            { text: 'Land & Property Lawyer Uttara', to: '/services/land-lawyer' },
+            { text: 'Supreme Court Lawyer Bangladesh', to: '/services/supreme-court-lawyer' },
             { text: 'Corporate Lawyer Dhaka', to: '/services/corporate-lawyer' },
         ],
     },
@@ -3126,7 +3126,7 @@ const posts = [
 <li>The court may award <strong>general damages</strong> (presumed harm to reputation), <strong>special damages</strong> (provable financial loss), and in serious cases, <strong>aggravated damages</strong>.</li>
 <li>An injunction can be sought to prevent repeated publication of the defamatory statement.</li>
 </ul>
-<p>Civil defamation suits in Bangladesh are filed before the Civil Courts. The limitation period for filing a civil defamation suit is generally <strong>one year</strong> from the date of publication. Act promptly — delay weakens your case and may bar your claim. Consult a <a href="/criminal-lawyer-uttara" style="color:var(--accent)">civil litigation lawyer in Dhaka</a> without delay.</p>`,
+<p>Civil defamation suits in Bangladesh are filed before the Civil Courts. The limitation period for filing a civil defamation suit is generally <strong>one year</strong> from the date of publication. Act promptly — delay weakens your case and may bar your claim. Consult a <a href="/services/criminal-lawyer" style="color:var(--accent)">civil litigation lawyer in Dhaka</a> without delay.</p>`,
             },
             {
                 h2: 'Online Defamation and the Cyber Security Act 2023',
@@ -3161,7 +3161,7 @@ const posts = [
 <li>File a plaint in the Civil Court claiming damages.</li>
 <li>Simultaneously apply for an injunction to stop further publication.</li>
 </ol>
-<p>An experienced <a href="/criminal-lawyer-uttara" style="color:var(--accent)">defamation lawyer in Dhaka</a> will advise on the optimal combination of remedies for your specific situation.</p>`,
+<p>An experienced <a href="/services/criminal-lawyer" style="color:var(--accent)">defamation lawyer in Dhaka</a> will advise on the optimal combination of remedies for your specific situation.</p>`,
             },
             {
                 h2: 'Defences Available to the Accused',
@@ -3197,9 +3197,9 @@ const posts = [
             { question: 'Can I claim both criminal punishment and civil damages for the same defamatory statement?', answer: 'Yes. Criminal and civil defamation actions are independent. You can pursue both tracks simultaneously — criminal for punishment and civil for monetary compensation.' },
         ],
         relatedServiceLinks: [
-            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-uttara' },
-            { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
-            { text: 'Bail Lawyer Dhaka', to: '/bail-lawyer-dhaka' },
+            { text: 'Criminal Lawyer Uttara', to: '/services/criminal-lawyer' },
+            { text: 'Supreme Court Lawyer Bangladesh', to: '/services/supreme-court-lawyer' },
+            { text: 'Bail Lawyer Dhaka', to: '/services/bail-lawyer' },
         ],
     },
 
@@ -3228,7 +3228,7 @@ const posts = [
             {
                 h2: 'What Is Cheque Dishonour Under Bangladesh Law?',
                 content: `<p>A cheque is dishonoured when a bank returns it unpaid. Reasons include: insufficient funds, account closed, payment stopped by the drawer, signature mismatch, or post-dated cheque presented early. While dishonour for technical reasons (e.g., date format) may not attract criminal liability, dishonour for <strong>insufficiency of funds or where the amount exceeds the amount arranged</strong> triggers criminal liability under Section 138 of the Negotiable Instruments Act 1881 (NI Act).</p>
-<p>This is one of Bangladesh's most commonly filed criminal cases — particularly in commercial disputes, loan recoveries, and business transactions where cheques are used as security. An experienced <a href="/criminal-lawyer-uttara" style="color:var(--accent)">criminal lawyer in Dhaka</a> can file and prosecute a Section 138 case efficiently.</p>`,
+<p>This is one of Bangladesh's most commonly filed criminal cases — particularly in commercial disputes, loan recoveries, and business transactions where cheques are used as security. An experienced <a href="/services/criminal-lawyer" style="color:var(--accent)">criminal lawyer in Dhaka</a> can file and prosecute a Section 138 case efficiently.</p>`,
             },
             {
                 h2: 'The Legal Framework: Section 138 NI Act 1881',
@@ -3311,7 +3311,7 @@ const posts = [
 <li><strong>Payment already made:</strong> The amount was paid before the case was filed.</li>
 <li><strong>Post-dating without liability:</strong> The cheque was post-dated expressly as a future guarantee for an obligation that never arose.</li>
 </ul>
-<p>The key advantage for the complainant under Section 139 is the <strong>presumption</strong> that the cheque was issued for a debt — which means the drawer must prove otherwise. A weak defence without clear evidence rarely succeeds. <a href="/criminal-lawyer-uttara" style="color:var(--accent)">Contact a criminal defence lawyer</a> immediately if you are served with a Section 138 notice.</p>`,
+<p>The key advantage for the complainant under Section 139 is the <strong>presumption</strong> that the cheque was issued for a debt — which means the drawer must prove otherwise. A weak defence without clear evidence rarely succeeds. <a href="/services/criminal-lawyer" style="color:var(--accent)">Contact a criminal defence lawyer</a> immediately if you are served with a Section 138 notice.</p>`,
             },
             {
                 h2: 'Real-Life Scenario: Business Partner Dishonours a Cheque',
@@ -3335,9 +3335,9 @@ const posts = [
             { question: 'What if the drawer pays after the case is filed?', answer: 'If the drawer pays the full amount owed, the complainant can withdraw the criminal case. Courts are generally amenable to withdrawal upon proof of full payment and settlement.' },
         ],
         relatedServiceLinks: [
-            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-uttara' },
-            { text: 'Bail Lawyer Dhaka', to: '/bail-lawyer-dhaka' },
-            { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
+            { text: 'Criminal Lawyer Uttara', to: '/services/criminal-lawyer' },
+            { text: 'Bail Lawyer Dhaka', to: '/services/bail-lawyer' },
+            { text: 'Supreme Court Lawyer Bangladesh', to: '/services/supreme-court-lawyer' },
         ],
     },
 
@@ -3370,7 +3370,7 @@ const posts = [
 <li><strong>Hizanat (physical custody):</strong> The right to have the child live with and be cared for physically. Under classical Muslim law (primarily Hanafi school followed in Bangladesh), hizanat belongs to the <strong>mother</strong> up to specified ages, regardless of who caused the divorce.</li>
 <li><strong>Wilayat (guardianship):</strong> The legal right to manage the child\'s property, give consent to marriage, and make major life decisions. This generally belongs to the <strong>father</strong> throughout.</li>
 </ul>
-<p>In practice, these two rights can coexist — the mother has the child physically, but the father remains the legal guardian. A <a href="/divorce-lawyer-uttara" style="color:var(--accent)">family lawyer in Dhaka</a> can help you understand which right is at stake in your situation.</p>`,
+<p>In practice, these two rights can coexist — the mother has the child physically, but the father remains the legal guardian. A <a href="/services/divorce-lawyer" style="color:var(--accent)">family lawyer in Dhaka</a> can help you understand which right is at stake in your situation.</p>`,
             },
             {
                 h2: 'Hizanat: The Mother\'s Right to Physical Custody',
@@ -3441,7 +3441,7 @@ const posts = [
 <li><strong>Hearings and evidence.</strong></li>
 <li><strong>Final order</strong> on custody/guardianship, with a visitation schedule for the non-custodial parent.</li>
 </ol>
-<p><a href="/divorce-lawyer-uttara" style="color:var(--accent)">Our family law team</a> handles custody petitions from initial filing through to final orders and handles cross-border custody issues where children have been taken abroad.</p>`,
+<p><a href="/services/divorce-lawyer" style="color:var(--accent)">Our family law team</a> handles custody petitions from initial filing through to final orders and handles cross-border custody issues where children have been taken abroad.</p>`,
             },
             {
                 h2: 'Visitation Rights for the Non-Custodial Parent',
@@ -3463,9 +3463,9 @@ const posts = [
             { question: 'Can a non-Muslim child custody case be filed in a Family Court?', answer: 'Yes. The Guardians and Wards Act 1890 applies to all children in Bangladesh regardless of religion. Non-Muslim custody cases are governed by this Act and the welfare principle.' },
         ],
         relatedServiceLinks: [
-            { text: 'Divorce Lawyer Uttara', to: '/divorce-lawyer-uttara' },
-            { text: 'Family Lawyer Dhaka', to: '/divorce-lawyer-uttara' },
-            { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
+            { text: 'Divorce Lawyer Uttara', to: '/services/divorce-lawyer' },
+            { text: 'Family Lawyer Dhaka', to: '/services/divorce-lawyer' },
+            { text: 'Supreme Court Lawyer Bangladesh', to: '/services/supreme-court-lawyer' },
         ],
     },
 
@@ -3494,7 +3494,7 @@ const posts = [
             {
                 h2: 'What Is a Writ Petition in Bangladesh?',
                 content: `<p>A writ petition is a formal application to the High Court Division of the Bangladesh Supreme Court asking it to exercise its constitutional supervisory power over inferior courts, tribunals, or public authorities. Unlike ordinary appeals (which challenge decisions on merits), writ petitions challenge the <strong>legality, jurisdiction, or constitutionality</strong> of a decision or action.</p>
-<p>Writ petitions are governed by <strong>Article 102 of the Constitution of Bangladesh</strong> and the High Court Division Rules. They are filed before the High Court Division sitting in Dhaka. Only advocates enrolled in the Supreme Court of Bangladesh (High Court Division) can appear in writ proceedings. <a href="/supreme-court-lawyer-bangladesh" style="color:var(--accent)">Our Supreme Court lawyers in Bangladesh</a> handle all types of writ petitions.</p>`,
+<p>Writ petitions are governed by <strong>Article 102 of the Constitution of Bangladesh</strong> and the High Court Division Rules. They are filed before the High Court Division sitting in Dhaka. Only advocates enrolled in the Supreme Court of Bangladesh (High Court Division) can appear in writ proceedings. <a href="/services/supreme-court-lawyer" style="color:var(--accent)">Our Supreme Court lawyers in Bangladesh</a> handle all types of writ petitions.</p>`,
             },
             {
                 h2: 'Constitutional Basis: Article 102 of the Constitution',
@@ -3573,7 +3573,7 @@ const posts = [
 <li><strong>Full hearing:</strong> Several months to one or more years depending on the complexity and the court\'s schedule.</li>
 <li><strong>Habeas corpus:</strong> Emergency procedures allow the court to hear habeas corpus matters on the same day in urgent cases of unlawful detention.</li>
 </ul>
-<p>If the Rule is made absolute, the respondent authority must comply with the High Court\'s order. Non-compliance constitutes contempt of court — a serious matter. <a href="/supreme-court-lawyer-bangladesh" style="color:var(--accent)">Contact our Supreme Court team</a> to evaluate whether your case qualifies for writ jurisdiction.</p>`,
+<p>If the Rule is made absolute, the respondent authority must comply with the High Court\'s order. Non-compliance constitutes contempt of court — a serious matter. <a href="/services/supreme-court-lawyer" style="color:var(--accent)">Contact our Supreme Court team</a> to evaluate whether your case qualifies for writ jurisdiction.</p>`,
             },
         ],
         faqs: [
@@ -3584,9 +3584,9 @@ const posts = [
             { question: 'Who can be respondent in a writ petition?', answer: 'Public authorities, government ministries, departments, statutory bodies, and public officials. In some cases, quasi-public or licensed bodies performing public functions can also be respondents.' },
         ],
         relatedServiceLinks: [
-            { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
-            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-uttara' },
-            { text: 'Bail Lawyer Dhaka', to: '/bail-lawyer-dhaka' },
+            { text: 'Supreme Court Lawyer Bangladesh', to: '/services/supreme-court-lawyer' },
+            { text: 'Criminal Lawyer Uttara', to: '/services/criminal-lawyer' },
+            { text: 'Bail Lawyer Dhaka', to: '/services/bail-lawyer' },
         ],
     },
 
@@ -3684,7 +3684,7 @@ const posts = [
 <li><strong>Product liability:</strong> Manufacturers and importers can be held liable if a product defect causes injury or damage.</li>
 <li><strong>Criminal complaint:</strong> For serious violations (adulteration, food fraud), a private complaint can be filed in the Magistrate Court independently of DNCRP proceedings.</li>
 </ul>
-<p>Consumer cases can be complex when large businesses are involved. Consult a <a href="/criminal-lawyer-uttara" style="color:var(--accent)">lawyer experienced in consumer and commercial matters</a> before proceeding to litigation.</p>`,
+<p>Consumer cases can be complex when large businesses are involved. Consult a <a href="/services/criminal-lawyer" style="color:var(--accent)">lawyer experienced in consumer and commercial matters</a> before proceeding to litigation.</p>`,
             },
             {
                 h2: 'Practical Tips for Consumers',
@@ -3697,7 +3697,7 @@ const posts = [
 <li>Report violations to the DNCRP — your complaint helps prevent the same wrong from being done to others</li>
 <li>Photograph defective products before returning them — evidence is crucial</li>
 </ul>
-<p>If a business refuses to address a legitimate complaint, do not hesitate to escalate to the DNCRP or consult an <a href="/supreme-court-lawyer-bangladesh" style="color:var(--accent)">experienced lawyer</a> about your legal options.</p>`,
+<p>If a business refuses to address a legitimate complaint, do not hesitate to escalate to the DNCRP or consult an <a href="/services/supreme-court-lawyer" style="color:var(--accent)">experienced lawyer</a> about your legal options.</p>`,
             },
         ],
         faqs: [
@@ -3711,9 +3711,9 @@ const posts = [
             { question: 'What if a service provider (e.g., phone company) cheats me?', answer: 'Service providers are subject to the CRPA 2009. You can also complain to the relevant regulator — for telecoms, the Bangladesh Telecommunication Regulatory Commission (BTRC).' },
         ],
         relatedServiceLinks: [
-            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-uttara' },
+            { text: 'Criminal Lawyer Uttara', to: '/services/criminal-lawyer' },
             { text: 'Corporate Lawyer Dhaka', to: '/services/corporate-lawyer' },
-            { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
+            { text: 'Supreme Court Lawyer Bangladesh', to: '/services/supreme-court-lawyer' },
         ],
     },
 
@@ -3747,7 +3747,7 @@ const posts = [
 <li><strong>Digital Security Act 2018 (DSA)</strong>: Replaced key sections of the ICT Act and established the Digital Security Agency. The DSA attracted significant international criticism over freedom of expression concerns.</li>
 <li><strong>Cyber Security Act 2023 (CSA)</strong>: Enacted in late 2023, the CSA replaced the DSA, reducing some maximum sentences and adjusting certain offences — though the core structure remains similar.</li>
 </ul>
-<p>Bangladesh also has provisions in the <strong>Penal Code 1860</strong>, the <strong>Pornography Control Act 2012</strong>, and the <strong>Money Laundering Prevention Act</strong> that cover cyber-related crimes. A <a href="/criminal-lawyer-uttara" style="color:var(--accent)">criminal lawyer in Dhaka</a> experienced in digital law can guide you through the applicable statute.</p>`,
+<p>Bangladesh also has provisions in the <strong>Penal Code 1860</strong>, the <strong>Pornography Control Act 2012</strong>, and the <strong>Money Laundering Prevention Act</strong> that cover cyber-related crimes. A <a href="/services/criminal-lawyer" style="color:var(--accent)">criminal lawyer in Dhaka</a> experienced in digital law can guide you through the applicable statute.</p>`,
             },
             {
                 h2: 'Key Offences Under the Digital Security Act 2018',
@@ -3793,7 +3793,7 @@ const posts = [
 <li>The right to challenge the investigation and evidence in court</li>
 <li>The right to present a defence, including challenging digital evidence on technical grounds</li>
 </ul>
-<p>Digital evidence is often challenged on grounds of tampering, improper collection, or lack of a proper chain of custody. An <a href="/bail-lawyer-dhaka" style="color:var(--accent)">experienced criminal lawyer in Dhaka</a> can raise these technical defences.</p>`,
+<p>Digital evidence is often challenged on grounds of tampering, improper collection, or lack of a proper chain of custody. An <a href="/services/bail-lawyer" style="color:var(--accent)">experienced criminal lawyer in Dhaka</a> can raise these technical defences.</p>`,
             },
             {
                 h2: 'How to File a Cyber Crime Complaint',
@@ -3813,7 +3813,7 @@ const posts = [
 <li><strong>Sessions Court (Cyber Tribunal or District Sessions Judge)</strong></li>
 <li><strong>High Court Division</strong> if the Sessions Court refuses</li>
 </ul>
-<p>Police can arrest without a warrant for cognisable cyber offences and must produce the accused before a Magistrate within 24 hours. Remand (police custody for investigation) is commonly sought in cyber cases — an accused has the right to resist unnecessary remand through their lawyer. If you or a family member has been arrested in a cyber case, contact a <a href="/bail-lawyer-dhaka" style="color:var(--accent)">bail lawyer in Dhaka</a> immediately.</p>`,
+<p>Police can arrest without a warrant for cognisable cyber offences and must produce the accused before a Magistrate within 24 hours. Remand (police custody for investigation) is commonly sought in cyber cases — an accused has the right to resist unnecessary remand through their lawyer. If you or a family member has been arrested in a cyber case, contact a <a href="/services/bail-lawyer" style="color:var(--accent)">bail lawyer in Dhaka</a> immediately.</p>`,
             },
             {
                 h2: 'How a Lawyer Can Help',
@@ -3823,7 +3823,7 @@ const posts = [
 <li><strong>For the accused:</strong> A lawyer can challenge the FIR, obtain bail, scrutinise the legality of the digital evidence, and build a defence on technical and legal grounds.</li>
 <li><strong>For businesses:</strong> A lawyer can advise on cyber compliance, data protection obligations, and response to regulatory investigations.</li>
 </ul>
-<p>Advocate Md. Shah Alam's team handles criminal defence matters including cyber crime cases at all levels of the Bangladesh judiciary. <a href="/criminal-lawyer-uttara" style="color:var(--accent)">Contact us</a> for a confidential consultation.</p>`,
+<p>Advocate Md. Shah Alam's team handles criminal defence matters including cyber crime cases at all levels of the Bangladesh judiciary. <a href="/services/criminal-lawyer" style="color:var(--accent)">Contact us</a> for a confidential consultation.</p>`,
             },
         ],
         faqs: [
@@ -3837,9 +3837,9 @@ const posts = [
             { question: 'Can a company be held liable for cyber crime in Bangladesh?', answer: 'Yes. Companies and their directors can face liability under the Cyber Security Act for offences committed using company resources or systems.' },
         ],
         relatedServiceLinks: [
-            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-uttara' },
-            { text: 'Bail Lawyer Dhaka', to: '/bail-lawyer-dhaka' },
-            { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
+            { text: 'Criminal Lawyer Uttara', to: '/services/criminal-lawyer' },
+            { text: 'Bail Lawyer Dhaka', to: '/services/bail-lawyer' },
+            { text: 'Supreme Court Lawyer Bangladesh', to: '/services/supreme-court-lawyer' },
         ],
     },
 
@@ -3877,7 +3877,7 @@ const posts = [
 <li>Safety, health, and welfare in the workplace</li>
 <li>Trade unions and collective bargaining</li>
 </ul>
-<p>Separate rules apply to government employees (governed by Service Rules), home-based workers, and the export-oriented garments sector (EPZ Labour Act applies to Export Processing Zones). Consult an <a href="/criminal-lawyer-uttara" style="color:var(--accent)">experienced employment lawyer in Dhaka</a> for sector-specific advice.</p>`,
+<p>Separate rules apply to government employees (governed by Service Rules), home-based workers, and the export-oriented garments sector (EPZ Labour Act applies to Export Processing Zones). Consult an <a href="/services/criminal-lawyer" style="color:var(--accent)">experienced employment lawyer in Dhaka</a> for sector-specific advice.</p>`,
             },
             {
                 h2: 'Key Rights of Workers Under the Labour Act',
@@ -3914,7 +3914,7 @@ const posts = [
 <li><strong>Retrenchment (reduction in workforce):</strong> Requires one month's notice and compensation at the rate of 30 days' wages for each completed year of service.</li>
 <li><strong>Lay-off:</strong> Workers cannot be indefinitely laid off without compensation. Rules for lay-off compensation are specified under the Act.</li>
 </ul>
-<p>Wrongful termination (dismissal without following due procedure) entitles the worker to reinstatement or compensation through the Labour Court. If you have been dismissed without proper process, contact a <a href="/criminal-lawyer-uttara" style="color:var(--accent)">labour law expert in Dhaka</a> immediately.</p>`,
+<p>Wrongful termination (dismissal without following due procedure) entitles the worker to reinstatement or compensation through the Labour Court. If you have been dismissed without proper process, contact a <a href="/services/criminal-lawyer" style="color:var(--accent)">labour law expert in Dhaka</a> immediately.</p>`,
             },
             {
                 h2: 'Gratuity, Provident Fund, and Leave Encashment',
@@ -3957,7 +3957,7 @@ const posts = [
 <li><strong>Night work restrictions:</strong> Women cannot generally be required to work between 10 PM and 6 AM without consent and specified safety arrangements</li>
 <li><strong>Protection from harassment:</strong> Employers are required to establish anti-harassment committees in workplaces with 25 or more female workers</li>
 </ul>
-<p>Child labour is strictly regulated. Employment of children under 14 years in industrial work is prohibited. Young persons (14–18 years) can work in non-hazardous work with restrictions on hours and type of work. Violations carry criminal penalties. For urgent labour law advice, <a href="/supreme-court-lawyer-bangladesh" style="color:var(--accent)">contact a lawyer</a> today.</p>`,
+<p>Child labour is strictly regulated. Employment of children under 14 years in industrial work is prohibited. Young persons (14–18 years) can work in non-hazardous work with restrictions on hours and type of work. Violations carry criminal penalties. For urgent labour law advice, <a href="/services/supreme-court-lawyer" style="color:var(--accent)">contact a lawyer</a> today.</p>`,
             },
         ],
         faqs: [
@@ -3971,8 +3971,8 @@ const posts = [
             { question: 'Can my employer terminate me without giving reasons?', answer: 'Not without proper procedure. Termination without misconduct requires 120 days\' notice. Termination for misconduct requires a formal inquiry. Procedurally defective dismissal is actionable in the Labour Court.' },
         ],
         relatedServiceLinks: [
-            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-uttara' },
-            { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
+            { text: 'Criminal Lawyer Uttara', to: '/services/criminal-lawyer' },
+            { text: 'Supreme Court Lawyer Bangladesh', to: '/services/supreme-court-lawyer' },
             { text: 'Corporate Lawyer Dhaka', to: '/services/corporate-lawyer' },
         ],
     },
@@ -4128,9 +4128,9 @@ const posts = [
             },
         ],
         relatedServiceLinks: [
-            { text: 'Criminal Lawyer in Uttara', to: '/criminal-lawyer-uttara' },
-            { text: 'Bail Lawyer in Dhaka', to: '/bail-lawyer-dhaka' },
-            { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
+            { text: 'Criminal Lawyer in Uttara', to: '/services/criminal-lawyer' },
+            { text: 'Bail Lawyer in Dhaka', to: '/services/bail-lawyer' },
+            { text: 'Supreme Court Lawyer Bangladesh', to: '/services/supreme-court-lawyer' },
         ],
     },
 
@@ -4159,7 +4159,7 @@ const posts = [
             {
                 h2: 'What Is Police Remand in Bangladesh?',
                 content: `<p>Police remand — formally called <strong>police custody remand</strong> — is when a court authorises police to keep an arrested person in their physical custody for further interrogation, beyond the standard 24-hour period within which every arrested person must be produced before a Magistrate.</p>
-<p>Remand is applied for by police when they believe the accused has information critical to the investigation that cannot be obtained otherwise. It is one of the most misused provisions in Bangladesh criminal procedure, making it essential that accused persons and their families understand the legal limits and available protections. Contact a <a href="/criminal-lawyer-uttara" style="color:var(--accent)">criminal lawyer in Uttara or Dhaka</a> the moment remand is applied for.</p>`,
+<p>Remand is applied for by police when they believe the accused has information critical to the investigation that cannot be obtained otherwise. It is one of the most misused provisions in Bangladesh criminal procedure, making it essential that accused persons and their families understand the legal limits and available protections. Contact a <a href="/services/criminal-lawyer" style="color:var(--accent)">criminal lawyer in Uttara or Dhaka</a> the moment remand is applied for.</p>`,
             },
             {
                 h2: 'Legal Basis for Remand Under CrPC',
@@ -4193,7 +4193,7 @@ const posts = [
 <li><strong>Right to medical examination</strong> if you allege physical abuse.</li>
 <li><strong>Right to notify family</strong> members of your arrest and location of custody.</li>
 </ul>
-<p>Any statement given under compulsion or torture is legally unreliable and may be challenged in court. <a href="/bail-lawyer-dhaka" style="color:var(--accent)">Contact a bail lawyer in Dhaka</a> immediately if remand is sought for a family member.</p>`,
+<p>Any statement given under compulsion or torture is legally unreliable and may be challenged in court. <a href="/services/bail-lawyer" style="color:var(--accent)">Contact a bail lawyer in Dhaka</a> immediately if remand is sought for a family member.</p>`,
             },
             {
                 h2: 'How Courts Decide Remand Applications',
@@ -4214,7 +4214,7 @@ const posts = [
 <li><strong>Application before the Magistrate</strong> — The accused's lawyer may appear before the same Magistrate to contest a remand order or request its cancellation.</li>
 <li><strong>Revision application</strong> — Against a Magistrate's remand order to the Sessions Judge.</li>
 </ul>
-<p>Act without delay. Every hour of unlawful custody matters. A <a href="/supreme-court-lawyer-bangladesh" style="color:var(--accent)">Supreme Court lawyer in Bangladesh</a> can file habeas corpus on an emergency basis.</p>`,
+<p>Act without delay. Every hour of unlawful custody matters. A <a href="/services/supreme-court-lawyer" style="color:var(--accent)">Supreme Court lawyer in Bangladesh</a> can file habeas corpus on an emergency basis.</p>`,
             },
             {
                 h2: 'Role of a Lawyer During Remand',
@@ -4226,7 +4226,7 @@ const posts = [
 <li>Request a medical examination if the accused shows signs of physical abuse.</li>
 <li>File a habeas corpus petition in the High Court if the detention is unlawful.</li>
 </ul>
-<p>Advocate Md. Shah Alam has represented clients at remand hearings across Dhaka including urgent matters in the High Court Division. If someone you know is facing remand, <a href="/criminal-lawyer-uttara" style="color:var(--accent)">contact a criminal lawyer in Uttara</a> without waiting.</p>`,
+<p>Advocate Md. Shah Alam has represented clients at remand hearings across Dhaka including urgent matters in the High Court Division. If someone you know is facing remand, <a href="/services/criminal-lawyer" style="color:var(--accent)">contact a criminal lawyer in Uttara</a> without waiting.</p>`,
             },
             {
                 h2: 'Protecting Yourself from Custodial Abuse',
@@ -4252,9 +4252,9 @@ const posts = [
             { question: 'Is a confession given during remand admissible in court?', answer: 'Under Section 164 CrPC, a confessional statement recorded by a Magistrate (not police) may be admissible. Statements made to police during remand are generally inadmissible as evidence of guilt under Section 25 of the Evidence Act.' },
         ],
         relatedServiceLinks: [
-            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-uttara' },
-            { text: 'Bail Lawyer Dhaka', to: '/bail-lawyer-dhaka' },
-            { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
+            { text: 'Criminal Lawyer Uttara', to: '/services/criminal-lawyer' },
+            { text: 'Bail Lawyer Dhaka', to: '/services/bail-lawyer' },
+            { text: 'Supreme Court Lawyer Bangladesh', to: '/services/supreme-court-lawyer' },
         ],
     },
 
@@ -4283,7 +4283,7 @@ const posts = [
             {
                 h2: 'What Is a Criminal Appeal in Bangladesh?',
                 content: `<p>A criminal appeal is a formal legal challenge filed before a higher court, asking it to review and overturn or modify a lower court's decision. In Bangladesh, the right to appeal is created entirely by statute — primarily the <strong>Code of Criminal Procedure 1898 (CrPC)</strong> in Chapter XXXI (Sections 404–431).</p>
-<p>Appeals exist to correct errors of law or fact made by lower courts. They serve as a critical safeguard against wrongful convictions and disproportionate sentences. If you or someone you know has been convicted at a lower court, consulting a <a href="/criminal-lawyer-uttara" style="color:var(--accent)">criminal lawyer in Uttara or Dhaka</a> immediately is the most important first step.</p>`,
+<p>Appeals exist to correct errors of law or fact made by lower courts. They serve as a critical safeguard against wrongful convictions and disproportionate sentences. If you or someone you know has been convicted at a lower court, consulting a <a href="/services/criminal-lawyer" style="color:var(--accent)">criminal lawyer in Uttara or Dhaka</a> immediately is the most important first step.</p>`,
             },
             {
                 h2: 'Who Can File a Criminal Appeal?',
@@ -4305,7 +4305,7 @@ const posts = [
 <li><strong>High Court Division decisions</strong> → Appeal lies (with leave) to the <strong>Appellate Division</strong> of the Bangladesh Supreme Court.</li>
 <li><strong>Special Tribunal decisions</strong> → The specific statute creating the tribunal specifies the appellate forum (e.g., Speedy Trial Tribunal appeals go to the High Court Division).</li>
 </ul>
-<p>For High Court and Appellate Division appeals, an experienced <a href="/supreme-court-lawyer-bangladesh" style="color:var(--accent)">Supreme Court lawyer in Bangladesh</a> is essential.</p>`,
+<p>For High Court and Appellate Division appeals, an experienced <a href="/services/supreme-court-lawyer" style="color:var(--accent)">Supreme Court lawyer in Bangladesh</a> is essential.</p>`,
             },
             {
                 h2: 'Grounds for Filing a Criminal Appeal',
@@ -4335,7 +4335,7 @@ const posts = [
                 content: `<p>Filing a criminal appeal in Bangladesh involves these steps:</p>
 <ol>
 <li>Obtain a certified copy of the lower court's judgment and order — this is mandatory for filing the appeal.</li>
-<li>Instruct a <a href="/criminal-lawyer-uttara" style="color:var(--accent)">criminal lawyer in Dhaka</a> experienced in appellate practice.</li>
+<li>Instruct a <a href="/services/criminal-lawyer" style="color:var(--accent)">criminal lawyer in Dhaka</a> experienced in appellate practice.</li>
 <li>Draft the memorandum of appeal, setting out the grounds of challenge in clear legal terms.</li>
 <li>File the appeal petition with the prescribed court fee in the appropriate appellate court.</li>
 <li>The appellate court issues notice to the respondent (State or complainant).</li>
@@ -4360,7 +4360,7 @@ const posts = [
 <li><strong>Criminal Revision (Sections 435–440 CrPC):</strong> A higher court may call for and examine the records of any lower court's proceeding to correct illegality, impropriety, or irregular exercise of jurisdiction. Revision is available even where no formal appeal right exists.</li>
 <li><strong>Reference (Section 432 CrPC):</strong> A Sessions Judge who disagrees with a Magistrate's sentence or who identifies a legal question may refer the matter to the High Court Division for its opinion.</li>
 </ul>
-<p>Revision is particularly useful where a lower court has committed a clear jurisdictional error or gross injustice that falls outside a standard appeal ground. Consult a <a href="/supreme-court-lawyer-bangladesh" style="color:var(--accent)">Supreme Court advocate</a> to determine the most appropriate remedy for your specific situation.</p>`,
+<p>Revision is particularly useful where a lower court has committed a clear jurisdictional error or gross injustice that falls outside a standard appeal ground. Consult a <a href="/services/supreme-court-lawyer" style="color:var(--accent)">Supreme Court advocate</a> to determine the most appropriate remedy for your specific situation.</p>`,
             },
         ],
         faqs: [
@@ -4374,9 +4374,9 @@ const posts = [
             { question: 'How long does a criminal appeal take in Bangladesh?', answer: 'Sessions Court appeals: 6 months–2 years. High Court Division appeals: 1–5 years depending on the nature of the case and court backlog. Expedited hearing can be requested for urgent cases.' },
         ],
         relatedServiceLinks: [
-            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-uttara' },
-            { text: 'Bail Lawyer Dhaka', to: '/bail-lawyer-dhaka' },
-            { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
+            { text: 'Criminal Lawyer Uttara', to: '/services/criminal-lawyer' },
+            { text: 'Bail Lawyer Dhaka', to: '/services/bail-lawyer' },
+            { text: 'Supreme Court Lawyer Bangladesh', to: '/services/supreme-court-lawyer' },
         ],
     },
 
@@ -4405,7 +4405,7 @@ const posts = [
             {
                 h2: 'What Is the Digital Security Act 2018?',
                 content: `<p>The <strong>Digital Security Act 2018 (DSA)</strong> was enacted by Bangladesh Parliament to address cybercrime, digital fraud, and threats to national security conducted through digital means. However, its broad and vaguely worded provisions — particularly those criminalising online speech — have drawn significant criticism from human rights organisations, press freedom groups, and legal experts.</p>
-<p>The DSA has been used to prosecute individuals for social media posts, online news articles, cartoons, and criticism of public figures. In 2023, the government passed the <strong>Cyber Security Act 2023 (CSA)</strong> to replace the DSA, with some modifications — though many provisions remain similar. Persons arrested under DSA cases filed before the CSA's commencement are still tried under the DSA. Contact a <a href="/criminal-lawyer-uttara" style="color:var(--accent)">criminal lawyer in Dhaka</a> immediately if you or someone you know has been arrested under either law.</p>`,
+<p>The DSA has been used to prosecute individuals for social media posts, online news articles, cartoons, and criticism of public figures. In 2023, the government passed the <strong>Cyber Security Act 2023 (CSA)</strong> to replace the DSA, with some modifications — though many provisions remain similar. Persons arrested under DSA cases filed before the CSA's commencement are still tried under the DSA. Contact a <a href="/services/criminal-lawyer" style="color:var(--accent)">criminal lawyer in Dhaka</a> immediately if you or someone you know has been arrested under either law.</p>`,
             },
             {
                 h2: 'Common Offences Under the DSA',
@@ -4428,7 +4428,7 @@ const posts = [
 <li><strong>Bailable sections</strong> (Sections 25, 29, 48): Bail is a right and must be granted by the court.</li>
 <li><strong>Non-bailable sections</strong> (Sections 17, 19, 21, 27, 28, 31, 32, 33, 34): Bail is discretionary. The accused must apply and convince the court that bail should be granted.</li>
 </ul>
-<p>In practice, prosecutors frequently invoke non-bailable sections — even where the alleged conduct fits bailable provisions — which leads to extended pre-trial custody. A skilled <a href="/bail-lawyer-dhaka" style="color:var(--accent)">bail lawyer in Dhaka</a> can challenge the invocation of non-bailable sections and argue for bail before the Cyber Tribunal or High Court Division.</p>`,
+<p>In practice, prosecutors frequently invoke non-bailable sections — even where the alleged conduct fits bailable provisions — which leads to extended pre-trial custody. A skilled <a href="/services/bail-lawyer" style="color:var(--accent)">bail lawyer in Dhaka</a> can challenge the invocation of non-bailable sections and argue for bail before the Cyber Tribunal or High Court Division.</p>`,
             },
             {
                 h2: 'Arrest Procedure Under the DSA',
@@ -4450,7 +4450,7 @@ const posts = [
 <li>If the Tribunal refuses bail, apply to the <strong>High Court Division</strong> — which has broader discretion to grant bail in non-bailable DSA cases.</li>
 <li>In arguements, highlight: the accused's ties to the community, no flight risk, lack of prior criminal record, the disproportionate severity of the charge relative to the alleged act, and whether the alleged content is genuinely harmful or merely critical speech.</li>
 </ol>
-<p>Bail in DSA cases — particularly at the Cyber Tribunal level — is often denied at first hearing. Persisting through to the High Court Division is frequently necessary. An experienced <a href="/supreme-court-lawyer-bangladesh" style="color:var(--accent)">Supreme Court lawyer in Bangladesh</a> is often required for High Court bail in DSA cases.</p>`,
+<p>Bail in DSA cases — particularly at the Cyber Tribunal level — is often denied at first hearing. Persisting through to the High Court Division is frequently necessary. An experienced <a href="/services/supreme-court-lawyer" style="color:var(--accent)">Supreme Court lawyer in Bangladesh</a> is often required for High Court bail in DSA cases.</p>`,
             },
             {
                 h2: 'Challenging a DSA Case: Legal Strategies',
@@ -4462,7 +4462,7 @@ const posts = [
 <li><strong>Challenging digital evidence:</strong> Contesting the authenticity, chain of custody, and integrity of the digital evidence produced by prosecution.</li>
 <li><strong>Defence at trial:</strong> Challenging the prosecution's witnesses, disputing authorship of the alleged content, or arguing lack of criminal intent (mens rea).</li>
 </ul>
-<p>The legal strategy must be tailored to the specific facts of each case. Contact a <a href="/criminal-lawyer-uttara" style="color:var(--accent)">criminal lawyer in Dhaka or Uttara</a> for a case-specific assessment.</p>`,
+<p>The legal strategy must be tailored to the specific facts of each case. Contact a <a href="/services/criminal-lawyer" style="color:var(--accent)">criminal lawyer in Dhaka or Uttara</a> for a case-specific assessment.</p>`,
             },
             {
                 h2: 'Cyber Tribunal: Where DSA Cases Are Tried',
@@ -4498,9 +4498,9 @@ const posts = [
             { question: 'What should I do if police contact me about a DSA complaint?', answer: 'Do not make any statement without consulting a lawyer first. Contact a criminal lawyer in Dhaka immediately to assess your exposure and take protective legal steps.' },
         ],
         relatedServiceLinks: [
-            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-uttara' },
-            { text: 'Bail Lawyer Dhaka', to: '/bail-lawyer-dhaka' },
-            { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
+            { text: 'Criminal Lawyer Uttara', to: '/services/criminal-lawyer' },
+            { text: 'Bail Lawyer Dhaka', to: '/services/bail-lawyer' },
+            { text: 'Supreme Court Lawyer Bangladesh', to: '/services/supreme-court-lawyer' },
         ],
     },
 
@@ -4529,7 +4529,7 @@ const posts = [
             {
                 h2: 'Narcotics Law Framework in Bangladesh',
                 content: `<p>Narcotics offences in Bangladesh are primarily governed by the <strong>Narcotics Control Act 1990 (NCA 1990)</strong>, the <strong>Bangladesh Narcotics Control Act (BNCA)</strong> as amended, and related regulations issued by the Department of Narcotics Control under the Home Ministry. The law takes an extremely serious view of drug-related offences — reflecting a zero-tolerance policy towards production, trafficking, and distribution of controlled substances.</p>
-<p>The Act covers a broad range of activities including production, processing, transportation, import, export, sale, purchase, storage, possession, and consumption of narcotics. Penalties vary significantly depending on the type and quantity of substance involved and the nature of the accused's role. If someone you know has been arrested, contact a <a href="/criminal-lawyer-uttara" style="color:var(--accent)">criminal lawyer in Dhaka or Uttara</a> without delay.</p>`,
+<p>The Act covers a broad range of activities including production, processing, transportation, import, export, sale, purchase, storage, possession, and consumption of narcotics. Penalties vary significantly depending on the type and quantity of substance involved and the nature of the accused's role. If someone you know has been arrested, contact a <a href="/services/criminal-lawyer" style="color:var(--accent)">criminal lawyer in Dhaka or Uttara</a> without delay.</p>`,
             },
             {
                 h2: 'Types of Narcotics Offences and Penalties',
@@ -4551,7 +4551,7 @@ const posts = [
 <li><strong>Non-bailable:</strong> Trafficking, production, financing, and large-quantity possession offences. Bail is at the court's discretion and denied in many serious cases at the trial court level.</li>
 <li><strong>Bailable:</strong> Minor possession and consumption offences — bail is a right.</li>
 </ul>
-<p>In practice, police frequently charge accused persons with the most serious sections even in ambiguous cases. A skilled <a href="/bail-lawyer-dhaka" style="color:var(--accent)">bail lawyer in Dhaka</a> will challenge the section invoked and argue that the facts support a less serious, bailable characterisation of the offence.</p>`,
+<p>In practice, police frequently charge accused persons with the most serious sections even in ambiguous cases. A skilled <a href="/services/bail-lawyer" style="color:var(--accent)">bail lawyer in Dhaka</a> will challenge the section invoked and argue that the facts support a less serious, bailable characterisation of the offence.</p>`,
             },
             {
                 h2: 'Arrest and Remand in Narcotics Cases',
@@ -4576,7 +4576,7 @@ const posts = [
 <li>There is a strong prima facie argument that the accused was wrongly implicated (e.g., framed, substance planted).</li>
 <li>The investigation is largely complete and there is no risk of evidence tampering.</li>
 </ul>
-<p>Applications refused at the Narcotics Tribunal level can be taken to the <a href="/supreme-court-lawyer-bangladesh" style="color:var(--accent)">High Court Division</a>. Perseverance and quality of legal argument are key to success in narcotics bail applications.</p>`,
+<p>Applications refused at the Narcotics Tribunal level can be taken to the <a href="/services/supreme-court-lawyer" style="color:var(--accent)">High Court Division</a>. Perseverance and quality of legal argument are key to success in narcotics bail applications.</p>`,
             },
             {
                 h2: 'Key Legal Defences in Narcotics Cases',
@@ -4612,7 +4612,7 @@ const posts = [
 <li>Obtain certified copies of all documents and cross-examine prosecution witnesses effectively at trial.</li>
 <li>If convicted, immediately evaluate the grounds for appeal and apply for suspension of sentence.</li>
 </ul>
-<p>Advocate Md. Shah Alam has represented clients in criminal cases in Dhaka courts for over 7 years, including matters before specialised tribunals. If you are dealing with a narcotics case, <a href="/criminal-lawyer-uttara" style="color:var(--accent)">contact our office in Uttara, Dhaka</a> for an immediate consultation.</p>`,
+<p>Advocate Md. Shah Alam has represented clients in criminal cases in Dhaka courts for over 7 years, including matters before specialised tribunals. If you are dealing with a narcotics case, <a href="/services/criminal-lawyer" style="color:var(--accent)">contact our office in Uttara, Dhaka</a> for an immediate consultation.</p>`,
             },
         ],
         faqs: [
@@ -4626,9 +4626,9 @@ const posts = [
             { question: 'Are DNC raids different from police raids?', answer: 'Both police and DNC officers have arrest and search powers under the NCA 1990. DNC raids are specific to narcotics matters and DNC officers are trained narcotics investigators.' },
         ],
         relatedServiceLinks: [
-            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-uttara' },
-            { text: 'Bail Lawyer Dhaka', to: '/bail-lawyer-dhaka' },
-            { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
+            { text: 'Criminal Lawyer Uttara', to: '/services/criminal-lawyer' },
+            { text: 'Bail Lawyer Dhaka', to: '/services/bail-lawyer' },
+            { text: 'Supreme Court Lawyer Bangladesh', to: '/services/supreme-court-lawyer' },
         ],
     },
 
@@ -4657,7 +4657,7 @@ const posts = [
             {
                 h2: 'What Is a Power of Attorney in Bangladesh Law?',
                 content: `<p>A <strong>Power of Attorney (POA)</strong> is a legal document through which one person (the <em>principal</em> or <em>donor</em>) authorises another person (the <em>attorney</em> or <em>donee</em>) to act on their behalf in specified legal matters. In the context of land and property, a POA authorises the attorney to sign deeds, execute sale agreements, receive payments, or take possession of land on the principal's behalf.</p>
-<p>In Bangladesh, Powers of Attorney relating to immovable property must comply with the <strong>Power of Attorney Act 2012</strong>, the <strong>Registration Act 1908</strong>, and the <strong>Stamp Act 1899</strong>. An improperly executed or unregistered POA cannot be used for property transactions. For guidance specific to your situation, consult a <a href="/land-property-lawyer-uttara" style="color:var(--accent)">land and property lawyer in Dhaka or Uttara</a>.</p>`,
+<p>In Bangladesh, Powers of Attorney relating to immovable property must comply with the <strong>Power of Attorney Act 2012</strong>, the <strong>Registration Act 1908</strong>, and the <strong>Stamp Act 1899</strong>. An improperly executed or unregistered POA cannot be used for property transactions. For guidance specific to your situation, consult a <a href="/services/land-lawyer" style="color:var(--accent)">land and property lawyer in Dhaka or Uttara</a>.</p>`,
             },
             {
                 h2: 'Types of Power of Attorney for Land',
@@ -4699,7 +4699,7 @@ const posts = [
 <li>The original attested document is sent to Bangladesh (by courier or through a trusted person).</li>
 <li>The attorney registers the POA at the relevant <strong>Sub-Registrar's office</strong> in Bangladesh, on the appropriate stamp paper.</li>
 </ol>
-<p>The entire process typically takes 2–4 weeks. For urgent land transactions, it is possible to expedite Embassy attestation at some missions. Contact a <a href="/land-property-lawyer-uttara" style="color:var(--accent)">property lawyer in Dhaka</a> to prepare the correct document before the NRB executes.</p>`,
+<p>The entire process typically takes 2–4 weeks. For urgent land transactions, it is possible to expedite Embassy attestation at some missions. Contact a <a href="/services/land-lawyer" style="color:var(--accent)">property lawyer in Dhaka</a> to prepare the correct document before the NRB executes.</p>`,
             },
             {
                 h2: 'What an Attorney Can and Cannot Do',
@@ -4736,7 +4736,7 @@ const posts = [
 <li>Conduct periodic checks of the land mutation records and Registration Office records to detect any unauthorised transfers.</li>
 <li>Consider requiring that any sale proceeds be deposited directly into your bank account abroad.</li>
 </ul>
-<p>If you discover that your POA has been misused, immediately <a href="/land-property-lawyer-uttara" style="color:var(--accent)">consult a land and property lawyer</a> to cancel the POA, challenge the fraudulent deed, and file the appropriate legal actions.</p>`,
+<p>If you discover that your POA has been misused, immediately <a href="/services/land-lawyer" style="color:var(--accent)">consult a land and property lawyer</a> to cancel the POA, challenge the fraudulent deed, and file the appropriate legal actions.</p>`,
             },
             {
                 h2: 'Cancelling a Power of Attorney',
@@ -4761,9 +4761,9 @@ const posts = [
             { question: 'Do I need a lawyer to draft a Power of Attorney?', answer: 'Legally you don\'t have to, but given the risks involved in property POAs, professional legal drafting is strongly recommended to ensure the document is correctly worded, registered, and limited to safe parameters.' },
         ],
         relatedServiceLinks: [
-            { text: 'Land & Property Lawyer Uttara', to: '/land-property-lawyer-uttara' },
-            { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
-            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-uttara' },
+            { text: 'Land & Property Lawyer Uttara', to: '/services/land-lawyer' },
+            { text: 'Supreme Court Lawyer Bangladesh', to: '/services/supreme-court-lawyer' },
+            { text: 'Criminal Lawyer Uttara', to: '/services/criminal-lawyer' },
         ],
     },
 
@@ -4792,7 +4792,7 @@ const posts = [
             {
                 h2: 'Why Legal Due Diligence Is Essential for Flat Buyers',
                 content: `<p>Bangladesh's real estate market — particularly in Dhaka and Uttara — has grown dramatically over the past two decades. With this growth has come a significant number of disputes: developers selling flats on land they do not own, buildings constructed without RAJUK approval, buyer agreements weighted entirely in the developer's favour, and titles disputed by the original landowners or heirs.</p>
-<p>Legal due diligence before signing any agreement or making any payment is not optional — it is essential self-protection. A <a href="/land-property-lawyer-uttara" style="color:var(--accent)">property lawyer in Dhaka or Uttara</a> can conduct a full title search and agreement review for a fraction of the financial risk involved in buying blind.</p>`,
+<p>Legal due diligence before signing any agreement or making any payment is not optional — it is essential self-protection. A <a href="/services/land-lawyer" style="color:var(--accent)">property lawyer in Dhaka or Uttara</a> can conduct a full title search and agreement review for a fraction of the financial risk involved in buying blind.</p>`,
             },
             {
                 h2: 'Step 1: Verify the Land Title of the Project',
@@ -4862,7 +4862,7 @@ const posts = [
 <li>The deed must describe the flat precisely — apartment number, floor, building name, plot number, and mouza information.</li>
 <li>After registration, keep the original registered deed in a safe place — it is your primary evidence of ownership.</li>
 </ul>
-<p>Never accept delivery of a flat without ensuring the registered deed is in your name. Taking possession without a registered deed leaves you legally vulnerable. A <a href="/land-property-lawyer-uttara" style="color:var(--accent)">property lawyer in Dhaka</a> will handle the entire registration process on your behalf.</p>`,
+<p>Never accept delivery of a flat without ensuring the registered deed is in your name. Taking possession without a registered deed leaves you legally vulnerable. A <a href="/services/land-lawyer" style="color:var(--accent)">property lawyer in Dhaka</a> will handle the entire registration process on your behalf.</p>`,
             },
             {
                 h2: 'Step 7: Post-Purchase — Mutation and Utility Transfer',
@@ -4886,9 +4886,9 @@ const posts = [
             { question: 'Is it safe to buy a flat in an under-construction building?', answer: 'It can be safe if proper due diligence is done: verified land title, RAJUK approval, reputable developer, registered Baina, and phased payment linked to construction milestones. Without these checks, pre-construction purchases carry significant risk.' },
         ],
         relatedServiceLinks: [
-            { text: 'Land & Property Lawyer Uttara', to: '/land-property-lawyer-uttara' },
-            { text: 'Supreme Court Lawyer Bangladesh', to: '/supreme-court-lawyer-bangladesh' },
-            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-uttara' },
+            { text: 'Land & Property Lawyer Uttara', to: '/services/land-lawyer' },
+            { text: 'Supreme Court Lawyer Bangladesh', to: '/services/supreme-court-lawyer' },
+            { text: 'Criminal Lawyer Uttara', to: '/services/criminal-lawyer' },
         ],
     },
 
@@ -4917,7 +4917,7 @@ const posts = [
             {
                 h2: 'What is Heba in Bangladesh Law?',
                 content: `<p><strong>Heba</strong> (Arabic: هبة) is an immediate, unconditional gift of property made by one person (the donor, or <em>wahib</em>) to another (the donee, or <em>mawhublahu</em>) during the donor's lifetime, with the intention of permanently transferring ownership. Unlike a Will, Heba takes effect immediately and does not wait for the donor's death.</p>
-<p>In Bangladesh, Heba is governed by principles of Muslim personal law (primarily from the Hedaya and Fatawa-e-Alamgiri), as well as the <strong>Transfer of Property Act 1882</strong> and <strong>Registration Act 1908</strong>. For non-Muslims, gifts of immovable property are known simply as "Gift Deeds" governed by the Transfer of Property Act. Before making any gift of property, consult a <a href="/land-property-lawyer-uttara" style="color:var(--accent)">property lawyer in Dhaka</a> to ensure the transfer is legally secure.</p>`,
+<p>In Bangladesh, Heba is governed by principles of Muslim personal law (primarily from the Hedaya and Fatawa-e-Alamgiri), as well as the <strong>Transfer of Property Act 1882</strong> and <strong>Registration Act 1908</strong>. For non-Muslims, gifts of immovable property are known simply as "Gift Deeds" governed by the Transfer of Property Act. Before making any gift of property, consult a <a href="/services/land-lawyer" style="color:var(--accent)">property lawyer in Dhaka</a> to ensure the transfer is legally secure.</p>`,
             },
             {
                 h2: 'Legal Requirements for a Valid Heba',
@@ -4966,7 +4966,7 @@ const posts = [
 <li>Present supporting documents: original title deed, mutation records, NID cards of both parties.</li>
 <li>Collect the registered Heba deed — this is the donee's primary evidence of ownership.</li>
 </ol>
-<p>After registration, the donee should apply for <strong>mutation (Namjari)</strong> to update the land records in their name. A <a href="/land-property-lawyer-uttara" style="color:var(--accent)">property lawyer</a> can handle the entire process seamlessly.</p>`,
+<p>After registration, the donee should apply for <strong>mutation (Namjari)</strong> to update the land records in their name. A <a href="/services/land-lawyer" style="color:var(--accent)">property lawyer</a> can handle the entire process seamlessly.</p>`,
             },
             {
                 h2: 'When Can a Heba Be Revoked or Challenged?',
@@ -4981,7 +4981,7 @@ const posts = [
 <li>A spouse (during marriage)</li>
 <li>In consideration of marriage (mehr-related gifts)</li>
 </ul>
-<p>Fraudulent or coerced Heba deeds can be challenged in Civil Court. Common grounds include: donor lacked mental capacity, signature forged, donor was under undue influence, or property was gifted twice to different people. If you suspect a fraudulent Heba was registered on your property, contact an <a href="/land-property-lawyer-uttara" style="color:var(--accent)">Uttara property lawyer</a> immediately.</p>`,
+<p>Fraudulent or coerced Heba deeds can be challenged in Civil Court. Common grounds include: donor lacked mental capacity, signature forged, donor was under undue influence, or property was gifted twice to different people. If you suspect a fraudulent Heba was registered on your property, contact an <a href="/services/land-lawyer" style="color:var(--accent)">Uttara property lawyer</a> immediately.</p>`,
             },
             {
                 h2: 'Role of a Property Lawyer in Heba Transfers',
@@ -4993,7 +4993,7 @@ const posts = [
 <li>Apply for mutation (Namjari) to update government land records.</li>
 <li>Advise on gift tax implications and stamp duty optimization.</li>
 </ul>
-<p>Advocate Md. Shah Alam has handled numerous Heba and gift deed registrations across Dhaka and Uttara. <a href="/land-property-lawyer-uttara" style="color:var(--accent)">Contact our office</a> for a consultation before your property transfer.</p>`,
+<p>Advocate Md. Shah Alam has handled numerous Heba and gift deed registrations across Dhaka and Uttara. <a href="/services/land-lawyer" style="color:var(--accent)">Contact our office</a> for a consultation before your property transfer.</p>`,
             },
         ],
         faqs: [
@@ -5004,8 +5004,8 @@ const posts = [
             { question: 'Can Heba be made of mortgaged property?', answer: 'Heba of mortgaged property is permitted but the mortgage liability accompanies the property to the donee unless the donor discharges the mortgage first.' },
         ],
         relatedServiceLinks: [
-            { text: 'Property Lawyer Uttara', to: '/land-property-lawyer-uttara' },
-            { text: 'Supreme Court Lawyer', to: '/supreme-court-lawyer-dhaka' },
+            { text: 'Property Lawyer Uttara', to: '/services/land-lawyer' },
+            { text: 'Supreme Court Lawyer', to: '/services/supreme-court-lawyer' },
         ],
     },
 
@@ -5034,7 +5034,7 @@ const posts = [
             {
                 h2: 'What is the Artha Rin Adalat?',
                 content: `<p>The <strong>Artha Rin Adalat</strong> (Money Loan Court) is a specialized civil court established under the <strong>Artha Rin Adalat Ain 2003</strong> to handle loan recovery suits by banks and financial institutions. Before this law, lenders had to pursue recovery through regular civil courts — a process that could take decades. The Artha Rin Adalat creates a faster, streamlined procedure specifically for financial institutions.</p>
-<p>If you are a defaulting borrower served with an Artha Rin Adalat summons — or a creditor considering filing a suit — consult an experienced <a href="/civil-lawyer-dhaka" style="color:var(--accent)">civil lawyer in Dhaka</a> without delay.</p>`,
+<p>If you are a defaulting borrower served with an Artha Rin Adalat summons — or a creditor considering filing a suit — consult an experienced <a href="/services/criminal-lawyer" style="color:var(--accent)">civil lawyer in Dhaka</a> without delay.</p>`,
             },
             {
                 h2: 'Who Can File in Artha Rin Adalat?',
@@ -5070,7 +5070,7 @@ const posts = [
 <li>Attachment of vehicles, machinery, and business assets</li>
 <li>Receiver appointed over a business to protect assets</li>
 </ul>
-<p>Attachment orders can be applied ex parte (without hearing the borrower first) in urgent cases. A defendant facing attachment must respond immediately — contact a <a href="/civil-lawyer-dhaka" style="color:var(--accent)">civil lawyer</a> to apply to vacate the attachment order.</p>`,
+<p>Attachment orders can be applied ex parte (without hearing the borrower first) in urgent cases. A defendant facing attachment must respond immediately — contact a <a href="/services/criminal-lawyer" style="color:var(--accent)">civil lawyer</a> to apply to vacate the attachment order.</p>`,
             },
             {
                 h2: 'Defending Against an Artha Rin Adalat Suit',
@@ -5091,7 +5091,7 @@ const posts = [
 <li>An appellant (borrower) may be required to deposit 50% of the decreed amount before the appeal is admitted.</li>
 <li>This deposit requirement can be waived in exceptional circumstances — an experienced Supreme Court lawyer can apply for this.</li>
 </ul>
-<p>Appeals in Artha Rin matters are handled exclusively by the High Court Division. Advocate Md. Shah Alam represents clients in both Artha Rin Adalat proceedings and High Court appeals. <a href="/civil-lawyer-dhaka" style="color:var(--accent)">Contact us</a> for urgent assistance.</p>`,
+<p>Appeals in Artha Rin matters are handled exclusively by the High Court Division. Advocate Md. Shah Alam represents clients in both Artha Rin Adalat proceedings and High Court appeals. <a href="/services/criminal-lawyer" style="color:var(--accent)">Contact us</a> for urgent assistance.</p>`,
             },
         ],
         faqs: [
@@ -5102,8 +5102,8 @@ const posts = [
             { question: 'Can I negotiate a settlement with the bank after the suit is filed?', answer: 'Yes. Settlement is possible at any stage of Artha Rin proceedings. Many banks prefer negotiated settlement over lengthy litigation. A lawyer can negotiate on your behalf.' },
         ],
         relatedServiceLinks: [
-            { text: 'Civil Lawyer Dhaka', to: '/civil-lawyer-dhaka' },
-            { text: 'Supreme Court Lawyer', to: '/supreme-court-lawyer-dhaka' },
+            { text: 'Civil Lawyer Dhaka', to: '/services/criminal-lawyer' },
+            { text: 'Supreme Court Lawyer', to: '/services/supreme-court-lawyer' },
         ],
     },
 
@@ -5132,7 +5132,7 @@ const posts = [
             {
                 h2: 'Contract Law in Bangladesh: The Basics',
                 content: `<p>Contract law in Bangladesh is governed primarily by the <strong>Contract Act 1872</strong> — a comprehensive law that defines valid contracts, conditions for enforceability, and consequences of breach. For property-related contracts (sale deeds, lease agreements, development agreements), the <strong>Transfer of Property Act 1882</strong> and <strong>Specific Relief Act 1877</strong> also apply.</p>
-<p>A valid contract requires: offer, acceptance, consideration, capacity of parties, free consent, and lawful object. Any breach of a valid contract entitles the aggrieved party to seek legal remedies. Contact an experienced <a href="/civil-lawyer-dhaka" style="color:var(--accent)">civil lawyer in Dhaka</a> to assess which remedy applies to your situation.</p>`,
+<p>A valid contract requires: offer, acceptance, consideration, capacity of parties, free consent, and lawful object. Any breach of a valid contract entitles the aggrieved party to seek legal remedies. Contact an experienced <a href="/services/criminal-lawyer" style="color:var(--accent)">civil lawyer in Dhaka</a> to assess which remedy applies to your situation.</p>`,
             },
             {
                 h2: 'What Constitutes a Breach of Contract?',
@@ -5165,7 +5165,7 @@ const posts = [
 <li>A valid and enforceable contract exists between the parties.</li>
 <li>The plaintiff was ready and willing to perform their side of the contract.</li>
 </ul>
-<p>In Dhaka property disputes, specific performance suits are extremely common — where a developer or seller has taken payment but refuses to execute the deed. A <a href="/civil-lawyer-dhaka" style="color:var(--accent)">Dhaka civil lawyer</a> experienced in property suits is essential for these cases.</p>`,
+<p>In Dhaka property disputes, specific performance suits are extremely common — where a developer or seller has taken payment but refuses to execute the deed. A <a href="/services/criminal-lawyer" style="color:var(--accent)">Dhaka civil lawyer</a> experienced in property suits is essential for these cases.</p>`,
             },
             {
                 h2: 'When Can Specific Performance Be Refused?',
@@ -5201,9 +5201,9 @@ const posts = [
             { question: 'Can I get an urgent court order to stop someone from breaching a contract?', answer: 'Yes. You can apply for a temporary injunction (under Order 39 CPC) at the same time as filing the suit to prevent the defendant from acting contrary to the contract while the case is pending.' },
         ],
         relatedServiceLinks: [
-            { text: 'Civil Lawyer Dhaka', to: '/civil-lawyer-dhaka' },
-            { text: 'Property Lawyer Uttara', to: '/land-property-lawyer-uttara' },
-            { text: 'Supreme Court Lawyer', to: '/supreme-court-lawyer-dhaka' },
+            { text: 'Civil Lawyer Dhaka', to: '/services/criminal-lawyer' },
+            { text: 'Property Lawyer Uttara', to: '/services/land-lawyer' },
+            { text: 'Supreme Court Lawyer', to: '/services/supreme-court-lawyer' },
         ],
     },
 
@@ -5232,7 +5232,7 @@ const posts = [
             {
                 h2: 'What is an Injunction in Bangladesh Law?',
                 content: `<p>An injunction is a judicial order requiring a party to do (or refrain from doing) a specific act. In Bangladesh, injunctions are governed by the <strong>Specific Relief Act 1877 (Sections 52–57)</strong> for perpetual injunctions, and the <strong>Code of Civil Procedure 1908 (Order 39)</strong> for temporary injunctions.</p>
-<p>Injunctions are equitable remedies — courts grant them at their discretion when they determine that ordinary monetary remedies would be inadequate or that irreparable harm would result without the order. Contact a <a href="/civil-lawyer-dhaka" style="color:var(--accent)">civil lawyer in Dhaka</a> immediately if you need urgent injunctive relief.</p>`,
+<p>Injunctions are equitable remedies — courts grant them at their discretion when they determine that ordinary monetary remedies would be inadequate or that irreparable harm would result without the order. Contact a <a href="/services/criminal-lawyer" style="color:var(--accent)">civil lawyer in Dhaka</a> immediately if you need urgent injunctive relief.</p>`,
             },
             {
                 h2: 'Types of Injunctions Available in Bangladesh',
@@ -5271,7 +5271,7 @@ const posts = [
 <li><strong>Court hearing:</strong> The court can hear both parties (inter partes) or issue an ex parte order if the case is urgent.</li>
 <li><strong>Show Cause:</strong> If an ex parte order is granted, the defendant is given a date to appear and show cause why the injunction should not continue.</li>
 </ol>
-<p>A <a href="/civil-lawyer-dhaka" style="color:var(--accent)">Dhaka civil lawyer</a> can prepare and file an injunction application on an emergency basis — sometimes within a single day when the urgency is dire.</p>`,
+<p>A <a href="/services/criminal-lawyer" style="color:var(--accent)">Dhaka civil lawyer</a> can prepare and file an injunction application on an emergency basis — sometimes within a single day when the urgency is dire.</p>`,
             },
             {
                 h2: 'Consequences of Breaching an Injunction Order',
@@ -5282,7 +5282,7 @@ const posts = [
 <li>Attachment and sale of assets</li>
 <li>In property cases: the breaching construction may be ordered demolished</li>
 </ul>
-<p>If someone is defying an existing court injunction order against you, apply immediately to the court that issued the order to initiate contempt proceedings. <a href="/civil-lawyer-dhaka" style="color:var(--accent)">Our civil lawyers</a> handle urgent contempt applications in Dhaka civil courts.</p>`,
+<p>If someone is defying an existing court injunction order against you, apply immediately to the court that issued the order to initiate contempt proceedings. <a href="/services/criminal-lawyer" style="color:var(--accent)">Our civil lawyers</a> handle urgent contempt applications in Dhaka civil courts.</p>`,
             },
         ],
         faqs: [
@@ -5293,9 +5293,9 @@ const posts = [
             { question: 'How long does a temporary injunction last?', answer: 'A temporary injunction remains in force until the final disposal of the suit, unless vacated earlier by the court on an application by either party.' },
         ],
         relatedServiceLinks: [
-            { text: 'Civil Lawyer Dhaka', to: '/civil-lawyer-dhaka' },
-            { text: 'Property Lawyer Uttara', to: '/land-property-lawyer-uttara' },
-            { text: 'Supreme Court Lawyer', to: '/supreme-court-lawyer-dhaka' },
+            { text: 'Civil Lawyer Dhaka', to: '/services/criminal-lawyer' },
+            { text: 'Property Lawyer Uttara', to: '/services/land-lawyer' },
+            { text: 'Supreme Court Lawyer', to: '/services/supreme-court-lawyer' },
         ],
     },
 
@@ -5325,7 +5325,7 @@ const posts = [
             {
                 h2: 'Does Bangladesh Allow Formal Adoption?',
                 content: `<p>The short answer is: <strong>not for Muslims</strong>. Bangladesh does not have a civil adoption law that applies to Muslims. Under Islamic jurisprudence (which governs Muslim personal law in Bangladesh), formal adoption — where a child is legally treated as the biological child and heir of the adopting parents — is not recognized.</p>
-<p>However, <strong>non-Muslims</strong> (Hindus, Christians, and Buddhists) in Bangladesh can adopt through specific personal laws. And for both Muslims and non-Muslims, the <strong>Guardians and Wards Act 1890</strong> provides a mechanism for legal guardianship that gives significant parental rights without formal adoption. Consult a <a href="/divorce-family-lawyer-uttara" style="color:var(--accent)">family lawyer in Dhaka</a> for advice specific to your circumstances.</p>`,
+<p>However, <strong>non-Muslims</strong> (Hindus, Christians, and Buddhists) in Bangladesh can adopt through specific personal laws. And for both Muslims and non-Muslims, the <strong>Guardians and Wards Act 1890</strong> provides a mechanism for legal guardianship that gives significant parental rights without formal adoption. Consult a <a href="/services/divorce-lawyer" style="color:var(--accent)">family lawyer in Dhaka</a> for advice specific to your circumstances.</p>`,
             },
             {
                 h2: 'Kafala: The Islamic Alternative',
@@ -5360,7 +5360,7 @@ const posts = [
 <li>If satisfied that guardianship is in the child's best interest, the court passes an order appointing the guardians.</li>
 <li>The guardian must report periodically to the court on the child's welfare.</li>
 </ol>
-<p>The entire process can take 3–6 months. A <a href="/divorce-family-lawyer-uttara" style="color:var(--accent)">family lawyer</a> will handle the petition and represent you before the Family Court.</p>`,
+<p>The entire process can take 3–6 months. A <a href="/services/divorce-lawyer" style="color:var(--accent)">family lawyer</a> will handle the petition and represent you before the Family Court.</p>`,
             },
             {
                 h2: 'Adoption by Non-Muslims in Bangladesh',
@@ -5391,8 +5391,8 @@ const posts = [
             { question: 'Can the biological parents take back the child after guardianship is granted?', answer: 'Biological parents can apply to the court to revoke or vary the guardianship order. The court will consider the child\'s best interests in determining the matter.' },
         ],
         relatedServiceLinks: [
-            { text: 'Family Lawyer Uttara', to: '/divorce-family-lawyer-uttara' },
-            { text: 'Supreme Court Lawyer', to: '/supreme-court-lawyer-dhaka' },
+            { text: 'Family Lawyer Uttara', to: '/services/divorce-lawyer' },
+            { text: 'Supreme Court Lawyer', to: '/services/supreme-court-lawyer' },
         ],
     },
 
@@ -5428,7 +5428,7 @@ const posts = [
 <li>The Council determines whether the second marriage is necessary and just.</li>
 <li>Only after receiving a <strong>Certificate of Permission</strong> from the Council may the second Nikah proceed.</li>
 </ul>
-<p>For legal advice on your specific situation, consult a <a href="/divorce-family-lawyer-uttara" style="color:var(--accent)">family lawyer in Dhaka</a>.</p>`,
+<p>For legal advice on your specific situation, consult a <a href="/services/divorce-lawyer" style="color:var(--accent)">family lawyer in Dhaka</a>.</p>`,
             },
             {
                 h2: 'Consequences of Marrying Without Permission',
@@ -5460,7 +5460,7 @@ const posts = [
 <li>Immediately file for divorce on the grounds of the unauthorized second marriage.</li>
 <li>Demand full payment of her dower.</li>
 </ul>
-<p>A <a href="/divorce-family-lawyer-uttara" style="color:var(--accent)">Dhaka family lawyer</a> can help a first wife assert all these rights promptly and effectively.</p>`,
+<p>A <a href="/services/divorce-lawyer" style="color:var(--accent)">Dhaka family lawyer</a> can help a first wife assert all these rights promptly and effectively.</p>`,
             },
             {
                 h2: 'Maintenance and Dower After Second Marriage',
@@ -5481,8 +5481,8 @@ const posts = [
             { question: 'Can a husband grant the first wife divorce rights in the Nikahnama before the second marriage question arises?', answer: 'Yes. Including delegated divorce rights (Talaq-e-Tafwid) in the Nikahnama at the time of the first marriage is a standard legal protection that gives the wife autonomy if the husband takes a second wife.' },
         ],
         relatedServiceLinks: [
-            { text: 'Family Lawyer Uttara', to: '/divorce-family-lawyer-uttara' },
-            { text: 'Supreme Court Lawyer', to: '/supreme-court-lawyer-dhaka' },
+            { text: 'Family Lawyer Uttara', to: '/services/divorce-lawyer' },
+            { text: 'Supreme Court Lawyer', to: '/services/supreme-court-lawyer' },
         ],
     },
 
@@ -5511,7 +5511,7 @@ const posts = [
             {
                 h2: 'The Domestic Violence Act 2010 in Bangladesh',
                 content: `<p>The <strong>Domestic Violence (Prevention and Protection) Act 2010</strong> is Bangladesh's primary legislation addressing domestic abuse. It provides civil remedies — protection orders, residence orders, and monetary relief — that are separate from (though can be combined with) criminal action. The Act is administered through designated courts, typically the Executive Magistrate or Family Court.</p>
-<p>If you or a family member is in immediate danger, contact the police (999) or a <a href="/divorce-family-lawyer-uttara" style="color:var(--accent)">family lawyer in Dhaka</a> immediately. Legal protection is available quickly under this Act.</p>`,
+<p>If you or a family member is in immediate danger, contact the police (999) or a <a href="/services/divorce-lawyer" style="color:var(--accent)">family lawyer in Dhaka</a> immediately. Legal protection is available quickly under this Act.</p>`,
             },
             {
                 h2: 'What Constitutes Domestic Violence Under Bangladesh Law?',
@@ -5544,7 +5544,7 @@ const posts = [
 <li><strong>Court hearing:</strong> The court will summon the respondent. In urgent cases, an interim order can be issued the same day without hearing the respondent first.</li>
 <li><strong>Final order:</strong> After hearing both parties, the court passes a final protection order if the complaint is substantiated.</li>
 </ol>
-<p>A <a href="/divorce-family-lawyer-uttara" style="color:var(--accent)">Dhaka family lawyer</a> can prepare and file the application and represent you in court — protecting you from having to face the abuser alone in court.</p>`,
+<p>A <a href="/services/divorce-lawyer" style="color:var(--accent)">Dhaka family lawyer</a> can prepare and file the application and represent you in court — protecting you from having to face the abuser alone in court.</p>`,
             },
             {
                 h2: 'Emergency Protection Orders: Immediate Relief',
@@ -5559,7 +5559,7 @@ const posts = [
 <li><strong>Case under Nari O Shishu Nirjatan Daman Ain 2000</strong> for dowry-related violence and sexual offences.</li>
 <li><strong>Case under Sections 4 and 6 of the Dowry Prohibition Act 1980</strong> for dowry demands and related violence.</li>
 </ul>
-<p>Filing parallel civil (protection order) and criminal (police case) proceedings provides maximum legal protection. Both tracks can be pursued simultaneously. Contact our <a href="/divorce-family-lawyer-uttara" style="color:var(--accent)">Uttara family law office</a> for a confidential consultation.</p>`,
+<p>Filing parallel civil (protection order) and criminal (police case) proceedings provides maximum legal protection. Both tracks can be pursued simultaneously. Contact our <a href="/services/divorce-lawyer" style="color:var(--accent)">Uttara family law office</a> for a confidential consultation.</p>`,
             },
         ],
         faqs: [
@@ -5570,9 +5570,9 @@ const posts = [
             { question: 'Do I need a lawyer to apply for a protection order?', answer: 'It is not legally required but strongly recommended. A family lawyer can ensure the application is properly drafted, evidence is organized, and you are protected from having to face the respondent alone in court.' },
         ],
         relatedServiceLinks: [
-            { text: 'Family Lawyer Uttara', to: '/divorce-family-lawyer-uttara' },
-            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-uttara' },
-            { text: 'Supreme Court Lawyer', to: '/supreme-court-lawyer-dhaka' },
+            { text: 'Family Lawyer Uttara', to: '/services/divorce-lawyer' },
+            { text: 'Criminal Lawyer Uttara', to: '/services/criminal-lawyer' },
+            { text: 'Supreme Court Lawyer', to: '/services/supreme-court-lawyer' },
         ],
     },
 
@@ -5606,7 +5606,7 @@ const posts = [
 <li>A wife's right to seek judicial divorce through Khula or other grounds applies through Bangladesh family courts.</li>
 <li>The 90-day reconciliation period before Talaq becomes effective applies even if both parties are abroad.</li>
 </ul>
-<p>For non-Muslim Bangladeshis abroad, the applicable personal law (Hindu, Christian, etc.) applies. Consult a <a href="/divorce-family-lawyer-uttara" style="color:var(--accent)">family lawyer in Dhaka</a> to understand which law governs your specific situation.</p>`,
+<p>For non-Muslim Bangladeshis abroad, the applicable personal law (Hindu, Christian, etc.) applies. Consult a <a href="/services/divorce-lawyer" style="color:var(--accent)">family lawyer in Dhaka</a> to understand which law governs your specific situation.</p>`,
             },
             {
                 h2: 'Divorce Initiated by NRB Husband (Talaq) from Abroad',
@@ -5640,7 +5640,7 @@ const posts = [
 <li>Represent the party during mediation or reconciliation attempts.</li>
 <li>Receive the final court decree and divorce certificate.</li>
 </ul>
-<p>This saves significant travel costs and time for NRBs. <a href="/divorce-family-lawyer-uttara" style="color:var(--accent)">Advocate Md. Shah Alam</a> regularly handles divorce cases on behalf of NRB clients through Power of Attorney representation.</p>`,
+<p>This saves significant travel costs and time for NRBs. <a href="/services/divorce-lawyer" style="color:var(--accent)">Advocate Md. Shah Alam</a> regularly handles divorce cases on behalf of NRB clients through Power of Attorney representation.</p>`,
             },
             {
                 h2: 'Recognition of Foreign Divorce Decrees in Bangladesh',
@@ -5661,8 +5661,8 @@ const posts = [
             { question: 'What happens to my dower (mehr) if we divorce while I am abroad?', answer: 'Your dower right is preserved regardless of where the divorce occurs. The unprompted dower becomes immediately payable at the time of Talaq. You can file a suit for recovery of dower in Bangladesh through an attorney.' },
         ],
         relatedServiceLinks: [
-            { text: 'Family Lawyer Uttara', to: '/divorce-family-lawyer-uttara' },
-            { text: 'Supreme Court Lawyer', to: '/supreme-court-lawyer-dhaka' },
+            { text: 'Family Lawyer Uttara', to: '/services/divorce-lawyer' },
+            { text: 'Supreme Court Lawyer', to: '/services/supreme-court-lawyer' },
         ],
     },
 
@@ -5697,7 +5697,7 @@ const posts = [
 <li>Requires compliance — failing to appear without a valid reason is a contempt of court and may lead to a warrant being issued.</li>
 <li>Is typically used in summons-triable cases (less serious offences) or to call witnesses.</li>
 </ul>
-<p>If you receive a summons, respond through a <a href="/criminal-lawyer-uttara" style="color:var(--accent)">criminal lawyer in Dhaka</a> — do not simply ignore it.</p>`,
+<p>If you receive a summons, respond through a <a href="/services/criminal-lawyer" style="color:var(--accent)">criminal lawyer in Dhaka</a> — do not simply ignore it.</p>`,
             },
             {
                 h2: 'What is an Arrest Warrant in Bangladesh?',
@@ -5727,7 +5727,7 @@ const posts = [
 <li><strong>Bailable Warrant:</strong> The officer executing the warrant must release the arrested person on bail upon their furnishing security. This is the less severe type.</li>
 <li><strong>Non-Bailable Warrant:</strong> The arrested person must be produced before the court — no bail can be granted at the point of arrest by the police. Only the court can grant bail. This is the most serious type and requires immediate legal action.</li>
 </ul>
-<p>If you learn that a non-bailable warrant has been issued against you, contact a <a href="/criminal-lawyer-uttara" style="color:var(--accent)">criminal lawyer</a> immediately to apply to the court to recall the warrant before it is executed.</p>`,
+<p>If you learn that a non-bailable warrant has been issued against you, contact a <a href="/services/criminal-lawyer" style="color:var(--accent)">criminal lawyer</a> immediately to apply to the court to recall the warrant before it is executed.</p>`,
             },
             {
                 h2: 'Getting an Arrest Warrant Cancelled (Recall)',
@@ -5749,8 +5749,8 @@ const posts = [
             { question: 'Can summons be issued for civil cases too?', answer: 'Yes. In civil proceedings, summons are issued to defendants and witnesses under the Code of Civil Procedure 1908. Failure to comply with a civil court summons also has serious consequences.' },
         ],
         relatedServiceLinks: [
-            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-uttara' },
-            { text: 'Supreme Court Lawyer', to: '/supreme-court-lawyer-dhaka' },
+            { text: 'Criminal Lawyer Uttara', to: '/services/criminal-lawyer' },
+            { text: 'Supreme Court Lawyer', to: '/services/supreme-court-lawyer' },
         ],
     },
 
@@ -5785,7 +5785,7 @@ const posts = [
 <li>Government forestland, beels, haors, and waterlogged areas.</li>
 <li>Urban government plots not yet permanently assigned.</li>
 </ul>
-<p>Khas land cannot be privately owned without a formal government allotment (bandabast). Unauthorized occupation is illegal. Yet in practice, khas land is among the most encroached-upon categories of land in Bangladesh. Consult a <a href="/land-property-lawyer-uttara" style="color:var(--accent)">property lawyer in Dhaka</a> before taking any action related to khas land.</p>`,
+<p>Khas land cannot be privately owned without a formal government allotment (bandabast). Unauthorized occupation is illegal. Yet in practice, khas land is among the most encroached-upon categories of land in Bangladesh. Consult a <a href="/services/land-lawyer" style="color:var(--accent)">property lawyer in Dhaka</a> before taking any action related to khas land.</p>`,
             },
             {
                 h2: 'Who Can Apply for Khas Land Allotment?',
@@ -5827,7 +5827,7 @@ const posts = [
 <li><strong>Challenging wrongful khas classification:</strong> Where private land has been incorrectly classified as khas through administrative error, the owner can file a petition to the Revenue Officer and ultimately to the High Court through writ jurisdiction to correct the record.</li>
 <li><strong>Eviction of illegal encroachers:</strong> The government can initiate eviction proceedings against unauthorized occupiers of khas land. Private landowners whose adjacent khas land is encroached may assist the government in eviction proceedings.</li>
 </ul>
-<p>Both types of disputes require a knowledgeable <a href="/land-property-lawyer-uttara" style="color:var(--accent)">property lawyer</a> familiar with land revenue procedures and Bangladesh land laws.</p>`,
+<p>Both types of disputes require a knowledgeable <a href="/services/land-lawyer" style="color:var(--accent)">property lawyer</a> familiar with land revenue procedures and Bangladesh land laws.</p>`,
             },
         ],
         faqs: [
@@ -5838,8 +5838,8 @@ const posts = [
             { question: 'My ancestral land was classified as khas by mistake — what can I do?', answer: 'File a complaint with the Land Revenue Officer providing documentation of original title (CS or SA records, mutation history). If not resolved administratively, file a writ petition in the High Court Division to correct the land records.' },
         ],
         relatedServiceLinks: [
-            { text: 'Property Lawyer Uttara', to: '/land-property-lawyer-uttara' },
-            { text: 'Supreme Court Lawyer', to: '/supreme-court-lawyer-dhaka' },
+            { text: 'Property Lawyer Uttara', to: '/services/land-lawyer' },
+            { text: 'Supreme Court Lawyer', to: '/services/supreme-court-lawyer' },
         ],
     },
 
@@ -5875,7 +5875,7 @@ const posts = [
 <li>A public authority has failed to perform a legal duty.</li>
 <li>A person holding public office lacks lawful authority.</li>
 </ul>
-<p>Writ jurisdiction in Bangladesh is constitutional — making it one of the most powerful legal remedies available. An experienced <a href="/supreme-court-lawyer-dhaka" style="color:var(--accent)">Supreme Court lawyer in Bangladesh</a> is essential for writ proceedings.</p>`,
+<p>Writ jurisdiction in Bangladesh is constitutional — making it one of the most powerful legal remedies available. An experienced <a href="/services/supreme-court-lawyer" style="color:var(--accent)">Supreme Court lawyer in Bangladesh</a> is essential for writ proceedings.</p>`,
             },
             {
                 h2: 'The Five Types of Writs in Bangladesh',
@@ -5920,7 +5920,7 @@ const posts = [
 <li><strong>Hearing on Return:</strong> Both sides appear. The petitioner argues for the Rule to be made absolute; the respondent argues for it to be discharged.</li>
 <li><strong>Final order:</strong> The court either makes the Rule Absolute (granting relief) or Discharges the Rule (rejecting the petition).</li>
 </ol>
-<p>An <a href="/supreme-court-lawyer-dhaka" style="color:var(--accent)">experienced Supreme Court advocate</a> is essential — writ proceedings have strict procedural requirements and the arguments are complex.</p>`,
+<p>An <a href="/services/supreme-court-lawyer" style="color:var(--accent)">experienced Supreme Court advocate</a> is essential — writ proceedings have strict procedural requirements and the arguments are complex.</p>`,
             },
         ],
         faqs: [
@@ -5931,8 +5931,8 @@ const posts = [
             { question: 'Can a writ be filed against an NBR tax assessment?', answer: 'Yes, though courts generally require the petitioner to first exhaust the available statutory appeal remedies before coming to writ jurisdiction. In exceptional cases involving jurisdictional errors or fundamental right violations, the High Court can intervene at any stage.' },
         ],
         relatedServiceLinks: [
-            { text: 'Supreme Court Lawyer', to: '/supreme-court-lawyer-dhaka' },
-            { text: 'Civil Lawyer Dhaka', to: '/civil-lawyer-dhaka' },
+            { text: 'Supreme Court Lawyer', to: '/services/supreme-court-lawyer' },
+            { text: 'Civil Lawyer Dhaka', to: '/services/criminal-lawyer' },
         ],
     },
 
@@ -5973,7 +5973,7 @@ const posts = [
 <li>Data theft and identity fraud</li>
 <li>Spreading misinformation or false news online</li>
 </ul>
-<p>If you are unsure whether your situation qualifies, consult a <a href="/criminal-lawyer-dhaka-uttara" style="color:var(--accent)">cyber law lawyer in Uttara or Dhaka</a> before filing.</p>`,
+<p>If you are unsure whether your situation qualifies, consult a <a href="/services/criminal-lawyer" style="color:var(--accent)">cyber law lawyer in Uttara or Dhaka</a> before filing.</p>`,
             },
             {
                 h2: 'Which Laws Govern Cyber Crime in Bangladesh?',
@@ -6005,7 +6005,7 @@ const posts = [
 <li><strong>Witness information:</strong> Names of people who also saw or received the content.</li>
 <li><strong>Date and time records</strong> of each incident.</li>
 </ul>
-<p>A <a href="/criminal-lawyer-dhaka-uttara" style="color:var(--accent)">cyber law lawyer</a> can advise on obtaining a court order to preserve digital evidence before it is deleted.</p>`,
+<p>A <a href="/services/criminal-lawyer" style="color:var(--accent)">cyber law lawyer</a> can advise on obtaining a court order to preserve digital evidence before it is deleted.</p>`,
             },
             {
                 h2: 'Filing at the Cyber Tribunal',
@@ -6020,7 +6020,7 @@ const posts = [
             },
             {
                 h2: 'Why You Need a Cyber Law Lawyer',
-                content: `<p>Filing a cyber crime complaint without legal guidance often results in delayed investigations, rejected complaints, or improperly preserved evidence. An experienced <a href="/criminal-lawyer-dhaka-uttara" style="color:var(--accent)">cyber law lawyer in Dhaka</a> will:</p>
+                content: `<p>Filing a cyber crime complaint without legal guidance often results in delayed investigations, rejected complaints, or improperly preserved evidence. An experienced <a href="/services/criminal-lawyer" style="color:var(--accent)">cyber law lawyer in Dhaka</a> will:</p>
 <ul>
 <li>Advise which law best fits your case.</li>
 <li>Draft a clear, legally sound complaint.</li>
@@ -6039,8 +6039,8 @@ const posts = [
             { question: 'Can the court order Facebook or Google to remove content?', answer: 'Yes. The Cyber Tribunal can issue orders directing platforms to remove defamatory or illegal content. This is typically a faster remedy than waiting for the platform\'s internal review process.' },
         ],
         relatedServiceLinks: [
-            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-dhaka-uttara' },
-            { text: 'Supreme Court Lawyer', to: '/supreme-court-lawyer-dhaka' },
+            { text: 'Criminal Lawyer Uttara', to: '/services/criminal-lawyer' },
+            { text: 'Supreme Court Lawyer', to: '/services/supreme-court-lawyer' },
         ],
     },
 
@@ -6070,7 +6070,7 @@ const posts = [
             {
                 h2: 'What is an FIR in Bangladesh?',
                 content: `<p>An <strong>FIR (First Information Report)</strong> is the formal written report filed with the police when a cognizable offence has been committed. It is governed by the <strong>Code of Criminal Procedure 1898 (Section 154)</strong>, which requires the officer in charge of a police station to record any information relating to a cognizable offence in writing.</p>
-<p>Once an FIR is filed, the police have a legal obligation to investigate — they cannot simply ignore it. The FIR becomes the foundation of the entire criminal case, so accuracy and completeness are critical. If you need help preparing or filing an FIR, an experienced <a href="/criminal-lawyer-dhaka-uttara" style="color:var(--accent)">criminal lawyer in Dhaka</a> can guide the process.</p>`,
+<p>Once an FIR is filed, the police have a legal obligation to investigate — they cannot simply ignore it. The FIR becomes the foundation of the entire criminal case, so accuracy and completeness are critical. If you need help preparing or filing an FIR, an experienced <a href="/services/criminal-lawyer" style="color:var(--accent)">criminal lawyer in Dhaka</a> can guide the process.</p>`,
             },
             {
                 h2: 'FIR vs. General Diary (GD): Key Difference',
@@ -6103,7 +6103,7 @@ const posts = [
 <li>Submit a First Charge Sheet (if evidence is found) or Final Report (if no evidence) to the Magistrate within the statutory period.</li>
 <li>Provide the complainant regular updates when requested.</li>
 </ul>
-<p>If police are slow to act, a <a href="/criminal-lawyer-dhaka-uttara" style="color:var(--accent)">criminal lawyer</a> can apply to the Magistrate or High Court to direct the investigation.</p>`,
+<p>If police are slow to act, a <a href="/services/criminal-lawyer" style="color:var(--accent)">criminal lawyer</a> can apply to the Magistrate or High Court to direct the investigation.</p>`,
             },
             {
                 h2: 'What If Police Refuse to Register an FIR?',
@@ -6124,8 +6124,8 @@ const posts = [
             { question: 'What is a Narazi petition?', answer: 'If you are dissatisfied with a police Final Report or the police fail to register your FIR, you can file a Narazi (protest) petition before the Magistrate asking the court to take cognizance of the offence independently.' },
         ],
         relatedServiceLinks: [
-            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-dhaka-uttara' },
-            { text: 'Supreme Court Lawyer', to: '/supreme-court-lawyer-dhaka' },
+            { text: 'Criminal Lawyer Uttara', to: '/services/criminal-lawyer' },
+            { text: 'Supreme Court Lawyer', to: '/services/supreme-court-lawyer' },
         ],
     },
 
@@ -6183,7 +6183,7 @@ const posts = [
 <li><strong>Bangladesh Bank:</strong> If a bank account was involved in the transfer chain, Bangladesh Bank's Financial Intelligence Unit (FIU) can freeze funds.</li>
 <li><strong>Cyber Tribunal:</strong> For DSA-specific complaints, file directly or through your lawyer before the Cyber Tribunal in Dhaka.</li>
 </ol>
-<p>A <a href="/criminal-lawyer-dhaka-uttara" style="color:var(--accent)">cyber law lawyer in Dhaka</a> can draft all these complaints simultaneously and obtain emergency court orders to freeze suspect accounts.</p>`,
+<p>A <a href="/services/criminal-lawyer" style="color:var(--accent)">cyber law lawyer in Dhaka</a> can draft all these complaints simultaneously and obtain emergency court orders to freeze suspect accounts.</p>`,
             },
             {
                 h2: 'Can You Recover Your Money?',
@@ -6202,7 +6202,7 @@ const posts = [
 <li><strong>Penal Code 1860, Section 420:</strong> Cheating and dishonestly inducing delivery of property — up to 7 years' imprisonment.</li>
 <li><strong>Digital Security Act 2018, Section 24:</strong> Online fraud and cheating — up to 7 years' imprisonment and BDT 5 lakh fine, or both.</li>
 </ul>
-<p>Filing under both laws strengthens your case. DSA cases go to the Cyber Tribunal (faster process); Penal Code cases go to regular Magistrate courts. An experienced <a href="/criminal-lawyer-dhaka-uttara" style="color:var(--accent)">Uttara cyber lawyer</a> will structure your complaint to maximize legal pressure.</p>`,
+<p>Filing under both laws strengthens your case. DSA cases go to the Cyber Tribunal (faster process); Penal Code cases go to regular Magistrate courts. An experienced <a href="/services/criminal-lawyer" style="color:var(--accent)">Uttara cyber lawyer</a> will structure your complaint to maximize legal pressure.</p>`,
             },
         ],
         faqs: [
@@ -6212,8 +6212,8 @@ const posts = [
             { question: 'What if the fraudster used a fake SIM?', answer: 'Police can obtain call data records (CDR) from the telecom operator to trace the physical location where the SIM was activated and used. CCTV evidence and tower location data have been used successfully in Bangladesh fraud cases.' },
         ],
         relatedServiceLinks: [
-            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-dhaka-uttara' },
-            { text: 'Civil Lawyer Dhaka', to: '/civil-lawyer-dhaka' },
+            { text: 'Criminal Lawyer Uttara', to: '/services/criminal-lawyer' },
+            { text: 'Civil Lawyer Dhaka', to: '/services/criminal-lawyer' },
         ],
     },
 
@@ -6252,7 +6252,7 @@ const posts = [
 <li>False accusations circulated in Facebook groups or WhatsApp broadcast lists.</li>
 <li>Malicious reviews or comments on business pages designed to destroy credibility.</li>
 </ul>
-<p>Opinion, satire, and truthful statements are generally not defamatory. If you believe you have been defamed, consult a <a href="/criminal-lawyer-dhaka-uttara" style="color:var(--accent)">cyber law lawyer in Uttara or Dhaka</a> to assess your case.</p>`,
+<p>Opinion, satire, and truthful statements are generally not defamatory. If you believe you have been defamed, consult a <a href="/services/criminal-lawyer" style="color:var(--accent)">cyber law lawyer in Uttara or Dhaka</a> to assess your case.</p>`,
             },
             {
                 h2: 'Facebook Defamation: DSA Section 29 Explained',
@@ -6270,7 +6270,7 @@ const posts = [
 <li><strong>Criminal Route (DSA Section 29 / Penal Code Sections 499–500):</strong> The goal is prosecution and punishment of the offender — imprisonment and/or fine. Filed via FIR at the police station or complaint to the Cyber Tribunal.</li>
 <li><strong>Civil Route (Tort of Defamation):</strong> The goal is compensation — monetary damages for harm to your reputation, business losses, and emotional suffering. Filed before a civil court.</li>
 </ul>
-<p>Most victims file criminal cases first to get content removed quickly, then pursue civil damages separately. An experienced <a href="/criminal-lawyer-dhaka-uttara" style="color:var(--accent)">Dhaka defamation lawyer</a> can manage both tracks simultaneously.</p>`,
+<p>Most victims file criminal cases first to get content removed quickly, then pursue civil damages separately. An experienced <a href="/services/criminal-lawyer" style="color:var(--accent)">Dhaka defamation lawyer</a> can manage both tracks simultaneously.</p>`,
             },
             {
                 h2: 'How to Get Defamatory Content Removed from Facebook',
@@ -6301,8 +6301,8 @@ const posts = [
             { question: 'Can I claim compensation for business losses caused by Facebook defamation?', answer: 'Yes. In a civil defamation suit, you can claim damages for loss of business revenue, loss of contracts, emotional distress, and reputational harm if you can establish these losses were caused by the defamatory content.' },
         ],
         relatedServiceLinks: [
-            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-dhaka-uttara' },
-            { text: 'Civil Lawyer Dhaka', to: '/civil-lawyer-dhaka' },
+            { text: 'Criminal Lawyer Uttara', to: '/services/criminal-lawyer' },
+            { text: 'Civil Lawyer Dhaka', to: '/services/criminal-lawyer' },
         ],
     },
 
@@ -6337,7 +6337,7 @@ const posts = [
 <li>A <strong>Digital Security Agency</strong> to coordinate national cyber security.</li>
 <li>Wide police powers to arrest without warrant for many offences.</li>
 </ul>
-<p>If you have received a DSA notice or your family member has been arrested, contact a <a href="/criminal-lawyer-dhaka-uttara" style="color:var(--accent)">cyber law lawyer in Dhaka</a> immediately.</p>`,
+<p>If you have received a DSA notice or your family member has been arrested, contact a <a href="/services/criminal-lawyer" style="color:var(--accent)">cyber law lawyer in Dhaka</a> immediately.</p>`,
             },
             {
                 h2: 'Key Sections Under Which People Are Charged',
@@ -6385,7 +6385,7 @@ const posts = [
 <li><strong>No publication:</strong> If the content was a private message, not a public post, defamation charges may not apply.</li>
 <li><strong>Procedural challenge:</strong> If the police violated arrest procedures or the FIR contains false facts, the case can be challenged.</li>
 </ul>
-<p>An experienced <a href="/criminal-lawyer-dhaka-uttara" style="color:var(--accent)">DSA lawyer in Dhaka</a> will evaluate your case and build the strongest available defence.</p>`,
+<p>An experienced <a href="/services/criminal-lawyer" style="color:var(--accent)">DSA lawyer in Dhaka</a> will evaluate your case and build the strongest available defence.</p>`,
             },
         ],
         faqs: [
@@ -6395,8 +6395,8 @@ const posts = [
             { question: 'Is the DSA being replaced in Bangladesh?', answer: 'As of 2024-2025, significant pressure exists to reform or replace the DSA with a more rights-respecting Cyber Security Act. The legal landscape is evolving — consult a current DSA lawyer for the latest status.' },
         ],
         relatedServiceLinks: [
-            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-dhaka-uttara' },
-            { text: 'Supreme Court Lawyer', to: '/supreme-court-lawyer-dhaka' },
+            { text: 'Criminal Lawyer Uttara', to: '/services/criminal-lawyer' },
+            { text: 'Supreme Court Lawyer', to: '/services/supreme-court-lawyer' },
         ],
     },
 
@@ -6433,7 +6433,7 @@ const posts = [
 <li>Giving the other side an opportunity to remedy the situation before costly litigation.</li>
 <li>In some cases (contract law, employment disputes), they are <strong>legally required</strong> before filing a case.</li>
 </ul>
-<p>A well-drafted legal notice from an experienced <a href="/civil-lawyer-dhaka" style="color:var(--accent)">civil lawyer in Dhaka</a> carries significant weight — signalling seriousness and often prompting early resolution.</p>`,
+<p>A well-drafted legal notice from an experienced <a href="/services/criminal-lawyer" style="color:var(--accent)">civil lawyer in Dhaka</a> carries significant weight — signalling seriousness and often prompting early resolution.</p>`,
             },
             {
                 h2: 'When Should You Send a Legal Notice?',
@@ -6494,8 +6494,8 @@ const posts = [
             { question: 'Can I sue for defamation based on the reply to my legal notice?', answer: 'Yes. If the other party\'s reply to your legal notice itself contains defamatory statements, those statements can form the basis of a separate or additional defamation claim.' },
         ],
         relatedServiceLinks: [
-            { text: 'Civil Lawyer Dhaka', to: '/civil-lawyer-dhaka' },
-            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-dhaka-uttara' },
+            { text: 'Civil Lawyer Dhaka', to: '/services/criminal-lawyer' },
+            { text: 'Criminal Lawyer Uttara', to: '/services/criminal-lawyer' },
         ],
     },
 
@@ -6533,7 +6533,7 @@ const posts = [
 <li>Repeated unwanted contact after being asked to stop.</li>
 <li>Monitoring a person\'s movements, location, or activity online.</li>
 </ul>
-<p>If you are experiencing any of these, you have legal remedies available in Bangladesh courts. Contact a <a href="/criminal-lawyer-dhaka-uttara" style="color:var(--accent)">cyber law lawyer in Uttara or Dhaka</a> immediately.</p>`,
+<p>If you are experiencing any of these, you have legal remedies available in Bangladesh courts. Contact a <a href="/services/criminal-lawyer" style="color:var(--accent)">cyber law lawyer in Uttara or Dhaka</a> immediately.</p>`,
             },
             {
                 h2: 'Laws That Protect Victims of Online Harassment',
@@ -6557,7 +6557,7 @@ const posts = [
 <li><strong>Save any phone numbers or email addresses</strong> used to contact you.</li>
 <li><strong>Preserve digital evidence</strong> — do not edit or alter screenshots, as this can undermine their credibility in court.</li>
 </ul>
-<p>A <a href="/criminal-lawyer-dhaka-uttara" style="color:var(--accent)">cyber law lawyer</a> can apply to court for an order preserving digital evidence from platforms before it disappears.</p>`,
+<p>A <a href="/services/criminal-lawyer" style="color:var(--accent)">cyber law lawyer</a> can apply to court for an order preserving digital evidence from platforms before it disappears.</p>`,
             },
             {
                 h2: 'Can You Get a Protection Order?',
@@ -6576,8 +6576,8 @@ const posts = [
             { question: 'What should I do if I receive threats of violence online?', answer: 'Treat it as an emergency. Screenshot the threats and contact the police immediately for a safety assessment. Also engage a lawyer to seek an emergency court order. Do not assume online threats are just words.' },
         ],
         relatedServiceLinks: [
-            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-dhaka-uttara' },
-            { text: 'Supreme Court Lawyer', to: '/supreme-court-lawyer-dhaka' },
+            { text: 'Criminal Lawyer Uttara', to: '/services/criminal-lawyer' },
+            { text: 'Supreme Court Lawyer', to: '/services/supreme-court-lawyer' },
         ],
     },
 
@@ -6611,7 +6611,7 @@ const posts = [
 <li><strong>Section 151, CPC:</strong> Inherent power of courts to prevent abuse of process.</li>
 </ul>
 <p>Examples of what a stay order can stop: construction on disputed land, transfer of a property, enforcement of a court decree, eviction from property, publication of defamatory material, or a company resolution.</p>
-<p>A <a href="/civil-lawyer-dhaka" style="color:var(--accent)">civil lawyer in Dhaka</a> can file an urgent stay order application within days of filing the main suit.</p>`,
+<p>A <a href="/services/criminal-lawyer" style="color:var(--accent)">civil lawyer in Dhaka</a> can file an urgent stay order application within days of filing the main suit.</p>`,
             },
             {
                 h2: 'Conditions the Court Uses to Decide',
@@ -6644,8 +6644,8 @@ const posts = [
             { question: 'Can a stay order be obtained against a government authority?', answer: 'Yes. Writ jurisdiction allows stay orders against government actions — this is handled through High Court writ petitions. For ordinary civil disputes, regular civil courts issue stay orders.' },
         ],
         relatedServiceLinks: [
-            { text: 'Civil Lawyer Dhaka', to: '/civil-lawyer-dhaka' },
-            { text: 'Land & Property Lawyer', to: '/land-property-lawyer-dhaka' },
+            { text: 'Civil Lawyer Dhaka', to: '/services/criminal-lawyer' },
+            { text: 'Land & Property Lawyer', to: '/services/land-lawyer' },
         ],
     },
 
@@ -6679,7 +6679,7 @@ const posts = [
 <li><strong>Registration Act 1908</strong></li>
 <li><strong>Transfer of Property Act 1882</strong></li>
 </ul>
-<p>A properly executed POA can authorise the agent to buy/sell land, file court cases, sign contracts, manage bank accounts, and engage in almost any legal act — within the scope defined in the document. Consult a <a href="/civil-lawyer-dhaka" style="color:var(--accent)">civil lawyer in Dhaka</a> before granting broad powers to any agent.</p>`,
+<p>A properly executed POA can authorise the agent to buy/sell land, file court cases, sign contracts, manage bank accounts, and engage in almost any legal act — within the scope defined in the document. Consult a <a href="/services/criminal-lawyer" style="color:var(--accent)">civil lawyer in Dhaka</a> before granting broad powers to any agent.</p>`,
             },
             {
                 h2: 'General vs. Special Power of Attorney',
@@ -6728,8 +6728,8 @@ const posts = [
             { question: 'Can an NRB in Canada or UK grant a POA for Bangladesh property?', answer: 'Yes. The NRB executes the POA abroad, has it notarized locally, authenticates it at the Bangladesh Embassy, and it becomes valid in Bangladesh after local verification. Most major cities have Bangladesh Embassies or High Commissions to assist with this.' },
         ],
         relatedServiceLinks: [
-            { text: 'Civil Lawyer Dhaka', to: '/civil-lawyer-dhaka' },
-            { text: 'Land & Property Lawyer', to: '/land-property-lawyer-dhaka' },
+            { text: 'Civil Lawyer Dhaka', to: '/services/criminal-lawyer' },
+            { text: 'Land & Property Lawyer', to: '/services/land-lawyer' },
         ],
     },
 
@@ -6763,7 +6763,7 @@ const posts = [
 <li><strong>Digital Security Act 2018, Section 25:</strong> Publishing false, menacing, or offensive information through digital means — up to 5 years.</li>
 <li><strong>DSA Section 24:</strong> Identity theft and impersonation online — up to 5 years.</li>
 </ul>
-<p>Contact a <a href="/criminal-lawyer-dhaka-uttara" style="color:var(--accent)">cyber law lawyer in Dhaka</a> to determine which laws apply to your specific fraud situation.</p>`,
+<p>Contact a <a href="/services/criminal-lawyer" style="color:var(--accent)">cyber law lawyer in Dhaka</a> to determine which laws apply to your specific fraud situation.</p>`,
             },
             {
                 h2: 'Common Types of Online Fraud in Bangladesh',
@@ -6806,8 +6806,8 @@ const posts = [
             { question: 'Can I sue a fake e-commerce website anonymously?', answer: 'You can file an FIR. The police or Cyber Tribunal can compel Facebook, domain registrars, and payment processors to reveal the owner\'s identity through court orders.' },
         ],
         relatedServiceLinks: [
-            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-dhaka-uttara' },
-            { text: 'Civil Lawyer Dhaka', to: '/civil-lawyer-dhaka' },
+            { text: 'Criminal Lawyer Uttara', to: '/services/criminal-lawyer' },
+            { text: 'Civil Lawyer Dhaka', to: '/services/criminal-lawyer' },
         ],
     },
 
@@ -6841,7 +6841,7 @@ const posts = [
 <li>Victim is persuaded to share intimate images or engage in video calls.</li>
 <li>Recordings are made without consent and used to demand money.</li>
 </ol>
-<p>This is a serious criminal offence. If you are a victim, contact a <a href="/criminal-lawyer-dhaka-uttara" style="color:var(--accent)">cyber law lawyer in Dhaka</a> immediately and do not comply with demands.</p>`,
+<p>This is a serious criminal offence. If you are a victim, contact a <a href="/services/criminal-lawyer" style="color:var(--accent)">cyber law lawyer in Dhaka</a> immediately and do not comply with demands.</p>`,
             },
             {
                 h2: 'Why You Must Never Pay the Blackmailer',
@@ -6884,8 +6884,8 @@ const posts = [
             { question: 'My images were shared without my knowledge. Can I sue the person who shared them?', answer: 'Absolutely. Under DSA Section 26, distributing intimate images without consent carries up to 7 years imprisonment. This applies even if the images were originally shared consensually — consent to share privately does not mean consent to distribute publicly.' },
         ],
         relatedServiceLinks: [
-            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-dhaka-uttara' },
-            { text: 'Supreme Court Lawyer', to: '/supreme-court-lawyer-dhaka' },
+            { text: 'Criminal Lawyer Uttara', to: '/services/criminal-lawyer' },
+            { text: 'Supreme Court Lawyer', to: '/services/supreme-court-lawyer' },
         ],
     },
 
@@ -6918,7 +6918,7 @@ const posts = [
 <li><strong>DSA Section 17 (Attacking Critical Infrastructure):</strong> Hacking power grids, financial systems, or government networks — up to 14 years.</li>
 <li><strong>ICT Act 2006, Section 54:</strong> Hacking provisions (still applicable for older cases).</li>
 </ul>
-<p>If your account, website, or business system has been hacked, contact a <a href="/criminal-lawyer-dhaka-uttara" style="color:var(--accent)">cyber law lawyer in Dhaka</a> for guidance on filing a case and securing your systems.</p>`,
+<p>If your account, website, or business system has been hacked, contact a <a href="/services/criminal-lawyer" style="color:var(--accent)">cyber law lawyer in Dhaka</a> for guidance on filing a case and securing your systems.</p>`,
             },
             {
                 h2: 'What Counts as Hacking Under the DSA?',
@@ -6960,8 +6960,8 @@ const posts = [
             { question: 'What if the hacker is from a foreign country?', answer: 'Bangladesh can still prosecute foreign hackers who target Bangladesh-based systems through Mutual Legal Assistance Treaties (MLATs) for international cooperation, and can pursue local assets of foreign entities operating in Bangladesh.' },
         ],
         relatedServiceLinks: [
-            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-dhaka-uttara' },
-            { text: 'Supreme Court Lawyer', to: '/supreme-court-lawyer-dhaka' },
+            { text: 'Criminal Lawyer Uttara', to: '/services/criminal-lawyer' },
+            { text: 'Supreme Court Lawyer', to: '/services/supreme-court-lawyer' },
         ],
     },
 
@@ -6999,7 +6999,7 @@ const posts = [
 <li>Online identifiers — IP addresses, browsing history, cookies.</li>
 <li>Location data.</li>
 </ul>
-<p>If your personal data has been improperly collected, shared, or exposed, a <a href="/criminal-lawyer-dhaka-uttara" style="color:var(--accent)">cyber law lawyer in Dhaka</a> can advise on your remedies.</p>`,
+<p>If your personal data has been improperly collected, shared, or exposed, a <a href="/services/criminal-lawyer" style="color:var(--accent)">cyber law lawyer in Dhaka</a> can advise on your remedies.</p>`,
             },
             {
                 h2: 'DSA Provisions Relating to Data Privacy',
@@ -7040,8 +7040,8 @@ const posts = [
             { question: 'Is selling a customer database illegal in Bangladesh?', answer: 'Selling identity information for fraudulent use is currently covered by DSA Section 23. More general restrictions on data selling are expected in the upcoming Data Protection Act. Currently, sector-specific rules apply (e.g., telecom subscriber data cannot be sold under BTRC rules).' },
         ],
         relatedServiceLinks: [
-            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-dhaka-uttara' },
-            { text: 'Civil Lawyer Dhaka', to: '/civil-lawyer-dhaka' },
+            { text: 'Criminal Lawyer Uttara', to: '/services/criminal-lawyer' },
+            { text: 'Civil Lawyer Dhaka', to: '/services/criminal-lawyer' },
         ],
     },
 
@@ -7075,7 +7075,7 @@ const posts = [
 <li>Must be sworn before a <strong>Notary Public, Oath Commissioner, or Magistrate</strong> — who administers the oath.</li>
 <li>Once sworn, the deponent is legally bound — making a false affidavit is perjury under the Penal Code.</li>
 </ul>
-<p>An experienced <a href="/civil-lawyer-dhaka" style="color:var(--accent)">civil lawyer in Dhaka</a> can prepare a legally sound affidavit for your specific purpose.</p>`,
+<p>An experienced <a href="/services/criminal-lawyer" style="color:var(--accent)">civil lawyer in Dhaka</a> can prepare a legally sound affidavit for your specific purpose.</p>`,
             },
             {
                 h2: 'Common Uses of Affidavits',
@@ -7113,8 +7113,8 @@ const posts = [
             { question: 'Is an affidavit the same as a power of attorney?', answer: 'No. An affidavit is a sworn statement of facts. A power of attorney authorises another person to act on your behalf. They are entirely different documents used for different purposes, though both require signing before authorized officials.' },
         ],
         relatedServiceLinks: [
-            { text: 'Civil Lawyer Dhaka', to: '/civil-lawyer-dhaka' },
-            { text: 'Land & Property Lawyer', to: '/land-property-lawyer-dhaka' },
+            { text: 'Civil Lawyer Dhaka', to: '/services/criminal-lawyer' },
+            { text: 'Land & Property Lawyer', to: '/services/land-lawyer' },
         ],
     },
 
@@ -7148,7 +7148,7 @@ const posts = [
 <li><strong>Revision:</strong> A superior court examines only whether the lower court had jurisdiction and whether it followed proper legal procedure — not a rehearing on facts.</li>
 <li><strong>Review:</strong> The same court that passed the order is asked to reconsider it based on specific grounds.</li>
 </ul>
-<p>Selecting the correct route depends on the nature of the order, the court that passed it, and the grounds of challenge. A <a href="/supreme-court-lawyer-dhaka" style="color:var(--accent)">Supreme Court lawyer in Dhaka</a> is essential for High Court and Appellate Division challenges.</p>`,
+<p>Selecting the correct route depends on the nature of the order, the court that passed it, and the grounds of challenge. A <a href="/services/supreme-court-lawyer" style="color:var(--accent)">Supreme Court lawyer in Dhaka</a> is essential for High Court and Appellate Division challenges.</p>`,
             },
             {
                 h2: 'What is an Appeal in Bangladesh?',
@@ -7201,8 +7201,830 @@ const posts = [
             { question: 'Can I get a stay of the lower court order while filing revision?', answer: 'Yes. When filing a revision or appeal, you can simultaneously apply for a stay of the lower court order (execution of the decree). Courts often grant a conditional stay pending hearing of the revision or appeal.' },
         ],
         relatedServiceLinks: [
-            { text: 'Supreme Court Lawyer', to: '/supreme-court-lawyer-dhaka' },
-            { text: 'Criminal Lawyer Uttara', to: '/criminal-lawyer-dhaka-uttara' },
+            { text: 'Supreme Court Lawyer', to: '/services/supreme-court-lawyer' },
+            { text: 'Criminal Lawyer Uttara', to: '/services/criminal-lawyer' },
+        ],
+    },
+
+
+    /* ── NEW 1 ── */
+    {
+        slug: 'hire-criminal-lawyer-bangladesh',
+        bnSlug: 'criminal-lawyer-kivabe-neben-bangladesh',
+        title: 'How to Hire a Criminal Lawyer in Bangladesh: A Complete Guide',
+        category: 'Criminal Law',
+        readTime: '7 min read',
+        metaTitle: 'How to Hire a Criminal Lawyer in Bangladesh – Complete Guide',
+        metaDescription: 'Facing a criminal case in Bangladesh? Learn how to choose, hire and work with a qualified criminal lawyer in Dhaka. What to look for, questions to ask, and what it costs.',
+        keywords: ['hire criminal lawyer Bangladesh', 'criminal lawyer Dhaka', 'how to find a lawyer Bangladesh', 'criminal defence lawyer Bangladesh', 'best criminal lawyer Uttara'],
+        publishedDate: '2026-03-24',
+        heroIntro: 'A criminal charge in Bangladesh can be life-altering. Whether you face an FIR, arrest, or ongoing trial, hiring the right criminal lawyer is the single most important decision you will make. This guide walks you through the process step by step.',
+        toc: [
+            'Why You Need a Specialist Criminal Lawyer',
+            'When to Hire a Criminal Lawyer',
+            'What Qualifications to Look For',
+            'Questions to Ask Before Hiring',
+            'Understanding Legal Fees in Bangladesh',
+            'How to Work Effectively with Your Lawyer',
+        ],
+        sections: [
+            {
+                h2: 'Why You Need a Specialist Criminal Lawyer',
+                content: `<p>Criminal law in Bangladesh is governed by the <strong>Penal Code 1860</strong>, the <strong>Code of Criminal Procedure 1898</strong>, and dozens of special laws including the Digital Security Act, Narcotics Control Act, and the Women and Children Repression Prevention Act. A general civil lawyer may lack the courtroom experience, police-station relationships, and procedural knowledge that a criminal case demands.</p>
+<p>A specialist criminal lawyer in Dhaka can apply for <a href="/services/bail-lawyer" style="color:var(--accent)">urgent bail</a>, challenge an FIR at the earliest stage, and build a defence strategy before the prosecution consolidates its case against you.</p>`,
+            },
+            {
+                h2: 'When to Hire a Criminal Lawyer',
+                content: `<p>Do not wait until you are in custody. The best time to hire a criminal lawyer is:</p>
+<ul>
+<li><strong>The moment an FIR is filed against you</strong> — even before arrest.</li>
+<li>If you receive a summons or notice from police or a court.</li>
+<li>Before making any statement to police — statements made without legal advice can be used against you.</li>
+<li>If someone threatens to file a criminal case against you.</li>
+<li>Immediately after arrest — ask for a lawyer before any interrogation.</li>
+</ul>
+<p>Early engagement gives your <a href="/services/criminal-lawyer" style="color:var(--accent)">criminal defence lawyer</a> time to apply for anticipatory bail, gather evidence, and identify weaknesses in the prosecution case.</p>`,
+            },
+            {
+                h2: 'What Qualifications to Look For',
+                content: `<p>When evaluating a criminal lawyer in Bangladesh, verify:</p>
+<ul>
+<li><strong>Bangladesh Bar Council enrolment</strong> — all practising advocates must be enrolled. Ask to see the enrolment certificate.</li>
+<li><strong>Experience in the relevant court</strong> — a Magistrate Court case requires a different skill set from a High Court bail application.</li>
+<li><strong>Familiarity with the specific charge</strong> — narcotics cases, financial crimes, and digital crimes each have distinct procedures.</li>
+<li><strong>Local court presence</strong> — a lawyer with regular presence in your district or division court will know the judges and procedures.</li>
+<li><strong>Track record in bail applications</strong> — especially important if you need urgent relief.</li>
+</ul>`,
+            },
+            {
+                h2: 'Questions to Ask Before Hiring',
+                content: `<p>In your initial consultation with a criminal lawyer, ask:</p>
+<ol>
+<li>How many cases like mine have you handled, and what were the outcomes?</li>
+<li>Which courts do you regularly appear in?</li>
+<li>What is your assessment of my case — strengths and risks?</li>
+<li>What is your fee structure — is it a lump sum, per hearing, or retainer?</li>
+<li>Who will handle my case day-to-day?</li>
+<li>How quickly can you file for bail if needed?</li>
+</ol>
+<p>A good lawyer will give honest assessments, not unrealistic guarantees. Be wary of any advocate who promises a specific outcome.</p>`,
+            },
+            {
+                h2: 'Understanding Legal Fees in Bangladesh',
+                content: `<p>Criminal legal fees in Bangladesh vary widely based on the seniority of the advocate, court level, and complexity of the case. Common structures include:</p>
+<ul>
+<li><strong>Per-hearing fees</strong> — paid each time the lawyer appears in court.</li>
+<li><strong>Lump-sum retainer</strong> — a fixed amount covering all services through to a verdict or defined milestone.</li>
+<li><strong>Bail-specific fee</strong> — a one-time fee for filing and arguing a bail application.</li>
+</ul>
+<p>Always agree on fees in writing before engaging. Clarify what is included: drafting, hearings, bail applications, and incidental expenses (court fees, stamp duties).</p>`,
+            },
+            {
+                h2: 'How to Work Effectively with Your Lawyer',
+                content: `<p>After hiring a criminal lawyer, your cooperation is critical:</p>
+<ul>
+<li>Share all facts honestly — even embarrassing ones. Lawyer-client communications are privileged and confidential.</li>
+<li>Provide all documents promptly: FIR copy, arrest memo, charge sheet, witness statements.</li>
+<li>Follow your lawyer's instructions on court attendance, media interactions, and social media posts.</li>
+<li>Do not speak to police, prosecutors, or witnesses without your lawyer's knowledge.</li>
+<li>Attend all court dates punctually.</li>
+</ul>
+<p><a href="/" style="color:var(--accent)">Advocate Md. Shah Alam</a> in Uttara, Dhaka provides an initial consultation to assess your case before any commitment. Contact us to discuss your situation confidentially.</p>`,
+            },
+        ],
+        faqs: [
+            { question: 'Can I change my criminal lawyer mid-case in Bangladesh?', answer: 'Yes. You can change your advocate at any stage by filing a Vakalatnama (power of attorney) for a new lawyer. However, changing lawyers mid-trial can cause delays, so consider it carefully.' },
+            { question: 'What is a Vakalatnama in Bangladesh?', answer: 'A Vakalatnama is the document you sign authorising a specific advocate to represent you in court. Without it, the advocate cannot appear on your behalf.' },
+            { question: 'Can I have more than one lawyer in Bangladesh?', answer: 'Yes. In complex cases especially at the High Court level, it is common to have a lead advocate and a junior advocate working together.' },
+            { question: 'What if I cannot afford a lawyer?', answer: 'Bangladesh Legal Aid Services Trust (BLAST) and the National Legal Aid Services Organisation (NLASO) provide free or subsidised legal aid to those who qualify based on income.' },
+            { question: 'How long will my criminal case take in Bangladesh?', answer: 'Magistrate Court cases can take 6 months to 2 years. Sessions Court cases typically take 2–5 years. High Court proceedings add further time. A good lawyer will push for expeditious hearing and use procedural tools to shorten the timeline.' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Criminal Lawyer Uttara', to: '/services/criminal-lawyer' },
+            { text: 'Bail Lawyer Dhaka', to: '/services/bail-lawyer' },
+            { text: 'Supreme Court Lawyer', to: '/services/supreme-court-lawyer' },
+        ],
+    },
+
+    /* ── NEW 2 ── */
+    {
+        slug: 'how-to-file-divorce-petition-bangladesh',
+        bnSlug: 'divorce-mamla-dakhil-bangladesh',
+        title: 'How to File a Divorce Petition in Bangladesh: Step-by-Step Guide',
+        category: 'Family Law',
+        readTime: '8 min read',
+        metaTitle: 'How to File a Divorce Petition in Bangladesh – Step-by-Step Guide',
+        metaDescription: 'Complete guide to filing a divorce petition in Bangladesh — required documents, court process, fees, timeline, and how a divorce lawyer in Dhaka can help.',
+        keywords: ['file divorce petition Bangladesh', 'divorce case Bangladesh', 'family court Bangladesh', 'how to divorce in Bangladesh', 'divorce lawyer Dhaka'],
+        publishedDate: '2026-03-24',
+        heroIntro: 'Filing a divorce petition in Bangladesh involves specific legal procedures that differ based on religion and the type of divorce sought. This guide explains the complete process — from documentation to court filing — so you can proceed with confidence.',
+        toc: [
+            'Divorce Options in Bangladesh: Which Applies to You?',
+            'Documents Required to File for Divorce',
+            'Filing in Family Court: Step by Step',
+            'Court Fees and Costs',
+            'Timeline: How Long Does Divorce Take?',
+            'What Happens After Filing?',
+            'Role of a Divorce Lawyer',
+        ],
+        sections: [
+            {
+                h2: 'Divorce Options in Bangladesh: Which Applies to You?',
+                content: `<p>Your divorce procedure depends on your religion and marital circumstances:</p>
+<ul>
+<li><strong>Muslim Talaq (husband-initiated)</strong>: Written notice to the Union Parishad/City Corporation Chairman, followed by 90-day reconciliation period.</li>
+<li><strong>Khula (wife-initiated)</strong>: Wife returns mahr (dower) and applies through Chairman or family court.</li>
+<li><strong>Judicial divorce (Faskh)</strong>: Court-ordered divorce on grounds such as cruelty, desertion, or non-maintenance — for Muslim, Hindu, or Christian spouses.</li>
+<li><strong>Mutual consent divorce</strong>: Both parties agree, joint notice to Chairman, 90-day waiting period.</li>
+</ul>
+<p>A <a href="/services/divorce-lawyer" style="color:var(--accent)">divorce lawyer in Uttara</a> will identify which route applies and prepare the correct filings.</p>`,
+            },
+            {
+                h2: 'Documents Required to File for Divorce',
+                content: `<p>Gather these documents before visiting the family court:</p>
+<ul>
+<li>Original <strong>Kabinnama</strong> (marriage registration certificate) and certified copy</li>
+<li>National ID cards of both parties</li>
+<li>Birth certificates of children (if applicable)</li>
+<li>Notice copy sent to Union Parishad Chairman (for Muslim divorce)</li>
+<li>Chairman's acknowledgment receipt</li>
+<li>Any evidence supporting grounds (for contested divorce): medical reports, witness statements, police records</li>
+<li>Two passport photos</li>
+</ul>`,
+            },
+            {
+                h2: 'Filing in Family Court: Step by Step',
+                content: `<p>For a judicial divorce through family court:</p>
+<ol>
+<li><strong>Engage a divorce lawyer</strong> to draft the plaint (petition).</li>
+<li>The plaint must state: parties' names, marriage details, grounds for divorce, and relief sought (divorce, maintenance, custody).</li>
+<li>File the plaint at the Family Court in the jurisdiction where the wife resides or where the marriage took place.</li>
+<li>Pay the court fee (stamp duty on the plaint).</li>
+<li>The court issues summons to the other party.</li>
+<li>Both parties attend initial hearing. Mediation is attempted first.</li>
+<li>If mediation fails, trial proceeds with evidence and witnesses.</li>
+<li>Court passes decree of divorce.</li>
+</ol>`,
+            },
+            {
+                h2: 'Court Fees and Costs',
+                content: `<p>Court costs for a divorce petition in Bangladesh include:</p>
+<ul>
+<li><strong>Court fee/stamp duty on plaint</strong>: Typically BDT 200–500 depending on relief sought.</li>
+<li><strong>Process fee</strong> for serving summons: BDT 50–200 per party.</li>
+<li><strong>Lawyer fees</strong>: Varies by seniority and case complexity — discuss upfront.</li>
+<li><strong>Miscellaneous</strong>: Certified copies of documents, affidavit stamps.</li>
+</ul>
+<p>A contested divorce is significantly more expensive than a mutual consent divorce due to prolonged hearings.</p>`,
+            },
+            {
+                h2: 'Timeline: How Long Does Divorce Take?',
+                content: `<p>Expected timeframes:</p>
+<ul>
+<li><strong>Muslim talaq/khula (uncontested)</strong>: 90 days from Chairman's notice + registration time ≈ 3–4 months total.</li>
+<li><strong>Mutual consent divorce</strong>: 3–4 months.</li>
+<li><strong>Contested judicial divorce</strong>: 1–3 years depending on court load and cooperation of parties.</li>
+</ul>
+<p>Engaging an experienced <a href="/services/divorce-lawyer" style="color:var(--accent)">family court lawyer</a> helps avoid procedural delays that extend cases unnecessarily.</p>`,
+            },
+            {
+                h2: 'Role of a Divorce Lawyer',
+                content: `<p>A divorce lawyer in Bangladesh handles:</p>
+<ul>
+<li>Preparing and filing the plaint with all required documents</li>
+<li>Drafting the Chairman notice (for Muslim divorce)</li>
+<li>Representing you at all court hearings</li>
+<li>Negotiating custody, maintenance, and mahr settlements</li>
+<li>Obtaining and registering the divorce certificate</li>
+</ul>
+<p><a href="/" style="color:var(--accent)">Advocate Md. Shah Alam</a> in Uttara, Dhaka handles all family court matters with sensitivity and expertise. Contact us for a confidential consultation.</p>`,
+            },
+        ],
+        faqs: [
+            { question: 'Can I file for divorce without going to court in Bangladesh?', answer: 'Muslim talaq and uncontested khula can be completed through the Union Parishad/City Corporation without a court case, provided both parties cooperate. A lawyer is still needed to draft the notice and register the divorce.' },
+            { question: 'What if my spouse refuses to sign divorce documents?', answer: 'You can still file a judicial divorce petition in family court on valid grounds. The court can proceed even if the other party is uncooperative or absent.' },
+            { question: 'Can I claim maintenance while the divorce case is pending?', answer: 'Yes. You can apply for interim maintenance (nafaqa) simultaneously with the divorce petition. The court can order the husband to pay maintenance during the pendency of the case.' },
+            { question: 'Where should I file my divorce case in Dhaka?', answer: 'File in the Family Court of the jurisdiction (thana) where the wife ordinarily resides, or where the marriage was solemnised. For Uttara, file at the relevant family court in Dhaka.' },
+            { question: 'Is a divorce certificate required after the court decree?', answer: 'Yes. The divorce must be registered with the local Union Parishad or City Corporation to obtain an official divorce certificate, which is needed for re-marriage, inheritance, and official records.' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Divorce Lawyer Uttara', to: '/services/divorce-lawyer' },
+            { text: 'Criminal Lawyer Dhaka', to: '/services/criminal-lawyer' },
+            { text: 'Supreme Court Lawyer', to: '/services/supreme-court-lawyer' },
+        ],
+    },
+
+    /* ── NEW 3 ── */
+    {
+        slug: 'land-registration-fees-process-bangladesh',
+        bnSlug: 'jomi-nibondhon-fees-prokriya-bangladesh',
+        title: 'Land Registration Fees and Process in Bangladesh: Complete Guide 2025',
+        category: 'Property Law',
+        readTime: '8 min read',
+        metaTitle: 'Land Registration Fees & Process Bangladesh 2025 – Complete Guide',
+        metaDescription: 'How to register land in Bangladesh — stamp duty, registration fees, required documents, Sub-Registrar process, and how a property lawyer can help you avoid costly mistakes.',
+        keywords: ['land registration fees Bangladesh', 'property registration Bangladesh', 'stamp duty Bangladesh', 'deed registration Bangladesh', 'land lawyer Dhaka'],
+        publishedDate: '2026-03-24',
+        heroIntro: 'Land registration in Bangladesh is a multi-step process involving stamp duty, registration fees, and visits to the Sub-Registrar office. Understanding the costs and steps in advance can save you significant money and prevent fraud.',
+        toc: [
+            'What is Land Registration in Bangladesh?',
+            'Step-by-Step Registration Process',
+            'Stamp Duty Rates in Bangladesh',
+            'Registration Fees at the Sub-Registrar',
+            'Required Documents for Land Registration',
+            'Common Mistakes and How to Avoid Them',
+            'Why You Need a Property Lawyer',
+        ],
+        sections: [
+            {
+                h2: 'What is Land Registration in Bangladesh?',
+                content: `<p>Land registration is the formal recording of property ownership with the government through the Sub-Registrar's office under the <strong>Registration Act 1908</strong>. Without a registered deed, a property transaction is invalid and unenforceable. Registration transfers legal title from seller to buyer and creates a permanent public record.</p>
+<p>An unregistered sale is one of the most common causes of land disputes in Bangladesh. Always register with the help of a qualified <a href="/services/land-lawyer" style="color:var(--accent)">land and property lawyer</a>.</p>`,
+            },
+            {
+                h2: 'Step-by-Step Registration Process',
+                content: `<p>The land registration process in Bangladesh involves these steps:</p>
+<ol>
+<li><strong>Document verification</strong>: Verify the seller's title chain (CS/SA/RS khatian, mutation records, previous deeds).</li>
+<li><strong>Draft the sale deed</strong>: A lawyer prepares a deed of sale (baina dil) with all legal particulars.</li>
+<li><strong>Purchase stamp paper</strong>: Buy non-judicial stamp paper worth the required stamp duty from a licensed vendor.</li>
+<li><strong>Visit the Sub-Registrar office</strong>: Both buyer and seller (or authorised agents with Power of Attorney) appear with two witnesses.</li>
+<li><strong>Biometric verification</strong>: Fingerprints of all parties are recorded.</li>
+<li><strong>Pay registration fee</strong>: Pay at the designated bank or through online gateway.</li>
+<li><strong>Deed is registered and returned</strong>: The Sub-Registrar registers the deed and returns the certified copy.</li>
+<li><strong>Mutation (Namjari)</strong>: Apply for namjari to update land records in your name at the Assistant Commissioner (Land) office.</li>
+</ol>`,
+            },
+            {
+                h2: 'Stamp Duty Rates in Bangladesh',
+                content: `<p>Stamp duty on land registration is a major cost. Current rates (subject to annual Finance Act changes):</p>
+<ul>
+<li><strong>Urban areas (City Corporation)</strong>: 4% of the deed value</li>
+<li><strong>Municipal areas (Pourashava)</strong>: 3% of deed value</li>
+<li><strong>Rural areas</strong>: 2% of deed value</li>
+</ul>
+<p>Stamp duty is calculated on the <strong>registered deed value</strong>, which must equal or exceed the government-assessed Mouza rate. Undervaluing to reduce stamp duty is illegal and can void the registration.</p>`,
+            },
+            {
+                h2: 'Registration Fees at the Sub-Registrar',
+                content: `<p>In addition to stamp duty, you pay:</p>
+<ul>
+<li><strong>Registration fee</strong>: 1% of deed value (capped at BDT 30,000 for most transactions)</li>
+<li><strong>Local government tax</strong>: Up to 2% depending on location</li>
+<li><strong>E-fees</strong>: BDT 100–500 for digital processing</li>
+<li><strong>Certified copy fee</strong>: BDT varies</li>
+</ul>
+<p>Total additional taxes can bring the effective rate to 6–9% of deed value in city areas. Budget accordingly.</p>`,
+            },
+            {
+                h2: 'Required Documents for Land Registration',
+                content: `<p>Bring to the Sub-Registrar office:</p>
+<ul>
+<li>Original seller's deed chain (all previous registered deeds)</li>
+<li>CS/SA/RS/BS khatian copies</li>
+<li>Mutation (namjari) records</li>
+<li>Mouza map excerpt</li>
+<li>NID cards of buyer, seller, and two witnesses</li>
+<li>Passport photos of all parties</li>
+<li>Tax clearance certificate (where applicable)</li>
+<li>Stamp paper (pre-purchased in required denomination)</li>
+</ul>`,
+            },
+            {
+                h2: 'Common Mistakes and How to Avoid Them',
+                content: `<p>Common errors that create legal problems later:</p>
+<ul>
+<li><strong>Not verifying the title chain</strong>: Always trace ownership back at least 25 years.</li>
+<li><strong>Buying from an unauthorised seller</strong>: Verify the seller's Power of Attorney if they are not the named owner.</li>
+<li><strong>Undervaluing the deed</strong>: Illegal and can be challenged later by tax authorities.</li>
+<li><strong>Skipping mutation</strong>: Without namjari, government records still show the old owner.</li>
+<li><strong>Not checking for encumbrances</strong>: Search for any mortgage, attachment, or caveat on the property.</li>
+</ul>
+<p><a href="/" style="color:var(--accent)">Contact Advocate Md. Shah Alam</a> in Uttara for a complete due diligence check before any property transaction.</p>`,
+            },
+        ],
+        faqs: [
+            { question: 'How long does land registration take in Bangladesh?', answer: 'The actual registration at the Sub-Registrar typically takes 1–3 days once all documents are ready and fees paid. Mutation (namjari) after registration can take 2–6 months.' },
+            { question: 'Can I register land without a lawyer in Bangladesh?', answer: 'Technically yes, but it is inadvisable. A lawyer verifies the title, drafts the deed correctly, and ensures all requirements are met — preventing costly problems later.' },
+            { question: 'What is the Mouza rate in Bangladesh?', answer: 'The Mouza rate is the government-assessed minimum value per decimal (shotangsha) of land in a specific area. Your deed must state at least this value. Rates are updated periodically by the government.' },
+            { question: 'What happens if land is sold without registration?', answer: 'An unregistered sale deed is inadmissible as evidence of title in any court and is legally void. The seller can sell the same land again to someone else who registers — and the registered buyer will prevail.' },
+            { question: 'Can NRBs (Non-Resident Bangladeshis) register land in Bangladesh?', answer: 'Yes. An NRB can register land through a Power of Attorney given to a trusted person in Bangladesh, which must be notarised and apostilled in the country of residence, then attested at the Bangladesh Embassy.' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Land & Property Lawyer Uttara', to: '/services/land-lawyer' },
+            { text: 'Supreme Court Lawyer', to: '/services/supreme-court-lawyer' },
+            { text: 'Criminal Lawyer Dhaka', to: '/services/criminal-lawyer' },
+        ],
+    },
+
+    /* ── NEW 4 ── */
+    {
+        slug: 'company-registration-cost-bangladesh',
+        bnSlug: 'company-garar-khoroch-prokriya-bangladesh',
+        title: 'Company Registration Cost and Process in Bangladesh (2025)',
+        category: 'Company & Corporate Law',
+        readTime: '7 min read',
+        metaTitle: 'Company Registration Cost & Process in Bangladesh 2025',
+        metaDescription: 'How much does it cost to register a company in Bangladesh in 2025? RJSC fees, government charges, required documents, timeline and how a company lawyer in Dhaka can help.',
+        keywords: ['company registration Bangladesh', 'RJSC fees Bangladesh', 'register private limited company Bangladesh', 'company registration cost Dhaka', 'corporate lawyer Bangladesh'],
+        publishedDate: '2026-03-24',
+        heroIntro: 'Registering a company in Bangladesh through the Registrar of Joint Stock Companies and Firms (RJSC) is a structured process. Understanding the real costs — government fees, stamp duties, and professional fees — helps you budget accurately and avoid delays.',
+        toc: [
+            'Types of Companies You Can Register in Bangladesh',
+            'Step-by-Step RJSC Registration Process',
+            'Government Fees: RJSC Registration Cost 2025',
+            'Stamp Duty on Memorandum and Articles',
+            'Required Documents',
+            'Timeline for Company Registration',
+            'Role of a Company Lawyer',
+        ],
+        sections: [
+            {
+                h2: 'Types of Companies You Can Register in Bangladesh',
+                content: `<p>Under the <strong>Companies Act 1994</strong>, the most common business structures are:</p>
+<ul>
+<li><strong>Private Limited Company (Ltd.)</strong>: 2–50 shareholders, limited liability. Most popular structure for SMEs and startups.</li>
+<li><strong>Public Limited Company (PLC)</strong>: 7+ shareholders, can raise capital from the public, requires more compliance.</li>
+<li><strong>One-Person Company (OPC)</strong>: Single shareholder, introduced by amendment — suitable for sole entrepreneurs.</li>
+<li><strong>Partnership Firm</strong>: Registered under the Partnership Act 1932, simpler but with unlimited liability.</li>
+</ul>
+<p>A <a href="/services/company-corporate-lawyer" style="color:var(--accent)">company lawyer in Dhaka</a> will advise which structure suits your business model, tax situation, and future plans.</p>`,
+            },
+            {
+                h2: 'Step-by-Step RJSC Registration Process',
+                content: `<p>The RJSC online registration process (via roc.gov.bd):</p>
+<ol>
+<li><strong>Name clearance</strong>: Apply online for name clearance — BDT 200 fee. Clearance usually takes 1–3 days.</li>
+<li><strong>Prepare documents</strong>: Memorandum of Association (MOA), Articles of Association (AOA), Form IX (consent of directors), Form XII (particulars of directors).</li>
+<li><strong>Pay fees online</strong>: RJSC registration fee based on authorised capital (see table below), plus stamp duty on MOA/AOA.</li>
+<li><strong>Upload documents</strong>: Submit scanned documents through the RJSC online portal.</li>
+<li><strong>Receive Certificate of Incorporation</strong>: Issued digitally, typically within 2–7 working days of complete submission.</li>
+<li><strong>Post-registration</strong>: Obtain Trade Licence, TIN/E-TIN, VAT registration, and open a bank account.</li>
+</ol>`,
+            },
+            {
+                h2: 'Government Fees: RJSC Registration Cost 2025',
+                content: `<p>RJSC registration fees are based on authorised share capital:</p>
+<ul>
+<li>Up to BDT 5 lakh: BDT 5,075</li>
+<li>BDT 5 lakh – BDT 10 lakh: BDT 6,975</li>
+<li>BDT 10 lakh – BDT 50 lakh: BDT 10,375</li>
+<li>BDT 50 lakh – BDT 1 crore: BDT 15,675</li>
+<li>BDT 1 crore – BDT 5 crore: BDT 30,875</li>
+</ul>
+<p>These are government fees only. Name clearance (BDT 200) and stamp duties are additional. Fees are updated by circular — confirm current rates at roc.gov.bd before filing.</p>`,
+            },
+            {
+                h2: 'Stamp Duty on Memorandum and Articles',
+                content: `<p>Stamp duty applies to the Memorandum and Articles of Association under the Stamp Act 1899:</p>
+<ul>
+<li><strong>MOA stamp duty</strong>: Based on authorised capital — typically BDT 2,000–10,000+ for most SMEs.</li>
+<li><strong>AOA stamp duty</strong>: Flat rates, usually BDT 1,000–3,000.</li>
+</ul>
+<p>Under-stamped documents will be rejected by RJSC. Buy stamp paper from a licensed vendor and have documents notarised before submission.</p>`,
+            },
+            {
+                h2: 'Timeline for Company Registration',
+                content: `<p>With complete, correct documents:</p>
+<ul>
+<li><strong>Name clearance</strong>: 1–3 business days</li>
+<li><strong>RJSC processing</strong>: 3–7 business days</li>
+<li><strong>Certificate of Incorporation</strong>: Issued digitally immediately upon approval</li>
+<li><strong>Total (typical)</strong>: 1–2 weeks</li>
+</ul>
+<p>Post-registration steps (Trade Licence, TIN, VAT) add another 2–4 weeks. <a href="/" style="color:var(--accent)">Contact Adv. Shah Alam</a> to handle the entire process on your behalf.</p>`,
+            },
+        ],
+        faqs: [
+            { question: 'What is the minimum capital required to register a company in Bangladesh?', answer: 'There is no statutory minimum authorised capital for a private limited company. In practice, most companies register with BDT 1 lakh to BDT 10 lakh to keep registration fees manageable.' },
+            { question: 'Can a foreigner register a company in Bangladesh?', answer: 'Yes. Foreign nationals can form a company in Bangladesh, subject to Board of Investment (BIDA) approval for certain sectors. At least one director must have a Bangladesh address for service.' },
+            { question: 'Is a company lawyer required for RJSC registration?', answer: 'Not legally required, but strongly recommended. The RJSC rejected many applications due to incorrect MOA/AOA drafting. A corporate lawyer ensures first-time approval.' },
+            { question: 'What is the difference between authorised capital and paid-up capital?', answer: 'Authorised capital is the maximum share capital stated in the MOA. Paid-up capital is the amount actually invested by shareholders. Registration fees are based on authorised capital.' },
+            { question: 'Do I need to renew my company registration annually?', answer: 'Yes. Companies must file annual returns and audited accounts with RJSC. Failure to file attracts penalties and can result in striking off the company from the register.' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Company & Corporate Lawyer Dhaka', to: '/services/company-corporate-lawyer' },
+            { text: 'Supreme Court Lawyer', to: '/services/supreme-court-lawyer' },
+            { text: 'Tax & VAT Lawyer', to: '/services/tax-lawyer' },
+        ],
+    },
+
+    /* ── NEW 5 ── */
+    {
+        slug: 'writ-petition-high-court-guide-bangladesh',
+        bnSlug: 'rit-petition-haikort-guide-bangladesh',
+        title: 'Writ Petition in High Court Bangladesh: A Complete Guide',
+        category: 'Legal Procedures',
+        readTime: '8 min read',
+        metaTitle: 'Writ Petition High Court Bangladesh – Complete Guide 2025',
+        metaDescription: 'How to file a writ petition in the High Court Division of Bangladesh Supreme Court — types of writ, grounds, process, time limits, costs, and when to hire a Supreme Court lawyer.',
+        keywords: ['writ petition Bangladesh', 'writ petition High Court Bangladesh', 'Article 102 Bangladesh Constitution', 'habeas corpus Bangladesh', 'mandamus Bangladesh', 'Supreme Court lawyer Dhaka'],
+        publishedDate: '2026-03-24',
+        heroIntro: 'A writ petition is one of the most powerful legal remedies in Bangladesh — it allows a citizen to challenge illegal government actions, enforce fundamental rights, and seek release from unlawful detention directly in the High Court Division of the Supreme Court.',
+        toc: [
+            'What is a Writ Petition in Bangladesh?',
+            'Constitutional Basis: Article 102',
+            'Five Types of Writ Available',
+            'Grounds for Filing a Writ Petition',
+            'How to File: Process and Timeline',
+            'Writ Costs and Court Fees',
+            'When is a Writ NOT the Right Remedy?',
+        ],
+        sections: [
+            {
+                h2: 'What is a Writ Petition in Bangladesh?',
+                content: `<p>A writ petition is an application filed directly in the <strong>High Court Division of the Supreme Court of Bangladesh</strong> under Article 102 of the Constitution. It is used to challenge the actions of public authorities, enforce fundamental rights guaranteed by Part III of the Constitution, or seek specific legal remedies that ordinary courts cannot provide.</p>
+<p>Unlike regular civil or criminal cases that start in lower courts, a writ petition begins in the High Court. It requires a specialised <a href="/services/supreme-court-lawyer" style="color:var(--accent)">Supreme Court lawyer in Bangladesh</a> with experience in constitutional law.</p>`,
+            },
+            {
+                h2: 'Constitutional Basis: Article 102',
+                content: `<p>Article 102 of the Bangladesh Constitution empowers the High Court Division to issue writs:</p>
+<ul>
+<li>On the application of any aggrieved person</li>
+<li>Against any person performing functions in connection with the affairs of Bangladesh or any unit of local government</li>
+<li>For enforcement of fundamental rights, or for any of the orders/directions/writs listed in the Article</li>
+</ul>
+<p>Article 102 is called the "constitutional court" provision — it makes the High Court the guardian of fundamental rights. No other court has this jurisdiction.</p>`,
+            },
+            {
+                h2: 'Five Types of Writ Available',
+                content: `<p>Bangladesh follows the five traditional English writs:</p>
+<ul>
+<li><strong>Certiorari</strong>: Quashes an illegal or ultra vires order/decision of a lower court or public authority.</li>
+<li><strong>Mandamus</strong>: Commands a public authority to perform a legal duty it has failed or refused to perform.</li>
+<li><strong>Prohibition</strong>: Prevents a lower court or tribunal from exceeding its jurisdiction.</li>
+<li><strong>Quo Warranto</strong>: Challenges the right of a person to hold a public office.</li>
+<li><strong>Habeas Corpus</strong>: Secures the release of a person unlawfully detained or imprisoned. The most urgent writ — the court can order production of the detained person within days.</li>
+</ul>`,
+            },
+            {
+                h2: 'Grounds for Filing a Writ Petition',
+                content: `<p>Common grounds for a writ petition in Bangladesh:</p>
+<ul>
+<li>Violation of fundamental rights (Articles 27–44 of the Constitution)</li>
+<li>Unlawful detention without due process</li>
+<li>Government order passed without authority (ultra vires)</li>
+<li>Denial of natural justice (no hearing given before adverse order)</li>
+<li>Arbitrary or discriminatory government action</li>
+<li>Failure of a regulatory body or authority to perform its statutory duty</li>
+<li>Unconstitutional legislation</li>
+</ul>
+<p>The petitioner must show a clear, specific illegality or rights violation — vague complaints will be dismissed at the initial stage.</p>`,
+            },
+            {
+                h2: 'How to File: Process and Timeline',
+                content: `<p>Steps to file a writ petition in the High Court Division:</p>
+<ol>
+<li><strong>Engage a Supreme Court lawyer</strong> to assess the merit and draft the petition.</li>
+<li>The petition includes: background facts, reliefs sought, supporting affidavit, annexures (impugned orders, correspondence).</li>
+<li>File the petition at the High Court Registry with court fees and affidavits.</li>
+<li>The court assigns the case to a Bench and lists it for an initial hearing (Rule).</li>
+<li>If the court is satisfied there is merit, it issues a Rule Nisi — calling on the respondent to show cause why the writ should not be made absolute.</li>
+<li>The government/respondent files an affidavit-in-opposition.</li>
+<li>Hearing on merit — final order (absolute rule, discharge, or other direction).</li>
+</ol>
+<p>Urgent cases (habeas corpus, imminent harm) can get an order within 1–3 days. Regular writ cases can take months to years.</p>`,
+            },
+            {
+                h2: 'Writ Costs and Court Fees',
+                content: `<p>Court fees for a writ petition are nominal — typically BDT 200–500 in stamp duty. However, the significant cost is the professional fee of the advocate, which varies by seniority and complexity. A habeas corpus matter or fundamental rights case involving imprisonment can be urgent and expensive. <a href="/" style="color:var(--accent)">Contact Advocate Md. Shah Alam</a> — an experienced Supreme Court lawyer in Bangladesh — for a realistic fee discussion before proceeding.</p>`,
+            },
+        ],
+        faqs: [
+            { question: 'Can anyone file a writ petition in Bangladesh?', answer: 'Any "aggrieved person" whose rights have been violated or who is directly affected by an illegal government action can file a writ. In habeas corpus cases, even a relative or friend of the detained person can file on their behalf.' },
+            { question: 'Is there a time limit for filing a writ petition?', answer: 'There is no strict limitation period, but undue delay can be grounds for dismissal. Courts expect petitions to be filed promptly after the cause of action arises. Delays must be explained.' },
+            { question: 'Can a writ petition be filed against a private person?', answer: 'Generally no. Writs lie against public authorities or persons exercising public functions. For disputes with private parties, ordinary civil or criminal remedies are more appropriate.' },
+            { question: 'What is the difference between a writ and an appeal?', answer: 'An appeal challenges a court decision on its merits before a higher court. A writ challenges the legality or jurisdiction of an act/decision, not its factual correctness. Both can sometimes be available for the same situation.' },
+            { question: 'Can a stay order be obtained while the writ is pending?', answer: 'Yes. When filing the writ, you can simultaneously apply for a stay/interim relief to prevent the impugned action from taking effect while the case is decided.' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Supreme Court Lawyer Bangladesh', to: '/services/supreme-court-lawyer' },
+            { text: 'Criminal Lawyer Uttara', to: '/services/criminal-lawyer' },
+            { text: 'Bail Lawyer Dhaka', to: '/services/bail-lawyer' },
+        ],
+    },
+
+
+    /* ── NEW 6 ── */
+    {
+        slug: 'mahr-dower-rights-wife-bangladesh',
+        bnSlug: 'mahr-den-mohor-odhikar-bangladesh',
+        title: "Wife's Rights to Mahr (Dower) in Bangladesh: What the Law Says",
+        category: 'Family Law',
+        readTime: '6 min read',
+        metaTitle: "Mahr (Dower) Rights of Wife in Bangladesh – Complete Legal Guide",
+        metaDescription: "What is mahr (dower) in Bangladesh? When is it payable, how much can a wife claim, and what happens if the husband refuses? Expert family lawyer guide.",
+        keywords: ['mahr Bangladesh', 'dower rights Bangladesh', 'den mohor Bangladesh', 'wife mahr claim Bangladesh', 'divorce mahr Bangladesh', 'family lawyer Dhaka'],
+        publishedDate: '2026-03-24',
+        heroIntro: "Mahr (also spelled mehr or dower) is a mandatory gift from husband to wife in Islamic marriage law and is a legally enforceable right in Bangladesh. Understanding when it is due, how much it should be, and how to claim it is essential for any Muslim woman.",
+        toc: ['What is Mahr (Dower) in Bangladesh?', 'Types of Mahr: Prompt and Deferred', 'How the Mahr Amount is Determined', 'When is Mahr Payable?', 'How to Claim Unpaid Mahr', 'Mahr in Divorce and Khula'],
+        sections: [
+            { h2: 'What is Mahr (Dower) in Bangladesh?', content: `<p><strong>Mahr</strong> (or dower) is a mandatory payment or gift given by a husband to his wife under Muslim personal law, as recorded in the <strong>Kabinnama</strong> (marriage registration certificate). Under the <strong>Muslim Family Laws Ordinance 1961</strong> and the Dissolution of Muslim Marriages Act 1939, mahr is a legal right — not a gift that the husband can choose to give or withhold. The wife can sue to recover it in the Family Court.</p><p>If the Kabinnama does not specify a mahr amount, "proper dower" (mahr-e-misl) applies — determined by customary standards based on the wife's family status, father's social position, and locality.</p>` },
+            { h2: 'Types of Mahr: Prompt and Deferred', content: `<p>Mahr is typically divided into two parts in the Kabinnama:</p><ul><li><strong>Prompt Mahr (Mahr-e-Mu'ajjal)</strong>: Payable immediately on marriage, on demand, or at a specified time. If not paid, the wife can refuse to cohabit without forfeiting her rights.</li><li><strong>Deferred Mahr (Mahr-e-Mu'ajjal)</strong>: Payable on dissolution of marriage (by divorce or death of husband). If the husband dies without paying, the deferred mahr is a debt of the estate — payable before inheritance distribution.</li></ul>` },
+            { h2: 'When is Mahr Payable?', content: `<p>Mahr becomes immediately enforceable:</p><ul><li>On husband's demand from wife for cohabitation (prompt mahr must be paid on demand)</li><li>On divorce — both prompt and deferred mahr become immediately due unless waived by khula</li><li>On death of the husband — deferred mahr is treated as a debt of the estate</li></ul><p>A wife is entitled to refuse conjugal rights until prompt mahr is paid, without it affecting her own maintenance rights.</p>` },
+            { h2: 'How to Claim Unpaid Mahr', content: `<p>An unpaid mahr can be sued for in the <strong>Family Court</strong> under the Family Courts Ordinance 1985. File a plaint for recovery of mahr, attaching a certified copy of the Kabinnama. The court will examine the Kabinnama, determine the amount due, and pass a money decree against the husband. The decree can be enforced through attachment of his salary, bank account, or property.</p><p>Contact a <a href="/services/divorce-lawyer" style="color:var(--accent)">family lawyer in Uttara</a> for help filing a mahr recovery case.</p>` },
+            { h2: 'Mahr in Divorce and Khula', content: `<p>On divorce initiated by the husband (talaq), the wife retains the full right to both prompt and deferred mahr. She cannot be forced to waive it as a condition of divorce.</p><p>However, in <strong>khula</strong> (wife-initiated divorce), the wife typically waives the deferred mahr or returns the prompt mahr as consideration for the husband's agreement. Courts will not force the husband into khula — his agreement is needed unless the wife seeks judicial khula through Family Court on valid grounds.</p><p><a href="/" style="color:var(--accent)">Advocate Md. Shah Alam</a> in Uttara handles all mahr and family law disputes.</p>` },
+        ],
+        faqs: [
+            { question: 'Can a wife be forced to give up her mahr?', answer: 'No. Mahr is an absolute right. A husband cannot legally compel a wife to waive it as a condition of divorce. Any such agreement signed under duress is voidable.' },
+            { question: 'What if the mahr amount in the Kabinnama is very low?', answer: '"Proper dower" (mahr-e-misl) provides a minimum benchmark. If the specified amount is unconscionably low, a court may still apply mahr-e-misl standards in certain circumstances — consult a lawyer.' },
+            { question: 'Is mahr taxable in Bangladesh?', answer: 'Generally no. Mahr is treated as a personal right/gift under family law, not as income. However, large mahr transactions should be documented carefully.' },
+            { question: 'Can mahr be claimed after the death of the husband?', answer: 'Yes. Deferred mahr is a debt of the estate and must be paid from the deceased husband\'s assets before the remaining estate is distributed among heirs.' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Divorce & Family Lawyer', to: '/services/divorce-lawyer' },
+            { text: 'Criminal Lawyer Uttara', to: '/services/criminal-lawyer' },
+        ],
+    },
+
+    /* ── NEW 7 ── */
+    {
+        slug: 'quash-false-case-bangladesh',
+        bnSlug: 'mittha-mamla-kharej-bangladesh',
+        title: 'How to Get a False Criminal Case Quashed in Bangladesh',
+        category: 'Criminal Law',
+        readTime: '7 min read',
+        metaTitle: 'How to Quash a False Criminal Case in Bangladesh – Legal Guide',
+        metaDescription: 'Facing a false FIR or fabricated criminal case in Bangladesh? Learn how to get a case quashed in the High Court Division — grounds, process, timeline, and costs.',
+        keywords: ['quash false case Bangladesh', 'FIR quashing Bangladesh', 'High Court quash Bangladesh', 'false criminal case Bangladesh', 'criminal lawyer Dhaka'],
+        publishedDate: '2026-03-24',
+        heroIntro: 'Fabricated criminal cases are used as tools of harassment in Bangladesh — often arising from family disputes, business rivalries, or political vendettas. The High Court Division has the power to quash (cancel) an FIR or criminal proceeding where the case is manifestly false or an abuse of process.',
+        toc: ['What Does "Quashing" a Case Mean?', 'Grounds for Quashing in Bangladesh', 'Where to File: High Court Division', 'The Quashing Process Step by Step', 'Stay of Proceedings During Quashing', 'What Happens After Quashing?'],
+        sections: [
+            { h2: 'What Does "Quashing" a Case Mean?', content: `<p>Quashing is a High Court order cancelling a criminal proceeding — typically an FIR, charge sheet, or the entire case. Once quashed, the case is legally dead — no arrest can be made on that FIR, no trial can proceed, and acquittal is not even required. A <a href="/services/criminal-lawyer" style="color:var(--accent)">criminal lawyer</a> files a writ petition or criminal miscellaneous case in the High Court Division under its inherent powers (Section 561A CrPC) or under Article 102 of the Constitution.</p>` },
+            { h2: 'Grounds for Quashing in Bangladesh', content: `<p>The High Court will quash a case on these grounds:</p><ul><li>The allegations in the FIR, even if taken at face value, do not constitute any criminal offence</li><li>The FIR is manifestly attended with mala fide intent (filed for harassment, not for seeking justice)</li><li>The case is barred by limitation</li><li>There is no legal evidence — the case rests entirely on interested witnesses' bare statements</li><li>The matter is purely civil in nature dressed up as a criminal complaint</li><li>Continued prosecution would be an abuse of the court process</li><li>The parties have reached a genuine compromise (especially in compoundable offences)</li></ul>` },
+            { h2: 'The Quashing Process Step by Step', content: `<ol><li>Engage a Supreme Court/criminal lawyer to analyse the FIR and build the quashing application.</li><li>File a <strong>Criminal Miscellaneous Case</strong> (Crl. Misc.) in the High Court Division under Section 561A CrPC, supported by an affidavit and relevant documents.</li><li>The court may issue a Rule Nisi (show cause) and a Stay of Proceedings — pausing the trial court case while the High Court considers the matter.</li><li>The State (government) files an affidavit-in-opposition.</li><li>Both sides are heard and the High Court passes judgment — either making the Rule absolute (quashing the case) or discharging it.</li></ol><p>Contact a <a href="/services/supreme-court-lawyer" style="color:var(--accent)">Supreme Court lawyer in Bangladesh</a> immediately if you are facing a false case.</p>` },
+            { h2: 'Stay of Proceedings During Quashing', content: `<p>One of the key strategic advantages of filing a quashing petition is securing a <strong>Stay of Proceedings</strong> order that pauses the trial court case below. This prevents the complainant from getting an arrest warrant or pushing the case to trial while you wait for the High Court ruling. Your lawyer will apply for interim stay simultaneously with the quashing application.</p>` },
+        ],
+        faqs: [
+            { question: 'How long does a quashing case take in Bangladesh?', answer: 'Cases where a stay is granted can take 6 months to 2 years to be fully decided. Urgent cases with clear merit may be resolved faster. The interim stay protects you during this period.' },
+            { question: 'Can a case be quashed at the trial court level?', answer: 'No. Quashing jurisdiction lies exclusively with the High Court Division. Trial courts can discharge accused, but cannot quash an FIR.' },
+            { question: 'What is the difference between discharge and quashing?', answer: 'Discharge happens at trial court level after charge framing — the accused is released. Quashing happens in the High Court and kills the proceeding before trial even begins. Quashing is more comprehensive.' },
+            { question: 'Can a non-compoundable offence be quashed?', answer: 'Generally no, but the High Court has discretion where it finds the case to be an abuse of process, even for serious offences. Each case depends on its specific facts.' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Criminal Lawyer Uttara', to: '/services/criminal-lawyer' },
+            { text: 'Supreme Court Lawyer', to: '/services/supreme-court-lawyer' },
+            { text: 'Bail Lawyer Dhaka', to: '/services/bail-lawyer' },
+        ],
+    },
+
+    /* ── NEW 8 ── */
+    {
+        slug: 'hire-cyber-crime-lawyer-bangladesh',
+        bnSlug: 'cyber-crime-lawyer-neben-bangladesh',
+        title: 'Cyber Crime Lawyer in Bangladesh: How to Get Legal Help',
+        category: 'Cyber Law',
+        readTime: '7 min read',
+        metaTitle: 'Cyber Crime Lawyer in Bangladesh – Digital Security Act Defence 2025',
+        metaDescription: 'Charged under the Digital Security Act or Cyber Security Act in Bangladesh? Learn how a cyber crime lawyer can help — DSA cases, online defamation, hacking, and financial fraud.',
+        keywords: ['cyber crime lawyer Bangladesh', 'Digital Security Act Bangladesh', 'DSA case Bangladesh', 'cyber lawyer Dhaka', 'online defamation Bangladesh', 'Cyber Security Act Bangladesh'],
+        publishedDate: '2026-03-24',
+        heroIntro: 'Bangladesh has enacted strict cyber crime legislation — the Digital Security Act 2018 (DSA) and Cyber Security Act 2023 (CSA). Cases under these laws carry severe penalties including years of imprisonment. If you face a cyber crime charge or are a victim, hiring an experienced cyber crime lawyer is critical.',
+        toc: ['Cyber Crime Laws in Bangladesh', 'Common Cyber Crime Cases', 'Penalties Under the Digital Security Act', 'What a Cyber Crime Lawyer Does', 'Steps to Take If Accused of a Cyber Crime', 'How Victims Can File Cyber Crime Cases'],
+        sections: [
+            { h2: 'Cyber Crime Laws in Bangladesh', content: `<p>Bangladesh cyber crime prosecution primarily relies on:</p><ul><li><strong>Cyber Security Act 2023 (CSA)</strong>: Replaced parts of the DSA 2018. Covers hacking, identity theft, unauthorised access, online fraud, and provocative digital content.</li><li><strong>Digital Security Act 2018 (DSA)</strong>: Still active for offences committed before the CSA. Widely criticised for wide-ranging provisions criminalising digital content.</li><li><strong>Information and Communication Technology (ICT) Act 2006</strong> (as amended): Earlier law, particularly Section 57, under which many older cases were filed.</li><li><strong>Penal Code 1860</strong>: Financial fraud, cheating, and forgery offences committed digitally are often charged under the Penal Code as well.</li></ul><p>Contact a <a href="/services/criminal-lawyer" style="color:var(--accent)">criminal lawyer in Dhaka</a> immediately if a case is filed against you under any of these laws.</p>` },
+            { h2: 'Penalties Under the Digital Security Act', content: `<p>DSA/CSA penalties are severe:</p><ul><li>Hacking or unauthorised access: Up to 7–14 years imprisonment</li><li>Propagating offensive/false information: 3–10 years + fine</li><li>Identity theft: Up to 5 years</li><li>Online sexual harassment/defamation: Up to 5–7 years</li><li>Critical information infrastructure attack: Up to 14 years or life</li></ul><p>Many offences under the DSA are non-bailable, meaning the accused can be held in custody pending trial. Immediate bail application through the <a href="/services/bail-lawyer" style="color:var(--accent)">High Court</a> is often necessary.</p>` },
+            { h2: 'What a Cyber Crime Lawyer Does', content: `<p>An experienced cyber crime lawyer in Bangladesh will:</p><ul><li>Analyse the FIR/complaint and assess defences available under DSA/CSA</li><li>Apply for bail immediately — DSA cases are notorious for lengthy pre-trial detention</li><li>Challenge the technical evidence (metadata, IP addresses, digital forensics reports)</li><li>File writ petitions to quash cases that are politically motivated or factually baseless</li><li>Negotiate with the complainant for settlement in compoundable cases</li><li>Defend at trial in the Cyber Tribunal</li></ul>` },
+            { h2: 'Steps to Take If Accused of a Cyber Crime', content: `<ol><li><strong>Do not make any statement</strong> to police or cyber tribunal investigators without legal advice.</li><li><strong>Preserve all evidence</strong> including screenshots, messages, posts — both the allegedly offending content and any evidence of your innocence or intent.</li><li><strong>Hire a cyber crime lawyer immediately</strong> — even before arrest, if you hear a case is being filed.</li><li><strong>Apply for anticipatory bail</strong> if arrest is imminent.</li><li><strong>Document your alibi</strong> and gather witnesses who can attest to your whereabouts or account credentials security.</li></ol><p><a href="/" style="color:var(--accent)">Advocate Md. Shah Alam</a> in Uttara handles DSA/CSA defence cases in Dhaka.</p>` },
+            { h2: 'How Victims Can File Cyber Crime Cases', content: `<p>If you are a victim of online fraud, hacking, defamation, or harassment in Bangladesh:</p><ul><li>File an FIR at your local police station or the <strong>Cyber Crime Investigation Department (CCID)</strong> of Bangladesh Police (Agargaon, Dhaka).</li><li>CCID has a dedicated online complaint portal at <strong>cybercrime.gov.bd</strong>.</li><li>Preserve all evidence: screenshots, URLs, chat logs, transaction records with timestamps.</li><li>A lawyer can help you draft a stronger complaint that accurately identifies the legal provisions violated and ensures evidence is collected in an admissible form.</li></ul>` },
+        ],
+        faqs: [
+            { question: 'Is a cyber crime case bailable in Bangladesh?', answer: 'Most DSA/CSA offences are non-bailable, meaning police cannot grant bail — it must be sought from a court (Sessions Court or High Court). Immediate legal representation is essential to apply for bail.' },
+            { question: 'What court hears cyber crime cases in Bangladesh?', answer: 'Cyber crime cases are heard in designated Cyber Tribunals established under the ICT Act and DSA. There are Cyber Tribunals in Dhaka and other divisional cities.' },
+            { question: 'Can a defamatory Facebook post result in a DSA case in Bangladesh?', answer: 'Yes. Section 29 of the DSA (defamation) has been frequently used to file cases over social media posts. If you are accused under this provision, bail and quashing proceedings may be available.' },
+            { question: 'Can someone file a DSA case against me anonymously?', answer: 'Yes. Complaints can be filed at police stations or online. However, in court proceedings, the complainant must be identified and can be cross-examined.' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Criminal Lawyer Uttara', to: '/services/criminal-lawyer' },
+            { text: 'Bail Lawyer Dhaka', to: '/services/bail-lawyer' },
+            { text: 'Supreme Court Lawyer', to: '/services/supreme-court-lawyer' },
+        ],
+    },
+
+    /* ── NEW 9 ── */
+    {
+        slug: 'bail-cost-criminal-case-bangladesh',
+        bnSlug: 'jamin-khoroch-bangladesh',
+        title: 'How Much Does Bail Cost in a Criminal Case in Bangladesh?',
+        category: 'Criminal Law',
+        readTime: '6 min read',
+        metaTitle: 'Bail Cost in Bangladesh Criminal Cases – Fees, Processes & Tips',
+        metaDescription: 'What is the real cost of getting bail in Bangladesh? Lawyer fees, court fees, bail bond amounts, and what affects bail costs in Dhaka criminal cases — explained by a bail lawyer.',
+        keywords: ['bail cost Bangladesh', 'bail fees Bangladesh', 'how much bail costs Dhaka', 'bail lawyer fees Bangladesh', 'bail bond Bangladesh'],
+        publishedDate: '2026-03-24',
+        heroIntro: 'When someone is arrested in Bangladesh, the first question from the family is: "How much will bail cost?" The answer depends on the type of offence, the court level, the strength of the case, and who you hire as your lawyer. This guide breaks it all down.',
+        toc: ['Court Fees for a Bail Application', 'Bail Bond Amount: What the Court Sets', 'Lawyer Fees for Bail in Bangladesh', 'Factors That Affect Bail Cost', 'High Court Bail vs Magistrate Court Bail Costs'],
+        sections: [
+            { h2: 'Court Fees for a Bail Application', content: `<p>The actual court fees for filing a bail petition in Bangladesh are very low:</p><ul><li><strong>Magistrate Court bail application</strong>: BDT 50–200 in process/stamp fees</li><li><strong>Sessions Court bail</strong>: BDT 100–500</li><li><strong>High Court Division bail application</strong>: BDT 200–600 in court fees, plus affidavit stamps</li></ul><p>The main cost of bail is always the <strong>lawyer's professional fee</strong>, not the government court fee. The two are entirely separate.</p>` },
+            { h2: 'Bail Bond Amount: What the Court Sets', content: `<p>The court sets a bail bond (surety) amount that the accused or a guarantor must provide. This is security — not a payment to the court. If the accused absconds, the bond amount is forfeited. The bond is returned when the case concludes. Bond amounts vary:</p><ul><li><strong>Bailable offences (Magistrate)</strong>: BDT 5,000 – BDT 1,00,000</li><li><strong>Non-bailable offences (Sessions)</strong>: BDT 50,000 – BDT 5,00,000+</li><li><strong>High Court bail in serious cases</strong>: BDT 5,00,000 – BDT 50,00,000+ depending on offence gravity</li></ul><p>A skilled <a href="/services/bail-lawyer" style="color:var(--accent)">bail lawyer in Dhaka</a> argues for a lower bond amount the court will accept.</p>` },
+            { h2: 'Lawyer Fees for Bail in Bangladesh', content: `<p>Bail lawyer fees in Bangladesh are not fixed by law — they are negotiated. Approximate market ranges:</p><ul><li><strong>Magistrate Court bail</strong>: BDT 5,000 – BDT 30,000 per application</li><li><strong>Sessions Court bail (non-bailable)</strong>: BDT 20,000 – BDT 1,00,000</li><li><strong>High Court Division bail</strong>: BDT 50,000 – BDT 5,00,000+ depending on seniority of advocate</li></ul><p>Urgent same-day filings and complex cases with multiple hearings cost more. Always agree on fee structure in writing beforehand. <a href="/" style="color:var(--accent)">Contact Advocate Md. Shah Alam</a> in Uttara for a realistic discussion.</p>` },
+            { h2: 'Factors That Affect Bail Cost', content: `<p>What makes bail more expensive:</p><ul><li><strong>Severity of offence</strong>: Murder, rape, narcotics cases require senior High Court lawyers</li><li><strong>Number of accused</strong>: Cases with multiple co-accused are more complex</li><li><strong>Prior criminal record</strong>: Harder to argue for bail, more work for lawyer</li><li><strong>Strength of prosecution case</strong>: A weak case is easier to argue; weak applications need more preparation</li><li><strong>Urgency</strong>: Same-day emergency filings attract higher fees</li><li><strong>Advocate seniority</strong>: Senior Supreme Court advocates charge more than junior counsel</li></ul>` },
+        ],
+        faqs: [
+            { question: 'Is bail refundable in Bangladesh?', answer: 'The lawyer\'s fee is not refundable. The bail bond/surety amount is security — not payment — and is returned at the end of the case provided the accused appeared at all hearings.' },
+            { question: 'What is a surety in a Bangladesh bail application?', answer: 'A surety is a person who undertakes to pay the bond amount if the accused fails to appear in court. The surety must typically have immovable property within jurisdiction, and may be required to produce title documents.' },
+            { question: 'Can I get bail the same day as arrest in Bangladesh?', answer: 'For bailable offences, yes — police can grant bail immediately. For non-bailable offences, an emergency application can be filed and heard as quickly as the same day or next day in urgent circumstances.' },
+            { question: 'Can family members pay bail on behalf of the accused?', answer: 'Yes. Family members can act as surety or pay the lawyer\'s fees on behalf of the accused. The accused does not need to be present for the bail application to be filed.' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Bail Lawyer Dhaka', to: '/services/bail-lawyer' },
+            { text: 'Criminal Lawyer Uttara', to: '/services/criminal-lawyer' },
+            { text: 'Supreme Court Lawyer', to: '/services/supreme-court-lawyer' },
+        ],
+    },
+
+    /* ── NEW 10 ── */
+    {
+        slug: 'tenant-landlord-dispute-bangladesh',
+        bnSlug: 'bhara-tikki-bibad-bangladesh',
+        title: 'Tenant and Landlord Disputes: Legal Rights in Bangladesh',
+        category: 'Civil Law',
+        readTime: '7 min read',
+        metaTitle: 'Tenant Landlord Dispute Bangladesh – Legal Rights & Remedies 2025',
+        metaDescription: 'Landlord refusing to return deposit? Tenant refusing to vacate? Know your rights under Bangladesh tenancy law — eviction process, rent disputes, and how to take legal action.',
+        keywords: ['tenant landlord dispute Bangladesh', 'eviction law Bangladesh', 'rent dispute Bangladesh', 'house rent act Bangladesh', 'property lawyer Dhaka'],
+        publishedDate: '2026-03-24',
+        heroIntro: 'Tenant-landlord disputes are among the most common civil disputes in urban Bangladesh, particularly in Dhaka and Uttara. Both landlords and tenants have legal rights and obligations. Knowing them — and enforcing them correctly — makes all the difference.',
+        toc: ['Tenancy Law in Bangladesh', "Tenant's Rights", "Landlord's Rights", 'How to Evict a Tenant Legally', 'Recovering Security Deposit', 'Taking Legal Action'],
+        sections: [
+            { h2: 'Tenancy Law in Bangladesh', content: `<p>Tenancy in urban Bangladesh is primarily governed by the <strong>House Rent Control Act 1991 (HRCA)</strong> and the <strong>Non-Agricultural Tenancy Act 1949</strong>. The HRCA applies to rental properties in designated urban areas and regulates rent increases, eviction grounds, and dispute mechanisms. The Rent Controller — a government officer — has special powers to adjudicate rent and eviction disputes without going to civil court.</p>` },
+            { h2: "Tenant's Rights", content: `<p>Under Bangladesh tenancy law, as a tenant you have the right to:</p><ul><li>Written tenancy agreement or receipt acknowledging rent payment</li><li>Quiet enjoyment of the property without interference by the landlord</li><li>Return of security deposit (advance) within a reasonable time after vacating</li><li>Proper notice before eviction — typically 1–3 months depending on agreement and HRCA</li><li>Protection from illegal lock-outs or forcible eviction without court order</li><li>Complain to the Rent Controller if the landlord raises rent beyond legal limits</li></ul>` },
+            { h2: "Landlord's Rights", content: `<p>A landlord's rights include:</p><ul><li>Receive rent on time as agreed in the tenancy deed</li><li>Recover possession after the tenancy period ends with proper notice</li><li>File an eviction case in Rent Controller Court or civil court for non-payment, misuse of property, or breach of agreement</li><li>Deduct from security deposit for verified damage beyond normal wear</li><li>Not renew a tenancy — provided proper notice is given per the agreement or law</li></ul>` },
+            { h2: 'How to Evict a Tenant Legally', content: `<p>You cannot forcibly evict a tenant in Bangladesh — illegal eviction (disconnecting utilities, changing locks) exposes the landlord to criminal complaints. Legal eviction steps:</p><ol><li>Give proper written notice to vacate (typically 1 month for monthly tenancy).</li><li>If tenant refuses, file an eviction petition before the <strong>Rent Controller</strong> (urban areas) or a civil court.</li><li>Attend hearings — court will examine the grounds of eviction.</li><li>On a Court order, the tenant must vacate. Court bailiff enforces if needed.</li></ol><p>A <a href="/services/criminal-lawyer" style="color:var(--accent)">civil lawyer in Dhaka</a> can assist with the entire eviction process.</p>` },
+            { h2: 'Recovering Security Deposit', content: `<p>If a landlord refuses to return the security deposit (advance rent):</p><ul><li>Send a legal notice through a lawyer demanding return within 30 days.</li><li>File a money recovery suit in a civil court for the deposit plus interest.</li><li>Alternatively, file a complaint before the Rent Controller who has jurisdiction over advance rent disputes.</li></ul><p><a href="/" style="color:var(--accent)">Contact Advocate Md. Shah Alam</a> for help with any tenant or landlord dispute in Dhaka or Uttara.</p>` },
+        ],
+        faqs: [
+            { question: 'Can a landlord increase rent arbitrarily in Bangladesh?', answer: 'No. Under the House Rent Control Act 1991, rent increases in urban areas must comply with prescribed limits. Any dispute over illegal rent increase can be filed before the Rent Controller.' },
+            { question: 'What if the landlord changes the lock while I still have belongings inside?', answer: 'This is an illegal eviction. File a police complaint for criminal trespass and simultaneously apply to the Rent Controller or civil court for an order restoring your possession.' },
+            { question: 'Is a verbal tenancy agreement valid in Bangladesh?', answer: 'A verbal agreement is legally recognised but very difficult to enforce due to lack of written evidence. Always insist on a written Baidhok Patra (tenancy agreement) to protect your rights.' },
+            { question: 'How long does an eviction case take in Bangladesh?', answer: 'Rent Controller proceedings can take 6 months to 2 years. Civil court eviction suits may take longer. An experienced lawyer can accelerate the process through correct procedure and persistent follow-up.' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Land & Property Lawyer', to: '/services/land-lawyer' },
+            { text: 'Criminal Lawyer Dhaka', to: '/services/criminal-lawyer' },
+        ],
+    },
+
+    /* ── NEW 11 ── */
+    {
+        slug: 'police-complaint-harassment-bangladesh',
+        bnSlug: 'police-abiyog-hoirani-bangladesh',
+        title: 'How to File a Police Complaint for Harassment in Bangladesh',
+        category: 'Legal Procedures',
+        readTime: '6 min read',
+        metaTitle: 'How to File a Police Complaint for Harassment in Bangladesh',
+        metaDescription: 'Being harassed in Bangladesh? Learn how to file a police GD or FIR for harassment — eve-teasing, workplace harassment, stalking, domestic abuse — step by step guide.',
+        keywords: ['police complaint Bangladesh', 'file FIR harassment Bangladesh', 'GD complaint Bangladesh', 'harassment law Bangladesh', 'how to complain police Dhaka'],
+        publishedDate: '2026-03-24',
+        heroIntro: 'Knowing how to file a police complaint correctly in Bangladesh can protect you from harassment, stalking, workplace abuse, or domestic violence. This guide walks you through the process, documents needed, and what to do if police refuse to act.',
+        toc: ['GD vs FIR: What is the Difference?', 'Step-by-Step: Filing a Complaint', 'Types of Harassment You Can File Against', 'What If Police Refuse to Take Your Complaint?', 'Role of a Lawyer in Harassment Cases'],
+        sections: [
+            { h2: 'GD vs FIR: What is the Difference?', content: `<p>Two types of police records are available:</p><ul><li><strong>GD (General Diary)</strong>: A record of an incident or complaint at the station level. Less formal, no automatic investigation begins. Use for minor incidents or to create an official record.</li><li><strong>FIR (First Information Report)</strong>: Filed for cognizable offences — police must investigate. Triggers a formal criminal case. FIR is what starts a prosecution.</li></ul><p>For serious harassment (physical assault, sexual harassment under Section 509 Penal Code, domestic violence), file an FIR. For milder incidents you want documented, a GD is appropriate.</p>` },
+            { h2: 'Step-by-Step: Filing a Complaint', content: `<ol><li><strong>Visit the nearest police station</strong> in your area (thana).</li><li>Ask to speak to the Officer-in-Charge (OC).</li><li>Provide a written complaint (ejahar) describing the incident: date, time, place, accused person's name/description, what happened, witnesses.</li><li>The officer must enter the FIR in the station register and give you a copy with the GD/FIR number.</li><li>Obtain the FIR copy — you are legally entitled to it.</li><li>If the accused is known, police should arrest and investigate.</li></ol><p>Always keep a photocopy of your written complaint and the FIR number. <a href="/" style="color:var(--accent)">Contact Advocate Md. Shah Alam</a> if you need help drafting the ejahar.</p>` },
+            { h2: 'What If Police Refuse to Take Your Complaint?', content: `<p>Police refusal to register an FIR is common in Bangladesh. Your options:</p><ul><li><strong>Approach the Superintendent of Police (SP)</strong> of the district — file a written complaint there.</li><li><strong>File a complaint directly in court</strong>: Under Section 190 CrPC, any Magistrate can take cognizance of an offence directly based on your complaint, bypassing police.</li><li><strong>File a writ petition</strong> in the High Court Division directing police to register your FIR.</li></ul><p>A lawyer can draft the court complaint or writ petition on your behalf.</p>` },
+            { h2: 'Types of Harassment You Can File Against', content: `<p>Specific offences for harassment cases:</p><ul><li><strong>Eve-teasing / street harassment</strong>: Sections 76, 509 Penal Code; also Women & Children Repression Prevention Act 2000</li><li><strong>Sexual harassment at workplace</strong>: High Court guidelines 2009, Section 509 Penal Code</li><li><strong>Domestic violence/physical abuse</strong>: Domestic Violence (Prevention & Protection) Act 2010; Sections 323, 326, 498A Penal Code</li><li><strong>Online harassment / cyber bullying</strong>: Cyber Security Act 2023</li><li><strong>Stalking</strong>: Section 354D Penal Code (as amended)</li></ul>` },
+        ],
+        faqs: [
+            { question: 'Can I file an FIR against an unknown person?', answer: 'Yes. The FIR can describe the unknown accused by physical description. Police will investigate and identify them.' },
+            { question: 'Is a lawyer necessary to file a police complaint in Bangladesh?', answer: 'Not legally required, but having a lawyer draft your ejahar ensures all key facts are included, the correct legal provisions are cited, and the complaint is taken seriously by police.' },
+            { question: 'How long does police have to investigate after an FIR?', answer: 'Police must submit a charge sheet or final report within 60–120 days (depending on the offence). Delays can be challenged in court.' },
+            { question: 'Can I file a complaint against a police officer for misconduct?', answer: 'Yes. File a complaint with the Police Headquarters or the Independent Police Oversight Authority (IPOA). You can also file a writ petition in the High Court.' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Criminal Lawyer Uttara', to: '/services/criminal-lawyer' },
+            { text: 'Bail Lawyer Dhaka', to: '/services/bail-lawyer' },
+            { text: 'Divorce & Family Lawyer', to: '/services/divorce-lawyer' },
+        ],
+    },
+
+    /* ── NEW 12 ── */
+    {
+        slug: 'succession-certificate-process-bangladesh',
+        bnSlug: 'uttaradhikar-certificate-bangladesh',
+        title: 'How to Get a Succession Certificate in Bangladesh',
+        category: 'Civil Law',
+        readTime: '7 min read',
+        metaTitle: 'Succession Certificate Bangladesh – Process, Documents & Costs 2025',
+        metaDescription: 'How to obtain a succession certificate in Bangladesh after someone dies — court process, required documents, timeline, costs, and how a civil lawyer can help.',
+        keywords: ['succession certificate Bangladesh', 'succession certificate Dhaka', 'legal heir certificate Bangladesh', 'probate Bangladesh', 'civil lawyer Dhaka'],
+        publishedDate: '2026-03-24',
+        heroIntro: 'When a person dies in Bangladesh, banks and financial institutions often require a succession certificate before releasing assets to heirs. This legal document, granted by a civil court, confirms who the legal successors are and authorises them to receive money, shares, or debts owed to the deceased.',
+        toc: ['What is a Succession Certificate?', 'When Do You Need One?', 'Which Court Grants It?', 'Step-by-Step Application Process', 'Required Documents', 'Timeline and Costs'],
+        sections: [
+            { h2: 'What is a Succession Certificate?', content: `<p>A succession certificate is a court order granted under the <strong>Succession Act 1925</strong> authorising specified heirs to receive movable assets of a deceased person — bank deposits, shares, savings certificates, pension dues, insurance proceeds, and debts payable to the deceased. It is different from a probate (which deals with wills and immovable property).</p>` },
+            { h2: 'When Do You Need One?', content: `<p>You need a succession certificate when:</p><ul><li>A bank refuses to release the deceased's fixed deposits, savings, or current account balance without court authorisation</li><li>Collecting dividend or shares from a company where the deceased was a shareholder</li><li>Claiming life insurance proceeds from an insurer</li><li>Recovering outstanding salary, pension, or government dues</li><li>Recovering debts owed to the deceased by third parties</li></ul><p>If the deceased left a registered will, probate proceedings may be needed instead. A <a href="/services/criminal-lawyer" style="color:var(--accent)">civil lawyer in Dhaka</a> can advise which route applies.</p>` },
+            { h2: 'Step-by-Step Application Process', content: `<ol><li><strong>File a petition</strong> in the District Judge Court or Civil Judge Court in the district where the deceased last ordinarily resided.</li><li>The petition states: deceased's details, relationship of applicant to deceased, list of all heirs, list of assets to be collected (with amounts), and prayer for certificate.</li><li>Court issues notice to all other legal heirs — they must be given an opportunity to object.</li><li>If no objections: court may grant the certificate without full trial.</li><li>If objections filed: full hearing and evidence presented.</li><li>Upon grant, the certificate specifies the heirs and their entitlement.</li><li>Present the certificate to the bank/institution to claim the assets.</li></ol>` },
+            { h2: 'Required Documents', content: `<ul><li>Death certificate of the deceased (from hospital or Union Parishad)</li><li>NID of the applicant and all legal heirs</li><li>Proof of relationship (birth certificates, family certificate, kabinnama)</li><li>Bank statement or passbook showing the account balance</li><li>Share certificates or savings certificate copies (if applicable)</li><li>Two witnesses for the petition</li></ul>` },
+            { h2: 'Timeline and Costs', content: `<p>Court fees are based on the value of assets claimed — typically 2–3% of the asset value (capped in some courts). An uncontested certificate can be obtained in <strong>2–4 months</strong>. A contested case with objections from other heirs may take 1–2 years. <a href="/" style="color:var(--accent)">Contact Advocate Md. Shah Alam</a> — a civil lawyer in Uttara — for fast, professional handling of your succession certificate case.</p>` },
+        ],
+        faqs: [
+            { question: 'Can all heirs jointly apply for a succession certificate?', answer: 'Yes. A joint application by all known heirs is faster and less contentious than a single-heir application, which may face objections from other heirs.' },
+            { question: 'Is a succession certificate required for land/property?', answer: 'No. For inheritance of land or immovable property, a mutation (namjari) application to the AC (Land) office is typically needed, not a succession certificate. Succession certificates cover movable assets and debts.' },
+            { question: 'What if there are multiple heirs but one refuses to cooperate?', answer: 'You can still apply individually as one of the heirs. The court will notify all other heirs — non-cooperation by one does not prevent the certificate from being issued.' },
+            { question: 'What is the difference between a succession certificate and a probate?', answer: 'A succession certificate covers movable property (money, debts, shares). Probate is granted by the High Court Division to authenticate a will and authorise the executor to deal with the deceased\'s estate — typically more relevant to large estates or immovable property.' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Land & Property Lawyer', to: '/services/land-lawyer' },
+            { text: 'Supreme Court Lawyer', to: '/services/supreme-court-lawyer' },
+        ],
+    },
+
+    /* ── NEW 13 ── */
+    {
+        slug: 'contract-breach-legal-action-bangladesh',
+        bnSlug: 'chukti-bhanga-aini-poqdokkep-bangladesh',
+        title: 'How to Take Legal Action for Contract Breach in Bangladesh',
+        category: 'Civil Law',
+        readTime: '7 min read',
+        metaTitle: 'Contract Breach Legal Action Bangladesh – How to Sue for Breach 2025',
+        metaDescription: 'Contract broken in Bangladesh? Know your legal remedies — damages, specific performance, injunction — and how to take legal action for breach of contract in Dhaka courts.',
+        keywords: ['contract breach Bangladesh', 'breach of contract Bangladesh', 'sue for breach of contract Bangladesh', 'contract dispute Dhaka', 'civil lawyer Bangladesh'],
+        publishedDate: '2026-03-24',
+        heroIntro: 'Contract breaches are common in business — unpaid invoices, undelivered goods, broken construction contracts, and service agreement violations. Bangladesh contract law provides clear remedies, but enforcing them requires the right legal steps taken promptly.',
+        toc: ['What Constitutes a Breach of Contract in Bangladesh?', 'Legal Remedies Available', 'Damages: Compensatory and Special', 'Specific Performance as a Remedy', 'How to File a Contract Dispute Case', 'How to Strengthen Your Contract Before Disputes Arise'],
+        sections: [
+            { h2: 'What Constitutes a Breach of Contract in Bangladesh?', content: `<p>Bangladesh contract law is governed by the <strong>Contract Act 1872</strong>. A breach occurs when a party without lawful excuse:</p><ul><li>Fails to perform an obligation when due (non-performance)</li><li>Performs defectively or partially</li><li>Anticipatorily repudiates the contract (indicates they will not perform before the due date)</li></ul><p>To pursue a remedy, the non-breaching party must show: (1) a valid contract existed; (2) the other party breached; (3) loss was caused by the breach.</p>` },
+            { h2: 'Legal Remedies Available', content: `<p>Under the Contract Act and Specific Relief Act 1877, you can pursue:</p><ul><li><strong>Compensatory damages</strong>: Money to put you in the position you would have been in had the contract been performed.</li><li><strong>Special/consequential damages</strong>: If the breaching party knew of special circumstances at the time of contracting.</li><li><strong>Specific performance</strong>: Court orders the breaching party to perform. Available only when damages are an inadequate remedy (e.g., unique property, irreplaceable goods).</li><li><strong>Injunction</strong>: Prevents the breaching party from violating a contract term or doing an act contrary to the contract.</li><li><strong>Quantum meruit</strong>: Reasonable compensation for work done before the breach.</li></ul>` },
+            { h2: 'How to File a Contract Dispute Case', content: `<ol><li><strong>Send a legal notice</strong> through a lawyer — gives the other party a chance to remedy the breach and is often required before filing suit.</li><li><strong>File a money suit or civil suit</strong> in the appropriate civil court (value determines court jurisdiction).</li><li>The trial court will hear evidence and witnesses.</li><li>Obtain a decree — a court order for payment of damages or specific performance.</li><li>Enforce the decree through execution proceedings (attachment of assets, bank accounts).</li></ol><p>A <a href="/services/criminal-lawyer" style="color:var(--accent)">civil litigation lawyer in Dhaka</a> can assess the strength of your claim and take prompt action.</p>` },
+            { h2: 'How to Strengthen Your Contract Before Disputes Arise', content: `<p>Prevention is better than litigation:</p><ul><li>Always use a <strong>written, signed contract</strong> — verbal agreements are enforceable but hard to prove.</li><li>Include <strong>specific performance obligations</strong>, timelines, and payment terms.</li><li>Add a <strong>dispute resolution clause</strong>: arbitration or mediation before court.</li><li>Specify <strong>liquidated damages</strong> (pre-agreed compensation for breach) to avoid arguments over quantum.</li><li>Have contracts <strong>drafted or reviewed by a lawyer</strong> before signing.</li></ul><p><a href="/" style="color:var(--accent)">Advocate Md. Shah Alam</a> in Uttara handles commercial contract disputes and can draft agreements that protect your interests.</p>` },
+        ],
+        faqs: [
+            { question: 'What is the limitation period for a contract breach case in Bangladesh?', answer: 'Under the Limitation Act 1908, the limitation period for a contract breach suit is 3 years from the date the breach occurred or the right to sue accrued. Do not delay.' },
+            { question: 'Can I get an injunction to stop a breach from happening?', answer: 'Yes. If a breach is threatened or ongoing, apply for an urgent injunction in civil court to prevent it. This is particularly useful for exclusive contracts or property-related agreements.' },
+            { question: 'Is arbitration faster than court litigation in Bangladesh?', answer: 'Generally yes. Arbitration under the Arbitration Act 2001 can resolve disputes in months rather than years, is private, and the award is enforceable like a court decree.' },
+            { question: 'What if the breaching party has no assets?', answer: 'If the breaching party is insolvent, recovering a money decree becomes difficult. This is why financial due diligence before entering contracts with new parties is important.' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Company & Corporate Lawyer', to: '/services/company-corporate-lawyer' },
+            { text: 'Supreme Court Lawyer', to: '/services/supreme-court-lawyer' },
+            { text: 'Criminal Lawyer Dhaka', to: '/services/criminal-lawyer' },
+        ],
+    },
+
+    /* ── NEW 14 ── */
+    {
+        slug: 'domestic-violence-legal-protection-bangladesh',
+        bnSlug: 'gharelu-nirjaton-aini-suraksha-bangladesh',
+        title: 'Domestic Violence: Legal Protection and Remedies in Bangladesh',
+        category: 'Family Law',
+        readTime: '7 min read',
+        metaTitle: 'Domestic Violence Legal Protection Bangladesh – Rights & Remedies 2025',
+        metaDescription: 'Experiencing domestic violence in Bangladesh? Know your legal rights under the Domestic Violence Act 2010 — protection orders, shelter, maintenance, and how to take legal action.',
+        keywords: ['domestic violence Bangladesh', 'domestic violence law Bangladesh', 'protection order Bangladesh', 'DV Act 2010 Bangladesh', 'family lawyer Dhaka'],
+        publishedDate: '2026-03-24',
+        heroIntro: 'Domestic violence is a recognised legal harm in Bangladesh under the Domestic Violence (Prevention and Protection) Act 2010. Victims — primarily women and children — have access to immediate legal protection through court orders, shelter homes, and criminal prosecution of abusers.',
+        toc: ['What is Domestic Violence Under Bangladesh Law?', 'Who is Protected?', 'Types of Protection Orders', 'How to Apply for a Protection Order', 'Criminal Complaints Alongside Civil Orders', 'Key Government Helplines and Resources'],
+        sections: [
+            { h2: 'What is Domestic Violence Under Bangladesh Law?', content: `<p>The Domestic Violence (Prevention and Protection) Act 2010 defines domestic violence broadly to include:</p><ul><li><strong>Physical abuse</strong>: Any act of bodily harm, assault, or use of force</li><li><strong>Sexual abuse</strong>: Forced sexual acts within marriage or the household</li><li><strong>Emotional/psychological abuse</strong>: Threats, humiliation, isolation, controlling behaviour</li><li><strong>Economic abuse</strong>: Withholding money, preventing employment, controlling assets</li></ul><p>Both ongoing relationships and post-separation situations are covered. A <a href="/services/divorce-lawyer" style="color:var(--accent)">family lawyer in Uttara</a> can assess your situation and recommend the fastest legal route.</p>` },
+            { h2: 'Who is Protected?', content: `<p>The Act protects:</p><ul><li>Wife or former wife</li><li>Female partner in a live-in relationship</li><li>Female family members of the household</li><li>Children of the household</li></ul><p>Male victims of domestic violence can still seek remedies under the Penal Code (assault, grievous hurt) even though the DV Act 2010 primarily protects women and children.</p>` },
+            { h2: 'Types of Protection Orders', content: `<p>A court can issue:</p><ul><li><strong>Protection Order</strong>: Prevents the abuser from committing further violence, contacting, or approaching the victim</li><li><strong>Residence Order</strong>: Prevents the abuser from entering the shared home or allows the victim to remain in the home</li><li><strong>Monetary Relief Order</strong>: Requires the abuser to pay for medical expenses, loss of earnings, or maintenance</li><li><strong>Custody Order</strong>: Temporary custody of children to the victim pending full hearing</li><li><strong>Compensation Order</strong>: Payment for pain, suffering, and emotional distress</li></ul>` },
+            { h2: 'How to Apply for a Protection Order', content: `<ol><li><strong>File an application</strong> before the Chief Metropolitan Magistrate (in cities) or the Chief Judicial Magistrate (in districts) — or the Family Court.</li><li>Alternatively, report to a <strong>Protection Officer</strong> (government-appointed officer under the DV Act) who will assist in filing.</li><li>The court can issue an <strong>emergency or ex-parte order</strong> on the same day if there is imminent danger — without hearing the other side first.</li><li>Final hearing with both parties — court makes the permanent order.</li></ol><p>Evidence to gather: medical reports, photos of injuries, witness statements, WhatsApp/call records showing threats.</p>` },
+            { h2: 'Criminal Complaints Alongside Civil Orders', content: `<p>Civil protection orders and criminal prosecution can run simultaneously. File an FIR at the police station for:</p><ul><li>Section 323/325 Penal Code: causing hurt or grievous hurt</li><li>Section 498A Penal Code: cruelty by husband or relatives</li><li>Women and Children Repression Prevention Act 2000: physical or sexual violence against women</li></ul><p>Criminal prosecution leads to imprisonment of the abuser, while civil orders provide immediate protection and financial relief. Use both pathways for maximum protection. <a href="/" style="color:var(--accent)">Contact Advocate Md. Shah Alam</a> for urgent legal help.</p>` },
+        ],
+        faqs: [
+            { question: 'Can I get a protection order without a lawyer in Bangladesh?', answer: 'Yes. You can directly approach the Protection Officer or the Magistrate Court. However, a lawyer significantly improves your chances of getting an emergency same-day order and ensures all evidence is properly presented.' },
+            { question: 'What emergency helplines are available for domestic violence victims in Bangladesh?', answer: 'National Emergency: 999 | Women and Children Helpline: 109 | Bangladesh National Women Lawyers\' Association (BNWLA): 01711-037893 | One-Stop Crisis Centres (OCC) at district hospitals provide free medical, legal, and shelter assistance.' },
+            { question: 'Can I file a domestic violence case if I have already left the shared home?', answer: 'Yes. You can file for protection orders, maintenance, and criminal prosecution even after leaving the shared household. The Act still applies to past incidents and ongoing threats.' },
+            { question: 'Will a protection order prevent my husband from seeing our children?', answer: 'Not automatically. A temporary custody order can be included in the protection order application. The court will balance the children\'s welfare with both parents\' access rights.' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Divorce & Family Lawyer', to: '/services/divorce-lawyer' },
+            { text: 'Criminal Lawyer Uttara', to: '/services/criminal-lawyer' },
+            { text: 'Supreme Court Lawyer', to: '/services/supreme-court-lawyer' },
+        ],
+    },
+
+    /* ── NEW 15 ── */
+    {
+        slug: 'company-director-liability-bangladesh',
+        bnSlug: 'company-director-dayitto-bangladesh',
+        title: "Company Director Liability in Bangladesh: What You Need to Know",
+        category: 'Company & Corporate Law',
+        readTime: '7 min read',
+        metaTitle: 'Company Director Liability Bangladesh – Personal & Legal Risks 2025',
+        metaDescription: 'Are you a company director in Bangladesh? Know when you can be personally liable for company debts, fraud, tax defaults, and legal violations under the Companies Act 1994.',
+        keywords: ['company director liability Bangladesh', 'director personal liability Bangladesh', 'Companies Act 1994 Bangladesh', 'corporate lawyer Dhaka', 'director responsibilities Bangladesh'],
+        publishedDate: '2026-03-24',
+        heroIntro: 'Many people assume that being a director of a limited liability company fully protects them from personal liability. In Bangladesh, this is not always true. Directors can face personal liability for fraud, tax defaults, environmental violations, and specific statutory duties — knowing these rules is essential for every company director.',
+        toc: ['Limited Liability: The Basic Rule', 'When Directors Lose Protection: Personal Liability', 'Tax Liability of Directors', 'Director Duties Under the Companies Act 1994', 'Liability After Company Winding Up', 'How a Corporate Lawyer Can Help'],
+        sections: [
+            { h2: 'Limited Liability: The Basic Rule', content: `<p>In a private or public limited company, shareholders and directors generally enjoy <strong>limited liability</strong> — meaning their personal assets are protected from company debts. If the company cannot pay its debts, creditors can only look to the company's assets, not the personal property of directors. This is the "corporate veil."</p><p>However, Bangladesh law provides several situations where this veil is "lifted" and directors face personal responsibility.</p>` },
+            { h2: 'When Directors Lose Protection: Personal Liability', content: `<p>Under the <strong>Companies Act 1994</strong> and general law, directors can be personally liable when:</p><ul><li><strong>Fraudulent trading</strong>: Directors knowingly carried on business to defraud creditors — personal liability for all company debts (Section 303 Companies Act)</li><li><strong>Wrongful trading</strong>: Directors continued trading when they knew or should have known the company could not pay its debts</li><li><strong>Breach of fiduciary duty</strong>: Acting in own interest rather than company's interest, accepting secret profits</li><li><strong>Ultra vires acts</strong>: Entering transactions beyond the company's Memorandum of Association</li><li><strong>Failure to maintain statutory registers</strong>: Personal fines apply</li><li><strong>Guarantee given personally</strong>: Bank loans secured by director personal guarantee make the director directly liable</li></ul>` },
+            { h2: 'Tax Liability of Directors', content: `<p>The <strong>Income Tax Act 2023</strong> (and previous IT Ordinance 1984) hold directors jointly and severally liable for the company's tax arrears in certain circumstances, including:</p><ul><li>Where the company has insufficient assets to meet tax demands</li><li>Where the director was responsible for the conduct of the company's affairs</li><li>Where the tax remained unpaid due to the director's negligence or misfeasance</li></ul><p>Contact a <a href="/services/tax-lawyer" style="color:var(--accent)">tax lawyer in Dhaka</a> if you receive a tax recovery notice as a director for company tax dues.</p>` },
+            { h2: 'Director Duties Under the Companies Act 1994', content: `<p>Every director in Bangladesh has statutory duties including:</p><ul><li>Act in good faith and in the best interests of the company</li>  <li>Exercise reasonable care, skill, and diligence</li><li>Avoid conflicts of interest</li><li>Not accept benefits from third parties</li><li>Disclose any personal interest in transactions</li><li>Maintain proper books of accounts</li><li>File annual returns with RJSC on time</li><li>Not trade while insolvent</li></ul><p>Breach of these duties can result in civil claims by the company or shareholders, and criminal prosecution in cases of fraud.</p>` },
+            { h2: 'How a Corporate Lawyer Can Help', content: `<p>If you are a director facing:</p><ul><li>A creditor lawsuit claiming personal liability</li><li>A tax recovery notice for company arrears</li><li>A shareholder derivative suit for breach of duty</li><li>A winding-up petition where officers may be examined</li><li>A criminal complaint for company fraud</li></ul><p>An experienced <a href="/services/company-corporate-lawyer" style="color:var(--accent)">corporate lawyer in Dhaka</a> can assess your exposure, advise on defences, and represent you before the High Court Company Division, Tax Appellate Tribunal, or criminal courts. <a href="/" style="color:var(--accent)">Contact Advocate Md. Shah Alam</a> in Uttara for expert corporate law advice.</p>` },
+        ],
+        faqs: [
+            { question: 'Can a director be arrested for company debts in Bangladesh?', answer: 'Not purely for civil debts. However, if fraud, tax evasion, or criminal breach of trust is alleged, criminal proceedings and arrest are possible. Civil debt alone does not lead to director arrest in most cases.' },
+            { question: 'Is a nominee director also liable?', answer: 'Yes. Nominee directors (people appointed just for registration purposes) are still legally directors and share the same statutory liabilities. "Silent" director status is not a defence.' },
+            { question: 'Can a director resign to avoid liability?', answer: 'Resignation after the fact does not protect a director from liability for acts committed during the directorship. Courts look at the period when the relevant act/omission occurred.' },
+            { question: 'What is a director\'s indemnity insurance?', answer: 'Directors and Officers (D&O) liability insurance protects directors from personal financial loss due to claims of wrongful acts. It is increasingly common in larger Bangladesh companies. Consult a lawyer about whether it suits your company.' },
+        ],
+        relatedServiceLinks: [
+            { text: 'Company & Corporate Lawyer', to: '/services/company-corporate-lawyer' },
+            { text: 'Tax & VAT Lawyer', to: '/services/tax-lawyer' },
+            { text: 'Supreme Court Lawyer', to: '/services/supreme-court-lawyer' },
         ],
     },
 

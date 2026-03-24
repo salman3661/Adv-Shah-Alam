@@ -1,10 +1,10 @@
-import React from 'react';
+﻿import React from 'react';
 import ServicePage from '../../components/ServicePage';
 
 const BailLawyer = () => (
     <ServicePage
-        metaTitle="Bail Lawyer in Dhaka | Anticipatory Bail & High Court Bail – Advocate Md. Shah Alam"
-        metaDesc="Need urgent bail in Dhaka? Advocate Md. Shah Alam handles bailable & non-bailable bail, anticipatory bail & High Court applications. Fast. Experienced. Call now."
+        metaTitle="Bail Lawyer Dhaka â€“ Same-Day Bail, Anticipatory & High Court Applications | Adv. Shah Alam"
+        metaDesc="Urgent bail needed in Dhaka? Adv. Shah Alam files bailable, non-bailable & anticipatory bail applications. Same-day filing possible. Fast & experienced. Call now."
         canonicalUrl="https://www.advmdshahalam.me/services/bail-lawyer"
         h1="Bail Lawyer in Dhaka – Fast Bail Applications Across Bangladesh"
         intro="Advocate Md. Shah Alam is a leading <strong>bail lawyer in Dhaka</strong>, known for handling urgent bail applications swiftly and effectively. Whether your case involves a bailable offence at the Magistrate Court or a serious non-bailable charge requiring High Court bail, Adv. Shah Alam has the expertise and court connections to act fast and protect your freedom."

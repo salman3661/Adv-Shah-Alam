@@ -158,11 +158,13 @@ const BlogPostBn = () => {
                 <meta name="description" content={post.metaDescription} />
                 <meta name="keywords" content={post.keywords.join(', ')} />
                 <link rel="canonical" href={`https://www.advmdshahalam.me/bn/blog/${post.slug}`} />
+                <meta name="robots" content="index, follow" />
                 {post.enSlug && (
                     <link rel="alternate" hrefLang="en" href={`https://www.advmdshahalam.me/blog/${post.enSlug}`} />
                 )}
                 <link rel="alternate" hrefLang="bn" href={`https://www.advmdshahalam.me/bn/blog/${post.slug}`} />
-                <link rel="alternate" hrefLang="x-default" href={`https://www.advmdshahalam.me/bn/blog/${post.slug}`} />
+                {/* x-default points to EN version if available, else homepage — tells Google which is the authoritative default */}
+                <link rel="alternate" hrefLang="x-default" href={post.enSlug ? `https://www.advmdshahalam.me/blog/${post.enSlug}` : 'https://www.advmdshahalam.me/'} />
                 <meta property="og:title" content={post.metaTitle} />
                 <meta property="og:description" content={post.metaDescription} />
                 <meta property="og:type" content="article" />

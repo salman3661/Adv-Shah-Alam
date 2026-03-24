@@ -1,11 +1,11 @@
-import React from 'react';
+﻿import React from 'react';
 import { Link } from 'react-router-dom';
 import ServicePage from '../../components/ServicePage';
 
 const TaxLawyer = () => (
     <ServicePage
-        metaTitle="Income Tax & VAT Lawyer in Dhaka | Advocate Md. Shah Alam"
-        metaDesc="Expert income tax lawyer in Bangladesh. Advocate Md. Shah Alam handles NBR tax disputes, income tax cases, VAT matters, and tax appeal process before the Taxes Appellate Tribunal in Dhaka."
+        metaTitle="Tax & VAT Lawyer Dhaka â€“ Income Tax Appeals & NBR Disputes | Adv. Shah Alam"
+        metaDesc="Fighting a tax notice in Bangladesh? Adv. Shah Alam handles income tax appeals, VAT disputes & NBR cases in Dhaka. Experienced tax lawyer. Free consultation."
         canonicalUrl="https://www.advmdshahalam.me/services/tax-lawyer"
         h1="Income Tax & VAT Lawyer in Dhaka – Bangladesh Tax Law Expert"
         intro="Advocate Md. Shah Alam is a knowledgeable <strong>income tax lawyer in Bangladesh</strong>, providing comprehensive legal representation in tax disputes, NBR assessments, VAT matters, and tax appeal proceedings. With extensive experience before the Taxes Appellate Tribunal and the High Court Division in revenue cases, Adv. Shah Alam helps individuals and businesses protect their financial interests."

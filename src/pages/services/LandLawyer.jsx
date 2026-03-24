@@ -1,11 +1,11 @@
-import React from 'react';
+﻿import React from 'react';
 import { Link } from 'react-router-dom';
 import ServicePage from '../../components/ServicePage';
 
 const LandLawyer = () => (
     <ServicePage
-        metaTitle="Land & Property Lawyer in Uttara, Dhaka | Disputes & Registration – Adv. Shah Alam"
-        metaDesc="Land dispute, property registration, mutation & deed cases handled by expert land lawyer in Uttara, Dhaka. Advocate Md. Shah Alam – 20+ years experience. Consult today."
+        metaTitle="Land & Property Lawyer Uttara Dhaka â€“ Disputes, Registration & Mutation | Adv. Shah Alam"
+        metaDesc="Resolve land disputes, property registration & mutation in Dhaka. Expert land lawyer in Uttara. 20+ yrs experience. Free consultation â€“ call Adv. Shah Alam now."
         canonicalUrl="https://www.advmdshahalam.me/services/land-lawyer"
         h1="Land & Property Lawyer in Uttara – Land Dispute Expert in Dhaka"
         intro="Advocate Md. Shah Alam is a trusted <strong>land dispute lawyer in Uttara, Dhaka</strong>, skilled in resolving complex land and property cases across Bangladesh. From title disputes and illegal possession to mutation fraud and property registration — Adv. Shah Alam provides expert legal counsel and strong courtroom representation to protect your property rights."

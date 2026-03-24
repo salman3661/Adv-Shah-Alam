@@ -1,11 +1,11 @@
-import React from 'react';
+﻿import React from 'react';
 import { Link } from 'react-router-dom';
 import ServicePage from '../../components/ServicePage';
 
 const DivorceLawyer = () => (
     <ServicePage
-        metaTitle="Divorce Lawyer in Uttara, Dhaka | Muslim Divorce, Khula & Custody – Adv. Shah Alam"
-        metaDesc="Expert divorce lawyer in Uttara for Muslim talaq, khula, child custody & maintenance in Bangladesh family courts. Compassionate, fast, experienced. WhatsApp now."
+        metaTitle="Divorce Lawyer Uttara, Dhaka â€“ Talaq, Khula & Child Custody | Adv. Shah Alam"
+        metaDesc="Need a divorce lawyer in Uttara? Adv. Shah Alam handles Muslim talaq, khula, child custody & maintenance in Dhaka family courts. Compassionate. Fast. WhatsApp today."
         canonicalUrl="https://www.advmdshahalam.me/services/divorce-lawyer"
         h1="Divorce & Family Lawyer in Uttara – Bangladesh Family Law Expert"
         intro="Advocate Md. Shah Alam is a compassionate and knowledgeable <strong>divorce lawyer in Uttara, Dhaka</strong>, handling all aspects of family law including Muslim divorce procedure in Bangladesh, khula, child custody, maintenance, and dower (mahr) disputes. With sensitivity to the emotional weight of family matters, Adv. Shah Alam provides clear guidance and strong representation in family courts."
