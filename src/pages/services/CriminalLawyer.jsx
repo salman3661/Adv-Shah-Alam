@@ -1,11 +1,11 @@
-﻿import React from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import ServicePage from '../../components/ServicePage';
 
 const CriminalLawyer = () => (
     <ServicePage
-        metaTitle="Criminal Lawyer Uttara – FIR, Bail & Trial Defence | Adv. Shah Alam"
-        metaDesc="Charged with a crime in Dhaka or Uttara? Adv. Shah Alam handles FIR, urgent bail & trial defence in Bangladesh courts. 20+ yrs experience. Call now."
+        metaTitle="Criminal Lawyer Dhaka – Fast Defense Help | Adv. Md. Shah Alam"
+        metaDesc="Arrested or facing charges? Hire an expert Criminal Lawyer in Dhaka. Advocate Md. Shah Alam provides aggressive FIR and trial defense. Visit our Uttara Chamber today."
         canonicalUrl="https://www.advmdshahalam.me/services/criminal-lawyer"
         h1="Criminal Lawyer in Uttara – Expert Criminal Defense in Dhaka"
         intro="Advocate Md. Shah Alam is an experienced <strong>criminal lawyer in Uttara, Dhaka</strong> with 20+ years of proven expertise in criminal defense, FIR matters, bail applications, and trial representation before Sessions Courts and the Supreme Court of Bangladesh. Whether you face a misdemeanor or serious criminal charge, Adv. Shah Alam delivers strategic, results-driven legal defense."
