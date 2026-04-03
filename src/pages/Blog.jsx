@@ -85,7 +85,7 @@ const Blog = () => {
     return (
         <>
             <Helmet>
-                <title>Bangladesh Law Blog – Legal Guides by Advocate Md. Shah Alam, Uttara Dhaka</title>
+                <title>Bangladesh Legal Guide – Free Legal Articles | Adv. Shah Alam, Uttara</title>
                 <meta
                     name="description"
                     content="Free legal guides on bail, divorce, land disputes, cheque dishonour &amp; child custody in Bangladesh. Written by experienced lawyer Advocate Md. Shah Alam of Uttara, Dhaka."

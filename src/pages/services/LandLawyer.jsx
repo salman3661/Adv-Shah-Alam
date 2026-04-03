@@ -4,7 +4,7 @@ import ServicePage from '../../components/ServicePage';
 
 const LandLawyer = () => (
     <ServicePage
-        metaTitle="Land & Property Lawyer Uttara Dhaka â€“ Disputes, Registration & Mutation | Adv. Shah Alam"
+        metaTitle="Land Dispute Lawyer Uttara – Property, Mutation & Title | Adv. Shah Alam"
         metaDesc="Resolve land disputes, property registration & mutation in Dhaka. Expert land lawyer in Uttara. 20+ yrs experience. Free consultation â€“ call Adv. Shah Alam now."
         canonicalUrl="https://www.advmdshahalam.me/services/land-lawyer"
         h1="Land & Property Lawyer in Uttara – Land Dispute Expert in Dhaka"

@@ -3,7 +3,7 @@ import ServicePage from '../../components/ServicePage';
 
 const BailLawyer = () => (
     <ServicePage
-        metaTitle="Bail Lawyer Dhaka â€“ Same-Day Bail, Anticipatory & High Court Applications | Adv. Shah Alam"
+        metaTitle="Bail Lawyer Dhaka – Same-Day & Anticipatory Bail | Adv. Shah Alam"
         metaDesc="Urgent bail needed in Dhaka? Adv. Shah Alam files bailable, non-bailable & anticipatory bail applications. Same-day filing possible. Fast & experienced. Call now."
         canonicalUrl="https://www.advmdshahalam.me/services/bail-lawyer"
         h1="Bail Lawyer in Dhaka – Fast Bail Applications Across Bangladesh"

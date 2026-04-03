@@ -6,7 +6,9 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "sitemap": "node generate_sitemap.js",
+    "prebuild": "node generate_sitemap.js"
   },
   "dependencies": {
     "@directus/sdk": "^21.2.0",

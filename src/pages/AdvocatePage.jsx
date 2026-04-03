@@ -281,7 +281,7 @@ const AdvocatePage = () => {
         <>
             {/* ── SEO / Head ── */}
             <Helmet>
-                <title>Advocate Md. Shah Alam – Lawyer in Uttara, Dhaka</title>
+                <title>Advocate Md. Shah Alam – Supreme Court Lawyer | Uttara, Dhaka</title>
                 <meta
                     name="description"
                     content="Advocate Md. Shah Alam – experienced criminal, family, property & Supreme Court lawyer in Uttara, Dhaka, Bangladesh. 20+ years of legal excellence. Contact for consultation."

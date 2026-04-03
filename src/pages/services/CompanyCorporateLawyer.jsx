@@ -4,7 +4,7 @@ import ServicePage from '../../components/ServicePage';
 
 const CompanyCorporateLawyer = () => (
     <ServicePage
-        metaTitle="Company & Corporate Lawyer Dhaka â€“ Registration, Disputes & Compliance | Adv. Shah Alam"
+        metaTitle="Company & Corporate Lawyer Dhaka – Registration & Disputes | Adv. Shah Alam"
         metaDesc="Register a company or resolve corporate disputes in Bangladesh. Adv. Shah Alam handles RJSC filings, shareholder disputes & corporate litigation in Dhaka. Call now."
         canonicalUrl="https://www.advmdshahalam.me/services/company-corporate-lawyer"
         h1="Company & Corporate Lawyer in Dhaka – Bangladesh Business Law Expert"

@@ -3,7 +3,7 @@ import ServicePage from '../../components/ServicePage';
 
 const SupremeCourtLawyer = () => (
     <ServicePage
-        metaTitle="Supreme Court Lawyer Bangladesh â€“ Writ Petition, Appeal & High Court | Adv. Shah Alam"
+        metaTitle="Supreme Court Lawyer Bangladesh – Writ, Appeal & High Court | Adv. Shah Alam"
         metaDesc="High Court Division or Appellate Division? Adv. Shah Alam is your experienced Supreme Court lawyer in Bangladesh. Writ petitions, appeals & High Court bail. Consult now."
         canonicalUrl="https://www.advmdshahalam.me/services/supreme-court-lawyer"
         h1="Supreme Court Lawyer Bangladesh – High Court & Appellate Expert"

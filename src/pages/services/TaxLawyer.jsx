@@ -4,7 +4,7 @@ import ServicePage from '../../components/ServicePage';
 
 const TaxLawyer = () => (
     <ServicePage
-        metaTitle="Tax & VAT Lawyer Dhaka â€“ Income Tax Appeals & NBR Disputes | Adv. Shah Alam"
+        metaTitle="Income Tax & VAT Lawyer Dhaka – NBR Disputes & Appeals | Adv. Shah Alam"
         metaDesc="Fighting a tax notice in Bangladesh? Adv. Shah Alam handles income tax appeals, VAT disputes & NBR cases in Dhaka. Experienced tax lawyer. Free consultation."
         canonicalUrl="https://www.advmdshahalam.me/services/tax-lawyer"
         h1="Income Tax & VAT Lawyer in Dhaka – Bangladesh Tax Law Expert"

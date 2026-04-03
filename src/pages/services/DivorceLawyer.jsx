@@ -4,7 +4,7 @@ import ServicePage from '../../components/ServicePage';
 
 const DivorceLawyer = () => (
     <ServicePage
-        metaTitle="Divorce Lawyer Uttara, Dhaka â€“ Talaq, Khula & Child Custody | Adv. Shah Alam"
+        metaTitle="Divorce Lawyer Uttara – Talaq, Khula & Child Custody | Adv. Shah Alam"
         metaDesc="Need a divorce lawyer in Uttara? Adv. Shah Alam handles Muslim talaq, khula, child custody & maintenance in Dhaka family courts. Compassionate. Fast. WhatsApp today."
         canonicalUrl="https://www.advmdshahalam.me/services/divorce-lawyer"
         h1="Divorce & Family Lawyer in Uttara – Bangladesh Family Law Expert"

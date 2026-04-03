@@ -18,7 +18,7 @@ const Home = () => {
     return (
         <>
             <Helmet>
-                <title>Lawyer in Uttara &amp; Dhaka | Advocate Md. Shah Alam – Criminal, Divorce &amp; Land Law</title>
+                <title>Lawyer in Uttara &amp; Dhaka – Criminal, Divorce &amp; Bail | Adv. Shah Alam</title>
                 <meta name="description" content="Trusted lawyer in Uttara, Dhaka — criminal defence, divorce, land disputes, bail &amp; Supreme Court cases. 20+ years. Free WhatsApp consultation: +880 1712-655546." />
                 <link rel="canonical" href="https://www.advmdshahalam.me/" />
                 {/* OpenGraph */}

@@ -4,7 +4,7 @@ import ServicePage from '../../components/ServicePage';
 
 const CriminalLawyer = () => (
     <ServicePage
-        metaTitle="Criminal Lawyer in Uttara, Dhaka â€“ FIR, Bail & Trial Defence | Adv. Shah Alam"
+        metaTitle="Criminal Lawyer Uttara – FIR, Bail & Trial Defence | Adv. Shah Alam"
         metaDesc="Charged with a crime in Dhaka or Uttara? Adv. Shah Alam handles FIR, urgent bail & trial defence in Bangladesh courts. 20+ yrs experience. Call now."
         canonicalUrl="https://www.advmdshahalam.me/services/criminal-lawyer"
         h1="Criminal Lawyer in Uttara – Expert Criminal Defense in Dhaka"
