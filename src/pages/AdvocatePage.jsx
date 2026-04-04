@@ -227,7 +227,7 @@ const faqPageFaqs = [
     {
         question: 'Who is Advocate Md. Shah Alam?',
         answer:
-            'Advocate Md. Shah Alam is an experienced lawyer based in Uttara, Dhaka, Bangladesh, practising at the Supreme Court of Bangladesh and the Metro Sessions Court, Dhaka. He has 10+ years of experience in criminal, family, property, and company & corporate law.',
+            'Advocate Md. Shah Alam is an experienced lawyer based in Bangladesh, practising at the Supreme Court of Bangladesh and the Metro Sessions Court, Dhaka. He has 10+ years of experience in criminal, family, property, and company & corporate law.',
     },
     {
         question: 'What areas of law does Advocate Shah Alam specialise in?',
@@ -237,7 +237,7 @@ const faqPageFaqs = [
     {
         question: 'Where does Advocate Shah Alam practise?',
         answer:
-            'He practises primarily in Uttara and across Dhaka at all court levels — Magistrate Courts, Sessions Courts, the Dhaka High Court Division, and the Appellate Division of the Supreme Court of Bangladesh.',
+            'He practises primarily in Dhaka and across Bangladesh at all court levels — Magistrate Courts, Sessions Courts, the Dhaka High Court Division, and the Appellate Division of the Supreme Court of Bangladesh.',
     },
     {
         question: 'How can I contact Advocate Shah Alam for a consultation?',
@@ -284,7 +284,7 @@ const AdvocatePage = () => {
                 <title>Advocate Md. Shah Alam – Supreme Court Lawyer | Uttara, Dhaka</title>
                 <meta
                     name="description"
-                    content="Advocate Md. Shah Alam – experienced criminal, family, property & Supreme Court lawyer in Uttara, Dhaka, Bangladesh. 20+ years of legal excellence. Contact for consultation."
+                    content="Advocate Md. Shah Alam – experienced criminal, family, property & Supreme Court lawyer in Bangladesh. 10+ years of legal excellence. Contact for consultation."
                 />
                 <link rel="canonical" href="https://www.advmdshahalam.me/advocate-md-shah-alam" />
                 <meta property="og:title" content="Advocate Md. Shah Alam – Lawyer in Uttara, Dhaka" />
@@ -326,11 +326,11 @@ const AdvocatePage = () => {
                         Advocate Md. Shah Alam
                     </h1>
                     <p className="text-lg md:text-xl font-medium mb-6" style={{ color: 'var(--accent)' }}>
-                        Lawyer in Uttara, Dhaka · Supreme Court of Bangladesh
+                        Lawyer in Bangladesh · Supreme Court of Bangladesh
                     </p>
                     <p className="text-base leading-relaxed max-w-2xl mb-8" style={{ color: 'var(--hero-text-2)' }}>
                         With over 10 years of experience, Advocate Md. Shah Alam is a trusted legal authority
-                        in Uttara and across Dhaka, providing expert counsel in criminal, family, property, and
+                        in Bangladesh, providing expert counsel in criminal, family, property, and
                         company & corporate law at all court levels in Bangladesh.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4">
@@ -489,7 +489,7 @@ const AdvocatePage = () => {
                         Practice Areas
                     </h2>
                     <p className="text-sm mb-8" style={{ color: 'var(--text-muted)' }}>
-                        Serving clients in Uttara and across Dhaka. Click a service to learn more.
+                        Serving clients in Uttara,Dhaka and across Bangladesh. Click a service to learn more.
                     </p>
                     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
                         {serviceLinks.map((service, i) => (
