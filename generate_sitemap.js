@@ -21,10 +21,10 @@ function extractPosts(src) {
   // Match each post block: get slug and publishedDate
   const slugs = [...src.matchAll(/slug:\s*'([^']+)'/g)].map(m => m[1]);
   const dates = [...src.matchAll(/publishedDate:\s*'([^']+)'/g)].map(m => m[1]);
-  
+
   // The PUBLISHED constant is used for most posts
   const publishedConst = (src.match(/const PUBLISHED\d* = '([^']+)'/) || [])[1] || TODAY;
-  
+
   slugs.forEach((slug, i) => {
     const date = dates[i] || publishedConst;
     results.push({ slug, date });
@@ -100,7 +100,7 @@ ${urls.join('\n')}
 </urlset>`;
 
 // Write to both dist and public
-fs.writeFileSync('dist/sitemap.xml', sitemap, 'utf8');
+fs.writeFileSync('public/sitemap.xml', sitemap, 'utf8');
 if (fs.existsSync('public')) {
   fs.writeFileSync('public/sitemap.xml', sitemap, 'utf8');
 }
@@ -108,7 +108,7 @@ if (fs.existsSync('public')) {
 const lineCount = sitemap.split('\n').length;
 const urlCount = urls.length;
 console.log(`\nSitemap written: ${urlCount} URLs, ${lineCount} lines`);
-console.log('Path: dist/sitemap.xml');
+console.log('Path: public/sitemap.xml');
 
 // Validation: check no future EN posts slipped in (check for /blog/slug specifically)
 const ghostCheck = futureEn.filter(p => sitemap.includes(`/blog/${p.slug}<`));
