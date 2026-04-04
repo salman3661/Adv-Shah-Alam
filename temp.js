@@ -1,4 +1,5 @@
-export const newPosts = [
+const posts = [
+
     /* ── NEW 6 ── */
     {
         slug: 'mahr-dower-rights-wife-bangladesh',
@@ -320,5 +321,7 @@ export const newPosts = [
             { text: 'Tax & VAT Lawyer', to: '/services/tax-lawyer' },
             { text: 'Supreme Court Lawyer', to: '/services/supreme-court-lawyer' },
         ],
-    }
+    },
+
+
 ];
