@@ -35,7 +35,7 @@ const siteInfo = {
 
     // ─── Footer bio text ────────────────────────────────────────────
     footerBio:
-        'Trusted advocate in Uttara, Dhaka with 20+ years of legal excellence across criminal, civil, and family law.',
+        'Trusted lawyer in Bangladesh with a professional chamber in Uttara, Dhaka, providing expert criminal, divorce, bail, and civil legal services nationwide.',
 
     // ─── Copyright text ─────────────────────────────────────────────
     /** Use {year} as a placeholder — it will be replaced with the current year */
@@ -46,7 +46,7 @@ const siteInfo = {
 
     // ─── Footer service links (shown in Practice Areas column) ─────
     footerServiceLinks: [
-        { name: 'Criminal Lawyer in Uttara',    path: '/services/criminal-lawyer' },
+        { name: 'Criminal Lawyer in Bangladesh',  path: '/services/criminal-lawyer' },
         { name: 'Divorce & Family Lawyer',       path: '/services/divorce-lawyer' },
         { name: 'Land & Property Lawyer',        path: '/services/land-lawyer' },
         { name: 'Bail Lawyer in Dhaka',          path: '/services/bail-lawyer' },

@@ -10,17 +10,17 @@ const hero = {
     /** Label badge above the H1 (small pill text) */
     labelBadge: 'Advocate · Supreme Court of Bangladesh',
 
-    /** Main H1 headline — keep the keyword "lawyer in Uttara" for SEO */
-    headline: 'Experienced Lawyer in Uttara –',
+    /** Main H1 headline — targets "Trusted Lawyer in Bangladesh" for national authority SEO */
+    headline: 'Trusted Lawyer in Bangladesh –',
     headlineAccent: 'Advocate Md. Shah Alam',
 
-    /** Bold subheading below the H1 */
+    /** Bold subheading below the H1 — calls out Uttara chamber for local conversion */
     subheading:
-        'Providing Legal Representation in Criminal, Divorce, Land, Bail, Company & Corporate, and Supreme Court Matters in Dhaka & Bangladesh.',
+        'Experienced Criminal, Divorce & Bail Lawyer with Chamber in Uttara, Dhaka — Serving Clients Across Bangladesh.',
 
-    /** Smaller description paragraph — keep internal keyword phrases */
+    /** Smaller description paragraph — national authority + local chamber conversion */
     description:
-        'As a trusted <strong>lawyer in Uttara</strong> and <strong>advocate in Uttara</strong>, Adv. Shah Alam offers expert criminal, divorce, land, bail, Supreme Court, and company & corporate legal services in Dhaka. Experienced Lawyer with proven courtroom excellence.',
+        'As a trusted <strong>lawyer in Bangladesh</strong>, Adv. Shah Alam provides legal services across Bangladesh with a dedicated <strong>lawyer chamber in Uttara, Dhaka</strong> for direct client consultation. Expert in criminal, divorce, bail, land, Supreme Court, and company & corporate law.',
 
     /** Primary CTA button (WhatsApp) */
     cta1Label: 'WhatsApp Consult',
@@ -45,7 +45,7 @@ const hero = {
     photoBadgeTop: '⚖️ Supreme Court',
 
     /** Photo alt text (important for SEO) */
-    photoAlt: 'Advocate Md. Shah Alam – Experienced Lawyer in Uttara, Dhaka',
+    photoAlt: 'Advocate Md. Shah Alam – Trusted Lawyer in Bangladesh | Chamber in Uttara, Dhaka',
 };
 
 export default hero;

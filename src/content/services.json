@@ -2,32 +2,32 @@
   "items": [
     {
       "icon": "Shield",
-      "title": "Criminal Lawyer in Uttara",
-      "desc": "Expert criminal defense for FIR cases, bail applications, trial representation, and criminal case handling in Dhaka courts.",
+      "title": "Criminal Lawyer in Bangladesh",
+      "desc": "Expert criminal defense for FIR cases, bail applications, trial representation, and criminal case handling across Bangladesh courts. Available for consultation at the Uttara chamber in Dhaka.",
       "link": "/services/criminal-lawyer",
       "iconBg": "rgba(239,68,68,0.12)",
       "iconColor": "#EF4444"
     },
     {
       "icon": "Users",
-      "title": "Divorce & Family Lawyer in Uttara",
-      "desc": "Handle divorce procedure in Bangladesh, child custody, Muslim family law, mutual divorce, and all family court matters.",
+      "title": "Divorce & Family Lawyer in Bangladesh",
+      "desc": "Handle divorce procedure in Bangladesh, child custody, Muslim family law, mutual divorce, and all family court matters. Consultation available at the Uttara chamber, Dhaka.",
       "link": "/services/divorce-lawyer",
       "iconBg": "rgba(236,72,153,0.12)",
       "iconColor": "#EC4899"
     },
     {
       "icon": "Home",
-      "title": "Land & Property Lawyer in Uttara",
-      "desc": "Resolve land dispute cases, property mutation, registration, land fraud, and title deed matters in Bangladesh courts.",
+      "title": "Land & Property Lawyer in Bangladesh",
+      "desc": "Resolve land dispute cases, property mutation, registration, land fraud, and title deed matters in Bangladesh courts. Visit our Uttara chamber in Dhaka for consultation.",
       "link": "/services/land-lawyer",
       "iconBg": "rgba(34,197,94,0.12)",
       "iconColor": "#22C55E"
     },
     {
       "icon": "Scale",
-      "title": "Bail Lawyer in Dhaka",
-      "desc": "Fast bail applications, anticipatory bail, High Court bail matters, and urgent bail proceedings across Bangladesh courts.",
+      "title": "Bail Lawyer in Bangladesh",
+      "desc": "Fast bail applications, anticipatory bail, High Court bail matters, and urgent bail proceedings across Bangladesh courts. Available at the Uttara chamber, Dhaka.",
       "link": "/services/bail-lawyer",
       "iconBg": "rgba(59,130,246,0.12)",
       "iconColor": "#3B82F6"
