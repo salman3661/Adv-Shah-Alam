@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import ServicePage from '../../components/ServicePage';
 
 const BailLawyer = () => (
@@ -20,6 +21,19 @@ const BailLawyer = () => (
             'Bail for foreign nationals in Bangladesh',
             'Emergency same-day bail filing',
         ]}
+        contextNote={
+            <>
+                Bail matters are often closely connected to the underlying criminal charge. If you are facing a criminal case alongside your bail application, Adv. Shah Alam's dedicated{' '}
+                <Link to="/services/criminal-lawyer" style={{ color: 'var(--accent)', textDecoration: 'underline' }}>
+                    criminal lawyer in Uttara
+                </Link>{' '}
+                service covers FIR defence, trial representation, and charge-sheet quashing. For a plain-language overview of how bail works in Bangladesh, read our detailed guide on{' '}
+                <Link to="/blog/bail-process-bangladesh" style={{ color: 'var(--accent)', textDecoration: 'underline' }}>
+                    the bail process in Bangladesh
+                </Link>
+                .
+            </>
+        }
         faqItems={[
             {
                 q: 'How to get bail in Bangladesh for a non-bailable offence?',

@@ -284,13 +284,13 @@ const AdvocatePage = () => {
                 <title>Advocate Md. Shah Alam – Supreme Court Lawyer | Uttara, Dhaka</title>
                 <meta
                     name="description"
-                    content="Advocate Md. Shah Alam – experienced criminal, family, property & Supreme Court lawyer in Bangladesh. 10+ years of legal excellence. Contact for consultation."
+                    content="Advocate Md. Shah Alam – experienced criminal, family, property &amp; Supreme Court lawyer in Bangladesh. 10+ years of legal excellence. Contact for consultation."
                 />
                 <link rel="canonical" href="https://www.advmdshahalam.me/advocate-md-shah-alam" />
-                <meta property="og:title" content="Advocate Md. Shah Alam – Lawyer in Uttara, Dhaka" />
+                <meta property="og:title" content="Advocate Md. Shah Alam – Supreme Court Lawyer | Uttara, Dhaka" />
                 <meta
                     property="og:description"
-                    content="Experienced criminal, family, property & Supreme Court lawyer in Uttara, Dhaka. 20+ years of legal excellence. Book a consultation today."
+                    content="Experienced criminal, family, property &amp; Supreme Court lawyer in Uttara, Dhaka. 20+ years of legal excellence. Book a consultation today."
                 />
                 <meta property="og:url" content="https://www.advmdshahalam.me/advocate-md-shah-alam" />
                 <meta property="og:type" content="profile" />
@@ -323,7 +323,7 @@ const AdvocatePage = () => {
                         className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold leading-tight mb-4"
                         style={{ color: 'var(--hero-text)', fontFamily: "'Playfair Display', serif" }}
                     >
-                        Advocate Md. Shah Alam
+                        Advocate Md. Shah Alam – Trusted Lawyer in Bangladesh
                     </h1>
                     <p className="text-lg md:text-xl font-medium mb-6" style={{ color: 'var(--accent)' }}>
                         Lawyer in Bangladesh · Supreme Court of Bangladesh

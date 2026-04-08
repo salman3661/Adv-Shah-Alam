@@ -8,7 +8,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "sitemap": "node generate_sitemap.js",
-    "prebuild": "node generate_sitemap.js"
+    "prebuild": "node generate_sitemap.js",
+    "indexnow": "node scripts/indexnow-submit.mjs"
   },
   "dependencies": {
     "@directus/sdk": "^21.2.0",

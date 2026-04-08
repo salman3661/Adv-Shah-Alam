@@ -26,23 +26,27 @@ const seo = {
     twitterHandle: null,                   // add @handle if you have one
 
     // ─── Per-page meta overrides ─────────────────────────────────────
-    // These are defaults — each page can override any field.
+    // These values MUST match what each page's <Helmet> actually outputs.
     pages: {
         home: {
             title: 'Trusted Lawyer in Bangladesh (2026) – Criminal, Divorce & Bail Expert | Uttara Chamber',
             desc: 'Trusted lawyer in Bangladesh for criminal, divorce and bail cases. Visit our Uttara chamber in Dhaka for expert legal consultation.',
         },
         blog: {
-            title: 'Legal Blog – Advocate Md. Shah Alam | Law Articles Bangladesh',
-            desc: 'Read expert legal articles on criminal law, family law, property disputes, civil law, and company & corporate law in Bangladesh by Advocate Md. Shah Alam.',
+            title: 'Free Legal Guides Bangladesh – Criminal, Divorce & Property Law | Adv. Shah Alam',
+            desc: 'Free legal guides on bail, divorce, land disputes & criminal law in Bangladesh. Plain-language articles by Advocate Md. Shah Alam, expert lawyer in Uttara, Dhaka.',
         },
         blogBn: {
             title: 'আইনি ব্লগ – অ্যাডভোকেট মো. শাহ আলম | বাংলাদেশ আইন প্রবন্ধ',
             desc: 'বাংলাদেশের আইন বিষয়ক বিশেষজ্ঞ নিবন্ধ — ফৌজদারি, পারিবারিক, সম্পত্তি, কর্পোরেট আইন এবং আরও অনেক বিষয়ে।',
         },
         advocate: {
-            title: 'Advocate Md. Shah Alam – Supreme Court Advocate, Uttara, Dhaka',
-            desc: 'Advocate Md. Shah Alam is a Supreme Court advocate based in Uttara, Dhaka with 20+ years of experience in criminal, civil, family, and corporate law across Bangladesh.',
+            title: 'Advocate Md. Shah Alam – Supreme Court Lawyer | Uttara, Dhaka',
+            desc: 'Advocate Md. Shah Alam – experienced criminal, family, property & Supreme Court lawyer in Bangladesh. 10+ years of legal excellence. Contact for consultation.',
+        },
+        education: {
+            title: 'Advocate Md. Shah Alam – Career, Education & Legal Journey | Lawyer in Bangladesh',
+            desc: 'Explore the education, career timeline and professional milestones of Advocate Md. Shah Alam – LL.M lawyer practising at the Supreme Court of Bangladesh from Uttara, Dhaka.',
         },
     },
 

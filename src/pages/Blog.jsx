@@ -85,12 +85,17 @@ const Blog = () => {
     return (
         <>
             <Helmet>
-                <title>Bangladesh Legal Guide – Free Legal Articles | Adv. Shah Alam, Uttara</title>
+                <title>Free Legal Guides Bangladesh – Criminal, Divorce &amp; Property Law | Adv. Shah Alam</title>
                 <meta
                     name="description"
-                    content="Free legal guides on bail, divorce, land disputes, cheque dishonour &amp; child custody in Bangladesh. Written by experienced lawyer Advocate Md. Shah Alam of Uttara, Dhaka."
+                    content="Free legal guides on bail, divorce, land disputes &amp; criminal law in Bangladesh. Plain-language articles by Advocate Md. Shah Alam, expert lawyer in Uttara, Dhaka."
                 />
                 <link rel="canonical" href="https://www.advmdshahalam.me/blog" />
+                <meta property="og:title" content="Free Legal Guides Bangladesh – Criminal, Divorce &amp; Property Law | Adv. Shah Alam" />
+                <meta property="og:description" content="Free legal guides on bail, divorce, land disputes &amp; criminal law in Bangladesh. Plain-language articles by Advocate Md. Shah Alam, expert lawyer in Uttara, Dhaka." />
+                <meta property="og:url" content="https://www.advmdshahalam.me/blog" />
+                <meta property="og:type" content="website" />
+                <meta property="og:image" content="https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.png" />
             </Helmet>
 
             {/* Hero */}
@@ -106,7 +111,7 @@ const Blog = () => {
                         className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight mb-6"
                         style={{ color: 'var(--hero-text)', fontFamily: "'Playfair Display', serif" }}
                     >
-                        Legal Blog & Guides
+                        Free Legal Guides &amp; Articles – Bangladesh Law Expert
                     </h1>
                     <p className="text-lg max-w-2xl mx-auto leading-relaxed" style={{ color: 'var(--hero-text-2)' }}>
                         Practical, plain-language legal guides on Bangladesh law — criminal, family,

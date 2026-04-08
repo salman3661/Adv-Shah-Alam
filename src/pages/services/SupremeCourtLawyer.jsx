@@ -1,4 +1,5 @@
-﻿import React from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import ServicePage from '../../components/ServicePage';
 
 const SupremeCourtLawyer = () => (
@@ -20,6 +21,19 @@ const SupremeCourtLawyer = () => (
             'Tax and revenue appellate matters',
             'Contempt of court proceedings',
         ]}
+        contextNote={
+            <>
+                High Court bail applications are among the most common Supreme Court matters. If you need urgent bail in a serious criminal case, Adv. Shah Alam's specialist{' '}
+                <Link to="/services/bail-lawyer" style={{ color: 'var(--accent)', textDecoration: 'underline' }}>
+                    bail lawyer in Dhaka
+                </Link>{' '}
+                service is specifically dedicated to fast bail applications at all court levels. To understand your constitutional options, read our in-depth guide on{' '}
+                <Link to="/blog/writ-petition-bangladesh" style={{ color: 'var(--accent)', textDecoration: 'underline' }}>
+                    how to file a writ petition in Bangladesh
+                </Link>
+                .
+            </>
+        }
         faqItems={[
             {
                 q: 'What types of cases does the High Court Division hear?',
