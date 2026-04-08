@@ -19,10 +19,15 @@
     { "source": "/advocate-md-shah-alam/", "destination": "/advocate-md-shah-alam","permanent": true }
   ],
   "rewrites": [
-    { "source": "/admin",      "destination": "/admin/index.html" },
-    { "source": "/admin/:path*", "destination": "/admin/:path*"   },
-    { "source": "/api/:path*",   "destination": "/api/:path*"     },
-    { "source": "/(.*)",         "destination": "/"               }
+    { "source": "/admin",        "destination": "/admin/index.html" },
+    { "source": "/admin/:path*", "destination": "/admin/:path*"     },
+    { "source": "/api/:path*",   "destination": "/api/:path*"       },
+
+    { "source": "/sitemap.xml",                          "destination": "/sitemap.xml"                          },
+    { "source": "/robots.txt",                           "destination": "/robots.txt"                           },
+    { "source": "/b88cb6f2bcc144ba92303e49cd3b7970.txt", "destination": "/b88cb6f2bcc144ba92303e49cd3b7970.txt" },
+
+    { "source": "/(.*)", "destination": "/" }
   ],
   "headers": [
     {
