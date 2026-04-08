@@ -4,7 +4,7 @@ import { BookOpen, ArrowRight, Clock } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import blogPosts, { isPublished } from '../data/blogPosts';
 import blogPostsBn, { isPublishedBn } from '../data/blogPostsBn';
-import seo from '../content/seo.json';
+import seo from '../content/seo.js';
 
 // Pull the 3 newest published posts from each dataset
 const latestEn = blogPosts.filter(isPublished).slice(0, 3);

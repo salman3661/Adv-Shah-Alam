@@ -17,7 +17,7 @@ const seo = {
     siteUrl: 'https://www.advmdshahalam.me',
 
     defaultTitle: 'Trusted Lawyer in Bangladesh (2026) – Criminal, Divorce & Bail Expert | Uttara Chamber',
-    defaultDesc: 'Looking for a trusted lawyer in Bangladesh? Expert in criminal, divorce & bail cases. Advocate Md. Shah Alam — visit our Uttara chamber in Dhaka for consultation.',
+    defaultDesc: 'Trusted lawyer in Bangladesh for criminal, divorce and bail cases. Visit our Uttara chamber in Dhaka for expert legal consultation.',
     defaultOgImage: 'https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.png',
     defaultOgImageAlt: 'Advocate Md. Shah Alam – Trusted Lawyer in Bangladesh | Uttara Chamber',
 
@@ -30,7 +30,7 @@ const seo = {
     pages: {
         home: {
             title: 'Trusted Lawyer in Bangladesh (2026) – Criminal, Divorce & Bail Expert | Uttara Chamber',
-            desc: 'Looking for a trusted lawyer in Bangladesh? Advocate Md. Shah Alam offers expert criminal, divorce, bail & land legal services. Visit our lawyer chamber in Uttara, Dhaka.',
+            desc: 'Trusted lawyer in Bangladesh for criminal, divorce and bail cases. Visit our Uttara chamber in Dhaka for expert legal consultation.',
         },
         blog: {
             title: 'Legal Blog – Advocate Md. Shah Alam | Law Articles Bangladesh',

@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { Search, Clock, ChevronRight, BookOpen } from 'lucide-react';
 import blogPosts, { isPublished } from '../data/blogPosts';
 import { telLink, waLink } from '../data/contactInfo';
-import seo from '../content/seo.json';
+import seo from '../content/seo.js';
 
 const CATEGORIES = seo.categoriesEn;
 const categoryColors = seo.categoryColors;

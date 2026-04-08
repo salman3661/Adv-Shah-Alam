@@ -18,8 +18,8 @@ const Home = () => {
     return (
         <>
             <Helmet>
-                <title>Lawyer Dhaka – Criminal &amp; Bail Expert | Adv. Shah Alam (Uttara)</title>
-                <meta name="description" content="Need a proven lawyer in Dhaka? Advocate Md. Shah Alam offers expert legal defense for criminal, bail, and family cases from his Uttara Chamber. Call now for urgent help." />
+                <title>Trusted Lawyer in Bangladesh (2026) – Criminal, Divorce &amp; Bail Expert | Uttara Chamber</title>
+                <meta name="description" content="Trusted lawyer in Bangladesh for criminal, divorce and bail cases. Visit our Uttara chamber in Dhaka for expert legal consultation." />
                 <link rel="canonical" href="https://www.advmdshahalam.me/" />
                 {/* OpenGraph */}
                 <meta property="og:type" content="website" />
