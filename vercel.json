@@ -8,7 +8,7 @@
           "value": "www.advmdshahalam.me"
         }
       ],
-      "destination": "https://advmdshahalam.me/",
+      "destination": "https://advmdshahalam.me/$1",
       "permanent": true
     },
     {
