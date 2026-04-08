@@ -2,149 +2,61 @@
   "redirects": [
     {
       "source": "/(.*)",
-      "has": [
-        {
-          "type": "host",
-          "value": "www.advmdshahalam.me"
-        }
-      ],
+      "has": [{ "type": "host", "value": "www.advmdshahalam.me" }],
       "destination": "https://advmdshahalam.me/$1",
       "permanent": true
     },
-    {
-      "source": "/criminal-lawyer-uttara",
-      "destination": "/services/criminal-lawyer",
-      "permanent": true
-    },
-    {
-      "source": "/divorce-lawyer-uttara",
-      "destination": "/services/divorce-lawyer",
-      "permanent": true
-    },
-    {
-      "source": "/land-property-lawyer-uttara",
-      "destination": "/services/land-lawyer",
-      "permanent": true
-    },
-    {
-      "source": "/bail-lawyer-dhaka",
-      "destination": "/services/bail-lawyer",
-      "permanent": true
-    },
-    {
-      "source": "/supreme-court-lawyer-bangladesh",
-      "destination": "/services/supreme-court-lawyer",
-      "permanent": true
-    },
-    {
-      "source": "/tax-vat-lawyer-dhaka",
-      "destination": "/services/tax-lawyer",
-      "permanent": true
-    },
-    {
-      "source": "/bn/blog/",
-      "destination": "/bn/blog",
-      "permanent": true
-    },
-    {
-      "source": "/blog/",
-      "destination": "/blog",
-      "permanent": true
-    },
-    {
-      "source": "/education/",
-      "destination": "/education",
-      "permanent": true
-    },
-    {
-      "source": "/services/:slug/",
-      "destination": "/services/:slug",
-      "permanent": true
-    },
-    {
-      "source": "/advocate-md-shah-alam/",
-      "destination": "/advocate-md-shah-alam",
-      "permanent": true
-    }
+    { "source": "/criminal-lawyer-uttara",         "destination": "/services/criminal-lawyer",     "permanent": true },
+    { "source": "/divorce-lawyer-uttara",           "destination": "/services/divorce-lawyer",      "permanent": true },
+    { "source": "/land-property-lawyer-uttara",     "destination": "/services/land-lawyer",         "permanent": true },
+    { "source": "/bail-lawyer-dhaka",               "destination": "/services/bail-lawyer",         "permanent": true },
+    { "source": "/supreme-court-lawyer-bangladesh", "destination": "/services/supreme-court-lawyer","permanent": true },
+    { "source": "/tax-vat-lawyer-dhaka",            "destination": "/services/tax-lawyer",          "permanent": true },
+    { "source": "/bn/blog/",               "destination": "/bn/blog",               "permanent": true },
+    { "source": "/blog/",                  "destination": "/blog",                  "permanent": true },
+    { "source": "/education/",             "destination": "/education",             "permanent": true },
+    { "source": "/services/:slug/",        "destination": "/services/:slug",        "permanent": true },
+    { "source": "/advocate-md-shah-alam/", "destination": "/advocate-md-shah-alam", "permanent": true }
   ],
   "rewrites": [
-    {
-      "source": "/admin",
-      "destination": "/admin/index.html"
-    },
-    {
-      "source": "/admin/:path*",
-      "destination": "/admin/:path*"
-    },
-    {
-      "source": "/api/:path*",
-      "destination": "/api/:path*"
-    },
-    {
-      "source": "/((?!api|admin|sitemap\\.xml|robots\\.txt|b88cb6f2bcc144ba92303e49cd3b7970\\.txt|assets|favicon\\.ico).*)",
-      "destination": "/"
-    }
+    { "source": "/admin",        "destination": "/admin/index.html" },
+    { "source": "/admin/:path*", "destination": "/admin/:path*"     },
+    { "source": "/api/:path*",   "destination": "/api/:path*"       },
+    { "source": "/(.*)",         "destination": "/index.html"       }
   ],
   "headers": [
     {
       "source": "/admin/config.yml",
       "headers": [
-        {
-          "key": "Content-Type",
-          "value": "text/yaml; charset=utf-8"
-        },
-        {
-          "key": "Cache-Control",
-          "value": "no-cache"
-        }
+        { "key": "Content-Type",  "value": "text/yaml; charset=utf-8" },
+        { "key": "Cache-Control", "value": "no-cache" }
       ]
     },
     {
       "source": "/api/(.*)",
       "headers": [
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        },
-        {
-          "key": "Cache-Control",
-          "value": "no-store"
-        }
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Cache-Control",          "value": "no-store" }
       ]
     },
     {
       "source": "/((?!api).*)",
       "headers": [
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        },
-        {
-          "key": "X-Frame-Options",
-          "value": "SAMEORIGIN"
-        },
-        {
-          "key": "Referrer-Policy",
-          "value": "strict-origin-when-cross-origin"
-        }
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options",        "value": "SAMEORIGIN" },
+        { "key": "Referrer-Policy",        "value": "strict-origin-when-cross-origin" }
       ]
     },
     {
       "source": "/assets/(.*)",
       "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
       ]
     },
     {
       "source": "/(sitemap.xml|robots.txt)",
       "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=86400"
-        }
+        { "key": "Cache-Control", "value": "public, max-age=86400" }
       ]
     }
   ]
