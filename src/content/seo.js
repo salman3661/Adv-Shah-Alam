@@ -1,4 +1,4 @@
-/**
+﻿/**
  * ╔══════════════════════════════════════════════════════════════╗
  * ║  src/content/seo.js — Global SEO Defaults                    ║
  * ║  These values are used as fallbacks across all pages.        ║
@@ -14,11 +14,11 @@
 const seo = {
     // ─── Site-level defaults (used when page doesn't specify) ───────
     siteName: 'Advocate Md. Shah Alam',
-    siteUrl: 'https://www.advmdshahalam.me',
+    siteUrl: 'https://advmdshahalam.me',
 
     defaultTitle: 'Trusted Lawyer in Bangladesh (2026) – Criminal, Divorce & Bail Expert | Uttara Chamber',
     defaultDesc: 'Trusted lawyer in Bangladesh for criminal, divorce and bail cases. Visit our Uttara chamber in Dhaka for expert legal consultation.',
-    defaultOgImage: 'https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.png',
+    defaultOgImage: 'https://advmdshahalam.me/images/hero/hero-md-shah-alam.png',
     defaultOgImageAlt: 'Advocate Md. Shah Alam – Trusted Lawyer in Bangladesh | Uttara Chamber',
 
     // ─── Twitter / X card ───────────────────────────────────────────

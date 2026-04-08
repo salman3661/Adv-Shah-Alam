@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { telLink, waLink } from '../data/contactInfo';
@@ -16,8 +16,8 @@ const ServicePage = ({ metaTitle, metaDesc, canonicalUrl, h1, intro, coverage, f
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
         itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.advmdshahalam.me/' },
-            { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.advmdshahalam.me/#services' },
+            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://advmdshahalam.me/' },
+            { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://advmdshahalam.me/#services' },
             { '@type': 'ListItem', position: 3, name: h1, item: canonicalUrl },
         ],
     } : null;
@@ -32,7 +32,7 @@ const ServicePage = ({ metaTitle, metaDesc, canonicalUrl, h1, intro, coverage, f
             '@type': 'Person',
             name: 'Advocate Md. Shah Alam',
             jobTitle: 'Advocate',
-            url: 'https://www.advmdshahalam.me/advocate-md-shah-alam',
+            url: 'https://advmdshahalam.me/advocate-md-shah-alam',
         },
         areaServed: [
             { '@type': 'City', name: 'Uttara' },
@@ -63,13 +63,13 @@ const ServicePage = ({ metaTitle, metaDesc, canonicalUrl, h1, intro, coverage, f
                 <meta property="og:title" content={metaTitle} />
                 <meta property="og:description" content={metaDesc} />
                 {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
-                <meta property="og:image" content="https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.png" />
+                <meta property="og:image" content="https://advmdshahalam.me/images/hero/hero-md-shah-alam.png" />
                 <meta property="og:site_name" content="Advocate Md. Shah Alam" />
                 {/* Twitter Card */}
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content={metaTitle} />
                 <meta name="twitter:description" content={metaDesc} />
-                <meta name="twitter:image" content="https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.png" />
+                <meta name="twitter:image" content="https://advmdshahalam.me/images/hero/hero-md-shah-alam.png" />
                 {/* JSON-LD */}
                 {breadcrumbSchema && <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>}
                 {legalServiceSchema && <script type="application/ld+json">{JSON.stringify(legalServiceSchema)}</script>}

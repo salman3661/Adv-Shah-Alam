@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Link } from 'react-router-dom';
 import ServicePage from '../../components/ServicePage';
 
@@ -6,7 +6,7 @@ const SupremeCourtLawyer = () => (
     <ServicePage
         metaTitle="Supreme Court Lawyer Bangladesh | Advocate Shah Alam"
         metaDesc="Adv. Shah Alam is your expert Supreme Court lawyer in Bangladesh for writ petitions, criminal appeals, High Court bail & Appellate Division matters. Consult now."
-        canonicalUrl="https://www.advmdshahalam.me/services/supreme-court-lawyer"
+        canonicalUrl="https://advmdshahalam.me/services/supreme-court-lawyer"
         h1="Supreme Court Lawyer Bangladesh – High Court & Appellate Expert"
         intro="Advocate Md. Shah Alam is a seasoned <strong>Supreme Court lawyer in Bangladesh</strong>, practicing at the High Court Division and Appellate Division of the Supreme Court of Bangladesh. He handles writ petitions, constitutional matters, criminal appeals, civil appellate cases, and all High Court Division proceedings with precision and expertise built over two decades of practice."
         coverage={[

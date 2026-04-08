@@ -82,8 +82,8 @@ const personSchema = {
     alternateName: 'Adv. Md. Shah Alam',
     description:
         'Experienced advocate practising at the Supreme Court of Bangladesh, Metro Sessions Court Dhaka, and all subordinate courts. 10+ years specialising in criminal, family, property, and company & corporate law.',
-    url: 'https://www.advmdshahalam.me/advocate-md-shah-alam',
-    image: 'https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.webp',
+    url: 'https://advmdshahalam.me/advocate-md-shah-alam',
+    image: 'https://advmdshahalam.me/images/hero/hero-md-shah-alam.webp',
     worksFor: {
         '@type': 'LegalService',
         name: 'Supreme Court of Bangladesh',
@@ -105,7 +105,7 @@ const personSchema = {
     sameAs: [
         'https://www.facebook.com/advmd.shahalamfb',
         'https://maps.app.goo.gl/M3NXMwW3xkp2TE3h8',
-        'https://www.advmdshahalam.me',
+        'https://advmdshahalam.me',
     ],
     knowsAbout: [
         'Criminal Law Bangladesh',
@@ -136,10 +136,10 @@ const legalServiceSchema = {
     '@context': 'https://schema.org',
     '@type': 'LegalService',
     name: 'Advocate Md. Shah Alam – Law Chambers',
-    url: 'https://www.advmdshahalam.me',
+    url: 'https://advmdshahalam.me',
     telephone: '+8801712655546',
     email: 'shahalam0332@gmail.com',
-    image: 'https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.webp',
+    image: 'https://advmdshahalam.me/images/hero/hero-md-shah-alam.webp',
     description:
         'Full-service legal practice in Uttara and Dhaka, Bangladesh. Criminal, family, property, and company & corporate law.',
     address: {
@@ -179,13 +179,13 @@ const breadcrumbSchema = {
             '@type': 'ListItem',
             position: 1,
             name: 'Home',
-            item: 'https://www.advmdshahalam.me/',
+            item: 'https://advmdshahalam.me/',
         },
         {
             '@type': 'ListItem',
             position: 2,
             name: 'Advocate Md. Shah Alam',
-            item: 'https://www.advmdshahalam.me/advocate-md-shah-alam',
+            item: 'https://advmdshahalam.me/advocate-md-shah-alam',
         },
     ],
 };
@@ -194,8 +194,8 @@ const organizationSchema = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Advocate Md. Shah Alam Law Chambers',
-    url: 'https://www.advmdshahalam.me',
-    logo: 'https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.webp',
+    url: 'https://advmdshahalam.me',
+    logo: 'https://advmdshahalam.me/images/hero/hero-md-shah-alam.webp',
     foundingDate: '2003',
     address: {
         '@type': 'PostalAddress',
@@ -286,15 +286,16 @@ const AdvocatePage = () => {
                     name="description"
                     content="Advocate Md. Shah Alam – experienced criminal, family, property &amp; Supreme Court lawyer in Bangladesh. 10+ years of legal excellence. Contact for consultation."
                 />
-                <link rel="canonical" href="https://www.advmdshahalam.me/advocate-md-shah-alam" />
+                <link rel="canonical" href="https://advmdshahalam.me/advocate-md-shah-alam" />
+                <meta name="robots" content="index, follow" />
                 <meta property="og:title" content="Advocate Shah Alam | Lawyer in Bangladesh, Uttara" />
                 <meta
                     property="og:description"
                     content="Experienced criminal, family, property &amp; Supreme Court lawyer in Uttara, Dhaka. 20+ years of legal excellence. Book a consultation today."
                 />
-                <meta property="og:url" content="https://www.advmdshahalam.me/advocate-md-shah-alam" />
+                <meta property="og:url" content="https://advmdshahalam.me/advocate-md-shah-alam" />
                 <meta property="og:type" content="profile" />
-                <meta property="og:image" content="https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.webp" />
+                <meta property="og:image" content="https://advmdshahalam.me/images/hero/hero-md-shah-alam.webp" />
                 <script type="application/ld+json">{JSON.stringify(personSchema)}</script>
                 <script type="application/ld+json">{JSON.stringify(legalServiceSchema)}</script>
                 <script type="application/ld+json">{JSON.stringify(organizationSchema)}</script>

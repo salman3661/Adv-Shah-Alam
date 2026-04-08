@@ -8,7 +8,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const BASE_URL = 'https://www.advmdshahalam.me';
+const BASE_URL = 'https://advmdshahalam.me';
 const TODAY = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
 
 // Load blog post data
@@ -76,21 +76,13 @@ const urls = [
   // ── EN Blog Posts (published only) ──────────────────────────────────────
   ...publishedEn.map(p => url('/blog/' + p.slug, p.date, 'monthly', '0.7')),
 
-  // ── Bangla Core Pages ────────────────────────────────────────────────────
+  // ── Bangla Core Pages (public indexable only — /bn/services/* redirect to EN) ──
   url('/bn/blog', RECENT, 'weekly', '0.8'),
-  url('/bn/advocate-md-shah-alam', RECENT, 'monthly', '0.9'),
-
-  // ── Bangla Service Pages ─────────────────────────────────────────────────
-  url('/bn/services/criminal-lawyer', RECENT, 'monthly', '0.9'),
-  url('/bn/services/bail-lawyer', RECENT, 'monthly', '0.9'),
-  url('/bn/services/divorce-lawyer', RECENT, 'monthly', '0.9'),
-  url('/bn/services/land-lawyer', RECENT, 'monthly', '0.9'),
-  url('/bn/services/supreme-court-lawyer', RECENT, 'monthly', '0.9'),
-  url('/bn/services/company-corporate-lawyer', RECENT, 'monthly', '0.9'),
-  url('/bn/services/tax-lawyer', RECENT, 'monthly', '0.9'),
 
   // ── BN Blog Posts (published only) ──────────────────────────────────────
   ...publishedBn.map(p => url('/bn/blog/' + p.slug, p.date, 'monthly', '0.7')),
+  // NOTE: /bn/services/* and /bn/advocate-md-shah-alam are intentionally excluded
+  // because App.jsx redirects those to EN pages — they are not canonical pages.
 ];
 
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>

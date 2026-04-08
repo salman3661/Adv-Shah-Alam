@@ -9,12 +9,13 @@ const Education = () => {
             <Helmet>
                 <title>Career &amp; Education | Advocate Shah Alam, Bangladesh</title>
                 <meta name="description" content="Explore the education and career timeline of Advocate Shah Alam – LL.M lawyer practising at the Supreme Court of Bangladesh with a chamber in Uttara, Dhaka." />
-                <link rel="canonical" href="https://www.advmdshahalam.me/education" />
+                <link rel="canonical" href="https://advmdshahalam.me/education" />
+                <meta name="robots" content="index, follow" />
                 <meta property="og:title" content="Career &amp; Education | Advocate Shah Alam, Bangladesh" />
                 <meta property="og:description" content="Explore the education and career timeline of Advocate Shah Alam – LL.M lawyer practising at the Supreme Court of Bangladesh with a chamber in Uttara, Dhaka." />
-                <meta property="og:url" content="https://www.advmdshahalam.me/education" />
+                <meta property="og:url" content="https://advmdshahalam.me/education" />
                 <meta property="og:type" content="profile" />
-                <meta property="og:image" content="https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.png" />
+                <meta property="og:image" content="https://advmdshahalam.me/images/hero/hero-md-shah-alam.png" />
             </Helmet>
 
             <motion.div

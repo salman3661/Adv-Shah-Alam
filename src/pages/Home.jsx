@@ -20,19 +20,20 @@ const Home = () => {
             <Helmet>
                 <title>Trusted Lawyer in Bangladesh | Advocate Shah Alam</title>
                 <meta name="description" content="Advocate Shah Alam is a trusted lawyer in Bangladesh for criminal, divorce, bail &amp; land cases. Visit our Uttara chamber in Dhaka – 20+ years of legal excellence." />
-                <link rel="canonical" href="https://www.advmdshahalam.me/" />
+                <link rel="canonical" href="https://advmdshahalam.me/" />
+                <meta name="robots" content="index, follow" />
                 {/* OpenGraph */}
                 <meta property="og:type" content="website" />
                 <meta property="og:title" content="Lawyer in Uttara &amp; Dhaka | Advocate Md. Shah Alam" />
                 <meta property="og:description" content="Trusted criminal, divorce, land &amp; Supreme Court lawyer in Uttara, Dhaka. 20+ years expertise. Free WhatsApp consultation today." />
-                <meta property="og:url" content="https://www.advmdshahalam.me/" />
-                <meta property="og:image" content="https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.png" />
+                <meta property="og:url" content="https://advmdshahalam.me/" />
+                <meta property="og:image" content="https://advmdshahalam.me/images/hero/hero-md-shah-alam.png" />
                 <meta property="og:site_name" content="Advocate Md. Shah Alam" />
                 {/* Twitter Card */}
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="Lawyer in Uttara &amp; Dhaka | Advocate Md. Shah Alam" />
                 <meta name="twitter:description" content="Expert criminal, divorce, land &amp; Supreme Court lawyer in Uttara, Dhaka. 20+ years experience." />
-                <meta name="twitter:image" content="https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.png" />
+                <meta name="twitter:image" content="https://advmdshahalam.me/images/hero/hero-md-shah-alam.png" />
             </Helmet>
             <Hero />
             <About />

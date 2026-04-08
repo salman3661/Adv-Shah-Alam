@@ -2,8 +2,8 @@
   "redirects": [
     {
       "source": "/(.*)",
-      "has": [{ "type": "host", "value": "advmdshahalam.me" }],
-      "destination": "https://www.advmdshahalam.me/$1",
+      "has": [{ "type": "host", "value": "www.advmdshahalam.me" }],
+      "destination": "https://advmdshahalam.me/$1",
       "permanent": true
     },
     { "source": "/criminal-lawyer-uttara",         "destination": "/services/criminal-lawyer",         "permanent": true },

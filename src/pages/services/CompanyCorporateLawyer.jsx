@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Link } from 'react-router-dom';
 import ServicePage from '../../components/ServicePage';
 
@@ -6,7 +6,7 @@ const CompanyCorporateLawyer = () => (
     <ServicePage
         metaTitle="Company Lawyer Dhaka, Bangladesh | Advocate Shah Alam"
         metaDesc="Register a company or resolve corporate disputes in Bangladesh. Advocate Shah Alam handles RJSC filings, shareholder disputes & corporate litigation in Dhaka."
-        canonicalUrl="https://www.advmdshahalam.me/services/company-corporate-lawyer"
+        canonicalUrl="https://advmdshahalam.me/services/company-corporate-lawyer"
         h1="Company & Corporate Lawyer in Dhaka – Bangladesh Business Law Expert"
         intro="Advocate Md. Shah Alam provides comprehensive <strong>company and corporate legal services in Bangladesh</strong>, advising businesses, entrepreneurs, and investors on formation, compliance, disputes, and commercial transactions under the Companies Act 1994. With strong courtroom experience and practical business insight, Adv. Shah Alam helps protect your commercial interests at every stage."
         coverage={[
