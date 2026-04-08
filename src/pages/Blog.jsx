@@ -85,14 +85,14 @@ const Blog = () => {
     return (
         <>
             <Helmet>
-                <title>Free Legal Guides Bangladesh – Criminal, Divorce &amp; Property Law | Adv. Shah Alam</title>
+                <title>Legal Guides Bangladesh | Advocate Shah Alam, Uttara</title>
                 <meta
                     name="description"
-                    content="Free legal guides on bail, divorce, land disputes &amp; criminal law in Bangladesh. Plain-language articles by Advocate Md. Shah Alam, expert lawyer in Uttara, Dhaka."
+                    content="Free legal guides on bail, divorce, land &amp; criminal law in Bangladesh. Plain-language articles by Advocate Shah Alam, expert lawyer in Uttara, Dhaka."
                 />
                 <link rel="canonical" href="https://www.advmdshahalam.me/blog" />
-                <meta property="og:title" content="Free Legal Guides Bangladesh – Criminal, Divorce &amp; Property Law | Adv. Shah Alam" />
-                <meta property="og:description" content="Free legal guides on bail, divorce, land disputes &amp; criminal law in Bangladesh. Plain-language articles by Advocate Md. Shah Alam, expert lawyer in Uttara, Dhaka." />
+                <meta property="og:title" content="Legal Guides Bangladesh | Advocate Shah Alam, Uttara" />
+                <meta property="og:description" content="Free legal guides on bail, divorce, land &amp; criminal law in Bangladesh. Plain-language articles by Advocate Shah Alam, expert lawyer in Uttara, Dhaka." />
                 <meta property="og:url" content="https://www.advmdshahalam.me/blog" />
                 <meta property="og:type" content="website" />
                 <meta property="og:image" content="https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.png" />

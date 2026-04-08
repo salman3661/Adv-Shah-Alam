@@ -4,7 +4,7 @@ import ServicePage from '../../components/ServicePage';
 
 const BailLawyer = () => (
     <ServicePage
-        metaTitle="Bail Lawyer Dhaka – Get Same-Day Bail Fast | Adv. Md. Shah Alam"
+        metaTitle="Bail Lawyer in Dhaka | Advocate Shah Alam, Bangladesh"
         metaDesc="Need urgent release? Get help from a top Bail Lawyer in Dhaka. We secure same-day and anticipatory bail fast. Meet Adv. Shah Alam at his Uttara Chamber now."
         canonicalUrl="https://www.advmdshahalam.me/services/bail-lawyer"
         h1="Bail Lawyer in Dhaka – Fast Bail Applications Across Bangladesh"

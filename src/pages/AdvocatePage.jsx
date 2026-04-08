@@ -281,13 +281,13 @@ const AdvocatePage = () => {
         <>
             {/* ── SEO / Head ── */}
             <Helmet>
-                <title>Advocate Md. Shah Alam – Supreme Court Lawyer | Uttara, Dhaka</title>
+                <title>Advocate Shah Alam | Lawyer in Bangladesh, Uttara</title>
                 <meta
                     name="description"
                     content="Advocate Md. Shah Alam – experienced criminal, family, property &amp; Supreme Court lawyer in Bangladesh. 10+ years of legal excellence. Contact for consultation."
                 />
                 <link rel="canonical" href="https://www.advmdshahalam.me/advocate-md-shah-alam" />
-                <meta property="og:title" content="Advocate Md. Shah Alam – Supreme Court Lawyer | Uttara, Dhaka" />
+                <meta property="og:title" content="Advocate Shah Alam | Lawyer in Bangladesh, Uttara" />
                 <meta
                     property="og:description"
                     content="Experienced criminal, family, property &amp; Supreme Court lawyer in Uttara, Dhaka. 20+ years of legal excellence. Book a consultation today."

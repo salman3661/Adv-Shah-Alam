@@ -18,8 +18,8 @@ const Home = () => {
     return (
         <>
             <Helmet>
-                <title>Trusted Lawyer in Bangladesh (2026) – Criminal, Divorce &amp; Bail Expert | Uttara Chamber</title>
-                <meta name="description" content="Trusted lawyer in Bangladesh for criminal, divorce and bail cases. Visit our Uttara chamber in Dhaka for expert legal consultation." />
+                <title>Trusted Lawyer in Bangladesh | Advocate Shah Alam</title>
+                <meta name="description" content="Advocate Shah Alam is a trusted lawyer in Bangladesh for criminal, divorce, bail &amp; land cases. Visit our Uttara chamber in Dhaka – 20+ years of legal excellence." />
                 <link rel="canonical" href="https://www.advmdshahalam.me/" />
                 {/* OpenGraph */}
                 <meta property="og:type" content="website" />
