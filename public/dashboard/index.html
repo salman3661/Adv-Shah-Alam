@@ -4,6 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex, nofollow" />
+  <meta name="referrer" content="no-referrer" />
+  <!-- AUTH GUARD: redirect immediately if no valid session -->
+  <script>
+  (function(){
+    var SESSION_KEY='__dash_auth';
+    var SESSION_TTL=4*60*60*1000;
+    try{
+      var d=JSON.parse(sessionStorage.getItem(SESSION_KEY)||'null');
+      if(!d||!d.exp||d.exp<Date.now()){
+        sessionStorage.removeItem(SESSION_KEY);
+        window.location.replace('./login.html');
+      }
+    }catch(e){
+      sessionStorage.removeItem(SESSION_KEY);
+      window.location.replace('./login.html');
+    }
+  })();
+  </script>
   <title>Dashboard — Adv. Shah Alam</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -322,6 +340,24 @@
     .btn-cms:hover {
       box-shadow: 0 4px 20px rgba(198,167,94,0.4);
       transform: translateY(-1px);
+    }
+    .btn-logout {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      font-size: 0.8rem;
+      font-weight: 600;
+      background: rgba(248,113,113,0.1);
+      color: var(--red);
+      border: 1px solid rgba(248,113,113,0.2);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .btn-logout:hover {
+      background: rgba(248,113,113,0.18);
+      border-color: rgba(248,113,113,0.4);
     }
 
     /* ══════════════════════════════════════════════════
@@ -999,6 +1035,7 @@
         <a class="btn-cms" href="https://www.advmdshahalam.me/admin/" target="_blank">
           ✏️ Open CMS
         </a>
+        <button class="btn-logout" onclick="doLogout()" title="Sign out">🚪 Logout</button>
       </div>
     </header>
 
@@ -1785,6 +1822,53 @@ setInterval(() => {
    RUN
 ══════════════════════════════════════════════════ */
 init();
+
+/* ══════════════════════════════════════════════════
+   AUTH: LOGOUT + SESSION HEARTBEAT
+══════════════════════════════════════════════════ */
+const SESSION_KEY_DASH = '__dash_auth';
+const SESSION_TTL_DASH = 4 * 60 * 60 * 1000;
+
+function doLogout() {
+  if (confirm('Sign out of the dashboard?')) {
+    sessionStorage.removeItem(SESSION_KEY_DASH);
+    window.location.replace('./login.html');
+  }
+}
+
+// Session heartbeat: extend expiry on activity, expire if idle too long
+(function sessionHeartbeat() {
+  let lastActivity = Date.now();
+  ['click','keydown','mousemove','touchstart'].forEach(ev => {
+    document.addEventListener(ev, () => { lastActivity = Date.now(); }, { passive: true });
+  });
+  setInterval(() => {
+    try {
+      const d = JSON.parse(sessionStorage.getItem(SESSION_KEY_DASH) || 'null');
+      if (!d || !d.exp) { window.location.replace('./login.html'); return; }
+      if (d.exp < Date.now()) { sessionStorage.removeItem(SESSION_KEY_DASH); window.location.replace('./login.html'); return; }
+      // Extend if active recently (within 10 min)
+      if (Date.now() - lastActivity < 10 * 60 * 1000) {
+        d.exp = Date.now() + SESSION_TTL_DASH;
+        sessionStorage.setItem(SESSION_KEY_DASH, JSON.stringify(d));
+      }
+    } catch(e) {
+      window.location.replace('./login.html');
+    }
+  }, 60 * 1000); // check every minute
+})();
+
+/* ══════════════════════════════════════════════════
+   SECURITY: Block right-click & basic devtools
+══════════════════════════════════════════════════ */
+document.addEventListener('contextmenu', e => e.preventDefault());
+document.addEventListener('keydown', e => {
+  if (e.key === 'F12' ||
+      (e.ctrlKey && e.shiftKey && ['I','J','C'].includes(e.key)) ||
+      (e.ctrlKey && e.key === 'u')) {
+    e.preventDefault();
+  }
+});
 </script>
 </body>
 </html>
