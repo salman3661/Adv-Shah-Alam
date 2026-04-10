@@ -30,6 +30,9 @@ async function apiFetch(endpoint, options = {}) {
 // ─── Auth API ────────────────────────────────────────────────────────────────
 
 export const adminApi = {
+  /** Direct authenticated fetch — useful for custom endpoints */
+  apiFetch,
+
   /** Login — returns token on success */
   async login(password) {
     return apiFetch('/admin-auth', {
@@ -70,6 +73,55 @@ export const adminApi = {
     return apiFetch(`/admin-content?file=${fileKey}`, {
       method: 'PUT',
       body: JSON.stringify({ content, sha }),
+    });
+  },
+
+  // ─── Blog CRUD ────────────────────────────────────────────────────────
+
+  /**
+   * Load the lightweight blog index (all post metadata, no sections).
+   * @param {'en'|'bn'} lang
+   * @returns {{ index: { posts: object[] } }}
+   */
+  async loadBlogIndex(lang) {
+    return apiFetch(`/admin-blog?lang=${lang}&slug=_index`);
+  },
+
+  /**
+   * Load a single full blog post from GitHub.
+   * @param {'en'|'bn'} lang
+   * @param {string} slug
+   * @returns {{ post: object, sha: string }}
+   */
+  async loadBlogPost(lang, slug) {
+    return apiFetch(`/admin-blog?lang=${lang}&slug=${encodeURIComponent(slug)}`);
+  },
+
+  /**
+   * Save (create or update) a blog post to GitHub.
+   * @param {'en'|'bn'} lang
+   * @param {string} slug
+   * @param {object} post  - full post object
+   * @param {string|null} sha  - current file SHA (null for new posts)
+   * @returns {{ success: boolean, sha: string, commit: string, isNew: boolean }}
+   */
+  async saveBlogPost(lang, slug, post, sha = null) {
+    return apiFetch(`/admin-blog?lang=${lang}&slug=${encodeURIComponent(slug)}`, {
+      method: 'PUT',
+      body: JSON.stringify({ post, sha }),
+    });
+  },
+
+  /**
+   * Delete a blog post from GitHub.
+   * @param {'en'|'bn'} lang
+   * @param {string} slug
+   * @param {string} sha  - current file SHA
+   */
+  async deleteBlogPost(lang, slug, sha) {
+    return apiFetch(`/admin-blog?lang=${lang}&slug=${encodeURIComponent(slug)}`, {
+      method: 'DELETE',
+      body: JSON.stringify({ sha }),
     });
   },
 

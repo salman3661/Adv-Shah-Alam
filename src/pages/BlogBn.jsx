@@ -2,7 +2,18 @@ import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { Search, Clock, ChevronRight, BookOpen } from 'lucide-react';
-import postsBn, { isPublishedBn } from '../data/blogPostsBn';
+
+// Load all BN blog posts from JSON files (bundled at build time by Vite)
+const _bnModules = import.meta.glob('../content/posts/bn/*.json', { eager: true });
+const postsBn = Object.values(_bnModules).map((m) => m.default ?? m);
+
+function isPublishedBn(post) {
+  try {
+    const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Dhaka' }));
+    const pub = new Date(post.publishedDate + 'T00:00:00');
+    return pub <= now && !post.isDraft;
+  } catch { return true; }
+}
 
 const CATEGORIES = ['সব', 'ফৌজদারি আইন', 'পারিবারিক আইন', 'সম্পত্তি আইন', 'কর আইন', 'দেওয়ানী আইন'];
 

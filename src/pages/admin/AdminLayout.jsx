@@ -3,7 +3,7 @@ import { NavLink, useNavigate, Outlet } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   LayoutDashboard, Home, FileText, Globe2, Settings,
-  Rocket, LogOut, Menu, X, ChevronRight,
+  Rocket, LogOut, Menu, X, ChevronRight, BarChart2,
 } from 'lucide-react';
 import { auth } from '../../lib/admin/auth';
 
@@ -21,12 +21,12 @@ const T = {
 };
 
 const NAV_ITEMS = [
-  { path: '/admin',            label: 'Dashboard',     icon: LayoutDashboard, exact: true },
-  { path: '/admin/homepage',   label: 'Homepage Editor', icon: Home },
-  { path: '/admin/blog',       label: 'Blog (English)',  icon: FileText },
-  { path: '/admin/blog-bn',    label: 'Blog (Bangla)',   icon: Globe2 },
-  { path: '/admin/settings',   label: 'Site Settings',  icon: Settings },
-  { path: '/admin/deploy',     label: 'Deploy',          icon: Rocket },
+  { path: '/admin',              label: 'Dashboard',     icon: LayoutDashboard, exact: true },
+  { path: '/admin/homepage',     label: 'Homepage Editor', icon: Home },
+  { path: '/admin/blog',         label: 'Blog (English)',  icon: FileText },
+  { path: '/admin/blog-bn',      label: 'Blog (Bangla)',   icon: Globe2 },
+  { path: '/admin/blog-analytics', label: 'Blog Analytics', icon: BarChart2 },
+  { path: '/admin/deploy',       label: 'Deploy',          icon: Rocket },
 ];
 
 export default function AdminLayout() {

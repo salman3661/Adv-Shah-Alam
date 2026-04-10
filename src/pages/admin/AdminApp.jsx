@@ -7,6 +7,7 @@ import AdminLayout  from './AdminLayout';
 import Dashboard    from './Dashboard';
 import HomepageEditor from './HomepageEditor';
 import BlogManager  from './BlogManager';
+import BlogAnalytics from './BlogAnalytics';
 import DeployPanel  from './DeployPanel';
 
 /**
@@ -32,6 +33,7 @@ export default function AdminApp() {
           <Route path="homepage"      element={<HomepageEditor />} />
           <Route path="blog"          element={<BlogManager lang="en" />} />
           <Route path="blog-bn"       element={<BlogManager lang="bn" />} />
+          <Route path="blog-analytics" element={<BlogAnalytics />} />
           <Route path="deploy"        element={<DeployPanel />} />
           {/* Catch all unknown admin routes */}
           <Route path="*"             element={<Navigate to="/admin" replace />} />

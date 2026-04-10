@@ -1,0 +1,70 @@
+{
+  "slug": "hacking-unauthorized-computer-access-bangladesh",
+  "bnSlug": "haking-computer-aboidho-probesh-bangladesh",
+  "title": "Hacking and Unauthorized Computer Access Under Bangladesh Law",
+  "category": "Cyber Law",
+  "readTime": "7 min read",
+  "metaTitle": "Hacking Law Bangladesh – Unauthorized Computer Access and Legal Consequences",
+  "metaDescription": "Complete guide to hacking laws in Bangladesh — what constitutes unauthorized computer access, penalties under the DSA and ICT Act, and how to report a hacking incident.",
+  "keywords": [
+    "hacking law Bangladesh",
+    "computer crime Bangladesh",
+    "unauthorized system access Bangladesh",
+    "DSA hacking Bangladesh",
+    "cyber crime lawyer Dhaka",
+    "ICT act Bangladesh hacking"
+  ],
+  "publishedDate": "2026-04-09",
+  "heroIntro": "Hacking — gaining unauthorized access to a computer system, network, or digital account — is a serious criminal offence in Bangladesh under the Digital Security Act 2018. This guide explains what the law covers, the penalties, how to report a hacking incident, and your legal options as a victim.",
+  "toc": [
+    "What is Hacking Under Bangladesh Law?",
+    "DSA Section 19: Unauthorized Computer Access",
+    "What Counts as Hacking Under the DSA?",
+    "Penalties for Hacking in Bangladesh",
+    "Steps to Take If You Are a Hacking Victim",
+    "Hacking vs. White Hat Security Testing"
+  ],
+  "sections": [
+    {
+      "h2": "What is Hacking Under Bangladesh Law?",
+      "content": "<p>Hacking refers to gaining access to a computer, network, server, or digital account without authorization or exceeding the authorization you legitimately have. Bangladesh law covers hacking under:</p>\n<ul>\n<li><strong>Digital Security Act 2018, Section 19 (Unauthorized Access):</strong> Up to 14 years' imprisonment and BDT 1 crore fine.</li>\n<li><strong>DSA Section 17 (Attacking Critical Infrastructure):</strong> Hacking power grids, financial systems, or government networks — up to 14 years.</li>\n<li><strong>ICT Act 2006, Section 54:</strong> Hacking provisions (still applicable for older cases).</li>\n</ul>\n<p>If your account, website, or business system has been hacked, contact a <a href=\"/services/criminal-lawyer\" style=\"color:var(--accent)\">cyber law lawyer in Dhaka</a> for guidance on filing a case and securing your systems.</p>"
+    },
+    {
+      "h2": "What Counts as Hacking Under the DSA?",
+      "content": "<p>DSA Section 19 covers unauthorized access to any computer, computer system, computer network, or any program, information, or data of any person. This includes:</p>\n<ul>\n<li>Logging into someone's email, social media, or bank account without permission.</li>\n<li>Installing malware, ransomware, or spyware on another's device.</li>\n<li>Intercepting communications or data transmissions without authorization.</li>\n<li>If the access is for committing any other offence (fraud, blackmail, espionage), the punishment escalates significantly.</li>\n<li>Hacking computer systems containing personal data triggers both DSA and potential data protection liability.</li>\n</ul>"
+    },
+    {
+      "h2": "Steps to Take If You Are a Hacking Victim",
+      "content": "<p>If you or your business has been hacked:</p>\n<ol>\n<li><strong>Isolate the affected system</strong> — disconnect from the network immediately to prevent further damage or data exfiltration.</li>\n<li><strong>Do not turn off the device</strong> if forensic evidence collection is being considered — a powered system preserves more evidence than one that was shut down.</li>\n<li><strong>Preserve logs</strong> — server logs, access logs, error messages are critical evidence.</li>\n<li><strong>Report to police</strong> and file an FIR under DSA Section 19. The Cyber Crime Unit can conduct technical investigations.</li>\n<li><strong>Notify affected parties</strong> — if customer or employee data was accessed, a data breach notification may be a legal or ethical obligation.</li>\n<li><strong>Engage a cyber lawyer</strong> to manage the legal response and any civil claims against the hacker.</li>\n</ol>\n<p><a href=\"/\" style=\"color:var(--accent)\">Contact Advocate Md. Shah Alam in Uttara</a> for hacking cases involving business systems or personal data breaches.</p>"
+    },
+    {
+      "h2": "Hacking vs. White Hat Security Testing",
+      "content": "<p>White hat or ethical hacking — security testing of systems you own or have been explicitly authorised to test — is not a crime. The key legal distinction is:</p>\n<ul>\n<li><strong>Authorization:</strong> Testing with written authorization from the system owner is lawful. Without it, the same acts are criminal hacking regardless of intent.</li>\n<li><strong>Scope:</strong> Even authorized testers can face liability if they exceed their agreed scope.</li>\n</ul>\n<p>Companies hiring penetration testers in Bangladesh should obtain a written security testing agreement to clearly define the legal scope of the engagement.</p>"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is it illegal to access someone's Facebook account even with their shared password?",
+      "answer": "It depends on the circumstances. If the account owner revokes consent and you continue accessing it, this can constitute unauthorized access. Regular sharing of an account is a grey area — but accessing someone's account to spy on or control them is illegal regardless of how access was obtained."
+    },
+    {
+      "question": "Can a business sue a former employee for hacking after leaving?",
+      "answer": "Yes. Former employees who retain or misuse system access after termination can face DSA Section 19 prosecution and civil liability for any damages caused by unauthorized access."
+    },
+    {
+      "question": "What if the hacker is from a foreign country?",
+      "answer": "Bangladesh can still prosecute foreign hackers who target Bangladesh-based systems through Mutual Legal Assistance Treaties (MLATs) for international cooperation, and can pursue local assets of foreign entities operating in Bangladesh."
+    }
+  ],
+  "relatedServiceLinks": [
+    {
+      "text": "Criminal Lawyer Uttara",
+      "to": "/services/criminal-lawyer"
+    },
+    {
+      "text": "Supreme Court Lawyer",
+      "to": "/services/supreme-court-lawyer"
+    }
+  ],
+  "lang": "en"
+}

@@ -2,8 +2,19 @@ import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { Search, Clock, ChevronRight, BookOpen } from 'lucide-react';
-import blogPosts, { isPublished } from '../data/blogPosts';
 import { telLink, waLink } from '../data/contactInfo';
+
+// Load all EN blog posts from JSON files (bundled at build time by Vite)
+const _postModules = import.meta.glob('../content/posts/en/*.json', { eager: true });
+const blogPosts = Object.values(_postModules).map((m) => m.default ?? m);
+
+function isPublished(post) {
+  try {
+    const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Dhaka' }));
+    const pub = new Date(post.publishedDate + 'T00:00:00');
+    return pub <= now && !post.isDraft;
+  } catch { return true; }
+}
 import seo from '../content/seo.js';
 
 const CATEGORIES = seo.categoriesEn;

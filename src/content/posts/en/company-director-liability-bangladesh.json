@@ -1,0 +1,81 @@
+{
+  "slug": "company-director-liability-bangladesh",
+  "bnSlug": "company-director-dayitto-bangladesh",
+  "title": "Company Director Liability in Bangladesh: What You Need to Know",
+  "category": "Company & Corporate Law",
+  "readTime": "7 min read",
+  "metaTitle": "Company Director Liability Bangladesh – Personal & Legal Risks 2025",
+  "metaDescription": "Are you a company director in Bangladesh? Know when you can be personally liable for company debts, fraud, tax defaults, and legal violations under the Companies Act 1994.",
+  "keywords": [
+    "company director liability Bangladesh",
+    "director personal liability Bangladesh",
+    "Companies Act 1994 Bangladesh",
+    "corporate lawyer Dhaka",
+    "director responsibilities Bangladesh"
+  ],
+  "publishedDate": "2026-03-24",
+  "heroIntro": "Many people assume that being a director of a limited liability company fully protects them from personal liability. In Bangladesh, this is not always true. Directors can face personal liability for fraud, tax defaults, environmental violations, and specific statutory duties — knowing these rules is essential for every company director.",
+  "toc": [
+    "Limited Liability: The Basic Rule",
+    "When Directors Lose Protection: Personal Liability",
+    "Tax Liability of Directors",
+    "Director Duties Under the Companies Act 1994",
+    "Liability After Company Winding Up",
+    "How a Corporate Lawyer Can Help"
+  ],
+  "sections": [
+    {
+      "h2": "Limited Liability: The Basic Rule",
+      "content": "<p>In a private or public limited company, shareholders and directors generally enjoy <strong>limited liability</strong> — meaning their personal assets are protected from company debts. If the company cannot pay its debts, creditors can only look to the company's assets, not the personal property of directors. This is the \"corporate veil.\"</p><p>However, Bangladesh law provides several situations where this veil is \"lifted\" and directors face personal responsibility.</p>"
+    },
+    {
+      "h2": "When Directors Lose Protection: Personal Liability",
+      "content": "<p>Under the <strong>Companies Act 1994</strong> and general law, directors can be personally liable when:</p><ul><li><strong>Fraudulent trading</strong>: Directors knowingly carried on business to defraud creditors — personal liability for all company debts (Section 303 Companies Act)</li><li><strong>Wrongful trading</strong>: Directors continued trading when they knew or should have known the company could not pay its debts</li><li><strong>Breach of fiduciary duty</strong>: Acting in own interest rather than company's interest, accepting secret profits</li><li><strong>Ultra vires acts</strong>: Entering transactions beyond the company's Memorandum of Association</li><li><strong>Failure to maintain statutory registers</strong>: Personal fines apply</li><li><strong>Guarantee given personally</strong>: Bank loans secured by director personal guarantee make the director directly liable</li></ul>"
+    },
+    {
+      "h2": "Tax Liability of Directors",
+      "content": "<p>The <strong>Income Tax Act 2023</strong> (and previous IT Ordinance 1984) hold directors jointly and severally liable for the company's tax arrears in certain circumstances, including:</p><ul><li>Where the company has insufficient assets to meet tax demands</li><li>Where the director was responsible for the conduct of the company's affairs</li><li>Where the tax remained unpaid due to the director's negligence or misfeasance</li></ul><p>Contact a <a href=\"/services/tax-lawyer\" style=\"color:var(--accent)\">tax lawyer in Dhaka</a> if you receive a tax recovery notice as a director for company tax dues.</p>"
+    },
+    {
+      "h2": "Director Duties Under the Companies Act 1994",
+      "content": "<p>Every director in Bangladesh has statutory duties including:</p><ul><li>Act in good faith and in the best interests of the company</li>  <li>Exercise reasonable care, skill, and diligence</li><li>Avoid conflicts of interest</li><li>Not accept benefits from third parties</li><li>Disclose any personal interest in transactions</li><li>Maintain proper books of accounts</li><li>File annual returns with RJSC on time</li><li>Not trade while insolvent</li></ul><p>Breach of these duties can result in civil claims by the company or shareholders, and criminal prosecution in cases of fraud.</p>"
+    },
+    {
+      "h2": "How a Corporate Lawyer Can Help",
+      "content": "<p>If you are a director facing:</p><ul><li>A creditor lawsuit claiming personal liability</li><li>A tax recovery notice for company arrears</li><li>A shareholder derivative suit for breach of duty</li><li>A winding-up petition where officers may be examined</li><li>A criminal complaint for company fraud</li></ul><p>An experienced <a href=\"/services/company-corporate-lawyer\" style=\"color:var(--accent)\">corporate lawyer in Dhaka</a> can assess your exposure, advise on defences, and represent you before the High Court Company Division, Tax Appellate Tribunal, or criminal courts. <a href=\"/\" style=\"color:var(--accent)\">Contact Advocate Md. Shah Alam</a> in Uttara for expert corporate law advice.</p>"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Can a director be arrested for company debts in Bangladesh?",
+      "answer": "Not purely for civil debts. However, if fraud, tax evasion, or criminal breach of trust is alleged, criminal proceedings and arrest are possible. Civil debt alone does not lead to director arrest in most cases."
+    },
+    {
+      "question": "Is a nominee director also liable?",
+      "answer": "Yes. Nominee directors (people appointed just for registration purposes) are still legally directors and share the same statutory liabilities. \"Silent\" director status is not a defence."
+    },
+    {
+      "question": "Can a director resign to avoid liability?",
+      "answer": "Resignation after the fact does not protect a director from liability for acts committed during the directorship. Courts look at the period when the relevant act/omission occurred."
+    },
+    {
+      "question": "What is a director's indemnity insurance?",
+      "answer": "Directors and Officers (D&O) liability insurance protects directors from personal financial loss due to claims of wrongful acts. It is increasingly common in larger Bangladesh companies. Consult a lawyer about whether it suits your company."
+    }
+  ],
+  "relatedServiceLinks": [
+    {
+      "text": "Company & Corporate Lawyer",
+      "to": "/services/company-corporate-lawyer"
+    },
+    {
+      "text": "Tax & VAT Lawyer",
+      "to": "/services/tax-lawyer"
+    },
+    {
+      "text": "Supreme Court Lawyer",
+      "to": "/services/supreme-court-lawyer"
+    }
+  ],
+  "lang": "en"
+}

@@ -5,8 +5,19 @@ import {
     ArrowLeft, Clock, ChevronDown, ChevronUp,
     Phone, MessageCircle, ExternalLink, BookOpen
 } from 'lucide-react';
-import postsBn, { isPublishedBn } from '../data/blogPostsBn';
 import { CALL_NUMBER, CALL_DISPLAY, WA_NUMBER, WA_DISPLAY, waLink, telLink } from '../data/contactInfo';
+
+// Load all BN blog posts from JSON files (bundled at build time by Vite)
+const _bnModules = import.meta.glob('../content/posts/bn/*.json', { eager: true });
+const postsBn = Object.values(_bnModules).map((m) => m.default ?? m);
+
+function isPublishedBn(post) {
+  try {
+    const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Dhaka' }));
+    const pub = new Date(post.publishedDate + 'T00:00:00');
+    return pub <= now && !post.isDraft;
+  } catch { return true; }
+}
 
 const FAQItem = ({ question, answer }) => {
     const [open, setOpen] = useState(false);
