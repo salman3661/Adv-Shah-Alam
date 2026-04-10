@@ -1,30 +1,16 @@
 /**
- * api/auth.js — GitHub OAuth redirect (Vercel Serverless Function / CommonJS)
+ * api/auth.js — DISABLED
  *
- * Decap CMS calls GET /api/auth to start the OAuth flow.
- * This redirects the browser to GitHub's authorization page.
+ * This endpoint previously served Decap CMS GitHub OAuth.
+ * The old CMS has been removed. The new admin panel at /admin
+ * uses its own token-based auth via api/admin-auth.js instead.
  *
- * Required Vercel environment variables:
- *   OAUTH_CLIENT_ID      — from your GitHub OAuth App
- *   OAUTH_CLIENT_SECRET  — from your GitHub OAuth App
+ * Returns 410 Gone so any cached links or bots learn this is permanently removed.
  */
-
 module.exports = function handler(req, res) {
-    const clientId = process.env.OAUTH_CLIENT_ID;
-
-    if (!clientId) {
-        res.setHeader('Content-Type', 'text/plain');
-        return res.status(500).send(
-            'OAUTH_CLIENT_ID is not set.\n' +
-            'Go to Vercel dashboard → Settings → Environment Variables and add it.'
-        );
-    }
-
-    const params = new URLSearchParams({
-        client_id:    clientId,
-        scope:        'repo,user',
-        redirect_uri: 'https://www.advmdshahalam.me/api/callback',
-    });
-
-    return res.redirect(302, `https://github.com/login/oauth/authorize?${params}`);
+  res.setHeader('Cache-Control', 'public, max-age=3600');
+  return res.status(410).json({
+    error: 'Gone',
+    message: 'This OAuth endpoint has been decommissioned. The legacy CMS has been replaced.',
+  });
 };
