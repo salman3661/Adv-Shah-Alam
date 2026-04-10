@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import ServicePage from '../../components/ServicePage';
 
@@ -45,6 +45,10 @@ const DivorceLawyer = () => (
             },
         ]}
         ctaText="Speak to a Divorce Lawyer in Uttara"
+        relatedBlogLinks={[
+            { to: '/blog/divorce-procedure-bangladesh', title: 'Divorce Procedure in Bangladesh – Complete Guide', desc: 'Step-by-step talaq, khula, and family court divorce procedures explained' },
+            { to: '/blog/child-custody-law-bangladesh', title: 'Child Custody Law in Bangladesh', desc: 'Who gets custody after divorce and how courts decide in the child’s interest' },
+        ]}
     />
 );
 

@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import ServicePage from '../../components/ServicePage';
 
@@ -49,6 +49,10 @@ const LandLawyer = () => (
             },
         ]}
         ctaText="Consult a Land Dispute Lawyer in Uttara"
+        relatedBlogLinks={[
+            { to: '/blog/mutation-process-bangladesh', title: 'Land Mutation Process in Bangladesh – Complete Guide', desc: 'How to transfer land records (namjari) to your name step by step' },
+            { to: '/blog/property-registration-process', title: 'Property Registration Process in Bangladesh', desc: 'Deed registration, stamp duties, and sub-registrar office requirements' },
+        ]}
     />
 );
 

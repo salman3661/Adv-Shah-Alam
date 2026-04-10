@@ -1,8 +1,49 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import { MapPin, Phone, MessageCircle, Mail, Send } from 'lucide-react';
 import { CALL_NUMBER, CALL_DISPLAY, waLink } from '../data/contactInfo';
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 import siteInfo from '../content/siteInfo.json';
+
+const LOCAL_BUSINESS_SCHEMA = {
+    '@context': 'https://schema.org',
+    '@type': 'LegalService',
+    name: 'Advocate Md. Shah Alam – Law Chamber',
+    image: 'https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.png',
+    url: 'https://www.advmdshahalam.me',
+    telephone: '+8801754440332',
+    email: 'shahalam0332@gmail.com',
+    address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'House 46, Road 6/B, Sector 12, Uttara West',
+        addressLocality: 'Dhaka',
+        postalCode: '1230',
+        addressCountry: 'BD',
+    },
+    geo: {
+        '@type': 'GeoCoordinates',
+        latitude: 23.8745,
+        longitude: 90.3987,
+    },
+    openingHoursSpecification: [
+        {
+            '@type': 'OpeningHoursSpecification',
+            dayOfWeek: ['Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday'],
+            opens: '09:00',
+            closes: '21:00',
+        },
+    ],
+    areaServed: [
+        { '@type': 'City', name: 'Uttara' },
+        { '@type': 'City', name: 'Dhaka' },
+        { '@type': 'Country', name: 'Bangladesh' },
+    ],
+    priceRange: 'Contact for consultation',
+    sameAs: [
+        'https://www.facebook.com/advmd.shahalamfb',
+        'https://maps.app.goo.gl/M3NXMwW3xkp2TE3h8',
+    ],
+};
 
 const Contact = () => {
     const [formData, setFormData] = useState({ name: '', phone: '', message: '' });
@@ -23,7 +64,11 @@ const Contact = () => {
     const inputClass = "w-full px-4 py-3 rounded-xl text-sm outline-none transition-all duration-200";
 
     return (
-        <section id="contact" className="py-24 relative overflow-hidden" style={{ background: 'var(--surface)' }}>
+        <>
+            <Helmet>
+                <script type="application/ld+json">{JSON.stringify(LOCAL_BUSINESS_SCHEMA)}</script>
+            </Helmet>
+            <section id="contact" className="py-24 relative overflow-hidden" style={{ background: 'var(--surface)' }}>
             <div className="container mx-auto px-6 max-w-7xl">
                 <div className="text-center mb-14">
                     <motion.span initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
@@ -128,6 +173,7 @@ const Contact = () => {
                 </div>
             </div>
         </section>
+        </>
     );
 };
 

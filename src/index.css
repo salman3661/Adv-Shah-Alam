@@ -571,6 +571,7 @@ body[data-theme="dark"] .status-current {
   bottom: 24px;
   z-index: 1100;
   pointer-events: auto;
+  overflow: visible; /* allow tooltip to escape the rounded button */
   /* Breathing animation — 3 s, ease-in-out, infinite */
   animation: wa-breathe 3s ease-in-out infinite;
   /* Smooth hover / active transitions */

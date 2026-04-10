@@ -12,7 +12,7 @@ const BASE = 'https://www.advmdshahalam.me';
  * Hero always dark (uses --hero-* vars that don't change with theme).
  * Coverage/FAQ/CTA use body CSS vars (theme-aware).
  */
-const ServicePage = ({ metaTitle, metaDesc, canonicalUrl, h1, intro, coverage, faqItems, ctaText, contextNote }) => {
+const ServicePage = ({ metaTitle, metaDesc, canonicalUrl, h1, intro, coverage, faqItems, ctaText, contextNote, relatedBlogLinks }) => {
     const [openFaq, setOpenFaq] = useState(null);
 
     // Ensure www in canonical
@@ -197,6 +197,38 @@ const ServicePage = ({ metaTitle, metaDesc, canonicalUrl, h1, intro, coverage, f
                                         )}
                                     </AnimatePresence>
                                 </motion.div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+            )}
+
+            {/* Further Reading — service → blog internal linking */}
+            {relatedBlogLinks?.length > 0 && (
+                <section className="py-14" style={{ background: 'var(--bg)' }}>
+                    <div className="container mx-auto px-6 max-w-5xl">
+                        <h2 className="text-xl font-bold mb-5 flex items-center gap-2"
+                            style={{ color: 'var(--text)' }}>
+                            📖 Further Reading
+                        </h2>
+                        <div className="grid sm:grid-cols-2 gap-4">
+                            {relatedBlogLinks.map((link, i) => (
+                                <Link key={i} to={link.to}
+                                    className="glass-card p-5 flex items-start gap-3 group no-underline"
+                                    style={{ textDecoration: 'none' }}>
+                                    <div className="w-8 h-8 rounded-xl flex items-center justify-center flex-shrink-0"
+                                        style={{ background: 'var(--accent-subtle)', color: 'var(--accent)' }}>
+                                        <ArrowRight size={15} />
+                                    </div>
+                                    <div>
+                                        <p className="text-sm font-semibold group-hover:underline decoration-dotted leading-snug" style={{ color: 'var(--text)' }}>
+                                            {link.title}
+                                        </p>
+                                        {link.desc && (
+                                            <p className="text-xs mt-1" style={{ color: 'var(--text-muted)' }}>{link.desc}</p>
+                                        )}
+                                    </div>
+                                </Link>
                             ))}
                         </div>
                     </div>

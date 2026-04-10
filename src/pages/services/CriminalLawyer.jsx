@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import ServicePage from '../../components/ServicePage';
 
@@ -49,6 +49,10 @@ const CriminalLawyer = () => (
             },
         ]}
         ctaText="Talk to a Criminal Lawyer in Uttara Today"
+        relatedBlogLinks={[
+            { to: '/blog/bail-process-bangladesh', title: 'How to Get Bail in Bangladesh – Step-by-Step Guide', desc: 'Understand bail types, applications, and how to act fast after arrest' },
+            { to: '/blog/fir-case-bangladesh-what-to-do', title: 'FIR Filed Against You? Here’s What to Do', desc: 'Key steps to protect your rights when an FIR is registered against you' },
+        ]}
     />
 );
 

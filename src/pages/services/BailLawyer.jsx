@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import ServicePage from '../../components/ServicePage';
 
@@ -49,6 +49,10 @@ const BailLawyer = () => (
             },
         ]}
         ctaText="Need Urgent Bail? Contact Us Now"
+        relatedBlogLinks={[
+            { to: '/blog/bail-process-bangladesh', title: 'How to Get Bail in Bangladesh – Step-by-Step Guide', desc: 'Complete guide on bail types, eligibility, and how the process works' },
+            { to: '/blog/anticipatory-bail-bangladesh', title: 'Anticipatory Bail in Bangladesh – Everything You Need to Know', desc: 'Pre-arrest bail, who qualifies, and how to apply' },
+        ]}
     />
 );
 

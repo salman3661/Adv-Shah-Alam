@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { Search, Clock, ChevronRight, BookOpen } from 'lucide-react';
+import { Search, Clock, ChevronRight, BookOpen, Phone, MessageCircle, Scale } from 'lucide-react';
 import { telLink, waLink } from '../data/contactInfo';
 
 // Load all EN blog posts from JSON files (bundled at build time by Vite)
@@ -108,6 +108,15 @@ const Blog = () => {
                 <meta property="og:url" content="https://www.advmdshahalam.me/blog" />
                 <meta property="og:type" content="website" />
                 <meta property="og:image" content="https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.png" />
+                {/* BreadcrumbList schema */}
+                <script type="application/ld+json">{JSON.stringify({
+                    '@context': 'https://schema.org',
+                    '@type': 'BreadcrumbList',
+                    itemListElement: [
+                        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.advmdshahalam.me/' },
+                        { '@type': 'ListItem', position: 2, name: 'Legal Guides', item: 'https://www.advmdshahalam.me/blog' },
+                    ],
+                })}</script>
             </Helmet>
 
             {/* Hero */}
@@ -194,30 +203,69 @@ const Blog = () => {
                 </div>
             </section>
 
+            {/* Related Services — Blog → Service internal linking */}
+            <section className="py-14" style={{ background: 'var(--surface)' }}>
+                <div className="container mx-auto px-6 max-w-5xl">
+                    <div className="text-center mb-8">
+                        <span className="label-accent block mb-2">Legal Practice Areas</span>
+                        <h2 className="text-2xl md:text-3xl font-serif font-bold"
+                            style={{ color: 'var(--text)', fontFamily: "'Playfair Display', serif" }}>
+                            Need a Lawyer, Not Just a Guide?
+                        </h2>
+                        <p className="text-sm mt-2 max-w-xl mx-auto" style={{ color: 'var(--text-muted)' }}>
+                            Explore our dedicated legal services for personal advice from Advocate Shah Alam.
+                        </p>
+                    </div>
+                    <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 mb-8">
+                        {[
+                            { to: '/services/criminal-lawyer', label: 'Criminal Lawyer', desc: 'FIR defence, trial & case quashing' },
+                            { to: '/services/bail-lawyer', label: 'Bail Lawyer', desc: 'Same-day & anticipatory bail' },
+                            { to: '/services/divorce-lawyer', label: 'Divorce Lawyer', desc: 'Talaq, khula & family court cases' },
+                            { to: '/services/land-lawyer', label: 'Land Lawyer', desc: 'Property disputes & registration' },
+                            { to: '/services/supreme-court-lawyer', label: 'Supreme Court', desc: 'Writ, appeals & High Court bail' },
+                            { to: '/services/company-corporate-lawyer', label: 'Corporate Lawyer', desc: 'Company registration & disputes' },
+                        ].map(({ to, label, desc }) => (
+                            <Link key={to} to={to}
+                                className="glass-card p-5 flex items-start gap-3 group no-underline"
+                                style={{ textDecoration: 'none' }}>
+                                <div className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0"
+                                    style={{ background: 'var(--accent-subtle)', color: 'var(--accent)' }}>
+                                    <Scale size={16} />
+                                </div>
+                                <div>
+                                    <p className="text-sm font-bold group-hover:underline decoration-dotted" style={{ color: 'var(--text)' }}>{label}</p>
+                                    <p className="text-xs mt-0.5" style={{ color: 'var(--text-muted)' }}>{desc}</p>
+                                </div>
+                            </Link>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
             {/* CTA */}
-            <section className="py-16 section-alt">
+            <section className="py-16" style={{ background: 'var(--bg)' }}>
                 <div className="container mx-auto px-6 max-w-3xl text-center">
+                    <span className="label-accent block mb-3">Get Expert Advice</span>
                     <h2
                         className="text-2xl md:text-3xl font-serif font-bold mb-4"
                         style={{ color: 'var(--text)', fontFamily: "'Playfair Display', serif" }}
                     >
-                        Need Legal Advice?
+                        These guides are general. Your case is unique.
                     </h2>
                     <p className="text-base mb-8" style={{ color: 'var(--text-secondary)' }}>
-                        These guides are for general information. For your specific case, speak directly
-                        with Advocate Md. Shah Alam.
+                        Speak directly with Advocate Md. Shah Alam for advice specific to your situation.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href={telLink()} className="btn-primary">
-                            📞 Call Now
+                        <a href={telLink()} className="btn-primary flex items-center justify-center gap-2">
+                            <Phone size={16} /> Call Now
                         </a>
                         <a
                             href={waLink()}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="btn-whatsapp"
+                            className="btn-whatsapp flex items-center justify-center gap-2"
                         >
-                            WhatsApp Consultation
+                            <MessageCircle size={16} /> WhatsApp Consultation
                         </a>
                     </div>
                 </div>
