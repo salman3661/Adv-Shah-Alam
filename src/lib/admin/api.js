@@ -41,6 +41,16 @@ export const adminApi = {
   // ─── Content CRUD ──────────────────────────────────────────────────────
 
   /**
+   * Load a raw file from GitHub (returns raw text, not parsed JSON).
+   * Used by BlogManager to read blogPosts.js / blogPostsBn.js source.
+   * @param {string} filePath  — repo-relative path, e.g. 'src/data/blogPosts.js'
+   * @returns {{ content: string, sha: string }}
+   */
+  async loadRawFile(filePath) {
+    return apiFetch(`/admin-raw?path=${encodeURIComponent(filePath)}`);
+  },
+
+  /**
    * Load a content file from GitHub.
    * @param {'hero'|'services'|'faq'|'siteInfo'|'about'} fileKey
    * @returns {{ content: object, sha: string }}
