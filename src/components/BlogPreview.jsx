@@ -98,9 +98,14 @@ const BlogPreview = () => {
                                         style={{ background: colors.bg, color: colors.color }}>
                                         {article.category}
                                     </span>
-                                    <span className="flex items-center gap-1 text-xs" style={{ color: 'var(--text-muted)' }}>
-                                        <Clock size={11} /> {article.readTime}{lang === 'en' ? ' read' : ''}
-                                    </span>
+                                    <div className="flex items-center gap-2 text-xs" style={{ color: 'var(--text-muted)' }}>
+                                        {article.date && (
+                                            <span>{new Date(article.date).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}</span>
+                                        )}
+                                        <span className="flex items-center gap-1">
+                                            <Clock size={11} /> {article.readTime}{lang === 'en' ? ' read' : ''}
+                                        </span>
+                                    </div>
                                 </div>
 
                                 <h3 className="font-bold text-base leading-snug mb-3 flex-1 group-hover:underline decoration-dotted" style={{ color: 'var(--text)' }}>

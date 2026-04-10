@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { MapPin, Phone, MessageCircle, Mail, Send } from 'lucide-react';
 import { CALL_NUMBER, CALL_DISPLAY, waLink } from '../data/contactInfo';
 import { motion } from 'framer-motion';
+import siteInfo from '../content/siteInfo.json';
 
 const Contact = () => {
     const [formData, setFormData] = useState({ name: '', phone: '', message: '' });
@@ -15,7 +16,7 @@ const Contact = () => {
 
     const contactInfo = [
         { icon: Phone, label: 'Phone', value: CALL_DISPLAY, href: `tel:${CALL_NUMBER}` },
-        { icon: Mail, label: 'Email', value: 'shahalam0332@gmail.com', href: 'mailto:shahalam0332@gmail.com' },
+        { icon: Mail, label: 'Email', value: siteInfo.email, href: `mailto:${siteInfo.email}` },
         { icon: MapPin, label: 'Office Address', value: 'House 46, Road 6/B, Sector 12, Uttara, Dhaka-1230', href: 'https://maps.google.com/?q=Sector+12+Uttara+West+Dhaka' },
     ];
 

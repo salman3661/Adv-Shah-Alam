@@ -1,9 +1,9 @@
 # Advocate Md. Shah Alam Law Firm - advmdshahalam.me
-# Last updated: 2026-04-03
+# Last updated: 2026-04-10
 
 User-agent: *
 Allow: /
 Disallow: /admin/
 Disallow: /api/
 
-Sitemap: https://advmdshahalam.me/sitemap.xml
+Sitemap: https://www.advmdshahalam.me/sitemap.xml

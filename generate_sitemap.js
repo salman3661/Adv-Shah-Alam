@@ -8,7 +8,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const BASE_URL = 'https://advmdshahalam.me';
+const BASE_URL = 'https://www.advmdshahalam.me';
 const TODAY = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
 
 // Load blog post data

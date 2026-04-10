@@ -44,7 +44,7 @@ const Services = () => {
                             transition={{ duration: 0.48, delay: index * 0.07 }} viewport={{ once: true }}
                             className="glass-card p-7 flex flex-col group"
                         >
-                            <div className="w-13 h-13 rounded-2xl flex items-center justify-center mb-5 flex-shrink-0 group-hover:scale-110 transition-transform duration-300 w-12 h-12"
+                            <div className="w-12 h-12 rounded-2xl flex items-center justify-center mb-5 flex-shrink-0 group-hover:scale-110 transition-transform duration-300"
                                 style={{ background: service.iconColor, color: service.iconText }}>
                                 <service.icon size={26} />
                             </div>

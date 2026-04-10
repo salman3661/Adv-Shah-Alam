@@ -18,11 +18,7 @@ const Hero = () => {
             <div className="absolute bottom-1/4 left-1/4 w-64 h-64 rounded-full -z-0 pointer-events-none"
                 style={{ background: 'radial-gradient(circle, var(--accent-subtle) 0%, transparent 70%)' }}></div>
 
-            {/* Dark-mode hero gradient overlay */}
-            <div className="absolute inset-0 z-0 pointer-events-none dark:opacity-100 opacity-0 transition-opacity duration-500"
-                style={{ background: 'linear-gradient(135deg, #0b1220 0%, #0f1b2d 100%)' }}></div>
-
-            <div className="container mx-auto px-6 relative z-10 w-full grid md:grid-cols-2 gap-12 items-center">
+        <div className="container mx-auto px-6 relative z-10 w-full grid md:grid-cols-2 gap-12 items-center">
 
                 {/* Profile Photo */}
                 <motion.div
@@ -108,7 +104,7 @@ const Hero = () => {
                     {/* Keyword-rich intro */}
                     <p className="text-sm md:text-base leading-relaxed max-w-lg mx-auto md:mx-0 mb-8"
                         style={{ color: 'var(--text-muted)' }}>
-                         <span dangerouslySetInnerHTML={{ __html: heroContent.description }} />
+                        {heroContent.description}
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">

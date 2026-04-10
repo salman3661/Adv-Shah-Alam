@@ -49,7 +49,7 @@ const Footer = () => {
                         </div>
                         <div className="flex items-center gap-2 text-xs" style={{ color: 'var(--text-muted)' }}>
                             <Phone size={12} className="flex-shrink-0" style={{ color: 'var(--gold)' }} />
-                            +880 1712-655546
+                            {CALL_DISPLAY}
                         </div>
                     </div>
 
