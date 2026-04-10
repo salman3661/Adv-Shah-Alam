@@ -1,0 +1,17 @@
+{
+  "sectionLabel": "About the Advocate",
+  "heading": "Dedicated to Justice",
+  "bio": [
+    "Advocate Md. Shah Alam is a distinguished legal professional with over two decades of experience practicing law at the Supreme Court of Bangladesh. His unwavering commitment to justice has earned him recognition as one of the most trusted advocates in Dhaka.",
+    "Specializing in criminal and civil litigation, he has successfully represented clients in high-stakes cases involving complex legal challenges. His approach combines thorough legal research, strategic thinking, and compassionate client service.",
+    "Beyond the courtroom, Advocate Shah Alam is passionate about legal education and community service, regularly contributing to legal awareness programs and mentoring young lawyers."
+  ],
+  "quote": "Justice delayed is justice denied. I strive to ensure every client receives timely, effective legal representation with the utmost dedication and integrity.",
+  "quoteAuthor": "Adv. Md. Shah Alam",
+  "stats": [
+    { "value": 10, "suffix": "+", "label": "Years Experience" },
+    { "value": 5000, "suffix": "+", "label": "Cases Handled" },
+    { "value": 95, "suffix": "%", "label": "Success Rate" },
+    { "value": 3000, "suffix": "+", "label": "Happy Clients" }
+  ]
+}

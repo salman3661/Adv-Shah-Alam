@@ -1,6 +1,10 @@
 import React, { useEffect, useRef } from 'react';
 import { motion, useInView, useMotionValue, useTransform, animate } from 'framer-motion';
 import { Scale, Users, Trophy, Clock } from 'lucide-react';
+import aboutContent from '../content/about.json';
+
+// Icon map — matches what's stored in about.json stats (if needed in future)
+const STAT_ICONS = [Clock, Scale, Trophy, Users];
 
 const AnimatedCounter = ({ value, suffix }) => {
     const ref = useRef(null);
@@ -24,12 +28,12 @@ const AnimatedCounter = ({ value, suffix }) => {
 };
 
 const About = () => {
-    const stats = [
-        { icon: Clock, value: 10, suffix: '+', label: 'Years Experience' },
-        { icon: Scale, value: 5000, suffix: '+', label: 'Cases Handled' },
-        { icon: Trophy, value: 95, suffix: '%', label: 'Success Rate' },
-        { icon: Users, value: 3000, suffix: '+', label: 'Happy Clients' },
-    ];
+    const stats = (aboutContent.stats || []).map((s, i) => ({
+        icon: STAT_ICONS[i % STAT_ICONS.length],
+        value: s.value,
+        suffix: s.suffix,
+        label: s.label,
+    }));
 
     return (
         <section id="about" className="py-24 relative overflow-hidden" style={{ background: 'var(--surface)' }}>
@@ -41,11 +45,11 @@ const About = () => {
                 <div className="text-center mb-16">
                     <motion.span initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
                         className="label-accent block mb-3">
-                        About the Advocate
+                        {aboutContent.sectionLabel}
                     </motion.span>
                     <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
                         className="text-4xl md:text-5xl font-serif font-bold mb-4" style={{ color: 'var(--text)', fontFamily: "'Playfair Display', serif" }}>
-                        Dedicated to Justice
+                        {aboutContent.heading}
                     </motion.h2>
                     <motion.div initial={{ scaleX: 0 }} whileInView={{ scaleX: 1 }} viewport={{ once: true }} transition={{ delay: 0.2 }}
                         className="w-24 h-1 mx-auto rounded-full" style={{ background: 'var(--accent)' }}></motion.div>
@@ -55,30 +59,20 @@ const About = () => {
                     {/* Content */}
                     <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}
                         className="space-y-5">
-                        <p className="text-base leading-relaxed" style={{ color: 'var(--text-2)' }}>
-                            Advocate Md. Shah Alam is a distinguished legal professional with over two decades of
-                            experience practicing law at the Supreme Court of Bangladesh. His unwavering commitment
-                            to justice has earned him recognition as one of the most trusted advocates in Dhaka.
-                        </p>
-                        <p className="text-base leading-relaxed" style={{ color: 'var(--text-muted)' }}>
-                            Specializing in criminal and civil litigation, he has successfully represented clients
-                            in high-stakes cases involving complex legal challenges. His approach combines thorough
-                            legal research, strategic thinking, and compassionate client service.
-                        </p>
-                        <p className="text-base leading-relaxed" style={{ color: 'var(--text-muted)' }}>
-                            Beyond the courtroom, Advocate Shah Alam is passionate about legal education and
-                            community service, regularly contributing to legal awareness programs and mentoring
-                            young lawyers.
-                        </p>
+                        {(aboutContent.bio || []).map((para, i) => (
+                            <p key={i} className="text-base leading-relaxed"
+                                style={{ color: i === 0 ? 'var(--text-2)' : 'var(--text-muted)' }}>
+                                {para}
+                            </p>
+                        ))}
 
                         {/* Quote */}
                         <div className="glass-card p-6 mt-4" style={{ borderLeft: '4px solid var(--accent)' }}>
                             <p className="text-base font-serif italic" style={{ color: 'var(--text)', fontFamily: "'Playfair Display', serif" }}>
-                                "Justice delayed is justice denied. I strive to ensure every client receives
-                                timely, effective legal representation with the utmost dedication and integrity."
+                                "{aboutContent.quote}"
                             </p>
                             <p className="font-bold mt-3 text-sm" style={{ color: 'var(--accent)' }}>
-                                — Adv. Md. Shah Alam
+                                — {aboutContent.quoteAuthor}
                             </p>
                         </div>
                     </motion.div>
