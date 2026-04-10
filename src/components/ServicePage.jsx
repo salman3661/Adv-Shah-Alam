@@ -1,9 +1,11 @@
-﻿import React from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { telLink, waLink } from '../data/contactInfo';
-import { MessageCircle, Phone, CheckCircle, ArrowLeft } from 'lucide-react';
+import { MessageCircle, Phone, CheckCircle, ArrowLeft, ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
+
+const BASE = 'https://www.advmdshahalam.me';
 
 /**
  * Reusable service page layout.
@@ -11,28 +13,34 @@ import { Link } from 'react-router-dom';
  * Coverage/FAQ/CTA use body CSS vars (theme-aware).
  */
 const ServicePage = ({ metaTitle, metaDesc, canonicalUrl, h1, intro, coverage, faqItems, ctaText, contextNote }) => {
+    const [openFaq, setOpenFaq] = useState(null);
 
-    const breadcrumbSchema = canonicalUrl ? {
+    // Ensure www in canonical
+    const wwwCanonical = canonicalUrl
+        ? canonicalUrl.replace('https://advmdshahalam.me', BASE)
+        : null;
+
+    const breadcrumbSchema = wwwCanonical ? {
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
         itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://advmdshahalam.me/' },
-            { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://advmdshahalam.me/#services' },
-            { '@type': 'ListItem', position: 3, name: h1, item: canonicalUrl },
+            { '@type': 'ListItem', position: 1, name: 'Home', item: `${BASE}/` },
+            { '@type': 'ListItem', position: 2, name: 'Services', item: `${BASE}/#services` },
+            { '@type': 'ListItem', position: 3, name: h1, item: wwwCanonical },
         ],
     } : null;
 
-    const legalServiceSchema = canonicalUrl ? {
+    const legalServiceSchema = wwwCanonical ? {
         '@context': 'https://schema.org',
         '@type': 'LegalService',
         name: h1,
         description: metaDesc,
-        url: canonicalUrl,
+        url: wwwCanonical,
         provider: {
             '@type': 'Person',
             name: 'Advocate Md. Shah Alam',
             jobTitle: 'Advocate',
-            url: 'https://advmdshahalam.me/advocate-md-shah-alam',
+            url: `${BASE}/advocate-md-shah-alam`,
         },
         areaServed: [
             { '@type': 'City', name: 'Uttara' },
@@ -57,19 +65,19 @@ const ServicePage = ({ metaTitle, metaDesc, canonicalUrl, h1, intro, coverage, f
                 <title>{metaTitle}</title>
                 <meta name="description" content={metaDesc} />
                 <meta name="robots" content="index, follow" />
-                {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+                {wwwCanonical && <link rel="canonical" href={wwwCanonical} />}
                 {/* OpenGraph */}
                 <meta property="og:type" content="website" />
                 <meta property="og:title" content={metaTitle} />
                 <meta property="og:description" content={metaDesc} />
-                {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
-                <meta property="og:image" content="https://advmdshahalam.me/images/hero/hero-md-shah-alam.png" />
+                {wwwCanonical && <meta property="og:url" content={wwwCanonical} />}
+                <meta property="og:image" content={`${BASE}/images/hero/hero-md-shah-alam.png`} />
                 <meta property="og:site_name" content="Advocate Md. Shah Alam" />
                 {/* Twitter Card */}
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content={metaTitle} />
                 <meta name="twitter:description" content={metaDesc} />
-                <meta name="twitter:image" content="https://advmdshahalam.me/images/hero/hero-md-shah-alam.png" />
+                <meta name="twitter:image" content={`${BASE}/images/hero/hero-md-shah-alam.png`} />
                 {/* JSON-LD */}
                 {breadcrumbSchema && <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>}
                 {legalServiceSchema && <script type="application/ld+json">{JSON.stringify(legalServiceSchema)}</script>}
@@ -147,7 +155,7 @@ const ServicePage = ({ metaTitle, metaDesc, canonicalUrl, h1, intro, coverage, f
                 </div>
             </section>
 
-            {/* FAQ — theme-aware */}
+            {/* FAQ — theme-aware, interactive accordion */}
             {faqItems?.length > 0 && (
                 <section className="py-16" style={{ background: 'var(--surface)' }}>
                     <div className="container mx-auto px-6 max-w-5xl">
@@ -155,13 +163,39 @@ const ServicePage = ({ metaTitle, metaDesc, canonicalUrl, h1, intro, coverage, f
                             style={{ color: 'var(--text)', fontFamily: "'Playfair Display', serif" }}>
                             Frequently Asked Questions
                         </h2>
-                        <div className="space-y-4">
+                        <div className="space-y-3">
                             {faqItems.map((faq, i) => (
                                 <motion.div key={i}
                                     initial={{ opacity: 0, y: 14 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.07 }}
-                                    className="glass-card p-6">
-                                    <h3 className="font-bold text-sm md:text-base mb-3" style={{ color: 'var(--text)' }}>{faq.q}</h3>
-                                    <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>{faq.a}</p>
+                                    className="glass-card overflow-hidden"
+                                    style={{ borderColor: openFaq === i ? 'var(--accent)' : undefined }}>
+                                    <button
+                                        onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                                        className="w-full flex items-center justify-between px-6 py-5 text-left gap-4"
+                                        aria-expanded={openFaq === i}>
+                                        <span className="font-semibold text-sm md:text-base leading-snug pr-2" style={{ color: 'var(--text)' }}>
+                                            {faq.q}
+                                        </span>
+                                        <motion.div animate={{ rotate: openFaq === i ? 180 : 0 }} transition={{ duration: 0.28 }}
+                                            className="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center"
+                                            style={{ background: openFaq === i ? 'var(--accent)' : 'var(--accent-subtle)', color: openFaq === i ? '#fff' : 'var(--accent)' }}>
+                                            <ChevronDown size={17} />
+                                        </motion.div>
+                                    </button>
+                                    <AnimatePresence initial={false}>
+                                        {openFaq === i && (
+                                            <motion.div
+                                                initial={{ height: 0, opacity: 0 }}
+                                                animate={{ height: 'auto', opacity: 1 }}
+                                                exit={{ height: 0, opacity: 0 }}
+                                                transition={{ duration: 0.32, ease: [0.04, 0.62, 0.23, 0.98] }}>
+                                                <div className="px-6 pb-6">
+                                                    <div className="w-full h-px mb-4" style={{ background: 'var(--card-border)' }} />
+                                                    <p className="text-sm leading-relaxed" style={{ color: 'var(--text-2)' }}>{faq.a}</p>
+                                                </div>
+                                            </motion.div>
+                                        )}
+                                    </AnimatePresence>
                                 </motion.div>
                             ))}
                         </div>

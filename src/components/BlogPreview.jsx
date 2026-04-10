@@ -2,13 +2,22 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { BookOpen, ArrowRight, Clock } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import blogPosts, { isPublished } from '../data/blogPosts';
-import blogPostsBn, { isPublishedBn } from '../data/blogPostsBn';
 import seo from '../content/seo.js';
 
-// Pull the 3 newest published posts from each dataset
-const latestEn = blogPosts.filter(isPublished).slice(0, 3);
-const latestBn = blogPostsBn.filter(isPublishedBn).slice(0, 3);
+// Load latest 3 published posts from each language using the JSON glob
+const _enModules = import.meta.glob('../content/posts/en/*.json', { eager: true });
+const _bnModules = import.meta.glob('../content/posts/bn/*.json', { eager: true });
+
+function isPublished(post) {
+  try {
+    const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Dhaka' }));
+    const pub = new Date(post.publishedDate + 'T00:00:00');
+    return pub <= now && !post.isDraft;
+  } catch { return true; }
+}
+
+const latestEn = Object.values(_enModules).map(m => m.default ?? m).filter(isPublished).slice(0, 3);
+const latestBn = Object.values(_bnModules).map(m => m.default ?? m).filter(isPublished).slice(0, 3);
 
 // Convert seo.categoryColors (hex) into bg/color pairs for the badge
 const categoryColors = Object.fromEntries(
@@ -99,8 +108,8 @@ const BlogPreview = () => {
                                         {article.category}
                                     </span>
                                     <div className="flex items-center gap-2 text-xs" style={{ color: 'var(--text-muted)' }}>
-                                        {article.date && (
-                                            <span>{new Date(article.date).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}</span>
+                                        {article.publishedDate && (
+                                            <span>{new Date(article.publishedDate).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}</span>
                                         )}
                                         <span className="flex items-center gap-1">
                                             <Clock size={11} /> {article.readTime}{lang === 'en' ? ' read' : ''}

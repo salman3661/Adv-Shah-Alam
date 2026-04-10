@@ -10,6 +10,7 @@ import AdminApp from './pages/admin/AdminApp';
 
 // Home is eager — it IS the first paint
 import Home from './pages/Home';
+import NotFound from './pages/NotFound';
 
 // All other pages are lazy-loaded (code split)
 const Education = lazy(() => import('./pages/Education'));
@@ -72,6 +73,9 @@ function App() {
                     <Route path="/bn/services/tax-lawyer" element={<Navigate to="/services/tax-lawyer" replace />} />
                     <Route path="/bn/services/company-corporate-lawyer" element={<Navigate to="/services/company-corporate-lawyer" replace />} />
                     <Route path="/bn/advocate-md-shah-alam" element={<Navigate to="/advocate-md-shah-alam" replace />} />
+
+                    {/* 404 — must be last */}
+                    <Route path="*" element={<NotFound />} />
                   </Routes>
                 </Suspense>
               </Layout>

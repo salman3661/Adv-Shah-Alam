@@ -6,7 +6,7 @@ const BailLawyer = () => (
     <ServicePage
         metaTitle="Bail Lawyer in Dhaka | Advocate Shah Alam, Bangladesh"
         metaDesc="Need urgent release? Get help from a top Bail Lawyer in Dhaka. We secure same-day and anticipatory bail fast. Meet Adv. Shah Alam at his Uttara Chamber now."
-        canonicalUrl="https://advmdshahalam.me/services/bail-lawyer"
+        canonicalUrl="https://www.advmdshahalam.me/services/bail-lawyer"
         h1="Bail Lawyer in Dhaka – Fast Bail Applications Across Bangladesh"
         intro="Advocate Md. Shah Alam is a leading <strong>bail lawyer in Dhaka</strong>, known for handling urgent bail applications swiftly and effectively. Whether your case involves a bailable offence at the Magistrate Court or a serious non-bailable charge requiring High Court bail, Adv. Shah Alam has the expertise and court connections to act fast and protect your freedom."
         coverage={[

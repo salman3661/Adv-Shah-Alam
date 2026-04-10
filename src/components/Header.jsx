@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect, useRef } from 'react';
-import { Home, Scale, Award, MapPin, Building2, User, Sun, Moon } from 'lucide-react';
+import { Home, Scale, Award, MapPin, BookOpen, User, Sun, Moon } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTheme } from '../context/ThemeContext';
 import { useNavigate, useLocation } from 'react-router-dom';
@@ -62,7 +62,7 @@ const Header = () => {
         { name: 'About', id: 'about', icon: User },
         { name: 'Services', id: 'services', icon: Scale },
         { name: 'FAQ', id: 'faq', icon: Award },
-        { name: 'Blog', id: 'blog', icon: Building2 },
+        { name: 'Blog', id: 'blog', icon: BookOpen },
         { name: 'Contact', id: 'contact', icon: MapPin },
     ];
 

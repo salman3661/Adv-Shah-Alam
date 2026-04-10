@@ -6,7 +6,7 @@ const LandLawyer = () => (
     <ServicePage
         metaTitle="Land Lawyer in Uttara, Dhaka | Advocate Shah Alam"
         metaDesc="Resolve land disputes, property registration & mutation in Dhaka. Expert land & property lawyer in Uttara – 20+ years experience. Free consultation. Call now."
-        canonicalUrl="https://advmdshahalam.me/services/land-lawyer"
+        canonicalUrl="https://www.advmdshahalam.me/services/land-lawyer"
         h1="Land & Property Lawyer in Uttara – Land Dispute Expert in Dhaka"
         intro="Advocate Md. Shah Alam is a trusted <strong>land dispute lawyer in Uttara, Dhaka</strong>, skilled in resolving complex land and property cases across Bangladesh. From title disputes and illegal possession to mutation fraud and property registration — Adv. Shah Alam provides expert legal counsel and strong courtroom representation to protect your property rights."
         coverage={[

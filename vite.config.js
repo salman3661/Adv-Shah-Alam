@@ -10,7 +10,7 @@ export default defineConfig({
     minify: true,
     cssCodeSplit: true,
     reportCompressedSize: false,
-    chunkSizeWarningLimit: 900,
+    chunkSizeWarningLimit: 1000,
     rollupOptions: {
       output: {
         manualChunks: {
@@ -18,8 +18,7 @@ export default defineConfig({
           'vendor-motion':   ['framer-motion'],
           'vendor-helmet':   ['react-helmet-async'],
           'vendor-lucide':   ['lucide-react'],
-          'data-blog-en':    ['./src/data/blogPosts.js'],
-          'data-blog-bn':    ['./src/data/blogPostsBn.js'],
+          // Blog JSON files are split automatically by Vite via import.meta.glob
         },
       },
     },
