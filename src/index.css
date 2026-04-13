@@ -186,10 +186,10 @@ html {
 .glass-card {
   background: var(--card-bg);
   border: 1px solid var(--card-border);
-  border-radius: 1.5rem;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.03);
+  border-radius: 1.75rem;   /* rounded-3xl */
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.04);
   transition:
     transform 0.32s cubic-bezier(0.34, 1.56, 0.64, 1),
     box-shadow 0.28s ease,
@@ -199,26 +199,44 @@ html {
 .glass-card:hover {
   transform: translateY(-6px);
   border-color: var(--accent);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.10);
+}
+
+/* Dark mode: cyan glow on glass-card hover */
+body[data-theme="dark"] .glass-card:hover {
+  box-shadow:
+    0 16px 40px rgba(0, 0, 0, 0.30),
+    0 0 28px rgba(34, 211, 238, 0.12),
+    0 0 0 1px rgba(34, 211, 238, 0.18);
+  border-color: rgba(34, 211, 238, 0.35);
 }
 
 .timeline-card {
   background: var(--card-bg);
   border: 1px solid var(--card-border);
-  border-radius: 1.5rem;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 1.75rem;   /* rounded-3xl */
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   transition:
     transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
-    box-shadow 0.3s ease,
-    border-color 0.3s ease;
+    box-shadow 0.32s ease,
+    border-color 0.32s ease;
 }
 
 .timeline-card:hover {
   transform: translateY(-8px);
   border-color: var(--accent);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.14);
+}
+
+/* Dark mode: add cyan glow on hover */
+body[data-theme="dark"] .timeline-card:hover {
+  box-shadow:
+    0 20px 48px rgba(0, 0, 0, 0.30),
+    0 0 32px rgba(34, 211, 238, 0.14),
+    0 0 0 1px rgba(34, 211, 238, 0.22);
+  border-color: rgba(34, 211, 238, 0.40);
 }
 
 /* ============================================================
@@ -227,9 +245,20 @@ html {
 .navbar-glass {
   background: var(--nav-bg);
   border: 1px solid var(--nav-border);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.10);
+  transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Dark mode: soft cyan ring glow on navbar */
+body[data-theme="dark"] .navbar-glass {
+  background: rgba(6, 13, 26, 0.82);
+  border-color: rgba(34, 211, 238, 0.18);
+  box-shadow:
+    0 4px 32px rgba(0, 0, 0, 0.40),
+    0 0 0 1px rgba(34, 211, 238, 0.10),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
 /* ============================================================
