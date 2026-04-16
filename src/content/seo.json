@@ -1,28 +1,28 @@
-﻿{
+{
   "siteName": "Advocate Md. Shah Alam",
   "siteUrl": "https://advmdshahalam.me",
-  "defaultTitle": "Trusted Lawyer in Bangladesh (2026) – Criminal, Divorce & Bail Expert | Uttara Chamber",
-  "defaultDesc": "Looking for a trusted lawyer in Bangladesh? Expert in criminal, divorce & bail cases. Advocate Md. Shah Alam — visit our Uttara chamber in Dhaka for consultation.",
+  "defaultTitle": "Best Lawyer in Uttara Dhaka (2026) – Criminal, Divorce & Bail Expert | Adv. Shah Alam",
+  "defaultDesc": "Need a top lawyer in Uttara, Dhaka? Advocate Md. Shah Alam — Supreme Court advocate specialising in criminal cases, divorce, bail & land disputes. Free consultation.",
   "defaultOgImage": "https://advmdshahalam.me/images/hero/hero-md-shah-alam.png",
-  "defaultOgImageAlt": "Advocate Md. Shah Alam – Trusted Lawyer in Bangladesh | Uttara Chamber",
+  "defaultOgImageAlt": "Advocate Md. Shah Alam – Best Lawyer in Uttara Dhaka | Criminal, Divorce & Bail Expert",
   "twitterCardType": "summary_large_image",
   "twitterHandle": null,
   "pages": {
     "home": {
-      "title": "Trusted Lawyer in Bangladesh (2026) – Criminal, Divorce & Bail Expert | Uttara Chamber",
-      "desc": "Looking for a trusted lawyer in Bangladesh? Advocate Md. Shah Alam offers expert criminal, divorce, bail & land legal services. Visit our lawyer chamber in Uttara, Dhaka."
+      "title": "Best Lawyer in Uttara Dhaka (2026) – Criminal, Divorce & Bail Expert | Adv. Shah Alam",
+      "desc": "Need a top lawyer in Uttara, Dhaka? Advocate Md. Shah Alam handles criminal cases, divorce, bail, land disputes & High Court writs. 20+ years experience. Call for free consultation."
     },
     "blog": {
-      "title": "Legal Blog – Advocate Md. Shah Alam | Law Articles Bangladesh",
-      "desc": "Read expert legal articles on criminal law, family law, property disputes, civil law, and company & corporate law in Bangladesh by Advocate Md. Shah Alam."
+      "title": "Bangladesh Legal Blog (2026) – Expert Law Articles by Adv. Shah Alam",
+      "desc": "Expert legal articles on criminal law, family & divorce law, property disputes, cyber law, and company law in Bangladesh — written by Advocate Md. Shah Alam."
     },
     "blogBn": {
-      "title": "আইনি ব্লগ – অ্যাডভোকেট মো. শাহ আলম | বাংলাদেশ আইন প্রবন্ধ",
-      "desc": "বাংলাদেশের আইন বিষয়ক বিশেষজ্ঞ নিবন্ধ — ফৌজদারি, পারিবারিক, সম্পত্তি, কর্পোরেট আইন এবং আরও অনেক বিষয়ে।"
+      "title": "বাংলাদেশ আইন ব্লগ (২০২৬) – অ্যাডভোকেট মো. শাহ আলম | আইনি প্রবন্ধ",
+      "desc": "ফৌজদারি, পারিবারিক, সম্পত্তি, সাইবার ও কর্পোরেট আইন বিষয়ে বিশেষজ্ঞ বাংলা প্রবন্ধ — অ্যাডভোকেট মো. শাহ আলম কর্তৃক লিখিত।"
     },
     "advocate": {
-      "title": "Advocate Md. Shah Alam – Supreme Court Advocate, Uttara, Dhaka",
-      "desc": "Advocate Md. Shah Alam is a Supreme Court advocate based in Uttara, Dhaka with 20+ years of experience in criminal, civil, family, and corporate law across Bangladesh."
+      "title": "Adv. Md. Shah Alam – Supreme Court Advocate, Uttara Dhaka | 20+ Years Experience",
+      "desc": "Advocate Md. Shah Alam – Supreme Court advocate, Uttara Dhaka. 20+ years in criminal, family, property & corporate law. Former court member. Trusted by hundreds of clients."
     }
   },
   "categoryColors": {
