@@ -1,9 +1,53 @@
-# Advocate Md. Shah Alam Law Firm - advmdshahalam.me
-# Last updated: 2026-04-10
+# Advocate Md. Shah Alam Law Chambers — advmdshahalam.me
+# Updated: 2026-04-16
+# Strategy: Concentrate crawl budget on 35 canonical high-value URLs.
+# All duplicate, cannibalized, and thin pages are disallowed.
 
 User-agent: *
 Allow: /
+Allow: /blog/
+Allow: /services/
+Allow: /advocate-md-shah-alam
+Allow: /bn/blog/
+
+# --- Block admin and API ---
 Disallow: /admin/
 Disallow: /api/
+
+# ── DUPLICATE / CANNIBALIZED EN POSTS (301s exist, block crawl) ──────────────
+Disallow: /blog/divorce-process-bangladesh-complete-guide
+Disallow: /blog/how-to-file-divorce-petition-bangladesh
+Disallow: /blog/divorce-from-court-bangladesh-muslim-law
+Disallow: /blog/how-to-get-bail-bangladesh-2026
+Disallow: /blog/bail-process-bangladesh-2026
+Disallow: /blog/anticipatory-bail-high-court-bangladesh
+Disallow: /blog/cheque-dishonour-case-bangladesh
+Disallow: /blog/cheque-dishonour-bangladesh-section-138
+Disallow: /blog/writ-petition-high-court-guide-bangladesh
+Disallow: /blog/writ-petition-bangladesh-high-court
+Disallow: /blog/child-custody-2026-bangladesh
+Disallow: /blog/child-custody-bangladesh-muslim-law
+Disallow: /blog/land-dispute-case-bangladesh
+Disallow: /blog/digital-security-act-rights-defences-bangladesh
+Disallow: /blog/digital-security-act-bangladesh-legal-rights
+Disallow: /blog/domestic-violence-legal-protection-bangladesh
+Disallow: /blog/domestic-violence-protection-order-bangladesh
+Disallow: /blog/how-to-challenge-false-criminal-case-bangladesh
+Disallow: /blog/quash-false-case-bangladesh
+Disallow: /blog/property-registration-process-bangladesh
+Disallow: /blog/land-registration-fees-process-bangladesh
+Disallow: /blog/wife-divorce-rights-bangladesh
+Disallow: /blog/contract-breach-specific-performance-bangladesh
+Disallow: /blog/cybercrime-laws-bangladesh-2026
+Disallow: /blog/cyber-security-act-2023-bangladesh
+Disallow: /blog/hire-criminal-lawyer-bangladesh
+Disallow: /blog/hire-cyber-crime-lawyer-bangladesh
+
+# ── BN PAGES: All handled via hreflang; block direct crawl to prevent duplication ──
+# (BN pages are indexed via hreflang signals from EN canonical, not independently)
+Disallow: /bn/
+
+# ── CRAWL-RATE HINT (Googlebot ignores, Bingbot respects) ──
+Crawl-delay: 1
 
 Sitemap: https://www.advmdshahalam.me/sitemap.xml
