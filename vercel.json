@@ -1,7 +1,5 @@
 {
   "redirects": [
-    { "source": "https://advmdshahalam.me/:path*",  "destination": "https://www.advmdshahalam.me/:path*", "permanent": true },
-
     { "source": "/criminal-lawyer-uttara",         "destination": "/services/criminal-lawyer",      "permanent": true },
     { "source": "/divorce-lawyer-uttara",           "destination": "/services/divorce-lawyer",       "permanent": true },
     { "source": "/land-property-lawyer-uttara",     "destination": "/services/land-lawyer",          "permanent": true },
