@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion, AnimatePresence } from 'framer-motion';
 import { telLink, waLink } from '../data/contactInfo';
-import { MessageCircle, Phone, CheckCircle, ArrowLeft, ChevronDown } from 'lucide-react';
+import { MessageCircle, Phone, CheckCircle, ArrowLeft, ArrowRight, ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const BASE = 'https://www.advmdshahalam.me';
@@ -12,7 +12,7 @@ const BASE = 'https://www.advmdshahalam.me';
  * Hero always dark (uses --hero-* vars that don't change with theme).
  * Coverage/FAQ/CTA use body CSS vars (theme-aware).
  */
-const ServicePage = ({ metaTitle, metaDesc, canonicalUrl, h1, intro, coverage, faqItems, ctaText, contextNote, relatedBlogLinks }) => {
+const ServicePage = ({ metaTitle, metaDesc, canonicalUrl, h1, intro, coverage, faqItems, ctaText, contextNote, relatedBlogLinks, relatedServices }) => {
     const [openFaq, setOpenFaq] = useState(null);
 
     // Ensure www in canonical
@@ -235,7 +235,33 @@ const ServicePage = ({ metaTitle, metaDesc, canonicalUrl, h1, intro, coverage, f
                 </section>
             )}
 
-            {/* CTA — theme-aware */}
+            {/* Related Legal Services — cross-service interlinking */}
+            {relatedServices?.length > 0 && (
+                <section className="py-14" style={{ background: 'var(--surface)' }}>
+                    <div className="container mx-auto px-6 max-w-5xl">
+                        <h2 className="text-xl font-bold mb-5" style={{ color: 'var(--text)' }}>
+                            ⚖️ Other Legal Services in Bangladesh
+                        </h2>
+                        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                            {relatedServices.map((svc, i) => (
+                                <Link key={i} to={svc.to}
+                                    className="glass-card p-4 flex items-center gap-3 group no-underline"
+                                    style={{ textDecoration: 'none' }}>
+                                    <div className="w-7 h-7 rounded-lg flex items-center justify-center flex-shrink-0"
+                                        style={{ background: 'var(--accent-subtle)', color: 'var(--accent)' }}>
+                                        <ArrowRight size={13} />
+                                    </div>
+                                    <span className="text-sm font-medium group-hover:underline decoration-dotted"
+                                        style={{ color: 'var(--text)' }}>
+                                        {svc.label}
+                                    </span>
+                                </Link>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+            )}
+
             <section className="py-16" style={{ background: 'var(--bg)' }}>
                 <div className="container mx-auto px-6 max-w-5xl">
                     <motion.div initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}

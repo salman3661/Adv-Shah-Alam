@@ -1,50 +1,72 @@
-﻿import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
 import ServicePage from '../../components/ServicePage';
+
+const ALL_SERVICES = [
+    { label: 'Divorce & Family Lawyer – Dhaka',        to: '/services/divorce-lawyer' },
+    { label: 'Criminal Lawyer – Uttara, Dhaka',        to: '/services/criminal-lawyer' },
+    { label: 'Bail Lawyer – Fast Applications',         to: '/services/bail-lawyer' },
+    { label: 'Land & Property Lawyer – Dhaka',         to: '/services/land-lawyer' },
+    { label: 'Supreme Court Lawyer – Bangladesh',       to: '/services/supreme-court-lawyer' },
+    { label: 'Tax & VAT Lawyer – Bangladesh',          to: '/services/tax-lawyer' },
+];
 
 const CompanyCorporateLawyer = () => (
     <ServicePage
-        metaTitle="Company Lawyer Dhaka, Bangladesh | Advocate Shah Alam"
-        metaDesc="Register a company or resolve corporate disputes in Bangladesh. Advocate Shah Alam handles RJSC filings, shareholder disputes & corporate litigation in Dhaka."
+        metaTitle="Company & Corporate Lawyer in Bangladesh (2026) – Business Law Expert in Dhaka | Adv. Shah Alam"
+        metaDesc="Register a company or resolve corporate disputes in Bangladesh. Advocate Shah Alam handles RJSC filings, shareholder disputes, contract law & corporate litigation in Dhaka. Consult now."
         canonicalUrl="https://www.advmdshahalam.me/services/company-corporate-lawyer"
-        h1="Company & Corporate Lawyer in Dhaka – Bangladesh Business Law Expert"
-        intro="Advocate Md. Shah Alam provides comprehensive <strong>company and corporate legal services in Bangladesh</strong>, advising businesses, entrepreneurs, and investors on formation, compliance, disputes, and commercial transactions under the Companies Act 1994. With strong courtroom experience and practical business insight, Adv. Shah Alam helps protect your commercial interests at every stage."
+        h1="Company & Corporate Lawyer in Bangladesh (2026) – Business Law Expert in Dhaka"
+        intro="Advocate Md. Shah Alam provides comprehensive <strong>company and corporate legal services in Bangladesh</strong>, advising businesses, entrepreneurs, and investors on company formation, commercial contracts, shareholder disputes, regulatory compliance, and corporate litigation. With deep expertise in the Companies Act 1994 and strong courtroom experience before the High Court Division — Adv. Shah Alam is the trusted legal partner for businesses operating in Bangladesh."
         coverage={[
-            'Company formation and incorporation under the Companies Act 1994',
-            'Shareholder agreements, partnership deeds, and joint venture contracts',
-            'Shareholder and director disputes',
-            'Corporate compliance and annual filing requirements',
-            'Commercial contract drafting and review',
-            'Business dissolution and winding-up proceedings',
-            'Trade licence and business permit matters',
-            'Corporate debt recovery and creditor rights',
+            'Company incorporation under the Companies Act 1994 — RJSC filings',
+            'Shareholder agreements, partnership deeds & joint venture contracts',
+            'Director and shareholder disputes — oppression & mismanagement petitions',
+            'Commercial contract drafting, review & enforcement',
+            'Corporate compliance — annual filings, board resolutions & governance',
+            'Business dissolution, winding-up & insolvency proceedings',
+            'Trade licence, business permit & regulatory matters',
+            'Corporate debt recovery and creditor rights enforcement',
             'Employment contract disputes for businesses',
-            'General business legal advisory for SMEs and corporates',
+            'Intellectual property licensing and business agreements',
+            'Foreign investment structuring and BIDA compliance',
+            'High Court company petitions — oppression, mismanagement & rectification',
         ]}
-        contextNote={
-            <>
-                For company disputes that escalate to the High Court Division — including oppression and mismanagement petitions under the Companies Act — Adv. Shah Alam's experience in{' '}
-                <Link to="/services/supreme-court-lawyer" style={{ color: 'var(--accent)', textDecoration: 'underline' }}>
-                    Supreme Court representation
-                </Link>{' '}
-                ensures your corporate matter is argued at the highest level of legal expertise in Bangladesh.
-            </>
-        }
+        contextNote="Company disputes that remain unresolved at the corporate level often escalate to the High Court Division — whether through oppression/mismanagement petitions under the Companies Act or commercial contract litigation. Adv. Shah Alam handles both the corporate advisory and the courtroom aspects of business disputes."
         faqItems={[
             {
-                q: 'How do I register a company in Bangladesh?',
-                a: 'Company registration in Bangladesh is done through the Registrar of Joint Stock Companies and Firms (RJSC). Steps include reserving a company name, preparing a Memorandum and Articles of Association, submitting required documents, and paying the registration fee. An experienced company lawyer can guide you through the process and ensure compliance from day one.',
+                q: 'How do I register a company in Bangladesh (2026)?',
+                a: 'Company registration in Bangladesh is processed through the Registrar of Joint Stock Companies and Firms (RJSC) — now partly online. Steps: (1) Reserve a company name (name clearance); (2) Draft Memorandum and Articles of Association; (3) Execute Form I (declaration) and Form IX (consent of directors); (4) Pay stamp duty and RJSC registration fees; (5) Receive Certificate of Incorporation. A company lawyer ensures compliant documentation and fastest possible RJSC approval.',
             },
             {
-                q: 'What can I do if a business partner breaches our partnership agreement?',
-                a: 'If a business partner breaches a partnership agreement, you may pursue civil remedies including damages, account of profits, or dissolution of the partnership through court. A corporate lawyer can review your agreement, assess the breach, and advise on the most effective legal strategy to protect your investment.',
+                q: 'What can I do if a business partner breaches a partnership agreement?',
+                a: 'If a business partner breaches your agreement, you may pursue: (1) Civil suit for damages or specific performance; (2) Injunction to prevent further breach or asset dissipation; (3) Account of profits — recovering profits improperly earned from the breach; (4) Dissolution of the partnership through court if the relationship is irrecoverable. Act quickly — delay weakens your legal position and allows the breach to compound.',
             },
             {
-                q: 'Can a shareholder sue the company directors in Bangladesh?',
-                a: 'Yes. Under the Companies Act 1994, shareholders may file a petition before the High Court Division alleging oppression or mismanagement by directors. The court can make orders to remedy the situation including regulating the company\'s affairs or even ordering a buyout of shares.',
+                q: 'Can a shareholder sue company directors in Bangladesh?',
+                a: 'Yes. Under the Companies Act 1994, shareholders may file a petition before the High Court Division alleging: oppression (directors acting in a manner prejudicial to shareholders), mismanagement (company affairs conducted fraudulently), or breach of fiduciary duty. The High Court can regulate the company\'s affairs, order rectification of the register, direct a share buyout, or even appoint a receiver.',
+            },
+            {
+                q: 'How do I recover a debt from a company in Bangladesh?',
+                a: 'Corporate debt recovery options: (1) Artha Rin Adalat (Money Loan Court) — for bank and NBFI loans under the Artha Rin Adalat Ain 2003; (2) Civil suit for money decree — for commercial debts between businesses; (3) Winding-up petition in High Court — a last resort that can pressure payment of substantial debts; (4) Negotiated settlement with legal assistance. The right route depends on the nature and amount of the debt.',
+            },
+            {
+                q: 'What are the legal requirements for foreign companies operating in Bangladesh?',
+                a: 'Foreign companies in Bangladesh must: (1) Register a branch or liaison office with RJSC; (2) Obtain investment registration from BIDA (Bangladesh Investment Development Authority) for FDI; (3) Register for VAT and tax with the NBR; (4) Comply with the Foreign Exchange Regulation Act for capital transactions; (5) Follow sectoral regulations if operating in restricted sectors. A corporate lawyer ensures full compliance from day one.',
+            },
+            {
+                q: 'How long does a company dispute case take in Bangladesh?',
+                a: 'High Court company petitions (oppression/mismanagement): 2–5 years for a contested full hearing, though interim relief can be obtained much faster. Commercial contract civil suits: 2–4 years in district civil courts. Winding-up petitions: 1–3 years. Mediation and negotiated settlements (recommended where possible) can resolve disputes in weeks or months.',
             },
         ]}
         ctaText="Talk to a Company Lawyer in Dhaka"
+        relatedBlogLinks={[
+            { to: '/blog/artha-rin-adalat-loan-recovery-bangladesh', title: 'Artha Rin Adalat – Loan Recovery in Bangladesh', desc: 'How the Money Loan Court works for corporate debt recovery' },
+            { to: '/blog/contract-breach-legal-action-bangladesh', title: 'Contract Breach – Legal Action in Bangladesh', desc: 'How to sue for breach of contract and recover damages' },
+            { to: '/blog/writ-petition-high-court-bangladesh', title: 'Writ Petition in Bangladesh High Court – Complete Guide', desc: 'When and how to approach the High Court for company and corporate disputes' },
+            { to: '/blog/cheque-dishonour-case-law-bangladesh', title: 'Cheque Dishonour Case Law Bangladesh – Section 138 Guide', desc: 'How to handle bounced cheques and recover corporate debts through courts' },
+            { to: '/blog/cheque-dishonour-penalty-bangladesh-138-ni-act', title: 'Section 138 NI Act Bangladesh – Penalties & How to Win', desc: 'Complete guide to cheque bounce penalties and court procedure' },
+        ]}
+        relatedServices={ALL_SERVICES}
     />
 );
 
