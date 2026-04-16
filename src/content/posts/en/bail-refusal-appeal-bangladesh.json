@@ -18,7 +18,18 @@
     "Supreme Court bail Bangladesh",
     "how to get bail after refusal Bangladesh"
   ],
-  "heroIntro": "⚡ Quick Answer: If bail is refused at Magistrate Court, immediately apply to Sessions Court. If refused at Sessions level, apply to the High Court Division. A bail refusal at one level does NOT bind the higher court — fresh applications at each level are heard independently. — A bail refusal is not the end. In Bangladesh, the law provides multiple layers of appeal, and experienced lawyers successfully reverse bail refusals every day.",
+  "heroIntro": "A bail refusal is not the end. In Bangladesh, the law provides multiple layers of appeal — Magistrate to Sessions Court, Sessions to High Court, and even Appellate Division. Experienced lawyers reverse bail refusals every day. This guide shows you exactly how.",
+  "quickAnswer": {
+    "heading": "⚡ Quick Answer: Bail Refused in Bangladesh — What to Do",
+    "points": [
+      "Step 1: Magistrate refuses → immediately file at Sessions Court (fresh application)",
+      "Step 2: Sessions refuses → file at High Court Division (strongest remedy)",
+      "Step 3: ALWAYS seek an interim order to block police remand same day",
+      "High Court regularly grants bail for murder, narcotics, DSA cases with weak evidence",
+      "A refusal at lower court does NOT bind the High Court — fully independent hearing",
+      "Timeline: Sessions bail in 3–7 days; High Court in 1–3 weeks"
+    ]
+  },
   "bnSlug": "bail-refusal-appeal-bangladesh-bn",
   "toc": [
     "Why Bail Gets Refused",
@@ -102,6 +113,24 @@
     {
       "text": "Supreme Court Lawyer Bangladesh",
       "to": "/services/supreme-court-lawyer"
+    }
+  ],
+  "relatedPosts": [
+    {
+      "text": "Bail Process Bangladesh – Complete 2026 Guide",
+      "to": "/blog/bail-process-bangladesh"
+    },
+    {
+      "text": "Anticipatory Bail Bangladesh – Before Arrest",
+      "to": "/blog/anticipatory-bail-bangladesh"
+    },
+    {
+      "text": "Narcotics Case – Bail & Defence Strategy",
+      "to": "/blog/narcotics-case-law-bangladesh"
+    },
+    {
+      "text": "How to Stop a False Criminal Case",
+      "to": "/blog/how-to-stop-false-criminal-case-bangladesh"
     }
   ],
   "lang": "en"

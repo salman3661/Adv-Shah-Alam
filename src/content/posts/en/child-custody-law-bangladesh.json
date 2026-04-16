@@ -16,7 +16,19 @@
     "best interest child Bangladesh"
   ],
   "publishedDate": "2026-03-02",
+  "updatedDate": "2026-04-16",
   "heroIntro": "When a marriage breaks down, the question of who will care for the children is often the most emotionally charged legal issue. In Bangladesh, child custody is governed by a combination of personal law, the Guardians and Wards Act 1890, and the welfare principle applied by Family Courts.",
+  "quickAnswer": {
+    "heading": "⚡ Quick Answer: Child Custody in Bangladesh After Divorce",
+    "points": [
+      "Mothers get hizanat (primary custody): Sons to ~7 years, daughters to puberty",
+      "Fathers are natural guardians: responsible for financial maintenance always",
+      "Courts apply the 'best interest of the child' principle — overrides rigid age rules",
+      "Remarriage of mother: Can end hizanat rights — courts still assess welfare",
+      "Non-Muslims: Guardians and Wards Act 1890 applies to all religions",
+      "Emergency: High Court can prevent a child from being taken abroad — act immediately"
+    ]
+  },
   "toc": [
     "Legal Framework for Child Custody in Bangladesh",
     "What Is Hizanat (Maternal Custody)?",
@@ -107,6 +119,24 @@
     {
       "text": "Criminal Lawyer Uttara",
       "to": "/services/criminal-lawyer"
+    }
+  ],
+  "relatedPosts": [
+    {
+      "text": "Divorce Procedure in Bangladesh – Step-by-Step Guide",
+      "to": "/blog/divorce-procedure-bangladesh"
+    },
+    {
+      "text": "Wife's Rights After Divorce in Bangladesh",
+      "to": "/blog/wife-rights-after-divorce-bangladesh"
+    },
+    {
+      "text": "Divorce Maintenance & Alimony for Wives",
+      "to": "/blog/divorce-alimony-maintenance-wife-bangladesh"
+    },
+    {
+      "text": "Domestic Violence Law – Protection Orders Bangladesh",
+      "to": "/blog/domestic-violence-law-bangladesh"
     }
   ],
   "lang": "en"

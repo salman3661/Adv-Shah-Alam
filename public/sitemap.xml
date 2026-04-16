@@ -217,5 +217,24 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <!-- ══ NEW HIGH-PRIORITY POSTS (2026-04-16) ══════════════════════════════════ -->
+  <url>
+    <loc>https://www.advmdshahalam.me/blog/second-marriage-wife-rights-bangladesh</loc>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.advmdshahalam.me/blog/cheque-dishonour-penalty-bangladesh-138-ni-act</loc>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.advmdshahalam.me/blog/namjari-online-check-land-record-bangladesh</loc>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
 
 </urlset>
