@@ -101,20 +101,20 @@ const Blog = () => {
                     name="description"
                     content="Free legal guides on bail, divorce, land &amp; criminal law in Bangladesh. Plain-language articles by Advocate Shah Alam, expert lawyer in Uttara, Dhaka."
                 />
-                <link rel="canonical" href="https://www.advmdshahalam.me/blog" />
+                <link rel="canonical" href="https://advmdshahalam.me/blog" />
                 <meta name="robots" content="index, follow" />
                 <meta property="og:title" content="Legal Guides Bangladesh | Advocate Shah Alam, Uttara" />
                 <meta property="og:description" content="Free legal guides on bail, divorce, land &amp; criminal law in Bangladesh. Plain-language articles by Advocate Shah Alam, expert lawyer in Uttara, Dhaka." />
-                <meta property="og:url" content="https://www.advmdshahalam.me/blog" />
+                <meta property="og:url" content="https://advmdshahalam.me/blog" />
                 <meta property="og:type" content="website" />
-                <meta property="og:image" content="https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.png" />
+                <meta property="og:image" content="https://advmdshahalam.me/images/hero/hero-md-shah-alam.png" />
                 {/* BreadcrumbList schema */}
                 <script type="application/ld+json">{JSON.stringify({
                     '@context': 'https://schema.org',
                     '@type': 'BreadcrumbList',
                     itemListElement: [
-                        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.advmdshahalam.me/' },
-                        { '@type': 'ListItem', position: 2, name: 'Legal Guides', item: 'https://www.advmdshahalam.me/blog' },
+                        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://advmdshahalam.me/' },
+                        { '@type': 'ListItem', position: 2, name: 'Legal Guides', item: 'https://advmdshahalam.me/blog' },
                     ],
                 })}</script>
             </Helmet>

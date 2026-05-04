@@ -414,8 +414,8 @@ function LinksEditor({ links = [], onChange }) {
 function PostRow({ post, lang, onEdit }) {
   const status = postStatus(post);
   const liveUrl = lang === 'en'
-    ? `https://www.advmdshahalam.me/blog/${post.slug}`
-    : `https://www.advmdshahalam.me/bn/blog/${post.slug}`;
+    ? `https://advmdshahalam.me/blog/${post.slug}`
+    : `https://advmdshahalam.me/bn/blog/${post.slug}`;
 
   return (
     <motion.div
@@ -732,8 +732,8 @@ function BlogEditorView({ lang, slug: initialSlug, onBack, onSaved }) {
 
   const status = postStatus(post);
   const liveUrl = lang === 'en'
-    ? `https://www.advmdshahalam.me/blog/${post.slug}`
-    : `https://www.advmdshahalam.me/bn/blog/${post.slug}`;
+    ? `https://advmdshahalam.me/blog/${post.slug}`
+    : `https://advmdshahalam.me/bn/blog/${post.slug}`;
 
   const TABS = [
     { id: 'meta',     label: 'Meta & SEO',  icon: Tag },
@@ -927,7 +927,7 @@ function BlogEditorView({ lang, slug: initialSlug, onBack, onSaved }) {
                         {post.metaTitle || post.title || '(no title)'}
                       </div>
                       <div style={{ fontSize: '0.72rem', color: '#006621', marginBottom: 4 }}>
-                        www.advmdshahalam.me/{lang === 'bn' ? 'bn/' : ''}blog/{post.slug || '...'}
+                        advmdshahalam.me/{lang === 'bn' ? 'bn/' : ''}blog/{post.slug || '...'}
                       </div>
                       <div style={{ fontSize: '0.75rem', color: '#545454', lineHeight: 1.5, overflow: 'hidden', display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical' }}>
                         {post.metaDescription || '(no meta description)'}

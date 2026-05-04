@@ -14,7 +14,7 @@ const SupremeCourtLawyer = () => (
     <ServicePage
         metaTitle="Supreme Court Lawyer in Bangladesh (2026) – High Court & Appellate Expert | Adv. Shah Alam"
         metaDesc="Need a Supreme Court lawyer in Bangladesh? Advocate Shah Alam handles writ petitions, criminal appeals, High Court bail & Appellate Division matters. 20+ years experience. Consult now."
-        canonicalUrl="https://www.advmdshahalam.me/services/supreme-court-lawyer"
+        canonicalUrl="https://advmdshahalam.me/services/supreme-court-lawyer"
         h1="Supreme Court Lawyer in Bangladesh (2026) – High Court & Appellate Division Expert"
         intro="Advocate Md. Shah Alam is a seasoned <strong>Supreme Court lawyer in Bangladesh</strong>, practicing at the High Court Division and Appellate Division of the Supreme Court of Bangladesh. With 20+ years of experience before the highest courts in the country, he handles writ petitions, constitutional matters, criminal appeals, civil appellate cases, High Court bail applications, and administrative law proceedings with precision and deep expertise."
         coverage={[

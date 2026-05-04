@@ -1,7 +1,7 @@
 # Advocate Md. Shah Alam Law Chambers — advmdshahalam.me
-# Updated: 2026-04-16
-# Strategy: Concentrate crawl budget on 35 canonical high-value URLs.
-# All duplicate, cannibalized, and thin pages are disallowed.
+# Updated: 2026-05-04
+# Strategy: Allow crawling of all public content. Sitemap contains only
+# high-quality Tier A pages. Duplicate/redirected URLs are 301'd in vercel.json.
 
 User-agent: *
 Allow: /
@@ -14,7 +14,7 @@ Allow: /bn/blog/
 Disallow: /admin/
 Disallow: /api/
 
-# ── DUPLICATE / CANNIBALIZED EN POSTS (301s exist, block crawl) ──────────────
+# ── DUPLICATE / REDIRECTED EN POSTS (301s exist, block crawl waste) ──────────
 Disallow: /blog/divorce-process-bangladesh-complete-guide
 Disallow: /blog/how-to-file-divorce-petition-bangladesh
 Disallow: /blog/divorce-from-court-bangladesh-muslim-law
@@ -37,17 +37,18 @@ Disallow: /blog/quash-false-case-bangladesh
 Disallow: /blog/property-registration-process-bangladesh
 Disallow: /blog/land-registration-fees-process-bangladesh
 Disallow: /blog/wife-divorce-rights-bangladesh
+Disallow: /blog/mahr-dower-rights-wife-bangladesh
 Disallow: /blog/contract-breach-specific-performance-bangladesh
 Disallow: /blog/cybercrime-laws-bangladesh-2026
 Disallow: /blog/cyber-security-act-2023-bangladesh
 Disallow: /blog/hire-criminal-lawyer-bangladesh
 Disallow: /blog/hire-cyber-crime-lawyer-bangladesh
-
-# ── BN PAGES: All handled via hreflang; block direct crawl to prevent duplication ──
-# (BN pages are indexed via hreflang signals from EN canonical, not independently)
-Disallow: /bn/
+Disallow: /blog/supreme-court-writ-petition-bangladesh
+Disallow: /blog/divorce-process-bangladesh-2026
+Disallow: /blog/how-to-file-divorce-bangladesh
+Disallow: /blog/divorce-from-court-bangladesh-muslim-law
 
 # ── CRAWL-RATE HINT (Googlebot ignores, Bingbot respects) ──
 Crawl-delay: 1
 
-Sitemap: https://www.advmdshahalam.me/sitemap.xml
+Sitemap: https://advmdshahalam.me/sitemap.xml

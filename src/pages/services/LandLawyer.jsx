@@ -14,7 +14,7 @@ const LandLawyer = () => (
     <ServicePage
         metaTitle="Land Lawyer in Bangladesh (2026) – Property & Mutation Expert in Dhaka | Adv. Shah Alam"
         metaDesc="Land dispute in Bangladesh? Advocate Shah Alam resolves title suits, mutation fraud, partition cases & property registration in Dhaka. 20+ years experience. Free consultation."
-        canonicalUrl="https://www.advmdshahalam.me/services/land-lawyer"
+        canonicalUrl="https://advmdshahalam.me/services/land-lawyer"
         h1="Land & Property Lawyer in Bangladesh (2026) – Land Dispute Expert in Dhaka"
         intro="Advocate Md. Shah Alam is a trusted <strong>land and property lawyer in Dhaka, Bangladesh</strong>, specialising in resolving complex land disputes, title suits, mutation fraud, and property transactions across Bangladesh. With 20+ years of hands-on experience in civil courts, High Court writ proceedings, and the Sub-Registrar system — Adv. Shah Alam provides expert legal counsel and decisive courtroom representation to protect your land rights."
         coverage={[

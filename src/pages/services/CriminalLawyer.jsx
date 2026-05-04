@@ -14,7 +14,7 @@ const CriminalLawyer = () => (
     <ServicePage
         metaTitle="Criminal Lawyer in Bangladesh (2026) – Expert Criminal Defence in Dhaka | Adv. Shah Alam"
         metaDesc="Facing criminal charges in Bangladesh? Advocate Shah Alam provides expert criminal defence — FIR, bail, trial & High Court appeals. 20+ years experience in Dhaka courts. Call now."
-        canonicalUrl="https://www.advmdshahalam.me/services/criminal-lawyer"
+        canonicalUrl="https://advmdshahalam.me/services/criminal-lawyer"
         h1="Criminal Lawyer in Bangladesh (2026) – Expert Criminal Defence in Dhaka"
         intro="Advocate Md. Shah Alam is a highly experienced <strong>criminal lawyer in Dhaka, Bangladesh</strong> with 20+ years of proven expertise in criminal defence, FIR matters, bail applications, and trial representation before Magistrate Courts, Sessions Courts, and the Supreme Court of Bangladesh. Whether you face a minor charge or the most serious criminal case, Adv. Shah Alam delivers strategic, results-driven legal defence from arrest through final judgment."
         coverage={[

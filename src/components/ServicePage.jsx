@@ -5,7 +5,7 @@ import { telLink, waLink } from '../data/contactInfo';
 import { MessageCircle, Phone, CheckCircle, ArrowLeft, ArrowRight, ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const BASE = 'https://www.advmdshahalam.me';
+const BASE = 'https://advmdshahalam.me';
 
 /**
  * Reusable service page layout.

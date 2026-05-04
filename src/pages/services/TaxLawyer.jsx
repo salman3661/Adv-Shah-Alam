@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import ServicePage from '../../components/ServicePage';
 
@@ -6,7 +6,7 @@ const TaxLawyer = () => (
     <ServicePage
         metaTitle="Tax & VAT Lawyer Dhaka | Advocate Shah Alam, Bangladesh"
         metaDesc="Fighting a tax notice in Bangladesh? Adv. Shah Alam handles income tax appeals, VAT disputes & NBR cases in Dhaka. Experienced tax lawyer. Free consultation."
-        canonicalUrl="https://www.advmdshahalam.me/services/tax-lawyer"
+        canonicalUrl="https://advmdshahalam.me/services/tax-lawyer"
         h1="Income Tax & VAT Lawyer in Dhaka – Bangladesh Tax Law Expert"
         intro="Advocate Md. Shah Alam is a knowledgeable <strong>income tax lawyer in Bangladesh</strong>, providing comprehensive legal representation in tax disputes, NBR assessments, VAT matters, and tax appeal proceedings. With extensive experience before the Taxes Appellate Tribunal and the High Court Division in revenue cases, Adv. Shah Alam helps individuals and businesses protect their financial interests."
         coverage={[
@@ -40,9 +40,22 @@ const TaxLawyer = () => (
                 a: 'Do not ignore an NBR notice. Engage an income tax lawyer promptly to review the notice, respond within the deadline, and challenge any incorrect assessment. Proper legal representation can significantly reduce tax liabilities and penalties.',
             },
             {
-                q: 'Can a VAT dispute in Bangladesh go to court?',
-                a: 'Yes. VAT disputes can be appealed to the VAT Appellate Tribunal and then to the High Court Division on questions of law. Having an experienced VAT lawyer ensures that your appeal is properly drafted and argued, maximizing the chance of a favourable outcome.',
+                q: 'How much does a tax lawyer cost in Dhaka?',
+                a: 'Tax lawyer fees vary based on the complexity of the case, the amount in dispute, and the stage of proceedings. Advocate Shah Alam offers a free initial consultation to assess your tax matter and provide transparent fee estimates before engagement.',
             },
+        ]}
+        relatedBlogLinks={[
+            { to: '/blog/artha-rin-adalat-loan-recovery-bangladesh', text: 'Loan Recovery (Artha Rin Adalat) – Legal Guide' },
+            { to: '/blog/contract-breach-legal-action-bangladesh', text: 'Contract Breach – How to Take Legal Action' },
+            { to: '/blog/how-to-file-legal-notice-bangladesh', text: 'How to Send a Legal Notice in Bangladesh' },
+        ]}
+        relatedServices={[
+            { to: '/services/company-corporate-lawyer', label: 'Company & Corporate Lawyer – Dhaka' },
+            { to: '/services/criminal-lawyer', label: 'Criminal Lawyer – Dhaka' },
+            { to: '/services/supreme-court-lawyer', label: 'Supreme Court Lawyer – Bangladesh' },
+            { to: '/services/land-lawyer', label: 'Land & Property Lawyer – Dhaka' },
+            { to: '/services/bail-lawyer', label: 'Bail Lawyer – Fast Applications' },
+            { to: '/services/divorce-lawyer', label: 'Divorce & Family Lawyer – Dhaka' },
         ]}
         ctaText="Talk to a Tax Lawyer in Dhaka"
     />

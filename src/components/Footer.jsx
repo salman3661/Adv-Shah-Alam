@@ -17,12 +17,12 @@ const Footer = () => {
     const serviceLinks = siteInfo.footerServiceLinks;
 
     const quickLinks = [
-        { name: 'Home', id: 'home' },
-        { name: 'About', id: 'about' },
-        { name: 'Services', id: 'services' },
-        { name: 'FAQ', id: 'faq' },
-        { name: 'Blog', id: 'blog' },
-        { name: 'Contact', id: 'contact' },
+        { name: 'Home', path: '/' },
+        { name: 'About', path: '/#about' },
+        { name: 'Services', path: '/#services' },
+        { name: 'FAQ', path: '/#faq' },
+        { name: 'Blog', path: '/blog' },
+        { name: 'Contact', path: '/#contact' },
     ];
 
     const advocatePageLink = { name: 'About the Advocate', path: '/advocate-md-shah-alam' };
@@ -58,8 +58,8 @@ const Footer = () => {
                         <h4 className="font-bold text-xs uppercase tracking-wider mb-4" style={{ color: 'var(--text)' }}>Quick Links</h4>
                         <nav className="space-y-2">
                             {quickLinks.map((link) => (
-                                <a key={link.id} href={`#${link.id}`} onClick={(e) => scrollTo(e, link.id)}
-                                    className={linkClass} style={{ color: 'var(--text-2)' }}>{link.name}</a>
+                                <Link key={link.path} to={link.path}
+                                    className={linkClass} style={{ color: 'var(--text-2)' }}>{link.name}</Link>
                             ))}
                             <Link to={advocatePageLink.path} className={linkClass} style={{ color: 'var(--text-2)' }}>
                                 {advocatePageLink.name}

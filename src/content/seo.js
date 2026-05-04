@@ -1,4 +1,4 @@
-﻿/**
+/**
  * ╔══════════════════════════════════════════════════════════════╗
  * ║  src/content/seo.js — Global SEO Defaults                    ║
  * ║  These values are used as fallbacks across all pages.        ║
@@ -19,7 +19,7 @@ const seo = {
     defaultTitle: 'Trusted Lawyer in Bangladesh (2026) – Criminal, Divorce & Bail Expert | Uttara Chamber',
     defaultDesc: 'Trusted lawyer in Bangladesh for criminal, divorce and bail cases. Visit our Uttara chamber in Dhaka for expert legal consultation.',
     defaultOgImage: 'https://advmdshahalam.me/images/hero/hero-md-shah-alam.png',
-    defaultOgImageAlt: 'Advocate Md. Shah Alam – Trusted Lawyer in Bangladesh | Uttara Chamber',
+    defaultOgImageAlt: 'Advocate Md. Shah Alam — Trusted Lawyer in Bangladesh | Uttara, Dhaka',
 
     // ─── Twitter / X card ───────────────────────────────────────────
     twitterCardType: 'summary_large_image',  // or 'summary'
@@ -29,8 +29,8 @@ const seo = {
     // These values MUST match what each page's <Helmet> actually outputs.
     pages: {
         home: {
-            title: 'Trusted Lawyer in Bangladesh | Advocate Shah Alam',                     // 50 chars
-            desc:  'Advocate Shah Alam is a trusted lawyer in Bangladesh for criminal, divorce, bail & land cases. Visit our Uttara chamber in Dhaka – 20+ years of legal excellence.',
+            title: 'Trusted Lawyer in Bangladesh | Advocate Md. Shah Alam — Uttara, Dhaka',
+            desc:  'Need a trusted lawyer in Bangladesh? Advocate Md. Shah Alam offers expert criminal, divorce, bail & land legal services. 20+ years experience. Free consultation at our Uttara chamber.',
         },
         blog: {
             title: 'Legal Guides Bangladesh | Advocate Shah Alam, Uttara',                  // 53 chars
@@ -49,20 +49,20 @@ const seo = {
             desc:  'Explore the education and career timeline of Advocate Shah Alam – LL.M lawyer practising at the Supreme Court of Bangladesh with a chamber in Uttara, Dhaka.',
         },
         services: {
-            criminal:    { title: 'Criminal Lawyer in Bangladesh | Advocate Shah Alam',     // 51 chars
-                           desc:  'Arrested or facing criminal charges? Advocate Shah Alam provides expert criminal defence, FIR help and bail in Uttara – Dhaka, Bangladesh. Call now.' },
-            bail:        { title: 'Bail Lawyer in Dhaka | Advocate Shah Alam, Bangladesh',  // 54 chars
-                           desc:  'Need urgent release? Get help from a top Bail Lawyer in Dhaka. We secure same-day and anticipatory bail fast. Meet Adv. Shah Alam at his Uttara Chamber now.' },
-            divorce:     { title: 'Divorce & Family Lawyer Uttara | Advocate Shah Alam',    // 52 chars
-                           desc:  'Need a divorce lawyer in Uttara, Dhaka? Advocate Shah Alam handles Muslim talaq, khula, child custody & maintenance in Bangladesh family courts. WhatsApp today.' },
-            land:        { title: 'Land Lawyer in Uttara, Dhaka | Advocate Shah Alam',      // 50 chars
-                           desc:  'Resolve land disputes, property registration & mutation in Dhaka. Expert land & property lawyer in Uttara – 20+ years experience. Free consultation. Call now.' },
-            supremeCourt:{ title: 'Supreme Court Lawyer Bangladesh | Advocate Shah Alam',   // 53 chars
-                           desc:  'Adv. Shah Alam is your expert Supreme Court lawyer in Bangladesh for writ petitions, criminal appeals, High Court bail & Appellate Division matters. Consult now.' },
-            tax:         { title: 'Tax & VAT Lawyer Dhaka | Advocate Shah Alam, Bangladesh',// 56 chars
-                           desc:  'Fighting a tax notice in Bangladesh? Adv. Shah Alam handles income tax appeals, VAT disputes & NBR cases in Dhaka. Experienced tax lawyer. Free consultation.' },
-            company:     { title: 'Company Lawyer Dhaka, Bangladesh | Advocate Shah Alam',  // 54 chars
-                           desc:  'Register a company or resolve corporate disputes in Bangladesh. Advocate Shah Alam handles RJSC filings, shareholder disputes & corporate litigation in Dhaka.' },
+            criminal:    { title: 'Criminal Lawyer in Bangladesh — Expert Defence | Adv. Shah Alam',
+                           desc:  'Facing criminal charges? Get expert criminal defence from Advocate Shah Alam in Dhaka. FIR, bail, trial & High Court appeals. 20+ years. Call now.' },
+            bail:        { title: 'Bail Lawyer in Bangladesh — Fast Bail Applications | Adv. Shah Alam',
+                           desc:  'Arrested? Get urgent bail from a top bail lawyer in Dhaka. Same-day filing, anticipatory & High Court bail. 20+ years. Contact now.' },
+            divorce:     { title: 'Divorce Lawyer in Bangladesh — Family Law Expert | Adv. Shah Alam',
+                           desc:  'Need a divorce lawyer in Dhaka? Talaq, khula, child custody & maintenance. 20+ years family court experience. WhatsApp consultation available.' },
+            land:        { title: 'Land Lawyer in Bangladesh — Property Dispute Expert | Adv. Shah Alam',
+                           desc:  'Land dispute in Bangladesh? Title suits, mutation fraud, partition cases & property registration. Expert land lawyer in Dhaka. Free consultation.' },
+            supremeCourt:{ title: 'Supreme Court Lawyer in Bangladesh — High Court Expert | Adv. Shah Alam',
+                           desc:  'Need a Supreme Court lawyer? Writ petitions, criminal appeals, High Court bail & Appellate Division matters. 20+ years. Consult now.' },
+            tax:         { title: 'Tax & VAT Lawyer in Dhaka — NBR & Tax Tribunal | Adv. Shah Alam',
+                           desc:  'Tax dispute in Bangladesh? Income tax appeals, VAT disputes & NBR cases. Experienced tax lawyer in Dhaka. Free consultation.' },
+            company:     { title: 'Company & Corporate Lawyer in Bangladesh | Adv. Shah Alam',
+                           desc:  'Register a company or resolve corporate disputes. RJSC filings, shareholder disputes & business litigation in Dhaka. Expert corporate counsel.' },
         },
     },
 
