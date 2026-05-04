@@ -35,6 +35,7 @@ const TIER_A_EN_SLUGS = [
     'how-to-file-gd-bangladesh-police-station',
     'divorce-alimony-maintenance-wife-bangladesh',
     'contract-breach-legal-action-bangladesh',
+    'gd-vs-fir-bangladesh',
 ];
 
 // ── TIER A BN Blog Slugs (high-quality, paired with EN via hreflang) ────────
