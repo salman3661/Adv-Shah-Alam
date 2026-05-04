@@ -76,7 +76,7 @@ const BailLawyer = () => (
         }}
         ctaText="Need Urgent Bail? Contact Us Now"
         relatedBlogLinks={[
-            { to: '/blog/bail-process-bangladesh', title: 'How to Get Bail in Bangladesh (2026) – Complete Guide', desc: 'All bail types, eligibility, court levels, costs, and step-by-step process' },
+            { to: '/blog/how-to-get-bail-in-bangladesh', title: 'How to Get Bail in Bangladesh Fast (2026)', desc: 'Step-by-step bail process, timelines, documents, and court strategy' },
             { to: '/blog/anticipatory-bail-bangladesh', title: 'Anticipatory Bail Bangladesh – Before Arrest Guide', desc: 'Who qualifies, how to apply, and what happens if it is refused' },
             { to: '/blog/bail-refusal-appeal-bangladesh', title: 'Bail Refused? How to Appeal to High Court (2026)', desc: 'Step-by-step guide to Sessions Court and High Court bail after refusal' },
             { to: '/blog/narcotics-case-law-bangladesh', title: 'Narcotics Case Bangladesh – Bail & Defence Guide', desc: 'How to fight narcotics charges and secure bail at every court level' },

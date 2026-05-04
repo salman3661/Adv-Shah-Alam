@@ -12,7 +12,6 @@ const TODAY = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
 
 // ── TIER A EN Blog Slugs (canonical, high-quality, substantial content) ─────
 const TIER_A_EN_SLUGS = [
-    'bail-process-bangladesh',
     'divorce-procedure-bangladesh',
     'cheque-dishonour-case-law-bangladesh',
     'child-custody-law-bangladesh',
@@ -36,6 +35,7 @@ const TIER_A_EN_SLUGS = [
     'divorce-alimony-maintenance-wife-bangladesh',
     'contract-breach-legal-action-bangladesh',
     'gd-vs-fir-bangladesh',
+    'how-to-get-bail-in-bangladesh',
 ];
 
 // ── TIER A BN Blog Slugs (high-quality, paired with EN via hreflang) ────────

@@ -76,7 +76,7 @@ const CriminalLawyer = () => (
         }}
         ctaText="Talk to a Criminal Lawyer in Dhaka Today"
         relatedBlogLinks={[
-            { to: '/blog/bail-process-bangladesh', title: 'How to Get Bail in Bangladesh (2026) – Complete Guide', desc: 'All types of bail, required documents, court levels, and costs' },
+            { to: '/blog/how-to-get-bail-in-bangladesh', title: 'How to Get Bail in Bangladesh Fast (2026)', desc: 'Step-by-step bail process, timelines, documents, and court strategy' },
             { to: '/blog/anticipatory-bail-bangladesh', title: 'Anticipatory Bail Bangladesh – Pre-Arrest Protection', desc: 'How to get bail before arrest and protect yourself from custody' },
             { to: '/blog/how-to-stop-false-criminal-case-bangladesh', title: 'How to Stop a False Criminal Case in Bangladesh', desc: 'Legal strategies: FIR quashing, anticipatory bail, counter-complaints' },
             { to: '/blog/police-remand-rights-bangladesh', title: 'Police Remand Rights in Bangladesh – Know Your Rights', desc: 'What remand is, your rights during it, and how to fight excessive remand' },

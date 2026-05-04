@@ -1,4 +1,16 @@
 {
+  "redirects": [
+    {
+      "source": "/blog/bail-process-bangladesh",
+      "destination": "/blog/how-to-get-bail-in-bangladesh",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/how-to-get-bail-bangladesh-2026",
+      "destination": "/blog/how-to-get-bail-in-bangladesh",
+      "statusCode": 301
+    }
+  ],
   "rewrites": [
     {
       "source": "/(.*)",

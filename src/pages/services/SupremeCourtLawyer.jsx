@@ -79,7 +79,7 @@ const SupremeCourtLawyer = () => (
             { to: '/blog/writ-petition-high-court-bangladesh', title: 'How to File a Writ Petition in Bangladesh (2026)', desc: 'When to go to High Court, types of writs, and the filing process' },
             { to: '/blog/bail-refusal-appeal-bangladesh', title: 'Bail Refused? How to Appeal to High Court (2026)', desc: 'Step-by-step High Court bail after Sessions Court refusal' },
             { to: '/blog/criminal-appeal-procedure-bangladesh', title: 'Criminal Appeal Procedure in Bangladesh – High Court Guide', desc: 'How to appeal a criminal conviction from Sessions Court to High Court' },
-            { to: '/blog/bail-process-bangladesh', title: 'How to Get Bail in Bangladesh (2026) – Complete Guide', desc: 'All bail types, High Court bail, documents, costs, and timeline' },
+            { to: '/blog/how-to-get-bail-in-bangladesh', title: 'How to Get Bail in Bangladesh Fast (2026)', desc: 'Step-by-step bail process, timelines, documents, and court strategy' },
             { to: '/blog/arrest-without-warrant-bangladesh', title: 'Arrested Without Warrant? Your Rights in Bangladesh', desc: 'Constitutional rights on arrest and how the High Court protects them' },
         ]}
         relatedServices={ALL_SERVICES}
