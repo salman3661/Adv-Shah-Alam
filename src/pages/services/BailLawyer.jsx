@@ -12,10 +12,10 @@ const ALL_SERVICES = [
 
 const BailLawyer = () => (
     <ServicePage
-        metaTitle="Bail Lawyer in Bangladesh (2026) – Fast Bail Applications in Dhaka | Adv. Shah Alam"
-        metaDesc="Arrested in Bangladesh? Get urgent bail from a top bail lawyer in Dhaka. Magistrate, Sessions & High Court bail — same-day filing available. 20+ years experience. Call now."
+        metaTitle="Arrested? Get Bail Fast — Top Bail Lawyer in Dhaka, Bangladesh"
+        metaDesc="Need urgent bail? Same-day filing at Magistrate, Sessions & High Court. Anticipatory bail available. 20+ years. Call Adv. Shah Alam now."
         canonicalUrl="https://advmdshahalam.me/services/bail-lawyer"
-        h1="Bail Lawyer in Bangladesh (2026) – Urgent Bail Applications in Dhaka & High Court"
+        h1="Bail Lawyer in Dhaka — Fast Bail at Every Court Level"
         intro="Advocate Md. Shah Alam is Bangladesh's trusted <strong>bail lawyer in Dhaka</strong>, known for securing urgent bail applications at every court level — from Magistrate hearings to the High Court Division and Appellate Division. Whether facing a bailable offence or a serious non-bailable charge, Adv. Shah Alam acts with speed and legal precision. Anticipatory bail, High Court bail, and emergency same-day applications are a core specialisation."
         coverage={[
             'Regular bail applications — Magistrate Court (bailable & non-bailable)',
@@ -31,7 +31,7 @@ const BailLawyer = () => (
             'Bail violation matters — cancellation and reapplication',
             'Emergency same-day bail filing for urgent arrests',
         ]}
-        contextNote="Bail matters are often linked to the underlying criminal charge. Adv. Shah Alam handles both bail and the full criminal defence — ensuring a consistent, strategic legal defence from custody through trial."
+        contextNote="Bail matters are often linked to the underlying criminal charge. Adv. Shah Alam handles both bail and <a href='/services/criminal-lawyer' style='color:var(--accent);text-decoration:underline'>full criminal trial defence</a> — ensuring a consistent, strategic approach from custody through acquittal. If bail is refused at the Sessions Court, we file directly at the <a href='/services/supreme-court-lawyer' style='color:var(--accent);text-decoration:underline'>High Court Division</a> for urgent relief."
         faqItems={[
             {
                 q: 'How to get bail in Bangladesh for a non-bailable offence?',
@@ -58,6 +58,22 @@ const BailLawyer = () => (
                 a: 'Narcotics cases under the Narcotics Control Act have special bail restrictions at lower court levels. However, the High Court regularly grants bail in narcotics cases where: the accused is a first offender, the quantity seized is small, the evidence is weak or procedurally flawed, or the accused has been in custody for a long period. A High Court bail application is almost always the right route.',
             },
         ]}
+        howWeHelp={{
+            problems: [
+                'You or a family member has just been arrested',
+                'Bail was refused by the Magistrate — you need a higher court',
+                'You fear arrest and need anticipatory bail before it happens',
+                'The accused has been in custody for weeks with no bail hearing',
+            ],
+            steps: [
+                { step: 'Emergency Call', desc: 'Contact us immediately — we handle bail calls 7 days a week' },
+                { step: 'Same-Day Filing', desc: 'Bail petition drafted and filed at the appropriate court level' },
+                { step: 'Court Hearing', desc: 'Adv. Shah Alam argues your bail in person — Magistrate to High Court' },
+                { step: 'Release', desc: 'Bail bond prepared, surety arranged, accused released from custody' },
+            ],
+            scenario: 'A Dhaka businessman was arrested on fraud allegations filed by a former partner. The Magistrate refused bail. Within 48 hours, Advocate Shah Alam filed a Sessions Court bail application with financial records proving the complaint was civil, not criminal. Bail was granted the next day — the accused spent only 3 days in custody.',
+            cta: 'Every hour in custody matters. Call now — we file bail the same day.',
+        }}
         ctaText="Need Urgent Bail? Contact Us Now"
         relatedBlogLinks={[
             { to: '/blog/bail-process-bangladesh', title: 'How to Get Bail in Bangladesh (2026) – Complete Guide', desc: 'All bail types, eligibility, court levels, costs, and step-by-step process' },

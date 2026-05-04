@@ -12,10 +12,10 @@ const ALL_SERVICES = [
 
 const CriminalLawyer = () => (
     <ServicePage
-        metaTitle="Criminal Lawyer in Bangladesh (2026) – Expert Criminal Defence in Dhaka | Adv. Shah Alam"
-        metaDesc="Facing criminal charges in Bangladesh? Advocate Shah Alam provides expert criminal defence — FIR, bail, trial & High Court appeals. 20+ years experience in Dhaka courts. Call now."
+        metaTitle="Charged With a Crime? Expert Criminal Lawyer in Dhaka, Bangladesh"
+        metaDesc="Facing arrest or criminal charges? Adv. Shah Alam defends FIR, bail & trial cases in Dhaka — 20+ years in all courts. Same-day consultation."
         canonicalUrl="https://advmdshahalam.me/services/criminal-lawyer"
-        h1="Criminal Lawyer in Bangladesh (2026) – Expert Criminal Defence in Dhaka"
+        h1="Criminal Lawyer in Dhaka — Expert Defence From Arrest to Acquittal"
         intro="Advocate Md. Shah Alam is a highly experienced <strong>criminal lawyer in Dhaka, Bangladesh</strong> with 20+ years of proven expertise in criminal defence, FIR matters, bail applications, and trial representation before Magistrate Courts, Sessions Courts, and the Supreme Court of Bangladesh. Whether you face a minor charge or the most serious criminal case, Adv. Shah Alam delivers strategic, results-driven legal defence from arrest through final judgment."
         coverage={[
             'FIR (First Information Report) — defence, quashing & police matters',
@@ -31,7 +31,7 @@ const CriminalLawyer = () => (
             'False FIR defence — quashing and harassment cases',
             'Pre-arrest consultation, rights protection & strategy',
         ]}
-        contextNote="In criminal cases, speed matters enormously. From the moment of arrest, every decision affects the outcome — bail, remand, charge framing, and trial strategy all require expert legal handling. Adv. Shah Alam is available for urgent consultation in Dhaka."
+        contextNote="In criminal cases, speed matters enormously. From the moment of arrest, every decision affects the outcome — <a href='/services/bail-lawyer' style='color:var(--accent);text-decoration:underline'>securing bail quickly</a> can mean the difference between days and months in custody. Remand, charge framing, and trial strategy all require expert handling. If you are facing a <a href='/blog/how-to-stop-false-criminal-case-bangladesh' style='color:var(--accent);text-decoration:underline'>false criminal case</a>, early intervention is critical. Adv. Shah Alam is available for urgent consultation in Dhaka."
         faqItems={[
             {
                 q: 'What should I do immediately if an FIR is filed against me in Bangladesh?',
@@ -58,6 +58,22 @@ const CriminalLawyer = () => (
                 a: 'Police remand means the accused is taken back to police custody for interrogation after production before a Magistrate. Remand is often used aggressively in Bangladesh. A lawyer can: (1) Object to the remand application and argue against it; (2) Apply for an interim bail or protective order; (3) File a writ in the High Court if remand is granted illegally or excessively. Act immediately — remand must be addressed the day of production before the Magistrate.',
             },
         ]}
+        howWeHelp={{
+            problems: [
+                'An FIR has been filed against you — falsely or otherwise',
+                'Police have called you for questioning or you fear imminent arrest',
+                'A family member is in custody and needs immediate bail',
+                'You have a court date coming and no lawyer prepared for trial',
+            ],
+            steps: [
+                { step: 'Urgent Consultation', desc: 'Call or WhatsApp — we respond the same day, even on weekends' },
+                { step: 'Case Assessment', desc: 'We review the FIR, charges, and evidence to build your defence' },
+                { step: 'Court Representation', desc: 'Bail filing, trial attendance, cross-examination — all courts' },
+                { step: 'Resolution', desc: 'Acquittal, charge quashing, or best possible outcome — we fight until it is over' },
+            ],
+            scenario: 'A schoolteacher in Uttara was falsely accused of assault by a neighbour over a property boundary dispute. An FIR was filed and arrest was imminent. Advocate Shah Alam filed anticipatory bail within 6 hours, secured protection from arrest, and later got the FIR quashed through the High Court. The teacher never spent a single day in custody.',
+            cta: 'Your freedom is at stake. Call Advocate Shah Alam now — same-day response guaranteed.',
+        }}
         ctaText="Talk to a Criminal Lawyer in Dhaka Today"
         relatedBlogLinks={[
             { to: '/blog/bail-process-bangladesh', title: 'How to Get Bail in Bangladesh (2026) – Complete Guide', desc: 'All types of bail, required documents, court levels, and costs' },

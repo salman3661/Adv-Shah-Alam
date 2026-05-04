@@ -12,10 +12,10 @@ const ALL_SERVICES = [
 
 const LandLawyer = () => (
     <ServicePage
-        metaTitle="Land Lawyer in Bangladesh (2026) – Property & Mutation Expert in Dhaka | Adv. Shah Alam"
-        metaDesc="Land dispute in Bangladesh? Advocate Shah Alam resolves title suits, mutation fraud, partition cases & property registration in Dhaka. 20+ years experience. Free consultation."
+        metaTitle="Land Dispute? Expert Property Lawyer in Dhaka, Bangladesh"
+        metaDesc="Title suits, mutation fraud & partition cases — resolved. 20+ years protecting land rights in Dhaka courts. Free consultation. Call now."
         canonicalUrl="https://advmdshahalam.me/services/land-lawyer"
-        h1="Land & Property Lawyer in Bangladesh (2026) – Land Dispute Expert in Dhaka"
+        h1="Land & Property Lawyer in Dhaka — Resolve Disputes, Protect Ownership"
         intro="Advocate Md. Shah Alam is a trusted <strong>land and property lawyer in Dhaka, Bangladesh</strong>, specialising in resolving complex land disputes, title suits, mutation fraud, and property transactions across Bangladesh. With 20+ years of hands-on experience in civil courts, High Court writ proceedings, and the Sub-Registrar system — Adv. Shah Alam provides expert legal counsel and decisive courtroom representation to protect your land rights."
         coverage={[
             'Title suit and declaration of land ownership in civil court',
@@ -31,7 +31,7 @@ const LandLawyer = () => (
             'Property boundary and wall encroachment cases',
             'Pre-purchase land title verification and due diligence',
         ]}
-        contextNote="Land cases in Bangladesh often span both civil courts and the AC Land office simultaneously. Adv. Shah Alam's dual expertise in civil litigation and revenue administration provides comprehensive protection for your property rights."
+        contextNote="Land cases in Bangladesh often span both civil courts and the AC Land office simultaneously. When fraudulent mutation or land grabbing involves criminal elements, we file <a href='/services/criminal-lawyer' style='color:var(--accent);text-decoration:underline'>criminal cases for forgery and fraud</a> alongside the civil suit. If the civil court ruling is unjust, Adv. Shah Alam takes the matter to the <a href='/services/supreme-court-lawyer' style='color:var(--accent);text-decoration:underline'>High Court through writ petition or appeal</a>."
         faqItems={[
             {
                 q: 'How do I resolve a land dispute in Bangladesh?',
@@ -58,6 +58,22 @@ const LandLawyer = () => (
                 a: 'Before purchasing, conduct: (1) Khatian verification — check CS, SA, RS, BS khatian at the AC Land office or land.gov.bd; (2) Sub-Registrar search — verify all registered deeds for the plot over the past 12–30 years; (3) Physical inspection — confirm seller\'s actual possession; (4) Mutation check — confirm the seller\'s name appears in the current khatian. A property lawyer can conduct all these searches for you.',
             },
         ]}
+        howWeHelp={{
+            problems: [
+                'Someone has illegally mutated your land in their name',
+                'Family members are fighting over inherited property',
+                'A buyer is refusing to complete registration after taking money',
+                'Your land is being encroached upon and you need a court order',
+            ],
+            steps: [
+                { step: 'Document Review', desc: 'Bring your deeds, khatian, and DCR — we verify your title chain' },
+                { step: 'Legal Strategy', desc: 'Title suit, partition suit, injunction, or criminal FIR — we choose the strongest path' },
+                { step: 'Court Action', desc: 'Case filed, injunction obtained to freeze the property, hearings attended' },
+                { step: 'Ownership Secured', desc: 'Court order in your favour, mutation corrected, land protected' },
+            ],
+            scenario: 'Three siblings in Tongi inherited agricultural land from their late father. The eldest brother fraudulently mutated the entire property in his name and attempted to sell it. Advocate Shah Alam filed an emergency injunction stopping the sale within 24 hours, then filed a partition suit and criminal FIR for forgery. The court restored equal shares to all three siblings.',
+            cta: 'Land fraud does not wait — and neither should you. Get your documents reviewed today. Free consultation.',
+        }}
         ctaText="Consult a Land Lawyer in Dhaka Today"
         relatedBlogLinks={[
             { to: '/blog/mutation-process-bangladesh', title: 'Land Mutation (Namjari) Bangladesh (2026) – Complete Guide', desc: 'AC Land process, documents, fees, timeline and what to do if refused' },

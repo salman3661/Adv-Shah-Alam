@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion, AnimatePresence } from 'framer-motion';
 import { telLink, waLink } from '../data/contactInfo';
-import { MessageCircle, Phone, CheckCircle, ArrowLeft, ArrowRight, ChevronDown } from 'lucide-react';
+import { MessageCircle, Phone, CheckCircle, ArrowLeft, ArrowRight, ChevronDown, AlertTriangle, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const BASE = 'https://advmdshahalam.me';
@@ -12,7 +12,7 @@ const BASE = 'https://advmdshahalam.me';
  * Hero always dark (uses --hero-* vars that don't change with theme).
  * Coverage/FAQ/CTA use body CSS vars (theme-aware).
  */
-const ServicePage = ({ metaTitle, metaDesc, canonicalUrl, h1, intro, coverage, faqItems, ctaText, contextNote, relatedBlogLinks, relatedServices }) => {
+const ServicePage = ({ metaTitle, metaDesc, canonicalUrl, h1, intro, coverage, faqItems, ctaText, contextNote, relatedBlogLinks, relatedServices, howWeHelp }) => {
     const [openFaq, setOpenFaq] = useState(null);
 
     // Ensure www in canonical
@@ -148,12 +148,100 @@ const ServicePage = ({ metaTitle, metaDesc, canonicalUrl, h1, intro, coverage, f
                         ))}
                     </div>
                     {contextNote && (
-                        <p className="mt-6 text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
-                            {contextNote}
-                        </p>
+                        <p className="mt-6 text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}
+                            dangerouslySetInnerHTML={{ __html: contextNote }} />
                     )}
                 </div>
             </section>
+
+            {/* How We Help You — high-conversion content block */}
+            {howWeHelp && (
+                <section className="py-16" style={{ background: 'var(--surface)' }}>
+                    <div className="container mx-auto px-6 max-w-5xl">
+                        <motion.h2 initial={{ opacity: 0, y: 14 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
+                            className="text-2xl md:text-3xl font-serif font-bold mb-10"
+                            style={{ color: 'var(--text)', fontFamily: "'Playfair Display', serif" }}>
+                            How We Help You
+                        </motion.h2>
+
+                        {/* Problems */}
+                        {howWeHelp.problems?.length > 0 && (
+                            <div className="mb-10">
+                                <h3 className="text-lg font-semibold mb-4 flex items-center gap-2" style={{ color: 'var(--text)' }}>
+                                    <AlertTriangle size={18} style={{ color: 'var(--accent)' }} /> Are You Facing This?
+                                </h3>
+                                <div className="grid sm:grid-cols-2 gap-3">
+                                    {howWeHelp.problems.map((problem, i) => (
+                                        <motion.div key={i}
+                                            initial={{ opacity: 0, x: -10 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.06 }}
+                                            className="glass-card p-4 flex items-start gap-3"
+                                            style={{ borderLeft: '3px solid var(--accent)' }}>
+                                            <span className="text-sm" style={{ color: 'var(--text-secondary)' }}>{problem}</span>
+                                        </motion.div>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
+
+                        {/* Process Steps */}
+                        {howWeHelp.steps?.length > 0 && (
+                            <div className="mb-10">
+                                <h3 className="text-lg font-semibold mb-4 flex items-center gap-2" style={{ color: 'var(--text)' }}>
+                                    <Zap size={18} style={{ color: 'var(--accent)' }} /> Our Process
+                                </h3>
+                                <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                                    {howWeHelp.steps.map((item, i) => (
+                                        <motion.div key={i}
+                                            initial={{ opacity: 0, y: 14 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}
+                                            className="glass-card p-5 text-center">
+                                            <div className="w-9 h-9 rounded-full flex items-center justify-center mx-auto mb-3 text-sm font-bold"
+                                                style={{ background: 'var(--accent)', color: '#fff' }}>
+                                                {i + 1}
+                                            </div>
+                                            <p className="text-sm font-semibold mb-1" style={{ color: 'var(--text)' }}>{item.step}</p>
+                                            <p className="text-xs leading-relaxed" style={{ color: 'var(--text-muted)' }}>{item.desc}</p>
+                                        </motion.div>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
+
+                        {/* Real-Life Scenario */}
+                        {howWeHelp.scenario && (
+                            <motion.div initial={{ opacity: 0, y: 14 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
+                                className="glass-card p-6 mb-10"
+                                style={{ borderLeft: '4px solid var(--gold, var(--accent))' }}>
+                                <h3 className="text-sm font-bold uppercase tracking-wider mb-3" style={{ color: 'var(--accent)' }}>
+                                    Real Case Example
+                                </h3>
+                                <p className="text-sm leading-relaxed italic" style={{ color: 'var(--text-secondary)' }}>
+                                    {howWeHelp.scenario}
+                                </p>
+                            </motion.div>
+                        )}
+
+                        {/* CTA */}
+                        {howWeHelp.cta && (
+                            <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
+                                className="glass-card p-6 text-center" style={{ borderColor: 'var(--accent)' }}>
+                                <p className="text-base font-semibold mb-4" style={{ color: 'var(--text)' }}>
+                                    {howWeHelp.cta}
+                                </p>
+                                <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                                    <a href={waLink()} target="_blank" rel="noopener noreferrer"
+                                        className="btn-whatsapp text-sm">
+                                        <MessageCircle size={17} /> WhatsApp Now
+                                    </a>
+                                    <a href={telLink()}
+                                        className="btn-secondary text-sm">
+                                        <Phone size={17} /> Call Now
+                                    </a>
+                                </div>
+                            </motion.div>
+                        )}
+                    </div>
+                </section>
+            )}
 
             {/* FAQ — theme-aware, interactive accordion */}
             {faqItems?.length > 0 && (

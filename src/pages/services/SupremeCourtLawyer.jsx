@@ -12,10 +12,10 @@ const ALL_SERVICES = [
 
 const SupremeCourtLawyer = () => (
     <ServicePage
-        metaTitle="Supreme Court Lawyer in Bangladesh (2026) – High Court & Appellate Expert | Adv. Shah Alam"
-        metaDesc="Need a Supreme Court lawyer in Bangladesh? Advocate Shah Alam handles writ petitions, criminal appeals, High Court bail & Appellate Division matters. 20+ years experience. Consult now."
+        metaTitle="Supreme Court & High Court Lawyer — Writs, Appeals & Bail | Bangladesh"
+        metaDesc="Lower court failed you? Adv. Shah Alam handles writ petitions, criminal appeals & High Court bail. 20+ years at the Supreme Court."
         canonicalUrl="https://advmdshahalam.me/services/supreme-court-lawyer"
-        h1="Supreme Court Lawyer in Bangladesh (2026) – High Court & Appellate Division Expert"
+        h1="Supreme Court Lawyer in Bangladesh — High Court & Appellate Division"
         intro="Advocate Md. Shah Alam is a seasoned <strong>Supreme Court lawyer in Bangladesh</strong>, practicing at the High Court Division and Appellate Division of the Supreme Court of Bangladesh. With 20+ years of experience before the highest courts in the country, he handles writ petitions, constitutional matters, criminal appeals, civil appellate cases, High Court bail applications, and administrative law proceedings with precision and deep expertise."
         coverage={[
             'Writ petition under Article 102 — certiorari, mandamus, prohibition, habeas corpus',
@@ -31,7 +31,7 @@ const SupremeCourtLawyer = () => (
             'Habeas corpus applications for illegal detention',
             'Stay orders and injunctions from High Court',
         ]}
-        contextNote="The Supreme Court of Bangladesh has two divisions — the High Court Division (ordinary and appellate jurisdiction) and the Appellate Division (final appellate court). Adv. Shah Alam practices in both. High Court bail is one of the most common Supreme Court matters — contact us immediately if lower court bail has been refused."
+        contextNote="The Supreme Court of Bangladesh has two divisions — the High Court Division and the Appellate Division. Adv. Shah Alam practices in both. <a href='/services/bail-lawyer' style='color:var(--accent);text-decoration:underline'>High Court bail</a> is one of the most common Supreme Court matters — contact us immediately if lower court bail has been refused. We also handle appeals from <a href='/services/criminal-lawyer' style='color:var(--accent);text-decoration:underline'>criminal trial convictions</a> and civil court judgments."
         faqItems={[
             {
                 q: 'What types of cases does the High Court Division hear in Bangladesh?',
@@ -58,6 +58,22 @@ const SupremeCourtLawyer = () => (
                 a: 'High Court writ petitions: 6 months to 3+ years depending on complexity and urgency. Criminal appeals: 1–5 years. High Court bail applications: 1–4 weeks for a hearing. Urgent matters (habeas corpus, urgent stay applications) can be heard the same day of filing in genuine emergencies. Interim orders are often obtained much faster than the final judgment.',
             },
         ]}
+        howWeHelp={{
+            problems: [
+                'The lower court gave an unjust verdict and you want to appeal',
+                'A government authority has made an illegal decision against you',
+                'Bail was refused at every lower court level',
+                'You need a writ petition to protect your fundamental rights',
+            ],
+            steps: [
+                { step: 'Case Review', desc: 'We study the lower court judgment and identify grounds for appeal' },
+                { step: 'Petition Drafting', desc: 'Writ petition, criminal appeal, or civil appeal — meticulously prepared' },
+                { step: 'High Court Filing', desc: 'Case filed at the Supreme Court with all supporting documents' },
+                { step: 'Hearing & Judgment', desc: 'Adv. Shah Alam argues your case before the High Court or Appellate Division' },
+            ],
+            scenario: 'A garment factory owner received an arbitrary tax demand from the NBR with no proper hearing. The Taxes Appellate Tribunal upheld it. Advocate Shah Alam filed a writ petition in the High Court Division challenging the assessment as a violation of natural justice. The High Court struck down the demand and ordered a fresh hearing — saving the business over BDT 80 lakh.',
+            cta: 'When lower courts fail, the Supreme Court is your answer. Consult Advocate Shah Alam today.',
+        }}
         ctaText="Consult a Supreme Court Lawyer in Bangladesh"
         relatedBlogLinks={[
             { to: '/blog/writ-petition-high-court-bangladesh', title: 'How to File a Writ Petition in Bangladesh (2026)', desc: 'When to go to High Court, types of writs, and the filing process' },

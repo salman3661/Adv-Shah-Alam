@@ -12,10 +12,10 @@ const ALL_SERVICES = [
 
 const DivorceLawyer = () => (
     <ServicePage
-        metaTitle="Divorce Lawyer in Bangladesh (2026) – Expert Family Lawyer in Dhaka | Adv. Shah Alam"
-        metaDesc="Need a divorce lawyer in Dhaka, Bangladesh? Advocate Shah Alam handles Muslim talaq, khula, child custody, mahr & maintenance with 20+ years family court experience. WhatsApp now."
+        metaTitle="Need a Divorce? Trusted Family Lawyer in Dhaka, Bangladesh"
+        metaDesc="Talaq, khula, custody & maintenance — handled with care. 20+ years in Family Courts. Confidential WhatsApp consultation. Call Adv. Shah Alam."
         canonicalUrl="https://advmdshahalam.me/services/divorce-lawyer"
-        h1="Divorce Lawyer in Bangladesh (2026) – Family Law Expert in Uttara, Dhaka"
+        h1="Divorce & Family Lawyer in Dhaka — Protecting Your Rights With Care"
         intro="Advocate Md. Shah Alam is a compassionate and highly experienced <strong>divorce lawyer in Dhaka, Bangladesh</strong>, handling all aspects of family law — Muslim talaq, khula, child custody, maintenance (nafaqa), and dower (mahr) recovery. With 20+ years practicing in Bangladesh Family Courts and the Supreme Court, Adv. Shah Alam provides clear guidance, protects your rights, and delivers results. Serving clients from Uttara, Dhaka, and Gazipur."
         coverage={[
             'Muslim divorce (talaq) — notice drafting & Union Parishad procedure',
@@ -31,7 +31,7 @@ const DivorceLawyer = () => (
             'NRB/overseas divorce — divorces for Bangladeshis abroad',
             'Hindu and Christian personal law matters',
         ]}
-        contextNote="Divorce cases often involve child custody, unpaid mahr, and ongoing maintenance — all of which are litigated simultaneously. Adv. Shah Alam has deep expertise in the full spectrum of family law remedies in Bangladesh."
+        contextNote="Divorce cases often involve child custody, unpaid mahr, and ongoing maintenance — all litigated simultaneously. When <a href='/services/land-lawyer' style='color:var(--accent);text-decoration:underline'>property disputes arise after divorce</a>, Adv. Shah Alam handles both family and property matters together. For complex cases requiring a <a href='/services/supreme-court-lawyer' style='color:var(--accent);text-decoration:underline'>High Court family law appeal</a>, we provide seamless representation at every level."
         faqItems={[
             {
                 q: 'What is the divorce procedure in Bangladesh for Muslims (2026)?',
@@ -58,6 +58,22 @@ const DivorceLawyer = () => (
                 a: 'A divorced wife is entitled to: (1) Iddat maintenance — full financial support for approximately 3 months after divorce; (2) Unpaid mahr — immediately payable upon divorce; (3) Child maintenance — the father must support all children financially regardless of who has custody. Post-iddat spousal maintenance may also be awarded by court in certain circumstances.',
             },
         ]}
+        howWeHelp={{
+            problems: [
+                'Your spouse refuses to agree to a divorce',
+                'You need child custody and your rights are being denied',
+                'Unpaid mahr (dower) — husband refuses to pay what is owed',
+                'You are facing a maintenance case and need legal advice',
+            ],
+            steps: [
+                { step: 'Confidential Consultation', desc: 'Discuss your situation privately — in person, phone, or WhatsApp' },
+                { step: 'Legal Strategy', desc: 'We advise on talaq, khula, or court divorce — whichever protects you best' },
+                { step: 'Court Filing', desc: 'All documents prepared, case filed, and hearings attended on your behalf' },
+                { step: 'Resolution', desc: 'Divorce, custody, maintenance, and mahr — all resolved in one process' },
+            ],
+            scenario: 'A mother of two in Gazipur was abandoned by her husband who moved abroad. He refused talaq and stopped sending money. Advocate Shah Alam filed for judicial divorce and interim maintenance in Family Court. Within 3 months, the wife received BDT 15,000/month interim maintenance. The final divorce and full mahr recovery were completed within 14 months.',
+            cta: 'You do not have to face this alone. Call Advocate Shah Alam — complete confidentiality guaranteed.',
+        }}
         ctaText="Speak to a Divorce Lawyer in Dhaka Today"
         relatedBlogLinks={[
             { to: '/blog/divorce-procedure-bangladesh', title: 'Divorce Procedure in Bangladesh (2026) – Complete Guide', desc: 'Step-by-step talaq, khula, and family court divorce procedures explained' },

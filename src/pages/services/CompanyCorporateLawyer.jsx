@@ -12,10 +12,10 @@ const ALL_SERVICES = [
 
 const CompanyCorporateLawyer = () => (
     <ServicePage
-        metaTitle="Company & Corporate Lawyer in Bangladesh (2026) – Business Law Expert in Dhaka | Adv. Shah Alam"
-        metaDesc="Register a company or resolve corporate disputes in Bangladesh. Advocate Shah Alam handles RJSC filings, shareholder disputes, contract law & corporate litigation in Dhaka. Consult now."
+        metaTitle="Starting a Business? Company & Corporate Lawyer in Dhaka, Bangladesh"
+        metaDesc="RJSC registration, shareholder disputes & corporate litigation. Expert business lawyer in Dhaka — 20+ years. Free first consultation."
         canonicalUrl="https://advmdshahalam.me/services/company-corporate-lawyer"
-        h1="Company & Corporate Lawyer in Bangladesh (2026) – Business Law Expert in Dhaka"
+        h1="Company & Corporate Lawyer in Dhaka — From Formation to Litigation"
         intro="Advocate Md. Shah Alam provides comprehensive <strong>company and corporate legal services in Bangladesh</strong>, advising businesses, entrepreneurs, and investors on company formation, commercial contracts, shareholder disputes, regulatory compliance, and corporate litigation. With deep expertise in the Companies Act 1994 and strong courtroom experience before the High Court Division — Adv. Shah Alam is the trusted legal partner for businesses operating in Bangladesh."
         coverage={[
             'Company incorporation under the Companies Act 1994 — RJSC filings',
@@ -31,7 +31,7 @@ const CompanyCorporateLawyer = () => (
             'Foreign investment structuring and BIDA compliance',
             'High Court company petitions — oppression, mismanagement & rectification',
         ]}
-        contextNote="Company disputes that remain unresolved at the corporate level often escalate to the High Court Division — whether through oppression/mismanagement petitions under the Companies Act or commercial contract litigation. Adv. Shah Alam handles both the corporate advisory and the courtroom aspects of business disputes."
+        contextNote="Company disputes that remain unresolved at the corporate level often escalate to the <a href='/services/supreme-court-lawyer' style='color:var(--accent);text-decoration:underline'>High Court Division</a> — whether through oppression petitions under the Companies Act or commercial litigation. For businesses facing <a href='/services/tax-lawyer' style='color:var(--accent);text-decoration:underline'>tax or VAT disputes with the NBR</a>, Adv. Shah Alam provides integrated corporate and tax counsel."
         faqItems={[
             {
                 q: 'How do I register a company in Bangladesh (2026)?',
@@ -58,6 +58,22 @@ const CompanyCorporateLawyer = () => (
                 a: 'High Court company petitions (oppression/mismanagement): 2–5 years for a contested full hearing, though interim relief can be obtained much faster. Commercial contract civil suits: 2–4 years in district civil courts. Winding-up petitions: 1–3 years. Mediation and negotiated settlements (recommended where possible) can resolve disputes in weeks or months.',
             },
         ]}
+        howWeHelp={{
+            problems: [
+                'You want to register a company but do not know the legal process',
+                'A business partner has cheated you or breached the agreement',
+                'You received an RJSC compliance notice and need urgent help',
+                'A client or company owes you money and refuses to pay',
+            ],
+            steps: [
+                { step: 'Business Consultation', desc: 'Tell us your business situation — we identify the legal solution' },
+                { step: 'Documentation', desc: 'Memorandum, Articles, contracts, and board resolutions — all drafted' },
+                { step: 'Filing & Registration', desc: 'RJSC filings, trade licence, BIDA registration — handled end to end' },
+                { step: 'Dispute Resolution', desc: 'Court litigation, arbitration, or negotiated settlement — your best path' },
+            ],
+            scenario: 'Two co-founders of a tech startup in Dhaka disagreed over equity split after one invested more capital. The dispute threatened to shut down the company. Advocate Shah Alam drafted a revised shareholder agreement, resolved the equity dispute through mediation, and restructured the company within 6 weeks — no court case needed.',
+            cta: 'Protect your business with expert legal counsel. Free first consultation — call or WhatsApp.',
+        }}
         ctaText="Talk to a Company Lawyer in Dhaka"
         relatedBlogLinks={[
             { to: '/blog/artha-rin-adalat-loan-recovery-bangladesh', title: 'Artha Rin Adalat – Loan Recovery in Bangladesh', desc: 'How the Money Loan Court works for corporate debt recovery' },
