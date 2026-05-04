@@ -4,7 +4,11 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), tailwindcss()],
+  base: '/',
+  plugins: [
+    react(),
+    tailwindcss()
+  ],
   build: {
     target: 'esnext',
     minify: true,
@@ -14,13 +18,12 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
-          'vendor-react':    ['react', 'react-dom', 'react-router-dom'],
-          'vendor-motion':   ['framer-motion'],
-          'vendor-helmet':   ['react-helmet-async'],
-          'vendor-lucide':   ['lucide-react'],
-          // Blog JSON files are split automatically by Vite via import.meta.glob
-        },
-      },
-    },
-  },
+          'vendor-react': ['react', 'react-dom', 'react-router-dom'],
+          'vendor-motion': ['framer-motion'],
+          'vendor-helmet': ['react-helmet-async'],
+          'vendor-lucide': ['lucide-react']
+        }
+      }
+    }
+  }
 })
