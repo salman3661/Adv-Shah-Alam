@@ -113,7 +113,7 @@ const BlogPostBn = () => {
         headline: post.title,
         description: post.metaDescription,
         datePublished: post.publishedDate,
-        dateModified: post.publishedDate,
+        dateModified: post.lastModified || post.publishedDate,
         inLanguage: 'bn',
         author: {
             '@type': 'Person',
@@ -187,6 +187,11 @@ const BlogPostBn = () => {
                 <meta name="twitter:description" content={post.metaDescription} />
                 <meta name="twitter:image" content="https://advmdshahalam.me/images/hero/hero-md-shah-alam.png" />
                 <meta name="author" content="অ্যাডভোকেট মো. শাহ আলম" />
+                {/* Article OG — content freshness signals */}
+                <meta property="article:published_time" content={post.publishedDate} />
+                <meta property="article:modified_time" content={post.lastModified || post.publishedDate} />
+                <meta property="article:section" content={post.category} />
+                <meta property="article:tag" content={post.keywords.slice(0, 5).join(', ')} />
                 <script type="application/ld+json">{JSON.stringify(blogPostingSchema)}</script>
                 <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
                 <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
@@ -213,6 +218,16 @@ const BlogPostBn = () => {
                             </Link>
                         )}
                     </div>
+                    {/* Visual Breadcrumb — Google extracts visible breadcrumbs for SERP */}
+                    <nav className="mb-5 text-xs" aria-label="Breadcrumb">
+                        <ol className="flex items-center gap-1.5 flex-wrap" style={{ color: 'var(--hero-muted)' }}>
+                            <li><Link to="/" className="hover:underline" style={{ color: 'var(--hero-text-2)' }}>হোম</Link></li>
+                            <li aria-hidden="true">/</li>
+                            <li><Link to="/bn/blog" className="hover:underline" style={{ color: 'var(--hero-text-2)' }}>ব্লগ</Link></li>
+                            <li aria-hidden="true">/</li>
+                            <li style={{ color: 'var(--gold)' }}>{post.category}</li>
+                        </ol>
+                    </nav>
                     <div className="flex items-center gap-3 mb-5">
                         <span
                             className="text-xs font-bold px-3 py-1 rounded-full"

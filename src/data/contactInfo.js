@@ -15,11 +15,17 @@ export const CALL_DISPLAY = '+880 1712-655546';
 export const WA_NUMBER = '8801955802007';   // no plus — wa.me format
 export const WA_DISPLAY = '+880 1955-802007';
 
-/** Build a wa.me URL, optionally with a pre-filled message */
-export const waLink = (msg = '') =>
-    msg
-        ? `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`
-        : `https://wa.me/${WA_NUMBER}`;
+/** Build a wa.me URL with a pre-filled message.
+ *  Every message includes a source tag so the lawyer knows it came from
+ *  the website (via Google SEO) rather than a random WhatsApp contact. */
+export const waLink = (msg = '') => {
+    const source = '🌐 *advmdshahalam.me (Google Website)*';
+    const defaultMsg = `${source}\n\nAssalamu Alaikum, I found you on Google and need legal advice.`;
+    const fullMsg = msg
+        ? `${source}\n\n${msg}`
+        : defaultMsg;
+    return `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(fullMsg)}`;
+};
 
 /** Build a tel: href */
 export const telLink = () => `tel:${CALL_NUMBER}`;

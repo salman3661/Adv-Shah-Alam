@@ -127,7 +127,7 @@ const BlogPost = () => {
         headline: post.title,
         description: post.metaDescription,
         datePublished: post.publishedDate,
-        dateModified: post.publishedDate,
+        dateModified: post.lastModified || post.publishedDate,
         inLanguage: 'en',
         author: {
             '@type': 'Person',
@@ -196,6 +196,11 @@ const BlogPost = () => {
                 <meta property="og:url" content={`https://advmdshahalam.me/blog/${post.slug}`} />
                 <meta property="og:image" content="https://advmdshahalam.me/images/hero/hero-md-shah-alam.png" />
                 <meta property="og:site_name" content="Advocate Md. Shah Alam" />
+                {/* Article OG — content freshness signals */}
+                <meta property="article:published_time" content={post.publishedDate} />
+                <meta property="article:modified_time" content={post.lastModified || post.publishedDate} />
+                <meta property="article:section" content={post.category} />
+                <meta property="article:tag" content={post.keywords.slice(0, 5).join(', ')} />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content={post.metaTitle} />
                 <meta name="twitter:description" content={post.metaDescription} />
@@ -215,7 +220,7 @@ const BlogPost = () => {
             {/* ── Hero ── */}
             <section className="pt-28 pb-14 relative overflow-hidden" style={{ background: 'var(--hero-bg)' }}>
                 <div className="container mx-auto px-6 max-w-4xl relative z-10">
-                    <div className="flex items-center justify-between mb-6 flex-wrap gap-3">
+                    <div className="flex items-center justify-between mb-4 flex-wrap gap-3">
                         <Link
                             to="/blog"
                             className="inline-flex items-center gap-2 text-sm font-medium opacity-70 hover:opacity-100 transition-opacity"
@@ -233,6 +238,16 @@ const BlogPost = () => {
                             </Link>
                         )}
                     </div>
+                    {/* Visual Breadcrumb — Google extracts visible breadcrumbs for SERP */}
+                    <nav className="mb-5 text-xs" aria-label="Breadcrumb">
+                        <ol className="flex items-center gap-1.5 flex-wrap" style={{ color: 'var(--hero-muted)' }}>
+                            <li><Link to="/" className="hover:underline" style={{ color: 'var(--hero-text-2)' }}>Home</Link></li>
+                            <li aria-hidden="true">/</li>
+                            <li><Link to="/blog" className="hover:underline" style={{ color: 'var(--hero-text-2)' }}>Blog</Link></li>
+                            <li aria-hidden="true">/</li>
+                            <li style={{ color: 'var(--gold)' }}>{post.category}</li>
+                        </ol>
+                    </nav>
                     <div className="flex items-center gap-3 mb-5">
                         <span
                             className="text-xs font-bold px-3 py-1 rounded-full"

@@ -42,9 +42,9 @@ const bnPosts = bnJsonFiles.map(f => {
     return true;
 });
 
-// ── Helper: get published date or fallback to today ─────────────────────────
+// ── Helper: prefer lastModified → publishedDate → today ────────────────────
 function getDate(post) {
-    return post.publishedDate || TODAY;
+    return post.lastModified || post.publishedDate || TODAY;
 }
 
 // ── Build URL entries ───────────────────────────────────────────────────────

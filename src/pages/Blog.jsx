@@ -117,6 +117,23 @@ const Blog = () => {
                         { '@type': 'ListItem', position: 2, name: 'Legal Guides', item: 'https://advmdshahalam.me/blog' },
                     ],
                 })}</script>
+                {/* CollectionPage + ItemList schema — helps Google understand blog index */}
+                <script type="application/ld+json">{JSON.stringify({
+                    '@context': 'https://schema.org',
+                    '@type': 'CollectionPage',
+                    name: 'Legal Guides Bangladesh — Advocate Md. Shah Alam',
+                    description: 'Free legal guides on bail, divorce, land & criminal law in Bangladesh by Advocate Shah Alam.',
+                    url: 'https://advmdshahalam.me/blog',
+                    mainEntity: {
+                        '@type': 'ItemList',
+                        itemListElement: blogPosts.filter(isPublished).slice(0, 10).map((p, i) => ({
+                            '@type': 'ListItem',
+                            position: i + 1,
+                            url: `https://advmdshahalam.me/blog/${p.slug}`,
+                            name: p.title,
+                        })),
+                    },
+                })}</script>
             </Helmet>
 
             {/* Hero */}

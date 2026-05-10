@@ -51,7 +51,7 @@ const Contact = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const text = `*New Case Inquiry*%0A%0A*Name:* ${formData.name}%0A*Phone:* ${formData.phone}%0A*Details:* ${formData.message}`;
+        const text = `*📋 New Case Inquiry*\n\n*Name:* ${formData.name}\n*Phone:* ${formData.phone}\n*Details:* ${formData.message}`;
         window.open(waLink(text), '_blank');
     };
 

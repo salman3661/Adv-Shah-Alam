@@ -65,7 +65,6 @@ const TaxLawyer = () => (
             { to: '/services/bail-lawyer', label: 'Bail Lawyer – Fast Applications' },
             { to: '/services/divorce-lawyer', label: 'Divorce & Family Lawyer – Dhaka' },
         ]}
-        ctaText="Talk to a Tax Lawyer in Dhaka"
     />
 );
 

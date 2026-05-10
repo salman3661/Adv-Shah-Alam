@@ -15,7 +15,7 @@ const BASE = 'https://advmdshahalam.me';
 const ServicePage = ({ metaTitle, metaDesc, canonicalUrl, h1, intro, coverage, faqItems, ctaText, contextNote, relatedBlogLinks, relatedServices, howWeHelp }) => {
     const [openFaq, setOpenFaq] = useState(null);
 
-    // Ensure www in canonical
+    // Normalise canonical to use the non-www BASE domain
     const wwwCanonical = canonicalUrl
         ? canonicalUrl.replace('https://advmdshahalam.me', BASE)
         : null;
