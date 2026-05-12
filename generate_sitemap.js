@@ -60,6 +60,8 @@ const urls = [
     url('/advocate-md-shah-alam', TODAY, 'monthly', '0.9'),
     url('/blog', TODAY, 'weekly', '0.8'),
     url('/education', TODAY, 'monthly', '0.6'),
+    url('/privacy-policy', TODAY, 'yearly', '0.3'),
+    url('/terms', TODAY, 'yearly', '0.3'),
 
     // ── Service Pages ────────────────────────────────────────────────────────
     url('/services/criminal-lawyer', TODAY, 'monthly', '0.9'),

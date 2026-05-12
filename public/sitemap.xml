@@ -26,6 +26,18 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://advmdshahalam.me/privacy-policy</loc>
+    <lastmod>2026-05-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://advmdshahalam.me/terms</loc>
+    <lastmod>2026-05-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://advmdshahalam.me/services/criminal-lawyer</loc>
     <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
