@@ -13,7 +13,9 @@ const TODAY = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
 // ── Load redirect sources from vercel.json to exclude them ──────────────────
 const vercelConfig = JSON.parse(fs.readFileSync('vercel.json', 'utf8'));
 const redirectSources = new Set(
-    (vercelConfig.redirects || []).map(r => r.source)
+    (vercelConfig.redirects || [])
+        .filter(r => !r.has) // skip conditional redirects (e.g. www→non-www)
+        .map(r => r.source)
 );
 
 // ── Scan all EN blog post JSON files ────────────────────────────────────────

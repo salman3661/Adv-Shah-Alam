@@ -1,6 +1,22 @@
 {
   "redirects": [
     {
+      "source": "/:path(.*)",
+      "has": [{ "type": "host", "value": "www.advmdshahalam.me" }],
+      "destination": "https://advmdshahalam.me/:path",
+      "statusCode": 308
+    },
+    {
+      "source": "/bn/contact",
+      "destination": "/#contact",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/advocate-md-shah-alam",
+      "destination": "/advocate-md-shah-alam",
+      "statusCode": 301
+    },
+    {
       "source": "/blog/bail-process-bangladesh",
       "destination": "/blog/how-to-get-bail-in-bangladesh",
       "statusCode": 301

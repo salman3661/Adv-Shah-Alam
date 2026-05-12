@@ -1,8 +1,9 @@
 # Advocate Md. Shah Alam Law Chambers — advmdshahalam.me
-# Updated: 2026-05-10
+# Updated: 2026-05-12
 # Strategy: Allow crawling of ALL public content. Duplicate/redirected URLs
 # are handled via 301 redirects in vercel.json (NOT robots.txt blocking).
 # Sitemap contains only canonical, non-redirected URLs.
+# www.advmdshahalam.me → advmdshahalam.me redirect handled by Vercel (308).
 
 User-agent: *
 Allow: /
@@ -14,4 +15,5 @@ Disallow: /api/
 # ── CRAWL-RATE HINT (Googlebot ignores, Bingbot respects) ──
 Crawl-delay: 1
 
+# ── Canonical Sitemap (non-www only) ──
 Sitemap: https://advmdshahalam.me/sitemap.xml
