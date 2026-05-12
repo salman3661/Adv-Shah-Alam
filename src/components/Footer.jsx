@@ -119,6 +119,13 @@ const Footer = () => {
                         <p className="text-xs mb-1" style={{ color: 'var(--text-muted)' }}>
                             © {currentYear} {siteInfo.advocateName}. All Rights Reserved.
                         </p>
+                        <div className="flex gap-3 justify-center md:justify-start mt-1">
+                            <Link to="/privacy-policy" className="text-xs hover:underline transition-opacity opacity-60 hover:opacity-100"
+                                style={{ color: 'var(--text-muted)' }}>Privacy Policy</Link>
+                            <span className="text-xs opacity-30" style={{ color: 'var(--text-muted)' }}>|</span>
+                            <Link to="/terms" className="text-xs hover:underline transition-opacity opacity-60 hover:opacity-100"
+                                style={{ color: 'var(--text-muted)' }}>Terms & Conditions</Link>
+                        </div>
                     </div>
 
                     <button onClick={toggleTheme}
