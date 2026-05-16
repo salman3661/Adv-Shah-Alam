@@ -36,17 +36,48 @@ const ServicePage = ({ metaTitle, metaDesc, canonicalUrl, h1, intro, coverage, f
         name: h1,
         description: metaDesc,
         url: wwwCanonical,
+        telephone: '+8801712122102',
+        priceRange: '৳৳',
+        image: `${BASE}/images/hero/hero-md-shah-alam.png`,
+        address: {
+            '@type': 'PostalAddress',
+            streetAddress: 'House 26, Road 7, Sector 3',
+            addressLocality: 'Uttara',
+            addressRegion: 'Dhaka',
+            postalCode: '1230',
+            addressCountry: 'BD',
+        },
+        geo: {
+            '@type': 'GeoCoordinates',
+            latitude: 23.8759,
+            longitude: 90.3795,
+        },
+        openingHoursSpecification: [
+            {
+                '@type': 'OpeningHoursSpecification',
+                dayOfWeek: ['Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday'],
+                opens: '09:00',
+                closes: '18:00',
+            },
+        ],
         provider: {
             '@type': 'Person',
             name: 'Advocate Md. Shah Alam',
-            jobTitle: 'Advocate',
+            jobTitle: 'Advocate, Supreme Court of Bangladesh',
             url: `${BASE}/advocate-md-shah-alam`,
+            image: `${BASE}/images/hero/hero-md-shah-alam.png`,
+            telephone: '+8801712122102',
+            sameAs: [
+                'https://www.facebook.com/advmdshahalam',
+            ],
         },
         areaServed: [
             { '@type': 'City', name: 'Uttara' },
             { '@type': 'City', name: 'Dhaka' },
+            { '@type': 'City', name: 'Gazipur' },
             { '@type': 'Country', name: 'Bangladesh' },
         ],
+        aggregateRating: undefined,
     } : null;
 
     const faqSchema = faqItems?.length > 0 ? {
