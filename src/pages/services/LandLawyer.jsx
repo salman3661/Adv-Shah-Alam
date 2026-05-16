@@ -12,8 +12,8 @@ const ALL_SERVICES = [
 
 const LandLawyer = () => (
     <ServicePage
-        metaTitle="Land Dispute? Expert Property Lawyer in Dhaka, Bangladesh"
-        metaDesc="Title suits, mutation fraud & partition cases — resolved. 20+ years protecting land rights in Dhaka courts. Free consultation. Call now."
+        metaTitle="Land & Property Lawyer Uttara, Dhaka — Mutation, Title Suit & Partition (2026)"
+        metaDesc="Expert land lawyer in Uttara, Dhaka. Title suits, mutation fraud, partition cases, land registration & deed verification. 20+ years. Free consultation."
         canonicalUrl="https://advmdshahalam.me/services/land-lawyer"
         h1="Land & Property Lawyer in Dhaka — Resolve Disputes, Protect Ownership"
         intro="Advocate Md. Shah Alam is a trusted <strong>land and property lawyer in Dhaka, Bangladesh</strong>, specialising in resolving complex land disputes, title suits, mutation fraud, and property transactions across Bangladesh. With 20+ years of hands-on experience in civil courts, High Court writ proceedings, and the Sub-Registrar system — Adv. Shah Alam provides expert legal counsel and decisive courtroom representation to protect your land rights."

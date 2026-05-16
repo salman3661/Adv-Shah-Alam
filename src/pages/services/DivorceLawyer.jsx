@@ -12,8 +12,8 @@ const ALL_SERVICES = [
 
 const DivorceLawyer = () => (
     <ServicePage
-        metaTitle="Need a Divorce? Trusted Family Lawyer in Dhaka, Bangladesh"
-        metaDesc="Talaq, khula, custody & maintenance — handled with care. 20+ years in Family Courts. Confidential WhatsApp consultation. Call Adv. Shah Alam."
+        metaTitle="Divorce Lawyer Uttara, Dhaka — Custody, Maintenance & Talaq (2026)"
+        metaDesc="Expert divorce lawyer in Uttara, Dhaka. Talaq, khula, child custody, mahr recovery & maintenance cases. 20+ years in Family Courts. Confidential WhatsApp consultation."
         canonicalUrl="https://advmdshahalam.me/services/divorce-lawyer"
         h1="Divorce & Family Lawyer in Dhaka — Protecting Your Rights With Care"
         intro="Advocate Md. Shah Alam is a compassionate and highly experienced <strong>divorce lawyer in Dhaka, Bangladesh</strong>, handling all aspects of family law — Muslim talaq, khula, child custody, maintenance (nafaqa), and dower (mahr) recovery. With 20+ years practicing in Bangladesh Family Courts and the Supreme Court, Adv. Shah Alam provides clear guidance, protects your rights, and delivers results. Serving clients from Uttara, Dhaka, and Gazipur."

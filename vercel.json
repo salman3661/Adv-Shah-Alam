@@ -175,6 +175,58 @@
       "source": "/blog/hire-cyber-crime-lawyer-bangladesh",
       "destination": "/services/criminal-lawyer",
       "statusCode": 301
+    },
+    {
+      "source": "/privacy",
+      "destination": "/privacy-policy",
+      "statusCode": 301
+    },
+    {
+      "source": "/contact",
+      "destination": "/#contact",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/about",
+      "destination": "/advocate-md-shah-alam",
+      "statusCode": 301
+    },
+    {
+      "source": "/about",
+      "destination": "/advocate-md-shah-alam",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/land-dispute-resolution-bangladesh",
+      "destination": "/blog/land-dispute-legal-remedies-bangladesh",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/services/civil-lawyer",
+      "destination": "/services/land-lawyer",
+      "statusCode": 301
+    }
+  ],
+  "headers": [
+    {
+      "source": "/((?!admin|api).*)",
+      "headers": [
+        { "key": "X-Robots-Tag", "value": "index, follow" }
+      ]
+    },
+    {
+      "source": "/sitemap.xml",
+      "headers": [
+        { "key": "Content-Type", "value": "application/xml; charset=utf-8" },
+        { "key": "Cache-Control", "value": "public, max-age=3600, s-maxage=86400" }
+      ]
+    },
+    {
+      "source": "/robots.txt",
+      "headers": [
+        { "key": "Content-Type", "value": "text/plain; charset=utf-8" },
+        { "key": "Cache-Control", "value": "public, max-age=3600, s-maxage=86400" }
+      ]
     }
   ],
   "rewrites": [
