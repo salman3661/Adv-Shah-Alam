@@ -1,4 +1,4 @@
-{
+﻿{
   "redirects": [
     {
       "source": "/:path(.*)",
@@ -294,7 +294,7 @@
   ],
   "rewrites": [
     {
-      "source": "/((?!ads\.txt|robots\.txt|sitemap\.xml|favicon|images|.*\.(png|jpg|jpeg|webp|svg|ico|css|js|json|woff|woff2|ttf|txt|xml)).*)",
+      "source": "/(.*)",
       "destination": "/"
     }
   ]
