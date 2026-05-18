@@ -205,6 +205,61 @@
       "source": "/bn/services/civil-lawyer",
       "destination": "/services/land-lawyer",
       "statusCode": 301
+    },
+    {
+      "source": "/bn/services/criminal-lawyer",
+      "destination": "/services/criminal-lawyer",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/services/divorce-lawyer",
+      "destination": "/services/divorce-lawyer",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/services/land-lawyer",
+      "destination": "/services/land-lawyer",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/services/bail-lawyer",
+      "destination": "/services/bail-lawyer",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/services/supreme-court-lawyer",
+      "destination": "/services/supreme-court-lawyer",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/services/tax-lawyer",
+      "destination": "/services/tax-lawyer",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/services/company-corporate-lawyer",
+      "destination": "/services/company-corporate-lawyer",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/criminal-defence-strategy-bangladesh",
+      "destination": "/blog/criminal-defence-strategy-bangladesh",
+      "statusCode": 200
+    },
+    {
+      "source": "/blog/flat-apartment-purchase-legal-checklist-bangladesh",
+      "destination": "/blog/flat-apartment-purchase-legal-checklist-bangladesh",
+      "statusCode": 200
+    },
+    {
+      "source": "/blog/bail-refusal-appeal-bangladesh",
+      "destination": "/blog/bail-refusal-appeal-bangladesh",
+      "statusCode": 200
+    },
+    {
+      "source": "/blog/mobile-banking-fraud-legal-action-bangladesh",
+      "destination": "/blog/mobile-banking-fraud-legal-action-bangladesh",
+      "statusCode": 200
     }
   ],
   "headers": [

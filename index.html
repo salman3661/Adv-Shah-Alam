@@ -11,9 +11,16 @@
     gtag('config', 'G-PJ4Z9WLRBS');
   </script>
 
-  <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4643828753885671"
-     crossorigin="anonymous"></script>
+  <!-- Google AdSense — deferred to avoid render-blocking on mobile -->
+  <script>
+    window.addEventListener('load', function() {
+      var s = document.createElement('script');
+      s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4643828753885671';
+      s.async = true;
+      s.crossOrigin = 'anonymous';
+      document.head.appendChild(s);
+    });
+  </script>
 
   <meta charset="UTF-8" />
   <link rel="icon" type="image/png" href="/adv-md-shah-alam.png" sizes="any" />
@@ -40,8 +47,13 @@
     })();
   </script>
 
-  <!-- Preload LCP hero image — browser fetches before JS executes -->
-  <link rel="preload" as="image" href="/images/hero/hero-md-shah-alam.webp" type="image/webp" />
+  <!-- Preload LCP hero image with fetchpriority=high — signals browser to prioritise this above all else -->
+  <link rel="preload" as="image" href="/images/hero/hero-md-shah-alam.webp" type="image/webp" fetchpriority="high" />
+
+  <!-- DNS prefetch for third-party domains -->
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
 
   <!-- Google Fonts: preconnect + deferred load (non-render-blocking) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />

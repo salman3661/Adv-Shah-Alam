@@ -10,18 +10,28 @@ export default defineConfig({
     tailwindcss()
   ],
   build: {
-    target: 'esnext',
-    minify: true,
+    target: 'es2020',
+    minify: 'esbuild',
     cssCodeSplit: true,
     reportCompressedSize: false,
-    chunkSizeWarningLimit: 1000,
+    chunkSizeWarningLimit: 800,
     rollupOptions: {
+      treeshake: true,
       output: {
-        manualChunks: {
-          'vendor-react': ['react', 'react-dom', 'react-router-dom'],
-          'vendor-motion': ['framer-motion'],
-          'vendor-helmet': ['react-helmet-async'],
-          'vendor-lucide': ['lucide-react']
+        // Granular splitting: each lazy page gets its own tiny chunk
+        manualChunks(id) {
+          if (id.includes('node_modules/react') || id.includes('node_modules/react-dom') || id.includes('node_modules/react-router-dom')) {
+            return 'vendor-react';
+          }
+          if (id.includes('node_modules/framer-motion')) {
+            return 'vendor-motion';
+          }
+          if (id.includes('node_modules/react-helmet-async')) {
+            return 'vendor-helmet';
+          }
+          if (id.includes('node_modules/lucide-react')) {
+            return 'vendor-lucide';
+          }
         }
       }
     }
