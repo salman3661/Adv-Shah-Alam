@@ -1,7 +1,7 @@
 {
   "redirects": [
     {
-      "source": "/:path(.*)",
+      "source": "/:path*",
       "has": [
         {
           "type": "host",
@@ -249,7 +249,7 @@
   ],
   "headers": [
     {
-      "source": "/((?!admin|api).*)",
+      "source": "/(.*)",
       "headers": [
         {
           "key": "X-Robots-Tag",
