@@ -6,261 +6,53 @@
       "destination": "https://advmdshahalam.me/:path",
       "statusCode": 308
     },
-    {
-      "source": "/bn/contact",
-      "destination": "/#contact",
-      "statusCode": 301
-    },
-    {
-      "source": "/bn/advocate-md-shah-alam",
-      "destination": "/advocate-md-shah-alam",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/bail-process-bangladesh",
-      "destination": "/blog/how-to-get-bail-in-bangladesh",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/how-to-get-bail-bangladesh-2026",
-      "destination": "/blog/how-to-get-bail-in-bangladesh",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/bail-process-bangladesh-2026",
-      "destination": "/blog/how-to-get-bail-in-bangladesh",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/divorce-process-bangladesh-complete-guide",
-      "destination": "/blog/divorce-procedure-bangladesh",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/how-to-file-divorce-petition-bangladesh",
-      "destination": "/blog/divorce-procedure-bangladesh",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/divorce-from-court-bangladesh-muslim-law",
-      "destination": "/blog/divorce-procedure-bangladesh",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/divorce-process-bangladesh-2026",
-      "destination": "/blog/divorce-procedure-bangladesh",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/how-to-file-divorce-bangladesh",
-      "destination": "/blog/divorce-procedure-bangladesh",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/cheque-dishonour-case-bangladesh",
-      "destination": "/blog/cheque-dishonour-case-law-bangladesh",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/cheque-dishonour-bangladesh-section-138",
-      "destination": "/blog/cheque-dishonour-case-law-bangladesh",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/anticipatory-bail-high-court-bangladesh",
-      "destination": "/blog/anticipatory-bail-bangladesh",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/child-custody-2026-bangladesh",
-      "destination": "/blog/child-custody-law-bangladesh",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/child-custody-bangladesh-muslim-law",
-      "destination": "/blog/child-custody-law-bangladesh",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/writ-petition-bangladesh-high-court",
-      "destination": "/blog/writ-petition-high-court-bangladesh",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/writ-petition-high-court-guide-bangladesh",
-      "destination": "/blog/writ-petition-high-court-bangladesh",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/supreme-court-writ-petition-bangladesh",
-      "destination": "/blog/writ-petition-high-court-bangladesh",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/land-dispute-case-bangladesh",
-      "destination": "/blog/land-dispute-legal-remedies-bangladesh",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/digital-security-act-rights-defences-bangladesh",
-      "destination": "/blog/cyber-crime-digital-security-act-bangladesh",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/digital-security-act-bangladesh-legal-rights",
-      "destination": "/blog/cyber-crime-digital-security-act-bangladesh",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/cyber-security-act-2023-bangladesh",
-      "destination": "/blog/cyber-crime-digital-security-act-bangladesh",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/cybercrime-laws-bangladesh-2026",
-      "destination": "/blog/cyber-crime-digital-security-act-bangladesh",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/domestic-violence-protection-order-bangladesh",
-      "destination": "/blog/domestic-violence-law-bangladesh",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/domestic-violence-legal-protection-bangladesh",
-      "destination": "/blog/domestic-violence-law-bangladesh",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/how-to-challenge-false-criminal-case-bangladesh",
-      "destination": "/blog/how-to-stop-false-criminal-case-bangladesh",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/quash-false-case-bangladesh",
-      "destination": "/blog/how-to-stop-false-criminal-case-bangladesh",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/property-registration-process-bangladesh",
-      "destination": "/blog/how-to-register-land-bangladesh",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/land-registration-fees-process-bangladesh",
-      "destination": "/blog/how-to-register-land-bangladesh",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/wife-divorce-rights-bangladesh",
-      "destination": "/blog/wife-rights-after-divorce-bangladesh",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/mahr-dower-rights-wife-bangladesh",
-      "destination": "/blog/wife-rights-after-divorce-bangladesh",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/contract-breach-specific-performance-bangladesh",
-      "destination": "/blog/contract-breach-legal-action-bangladesh",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/hire-criminal-lawyer-bangladesh",
-      "destination": "/services/criminal-lawyer",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/hire-cyber-crime-lawyer-bangladesh",
-      "destination": "/services/criminal-lawyer",
-      "statusCode": 301
-    },
-    {
-      "source": "/privacy",
-      "destination": "/privacy-policy",
-      "statusCode": 301
-    },
-    {
-      "source": "/contact",
-      "destination": "/#contact",
-      "statusCode": 301
-    },
-    {
-      "source": "/bn/about",
-      "destination": "/advocate-md-shah-alam",
-      "statusCode": 301
-    },
-    {
-      "source": "/about",
-      "destination": "/advocate-md-shah-alam",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/land-dispute-resolution-bangladesh",
-      "destination": "/blog/land-dispute-legal-remedies-bangladesh",
-      "statusCode": 301
-    },
-    {
-      "source": "/bn/services/civil-lawyer",
-      "destination": "/services/land-lawyer",
-      "statusCode": 301
-    },
-    {
-      "source": "/bn/services/criminal-lawyer",
-      "destination": "/services/criminal-lawyer",
-      "statusCode": 301
-    },
-    {
-      "source": "/bn/services/divorce-lawyer",
-      "destination": "/services/divorce-lawyer",
-      "statusCode": 301
-    },
-    {
-      "source": "/bn/services/land-lawyer",
-      "destination": "/services/land-lawyer",
-      "statusCode": 301
-    },
-    {
-      "source": "/bn/services/bail-lawyer",
-      "destination": "/services/bail-lawyer",
-      "statusCode": 301
-    },
-    {
-      "source": "/bn/services/supreme-court-lawyer",
-      "destination": "/services/supreme-court-lawyer",
-      "statusCode": 301
-    },
-    {
-      "source": "/bn/services/tax-lawyer",
-      "destination": "/services/tax-lawyer",
-      "statusCode": 301
-    },
-    {
-      "source": "/bn/services/company-corporate-lawyer",
-      "destination": "/services/company-corporate-lawyer",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/criminal-defence-strategy-bangladesh",
-      "destination": "/blog/criminal-defence-strategy-bangladesh",
-      "statusCode": 200
-    },
-    {
-      "source": "/blog/flat-apartment-purchase-legal-checklist-bangladesh",
-      "destination": "/blog/flat-apartment-purchase-legal-checklist-bangladesh",
-      "statusCode": 200
-    },
-    {
-      "source": "/blog/bail-refusal-appeal-bangladesh",
-      "destination": "/blog/bail-refusal-appeal-bangladesh",
-      "statusCode": 200
-    },
-    {
-      "source": "/blog/mobile-banking-fraud-legal-action-bangladesh",
-      "destination": "/blog/mobile-banking-fraud-legal-action-bangladesh",
-      "statusCode": 200
-    }
+    { "source": "/bn/contact", "destination": "/#contact", "statusCode": 301 },
+    { "source": "/bn/advocate-md-shah-alam", "destination": "/advocate-md-shah-alam", "statusCode": 301 },
+    { "source": "/blog/bail-process-bangladesh", "destination": "/blog/how-to-get-bail-in-bangladesh", "statusCode": 301 },
+    { "source": "/blog/how-to-get-bail-bangladesh-2026", "destination": "/blog/how-to-get-bail-in-bangladesh", "statusCode": 301 },
+    { "source": "/blog/bail-process-bangladesh-2026", "destination": "/blog/how-to-get-bail-in-bangladesh", "statusCode": 301 },
+    { "source": "/blog/anticipatory-bail-high-court-bangladesh", "destination": "/blog/anticipatory-bail-bangladesh", "statusCode": 301 },
+    { "source": "/blog/divorce-process-bangladesh-complete-guide", "destination": "/blog/divorce-procedure-bangladesh", "statusCode": 301 },
+    { "source": "/blog/how-to-file-divorce-petition-bangladesh", "destination": "/blog/divorce-procedure-bangladesh", "statusCode": 301 },
+    { "source": "/blog/divorce-from-court-bangladesh-muslim-law", "destination": "/blog/divorce-procedure-bangladesh", "statusCode": 301 },
+    { "source": "/blog/divorce-process-bangladesh-2026", "destination": "/blog/divorce-procedure-bangladesh", "statusCode": 301 },
+    { "source": "/blog/how-to-file-divorce-bangladesh", "destination": "/blog/divorce-procedure-bangladesh", "statusCode": 301 },
+    { "source": "/blog/cheque-dishonour-case-bangladesh", "destination": "/blog/cheque-dishonour-case-law-bangladesh", "statusCode": 301 },
+    { "source": "/blog/cheque-dishonour-bangladesh-section-138", "destination": "/blog/cheque-dishonour-case-law-bangladesh", "statusCode": 301 },
+    { "source": "/blog/child-custody-2026-bangladesh", "destination": "/blog/child-custody-law-bangladesh", "statusCode": 301 },
+    { "source": "/blog/child-custody-bangladesh-muslim-law", "destination": "/blog/child-custody-law-bangladesh", "statusCode": 301 },
+    { "source": "/blog/writ-petition-bangladesh-high-court", "destination": "/blog/writ-petition-high-court-bangladesh", "statusCode": 301 },
+    { "source": "/blog/writ-petition-high-court-guide-bangladesh", "destination": "/blog/writ-petition-high-court-bangladesh", "statusCode": 301 },
+    { "source": "/blog/supreme-court-writ-petition-bangladesh", "destination": "/blog/writ-petition-high-court-bangladesh", "statusCode": 301 },
+    { "source": "/blog/land-dispute-case-bangladesh", "destination": "/blog/land-dispute-legal-remedies-bangladesh", "statusCode": 301 },
+    { "source": "/blog/land-dispute-resolution-bangladesh", "destination": "/blog/land-dispute-legal-remedies-bangladesh", "statusCode": 301 },
+    { "source": "/blog/digital-security-act-rights-defences-bangladesh", "destination": "/blog/cyber-crime-digital-security-act-bangladesh", "statusCode": 301 },
+    { "source": "/blog/digital-security-act-bangladesh-legal-rights", "destination": "/blog/cyber-crime-digital-security-act-bangladesh", "statusCode": 301 },
+    { "source": "/blog/cyber-security-act-2023-bangladesh", "destination": "/blog/cyber-crime-digital-security-act-bangladesh", "statusCode": 301 },
+    { "source": "/blog/cybercrime-laws-bangladesh-2026", "destination": "/blog/cyber-crime-digital-security-act-bangladesh", "statusCode": 301 },
+    { "source": "/blog/domestic-violence-protection-order-bangladesh", "destination": "/blog/domestic-violence-law-bangladesh", "statusCode": 301 },
+    { "source": "/blog/domestic-violence-legal-protection-bangladesh", "destination": "/blog/domestic-violence-law-bangladesh", "statusCode": 301 },
+    { "source": "/blog/how-to-challenge-false-criminal-case-bangladesh", "destination": "/blog/how-to-stop-false-criminal-case-bangladesh", "statusCode": 301 },
+    { "source": "/blog/quash-false-case-bangladesh", "destination": "/blog/how-to-stop-false-criminal-case-bangladesh", "statusCode": 301 },
+    { "source": "/blog/property-registration-process-bangladesh", "destination": "/blog/how-to-register-land-bangladesh", "statusCode": 301 },
+    { "source": "/blog/land-registration-fees-process-bangladesh", "destination": "/blog/how-to-register-land-bangladesh", "statusCode": 301 },
+    { "source": "/blog/wife-divorce-rights-bangladesh", "destination": "/blog/wife-rights-after-divorce-bangladesh", "statusCode": 301 },
+    { "source": "/blog/mahr-dower-rights-wife-bangladesh", "destination": "/blog/wife-rights-after-divorce-bangladesh", "statusCode": 301 },
+    { "source": "/blog/contract-breach-specific-performance-bangladesh", "destination": "/blog/contract-breach-legal-action-bangladesh", "statusCode": 301 },
+    { "source": "/blog/hire-criminal-lawyer-bangladesh", "destination": "/services/criminal-lawyer", "statusCode": 301 },
+    { "source": "/blog/hire-cyber-crime-lawyer-bangladesh", "destination": "/services/criminal-lawyer", "statusCode": 301 },
+    { "source": "/privacy", "destination": "/privacy-policy", "statusCode": 301 },
+    { "source": "/contact", "destination": "/#contact", "statusCode": 301 },
+    { "source": "/bn/about", "destination": "/advocate-md-shah-alam", "statusCode": 301 },
+    { "source": "/about", "destination": "/advocate-md-shah-alam", "statusCode": 301 },
+    { "source": "/bn/services/civil-lawyer", "destination": "/services/land-lawyer", "statusCode": 301 },
+    { "source": "/bn/services/criminal-lawyer", "destination": "/services/criminal-lawyer", "statusCode": 301 },
+    { "source": "/bn/services/divorce-lawyer", "destination": "/services/divorce-lawyer", "statusCode": 301 },
+    { "source": "/bn/services/land-lawyer", "destination": "/services/land-lawyer", "statusCode": 301 },
+    { "source": "/bn/services/bail-lawyer", "destination": "/services/bail-lawyer", "statusCode": 301 },
+    { "source": "/bn/services/supreme-court-lawyer", "destination": "/services/supreme-court-lawyer", "statusCode": 301 },
+    { "source": "/bn/services/tax-lawyer", "destination": "/services/tax-lawyer", "statusCode": 301 },
+    { "source": "/bn/services/company-corporate-lawyer", "destination": "/services/company-corporate-lawyer", "statusCode": 301 }
   ],
   "headers": [
     {
