@@ -282,11 +282,19 @@
         { "key": "Content-Type", "value": "text/plain; charset=utf-8" },
         { "key": "Cache-Control", "value": "public, max-age=3600, s-maxage=86400" }
       ]
+    },
+    {
+      "source": "/ads.txt",
+      "headers": [
+        { "key": "Content-Type", "value": "text/plain; charset=utf-8" },
+        { "key": "Cache-Control", "value": "public, max-age=3600, s-maxage=86400" },
+        { "key": "Access-Control-Allow-Origin", "value": "*" }
+      ]
     }
   ],
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/((?!ads\.txt|robots\.txt|sitemap\.xml|favicon|images|.*\.(png|jpg|jpeg|webp|svg|ico|css|js|json|woff|woff2|ttf|txt|xml)).*)",
       "destination": "/"
     }
   ]
