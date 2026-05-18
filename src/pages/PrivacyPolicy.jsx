@@ -4,14 +4,14 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 
 const PrivacyPolicy = () => {
-    const lastUpdated = 'May 12, 2026';
+    const lastUpdated = 'May 18, 2026';
 
     return (
         <>
             <Helmet>
-                <title>Privacy Policy | Advocate Md. Shah Alam</title>
-                <meta name="description" content="Privacy Policy of advmdshahalam.me — learn how we collect, use, and protect your personal information when you visit our website." />
-                <meta name="robots" content="noindex, follow" />
+                <title>Privacy Policy | Advocate Md. Shah Alam — advmdshahalam.me</title>
+                <meta name="description" content="Privacy Policy of advmdshahalam.me — how we collect, use and protect your information. Includes Google AdSense, Analytics and cookie policy disclosures." />
+                <meta name="robots" content="index, follow" />
                 <link rel="canonical" href="https://advmdshahalam.me/privacy-policy" />
             </Helmet>
 
@@ -69,28 +69,37 @@ const PrivacyPolicy = () => {
 
                         {/* 4 - Google AdSense & Cookies */}
                         <div className="glass-card p-6 md:p-8" style={{ borderLeft: '3px solid var(--accent)' }}>
-                            <h2 className="text-lg font-bold mb-3" style={{ color: 'var(--text)' }}>4. Google AdSense & Cookies</h2>
+                            <h2 className="text-lg font-bold mb-3" style={{ color: 'var(--text)' }}>4. Google AdSense &amp; Advertising Cookies</h2>
                             <p className="text-sm leading-relaxed mb-3" style={{ color: 'var(--text-secondary)' }}>
-                                This website uses <strong>Google AdSense</strong>, a service provided by Google LLC, to display advertisements. 
-                                Google AdSense uses cookies, including the <strong>DoubleClick DART cookie</strong>, to serve ads based on your 
-                                visits to this website and other websites on the Internet.
+                                This website uses <strong>Google AdSense</strong>, a third-party advertising service provided by Google LLC 
+                                (1600 Amphitheatre Parkway, Mountain View, CA 94043, USA), to display advertisements. 
+                                Google AdSense may use cookies, web beacons, and similar tracking technologies — including the 
+                                <strong> DoubleClick DART cookie</strong> — to serve ads based on your visits to this website and 
+                                other websites on the Internet.
                             </p>
                             <p className="text-sm leading-relaxed mb-3" style={{ color: 'var(--text-secondary)' }}>
-                                Third-party vendors, including Google, use cookies to serve ads based on your prior visits to this website 
-                                or other websites. Google's use of advertising cookies enables it and its partners to serve ads to you 
-                                based on your visit to this site and/or other sites on the Internet.
+                                Third-party vendors and ad networks, including Google, use cookies to serve ads based on your prior 
+                                visits to this website and other websites. These cookies allow Google and its partners to serve ads 
+                                tailored to your interests. <strong>We do not control</strong> the cookies placed by Google AdSense 
+                                and are not responsible for Google's data practices.
+                            </p>
+                            <p className="text-sm leading-relaxed mb-3" style={{ color: 'var(--text-secondary)' }}>
+                                <strong>What information may be collected by AdSense:</strong> IP address, browser type, device type, 
+                                pages visited, time of visit, referring URLs, and other browsing activity.
                             </p>
                             <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
-                                You may opt out of personalised advertising by visiting{' '}
+                                <strong>Opt-out options:</strong> You may opt out of personalised advertising by visiting{' '}
                                 <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer"
                                     className="font-medium underline" style={{ color: 'var(--accent)' }}>
                                     Google Ads Settings
                                 </a>
-                                . Alternatively, you can opt out of a third-party vendor's use of cookies by visiting{' '}
-                                <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener noreferrer"
+                                {' '}or the{' '}
+                                <a href="https://optout.aboutads.info/" target="_blank" rel="noopener noreferrer"
                                     className="font-medium underline" style={{ color: 'var(--accent)' }}>
-                                    aboutads.info
-                                </a>.
+                                    Digital Advertising Alliance opt-out
+                                </a>
+                                . You can also manage cookies through your browser settings. Note that opting out of personalised 
+                                ads does not prevent you from seeing ads — it means ads will not be personalised to your interests.
                             </p>
                         </div>
 
