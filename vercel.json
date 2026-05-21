@@ -8,8 +8,13 @@
           "value": "www.advmdshahalam.me"
         }
       ],
-      "destination": "https://advmdshahalam.me/:path",
-      "statusCode": 308
+      "destination": "https://advmdshahalam.me/:path*",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn",
+      "destination": "/bn/blog",
+      "statusCode": 301
     },
     {
       "source": "/bn/contact",
@@ -212,6 +217,11 @@
       "statusCode": 301
     },
     {
+      "source": "/bn/services/property-lawyer",
+      "destination": "/services/land-lawyer",
+      "statusCode": 301
+    },
+    {
       "source": "/bn/services/criminal-lawyer",
       "destination": "/services/criminal-lawyer",
       "statusCode": 301
@@ -244,6 +254,21 @@
     {
       "source": "/bn/services/company-corporate-lawyer",
       "destination": "/services/company-corporate-lawyer",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/blog/how-to-stop-false-criminal-case-bangladesh-bn",
+      "destination": "/bn/blog/mittha-mamla-theke-bachar-upay-bangladesh",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/blog/divorce-alimony-maintenance-wife-bangladesh-bn",
+      "destination": "/bn/blog/divorce-process-bangladesh-bn",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/blog/company-director-dayitto-bangladesh",
+      "destination": "/blog/company-director-liability-bangladesh",
       "statusCode": 301
     }
   ],
