@@ -25,7 +25,7 @@ const STATIC_SETTINGS = {
     lawyerName:          'Advocate Md. Shah Alam',
     barEnrollmentNumber: null,
     yearsExperience:     20,
-    email:               'shahalam0332@gmail.com',
+    email:               'contact@advmdshahalam.me',
     officeHours:         'Sat – Thu: 9am – 9pm',
     siteTagline:         'Supreme Court Advocate · Uttara, Dhaka',
     footerCopyrightText: `© ${new Date().getFullYear()} Advocate Md. Shah Alam. All rights reserved.`,

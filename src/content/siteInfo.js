@@ -28,7 +28,7 @@ const siteInfo = {
     // ─── Contact links ──────────────────────────────────────────────
     // Phone and WhatsApp → edit src/data/contactInfo.js (centralized)
 
-    email:              'shahalam0332@gmail.com',
+    email:              'contact@advmdshahalam.me',
     facebookUrl:        'https://www.facebook.com/advmd.shahalamfb',
     googleMapsUrl:      'https://maps.app.goo.gl/M3NXMwW3xkp2TE3h8',
     googleMapsEmbed:    null,  // paste Google Maps iframe src here if you want to embed a map

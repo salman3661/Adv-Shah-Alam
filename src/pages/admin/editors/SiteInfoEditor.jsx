@@ -53,7 +53,7 @@ export default function SiteInfoEditor({ data, onChange }) {
 
       <SectionCard title="📬 Contact & Social">
         <Field label="Email Address">
-          <Input value={data.email} onChange={(v) => set('email', v)} placeholder="example@gmail.com" />
+          <Input value={data.email} onChange={(v) => set('email', v)} placeholder="contact@advmdshahalam.me" />
         </Field>
         <Field label="Facebook Profile URL">
           <Input value={data.facebookUrl} onChange={(v) => set('facebookUrl', v)} placeholder="https://www.facebook.com/..." />

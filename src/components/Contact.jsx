@@ -12,7 +12,7 @@ const LOCAL_BUSINESS_SCHEMA = {
     image: 'https://advmdshahalam.me/images/hero/hero-md-shah-alam.png',
     url: 'https://advmdshahalam.me',
     telephone: '+8801754440332',
-    email: 'shahalam0332@gmail.com',
+    email: 'contact@advmdshahalam.me',
     address: {
         '@type': 'PostalAddress',
         streetAddress: 'House 46, Road 6/B, Sector 12, Uttara West',

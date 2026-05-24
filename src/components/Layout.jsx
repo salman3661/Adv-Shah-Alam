@@ -16,7 +16,7 @@ const attorneySchema = {
     url: BASE,
     image: `${BASE}/images/hero/hero-md-shah-alam.png`,
     telephone: '+8801712122102',
-    email: 'advmdshahalam@gmail.com',
+    email: 'contact@advmdshahalam.me',
     description: 'Advocate Md. Shah Alam is a Supreme Court lawyer in Bangladesh with 20+ years of experience in Criminal, Family, Land, Company, and Tax Law. Based in Uttara, Dhaka.',
     priceRange: '৳৳',
     address: {

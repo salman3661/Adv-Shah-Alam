@@ -153,7 +153,7 @@ const TermsConditions = () => {
                             </p>
                             <ul className="text-sm space-y-1" style={{ color: 'var(--text-secondary)' }}>
                                 <li><strong>Name:</strong> Advocate Md. Shah Alam</li>
-                                <li><strong>Email:</strong> shahalam0332@gmail.com</li>
+                                <li><strong>Email:</strong> contact@advmdshahalam.me</li>
                                 <li><strong>Phone:</strong> +880 1712-655546</li>
                                 <li><strong>Address:</strong> Mantrust Nazma Monzil, Sector 12, Uttara West, Dhaka-1230</li>
                             </ul>

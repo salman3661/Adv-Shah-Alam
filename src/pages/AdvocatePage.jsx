@@ -101,7 +101,7 @@ const personSchema = {
         addressCountry: 'BD',
     },
     telephone: '+8801712655546',
-    email: 'shahalam0332@gmail.com',
+    email: 'contact@advmdshahalam.me',
     sameAs: [
         'https://www.facebook.com/advmd.shahalamfb',
         'https://maps.app.goo.gl/M3NXMwW3xkp2TE3h8',
@@ -138,7 +138,7 @@ const legalServiceSchema = {
     name: 'Advocate Md. Shah Alam – Law Chambers',
     url: 'https://advmdshahalam.me',
     telephone: '+8801712655546',
-    email: 'shahalam0332@gmail.com',
+    email: 'contact@advmdshahalam.me',
     image: 'https://advmdshahalam.me/images/hero/hero-md-shah-alam.webp',
     description:
         'Full-service legal practice in Uttara and Dhaka, Bangladesh. Criminal, family, property, and company & corporate law.',
@@ -242,7 +242,7 @@ const faqPageFaqs = [
     {
         question: 'How can I contact Advocate Shah Alam for a consultation?',
         answer:
-            'You can call +880 1712-655546 for a direct call, or send a WhatsApp message to +880 1955-802007. You can also send an email to shahalam0332@gmail.com.',
+            'You can call +880 1712-655546 for a direct call, or send a WhatsApp message to +880 1955-802007. You can also send an email to contact@advmdshahalam.me.',
     },
     {
         question: 'Can Advocate Shah Alam handle Supreme Court cases?',
