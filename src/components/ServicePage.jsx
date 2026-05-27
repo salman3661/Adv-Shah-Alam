@@ -5,7 +5,7 @@ import { telLink, waLink } from '../data/contactInfo';
 import { MessageCircle, Phone, CheckCircle, ArrowLeft, ArrowRight, ChevronDown, AlertTriangle, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const BASE = 'https://advmdshahalam.me';
+const BASE = 'https://www.advmdshahalam.me';
 
 /**
  * Reusable service page layout.
@@ -17,7 +17,7 @@ const ServicePage = ({ metaTitle, metaDesc, canonicalUrl, h1, intro, coverage, f
 
     // Normalise canonical to use the non-www BASE domain
     const wwwCanonical = canonicalUrl
-        ? canonicalUrl.replace('https://advmdshahalam.me', BASE)
+        ? canonicalUrl.replace('https://www.advmdshahalam.me', BASE)
         : null;
 
     const breadcrumbSchema = wwwCanonical ? {

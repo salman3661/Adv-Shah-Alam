@@ -14,7 +14,7 @@ const BailLawyer = () => (
     <ServicePage
         metaTitle="Bail Lawyer Uttara, Dhaka — Same-Day Bail Filing, All Courts (2026)"
         metaDesc="Need urgent bail? Same-day filing at Magistrate, Sessions & High Court. Anticipatory bail available. 20+ years experience. Call Advocate Shah Alam now."
-        canonicalUrl="https://advmdshahalam.me/services/bail-lawyer"
+        canonicalUrl="https://www.advmdshahalam.me/services/bail-lawyer"
         h1="Bail Lawyer in Dhaka — Fast Bail at Every Court Level"
         intro="Advocate Md. Shah Alam is Bangladesh's trusted <strong>bail lawyer in Dhaka</strong>, known for securing urgent bail applications at every court level — from Magistrate hearings to the High Court Division and Appellate Division. Whether facing a bailable offence or a serious non-bailable charge, Adv. Shah Alam acts with speed and legal precision. Anticipatory bail, High Court bail, and emergency same-day applications are a core specialisation."
         coverage={[

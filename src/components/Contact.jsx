@@ -9,8 +9,8 @@ const LOCAL_BUSINESS_SCHEMA = {
     '@context': 'https://schema.org',
     '@type': 'LegalService',
     name: 'Advocate Md. Shah Alam – Law Chamber',
-    image: 'https://advmdshahalam.me/images/hero/hero-md-shah-alam.png',
-    url: 'https://advmdshahalam.me',
+    image: 'https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.png',
+    url: 'https://www.advmdshahalam.me',
     telephone: '+8801754440332',
     email: 'contact@advmdshahalam.me',
     address: {

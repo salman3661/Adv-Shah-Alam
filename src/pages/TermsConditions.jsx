@@ -12,7 +12,7 @@ const TermsConditions = () => {
                 <title>Terms & Conditions | Advocate Md. Shah Alam</title>
                 <meta name="description" content="Terms and Conditions for using advmdshahalam.me — the official website of Advocate Md. Shah Alam, trusted lawyer in Uttara, Dhaka." />
                 <meta name="robots" content="index, follow" />
-                <link rel="canonical" href="https://advmdshahalam.me/terms" />
+                <link rel="canonical" href="https://www.advmdshahalam.me/terms" />
             </Helmet>
 
             <section className="pt-28 pb-16" style={{ background: 'var(--bg)' }}>

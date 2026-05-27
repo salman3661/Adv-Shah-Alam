@@ -414,8 +414,8 @@ function LinksEditor({ links = [], onChange }) {
 function PostRow({ post, lang, onEdit }) {
   const status = postStatus(post);
   const liveUrl = lang === 'en'
-    ? `https://advmdshahalam.me/blog/${post.slug}`
-    : `https://advmdshahalam.me/bn/blog/${post.slug}`;
+    ? `https://www.advmdshahalam.me/blog/${post.slug}`
+    : `https://www.advmdshahalam.me/bn/blog/${post.slug}`;
 
   return (
     <motion.div
@@ -732,8 +732,8 @@ function BlogEditorView({ lang, slug: initialSlug, onBack, onSaved }) {
 
   const status = postStatus(post);
   const liveUrl = lang === 'en'
-    ? `https://advmdshahalam.me/blog/${post.slug}`
-    : `https://advmdshahalam.me/bn/blog/${post.slug}`;
+    ? `https://www.advmdshahalam.me/blog/${post.slug}`
+    : `https://www.advmdshahalam.me/bn/blog/${post.slug}`;
 
   const TABS = [
     { id: 'meta',     label: 'Meta & SEO',  icon: Tag },

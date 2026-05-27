@@ -13,8 +13,8 @@
  * ║  USAGE (bulk — e.g. after sitemap regeneration):            ║
  * ║    import { submitMultipleUrls } from '../utils/indexNow';   ║
  * ║    submitMultipleUrls([                                       ║
- * ║      'https://advmdshahalam.me/',                            ║
- * ║      'https://advmdshahalam.me/blog',                        ║
+ * ║      'https://www.advmdshahalam.me/',                            ║
+ * ║      'https://www.advmdshahalam.me/blog',                        ║
  * ║    ]);                                                        ║
  * ╚══════════════════════════════════════════════════════════════╝
  *
@@ -26,7 +26,7 @@
  */
 
 const INDEXNOW_KEY = 'b88cb6f2bcc144ba92303e49cd3b7970';
-const INDEXNOW_HOST = 'advmdshahalam.me';
+const INDEXNOW_HOST = 'www.advmdshahalam.me';
 const INDEXNOW_API  = 'https://api.indexnow.org/indexnow';
 
 // ─── Single URL submission ────────────────────────────────────────────────────

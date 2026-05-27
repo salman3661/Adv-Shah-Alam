@@ -5,7 +5,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const DOMAIN = 'https://advmdshahalam.me';
+const DOMAIN = 'https://www.advmdshahalam.me';
 const TODAY = new Date().toISOString().split('T')[0];
 
 // Static pages

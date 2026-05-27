@@ -13,7 +13,7 @@
  */
 
 const KEY  = 'b88cb6f2bcc144ba92303e49cd3b7970';
-const HOST = 'advmdshahalam.me';
+const HOST = 'www.advmdshahalam.me';
 const API  = 'https://api.indexnow.org/indexnow';
 
 // ── All canonical URLs to submit after a deploy ──────────────────────────────

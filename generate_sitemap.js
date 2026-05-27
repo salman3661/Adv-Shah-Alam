@@ -7,7 +7,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const BASE_URL = 'https://advmdshahalam.me';
+const BASE_URL = 'https://www.advmdshahalam.me';
 const TODAY = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
 
 // ── Load redirect sources from vercel.json to exclude them ──────────────────
@@ -108,9 +108,9 @@ console.log(`Base URL: ${BASE_URL}`);
 // ── Validation ──────────────────────────────────────────────────────────────
 let errors = 0;
 
-// Check no www URLs
-if (sitemap.includes('www.advmdshahalam.me')) {
-    console.error('ERROR: www URLs found in sitemap! Must be non-www only.');
+// Check no non-www URLs leaked in
+if (sitemap.replace(/www\.advmdshahalam\.me/g, '').includes('advmdshahalam.me')) {
+    console.error('ERROR: non-www bare URLs found in sitemap! Must be www only.');
     errors++;
 }
 
@@ -141,7 +141,7 @@ if (errors > 0) {
     process.exit(1);
 }
 
-console.log('\n[PASS] No www URLs');
+console.log('\n[PASS] No non-www URLs');
 console.log('[PASS] No redirect-source slugs');
 console.log('[PASS] No duplicate URLs');
 console.log(`[PASS] Total: ${urlCount} URLs`);

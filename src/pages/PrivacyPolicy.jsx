@@ -12,7 +12,7 @@ const PrivacyPolicy = () => {
                 <title>Privacy Policy | Advocate Md. Shah Alam — advmdshahalam.me</title>
                 <meta name="description" content="Privacy Policy of advmdshahalam.me — how we collect, use and protect your information. Includes Google AdSense, Analytics and cookie policy disclosures." />
                 <meta name="robots" content="index, follow" />
-                <link rel="canonical" href="https://advmdshahalam.me/privacy-policy" />
+                <link rel="canonical" href="https://www.advmdshahalam.me/privacy-policy" />
             </Helmet>
 
             <section className="pt-28 pb-16" style={{ background: 'var(--bg)' }}>

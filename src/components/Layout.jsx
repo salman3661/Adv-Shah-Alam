@@ -5,7 +5,7 @@ import Footer from './Footer';
 import FloatingWhatsApp from './FloatingWhatsApp';
 import MobileCallButton from './MobileCallButton';
 
-const BASE = 'https://advmdshahalam.me';
+const BASE = 'https://www.advmdshahalam.me';
 
 const attorneySchema = {
     '@context': 'https://schema.org',

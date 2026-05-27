@@ -1,14 +1,30 @@
 {
+  "trailingSlash": false,
   "redirects": [
     {
       "source": "/:path*",
       "has": [
         {
           "type": "host",
-          "value": "www.advmdshahalam.me"
+          "value": "advmdshahalam.me"
         }
       ],
-      "destination": "https://advmdshahalam.me/:path*",
+      "destination": "https://www.advmdshahalam.me/:path*",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/land-mutation-procedure-bangladesh",
+      "destination": "/blog",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/criminal-defence-strategy-bangladesh",
+      "destination": "/blog",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/company-tax-registration-tin-bangladesh",
+      "destination": "/blog",
       "statusCode": 301
     },
     {
