@@ -6,6 +6,7 @@ import {
     Phone, MessageCircle, ExternalLink, BookOpen
 } from 'lucide-react';
 import { telLink, waLink } from '../data/contactInfo';
+import Disclaimer from '../components/Disclaimer';
 
 // Load all EN blog posts from JSON files (bundled at build time by Vite)
 const _postModules = import.meta.glob('../content/posts/en/*.json', { eager: true });
@@ -288,6 +289,9 @@ const BlogPost = () => {
 
                         {/* Main content */}
                         <article className="flex-1 min-w-0">
+
+                            {/* Legal Disclaimer — required for AdSense on legal content */}
+                            <Disclaimer lang="en" />
 
                             {/* Table of Contents */}
                             <nav

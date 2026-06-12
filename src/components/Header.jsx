@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from 'react';
 import { Home, Scale, Award, MapPin, BookOpen, User, Sun, Moon } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTheme } from '../context/ThemeContext';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 
 const Header = () => {
     const [isVisible, setIsVisible] = useState(true);
@@ -57,13 +57,14 @@ const Header = () => {
         }
     };
 
+    // Mixed nav: some are hash-scrolls on home, others are real page routes
     const navLinks = [
-        { name: 'Home', id: 'home', icon: Home },
-        { name: 'About', id: 'about', icon: User },
-        { name: 'Services', id: 'services', icon: Scale },
-        { name: 'FAQ', id: 'faq', icon: Award },
-        { name: 'Blog', id: 'blog', icon: BookOpen },
-        { name: 'Contact', id: 'contact', icon: MapPin },
+        { name: 'Home',     href: '/',                      icon: Home,     isPage: true },
+        { name: 'About',    href: '/advocate-md-shah-alam', icon: User,     isPage: true },
+        { name: 'Services', id: 'services',                 icon: Scale,    isPage: false },
+        { name: 'FAQ',      id: 'faq',                      icon: Award,    isPage: false },
+        { name: 'Blog',     href: '/blog',                  icon: BookOpen, isPage: true },
+        { name: 'Contact',  href: '/contact',               icon: MapPin,   isPage: true },
     ];
 
     return (
@@ -86,23 +87,42 @@ const Header = () => {
                         {/* Nav Links */}
                         <div className="flex items-center gap-0.5">
                             {navLinks.map((link) => (
-                                <a
-                                    key={link.name}
-                                    href={`#${link.id}`}
-                                    onClick={(e) => handleNavClick(e, link.id)}
-                                    style={{ color: 'var(--text-2)' }}
-                                    className="
-                                        relative flex items-center justify-center
-                                        px-2.5 sm:px-3 py-2 rounded-full text-sm font-medium
-                                        transition-all duration-200
-                                        hover:bg-black/5 dark:hover:bg-white/8
-                                        active:scale-95
-                                    "
-                                    title={link.name}
-                                >
-                                    <link.icon size={17} className="sm:mr-1.5 flex-shrink-0 opacity-70" style={{ color: 'inherit' }} />
-                                    <span className="hidden md:inline whitespace-nowrap">{link.name}</span>
-                                </a>
+                                link.isPage ? (
+                                    <Link
+                                        key={link.name}
+                                        to={link.href}
+                                        style={{ color: 'var(--text-2)' }}
+                                        className="
+                                            relative flex items-center justify-center
+                                            px-2.5 sm:px-3 py-2 rounded-full text-sm font-medium
+                                            transition-all duration-200
+                                            hover:bg-black/5 dark:hover:bg-white/8
+                                            active:scale-95
+                                        "
+                                        title={link.name}
+                                    >
+                                        <link.icon size={17} className="sm:mr-1.5 flex-shrink-0 opacity-70" style={{ color: 'inherit' }} />
+                                        <span className="hidden md:inline whitespace-nowrap">{link.name}</span>
+                                    </Link>
+                                ) : (
+                                    <a
+                                        key={link.name}
+                                        href={`#${link.id}`}
+                                        onClick={(e) => handleNavClick(e, link.id)}
+                                        style={{ color: 'var(--text-2)' }}
+                                        className="
+                                            relative flex items-center justify-center
+                                            px-2.5 sm:px-3 py-2 rounded-full text-sm font-medium
+                                            transition-all duration-200
+                                            hover:bg-black/5 dark:hover:bg-white/8
+                                            active:scale-95
+                                        "
+                                        title={link.name}
+                                    >
+                                        <link.icon size={17} className="sm:mr-1.5 flex-shrink-0 opacity-70" style={{ color: 'inherit' }} />
+                                        <span className="hidden md:inline whitespace-nowrap">{link.name}</span>
+                                    </a>
+                                )
                             ))}
                         </div>
 

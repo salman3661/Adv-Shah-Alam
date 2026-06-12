@@ -30,6 +30,7 @@ const CompanyCorporateLawyer = lazy(() => import('./pages/services/CompanyCorpor
 const AdvocatePage = lazy(() => import('./pages/AdvocatePage'));
 const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
 const TermsConditions = lazy(() => import('./pages/TermsConditions'));
+const ContactPage = lazy(() => import('./pages/ContactPage'));
 
 // Minimal fallback — keeps layout stable while the chunk loads
 const PageFallback = () => (
@@ -78,6 +79,9 @@ function App() {
                       <Route path="/bn/services/tax-lawyer" element={<Navigate to="/services/tax-lawyer" replace />} />
                       <Route path="/bn/services/company-corporate-lawyer" element={<Navigate to="/services/company-corporate-lawyer" replace />} />
                       <Route path="/bn/advocate-md-shah-alam" element={<Navigate to="/advocate-md-shah-alam" replace />} />
+
+                      {/* Contact page — standalone, required by AdSense */}
+                      <Route path="/contact" element={<ContactPage />} />
 
                       {/* Legal pages (AdSense compliance) */}
                       <Route path="/privacy-policy" element={<PrivacyPolicy />} />

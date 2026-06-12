@@ -18,11 +18,11 @@ const Footer = () => {
 
     const quickLinks = [
         { name: 'Home', path: '/' },
-        { name: 'About', path: '/#about' },
+        { name: 'About Advocate', path: '/advocate-md-shah-alam' },
         { name: 'Services', path: '/#services' },
         { name: 'FAQ', path: '/#faq' },
         { name: 'Blog', path: '/blog' },
-        { name: 'Contact', path: '/#contact' },
+        { name: 'Contact Us', path: '/contact' },
     ];
 
     const advocatePageLink = { name: 'About the Advocate', path: '/advocate-md-shah-alam' };

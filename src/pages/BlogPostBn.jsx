@@ -6,6 +6,7 @@ import {
     Phone, MessageCircle, ExternalLink, BookOpen
 } from 'lucide-react';
 import { CALL_NUMBER, CALL_DISPLAY, WA_NUMBER, WA_DISPLAY, waLink, telLink } from '../data/contactInfo';
+import Disclaimer from '../components/Disclaimer';
 
 // Load all BN blog posts from JSON files (bundled at build time by Vite)
 const _bnModules = import.meta.glob('../content/posts/bn/*.json', { eager: true });
@@ -258,6 +259,9 @@ const BlogPostBn = () => {
 
                         {/* Main content */}
                         <div>
+                            {/* Bengali Legal Disclaimer — required for AdSense on legal content */}
+                            <Disclaimer lang="bn" />
+
                             {/* TOC */}
                             {post.toc && post.toc.length > 0 && (
                                 <nav

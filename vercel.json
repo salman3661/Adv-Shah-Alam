@@ -213,11 +213,6 @@
       "statusCode": 301
     },
     {
-      "source": "/contact",
-      "destination": "/#contact",
-      "statusCode": 301
-    },
-    {
       "source": "/bn/about",
       "destination": "/advocate-md-shah-alam",
       "statusCode": 301
