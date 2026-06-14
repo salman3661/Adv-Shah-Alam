@@ -29,6 +29,8 @@ const enPosts = enJsonFiles.map(f => {
     if (post.isDraft) return false;
     // Exclude posts whose URL is a redirect source
     if (redirectSources.has(`/blog/${post.slug}`)) return false;
+    // Exclude future-dated posts (not yet published — they render with noindex)
+    if (post.publishedDate && post.publishedDate > TODAY) return false;
     return true;
 });
 
@@ -41,6 +43,8 @@ const bnPosts = bnJsonFiles.map(f => {
 }).filter(post => {
     if (post.isDraft) return false;
     if (redirectSources.has(`/bn/blog/${post.slug}`)) return false;
+    // Exclude future-dated posts (not yet published — they render with noindex)
+    if (post.publishedDate && post.publishedDate > TODAY) return false;
     return true;
 });
 
