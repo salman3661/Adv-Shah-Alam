@@ -10,65 +10,33 @@ import ScrollToTop from './components/ScrollToTop';
 // Admin panel — standalone SPA with its own layout (no site Layout wrapper)
 import AdminApp from './pages/admin/AdminApp';
 
-// Home is eager — it IS the first paint
+// Eagerly imported public pages for instant transitions and zero flashes
 import Home from './pages/Home';
 import NotFound from './pages/NotFound';
+import Education from './pages/Education';
+import CriminalLawyer from './pages/services/CriminalLawyer';
+import DivorceLawyer from './pages/services/DivorceLawyer';
+import LandLawyer from './pages/services/LandLawyer';
+import BailLawyer from './pages/services/BailLawyer';
+import SupremeCourtLawyer from './pages/services/SupremeCourtLawyer';
+import TaxLawyer from './pages/services/TaxLawyer';
+import CompanyCorporateLawyer from './pages/services/CompanyCorporateLawyer';
+import AdvocatePage from './pages/AdvocatePage';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsConditions from './pages/TermsConditions';
+import ContactPage from './pages/ContactPage';
 
-// All other pages are lazy-loaded (code split)
-const Education = lazy(() => import('./pages/Education'));
+// Lazy-loaded large blog pages (and their JSON articles) to keep initial bundle size minimal
 const Blog = lazy(() => import('./pages/Blog'));
 const BlogPost = lazy(() => import('./pages/BlogPost'));
 const BlogBn = lazy(() => import('./pages/BlogBn'));
 const BlogPostBn = lazy(() => import('./pages/BlogPostBn'));
-const CriminalLawyer = lazy(() => import('./pages/services/CriminalLawyer'));
-const DivorceLawyer = lazy(() => import('./pages/services/DivorceLawyer'));
-const LandLawyer = lazy(() => import('./pages/services/LandLawyer'));
-const BailLawyer = lazy(() => import('./pages/services/BailLawyer'));
-const SupremeCourtLawyer = lazy(() => import('./pages/services/SupremeCourtLawyer'));
-const TaxLawyer = lazy(() => import('./pages/services/TaxLawyer'));
-const CompanyCorporateLawyer = lazy(() => import('./pages/services/CompanyCorporateLawyer'));
-const AdvocatePage = lazy(() => import('./pages/AdvocatePage'));
-const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
-const TermsConditions = lazy(() => import('./pages/TermsConditions'));
-const ContactPage = lazy(() => import('./pages/ContactPage'));
 
 // Minimal fallback — transparent and keeps layout stable
 const PageFallback = () => null;
 
 function App() {
-  React.useEffect(() => {
-    // Prefetch critical page chunks when browser is idle to eliminate the first-click delay (Suspense flash)
-    const prefetchChunks = () => {
-      const chunks = [
-        () => import('./pages/Education'),
-        () => import('./pages/Blog'),
-        () => import('./pages/BlogPost'),
-        () => import('./pages/BlogBn'),
-        () => import('./pages/BlogPostBn'),
-        () => import('./pages/services/CriminalLawyer'),
-        () => import('./pages/services/DivorceLawyer'),
-        () => import('./pages/services/LandLawyer'),
-        () => import('./pages/services/BailLawyer'),
-        () => import('./pages/services/SupremeCourtLawyer'),
-        () => import('./pages/services/TaxLawyer'),
-        () => import('./pages/services/CompanyCorporateLawyer'),
-        () => import('./pages/AdvocatePage'),
-        () => import('./pages/ContactPage'),
-      ];
-      // Run imports sequentially to be gentle on CPU/network
-      chunks.forEach((fetchChunk, index) => {
-        setTimeout(() => {
-          fetchChunk().catch(() => {});
-        }, index * 150);
-      });
-    };
 
-    if ('requestIdleCallback' in window) {
-      window.requestIdleCallback(() => setTimeout(prefetchChunks, 1000));
-    } else {
-      setTimeout(prefetchChunks, 2000);
-    }
-  }, []);
 
   return (
     <>
