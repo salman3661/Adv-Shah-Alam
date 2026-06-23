@@ -59,12 +59,6 @@ const Footer = () => {
                         <nav className="space-y-2">
                             {quickLinks.map((link) => (
                                 <Link key={link.path} to={link.path}
-                                    onMouseEnter={() => {
-                                        if (link.path === '/blog') {
-                                            import('../pages/Blog').catch(() => {});
-                                            import('../pages/BlogBn').catch(() => {});
-                                        }
-                                    }}
                                     className={linkClass} style={{ color: 'var(--text-2)' }}>{link.name}</Link>
                             ))}
                             <Link to={advocatePageLink.path} className={linkClass} style={{ color: 'var(--text-2)' }}>

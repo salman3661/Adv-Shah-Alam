@@ -85,10 +85,6 @@ const BlogPreview = () => {
                         </div>
                         <Link
                             to={lang === 'en' ? '/blog' : '/bn/blog'}
-                            onMouseEnter={() => {
-                                import('../pages/Blog').catch(() => {});
-                                import('../pages/BlogBn').catch(() => {});
-                            }}
                             className="btn-outline inline-flex items-center gap-2 py-2.5 px-6 text-sm font-semibold whitespace-nowrap"
                             aria-label={lang === 'en' ? 'View all English legal articles' : 'সকল বাংলা আইনি নিবন্ধ দেখুন'}
                         >
@@ -133,13 +129,6 @@ const BlogPreview = () => {
 
                                 <Link
                                     to={`${linkBase}${article.slug}`}
-                                    onMouseEnter={() => {
-                                        if (lang === 'en') {
-                                            import('../pages/BlogPost').catch(() => {});
-                                        } else {
-                                            import('../pages/BlogPostBn').catch(() => {});
-                                        }
-                                    }}
                                     className="inline-flex items-center gap-1.5 text-sm font-semibold"
                                     style={{ color: 'var(--accent)' }}
                                     aria-label={readLabel(article)}

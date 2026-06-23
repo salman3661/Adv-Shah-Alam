@@ -64,9 +64,6 @@ const BlogCard = ({ post }) => (
             </span>
             <Link
                 to={`/blog/${post.slug}`}
-                onMouseEnter={() => {
-                    import('../pages/BlogPost').catch(() => {});
-                }}
                 className="inline-flex items-center gap-1 text-sm font-semibold hover:gap-2 transition-all"
                 style={{ color: 'var(--accent)' }}
                 aria-label={`Read article: ${post.title}`}

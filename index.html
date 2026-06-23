@@ -42,25 +42,6 @@
       } catch (e) { }
     })();
   </script>
-  <style>
-    /* Instant theme backgrounds to prevent white flash before stylesheets parse */
-    html {
-      background-color: #FFFFFF;
-      color: #0F172A;
-    }
-    html.dark {
-      background-color: #0B1220;
-      color: #E5E7EB;
-    }
-    body {
-      background-color: #FFFFFF;
-      color: #0F172A;
-    }
-    html.dark body {
-      background-color: #0B1220;
-      color: #E5E7EB;
-    }
-  </style>
 
   <!-- Preload LCP hero image with fetchpriority=high — signals browser to prioritise this above all else -->
   <link rel="preload" as="image" href="/images/hero/hero-md-shah-alam.webp" type="image/webp" fetchpriority="high" />
@@ -70,11 +51,16 @@
   <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
   <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
 
-  <!-- Google Fonts: preconnect + blocking load (prevents FOUT flash) -->
+  <!-- Google Fonts: preconnect + deferred load (non-render-blocking) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" />
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+    media="print" onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" />
+  </noscript>
 
 
   <!-- Primary Meta Tags (fallback — React Helmet overrides these per page) -->

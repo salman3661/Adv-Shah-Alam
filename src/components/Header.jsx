@@ -91,13 +91,6 @@ const Header = () => {
                                     <Link
                                         key={link.name}
                                         to={link.href}
-                                        onMouseEnter={() => {
-                                            if (link.href === '/blog') {
-                                                import('../pages/Blog').catch(() => {});
-                                                // Also prefetch Bengali blog index just in case
-                                                import('../pages/BlogBn').catch(() => {});
-                                            }
-                                        }}
                                         style={{ color: 'var(--text-2)' }}
                                         className="
                                             relative flex items-center justify-center

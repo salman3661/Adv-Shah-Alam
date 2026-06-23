@@ -10,34 +10,34 @@ import ScrollToTop from './components/ScrollToTop';
 // Admin panel — standalone SPA with its own layout (no site Layout wrapper)
 import AdminApp from './pages/admin/AdminApp';
 
-// Eagerly imported public pages for instant transitions and zero flashes
+// Home is eager — it IS the first paint
 import Home from './pages/Home';
 import NotFound from './pages/NotFound';
-import Education from './pages/Education';
-import CriminalLawyer from './pages/services/CriminalLawyer';
-import DivorceLawyer from './pages/services/DivorceLawyer';
-import LandLawyer from './pages/services/LandLawyer';
-import BailLawyer from './pages/services/BailLawyer';
-import SupremeCourtLawyer from './pages/services/SupremeCourtLawyer';
-import TaxLawyer from './pages/services/TaxLawyer';
-import CompanyCorporateLawyer from './pages/services/CompanyCorporateLawyer';
-import AdvocatePage from './pages/AdvocatePage';
-import PrivacyPolicy from './pages/PrivacyPolicy';
-import TermsConditions from './pages/TermsConditions';
-import ContactPage from './pages/ContactPage';
 
-// Lazy-loaded large blog pages (and their JSON articles) to keep initial bundle size minimal
+// All other pages are lazy-loaded (code split)
+const Education = lazy(() => import('./pages/Education'));
 const Blog = lazy(() => import('./pages/Blog'));
 const BlogPost = lazy(() => import('./pages/BlogPost'));
 const BlogBn = lazy(() => import('./pages/BlogBn'));
 const BlogPostBn = lazy(() => import('./pages/BlogPostBn'));
+const CriminalLawyer = lazy(() => import('./pages/services/CriminalLawyer'));
+const DivorceLawyer = lazy(() => import('./pages/services/DivorceLawyer'));
+const LandLawyer = lazy(() => import('./pages/services/LandLawyer'));
+const BailLawyer = lazy(() => import('./pages/services/BailLawyer'));
+const SupremeCourtLawyer = lazy(() => import('./pages/services/SupremeCourtLawyer'));
+const TaxLawyer = lazy(() => import('./pages/services/TaxLawyer'));
+const CompanyCorporateLawyer = lazy(() => import('./pages/services/CompanyCorporateLawyer'));
+const AdvocatePage = lazy(() => import('./pages/AdvocatePage'));
+const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
+const TermsConditions = lazy(() => import('./pages/TermsConditions'));
+const ContactPage = lazy(() => import('./pages/ContactPage'));
 
-// Minimal fallback — transparent and keeps layout stable
-const PageFallback = () => null;
+// Minimal fallback — keeps layout stable while the chunk loads
+const PageFallback = () => (
+  <div style={{ minHeight: '100vh', background: 'var(--bg)' }} aria-hidden="true" />
+);
 
 function App() {
-
-
   return (
     <>
       <HelmetProvider>
