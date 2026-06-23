@@ -67,7 +67,7 @@ body {
 /* Single source: body[data-theme="dark"] only.
    html[data-theme] is synced by ThemeContext.applyThemeToDom() but CSS vars
    are scoped here so there is never a conflict. */
-body[data-theme="dark"] {
+html[data-theme="dark"] body {
   --bg: #0B1220;
   --surface: #0F1B2D;
   --card-bg: rgba(15, 27, 45, 0.72);
@@ -203,7 +203,7 @@ html {
 }
 
 /* Dark mode: cyan glow on glass-card hover */
-body[data-theme="dark"] .glass-card:hover {
+html[data-theme="dark"] .glass-card:hover {
   box-shadow:
     0 16px 40px rgba(0, 0, 0, 0.30),
     0 0 28px rgba(34, 211, 238, 0.12),
@@ -231,7 +231,7 @@ body[data-theme="dark"] .glass-card:hover {
 }
 
 /* Dark mode: add cyan glow on hover */
-body[data-theme="dark"] .timeline-card:hover {
+html[data-theme="dark"] .timeline-card:hover {
   box-shadow:
     0 20px 48px rgba(0, 0, 0, 0.30),
     0 0 32px rgba(34, 211, 238, 0.14),
@@ -252,7 +252,7 @@ body[data-theme="dark"] .timeline-card:hover {
 }
 
 /* Dark mode: soft cyan ring glow on navbar */
-body[data-theme="dark"] .navbar-glass {
+html[data-theme="dark"] .navbar-glass {
   background: rgba(6, 13, 26, 0.82);
   border-color: rgba(34, 211, 238, 0.18);
   box-shadow:
@@ -419,7 +419,7 @@ body[data-theme="dark"] .navbar-glass {
   border-radius: 9999px;
 }
 
-body[data-theme="dark"] .status-current {
+html[data-theme="dark"] .status-current {
   background: rgba(34, 197, 94, 0.18);
   color: #4ade80;
 }
@@ -667,7 +667,7 @@ body[data-theme="dark"] .status-current {
   }
 
   /* Dark mode: stronger shadow + white-alpha border */
-  body[data-theme="dark"] .mobile-call-bar {
+  html[data-theme="dark"] .mobile-call-bar {
     box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
     border: 1px solid rgba(255, 255, 255, 0.15);
   }
