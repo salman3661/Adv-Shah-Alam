@@ -38,6 +38,40 @@ const PageFallback = () => (
 );
 
 function App() {
+  React.useEffect(() => {
+    // Prefetch critical page chunks when browser is idle to eliminate the first-click delay (Suspense flash)
+    const prefetchChunks = () => {
+      const chunks = [
+        () => import('./pages/Education'),
+        () => import('./pages/Blog'),
+        () => import('./pages/BlogPost'),
+        () => import('./pages/BlogBn'),
+        () => import('./pages/BlogPostBn'),
+        () => import('./pages/services/CriminalLawyer'),
+        () => import('./pages/services/DivorceLawyer'),
+        () => import('./pages/services/LandLawyer'),
+        () => import('./pages/services/BailLawyer'),
+        () => import('./pages/services/SupremeCourtLawyer'),
+        () => import('./pages/services/TaxLawyer'),
+        () => import('./pages/services/CompanyCorporateLawyer'),
+        () => import('./pages/AdvocatePage'),
+        () => import('./pages/ContactPage'),
+      ];
+      // Run imports sequentially to be gentle on CPU/network
+      chunks.forEach((fetchChunk, index) => {
+        setTimeout(() => {
+          fetchChunk().catch(() => {});
+        }, index * 150);
+      });
+    };
+
+    if ('requestIdleCallback' in window) {
+      window.requestIdleCallback(() => setTimeout(prefetchChunks, 1000));
+    } else {
+      setTimeout(prefetchChunks, 2000);
+    }
+  }, []);
+
   return (
     <>
       <HelmetProvider>
