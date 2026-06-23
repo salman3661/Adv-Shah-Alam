@@ -32,10 +32,8 @@ const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
 const TermsConditions = lazy(() => import('./pages/TermsConditions'));
 const ContactPage = lazy(() => import('./pages/ContactPage'));
 
-// Minimal fallback — keeps layout stable while the chunk loads
-const PageFallback = () => (
-  <div style={{ minHeight: '100vh', background: 'var(--bg)' }} aria-hidden="true" />
-);
+// Minimal fallback — transparent and keeps layout stable
+const PageFallback = () => null;
 
 function App() {
   React.useEffect(() => {

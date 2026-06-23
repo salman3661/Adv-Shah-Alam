@@ -42,6 +42,25 @@
       } catch (e) { }
     })();
   </script>
+  <style>
+    /* Instant theme backgrounds to prevent white flash before stylesheets parse */
+    html {
+      background-color: #FFFFFF;
+      color: #0F172A;
+    }
+    html.dark {
+      background-color: #0B1220;
+      color: #E5E7EB;
+    }
+    body {
+      background-color: #FFFFFF;
+      color: #0F172A;
+    }
+    body[data-theme="dark"] {
+      background-color: #0B1220;
+      color: #E5E7EB;
+    }
+  </style>
 
   <!-- Preload LCP hero image with fetchpriority=high — signals browser to prioritise this above all else -->
   <link rel="preload" as="image" href="/images/hero/hero-md-shah-alam.webp" type="image/webp" fetchpriority="high" />

@@ -57,7 +57,7 @@ function buildPage(base, { title, description, canonical, body, lang='en' }) {
   h = h.replace(/<link rel="canonical"[^>]*>/g, '');
   h = h.replace('</head>', `<link rel="canonical" href="${canonical}">\n</head>`);
 
-  const prerendered = `\n<div id="prerendered-content" style="font-family:Georgia,serif;max-width:900px;margin:0 auto;padding:20px 16px;color:#1a1a1a;line-height:1.7">\n${body}\n</div>`;
+  const prerendered = `\n<div id="prerendered-content" style="font-family:Georgia,serif;max-width:900px;margin:0 auto;padding:20px 16px;color:var(--text,#1a1a1a);line-height:1.7">\n${body}\n</div>`;
   h = h.replace('<div id="root"></div>', `<div id="root">${prerendered}</div>`);
   return h;
 }
