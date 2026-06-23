@@ -45,8 +45,16 @@ function escHtml(s='') { return String(s).replace(/&/g,'&amp;').replace(/"/g,'&q
 function jsonLoad(p) { try { return JSON.parse(fs.readFileSync(p,'utf8')); } catch { return null; } }
 
 /**
- * Inject page-specific title, description, canonical, and a <noscript> content
- * block into the base index.html so search crawlers see real content.
+ * Inject page-specific title, description, canonical, and a hidden pre-rendered
+ * content block into the base index.html so search crawlers see real content.
+ *
+ * The #prerendered-content div is:
+ *   - INVISIBLE to users  (position:absolute; visibility:hidden; height:0; overflow:hidden)
+ *   - FULLY READABLE by crawlers (it's real HTML in the DOM, not inside <noscript>)
+ *   - ADOPTED by React   (hydrateRoot in main.jsx detects it and hydrates cleanly)
+ *
+ * This eliminates the millisecond flash: React never destroys + repaints the root,
+ * it simply hydrates over the existing (already hidden) pre-rendered node.
  */
 function buildPage(base, { title, description, canonical, body, lang='en' }) {
   let h = base;
@@ -57,7 +65,8 @@ function buildPage(base, { title, description, canonical, body, lang='en' }) {
   h = h.replace(/<link rel="canonical"[^>]*>/g, '');
   h = h.replace('</head>', `<link rel="canonical" href="${canonical}">\n</head>`);
 
-  const prerendered = `\n<div id="prerendered-content" style="font-family:Georgia,serif;max-width:900px;margin:0 auto;padding:20px 16px;color:#1a1a1a;line-height:1.7">\n${body}\n</div>`;
+  // Hidden from users, visible to crawlers — no flash, no cloaking
+  const prerendered = `\n<div id="prerendered-content" aria-hidden="true" style="position:absolute;width:1px;height:1px;overflow:hidden;visibility:hidden;clip:rect(0,0,0,0);white-space:nowrap">\n${body}\n</div>`;
   h = h.replace('<div id="root"></div>', `<div id="root">${prerendered}</div>`);
   return h;
 }
