@@ -2,14 +2,16 @@ import React, { lazy, Suspense } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Hero from '../components/Hero';
 import About from '../components/About';
+import BackToTop from '../components/BackToTop';
 
 // Below-fold sections are lazy-loaded — reduces initial JS parse on mobile
-const Services    = lazy(() => import('../components/Services'));
-const FAQ         = lazy(() => import('../components/FAQ'));
-const BlogPreview = lazy(() => import('../components/BlogPreview'));
-const Timeline    = lazy(() => import('../components/Timeline'));
-const Chambers    = lazy(() => import('../components/Chambers'));
-const Contact     = lazy(() => import('../components/Contact'));
+const Services       = lazy(() => import('../components/Services'));
+const FAQ            = lazy(() => import('../components/FAQ'));
+const Testimonials   = lazy(() => import('../components/Testimonials'));
+const BlogPreview    = lazy(() => import('../components/BlogPreview'));
+const Timeline       = lazy(() => import('../components/Timeline'));
+const Chambers       = lazy(() => import('../components/Chambers'));
+const Contact        = lazy(() => import('../components/Contact'));
 
 // Minimal in-place fallback — preserves document height to avoid CLS
 const SectionFallback = () => <div style={{ minHeight: '200px' }} aria-hidden="true" />;
@@ -40,11 +42,13 @@ const Home = () => {
             <Suspense fallback={<SectionFallback />}>
                 <Services />
                 <FAQ />
+                <Testimonials />
                 <BlogPreview />
                 <Timeline />
                 <Chambers />
                 <Contact />
             </Suspense>
+            <BackToTop />
         </>
     );
 };

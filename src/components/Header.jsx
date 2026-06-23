@@ -67,6 +67,12 @@ const Header = () => {
         { name: 'Contact',  href: '/contact',               icon: MapPin,   isPage: true },
     ];
 
+    const isActive = (link) => {
+        if (!link.isPage) return false;
+        if (link.href === '/') return location.pathname === '/';
+        return location.pathname.startsWith(link.href);
+    };
+
     return (
         <AnimatePresence>
             {isVisible && (
@@ -91,9 +97,9 @@ const Header = () => {
                                     <Link
                                         key={link.name}
                                         to={link.href}
-                                        style={{ color: 'var(--text-2)' }}
+                                        style={{ color: isActive(link) ? 'var(--accent)' : 'var(--text-2)' }}
                                         className="
-                                            relative flex items-center justify-center
+                                            relative flex flex-col items-center justify-center
                                             px-2.5 sm:px-3 py-2 rounded-full text-sm font-medium
                                             transition-all duration-200
                                             hover:bg-black/5 dark:hover:bg-white/8
@@ -101,8 +107,16 @@ const Header = () => {
                                         "
                                         title={link.name}
                                     >
-                                        <link.icon size={17} className="sm:mr-1.5 flex-shrink-0 opacity-70" style={{ color: 'inherit' }} />
-                                        <span className="hidden md:inline whitespace-nowrap">{link.name}</span>
+                                        <span className="flex items-center gap-1.5">
+                                            <link.icon size={17} className="sm:mr-0 flex-shrink-0" style={{ opacity: isActive(link) ? 1 : 0.7, color: 'inherit' }} />
+                                            <span className="hidden md:inline whitespace-nowrap">{link.name}</span>
+                                        </span>
+                                        {isActive(link) && (
+                                            <span
+                                                className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full"
+                                                style={{ background: 'var(--accent)', marginBottom: '2px' }}
+                                            />
+                                        )}
                                     </Link>
                                 ) : (
                                     <a

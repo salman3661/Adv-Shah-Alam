@@ -126,6 +126,9 @@ const Footer = () => {
                             <Link to="/terms" className="text-xs hover:underline transition-opacity opacity-60 hover:opacity-100"
                                 style={{ color: 'var(--text-muted)' }}>Terms & Conditions</Link>
                         </div>
+                        <p className="text-xs mt-2 max-w-lg" style={{ color: 'var(--text-muted)', opacity: 0.55 }}>
+                            <strong>Disclaimer:</strong> The information on this website is for general informational purposes only and does not constitute legal advice. Visiting this site or contacting us does not create an attorney-client relationship. Please consult a qualified advocate for advice specific to your situation.
+                        </p>
                     </div>
 
                     <button onClick={toggleTheme}

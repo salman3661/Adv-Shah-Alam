@@ -16,8 +16,16 @@ function isPublished(post) {
   } catch { return true; }
 }
 
-const latestEn = Object.values(_enModules).map(m => m.default ?? m).filter(isPublished).slice(0, 3);
-const latestBn = Object.values(_bnModules).map(m => m.default ?? m).filter(isPublished).slice(0, 3);
+const latestEn = Object.values(_enModules)
+  .map(m => m.default ?? m)
+  .filter(isPublished)
+  .sort((a, b) => new Date(b.publishedDate) - new Date(a.publishedDate))
+  .slice(0, 3);
+const latestBn = Object.values(_bnModules)
+  .map(m => m.default ?? m)
+  .filter(isPublished)
+  .sort((a, b) => new Date(b.publishedDate) - new Date(a.publishedDate))
+  .slice(0, 3);
 
 // Convert seo.categoryColors (hex) into bg/color pairs for the badge
 const categoryColors = Object.fromEntries(
@@ -95,7 +103,12 @@ const BlogPreview = () => {
 
                 {/* Grid */}
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {articles.map((article, i) => {
+                    {articles.length === 0 ? (
+                        <div className="col-span-full text-center py-12">
+                            <BookOpen size={40} className="mx-auto mb-4 opacity-30" style={{ color: 'var(--text-muted)' }} />
+                            <p className="text-sm" style={{ color: 'var(--text-muted)' }}>No articles published yet. Check back soon.</p>
+                        </div>
+                    ) : articles.map((article, i) => {
                         const colors = categoryColors[article.category] || { bg: 'rgba(100,116,139,0.1)', color: '#64748B' };
                         return (
                             <motion.article key={article.slug || i}

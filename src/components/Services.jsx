@@ -38,15 +38,23 @@ const Services = () => {
 
                 {/* Grid */}
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-7">
-                    {services.map((service, index) => (
-                        <motion.div key={index}
+                    {services.map((service) => (
+                        <motion.div key={service.title}
                             initial={{ opacity: 0, y: 28 }} whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.48, delay: index * 0.07 }} viewport={{ once: true }}
+                            transition={{ duration: 0.48 }} viewport={{ once: true }}
                             className="glass-card p-7 flex flex-col group"
                         >
-                            <div className="w-12 h-12 rounded-2xl flex items-center justify-center mb-5 flex-shrink-0 group-hover:scale-110 transition-transform duration-300"
-                                style={{ background: service.iconColor, color: service.iconText }}>
-                                <service.icon size={26} />
+                            <div className="flex items-start justify-between mb-5">
+                                <div className="w-12 h-12 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300"
+                                    style={{ background: service.iconColor, color: service.iconText }}>
+                                    <service.icon size={26} />
+                                </div>
+                                <span
+                                    className="text-xs font-semibold px-2 py-1 rounded-full flex-shrink-0"
+                                    style={{ background: 'rgba(34,197,94,0.10)', color: '#16a34a', border: '1px solid rgba(34,197,94,0.2)' }}
+                                >
+                                    Free Consult
+                                </span>
                             </div>
 
                             <h3 className="text-base font-bold mb-3 leading-snug" style={{ color: 'var(--text)' }}>
@@ -66,6 +74,7 @@ const Services = () => {
                         </motion.div>
                     ))}
                 </div>
+
 
                 {/* CTA */}
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }}

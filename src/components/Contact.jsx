@@ -47,12 +47,15 @@ const LOCAL_BUSINESS_SCHEMA = {
 
 const Contact = () => {
     const [formData, setFormData] = useState({ name: '', phone: '', message: '' });
+    const [submitted, setSubmitted] = useState(false);
     const handleChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
 
     const handleSubmit = (e) => {
         e.preventDefault();
         const text = `*📋 New Case Inquiry*\n\n*Name:* ${formData.name}\n*Phone:* ${formData.phone}\n*Details:* ${formData.message}`;
         window.open(waLink(text), '_blank');
+        setSubmitted(true);
+        setTimeout(() => setSubmitted(false), 5000);
     };
 
     const contactInfo = [
@@ -133,6 +136,32 @@ const Contact = () => {
                             <p className="text-sm mb-7" style={{ color: 'var(--text-muted)' }}>
                                 Fill out the form below and we'll respond via WhatsApp within hours.
                             </p>
+
+                            {submitted ? (
+                                <motion.div
+                                    initial={{ opacity: 0, scale: 0.9 }}
+                                    animate={{ opacity: 1, scale: 1 }}
+                                    className="flex flex-col items-center justify-center py-12 text-center"
+                                >
+                                    <div
+                                        className="w-16 h-16 rounded-full flex items-center justify-center mb-4"
+                                        style={{ background: 'rgba(34,197,94,0.12)', color: '#16a34a' }}
+                                    >
+                                        <MessageCircle size={32} />
+                                    </div>
+                                    <h4 className="font-bold text-lg mb-2" style={{ color: 'var(--text)' }}>Message Sent!</h4>
+                                    <p className="text-sm" style={{ color: 'var(--text-muted)' }}>
+                                        Your WhatsApp has been opened. We'll respond within a few hours.
+                                    </p>
+                                    <button
+                                        onClick={() => setSubmitted(false)}
+                                        className="mt-6 text-xs font-semibold hover:underline"
+                                        style={{ color: 'var(--accent)' }}
+                                    >
+                                        Send another inquiry
+                                    </button>
+                                </motion.div>
+                            ) : (
                             <form onSubmit={handleSubmit} className="space-y-4">
                                 {[
                                     { name: 'name', label: 'Your Name', type: 'text', placeholder: 'Full Name' },
@@ -168,6 +197,7 @@ const Contact = () => {
                                     <Send size={17} /> Send to WhatsApp
                                 </button>
                             </form>
+                            )}
                         </div>
                     </motion.div>
                 </div>

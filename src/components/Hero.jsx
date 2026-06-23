@@ -107,6 +107,23 @@ const Hero = () => {
                         {heroContent.description}
                     </p>
 
+                    {/* Available status badge */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.9, duration: 0.5 }}
+                        className="flex items-center gap-2 justify-center md:justify-start mb-5"
+                    >
+                        <span
+                            className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold"
+                            style={{ background: 'rgba(34,197,94,0.12)', color: '#16a34a', border: '1px solid rgba(34,197,94,0.25)' }}
+                        >
+                            <span className="w-1.5 h-1.5 rounded-full bg-green-500 inline-block" style={{ animation: 'hero-pulse 2s ease-in-out infinite' }} />
+                            Available for Consultation
+                        </span>
+                        <span className="text-xs" style={{ color: 'var(--text-muted)' }}>· Free WhatsApp advice</span>
+                    </motion.div>
+
                     <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                         <motion.a
                             href={waLink()}
@@ -130,6 +147,7 @@ const Hero = () => {
                             <ArrowRight size={18} />
                         </motion.a>
                     </div>
+
 
                     {/* Speciality tags */}
                     <div className="flex flex-wrap gap-2 justify-center md:justify-start mt-7">
