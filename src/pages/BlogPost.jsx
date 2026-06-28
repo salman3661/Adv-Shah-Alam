@@ -7,6 +7,7 @@ import {
 } from 'lucide-react';
 import { telLink, waLink } from '../data/contactInfo';
 import Disclaimer from '../components/Disclaimer';
+import ReadingProgress from '../components/ReadingProgress';
 
 // Load all EN blog posts from JSON files (bundled at build time by Vite)
 const _postModules = import.meta.glob('../content/posts/en/*.json', { eager: true });
@@ -185,6 +186,7 @@ const BlogPost = () => {
 
     return (
         <>
+            <ReadingProgress />
             <Helmet>
                 <title>{post.metaTitle}</title>
                 <meta name="description" content={post.metaDescription} />

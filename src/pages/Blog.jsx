@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { Search, Clock, ChevronRight, BookOpen, Phone, MessageCircle, Scale } from 'lucide-react';
+import { Search, Clock, ChevronRight, BookOpen, Phone, MessageCircle, Scale, TrendingUp, ArrowUpDown } from 'lucide-react';
 import { telLink, waLink } from '../data/contactInfo';
 
 // Load all EN blog posts from JSON files (bundled at build time by Vite)
@@ -20,10 +20,19 @@ import seo from '../content/seo.js';
 const CATEGORIES = seo.categoriesEn;
 const categoryColors = seo.categoryColors;
 
+// Posts published within last 14 days get "NEW" badge
+function isNew(post) {
+  try {
+    const pub = new Date(post.publishedDate + 'T00:00:00');
+    const diffDays = (Date.now() - pub.getTime()) / (1000 * 60 * 60 * 24);
+    return diffDays <= 14;
+  } catch { return false; }
+}
+
 const BlogCard = ({ post }) => (
     <article
-        className="glass-card flex flex-col h-full overflow-hidden"
-        style={{ borderRadius: '1.25rem' }}
+        className="glass-card flex flex-col h-full overflow-hidden blog-card-hover"
+        style={{ borderRadius: '1.25rem', transition: 'transform 0.25s ease, box-shadow 0.25s ease' }}
     >
         <div
             className="px-6 pt-6 pb-4"
@@ -40,13 +49,28 @@ const BlogCard = ({ post }) => (
                 >
                     {post.category}
                 </span>
-                <span
-                    className="flex items-center gap-1 text-xs"
-                    style={{ color: 'var(--text-muted)' }}
-                >
-                    <Clock size={12} />
-                    {post.readTime}
-                </span>
+                <div className="flex items-center gap-2">
+                    {isNew(post) && (
+                        <span
+                            className="text-xs font-bold px-2 py-0.5 rounded-full"
+                            style={{
+                                background: 'linear-gradient(135deg, #10b981, #059669)',
+                                color: '#fff',
+                                letterSpacing: '0.04em',
+                                fontSize: '10px',
+                            }}
+                        >
+                            ✦ NEW
+                        </span>
+                    )}
+                    <span
+                        className="flex items-center gap-1 text-xs"
+                        style={{ color: 'var(--text-muted)' }}
+                    >
+                        <Clock size={12} />
+                        {post.readTime}
+                    </span>
+                </div>
             </div>
             <h2
                 className="text-lg font-bold leading-snug mb-3"
@@ -77,9 +101,21 @@ const BlogCard = ({ post }) => (
 const Blog = () => {
     const [activeCategory, setActiveCategory] = useState('All');
     const [searchQuery, setSearchQuery] = useState('');
+    const [sortOrder, setSortOrder] = useState('newest'); // 'newest' | 'oldest'
+
+    const publishedPosts = useMemo(() => blogPosts.filter(isPublished), []);
+
+    // Count per category for badges
+    const categoryCounts = useMemo(() => {
+        const counts = { All: publishedPosts.length };
+        CATEGORIES.forEach(cat => {
+            if (cat !== 'All') counts[cat] = publishedPosts.filter(p => p.category === cat).length;
+        });
+        return counts;
+    }, [publishedPosts]);
 
     const filtered = useMemo(() => {
-        let posts = blogPosts.filter(isPublished);
+        let posts = publishedPosts;
         if (activeCategory !== 'All') {
             posts = posts.filter(p => p.category === activeCategory);
         }
@@ -87,11 +123,18 @@ const Blog = () => {
             const q = searchQuery.toLowerCase();
             posts = posts.filter(p =>
                 p.title.toLowerCase().includes(q) ||
-                p.category.toLowerCase().includes(q)
+                p.category.toLowerCase().includes(q) ||
+                (p.heroIntro && p.heroIntro.toLowerCase().includes(q))
             );
         }
-        return posts;
-    }, [activeCategory, searchQuery]);
+        // Sort
+        return [...posts].sort((a, b) => {
+            const da = new Date(a.publishedDate), db = new Date(b.publishedDate);
+            return sortOrder === 'newest' ? db - da : da - db;
+        });
+    }, [activeCategory, searchQuery, sortOrder, publishedPosts]);
+
+    const newCount = publishedPosts.filter(isNew).length;
 
     return (
         <>
@@ -117,7 +160,7 @@ const Blog = () => {
                         { '@type': 'ListItem', position: 2, name: 'Legal Guides', item: 'https://www.advmdshahalam.me/blog' },
                     ],
                 })}</script>
-                {/* CollectionPage + ItemList schema — helps Google understand blog index */}
+                {/* CollectionPage + ItemList schema */}
                 <script type="application/ld+json">{JSON.stringify({
                     '@context': 'https://schema.org',
                     '@type': 'CollectionPage',
@@ -126,7 +169,7 @@ const Blog = () => {
                     url: 'https://www.advmdshahalam.me/blog',
                     mainEntity: {
                         '@type': 'ItemList',
-                        itemListElement: blogPosts.filter(isPublished).slice(0, 10).map((p, i) => ({
+                        itemListElement: publishedPosts.slice(0, 10).map((p, i) => ({
                             '@type': 'ListItem',
                             position: i + 1,
                             url: `https://www.advmdshahalam.me/blog/${p.slug}`,
@@ -151,23 +194,40 @@ const Blog = () => {
                     >
                         Free Legal Guides &amp; Articles – Bangladesh Law Expert
                     </h1>
-                    <p className="text-lg max-w-2xl mx-auto leading-relaxed" style={{ color: 'var(--hero-text-2)' }}>
+                    <p className="text-lg max-w-2xl mx-auto leading-relaxed mb-6" style={{ color: 'var(--hero-text-2)' }}>
                         Practical, plain-language legal guides on Bangladesh law — criminal, family,
                         property, and company matters — written by Advocate Md. Shah Alam.
                     </p>
+                    {/* Stats row */}
+                    <div className="flex items-center justify-center gap-6 flex-wrap">
+                        <span className="flex items-center gap-2 text-sm font-semibold" style={{ color: 'var(--hero-text-2)' }}>
+                            <BookOpen size={16} style={{ color: 'var(--gold)' }} />
+                            {publishedPosts.length}+ Articles
+                        </span>
+                        {newCount > 0 && (
+                            <span className="flex items-center gap-2 text-sm font-semibold" style={{ color: 'var(--hero-text-2)' }}>
+                                <TrendingUp size={16} style={{ color: '#10b981' }} />
+                                {newCount} New This Week
+                            </span>
+                        )}
+                        <span className="flex items-center gap-2 text-sm font-semibold" style={{ color: 'var(--hero-text-2)' }}>
+                            <Scale size={16} style={{ color: 'var(--gold)' }} />
+                            {CATEGORIES.length - 1} Practice Areas
+                        </span>
+                    </div>
                 </div>
             </section>
 
-            {/* Filters + Search */}
-            <section className="py-4 md:py-6 sticky top-[68px] z-40" style={{ background: 'var(--nav-bg)', backdropFilter: 'blur(16px)', borderBottom: '1px solid var(--divider)' }}>
-                <div className="container mx-auto px-6 max-w-5xl flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between">
-                    {/* Category chips */}
+            {/* Filters + Search + Sort */}
+            <section className="py-4 md:py-5 sticky top-[68px] z-40" style={{ background: 'var(--nav-bg)', backdropFilter: 'blur(16px)', borderBottom: '1px solid var(--divider)' }}>
+                <div className="container mx-auto px-6 max-w-5xl flex flex-col sm:flex-row gap-3 items-start sm:items-center justify-between">
+                    {/* Category chips with count badges */}
                     <div className="flex flex-wrap gap-2">
                         {CATEGORIES.map(cat => (
                             <button
                                 key={cat}
                                 onClick={() => setActiveCategory(cat)}
-                                className="px-4 py-1.5 rounded-full text-sm font-semibold transition-all"
+                                className="px-3 py-1.5 rounded-full text-xs font-semibold transition-all flex items-center gap-1.5"
                                 style={{
                                     background: activeCategory === cat ? 'var(--accent)' : 'var(--card-bg)',
                                     color: activeCategory === cat ? '#fff' : 'var(--text)',
@@ -175,21 +235,48 @@ const Blog = () => {
                                 }}
                             >
                                 {cat}
+                                <span
+                                    className="text-xs rounded-full px-1.5 py-0.5 font-bold leading-none"
+                                    style={{
+                                        background: activeCategory === cat ? 'rgba(255,255,255,0.25)' : 'var(--accent-subtle)',
+                                        color: activeCategory === cat ? '#fff' : 'var(--accent)',
+                                        fontSize: '10px',
+                                    }}
+                                >
+                                    {categoryCounts[cat] || 0}
+                                </span>
                             </button>
                         ))}
                     </div>
 
-                    {/* Search */}
-                    <div className="relative w-full sm:w-60">
-                        <Search size={15} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: 'var(--text-muted)' }} />
-                        <input
-                            type="search"
-                            placeholder="Search articles..."
-                            value={searchQuery}
-                            onChange={e => setSearchQuery(e.target.value)}
-                            className="input-field pl-9 py-2 text-sm"
-                            aria-label="Search blog articles"
-                        />
+                    <div className="flex items-center gap-2 w-full sm:w-auto">
+                        {/* Sort toggle */}
+                        <button
+                            onClick={() => setSortOrder(s => s === 'newest' ? 'oldest' : 'newest')}
+                            className="flex items-center gap-1.5 text-xs font-semibold px-3 py-2 rounded-full border transition-all whitespace-nowrap"
+                            style={{
+                                background: 'var(--card-bg)',
+                                color: 'var(--text)',
+                                border: '1.5px solid var(--card-border)',
+                            }}
+                            title="Toggle sort order"
+                        >
+                            <ArrowUpDown size={13} />
+                            {sortOrder === 'newest' ? 'Newest' : 'Oldest'}
+                        </button>
+
+                        {/* Search */}
+                        <div className="relative flex-1 sm:w-52">
+                            <Search size={15} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: 'var(--text-muted)' }} />
+                            <input
+                                type="search"
+                                placeholder="Search articles..."
+                                value={searchQuery}
+                                onChange={e => setSearchQuery(e.target.value)}
+                                className="input-field pl-9 py-2 text-sm w-full"
+                                aria-label="Search blog articles"
+                            />
+                        </div>
                     </div>
                 </div>
             </section>
@@ -204,11 +291,20 @@ const Blog = () => {
                             <p className="text-sm mt-2" style={{ color: 'var(--text-muted)' }}>
                                 Try a different category or search term.
                             </p>
+                            <button
+                                onClick={() => { setActiveCategory('All'); setSearchQuery(''); }}
+                                className="mt-4 text-sm font-semibold px-5 py-2 rounded-full"
+                                style={{ background: 'var(--accent)', color: '#fff' }}
+                            >
+                                Show All Articles
+                            </button>
                         </div>
                     ) : (
                         <>
                             <p className="text-sm mb-8" style={{ color: 'var(--text-muted)' }}>
                                 Showing <strong>{filtered.length}</strong> article{filtered.length !== 1 ? 's' : ''}
+                                {activeCategory !== 'All' && <> in <strong>{activeCategory}</strong></>}
+                                {searchQuery && <> matching &ldquo;<strong>{searchQuery}</strong>&rdquo;</>}
                             </p>
                             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                                 {filtered.map(post => (
