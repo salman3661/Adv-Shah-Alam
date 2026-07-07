@@ -1,11 +1,11 @@
 {
   "slug": "wrongful-termination-labour-law-bangladesh",
   "bnSlug": "beaini-chaktir-labor-ain-bangladesh",
-  "title": "Wrongful Termination & Employment Law in Bangladesh – Legal Guide 2026",
+  "title": "Wrongful Termination & Employment Law Bangladesh – Legal Guide",
   "category": "Civil Law",
   "readTime": "9 min read",
-  "metaTitle": "Wrongful Termination Bangladesh 2026 – Labour Law Rights | Advocate Shah Alam",
-  "metaDescription": "Complete guide to wrongful termination and employment dismissal in Bangladesh under the Labour Act 2006 — notice period, compensation, legal remedies, and Labour Court.",
+  "metaTitle": "Wrongful Termination Bangladesh – Labour Law Rights | Advocate Shah Alam",
+  "metaDescription": "Complete guide to wrongful termination and employment dismissal Bangladesh under the Labour Act 2006 — notice period, compensation, legal remedies, and Labour Court.",
   "keywords": [
     "wrongful termination Bangladesh",
     "employment dismissal Bangladesh",
@@ -89,9 +89,18 @@
     }
   ],
   "relatedServiceLinks": [
-    { "text": "Criminal Lawyer Uttara Dhaka", "to": "/services/criminal-lawyer" },
-    { "text": "Supreme Court Lawyer Bangladesh", "to": "/services/supreme-court-lawyer" },
-    { "text": "Company & Corporate Lawyer Dhaka", "to": "/services/company-corporate-lawyer" }
+    {
+      "text": "Criminal Lawyer Uttara Dhaka",
+      "to": "/services/criminal-lawyer"
+    },
+    {
+      "text": "Supreme Court Lawyer Bangladesh",
+      "to": "/services/supreme-court-lawyer"
+    },
+    {
+      "text": "Company & Corporate Lawyer Dhaka",
+      "to": "/services/company-corporate-lawyer"
+    }
   ],
   "lang": "en"
 }

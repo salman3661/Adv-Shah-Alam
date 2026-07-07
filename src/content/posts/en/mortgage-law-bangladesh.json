@@ -1,11 +1,11 @@
 {
   "slug": "mortgage-law-bangladesh",
   "bnSlug": "bandhak-ain-bangladesh",
-  "title": "Mortgage Law in Bangladesh – Types, Foreclosure & Redemption Rights 2026",
+  "title": "Mortgage Law Bangladesh – Types, Foreclosure & Redemption Rights",
   "category": "Property Law",
   "readTime": "9 min read",
-  "metaTitle": "Mortgage Law in Bangladesh 2026 – Types & Rights | Advocate Md. Shah Alam",
-  "metaDescription": "Complete guide to mortgage law in Bangladesh — types of mortgages, usufructuary mortgage, foreclosure, redemption rights, and Transfer of Property Act provisions.",
+  "metaTitle": "Mortgage Law Bangladesh – Types & Rights | Advocate Md. Shah Alam",
+  "metaDescription": "Complete guide to mortgage law Bangladesh — types of mortgages, usufructuary mortgage, foreclosure, redemption rights, and Transfer of Property Act provisions.",
   "keywords": [
     "mortgage law Bangladesh",
     "bandhak ain Bangladesh",
@@ -89,9 +89,18 @@
     }
   ],
   "relatedServiceLinks": [
-    { "text": "Land & Property Lawyer Dhaka", "to": "/services/land-lawyer" },
-    { "text": "Supreme Court Lawyer Bangladesh", "to": "/services/supreme-court-lawyer" },
-    { "text": "Company & Corporate Lawyer Bangladesh", "to": "/services/company-corporate-lawyer" }
+    {
+      "text": "Land & Property Lawyer Dhaka",
+      "to": "/services/land-lawyer"
+    },
+    {
+      "text": "Supreme Court Lawyer Bangladesh",
+      "to": "/services/supreme-court-lawyer"
+    },
+    {
+      "text": "Company & Corporate Lawyer Bangladesh",
+      "to": "/services/company-corporate-lawyer"
+    }
   ],
   "lang": "en"
 }

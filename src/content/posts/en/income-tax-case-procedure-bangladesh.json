@@ -1,11 +1,11 @@
 {
   "slug": "income-tax-case-procedure-bangladesh",
   "bnSlug": null,
-  "title": "Income Tax Case Procedure in Bangladesh: How to Handle NBR Disputes (2026)",
+  "title": "Income Tax Case Procedure Bangladesh: How to Handle NBR Disputes",
   "category": "Company & Corporate Law",
   "readTime": "9 min read",
-  "metaTitle": "Income Tax Case Procedure Bangladesh (2026): NBR Disputes, Appeals & Rights",
-  "metaDescription": "Received an NBR income tax notice in Bangladesh? Learn how to respond, object to assessments, appeal to the Taxes Appellate Tribunal, and protect your rights. Expert guide from Dhaka.",
+  "metaTitle": "Income Tax Case Procedure Bangladesh: NBR Disputes, Appeals & Rights",
+  "metaDescription": "Received an NBR income tax notice Bangladesh? Learn how to respond, object to assessments, appeal to the Taxes Appellate Tribunal, and protect your rights. Expert guide from Dhaka.",
   "keywords": [
     "income tax case Bangladesh",
     "NBR income tax Bangladesh",
@@ -91,9 +91,18 @@
     }
   ],
   "relatedServiceLinks": [
-    { "text": "Tax & VAT Lawyer Bangladesh", "to": "/services/tax-lawyer" },
-    { "text": "Company & Corporate Lawyer Dhaka", "to": "/services/company-corporate-lawyer" },
-    { "text": "Supreme Court Lawyer Bangladesh", "to": "/services/supreme-court-lawyer" }
+    {
+      "text": "Tax & VAT Lawyer Bangladesh",
+      "to": "/services/tax-lawyer"
+    },
+    {
+      "text": "Company & Corporate Lawyer Dhaka",
+      "to": "/services/company-corporate-lawyer"
+    },
+    {
+      "text": "Supreme Court Lawyer Bangladesh",
+      "to": "/services/supreme-court-lawyer"
+    }
   ],
   "lang": "en"
 }

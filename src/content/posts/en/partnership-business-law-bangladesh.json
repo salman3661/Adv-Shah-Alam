@@ -1,11 +1,11 @@
 {
   "slug": "partnership-business-law-bangladesh",
   "bnSlug": "orthonitik-orthogitatai-ain-bangladesh",
-  "title": "Partnership Business Law in Bangladesh – Complete Legal Guide 2026",
+  "title": "Partnership Business Law Bangladesh – Complete Legal Guide",
   "category": "Company & Corporate Law",
   "readTime": "9 min read",
-  "metaTitle": "Partnership Business Law in Bangladesh 2026 | Advocate Md. Shah Alam",
-  "metaDescription": "Complete guide to partnership business law in Bangladesh — formation, rights of partners, duties, dissolution, and dispute resolution under the Partnership Act 1932.",
+  "metaTitle": "Partnership Business Law Bangladesh | Advocate Md. Shah Alam",
+  "metaDescription": "Complete guide to partnership business law Bangladesh — formation, rights of partners, duties, dissolution, and dispute resolution under the Partnership Act 1932.",
   "keywords": [
     "partnership business law Bangladesh",
     "partnership act 1932 Bangladesh",
@@ -89,9 +89,18 @@
     }
   ],
   "relatedServiceLinks": [
-    { "text": "Company & Corporate Lawyer Dhaka", "to": "/services/company-corporate-lawyer" },
-    { "text": "Supreme Court Lawyer Bangladesh", "to": "/services/supreme-court-lawyer" },
-    { "text": "Land & Property Lawyer Dhaka", "to": "/services/land-lawyer" }
+    {
+      "text": "Company & Corporate Lawyer Dhaka",
+      "to": "/services/company-corporate-lawyer"
+    },
+    {
+      "text": "Supreme Court Lawyer Bangladesh",
+      "to": "/services/supreme-court-lawyer"
+    },
+    {
+      "text": "Land & Property Lawyer Dhaka",
+      "to": "/services/land-lawyer"
+    }
   ],
   "lang": "en"
 }

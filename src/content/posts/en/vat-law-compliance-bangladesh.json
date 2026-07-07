@@ -1,12 +1,18 @@
 {
   "slug": "vat-law-compliance-bangladesh",
   "bnSlug": "vet-ain-compliance-bangladesh",
-  "title": "VAT Law and Compliance in Bangladesh – Complete Guide 2026",
+  "title": "VAT Law and Compliance Bangladesh – Complete Guide",
   "category": "Company & Corporate Law",
   "readTime": "12 min read",
-  "metaTitle": "VAT Law & Compliance Bangladesh 2026 | Advocate Md. Shah Alam",
-  "metaDescription": "Complete guide to VAT law in Bangladesh — VAT Act 2012, registration, rates, returns, penalties, and appeals. Expert legal advice from Dhaka.",
-  "keywords": ["VAT law Bangladesh", "VAT Act 2012 Bangladesh", "VAT registration Bangladesh", "VAT compliance Dhaka", "VAT penalty Bangladesh lawyer"],
+  "metaTitle": "VAT Law & Compliance Bangladesh | Advocate Md. Shah Alam",
+  "metaDescription": "Complete guide to VAT law Bangladesh — VAT Act 2012, registration, rates, returns, penalties, and appeals. Expert legal advice from Dhaka.",
+  "keywords": [
+    "VAT law Bangladesh",
+    "VAT Act 2012 Bangladesh",
+    "VAT registration Bangladesh",
+    "VAT compliance Dhaka",
+    "VAT penalty Bangladesh lawyer"
+  ],
   "publishedDate": "2026-05-21",
   "lastModified": "2026-05-21",
   "heroIntro": "Value Added Tax (VAT) is the single largest source of government revenue in Bangladesh, yet many businesses remain non-compliant due to complex registration and filing requirements. Whether you are a new entrepreneur or an established company, understanding the VAT Act 2012 and its regulations is essential to avoiding heavy penalties and legal action. This guide provides a thorough breakdown of VAT law, compliance obligations, and what to do when the National Board of Revenue (NBR) challenges your filings.",
@@ -76,9 +82,18 @@
     }
   ],
   "relatedServiceLinks": [
-    { "text": "Tax Lawyer Bangladesh", "to": "/services/tax-lawyer" },
-    { "text": "Company & Corporate Lawyer Dhaka", "to": "/services/company-corporate-lawyer" },
-    { "text": "Supreme Court Lawyer Bangladesh", "to": "/services/supreme-court-lawyer" }
+    {
+      "text": "Tax Lawyer Bangladesh",
+      "to": "/services/tax-lawyer"
+    },
+    {
+      "text": "Company & Corporate Lawyer Dhaka",
+      "to": "/services/company-corporate-lawyer"
+    },
+    {
+      "text": "Supreme Court Lawyer Bangladesh",
+      "to": "/services/supreme-court-lawyer"
+    }
   ],
   "lang": "en"
 }

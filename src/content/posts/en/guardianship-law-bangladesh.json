@@ -1,12 +1,18 @@
 {
   "slug": "guardianship-law-bangladesh",
   "bnSlug": "obhivaboktwo-ain-bangladesh",
-  "title": "Guardianship Law in Bangladesh – Guardians and Wards Act Explained 2026",
+  "title": "Guardianship Law Bangladesh – Guardians and Wards Act Explained",
   "category": "Family Law",
   "readTime": "11 min read",
-  "metaTitle": "Guardianship Law Bangladesh 2026 | Advocate Md. Shah Alam",
-  "metaDescription": "Complete guide to guardianship law in Bangladesh — Guardians and Wards Act 1890, court-appointed guardians, rights of minors, Muslim and Hindu guardianship rules.",
-  "keywords": ["guardianship law Bangladesh", "Guardians and Wards Act Bangladesh", "court appointed guardian Bangladesh", "minor rights Bangladesh", "Muslim guardianship Bangladesh lawyer"],
+  "metaTitle": "Guardianship Law Bangladesh | Advocate Md. Shah Alam",
+  "metaDescription": "Complete guide to guardianship law Bangladesh — Guardians and Wards Act 1890, court-appointed guardians, rights of minors, Muslim and Hindu guardianship rules.",
+  "keywords": [
+    "guardianship law Bangladesh",
+    "Guardians and Wards Act Bangladesh",
+    "court appointed guardian Bangladesh",
+    "minor rights Bangladesh",
+    "Muslim guardianship Bangladesh lawyer"
+  ],
   "publishedDate": "2026-05-21",
   "lastModified": "2026-05-21",
   "heroIntro": "When a child loses parental care or when parents are unable to manage a minor's property, the law steps in through the institution of guardianship. In Bangladesh, the Guardians and Wards Act 1890 — supplemented by religious personal laws for Muslims and Hindus — governs who may act as a guardian, how a court appoints one, and what rights and duties flow from that appointment. Whether you are seeking guardianship of a child or wish to protect a minor's property, understanding the legal framework is the first essential step.",
@@ -76,9 +82,18 @@
     }
   ],
   "relatedServiceLinks": [
-    { "text": "Divorce Lawyer Dhaka", "to": "/services/divorce-lawyer" },
-    { "text": "Child Custody Lawyer Bangladesh", "to": "/services/divorce-lawyer" },
-    { "text": "Supreme Court Lawyer Bangladesh", "to": "/services/supreme-court-lawyer" }
+    {
+      "text": "Divorce Lawyer Dhaka",
+      "to": "/services/divorce-lawyer"
+    },
+    {
+      "text": "Child Custody Lawyer Bangladesh",
+      "to": "/services/divorce-lawyer"
+    },
+    {
+      "text": "Supreme Court Lawyer Bangladesh",
+      "to": "/services/supreme-court-lawyer"
+    }
   ],
   "lang": "en"
 }

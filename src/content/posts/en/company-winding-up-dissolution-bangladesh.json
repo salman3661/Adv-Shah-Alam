@@ -1,12 +1,18 @@
 {
   "slug": "company-winding-up-dissolution-bangladesh",
   "bnSlug": "company-bandho-ainogobal-prokriya-bangladesh",
-  "title": "Company Winding Up and Dissolution in Bangladesh – Complete Legal Guide 2026",
+  "title": "Company Winding Up and Dissolution Bangladesh – Complete Legal Guide",
   "category": "Company & Corporate Law",
   "readTime": "13 min read",
-  "metaTitle": "Company Winding Up Bangladesh 2026 | Advocate Md. Shah Alam",
-  "metaDescription": "Complete guide to company dissolution and winding up in Bangladesh — Companies Act 1994, voluntary vs court-ordered winding up, liquidation process, legal steps.",
-  "keywords": ["company winding up Bangladesh", "company dissolution Bangladesh", "Companies Act 1994 Bangladesh", "voluntary winding up Bangladesh", "liquidation Bangladesh lawyer"],
+  "metaTitle": "Company Winding Up Bangladesh | Advocate Md. Shah Alam",
+  "metaDescription": "Complete guide to company dissolution and winding up Bangladesh — Companies Act 1994, voluntary vs court-ordered winding up, liquidation process, legal steps.",
+  "keywords": [
+    "company winding up Bangladesh",
+    "company dissolution Bangladesh",
+    "Companies Act 1994 Bangladesh",
+    "voluntary winding up Bangladesh",
+    "liquidation Bangladesh lawyer"
+  ],
   "publishedDate": "2026-05-21",
   "lastModified": "2026-05-21",
   "heroIntro": "Closing a company in Bangladesh is far more legally complex than opening one. Whether a business is winding up voluntarily due to completed purpose, or being forced into liquidation by creditors or a court order, the process is governed by detailed provisions of the Companies Act 1994. Understanding the distinction between voluntary winding up and court-ordered liquidation — and knowing the rights of shareholders, creditors, and employees throughout the process — is essential to protecting everyone's interests during a corporate dissolution.",
@@ -76,9 +82,18 @@
     }
   ],
   "relatedServiceLinks": [
-    { "text": "Company & Corporate Lawyer Dhaka", "to": "/services/company-corporate-lawyer" },
-    { "text": "Supreme Court Lawyer Bangladesh", "to": "/services/supreme-court-lawyer" },
-    { "text": "Tax Lawyer Bangladesh", "to": "/services/tax-lawyer" }
+    {
+      "text": "Company & Corporate Lawyer Dhaka",
+      "to": "/services/company-corporate-lawyer"
+    },
+    {
+      "text": "Supreme Court Lawyer Bangladesh",
+      "to": "/services/supreme-court-lawyer"
+    },
+    {
+      "text": "Tax Lawyer Bangladesh",
+      "to": "/services/tax-lawyer"
+    }
   ],
   "lang": "en"
 }

@@ -1,11 +1,11 @@
 {
   "slug": "partition-suit-property-bangladesh",
   "bnSlug": "sampatti-vibhajan-mamla-bangladesh",
-  "title": "Partition Suit & Joint Family Property Division in Bangladesh – Legal Guide 2026",
+  "title": "Partition Suit & Joint Family Property Division Bangladesh – Legal Guide",
   "category": "Property Law",
   "readTime": "9 min read",
-  "metaTitle": "Partition Suit & Property Division Bangladesh 2026 | Advocate Md. Shah Alam",
-  "metaDescription": "Complete guide to partition suits and joint family property division in Bangladesh — filing procedure under CPC, undivided share, court process, and legal remedies.",
+  "metaTitle": "Partition Suit & Property Division Bangladesh | Advocate Md. Shah Alam",
+  "metaDescription": "Complete guide to partition suits and joint family property division Bangladesh — filing procedure under CPC, undivided share, court process, and legal remedies.",
   "keywords": [
     "partition suit Bangladesh",
     "joint family property division Bangladesh",
@@ -89,9 +89,18 @@
     }
   ],
   "relatedServiceLinks": [
-    { "text": "Land & Property Lawyer Dhaka", "to": "/services/land-lawyer" },
-    { "text": "Supreme Court Lawyer Bangladesh", "to": "/services/supreme-court-lawyer" },
-    { "text": "Company & Corporate Lawyer Bangladesh", "to": "/services/company-corporate-lawyer" }
+    {
+      "text": "Land & Property Lawyer Dhaka",
+      "to": "/services/land-lawyer"
+    },
+    {
+      "text": "Supreme Court Lawyer Bangladesh",
+      "to": "/services/supreme-court-lawyer"
+    },
+    {
+      "text": "Company & Corporate Lawyer Bangladesh",
+      "to": "/services/company-corporate-lawyer"
+    }
   ],
   "lang": "en"
 }

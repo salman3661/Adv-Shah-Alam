@@ -1,10 +1,10 @@
 {
   "slug": "sampatti-vibhajan-mamla-bangladesh",
   "enSlug": "partition-suit-property-bangladesh",
-  "title": "সম্পত্তি বিভাজন মামলা বাংলাদেশ – যৌথ পারিবারিক সম্পত্তি ভাগ ২০২৬",
+  "title": "সম্পত্তি বিভাজন মামলা বাংলাদেশ – যৌথ পারিবারিক সম্পত্তি ভাগ",
   "category": "সম্পত্তি আইন",
   "readTime": "৯ মিনিট পড়া",
-  "metaTitle": "সম্পত্তি বিভাজন মামলা বাংলাদেশ ২০২৬ | অ্যাডভোকেট মো. শাহ আলম",
+  "metaTitle": "সম্পত্তি বিভাজন মামলা বাংলাদেশ | অ্যাডভোকেট মো. শাহ আলম",
   "metaDescription": "বাংলাদেশে সম্পত্তি বিভাজন মামলা — দেওয়ানি কার্যবিধি, অবিভক্ত পারিবারিক সম্পদ ভাগ, প্রাথমিক ডিক্রি, চূড়ান্ত ডিক্রি ও প্রি-এম্পশন অধিকার সম্পর্কে সম্পূর্ণ গাইড।",
   "keywords": [
     "সম্পত্তি বিভাজন মামলা বাংলাদেশ",
@@ -89,9 +89,18 @@
     }
   ],
   "relatedServiceLinks": [
-    { "text": "জমি ও সম্পত্তি আইনজীবী ঢাকা", "to": "/services/land-lawyer" },
-    { "text": "সুপ্রিম কোর্ট আইনজীবী বাংলাদেশ", "to": "/services/supreme-court-lawyer" },
-    { "text": "কোম্পানি আইনজীবী বাংলাদেশ", "to": "/services/company-corporate-lawyer" }
+    {
+      "text": "জমি ও সম্পত্তি আইনজীবী ঢাকা",
+      "to": "/services/land-lawyer"
+    },
+    {
+      "text": "সুপ্রিম কোর্ট আইনজীবী বাংলাদেশ",
+      "to": "/services/supreme-court-lawyer"
+    },
+    {
+      "text": "কোম্পানি আইনজীবী বাংলাদেশ",
+      "to": "/services/company-corporate-lawyer"
+    }
   ],
   "lang": "bn"
 }

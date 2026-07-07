@@ -1,10 +1,10 @@
 {
   "slug": "orthonitik-orthogitatai-ain-bangladesh",
   "enSlug": "partnership-business-law-bangladesh",
-  "title": "অংশীদারিত্ব ব্যবসার আইন বাংলাদেশ – সম্পূর্ণ আইনি গাইড ২০২৬",
+  "title": "অংশীদারিত্ব ব্যবসার আইন বাংলাদেশ – সম্পূর্ণ আইনি গাইড",
   "category": "কোম্পানি আইন",
   "readTime": "৯ মিনিট পড়া",
-  "metaTitle": "অংশীদারিত্ব ব্যবসার আইন বাংলাদেশ ২০২৬ | অ্যাডভোকেট মো. শাহ আলম",
+  "metaTitle": "অংশীদারিত্ব ব্যবসার আইন বাংলাদেশ | অ্যাডভোকেট মো. শাহ আলম",
   "metaDescription": "বাংলাদেশে অংশীদারিত্ব ব্যবসার আইন — গঠন, অংশীদারদের অধিকার ও দায়িত্ব, বিলুপ্তি এবং বিরোধ নিষ্পত্তি সম্পর্কে সম্পূর্ণ আইনি গাইড।",
   "keywords": [
     "অংশীদারিত্ব ব্যবসার আইন বাংলাদেশ",
@@ -89,9 +89,18 @@
     }
   ],
   "relatedServiceLinks": [
-    { "text": "কোম্পানি আইনজীবী ঢাকা", "to": "/services/company-corporate-lawyer" },
-    { "text": "সুপ্রিম কোর্ট আইনজীবী বাংলাদেশ", "to": "/services/supreme-court-lawyer" },
-    { "text": "জমি ও সম্পত্তি আইনজীবী ঢাকা", "to": "/services/land-lawyer" }
+    {
+      "text": "কোম্পানি আইনজীবী ঢাকা",
+      "to": "/services/company-corporate-lawyer"
+    },
+    {
+      "text": "সুপ্রিম কোর্ট আইনজীবী বাংলাদেশ",
+      "to": "/services/supreme-court-lawyer"
+    },
+    {
+      "text": "জমি ও সম্পত্তি আইনজীবী ঢাকা",
+      "to": "/services/land-lawyer"
+    }
   ],
   "lang": "bn"
 }

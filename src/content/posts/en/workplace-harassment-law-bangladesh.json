@@ -1,12 +1,18 @@
 {
   "slug": "workplace-harassment-law-bangladesh",
   "bnSlug": "karmosthale-hoirani-ain-bangladesh",
-  "title": "Sexual Harassment at Workplace Law in Bangladesh – Legal Guide 2026",
+  "title": "Sexual Harassment at Workplace Law Bangladesh – Legal Guide",
   "category": "Civil Law",
   "readTime": "11 min read",
-  "metaTitle": "Workplace Harassment Law Bangladesh 2026 | Advocate Md. Shah Alam",
-  "metaDescription": "Complete guide to sexual harassment at workplace law in Bangladesh — High Court guidelines 2009, legal remedies, complaint procedure, and penalties for employers.",
-  "keywords": ["workplace harassment law Bangladesh", "sexual harassment Bangladesh", "High Court guidelines 2009 Bangladesh", "harassment complaint Bangladesh", "workplace harassment lawyer Dhaka"],
+  "metaTitle": "Workplace Harassment Law Bangladesh | Advocate Md. Shah Alam",
+  "metaDescription": "Complete guide to sexual harassment at workplace law Bangladesh — High Court guidelines 2009, legal remedies, complaint procedure, and penalties employers.",
+  "keywords": [
+    "workplace harassment law Bangladesh",
+    "sexual harassment Bangladesh",
+    "High Court guidelines 2009 Bangladesh",
+    "harassment complaint Bangladesh",
+    "workplace harassment lawyer Dhaka"
+  ],
   "publishedDate": "2026-05-21",
   "lastModified": "2026-05-21",
   "heroIntro": "Sexual harassment at the workplace remains a serious and pervasive problem in Bangladesh across all sectors — from garment factories to corporate offices and educational institutions. While Bangladesh lacks a dedicated standalone anti-harassment law, the High Court Division of the Supreme Court issued landmark guidelines in 2009 that are legally binding on all employers, and the Bangladesh Labour Act 2006 provides additional protections. Understanding your rights and the remedies available is the first step toward a safer, more just workplace.",
@@ -76,9 +82,18 @@
     }
   ],
   "relatedServiceLinks": [
-    { "text": "Criminal Lawyer Dhaka", "to": "/services/criminal-lawyer" },
-    { "text": "Supreme Court Lawyer Bangladesh", "to": "/services/supreme-court-lawyer" },
-    { "text": "Divorce & Family Lawyer Dhaka", "to": "/services/divorce-lawyer" }
+    {
+      "text": "Criminal Lawyer Dhaka",
+      "to": "/services/criminal-lawyer"
+    },
+    {
+      "text": "Supreme Court Lawyer Bangladesh",
+      "to": "/services/supreme-court-lawyer"
+    },
+    {
+      "text": "Divorce & Family Lawyer Dhaka",
+      "to": "/services/divorce-lawyer"
+    }
   ],
   "lang": "en"
 }
