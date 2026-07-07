@@ -14,6 +14,7 @@ const _postModules = import.meta.glob('../content/posts/en/*.json', { eager: tru
 const posts = Object.values(_postModules).map((m) => m.default ?? m);
 
 function isPublished(post) {
+  if (typeof window !== 'undefined') return true;
   try {
     const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Dhaka' }));
     const pub = new Date(post.publishedDate + 'T00:00:00');

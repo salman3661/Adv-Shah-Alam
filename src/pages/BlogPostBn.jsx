@@ -13,6 +13,7 @@ const _bnModules = import.meta.glob('../content/posts/bn/*.json', { eager: true 
 const postsBn = Object.values(_bnModules).map((m) => m.default ?? m);
 
 function isPublishedBn(post) {
+  if (typeof window !== 'undefined') return true;
   try {
     const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Dhaka' }));
     const pub = new Date(post.publishedDate + 'T00:00:00');
