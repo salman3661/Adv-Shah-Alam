@@ -336,7 +336,7 @@ const BlogPostBn = () => {
                                         <Phone size={15} /> এখনই ফোন করুন
                                     </a>
                                     <a
-                                        href={waLink()}
+                                        href={waLink(`আসসালামু আলাইকুম, আমি আপনার "${post.title}" নিবন্ধটি পড়েছি এবং এই বিষয়ে আইনি পরামর্শ চাই।`)}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="btn-whatsapp w-full flex items-center justify-center gap-2 text-sm"

@@ -148,7 +148,7 @@ const ServicePage = ({ metaTitle, metaDesc, canonicalUrl, h1, intro, coverage, f
 
                     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.35 }}
                         className="flex flex-col sm:flex-row gap-4 mt-8">
-                        <a href={waLink()} target="_blank" rel="noopener noreferrer"
+                        <a href={waLink(`Hello, I need legal consultation regarding your "${title}" service.`)} target="_blank" rel="noopener noreferrer"
                             className="btn-whatsapp text-sm">
                             <MessageCircle size={17} /> WhatsApp Consultation
                         </a>
@@ -259,7 +259,7 @@ const ServicePage = ({ metaTitle, metaDesc, canonicalUrl, h1, intro, coverage, f
                                     {howWeHelp.cta}
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                                    <a href={waLink()} target="_blank" rel="noopener noreferrer"
+                                    <a href={waLink(`Hello, I need legal consultation regarding your "${title}" service.`)} target="_blank" rel="noopener noreferrer"
                                         className="btn-whatsapp text-sm">
                                         <MessageCircle size={17} /> WhatsApp Now
                                     </a>
@@ -394,7 +394,7 @@ const ServicePage = ({ metaTitle, metaDesc, canonicalUrl, h1, intro, coverage, f
                             Contact Advocate Md. Shah Alam in Uttara, Dhaka today. Call, WhatsApp, or visit our office.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <a href={waLink()} target="_blank" rel="noopener noreferrer"
+                            <a href={waLink(`Hello, I need legal consultation regarding your "${title}" service.`)} target="_blank" rel="noopener noreferrer"
                                 className="btn-whatsapp text-sm">
                                 <MessageCircle size={17} /> WhatsApp Now
                             </a>

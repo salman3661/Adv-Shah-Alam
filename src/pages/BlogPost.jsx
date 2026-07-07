@@ -402,7 +402,7 @@ const BlogPost = () => {
                                         <Phone size={16} /> Call Now
                                     </a>
                                     <a
-                                        href={waLink('I need legal advice')}
+                                        href={waLink(`Hello, I read your article about "${post.title}" and I need legal advice.`)}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="btn-whatsapp flex items-center gap-2"
