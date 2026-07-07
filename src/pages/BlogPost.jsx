@@ -57,6 +57,23 @@ const FAQItem = ({ question, answer }) => {
 const BlogPost = () => {
     const { slug } = useParams();
     const post = posts.find(p => p.slug === slug);
+    const [cName, setCName] = useState('');
+    const [cPhone, setCPhone] = useState('');
+    const [cMessage, setCMessage] = useState('');
+    const [cSubmitted, setCSubmitted] = useState(false);
+
+    const handleConsultSubmit = (e) => {
+        e.preventDefault();
+        const text = `*📋 New Consultation Request*\n\n*Article:* ${post.title}\n*Name:* ${cName}\n*Phone:* ${cPhone}\n*Brief Inquiry:* ${cMessage}`;
+        window.open(waLink(text), '_blank');
+        setCSubmitted(true);
+        setTimeout(() => {
+            setCSubmitted(false);
+            setCName('');
+            setCPhone('');
+            setCMessage('');
+        }, 5000);
+    };
 
     /* ── 404 fallback ── */
     if (!post) {
@@ -383,33 +400,105 @@ const BlogPost = () => {
                                 </div>
                             </div>
 
-                            {/* CTA */}
+                            {/* CTA Form */}
                             <div
-                                className="rounded-2xl p-8 text-center"
+                                className="rounded-2xl p-6 md:p-8"
                                 style={{ background: 'linear-gradient(135deg, var(--hero-bg) 0%, var(--hero-surface) 100%)', border: '1px solid var(--hero-border)' }}
                             >
-                                <h2
-                                    className="text-xl md:text-2xl font-serif font-bold mb-3"
-                                    style={{ color: 'var(--hero-text)', fontFamily: "'Playfair Display', serif" }}
-                                >
-                                    Need Legal Help?
-                                </h2>
-                                <p className="text-sm mb-6 max-w-md mx-auto" style={{ color: 'var(--hero-text-2)' }}>
-                                    Contact Advocate Md. Shah Alam for expert legal counsel in Dhaka &amp; Uttara.
-                                </p>
-                                <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                                    <a href={telLink()} className="btn-primary flex items-center gap-2">
-                                        <Phone size={16} /> Call Now
-                                    </a>
-                                    <a
-                                        href={waLink(`Hello, I read your article about "${post.title}" and I need legal advice.`)}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="btn-whatsapp flex items-center gap-2"
+                                <div className="text-center mb-6">
+                                    <h2
+                                        className="text-xl md:text-2xl font-serif font-bold mb-2"
+                                        style={{ color: 'var(--hero-text)', fontFamily: "'Playfair Display', serif" }}
                                     >
-                                        <MessageCircle size={16} /> WhatsApp
-                                    </a>
+                                        Direct Legal Consultation
+                                    </h2>
+                                    <p className="text-sm max-w-md mx-auto" style={{ color: 'var(--hero-text-2)' }}>
+                                        Fill out this quick form to initiate an official legal review and connect directly via WhatsApp.
+                                    </p>
                                 </div>
+
+                                {cSubmitted ? (
+                                    <div className="flex flex-col items-center justify-center py-8 text-center">
+                                        <div
+                                            className="w-12 h-12 rounded-full flex items-center justify-center mb-3"
+                                            style={{ background: 'rgba(34,197,94,0.15)', color: '#22c55e' }}
+                                        >
+                                            <MessageCircle size={24} />
+                                        </div>
+                                        <h3 className="font-bold text-base mb-1" style={{ color: 'var(--hero-text)' }}>Connecting to WhatsApp...</h3>
+                                        <p className="text-xs" style={{ color: 'var(--hero-text-2)' }}>
+                                            Advocate Md. Shah Alam's direct WhatsApp line has been opened.
+                                        </p>
+                                    </div>
+                                ) : (
+                                    <form onSubmit={handleConsultSubmit} className="space-y-4">
+                                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                            <div>
+                                                <label className="text-xs font-bold uppercase tracking-wider block mb-1.5" style={{ color: 'var(--hero-text-2)' }}>
+                                                    Your Name
+                                                </label>
+                                                <input
+                                                    type="text"
+                                                    required
+                                                    value={cName}
+                                                    onChange={e => setCName(e.target.value)}
+                                                    placeholder="Full Name"
+                                                    className="w-full px-4 py-3 rounded-xl text-xs outline-none transition-all duration-200"
+                                                    style={{ background: 'var(--input-bg)', border: '1.5px solid var(--input-border)', color: 'var(--text)' }}
+                                                    onFocus={e => e.target.style.borderColor = 'var(--accent)'}
+                                                    onBlur={e => e.target.style.borderColor = 'var(--input-border)'}
+                                                />
+                                            </div>
+                                            <div>
+                                                <label className="text-xs font-bold uppercase tracking-wider block mb-1.5" style={{ color: 'var(--hero-text-2)' }}>
+                                                    Phone Number
+                                                </label>
+                                                <input
+                                                    type="tel"
+                                                    required
+                                                    value={cPhone}
+                                                    onChange={e => setCPhone(e.target.value)}
+                                                    placeholder="Mobile Number"
+                                                    className="w-full px-4 py-3 rounded-xl text-xs outline-none transition-all duration-200"
+                                                    style={{ background: 'var(--input-bg)', border: '1.5px solid var(--input-border)', color: 'var(--text)' }}
+                                                    onFocus={e => e.target.style.borderColor = 'var(--accent)'}
+                                                    onBlur={e => e.target.style.borderColor = 'var(--input-border)'}
+                                                />
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <label className="text-xs font-bold uppercase tracking-wider block mb-1.5" style={{ color: 'var(--hero-text-2)' }}>
+                                                Brief Legal Issue Details
+                                            </label>
+                                            <textarea
+                                                rows="3"
+                                                required
+                                                value={cMessage}
+                                                onChange={e => setCMessage(e.target.value)}
+                                                placeholder="Describe your case briefly (e.g., Land dispute in Uttara, cheque bounce NI Act 138, etc.)"
+                                                className="w-full px-4 py-3 rounded-xl text-xs outline-none transition-all duration-200 resize-none"
+                                                style={{ background: 'var(--input-bg)', border: '1.5px solid var(--input-border)', color: 'var(--text)' }}
+                                                onFocus={e => e.target.style.borderColor = 'var(--accent)'}
+                                                onBlur={e => e.target.style.borderColor = 'var(--input-border)'}
+                                            ></textarea>
+                                        </div>
+                                        <div className="flex flex-col sm:flex-row gap-3 pt-2">
+                                            <button
+                                                type="submit"
+                                                className="btn-whatsapp flex-1 flex items-center justify-center gap-2 py-3.5 rounded-xl font-bold text-xs shadow-sm hover:scale-[1.01] transition-transform"
+                                            >
+                                                <MessageCircle size={15} /> Start WhatsApp Consult
+                                            </button>
+                                            <a
+                                                href={telLink()}
+                                                className="btn-secondary flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl font-bold text-xs hover:scale-[1.01] transition-transform"
+                                                style={{ borderColor: 'var(--hero-border)', color: 'var(--hero-text-2)' }}
+                                            >
+                                                <Phone size={14} /> Call Chamber
+                                            </a>
+                                        </div>
+                                    </form>
+                                )}
                             </div>
                         </article>
 

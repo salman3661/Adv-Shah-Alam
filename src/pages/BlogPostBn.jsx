@@ -54,6 +54,23 @@ const FAQItem = ({ question, answer }) => {
 const BlogPostBn = () => {
     const { slug } = useParams();
     const post = postsBn.find(p => p.slug === slug);
+    const [cName, setCName] = useState('');
+    const [cPhone, setCPhone] = useState('');
+    const [cMessage, setCMessage] = useState('');
+    const [cSubmitted, setCSubmitted] = useState(false);
+
+    const handleConsultSubmit = (e) => {
+        e.preventDefault();
+        const text = `*📋 আইনি পরামর্শের অনুরোধ*\n\n*নিবন্ধ:* ${post.title}\n*নাম:* ${cName}\n*মোবাইল:* ${cPhone}\n*আইনি সমস্যা:* ${cMessage}`;
+        window.open(waLink(text), '_blank');
+        setCSubmitted(true);
+        setTimeout(() => {
+            setCSubmitted(false);
+            setCName('');
+            setCPhone('');
+            setCMessage('');
+        }, 5000);
+    };
 
     if (!post) {
         return (
@@ -316,6 +333,107 @@ const BlogPostBn = () => {
                                     </div>
                                 </div>
                             )}
+
+                            {/* CTA Form */}
+                            <div
+                                className="rounded-2xl p-6 md:p-8 mt-12"
+                                style={{ background: 'linear-gradient(135deg, var(--hero-bg) 0%, var(--hero-surface) 100%)', border: '1px solid var(--hero-border)' }}
+                            >
+                                <div className="text-center mb-6">
+                                    <h2
+                                        className="text-xl md:text-2xl font-serif font-bold mb-2"
+                                        style={{ color: 'var(--hero-text)', fontFamily: "'Playfair Display', serif" }}
+                                    >
+                                        সরাসরি আইনি পরামর্শ
+                                    </h2>
+                                    <p className="text-sm max-w-md mx-auto" style={{ color: 'var(--hero-text-2)' }}>
+                                        নিচের ফর্মটি পূরণ করে সরাসরি হোয়াটসঅ্যাপের মাধ্যমে অ্যাডভোকেট মো. শাহ আলমের সাথে যোগাযোগ করুন।
+                                    </p>
+                                </div>
+
+                                {cSubmitted ? (
+                                    <div className="flex flex-col items-center justify-center py-8 text-center">
+                                        <div
+                                            className="w-12 h-12 rounded-full flex items-center justify-center mb-3"
+                                            style={{ background: 'rgba(34,197,94,0.15)', color: '#22c55e' }}
+                                        >
+                                            <MessageCircle size={24} />
+                                        </div>
+                                        <h3 className="font-bold text-base mb-1" style={{ color: 'var(--hero-text)' }}>হোয়াটসঅ্যাপে যুক্ত করা হচ্ছে...</h3>
+                                        <p className="text-xs" style={{ color: 'var(--hero-text-2)' }}>
+                                            অ্যাডভোকেট মো. শাহ আলমের অফিসিয়াল হোয়াটসঅ্যাপ চ্যাট ওপেন হচ্ছে।
+                                        </p>
+                                    </div>
+                                ) : (
+                                    <form onSubmit={handleConsultSubmit} className="space-y-4">
+                                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                            <div>
+                                                <label className="text-xs font-bold uppercase tracking-wider block mb-1.5" style={{ color: 'var(--hero-text-2)' }}>
+                                                    আপনার নাম
+                                                </label>
+                                                <input
+                                                    type="text"
+                                                    required
+                                                    value={cName}
+                                                    onChange={e => setCName(e.target.value)}
+                                                    placeholder="পূর্ণ নাম লিখুন"
+                                                    className="w-full px-4 py-3 rounded-xl text-xs outline-none transition-all duration-200"
+                                                    style={{ background: 'var(--input-bg)', border: '1.5px solid var(--input-border)', color: 'var(--text)' }}
+                                                    onFocus={e => e.target.style.borderColor = 'var(--accent)'}
+                                                    onBlur={e => e.target.style.borderColor = 'var(--input-border)'}
+                                                />
+                                            </div>
+                                            <div>
+                                                <label className="text-xs font-bold uppercase tracking-wider block mb-1.5" style={{ color: 'var(--hero-text-2)' }}>
+                                                    মোবাইল নম্বর
+                                                </label>
+                                                <input
+                                                    type="tel"
+                                                    required
+                                                    value={cPhone}
+                                                    onChange={e => setCPhone(e.target.value)}
+                                                    placeholder="মোবাইল নম্বর"
+                                                    className="w-full px-4 py-3 rounded-xl text-xs outline-none transition-all duration-200"
+                                                    style={{ background: 'var(--input-bg)', border: '1.5px solid var(--input-border)', color: 'var(--text)' }}
+                                                    onFocus={e => e.target.style.borderColor = 'var(--accent)'}
+                                                    onBlur={e => e.target.style.borderColor = 'var(--input-border)'}
+                                                />
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <label className="text-xs font-bold uppercase tracking-wider block mb-1.5" style={{ color: 'var(--hero-text-2)' }}>
+                                                আইনি সমস্যার সংক্ষিপ্ত বিবরণ
+                                            </label>
+                                            <textarea
+                                                rows="3"
+                                                required
+                                                value={cMessage}
+                                                onChange={e => setCMessage(e.target.value)}
+                                                placeholder="আপনার আইনি সমস্যাটি সংক্ষেপে লিখুন (যেমন: জমি সংক্রান্ত বিরোধ, পারিবারিক সমস্যা, জামিনের আবেদন ইত্যাদি)"
+                                                className="w-full px-4 py-3 rounded-xl text-xs outline-none transition-all duration-200 resize-none"
+                                                style={{ background: 'var(--input-bg)', border: '1.5px solid var(--input-border)', color: 'var(--text)' }}
+                                                onFocus={e => e.target.style.borderColor = 'var(--accent)'}
+                                                onBlur={e => e.target.style.borderColor = 'var(--input-border)'}
+                                            ></textarea>
+                                        </div>
+                                        <div className="flex flex-col sm:flex-row gap-3 pt-2">
+                                            <button
+                                                type="submit"
+                                                className="btn-whatsapp flex-1 flex items-center justify-center gap-2 py-3.5 rounded-xl font-bold text-xs shadow-sm hover:scale-[1.01] transition-transform"
+                                            >
+                                                <MessageCircle size={15} /> হোয়াটসঅ্যাপে পরামর্শ শুরু করুন
+                                            </button>
+                                            <a
+                                                href={telLink()}
+                                                className="btn-secondary flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl font-bold text-xs hover:scale-[1.01] transition-transform"
+                                                style={{ borderColor: 'var(--hero-border)', color: 'var(--hero-text-2)' }}
+                                            >
+                                                <Phone size={14} /> সরাসরি কল করুন
+                                            </a>
+                                        </div>
+                                    </form>
+                                )}
+                            </div>
                         </div>
 
                         {/* Sidebar */}
