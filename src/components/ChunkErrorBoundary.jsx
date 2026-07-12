@@ -16,10 +16,11 @@ class ChunkErrorBoundary extends React.Component {
       /Loading chunk/.test(error?.message || '') ||
       /Failed to fetch dynamically imported module/.test(error?.message || '') ||
       /dynamically imported module/.test(error?.message || '');
-    return { hasError: true, isChunkError };
+    return { hasError: true, isChunkError, errorMsg: error?.message || String(error) };
   }
 
   componentDidCatch(error, info) {
+    console.error('[ChunkErrorBoundary] caught:', error, info);
     const isChunkError =
       error?.name === 'ChunkLoadError' ||
       /Loading chunk/.test(error?.message || '') ||
@@ -33,7 +34,7 @@ class ChunkErrorBoundary extends React.Component {
   }
 
   render() {
-    if (this.state.hasError && !this.state.isChunkError) {
+    if (this.state.hasError) {
       return (
         <div style={{
           minHeight: '60vh', display: 'flex', flexDirection: 'column',
@@ -43,8 +44,8 @@ class ChunkErrorBoundary extends React.Component {
           <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '0.75rem' }}>
             Something went wrong
           </h2>
-          <p style={{ color: 'var(--text-muted)', marginBottom: '1.5rem' }}>
-            Please refresh the page and try again.
+          <p style={{ color: 'var(--text-muted)', marginBottom: '0.75rem', fontSize: '0.85rem' }}>
+            {this.state.errorMsg}
           </p>
           <button
             onClick={() => window.location.reload()}
