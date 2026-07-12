@@ -6,6 +6,7 @@ import { Analytics } from '@vercel/analytics/react';
 import { ThemeProvider } from './context/ThemeContext';
 import Layout from './components/Layout';
 import ScrollToTop from './components/ScrollToTop';
+import ChunkErrorBoundary from './components/ChunkErrorBoundary';
 
 // Admin panel — standalone SPA with its own layout (no site Layout wrapper)
 import AdminApp from './pages/admin/AdminApp';
@@ -62,6 +63,7 @@ function App() {
               {/* Public site — wrapped in Layout */}
               <Route path="/*" element={
                 <Layout>
+                  <ChunkErrorBoundary>
                   <Suspense fallback={<PageFallback />}>
                     <Routes>
                       <Route path="/" element={<Home />} />
@@ -102,6 +104,7 @@ function App() {
                       <Route path="*" element={<NotFound />} />
                     </Routes>
                   </Suspense>
+                  </ChunkErrorBoundary>
                 </Layout>
               } />
             </Routes>
