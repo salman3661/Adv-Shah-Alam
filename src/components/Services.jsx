@@ -51,9 +51,9 @@ const Services = () => {
                                 </div>
                                 <span
                                     className="text-xs font-semibold px-2 py-1 rounded-full flex-shrink-0"
-                                    style={{ background: 'rgba(26,63,191,0.08)', color: 'var(--accent)', border: '1px solid rgba(26,63,191,0.18)' }}
+                                    style={{ background: 'rgba(202,138,4,0.10)', color: '#b45309', border: '1px solid rgba(202,138,4,0.25)' }}
                                 >
-                                    Book Consultation
+                                    Paid Consult
                                 </span>
                             </div>
 
