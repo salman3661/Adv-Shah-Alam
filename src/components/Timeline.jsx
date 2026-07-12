@@ -45,10 +45,10 @@ const LogoBadge = ({ logoKey, fallbackText }) => {
     if (showImage) {
         return (
             <div
-                className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 p-1.5"
+                className="w-16 h-16 rounded-xl flex items-center justify-center flex-shrink-0 overflow-hidden"
                 style={{
                     background: 'var(--card-bg)',
-                    border: '1px solid var(--card-border)',
+                    border: '1.5px solid var(--card-border)',
                     backdropFilter: 'blur(8px)',
                 }}
             >
@@ -58,7 +58,7 @@ const LogoBadge = ({ logoKey, fallbackText }) => {
                     onError={() => setImgError(true)}
                     loading="lazy"
                     decoding="async"
-                    className="w-full h-full object-contain"
+                    style={{ width: '110%', height: '110%', objectFit: 'cover', objectPosition: 'center' }}
                 />
             </div>
         );
