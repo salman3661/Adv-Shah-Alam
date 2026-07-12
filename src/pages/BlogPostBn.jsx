@@ -88,7 +88,15 @@ const FAQItem = ({ question, answer, index }) => {
                 </span>
             </button>
             {open && (
-                <div style={{ padding: '0.875rem 1.375rem 1.125rem', borderTop: '1px solid var(-/* ─── Sidebar Glass Wrappers ─── */
+                <div style={{ padding: '0.875rem 1.375rem 1.125rem', borderTop: '1px solid var(--card-border)', color: 'var(--text-secondary)', fontSize: '0.9rem', lineHeight: 1.8, wordBreak: 'break-word' }}>
+                    {answer}
+                </div>
+            )}
+        </div>
+    );
+};
+
+/* ─── Sidebar Glass Wrappers ─── */
 const SbCard = ({ children, accentColor }) => (
     <div style={{
         background: 'rgba(255,255,255,0.025)',
