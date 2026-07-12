@@ -409,11 +409,11 @@ const BlogPostBnInner = () => {
                         </span>
                     </div>
 
-                    <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(1.875rem, 4vw, 3.5rem)', fontWeight: 800, lineHeight: 1.18, color: 'var(--hero-text)', marginBottom: '1.375rem', letterSpacing: '-0.025em', maxWidth: '900px' }}>
+                    <h1 style={{ fontFamily: "'SolaimanLipi', 'Noto Sans Bengali', 'Playfair Display', serif", fontSize: 'clamp(1.75rem, 4vw, 3rem)', fontWeight: 800, lineHeight: 1.22, color: 'var(--hero-text)', marginBottom: '1.375rem', letterSpacing: '-0.01em', maxWidth: '900px' }}>
                         {post.title}
                     </h1>
 
-                    <p style={{ fontSize: '1.0625rem', lineHeight: 1.8, color: 'var(--hero-text-2)', maxWidth: '680px', marginBottom: '2rem', opacity: 0.88 }}>
+                    <p style={{ fontSize: '1.0625rem', lineHeight: 1.9, color: 'var(--hero-text-2)', maxWidth: '700px', marginBottom: '2rem', opacity: 0.9, fontFamily: "'SolaimanLipi', 'Noto Sans Bengali', sans-serif" }}>
                         {post.heroIntro}
                     </p>
 
@@ -492,11 +492,11 @@ const BlogPostBnInner = () => {
 
                                 {/* Quick Answer */}
                                 {post.quickAnswer && (
-                                    <div style={{ marginBottom: '2.5rem', padding: '1.375rem 1.5rem', borderRadius: '1rem', background: 'linear-gradient(135deg, rgba(198,167,94,0.07), rgba(198,167,94,0.02))', border: '1.5px solid rgba(198,167,94,0.22)' }}>
-                                        <p style={{ fontSize: '0.875rem', fontWeight: 800, color: 'var(--gold)', marginBottom: '0.875rem' }}>{post.quickAnswer.heading}</p>
+                                    <div style={{ marginBottom: '2.5rem', padding: '1.375rem 1.5rem', borderRadius: '1rem', background: 'linear-gradient(135deg, rgba(184,146,42,0.08), rgba(184,146,42,0.02))', border: '1.5px solid rgba(184,146,42,0.22)' }}>
+                                        <p style={{ fontSize: '0.875rem', fontWeight: 800, color: 'var(--gold)', marginBottom: '0.875rem', fontFamily: "'SolaimanLipi', 'Noto Sans Bengali', sans-serif" }}>{post.quickAnswer.heading}</p>
                                         <ul style={{ margin: 0, padding: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
                                             {post.quickAnswer.points.map((pt, i) => (
-                                                <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.625rem', fontSize: '0.9375rem', color: 'var(--text-secondary)', lineHeight: 1.6 }}>
+                                                <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.625rem', fontSize: '0.9375rem', color: 'var(--text-secondary)', lineHeight: 1.7, fontFamily: "'SolaimanLipi', 'Noto Sans Bengali', sans-serif" }}>
                                                     <span style={{ flexShrink: 0, width: '5px', height: '5px', borderRadius: '50%', background: 'var(--accent)', marginTop: '9px' }} />
                                                     {pt}
                                                 </li>
@@ -508,11 +508,11 @@ const BlogPostBnInner = () => {
                                 {/* Sections */}
                                 {post.sections?.map((sec, i) => (
                                     <section key={i} id={`bnsec-${i}`} style={{ marginBottom: '3rem', scrollMarginTop: '5rem' }}>
-                                        <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(1.2rem, 2vw, 1.5rem)', fontWeight: 700, lineHeight: 1.3, color: 'var(--text)', marginBottom: '1.125rem', paddingLeft: '0.875rem', borderLeft: `3px solid ${cc.bg}` }}>
+                                        <h2 style={{ fontFamily: "'SolaimanLipi', 'Noto Sans Bengali', sans-serif", fontSize: 'clamp(1.2rem, 2vw, 1.5rem)', fontWeight: 700, lineHeight: 1.3, color: 'var(--text)', marginBottom: '1.125rem', paddingLeft: '0.875rem', borderLeft: `3px solid ${cc.bg}` }}>
                                             {sec.h2}
                                         </h2>
                                         <div className="prose-bn-content"
-                                            style={{ color: 'var(--text-secondary)', fontSize: '1.0625rem', lineHeight: '1.9', letterSpacing: '0.008em', wordBreak: 'break-word', overflowWrap: 'anywhere' }}
+                                            style={{ color: 'var(--text-secondary)', fontSize: '1.05rem', lineHeight: '1.95', letterSpacing: '0.01em', wordBreak: 'break-word', overflowWrap: 'anywhere', fontFamily: "'SolaimanLipi', 'Noto Sans Bengali', sans-serif" }}
                                             dangerouslySetInnerHTML={{ __html: sec.content }}
                                         />
                                     </section>

@@ -9,44 +9,38 @@
 
 /* ── LIGHT THEME (default) ── */
 body {
-  --bg: #FFFFFF;
-  --surface: #F6F8FB;
-  --card-bg: rgba(255, 255, 255, 0.82);
-  --card-border: #E2E8F0;
+  --bg: #F8F9FC;
+  --surface: #FFFFFF;
+  --card-bg: rgba(255, 255, 255, 0.92);
+  --card-border: #E4E9F2;
 
-  --text: #0F172A;
-  --text-secondary: #334155;
-  --text-2: #334155;
-  /* alias kept for legacy references */
-  --text-muted: #4B5563;
+  --text: #0D1B2E;
+  --text-secondary: #2D3E55;
+  --text-2: #3B4F6B;
+  --text-muted: #5A6B80;
 
+  --accent: #1A3FBF;
+  --accent-hover: #15339A;
+  --accent-subtle: rgba(26, 63, 191, 0.07);
+  --btn-primary-bg: #1A3FBF;
 
-  --accent: #1D4ED8;
-  --accent-hover: #1E40AF;
-  --accent-subtle: rgba(29, 78, 216, 0.08);
-  --btn-primary-bg: #1D4ED8;
-  /* alias for MobileCallButton */
+  --gold: #B8922A;
 
-  --gold: #C6A75E;
-  /* icon accents only, never body text */
-
-  --nav-bg: rgba(255, 255, 255, 0.88);
-  --nav-border: rgba(203, 213, 225, 0.6);
+  --nav-bg: rgba(248, 249, 252, 0.90);
+  --nav-border: rgba(200, 210, 230, 0.65);
 
   --input-bg: #FFFFFF;
-  --input-border: #CBD5E1;
+  --input-border: #C8D2E0;
 
-  --divider: #E2E8F0;
+  --divider: #E4E9F2;
 
-  /* Hero section always stays dark regardless of theme */
-  --hero-bg: #0B1220;
-  --hero-surface: #0F1B2D;
-  --hero-text: #E5E7EB;
-  --hero-text-2: #CBD5E1;
-  --hero-muted: #94A3B8;
-  --hero-border: rgba(148, 163, 184, 0.2);
+  --hero-bg: #0A1120;
+  --hero-surface: #0E1A2E;
+  --hero-text: #EEF2F8;
+  --hero-text-2: #C8D4E8;
+  --hero-muted: #8A9BB5;
+  --hero-border: rgba(140, 160, 190, 0.18);
 
-  /* WhatsApp — always green, never themed */
   --wa-green: #25D366;
   --wa-green-hover: #1ebe5d;
 
@@ -58,10 +52,8 @@ body {
   overflow-x: hidden;
   background-color: var(--bg);
   color: var(--text);
-  /* NOTE: no transition here — body bg/color transition was causing the
-     green/flash artefact on theme toggle. Individual components
-     (cards, sections) still animate via their own transition rules. */
 }
+
 
 /* ── DARK THEME ── */
 /* Single source: body[data-theme="dark"] only.

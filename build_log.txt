@@ -1,3 +1,39 @@
 [36mvite v7.3.1 [32mbuilding client environment for production...[36m[39m
 transforming...
-[32m✓[39m 243 modules transformed.
+[32m✓[39m 2451 modules transformed.
+rendering chunks...
+[2mdist/[22m[32mindex.html                                                     [39m[1m[2m   10.71 kB[22m[1m[22m
+[2mdist/[22m[35massets/index-BSbFE1_h.css                                      [39m[1m[2m   37.30 kB[22m[1m[22m
+[2mdist/[22m[36massets/seo-BJzY_h85.js                                         [39m[1m[2m    0.63 kB[22m[1m[22m
+[2mdist/[22m[36massets/Education-D3yefHU5.js                                   [39m[1m[2m    1.89 kB[22m[1m[22m
+[2mdist/[22m[36massets/Disclaimer-dL5DeM9j.js                                  [39m[1m[2m    2.79 kB[22m[1m[22m
+[2mdist/[22m[36massets/Chambers-CJyre4WD.js                                    [39m[1m[2m    5.02 kB[22m[1m[22m
+[2mdist/[22m[36massets/TaxLawyer-CSP296eh.js                                   [39m[1m[2m    5.04 kB[22m[1m[22m
+[2mdist/[22m[36massets/Services-CYLLdKES.js                                    [39m[1m[2m    5.13 kB[22m[1m[22m
+[2mdist/[22m[36massets/Timeline-D0WwryVy.js                                    [39m[1m[2m    6.37 kB[22m[1m[22m
+[2mdist/[22m[36massets/FAQ-C9fOcNH6.js                                         [39m[1m[2m    6.77 kB[22m[1m[22m
+[2mdist/[22m[36massets/BailLawyer-BjUv8PzT.js                                  [39m[1m[2m    7.25 kB[22m[1m[22m
+[2mdist/[22m[36massets/DivorceLawyer-DhEZ-LlP.js                               [39m[1m[2m    7.36 kB[22m[1m[22m
+[2mdist/[22m[36massets/CriminalLawyer-DrLASkHM.js                              [39m[1m[2m    7.68 kB[22m[1m[22m
+[2mdist/[22m[36massets/Contact-CBZ31bjT.js                                     [39m[1m[2m    7.75 kB[22m[1m[22m
+[2mdist/[22m[36massets/LandLawyer-VDynqYD_.js                                  [39m[1m[2m    7.79 kB[22m[1m[22m
+[2mdist/[22m[36massets/SupremeCourtLawyer-CD0LfYSE.js                          [39m[1m[2m    7.85 kB[22m[1m[22m
+[2mdist/[22m[36massets/CompanyCorporateLawyer-D52UWrfc.js                      [39m[1m[2m    8.00 kB[22m[1m[22m
+[2mdist/[22m[36massets/TermsConditions-VPBPXiiK.js                             [39m[1m[2m    8.75 kB[22m[1m[22m
+[2mdist/[22m[36massets/Testimonials-CLr4U5aB.js                                [39m[1m[2m    8.92 kB[22m[1m[22m
+[2mdist/[22m[36massets/PrivacyPolicy-ZrIlsIku.js                               [39m[1m[2m   10.49 kB[22m[1m[22m
+[2mdist/[22m[36massets/ServicePage-BKfRdXAR.js                                 [39m[1m[2m   13.35 kB[22m[1m[22m
+[2mdist/[22m[36massets/BlogBn-u7SaFhKZ.js                                      [39m[1m[2m   14.02 kB[22m[1m[22m
+[2mdist/[22m[36massets/ContactPage-CZzcYu_j.js                                 [39m[1m[2m   15.49 kB[22m[1m[22m
+[2mdist/[22m[36massets/vendor-lucide-B-9QqeFF.js                               [39m[1m[2m   16.37 kB[22m[1m[22m
+[2mdist/[22m[36massets/Blog-CSkgMKTV.js                                        [39m[1m[2m   24.35 kB[22m[1m[22m
+[2mdist/[22m[36massets/BlogPreview-jYN0eebA.js                                 [39m[1m[2m   24.73 kB[22m[1m[22m
+[2mdist/[22m[36massets/BlogPostBn-B2jU81TA.js                                  [39m[1m[2m   47.83 kB[22m[1m[22m
+[2mdist/[22m[36massets/BlogPost-BSeCOnc9.js                                    [39m[1m[2m   49.21 kB[22m[1m[22m
+[2mdist/[22m[36massets/vendor-motion-BZzsUeYg.js                               [39m[1m[2m  126.47 kB[22m[1m[22m
+[2mdist/[22m[36massets/index-Nd_RvPVb.js                                       [39m[1m[2m  148.61 kB[22m[1m[22m
+[2mdist/[22m[36massets/vendor-react-DBbMgghY.js                                [39m[1m[2m  192.41 kB[22m[1m[22m
+[2mdist/[22m[36massets/AdvocatePage-WKMl0apW.js                                [39m[1m[2m  709.32 kB[22m[1m[22m
+[2mdist/[22m[36massets/yautuk-dowry-ain-bangladesh-bn-CNtNhfwg.js              [39m[1m[33m1,587.26 kB[39m[22m
+[2mdist/[22m[36massets/wrongful-termination-labour-law-bangladesh-CEoKV2ul.js  [39m[1m[33m2,558.16 kB[39m[22m
+[32m✓ built in 7.37s[39m
