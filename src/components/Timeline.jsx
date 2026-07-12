@@ -56,6 +56,8 @@ const LogoBadge = ({ logoKey, fallbackText }) => {
                     src={src}
                     alt={fallbackText}
                     onError={() => setImgError(true)}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-contain"
                 />
             </div>

@@ -2,20 +2,7 @@
 <html lang="en">
 
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PJ4Z9WLRBS"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-PJ4Z9WLRBS');
-  </script>
-
-  <!-- Google AdSense — Publisher ID: ca-pub-1464618116731342 -->
-  <!-- Required for AdSense site verification and ad serving -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1464618116731342"
-     crossorigin="anonymous"></script>
-  <!-- AdSense account ownership verification -->
+  <!-- Google AdSense verification meta (non-blocking) -->
   <meta name="google-adsense-account" content="ca-pub-1464618116731342">
 
   <meta charset="UTF-8" />
@@ -51,11 +38,15 @@
   <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
   <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
 
-  <!-- Google Fonts: preconnect + deferred load (non-render-blocking) -->
+  <!-- Google Fonts: truly non-render-blocking via media=print + onload swap -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&family=Playfair+Display:wght@600;700&display=swap" />
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&family=Playfair+Display:wght@600;700&display=swap"
+    media="print" onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&family=Playfair+Display:wght@600;700&display=swap" />
+  </noscript>
 
 
   <!-- Primary Meta Tags (fallback — React Helmet overrides these per page) -->
@@ -246,6 +237,31 @@
 <body>
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
+
+  <!-- Google Analytics — deferred to after page load (non-blocking) -->
+  <script>
+    window.addEventListener('load', function() {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-PJ4Z9WLRBS';
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-PJ4Z9WLRBS', { send_page_view: true });
+    });
+  </script>
+
+  <!-- Google AdSense — deferred to after page load (non-blocking) -->
+  <script>
+    window.addEventListener('load', function() {
+      var a = document.createElement('script');
+      a.async = true;
+      a.crossOrigin = 'anonymous';
+      a.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1464618116731342';
+      document.head.appendChild(a);
+    });
+  </script>
 </body>
 
 </html>
