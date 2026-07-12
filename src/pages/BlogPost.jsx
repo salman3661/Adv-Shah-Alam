@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import {
     ArrowLeft, Clock, ChevronDown, ChevronUp,
-    Phone, MessageCircle, ExternalLink, BookOpen
+    Phone, MessageCircle, ExternalLink, BookOpen, AlertTriangle
 } from 'lucide-react';
 import { telLink, waLink } from '../data/contactInfo';
 import Disclaimer from '../components/Disclaimer';
@@ -11,14 +11,50 @@ import ReadingProgress from '../components/ReadingProgress';
 
 // Load all EN blog posts from JSON files (bundled at build time by Vite)
 const _postModules = import.meta.glob('../content/posts/en/*.json', { eager: true });
-const posts = Object.values(_postModules).map((m) => m.default ?? m);
+const posts = Object.values(_postModules)
+    .map((m) => m.default ?? m)
+    .filter((p) => p && p.slug); // guard against malformed entries
+
+/* ─── Error Boundary — catches JS crashes so we NEVER show blank page ─── */
+class BlogPostErrorBoundary extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { hasError: false, error: null };
+    }
+    static getDerivedStateFromError(error) {
+        return { hasError: true, error };
+    }
+    componentDidCatch(error, info) {
+        console.error('[BlogPost] Render error:', error, info);
+    }
+    render() {
+        if (this.state.hasError) {
+            return (
+                <section className="pt-28 pb-20" style={{ background: 'var(--bg)' }}>
+                    <Helmet><title>Error | Advocate Md. Shah Alam</title><meta name="robots" content="noindex" /></Helmet>
+                    <div className="container mx-auto px-6 max-w-2xl text-center">
+                        <div className="glass-card inline-flex flex-col items-center gap-5 px-10 py-14">
+                            <AlertTriangle size={44} style={{ color: 'var(--accent)' }} />
+                            <h1 className="text-2xl font-bold" style={{ color: 'var(--text)' }}>Something went wrong</h1>
+                            <p className="text-sm" style={{ color: 'var(--text-muted)' }}>This article could not be loaded. Please try again or go back to the blog.</p>
+                            <Link to="/blog" className="btn-primary text-sm">← Back to Blog</Link>
+                        </div>
+                    </div>
+                </section>
+            );
+        }
+        return this.props.children;
+    }
+}
 
 function isPublished(post) {
-  if (typeof window !== 'undefined') return true;
+  // Always check date on client — previous `typeof window` guard bypassed the check
   try {
+    if (post.isDraft) return false;
+    if (!post.publishedDate) return true; // no date = always show
     const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Dhaka' }));
     const pub = new Date(post.publishedDate + 'T00:00:00');
-    return pub <= now && !post.isDraft;
+    return pub <= now;
   } catch { return true; }
 }
 
@@ -55,7 +91,7 @@ const FAQItem = ({ question, answer }) => {
 };
 
 /* ─── Main Component ─────────────────────────────────── */
-const BlogPost = () => {
+const BlogPostInner = () => {
     const { slug } = useParams();
     const post = posts.find(p => p.slug === slug);
     const [cName, setCName] = useState('');
@@ -65,6 +101,7 @@ const BlogPost = () => {
 
     const handleConsultSubmit = (e) => {
         e.preventDefault();
+        if (!post) return;
         const text = `*📋 New Consultation Request*\n\n*Article:* ${post.title}\n*Name:* ${cName}\n*Phone:* ${cPhone}\n*Brief Inquiry:* ${cMessage}`;
         window.open(waLink(text), '_blank');
         setCSubmitted(true);
@@ -76,11 +113,23 @@ const BlogPost = () => {
         }, 5000);
     };
 
-    /* ── 404 fallback ── */
+    // Auto-redirect to /blog when post is not found (fixes Soft 404)
+    React.useEffect(() => {
+        if (!post) {
+            const t = setTimeout(() => { window.location.replace('/blog'); }, 3000);
+            return () => clearTimeout(t);
+        }
+    }, [post]);
+
+    /* ── 404 fallback — noindex + auto-redirect to /blog ── */
     if (!post) {
         return (
             <>
-                <Helmet><title>Post Not Found | Advocate Md. Shah Alam</title></Helmet>
+                <Helmet>
+                    <title>Article Not Found | Advocate Md. Shah Alam</title>
+                    <meta name="robots" content="noindex, nofollow" />
+                    <meta httpEquiv="refresh" content="3;url=/blog" />
+                </Helmet>
                 <section className="pt-28 pb-20" style={{ background: 'var(--bg)' }}>
                     <div className="container mx-auto px-6 max-w-2xl text-center">
                         <div className="glass-card inline-flex flex-col items-center gap-5 px-10 py-14">
@@ -92,7 +141,7 @@ const BlogPost = () => {
                                 Article Not Found
                             </h1>
                             <p className="text-sm max-w-sm" style={{ color: 'var(--text-muted)' }}>
-                                The article you are looking for does not exist or may have been moved.
+                                This article has been moved or updated. Redirecting you to our blog in 3 seconds...
                             </p>
                             <Link to="/blog" className="btn-primary text-sm">
                                 ← Back to Blog
@@ -551,5 +600,12 @@ const BlogPost = () => {
         </>
     );
 };
+
+/* Wrap with error boundary so a JS crash never shows a blank white page */
+const BlogPost = () => (
+    <BlogPostErrorBoundary>
+        <BlogPostInner />
+    </BlogPostErrorBoundary>
+);
 
 export default BlogPost;

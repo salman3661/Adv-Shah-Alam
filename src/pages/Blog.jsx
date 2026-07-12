@@ -219,7 +219,7 @@ const Blog = () => {
             </section>
 
             {/* Filters + Search + Sort */}
-            <section className="py-4 md:py-5 sticky top-[68px] z-40" style={{ background: 'var(--nav-bg)', backdropFilter: 'blur(16px)', borderBottom: '1px solid var(--divider)' }}>
+            <section className="py-4 md:py-5 sticky top-0 z-30" style={{ background: 'var(--nav-bg)', backdropFilter: 'blur(20px)', WebkitBackdropFilter: 'blur(20px)', borderBottom: '1px solid var(--divider)' }}>
                 <div className="container mx-auto px-6 max-w-5xl flex flex-col sm:flex-row gap-3 items-start sm:items-center justify-between">
                     {/* Category chips with count badges */}
                     <div className="flex flex-wrap gap-2">

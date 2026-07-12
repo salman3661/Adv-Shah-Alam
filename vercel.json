@@ -13,6 +13,26 @@
       "statusCode": 301
     },
     {
+      "source": "/blog/khas-land-bangladesh-claim",
+      "destination": "/blog/khas-land-claim-bangladesh",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/inheritance-law-bangladesh",
+      "destination": "/blog/inheritance-law-bangladesh-legal-guide",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/divorce-process-bangladesh",
+      "destination": "/blog/divorce-procedure-bangladesh",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/education",
+      "destination": "/education",
+      "statusCode": 301
+    },
+    {
       "source": "/blog/land-mutation-procedure-bangladesh",
       "destination": "/blog",
       "statusCode": 301

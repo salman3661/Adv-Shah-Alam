@@ -32,9 +32,20 @@ const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
 const TermsConditions = lazy(() => import('./pages/TermsConditions'));
 const ContactPage = lazy(() => import('./pages/ContactPage'));
 
-// Minimal fallback — keeps layout stable while the chunk loads
+// Visible fallback — prevents perceived blank page during lazy chunk loading
 const PageFallback = () => (
-  <div style={{ minHeight: '100vh', background: 'var(--bg)' }} aria-hidden="true" />
+  <div
+    style={{ minHeight: '100vh', background: 'var(--bg)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+    aria-label="Loading page..."
+  >
+    <div style={{
+      width: 48, height: 48, borderRadius: '50%',
+      border: '4px solid var(--card-border)',
+      borderTopColor: 'var(--accent)',
+      animation: 'spin 0.8s linear infinite',
+    }} />
+    <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
+  </div>
 );
 
 function App() {

@@ -81,7 +81,7 @@ const Header = () => {
                     animate={{ y: 0, opacity: 1 }}
                     exit={{ y: -100, opacity: 0 }}
                     transition={{ duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
-                    className="fixed top-4 left-0 right-0 z-50 flex justify-center px-4 pointer-events-none"
+                    className="fixed top-4 left-0 right-0 z-[60] flex justify-center px-4 pointer-events-none"
                 >
                     <div className={`
                         pointer-events-auto

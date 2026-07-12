@@ -3,21 +3,53 @@ import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import {
     ArrowLeft, Clock, ChevronDown, ChevronUp,
-    Phone, MessageCircle, ExternalLink, BookOpen
+    Phone, MessageCircle, ExternalLink, BookOpen, AlertTriangle
 } from 'lucide-react';
 import { CALL_NUMBER, CALL_DISPLAY, WA_NUMBER, WA_DISPLAY, waLink, telLink } from '../data/contactInfo';
 import Disclaimer from '../components/Disclaimer';
 
 // Load all BN blog posts from JSON files (bundled at build time by Vite)
 const _bnModules = import.meta.glob('../content/posts/bn/*.json', { eager: true });
-const postsBn = Object.values(_bnModules).map((m) => m.default ?? m);
+const postsBn = Object.values(_bnModules)
+    .map((m) => m.default ?? m)
+    .filter((p) => p && p.slug); // guard against malformed entries
+
+/* ─── Error Boundary — catches JS crashes so we NEVER show blank page ─── */
+class BlogPostBnErrorBoundary extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { hasError: false };
+    }
+    static getDerivedStateFromError() { return { hasError: true }; }
+    componentDidCatch(error, info) { console.error('[BlogPostBn] Render error:', error, info); }
+    render() {
+        if (this.state.hasError) {
+            return (
+                <section className="pt-28 pb-20" style={{ background: 'var(--bg)' }}>
+                    <Helmet><title>Error | Advocate Md. Shah Alam</title><meta name="robots" content="noindex" /></Helmet>
+                    <div className="container mx-auto px-6 max-w-2xl text-center">
+                        <div className="glass-card inline-flex flex-col items-center gap-5 px-10 py-14">
+                            <AlertTriangle size={44} style={{ color: 'var(--accent)' }} />
+                            <h1 className="text-2xl font-bold" style={{ color: 'var(--text)' }}>কিছু একটা ভুল হয়েছে</h1>
+                            <p className="text-sm" style={{ color: 'var(--text-muted)' }}>এই নিবন্ধটি লোড করা যায়নি। অনুগ্রহ করে পুনরায় চেষ্টা করুন বা ব্লগে ফিরে যান।</p>
+                            <Link to="/bn/blog" className="btn-primary text-sm">← ব্লগে ফিরুন</Link>
+                        </div>
+                    </div>
+                </section>
+            );
+        }
+        return this.props.children;
+    }
+}
 
 function isPublishedBn(post) {
-  if (typeof window !== 'undefined') return true;
+  // Always check date properly — previous `typeof window` guard bypassed date check
   try {
+    if (post.isDraft) return false;
+    if (!post.publishedDate) return true;
     const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Dhaka' }));
     const pub = new Date(post.publishedDate + 'T00:00:00');
-    return pub <= now && !post.isDraft;
+    return pub <= now;
   } catch { return true; }
 }
 
@@ -52,7 +84,7 @@ const FAQItem = ({ question, answer }) => {
     );
 };
 
-const BlogPostBn = () => {
+const BlogPostBnInner = () => {
     const { slug } = useParams();
     const post = postsBn.find(p => p.slug === slug);
     const [cName, setCName] = useState('');
@@ -521,5 +553,12 @@ const BlogPostBn = () => {
         </>
     );
 };
+
+/* Wrap with error boundary so a JS crash never shows a blank white page */
+const BlogPostBn = () => (
+    <BlogPostBnErrorBoundary>
+        <BlogPostBnInner />
+    </BlogPostBnErrorBoundary>
+);
 
 export default BlogPostBn;
