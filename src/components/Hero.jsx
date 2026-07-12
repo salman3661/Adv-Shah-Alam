@@ -252,17 +252,16 @@ const Hero = () => (
                 boxShadow: '0 20px 56px var(--hero-photo-shadow)',
                 height: '100%', zIndex: 1,
               }}>
-                <picture>
-                  <source srcSet="/images/hero/hero-md-shah-alam.webp" type="image/webp" />
-                  <img
-                    src="/images/hero/hero-md-shah-alam.png"
+                <img
+                    src="/images/hero/hero-md-shah-alam.webp"
                     alt={heroContent.photoAlt}
-                    loading="eager" fetchpriority="high" decoding="async"
-                    width="600" height="750"
+                    loading="eager"
+                    fetchPriority="high"
+                    decoding="sync"
+                    width="600"
+                    height="750"
                     style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top', display: 'block' }}
-                    onError={e => { e.target.onerror = null; e.target.src = 'https://placehold.co/600x800/1A3FBF/FFFFFF?text=Adv.+Shah+Alam'; }}
                   />
-                </picture>
                 <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '38%', background: 'linear-gradient(to top, rgba(10,17,36,0.7) 0%, transparent 100%)' }} />
                 <div style={{
                   position: 'absolute', bottom: '0.875rem', right: '0.875rem',
