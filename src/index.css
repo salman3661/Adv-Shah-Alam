@@ -247,19 +247,22 @@ body[data-theme="dark"] .timeline-card:hover {
   border: 1px solid var(--nav-border);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.10);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
   transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  --nav-active-text: #fff;
 }
 
 /* Dark mode: soft cyan ring glow on navbar */
 body[data-theme="dark"] .navbar-glass {
-  background: rgba(6, 13, 26, 0.82);
-  border-color: rgba(34, 211, 238, 0.18);
+  background: rgba(6, 13, 26, 0.85);
+  border-color: rgba(34, 211, 238, 0.15);
   box-shadow:
-    0 4px 32px rgba(0, 0, 0, 0.40),
-    0 0 0 1px rgba(34, 211, 238, 0.10),
-    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    0 2px 24px rgba(0, 0, 0, 0.35),
+    0 0 0 1px rgba(34, 211, 238, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  --nav-active-text: #fff;
 }
+
 
 /* ============================================================
    BUTTON SYSTEM — 4 canonical types

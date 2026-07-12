@@ -57,7 +57,6 @@ const Header = () => {
         }
     };
 
-    // Mixed nav: some are hash-scrolls on home, others are real page routes
     const navLinks = [
         { name: 'Home',     href: '/',                      icon: Home,     isPage: true },
         { name: 'About',    href: '/advocate-md-shah-alam', icon: User,     isPage: true },
@@ -77,87 +76,108 @@ const Header = () => {
         <AnimatePresence>
             {isVisible && (
                 <motion.nav
-                    initial={{ y: -100, opacity: 0 }}
+                    initial={{ y: -80, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
-                    exit={{ y: -100, opacity: 0 }}
-                    transition={{ duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
-                    className="fixed top-4 left-0 right-0 z-[60] flex justify-center px-4 pointer-events-none"
+                    exit={{ y: -80, opacity: 0 }}
+                    transition={{ duration: 0.35, ease: [0.25, 0.46, 0.45, 0.94] }}
+                    className="fixed top-3 left-0 right-0 z-[60] flex justify-center px-4 pointer-events-none"
                 >
                     <div className={`
                         pointer-events-auto
-                        flex items-center gap-1 px-3 sm:px-4 py-2.5
+                        flex items-center gap-1 px-2 sm:px-3 py-1.5
                         rounded-full navbar-glass
                         transition-all duration-500
                         max-w-[95vw] sm:max-w-fit overflow-x-auto no-scrollbar
                     `}>
                         {/* Nav Links */}
-                        <div className="flex items-center gap-0.5">
-                            {navLinks.map((link) => (
-                                link.isPage ? (
+                        <div className="flex items-center gap-0">
+                            {navLinks.map((link) => {
+                                const active = isActive(link);
+                                return link.isPage ? (
                                     <Link
                                         key={link.name}
                                         to={link.href}
-                                        style={{ color: isActive(link) ? 'var(--accent)' : 'var(--text-2)' }}
-                                        className="
-                                            relative flex flex-col items-center justify-center
-                                            px-2.5 sm:px-3 py-2 rounded-full text-sm font-medium
-                                            transition-all duration-200
-                                            hover:bg-black/5 dark:hover:bg-white/8
-                                            active:scale-95
-                                        "
+                                        className="relative flex items-center justify-center px-2.5 sm:px-3 py-1.5 rounded-full text-sm font-medium transition-colors duration-200 active:scale-95"
+                                        style={{ color: active ? 'var(--nav-active-text, #fff)' : 'var(--text-2)' }}
                                         title={link.name}
                                     >
-                                        <span className="flex items-center gap-1.5">
-                                            <link.icon size={17} className="sm:mr-0 flex-shrink-0" style={{ opacity: isActive(link) ? 1 : 0.7, color: 'inherit' }} />
-                                            <span className="hidden md:inline whitespace-nowrap">{link.name}</span>
-                                        </span>
-                                        {isActive(link) && (
-                                            <span
-                                                className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full"
-                                                style={{ background: 'var(--accent)', marginBottom: '2px' }}
+                                        {/* Sliding background pill */}
+                                        {active && (
+                                            <motion.span
+                                                layoutId="nav-pill"
+                                                className="absolute inset-0 rounded-full"
+                                                style={{ background: 'var(--accent)' }}
+                                                transition={{ type: 'spring', stiffness: 380, damping: 34, mass: 0.8 }}
                                             />
                                         )}
+                                        <span className="relative z-10 flex items-center gap-1.5">
+                                            <link.icon
+                                                size={15}
+                                                className="flex-shrink-0"
+                                                style={{ opacity: active ? 1 : 0.65, color: 'inherit' }}
+                                            />
+                                            <span className="hidden md:inline whitespace-nowrap text-xs font-semibold">
+                                                {link.name}
+                                            </span>
+                                        </span>
                                     </Link>
                                 ) : (
                                     <a
                                         key={link.name}
                                         href={`#${link.id}`}
                                         onClick={(e) => handleNavClick(e, link.id)}
+                                        className="relative flex items-center justify-center px-2.5 sm:px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-200 hover:bg-black/5 dark:hover:bg-white/8 active:scale-95"
                                         style={{ color: 'var(--text-2)' }}
-                                        className="
-                                            relative flex items-center justify-center
-                                            px-2.5 sm:px-3 py-2 rounded-full text-sm font-medium
-                                            transition-all duration-200
-                                            hover:bg-black/5 dark:hover:bg-white/8
-                                            active:scale-95
-                                        "
                                         title={link.name}
                                     >
-                                        <link.icon size={17} className="sm:mr-1.5 flex-shrink-0 opacity-70" style={{ color: 'inherit' }} />
-                                        <span className="hidden md:inline whitespace-nowrap">{link.name}</span>
+                                        <span className="flex items-center gap-1.5">
+                                            <link.icon size={15} className="flex-shrink-0 opacity-65" style={{ color: 'inherit' }} />
+                                            <span className="hidden md:inline whitespace-nowrap text-xs font-semibold">{link.name}</span>
+                                        </span>
                                     </a>
-                                )
-                            ))}
+                                );
+                            })}
                         </div>
 
                         {/* Divider */}
-                        <div className="w-px h-5 bg-current opacity-10 mx-1"></div>
+                        <div className="w-px h-4 bg-current opacity-10 mx-1 flex-shrink-0" />
 
-                        {/* Theme Toggle — pill button */}
-                        <button
+                        {/* Theme Toggle */}
+                        <motion.button
                             onClick={toggleTheme}
-                            className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold transition-all duration-250 hover:scale-105 active:scale-95"
+                            whileHover={{ scale: 1.06 }}
+                            whileTap={{ scale: 0.94 }}
+                            className="flex items-center gap-1 px-2.5 py-1.5 rounded-full text-xs font-semibold flex-shrink-0"
                             style={{
                                 background: 'var(--accent)',
                                 color: '#ffffff',
                             }}
                             aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
                         >
-                            {theme === 'light'
-                                ? <><Moon size={14} /><span className="hidden sm:inline">Dark</span></>
-                                : <><Sun size={14} /><span className="hidden sm:inline">Light</span></>
-                            }
-                        </button>
+                            <AnimatePresence mode="wait" initial={false}>
+                                {theme === 'light' ? (
+                                    <motion.span key="dark"
+                                        initial={{ opacity: 0, rotate: -30, scale: 0.7 }}
+                                        animate={{ opacity: 1, rotate: 0, scale: 1 }}
+                                        exit={{ opacity: 0, rotate: 30, scale: 0.7 }}
+                                        transition={{ duration: 0.18 }}
+                                        className="flex items-center gap-1"
+                                    >
+                                        <Moon size={13} /><span className="hidden sm:inline">Dark</span>
+                                    </motion.span>
+                                ) : (
+                                    <motion.span key="light"
+                                        initial={{ opacity: 0, rotate: 30, scale: 0.7 }}
+                                        animate={{ opacity: 1, rotate: 0, scale: 1 }}
+                                        exit={{ opacity: 0, rotate: -30, scale: 0.7 }}
+                                        transition={{ duration: 0.18 }}
+                                        className="flex items-center gap-1"
+                                    >
+                                        <Sun size={13} /><span className="hidden sm:inline">Light</span>
+                                    </motion.span>
+                                )}
+                            </AnimatePresence>
+                        </motion.button>
                     </div>
                 </motion.nav>
             )}
