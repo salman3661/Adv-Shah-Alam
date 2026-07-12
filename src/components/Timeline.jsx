@@ -83,7 +83,7 @@ const Timeline = ({ isHome = false }) => {
         {
             institution: 'Dhaka International University (DIU)',
             degree: 'LL.M',
-            year: '2010',
+            year: '2020',
             logoKey: 'diu',
         },
         {
@@ -107,13 +107,13 @@ const Timeline = ({ isHome = false }) => {
         {
             institution: 'Tongi Govt. University & College, Gazipur',
             degree: 'HSC, BA',
-            year: '2002 – 2005',
+            year: '1996',
             logoKey: 'tguc',
         },
         {
             institution: 'Maligram High School, Bhanga, Faridpur',
             degree: 'SSC',
-            year: '2000',
+            year: '1994',
             logoKey: 'mhs',
         },
     ];
@@ -122,15 +122,15 @@ const Timeline = ({ isHome = false }) => {
         {
             title: 'Advocate',
             organization: 'Supreme Court of Bangladesh',
-            period: '2008 – Present',
+            period: '2025 – Present',
             isCurrent: true,
             logoKey: 'sco',
         },
         {
             title: 'APP (Assistant Public Prosecutor)',
             organization: 'Metro Sessions Court, Dhaka',
-            period: '2015 – 2020',
-            isCurrent: false,
+            period: '2025 – Present',
+            isCurrent: true,
             logoKey: 'msc',
         },
     ];
