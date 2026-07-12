@@ -1,41 +1,29 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { waLink } from '../data/contactInfo';
-import { MessageCircle, ArrowRight, Scale, Shield } from 'lucide-react';
+import { MessageCircle, ArrowRight, Scale, Shield, MapPin } from 'lucide-react';
 import heroContent from '../content/hero.json';
 
 const Hero = () => {
     return (
         <section
             id="home"
-            className="relative min-h-screen flex items-center pt-16 overflow-hidden"
-            style={{ background: 'var(--hero-bg)' }}
+            className="relative min-h-screen flex items-center pt-16 overflow-hidden transition-colors duration-300"
+            style={{ background: 'var(--bg)' }}
         >
-            {/* Background layered glassy orbs */}
+            {/* Background orbs — theme-aware */}
             <div className="absolute inset-0 pointer-events-none overflow-hidden">
                 <div style={{
-                    position: 'absolute', top: '15%', right: '10%',
-                    width: '520px', height: '520px', borderRadius: '50%',
-                    background: 'radial-gradient(circle, rgba(26,63,191,0.18) 0%, transparent 65%)',
-                    filter: 'blur(40px)',
-                }} />
-                <div style={{
-                    position: 'absolute', bottom: '10%', left: '5%',
-                    width: '380px', height: '380px', borderRadius: '50%',
-                    background: 'radial-gradient(circle, rgba(184,146,42,0.12) 0%, transparent 65%)',
+                    position: 'absolute', top: '15%', right: '8%',
+                    width: '480px', height: '480px', borderRadius: '50%',
+                    background: 'radial-gradient(circle, var(--accent-subtle) 0%, transparent 65%)',
                     filter: 'blur(50px)',
                 }} />
                 <div style={{
-                    position: 'absolute', top: '50%', left: '40%',
-                    width: '300px', height: '300px', borderRadius: '50%',
-                    background: 'radial-gradient(circle, rgba(96,165,250,0.08) 0%, transparent 65%)',
+                    position: 'absolute', bottom: '10%', left: '5%',
+                    width: '360px', height: '360px', borderRadius: '50%',
+                    background: 'radial-gradient(circle, rgba(184,146,42,0.07) 0%, transparent 65%)',
                     filter: 'blur(60px)',
-                }} />
-                {/* Subtle grid overlay */}
-                <div style={{
-                    position: 'absolute', inset: 0,
-                    backgroundImage: 'linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px)',
-                    backgroundSize: '60px 60px',
                 }} />
             </div>
 
@@ -49,16 +37,16 @@ const Hero = () => {
                     className="flex justify-center md:justify-end order-1 md:order-2"
                 >
                     <div className="hero-float relative w-full max-w-xs lg:max-w-sm" style={{ aspectRatio: '4/5' }}>
-                        {/* Glassy ring glow behind photo */}
+                        {/* Glow ring */}
                         <div style={{
-                            position: 'absolute', inset: '-12px', borderRadius: '1.5rem',
-                            background: 'linear-gradient(135deg, rgba(184,146,42,0.2) 0%, rgba(26,63,191,0.15) 50%, transparent 100%)',
-                            filter: 'blur(16px)', zIndex: 0,
+                            position: 'absolute', inset: '-10px', borderRadius: '1.5rem',
+                            background: 'linear-gradient(135deg, var(--accent-subtle) 0%, rgba(184,146,42,0.1) 100%)',
+                            filter: 'blur(18px)', zIndex: 0,
                         }} />
                         <div className="relative rounded-2xl overflow-hidden shadow-2xl group"
                             style={{
-                                border: '1.5px solid rgba(184,146,42,0.25)',
-                                boxShadow: '0 24px 64px rgba(0,0,0,0.55), 0 0 0 1px rgba(255,255,255,0.04) inset',
+                                border: '1.5px solid var(--card-border)',
+                                boxShadow: '0 20px 60px rgba(0,0,0,0.18)',
                                 zIndex: 1, height: '100%',
                             }}>
                             <picture>
@@ -74,15 +62,15 @@ const Hero = () => {
                                     className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                                     onError={(e) => {
                                         e.target.onerror = null;
-                                        e.target.src = 'https://placehold.co/600x800/1D4ED8/FFFFFF?text=Adv.+Shah+Alam';
+                                        e.target.src = 'https://placehold.co/600x800/1A3FBF/FFFFFF?text=Adv.+Shah+Alam';
                                     }}
                                 />
                             </picture>
 
-                            {/* Bottom gradient overlay */}
+                            {/* Gradient overlay bottom */}
                             <div style={{
-                                position: 'absolute', bottom: 0, left: 0, right: 0, height: '55%',
-                                background: 'linear-gradient(to top, rgba(10,17,32,0.92) 0%, rgba(10,17,32,0.4) 60%, transparent 100%)',
+                                position: 'absolute', bottom: 0, left: 0, right: 0, height: '45%',
+                                background: 'linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 100%)',
                             }} />
 
                             {/* Bottom badge */}
@@ -91,13 +79,12 @@ const Hero = () => {
                                 animate={{ scale: 1, opacity: 1 }}
                                 transition={{ delay: 0.6, type: 'spring', stiffness: 220 }}
                                 style={{
-                                    position: 'absolute', bottom: '1.25rem', right: '1rem',
-                                    background: 'linear-gradient(135deg, #1A3FBF, #2563EB)',
-                                    backdropFilter: 'blur(12px)',
+                                    position: 'absolute', bottom: '1rem', right: '0.875rem',
+                                    background: 'var(--accent)',
+                                    backdropFilter: 'blur(10px)',
                                     color: '#fff', fontSize: '0.72rem', fontWeight: 700,
-                                    padding: '0.45rem 0.875rem', borderRadius: '0.5rem',
-                                    boxShadow: '0 4px 16px rgba(26,63,191,0.4)',
-                                    border: '1px solid rgba(255,255,255,0.15)',
+                                    padding: '0.4rem 0.875rem', borderRadius: '0.5rem',
+                                    boxShadow: '0 4px 16px rgba(0,0,0,0.3)',
                                 }}
                             >
                                 {heroContent.photoBadgeBottom}
@@ -109,14 +96,14 @@ const Hero = () => {
                                 animate={{ scale: 1, opacity: 1 }}
                                 transition={{ delay: 0.8, type: 'spring', stiffness: 220 }}
                                 style={{
-                                    position: 'absolute', top: '1rem', left: '1rem',
-                                    background: 'rgba(0,0,0,0.6)',
-                                    backdropFilter: 'blur(14px)',
-                                    WebkitBackdropFilter: 'blur(14px)',
-                                    color: '#B8922A', fontSize: '0.7rem', fontWeight: 700,
-                                    padding: '0.375rem 0.75rem', borderRadius: '0.5rem',
+                                    position: 'absolute', top: '0.875rem', left: '0.875rem',
+                                    background: 'rgba(0,0,0,0.55)',
+                                    backdropFilter: 'blur(12px)',
+                                    WebkitBackdropFilter: 'blur(12px)',
+                                    color: '#B8922A', fontSize: '0.68rem', fontWeight: 700,
+                                    padding: '0.35rem 0.75rem', borderRadius: '0.5rem',
                                     border: '1px solid rgba(184,146,42,0.35)',
-                                    display: 'flex', alignItems: 'center', gap: '0.35rem',
+                                    display: 'flex', alignItems: 'center', gap: '0.3rem',
                                 }}
                             >
                                 <Scale size={11} /> {heroContent.photoBadgeTop}
@@ -134,19 +121,18 @@ const Hero = () => {
                 >
                     {/* Label badge */}
                     <motion.div
-                        initial={{ opacity: 0, y: -10 }}
+                        initial={{ opacity: 0, y: -8 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.3 }}
                         style={{
                             display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
-                            padding: '0.375rem 0.875rem', borderRadius: '9999px', marginBottom: '1.5rem',
-                            background: 'rgba(184,146,42,0.1)',
-                            border: '1px solid rgba(184,146,42,0.28)',
-                            backdropFilter: 'blur(8px)',
+                            padding: '0.35rem 0.875rem', borderRadius: '9999px', marginBottom: '1.25rem',
+                            background: 'var(--surface)',
+                            border: '1px solid var(--card-border)',
                         }}
                     >
-                        <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#B8922A', display: 'inline-block' }} />
-                        <span style={{ fontSize: '0.72rem', fontWeight: 800, letterSpacing: '0.08em', textTransform: 'uppercase', color: '#B8922A' }}>
+                        <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: 'var(--gold)', display: 'inline-block' }} />
+                        <span style={{ fontSize: '0.7rem', fontWeight: 800, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--gold)' }}>
                             {heroContent.labelBadge}
                         </span>
                     </motion.div>
@@ -154,99 +140,105 @@ const Hero = () => {
                     {/* SEO H1 */}
                     <h1 style={{
                         fontFamily: "'Playfair Display', Georgia, serif",
-                        fontSize: 'clamp(2rem, 4vw, 3.2rem)',
-                        fontWeight: 800, lineHeight: 1.15, marginBottom: '1.25rem',
-                        color: 'var(--hero-text)', letterSpacing: '-0.02em',
+                        fontSize: 'clamp(1.9rem, 4vw, 3rem)',
+                        fontWeight: 800, lineHeight: 1.15, marginBottom: '1.125rem',
+                        color: 'var(--text)', letterSpacing: '-0.02em',
                     }}>
                         {heroContent.headline}{' '}
-                        <span style={{ color: '#60A5FA' }}>{heroContent.headlineAccent}</span>
+                        <span style={{ color: 'var(--accent)' }}>{heroContent.headlineAccent}</span>
                     </h1>
 
-                    {/* Credential highlight cards */}
+                    {/* ── Credential Highlight Cards ── */}
                     <motion.div
-                        initial={{ opacity: 0, y: 12 }}
+                        initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.45, duration: 0.5 }}
-                        style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', marginBottom: '1.375rem' }}
+                        transition={{ delay: 0.42, duration: 0.5 }}
+                        style={{ display: 'flex', flexDirection: 'column', gap: '0.45rem', marginBottom: '1.25rem' }}
                     >
-                        {/* Credential 1 */}
+                        {/* Credential 1: Advocate, Supreme Court */}
                         <div style={{
                             display: 'inline-flex', alignItems: 'center', gap: '0.625rem',
-                            padding: '0.5rem 1rem', borderRadius: '0.625rem',
-                            background: 'linear-gradient(135deg, rgba(184,146,42,0.12) 0%, rgba(184,146,42,0.05) 100%)',
-                            border: '1px solid rgba(184,146,42,0.22)',
-                            backdropFilter: 'blur(10px)',
+                            padding: '0.5rem 0.9rem', borderRadius: '0.625rem',
+                            background: 'var(--surface)',
+                            border: '1px solid var(--card-border)',
                             maxWidth: 'fit-content',
+                            boxShadow: '0 2px 8px rgba(0,0,0,0.05)',
                         }}>
-                            <Scale size={14} style={{ color: '#B8922A', flexShrink: 0 }} />
+                            <Scale size={14} style={{ color: 'var(--gold)', flexShrink: 0 }} />
                             <div>
-                                <span style={{ fontSize: '0.6rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#B8922A', display: 'block', lineHeight: 1 }}>Designation</span>
-                                <span style={{ fontSize: '0.82rem', fontWeight: 700, color: 'var(--hero-text)', lineHeight: 1.3 }}>
-                                    Advocate, <span style={{ color: '#FBBF24' }}>Supreme Court of Bangladesh</span>
+                                <span style={{ fontSize: '0.58rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.09em', color: 'var(--gold)', display: 'block', lineHeight: 1.1 }}>Designation</span>
+                                <span style={{ fontSize: '0.82rem', fontWeight: 700, color: 'var(--text)', lineHeight: 1.3 }}>
+                                    Advocate, <span style={{ color: 'var(--accent)' }}>Supreme Court of Bangladesh</span>
                                 </span>
                             </div>
                         </div>
 
-                        {/* Credential 2 */}
+                        {/* Credential 2: Asst. Public Prosecutor */}
                         <div style={{
                             display: 'inline-flex', alignItems: 'center', gap: '0.625rem',
-                            padding: '0.5rem 1rem', borderRadius: '0.625rem',
-                            background: 'linear-gradient(135deg, rgba(96,165,250,0.1) 0%, rgba(96,165,250,0.04) 100%)',
-                            border: '1px solid rgba(96,165,250,0.2)',
-                            backdropFilter: 'blur(10px)',
+                            padding: '0.5rem 0.9rem', borderRadius: '0.625rem',
+                            background: 'var(--surface)',
+                            border: '1px solid var(--card-border)',
                             maxWidth: 'fit-content',
+                            boxShadow: '0 2px 8px rgba(0,0,0,0.05)',
                         }}>
-                            <Shield size={14} style={{ color: '#60A5FA', flexShrink: 0 }} />
+                            <Shield size={14} style={{ color: 'var(--accent)', flexShrink: 0 }} />
                             <div>
-                                <span style={{ fontSize: '0.6rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#60A5FA', display: 'block', lineHeight: 1 }}>Former</span>
-                                <span style={{ fontSize: '0.82rem', fontWeight: 700, color: 'var(--hero-text)', lineHeight: 1.3 }}>
-                                    Asst. Public Prosecutor, <span style={{ color: '#93C5FD' }}>Metro Sessions Court, Dhaka</span>
+                                <span style={{ fontSize: '0.58rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.09em', color: 'var(--text-muted)', display: 'block', lineHeight: 1.1 }}>Former</span>
+                                <span style={{ fontSize: '0.82rem', fontWeight: 700, color: 'var(--text)', lineHeight: 1.3 }}>
+                                    Asst. Public Prosecutor, <span style={{ color: 'var(--accent)' }}>Metro Sessions Court, Dhaka</span>
                                 </span>
                             </div>
+                        </div>
+
+                        {/* Location badge */}
+                        <div style={{
+                            display: 'inline-flex', alignItems: 'center', gap: '0.4rem',
+                            padding: '0.35rem 0.75rem', borderRadius: '9999px',
+                            background: 'var(--surface)',
+                            border: '1px solid var(--card-border)',
+                            maxWidth: 'fit-content',
+                        }}>
+                            <MapPin size={12} style={{ color: 'var(--text-muted)', flexShrink: 0 }} />
+                            <span style={{ fontSize: '0.75rem', fontWeight: 600, color: 'var(--text-muted)' }}>
+                                Chamber: <span style={{ color: 'var(--text-2)', fontWeight: 700 }}>Uttara, Dhaka</span>
+                            </span>
                         </div>
                     </motion.div>
 
-                    {/* SEO Subheading */}
+                    {/* Subheading — trimmed */}
                     <p style={{
-                        fontSize: '1.0625rem', lineHeight: 1.75, maxWidth: '520px',
-                        margin: '0 auto 0.875rem', color: 'var(--hero-text-2)', fontWeight: 500,
+                        fontSize: '1rem', lineHeight: 1.7, maxWidth: '500px',
+                        margin: '0 auto 1.5rem', color: 'var(--text-2)', fontWeight: 500,
                     }} className="md:mx-0">
                         {heroContent.subheading}
                     </p>
 
-                    {/* Keyword-rich intro */}
-                    <p style={{
-                        fontSize: '0.9rem', lineHeight: 1.8, maxWidth: '500px',
-                        margin: '0 auto 1.625rem', color: 'var(--hero-muted)',
-                    }} className="md:mx-0">
-                        {heroContent.description}
-                    </p>
-
-                    {/* Available status badge */}
+                    {/* Available status */}
                     <motion.div
-                        initial={{ opacity: 0, y: 10 }}
+                        initial={{ opacity: 0, y: 8 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.9, duration: 0.5 }}
-                        className="flex items-center gap-2 justify-center md:justify-start mb-5"
+                        transition={{ delay: 0.85, duration: 0.5 }}
+                        className="flex items-center gap-2 justify-center md:justify-start mb-4"
                     >
                         <span style={{
                             display: 'flex', alignItems: 'center', gap: '0.5rem',
-                            padding: '0.375rem 0.875rem', borderRadius: '9999px', fontSize: '0.75rem', fontWeight: 700,
-                            background: 'rgba(34,197,94,0.1)', color: '#4ADE80', border: '1px solid rgba(34,197,94,0.22)',
+                            padding: '0.35rem 0.875rem', borderRadius: '9999px', fontSize: '0.75rem', fontWeight: 700,
+                            background: 'rgba(34,197,94,0.1)', color: '#16a34a', border: '1px solid rgba(34,197,94,0.25)',
                         }}>
-                            <span style={{ width: '7px', height: '7px', borderRadius: '50%', background: '#22c55e', display: 'inline-block', boxShadow: '0 0 6px rgba(34,197,94,0.7)', animation: 'hero-pulse 2s ease-in-out infinite' }} />
+                            <span style={{ width: '7px', height: '7px', borderRadius: '50%', background: '#22c55e', display: 'inline-block', animation: 'hero-pulse 2s ease-in-out infinite' }} />
                             Available for Consultation
                         </span>
-                        <span style={{ fontSize: '0.75rem', color: 'var(--hero-muted)' }}>· Free WhatsApp advice</span>
+                        <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>· Free WhatsApp</span>
                     </motion.div>
 
                     {/* CTA Buttons */}
-                    <div className="flex flex-col sm:flex-row gap-3 justify-center md:justify-start mb-7">
+                    <div className="flex flex-col sm:flex-row gap-3 justify-center md:justify-start mb-6">
                         <motion.a
                             href={waLink()}
                             target="_blank"
                             rel="noopener noreferrer"
-                            whileHover={{ scale: 1.04, boxShadow: '0 8px 28px rgba(34,197,94,0.45)' }}
+                            whileHover={{ scale: 1.04 }}
                             whileTap={{ scale: 0.96 }}
                             className="btn-whatsapp text-sm"
                         >
@@ -258,29 +250,20 @@ const Hero = () => {
                             href="#contact"
                             whileHover={{ scale: 1.04 }}
                             whileTap={{ scale: 0.96 }}
-                            style={{
-                                display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem',
-                                padding: '0.8rem 1.75rem', borderRadius: '0.75rem', fontSize: '0.9rem', fontWeight: 600,
-                                border: '1.5px solid rgba(184,146,42,0.35)', color: '#B8922A',
-                                background: 'rgba(184,146,42,0.07)', textDecoration: 'none',
-                                backdropFilter: 'blur(8px)', transition: 'all 0.2s',
-                            }}
-                            onMouseEnter={e => { e.currentTarget.style.background = 'rgba(184,146,42,0.14)'; e.currentTarget.style.borderColor = 'rgba(184,146,42,0.55)'; }}
-                            onMouseLeave={e => { e.currentTarget.style.background = 'rgba(184,146,42,0.07)'; e.currentTarget.style.borderColor = 'rgba(184,146,42,0.35)'; }}
+                            className="btn-outline flex items-center justify-center gap-2 py-3 px-6 text-sm"
                         >
                             {heroContent.cta2Label}
-                            <ArrowRight size={17} />
+                            <ArrowRight size={16} />
                         </motion.a>
                     </div>
 
-                    {/* Speciality tags */}
+                    {/* Specialty tags */}
                     <div className="flex flex-wrap gap-1.5 justify-center md:justify-start">
                         {heroContent.tags.map((tag) => (
                             <span key={tag} style={{
                                 fontSize: '0.72rem', padding: '0.3rem 0.75rem', borderRadius: '9999px', fontWeight: 600,
-                                border: '1px solid rgba(255,255,255,0.1)', color: 'var(--hero-muted)',
-                                background: 'rgba(255,255,255,0.04)', backdropFilter: 'blur(6px)',
-                                transition: 'all 0.2s',
+                                border: '1px solid var(--card-border)', color: 'var(--text-muted)',
+                                background: 'var(--surface)',
                             }}>
                                 {tag}
                             </span>
