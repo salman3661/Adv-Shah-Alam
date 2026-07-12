@@ -4,11 +4,10 @@ import { Helmet } from 'react-helmet-async';
 import {
     ArrowLeft, Clock, ChevronDown, ChevronUp, Phone, MessageCircle,
     ExternalLink, BookOpen, AlertTriangle, List, Calendar,
-    TrendingUp, Newspaper, Flame, Eye
+    TrendingUp, Newspaper, Flame
 } from 'lucide-react';
 import { telLink, waLink } from '../data/contactInfo';
 import Disclaimer from '../components/Disclaimer';
-import ReadingProgress from '../components/ReadingProgress';
 
 /* ── Load all EN posts ── */
 const _postModules = import.meta.glob('../content/posts/en/*.json', { eager: true });
@@ -98,46 +97,73 @@ const FAQItem = ({ question, answer, index }) => {
     );
 };
 
+/* ─── Sidebar Glass Card Wrapper ─── */
+const SbCard = ({ children, accentColor }) => (
+    <div style={{
+        background: 'rgba(255,255,255,0.025)',
+        backdropFilter: 'blur(14px)',
+        WebkitBackdropFilter: 'blur(14px)',
+        border: `1px solid ${accentColor ? accentColor + '25' : 'rgba(198,167,94,0.14)'}`,
+        borderRadius: '1rem',
+        overflow: 'hidden',
+        marginBottom: '1.125rem',
+        boxShadow: '0 4px 28px rgba(0,0,0,0.18), inset 0 1px 0 rgba(255,255,255,0.05)',
+        transition: 'box-shadow 0.3s, border-color 0.3s',
+    }}>{children}</div>
+);
+
+const SbHeader = ({ icon: Icon, label, color = 'var(--accent)' }) => (
+    <div style={{
+        display: 'flex', alignItems: 'center', gap: '0.5rem',
+        padding: '0.7rem 1.125rem',
+        background: `linear-gradient(135deg, ${color}20 0%, transparent 60%)`,
+        borderBottom: `1px solid ${color}22`,
+    }}>
+        <Icon size={13} style={{ color, flexShrink: 0 }} />
+        <span style={{ fontSize: '0.7rem', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--text)' }}>{label}</span>
+        <div style={{ flex: 1, height: '1px', background: `linear-gradient(90deg, ${color}30, transparent)`, marginLeft: '0.25rem' }} />
+    </div>
+);
+
 /* ─── Sidebar: Most Popular ─── */
 const PopularPosts = ({ currentSlug }) => {
     const popular = POPULAR_SLUGS
         .map(s => allPosts.find(p => p.slug === s))
         .filter(p => p && p.slug !== currentSlug)
         .slice(0, 7);
-
     if (popular.length === 0) return null;
     return (
-        <div style={{ marginBottom: '1.5rem' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem', paddingBottom: '0.625rem', borderBottom: '2px solid var(--accent)' }}>
-                <Flame size={15} style={{ color: 'var(--accent)' }} />
-                <span style={{ fontSize: '0.8125rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.07em', color: 'var(--text)' }}>Most Popular</span>
-            </div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0' }}>
+        <SbCard>
+            <SbHeader icon={Flame} label="Most Popular" color="#f59e0b" />
+            <div style={{ padding: '0.5rem 0.75rem 0.75rem' }}>
                 {popular.map((rp, idx) => {
                     const cc = catColor(rp.category);
+                    const isTop3 = idx < 3;
                     return (
                         <Link key={rp.slug} to={`/blog/${rp.slug}`}
-                            style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', padding: '0.75rem 0', borderBottom: '1px solid var(--card-border)', textDecoration: 'none', transition: 'opacity 0.2s' }}
-                            onMouseEnter={e => e.currentTarget.style.opacity = '0.75'}
-                            onMouseLeave={e => e.currentTarget.style.opacity = '1'}>
-                            {/* Rank number */}
-                            <span style={{ flexShrink: 0, width: '1.875rem', height: '1.875rem', borderRadius: '0.375rem', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, fontSize: '0.8125rem', background: idx < 3 ? 'var(--accent)' : 'var(--surface)', color: idx < 3 ? '#111' : 'var(--text-muted)', border: '1px solid var(--card-border)' }}>
-                                {idx + 1}
-                            </span>
+                            className="sb-item"
+                            style={{ display: 'flex', alignItems: 'flex-start', gap: '0.625rem', padding: '0.5rem 0.5rem', borderRadius: '0.625rem', textDecoration: 'none', transition: 'all 0.2s', marginBottom: '0.125rem', border: '1px solid transparent' }}
+                            onMouseEnter={e => { e.currentTarget.style.background = 'rgba(198,167,94,0.07)'; e.currentTarget.style.borderColor = 'rgba(198,167,94,0.15)'; e.currentTarget.style.transform = 'translateX(3px)'; }}
+                            onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.borderColor = 'transparent'; e.currentTarget.style.transform = 'translateX(0)'; }}>
+                            <span style={{
+                                flexShrink: 0, width: '1.625rem', height: '1.625rem', borderRadius: '0.375rem',
+                                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                                fontWeight: 900, fontSize: '0.75rem',
+                                background: isTop3 ? 'linear-gradient(135deg, #c6a75e, #e8c97d)' : 'rgba(255,255,255,0.06)',
+                                color: isTop3 ? '#111' : 'var(--text-muted)',
+                                border: isTop3 ? 'none' : '1px solid rgba(255,255,255,0.08)',
+                                boxShadow: isTop3 ? '0 2px 8px rgba(198,167,94,0.35)' : 'none',
+                            }}>{idx + 1}</span>
                             <div style={{ flex: 1, minWidth: 0 }}>
-                                <span style={{ display: 'inline-block', fontSize: '0.6rem', fontWeight: 700, padding: '1px 6px', borderRadius: '3px', marginBottom: '0.25rem', background: cc.bg, color: cc.text, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-                                    {rp.category}
-                                </span>
-                                <p style={{ fontSize: '0.8125rem', fontWeight: 600, color: 'var(--text)', lineHeight: 1.4, margin: 0 }}>{rp.title}</p>
-                                <span style={{ display: 'flex', alignItems: 'center', gap: '0.25rem', fontSize: '0.7rem', color: 'var(--text-muted)', marginTop: '0.25rem' }}>
-                                    <Clock size={10} /> {rp.readTime}
-                                </span>
+                                <span style={{ display: 'inline-block', fontSize: '0.58rem', fontWeight: 700, padding: '1px 5px', borderRadius: '3px', marginBottom: '0.2rem', background: cc.bg + 'cc', color: cc.text, textTransform: 'uppercase', letterSpacing: '0.05em' }}>{rp.category}</span>
+                                <p style={{ fontSize: '0.8rem', fontWeight: 600, color: 'var(--text)', lineHeight: 1.4, margin: 0 }}>{rp.title}</p>
+                                <span style={{ display: 'flex', alignItems: 'center', gap: '0.2rem', fontSize: '0.68rem', color: 'var(--text-muted)', marginTop: '0.2rem' }}><Clock size={9} />{rp.readTime}</span>
                             </div>
                         </Link>
                     );
                 })}
             </div>
-        </div>
+        </SbCard>
     );
 };
 
@@ -147,89 +173,89 @@ const RecentPosts = ({ currentSlug }) => {
         .filter(p => p.slug !== currentSlug && p.publishedDate)
         .sort((a, b) => new Date(b.publishedDate) - new Date(a.publishedDate))
         .slice(0, 6);
-
     if (recent.length === 0) return null;
     return (
-        <div style={{ marginBottom: '1.5rem' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem', paddingBottom: '0.625rem', borderBottom: '2px solid var(--accent)' }}>
-                <Newspaper size={14} style={{ color: 'var(--accent)' }} />
-                <span style={{ fontSize: '0.8125rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.07em', color: 'var(--text)' }}>Recent Articles</span>
-            </div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0' }}>
+        <SbCard>
+            <SbHeader icon={Newspaper} label="Recent Articles" color="#60a5fa" />
+            <div style={{ padding: '0.5rem 0.75rem 0.75rem' }}>
                 {recent.map(rp => {
                     const cc = catColor(rp.category);
                     return (
                         <Link key={rp.slug} to={`/blog/${rp.slug}`}
-                            style={{ display: 'flex', alignItems: 'flex-start', gap: '0.625rem', padding: '0.75rem 0', borderBottom: '1px solid var(--card-border)', textDecoration: 'none', transition: 'opacity 0.2s' }}
-                            onMouseEnter={e => e.currentTarget.style.opacity = '0.75'}
-                            onMouseLeave={e => e.currentTarget.style.opacity = '1'}>
-                            {/* Category color bar */}
-                            <div style={{ flexShrink: 0, width: '3px', alignSelf: 'stretch', borderRadius: '2px', background: cc.bg, minHeight: '40px' }} />
+                            style={{ display: 'flex', alignItems: 'flex-start', gap: '0.625rem', padding: '0.5rem 0.5rem', borderRadius: '0.625rem', textDecoration: 'none', transition: 'all 0.2s', marginBottom: '0.125rem', border: '1px solid transparent' }}
+                            onMouseEnter={e => { e.currentTarget.style.background = 'rgba(96,165,250,0.06)'; e.currentTarget.style.borderColor = 'rgba(96,165,250,0.14)'; e.currentTarget.style.transform = 'translateX(3px)'; }}
+                            onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.borderColor = 'transparent'; e.currentTarget.style.transform = 'translateX(0)'; }}>
+                            <div style={{ flexShrink: 0, width: '3px', alignSelf: 'stretch', borderRadius: '2px', background: cc.bg, minHeight: '36px', opacity: 0.9 }} />
                             <div style={{ flex: 1, minWidth: 0 }}>
-                                <span style={{ display: 'inline-block', fontSize: '0.6rem', fontWeight: 700, padding: '1px 6px', borderRadius: '3px', marginBottom: '0.25rem', background: cc.bg, color: cc.text, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-                                    {rp.category}
-                                </span>
-                                <p style={{ fontSize: '0.8125rem', fontWeight: 600, color: 'var(--text)', lineHeight: 1.4, margin: 0 }}>{rp.title}</p>
-                                <span style={{ display: 'flex', alignItems: 'center', gap: '0.25rem', fontSize: '0.7rem', color: 'var(--text-muted)', marginTop: '0.25rem' }}>
-                                    <Calendar size={10} /> {rp.publishedDate ? new Date(rp.publishedDate).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }) : ''}
-                                </span>
+                                <span style={{ display: 'inline-block', fontSize: '0.58rem', fontWeight: 700, padding: '1px 5px', borderRadius: '3px', marginBottom: '0.2rem', background: cc.bg + 'cc', color: cc.text, textTransform: 'uppercase' }}>{rp.category}</span>
+                                <p style={{ fontSize: '0.8rem', fontWeight: 600, color: 'var(--text)', lineHeight: 1.4, margin: 0 }}>{rp.title}</p>
+                                <span style={{ display: 'flex', alignItems: 'center', gap: '0.2rem', fontSize: '0.68rem', color: 'var(--text-muted)', marginTop: '0.2rem' }}><Calendar size={9} />{rp.publishedDate ? new Date(rp.publishedDate).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }) : ''}</span>
                             </div>
                         </Link>
                     );
                 })}
             </div>
-        </div>
+        </SbCard>
     );
 };
 
 /* ─── Related by Category ─── */
 const RelatedByCategory = ({ category, currentSlug }) => {
-    const related = allPosts
-        .filter(p => p.category === category && p.slug !== currentSlug)
-        .slice(0, 4);
+    const related = allPosts.filter(p => p.category === category && p.slug !== currentSlug).slice(0, 4);
     if (related.length === 0) return null;
     const cc = catColor(category);
     return (
-        <div style={{ marginBottom: '1.5rem' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem', paddingBottom: '0.625rem', borderBottom: `2px solid ${cc.bg}` }}>
-                <TrendingUp size={14} style={{ color: cc.bg }} />
-                <span style={{ fontSize: '0.8125rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.07em', color: 'var(--text)' }}>More on {category}</span>
-            </div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0' }}>
+        <SbCard accentColor={cc.bg}>
+            <SbHeader icon={TrendingUp} label={`More: ${category}`} color={cc.bg} />
+            <div style={{ padding: '0.5rem 0.75rem 0.75rem' }}>
                 {related.map(rp => (
                     <Link key={rp.slug} to={`/blog/${rp.slug}`}
-                        style={{ display: 'flex', alignItems: 'flex-start', gap: '0.625rem', padding: '0.75rem 0', borderBottom: '1px solid var(--card-border)', textDecoration: 'none', transition: 'opacity 0.2s' }}
-                        onMouseEnter={e => e.currentTarget.style.opacity = '0.75'}
-                        onMouseLeave={e => e.currentTarget.style.opacity = '1'}>
-                        <span style={{ flexShrink: 0, width: '5px', height: '5px', borderRadius: '50%', background: cc.bg, marginTop: '7px' }} />
-                        <div>
-                            <p style={{ fontSize: '0.8125rem', fontWeight: 600, color: 'var(--text)', lineHeight: 1.4, margin: 0 }}>{rp.title}</p>
-                            <span style={{ fontSize: '0.7rem', color: 'var(--text-muted)' }}>{rp.readTime}</span>
+                        style={{ display: 'flex', alignItems: 'flex-start', gap: '0.5rem', padding: '0.5rem 0.5rem', borderRadius: '0.625rem', textDecoration: 'none', transition: 'all 0.2s', marginBottom: '0.125rem', border: '1px solid transparent' }}
+                        onMouseEnter={e => { e.currentTarget.style.background = cc.bg + '12'; e.currentTarget.style.borderColor = cc.bg + '25'; e.currentTarget.style.transform = 'translateX(3px)'; }}
+                        onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.borderColor = 'transparent'; e.currentTarget.style.transform = 'translateX(0)'; }}>
+                        <span style={{ flexShrink: 0, width: '6px', height: '6px', borderRadius: '50%', background: cc.bg, marginTop: '6px', boxShadow: `0 0 6px ${cc.bg}88` }} />
+                        <div style={{ flex: 1, minWidth: 0 }}>
+                            <p style={{ fontSize: '0.8rem', fontWeight: 600, color: 'var(--text)', lineHeight: 1.4, margin: 0 }}>{rp.title}</p>
+                            <span style={{ fontSize: '0.68rem', color: 'var(--text-muted)' }}>{rp.readTime}</span>
                         </div>
                     </Link>
                 ))}
             </div>
-        </div>
+        </SbCard>
     );
 };
 
 /* ─── Quick Consult Widget ─── */
 const ConsultWidget = ({ postTitle }) => (
-    <div style={{ borderRadius: '1rem', overflow: 'hidden', background: 'linear-gradient(135deg, var(--hero-bg) 0%, var(--hero-surface, #1c1c35) 100%)', border: '1px solid rgba(198,167,94,0.2)', marginBottom: '1.5rem' }}>
-        <div style={{ background: 'linear-gradient(90deg, var(--accent), var(--gold))', padding: '0.625rem 1rem' }}>
-            <p style={{ fontSize: '0.7rem', fontWeight: 800, color: '#111', textTransform: 'uppercase', letterSpacing: '0.1em', margin: 0 }}>⚖️ Free Legal Consultation</p>
-        </div>
-        <div style={{ padding: '1rem' }}>
-            <p style={{ fontSize: '0.8125rem', color: 'var(--hero-text-2)', lineHeight: 1.55, marginBottom: '0.875rem' }}>
-                Get expert legal advice from <strong style={{ color: 'var(--hero-text)' }}>Advocate Md. Shah Alam</strong> — Supreme Court, Bangladesh.
+    <div style={{
+        borderRadius: '1rem', overflow: 'hidden', marginBottom: '1.125rem',
+        background: 'linear-gradient(145deg, rgba(12,10,30,0.95) 0%, rgba(25,20,55,0.92) 100%)',
+        border: '1px solid rgba(198,167,94,0.28)',
+        boxShadow: '0 8px 32px rgba(0,0,0,0.3), 0 0 0 1px rgba(198,167,94,0.06) inset',
+        backdropFilter: 'blur(16px)',
+        WebkitBackdropFilter: 'blur(16px)',
+        position: 'relative',
+    }}>
+        {/* Gold shimmer line */}
+        <div style={{ height: '2.5px', background: 'linear-gradient(90deg, transparent, #c6a75e, #e8c97d, #c6a75e, transparent)' }} />
+        <div style={{ padding: '1rem 1.125rem' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.375rem', marginBottom: '0.625rem' }}>
+                <span style={{ fontSize: '0.9rem' }}>⚖️</span>
+                <span style={{ fontSize: '0.7rem', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.1em', background: 'linear-gradient(90deg, #c6a75e, #e8c97d)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Free Legal Consultation</span>
+            </div>
+            <p style={{ fontSize: '0.8125rem', color: 'rgba(255,255,255,0.7)', lineHeight: 1.6, marginBottom: '0.875rem' }}>
+                Expert advice from <strong style={{ color: '#e8c97d' }}>Adv. Md. Shah Alam</strong> — Supreme Court, Bangladesh.
             </p>
             <a href={waLink(`I read: ${postTitle}. Need legal help.`)} target="_blank" rel="noopener noreferrer"
-                className="btn-whatsapp"
-                style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', padding: '0.75rem', borderRadius: '0.625rem', fontSize: '0.8125rem', fontWeight: 700, textDecoration: 'none', marginBottom: '0.5rem' }}>
+                style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', padding: '0.75rem', borderRadius: '0.625rem', fontSize: '0.8125rem', fontWeight: 700, textDecoration: 'none', marginBottom: '0.5rem', background: 'linear-gradient(135deg, #22c55e, #16a34a)', color: '#fff', boxShadow: '0 4px 14px rgba(34,197,94,0.35)', transition: 'transform 0.15s, box-shadow 0.15s' }}
+                onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-1px)'; e.currentTarget.style.boxShadow = '0 6px 20px rgba(34,197,94,0.45)'; }}
+                onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 4px 14px rgba(34,197,94,0.35)'; }}>
                 <MessageCircle size={14} /> WhatsApp Now
             </a>
             <a href={telLink()}
-                style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', padding: '0.625rem', borderRadius: '0.625rem', fontSize: '0.8125rem', fontWeight: 600, textDecoration: 'none', color: 'var(--hero-text-2)', border: '1px solid rgba(255,255,255,0.1)' }}>
+                style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', padding: '0.625rem', borderRadius: '0.625rem', fontSize: '0.8125rem', fontWeight: 600, textDecoration: 'none', color: 'rgba(255,255,255,0.65)', border: '1px solid rgba(255,255,255,0.1)', transition: 'all 0.15s' }}
+                onMouseEnter={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.06)'; e.currentTarget.style.color = '#fff'; }}
+                onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = 'rgba(255,255,255,0.65)'; }}>
                 <Phone size={13} /> Call Chamber
             </a>
         </div>
@@ -340,7 +366,6 @@ const BlogPostInner = () => {
 
     return (
         <>
-            <ReadingProgress />
             <Helmet>
                 <title>{post.metaTitle}</title>
                 <meta name="description" content={post.metaDescription} />
