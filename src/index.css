@@ -64,6 +64,9 @@ body {
   --hero-photo-glow: rgba(99,133,229,0.18);
   --hero-photo-border: rgba(200,210,230,0.7);
   --hero-photo-shadow: rgba(13,27,46,0.14);
+  --hero-cred-bg: rgba(255,255,255,0.8);
+  --hero-cred-border: #DDE4F0;
+  --hero-cred-shadow: rgba(13,27,46,0.06);
 
   --wa-green: #25D366;
   --wa-green-hover: #1ebe5d;
@@ -126,6 +129,9 @@ body[data-theme="dark"] {
   --hero-photo-glow: rgba(37,99,235,0.2);
   --hero-photo-border: rgba(148,163,184,0.15);
   --hero-photo-shadow: rgba(0,0,0,0.4);
+  --hero-cred-bg: rgba(255,255,255,0.04);
+  --hero-cred-border: rgba(148,163,184,0.14);
+  --hero-cred-shadow: rgba(0,0,0,0.2);
   --nav-border: rgba(148, 163, 184, 0.1);
 
   --input-bg: rgba(255, 255, 255, 0.04);
