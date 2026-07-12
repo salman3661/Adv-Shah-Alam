@@ -144,7 +144,9 @@ const Hero = () => {
                                 className="btn-outline flex items-center gap-2 py-3 px-5 text-sm">
                                 {heroContent.cta2Label} <ArrowRight size={15} />
                             </motion.a>
+                        </div>
                     </motion.div>
+
 
                     {/* ── RIGHT: Photo only ── */}
                     <motion.div
