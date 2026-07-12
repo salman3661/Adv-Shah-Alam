@@ -115,17 +115,17 @@ const ServicePage = ({ metaTitle, metaDesc, canonicalUrl, h1, intro, coverage, f
                 {faqSchema && <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>}
             </Helmet>
 
-            {/* Hero — intentionally always dark charcoal */}
+            {/* Hero — always dark, theme-independent */}
             <section className="pt-28 pb-16 relative overflow-hidden"
-                style={{ background: 'var(--hero-bg)' }}>
+                style={{ background: 'linear-gradient(135deg, #0A1120 0%, #0E1A2E 100%)' }}>
                 <div className="absolute inset-0 pointer-events-none"
-                    style={{ background: 'radial-gradient(ellipse at 70% 50%, rgba(29,78,216,0.10) 0%, transparent 70%)' }}></div>
+                    style={{ background: 'radial-gradient(ellipse at 70% 50%, rgba(29,78,216,0.12) 0%, transparent 70%)' }}></div>
 
                 <div className="container mx-auto px-6 max-w-5xl relative z-10">
                     <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }} className="mb-6">
                         <Link to="/"
                             className="inline-flex items-center gap-2 text-sm font-medium hover:underline transition-opacity hover:opacity-100 opacity-80"
-                            style={{ color: 'var(--hero-text-2)' }}>
+                            style={{ color: '#C8D4E8' }}>
                             <ArrowLeft size={15} /> Back to Home
                         </Link>
                     </motion.div>
@@ -137,13 +137,13 @@ const ServicePage = ({ metaTitle, metaDesc, canonicalUrl, h1, intro, coverage, f
 
                     <h1
                         className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold leading-tight mb-6"
-                        style={{ color: 'var(--hero-text)', fontFamily: "'Playfair Display', serif" }}>
+                        style={{ color: '#EEF2F8', fontFamily: "'Playfair Display', serif" }}>
                         {h1}
                     </h1>
 
                     <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
                         className="text-lg leading-relaxed max-w-3xl"
-                        style={{ color: 'var(--hero-text-2)' }}
+                        style={{ color: '#C8D4E8' }}
                         dangerouslySetInnerHTML={{ __html: intro }} />
 
                     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.35 }}
@@ -154,7 +154,7 @@ const ServicePage = ({ metaTitle, metaDesc, canonicalUrl, h1, intro, coverage, f
                         </a>
                         <a href={telLink()}
                             className="btn-secondary text-sm"
-                            style={{ borderColor: 'var(--hero-border)', color: 'var(--hero-text-2)' }}>
+                            style={{ borderColor: 'rgba(140,160,190,0.3)', color: '#C8D4E8' }}>
                             <Phone size={17} /> Call Now
                         </a>
                     </motion.div>
