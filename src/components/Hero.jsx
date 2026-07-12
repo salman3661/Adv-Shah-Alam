@@ -1,16 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { waLink } from '../data/contactInfo';
-import { MessageCircle, ArrowRight, Scale, Shield, MapPin, Award, Users, BookOpen, ChevronRight } from 'lucide-react';
+import { MessageCircle, ArrowRight, Scale, Shield, MapPin } from 'lucide-react';
 import heroContent from '../content/hero.json';
 import { Link } from 'react-router-dom';
 
-const STATS = [
-    { value: '20+', label: 'Years\nof Practice' },
-    { value: '5000+', label: 'Cases\nHandled' },
-    { value: '98%', label: 'Client\nSatisfaction' },
-    { value: '6', label: 'Practice\nAreas' },
-];
+
 
 const Hero = () => {
     return (
@@ -149,33 +144,6 @@ const Hero = () => {
                                 className="btn-outline flex items-center gap-2 py-3 px-5 text-sm">
                                 {heroContent.cta2Label} <ArrowRight size={15} />
                             </motion.a>
-                        </div>
-
-                        {/* ── Stats Row ── */}
-                        <div style={{
-                            display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)',
-                            borderRadius: '1rem', overflow: 'hidden',
-                            border: '1px solid var(--card-border)',
-                        }}>
-                            {STATS.map((s, i) => (
-                                <div key={i} style={{
-                                    padding: '1rem 0.5rem', textAlign: 'center',
-                                    background: 'var(--surface)',
-                                    borderRight: i < STATS.length - 1 ? '1px solid var(--card-border)' : 'none',
-                                }}>
-                                    <div style={{
-                                        fontSize: 'clamp(1.3rem, 2.5vw, 1.75rem)', fontWeight: 800,
-                                        color: 'var(--accent)', lineHeight: 1,
-                                        fontFamily: "'Playfair Display', serif",
-                                    }}>{s.value}</div>
-                                    <div style={{
-                                        fontSize: '0.62rem', fontWeight: 600,
-                                        color: 'var(--text-muted)', marginTop: '0.3rem', lineHeight: 1.35,
-                                        whiteSpace: 'pre-line',
-                                    }}>{s.label}</div>
-                                </div>
-                            ))}
-                        </div>
                     </motion.div>
 
                     {/* ── RIGHT: Photo only ── */}
@@ -225,39 +193,6 @@ const Hero = () => {
                         </div>
                     </motion.div>
                 </div>
-
-                {/* ── BOTTOM TRUST BAR ── */}
-                <motion.div
-                    initial={{ opacity: 0, y: 16 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.7, duration: 0.6 }}
-                    style={{
-                        borderTop: '1px solid var(--card-border)',
-                        paddingTop: '1.125rem', paddingBottom: '1.5rem',
-                        display: 'flex', alignItems: 'center',
-                        justifyContent: 'space-between', flexWrap: 'wrap', gap: '0.75rem',
-                    }}
-                >
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', flexWrap: 'wrap' }}>
-                        {[
-                            { icon: <Award size={15} style={{ color: 'var(--gold)' }} />, text: 'Bangladesh Bar Council Enrolled' },
-                            { icon: <Scale size={15} style={{ color: 'var(--accent)' }} />, text: 'Supreme Court of Bangladesh' },
-                            { icon: <Users size={15} style={{ color: 'var(--accent)' }} />, text: '5000+ Clients Served' },
-                            { icon: <BookOpen size={15} style={{ color: 'var(--gold)' }} />, text: 'LL.M — Dhaka International University' },
-                        ].map((item, i) => (
-                            <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '0.45rem' }}>
-                                {item.icon}
-                                <span style={{ fontSize: '0.76rem', fontWeight: 600, color: 'var(--text-muted)' }}>{item.text}</span>
-                            </div>
-                        ))}
-                    </div>
-                    <Link to="/blog"
-                        style={{ display: 'flex', alignItems: 'center', gap: '0.3rem', fontSize: '0.8rem', fontWeight: 700, color: 'var(--accent)', textDecoration: 'none' }}
-                        onMouseEnter={e => e.currentTarget.style.opacity = '0.7'}
-                        onMouseLeave={e => e.currentTarget.style.opacity = '1'}>
-                        Read Legal Articles <ChevronRight size={14} />
-                    </Link>
-                </motion.div>
             </div>
         </section>
     );
