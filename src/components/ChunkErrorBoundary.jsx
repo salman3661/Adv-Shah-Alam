@@ -44,8 +44,8 @@ class ChunkErrorBoundary extends React.Component {
           <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '0.75rem' }}>
             Something went wrong
           </h2>
-          <p style={{ color: 'var(--text-muted)', marginBottom: '0.75rem', fontSize: '0.85rem' }}>
-            {this.state.errorMsg}
+          <p style={{ color: 'var(--text-muted)', marginBottom: '1.5rem' }}>
+            Please refresh the page and try again.
           </p>
           <button
             onClick={() => window.location.reload()}
