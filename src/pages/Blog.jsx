@@ -6,7 +6,9 @@ import { telLink, waLink } from '../data/contactInfo';
 
 // Load all EN blog posts from JSON files (bundled at build time by Vite)
 const _postModules = import.meta.glob('../content/posts/en/*.json', { eager: true });
-const blogPosts = Object.values(_postModules).map((m) => m.default ?? m);
+const blogPosts = Object.values(_postModules)
+    .map((m) => m.default ?? m)
+    .filter((p) => p && p.slug && p.title); // guard against malformed entries
 
 function isPublished(post) {
   try {
@@ -31,8 +33,15 @@ function isNew(post) {
 
 const BlogCard = ({ post }) => (
     <article
-        className="glass-card flex flex-col h-full overflow-hidden blog-card-hover"
-        style={{ borderRadius: '1.25rem', transition: 'transform 0.25s ease, box-shadow 0.25s ease' }}
+        className="glass-card flex flex-col h-full overflow-hidden"
+        style={{
+            borderRadius: '1.25rem',
+            transition: 'transform 0.25s cubic-bezier(0.4,0,0.2,1), box-shadow 0.25s ease',
+            cursor: 'pointer',
+        }}
+        onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = '0 16px 40px rgba(0,0,0,0.12)'; }}
+        onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = ''; }}
+        onClick={() => window.location.href = `/blog/${post.slug}`}
     >
         <div
             className="px-6 pt-6 pb-4"
@@ -52,7 +61,7 @@ const BlogCard = ({ post }) => (
                 <div className="flex items-center gap-2">
                     {isNew(post) && (
                         <span
-                            className="text-xs font-bold px-2 py-0.5 rounded-full"
+                            className="text-xs font-bold px-2 py-0.5 rounded-full animate-pulse"
                             style={{
                                 background: 'linear-gradient(135deg, #10b981, #059669)',
                                 color: '#fff',
@@ -84,7 +93,7 @@ const BlogCard = ({ post }) => (
         </div>
         <div className="px-6 py-4 mt-auto flex items-center justify-between">
             <span className="text-xs" style={{ color: 'var(--text-muted)' }}>
-                {post.publishedDate}
+                {new Date(post.publishedDate).toLocaleDateString('en-BD', { day: 'numeric', month: 'short', year: 'numeric' })}
             </span>
             <Link
                 to={`/blog/${post.slug}`}
