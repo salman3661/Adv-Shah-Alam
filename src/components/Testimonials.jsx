@@ -337,7 +337,7 @@ const Testimonials = () => {
                             rel="noopener noreferrer"
                             className="btn-whatsapp inline-flex items-center gap-2 text-sm"
                         >
-                            Book Free Consultation
+                            Book a Consultation
                         </a>
                     </motion.div>
                 </div>

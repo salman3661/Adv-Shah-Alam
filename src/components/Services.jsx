@@ -51,9 +51,9 @@ const Services = () => {
                                 </div>
                                 <span
                                     className="text-xs font-semibold px-2 py-1 rounded-full flex-shrink-0"
-                                    style={{ background: 'rgba(34,197,94,0.10)', color: '#16a34a', border: '1px solid rgba(34,197,94,0.2)' }}
+                                    style={{ background: 'rgba(26,63,191,0.08)', color: 'var(--accent)', border: '1px solid rgba(26,63,191,0.18)' }}
                                 >
-                                    Free Consult
+                                    Book Consultation
                                 </span>
                             </div>
 
@@ -79,10 +79,10 @@ const Services = () => {
                 {/* CTA */}
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }}
                     className="text-center mt-12">
-                    <p className="text-sm mb-4" style={{ color: 'var(--text-muted)' }}>Not sure which service you need?</p>
+                    <p className="text-sm mb-4" style={{ color: 'var(--text-muted)' }}>Not sure which service you need? Speak with our legal team.</p>
                     <a href={waLink()} target="_blank" rel="noopener noreferrer"
                         className="btn-primary inline-flex items-center gap-2 py-3.5 px-8 shadow-lg text-sm">
-                        Get Free Consultation
+                        Book a Consultation
                     </a>
                 </motion.div>
             </div>

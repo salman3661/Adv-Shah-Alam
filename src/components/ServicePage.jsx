@@ -385,13 +385,17 @@ const ServicePage = ({ metaTitle, metaDesc, canonicalUrl, h1, intro, coverage, f
                 <div className="container mx-auto px-6 max-w-5xl">
                     <motion.div initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
                         className="glass-card p-10 text-center" style={{ borderColor: 'var(--accent)' }}>
-                        <span className="label-accent block mb-3">Free Consultation</span>
+                        <span className="label-accent block mb-3">Book a Consultation</span>
                         <h2 className="text-2xl md:text-3xl font-serif font-bold mb-4"
                             style={{ color: 'var(--text)', fontFamily: "'Playfair Display', serif" }}>
                             {ctaText || 'Need Expert Legal Help?'}
                         </h2>
-                        <p className="text-sm mb-7 max-w-xl mx-auto" style={{ color: 'var(--text-muted)' }}>
-                            Contact Advocate Md. Shah Alam in Uttara, Dhaka today. Call, WhatsApp, or visit our office.
+                        <p className="text-sm mb-2 max-w-xl mx-auto" style={{ color: 'var(--text-muted)' }}>
+                            Contact Advocate Md. Shah Alam in Uttara, Dhaka today. A brief consultation helps us understand your case before taking action.
+                        </p>
+                        <p className="text-xs mb-6 max-w-md mx-auto" style={{ color: 'var(--text-muted)', opacity: 0.75 }}>
+                            Consultation available via WhatsApp, phone, or in-chamber visit. Fees vary by case type.
+                            Payment accepted via <strong>bKash:</strong> 01712655546
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <a href={waLink(`Hello, I need legal consultation regarding your "${h1}" service.`)} target="_blank" rel="noopener noreferrer"
