@@ -135,11 +135,11 @@ const ServicePage = ({ metaTitle, metaDesc, canonicalUrl, h1, intro, coverage, f
                         Legal Services · Advocate Md. Shah Alam
                     </motion.span>
 
-                    <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.14 }}
+                    <h1
                         className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold leading-tight mb-6"
                         style={{ color: 'var(--hero-text)', fontFamily: "'Playfair Display', serif" }}>
                         {h1}
-                    </motion.h1>
+                    </h1>
 
                     <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
                         className="text-lg leading-relaxed max-w-3xl"
