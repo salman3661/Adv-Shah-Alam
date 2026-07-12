@@ -52,7 +52,7 @@ export default function AdminLogin({ onLogin }) {
       alignItems: 'center',
       justifyContent: 'center',
       padding: '24px',
-      fontFamily: "'Inter', system-ui, sans-serif",
+      fontFamily: "'DM Sans', system-ui, sans-serif",
       position: 'relative',
       overflow: 'hidden',
     }}>
