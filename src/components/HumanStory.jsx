@@ -64,7 +64,7 @@ const HumanStory = ({ lang = 'en' }) => {
     return (
         <section
             id="human-story"
-            className="py-24 relative overflow-hidden"
+            className="py-20 relative overflow-hidden"
             style={{ background: 'var(--surface)' }}
         >
             {/* Background glow */}
@@ -84,7 +84,7 @@ const HumanStory = ({ lang = 'en' }) => {
                     </motion.span>
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
-                        className="text-4xl md:text-5xl font-serif font-bold mb-4"
+                        className="text-3xl md:text-4xl font-serif font-bold mb-3"
                         style={{ color: 'var(--text)', fontFamily: "'Playfair Display', serif" }}
                     >
                         {isBn ? 'একজন মানুষ, একটি প্রতিশ্রুতি' : 'A Person, A Commitment'}
@@ -150,14 +150,14 @@ const HumanStory = ({ lang = 'en' }) => {
                     </blockquote>
                     <div className="mb-6">
                         <span style={{
-                            fontFamily: "'Dancing Script', 'Brush Script MT', cursive",
-                            fontSize: '1.6rem',
+                            fontFamily: isBn ? "'Noto Serif Bengali', serif" : "'Dancing Script', 'Brush Script MT', cursive",
+                            fontSize: isBn ? '1.4rem' : '1.6rem',
                             color: 'var(--accent)',
                             fontWeight: 600,
                             display: 'block',
                             lineHeight: 1.3,
                         }}>
-                            Md. Shah Alam
+                            {isBn ? 'এডভোকেট মোঃ শাহ আলম' : 'Md. Shah Alam'}
                         </span>
                         <span className="text-xs font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>
                             {isBn ? 'অ্যাডভোকেট, বাংলাদেশ সুপ্রিম কোর্ট' : 'Advocate, Supreme Court of Bangladesh'}

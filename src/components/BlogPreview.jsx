@@ -39,7 +39,9 @@ const categoryColors = Object.fromEntries(
 );
 
 const BlogPreview = ({ lang: initialLang = 'en' }) => {
+    // Sync active language with the page language on mount
     const [activeLang, setLang] = useState(initialLang);
+    const isBn = initialLang === 'bn';
     const articles = activeLang === 'en' ? latestEn : latestBn;
     const linkBase = activeLang === 'en' ? '/blog/' : '/bn/blog/';
     const readLabel = activeLang === 'en'
@@ -55,14 +57,14 @@ const BlogPreview = ({ lang: initialLang = 'en' }) => {
                     <div>
                         <motion.span initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
                             className="label-accent block mb-3">
-                            {activeLang === 'en' ? 'Legal Knowledge Hub' : 'আইন সম্পর্কে জানুন'}
+                            {activeLang === 'en' ? 'Legal Knowledge Hub' : 'আইনি জ্ঞানের ভাণ্ডার'}
                         </motion.span>
                         <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
-                            className="text-4xl md:text-5xl font-serif font-bold mb-2" style={{ color: 'var(--text)', fontFamily: "'Playfair Display', serif" }}>
+                            className="text-3xl md:text-4xl font-serif font-bold mb-2" style={{ color: 'var(--text)', fontFamily: "'Playfair Display', serif" }}>
                             {activeLang === 'en' ? 'Legal Guides & Case Insights' : 'আইনি পরামর্শ ও আপনার অধিকার'}
                         </motion.h2>
                         <motion.div initial={{ scaleX: 0 }} whileInView={{ scaleX: 1 }} viewport={{ once: true }} transition={{ delay: 0.2 }}
-                            className="w-24 h-1 mx-auto rounded-full" style={{ background: 'var(--accent)' }}></motion.div>
+                            className="w-20 h-1 rounded-full" style={{ background: 'var(--accent)' }}></motion.div>
                     </div>
 
                     {/* Lang toggle + All Articles link */}

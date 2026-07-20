@@ -18,16 +18,16 @@ const Services = ({ lang = 'en' }) => {
     const isBn = lang === 'bn';
 
     return (
-        <section id="services" className="py-24 relative overflow-hidden" style={{ background: 'var(--bg)' }}>
+        <section id="services" className="py-20 relative overflow-hidden" style={{ background: 'var(--bg)' }}>
             <div className="container mx-auto px-6 max-w-7xl">
                 {/* Header */}
-                <div className="text-center mb-14">
+                <div className="text-center mb-12">
                     <motion.span initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
                         className="label-accent block mb-3">
-                        {isBn ? 'আমরা যেভাবে আপনাকে সাহায্য করি' : 'How We Help You'}
+                        {isBn ? 'আইনি সেবাসমূহ' : 'How We Help You'}
                     </motion.span>
                     <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
-                        className="text-4xl md:text-5xl font-serif font-bold mb-3" style={{ color: 'var(--text)', fontFamily: "'Playfair Display', serif" }}>
+                        className="text-3xl md:text-4xl font-serif font-bold mb-3" style={{ color: 'var(--text)', fontFamily: "'Playfair Display', serif" }}>
                         {isBn ? 'আইনের প্রতিটি ক্ষেত্রে আমরা পাশে আছি' : 'Legal Services & Practice Areas'}
                     </motion.h2>
                     <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.15 }}
