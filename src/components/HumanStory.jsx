@@ -85,7 +85,7 @@ const HumanStory = ({ lang = 'en' }) => {
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
                         className="text-3xl md:text-4xl font-serif font-bold mb-3"
-                        style={{ color: 'var(--text)', fontFamily: "'Playfair Display', serif" }}
+                        style={{ color: 'var(--text)', fontFamily: isBn ? 'inherit' : "'Playfair Display', serif" }}
                     >
                         {isBn ? 'একজন মানুষ, একটি প্রতিশ্রুতি' : 'A Person, A Commitment'}
                     </motion.h2>
@@ -142,7 +142,7 @@ const HumanStory = ({ lang = 'en' }) => {
                     <Scale size={36} className="mx-auto mb-5" style={{ color: 'var(--accent)', opacity: 0.7 }} />
                     <blockquote
                         className="text-lg md:text-xl font-serif italic leading-relaxed mb-6 max-w-3xl mx-auto"
-                        style={{ color: 'var(--text-2)', fontFamily: "'Playfair Display', serif" }}
+                        style={{ color: 'var(--text-2)', fontFamily: isBn ? 'inherit' : "'Playfair Display', serif" }}
                     >
                         {isBn 
                             ? '"আমার কাছে প্রতিটি মামলা শুধু একটি কেস নম্বর নয় — এটি একটি মানুষের জীবনের গুরুত্বপূর্ণ অধ্যায়। আপনি যখন আমাকে বিশ্বাস করে আসেন, আমি সেই বিশ্বাসের প্রতি সৎ থাকার শপথ নিই।"'

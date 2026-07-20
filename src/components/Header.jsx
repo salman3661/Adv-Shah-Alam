@@ -57,10 +57,15 @@ const Header = () => {
         }
     };
 
-    const isBn = location.pathname.startsWith('/bn');
+    const isBn = !location.pathname.startsWith('/en') &&
+                 !location.pathname.startsWith('/blog') &&
+                 !location.pathname.startsWith('/advocate-md-shah-alam') &&
+                 !location.pathname.startsWith('/contact') &&
+                 !location.pathname.startsWith('/privacy-policy') &&
+                 !location.pathname.startsWith('/terms');
 
     const navLinks = [
-        { name: isBn ? 'হোম'       : 'Home',     nameBn: 'হোম',       href: isBn ? '/bn' : '/',            icon: Home,     isPage: true },
+        { name: isBn ? 'হোম'       : 'Home',     nameBn: 'হোম',       href: isBn ? '/' : '/en',            icon: Home,     isPage: true },
         { name: isBn ? 'সম্পর্কে'   : 'About',    nameBn: 'সম্পর্কে',   href: '/advocate-md-shah-alam',       icon: User,     isPage: true },
         { name: isBn ? 'সেবাসমূহ'  : 'Services', nameBn: 'সেবাসমূহ',  id: 'services',                        icon: Scale,    isPage: false },
         { name: isBn ? 'প্রশ্নোত্তর' : 'FAQ',      nameBn: 'প্রশ্নোত্তর', id: 'faq',                             icon: Award,    isPage: false },
@@ -70,7 +75,7 @@ const Header = () => {
 
     const isActive = (link) => {
         if (!link.isPage) return false;
-        if (link.href === '/' || link.href === '/bn') return location.pathname === '/' || location.pathname === '/bn';
+        if (link.href === '/' || link.href === '/en') return location.pathname === '/' || location.pathname === '/en';
         return location.pathname.startsWith(link.href);
     };
 
@@ -147,18 +152,18 @@ const Header = () => {
                         {/* Language Switcher */}
                         <motion.button
                             onClick={() => {
-                                const isBnPage = location.pathname.startsWith('/bn') || location.pathname === '/bn';
-                                if (isBnPage) {
+                                const isCurrentlyBn = isBn;
+                                if (isCurrentlyBn) {
                                     if (location.pathname.startsWith('/bn/blog')) {
                                         navigate(location.pathname.replace(/^\/bn/, ''));
                                     } else {
-                                        navigate('/');
+                                        navigate('/en');
                                     }
                                 } else {
                                     if (location.pathname.startsWith('/blog')) {
                                         navigate('/bn' + location.pathname);
                                     } else {
-                                        navigate('/bn');
+                                        navigate('/');
                                     }
                                 }
                             }}
@@ -173,7 +178,7 @@ const Header = () => {
                             }}
                             aria-label="Switch language"
                         >
-                            {location.pathname.startsWith('/bn') || location.pathname === '/bn' ? '🇬🇧 EN' : '🇧🇩 বাংলা'}
+                            {isBn ? '🇬🇧 EN' : '🇧🇩 বাংলা'}
                         </motion.button>
 
                         {/* Theme Toggle */}

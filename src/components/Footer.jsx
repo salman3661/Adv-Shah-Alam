@@ -14,18 +14,34 @@ const Footer = () => {
         document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
     };
 
-    const serviceLinks = siteInfo.footerServiceLinks;
+    const isBn = !location.pathname.startsWith('/en') &&
+                 !location.pathname.startsWith('/blog') &&
+                 !location.pathname.startsWith('/advocate-md-shah-alam') &&
+                 !location.pathname.startsWith('/contact') &&
+                 !location.pathname.startsWith('/privacy-policy') &&
+                 !location.pathname.startsWith('/terms');
+
+    const serviceLinks = siteInfo.footerServiceLinks.map(link => {
+        let name = link.name;
+        if (isBn) {
+            if (link.name === 'Criminal Defense') name = 'ফৌজদারি মামলা';
+            else if (link.name === 'Divorce & Family Law') name = 'পারিবারিক ও বিবাহবিচ্ছেদ';
+            else if (link.name === 'Land & Property Disputes') name = 'ভূমি ও জমিজমা';
+            else if (link.name === 'Bail Applications') name = 'জামিনের আবেদন';
+            else if (link.name === 'Supreme Court Matters') name = 'সুপ্রীম কোর্ট মামলা';
+            else if (link.name === 'Company & Corporate Law') name = 'কোম্পানি ও করপোরেট';
+        }
+        return { ...link, name };
+    });
 
     const quickLinks = [
-        { name: 'Home', path: '/' },
-        { name: 'About Advocate', path: '/advocate-md-shah-alam' },
-        { name: 'Services', path: '/#services' },
-        { name: 'FAQ', path: '/#faq' },
-        { name: 'Blog', path: '/blog' },
-        { name: 'Contact Us', path: '/contact' },
+        { name: isBn ? 'হোম' : 'Home', path: isBn ? '/' : '/en' },
+        { name: isBn ? 'আইনজীবী সম্পর্কে' : 'About Advocate', path: '/advocate-md-shah-alam' },
+        { name: isBn ? 'সেবাসমূহ' : 'Services', path: isBn ? '/#services' : '/en#services' },
+        { name: isBn ? 'প্রশ্নোত্তর' : 'FAQ', path: isBn ? '/#faq' : '/en#faq' },
+        { name: isBn ? 'ব্লগ' : 'Blog', path: isBn ? '/bn/blog' : '/blog' },
+        { name: isBn ? 'যোগাযোগ' : 'Contact Us', path: '/contact' },
     ];
-
-    const advocatePageLink = { name: 'About the Advocate', path: '/advocate-md-shah-alam' };
 
     const linkClass = "block text-sm transition-colors duration-200 hover:opacity-100 opacity-70 hover:underline decoration-dotted";
 
@@ -36,16 +52,20 @@ const Footer = () => {
 
                     {/* Brand */}
                     <div className="sm:col-span-2 lg:col-span-1">
-                        <h3 className="font-serif font-bold text-2xl mb-1" style={{ color: 'var(--text)', fontFamily: "'Playfair Display', serif" }}>
-                            Adv. Md. Shah Alam
+                        <h3 className="font-serif font-bold text-2xl mb-1" style={{ color: 'var(--text)', fontFamily: isBn ? 'inherit' : "'Playfair Display', serif" }}>
+                            {isBn ? 'এডভোকেট মোঃ শাহ আলম' : 'Adv. Md. Shah Alam'}
                         </h3>
-                        <p className="text-sm font-semibold mb-3" style={{ color: 'var(--accent)' }}>Supreme Court of Bangladesh</p>
+                        <p className="text-sm font-semibold mb-3" style={{ color: 'var(--accent)' }}>
+                            {isBn ? 'বাংলাদেশ সুপ্রীম কোর্ট' : 'Supreme Court of Bangladesh'}
+                        </p>
                         <p className="text-xs leading-relaxed mb-4" style={{ color: 'var(--text-muted)' }}>
-                            {siteInfo.footerBio}
+                            {isBn
+                                ? 'এডভোকেট মোঃ শাহ আলম — ঢাকা উত্তরা ও সুপ্রীম কোর্টের একজন অভিজ্ঞ আইনজীবী। ১০ বছরেরও বেশি সময় ধরে তিনি ফৌজদারি, পারিবারিক, ভূমি ও করপোরেট আইনে সফলতার সাথে আইনি সেবা দিয়ে আসছেন।'
+                                : siteInfo.footerBio}
                         </p>
                         <div className="flex items-start gap-2 text-xs mb-2" style={{ color: 'var(--text-muted)' }}>
                             <MapPin size={12} className="mt-0.5 flex-shrink-0" style={{ color: 'var(--gold)' }} />
-                            {siteInfo.chamberAddress}
+                            {isBn ? 'বাড়ি ৪৬, রাস্তা ৬/বি, সেক্টর ১২, উত্তরা, ঢাকা-১২৩০' : siteInfo.chamberAddress}
                         </div>
                         <div className="flex items-center gap-2 text-xs" style={{ color: 'var(--text-muted)' }}>
                             <Phone size={12} className="flex-shrink-0" style={{ color: 'var(--gold)' }} />
@@ -55,21 +75,22 @@ const Footer = () => {
 
                     {/* Quick Links */}
                     <div>
-                        <h4 className="font-bold text-xs uppercase tracking-wider mb-4" style={{ color: 'var(--text)' }}>Quick Links</h4>
+                        <h4 className="font-bold text-xs uppercase tracking-wider mb-4" style={{ color: 'var(--text)' }}>
+                            {isBn ? 'সহজ লিঙ্ক' : 'Quick Links'}
+                        </h4>
                         <nav className="space-y-2">
                             {quickLinks.map((link) => (
                                 <Link key={link.path} to={link.path}
                                     className={linkClass} style={{ color: 'var(--text-2)' }}>{link.name}</Link>
                             ))}
-                            <Link to={advocatePageLink.path} className={linkClass} style={{ color: 'var(--text-2)' }}>
-                                {advocatePageLink.name}
-                            </Link>
                         </nav>
                     </div>
 
                     {/* Services */}
                     <div>
-                        <h4 className="font-bold text-xs uppercase tracking-wider mb-4" style={{ color: 'var(--text)' }}>Practice Areas</h4>
+                        <h4 className="font-bold text-xs uppercase tracking-wider mb-4" style={{ color: 'var(--text)' }}>
+                            {isBn ? 'আইনি সেবাসমূহ' : 'Practice Areas'}
+                        </h4>
                         <nav className="space-y-2">
                             {serviceLinks.map((link) => (
                                 <Link key={link.path} to={link.path} className={linkClass} style={{ color: 'var(--text-2)' }}>
@@ -81,7 +102,9 @@ const Footer = () => {
 
                     {/* Connect */}
                     <div>
-                        <h4 className="font-bold text-xs uppercase tracking-wider mb-4" style={{ color: 'var(--text)' }}>Connect With Us</h4>
+                        <h4 className="font-bold text-xs uppercase tracking-wider mb-4" style={{ color: 'var(--text)' }}>
+                            {isBn ? 'যোগাযোগ করুন' : 'Connect With Us'}
+                        </h4>
                         <div className="space-y-2 mb-5">
                             <a href={telLink()} className="flex items-center gap-2 text-sm" style={{ color: 'var(--text-2)' }}>
                                 <Phone size={14} style={{ color: 'var(--accent)' }} />{CALL_DISPLAY}
@@ -113,32 +136,23 @@ const Footer = () => {
                 </div>
 
                 {/* Bottom */}
-                <div className="pt-8 flex flex-col md:flex-row justify-between items-center gap-4 flex-wrap"
+                <div className="pt-8 flex flex-col items-center justify-center text-center gap-4"
                     style={{ borderTop: '1px solid var(--card-border)' }}>
-                    <div className="text-center md:text-left">
+                    <div className="w-full flex flex-col items-center">
                         <p className="text-xs mb-1" style={{ color: 'var(--text-muted)' }}>
                             © {currentYear} {siteInfo.advocateName}. All Rights Reserved.
                         </p>
-                        <div className="flex gap-3 justify-center md:justify-start mt-1">
+                        <div className="flex gap-3 justify-center mt-1">
                             <Link to="/privacy-policy" className="text-xs hover:underline transition-opacity opacity-60 hover:opacity-100"
                                 style={{ color: 'var(--text-muted)' }}>Privacy Policy</Link>
                             <span className="text-xs opacity-30" style={{ color: 'var(--text-muted)' }}>|</span>
                             <Link to="/terms" className="text-xs hover:underline transition-opacity opacity-60 hover:opacity-100"
                                 style={{ color: 'var(--text-muted)' }}>Terms & Conditions</Link>
                         </div>
-                        <p className="text-xs mt-2 max-w-lg" style={{ color: 'var(--text-muted)', opacity: 0.55 }}>
+                        <p className="text-xs mt-3 max-w-2xl mx-auto" style={{ color: 'var(--text-muted)', opacity: 0.55, lineHeight: 1.6 }}>
                             <strong>Disclaimer:</strong> The information on this website is for general informational purposes only and does not constitute legal advice. Visiting this site or contacting us does not create an attorney-client relationship. Please consult a qualified advocate for advice specific to your situation.
                         </p>
                     </div>
-
-                    <button onClick={toggleTheme}
-                        className="flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold transition-all hover:scale-105"
-                        style={{ background: 'var(--card-bg)', border: '1px solid var(--card-border)', color: 'var(--text)' }}>
-                        {theme === 'light'
-                            ? <><Moon size={13} style={{ color: 'var(--accent)' }} /><span>Dark Mode</span></>
-                            : <><Sun size={13} style={{ color: 'var(--gold)' }} /><span>Light Mode</span></>
-                        }
-                    </button>
                 </div>
             </div>
         </footer>

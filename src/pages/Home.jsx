@@ -26,8 +26,8 @@ const Home = ({ lang = 'en' }) => {
         ? "এডভোকেট মোঃ শাহ আলম — বাংলাদেশ সুপ্রীম কোর্টের অভিজ্ঞ আইনজীবী। ফৌজদারি মামলা, বিবাহবিচ্ছেদ, জামিন, ভূমি বিরোধ ও করপোরেট আইনে বিশেষজ্ঞ। উত্তরা, ঢাকায় আমাদের চেম্বারে আসুন অথবা সরাসরি WhatsApp করুন।"
         : "Advocate Md. Shah Alam is a trusted lawyer in Bangladesh for criminal, divorce, bail & land cases. Visit our Uttara chamber in Dhaka – 10+ years of legal excellence.";
     const canonical = isBn
-        ? "https://www.advmdshahalam.me/bn"
-        : "https://www.advmdshahalam.me/";
+        ? "https://www.advmdshahalam.me/"
+        : "https://www.advmdshahalam.me/en";
 
     return (
         <>
@@ -38,8 +38,8 @@ const Home = ({ lang = 'en' }) => {
                 <meta name="robots" content="index, follow" />
                 {isBn && <meta name="keywords" content="আইনজীবী ঢাকা, এডভোকেট উত্তরা, বাংলাদেশ সুপ্রীম কোর্ট আইনজীবী, জামিন আইনজীবী, ফৌজদারি মামলা, বিবাহবিচ্ছেদ আইনজীবী, ভূমি বিরোধ, এডভোকেট মোঃ শাহ আলম" />}
                 {/* hreflang alternates */}
-                <link rel="alternate" hreflang="en" href="https://www.advmdshahalam.me/" />
-                <link rel="alternate" hreflang="bn" href="https://www.advmdshahalam.me/bn" />
+                <link rel="alternate" hreflang="en" href="https://www.advmdshahalam.me/en" />
+                <link rel="alternate" hreflang="bn" href="https://www.advmdshahalam.me/" />
                 <link rel="alternate" hreflang="x-default" href="https://www.advmdshahalam.me/" />
                 {/* OpenGraph */}
                 <meta property="og:type" content="website" />

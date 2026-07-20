@@ -161,7 +161,7 @@ const Timeline = ({ isHome = false, lang = 'en' }) => {
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
                         className="text-4xl md:text-5xl font-serif font-bold mb-4"
-                        style={{ color: 'var(--text)', fontFamily: "'Playfair Display', serif" }}
+                        style={{ color: 'var(--text)', fontFamily: isBn ? 'inherit' : "'Playfair Display', serif" }}
                     >
                         {isBn ? 'পেশাদার যাত্রা' : 'Professional Journey'}
                     </motion.h2>
@@ -190,7 +190,7 @@ const Timeline = ({ isHome = false, lang = 'en' }) => {
                         </div>
                         <h3
                             className="text-2xl font-serif font-bold"
-                            style={{ color: 'var(--text)', fontFamily: "'Playfair Display', serif" }}
+                            style={{ color: 'var(--text)', fontFamily: isBn ? 'inherit' : "'Playfair Display', serif" }}
                         >
                             {isBn ? 'কর্মঅভিজ্ঞতা' : 'Work Experience'}
                         </h3>
@@ -257,7 +257,7 @@ const Timeline = ({ isHome = false, lang = 'en' }) => {
                         </div>
                         <h3
                             className="text-2xl font-serif font-bold"
-                            style={{ color: 'var(--text)', fontFamily: "'Playfair Display', serif" }}
+                            style={{ color: 'var(--text)', fontFamily: isBn ? 'inherit' : "'Playfair Display', serif" }}
                         >
                             {isBn ? 'শিক্ষা' : 'Education'}
                         </h3>

@@ -52,7 +52,7 @@ const About = ({ lang = 'en' }) => {
                         {aboutContent.sectionLabel}
                     </motion.span>
                     <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
-                        className="text-4xl md:text-5xl font-serif font-bold mb-4" style={{ color: 'var(--text)', fontFamily: "'Playfair Display', serif" }}>
+                        className="text-4xl md:text-5xl font-serif font-bold mb-4" style={{ color: 'var(--text)', fontFamily: isBn ? 'inherit' : "'Playfair Display', serif" }}>
                         {aboutContent.heading}
                     </motion.h2>
                     <motion.div initial={{ scaleX: 0 }} whileInView={{ scaleX: 1 }} viewport={{ once: true }} transition={{ delay: 0.2 }}
@@ -97,7 +97,7 @@ const About = ({ lang = 'en' }) => {
                                 className="rounded-2xl p-6 mt-2"
                                 style={{ background: 'linear-gradient(135deg, rgba(198,167,94,0.08) 0%, rgba(26,63,191,0.06) 100%)', border: '1px solid rgba(198,167,94,0.2)' }}
                             >
-                                <p className="text-sm leading-relaxed italic mb-4" style={{ color: 'var(--text-2)', fontFamily: "'Playfair Display', serif" }}>
+                                <p className="text-sm leading-relaxed italic mb-4" style={{ color: 'var(--text-2)', fontFamily: isBn ? 'inherit' : "'Playfair Display', serif" }}>
                                     ❝ {aboutContent.personalNote} ❞
                                 </p>
                                 {/* Signature */}

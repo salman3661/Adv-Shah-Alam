@@ -76,7 +76,7 @@ const Chambers = ({ lang = 'en' }) => {
                     </motion.span>
                     <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
                         className="text-3xl md:text-4xl font-serif font-bold mb-3"
-                        style={{ color: 'var(--text)', fontFamily: "'Playfair Display', serif" }}>
+                        style={{ color: 'var(--text)', fontFamily: isBn ? 'inherit' : "'Playfair Display', serif" }}>
                         {isBn ? 'চেম্বারের ঠিকানা' : 'Chamber Locations'}
                     </motion.h2>
                     <motion.div initial={{ scaleX: 0 }} whileInView={{ scaleX: 1 }} viewport={{ once: true }} transition={{ delay: 0.2 }}
@@ -93,8 +93,8 @@ const Chambers = ({ lang = 'en' }) => {
                             <button
                                 key={i}
                                 onClick={() => setLightboxIdx(i)}
-                                className="relative overflow-hidden group focus:outline-none"
-                                style={{ aspectRatio: i === 0 ? '16/9' : '4/3' }}
+                                className="relative overflow-hidden group focus:outline-none w-full"
+                                style={{ aspectRatio: '3/2' }}
                                 aria-label={isBn ? photo.alt : photo.altEn}>
                                 <img
                                     src={photo.src}

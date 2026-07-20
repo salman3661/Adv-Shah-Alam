@@ -179,7 +179,7 @@ const Testimonials = ({ lang = 'en' }) => {
                             initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }} transition={{ delay: 0.1 }}
                             className="text-4xl md:text-5xl font-serif font-bold mb-4"
-                            style={{ color: 'var(--text)', fontFamily: "'Playfair Display', serif" }}
+                            style={{ color: 'var(--text)', fontFamily: isBn ? 'inherit' : "'Playfair Display', serif" }}
                         >
                             {isBn ? 'আমাদের মক্কেলদের কথা' : 'What Our Clients Say'}
                         </motion.h2>
@@ -219,7 +219,7 @@ const Testimonials = ({ lang = 'en' }) => {
                             </span>
                             <span className="text-xs font-semibold" style={{ color: 'var(--text-muted)' }}>Criminal Defence · Uttara, Dhaka</span>
                         </div>
-                        <h4 className="text-lg font-serif font-bold mb-3" style={{ color: 'var(--text)', fontFamily: "'Playfair Display', serif" }}>
+                        <h4 className="text-lg font-serif font-bold mb-3" style={{ color: 'var(--text)', fontFamily: isBn ? 'inherit' : "'Playfair Display', serif" }}>
                             {isBn ? '"৪৮ ঘণ্টায় জামিন — একটি পরিবার রক্ষার গল্প"' : '"Bail in 48 Hours — A Family Saved"'}
                         </h4>
                         <p className="text-sm leading-relaxed mb-4" style={{ color: 'var(--text-2)' }}>

@@ -27,7 +27,7 @@ const Services = ({ lang = 'en' }) => {
                         {isBn ? 'আইনি সেবাসমূহ' : 'How We Help You'}
                     </motion.span>
                     <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
-                        className="text-3xl md:text-4xl font-serif font-bold mb-3" style={{ color: 'var(--text)', fontFamily: "'Playfair Display', serif" }}>
+                        className="text-3xl md:text-4xl font-serif font-bold mb-3" style={{ color: 'var(--text)', fontFamily: isBn ? 'inherit' : "'Playfair Display', serif" }}>
                         {isBn ? 'আইনের প্রতিটি ক্ষেত্রে আমরা পাশে আছি' : 'Legal Services & Practice Areas'}
                     </motion.h2>
                     <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.15 }}

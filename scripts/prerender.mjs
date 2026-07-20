@@ -36,6 +36,8 @@ const faq      = JSON.parse(fs.readFileSync(path.join(ROOT,'src','content','faq.
 const services = JSON.parse(fs.readFileSync(path.join(ROOT,'src','content','services.json'),'utf8'));
 const about    = JSON.parse(fs.readFileSync(path.join(ROOT,'src','content','about.json'),'utf8'));
 const hero     = JSON.parse(fs.readFileSync(path.join(ROOT,'src','content','hero.json'),'utf8'));
+const aboutBn  = JSON.parse(fs.readFileSync(path.join(ROOT,'src','content','about_bn.json'),'utf8'));
+const heroBn   = JSON.parse(fs.readFileSync(path.join(ROOT,'src','content','hero_bn.json'),'utf8'));
 
 // ── helpers ─────────────────────────────────────────────────────────────────
 function readBase() { return fs.readFileSync(path.join(DIST,'index.html'),'utf8'); }
@@ -245,6 +247,55 @@ function getServiceMeta(slug) {
 
 // ── page-specific content builders ────────────────────────────────────────────
 
+function homeBodyBn() {
+  const serviceList = services.items.map(s =>
+    `<li style="margin-bottom:8px"><a href="${s.link}" style="color:#1a56db;font-weight:600">${escHtml(s.titleBn || s.title)}</a> — ${escHtml(s.descBn || s.desc)}</li>`
+  ).join('');
+
+  const faqList = faq.items.map(f =>
+    `<div style="margin-bottom:16px;padding:12px 16px;background:#f9f9f9;border-radius:8px">
+      <strong style="color:#111">${escHtml(f.q_bn || f.q)}</strong>
+      <p style="margin:6px 0 0;color:#444;font-size:14px">${escHtml(f.a_bn || f.a)}</p>
+    </div>`
+  ).join('');
+
+  return `
+<h1 style="font-size:30px;font-weight:700;margin-bottom:8px;color:#0a0a0a">বিশ্বস্ত আইনজীবী বাংলাদেশ — এডভোকেট মোঃ শাহ আলম</h1>
+<p style="font-size:16px;color:#444;margin-bottom:24px">ফৌজদারি, পারিবারিক, জামিন ও জমি সংক্রান্ত মামলার অভিজ্ঞ আইনজীবী। চেম্বার: উত্তরা, ঢাকা।</p>
+
+<section style="margin-bottom:32px">
+  <h2 style="font-size:22px;font-weight:700;margin-bottom:12px;color:#111">আমাদের সম্পর্কে</h2>
+  ${aboutBn.bio.map(p=>`<p style="color:#333;margin-bottom:12px">${escHtml(p)}</p>`).join('')}
+  <blockquote style="border-left:4px solid #c6a75e;padding:12px 16px;margin:16px 0;color:#555;font-style:italic">
+    "${escHtml(aboutBn.personalNote)}" — <strong>${escHtml(aboutBn.personalNoteAuthor)}</strong>
+  </blockquote>
+</section>
+
+<section style="margin-bottom:32px">
+  <h2 style="font-size:22px;font-weight:700;margin-bottom:12px;color:#111">আইনি সেবাসমূহ</h2>
+  <ul style="padding-left:20px;list-style:none">
+    ${serviceList}
+  </ul>
+</section>
+
+<section style="margin-bottom:32px">
+  <h2 style="font-size:22px;font-weight:700;margin-bottom:16px;color:#111">আপনার জিজ্ঞাসা (FAQ)</h2>
+  ${faqList}
+</section>
+
+<section style="margin-bottom:32px">
+  <h2 style="font-size:22px;font-weight:700;margin-bottom:12px;color:#111">চেম্বার ও যোগাযোগ</h2>
+  <ul style="padding-left:20px;color:#333;line-height:2">
+    <li><strong>ফোন:</strong> <a href="tel:+8801712655546" style="color:#1a56db">+880 1712-655546</a></li>
+    <li><strong>WhatsApp:</strong> <a href="https://wa.me/8801955802007" style="color:#25D366">+880 1955-802007</a></li>
+    <li><strong>ইমেইল:</strong> <a href="mailto:contact@advmdshahalam.me" style="color:#1a56db">contact@advmdshahalam.me</a></li>
+    <li><strong>উত্তরা সন্ধ্যা চেম্বার:</strong> বাড়ি ৪৬, রাস্তা ৬/বি, সেক্টর ১২, উত্তরা, ঢাকা-১২৩০</li>
+    <li><strong>জজ কোর্ট চেম্বার:</strong> আইনজীবী সমিতি ভবন, ১ম তলা (হল রুম), ৬/৭ কোর্ট হাউস স্ট্রিট, কোতোয়ালি, ঢাকা</li>
+    <li><strong>অফিস সময়:</strong> শনিবার – বৃহস্পতিবার, সকাল ৯:০০ – রাত ৯:০০</li>
+  </ul>
+</section>`;
+}
+
 function homeBody() {
   const serviceList = services.items.map(s =>
     `<li style="margin-bottom:8px"><a href="${s.link}" style="color:#1a56db;font-weight:600">${escHtml(s.title)}</a> — ${escHtml(s.desc)}</li>`
@@ -439,16 +490,30 @@ async function main() {
 
   console.log('\n🏠 Pre-rendering core pages...');
 
-  // ── Home page (/index.html) ────────────────────────────────────────────────
+  // ── Home page (/index.html — Bengali-first) ────────────────────────────────
+  {
+    const html = buildPage(base, {
+      title: 'বিশ্বস্ত আইনজীবী বাংলাদেশ | এডভোকেট মোঃ শাহ আলম — উত্তরা, ঢাকা',
+      description: 'এডভোকেট মোঃ শাহ আলম — বাংলাদেশ সুপ্রীম কোর্টের অভিজ্ঞ আইনজীবী। ফৌজদারি মামলা, বিবাহবিচ্ছেদ, জামিন, ভূমি বিরোধ ও করপোরেট আইনে বিশেষজ্ঞ। উত্তরা, ঢাকায় আমাদের চেম্বারে আসুন অথবা সরাসরি WhatsApp করুন।',
+      canonical: `${BASE}/`,
+      body: homeBodyBn(),
+      lang: 'bn',
+    });
+    write(path.join(DIST, 'index.html'), html);
+    console.log('  ✓ / (home - Bengali)');
+  }
+
+  // ── English Home page (/en/index.html) ─────────────────────────────────────
   {
     const html = buildPage(base, {
       title: 'Trusted Lawyer in Bangladesh | Advocate Md. Shah Alam — Uttara, Dhaka',
       description: 'Official website of Advocate Md. Shah Alam, experienced lawyer in Uttara, Dhaka, practising at the Supreme Court of Bangladesh. Criminal, divorce, bail & property law.',
-      canonical: `${BASE}/`,
+      canonical: `${BASE}/en`,
       body: homeBody(),
+      lang: 'en',
     });
-    write(path.join(DIST, 'index.html'), html);
-    console.log('  ✓ / (home)');
+    write(path.join(DIST, 'en', 'index.html'), html);
+    console.log('  ✓ /en (home - English)');
   }
 
   // ── Advocate/About page ────────────────────────────────────────────────────
