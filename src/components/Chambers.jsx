@@ -7,6 +7,11 @@ import PhoneLink from './PhoneLink';
 // Chamber gallery photos (pre-compressed WebP)
 const GALLERY = [
     {
+        src: '/images/chambers/adv-shah-alam-photo.webp',
+        alt: 'এডভোকেট মোঃ শাহ আলম চেম্বারে উপবিষ্ট',
+        altEn: 'Advocate Md. Shah Alam seated at his chamber',
+    },
+    {
         src: '/images/chambers/chamber-front.webp',
         alt: 'উত্তরা চেম্বার — সামনের দৃশ্য',
         altEn: 'Uttara Chamber — Front View',
@@ -88,7 +93,7 @@ const Chambers = ({ lang = 'en' }) => {
                     initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
                     className="mb-14 rounded-3xl overflow-hidden"
                     style={{ border: '1px solid var(--card-border)' }}>
-                    <div className="grid grid-cols-3 gap-0.5" style={{ background: 'var(--card-border)' }}>
+                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-0.5" style={{ background: 'var(--card-border)' }}>
                         {GALLERY.map((photo, i) => (
                             <button
                                 key={i}

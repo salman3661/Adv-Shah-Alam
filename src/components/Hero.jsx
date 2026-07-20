@@ -287,7 +287,7 @@ const Hero = ({ lang = 'en' }) => {
                   height: '100%', zIndex: 1,
                 }}>
                   <img
-                      src="/images/chambers/adv-shah-alam-photo.webp"
+                      src="/images/hero/hero-md-shah-alam.webp"
                       alt={heroContent.photoAlt}
                       loading="eager"
                       fetchPriority="high"
