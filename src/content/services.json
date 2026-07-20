@@ -3,7 +3,9 @@
     {
       "icon": "Shield",
       "title": "Criminal Lawyer in Bangladesh",
-      "desc": "Expert criminal defense for FIR cases, bail applications, trial representation, and criminal case handling across Bangladesh courts. Available for consultation at the Uttara chamber in Dhaka.",
+      "titleBn": "ফৌজদারি মামলার আইনজীবী",
+      "desc": "ফৌজদারি মামলা, এফআইআর (FIR), জামিন আবেদন এবং ট্রায়াল রিপ্রেজেন্টেশনের জন্য অভিজ্ঞ আইনি পরামর্শ ও সহায়তা। উত্তরা চেম্বার, ঢাকা।",
+      "descBn": "ফৌজদারি মামলা, এফআইআর (FIR), জামিন আবেদন এবং ট্রায়াল রিপ্রেজেন্টেশনের জন্য অভিজ্ঞ আইনি পরামর্শ ও সহায়তা। উত্তরা চেম্বার, ঢাকা।",
       "link": "/services/criminal-lawyer",
       "iconBg": "rgba(239,68,68,0.12)",
       "iconColor": "#EF4444"
@@ -11,7 +13,9 @@
     {
       "icon": "Users",
       "title": "Divorce & Family Lawyer in Bangladesh",
-      "desc": "Handle divorce procedure in Bangladesh, child custody, Muslim family law, mutual divorce, and all family court matters. Consultation available at the Uttara chamber, Dhaka.",
+      "titleBn": "বিবাহবিচ্ছেদ ও পারিবারিক আইন",
+      "desc": "Muslim divorce proceedings, child custody, dower (mahr), maintenance, and family court dispute resolution. Available at Uttara chamber.",
+      "descBn": "তালাক বা বিবাহবিচ্ছেদ নোটিশ, দেনমোহর ও খোরপোষ, সন্তানের অভিভাবকত্ব এবং পারিবারিক আদালতের মামলা পরিচালনা। উত্তরা চেম্বার, ঢাকা।",
       "link": "/services/divorce-lawyer",
       "iconBg": "rgba(236,72,153,0.12)",
       "iconColor": "#EC4899"
@@ -19,7 +23,9 @@
     {
       "icon": "Home",
       "title": "Land & Property Lawyer in Bangladesh",
-      "desc": "Resolve land dispute cases, property mutation, registration, land fraud, and title deed matters in Bangladesh courts. Visit our Uttara chamber in Dhaka for consultation.",
+      "titleBn": "ভূমি ও সম্পত্তি আইন",
+      "desc": "Resolve property disputes, land registration issues, Namjari (mutation) verification, and civil title lawsuits in Bangladesh courts.",
+      "descBn": "জমির মালিকানা নিয়ে বিরোধ, নামজারি (মিউটেশন), দলিল রেজিস্ট্রেশন সংক্রান্ত জটিলতা এবং দেওয়ানি মামলা পরিচালনা। উত্তরা চেম্বার, ঢাকা।",
       "link": "/services/land-lawyer",
       "iconBg": "rgba(34,197,94,0.12)",
       "iconColor": "#22C55E"
@@ -27,7 +33,9 @@
     {
       "icon": "Scale",
       "title": "Bail Lawyer in Bangladesh",
-      "desc": "Fast bail applications, anticipatory bail, High Court bail matters, and urgent bail proceedings across Bangladesh courts. Available at the Uttara chamber, Dhaka.",
+      "titleBn": "জামিন আবেদনের আইনজীবী",
+      "desc": "Fast regular bail applications, anticipatory bail in the High Court, and emergency bail representation at sessions courts.",
+      "descBn": "দ্রুত জামিনের আবেদন, হাইকোর্টে আগাম জামিন (Anticipatory Bail) এবং সেশন কোর্টে জরুরি জামিনের আইনি পদক্ষেপ।",
       "link": "/services/bail-lawyer",
       "iconBg": "rgba(34,197,94,0.12)",
       "iconColor": "#3B82F6"
@@ -35,7 +43,9 @@
     {
       "icon": "Landmark",
       "title": "Supreme Court Lawyer Bangladesh",
-      "desc": "Expert representation in High Court Division cases, writ petitions, appellate matters, and constitutional litigation.",
+      "titleBn": "সুপ্রিম কোর্টের আইনজীবী",
+      "desc": "Writ petitions, High Court appeals, revisions, and constitutional litigation representation in the Supreme Court of Bangladesh.",
+      "descBn": "বাংলাদেশ সুপ্রিম কোর্টের হাইকোর্ট বিভাগ ও আপিল বিভাগে রিট পিটিশন, ফৌজদারি ও দেওয়ানি আপিল এবং রিভিশন মামলা পরিচালনা।",
       "link": "/services/supreme-court-lawyer",
       "iconBg": "rgba(124,58,237,0.12)",
       "iconColor": "#7C3AED"
@@ -43,7 +53,9 @@
     {
       "icon": "FileText",
       "title": "Company & Corporate Law",
-      "desc": "Business formation, company disputes, partnerships, corporate compliance, and commercial legal matters.",
+      "titleBn": "কোম্পানি ও কর্পোরেট আইন",
+      "desc": "Company registration (RJSC), trade licensing, director agreements, business formation, and corporate compliance services.",
+      "descBn": "কোম্পানি রেজিস্ট্রেশন (RJSC), পার্টনারশিপ ডিড, ট্রেড লাইসেন্স এবং কর্পোরেট আইন সংক্রান্ত যাবতীয় আইনি সহায়তা ও কমপ্লায়েন্স।",
       "link": "/services/company-corporate-lawyer",
       "iconBg": "rgba(217,119,6,0.12)",
       "iconColor": "#D97706"

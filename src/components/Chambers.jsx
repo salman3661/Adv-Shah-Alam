@@ -41,7 +41,44 @@ const chambers = [
     },
 ];
 
-const Chambers = () => {
+const Chambers = ({ lang = 'en' }) => {
+    const isBn = lang === 'bn';
+
+    const chambers = [
+        {
+            name: isBn ? 'জজ কোর্ট চেম্বার (প্রধান)' : 'Judge Court Chamber (Primary)',
+            address: isBn ? 'আইনজীবী সমিতি ভবন, প্রথম তলা (হল রুম), ৬/৭ কোর্ট হাউস স্ট্রিট, কোতোয়ালি, ঢাকা' : 'Ainjeebi Samity Bhaban, 4th Floor (Hall Room), 6/7 Court House Street, Kotwali, Dhaka-1100',
+            phone: CALL_NUMBER,
+            hours: isBn ? 'রবিবার-বৃহস্পতিবার: সকাল ৯টা – বিকেল ৫টা' : 'Sun–Thu: 9:00 AM – 5:00 PM',
+            mapUrl: 'https://maps.google.com/?q=6+Court+House+Street+Kotwali+Dhaka',
+            isPrimary: true,
+        },
+        {
+            name: isBn ? 'মেট্রোপলিটন পিপি অফিস — ঢাকা (APP)' : 'Metropolitan P.P Office — Dhaka (APP)',
+            address: isBn ? '৪, কোর্ট হাউস স্ট্রিট, রব্বতি মানশন, কোতোয়ালি, ঢাকা' : '4, Court House Street, Robboti Mansion, Kotwali, Dhaka-1100',
+            phone: CALL_NUMBER,
+            hours: isBn ? 'রবিবার-বৃহস্পতিবার: সকাল ৯টা – বিকেল ৫টা' : 'Sun–Thu: 9:00 AM – 5:00 PM',
+            mapUrl: 'https://maps.google.com/?q=4+Court+House+Street+Kotwali+Dhaka',
+            isPrimary: false,
+        },
+        {
+            name: isBn ? 'সুপ্রিম কোর্ট চেম্বার' : 'Supreme Court Chamber',
+            address: isBn ? 'কক্ষ ০২, SCBA ভবন, শাহবাগ, ঢাকা' : 'Room 02, SCBA Bhaban, Shahbag, Dhaka-1000',
+            phone: '+' + WA_NUMBER,
+            hours: isBn ? 'রবিবার-বৃহস্পতিবার: সকাল ৯টা – বিকেল ৫টা' : 'Sun–Thu: 9:00 AM – 5:00 PM',
+            mapUrl: 'https://maps.google.com/?q=Supreme+Court+Bar+Association+Dhaka',
+            isPrimary: false,
+        },
+        {
+            name: isBn ? 'সন্ধ্যা চেম্বার — উত্তরা' : 'Evening Chamber — Uttara',
+            address: isBn ? 'বাড়ি ৪৬, রাস্তা ৬/বি, সেক্টর ১২, উত্তরা, ঢাকা' : 'House 46, Road 6/B, Sector 12, Uttara, Dhaka-1230',
+            phone: CALL_NUMBER,
+            hours: isBn ? 'রবি-শনি: সন্ধ্যা ৬টা – রাত ১১টা' : 'Sun–Sat: 6:00 PM – 11:00 PM',
+            mapUrl: 'https://maps.app.goo.gl/QebF9RVMYmzWGTrh7',
+            isPrimary: false,
+        },
+    ];
+
     return (
         <section id="chambers" className="py-24 relative overflow-hidden" style={{ background: 'var(--surface)' }}>
             <div className="container mx-auto px-6 max-w-6xl">
@@ -49,12 +86,12 @@ const Chambers = () => {
                 <div className="text-center mb-16">
                     <motion.span initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
                         className="label-accent block mb-3">
-                        Visit Our Offices
+                        {isBn ? 'আমাদের অফিসে আসুন' : 'Visit Our Offices'}
                     </motion.span>
                     <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
                         className="text-4xl md:text-5xl font-serif font-bold mb-4"
                         style={{ color: 'var(--text)', fontFamily: "'Playfair Display', serif" }}>
-                        Chamber Locations
+                        {isBn ? 'চেম্বারের ঠিকানা' : 'Chamber Locations'}
                     </motion.h2>
                     <motion.div initial={{ scaleX: 0 }} whileInView={{ scaleX: 1 }} viewport={{ once: true }} transition={{ delay: 0.2 }}
                         className="divider-accent mx-auto"></motion.div>
@@ -73,7 +110,7 @@ const Chambers = () => {
                                 <div className="absolute top-5 right-5">
                                     <span className="text-xs font-bold px-3 py-1 rounded-full"
                                         style={{ background: 'var(--accent-subtle)', color: 'var(--accent)' }}>
-                                        Primary
+                                    {isBn ? 'প্রধান' : 'Primary'}
                                     </span>
                                 </div>
                             )}
@@ -92,7 +129,7 @@ const Chambers = () => {
                                         </div>
                                         <div>
                                             <p className="text-xs font-bold uppercase tracking-wider mb-1"
-                                                style={{ color: 'var(--text-muted)' }}>Address</p>
+                                                style={{ color: 'var(--text-muted)' }}>{isBn ? 'ঠিকানা' : 'Address'}</p>
                                             <a href={chamber.mapUrl} target="_blank" rel="noopener noreferrer"
                                                 className="text-sm hover:underline decoration-dotted"
                                                 style={{ color: 'var(--text-secondary)' }}>
@@ -109,7 +146,7 @@ const Chambers = () => {
                                         </div>
                                         <div>
                                             <p className="text-xs font-bold uppercase tracking-wider mb-1"
-                                                style={{ color: 'var(--text-muted)' }}>Phone</p>
+                                                style={{ color: 'var(--text-muted)' }}>{isBn ? 'ফোন' : 'Phone'}</p>
                                             <PhoneLink
                                                 number={chamber.phone}
                                                 className="text-sm hover:underline decoration-dotted"
@@ -126,7 +163,7 @@ const Chambers = () => {
                                         </div>
                                         <div>
                                             <p className="text-xs font-bold uppercase tracking-wider mb-1"
-                                                style={{ color: 'var(--text-muted)' }}>Hours</p>
+                                                style={{ color: 'var(--text-muted)' }}>{isBn ? 'সময়' : 'Hours'}</p>
                                             <p className="text-sm" style={{ color: 'var(--text-secondary)' }}>{chamber.hours}</p>
                                         </div>
                                     </div>
@@ -137,7 +174,7 @@ const Chambers = () => {
                                 <a href={chamber.mapUrl} target="_blank" rel="noopener noreferrer"
                                     className="inline-flex items-center gap-2 text-sm font-semibold hover:gap-3 transition-all group"
                                     style={{ color: 'var(--accent)' }}>
-                                    View on Google Maps
+                                    {isBn ? 'গুগল ম্যাপে দেখুন' : 'View on Google Maps'}
                                     <ExternalLink size={15} className="group-hover:translate-x-1 transition-transform" />
                                 </a>
                             </div>

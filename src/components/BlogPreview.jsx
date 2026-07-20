@@ -38,14 +38,14 @@ const categoryColors = Object.fromEntries(
     ])
 );
 
-const BlogPreview = () => {
-    const [lang, setLang] = useState('en');
-    const articles = lang === 'en' ? latestEn : latestBn;
-    const linkBase = lang === 'en' ? '/blog/' : '/bn/blog/';
-    const readLabel = lang === 'en'
+const BlogPreview = ({ lang: initialLang = 'en' }) => {
+    const [activeLang, setLang] = useState(initialLang);
+    const articles = activeLang === 'en' ? latestEn : latestBn;
+    const linkBase = activeLang === 'en' ? '/blog/' : '/bn/blog/';
+    const readLabel = activeLang === 'en'
         ? (a) => `Read the complete guide: ${a.title}`
         : (a) => `পড়ুন: ${a.title}`;
-    const readShort = lang === 'en' ? 'Read Full Guide' : 'সম্পূর্ণ পড়ুন';
+    const readShort = activeLang === 'en' ? 'Read Full Guide' : 'সম্পূর্ণ পড়ুন';
 
     return (
         <section id="blog" className="py-24 relative overflow-hidden" style={{ background: 'var(--bg)' }}>
@@ -55,14 +55,14 @@ const BlogPreview = () => {
                     <div>
                         <motion.span initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
                             className="label-accent block mb-3">
-                            Legal Knowledge Hub
+                            {activeLang === 'en' ? 'Legal Knowledge Hub' : 'আইন সম্পর্কে জানুন'}
                         </motion.span>
                         <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
                             className="text-4xl md:text-5xl font-serif font-bold mb-2" style={{ color: 'var(--text)', fontFamily: "'Playfair Display', serif" }}>
-                            Legal Guides &amp; Case Insights
+                            {activeLang === 'en' ? 'Legal Guides & Case Insights' : 'আইনি পরামর্শ ও আপনার অধিকার'}
                         </motion.h2>
                         <motion.div initial={{ scaleX: 0 }} whileInView={{ scaleX: 1 }} viewport={{ once: true }} transition={{ delay: 0.2 }}
-                            className="w-24 h-1 rounded-full" style={{ background: 'var(--accent)' }}></motion.div>
+                            className="w-24 h-1 mx-auto rounded-full" style={{ background: 'var(--accent)' }}></motion.div>
                     </div>
 
                     {/* Lang toggle + All Articles link */}
@@ -73,30 +73,30 @@ const BlogPreview = () => {
                             <button
                                 onClick={() => setLang('en')}
                                 className="px-4 py-1.5 text-xs font-bold transition-all"
-                                style={lang === 'en'
+                                style={activeLang === 'en'
                                     ? { background: 'var(--accent)', color: '#fff' }
                                     : { background: 'transparent', color: 'var(--text-muted)' }}
-                                aria-pressed={lang === 'en'}
+                                aria-pressed={activeLang === 'en'}
                             >
                                 🇬🇧 English
                             </button>
                             <button
                                 onClick={() => setLang('bn')}
                                 className="px-4 py-1.5 text-xs font-bold transition-all"
-                                style={lang === 'bn'
+                                style={activeLang === 'bn'
                                     ? { background: 'var(--accent)', color: '#fff' }
                                     : { background: 'transparent', color: 'var(--text-muted)' }}
-                                aria-pressed={lang === 'bn'}
+                                aria-pressed={activeLang === 'bn'}
                             >
                                 🇧🇩 বাংলা
                             </button>
                         </div>
                         <Link
-                            to={lang === 'en' ? '/blog' : '/bn/blog'}
+                            to={activeLang === 'en' ? '/blog' : '/bn/blog'}
                             className="btn-outline inline-flex items-center gap-2 py-2.5 px-6 text-sm font-semibold whitespace-nowrap"
-                            aria-label={lang === 'en' ? 'View all English legal articles' : 'সকল বাংলা আইনি নিবন্ধ দেখুন'}
+                            aria-label={activeLang === 'en' ? 'View all English legal articles' : 'আমাদের সব লেখা পড়ুন'}
                         >
-                            {lang === 'en' ? 'All Articles' : 'সকল নিবন্ধ'} <ArrowRight size={15} />
+                            {activeLang === 'en' ? 'All Articles' : 'আরো পড়ুন'} <ArrowRight size={15} />
                         </Link>
                     </motion.div>
                 </div>
@@ -106,7 +106,9 @@ const BlogPreview = () => {
                     {articles.length === 0 ? (
                         <div className="col-span-full text-center py-12">
                             <BookOpen size={40} className="mx-auto mb-4 opacity-30" style={{ color: 'var(--text-muted)' }} />
-                            <p className="text-sm" style={{ color: 'var(--text-muted)' }}>No articles published yet. Check back soon.</p>
+                        <p className="text-sm" style={{ color: 'var(--text-muted)' }}>
+                            {activeLang === 'bn' ? 'এখনো কোনো লেখা প্রকাশিত হয়নি। শীঘ্রই আসবে।' : 'No articles published yet. Check back soon.'}
+                        </p>
                         </div>
                     ) : articles.map((article, i) => {
                         const colors = categoryColors[article.category] || { bg: 'rgba(100,116,139,0.1)', color: '#64748B' };
@@ -122,10 +124,13 @@ const BlogPreview = () => {
                                     </span>
                                     <div className="flex items-center gap-2 text-xs" style={{ color: 'var(--text-muted)' }}>
                                         {article.publishedDate && (
-                                            <span>{new Date(article.publishedDate).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}</span>
+                                            <span>{new Date(article.publishedDate).toLocaleDateString(
+                                            activeLang === 'bn' ? 'bn-BD' : 'en-GB',
+                                            { day: 'numeric', month: 'short', year: 'numeric' }
+                                        )}</span>
                                         )}
                                         <span className="flex items-center gap-1">
-                                            <Clock size={11} /> {article.readTime}{lang === 'en' ? ' read' : ''}
+                                            <Clock size={11} /> {article.readTime}{activeLang === 'en' ? ' read' : ''}
                                         </span>
                                     </div>
                                 </div>

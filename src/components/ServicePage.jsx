@@ -36,7 +36,7 @@ const ServicePage = ({ metaTitle, metaDesc, canonicalUrl, h1, intro, coverage, f
         name: h1,
         description: metaDesc,
         url: wwwCanonical,
-        telephone: '+8801712122102',
+        telephone: '+8801712655546',
         priceRange: '৳৳',
         image: `${BASE}/images/hero/hero-md-shah-alam.png`,
         address: {
@@ -66,7 +66,7 @@ const ServicePage = ({ metaTitle, metaDesc, canonicalUrl, h1, intro, coverage, f
             jobTitle: 'Advocate, Supreme Court of Bangladesh',
             url: `${BASE}/advocate-md-shah-alam`,
             image: `${BASE}/images/hero/hero-md-shah-alam.png`,
-            telephone: '+8801712122102',
+            telephone: '+8801712655546',
             sameAs: [
                 'https://www.facebook.com/advmdshahalam',
             ],

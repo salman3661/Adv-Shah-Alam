@@ -78,7 +78,8 @@ const LogoBadge = ({ logoKey, fallbackText }) => {
     );
 };
 
-const Timeline = ({ isHome = false }) => {
+const Timeline = ({ isHome = false, lang = 'en' }) => {
+    const isBn = lang === 'bn';
     const education = [
         {
             institution: 'Dhaka International University (DIU)',
@@ -152,7 +153,7 @@ const Timeline = ({ isHome = false }) => {
                         viewport={{ once: true }}
                         className="label-accent block mb-3"
                     >
-                        Education &amp; Experience
+                        {isBn ? 'শিক্ষা ও অভিজ্ঞতা' : 'Education & Experience'}
                     </motion.span>
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
@@ -162,7 +163,7 @@ const Timeline = ({ isHome = false }) => {
                         className="text-4xl md:text-5xl font-serif font-bold mb-4"
                         style={{ color: 'var(--text)', fontFamily: "'Playfair Display', serif" }}
                     >
-                        Professional Journey
+                        {isBn ? 'পেশাদার যাত্রা' : 'Professional Journey'}
                     </motion.h2>
                     <motion.div
                         initial={{ scaleX: 0 }}
@@ -191,7 +192,7 @@ const Timeline = ({ isHome = false }) => {
                             className="text-2xl font-serif font-bold"
                             style={{ color: 'var(--text)', fontFamily: "'Playfair Display', serif" }}
                         >
-                            Work Experience
+                            {isBn ? 'কর্মঅভিজ্ঞতা' : 'Work Experience'}
                         </h3>
                     </motion.div>
 
@@ -218,7 +219,7 @@ const Timeline = ({ isHome = false }) => {
                                         </h4>
                                         {item.isCurrent && (
                                             <span className="status-current flex-shrink-0">
-                                                <span className="status-dot" /> Current
+                                                <span className="status-dot" /> {isBn ? 'কর্মরত' : 'Current'}
                                             </span>
                                         )}
                                     </div>
@@ -258,7 +259,7 @@ const Timeline = ({ isHome = false }) => {
                             className="text-2xl font-serif font-bold"
                             style={{ color: 'var(--text)', fontFamily: "'Playfair Display', serif" }}
                         >
-                            Education
+                            {isBn ? 'শিক্ষা' : 'Education'}
                         </h3>
                     </motion.div>
 
@@ -309,7 +310,7 @@ const Timeline = ({ isHome = false }) => {
                                 to="/education"
                                 className="btn-secondary inline-flex items-center gap-2 text-sm"
                             >
-                                <GraduationCap size={17} /> View Detailed Education History
+                                <GraduationCap size={17} /> {isBn ? 'সম্পূর্ণ শিক্ষাগত ইতিহাস দেখুন' : 'View Detailed Education History'}
                             </Link>
                         </div>
                     )}

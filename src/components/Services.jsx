@@ -14,7 +14,9 @@ const services = serviceCardsData.items.map(s => ({
     icon: ICON_MAP[s.icon] ?? FileText,
 }));
 
-const Services = () => {
+const Services = ({ lang = 'en' }) => {
+    const isBn = lang === 'bn';
+
     return (
         <section id="services" className="py-24 relative overflow-hidden" style={{ background: 'var(--bg)' }}>
             <div className="container mx-auto px-6 max-w-7xl">
@@ -22,15 +24,17 @@ const Services = () => {
                 <div className="text-center mb-14">
                     <motion.span initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
                         className="label-accent block mb-3">
-                        Legal Practice Areas
+                        {isBn ? 'আমরা যেভাবে আপনাকে সাহায্য করি' : 'How We Help You'}
                     </motion.span>
                     <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
                         className="text-4xl md:text-5xl font-serif font-bold mb-3" style={{ color: 'var(--text)', fontFamily: "'Playfair Display', serif" }}>
-                        Our Legal Services
+                        {isBn ? 'আইনের প্রতিটি ক্ষেত্রে আমরা পাশে আছি' : 'Legal Services & Practice Areas'}
                     </motion.h2>
                     <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.15 }}
                         className="text-sm max-w-xl mx-auto mb-4" style={{ color: 'var(--text-muted)' }}>
-                        As an experienced <strong style={{ color: 'var(--text-2)' }}>advocate in Uttara, Dhaka</strong>, Adv. Shah Alam provides dedicated legal representation across all major practice areas.
+                        {isBn 
+                            ? 'ব্যক্তিগত সমস্যা থেকে জটিল আইনি বিরোধ — উত্তরা, ঢাকায় আমাদের চেম্বারে আসুন অথবা সরাসরি WhatsApp করুন।'
+                            : 'From personal matters to complex litigation — visit our chamber in Uttara, Dhaka or contact us via WhatsApp.'}
                     </motion.p>
                     <motion.div initial={{ scaleX: 0 }} whileInView={{ scaleX: 1 }} viewport={{ once: true }} transition={{ delay: 0.2 }}
                         className="w-24 h-1 mx-auto rounded-full" style={{ background: 'var(--accent)' }}></motion.div>
@@ -50,39 +54,42 @@ const Services = () => {
                                     <service.icon size={26} />
                                 </div>
                                 <span
-                                    className="text-xs font-semibold px-2 py-1 rounded-full flex-shrink-0"
-                                    style={{ background: 'rgba(202,138,4,0.10)', color: '#b45309', border: '1px solid rgba(202,138,4,0.25)' }}
+                                    className="text-xs font-semibold px-2.5 py-1 rounded-full flex-shrink-0"
+                                    style={{ background: 'rgba(34,197,94,0.10)', color: '#16a34a', border: '1px solid rgba(34,197,94,0.25)' }}
                                 >
-                                    Paid Consult
+                                    {isBn ? 'পরামর্শ করুন' : 'Consultation'}
                                 </span>
                             </div>
 
                             <h3 className="text-base font-bold mb-3 leading-snug" style={{ color: 'var(--text)' }}>
-                                {service.title}
+                                {isBn && service.titleBn ? service.titleBn : service.title}
                             </h3>
 
                             <p className="text-sm leading-relaxed flex-1 mb-5" style={{ color: 'var(--text-muted)' }}>
-                                {service.desc}
+                                {isBn && service.descBn ? service.descBn : service.desc}
                             </p>
 
                             <Link to={service.link}
                                 className="inline-flex items-center gap-1.5 text-sm font-semibold hover:gap-2.5 transition-all duration-200"
                                 style={{ color: 'var(--accent)' }}
                                 aria-label={`View details for ${service.title}`}>
-                                Explore Service <ArrowRight size={15} />
+                                {isBn ? 'বিস্তারিত দেখুন' : 'Explore Service'} <ArrowRight size={15} />
                             </Link>
                         </motion.div>
                     ))}
                 </div>
 
-
                 {/* CTA */}
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }}
                     className="text-center mt-12">
-                    <p className="text-sm mb-4" style={{ color: 'var(--text-muted)' }}>Not sure which service you need? Speak with our legal team.</p>
+                    <p className="text-sm mb-4" style={{ color: 'var(--text-muted)' }}>
+                        {isBn 
+                            ? 'কোন সেবাটি আপনার দরকার বুঝতে পারছেন না? সরাসরি জিজ্ঞেস করুন — আমরা সাহায্য করবো।'
+                            : 'Not sure which service fits your situation? Ask us directly — we are here to guide you.'}
+                    </p>
                     <a href={waLink()} target="_blank" rel="noopener noreferrer"
                         className="btn-primary inline-flex items-center gap-2 py-3.5 px-8 shadow-lg text-sm">
-                        Book a Consultation
+                        {isBn ? 'আজই কথা বলুন' : 'Speak with Us Today'}
                     </a>
                 </motion.div>
             </div>

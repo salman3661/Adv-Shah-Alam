@@ -6,7 +6,8 @@ import { ChevronDown } from 'lucide-react';
 import faqData from '../content/faq.json';
 const faqs = faqData.items;
 
-const FAQ = () => {
+const FAQ = ({ lang = 'en' }) => {
+    const isBn = lang === 'bn';
     const [openIndex, setOpenIndex] = useState(null);
     const toggle = (i) => setOpenIndex(openIndex === i ? null : i);
 
@@ -37,11 +38,11 @@ const FAQ = () => {
                     <div className="text-center mb-12">
                         <motion.span initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
                             className="label-accent block mb-3">
-                            Frequently Asked Questions
+                            {isBn ? 'আপনার মনে প্রশ্ন আছে?' : 'Frequently Asked Questions'}
                         </motion.span>
                         <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
                             className="text-4xl md:text-5xl font-serif font-bold mb-4" style={{ color: 'var(--text)', fontFamily: "'Playfair Display', serif" }}>
-                            Legal Questions Answered
+                            {isBn ? 'আইনি প্রশ্নের সহজ উত্তর' : 'Legal Questions Answered'}
                         </motion.h2>
                         <motion.div initial={{ scaleX: 0 }} whileInView={{ scaleX: 1 }} viewport={{ once: true }} transition={{ delay: 0.2 }}
                             className="w-24 h-1 mx-auto rounded-full" style={{ background: 'var(--accent)' }}></motion.div>
@@ -80,7 +81,7 @@ const FAQ = () => {
                                                 <a href={waLink()} target="_blank" rel="noopener noreferrer"
                                                     className="inline-flex items-center gap-1.5 text-xs font-semibold mt-4 hover:underline"
                                                     style={{ color: 'var(--accent)' }}>
-                                                    Get expert advice on this →
+                                                    {isBn ? 'এই বিষয়ে বিশেষজ্ঞ পরামর্শ নিন →' : 'Get expert advice on this →'}
                                                 </a>
                                             </div>
                                         </motion.div>

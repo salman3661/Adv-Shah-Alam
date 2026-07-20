@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { Star, Quote, ChevronLeft, ChevronRight } from 'lucide-react';
 import { waLink } from '../data/contactInfo';
 
-const testimonials = [
+const testimonialsEn = [
     {
         id: 1,
         name: 'Rahim Uddin',
@@ -52,6 +52,54 @@ const testimonials = [
     },
 ];
 
+const testimonialsBn = [
+    {
+        id: 1,
+        name: 'রহিম উদ্দিন',
+        location: 'উত্তরা, ঢাকা',
+        case: 'ফৌজদারি মামলা',
+        rating: 5,
+        review: 'অ্যাডভোকেট শাহ আলম আমার ছেলের মামলায় অসাধারণ নিষ্ঠা দিয়েছিলেন। যখন আমরা ভেবেছিলাম জামিন হবে না, তিনি ৪৮ ঘণ্টার মধ্যে জামিন আদায় করেছিলেন। ফৌজদারি বিষয়ে যেকোনো জরুরি বিষয়ে তাঁকে নিশ্চিন্তে বিশ্বাস করা যায়।',
+        initial: 'র',
+    },
+    {
+        id: 2,
+        name: 'নাসরিন বেগম',
+        location: 'গাজীপুর',
+        case: 'তালাক ও পরিবার আইন',
+        rating: 5,
+        review: 'বছরের পর বছর কষ্টের পর অ্যাডভোকেট শাহ আলম আমাকে আইনি সুরক্ষা দিয়েছেন। প্রতিটি ধাপে ধৈর্যের সাথে বুঝিয়ে দিয়েছেন। খুলওয়ার প্রক্রিয়া স্বাভাবিকভাবেই সম্পন্ন হয়েছে। যেনো তেনো সময়ে আমার প্রশ্নের উত্তর দিয়েছেন।',
+        initial: 'ন',
+    },
+    {
+        id: 3,
+        name: 'কামাল হোসেন',
+        location: 'মিরপুর, ঢাকা',
+        case: 'জমির বিরোধ',
+        rating: 5,
+        review: 'অন্য আইনজীবীরা যে মামলা সমাধান করতে পারেননি, অ্যাডভোকেট শাহ আলম সব কাগজপত্র ভালোকরে দেখে মূল দিকগুলো খুঁজে বের করলেন এবং দায়রা দণ্ড আদালতে জিতে দিলেন। তাঁর মনোযোগ ও আদালতে দক্ষতা সত্যিই অতুলনীয়।',
+        initial: 'ক',
+    },
+    {
+        id: 4,
+        name: 'শিরিন আক্তার',
+        location: 'উত্তরা, ঢাকা',
+        case: 'হাইকোর্ট আপিল',
+        rating: 5,
+        review: 'আমরা জরুরিভাবে হাইকোর্টে রিট পিটিশন দায়ের করতে চেয়েছিলাম। অ্যাডভোকেট শাহ আলম ২৪ ঘণ্টার মধ্যে ফাইল করে স্থগিতাদেশ আদায় করেছিলেন। সুপ্রিম কোর্টে তাঁর অভিজ্ঞতা সত্যিই অতুলনীয়।',
+        initial: 'শ',
+    },
+    {
+        id: 5,
+        name: 'ফারহান আহমেদ',
+        location: 'টঙ্গী, গাজীপুর',
+        case: 'কোম্পানি আইন',
+        rating: 5,
+        review: 'আমাদের কোম্পানি নিবন্ধন ডিড় পার্টনারশিপ ডিডের জন্য অ্যাডভোকেট শাহ আলম বিনা ঝামেলায় গাইড করেছেন। আমাদের প্রত্যাশার চেয়ে অনেক দ্রুত সম্পন্ন হয়েছে। প্রফেশনাল, জ্ঞানী, ও ফি যুক্তিসংগত।',
+        initial: 'ফ',
+    },
+];
+
 const reviewSchema = {
     '@context': 'https://schema.org',
     '@type': 'LegalService',
@@ -60,11 +108,11 @@ const reviewSchema = {
     aggregateRating: {
         '@type': 'AggregateRating',
         ratingValue: '5',
-        reviewCount: testimonials.length.toString(),
+        reviewCount: testimonialsEn.length.toString(),
         bestRating: '5',
         worstRating: '1',
     },
-    review: testimonials.map(t => ({
+    review: testimonialsEn.map(t => ({
         '@type': 'Review',
         author: { '@type': 'Person', name: t.name },
         reviewBody: t.review,
@@ -89,7 +137,9 @@ const StarRating = ({ rating }) => (
     </div>
 );
 
-const Testimonials = () => {
+const Testimonials = ({ lang = 'en' }) => {
+    const isBn = lang === 'bn';
+    const testimonials = isBn ? testimonialsBn : testimonialsEn;
     const [active, setActive] = useState(0);
     const total = testimonials.length;
 
@@ -123,7 +173,7 @@ const Testimonials = () => {
                             viewport={{ once: true }}
                             className="label-accent block mb-3"
                         >
-                            Client Testimonials
+                            {isBn ? 'তারা বিশ্বাস করেছিলেন, আমরা পাশে ছিলাম' : 'They Trusted Us, We Stood by Them'}
                         </motion.span>
                         <motion.h2
                             initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
@@ -131,7 +181,7 @@ const Testimonials = () => {
                             className="text-4xl md:text-5xl font-serif font-bold mb-4"
                             style={{ color: 'var(--text)', fontFamily: "'Playfair Display', serif" }}
                         >
-                            What Clients Say
+                            {isBn ? 'আমাদের মক্কেলদের কথা' : 'What Our Clients Say'}
                         </motion.h2>
                         <motion.div
                             initial={{ scaleX: 0 }} whileInView={{ scaleX: 1 }}
@@ -151,10 +201,36 @@ const Testimonials = () => {
                             </div>
                             <span className="text-sm font-bold" style={{ color: 'var(--text)' }}>5.0</span>
                             <span className="text-sm" style={{ color: 'var(--text-muted)' }}>
-                                · {total} verified client reviews
+                                {isBn ? `· ${total}টি যাচাইকৃত মতামত` : `· ${total} verified client reviews`}
                             </span>
                         </motion.div>
                     </div>
+
+                    {/* Featured Case Story */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }} transition={{ delay: 0.15 }}
+                        className="mb-10 rounded-2xl p-6 md:p-8 relative overflow-hidden"
+                        style={{ background: 'linear-gradient(135deg, rgba(26,63,191,0.08) 0%, rgba(198,167,94,0.06) 100%)', border: '1px solid rgba(26,63,191,0.18)' }}
+                    >
+                        <div className="flex items-start gap-3 mb-4">
+                            <span className="text-xs font-bold px-3 py-1 rounded-full" style={{ background: 'rgba(26,63,191,0.12)', color: 'var(--accent)' }}>
+                                ⭐ {isBn ? 'বিশেষ ঘটনা' : 'Featured Story'}
+                            </span>
+                            <span className="text-xs font-semibold" style={{ color: 'var(--text-muted)' }}>Criminal Defence · Uttara, Dhaka</span>
+                        </div>
+                        <h4 className="text-lg font-serif font-bold mb-3" style={{ color: 'var(--text)', fontFamily: "'Playfair Display', serif" }}>
+                            {isBn ? '"৪৮ ঘণ্টায় জামিন — একটি পরিবার রক্ষার গল্প"' : '"Bail in 48 Hours — A Family Saved"'}
+                        </h4>
+                        <p className="text-sm leading-relaxed mb-4" style={{ color: 'var(--text-2)' }}>
+                            {isBn 
+                                ? 'রাত ১১টায় ফোন এলো — ছেলেকে আটক করা হয়েছে, পরিবার কী করবে বুঝতে পারছে না। পরদিন সকালে আমরা মামলার কাগজ দেখলাম, আইনি ফাঁক খুঁজে বের করলাম, এবং ৪৮ ঘণ্টার মধ্যে জামিন আদায় করলাম। পরিবারটি আজও কৃতজ্ঞ।'
+                                : 'It was 11:00 PM when we got the call. A young man had been detained, and his family was in panic. The next morning, we studied the case files, found critical legal loopholes, and secured bail within 48 hours. The family\'s relief was our greatest reward.'}
+                        </p>
+                        <p className="text-xs font-semibold" style={{ color: 'var(--accent)' }}>
+                            {isBn ? '— রহিম উদ্দিন পরিবার, উত্তরা (নাম পরিবর্তিত)' : '— Rahim Uddin\'s Family, Uttara (Name changed)'}
+                        </p>
+                    </motion.div>
 
                     {/* Desktop: 3-column grid */}
                     <div className="hidden lg:grid grid-cols-3 gap-6 mb-10">
@@ -329,7 +405,7 @@ const Testimonials = () => {
                         className="text-center mt-12"
                     >
                         <p className="text-sm mb-4" style={{ color: 'var(--text-muted)' }}>
-                            Join hundreds of satisfied clients across Bangladesh
+                            {isBn ? 'আপনার পাশে দাঁড়ানোর জন্য আমরা সবসময় প্রস্তুত।' : 'We are ready to stand by your side in your hour of need.'}
                         </p>
                         <a
                             href={waLink()}
@@ -337,7 +413,7 @@ const Testimonials = () => {
                             rel="noopener noreferrer"
                             className="btn-whatsapp inline-flex items-center gap-2 text-sm"
                         >
-                            Book a Consultation
+                            {isBn ? 'আজই আমাদের সাথে কথা বলুন' : 'Speak with Us Today'}
                         </a>
                     </motion.div>
                 </div>

@@ -71,7 +71,10 @@ body {
   --wa-green: #25D366;
   --wa-green-hover: #1ebe5d;
 
-  font-family: 'DM Sans', system-ui, sans-serif;
+  --font-en: 'DM Sans', system-ui, sans-serif;
+  --font-bn: 'Hind Siliguri', 'SolaimanLipi', 'Kalpurush', sans-serif;
+
+  font-family: var(--font-en);
   font-size: 16px;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
@@ -81,6 +84,48 @@ body {
   color: var(--text);
 }
 
+
+/* ══════════════════════════════════════════════════════════
+   BENGALI FONT — automatic when lang="bn" is on <html>
+   ══════════════════════════════════════════════════════════ */
+
+/* Every element on a Bengali page uses Hind Siliguri */
+html[lang="bn"] body,
+html[lang="bn"] h1,
+html[lang="bn"] h2,
+html[lang="bn"] h3,
+html[lang="bn"] h4,
+html[lang="bn"] h5,
+html[lang="bn"] h6,
+html[lang="bn"] p,
+html[lang="bn"] span,
+html[lang="bn"] a,
+html[lang="bn"] button,
+html[lang="bn"] label,
+html[lang="bn"] input,
+html[lang="bn"] textarea,
+html[lang="bn"] li,
+html[lang="bn"] div {
+  font-family: var(--font-bn);
+}
+
+/* Mixed content: Bengali Unicode block always uses Bengali font
+   regardless of lang attribute — covers inline BN in EN pages */
+:lang(bn),
+[lang="bn"] {
+  font-family: var(--font-bn);
+}
+
+/* Selector for any element that contains Bangla script characters */
+.bn-text {
+  font-family: var(--font-bn) !important;
+}
+
+/* English elements inside a Bengali page keep DM Sans */
+html[lang="bn"] .en-text,
+html[lang="bn"] [lang="en"] {
+  font-family: var(--font-en);
+}
 
 /* ── DARK THEME ── */
 /* Single source: body[data-theme="dark"] only.

@@ -1,9 +1,10 @@
 import React, { useEffect, useRef } from 'react';
 import { motion, useInView, useMotionValue, useTransform, animate } from 'framer-motion';
-import { Scale, Users, Trophy, Clock } from 'lucide-react';
-import aboutContent from '../content/about.json';
+import { Scale, Users, Trophy, Clock, Heart, CheckCircle } from 'lucide-react';
+import aboutEn from '../content/about.json';
+import aboutBn from '../content/about_bn.json';
 
-// Icon map — matches what's stored in about.json stats (if needed in future)
+// Icon map
 const STAT_ICONS = [Clock, Scale, Trophy, Users];
 
 const AnimatedCounter = ({ value, suffix }) => {
@@ -27,7 +28,10 @@ const AnimatedCounter = ({ value, suffix }) => {
     );
 };
 
-const About = () => {
+const About = ({ lang = 'en' }) => {
+    const isBn = lang === 'bn';
+    const aboutContent = isBn ? aboutBn : aboutEn;
+
     const stats = (aboutContent.stats || []).map((s, i) => ({
         icon: STAT_ICONS[i % STAT_ICONS.length],
         value: s.value,
@@ -55,7 +59,27 @@ const About = () => {
                         className="w-24 h-1 mx-auto rounded-full" style={{ background: 'var(--accent)' }}></motion.div>
                 </div>
 
-                <div className="grid lg:grid-cols-2 gap-12 items-center">
+                {/* Empathy reassurance banner */}
+                <motion.div
+                    initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.05 }}
+                    className="mb-12 rounded-2xl px-6 py-5 flex items-start gap-4"
+                    style={{ background: 'linear-gradient(135deg, rgba(26,63,191,0.08) 0%, rgba(198,167,94,0.06) 100%)', border: '1px solid rgba(26,63,191,0.15)' }}
+                >
+                    <Heart size={22} style={{ color: 'var(--accent)', flexShrink: 0, marginTop: '2px' }} />
+                    <p className="text-sm leading-relaxed" style={{ color: 'var(--text-2)' }}>
+                        {isBn ? (
+                            <>
+                                <strong style={{ color: 'var(--text)' }}>আমরা জানি এই মুহূর্তটা আপনার জন্য কঠিন।</strong> আইনি সমস্যা মানুষকে একা এবং অসহায় করে দেয়। কিন্তু আপনি একা নন — আমরা আপনার পাশে আছি, প্রতিটি পদক্ষেপে।
+                            </>
+                        ) : (
+                            <>
+                                <strong style={{ color: 'var(--text)' }}>We know this is a difficult time for you.</strong> Legal challenges can leave you feeling alone and overwhelmed. But you do not have to carry this burden alone — we are here to support you every step of the way.
+                            </>
+                        )}
+                    </p>
+                </motion.div>
+
+                <div className="grid lg:grid-cols-2 gap-12 items-start">
                     {/* Content */}
                     <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}
                         className="space-y-5">
@@ -66,14 +90,54 @@ const About = () => {
                             </p>
                         ))}
 
-                        {/* Quote */}
-                        <div className="glass-card p-6 mt-4" style={{ borderLeft: '4px solid var(--accent)' }}>
-                            <p className="text-base font-serif italic" style={{ color: 'var(--text)', fontFamily: "'Playfair Display', serif" }}>
-                                "{aboutContent.quote}"
-                            </p>
-                            <p className="font-bold mt-3 text-sm" style={{ color: 'var(--accent)' }}>
-                                — {aboutContent.quoteAuthor}
-                            </p>
+                        {/* Personal note / Founder's story */}
+                        {aboutContent.personalNote && (
+                            <motion.div
+                                initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}
+                                className="rounded-2xl p-6 mt-2"
+                                style={{ background: 'linear-gradient(135deg, rgba(198,167,94,0.08) 0%, rgba(26,63,191,0.06) 100%)', border: '1px solid rgba(198,167,94,0.2)' }}
+                            >
+                                <p className="text-sm leading-relaxed italic mb-4" style={{ color: 'var(--text-2)', fontFamily: "'Playfair Display', serif" }}>
+                                    ❝ {aboutContent.personalNote} ❞
+                                </p>
+                                {/* Signature */}
+                                <div className="flex items-center gap-3 pt-2" style={{ borderTop: '1px solid rgba(198,167,94,0.15)' }}>
+                                    <div>
+                                        <span style={{
+                                            fontFamily: isBn ? "'Noto Serif Bengali', serif" : "'Dancing Script', 'Brush Script MT', cursive",
+                                            fontSize: isBn ? '1.25rem' : '1.4rem',
+                                            color: 'var(--accent)',
+                                            fontWeight: 600,
+                                            letterSpacing: '0.02em',
+                                            lineHeight: 1.2,
+                                            display: 'block',
+                                            fontStyle: isBn ? 'italic' : 'normal'
+                                        }}>
+                                            {aboutContent.personalNoteAuthor}
+                                        </span>
+                                        <span className="text-xs font-semibold tracking-wide" style={{ color: 'var(--text-muted)', display: 'block', marginTop: '0.15rem' }}>
+                                            {isBn ? 'এডভোকেট, সুপ্রীম কোর্ট অব বাংলাদেশ' : 'Advocate, Supreme Court of Bangladesh'}
+                                        </span>
+                                        <span className="text-xs font-semibold tracking-wide" style={{ color: 'var(--text-muted)', display: 'block', marginTop: '0.05rem' }}>
+                                            {isBn ? 'অ্যাসিস্ট্যান্ট পাবলিক প্রসিকিউটর, ঢাকা' : 'Assistant Public Prosecutor, Dhaka'}
+                                        </span>
+                                    </div>
+                                </div>
+                            </motion.div>
+                        )}
+
+
+                        {/* Trust markers */}
+                        <div className="flex flex-wrap gap-3 pt-2">
+                            {(isBn 
+                                ? ['সততার সাথে কাজ করি', 'সরল ভাষায় বুঝিয়ে দিই', 'সময়মতো সাড়া দিই']
+                                : ['Dedicated & Honest Service', 'Clear & Plain Explanation', 'Responsive & Caring Communication']
+                            ).map((item, i) => (
+                                <span key={i} className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full"
+                                    style={{ background: 'rgba(26,63,191,0.08)', color: 'var(--accent)', border: '1px solid rgba(26,63,191,0.15)' }}>
+                                    <CheckCircle size={12} /> {item}
+                                </span>
+                            ))}
                         </div>
                     </motion.div>
 

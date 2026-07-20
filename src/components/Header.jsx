@@ -142,6 +142,38 @@ const Header = () => {
                         {/* Divider */}
                         <div className="w-px h-4 bg-current opacity-10 mx-1 flex-shrink-0" />
 
+                        {/* Language Switcher */}
+                        <motion.button
+                            onClick={() => {
+                                const isBnPage = location.pathname.startsWith('/bn') || location.pathname === '/bn';
+                                if (isBnPage) {
+                                    if (location.pathname.startsWith('/bn/blog')) {
+                                        navigate(location.pathname.replace(/^\/bn/, ''));
+                                    } else {
+                                        navigate('/');
+                                    }
+                                } else {
+                                    if (location.pathname.startsWith('/blog')) {
+                                        navigate('/bn' + location.pathname);
+                                    } else {
+                                        navigate('/bn');
+                                    }
+                                }
+                            }}
+                            whileHover={{ scale: 1.06 }}
+                            whileTap={{ scale: 0.94 }}
+                            className="flex items-center gap-1 px-2.5 py-1.5 rounded-full text-xs font-bold flex-shrink-0"
+                            style={{
+                                background: 'var(--hero-pill-bg, rgba(26,63,191,0.08))',
+                                border: '1.5px solid var(--hero-pill-border, rgba(26,63,191,0.15))',
+                                color: 'var(--text)',
+                                marginRight: '0.25rem'
+                            }}
+                            aria-label="Switch language"
+                        >
+                            {location.pathname.startsWith('/bn') || location.pathname === '/bn' ? '🇬🇧 EN' : '🇧🇩 বাংলা'}
+                        </motion.button>
+
                         {/* Theme Toggle */}
                         <motion.button
                             onClick={toggleTheme}

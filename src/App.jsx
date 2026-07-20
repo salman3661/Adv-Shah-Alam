@@ -66,7 +66,8 @@ function App() {
                   <ChunkErrorBoundary>
                   <Suspense fallback={<PageFallback />}>
                     <Routes>
-                      <Route path="/" element={<Home />} />
+                      <Route path="/" element={<Home lang="en" />} />
+                      <Route path="/bn" element={<Home lang="bn" />} />
                       <Route path="/education" element={<Education />} />
                       <Route path="/advocate-md-shah-alam" element={<AdvocatePage />} />
 
