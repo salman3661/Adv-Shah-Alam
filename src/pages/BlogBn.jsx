@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { Search, Clock, ChevronRight, BookOpen, Flame, Award, ShieldCheck, UserCheck, Scale, ArrowUpRight, X } from 'lucide-react';
+import { Search, Clock, ChevronRight, BookOpen, Flame, Award, ShieldCheck, UserCheck, Scale, ArrowUpRight, X, TrendingUp } from 'lucide-react';
 
 // Load all BN blog posts from JSON files (bundled at build time by Vite)
 const _bnModules = import.meta.glob('../content/posts/bn/*.json', { eager: true });
@@ -171,13 +171,16 @@ const BlogBn = () => {
 
     const allPublished = useMemo(() => postsBn.filter(isPublishedBn), []);
 
-    // Dynamic Spotlight Featured Post (selects newest or marked featured post)
+    // Search Console Analytics Dynamic Spotlight Selection
     const featuredPost = useMemo(() => {
         if (!allPublished.length) return null;
+        // Priority 1: Post explicitly flagged featured
         const explicitFeatured = allPublished.find(p => p.featured === true);
         if (explicitFeatured) return explicitFeatured;
-        // Dynamically select the newest published post
-        return [...allPublished].sort((a, b) => new Date(b.publishedDate || 0) - new Date(a.publishedDate || 0))[0];
+
+        // Priority 2: Post with highest Search Console impressions
+        const sortedBySearch = [...allPublished].sort((a, b) => (b.impressions || 0) - (a.impressions || 0));
+        return sortedBySearch[0];
     }, [allPublished]);
 
     const categoryCounts = useMemo(() => {
@@ -401,7 +404,7 @@ const BlogBn = () => {
                 </div>
             </section>
 
-            {/* ════ SPOTLIGHT DYNAMIC FEATURED ARTICLE (IF NO SEARCH & ALL CATEGORY) ════ */}
+            {/* ════ SEARCH CONSOLE ANALYTICS DYNAMIC FEATURED ARTICLE ════ */}
             {activeCategory === 'সব' && !searchQuery.trim() && featuredPost && (
                 <section className="py-6" style={{ background: 'var(--bg)' }}>
                     <div className="container mx-auto px-6 max-w-6xl">
@@ -416,8 +419,8 @@ const BlogBn = () => {
                             <div className="flex flex-col md:flex-row gap-6 items-start justify-between">
                                 <div className="flex-1">
                                     <div className="flex items-center gap-2 mb-3">
-                                        <span className="inline-flex items-center gap-1 text-xs font-bold px-3 py-1 rounded-full text-white" style={{ background: 'linear-gradient(135deg, #f59e0b, #be185d)', fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif" }}>
-                                            <Flame size={13} /> সাম্প্রতিক সেরা নিবন্ধ
+                                        <span className="inline-flex items-center gap-1 text-xs font-bold px-3 py-1 rounded-full text-white shadow-sm" style={{ background: 'linear-gradient(135deg, #f59e0b, #be185d)', fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif" }}>
+                                            <TrendingUp size={13} /> গুগলে সবচেয়ে জনপ্রিয় আইনি গাইড (Search Console Analytics)
                                         </span>
                                         <span className="text-xs text-[var(--text-muted)]" style={{ fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif" }}>
                                             {featuredPost.readTime}

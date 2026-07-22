@@ -61,5 +61,8 @@
       "to": "/bn/services/property-lawyer"
     }
   ],
-  "lang": "bn"
+  "lang": "bn",
+  "impressions": 2,
+  "clicks": 0,
+  "featured": false
 }

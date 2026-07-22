@@ -94,5 +94,8 @@
     }
   ],
   "isDraft": false,
-  "lang": "bn"
+  "lang": "bn",
+  "impressions": 15,
+  "clicks": 1,
+  "featured": false
 }

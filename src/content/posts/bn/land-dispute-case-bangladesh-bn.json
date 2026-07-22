@@ -97,5 +97,8 @@
       "to": "/bn/services/criminal-lawyer"
     }
   ],
-  "lang": "bn"
+  "lang": "bn",
+  "impressions": 1,
+  "clicks": 0,
+  "featured": false
 }

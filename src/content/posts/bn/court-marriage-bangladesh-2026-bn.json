@@ -110,5 +110,8 @@
     }
   ],
   "isDraft": false,
-  "lang": "bn"
+  "lang": "bn",
+  "impressions": 299,
+  "clicks": 12,
+  "featured": false
 }

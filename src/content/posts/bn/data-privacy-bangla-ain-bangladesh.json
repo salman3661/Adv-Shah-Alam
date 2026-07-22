@@ -62,5 +62,8 @@
       "to": "/bn/services/civil-lawyer"
     }
   ],
-  "lang": "bn"
+  "lang": "bn",
+  "impressions": 3,
+  "clicks": 0,
+  "featured": false
 }

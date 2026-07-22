@@ -102,5 +102,8 @@
       "to": "/services/company-corporate-lawyer"
     }
   ],
-  "lang": "bn"
+  "lang": "bn",
+  "impressions": 12,
+  "clicks": 0,
+  "featured": false
 }

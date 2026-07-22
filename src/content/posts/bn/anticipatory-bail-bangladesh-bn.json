@@ -95,5 +95,8 @@
       "to": "/bn/services/supreme-court-lawyer"
     }
   ],
-  "lang": "bn"
+  "lang": "bn",
+  "impressions": 1,
+  "clicks": 0,
+  "featured": false
 }

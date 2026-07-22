@@ -63,5 +63,8 @@
       "to": "/bn/services/land-lawyer"
     }
   ],
-  "lang": "bn"
+  "lang": "bn",
+  "impressions": 1,
+  "clicks": 1,
+  "featured": false
 }

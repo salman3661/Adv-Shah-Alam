@@ -80,5 +80,8 @@
       "to": "/criminal-lawyer-uttara"
     }
   ],
-  "lang": "bn"
+  "lang": "bn",
+  "impressions": 5,
+  "clicks": 0,
+  "featured": false
 }

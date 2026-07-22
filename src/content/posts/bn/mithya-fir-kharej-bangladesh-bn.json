@@ -117,5 +117,8 @@
     }
   ],
   "isDraft": false,
-  "lang": "bn"
+  "lang": "bn",
+  "impressions": 11,
+  "clicks": 0,
+  "featured": false
 }

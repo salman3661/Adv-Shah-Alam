@@ -102,5 +102,8 @@
       "to": "/services/land-lawyer"
     }
   ],
-  "lang": "bn"
+  "lang": "bn",
+  "impressions": 28,
+  "clicks": 0,
+  "featured": false
 }

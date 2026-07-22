@@ -55,5 +55,8 @@
       "to": "/bn/services/bail-lawyer"
     }
   ],
-  "lang": "bn"
+  "lang": "bn",
+  "impressions": 5,
+  "clicks": 0,
+  "featured": false
 }

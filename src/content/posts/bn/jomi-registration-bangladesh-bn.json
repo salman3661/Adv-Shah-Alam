@@ -98,5 +98,8 @@
       "to": "/bn/services/tax-lawyer"
     }
   ],
-  "lang": "bn"
+  "lang": "bn",
+  "impressions": 10,
+  "clicks": 1,
+  "featured": false
 }
