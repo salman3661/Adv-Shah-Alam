@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { Search, Clock, ChevronRight, BookOpen } from 'lucide-react';
+import { Search, Clock, ChevronRight, BookOpen, Flame, Award, ShieldCheck, UserCheck, Scale, ArrowUpRight } from 'lucide-react';
 
 // Load all BN blog posts from JSON files (bundled at build time by Vite)
 const _bnModules = import.meta.glob('../content/posts/bn/*.json', { eager: true });
@@ -15,7 +15,7 @@ function isPublishedBn(post) {
   } catch { return true; }
 }
 
-const CATEGORIES = ['সব', 'ফৌজদারি আইন', 'পারিবারিক আইন', 'সম্পত্তি আইন', 'কর আইন', 'দেওয়ানী আইন'];
+const CATEGORIES = ['সব', 'ফৌজদারি আইন', 'পারিবারিক আইন', 'সম্পত্তি আইন', 'কর আইন', 'দেওয়ানী আইন', 'সাইবার আইন'];
 
 const categoryColors = {
     'ফৌজদারি আইন': '#EF4444',
@@ -23,68 +23,130 @@ const categoryColors = {
     'সম্পত্তি আইন': '#10B981',
     'কর আইন': '#F59E0B',
     'দেওয়ানী আইন': '#3B82F6',
+    'সাইবার আইন': '#065F46',
 };
 
-const BlogCardBn = ({ post }) => (
-    <article
-        className="glass-card flex flex-col h-full overflow-hidden"
-        style={{ borderRadius: '1.25rem' }}
-    >
-        <div
-            className="px-6 pt-6 pb-4"
-            style={{ borderBottom: '1px solid var(--card-border)' }}
+const getCatColor = (cat) => categoryColors[cat] || 'var(--accent)';
+
+/* ─── Premium Glassmorphic Blog Card ─── */
+const BlogCardBn = ({ post }) => {
+    const catColor = getCatColor(post.category);
+    return (
+        <article
+            className="group relative flex flex-col h-full overflow-hidden transition-all duration-300 hover:-translate-y-1.5"
+            style={{
+                background: 'rgba(255, 255, 255, 0.03)',
+                backdropFilter: 'blur(16px)',
+                WebkitBackdropFilter: 'blur(16px)',
+                border: '1px solid var(--card-border)',
+                borderRadius: '1.25rem',
+                boxShadow: '0 4px 20px rgba(0,0,0,0.06)',
+            }}
         >
-            <div className="flex items-center justify-between mb-3">
-                <span
-                    className="text-xs font-bold px-3 py-1 rounded-full"
+            {/* Top Color Accent Line */}
+            <div style={{ height: '3px', background: `linear-gradient(90deg, ${catColor}, var(--accent))` }} />
+
+            <div className="p-6 flex flex-col flex-1">
+                {/* Header Meta: Category Badge & Read Time */}
+                <div className="flex items-center justify-between mb-3.5 gap-2 flex-wrap">
+                    <span
+                        className="text-xs font-bold px-3 py-1 rounded-md transition-transform group-hover:scale-105"
+                        style={{
+                            background: catColor + '18',
+                            color: catColor,
+                            letterSpacing: '0.04em',
+                            fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif"
+                        }}
+                    >
+                        {post.category}
+                    </span>
+                    <span
+                        className="inline-flex items-center gap-1 text-xs"
+                        style={{ color: 'var(--text-muted)', fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif" }}
+                    >
+                        <Clock size={13} style={{ color: catColor }} />
+                        {post.readTime}
+                    </span>
+                </div>
+
+                {/* Post Title */}
+                <h2
+                    className="text-lg md:text-xl font-bold leading-snug mb-3 group-hover:text-[var(--accent)] transition-colors"
                     style={{
-                        background: (categoryColors[post.category] || '#888') + '18',
-                        color: categoryColors[post.category] || 'var(--accent)',
-                        letterSpacing: '0.06em',
+                        color: 'var(--text)',
+                        fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif",
+                        lineHeight: 1.35
                     }}
                 >
-                    {post.category}
-                </span>
-                <span
-                    className="flex items-center gap-1 text-xs"
-                    style={{ color: 'var(--text-muted)' }}
+                    <Link to={`/bn/blog/${post.slug}`} className="hover:underline">
+                        {post.title}
+                    </Link>
+                </h2>
+
+                {/* Excerpt */}
+                <p
+                    className="text-sm leading-relaxed line-clamp-3 mb-4 flex-1"
+                    style={{
+                        color: 'var(--text-secondary)',
+                        fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif",
+                        fontSize: '0.925rem',
+                        lineHeight: 1.7
+                    }}
                 >
-                    <Clock size={12} />
-                    {post.readTime}
-                </span>
+                    {post.heroIntro}
+                </p>
+
+                {/* Author & Read Action Footer */}
+                <div className="pt-4 border-t flex items-center justify-between mt-auto" style={{ borderColor: 'var(--card-border)' }}>
+                    <div className="flex items-center gap-2">
+                        <div
+                            className="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white"
+                            style={{ background: 'linear-gradient(135deg, #c6a75e, #1A3FBF)' }}
+                        >
+                            ⚖️
+                        </div>
+                        <span className="text-xs font-medium" style={{ color: 'var(--text-muted)', fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif" }}>
+                            অ্যাডভোকেট মো. শাহ আলম
+                        </span>
+                    </div>
+
+                    <Link
+                        to={`/bn/blog/${post.slug}`}
+                        className="inline-flex items-center gap-1 text-xs font-bold px-3 py-1.5 rounded-lg transition-all group-hover:bg-[var(--accent)] group-hover:text-white"
+                        style={{
+                            background: 'var(--accent-subtle)',
+                            color: 'var(--accent)',
+                            fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif"
+                        }}
+                        aria-label={`পড়ুন: ${post.title}`}
+                    >
+                        পড়ুন <ArrowUpRight size={14} />
+                    </Link>
+                </div>
             </div>
-            <h2
-                className="text-lg font-bold leading-snug mb-3"
-                style={{ color: 'var(--text)', fontFamily: "'Playfair Display', serif" }}
-            >
-                {post.title}
-            </h2>
-            <p className="text-sm leading-relaxed line-clamp-3" style={{ color: 'var(--text-secondary)' }}>
-                {post.heroIntro}
-            </p>
-        </div>
-        <div className="px-6 py-4 mt-auto flex items-center justify-between">
-            <span className="text-xs" style={{ color: 'var(--text-muted)' }}>
-                {post.publishedDate}
-            </span>
-            <Link
-                to={`/bn/blog/${post.slug}`}
-                className="inline-flex items-center gap-1 text-sm font-semibold hover:gap-2 transition-all"
-                style={{ color: 'var(--accent)' }}
-                aria-label={`পড়ুন: ${post.title}`}
-            >
-                পড়ুন <ChevronRight size={16} />
-            </Link>
-        </div>
-    </article>
-);
+        </article>
+    );
+};
 
 const BlogBn = () => {
     const [activeCategory, setActiveCategory] = useState('সব');
     const [searchQuery, setSearchQuery] = useState('');
 
+    const allPublished = useMemo(() => postsBn.filter(isPublishedBn), []);
+
+    // Featured / Spotlight post (first post or highlighted one)
+    const featuredPost = useMemo(() => allPublished[0] || null, [allPublished]);
+
+    const categoryCounts = useMemo(() => {
+        const counts = { 'সব': allPublished.length };
+        allPublished.forEach(p => {
+            counts[p.category] = (counts[p.category] || 0) + 1;
+        });
+        return counts;
+    }, [allPublished]);
+
     const filtered = useMemo(() => {
-        let posts = postsBn.filter(isPublishedBn);
+        let posts = [...allPublished];
         if (activeCategory !== 'সব') {
             posts = posts.filter(p => p.category === activeCategory);
         }
@@ -97,83 +159,213 @@ const BlogBn = () => {
             );
         }
         return posts;
-    }, [activeCategory, searchQuery]);
+    }, [allPublished, activeCategory, searchQuery]);
 
     return (
         <>
             <Helmet>
                 <html lang="bn" />
-                <title>আইনি ব্লগ বাংলা | অ্যাডভোকেট মো. শাহ আলম</title>
-                <meta name="description" content="বাংলাদেশের আইন বিষয়ক বাংলা ব্লগ — জামিন, তালাক, জমি বিরোধ, কর মামলা ও আরও অনেক বিষয়ে বিশেষজ্ঞ পরামর্শ।" />
+                <title>বাংলা আইনি ব্লগ ও সমাধান নির্দেশিকা | অ্যাডভোকেট মো. শাহ আলম</title>
+                <meta name="description" content="বাংলাদেশের সর্বোচ্চ আদালতের আইনজীবীর দ্বারা লিখিত নির্ভরযোগ্য বাংলা আইনি ব্লগ — জমি রেজিস্ট্রি, জামিন, তালাক, উত্তরাধিকার, শ্রম আইন ও সাইবার আইনের পূর্ণাঙ্গ সমাধান।" />
                 <link rel="canonical" href="https://www.advmdshahalam.me/bn/blog" />
                 <meta name="robots" content="index, follow" />
                 <link rel="alternate" hrefLang="en" href="https://www.advmdshahalam.me/blog" />
                 <link rel="alternate" hrefLang="bn" href="https://www.advmdshahalam.me/bn/blog" />
             </Helmet>
 
-            {/* Hero */}
-            <section className="pt-24 md:pt-28 pb-10" style={{ background: 'var(--bg)' }}>
-                <div className="container mx-auto px-6 max-w-4xl text-center">
+            {/* ════ HERO HEADER ════ */}
+            <section className="pt-28 md:pt-32 pb-12 relative overflow-hidden" style={{ background: 'var(--bg)' }}>
+                {/* Background Glow Effect */}
+                <div
+                    className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full pointer-events-none blur-3xl opacity-20"
+                    style={{ background: 'radial-gradient(circle, var(--accent) 0%, transparent 70%)' }}
+                />
+
+                <div className="container mx-auto px-6 max-w-5xl relative z-10 text-center">
                     <div
-                        className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold mb-5"
-                        style={{ background: 'var(--accent-soft)', color: 'var(--accent)' }}
+                        className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold mb-6 shadow-sm border"
+                        style={{
+                            background: 'var(--accent-subtle)',
+                            color: 'var(--accent)',
+                            borderColor: 'rgba(198,167,94,0.25)',
+                            fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif"
+                        }}
                     >
-                        <BookOpen size={14} />
-                        আইনি জ্ঞান কেন্দ্র
+                        <Scale size={15} style={{ color: 'var(--gold)' }} />
+                        বাংলাদেশ সুপ্রিম কোর্ট আইনজীবী স্পেশাল লাইব্রেরি
                     </div>
+
                     <h1
-                        className="text-3xl md:text-5xl font-serif font-bold mb-5 leading-tight"
-                        style={{ color: 'var(--text)', fontFamily: "'Playfair Display', serif" }}
+                        className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
+                        style={{
+                            color: 'var(--text)',
+                            fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif",
+                            letterSpacing: '-0.02em'
+                        }}
                     >
-                        বাংলা আইনি ব্লগ
+                        বাংলা আইনি জ্ঞান কেন্দ্র
                     </h1>
-                    <p className="text-lg mb-8" style={{ color: 'var(--text-secondary)', maxWidth: '640px', margin: '0 auto 2rem' }}>
-                        বাংলাদেশের আইনি বিষয়ে সহজ বাংলায় বিশেষজ্ঞ গাইড।
+
+                    <p
+                        className="text-base md:text-lg mb-8 max-w-2xl mx-auto leading-relaxed"
+                        style={{
+                            color: 'var(--text-secondary)',
+                            fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif"
+                        }}
+                    >
+                        জমি জমা, জামিন, পারিবারিক বিবাদ ও ফৌজদারি মামলার নির্ভরযোগ্য ও সহজ বাংলা আইনি নির্দেশিকা।
                     </p>
 
-                    {/* Search */}
-                    <div className="relative max-w-xl mx-auto mb-8">
-                        <Search size={18} className="absolute left-4 top-1/2 -translate-y-1/2" style={{ color: 'var(--text-muted)' }} />
-                        <input
-                            type="search"
-                            placeholder="আইনি বিষয় খুঁজুন…"
-                            value={searchQuery}
-                            onChange={e => setSearchQuery(e.target.value)}
-                            className="w-full pl-12 pr-5 py-3 rounded-2xl border text-sm outline-none focus:ring-2"
-                            style={{
-                                background: 'var(--surface)',
-                                color: 'var(--text)',
-                                borderColor: 'var(--card-border)',
-                            }}
-                        />
+                    {/* Trust Badges */}
+                    <div className="flex flex-wrap justify-center items-center gap-6 mb-10 text-xs font-semibold" style={{ color: 'var(--text-muted)', fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif" }}>
+                        <span className="flex items-center gap-1.5">
+                            <ShieldCheck size={16} className="text-emerald-500" /> ১০০% আইনি ও নজিরনির্ভর
+                        </span>
+                        <span className="flex items-center gap-1.5">
+                            <UserCheck size={16} className="text-amber-500" /> সুপ্রিম কোর্টের আইনজীবী পরামর্শ
+                        </span>
+                        <span className="flex items-center gap-1.5">
+                            <Award size={16} className="text-blue-500" /> বিনামূল্যে তথ্য সংকলন
+                        </span>
                     </div>
 
-                    {/* Category Filter */}
-                    <div className="flex flex-wrap justify-center gap-2">
-                        {CATEGORIES.map(cat => (
-                            <button
-                                key={cat}
-                                onClick={() => setActiveCategory(cat)}
-                                className="px-4 py-1.5 rounded-full text-xs font-semibold border transition-all"
-                                style={
-                                    activeCategory === cat
-                                        ? { background: 'var(--accent)', color: '#fff', borderColor: 'var(--accent)' }
-                                        : { background: 'transparent', color: 'var(--text-secondary)', borderColor: 'var(--card-border)' }
-                                }
-                            >
-                                {cat}
-                            </button>
-                        ))}
+                    {/* Interactive Search Bar */}
+                    <div className="relative max-w-2xl mx-auto mb-8 shadow-lg rounded-2xl overflow-hidden border" style={{ borderColor: 'var(--card-border)', background: 'var(--surface)' }}>
+                        <Search size={20} className="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none" style={{ color: 'var(--accent)' }} />
+                        <input
+                            type="search"
+                            placeholder="আইনি বিষয় বা মামলা খুঁজুন (যেমন: জামিন, বাটোয়ারা, দেনমোহর)..."
+                            value={searchQuery}
+                            onChange={e => setSearchQuery(e.target.value)}
+                            className="w-full pl-12 pr-28 py-4 text-sm md:text-base outline-none transition-all"
+                            style={{
+                                background: 'transparent',
+                                color: 'var(--text)',
+                                fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif"
+                            }}
+                        />
+                        <span
+                            className="absolute right-3 top-1/2 -translate-y-1/2 text-xs px-3 py-1.5 rounded-lg font-bold"
+                            style={{
+                                background: 'var(--accent-subtle)',
+                                color: 'var(--accent)',
+                                fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif"
+                            }}
+                        >
+                            {filtered.length} টি পাওয়া গেছে
+                        </span>
+                    </div>
+
+                    {/* Category Filter Pills */}
+                    <div className="flex flex-wrap justify-center gap-2.5">
+                        {CATEGORIES.map(cat => {
+                            const count = categoryCounts[cat] || 0;
+                            const isActive = activeCategory === cat;
+                            const color = getCatColor(cat);
+                            return (
+                                <button
+                                    key={cat}
+                                    onClick={() => setActiveCategory(cat)}
+                                    className="px-4 py-2 rounded-xl text-xs md:text-sm font-semibold border transition-all flex items-center gap-1.5"
+                                    style={
+                                        isActive
+                                            ? {
+                                                background: 'linear-gradient(135deg, #1A3FBF, #0B1220)',
+                                                color: '#fff',
+                                                borderColor: 'var(--accent)',
+                                                boxShadow: '0 4px 14px rgba(26,63,191,0.3)',
+                                                fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif"
+                                            }
+                                            : {
+                                                background: 'var(--surface)',
+                                                color: 'var(--text-secondary)',
+                                                borderColor: 'var(--card-border)',
+                                                fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif"
+                                            }
+                                    }
+                                >
+                                    <span>{cat}</span>
+                                    <span
+                                        className="px-1.5 py-0.5 rounded-full text-[10px] font-bold"
+                                        style={{
+                                            background: isActive ? 'rgba(255,255,255,0.2)' : 'var(--accent-subtle)',
+                                            color: isActive ? '#fff' : color
+                                        }}
+                                    >
+                                        {count}
+                                    </span>
+                                </button>
+                            );
+                        })}
                     </div>
                 </div>
             </section>
 
-            {/* Grid */}
-            <section className="pb-20" style={{ background: 'var(--bg)' }}>
+            {/* ════ SPOTLIGHT FEATURED ARTICLE (IF NO SEARCH) ════ */}
+            {activeCategory === 'সব' && !searchQuery.trim() && featuredPost && (
+                <section className="py-6" style={{ background: 'var(--bg)' }}>
+                    <div className="container mx-auto px-6 max-w-6xl">
+                        <div
+                            className="relative overflow-hidden p-6 md:p-8 rounded-3xl border transition-all duration-300 hover:shadow-2xl"
+                            style={{
+                                background: 'linear-gradient(135deg, rgba(26,63,191,0.06) 0%, rgba(198,167,94,0.05) 100%)',
+                                borderColor: 'rgba(198,167,94,0.3)',
+                                backdropFilter: 'blur(20px)'
+                            }}
+                        >
+                            <div className="flex flex-col md:flex-row gap-6 items-start justify-between">
+                                <div className="flex-1">
+                                    <div className="flex items-center gap-2 mb-3">
+                                        <span className="inline-flex items-center gap-1 text-xs font-bold px-3 py-1 rounded-full text-white" style={{ background: 'linear-gradient(135deg, #f59e0b, #be185d)', fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif" }}>
+                                            <Flame size={13} /> বিশেষ আলোচিত গাইড
+                                        </span>
+                                        <span className="text-xs text-[var(--text-muted)]" style={{ fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif" }}>
+                                            {featuredPost.readTime}
+                                        </span>
+                                    </div>
+                                    <h2
+                                        className="text-2xl md:text-3xl font-bold mb-3 leading-snug"
+                                        style={{ color: 'var(--text)', fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif" }}
+                                    >
+                                        <Link to={`/bn/blog/${featuredPost.slug}`} className="hover:text-[var(--accent)] transition-colors">
+                                            {featuredPost.title}
+                                        </Link>
+                                    </h2>
+                                    <p
+                                        className="text-sm md:text-base leading-relaxed line-clamp-3 mb-6"
+                                        style={{ color: 'var(--text-secondary)', fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif" }}
+                                    >
+                                        {featuredPost.heroIntro}
+                                    </p>
+                                    <Link
+                                        to={`/bn/blog/${featuredPost.slug}`}
+                                        className="inline-flex items-center gap-2 text-sm font-bold px-6 py-3 rounded-xl text-white shadow-lg transition-all hover:scale-105"
+                                        style={{ background: 'linear-gradient(135deg, var(--accent), #1e1b4b)', fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif" }}
+                                    >
+                                        সম্পূর্ণ আইনি নিবন্ধটি পড়ুন <ChevronRight size={18} />
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            )}
+
+            {/* ════ MAIN ARTICLES GRID ════ */}
+            <section className="py-12 pb-24" style={{ background: 'var(--bg)' }}>
                 <div className="container mx-auto px-6 max-w-6xl">
                     {filtered.length === 0 ? (
-                        <div className="text-center py-20" style={{ color: 'var(--text-muted)' }}>
-                            কোনো পোস্ট পাওয়া যায়নি।
+                        <div className="text-center py-20 rounded-2xl border" style={{ background: 'var(--surface)', borderColor: 'var(--card-border)', color: 'var(--text-muted)' }}>
+                            <BookOpen size={48} className="mx-auto mb-4 text-[var(--accent)] opacity-50" />
+                            <h3 className="text-lg font-bold mb-2" style={{ fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif" }}>কোনো আইনি নিবন্ধ পাওয়া যায়নি</h3>
+                            <p className="text-sm mb-4" style={{ fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif" }}>অন্য কোনো শব্দ দিয়ে পুনরায় অনুসন্ধান করুন।</p>
+                            <button
+                                onClick={() => { setSearchQuery(''); setActiveCategory('সব'); }}
+                                className="px-5 py-2 rounded-lg text-xs font-bold text-white bg-[var(--accent)]"
+                                style={{ fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif" }}
+                            >
+                                সব পোস্ট দেখুন
+                            </button>
                         </div>
                     ) : (
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -183,14 +375,14 @@ const BlogBn = () => {
                         </div>
                     )}
 
-                    {/* Language toggle */}
-                    <div className="mt-12 text-center">
+                    {/* Language Switch Footer */}
+                    <div className="mt-16 text-center">
                         <Link
                             to="/blog"
-                            className="inline-flex items-center gap-2 text-sm font-semibold px-5 py-2.5 rounded-full border transition-all hover:opacity-80"
-                            style={{ color: 'var(--accent)', borderColor: 'var(--accent)' }}
+                            className="inline-flex items-center gap-2 text-sm font-bold px-6 py-3 rounded-2xl border transition-all hover:bg-[var(--accent-subtle)]"
+                            style={{ color: 'var(--accent)', borderColor: 'var(--accent)', fontFamily: "var(--font-en), sans-serif" }}
                         >
-                            🇬🇧 View English Blog
+                            🌐 Switch to English Legal Guides &amp; Articles
                         </Link>
                     </div>
                 </div>
