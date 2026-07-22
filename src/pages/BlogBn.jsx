@@ -128,13 +128,15 @@ const BlogCardBn = ({ post }) => {
                 {/* Author & Read Action Footer */}
                 <div className="pt-4 border-t flex items-center justify-between mt-auto" style={{ borderColor: 'var(--card-border)' }}>
                     <div className="flex items-center gap-2">
-                        <div
-                            className="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white"
-                            style={{ background: 'linear-gradient(135deg, #c6a75e, #1A3FBF)' }}
-                        >
-                            ⚖️
-                        </div>
-                        <span className="text-xs font-medium" style={{ color: 'var(--text-muted)', fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif" }}>
+                        <img
+                            src="/images/hero/hero-md-shah-alam.webp"
+                            alt="অ্যাডভোকেট মো. শাহ আলম"
+                            className="w-7 h-7 rounded-full object-cover border border-[var(--gold)] flex-shrink-0 shadow-sm"
+                            loading="lazy"
+                            width="28"
+                            height="28"
+                        />
+                        <span className="text-xs font-semibold" style={{ color: 'var(--text)', fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif" }}>
                             অ্যাডভোকেট মো. শাহ আলম
                         </span>
                     </div>

@@ -412,13 +412,19 @@ const BlogPostBnInner = () => {
                     <h1 style={{ fontFamily: "'SolaimanLipi', 'Noto Sans Bengali', 'Playfair Display', serif", fontSize: 'clamp(1.75rem, 4vw, 3rem)', fontWeight: 800, lineHeight: 1.22, color: 'var(--hero-text)', marginBottom: '1.375rem', letterSpacing: '-0.01em', maxWidth: '900px' }}>
                         {post.title}
                     </h1>
-
                     <p style={{ fontSize: '1.0625rem', lineHeight: 1.9, color: 'var(--hero-text-2)', maxWidth: '700px', marginBottom: '2rem', opacity: 0.9, fontFamily: "'SolaimanLipi', 'Noto Sans Bengali', sans-serif" }}>
                         {post.heroIntro}
                     </p>
 
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.875rem', flexWrap: 'wrap', paddingTop: '1.25rem', borderTop: '1px solid rgba(255,255,255,0.08)' }}>
-                        <div style={{ width: '2.375rem', height: '2.375rem', borderRadius: '50%', background: `linear-gradient(135deg, ${cc.bg}, var(--gold))`, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.75rem', fontWeight: 800, color: '#fff', flexShrink: 0 }}>SA</div>
+                        <img
+                            src="/images/hero/hero-md-shah-alam.webp"
+                            alt="অ্যাডভোকেট মো. শাহ আলম"
+                            style={{ width: '2.5rem', height: '2.5rem', borderRadius: '50%', objectFit: 'cover', border: '1.5px solid var(--gold)', flexShrink: 0 }}
+                            loading="eager"
+                            width="40"
+                            height="40"
+                        />
                         <div>
                             <p style={{ fontSize: '0.875rem', fontWeight: 700, color: 'var(--hero-text)', margin: 0 }}>অ্যাডভোকেট মো. শাহ আলম</p>
                             <p style={{ fontSize: '0.7rem', color: 'var(--hero-muted)', margin: 0 }}>বাংলাদেশ সুপ্রিম কোর্ট</p>
