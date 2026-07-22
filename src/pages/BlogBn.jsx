@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { Search, Clock, ChevronRight, BookOpen, Flame, Award, ShieldCheck, UserCheck, Scale, ArrowUpRight } from 'lucide-react';
+import { Search, Clock, ChevronRight, BookOpen, Flame, Award, ShieldCheck, UserCheck, Scale, ArrowUpRight, X } from 'lucide-react';
 
 // Load all BN blog posts from JSON files (bundled at build time by Vite)
 const _bnModules = import.meta.glob('../content/posts/bn/*.json', { eager: true });
@@ -14,6 +14,35 @@ function isPublishedBn(post) {
     return pub <= now && !post.isDraft;
   } catch { return true; }
 }
+
+// Bengali unicode normalization helper
+function normalizeBnText(str) {
+  if (!str) return '';
+  return String(str)
+    .toLowerCase()
+    .replace(/[\u200C\u200D]/g, '')
+    .replace(/য়/g, 'য়')
+    .replace(/ড়/g, 'ড়')
+    .replace(/ঢ়/g, 'ঢ়')
+    .trim();
+}
+
+// Common search synonyms for English <-> Bangla intent mapping
+const SYNONYMS = {
+  'bail': ['জামিন', 'অগাম জামিন', 'হাইকোর্ট', 'foster', 'bail'],
+  'divorce': ['তালাক', 'ডিভোর্স', 'খোরপোষ', 'দেনমোহর', 'পারিবারিক'],
+  'talak': ['তালাক', 'ডিভোর্স', 'খোরপোষ'],
+  'land': ['জমি', 'দলিল', 'খতিয়ান', 'নামজারি', 'বাটোয়ারা', 'সম্পত্তি'],
+  'jomi': ['জমি', 'দলিল', 'খতিয়ান', 'নামজারি', 'বাটোয়ারা'],
+  'mutation': ['নামজারি', 'ই-নামজারি', 'খতিয়ান'],
+  'khatian': ['খতিয়ান', 'আরএস', 'বিএস', 'সিএস'],
+  'cheque': ['চেক', 'চেক ডিজঅনার', '১৩৮ ধারা', 'এনআই অ্যাক্ট'],
+  'remand': ['রিমান্ড', '৫৪ ধারা', 'পুলিশ'],
+  'marriage': ['বিবাহ', 'কোর্ট ম্যারেজ', 'নিকাহনামা', 'রেজিস্ট্রি'],
+  'tax': ['কর', 'ইনকাম ট্যাক্স', 'এনবিআর', 'টিআইএন'],
+  'cyber': ['সাইবার', 'ফেসবুক', 'হ্যাকিং', 'ব্ল্যাকমেইল', 'ডিজিটাল নিরাপত্তা'],
+  'police': ['পুলিশ', 'জিডি', 'এফআইআর', 'থানা', 'মামলা'],
+};
 
 const CATEGORIES = ['সব', 'ফৌজদারি আইন', 'পারিবারিক আইন', 'সম্পত্তি আইন', 'কর আইন', 'দেওয়ানী আইন', 'সাইবার আইন'];
 
@@ -145,20 +174,63 @@ const BlogBn = () => {
         return counts;
     }, [allPublished]);
 
+    // Intelligent Deep Search Filtering Algorithm
     const filtered = useMemo(() => {
         let posts = [...allPublished];
+
         if (activeCategory !== 'সব') {
             posts = posts.filter(p => p.category === activeCategory);
         }
-        if (searchQuery.trim()) {
-            const q = searchQuery.toLowerCase();
-            posts = posts.filter(p =>
-                p.title.toLowerCase().includes(q) ||
-                (p.heroIntro && p.heroIntro.toLowerCase().includes(q)) ||
-                (p.keywords && p.keywords.some(k => k.toLowerCase().includes(q)))
-            );
-        }
-        return posts;
+
+        const rawQuery = searchQuery.trim();
+        if (!rawQuery) return posts;
+
+        const normalizedQ = normalizeBnText(rawQuery);
+        const queryTokens = normalizedQ.split(/\s+/).filter(Boolean);
+
+        // Check if query maps to any synonym terms
+        let mappedTerms = [normalizedQ];
+        Object.keys(SYNONYMS).forEach(synKey => {
+            if (normalizedQ.includes(synKey) || synKey.includes(normalizedQ)) {
+                mappedTerms.push(...SYNONYMS[synKey].map(normalizeBnText));
+            }
+        });
+
+        return posts.filter(post => {
+            // Build searchable full text corpus for the post
+            const titleNorm = normalizeBnText(post.title);
+            const metaTitleNorm = normalizeBnText(post.metaTitle);
+            const metaDescNorm = normalizeBnText(post.metaDescription);
+            const heroNorm = normalizeBnText(post.heroIntro);
+            const slugNorm = normalizeBnText(post.slug);
+            const categoryNorm = normalizeBnText(post.category);
+            const keywordsNorm = (post.keywords || []).map(normalizeBnText).join(' ');
+
+            // Sections content
+            const sectionsNorm = (post.sections || [])
+                .map(s => normalizeBnText(s.heading) + ' ' + normalizeBnText(s.content))
+                .join(' ');
+
+            // FAQs content
+            const faqsNorm = (post.faqs || [])
+                .map(f => normalizeBnText(f.question) + ' ' + normalizeBnText(f.answer))
+                .join(' ');
+
+            const corpus = `${titleNorm} ${metaTitleNorm} ${metaDescNorm} ${heroNorm} ${slugNorm} ${categoryNorm} ${keywordsNorm} ${sectionsNorm} ${faqsNorm}`;
+
+            // Check if full normalized query matches
+            if (corpus.includes(normalizedQ)) return true;
+
+            // Check if mapped synonym terms match
+            if (mappedTerms.some(term => corpus.includes(term))) return true;
+
+            // Check if all token words match anywhere in corpus
+            if (queryTokens.length > 1 && queryTokens.every(token => corpus.includes(token))) {
+                return true;
+            }
+
+            return false;
+        });
     }, [allPublished, activeCategory, searchQuery]);
 
     return (
@@ -234,7 +306,7 @@ const BlogBn = () => {
                         <Search size={20} className="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none" style={{ color: 'var(--accent)' }} />
                         <input
                             type="search"
-                            placeholder="আইনি বিষয় বা মামলা খুঁজুন (যেমন: জামিন, বাটোয়ারা, দেনমোহর)..."
+                            placeholder="আইনি বিষয় বা মামলা খুঁজুন (যেমন: জামিন, বাটোয়ারা, দেনমোহর, divorce, land)..."
                             value={searchQuery}
                             onChange={e => setSearchQuery(e.target.value)}
                             className="w-full pl-12 pr-28 py-4 text-sm md:text-base outline-none transition-all"
@@ -244,16 +316,41 @@ const BlogBn = () => {
                                 fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif"
                             }}
                         />
-                        <span
-                            className="absolute right-3 top-1/2 -translate-y-1/2 text-xs px-3 py-1.5 rounded-lg font-bold"
-                            style={{
-                                background: 'var(--accent-subtle)',
-                                color: 'var(--accent)',
-                                fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif"
-                            }}
-                        >
-                            {filtered.length} টি পাওয়া গেছে
-                        </span>
+
+                        {/* Search Action / Result Pill */}
+                        <div className="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-1.5">
+                            {searchQuery.trim() ? (
+                                <>
+                                    <span
+                                        className="text-xs px-3 py-1.5 rounded-lg font-bold"
+                                        style={{
+                                            background: 'var(--accent-subtle)',
+                                            color: 'var(--accent)',
+                                            fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif"
+                                        }}
+                                    >
+                                        {filtered.length} টি ফলাফল
+                                    </span>
+                                    <button
+                                        onClick={() => setSearchQuery('')}
+                                        className="p-1.5 rounded-lg hover:bg-black/10 text-gray-400 hover:text-gray-600 transition-all"
+                                        title="অনুসন্ধান ক্লিয়ার করুন"
+                                    >
+                                        <X size={16} />
+                                    </button>
+                                </>
+                            ) : (
+                                <button
+                                    className="text-xs px-4 py-2 rounded-lg font-bold text-white shadow-md transition-all hover:scale-105"
+                                    style={{
+                                        background: 'linear-gradient(135deg, var(--accent), #1e1b4b)',
+                                        fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif"
+                                    }}
+                                >
+                                    খুঁজুন
+                                </button>
+                            )}
+                        </div>
                     </div>
 
                     {/* Category Filter Pills */}
@@ -301,7 +398,7 @@ const BlogBn = () => {
                 </div>
             </section>
 
-            {/* ════ SPOTLIGHT FEATURED ARTICLE (IF NO SEARCH) ════ */}
+            {/* ════ SPOTLIGHT FEATURED ARTICLE (IF NO SEARCH & ALL CATEGORY) ════ */}
             {activeCategory === 'সব' && !searchQuery.trim() && featuredPost && (
                 <section className="py-6" style={{ background: 'var(--bg)' }}>
                     <div className="container mx-auto px-6 max-w-6xl">
@@ -361,7 +458,7 @@ const BlogBn = () => {
                             <p className="text-sm mb-4" style={{ fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif" }}>অন্য কোনো শব্দ দিয়ে পুনরায় অনুসন্ধান করুন।</p>
                             <button
                                 onClick={() => { setSearchQuery(''); setActiveCategory('সব'); }}
-                                className="px-5 py-2 rounded-lg text-xs font-bold text-white bg-[var(--accent)]"
+                                className="px-5 py-2 rounded-lg text-xs font-bold text-white bg-[var(--accent)] shadow-md transition-all hover:scale-105"
                                 style={{ fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif" }}
                             >
                                 সব পোস্ট দেখুন
@@ -379,7 +476,7 @@ const BlogBn = () => {
                     <div className="mt-16 text-center">
                         <Link
                             to="/blog"
-                            className="inline-flex items-center gap-2 text-sm font-bold px-6 py-3 rounded-2xl border transition-all hover:bg-[var(--accent-subtle)]"
+                            className="inline-flex items-center gap-2 text-sm font-bold px-6 py-3 rounded-2xl border transition-all hover:bg-[var(--accent-subtle)] shadow-sm"
                             style={{ color: 'var(--accent)', borderColor: 'var(--accent)', fontFamily: "var(--font-en), sans-serif" }}
                         >
                             🌐 Switch to English Legal Guides &amp; Articles
