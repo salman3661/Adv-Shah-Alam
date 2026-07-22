@@ -1,8 +1,8 @@
 {
   "slug": "bandhak-jomi-ain-bangladesh-bn",
-  "metaTitle": "বন্ধকি জমির আইন বাংলাদেশ ২০২৬ | মর্টগেজ গাইড",
+  "metaTitle": "বন্ধকি জমির আইন বাংলাদেশ | মর্টগেজ গাইড",
   "category": "ভূমি আইন",
-  "title": "বন্ধকি জমির আইন বাংলাদেশ ২০২৬ — মর্টগেজ ও বন্ধকের সম্পূর্ণ গাইড",
+  "title": "বন্ধকি জমির আইন বাংলাদেশ — মর্টগেজ ও বন্ধকের সম্পূর্ণ গাইড",
   "metaDescription": "বন্ধকি জমির আইন বাংলাদেশ: বন্ধক কী, মর্টগেজের প্রকারভেদ, নিবন্ধন পদ্ধতি, বন্ধক ছাড়ানোর উপায় ও আইনি সতর্কতা বিস্তারিত জানুন।",
   "keywords": [
     "mortgage law bangladesh",
@@ -85,12 +85,24 @@
     }
   ],
   "relatedServiceLinks": [
-    {"text": "ভূমি আইনজীবী", "to": "/services/land-lawyer"},
-    {"text": "সুপ্রিম কোর্ট আইনজীবী", "to": "/services/supreme-court-lawyer"}
+    {
+      "text": "ভূমি আইনজীবী",
+      "to": "/services/land-lawyer"
+    },
+    {
+      "text": "সুপ্রিম কোর্ট আইনজীবী",
+      "to": "/services/supreme-court-lawyer"
+    }
   ],
   "relatedPosts": [
-    {"text": "ঢাকায় জমি কেনার আইনি গাইড ২০২৬", "to": "/bn/blog/jomi-kena-dhaka-legal-guide-bn"},
-    {"text": "জমি নিবন্ধন ফি ২০২৬", "to": "/bn/blog/jomi-nibandhon-fee-2026-bn"}
+    {
+      "text": "ঢাকায় জমি কেনার আইনি গাইড ২০২৬",
+      "to": "/bn/blog/jomi-kena-dhaka-legal-guide-bn"
+    },
+    {
+      "text": "জমি নিবন্ধন ফি ২০২৬",
+      "to": "/bn/blog/jomi-nibandhon-fee-2026-bn"
+    }
   ],
   "isDraft": false,
   "lang": "bn"

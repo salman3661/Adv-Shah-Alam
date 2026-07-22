@@ -1,8 +1,8 @@
 {
   "slug": "family-ain-bangladesh-complete-guide-bn",
-  "metaTitle": "পারিবারিক আইন বাংলাদেশ সম্পূর্ণ গাইড ২০২৬",
+  "metaTitle": "পারিবারিক আইন বাংলাদেশ সম্পূর্ণ গাইড",
   "category": "পারিবারিক আইন",
-  "title": "বাংলাদেশে পারিবারিক আইন সম্পূর্ণ গাইড ২০২৬ — বিবাহ থেকে উত্তরাধিকার",
+  "title": "বাংলাদেশে পারিবারিক আইন সম্পূর্ণ গাইড — বিবাহ থেকে উত্তরাধিকার",
   "metaDescription": "বাংলাদেশে পারিবারিক আইনের সম্পূর্ণ গাইড: বিবাহ, তালাক, সন্তানের হেফাজত, ভরণপোষণ, উত্তরাধিকার — সবকিছু বাংলায়। অ্যাডভোকেট শাহ আলাম।",
   "keywords": [
     "পারিবারিক আইন বাংলাদেশ",
@@ -98,15 +98,36 @@
     }
   ],
   "relatedServiceLinks": [
-    { "text": "ডিভোর্স আইনজীবী ঢাকা", "to": "/services/divorce-lawyer" },
-    { "text": "ভূমি আইনজীবী", "to": "/services/land-lawyer" },
-    { "text": "সুপ্রিম কোর্ট আইনজীবী", "to": "/services/supreme-court-lawyer" }
+    {
+      "text": "ডিভোর্স আইনজীবী ঢাকা",
+      "to": "/services/divorce-lawyer"
+    },
+    {
+      "text": "ভূমি আইনজীবী",
+      "to": "/services/land-lawyer"
+    },
+    {
+      "text": "সুপ্রিম কোর্ট আইনজীবী",
+      "to": "/services/supreme-court-lawyer"
+    }
   ],
   "relatedPosts": [
-    { "text": "তালাক নামা প্রক্রিয়া বাংলাদেশ", "to": "/bn/blog/talak-name-prokriya-bangladesh-bn" },
-    { "text": "সন্তানের হেফাজত আইন ২০২৬", "to": "/bn/blog/child-custody-law-2026-bn" },
-    { "text": "ডিভোর্স খরচ বাংলাদেশ ২০২৬", "to": "/bn/blog/divorce-kharch-bangladesh-2026" },
-    { "text": "বাবার সম্পত্তি বন্টন আইন", "to": "/bn/blog/baba-sampatti-vantan-ain-bangladesh-2026" }
+    {
+      "text": "তালাক নামা প্রক্রিয়া বাংলাদেশ",
+      "to": "/bn/blog/talak-name-prokriya-bangladesh-bn"
+    },
+    {
+      "text": "সন্তানের হেফাজত আইন ২০২৬",
+      "to": "/bn/blog/child-custody-law-2026-bn"
+    },
+    {
+      "text": "ডিভোর্স খরচ বাংলাদেশ ২০২৬",
+      "to": "/bn/blog/divorce-kharch-bangladesh-2026"
+    },
+    {
+      "text": "বাবার সম্পত্তি বন্টন আইন",
+      "to": "/bn/blog/baba-sampatti-vantan-ain-bangladesh-2026"
+    }
   ],
   "isDraft": false,
   "lang": "bn"

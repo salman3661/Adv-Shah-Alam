@@ -1,8 +1,8 @@
 {
   "slug": "police-complaint-hoirani-bn",
-  "metaTitle": "পুলিশে অভিযোগ করার নিয়ম বাংলাদেশ ২০২৬",
+  "metaTitle": "পুলিশে অভিযোগ করার নিয়ম বাংলাদেশ",
   "category": "ফৌজদারি আইন",
-  "title": "পুলিশের কাছে অভিযোগ বা মামলা করার নিয়ম বাংলাদেশ ২০২৬",
+  "title": "পুলিশের কাছে অভিযোগ বা মামলা করার নিয়ম বাংলাদেশ",
   "metaDescription": "বাংলাদেশে পুলিশে অভিযোগ কিভাবে করবেন? GD, FIR, অনলাইন অভিযোগ — সম্পূর্ণ পদ্ধতি ও আপনার অধিকার। অ্যাডভোকেট শাহ আলাম।",
   "keywords": [
     "পুলিশে অভিযোগ বাংলাদেশ",
@@ -84,13 +84,28 @@
     }
   ],
   "relatedServiceLinks": [
-    { "text": "ফৌজদারি আইনজীবী ঢাকা", "to": "/services/criminal-lawyer" },
-    { "text": "জামিন আইনজীবী", "to": "/services/bail-lawyer" }
+    {
+      "text": "ফৌজদারি আইনজীবী ঢাকা",
+      "to": "/services/criminal-lawyer"
+    },
+    {
+      "text": "জামিন আইনজীবী",
+      "to": "/services/bail-lawyer"
+    }
   ],
   "relatedPosts": [
-    { "text": "FIR কিভাবে করবেন বাংলাদেশ", "to": "/bn/blog/fir-kivabe-korben-bangladesh" },
-    { "text": "থানায় জিডি করার নিয়ম", "to": "/bn/blog/thana-jidi-korar-niyom-bangladesh-bn" },
-    { "text": "মিথ্যা মামলা থেকে বাঁচার উপায়", "to": "/bn/blog/mithya-fir-kharej-bangladesh-bn" }
+    {
+      "text": "FIR কিভাবে করবেন বাংলাদেশ",
+      "to": "/bn/blog/fir-kivabe-korben-bangladesh"
+    },
+    {
+      "text": "থানায় জিডি করার নিয়ম",
+      "to": "/bn/blog/thana-jidi-korar-niyom-bangladesh-bn"
+    },
+    {
+      "text": "মিথ্যা মামলা থেকে বাঁচার উপায়",
+      "to": "/bn/blog/mithya-fir-kharej-bangladesh-bn"
+    }
   ],
   "isDraft": false,
   "lang": "bn"

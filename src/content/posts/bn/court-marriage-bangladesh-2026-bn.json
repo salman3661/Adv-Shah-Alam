@@ -1,9 +1,9 @@
 {
   "slug": "court-marriage-bangladesh-2026-bn",
-  "metaTitle": "বাংলাদেশে কোর্ট ম্যারেজ ২০২৬ | সম্পূর্ণ পদ্ধতি ও কাগজপত্র",
+  "metaTitle": "বাংলাদেশে কোর্ট ম্যারেজ | সম্পূর্ণ পদ্ধতি ও কাগজপত্র",
   "category": "পারিবারিক আইন",
-  "title": "বাংলাদেশে কোর্ট ম্যারেজ ২০২৬ — সম্পূর্ণ পদ্ধতি ও প্রয়োজনীয় কাগজপত্র",
-  "metaDescription": "বাংলাদেশে কোর্ট ম্যারেজ ২০২৬: কে করতে পারবে, প্রয়োজনীয় কাগজপত্র, খরচ, সময় ও আইনি পদ্ধতি বিস্তারিত জানুন। মুসলিম ও অমুসলিম বিবাহের তথ্য।",
+  "title": "বাংলাদেশে কোর্ট ম্যারেজ — সম্পূর্ণ পদ্ধতি ও প্রয়োজনীয় কাগজপত্র",
+  "metaDescription": "বাংলাদেশে কোর্ট ম্যারেজ কে করতে পারবে, প্রয়োজনীয় কাগজপত্র, খরচ, সময় ও আইনি পদ্ধতি বিস্তারিত জানুন। মুসলিম ও অমুসলিম বিবাহের তথ্য।",
   "keywords": [
     "court marriage bangladesh",
     "court marriage 2026",
@@ -90,12 +90,24 @@
     }
   ],
   "relatedServiceLinks": [
-    {"text": "ডিভোর্স আইনজীবী", "to": "/services/divorce-lawyer"},
-    {"text": "সুপ্রিম কোর্ট আইনজীবী", "to": "/services/supreme-court-lawyer"}
+    {
+      "text": "ডিভোর্স আইনজীবী",
+      "to": "/services/divorce-lawyer"
+    },
+    {
+      "text": "সুপ্রিম কোর্ট আইনজীবী",
+      "to": "/services/supreme-court-lawyer"
+    }
   ],
   "relatedPosts": [
-    {"text": "সম্পত্তির উত্তরাধিকার আইন বাংলাদেশ ২০২৬", "to": "/bn/blog/sampatti-uttoradhikar-ain-2026-bn"},
-    {"text": "কোর্ট ম্যারেজ পদ্ধতি বাংলাদেশ", "to": "/bn/blog/court-marriage-procedure-bangladesh-bn"}
+    {
+      "text": "সম্পত্তির উত্তরাধিকার আইন বাংলাদেশ ২০২৬",
+      "to": "/bn/blog/sampatti-uttoradhikar-ain-2026-bn"
+    },
+    {
+      "text": "কোর্ট ম্যারেজ পদ্ধতি বাংলাদেশ",
+      "to": "/bn/blog/court-marriage-procedure-bangladesh-bn"
+    }
   ],
   "isDraft": false,
   "lang": "bn"

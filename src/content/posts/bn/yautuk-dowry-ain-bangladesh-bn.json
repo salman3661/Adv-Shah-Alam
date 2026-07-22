@@ -1,8 +1,8 @@
 {
   "slug": "yautuk-dowry-ain-bangladesh-bn",
-  "metaTitle": "যৌতুক নিরোধ আইন বাংলাদেশ ২০২৬ — শাস্তি ও প্রতিকার",
+  "metaTitle": "যৌতুক নিরোধ আইন বাংলাদেশ — শাস্তি ও প্রতিকার",
   "category": "পারিবারিক আইন",
-  "title": "বাংলাদেশে যৌতুক নিরোধ আইন ২০২৬ — যৌতুক দাবি করলে কি শাস্তি?",
+  "title": "বাংলাদেশে যৌতুক নিরোধ আইন — যৌতুক দাবি করলে কি শাস্তি?",
   "metaDescription": "বাংলাদেশে যৌতুক দাবি করা বা দেওয়া উভয়ই অবৈধ। জানুন যৌতুক নিরোধ আইন ১৯৮০, শাস্তি, মামলা করার পদ্ধতি ও নারীর আইনি সুরক্ষা।",
   "keywords": [
     "যৌতুক নিরোধ আইন বাংলাদেশ",
@@ -84,13 +84,28 @@
     }
   ],
   "relatedServiceLinks": [
-    { "text": "ডিভোর্স আইনজীবী ঢাকা", "to": "/services/divorce-lawyer" },
-    { "text": "ফৌজদারি আইনজীবী", "to": "/services/criminal-lawyer" }
+    {
+      "text": "ডিভোর্স আইনজীবী ঢাকা",
+      "to": "/services/divorce-lawyer"
+    },
+    {
+      "text": "ফৌজদারি আইনজীবী",
+      "to": "/services/criminal-lawyer"
+    }
   ],
   "relatedPosts": [
-    { "text": "ঘরোয়া নির্যাতন আইনি সুরক্ষা", "to": "/bn/blog/gharelu-nirjaton-aini-suraksha-bangladesh" },
-    { "text": "পারিবারিক আইন বাংলাদেশ", "to": "/bn/blog/divorce-procedure-bangladesh-bn" },
-    { "text": "মানাহানির আইন", "to": "/bn/blog/manahanir-ain-bangladesh-bn" }
+    {
+      "text": "ঘরোয়া নির্যাতন আইনি সুরক্ষা",
+      "to": "/bn/blog/gharelu-nirjaton-aini-suraksha-bangladesh"
+    },
+    {
+      "text": "পারিবারিক আইন বাংলাদেশ",
+      "to": "/bn/blog/divorce-procedure-bangladesh-bn"
+    },
+    {
+      "text": "মানাহানির আইন",
+      "to": "/bn/blog/manahanir-ain-bangladesh-bn"
+    }
   ],
   "isDraft": false,
   "lang": "bn"

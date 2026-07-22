@@ -1,8 +1,8 @@
 {
   "slug": "jomi-kena-dhaka-legal-guide-bn",
-  "metaTitle": "ঢাকায় জমি কেনার আইনি গাইড ২০২৬ | সম্পূর্ণ ধাপে ধাপে",
+  "metaTitle": "ঢাকায় জমি কেনার আইনি গাইড | সম্পূর্ণ ধাপে ধাপে",
   "category": "ভূমি আইন",
-  "title": "ঢাকায় জমি কেনার আইনি গাইড ২০২৬ — ধাপে ধাপে সম্পূর্ণ প্রক্রিয়া",
+  "title": "ঢাকায় জমি কেনার আইনি গাইড — ধাপে ধাপে সম্পূর্ণ প্রক্রিয়া",
   "metaDescription": "ঢাকায় জমি কেনার সম্পূর্ণ আইনি গাইড। দলিল যাচাই, খতিয়ান, নামজারি, নিবন্ধন ও জমি জালিয়াতি থেকে বাঁচার উপায় বিস্তারিত জানুন।",
   "keywords": [
     "buying land dhaka",
@@ -90,12 +90,24 @@
     }
   ],
   "relatedServiceLinks": [
-    {"text": "ভূমি আইনজীবী", "to": "/services/land-lawyer"},
-    {"text": "সুপ্রিম কোর্ট আইনজীবী", "to": "/services/supreme-court-lawyer"}
+    {
+      "text": "ভূমি আইনজীবী",
+      "to": "/services/land-lawyer"
+    },
+    {
+      "text": "সুপ্রিম কোর্ট আইনজীবী",
+      "to": "/services/supreme-court-lawyer"
+    }
   ],
   "relatedPosts": [
-    {"text": "জমি নিবন্ধন ফি ২০২৬ বাংলাদেশ", "to": "/bn/blog/jomi-nibandhon-fee-2026-bn"},
-    {"text": "আরএস জরিপ ও খতিয়ান অনলাইন চেক", "to": "/bn/blog/rs-survey-bangladesh-bn"}
+    {
+      "text": "জমি নিবন্ধন ফি ২০২৬ বাংলাদেশ",
+      "to": "/bn/blog/jomi-nibandhon-fee-2026-bn"
+    },
+    {
+      "text": "আরএস জরিপ ও খতিয়ান অনলাইন চেক",
+      "to": "/bn/blog/rs-survey-bangladesh-bn"
+    }
   ],
   "isDraft": false,
   "lang": "bn"

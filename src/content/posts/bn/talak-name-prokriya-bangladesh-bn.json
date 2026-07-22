@@ -1,8 +1,8 @@
 {
   "slug": "talak-name-prokriya-bangladesh-bn",
-  "metaTitle": "তালাক নামা বাংলাদেশ ২০২৬ — সম্পূর্ণ পদ্ধতি",
+  "metaTitle": "তালাক নামা বাংলাদেশ — সম্পূর্ণ পদ্ধতি",
   "category": "পারিবারিক আইন",
-  "title": "বাংলাদেশে তালাক নামা প্রক্রিয়া ২০২৬ — কিভাবে তালাক নামা করবেন?",
+  "title": "বাংলাদেশে তালাক নামা প্রক্রিয়া — কিভাবে তালাক নামা করবেন?",
   "metaDescription": "বাংলাদেশে তালাক নামা করার সম্পূর্ণ আইনি পদ্ধতি — কোথায় যাবেন, কী কাগজ লাগবে, খরচ কত, কতদিন লাগে। অ্যাডভোকেট শাহ আলামের গাইড।",
   "keywords": [
     "তালাক নামা বাংলাদেশ",
@@ -89,15 +89,36 @@
     }
   ],
   "relatedServiceLinks": [
-    { "text": "ডিভোর্স আইনজীবী ঢাকা", "to": "/services/divorce-lawyer" },
-    { "text": "পারিবারিক আদালত সহায়তা", "to": "/services/divorce-lawyer" },
-    { "text": "সুপ্রিম কোর্ট আইনজীবী", "to": "/services/supreme-court-lawyer" }
+    {
+      "text": "ডিভোর্স আইনজীবী ঢাকা",
+      "to": "/services/divorce-lawyer"
+    },
+    {
+      "text": "পারিবারিক আদালত সহায়তা",
+      "to": "/services/divorce-lawyer"
+    },
+    {
+      "text": "সুপ্রিম কোর্ট আইনজীবী",
+      "to": "/services/supreme-court-lawyer"
+    }
   ],
   "relatedPosts": [
-    { "text": "ডিভোর্স খরচ বাংলাদেশ ২০২৬", "to": "/bn/blog/divorce-kharch-bangladesh-2026" },
-    { "text": "ডিভোর্স প্রক্রিয়া বাংলাদেশ", "to": "/bn/blog/divorce-process-bangladesh-bn" },
-    { "text": "আদালতে তালাক মুসলিম আইন", "to": "/bn/blog/divorce-from-court-bangladesh-muslim-law-bn" },
-    { "text": "মানাহানির আইন বাংলাদেশ", "to": "/bn/blog/manahanir-ain-bangladesh-bn" }
+    {
+      "text": "ডিভোর্স খরচ বাংলাদেশ ২০২৬",
+      "to": "/bn/blog/divorce-kharch-bangladesh-2026"
+    },
+    {
+      "text": "ডিভোর্স প্রক্রিয়া বাংলাদেশ",
+      "to": "/bn/blog/divorce-process-bangladesh-bn"
+    },
+    {
+      "text": "আদালতে তালাক মুসলিম আইন",
+      "to": "/bn/blog/divorce-from-court-bangladesh-muslim-law-bn"
+    },
+    {
+      "text": "মানাহানির আইন বাংলাদেশ",
+      "to": "/bn/blog/manahanir-ain-bangladesh-bn"
+    }
   ],
   "isDraft": false,
   "lang": "bn"

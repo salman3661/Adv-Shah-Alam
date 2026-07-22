@@ -1,9 +1,9 @@
 {
   "slug": "sampatti-uttoradhikar-ain-2026-bn",
-  "metaTitle": "বাবার সম্পত্তি বন্টন আইন বাংলাদেশ ২০২৬ | উত্তরাধিকার গাইড",
+  "metaTitle": "বাবার সম্পত্তি বন্টন আইন বাংলাদেশ | উত্তরাধিকার গাইড",
   "category": "পারিবারিক আইন",
-  "title": "সম্পত্তির উত্তরাধিকার আইন বাংলাদেশ ২০২৬ — কে কতটুকু পাবে?",
-  "metaDescription": "বাবার সম্পত্তি বন্টন আইন বাংলাদেশ ২০২৬: মুসলিম উত্তরাধিকার আইনে ছেলে, মেয়ে, স্ত্রী ও মায়ের অংশ, উত্তরাধিকার সনদ ও বিরোধ সমাধান গাইড।",
+  "title": "সম্পত্তির উত্তরাধিকার আইন বাংলাদেশ — কে কতটুকু পাবে?",
+  "metaDescription": "বাবার সম্পত্তি বন্টন আইন বাংলাদেশ মুসলিম উত্তরাধিকার আইনে ছেলে, মেয়ে, স্ত্রী ও মায়ের অংশ, উত্তরাধিকার সনদ ও বিরোধ সমাধান গাইড।",
   "keywords": [
     "বাবার সম্পত্তি বন্টন আইন বাংলাদেশ 2026",
     "property inheritance bangladesh",
@@ -90,13 +90,28 @@
     }
   ],
   "relatedServiceLinks": [
-    {"text": "ভূমি আইনজীবী", "to": "/services/land-lawyer"},
-    {"text": "ডিভোর্স আইনজীবী", "to": "/services/divorce-lawyer"},
-    {"text": "সুপ্রিম কোর্ট আইনজীবী", "to": "/services/supreme-court-lawyer"}
+    {
+      "text": "ভূমি আইনজীবী",
+      "to": "/services/land-lawyer"
+    },
+    {
+      "text": "ডিভোর্স আইনজীবী",
+      "to": "/services/divorce-lawyer"
+    },
+    {
+      "text": "সুপ্রিম কোর্ট আইনজীবী",
+      "to": "/services/supreme-court-lawyer"
+    }
   ],
   "relatedPosts": [
-    {"text": "কোর্ট ম্যারেজ বাংলাদেশ ২০২৬", "to": "/bn/blog/court-marriage-bangladesh-2026-bn"},
-    {"text": "ঢাকায় জমি কেনার আইনি গাইড ২০২৬", "to": "/bn/blog/jomi-kena-dhaka-legal-guide-bn"}
+    {
+      "text": "কোর্ট ম্যারেজ বাংলাদেশ ২০২৬",
+      "to": "/bn/blog/court-marriage-bangladesh-2026-bn"
+    },
+    {
+      "text": "ঢাকায় জমি কেনার আইনি গাইড ২০২৬",
+      "to": "/bn/blog/jomi-kena-dhaka-legal-guide-bn"
+    }
   ],
   "isDraft": false,
   "lang": "bn"

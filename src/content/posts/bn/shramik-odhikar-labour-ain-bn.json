@@ -1,8 +1,8 @@
 {
   "slug": "shramik-odhikar-labour-ain-bn",
-  "metaTitle": "শ্রমিকের অধিকার বাংলাদেশ ২০২৬ — শ্রম আইন গাইড",
+  "metaTitle": "শ্রমিকের অধিকার বাংলাদেশ — শ্রম আইন গাইড",
   "category": "শ্রম আইন",
-  "title": "বাংলাদেশে শ্রমিকের অধিকার ২০২৬ — শ্রম আইন সম্পূর্ণ গাইড",
+  "title": "বাংলাদেশে শ্রমিকের অধিকার — শ্রম আইন সম্পূর্ণ গাইড",
   "metaDescription": "বাংলাদেশ শ্রম আইন ২০০৬ অনুযায়ী শ্রমিকের অধিকার, বেতন, ছাঁটাই, মামলার পদ্ধতি — সম্পূর্ণ বাংলা গাইড। অ্যাডভোকেট শাহ আলাম।",
   "keywords": [
     "শ্রমিকের অধিকার বাংলাদেশ",
@@ -89,12 +89,24 @@
     }
   ],
   "relatedServiceLinks": [
-    { "text": "ফৌজদারি আইনজীবী", "to": "/services/criminal-lawyer" },
-    { "text": "কোম্পানি আইনজীবী", "to": "/services/company-corporate-lawyer" }
+    {
+      "text": "ফৌজদারি আইনজীবী",
+      "to": "/services/criminal-lawyer"
+    },
+    {
+      "text": "কোম্পানি আইনজীবী",
+      "to": "/services/company-corporate-lawyer"
+    }
   ],
   "relatedPosts": [
-    { "text": "বেআইনি চাকরি ছাঁটাই আইন", "to": "/bn/blog/beaini-chaktir-labor-ain-bangladesh" },
-    { "text": "কর্মস্থলে হয়রানি আইন", "to": "/bn/blog/karmosthale-hoirani-ain-bangladesh" }
+    {
+      "text": "বেআইনি চাকরি ছাঁটাই আইন",
+      "to": "/bn/blog/beaini-chaktir-labor-ain-bangladesh"
+    },
+    {
+      "text": "কর্মস্থলে হয়রানি আইন",
+      "to": "/bn/blog/karmosthale-hoirani-ain-bangladesh"
+    }
   ],
   "isDraft": false,
   "lang": "bn"

@@ -1,6 +1,6 @@
 {
   "slug": "mithya-fir-kharej-bangladesh-bn",
-  "metaTitle": "মিথ্যা মামলা থেকে বাঁচার উপায় বাংলাদেশ ২০২৬",
+  "metaTitle": "মিথ্যা মামলা থেকে বাঁচার উপায় বাংলাদেশ",
   "category": "ফৌজদারি আইন",
   "title": "মিথ্যা মামলা থেকে বাঁচুন: বাংলাদেশে মিথ্যা FIR বাতিল করার আইনি উপায়",
   "metaDescription": "বাংলাদেশে মিথ্যা FIR বা মামলা হলে কী করবেন? আগাম জামিন, মামলা খারিজ, উচ্চ আদালত — সম্পূর্ণ আইনি গাইড। অ্যাডভোকেট শাহ আলাম।",
@@ -89,14 +89,32 @@
     }
   ],
   "relatedServiceLinks": [
-    { "text": "ফৌজদারি আইনজীবী ঢাকা", "to": "/services/criminal-lawyer" },
-    { "text": "জামিন আইনজীবী", "to": "/services/bail-lawyer" },
-    { "text": "সুপ্রিম কোর্ট আইনজীবী", "to": "/services/supreme-court-lawyer" }
+    {
+      "text": "ফৌজদারি আইনজীবী ঢাকা",
+      "to": "/services/criminal-lawyer"
+    },
+    {
+      "text": "জামিন আইনজীবী",
+      "to": "/services/bail-lawyer"
+    },
+    {
+      "text": "সুপ্রিম কোর্ট আইনজীবী",
+      "to": "/services/supreme-court-lawyer"
+    }
   ],
   "relatedPosts": [
-    { "text": "মিথ্যা মামলা থেকে বাঁচার উপায়", "to": "/bn/blog/mittha-mamla-theke-bachar-upay-bangladesh" },
-    { "text": "আগাম জামিন বাংলাদেশ", "to": "/bn/blog/anticipatory-bail-bangladesh-bn" },
-    { "text": "পুলিশ রিমান্ড অধিকার", "to": "/bn/blog/police-remand-rights-bangladesh-bn" }
+    {
+      "text": "মিথ্যা মামলা থেকে বাঁচার উপায়",
+      "to": "/bn/blog/mittha-mamla-theke-bachar-upay-bangladesh"
+    },
+    {
+      "text": "আগাম জামিন বাংলাদেশ",
+      "to": "/bn/blog/anticipatory-bail-bangladesh-bn"
+    },
+    {
+      "text": "পুলিশ রিমান্ড অধিকার",
+      "to": "/bn/blog/police-remand-rights-bangladesh-bn"
+    }
   ],
   "isDraft": false,
   "lang": "bn"
