@@ -25,3 +25,5 @@ dist-ssr
 
 .vercel
 .env*.local
+gsc-service-account.json
+gsc-*.json
