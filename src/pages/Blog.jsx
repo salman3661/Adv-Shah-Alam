@@ -1,14 +1,14 @@
 import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { Search, Clock, ChevronRight, BookOpen, Phone, MessageCircle, Scale, TrendingUp, ArrowUpDown } from 'lucide-react';
-import { telLink, waLink } from '../data/contactInfo';
+import { Search, Clock, ChevronRight, BookOpen, Flame, Award, ShieldCheck, UserCheck, Scale, ArrowUpRight, X } from 'lucide-react';
+import seo from '../content/seo.js';
 
 // Load all EN blog posts from JSON files (bundled at build time by Vite)
 const _postModules = import.meta.glob('../content/posts/en/*.json', { eager: true });
 const blogPosts = Object.values(_postModules)
     .map((m) => m.default ?? m)
-    .filter((p) => p && p.slug && p.title); // guard against malformed entries
+    .filter((p) => p && p.slug && p.title);
 
 function isPublished(post) {
   try {
@@ -17,378 +17,394 @@ function isPublished(post) {
     return pub <= now && !post.isDraft;
   } catch { return true; }
 }
-import seo from '../content/seo.js';
+
+function stripHtml(html) {
+  if (!html) return '';
+  return String(html).replace(/<[^>]*>?/gm, '').trim();
+}
 
 const CATEGORIES = seo.categoriesEn;
 const categoryColors = seo.categoryColors;
 
-// Posts published within last 14 days get "NEW" badge
-function isNew(post) {
-  try {
-    const pub = new Date(post.publishedDate + 'T00:00:00');
-    const diffDays = (Date.now() - pub.getTime()) / (1000 * 60 * 60 * 24);
-    return diffDays <= 14;
-  } catch { return false; }
-}
+const getCatColor = (cat) => categoryColors[cat] || 'var(--accent)';
 
-const BlogCard = ({ post }) => (
-    <article
-        className="glass-card flex flex-col h-full overflow-hidden"
-        style={{
-            borderRadius: '1.25rem',
-            transition: 'transform 0.25s cubic-bezier(0.4,0,0.2,1), box-shadow 0.25s ease',
-            cursor: 'pointer',
-        }}
-        onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = '0 16px 40px rgba(0,0,0,0.12)'; }}
-        onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = ''; }}
-        onClick={() => window.location.href = `/blog/${post.slug}`}
-    >
-        <div
-            className="px-6 pt-6 pb-4"
-            style={{ borderBottom: '1px solid var(--card-border)' }}
+/* ─── Premium Glassmorphic Blog Card ─── */
+const BlogCardEn = ({ post }) => {
+    const catColor = getCatColor(post.category);
+    return (
+        <article
+            className="group relative flex flex-col h-full overflow-hidden transition-all duration-300 hover:-translate-y-1.5"
+            style={{
+                background: 'rgba(255, 255, 255, 0.03)',
+                backdropFilter: 'blur(16px)',
+                WebkitBackdropFilter: 'blur(16px)',
+                border: '1px solid var(--card-border)',
+                borderRadius: '1.25rem',
+                boxShadow: '0 4px 20px rgba(0,0,0,0.06)',
+            }}
         >
-            <div className="flex items-center justify-between mb-3">
-                <span
-                    className="text-xs font-bold px-3 py-1 rounded-full"
-                    style={{
-                        background: categoryColors[post.category] + '18',
-                        color: categoryColors[post.category],
-                        letterSpacing: '0.06em',
-                    }}
-                >
-                    {post.category}
-                </span>
-                <div className="flex items-center gap-2">
-                    {isNew(post) && (
-                        <span
-                            className="text-xs font-bold px-2 py-0.5 rounded-full animate-pulse"
-                            style={{
-                                background: 'linear-gradient(135deg, #10b981, #059669)',
-                                color: '#fff',
-                                letterSpacing: '0.04em',
-                                fontSize: '10px',
-                            }}
-                        >
-                            ✦ NEW
-                        </span>
-                    )}
+            {/* Top Color Accent Line */}
+            <div style={{ height: '3px', background: `linear-gradient(90deg, ${catColor}, var(--accent))` }} />
+
+            <div className="p-6 flex flex-col flex-1">
+                {/* Header Meta: Category Badge & Read Time */}
+                <div className="flex items-center justify-between mb-3.5 gap-2 flex-wrap">
                     <span
-                        className="flex items-center gap-1 text-xs"
+                        className="text-xs font-bold px-3 py-1 rounded-md transition-transform group-hover:scale-105"
+                        style={{
+                            background: catColor + '18',
+                            color: catColor,
+                            letterSpacing: '0.04em',
+                        }}
+                    >
+                        {post.category}
+                    </span>
+                    <span
+                        className="inline-flex items-center gap-1 text-xs"
                         style={{ color: 'var(--text-muted)' }}
                     >
-                        <Clock size={12} />
+                        <Clock size={13} style={{ color: catColor }} />
                         {post.readTime}
                     </span>
                 </div>
+
+                {/* Post Title */}
+                <h2
+                    className="text-lg md:text-xl font-bold leading-snug mb-3 group-hover:text-[var(--accent)] transition-colors"
+                    style={{
+                        color: 'var(--text)',
+                        fontFamily: "'Playfair Display', serif",
+                        lineHeight: 1.35
+                    }}
+                >
+                    <Link to={`/blog/${post.slug}`} className="hover:underline">
+                        {post.title}
+                    </Link>
+                </h2>
+
+                {/* Excerpt */}
+                <p
+                    className="text-sm leading-relaxed line-clamp-3 mb-4 flex-1"
+                    style={{
+                        color: 'var(--text-secondary)',
+                        fontSize: '0.925rem',
+                        lineHeight: 1.7
+                    }}
+                >
+                    {stripHtml(post.heroIntro)}
+                </p>
+
+                {/* Author & Read Action Footer */}
+                <div className="pt-4 border-t flex items-center justify-between mt-auto" style={{ borderColor: 'var(--card-border)' }}>
+                    <div className="flex items-center gap-2">
+                        <img
+                            src="/images/hero/hero-md-shah-alam.webp"
+                            alt="Advocate Md. Shah Alam"
+                            className="w-7 h-7 rounded-full object-cover border border-[var(--gold)] flex-shrink-0 shadow-sm"
+                            loading="lazy"
+                            width="28"
+                            height="28"
+                        />
+                        <span className="text-xs font-semibold" style={{ color: 'var(--text)' }}>
+                            Adv. Md. Shah Alam
+                        </span>
+                    </div>
+
+                    <Link
+                        to={`/blog/${post.slug}`}
+                        className="inline-flex items-center gap-1 text-xs font-bold px-3 py-1.5 rounded-lg transition-all group-hover:bg-[var(--accent)] group-hover:text-white"
+                        style={{
+                            background: 'var(--accent-subtle)',
+                            color: 'var(--accent)',
+                        }}
+                        aria-label={`Read: ${post.title}`}
+                    >
+                        Read <ArrowUpRight size={14} />
+                    </Link>
+                </div>
             </div>
-            <h2
-                className="text-lg font-bold leading-snug mb-3"
-                style={{ color: 'var(--text)', fontFamily: "'Playfair Display', serif" }}
-            >
-                {post.title}
-            </h2>
-            <p className="text-sm leading-relaxed line-clamp-3" style={{ color: 'var(--text-secondary)' }}>
-                {post.heroIntro}
-            </p>
-        </div>
-        <div className="px-6 py-4 mt-auto flex items-center justify-between">
-            <span className="text-xs" style={{ color: 'var(--text-muted)' }}>
-                {new Date(post.publishedDate).toLocaleDateString('en-BD', { day: 'numeric', month: 'short', year: 'numeric' })}
-            </span>
-            <Link
-                to={`/blog/${post.slug}`}
-                className="inline-flex items-center gap-1 text-sm font-semibold hover:gap-2 transition-all"
-                style={{ color: 'var(--accent)' }}
-                aria-label={`Read article: ${post.title}`}
-            >
-                Read Article <ChevronRight size={16} />
-            </Link>
-        </div>
-    </article>
-);
+        </article>
+    );
+};
 
 const Blog = () => {
     const [activeCategory, setActiveCategory] = useState('All');
     const [searchQuery, setSearchQuery] = useState('');
-    const [sortOrder, setSortOrder] = useState('newest'); // 'newest' | 'oldest'
 
     const publishedPosts = useMemo(() => blogPosts.filter(isPublished), []);
 
-    // Count per category for badges
+    // Dynamic Spotlight Featured Post
+    const featuredPost = useMemo(() => {
+        if (!publishedPosts.length) return null;
+        const explicitFeatured = publishedPosts.find(p => p.featured === true);
+        if (explicitFeatured) return explicitFeatured;
+        return [...publishedPosts].sort((a, b) => new Date(b.publishedDate || 0) - new Date(a.publishedDate || 0))[0];
+    }, [publishedPosts]);
+
     const categoryCounts = useMemo(() => {
         const counts = { All: publishedPosts.length };
-        CATEGORIES.forEach(cat => {
-            if (cat !== 'All') counts[cat] = publishedPosts.filter(p => p.category === cat).length;
+        publishedPosts.forEach(p => {
+            counts[p.category] = (counts[p.category] || 0) + 1;
         });
         return counts;
     }, [publishedPosts]);
 
     const filtered = useMemo(() => {
-        let posts = publishedPosts;
+        let posts = [...publishedPosts];
         if (activeCategory !== 'All') {
             posts = posts.filter(p => p.category === activeCategory);
         }
         if (searchQuery.trim()) {
-            const q = searchQuery.toLowerCase();
+            const q = searchQuery.toLowerCase().trim();
             posts = posts.filter(p =>
                 p.title.toLowerCase().includes(q) ||
                 p.category.toLowerCase().includes(q) ||
-                (p.heroIntro && p.heroIntro.toLowerCase().includes(q))
+                (p.heroIntro && p.heroIntro.toLowerCase().includes(q)) ||
+                (p.keywords && p.keywords.some(k => String(k).toLowerCase().includes(q)))
             );
         }
-        // Sort
-        return [...posts].sort((a, b) => {
-            const da = new Date(a.publishedDate), db = new Date(b.publishedDate);
-            return sortOrder === 'newest' ? db - da : da - db;
-        });
-    }, [activeCategory, searchQuery, sortOrder, publishedPosts]);
-
-    const newCount = publishedPosts.filter(isNew).length;
+        return posts;
+    }, [publishedPosts, activeCategory, searchQuery]);
 
     return (
         <>
             <Helmet>
-                <title>Legal Guides Bangladesh | Advocate Shah Alam, Uttara</title>
+                <title>Legal Guides &amp; Articles | Advocate Md. Shah Alam – Supreme Court Lawyer</title>
                 <meta
                     name="description"
-                    content="Free legal guides on bail, divorce, land &amp; criminal law in Bangladesh. Plain-language articles by Advocate Shah Alam, expert lawyer in Uttara, Dhaka."
+                    content="Comprehensive, plain-language legal guides on Bangladesh law — criminal defence, bail, divorce, land disputes, tax & corporate law by Advocate Md. Shah Alam."
                 />
                 <link rel="canonical" href="https://www.advmdshahalam.me/blog" />
                 <meta name="robots" content="index, follow" />
-                <meta property="og:title" content="Legal Guides Bangladesh | Advocate Shah Alam, Uttara" />
-                <meta property="og:description" content="Free legal guides on bail, divorce, land &amp; criminal law in Bangladesh. Plain-language articles by Advocate Shah Alam, expert lawyer in Uttara, Dhaka." />
-                <meta property="og:url" content="https://www.advmdshahalam.me/blog" />
-                <meta property="og:type" content="website" />
-                <meta property="og:image" content="https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.png" />
-                {/* BreadcrumbList schema */}
-                <script type="application/ld+json">{JSON.stringify({
-                    '@context': 'https://schema.org',
-                    '@type': 'BreadcrumbList',
-                    itemListElement: [
-                        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.advmdshahalam.me/' },
-                        { '@type': 'ListItem', position: 2, name: 'Legal Guides', item: 'https://www.advmdshahalam.me/blog' },
-                    ],
-                })}</script>
-                {/* CollectionPage + ItemList schema */}
-                <script type="application/ld+json">{JSON.stringify({
-                    '@context': 'https://schema.org',
-                    '@type': 'CollectionPage',
-                    name: 'Legal Guides Bangladesh — Advocate Md. Shah Alam',
-                    description: 'Free legal guides on bail, divorce, land & criminal law in Bangladesh by Advocate Shah Alam.',
-                    url: 'https://www.advmdshahalam.me/blog',
-                    mainEntity: {
-                        '@type': 'ItemList',
-                        itemListElement: publishedPosts.slice(0, 10).map((p, i) => ({
-                            '@type': 'ListItem',
-                            position: i + 1,
-                            url: `https://www.advmdshahalam.me/blog/${p.slug}`,
-                            name: p.title,
-                        })),
-                    },
-                })}</script>
+                <link rel="alternate" hrefLang="en" href="https://www.advmdshahalam.me/blog" />
+                <link rel="alternate" hrefLang="bn" href="https://www.advmdshahalam.me/bn/blog" />
             </Helmet>
 
-            {/* Hero */}
-            <section
-                className="pt-24 md:pt-28 pb-16 relative overflow-hidden"
-                style={{ background: 'var(--hero-bg)' }}
-            >
+            {/* ════ HERO HEADER ════ */}
+            <section className="pt-28 md:pt-32 pb-12 relative overflow-hidden" style={{ background: 'var(--bg)' }}>
+                <div
+                    className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full pointer-events-none blur-3xl opacity-20"
+                    style={{ background: 'radial-gradient(circle, var(--accent) 0%, transparent 70%)' }}
+                />
+
                 <div className="container mx-auto px-6 max-w-5xl relative z-10 text-center">
-                    <span className="label-accent block mb-4" style={{ color: 'var(--gold)' }}>
-                        Legal Knowledge · Bangladesh
-                    </span>
-                    <h1
-                        className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight mb-6"
-                        style={{ color: 'var(--hero-text)', fontFamily: "'Playfair Display', serif" }}
+                    <div
+                        className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold mb-6 shadow-sm border"
+                        style={{
+                            background: 'var(--accent-subtle)',
+                            color: 'var(--accent)',
+                            borderColor: 'rgba(198,167,94,0.25)',
+                        }}
                     >
-                        Free Legal Guides &amp; Articles – Bangladesh Law Expert
+                        <Scale size={15} style={{ color: 'var(--gold)' }} />
+                        Supreme Court Advocate Legal Resource Center
+                    </div>
+
+                    <h1
+                        className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold mb-6 leading-tight"
+                        style={{
+                            color: 'var(--text)',
+                            fontFamily: "'Playfair Display', serif",
+                            letterSpacing: '-0.02em'
+                        }}
+                    >
+                        Bangladesh Legal Knowledge Hub
                     </h1>
-                    <p className="text-lg max-w-2xl mx-auto leading-relaxed mb-6" style={{ color: 'var(--hero-text-2)' }}>
-                        Practical, plain-language legal guides on Bangladesh law — criminal, family,
-                        property, and company matters — written by Advocate Md. Shah Alam.
+
+                    <p
+                        className="text-base md:text-lg mb-8 max-w-2xl mx-auto leading-relaxed"
+                        style={{ color: 'var(--text-secondary)' }}
+                    >
+                        Practical, plain-language legal guides on criminal, divorce, land, tax &amp; corporate law in Bangladesh.
                     </p>
-                    {/* Stats row */}
-                    <div className="flex items-center justify-center gap-6 flex-wrap">
-                        <span className="flex items-center gap-2 text-sm font-semibold" style={{ color: 'var(--hero-text-2)' }}>
-                            <BookOpen size={16} style={{ color: 'var(--gold)' }} />
-                            {publishedPosts.length}+ Articles
+
+                    {/* Trust Badges */}
+                    <div className="flex flex-wrap justify-center items-center gap-6 mb-10 text-xs font-semibold" style={{ color: 'var(--text-muted)' }}>
+                        <span className="flex items-center gap-1.5">
+                            <ShieldCheck size={16} className="text-emerald-500" /> 100% Law &amp; Precedent Verified
                         </span>
-                        {newCount > 0 && (
-                            <span className="flex items-center gap-2 text-sm font-semibold" style={{ color: 'var(--hero-text-2)' }}>
-                                <TrendingUp size={16} style={{ color: '#10b981' }} />
-                                {newCount} New This Week
-                            </span>
-                        )}
-                        <span className="flex items-center gap-2 text-sm font-semibold" style={{ color: 'var(--hero-text-2)' }}>
-                            <Scale size={16} style={{ color: 'var(--gold)' }} />
-                            {CATEGORIES.length - 1} Practice Areas
+                        <span className="flex items-center gap-1.5">
+                            <UserCheck size={16} className="text-amber-500" /> Supreme Court Advocate Author
+                        </span>
+                        <span className="flex items-center gap-1.5">
+                            <Award size={16} className="text-blue-500" /> Free Information Access
                         </span>
                     </div>
-                </div>
-            </section>
 
-            {/* Filters + Search + Sort */}
-            <section className="py-4 md:py-5 sticky top-0 z-30" style={{ background: 'var(--nav-bg)', backdropFilter: 'blur(20px)', WebkitBackdropFilter: 'blur(20px)', borderBottom: '1px solid var(--divider)' }}>
-                <div className="container mx-auto px-6 max-w-5xl flex flex-col sm:flex-row gap-3 items-start sm:items-center justify-between">
-                    {/* Category chips with count badges */}
-                    <div className="flex flex-wrap gap-2">
-                        {CATEGORIES.map(cat => (
-                            <button
-                                key={cat}
-                                onClick={() => setActiveCategory(cat)}
-                                className="px-3 py-1.5 rounded-full text-xs font-semibold transition-all flex items-center gap-1.5"
-                                style={{
-                                    background: activeCategory === cat ? 'var(--accent)' : 'var(--card-bg)',
-                                    color: activeCategory === cat ? '#fff' : 'var(--text)',
-                                    border: `1.5px solid ${activeCategory === cat ? 'var(--accent)' : 'var(--card-border)'}`,
-                                }}
-                            >
-                                {cat}
-                                <span
-                                    className="text-xs rounded-full px-1.5 py-0.5 font-bold leading-none"
+                    {/* Interactive Search Bar */}
+                    <div className="relative max-w-2xl mx-auto mb-8 shadow-lg rounded-2xl overflow-hidden border" style={{ borderColor: 'var(--card-border)', background: 'var(--surface)' }}>
+                        <Search size={20} className="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none" style={{ color: 'var(--accent)' }} />
+                        <input
+                            type="search"
+                            placeholder="Search legal topic (e.g. bail, divorce, land mutation, cheque)..."
+                            value={searchQuery}
+                            onChange={e => setSearchQuery(e.target.value)}
+                            className="w-full pl-12 pr-28 py-4 text-sm md:text-base outline-none transition-all"
+                            style={{
+                                background: 'transparent',
+                                color: 'var(--text)',
+                            }}
+                        />
+
+                        {/* Search Action / Result Pill */}
+                        <div className="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-1.5">
+                            {searchQuery.trim() ? (
+                                <>
+                                    <span
+                                        className="text-xs px-3 py-1.5 rounded-lg font-bold"
+                                        style={{
+                                            background: 'var(--accent-subtle)',
+                                            color: 'var(--accent)',
+                                        }}
+                                    >
+                                        {filtered.length} results
+                                    </span>
+                                    <button
+                                        onClick={() => setSearchQuery('')}
+                                        className="p-1.5 rounded-lg hover:bg-black/10 text-gray-400 hover:text-gray-600 transition-all"
+                                        title="Clear search"
+                                    >
+                                        <X size={16} />
+                                    </button>
+                                </>
+                            ) : (
+                                <button
+                                    className="text-xs px-4 py-2 rounded-lg font-bold text-white shadow-md transition-all hover:scale-105"
                                     style={{
-                                        background: activeCategory === cat ? 'rgba(255,255,255,0.25)' : 'var(--accent-subtle)',
-                                        color: activeCategory === cat ? '#fff' : 'var(--accent)',
-                                        fontSize: '10px',
+                                        background: 'linear-gradient(135deg, var(--accent), #1e1b4b)',
                                     }}
                                 >
-                                    {categoryCounts[cat] || 0}
-                                </span>
-                            </button>
-                        ))}
+                                    Search
+                                </button>
+                            )}
+                        </div>
                     </div>
 
-                    <div className="flex items-center gap-2 w-full sm:w-auto">
-                        {/* Sort toggle */}
-                        <button
-                            onClick={() => setSortOrder(s => s === 'newest' ? 'oldest' : 'newest')}
-                            className="flex items-center gap-1.5 text-xs font-semibold px-3 py-2 rounded-full border transition-all whitespace-nowrap"
-                            style={{
-                                background: 'var(--card-bg)',
-                                color: 'var(--text)',
-                                border: '1.5px solid var(--card-border)',
-                            }}
-                            title="Toggle sort order"
-                        >
-                            <ArrowUpDown size={13} />
-                            {sortOrder === 'newest' ? 'Newest' : 'Oldest'}
-                        </button>
-
-                        {/* Search */}
-                        <div className="relative flex-1 sm:w-52">
-                            <Search size={15} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: 'var(--text-muted)' }} />
-                            <input
-                                type="search"
-                                placeholder="Search articles..."
-                                value={searchQuery}
-                                onChange={e => setSearchQuery(e.target.value)}
-                                className="input-field pl-9 py-2 text-sm w-full"
-                                aria-label="Search blog articles"
-                            />
-                        </div>
+                    {/* Category Filter Pills */}
+                    <div className="flex flex-wrap justify-center gap-2.5">
+                        {CATEGORIES.map(cat => {
+                            const count = categoryCounts[cat] || 0;
+                            const isActive = activeCategory === cat;
+                            const color = getCatColor(cat);
+                            return (
+                                <button
+                                    key={cat}
+                                    onClick={() => setActiveCategory(cat)}
+                                    className="px-4 py-2 rounded-xl text-xs md:text-sm font-semibold border transition-all flex items-center gap-1.5"
+                                    style={
+                                        isActive
+                                            ? {
+                                                background: 'linear-gradient(135deg, #1A3FBF, #0B1220)',
+                                                color: '#fff',
+                                                borderColor: 'var(--accent)',
+                                                boxShadow: '0 4px 14px rgba(26,63,191,0.3)',
+                                            }
+                                            : {
+                                                background: 'var(--surface)',
+                                                color: 'var(--text-secondary)',
+                                                borderColor: 'var(--card-border)',
+                                            }
+                                    }
+                                >
+                                    <span>{cat}</span>
+                                    <span
+                                        className="px-1.5 py-0.5 rounded-full text-[10px] font-bold"
+                                        style={{
+                                            background: isActive ? 'rgba(255,255,255,0.2)' : 'var(--accent-subtle)',
+                                            color: isActive ? '#fff' : color
+                                        }}
+                                    >
+                                        {count}
+                                    </span>
+                                </button>
+                            );
+                        })}
                     </div>
                 </div>
             </section>
 
-            {/* Grid */}
-            <section className="py-16" style={{ background: 'var(--bg)' }}>
-                <div className="container mx-auto px-6 max-w-5xl">
+            {/* ════ SPOTLIGHT DYNAMIC FEATURED ARTICLE ════ */}
+            {activeCategory === 'All' && !searchQuery.trim() && featuredPost && (
+                <section className="py-6" style={{ background: 'var(--bg)' }}>
+                    <div className="container mx-auto px-6 max-w-6xl">
+                        <div
+                            className="relative overflow-hidden p-6 md:p-8 rounded-3xl border transition-all duration-300 hover:shadow-2xl"
+                            style={{
+                                background: 'linear-gradient(135deg, rgba(26,63,191,0.06) 0%, rgba(198,167,94,0.05) 100%)',
+                                borderColor: 'rgba(198,167,94,0.3)',
+                                backdropFilter: 'blur(20px)'
+                            }}
+                        >
+                            <div className="flex flex-col md:flex-row gap-6 items-start justify-between">
+                                <div className="flex-1">
+                                    <div className="flex items-center gap-2 mb-3">
+                                        <span className="inline-flex items-center gap-1 text-xs font-bold px-3 py-1 rounded-full text-white" style={{ background: 'linear-gradient(135deg, #f59e0b, #be185d)' }}>
+                                            <Flame size={13} /> Featured Legal Guide
+                                        </span>
+                                        <span className="text-xs text-[var(--text-muted)]">
+                                            {featuredPost.readTime}
+                                        </span>
+                                    </div>
+                                    <h2
+                                        className="text-2xl md:text-3xl font-serif font-bold mb-3 leading-snug"
+                                        style={{ color: 'var(--text)', fontFamily: "'Playfair Display', serif" }}
+                                    >
+                                        <Link to={`/blog/${featuredPost.slug}`} className="hover:text-[var(--accent)] transition-colors">
+                                            {featuredPost.title}
+                                        </Link>
+                                    </h2>
+                                    <p
+                                        className="text-sm md:text-base leading-relaxed line-clamp-3 mb-6"
+                                        style={{ color: 'var(--text-secondary)' }}
+                                    >
+                                        {stripHtml(featuredPost.heroIntro)}
+                                    </p>
+                                    <Link
+                                        to={`/blog/${featuredPost.slug}`}
+                                        className="inline-flex items-center gap-2 text-sm font-bold px-6 py-3 rounded-xl text-white shadow-lg transition-all hover:scale-105"
+                                        style={{ background: 'linear-gradient(135deg, var(--accent), #1e1b4b)' }}
+                                    >
+                                        Read Full Legal Guide <ChevronRight size={18} />
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            )}
+
+            {/* ════ MAIN ARTICLES GRID ════ */}
+            <section className="py-12 pb-24" style={{ background: 'var(--bg)' }}>
+                <div className="container mx-auto px-6 max-w-6xl">
                     {filtered.length === 0 ? (
-                        <div className="text-center py-20">
-                            <BookOpen size={40} className="mx-auto mb-4" style={{ color: 'var(--text-muted)' }} />
-                            <p className="text-lg font-semibold" style={{ color: 'var(--text)' }}>No articles found</p>
-                            <p className="text-sm mt-2" style={{ color: 'var(--text-muted)' }}>
-                                Try a different category or search term.
-                            </p>
+                        <div className="text-center py-20 rounded-2xl border" style={{ background: 'var(--surface)', borderColor: 'var(--card-border)', color: 'var(--text-muted)' }}>
+                            <BookOpen size={48} className="mx-auto mb-4 text-[var(--accent)] opacity-50" />
+                            <h3 className="text-lg font-bold mb-2">No Legal Guides Found</h3>
+                            <p className="text-sm mb-4">Try searching with a different legal term or keyword.</p>
                             <button
-                                onClick={() => { setActiveCategory('All'); setSearchQuery(''); }}
-                                className="mt-4 text-sm font-semibold px-5 py-2 rounded-full"
-                                style={{ background: 'var(--accent)', color: '#fff' }}
+                                onClick={() => { setSearchQuery(''); setActiveCategory('All'); }}
+                                className="px-5 py-2 rounded-lg text-xs font-bold text-white bg-[var(--accent)] shadow-md transition-all hover:scale-105"
                             >
-                                Show All Articles
+                                View All Articles
                             </button>
                         </div>
                     ) : (
-                        <>
-                            <p className="text-sm mb-8" style={{ color: 'var(--text-muted)' }}>
-                                Showing <strong>{filtered.length}</strong> article{filtered.length !== 1 ? 's' : ''}
-                                {activeCategory !== 'All' && <> in <strong>{activeCategory}</strong></>}
-                                {searchQuery && <> matching &ldquo;<strong>{searchQuery}</strong>&rdquo;</>}
-                            </p>
-                            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                                {filtered.map(post => (
-                                    <BlogCard key={post.slug} post={post} />
-                                ))}
-                            </div>
-                        </>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            {filtered.map(post => (
+                                <BlogCardEn key={post.slug} post={post} />
+                            ))}
+                        </div>
                     )}
-                </div>
-            </section>
 
-            {/* Related Services — Blog → Service internal linking */}
-            <section className="py-14" style={{ background: 'var(--surface)' }}>
-                <div className="container mx-auto px-6 max-w-5xl">
-                    <div className="text-center mb-8">
-                        <span className="label-accent block mb-2">Legal Practice Areas</span>
-                        <h2 className="text-2xl md:text-3xl font-serif font-bold"
-                            style={{ color: 'var(--text)', fontFamily: "'Playfair Display', serif" }}>
-                            Need a Lawyer, Not Just a Guide?
-                        </h2>
-                        <p className="text-sm mt-2 max-w-xl mx-auto" style={{ color: 'var(--text-muted)' }}>
-                            Explore our dedicated legal services for personal advice from Advocate Shah Alam.
-                        </p>
-                    </div>
-                    <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 mb-8">
-                        {[
-                            { to: '/services/criminal-lawyer', label: 'Criminal Lawyer', desc: 'FIR defence, trial & case quashing' },
-                            { to: '/services/bail-lawyer', label: 'Bail Lawyer', desc: 'Same-day & anticipatory bail' },
-                            { to: '/services/divorce-lawyer', label: 'Divorce Lawyer', desc: 'Talaq, khula & family court cases' },
-                            { to: '/services/land-lawyer', label: 'Land Lawyer', desc: 'Property disputes & registration' },
-                            { to: '/services/supreme-court-lawyer', label: 'Supreme Court', desc: 'Writ, appeals & High Court bail' },
-                            { to: '/services/company-corporate-lawyer', label: 'Corporate Lawyer', desc: 'Company registration & disputes' },
-                        ].map(({ to, label, desc }) => (
-                            <Link key={to} to={to}
-                                className="glass-card p-5 flex items-start gap-3 group no-underline"
-                                style={{ textDecoration: 'none' }}>
-                                <div className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0"
-                                    style={{ background: 'var(--accent-subtle)', color: 'var(--accent)' }}>
-                                    <Scale size={16} />
-                                </div>
-                                <div>
-                                    <p className="text-sm font-bold group-hover:underline decoration-dotted" style={{ color: 'var(--text)' }}>{label}</p>
-                                    <p className="text-xs mt-0.5" style={{ color: 'var(--text-muted)' }}>{desc}</p>
-                                </div>
-                            </Link>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* CTA */}
-            <section className="py-16" style={{ background: 'var(--bg)' }}>
-                <div className="container mx-auto px-6 max-w-3xl text-center">
-                    <span className="label-accent block mb-3">Get Expert Advice</span>
-                    <h2
-                        className="text-2xl md:text-3xl font-serif font-bold mb-4"
-                        style={{ color: 'var(--text)', fontFamily: "'Playfair Display', serif" }}
-                    >
-                        These guides are general. Your case is unique.
-                    </h2>
-                    <p className="text-base mb-8" style={{ color: 'var(--text-secondary)' }}>
-                        Speak directly with Advocate Md. Shah Alam for advice specific to your situation.
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href={telLink()} className="btn-primary flex items-center justify-center gap-2">
-                            <Phone size={16} /> Call Now
-                        </a>
-                        <a
-                            href={waLink()}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="btn-whatsapp flex items-center justify-center gap-2"
+                    {/* Language Switch Footer */}
+                    <div className="mt-16 text-center">
+                        <Link
+                            to="/bn/blog"
+                            className="inline-flex items-center gap-2 text-sm font-bold px-6 py-3 rounded-2xl border transition-all hover:bg-[var(--accent-subtle)] shadow-sm"
+                            style={{ color: 'var(--accent)', borderColor: 'var(--accent)', fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif" }}
                         >
-                            <MessageCircle size={16} /> WhatsApp Consultation
-                        </a>
+                            🇧🇩 বাংলা আইনি জ্ঞান কেন্দ্র ও ব্লগ দেখুন
+                        </Link>
                     </div>
                 </div>
             </section>

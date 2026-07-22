@@ -15,6 +15,12 @@ function isPublishedBn(post) {
   } catch { return true; }
 }
 
+// Helper to strip HTML tags for clean card snippet display
+function stripHtml(html) {
+  if (!html) return '';
+  return String(html).replace(/<[^>]*>?/gm, '').trim();
+}
+
 // Bengali unicode normalization helper
 function normalizeBnText(str) {
   if (!str) return '';
@@ -29,7 +35,7 @@ function normalizeBnText(str) {
 
 // Common search synonyms for English <-> Bangla intent mapping
 const SYNONYMS = {
-  'bail': ['জামিন', 'অগাম জামিন', 'হাইকোর্ট', 'foster', 'bail'],
+  'bail': ['জামিন', 'অগাম জামিন', 'হাইকোর্ট', 'bail'],
   'divorce': ['তালাক', 'ডিভোর্স', 'খোরপোষ', 'দেনমোহর', 'পারিবারিক'],
   'talak': ['তালাক', 'ডিভোর্স', 'খোরপোষ'],
   'land': ['জমি', 'দলিল', 'খতিয়ান', 'নামজারি', 'বাটোয়ারা', 'সম্পত্তি'],
@@ -112,7 +118,7 @@ const BlogCardBn = ({ post }) => {
                     </Link>
                 </h2>
 
-                {/* Excerpt */}
+                {/* Excerpt with stripped HTML */}
                 <p
                     className="text-sm leading-relaxed line-clamp-3 mb-4 flex-1"
                     style={{
@@ -122,7 +128,7 @@ const BlogCardBn = ({ post }) => {
                         lineHeight: 1.7
                     }}
                 >
-                    {post.heroIntro}
+                    {stripHtml(post.heroIntro)}
                 </p>
 
                 {/* Author & Read Action Footer */}
@@ -165,8 +171,14 @@ const BlogBn = () => {
 
     const allPublished = useMemo(() => postsBn.filter(isPublishedBn), []);
 
-    // Featured / Spotlight post (first post or highlighted one)
-    const featuredPost = useMemo(() => allPublished[0] || null, [allPublished]);
+    // Dynamic Spotlight Featured Post (selects newest or marked featured post)
+    const featuredPost = useMemo(() => {
+        if (!allPublished.length) return null;
+        const explicitFeatured = allPublished.find(p => p.featured === true);
+        if (explicitFeatured) return explicitFeatured;
+        // Dynamically select the newest published post
+        return [...allPublished].sort((a, b) => new Date(b.publishedDate || 0) - new Date(a.publishedDate || 0))[0];
+    }, [allPublished]);
 
     const categoryCounts = useMemo(() => {
         const counts = { 'সব': allPublished.length };
@@ -199,7 +211,6 @@ const BlogBn = () => {
         });
 
         return posts.filter(post => {
-            // Build searchable full text corpus for the post
             const titleNorm = normalizeBnText(post.title);
             const metaTitleNorm = normalizeBnText(post.metaTitle);
             const metaDescNorm = normalizeBnText(post.metaDescription);
@@ -208,28 +219,19 @@ const BlogBn = () => {
             const categoryNorm = normalizeBnText(post.category);
             const keywordsNorm = (post.keywords || []).map(normalizeBnText).join(' ');
 
-            // Sections content
             const sectionsNorm = (post.sections || [])
                 .map(s => normalizeBnText(s.heading) + ' ' + normalizeBnText(s.content))
                 .join(' ');
 
-            // FAQs content
             const faqsNorm = (post.faqs || [])
                 .map(f => normalizeBnText(f.question) + ' ' + normalizeBnText(f.answer))
                 .join(' ');
 
             const corpus = `${titleNorm} ${metaTitleNorm} ${metaDescNorm} ${heroNorm} ${slugNorm} ${categoryNorm} ${keywordsNorm} ${sectionsNorm} ${faqsNorm}`;
 
-            // Check if full normalized query matches
             if (corpus.includes(normalizedQ)) return true;
-
-            // Check if mapped synonym terms match
             if (mappedTerms.some(term => corpus.includes(term))) return true;
-
-            // Check if all token words match anywhere in corpus
-            if (queryTokens.length > 1 && queryTokens.every(token => corpus.includes(token))) {
-                return true;
-            }
+            if (queryTokens.length > 1 && queryTokens.every(token => corpus.includes(token))) return true;
 
             return false;
         });
@@ -249,7 +251,6 @@ const BlogBn = () => {
 
             {/* ════ HERO HEADER ════ */}
             <section className="pt-28 md:pt-32 pb-12 relative overflow-hidden" style={{ background: 'var(--bg)' }}>
-                {/* Background Glow Effect */}
                 <div
                     className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full pointer-events-none blur-3xl opacity-20"
                     style={{ background: 'radial-gradient(circle, var(--accent) 0%, transparent 70%)' }}
@@ -400,7 +401,7 @@ const BlogBn = () => {
                 </div>
             </section>
 
-            {/* ════ SPOTLIGHT FEATURED ARTICLE (IF NO SEARCH & ALL CATEGORY) ════ */}
+            {/* ════ SPOTLIGHT DYNAMIC FEATURED ARTICLE (IF NO SEARCH & ALL CATEGORY) ════ */}
             {activeCategory === 'সব' && !searchQuery.trim() && featuredPost && (
                 <section className="py-6" style={{ background: 'var(--bg)' }}>
                     <div className="container mx-auto px-6 max-w-6xl">
@@ -416,7 +417,7 @@ const BlogBn = () => {
                                 <div className="flex-1">
                                     <div className="flex items-center gap-2 mb-3">
                                         <span className="inline-flex items-center gap-1 text-xs font-bold px-3 py-1 rounded-full text-white" style={{ background: 'linear-gradient(135deg, #f59e0b, #be185d)', fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif" }}>
-                                            <Flame size={13} /> বিশেষ আলোচিত গাইড
+                                            <Flame size={13} /> সাম্প্রতিক সেরা নিবন্ধ
                                         </span>
                                         <span className="text-xs text-[var(--text-muted)]" style={{ fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif" }}>
                                             {featuredPost.readTime}
@@ -434,7 +435,7 @@ const BlogBn = () => {
                                         className="text-sm md:text-base leading-relaxed line-clamp-3 mb-6"
                                         style={{ color: 'var(--text-secondary)', fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif" }}
                                     >
-                                        {featuredPost.heroIntro}
+                                        {stripHtml(featuredPost.heroIntro)}
                                     </p>
                                     <Link
                                         to={`/bn/blog/${featuredPost.slug}`}
