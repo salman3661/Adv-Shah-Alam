@@ -64,6 +64,7 @@ const urls = [
     url('/en', TODAY, 'weekly', '1.0'),
     url('/advocate-md-shah-alam', TODAY, 'monthly', '0.9'),
     url('/contact', TODAY, 'monthly', '0.9'),
+    url('/bn/contact', TODAY, 'monthly', '0.9'),
     url('/blog', TODAY, 'weekly', '0.8'),
     url('/education', TODAY, 'monthly', '0.6'),
     url('/privacy-policy', TODAY, 'yearly', '0.3'),

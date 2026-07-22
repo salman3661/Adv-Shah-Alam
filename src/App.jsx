@@ -97,6 +97,7 @@ function App() {
 
                       {/* Contact page — standalone, required by AdSense */}
                       <Route path="/contact" element={<ContactPage />} />
+                      <Route path="/bn/contact" element={<ContactPage lang="bn" />} />
 
                       {/* Legal pages (AdSense compliance) */}
                       <Route path="/privacy-policy" element={<PrivacyPolicy />} />

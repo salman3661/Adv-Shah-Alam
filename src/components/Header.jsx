@@ -57,12 +57,13 @@ const Header = () => {
         }
     };
 
-    const isBn = !location.pathname.startsWith('/en') &&
-                 !location.pathname.startsWith('/blog') &&
-                 !location.pathname.startsWith('/advocate-md-shah-alam') &&
-                 !location.pathname.startsWith('/contact') &&
-                 !location.pathname.startsWith('/privacy-policy') &&
-                 !location.pathname.startsWith('/terms');
+    const isBn = location.pathname.startsWith('/bn') || 
+                 (location.pathname !== '/en' &&
+                  !location.pathname.startsWith('/blog') &&
+                  !location.pathname.startsWith('/advocate-md-shah-alam') &&
+                  !location.pathname.startsWith('/contact') &&
+                  !location.pathname.startsWith('/privacy-policy') &&
+                  !location.pathname.startsWith('/terms'));
 
     const navLinks = [
         { name: isBn ? 'হোম'       : 'Home',     nameBn: 'হোম',       href: isBn ? '/' : '/en',            icon: Home,     isPage: true },
@@ -70,7 +71,7 @@ const Header = () => {
         { name: isBn ? 'সেবাসমূহ'  : 'Services', nameBn: 'সেবাসমূহ',  id: 'services',                        icon: Scale,    isPage: false },
         { name: isBn ? 'প্রশ্নোত্তর' : 'FAQ',      nameBn: 'প্রশ্নোত্তর', id: 'faq',                             icon: Award,    isPage: false },
         { name: isBn ? 'ব্লগ'       : 'Blog',     nameBn: 'ব্লগ',       href: isBn ? '/bn/blog' : '/blog',   icon: BookOpen, isPage: true },
-        { name: isBn ? 'যোগাযোগ'   : 'Contact',  nameBn: 'যোগাযোগ',   href: '/contact',                     icon: MapPin,   isPage: true },
+        { name: isBn ? 'যোগাযোগ'   : 'Contact',  nameBn: 'যোগাযোগ',   href: isBn ? '/bn/contact' : '/contact', icon: MapPin,   isPage: true },
     ];
 
     const isActive = (link) => {

@@ -52,11 +52,7 @@
       "destination": "/bn/blog",
       "statusCode": 301
     },
-    {
-      "source": "/bn/contact",
-      "destination": "/#contact",
-      "statusCode": 301
-    },
+
     {
       "source": "/bn/advocate-md-shah-alam",
       "destination": "/advocate-md-shah-alam",
