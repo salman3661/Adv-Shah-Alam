@@ -128,9 +128,9 @@ const Footer = () => {
                             </a>
                         </div>
                         <a href={siteInfo.googleMapsUrl} target="_blank" rel="noopener noreferrer"
-                            className="inline-flex items-center gap-1.5 text-xs px-3 py-2 rounded-full transition-colors hover:opacity-80"
-                            style={{ border: '1px solid var(--card-border)', color: 'var(--text-2)' }}>
-                            ⭐ Google Business Profile
+                            className="inline-flex items-center gap-1.5 text-xs px-3 py-2 rounded-full transition-all hover:opacity-90 font-semibold"
+                            style={{ border: '1px solid var(--card-border)', color: 'var(--gold)', background: 'var(--card-bg)' }}>
+                            ⭐ {isBn ? 'গুগল বিজনেস প্রোফাইল' : 'Google Business Profile'}
                         </a>
                     </div>
                 </div>
@@ -150,7 +150,11 @@ const Footer = () => {
                                 style={{ color: 'var(--text-muted)' }}>Terms & Conditions</Link>
                         </div>
                         <p className="text-xs mt-3 max-w-2xl mx-auto" style={{ color: 'var(--text-muted)', opacity: 0.55, lineHeight: 1.6 }}>
-                            <strong>Disclaimer:</strong> The information on this website is for general informational purposes only and does not constitute legal advice. Visiting this site or contacting us does not create an attorney-client relationship. Please consult a qualified advocate for advice specific to your situation.
+                            {isBn ? (
+                                <><strong>দায়বর্জন:</strong> এই ওয়েবসাইটের তথ্য শুধুমাত্র সাধারণ জ্ঞানের উদ্দেশ্যে প্রদান করা হয়েছে এবং এটি আইনি পরামর্শ নয়। এই সাইট পরিদর্শন বা যোগাযোগ করলে আইনজীবী-মক্কেল সম্পর্ক তৈরি হয় না। আপনার নির্দিষ্ট পরিস্থিতির জন্য একজন যোগ্য আইনজীবীর পরামর্শ নিন।</>
+                            ) : (
+                                <><strong>Disclaimer:</strong> The information on this website is for general informational purposes only and does not constitute legal advice. Visiting this site or contacting us does not create an attorney-client relationship. Please consult a qualified advocate for advice specific to your situation.</>
+                            )}
                         </p>
                     </div>
                 </div>

@@ -60,7 +60,7 @@ const BlogPreview = ({ lang: initialLang = 'en' }) => {
                             {activeLang === 'en' ? 'Legal Knowledge Hub' : 'আইনি জ্ঞানের ভাণ্ডার'}
                         </motion.span>
                         <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
-                            className="text-3xl md:text-4xl font-serif font-bold mb-2" style={{ color: 'var(--text)', fontFamily: activeLang === 'bn' ? 'inherit' : "'Playfair Display', serif" }}>
+                            className="text-3xl md:text-4xl font-bold mb-2" style={{ color: 'var(--text)', fontFamily: activeLang === 'bn' ? "var(--font-bn), 'SolaimanLipi', 'Hind Siliguri', sans-serif" : "'Playfair Display', serif" }}>
                             {activeLang === 'en' ? 'Legal Guides & Case Insights' : 'আইনি পরামর্শ ও আপনার অধিকার'}
                         </motion.h2>
                         <motion.div initial={{ scaleX: 0 }} whileInView={{ scaleX: 1 }} viewport={{ once: true }} transition={{ delay: 0.2 }}
@@ -121,7 +121,7 @@ const BlogPreview = ({ lang: initialLang = 'en' }) => {
                             >
                                 <div className="flex items-center justify-between mb-4">
                                     <span className="text-xs font-bold px-3 py-1 rounded-full"
-                                        style={{ background: colors.bg, color: colors.color }}>
+                                        style={{ background: colors.bg, color: colors.color, letterSpacing: activeLang === 'bn' ? '0' : '0.04em', fontFamily: activeLang === 'bn' ? "var(--font-bn), 'SolaimanLipi', sans-serif" : 'inherit' }}>
                                         {article.category}
                                     </span>
                                     <div className="flex items-center gap-2 text-xs" style={{ color: 'var(--text-muted)' }}>
@@ -137,11 +137,11 @@ const BlogPreview = ({ lang: initialLang = 'en' }) => {
                                     </div>
                                 </div>
 
-                                <h3 className="font-bold text-base leading-snug mb-3 flex-1 group-hover:underline decoration-dotted" style={{ color: 'var(--text)' }}>
+                                <h3 className="font-bold text-base leading-snug mb-3 flex-1 group-hover:underline decoration-dotted" style={{ color: 'var(--text)', fontFamily: activeLang === 'bn' ? "var(--font-bn), 'SolaimanLipi', sans-serif" : 'inherit' }}>
                                     {article.title}
                                 </h3>
 
-                                <p className="text-sm leading-relaxed mb-5" style={{ color: 'var(--text-muted)' }}>
+                                <p className="text-sm leading-relaxed mb-5" style={{ color: 'var(--text-muted)', fontFamily: activeLang === 'bn' ? "var(--font-bn), 'SolaimanLipi', sans-serif" : 'inherit' }}>
                                     {article.heroIntro
                                         ? article.heroIntro.slice(0, 120) + (article.heroIntro.length > 120 ? '…' : '')
                                         : ''}

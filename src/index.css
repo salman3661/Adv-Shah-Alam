@@ -804,6 +804,32 @@ body[data-theme="dark"] .hero-available-badge {
     overflow-x: hidden;
     max-width: 100vw;
   }
+
+  /* Blog post prose — guaranteed comfortable reading margin on phones */
+  .prose-content p,
+  .prose-content ul,
+  .prose-content ol {
+    max-width: 100% !important;
+  }
+
+  .prose-bn p,
+  .prose-bn ul,
+  .prose-bn ol {
+    max-width: 100% !important;
+  }
+}
+
+/* Very small phones (≤375px) — prevent content overflow */
+@media (max-width: 375px) {
+  html, body {
+    font-size: 15px;
+  }
+
+  .bp-hero-container,
+  .bp-body-container {
+    padding-left: 0.875rem !important;
+    padding-right: 0.875rem !important;
+  }
 }
 
 /* ============================================================

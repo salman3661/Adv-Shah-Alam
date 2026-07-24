@@ -4,6 +4,7 @@ import Header from './Header';
 import Footer from './Footer';
 import FloatingWhatsApp from './FloatingWhatsApp';
 import MobileCallButton from './MobileCallButton';
+import ReadingProgress from './ReadingProgress';
 
 const BASE = 'https://www.advmdshahalam.me';
 
@@ -224,6 +225,7 @@ const Layout = ({ children }) => {
     return (
         <div className="min-h-screen font-sans flex flex-col transition-colors duration-300"
             style={{ background: 'var(--bg)', color: 'var(--text)' }}>
+            <ReadingProgress />
             <Helmet>
                 <script type="application/ld+json">{JSON.stringify(personSchema)}</script>
                 <script type="application/ld+json">{JSON.stringify(legalServiceSchema)}</script>

@@ -458,7 +458,14 @@ const BlogPostInner = () => {
 
                     {/* Author / date row */}
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.875rem', flexWrap: 'wrap', paddingTop: '1.25rem', borderTop: '1px solid rgba(255,255,255,0.08)' }}>
-                        <div style={{ width: '2.375rem', height: '2.375rem', borderRadius: '50%', background: `linear-gradient(135deg, ${cc.bg}, var(--gold))`, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.75rem', fontWeight: 800, color: '#fff', flexShrink: 0 }}>SA</div>
+                        <img
+                            src="/images/hero/hero-md-shah-alam.webp"
+                            alt="Advocate Md. Shah Alam"
+                            style={{ width: '2.375rem', height: '2.375rem', borderRadius: '50%', objectFit: 'cover', objectPosition: 'center top', border: `2px solid ${cc.bg}`, flexShrink: 0, boxShadow: '0 2px 8px rgba(0,0,0,0.3)' }}
+                            loading="lazy"
+                            width="38"
+                            height="38"
+                        />
                         <div>
                             <p style={{ fontSize: '0.875rem', fontWeight: 700, color: 'var(--hero-text)', margin: 0 }}>Advocate Md. Shah Alam</p>
                             <p style={{ fontSize: '0.7rem', color: 'var(--hero-muted)', margin: 0 }}>Supreme Court of Bangladesh</p>

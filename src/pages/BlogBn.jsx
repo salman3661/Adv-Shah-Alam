@@ -89,7 +89,6 @@ const BlogCardBn = ({ post }) => {
                         style={{
                             background: catColor + '18',
                             color: catColor,
-                            letterSpacing: '0.04em',
                             fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif"
                         }}
                     >
@@ -435,11 +434,30 @@ const BlogBn = () => {
                                         </Link>
                                     </h2>
                                     <p
-                                        className="text-sm md:text-base leading-relaxed line-clamp-3 mb-6"
+                                        className="text-sm md:text-base leading-relaxed line-clamp-3 mb-5"
                                         style={{ color: 'var(--text-secondary)', fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif" }}
                                     >
                                         {stripHtml(featuredPost.heroIntro)}
                                     </p>
+                                    <div className="flex items-center gap-3 mb-6">
+                                        <img
+                                            src="/images/hero/hero-md-shah-alam.webp"
+                                            alt="অ্যাডভোকেট মো. শাহ আলম"
+                                            className="w-8 h-8 rounded-full object-cover border-2 border-[var(--gold)] flex-shrink-0"
+                                            loading="lazy"
+                                            width="32"
+                                            height="32"
+                                            style={{ objectPosition: 'center top' }}
+                                        />
+                                        <div>
+                                            <p className="text-xs font-bold" style={{ color: 'var(--text)', fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif" }}>অ্যাডভোকেট মো. শাহ আলম</p>
+                                            {featuredPost.publishedDate && (
+                                                <p className="text-xs" style={{ color: 'var(--text-muted)', fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif" }}>
+                                                    {new Date(featuredPost.publishedDate).toLocaleDateString('bn-BD', { day: 'numeric', month: 'short', year: 'numeric' })}
+                                                </p>
+                                            )}
+                                        </div>
+                                    </div>
                                     <Link
                                         to={`/bn/blog/${featuredPost.slug}`}
                                         className="inline-flex items-center gap-2 text-sm font-bold px-6 py-3 rounded-xl text-white shadow-lg transition-all hover:scale-105"

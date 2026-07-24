@@ -354,11 +354,30 @@ const Blog = () => {
                                         </Link>
                                     </h2>
                                     <p
-                                        className="text-sm md:text-base leading-relaxed line-clamp-3 mb-6"
+                                        className="text-sm md:text-base leading-relaxed line-clamp-3 mb-5"
                                         style={{ color: 'var(--text-secondary)' }}
                                     >
                                         {stripHtml(featuredPost.heroIntro)}
                                     </p>
+                                    <div className="flex items-center gap-3 mb-6">
+                                        <img
+                                            src="/images/hero/hero-md-shah-alam.webp"
+                                            alt="Advocate Md. Shah Alam"
+                                            className="w-8 h-8 rounded-full object-cover border-2 border-[var(--gold)] flex-shrink-0"
+                                            loading="lazy"
+                                            width="32"
+                                            height="32"
+                                            style={{ objectPosition: 'center top' }}
+                                        />
+                                        <div>
+                                            <p className="text-xs font-bold" style={{ color: 'var(--text)' }}>Adv. Md. Shah Alam</p>
+                                            {featuredPost.publishedDate && (
+                                                <p className="text-xs" style={{ color: 'var(--text-muted)' }}>
+                                                    {new Date(featuredPost.publishedDate).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}
+                                                </p>
+                                            )}
+                                        </div>
+                                    </div>
                                     <Link
                                         to={`/blog/${featuredPost.slug}`}
                                         className="inline-flex items-center gap-2 text-sm font-bold px-6 py-3 rounded-xl text-white shadow-lg transition-all hover:scale-105"
