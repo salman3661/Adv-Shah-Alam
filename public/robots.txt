@@ -1,5 +1,5 @@
 # Advocate Md. Shah Alam Law Chambers — www.advmdshahalam.me
-# Updated: 2026-07-12
+# Updated: 2026-07-28
 # Strategy: Allow crawling of ALL public content. Duplicate/redirected URLs
 # are handled via 301 redirects in vercel.json (NOT robots.txt blocking).
 # Sitemap contains only canonical www URLs (non-redirected).
@@ -11,8 +11,6 @@ Allow: /
 # --- Block admin, API, and utility paths ---
 Disallow: /admin/
 Disallow: /api/
-Disallow: /*?*          # Block URL query strings to avoid duplicate crawls
-Disallow: /#            # Block fragment-only URLs
 
 # ── Googlebot: no crawl rate limit (Googlebot self-manages) ──
 User-agent: Googlebot
@@ -28,4 +26,5 @@ Disallow: /api/
 Crawl-delay: 2
 
 # ── Canonical Sitemap (www only) ──
+# Note: Ensure all pages in sitemap have X-Robots-Tag: index, follow
 Sitemap: https://www.advmdshahalam.me/sitemap.xml
