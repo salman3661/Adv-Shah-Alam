@@ -13,7 +13,7 @@
   ],
   "publishedDate": "2026-07-28",
   "lastModified": "2026-07-28",
-  "readTime": "৯ মিনিট",
+  "readTime": "১৩ মিনিট",
   "heroIntro": "কোনো বয়ান হারানো, হুমকি প্রাপ্ত হওয়া বা অপরাধের শিকার হলে থানায় জিডি (General Diary) অথবা এজাহার/এফআইআর (FIR) দায়ের করা জরুরি প্রথম আইনি পদক্ষেপ। এছাড়া পুলিশি গ্রেপ্তার বা রিমান্ডের সময় নাগরিকের কী কী সাংবিধানিক অধিকার রয়েছে সে বিষয়ে বিস্তারিত বিবরণ দেওয়া হলো। জরুরী আইনজীবীর সহায়তায় কল দিন: <a href=\"tel:01712655546\" style=\"color:var(--gold);font-weight:bold;\">01712655546</a>।",
   "quickAnswer": {
     "heading": "⚡ জিডি ও এফআইআর এর মূল পার্থক্য",
@@ -37,7 +37,7 @@
     },
     {
       "heading": "২. এজাহার বা এফআইআর (FIR) দায়েরের পদ্ধতি",
-      "content": "<p>মারামারি, চুরি, চাদাবাজি বা নারী নির্যাতনের মতো গুরুতর অপরাধে থানায় গিয়ে এজাহার দিতে হয়। পুলিশ অফিসার ধারা অনুযায়ী তা রেজিস্ট্রি খাতায় মামলা (Case) হিসেবে অন্তর্ভূক্ত করেন। পুলিশ মামলা নিতে অস্বীকার করলে সরাসরি মেটোপলিটন ম্যাজিস্ট্রেট বা জুডিশিয়াল ম্যাজিস্ট্রেট আদালতে সিআর (CR) মামলা করা যায়।</p><p>আমাদের <a href=\"/services/criminal-lawyer\" style=\"color:var(--accent);font-weight:600;\">ফৌজদারি আইনজীবী সার্ভিসে</a> এ বিষয়ে পূর্ণ সহায়তা পাবেন।</p>"
+      "content": "<p>মারামারি, চুরি, চাদাবাজি বা নারী নির্যাতনের মতো গুরুতর অপরাধে থানায় গিয়ে এজাহার দিতে হয়। পুলিশ অফিসার ধারা অনুযায়ী তা রেজিস্ট্রি খাতায় মামলা (Case) হিসেবে অন্তর্ভূক্ত করেন। পুলিশ মামলা নিতে অস্বীকার করলে সরাসরি মেটোপলিটন ম্যাজিস্ট্রেট বা জুডিশিয়াল ম্যাজিস্ট্রেট আদালতে সিআর (CR) মামলা করা যায়।</p>"
     },
     {
       "heading": "৩. পুলিশি গ্রেপ্তার ও আসামির মৌলিক অধিকার",
@@ -49,7 +49,7 @@
     },
     {
       "heading": "আইনজীবী পরামর্শ ও চেম্বার ঠিকানা",
-      "content": "<div className=\"p-5 rounded-2xl border\" style=\"background:var(--accent-subtle);borderColor:var(--accent)\"><h4 style=\"margin:0 0 0.5rem 0;color:var(--text)\">📞 পুলিশি মামলা ও জামিন সহায়তার জন্য</h4><p style=\"margin:0 0 1rem 0;color:var(--text-secondary)\">মিথ্যা এফআইআর, পুলিশি রিমান্ড বাতিল বা অবিলম্বে কোর্টে জামিন আবেদনের জন্য সুপ্রিম কোর্টের অভিজ্ঞ অ্যাডভোকেট মো. শাহ আলম স্যারের সাথে সরাসরি যোগাযোগ করুন:</p><div style=\"display:flex;gap:1rem;flex-wrap:wrap\"><a href=\"tel:01712655546\" style=\"background:linear-gradient(135deg,var(--accent),#1A3FBF);color:#fff;padding:0.6rem 1.2rem;border-radius:0.75rem;font-weight:bold;text-decoration:none\">📱 কল করুন: 01712655546</a><a href=\"/bn/contact\" style=\"background:var(--accent-subtle);color:var(--accent);padding:0.6rem 1.2rem;border-radius:0.75rem;font-weight:bold;text-decoration:none;border:1px solid var(--accent)\">📍 চেম্বার অ্যাপয়েন্টমেন্ট</a></div></div>"
+      "content": "<div className=\"p-6 rounded-2xl border mb-6 shadow-xl\" style=\"background:linear-gradient(135deg,rgba(26,63,191,0.08),rgba(198,167,94,0.08));borderColor:var(--gold)\">\n<h3 style=\"margin:0 0 0.75rem 0;color:var(--text);font-family:'SolaimanLipi',sans-serif;\">📞 পুলিশি মামলা ও জামিন সহায়তার জন্য</h3>\n<p style=\"margin:0 0 1.25rem 0;color:var(--text-secondary);line-height:1.8;\">মিথ্যা এফআইআর, পুলিশি রিমান্ড বাতিল বা অবিলম্বে কোর্টে জামিন আবেদনের জন্য সুপ্রিম কোর্টের অভিজ্ঞ অ্যাডভোকেট মো. শাহ আলম স্যারের সাথে সরাসরি যোগাযোগ করুন:</p>\n<div style=\"display:flex;gap:1rem;flex-wrap:wrap\">\n<a href=\"tel:01712655546\" style=\"background:linear-gradient(135deg,var(--accent),#1A3FBF);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none\">📱 কল করুন: 01712655546</a>\n<a href=\"/bn/contact\" style=\"background:var(--surface);color:var(--text);padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none;border:1px solid var(--card-border)\">📍 চেম্বার অ্যাপয়েন্টমেন্ট</a>\n</div>\n</div>"
     }
   ],
   "faqs": [

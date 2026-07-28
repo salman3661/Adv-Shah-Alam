@@ -452,9 +452,10 @@ const BlogPostInner = () => {
                     </h1>
 
                     {/* Hero intro */}
-                    <p style={{ fontSize: '1.0625rem', lineHeight: 1.8, color: 'var(--hero-text-2)', maxWidth: '680px', marginBottom: '2rem', opacity: 0.88 }}>
-                        {post.heroIntro}
-                    </p>
+                    <p
+                        style={{ fontSize: '1.0625rem', lineHeight: 1.8, color: 'var(--hero-text-2)', maxWidth: '680px', marginBottom: '2rem', opacity: 0.88 }}
+                        dangerouslySetInnerHTML={{ __html: post.heroIntro }}
+                    />
 
                     {/* Author / date row */}
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.875rem', flexWrap: 'wrap', paddingTop: '1.25rem', borderTop: '1px solid rgba(255,255,255,0.08)' }}>

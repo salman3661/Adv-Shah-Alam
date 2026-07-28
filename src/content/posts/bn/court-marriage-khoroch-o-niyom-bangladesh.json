@@ -12,7 +12,7 @@
   ],
   "publishedDate": "2026-07-28",
   "lastModified": "2026-07-28",
-  "readTime": "৮ মিনিট",
+  "readTime": "১২ মিনিট",
   "heroIntro": "বাংলাদেশে \"কোর্ট ম্যারেজ\" (Court Marriage) বলতে আইনজীবী ও নোটারী পাবলিকের সম্মুখে বিয়ের হলফনামা (Affidavit) সম্পাদন এবং কাজী অফিসে মুসলিম বিবাহ রেজিস্ট্রেশন বোঝায়। কোর্ট ম্যারেজের সঠিক খরচ, বয়স প্রমাণ ও প্রয়োজনীয় কাগজপত্রের তালিকা নিচে দেওয়া হলো। জরুরি প্রয়োজনে যোগাযোগ করুন: <a href=\"tel:01712655546\" style=\"color:var(--gold);font-weight:bold;\">01712655546</a>।",
   "quickAnswer": {
     "heading": "⚡ এক নজরে: কোর্ট ম্যারেজের শর্ত ও খরচ",
@@ -20,7 +20,7 @@
       "আইনি বয়স: ছেলের বয়স সর্বনিম্ন ২১ বছর এবং মেয়ের বয়স সর্বনিম্ন ১৮ বছর হতে হবে।",
       "বয়স প্রমাণের জন্য জাতীয় পরিচয়পত্র (NID) বা এসএসসি পরীক্ষার সনদের ফটোকপি লাগবে।",
       "কাজী অফিসে রেজিস্ট্রি কাবিননামা সম্পাদন বাধ্যতামূলক।",
-      "নোটারী পাবলিকের মাধ্যমে ৫০/১০০ টাকার নন-জ্যূডিশিয়াল স্ট্যাম্পে বিয়ের হলফনামা সম্পাদন করা হয়।"
+      "নোটারী পাবলিকের মাধ্যমে ৫০/১ ১০০ টাকার নন-জ্যূডিশিয়াল স্ট্যাম্পে বিয়ের হলফনামা সম্পাদন করা হয়।"
     ]
   },
   "toc": [
@@ -33,7 +33,7 @@
   "sections": [
     {
       "heading": "কোর্ট ম্যারেজ কি আসলেই আইনি বিয়ে?",
-      "content": "<p>আইনের দৃষ্টিতে শুধু নোটারী স্ট্যাম্পে সই করলেই বিয়ে বৈধ হয় না। মুসলিম পারিবারিক আইন অনুযায়ী অবশ্যই সরকারি লাইসেন্সপ্রাপ্ত কাজীর মাধ্যমে নিকাহনামা (Kabinnama) রেজিস্ট্রি হতে হবে। কেবল নোটারী হলফনামা হলো বর ও কনের স্বইচ্ছায় প্রাপ্তবয়স্ক হিসেবে বিয়ের ঘোষণা দেওয়া লিখিত চুক্তি।</p><p>আমাদের <a href=\"/services/divorce-lawyer\" style=\"color:var(--accent);font-weight:600;\">পারিবারিক আইনজীবী টিমের</a> সাথে কথা বলতে পারেন।</p>"
+      "content": "<p>আইনের দৃষ্টিতে শুধু নোটারী স্ট্যাম্পে সই করলেই বিয়ে বৈধ হয় না। মুসলিম পারিবারিক আইন অনুযায়ী অবশ্যই সরকারি লাইসেন্সপ্রাপ্ত কাজীর মাধ্যমে নিকাহনামা (Kabinnama) রেজিস্ট্রি হতে হবে। কেবল নোটারী হলফনামা হলো বর ও কনের স্বইচ্ছায় প্রাপ্তবয়স্ক হিসেবে বিয়ের ঘোষণা দেওয়া লিখিত চুক্তি।</p>"
     },
     {
       "heading": "প্রয়োজনীয় কাগজপত্র ও শর্তাবলী",
@@ -49,7 +49,7 @@
     },
     {
       "heading": "আইনজীবী পরামর্শ ও যোগাযোগ",
-      "content": "<div className=\"p-5 rounded-2xl border\" style=\"background:var(--accent-subtle);borderColor:var(--accent)\"><h4 style=\"margin:0 0 0.5rem 0;color:var(--text)\">📞 কোর্ট ম্যারেজ ও আইনি সুরক্ষার জন্য</h4><p style=\"margin:0 0 1rem 0;color:var(--text-secondary)\">ঝামেলামুক্ত ও ১০০% সঠিক উপায়ে কোর্ট ম্যারেজ সম্পাদনে বাংলাদেশ সুপ্রিম কোর্টের অভিজ্ঞ অ্যাডভোকেট মো. শাহ আলম স্যারের সরাসরি সহায়তা পেতে কল করুন:</p><div style=\"display:flex;gap:1rem;flex-wrap:wrap\"><a href=\"tel:01712655546\" style=\"background:linear-gradient(135deg,var(--accent),#1A3FBF);color:#fff;padding:0.6rem 1.2rem;border-radius:0.75rem;font-weight:bold;text-decoration:none\">📱 কল করুন: 01712655546</a><a href=\"https://wa.me/8801712655546\" target=\"_blank\" style=\"background:#25D366;color:#fff;padding:0.6rem 1.2rem;border-radius:0.75rem;font-weight:bold;text-decoration:none\">💬 WhatsApp মেসেজ</a></div></div>"
+      "content": "<div className=\"p-6 rounded-2xl border mb-6 shadow-xl\" style=\"background:linear-gradient(135deg,rgba(26,63,191,0.08),rgba(198,167,94,0.08));borderColor:var(--gold)\">\n<h3 style=\"margin:0 0 0.75rem 0;color:var(--text);font-family:'SolaimanLipi',sans-serif;\">📞 কোর্ট ম্যারেজ ও আইনি সুরক্ষার জন্য</h3>\n<p style=\"margin:0 0 1.25rem 0;color:var(--text-secondary);line-height:1.8;\">ঝামেলামুক্ত ও ১০০% সঠিক উপায়ে কোর্ট ম্যারেজ সম্পাদনে বাংলাদেশ সুপ্রিম কোর্টের অভিজ্ঞ অ্যাডভোকেট মো. শাহ আলম স্যারের সরাসরি সহায়তা পেতে কল করুন:</p>\n<div style=\"display:flex;gap:1rem;flex-wrap:wrap\">\n<a href=\"tel:01712655546\" style=\"background:linear-gradient(135deg,var(--accent),#1A3FBF);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none\">📱 কল করুন: 01712655546</a>\n<a href=\"https://wa.me/8801712655546\" target=\"_blank\" style=\"background:#25D366;color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none\">💬 WhatsApp মেসেজ</a>\n</div>\n</div>"
     }
   ],
   "faqs": [

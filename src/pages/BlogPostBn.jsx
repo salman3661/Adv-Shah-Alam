@@ -412,9 +412,10 @@ const BlogPostBnInner = () => {
                     <h1 style={{ fontFamily: "'SolaimanLipi', 'Noto Sans Bengali', 'Playfair Display', serif", fontSize: 'clamp(1.75rem, 4vw, 3rem)', fontWeight: 800, lineHeight: 1.22, color: 'var(--hero-text)', marginBottom: '1.375rem', letterSpacing: '-0.01em', maxWidth: '900px' }}>
                         {post.title}
                     </h1>
-                    <p style={{ fontSize: '1.0625rem', lineHeight: 1.9, color: 'var(--hero-text-2)', maxWidth: '700px', marginBottom: '2rem', opacity: 0.9, fontFamily: "'SolaimanLipi', 'Noto Sans Bengali', sans-serif" }}>
-                        {post.heroIntro}
-                    </p>
+                    <p
+                        style={{ fontSize: '1.0625rem', lineHeight: 1.9, color: 'var(--hero-text-2)', maxWidth: '700px', marginBottom: '2rem', opacity: 0.9, fontFamily: "'SolaimanLipi', 'Noto Sans Bengali', sans-serif" }}
+                        dangerouslySetInnerHTML={{ __html: post.heroIntro }}
+                    />
 
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.875rem', flexWrap: 'wrap', paddingTop: '1.25rem', borderTop: '1px solid rgba(255,255,255,0.08)' }}>
                         <img

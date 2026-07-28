@@ -12,7 +12,7 @@
   ],
   "publishedDate": "2026-07-28",
   "lastModified": "2026-07-28",
-  "readTime": "৯ মিনিট",
+  "readTime": "১৫ মিনিট",
   "heroIntro": "ঢাকাসহ সারা দেশে ফ্ল্যাট বা অ্যাপার্টমেন্ট কিনে প্রতারিত হওয়ার ঘটনা অহরহ ঘটছে। ডেভেলপার কোম্পানি বা বিক্রেতার কাছ থেকে ফ্ল্যাট কেনার আগে মূল জমির মালিকানা, রাজউক অনুমোদন ও ফ্ল্যাট দলিলের সত্যতা যাচাই করা আবশ্যক। ফ্ল্যাট কেনার পূর্ণাঙ্গ আইনি চেকলিস্ট এখানে পাবেন। সরাসরি আইনজীবীর পরামর্শে কল দিন: <a href=\"tel:01712655546\" style=\"color:var(--gold);font-weight:bold;\">01712655546</a>।",
   "quickAnswer": {
     "heading": "⚡ ফ্ল্যাট কেনার ১০টি আবশ্যিক আইনি চেকলিস্ট",
@@ -50,7 +50,7 @@
     },
     {
       "heading": "আইনজীবী পরামর্শ ও ফোন নম্বর",
-      "content": "<div className=\"p-5 rounded-2xl border\" style=\"background:var(--accent-subtle);borderColor:var(--accent)\"><h4 style=\"margin:0 0 0.5rem 0;color:var(--text)\">📞 ফ্ল্যাট ক্রয়ের আগে আইনি সার্চিং ও কাগজ অনুসন্ধানের জন্য</h4><p style=\"margin:0 0 1rem 0;color:var(--text-secondary)\">লাখ লাখ টাকা বিনিয়োগের আগে ফ্ল্যাটের জমি সার্চিং ও চুক্তিপত্র যাচাই করতে সুপ্রিম কোর্টের প্রখ্যাত অ্যাডভোকেট মো. শাহ আলম স্যারের সেবা নিন:</p><div style=\"display:flex;gap:1rem;flex-wrap:wrap\"><a href=\"tel:01712655546\" style=\"background:linear-gradient(135deg,var(--accent),#1A3FBF);color:#fff;padding:0.6rem 1.2rem;border-radius:0.75rem;font-weight:bold;text-decoration:none\">📱 কল করুন: 01712655546</a><a href=\"/bn/contact\" style=\"background:var(--accent-subtle);color:var(--accent);padding:0.6rem 1.2rem;border-radius:0.75rem;font-weight:bold;text-decoration:none;border:1px solid var(--accent)\">📍 উত্তরা ও কোর্ট চেম্বার</a></div></div>"
+      "content": "<div className=\"p-6 rounded-2xl border mb-6 shadow-xl\" style=\"background:linear-gradient(135deg,rgba(26,63,191,0.08),rgba(198,167,94,0.08));borderColor:var(--gold)\">\n<h3 style=\"margin:0 0 0.75rem 0;color:var(--text);font-family:'SolaimanLipi',sans-serif;\">📞 ফ্ল্যাট ক্রয়ের আগে আইনি সার্চিং ও কাগজ অনুসন্ধানের জন্য</h3>\n<p style=\"margin:0 0 1.25rem 0;color:var(--text-secondary);line-height:1.8;\">লাখ লাখ টাকা বিনিয়োগের আগে ফ্ল্যাটের জমি সার্চিং ও চুক্তিপত্র যাচাই করতে সুপ্রিম কোর্টের প্রখ্যাত অ্যাডভোকেট মো. শাহ আলম স্যারের সেবা নিন:</p>\n<div style=\"display:flex;gap:1rem;flex-wrap:wrap\">\n<a href=\"tel:01712655546\" style=\"background:linear-gradient(135deg,var(--accent),#1A3FBF);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none\">📱 কল করুন: 01712655546</a>\n<a href=\"/bn/contact\" style=\"background:var(--surface);color:var(--text);padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none;border:1px solid var(--card-border)\">📍 উত্তরা ও কোর্ট চেম্বার</a>\n</div>\n</div>"
     }
   ],
   "faqs": [
