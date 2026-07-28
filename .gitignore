@@ -27,3 +27,6 @@ dist-ssr
 .env*.local
 gsc-service-account.json
 gsc-*.json
+
+# Search Console analytics data (private)
+Search Console CSV/

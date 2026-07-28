@@ -364,7 +364,8 @@
       "statusCode": 301
     },
     {
-      "source": "/blog?q=%7Bsearch_term_string%7D",
+      "source": "/blog",
+      "has": [{"type": "query", "key": "q", "value": "%7Bsearch_term_string%7D"}],
       "destination": "/blog",
       "statusCode": 301
     },
