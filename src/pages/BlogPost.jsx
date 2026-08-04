@@ -225,6 +225,70 @@ const RelatedByCategory = ({ category, currentSlug }) => {
     );
 };
 
+/* ─── Chamber Promo Card (Sidebar) ─── */
+const ChamberPromoCard = () => (
+    <div style={{
+        borderRadius: '1rem', overflow: 'hidden', marginBottom: '1.125rem',
+        background: 'linear-gradient(160deg, rgba(12,10,30,0.97) 0%, rgba(20,16,50,0.95) 100%)',
+        border: '1px solid rgba(198,167,94,0.3)',
+        boxShadow: '0 8px 32px rgba(0,0,0,0.35)',
+        backdropFilter: 'blur(16px)', WebkitBackdropFilter: 'blur(16px)',
+    }}>
+        {/* Gold shimmer top */}
+        <div style={{ height: '3px', background: 'linear-gradient(90deg, transparent, #c6a75e, #f0d98a, #c6a75e, transparent)' }} />
+        {/* Lawyer Photo + Name */}
+        <div style={{ padding: '1rem 1.125rem 0.75rem', display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+            <img
+                src="/images/hero/hero-md-shah-alam.webp"
+                alt="Advocate Md. Shah Alam"
+                style={{ width: '52px', height: '52px', borderRadius: '50%', objectFit: 'cover', border: '2px solid #c6a75e', flexShrink: 0, boxShadow: '0 4px 14px rgba(198,167,94,0.4)' }}
+                loading="lazy" width="52" height="52"
+            />
+            <div style={{ minWidth: 0 }}>
+                <p style={{ fontSize: '0.8rem', fontWeight: 800, color: '#e8c97d', margin: 0, lineHeight: 1.2 }}>Adv. Md. Shah Alam</p>
+                <p style={{ fontSize: '0.65rem', color: 'rgba(255,255,255,0.55)', margin: '2px 0 0', lineHeight: 1.3 }}>Supreme Court of Bangladesh</p>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '4px', marginTop: '4px' }}>
+                    {['★','★','★','★','★'].map((s,i) => <span key={i} style={{ fontSize: '0.6rem', color: '#f59e0b' }}>{s}</span>)}
+                    <span style={{ fontSize: '0.58rem', color: 'rgba(255,255,255,0.4)', marginLeft: '2px' }}>5.0</span>
+                </div>
+            </div>
+        </div>
+        {/* Office Info */}
+        <div style={{ padding: '0 1.125rem 0.875rem' }}>
+            <div style={{ background: 'rgba(198,167,94,0.07)', border: '1px solid rgba(198,167,94,0.15)', borderRadius: '0.625rem', padding: '0.625rem 0.75rem', marginBottom: '0.5rem' }}>
+                <p style={{ fontSize: '0.6rem', fontWeight: 800, color: '#c6a75e', textTransform: 'uppercase', letterSpacing: '0.08em', margin: '0 0 4px' }}>📍 Supreme Court Chamber</p>
+                <p style={{ fontSize: '0.72rem', color: 'rgba(255,255,255,0.65)', margin: 0, lineHeight: 1.5 }}>Moktob Bhaban (3rd Floor), Near Supreme Court, Dhaka-1000</p>
+            </div>
+            <div style={{ background: 'rgba(198,167,94,0.07)', border: '1px solid rgba(198,167,94,0.15)', borderRadius: '0.625rem', padding: '0.625rem 0.75rem', marginBottom: '0.875rem' }}>
+                <p style={{ fontSize: '0.6rem', fontWeight: 800, color: '#c6a75e', textTransform: 'uppercase', letterSpacing: '0.08em', margin: '0 0 4px' }}>📍 Uttara Branch</p>
+                <p style={{ fontSize: '0.72rem', color: 'rgba(255,255,255,0.65)', margin: 0, lineHeight: 1.5 }}>House 4, Road 7, Sector 4, Uttara, Dhaka-1230</p>
+            </div>
+            <a href="https://wa.me/8801712655546?text=I+need+legal+consultation" target="_blank" rel="noopener noreferrer"
+                style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', padding: '0.65rem', borderRadius: '0.5rem', fontSize: '0.78rem', fontWeight: 700, textDecoration: 'none', marginBottom: '0.4rem', background: 'linear-gradient(135deg, #22c55e, #16a34a)', color: '#fff', boxShadow: '0 3px 12px rgba(34,197,94,0.35)', transition: 'transform 0.15s' }}
+                onMouseEnter={e => e.currentTarget.style.transform = 'translateY(-1px)'}
+                onMouseLeave={e => e.currentTarget.style.transform = 'translateY(0)'}>
+                <MessageCircle size={13} /> WhatsApp Now
+            </a>
+            <a href="tel:01712655546"
+                style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', padding: '0.6rem', borderRadius: '0.5rem', fontSize: '0.78rem', fontWeight: 600, textDecoration: 'none', color: 'rgba(255,255,255,0.7)', border: '1px solid rgba(255,255,255,0.12)', transition: 'all 0.15s' }}
+                onMouseEnter={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.07)'; e.currentTarget.style.color = '#fff'; }}
+                onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = 'rgba(255,255,255,0.7)'; }}>
+                <Phone size={12} /> 01712-655546
+            </a>
+            <div style={{ marginTop: '0.75rem', padding: '0.5rem 0.75rem', borderRadius: '0.5rem', background: 'rgba(34,197,94,0.07)', border: '1px solid rgba(34,197,94,0.15)', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#22c55e', boxShadow: '0 0 6px #22c55e', flexShrink: 0 }} />
+                <span style={{ fontSize: '0.62rem', color: 'rgba(255,255,255,0.55)' }}>Sun–Thu: 10AM–6PM | Fri: 10AM–1PM</span>
+            </div>
+        </div>
+        <div style={{ height: '1px', background: 'linear-gradient(90deg, transparent, rgba(198,167,94,0.2), transparent)' }} />
+        <a href="/contact" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.375rem', padding: '0.6rem', fontSize: '0.7rem', fontWeight: 600, color: 'rgba(198,167,94,0.75)', textDecoration: 'none', transition: 'color 0.15s' }}
+            onMouseEnter={e => e.currentTarget.style.color = '#c6a75e'}
+            onMouseLeave={e => e.currentTarget.style.color = 'rgba(198,167,94,0.75)'}>
+            📋 View Full Contact Details →
+        </a>
+    </div>
+);
+
 /* ─── Quick Consult Widget ─── */
 const ConsultWidget = ({ postTitle }) => (
     <div style={{
@@ -562,22 +626,34 @@ const BlogPostInner = () => {
                                     </div>
                                 )}
 
-                                {/* Article Sections */}
+                                {/* Article Sections — Premium Design */}
                                 {post.sections.map((sec, i) => (
-                                    <section key={i} id={`section-${i}`} style={{ marginBottom: '3rem', scrollMarginTop: '5rem' }}>
-                                        <h2 style={{
-                                            fontFamily: "'Playfair Display', serif",
-                                            fontSize: 'clamp(1.2rem, 2vw, 1.5rem)',
-                                            fontWeight: 700, lineHeight: 1.3,
-                                            color: 'var(--text)',
-                                            marginBottom: '1.125rem',
-                                            paddingLeft: '0.875rem',
-                                            borderLeft: `3px solid ${cc.bg}`,
-                                        }}>
-                                            {sec.h2}
-                                        </h2>
+                                    <section key={i} id={`section-${i}`} style={{ marginBottom: '3.25rem', scrollMarginTop: '5rem' }}>
+                                        {/* Section heading with numbered badge */}
+                                        <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.875rem', marginBottom: '1.25rem' }}>
+                                            <span style={{
+                                                flexShrink: 0, width: '2.25rem', height: '2.25rem', borderRadius: '0.625rem',
+                                                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                                                fontWeight: 900, fontSize: '0.8rem', lineHeight: 1,
+                                                background: `linear-gradient(135deg, ${cc.bg}dd, ${cc.bg}99)`,
+                                                color: '#fff', boxShadow: `0 4px 14px ${cc.bg}55`,
+                                                border: `1px solid ${cc.bg}66`, marginTop: '2px',
+                                            }}>{String(i + 1).padStart(2, '0')}</span>
+                                            <h2 style={{
+                                                fontFamily: "'Playfair Display', serif",
+                                                fontSize: 'clamp(1.2rem, 2.2vw, 1.55rem)',
+                                                fontWeight: 800, lineHeight: 1.28,
+                                                color: 'var(--text)',
+                                                margin: 0, flex: 1,
+                                                letterSpacing: '-0.01em',
+                                            }}>
+                                                {sec.heading || sec.h2}
+                                            </h2>
+                                        </div>
+                                        {/* Accent rule under heading */}
+                                        <div style={{ height: '2px', width: '4rem', background: `linear-gradient(90deg, ${cc.bg}, transparent)`, borderRadius: '2px', marginBottom: '1.375rem', marginLeft: '3.125rem' }} />
                                         <div className="prose-content"
-                                            style={{ color: 'var(--text-secondary)', fontSize: '1.0625rem', lineHeight: '1.9', letterSpacing: '0.008em' }}
+                                            style={{ color: 'var(--text-secondary)', fontSize: '1.0625rem', lineHeight: '1.95', letterSpacing: '0.008em' }}
                                             dangerouslySetInnerHTML={{ __html: sec.content }}
                                         />
                                     </section>
@@ -671,6 +747,7 @@ const BlogPostInner = () => {
                         <aside className="bp-sidebar">
                             <div style={{ position: 'sticky', top: '5rem' }}>
                                 <ConsultWidget postTitle={post.title} />
+                                <ChamberPromoCard />
                                 <PopularPosts currentSlug={post.slug} />
                                 <RecentPosts currentSlug={post.slug} />
                                 <RelatedByCategory category={post.category} currentSlug={post.slug} />
@@ -760,24 +837,28 @@ const BlogPostInner = () => {
                     .bp-body-container, .bp-hero-container { padding-left: 1rem; padding-right: 1rem; }
                 }
 
-                /* ── Prose typography — wide, comfortable reading ── */
-                .prose-content p { margin-bottom: 1.4rem; max-width: 72ch; }
-                .prose-content ul, .prose-content ol { padding-left: 1.75rem; margin-bottom: 1.4rem; max-width: 72ch; }
-                .prose-content li { margin-bottom: 0.6rem; line-height: 1.85; }
+                /* ── Prose typography — full-width, premium reading ── */
+                .prose-content p { margin-bottom: 1.5rem; }
+                .prose-content ul, .prose-content ol { padding-left: 1.75rem; margin-bottom: 1.5rem; }
+                .prose-content li { margin-bottom: 0.7rem; line-height: 1.9; }
+                .prose-content li::marker { color: var(--accent); font-weight: 700; }
                 .prose-content strong { color: var(--text); font-weight: 700; }
+                .prose-content b { color: var(--text); font-weight: 700; }
                 .prose-content a { color: var(--accent); text-decoration: underline; text-decoration-color: rgba(198,167,94,0.35); text-underline-offset: 3px; transition: text-decoration-color 0.2s; }
                 .prose-content a:hover { text-decoration-color: var(--accent); }
-                .prose-content h3 { font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 700; color: var(--text); margin: 2rem 0 0.875rem; }
-                .prose-content blockquote { border-left: 4px solid var(--accent); padding: 1rem 1.25rem; margin: 2rem 0; font-style: italic; color: var(--text-muted); background: var(--surface); border-radius: 0 0.75rem 0.75rem 0; }
-                .prose-content table { width: 100%; border-collapse: collapse; margin-bottom: 1.75rem; font-size: 0.9rem; }
-                .prose-content th, .prose-content td { padding: 0.75rem 1rem; border: 1px solid var(--card-border); }
-                .prose-content th { background: var(--surface); font-weight: 700; color: var(--text); }
+                .prose-content h3 { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 800; color: var(--text); margin: 2.25rem 0 1rem; padding: 0.5rem 0.875rem; border-left: 3px solid var(--accent); background: linear-gradient(90deg, rgba(198,167,94,0.06), transparent); border-radius: 0 0.5rem 0.5rem 0; }
+                .prose-content h4 { font-size: 1.05rem; font-weight: 700; color: var(--text); margin: 1.75rem 0 0.75rem; }
+                .prose-content blockquote { border-left: 4px solid var(--accent); padding: 1.125rem 1.375rem; margin: 2.25rem 0; color: var(--text-secondary); background: linear-gradient(90deg, rgba(198,167,94,0.06), rgba(198,167,94,0.02)); border-radius: 0 0.875rem 0.875rem 0; font-size: 1rem; line-height: 1.85; }
+                .prose-content table { width: 100%; border-collapse: collapse; margin-bottom: 1.75rem; font-size: 0.9rem; border-radius: 0.625rem; overflow: hidden; }
+                .prose-content th, .prose-content td { padding: 0.8rem 1.1rem; border: 1px solid var(--card-border); }
+                .prose-content th { background: linear-gradient(90deg, var(--surface), rgba(198,167,94,0.07)); font-weight: 700; color: var(--text); }
+                .prose-content tr:nth-child(even) td { background: rgba(255,255,255,0.018); }
                 .prose-content ol { list-style: decimal; }
-                .prose-content ul { list-style: disc; }
-                /* Wide reading on large screens */
-                @media (min-width: 1400px) {
-                    .prose-content p, .prose-content ul, .prose-content ol { max-width: 80ch; }
-                }
+                .prose-content ul { list-style: none; padding-left: 0; }
+                .prose-content ul li { padding-left: 1.5rem; position: relative; }
+                .prose-content ul li::before { content: '▸'; position: absolute; left: 0; top: 0; color: var(--accent); font-size: 0.85em; font-weight: 700; }
+                .prose-content div[style] { margin: 1.5rem 0; }
+                .prose-content hr { border: none; height: 1px; background: linear-gradient(90deg, transparent, var(--card-border), transparent); margin: 2rem 0; }
             `}</style>
         </>
     );
