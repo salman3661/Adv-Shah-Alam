@@ -600,7 +600,7 @@ const BlogPostBnInner = () => {
                                         {/* Accent gradient underline */}
                                         <div style={{ height: '2px', width: '4rem', background: `linear-gradient(90deg, ${cc.bg}, transparent)`, borderRadius: '2px', marginBottom: '1.375rem', marginLeft: '3.125rem' }} />
                                         <div className="prose-bn-content"
-                                            style={{ color: 'var(--text-secondary)', fontSize: '1.25rem', lineHeight: '2.1', letterSpacing: '0.01em', wordBreak: 'break-word', overflowWrap: 'anywhere', fontFamily: "'SolaimanLipi', 'Noto Sans Bengali', sans-serif" }}
+                                            style={{ color: 'var(--text)', fontSize: '1.25rem', lineHeight: '2.1', letterSpacing: '0.005em', wordBreak: 'break-word', overflowWrap: 'anywhere', fontFamily: "'Hind Siliguri', 'SolaimanLipi', sans-serif" }}
                                             dangerouslySetInnerHTML={{ __html: sec.content }}
                                         />
                                     </section>
@@ -769,19 +769,19 @@ const BlogPostBnInner = () => {
                     .bpbn-mobile-toc { display: block; }
                     .bpbn-body-container, .bpbn-hero-container { padding-left: 1rem; padding-right: 1rem; }
                 }
-                .prose-bn-content p { margin-bottom: 1.6rem; font-size: 1.25rem; line-height: 2.15; }
+                .prose-bn-content p { margin-bottom: 1.6rem; font-size: 1.25rem; line-height: 2.15; color: var(--text); text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
                 .prose-bn-content ul, .prose-bn-content ol { padding-left: 1.75rem; margin-bottom: 1.6rem; }
-                .prose-bn-content li { margin-bottom: 0.8rem; font-size: 1.2rem; line-height: 2.1; }
+                .prose-bn-content li { margin-bottom: 0.8rem; font-size: 1.2rem; line-height: 2.1; color: var(--text); }
                 .prose-bn-content li::marker { color: var(--accent); font-weight: 700; }
                 .prose-bn-content strong { color: var(--text); font-weight: 700; }
                 .prose-bn-content b { color: var(--text); font-weight: 700; }
                 .prose-bn-content a { color: var(--accent); text-decoration: underline; text-decoration-color: rgba(198,167,94,0.35); text-underline-offset: 4px; }
                 .prose-bn-content a:hover { text-decoration-color: var(--accent); }
-                .prose-bn-content h3 { font-family: 'SolaimanLipi', 'Noto Sans Bengali', sans-serif; font-size: 1.35rem; font-weight: 800; color: var(--text); margin: 2.5rem 0 1.1rem; padding: 0.5rem 0.875rem; border-left: 4px solid var(--accent); background: linear-gradient(90deg, rgba(198,167,94,0.06), transparent); border-radius: 0 0.5rem 0.5rem 0; }
+                .prose-bn-content h3 { font-family: 'Hind Siliguri', 'SolaimanLipi', sans-serif; font-size: 1.35rem; font-weight: 800; color: var(--text); margin: 2.5rem 0 1.1rem; padding: 0.5rem 0.875rem; border-left: 4px solid var(--accent); background: linear-gradient(90deg, rgba(198,167,94,0.06), transparent); border-radius: 0 0.5rem 0.5rem 0; }
                 .prose-bn-content h4 { font-size: 1.18rem; font-weight: 700; color: var(--text); margin: 2rem 0 0.85rem; }
-                .prose-bn-content blockquote { border-left: 4px solid var(--accent); padding: 1.25rem 1.5rem; margin: 2.25rem 0; color: var(--text-secondary); background: linear-gradient(90deg, rgba(198,167,94,0.06), rgba(198,167,94,0.02)); border-radius: 0 0.875rem 0.875rem 0; font-size: 1.15rem; line-height: 2.05; }
+                .prose-bn-content blockquote { border-left: 4px solid var(--accent); padding: 1.25rem 1.5rem; margin: 2.25rem 0; color: var(--text); background: linear-gradient(90deg, rgba(198,167,94,0.06), rgba(198,167,94,0.02)); border-radius: 0 0.875rem 0.875rem 0; font-size: 1.15rem; line-height: 2.05; }
                 .prose-bn-content table { width: 100%; border-collapse: collapse; margin-bottom: 1.75rem; font-size: 1.05rem; border-radius: 0.625rem; overflow: hidden; }
-                .prose-bn-content th, .prose-bn-content td { padding: 0.9rem 1.25rem; border: 1px solid var(--card-border); }
+                .prose-bn-content th, .prose-bn-content td { padding: 0.9rem 1.25rem; border: 1px solid var(--card-border); color: var(--text); }
                 .prose-bn-content th { background: linear-gradient(90deg, var(--surface), rgba(198,167,94,0.07)); font-weight: 700; color: var(--text); }
                 .prose-bn-content tr:nth-child(even) td { background: rgba(255,255,255,0.018); }
                 .prose-bn-content ol { list-style: decimal; }
