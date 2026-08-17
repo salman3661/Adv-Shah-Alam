@@ -44,6 +44,18 @@ const CAT_COLOR = {
 };
 const catColor = cat => CAT_COLOR[cat] || { bg: 'var(--accent)', text: '#111' };
 
+/* Clean duplicate leading numbers from section headings */
+const cleanHeadingText = text => {
+    if (!text) return '';
+    return String(text).replace(/^[\(\[\{]?[\d\u09E6-\u09EF]+[\.\-\)\:\}\]]*\s*[\:\.\-]?\s*/, '').trim();
+};
+
+/* Convert integer to Bengali two-digit string */
+const toBnDigits = num => {
+    const bnDigits = ['০', '১', '২', '৩', '৪', '৫', '৬', '৭', '৮', '৯'];
+    return String(num).padStart(2, '0').split('').map(d => bnDigits[d] || d).join('');
+};
+
 /* ─── Error Boundary ─── */
 class BlogPostBnErrorBoundary extends React.Component {
     constructor(props) { super(props); this.state = { hasError: false }; }
@@ -573,34 +585,68 @@ const BlogPostBnInner = () => {
                                     </div>
                                 )}
 
-                                {/* Sections — Premium Design */}
+                                {/* Sections — High-End Editorial Design */}
                                 {post.sections?.map((sec, i) => (
-                                    <section key={i} id={`bnsec-${i}`} style={{ marginBottom: '3.25rem', scrollMarginTop: '5rem' }}>
-                                        {/* Numbered badge + heading */}
-                                        <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.875rem', marginBottom: '1.25rem' }}>
-                                            <span style={{
-                                                flexShrink: 0, width: '2.25rem', height: '2.25rem', borderRadius: '0.625rem',
-                                                display: 'flex', alignItems: 'center', justifyContent: 'center',
-                                                fontWeight: 900, fontSize: '0.8rem', lineHeight: 1,
-                                                background: `linear-gradient(135deg, ${cc.bg}dd, ${cc.bg}99)`,
-                                                color: '#fff', boxShadow: `0 4px 14px ${cc.bg}55`,
-                                                border: `1px solid ${cc.bg}66`, marginTop: '2px',
-                                            }}>{String(i + 1).padStart(2, '0')}</span>
+                                    <section key={i} id={`bnsec-${i}`} style={{ marginBottom: '3.5rem', scrollMarginTop: '5rem' }}>
+                                        {/* Editorial Section Header */}
+                                        <div style={{
+                                            position: 'relative',
+                                            marginBottom: '1.75rem',
+                                            paddingBottom: '1.125rem',
+                                            borderBottom: '1px solid var(--card-border)',
+                                            display: 'flex',
+                                            flexDirection: 'column',
+                                            gap: '0.625rem'
+                                        }}>
+                                            {/* Sub-pill badge */}
+                                            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                                                <span style={{
+                                                    display: 'inline-flex',
+                                                    alignItems: 'center',
+                                                    gap: '0.375rem',
+                                                    fontSize: '0.75rem',
+                                                    fontWeight: 800,
+                                                    letterSpacing: '0.06em',
+                                                    textTransform: 'uppercase',
+                                                    color: 'var(--gold, #c6a75e)',
+                                                    background: 'rgba(198, 167, 94, 0.08)',
+                                                    border: '1px solid rgba(198, 167, 94, 0.22)',
+                                                    padding: '0.25rem 0.65rem',
+                                                    borderRadius: '9999px',
+                                                }}>
+                                                    <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: 'var(--gold, #c6a75e)' }}></span>
+                                                    <span>ধাপ {toBnDigits(i + 1)}</span>
+                                                </span>
+                                            </div>
+
+                                            {/* Clean Headline with vertical accent bar */}
                                             <h2 style={{
-                                                fontFamily: "'SolaimanLipi', 'Noto Sans Bengali', sans-serif",
-                                                fontSize: 'clamp(1.2rem, 2.2vw, 1.55rem)',
-                                                fontWeight: 800, lineHeight: 1.28,
+                                                fontFamily: "'Hind Siliguri', 'SolaimanLipi', sans-serif",
+                                                fontSize: 'clamp(1.35rem, 2.5vw, 1.75rem)',
+                                                fontWeight: 800,
+                                                lineHeight: 1.35,
                                                 color: 'var(--text)',
-                                                margin: 0, flex: 1,
-                                                letterSpacing: '-0.005em',
+                                                margin: 0,
+                                                letterSpacing: '-0.01em',
+                                                display: 'flex',
+                                                alignItems: 'flex-start',
+                                                gap: '0.75rem'
                                             }}>
-                                                {sec.heading || sec.h2}
+                                                <span style={{
+                                                    display: 'inline-block',
+                                                    width: '4px',
+                                                    minHeight: '1.35em',
+                                                    borderRadius: '4px',
+                                                    background: `linear-gradient(180deg, var(--gold, #c6a75e), ${cc.bg})`,
+                                                    flexShrink: 0,
+                                                    marginTop: '0.12em'
+                                                }}></span>
+                                                <span style={{ flex: 1 }}>{cleanHeadingText(sec.heading || sec.h2)}</span>
                                             </h2>
                                         </div>
-                                        {/* Accent gradient underline */}
-                                        <div style={{ height: '2px', width: '4rem', background: `linear-gradient(90deg, ${cc.bg}, transparent)`, borderRadius: '2px', marginBottom: '1.375rem', marginLeft: '3.125rem' }} />
+
                                         <div className="prose-bn-content"
-                                            style={{ color: 'var(--text)', fontSize: '1.25rem', lineHeight: '2.1', letterSpacing: '0.005em', wordBreak: 'break-word', overflowWrap: 'anywhere', fontFamily: "'Hind Siliguri', 'SolaimanLipi', sans-serif" }}
+                                            style={{ color: 'var(--text)', fontSize: '1.1875rem', lineHeight: '2.05', letterSpacing: '0.005em', wordBreak: 'break-word', overflowWrap: 'anywhere', fontFamily: "'Hind Siliguri', 'SolaimanLipi', sans-serif" }}
                                             dangerouslySetInnerHTML={{ __html: sec.content }}
                                         />
                                     </section>

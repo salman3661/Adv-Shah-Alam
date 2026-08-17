@@ -579,55 +579,201 @@ body[data-theme="dark"] .status-current {
    CSS variable = single source of truth for bar height.
    ═══════════════════════════════════════════════ */
 
-/* Bangla article typography — improved readability */
-.prose-bn {
-  line-height: 1.8;
+/* Bangla article typography — high-end editorial readability */
+.prose-bn,
+.prose-bn-content {
+  line-height: 2.05;
   word-break: break-word;
   overflow-wrap: anywhere;
+  color: var(--text);
 }
 
-.prose-bn p {
-  margin-bottom: 1rem;
+.prose-bn p,
+.prose-bn-content p {
+  margin-bottom: 1.25rem;
+}
+
+.prose-bn h3,
+.prose-bn-content h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-top: 2.25rem;
+  margin-bottom: 0.875rem;
+  line-height: 1.4;
+  padding-left: 0.75rem;
+  border-left: 3px solid var(--gold, #c6a75e);
+  letter-spacing: -0.01em;
+}
+
+.prose-bn h4,
+.prose-bn-content h4 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--gold, #c6a75e);
+  margin-top: 1.75rem;
+  margin-bottom: 0.625rem;
+  line-height: 1.45;
 }
 
 .prose-bn ul,
-.prose-bn ol {
-  padding-left: 1.25rem;
-  margin-bottom: 1rem;
+.prose-bn ol,
+.prose-bn-content ul,
+.prose-bn-content ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
-.prose-bn li {
-  margin-bottom: 0.4rem;
+.prose-bn li,
+.prose-bn-content li {
+  margin-bottom: 0.55rem;
+  line-height: 1.85;
 }
 
-.prose-bn strong {
+.prose-bn strong,
+.prose-bn-content strong {
   color: var(--text);
   font-weight: 700;
 }
 
-/* Prose for English posts */
+.prose-bn a,
+.prose-bn-content a {
+  color: var(--gold, #c6a75e);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 600;
+  transition: opacity 0.15s ease;
+}
+
+.prose-bn a:hover,
+.prose-bn-content a:hover {
+  opacity: 0.85;
+}
+
+.prose-bn table,
+.prose-bn-content table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--card-border);
+  margin: 1.75rem 0;
+  background: var(--surface);
+}
+
+.prose-bn th,
+.prose-bn-content th {
+  background: rgba(198, 167, 94, 0.08);
+  color: var(--gold, #c6a75e);
+  font-weight: 700;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--card-border);
+  text-align: left;
+}
+
+.prose-bn td,
+.prose-bn-content td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--card-border);
+  color: var(--text-secondary);
+}
+
+.prose-bn tr:last-child td,
+.prose-bn-content tr:last-child td {
+  border-bottom: none;
+}
+
+/* Prose for English posts — high-end editorial */
 .prose-content {
   word-break: break-word;
   overflow-wrap: anywhere;
+  color: var(--text);
+  line-height: 1.85;
+  font-size: 1.0625rem;
 }
 
 .prose-content p {
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose-content h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-top: 2.25rem;
+  margin-bottom: 0.875rem;
+  line-height: 1.4;
+  padding-left: 0.75rem;
+  border-left: 3px solid var(--gold, #c6a75e);
+  letter-spacing: -0.01em;
+}
+
+.prose-content h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--gold, #c6a75e);
+  margin-top: 1.75rem;
+  margin-bottom: 0.625rem;
+  line-height: 1.45;
 }
 
 .prose-content ul,
 .prose-content ol {
-  padding-left: 1.25rem;
-  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .prose-content li {
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.55rem;
+  line-height: 1.8;
 }
 
 .prose-content strong {
   color: var(--text);
   font-weight: 700;
+}
+
+.prose-content a {
+  color: var(--gold, #c6a75e);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 600;
+  transition: opacity 0.15s ease;
+}
+
+.prose-content a:hover {
+  opacity: 0.85;
+}
+
+.prose-content table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--card-border);
+  margin: 1.75rem 0;
+  background: var(--surface);
+}
+
+.prose-content th {
+  background: rgba(198, 167, 94, 0.08);
+  color: var(--gold, #c6a75e);
+  font-weight: 700;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--card-border);
+  text-align: left;
+}
+
+.prose-content td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--card-border);
+  color: var(--text-secondary);
+}
+
+.prose-content tr:last-child td {
+  border-bottom: none;
 }
 
 /* ============================================================
