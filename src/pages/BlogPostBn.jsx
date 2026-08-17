@@ -132,25 +132,85 @@ const PopularBnPosts = ({ currentSlug }) => {
     const popular = POPULAR_BN_SLUGS
         .map(s => allBnPosts.find(p => p.slug === s))
         .filter(p => p && p.slug !== currentSlug)
-        .slice(0, 7);
+        .slice(0, 6);
     if (popular.length === 0) return null;
     return (
-        <SbCard>
+        <SbCard accentColor="#f59e0b">
             <SbHeader icon={Flame} label="সর্বাধিক পঠিত" color="#f59e0b" />
-            <div style={{ padding: '0.5rem 0.75rem 0.75rem' }}>
+            <div style={{ padding: '0.625rem 0.875rem 0.875rem' }}>
                 {popular.map((rp, idx) => {
                     const cc = catColor(rp.category);
                     const isTop3 = idx < 3;
                     return (
                         <Link key={rp.slug} to={`/bn/blog/${rp.slug}`}
-                            style={{ display: 'flex', alignItems: 'flex-start', gap: '0.625rem', padding: '0.5rem 0.5rem', borderRadius: '0.625rem', textDecoration: 'none', transition: 'all 0.2s', marginBottom: '0.125rem', border: '1px solid transparent' }}
-                            onMouseEnter={e => { e.currentTarget.style.background = 'rgba(198,167,94,0.07)'; e.currentTarget.style.borderColor = 'rgba(198,167,94,0.15)'; e.currentTarget.style.transform = 'translateX(3px)'; }}
-                            onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.borderColor = 'transparent'; e.currentTarget.style.transform = 'translateX(0)'; }}>
-                            <span style={{ flexShrink: 0, width: '1.625rem', height: '1.625rem', borderRadius: '0.375rem', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 900, fontSize: '0.75rem', background: isTop3 ? 'linear-gradient(135deg, #c6a75e, #e8c97d)' : 'rgba(255,255,255,0.06)', color: isTop3 ? '#111' : 'var(--text-muted)', border: isTop3 ? 'none' : '1px solid rgba(255,255,255,0.08)', boxShadow: isTop3 ? '0 2px 8px rgba(198,167,94,0.35)' : 'none' }}>{idx + 1}</span>
+                            style={{
+                                display: 'flex',
+                                alignItems: 'flex-start',
+                                gap: '0.75rem',
+                                padding: '0.65rem 0.5rem',
+                                borderRadius: '0.625rem',
+                                textDecoration: 'none',
+                                transition: 'all 0.2s cubic-bezier(0.16, 1, 0.3, 1)',
+                                marginBottom: '0.25rem',
+                                borderBottom: idx !== popular.length - 1 ? '1px solid rgba(255,255,255,0.05)' : 'none',
+                                background: 'transparent'
+                            }}
+                            onMouseEnter={e => {
+                                e.currentTarget.style.background = 'rgba(245,158,11,0.07)';
+                                e.currentTarget.style.transform = 'translateX(4px)';
+                            }}
+                            onMouseLeave={e => {
+                                e.currentTarget.style.background = 'transparent';
+                                e.currentTarget.style.transform = 'translateX(0)';
+                            }}>
+                            <span style={{
+                                flexShrink: 0,
+                                width: '1.625rem',
+                                height: '1.625rem',
+                                borderRadius: '0.375rem',
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                fontWeight: 900,
+                                fontSize: '0.75rem',
+                                background: isTop3 ? 'linear-gradient(135deg, #c6a75e, #e8c97d)' : 'rgba(255,255,255,0.06)',
+                                color: isTop3 ? '#111' : 'var(--text-muted)',
+                                border: isTop3 ? 'none' : '1px solid rgba(255,255,255,0.08)',
+                                boxShadow: isTop3 ? '0 2px 8px rgba(198,167,94,0.35)' : 'none',
+                                marginTop: '2px'
+                            }}>
+                                {idx + 1}
+                            </span>
                             <div style={{ flex: 1, minWidth: 0 }}>
-                                <span style={{ display: 'inline-block', fontSize: '0.58rem', fontWeight: 700, padding: '1px 5px', borderRadius: '3px', marginBottom: '0.2rem', background: cc.bg + 'cc', color: cc.text, textTransform: 'uppercase', letterSpacing: '0.05em' }}>{rp.category}</span>
-                                <p style={{ fontSize: '0.8rem', fontWeight: 600, color: 'var(--text)', lineHeight: 1.45, margin: 0, fontFamily: "'SolaimanLipi', 'Noto Sans Bengali', sans-serif" }}>{rp.title}</p>
-                                <span style={{ display: 'flex', alignItems: 'center', gap: '0.2rem', fontSize: '0.68rem', color: 'var(--text-muted)', marginTop: '0.2rem' }}><Clock size={9} />{rp.readTime}</span>
+                                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '0.5rem', marginBottom: '0.2rem' }}>
+                                    <span style={{
+                                        display: 'inline-block',
+                                        fontSize: '0.6rem',
+                                        fontWeight: 700,
+                                        padding: '1px 6px',
+                                        borderRadius: '4px',
+                                        background: `${cc.bg}22`,
+                                        color: cc.bg,
+                                        border: `1px solid ${cc.bg}40`,
+                                        textTransform: 'uppercase'
+                                    }}>
+                                        {rp.category}
+                                    </span>
+                                    <span style={{ fontSize: '0.68rem', color: 'var(--text-muted)' }}>
+                                        {rp.readTime}
+                                    </span>
+                                </div>
+                                <p style={{
+                                    fontSize: '0.84rem',
+                                    fontWeight: 600,
+                                    color: 'var(--text)',
+                                    lineHeight: 1.45,
+                                    margin: 0,
+                                    fontFamily: "'Hind Siliguri', 'SolaimanLipi', sans-serif",
+                                    wordBreak: 'break-word'
+                                }}>
+                                    {rp.title}
+                                </p>
                             </div>
                         </Link>
                     );
@@ -792,6 +852,7 @@ const BlogPostBnInner = () => {
                         <aside className="bpbn-sidebar">
                             <div style={{ position: 'sticky', top: '5rem' }}>
                                 <ConsultBnWidget postTitle={post.title} />
+                                <PopularBnPosts currentSlug={post.slug} />
                                 <RecentBnPosts currentSlug={post.slug} />
                             </div>
                         </aside>

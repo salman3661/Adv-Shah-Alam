@@ -838,7 +838,7 @@ const BlogPostInner = () => {
                         <aside className="bp-sidebar">
                             <div style={{ position: 'sticky', top: '5rem' }}>
                                 <ConsultWidget postTitle={post.title} />
-                                <ChamberPromoCard />
+                                <PopularPosts currentSlug={post.slug} />
                                 <RecentPosts currentSlug={post.slug} />
                             </div>
                         </aside>
