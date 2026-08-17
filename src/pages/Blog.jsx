@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { Search, Clock, ChevronRight, BookOpen, Flame, Award, ShieldCheck, UserCheck, Scale, ArrowUpRight, X } from 'lucide-react';
+import { Search, Clock, ChevronRight, BookOpen, Flame, Award, ShieldCheck, UserCheck, Scale, ArrowUpRight, X, Calendar, Sparkles } from 'lucide-react';
 import seo from '../content/seo.js';
 
 // Load all EN blog posts from JSON files (bundled at build time by Vite)
@@ -29,8 +29,10 @@ const categoryColors = seo.categoryColors;
 const getCatColor = (cat) => categoryColors[cat] || 'var(--accent)';
 
 /* ─── Premium Glassmorphic Blog Card ─── */
-const BlogCardEn = ({ post }) => {
+const BlogCardEn = ({ post, isRecent = false }) => {
     const catColor = getCatColor(post.category);
+    const pubDateFormatted = post.publishedDate ? new Date(post.publishedDate).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }) : null;
+
     return (
         <article
             className="group relative flex flex-col h-full overflow-hidden transition-all duration-300 hover:-translate-y-1.5"
@@ -47,18 +49,28 @@ const BlogCardEn = ({ post }) => {
             <div style={{ height: '3px', background: `linear-gradient(90deg, ${catColor}, var(--accent))` }} />
 
             <div className="p-6 flex flex-col flex-1">
-                {/* Header Meta: Category Badge & Read Time */}
+                {/* Header Meta: Category Badge, Date & Read Time */}
                 <div className="flex items-center justify-between mb-3.5 gap-2 flex-wrap">
-                    <span
-                        className="text-xs font-bold px-3 py-1 rounded-md transition-transform group-hover:scale-105"
-                        style={{
-                            background: catColor + '18',
-                            color: catColor,
-                            letterSpacing: '0.04em',
-                        }}
-                    >
-                        {post.category}
-                    </span>
+                    <div className="flex items-center gap-1.5 flex-wrap">
+                        <span
+                            className="text-xs font-bold px-3 py-1 rounded-md transition-transform group-hover:scale-105"
+                            style={{
+                                background: catColor + '18',
+                                color: catColor,
+                                letterSpacing: '0.04em',
+                            }}
+                        >
+                            {post.category}
+                        </span>
+                        {isRecent && (
+                            <span
+                                className="inline-flex items-center gap-0.5 text-[10px] font-extrabold px-2 py-0.5 rounded-full text-white shadow-sm"
+                                style={{ background: 'linear-gradient(135deg, #10b981, #059669)' }}
+                            >
+                                <Sparkles size={10} /> NEW
+                            </span>
+                        )}
+                    </div>
                     <span
                         className="inline-flex items-center gap-1 text-xs"
                         style={{ color: 'var(--text-muted)' }}
@@ -105,9 +117,16 @@ const BlogCardEn = ({ post }) => {
                             width="28"
                             height="28"
                         />
-                        <span className="text-xs font-semibold" style={{ color: 'var(--text)' }}>
-                            Adv. Md. Shah Alam
-                        </span>
+                        <div className="flex flex-col">
+                            <span className="text-xs font-semibold leading-tight" style={{ color: 'var(--text)' }}>
+                                Adv. Md. Shah Alam
+                            </span>
+                            {pubDateFormatted && (
+                                <span className="text-[11px] leading-tight mt-0.5 flex items-center gap-1" style={{ color: 'var(--text-muted)' }}>
+                                    <Calendar size={10} /> {pubDateFormatted}
+                                </span>
+                            )}
+                        </div>
                     </div>
 
                     <Link
@@ -130,8 +149,14 @@ const BlogCardEn = ({ post }) => {
 const Blog = () => {
     const [activeCategory, setActiveCategory] = useState('All');
     const [searchQuery, setSearchQuery] = useState('');
+    const [sortBy, setSortBy] = useState('recent'); // 'recent' | 'popular'
 
-    const publishedPosts = useMemo(() => blogPosts.filter(isPublished), []);
+    // Sort all published posts by publishedDate descending by default
+    const publishedPosts = useMemo(() => {
+        return [...blogPosts]
+            .filter(isPublished)
+            .sort((a, b) => new Date(b.publishedDate || 0) - new Date(a.publishedDate || 0));
+    }, []);
 
     // Dynamic Spotlight Featured Post
     const featuredPost = useMemo(() => {
@@ -163,8 +188,16 @@ const Blog = () => {
                 (p.keywords && p.keywords.some(k => String(k).toLowerCase().includes(q)))
             );
         }
+
+        // Apply sorting
+        if (sortBy === 'recent') {
+            posts.sort((a, b) => new Date(b.publishedDate || 0) - new Date(a.publishedDate || 0));
+        } else if (sortBy === 'popular') {
+            posts.sort((a, b) => (b.impressions || 0) - (a.impressions || 0));
+        }
+
         return posts;
-    }, [publishedPosts, activeCategory, searchQuery]);
+    }, [publishedPosts, activeCategory, searchQuery, sortBy]);
 
     return (
         <>
@@ -393,8 +426,36 @@ const Blog = () => {
             )}
 
             {/* ════ MAIN ARTICLES GRID ════ */}
-            <section className="py-12 pb-24" style={{ background: 'var(--bg)' }}>
+            <section className="py-10 pb-24" style={{ background: 'var(--bg)' }}>
                 <div className="container mx-auto px-6 max-w-6xl">
+                    {/* ── Sort & Results Control Bar ── */}
+                    <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-8 pb-4 border-b" style={{ borderColor: 'var(--card-border)' }}>
+                        <div className="flex items-center gap-2">
+                            <span className="text-sm md:text-base font-bold" style={{ color: 'var(--text)' }}>
+                                {activeCategory === 'All' ? 'All Legal Guides' : activeCategory}
+                            </span>
+                            <span className="text-xs px-2.5 py-0.5 rounded-full font-bold" style={{ background: 'var(--accent-subtle)', color: 'var(--accent)' }}>
+                                {filtered.length} Articles
+                            </span>
+                        </div>
+
+                        {/* Sort Switcher */}
+                        <div className="flex items-center gap-1.5 p-1 rounded-xl border" style={{ background: 'var(--surface)', borderColor: 'var(--card-border)' }}>
+                            <button
+                                onClick={() => setSortBy('recent')}
+                                className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all ${sortBy === 'recent' ? 'bg-[var(--accent)] text-white shadow-sm' : 'text-[var(--text-secondary)] hover:text-[var(--text)]'}`}
+                            >
+                                <Sparkles size={13} /> 🆕 Newest First
+                            </button>
+                            <button
+                                onClick={() => setSortBy('popular')}
+                                className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all ${sortBy === 'popular' ? 'bg-[var(--accent)] text-white shadow-sm' : 'text-[var(--text-secondary)] hover:text-[var(--text)]'}`}
+                            >
+                                <Flame size={13} /> 🔥 Most Popular
+                            </button>
+                        </div>
+                    </div>
+
                     {filtered.length === 0 ? (
                         <div className="text-center py-20 rounded-2xl border" style={{ background: 'var(--surface)', borderColor: 'var(--card-border)', color: 'var(--text-muted)' }}>
                             <BookOpen size={48} className="mx-auto mb-4 text-[var(--accent)] opacity-50" />
@@ -409,8 +470,8 @@ const Blog = () => {
                         </div>
                     ) : (
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            {filtered.map(post => (
-                                <BlogCardEn key={post.slug} post={post} />
+                            {filtered.map((post, idx) => (
+                                <BlogCardEn key={post.slug} post={post} isRecent={sortBy === 'recent' ? idx < 12 : false} />
                             ))}
                         </div>
                     )}

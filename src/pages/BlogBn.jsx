@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { Search, Clock, ChevronRight, BookOpen, Flame, Award, ShieldCheck, UserCheck, Scale, ArrowUpRight, X, TrendingUp } from 'lucide-react';
+import { Search, Clock, ChevronRight, BookOpen, Flame, Award, ShieldCheck, UserCheck, Scale, ArrowUpRight, X, TrendingUp, Calendar, Sparkles } from 'lucide-react';
 
 // Load all BN blog posts from JSON files (bundled at build time by Vite)
 const _bnModules = import.meta.glob('../content/posts/bn/*.json', { eager: true });
@@ -64,8 +64,10 @@ const categoryColors = {
 const getCatColor = (cat) => categoryColors[cat] || 'var(--accent)';
 
 /* ─── Premium Glassmorphic Blog Card ─── */
-const BlogCardBn = ({ post }) => {
+const BlogCardBn = ({ post, isRecent = false }) => {
     const catColor = getCatColor(post.category);
+    const pubDateFormatted = post.publishedDate ? new Date(post.publishedDate).toLocaleDateString('bn-BD', { day: 'numeric', month: 'short', year: 'numeric' }) : null;
+
     return (
         <article
             className="group relative flex flex-col h-full overflow-hidden transition-all duration-300 hover:-translate-y-1.5"
@@ -82,18 +84,28 @@ const BlogCardBn = ({ post }) => {
             <div style={{ height: '3px', background: `linear-gradient(90deg, ${catColor}, var(--accent))` }} />
 
             <div className="p-6 flex flex-col flex-1">
-                {/* Header Meta: Category Badge & Read Time */}
+                {/* Header Meta: Category Badge, Date & Read Time */}
                 <div className="flex items-center justify-between mb-3.5 gap-2 flex-wrap">
-                    <span
-                        className="text-xs font-bold px-3 py-1 rounded-md transition-transform group-hover:scale-105"
-                        style={{
-                            background: catColor + '18',
-                            color: catColor,
-                            fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif"
-                        }}
-                    >
-                        {post.category}
-                    </span>
+                    <div className="flex items-center gap-1.5 flex-wrap">
+                        <span
+                            className="text-xs font-bold px-3 py-1 rounded-md transition-transform group-hover:scale-105"
+                            style={{
+                                background: catColor + '18',
+                                color: catColor,
+                                fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif"
+                            }}
+                        >
+                            {post.category}
+                        </span>
+                        {isRecent && (
+                            <span
+                                className="inline-flex items-center gap-0.5 text-[10px] font-extrabold px-2 py-0.5 rounded-full text-white shadow-sm"
+                                style={{ background: 'linear-gradient(135deg, #10b981, #059669)', fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif" }}
+                            >
+                                <Sparkles size={10} /> নতুন
+                            </span>
+                        )}
+                    </div>
                     <span
                         className="inline-flex items-center gap-1 text-xs"
                         style={{ color: 'var(--text-muted)', fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif" }}
@@ -141,9 +153,16 @@ const BlogCardBn = ({ post }) => {
                             width="28"
                             height="28"
                         />
-                        <span className="text-xs font-semibold" style={{ color: 'var(--text)', fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif" }}>
-                            অ্যাডভোকেট মো. শাহ আলম
-                        </span>
+                        <div className="flex flex-col">
+                            <span className="text-xs font-semibold leading-tight" style={{ color: 'var(--text)', fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif" }}>
+                                অ্যাডভোকেট মো. শাহ আলম
+                            </span>
+                            {pubDateFormatted && (
+                                <span className="text-[11px] leading-tight mt-0.5 flex items-center gap-1" style={{ color: 'var(--text-muted)', fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif" }}>
+                                    <Calendar size={10} /> {pubDateFormatted}
+                                </span>
+                            )}
+                        </div>
                     </div>
 
                     <Link
@@ -167,8 +186,19 @@ const BlogCardBn = ({ post }) => {
 const BlogBn = () => {
     const [activeCategory, setActiveCategory] = useState('সব');
     const [searchQuery, setSearchQuery] = useState('');
+    const [sortBy, setSortBy] = useState('recent'); // 'recent' | 'popular'
 
-    const allPublished = useMemo(() => postsBn.filter(isPublishedBn), []);
+    // Sort all published posts by publishedDate descending by default
+    const allPublished = useMemo(() => {
+        return [...postsBn]
+            .filter(isPublishedBn)
+            .sort((a, b) => new Date(b.publishedDate || 0) - new Date(a.publishedDate || 0));
+    }, []);
+
+    // Get 4 most recent posts for top showcase
+    const latestShowcase = useMemo(() => {
+        return allPublished.slice(0, 4);
+    }, [allPublished]);
 
     // Search Console Analytics Dynamic Spotlight Selection
     const featuredPost = useMemo(() => {
@@ -190,7 +220,7 @@ const BlogBn = () => {
         return counts;
     }, [allPublished]);
 
-    // Intelligent Deep Search Filtering Algorithm
+    // Intelligent Deep Search Filtering & Sorting Algorithm
     const filtered = useMemo(() => {
         let posts = [...allPublished];
 
@@ -199,45 +229,53 @@ const BlogBn = () => {
         }
 
         const rawQuery = searchQuery.trim();
-        if (!rawQuery) return posts;
+        if (rawQuery) {
+            const normalizedQ = normalizeBnText(rawQuery);
+            const queryTokens = normalizedQ.split(/\s+/).filter(Boolean);
 
-        const normalizedQ = normalizeBnText(rawQuery);
-        const queryTokens = normalizedQ.split(/\s+/).filter(Boolean);
+            let mappedTerms = [normalizedQ];
+            Object.keys(SYNONYMS).forEach(synKey => {
+                if (normalizedQ.includes(synKey) || synKey.includes(normalizedQ)) {
+                    mappedTerms.push(...SYNONYMS[synKey].map(normalizeBnText));
+                }
+            });
 
-        // Check if query maps to any synonym terms
-        let mappedTerms = [normalizedQ];
-        Object.keys(SYNONYMS).forEach(synKey => {
-            if (normalizedQ.includes(synKey) || synKey.includes(normalizedQ)) {
-                mappedTerms.push(...SYNONYMS[synKey].map(normalizeBnText));
-            }
-        });
+            posts = posts.filter(post => {
+                const titleNorm = normalizeBnText(post.title);
+                const metaTitleNorm = normalizeBnText(post.metaTitle);
+                const metaDescNorm = normalizeBnText(post.metaDescription);
+                const heroNorm = normalizeBnText(post.heroIntro);
+                const slugNorm = normalizeBnText(post.slug);
+                const categoryNorm = normalizeBnText(post.category);
+                const keywordsNorm = (post.keywords || []).map(normalizeBnText).join(' ');
 
-        return posts.filter(post => {
-            const titleNorm = normalizeBnText(post.title);
-            const metaTitleNorm = normalizeBnText(post.metaTitle);
-            const metaDescNorm = normalizeBnText(post.metaDescription);
-            const heroNorm = normalizeBnText(post.heroIntro);
-            const slugNorm = normalizeBnText(post.slug);
-            const categoryNorm = normalizeBnText(post.category);
-            const keywordsNorm = (post.keywords || []).map(normalizeBnText).join(' ');
+                const sectionsNorm = (post.sections || [])
+                    .map(s => normalizeBnText(s.heading) + ' ' + normalizeBnText(s.content))
+                    .join(' ');
 
-            const sectionsNorm = (post.sections || [])
-                .map(s => normalizeBnText(s.heading) + ' ' + normalizeBnText(s.content))
-                .join(' ');
+                const faqsNorm = (post.faqs || [])
+                    .map(f => normalizeBnText(f.question) + ' ' + normalizeBnText(f.answer))
+                    .join(' ');
 
-            const faqsNorm = (post.faqs || [])
-                .map(f => normalizeBnText(f.question) + ' ' + normalizeBnText(f.answer))
-                .join(' ');
+                const corpus = `${titleNorm} ${metaTitleNorm} ${metaDescNorm} ${heroNorm} ${slugNorm} ${categoryNorm} ${keywordsNorm} ${sectionsNorm} ${faqsNorm}`;
 
-            const corpus = `${titleNorm} ${metaTitleNorm} ${metaDescNorm} ${heroNorm} ${slugNorm} ${categoryNorm} ${keywordsNorm} ${sectionsNorm} ${faqsNorm}`;
+                if (corpus.includes(normalizedQ)) return true;
+                if (mappedTerms.some(term => corpus.includes(term))) return true;
+                if (queryTokens.length > 1 && queryTokens.every(token => corpus.includes(token))) return true;
 
-            if (corpus.includes(normalizedQ)) return true;
-            if (mappedTerms.some(term => corpus.includes(term))) return true;
-            if (queryTokens.length > 1 && queryTokens.every(token => corpus.includes(token))) return true;
+                return false;
+            });
+        }
 
-            return false;
-        });
-    }, [allPublished, activeCategory, searchQuery]);
+        // Apply sorting
+        if (sortBy === 'recent') {
+            posts.sort((a, b) => new Date(b.publishedDate || 0) - new Date(a.publishedDate || 0));
+        } else if (sortBy === 'popular') {
+            posts.sort((a, b) => (b.impressions || 0) - (a.impressions || 0));
+        }
+
+        return posts;
+    }, [allPublished, activeCategory, searchQuery, sortBy]);
 
     return (
         <>
@@ -473,8 +511,38 @@ const BlogBn = () => {
             )}
 
             {/* ════ MAIN ARTICLES GRID ════ */}
-            <section className="py-12 pb-24" style={{ background: 'var(--bg)' }}>
+            <section className="py-10 pb-24" style={{ background: 'var(--bg)' }}>
                 <div className="container mx-auto px-6 max-w-6xl">
+                    {/* ── Sort & Results Control Bar ── */}
+                    <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-8 pb-4 border-b" style={{ borderColor: 'var(--card-border)' }}>
+                        <div className="flex items-center gap-2">
+                            <span className="text-sm md:text-base font-bold" style={{ color: 'var(--text)', fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif" }}>
+                                {activeCategory === 'সব' ? 'সকল আইনি নির্দেশিকা' : activeCategory}
+                            </span>
+                            <span className="text-xs px-2.5 py-0.5 rounded-full font-bold" style={{ background: 'var(--accent-subtle)', color: 'var(--accent)', fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif" }}>
+                                {filtered.length} টি আর্টিকেল
+                            </span>
+                        </div>
+
+                        {/* Sort Switcher */}
+                        <div className="flex items-center gap-1.5 p-1 rounded-xl border" style={{ background: 'var(--surface)', borderColor: 'var(--card-border)' }}>
+                            <button
+                                onClick={() => setSortBy('recent')}
+                                className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all ${sortBy === 'recent' ? 'bg-[var(--accent)] text-white shadow-sm' : 'text-[var(--text-secondary)] hover:text-[var(--text)]'}`}
+                                style={{ fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif" }}
+                            >
+                                <Sparkles size={13} /> 🆕 সর্বশেষ প্রকাশিত (Newest)
+                            </button>
+                            <button
+                                onClick={() => setSortBy('popular')}
+                                className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all ${sortBy === 'popular' ? 'bg-[var(--accent)] text-white shadow-sm' : 'text-[var(--text-secondary)] hover:text-[var(--text)]'}`}
+                                style={{ fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif" }}
+                            >
+                                <Flame size={13} /> 🔥 সর্বাধিক পঠিত (Popular)
+                            </button>
+                        </div>
+                    </div>
+
                     {filtered.length === 0 ? (
                         <div className="text-center py-20 rounded-2xl border" style={{ background: 'var(--surface)', borderColor: 'var(--card-border)', color: 'var(--text-muted)' }}>
                             <BookOpen size={48} className="mx-auto mb-4 text-[var(--accent)] opacity-50" />
@@ -490,8 +558,8 @@ const BlogBn = () => {
                         </div>
                     ) : (
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            {filtered.map(post => (
-                                <BlogCardBn key={post.slug} post={post} />
+                            {filtered.map((post, idx) => (
+                                <BlogCardBn key={post.slug} post={post} isRecent={sortBy === 'recent' ? idx < 12 : false} />
                             ))}
                         </div>
                     )}
