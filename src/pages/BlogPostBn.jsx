@@ -160,29 +160,81 @@ const PopularBnPosts = ({ currentSlug }) => {
     );
 };
 
-/* ─── Sidebar: Recent BN Posts ─── */
+/* ─── Sidebar: Recent BN Posts (Fresh & Dynamic) ─── */
 const RecentBnPosts = ({ currentSlug }) => {
     const recent = [...allBnPosts]
         .filter(p => p.slug !== currentSlug && p.publishedDate)
         .sort((a, b) => new Date(b.publishedDate) - new Date(a.publishedDate))
-        .slice(0, 6);
+        .slice(0, 8);
     if (recent.length === 0) return null;
     return (
-        <SbCard>
-            <SbHeader icon={Newspaper} label="সাম্প্রতিক নিবন্ধ" color="#60a5fa" />
-            <div style={{ padding: '0.5rem 0.75rem 0.75rem' }}>
-                {recent.map(rp => {
+        <SbCard accentColor="var(--accent)">
+            <SbHeader icon={Newspaper} label="নতুন প্রকাশিত পোস্ট" color="var(--accent)" />
+            <div style={{ padding: '0.625rem 0.875rem 0.875rem' }}>
+                {recent.map((rp, idx) => {
                     const cc = catColor(rp.category);
                     return (
                         <Link key={rp.slug} to={`/bn/blog/${rp.slug}`}
-                            style={{ display: 'flex', alignItems: 'flex-start', gap: '0.625rem', padding: '0.5rem 0.5rem', borderRadius: '0.625rem', textDecoration: 'none', transition: 'all 0.2s', marginBottom: '0.125rem', border: '1px solid transparent' }}
-                            onMouseEnter={e => { e.currentTarget.style.background = 'rgba(96,165,250,0.06)'; e.currentTarget.style.borderColor = 'rgba(96,165,250,0.14)'; e.currentTarget.style.transform = 'translateX(3px)'; }}
-                            onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.borderColor = 'transparent'; e.currentTarget.style.transform = 'translateX(0)'; }}>
-                            <div style={{ flexShrink: 0, width: '3px', alignSelf: 'stretch', borderRadius: '2px', background: cc.bg, minHeight: '36px', opacity: 0.9 }} />
+                            style={{
+                                display: 'flex',
+                                alignItems: 'flex-start',
+                                gap: '0.75rem',
+                                padding: '0.65rem 0.5rem',
+                                borderRadius: '0.625rem',
+                                textDecoration: 'none',
+                                transition: 'all 0.2s cubic-bezier(0.16, 1, 0.3, 1)',
+                                marginBottom: '0.25rem',
+                                borderBottom: idx !== recent.length - 1 ? '1px solid rgba(255,255,255,0.05)' : 'none',
+                                background: 'transparent'
+                            }}
+                            onMouseEnter={e => {
+                                e.currentTarget.style.background = 'rgba(198,167,94,0.07)';
+                                e.currentTarget.style.transform = 'translateX(4px)';
+                            }}
+                            onMouseLeave={e => {
+                                e.currentTarget.style.background = 'transparent';
+                                e.currentTarget.style.transform = 'translateX(0)';
+                            }}>
+                            <div style={{
+                                flexShrink: 0,
+                                width: '4px',
+                                minHeight: '38px',
+                                alignSelf: 'stretch',
+                                borderRadius: '3px',
+                                background: cc.bg,
+                                marginTop: '2px'
+                            }} />
                             <div style={{ flex: 1, minWidth: 0 }}>
-                                <span style={{ display: 'inline-block', fontSize: '0.58rem', fontWeight: 700, padding: '1px 5px', borderRadius: '3px', marginBottom: '0.2rem', background: cc.bg + 'cc', color: cc.text, textTransform: 'uppercase' }}>{rp.category}</span>
-                                <p style={{ fontSize: '0.8rem', fontWeight: 600, color: 'var(--text)', lineHeight: 1.45, margin: 0, fontFamily: "'SolaimanLipi', 'Noto Sans Bengali', sans-serif" }}>{rp.title}</p>
-                                <span style={{ display: 'flex', alignItems: 'center', gap: '0.2rem', fontSize: '0.68rem', color: 'var(--text-muted)', marginTop: '0.2rem' }}><Calendar size={9} />{rp.publishedDate ? new Date(rp.publishedDate).toLocaleDateString('bn-BD', { day: 'numeric', month: 'short', year: 'numeric' }) : ''}</span>
+                                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                                    <span style={{
+                                        display: 'inline-block',
+                                        fontSize: '0.6rem',
+                                        fontWeight: 700,
+                                        padding: '1px 6px',
+                                        borderRadius: '4px',
+                                        background: `${cc.bg}22`,
+                                        color: cc.bg,
+                                        border: `1px solid ${cc.bg}40`,
+                                        textTransform: 'uppercase'
+                                    }}>
+                                        {rp.category}
+                                    </span>
+                                    <span style={{ fontSize: '0.68rem', color: 'var(--text-muted)', display: 'flex', alignItems: 'center', gap: '0.2rem' }}>
+                                        <Calendar size={9} />
+                                        {rp.publishedDate ? new Date(rp.publishedDate).toLocaleDateString('bn-BD', { day: 'numeric', month: 'short' }) : ''}
+                                    </span>
+                                </div>
+                                <p style={{
+                                    fontSize: '0.84rem',
+                                    fontWeight: 600,
+                                    color: 'var(--text)',
+                                    lineHeight: 1.45,
+                                    margin: 0,
+                                    fontFamily: "'Hind Siliguri', 'SolaimanLipi', sans-serif",
+                                    wordBreak: 'break-word'
+                                }}>
+                                    {rp.title}
+                                </p>
                             </div>
                         </Link>
                     );
@@ -740,9 +792,7 @@ const BlogPostBnInner = () => {
                         <aside className="bpbn-sidebar">
                             <div style={{ position: 'sticky', top: '5rem' }}>
                                 <ConsultBnWidget postTitle={post.title} />
-                                <PopularBnPosts currentSlug={post.slug} />
                                 <RecentBnPosts currentSlug={post.slug} />
-                                <RelatedBnByCategory category={post.category} currentSlug={post.slug} />
                             </div>
                         </aside>
                     </div>
