@@ -19,12 +19,12 @@
     },
     {
       "source": "/blog/inheritance-law-bangladesh",
-      "destination": "/blog/inheritance-law-bangladesh-legal-guide",
+      "destination": "/blog/property-inheritance-distribution-bangladesh-2026",
       "statusCode": 301
     },
     {
       "source": "/blog/divorce-process-bangladesh",
-      "destination": "/blog/divorce-procedure-bangladesh",
+      "destination": "/blog/how-to-file-divorce-court-bangladesh-2026",
       "statusCode": 301
     },
     {
@@ -52,7 +52,6 @@
       "destination": "/bn/blog",
       "statusCode": 301
     },
-
     {
       "source": "/bn/advocate-md-shah-alam",
       "destination": "/advocate-md-shah-alam",
@@ -80,27 +79,27 @@
     },
     {
       "source": "/blog/divorce-process-bangladesh-complete-guide",
-      "destination": "/blog/divorce-procedure-bangladesh",
+      "destination": "/blog/how-to-file-divorce-court-bangladesh-2026",
       "statusCode": 301
     },
     {
       "source": "/blog/how-to-file-divorce-petition-bangladesh",
-      "destination": "/blog/divorce-procedure-bangladesh",
+      "destination": "/blog/how-to-file-divorce-court-bangladesh-2026",
       "statusCode": 301
     },
     {
       "source": "/blog/divorce-from-court-bangladesh-muslim-law",
-      "destination": "/blog/divorce-procedure-bangladesh",
+      "destination": "/blog/how-to-file-divorce-court-bangladesh-2026",
       "statusCode": 301
     },
     {
       "source": "/blog/divorce-process-bangladesh-2026",
-      "destination": "/blog/divorce-procedure-bangladesh",
+      "destination": "/blog/how-to-file-divorce-court-bangladesh-2026",
       "statusCode": 301
     },
     {
       "source": "/blog/how-to-file-divorce-bangladesh",
-      "destination": "/blog/divorce-procedure-bangladesh",
+      "destination": "/blog/how-to-file-divorce-court-bangladesh-2026",
       "statusCode": 301
     },
     {
@@ -329,11 +328,6 @@
       "statusCode": 301
     },
     {
-      "source": "/blog/domestic-violence-law-bangladesh",
-      "destination": "/blog/domestic-violence-law-bangladesh",
-      "statusCode": 301
-    },
-    {
       "source": "/blog/kabinnama-mahr-maintenance-family-court-bangladesh",
       "destination": "/blog/wife-rights-after-divorce-bangladesh",
       "statusCode": 301
@@ -359,13 +353,19 @@
       "statusCode": 301
     },
     {
-      "source": "/blog/inherit­ance-law-bangladesh-legal-guide",
+      "source": "/blog/inheritance-law-bangladesh-legal-guide",
       "destination": "/blog/property-inheritance-distribution-bangladesh-2026",
       "statusCode": 301
     },
     {
       "source": "/blog",
-      "has": [{"type": "query", "key": "q", "value": "%7Bsearch_term_string%7D"}],
+      "has": [
+        {
+          "type": "query",
+          "key": "q",
+          "value": "%7Bsearch_term_string%7D"
+        }
+      ],
       "destination": "/blog",
       "statusCode": 301
     },

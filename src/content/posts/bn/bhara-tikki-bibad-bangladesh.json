@@ -26,7 +26,7 @@
     },
     {
       "h2": "বাড়িওয়ালার অধিকার ও উচ্ছেদ",
-      "content": "<p>ভাড়া না পেলে বা চুক্তি ভঙ্গ হলে দেওয়ানি আদালত বা ভাড়া নিয়ন্ত্রকের মাধ্যমে আইনি উচ্ছেদ (Eviction) সম্ভব। তবে জোর করে তালা দেওয়া বেআইনি। এসব ক্ষেত্রে একজন <a href=\"/bn/services/criminal-lawyer\" style=\"color:var(--accent)\">দেওয়ানি আইনজীবীর</a> পরামর্শ নেওয়া উচিত।</p><p style=\"margin-top:1.25rem;padding:1rem 1.25rem;background:rgba(198,167,94,0.08);border-left:4px solid var(--accent);border-radius:0.5rem;font-size:0.92rem;line-height:1.6;\">⚖️ <strong>বিশেষজ্ঞ আইনি পরামর্শের জন্য যোগাযোগ:</strong> আপনার আইনি বিষযটি নিয়ে সুপ্রিম কোর্টের অভিজ্ঞ আইনজীবী <a href=\"/advocate-md-shah-alam\" style=\"color:var(--accent);font-weight:700;\">অ্যাডভোকেট মো. শাহ আলম</a>-এর সাথে সরাসরি কথা বলুন বা আমাদের <a href=\"/services/supreme-court-lawyer\" style=\"color:var(--accent);font-weight:700;\">বিশেষজ্ঞ আইনি সেবা</a> গ্রহণ করুন। যেকোনো প্রয়োজনে সরাসরি <a href=\"/contact\" style=\"color:var(--accent);font-weight:700;\">যোগাযোগ পেজে ক্লিক করুন</a>।</p>"
+      "content": "<p>ভাড়া না পেলে বা চুক্তি ভঙ্গ হলে দেওয়ানি আদালত বা ভাড়া নিয়ন্ত্রকের মাধ্যমে আইনি উচ্ছেদ (Eviction) সম্ভব। তবে জোর করে তালা দেওয়া বেআইনি। এসব ক্ষেত্রে একজন <a href=\"/services/criminal-lawyer\" style=\"color:var(--accent)\">দেওয়ানি আইনজীবীর</a> পরামর্শ নেওয়া উচিত।</p><p style=\"margin-top:1.25rem;padding:1rem 1.25rem;background:rgba(198,167,94,0.08);border-left:4px solid var(--accent);border-radius:0.5rem;font-size:0.92rem;line-height:1.6;\">⚖️ <strong>বিশেষজ্ঞ আইনি পরামর্শের জন্য যোগাযোগ:</strong> আপনার আইনি বিষযটি নিয়ে সুপ্রিম কোর্টের অভিজ্ঞ আইনজীবী <a href=\"/advocate-md-shah-alam\" style=\"color:var(--accent);font-weight:700;\">অ্যাডভোকেট মো. শাহ আলম</a>-এর সাথে সরাসরি কথা বলুন বা আমাদের <a href=\"/services/supreme-court-lawyer\" style=\"color:var(--accent);font-weight:700;\">বিশেষজ্ঞ আইনি সেবা</a> গ্রহণ করুন। যেকোনো প্রয়োজনে সরাসরি <a href=\"/contact\" style=\"color:var(--accent);font-weight:700;\">যোগাযোগ পেজে ক্লিক করুন</a>।</p>"
     }
   ],
   "faqs": [
@@ -38,11 +38,11 @@
   "relatedServiceLinks": [
     {
       "text": "ভূমি বিষয়ক আইনজীবী",
-      "to": "/bn/services/land-lawyer"
+      "to": "/services/land-lawyer"
     },
     {
       "text": "ফৌজদারি ও সিভিল আইনজীবী",
-      "to": "/bn/services/criminal-lawyer"
+      "to": "/services/criminal-lawyer"
     }
   ],
   "lang": "bn",

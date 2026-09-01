@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { motion } from 'framer-motion';
 import { Shield, Eye, EyeOff, Lock, AlertCircle } from 'lucide-react';
+
 import { adminApi } from '../../lib/admin/api';
 import { auth } from '../../lib/admin/auth';
 

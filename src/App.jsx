@@ -68,10 +68,10 @@ function App() {
                     <Routes>
                       <Route path="/" element={<Home lang="bn" />} />
                       <Route path="/en" element={<Home lang="en" />} />
-                      <Route path="/bn" element={<Navigate to="/" replace />} />
                       <Route path="/education" element={<Education />} />
                       <Route path="/advocate-md-shah-alam" element={<AdvocatePage />} />
 
+                      {/* Services */}
                       <Route path="/services/criminal-lawyer" element={<CriminalLawyer />} />
                       <Route path="/services/divorce-lawyer" element={<DivorceLawyer />} />
                       <Route path="/services/land-lawyer" element={<LandLawyer />} />
@@ -80,24 +80,17 @@ function App() {
                       <Route path="/services/tax-lawyer" element={<TaxLawyer />} />
                       <Route path="/services/company-corporate-lawyer" element={<CompanyCorporateLawyer />} />
 
+                      {/* Blog */}
                       <Route path="/blog" element={<Blog />} />
                       <Route path="/blog/:slug" element={<BlogPost />} />
 
                       <Route path="/bn/blog" element={<BlogBn />} />
                       <Route path="/bn/blog/:slug" element={<BlogPostBn />} />
 
-                      <Route path="/bn/services/criminal-lawyer" element={<Navigate to="/services/criminal-lawyer" replace />} />
-                      <Route path="/bn/services/divorce-lawyer" element={<Navigate to="/services/divorce-lawyer" replace />} />
-                      <Route path="/bn/services/land-lawyer" element={<Navigate to="/services/land-lawyer" replace />} />
-                      <Route path="/bn/services/bail-lawyer" element={<Navigate to="/services/bail-lawyer" replace />} />
-                      <Route path="/bn/services/supreme-court-lawyer" element={<Navigate to="/services/supreme-court-lawyer" replace />} />
-                      <Route path="/bn/services/tax-lawyer" element={<Navigate to="/services/tax-lawyer" replace />} />
-                      <Route path="/bn/services/company-corporate-lawyer" element={<Navigate to="/services/company-corporate-lawyer" replace />} />
-                      <Route path="/bn/advocate-md-shah-alam" element={<Navigate to="/advocate-md-shah-alam" replace />} />
-
-                      {/* Contact page — standalone, required by AdSense */}
+                      {/* Contact page — standalone */}
                       <Route path="/contact" element={<ContactPage />} />
                       <Route path="/bn/contact" element={<ContactPage lang="bn" />} />
+
 
                       {/* Legal pages (AdSense compliance) */}
                       <Route path="/privacy-policy" element={<PrivacyPolicy />} />

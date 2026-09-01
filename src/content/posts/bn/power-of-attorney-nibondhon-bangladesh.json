@@ -60,11 +60,11 @@
   "relatedServiceLinks": [
     {
       "text": "দেওয়ানি আইনজীবী ঢাকা",
-      "to": "/bn/services/civil-lawyer"
+      "to": "/services/land-lawyer"
     },
     {
       "text": "ভূমি ও সম্পত্তি আইনজীবী",
-      "to": "/bn/services/land-lawyer"
+      "to": "/services/land-lawyer"
     }
   ],
   "lang": "bn",

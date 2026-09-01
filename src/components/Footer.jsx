@@ -1,13 +1,14 @@
 import React from 'react';
-import { Facebook, MessageCircle, Phone, Sun, Moon, MapPin, Mail } from 'lucide-react';
+import { Facebook, MessageCircle, Phone, MapPin, Mail } from 'lucide-react';
 import { CALL_DISPLAY, telLink, waLink } from '../data/contactInfo';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
 import siteInfo from '../content/siteInfo.json';
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
     const { theme, toggleTheme } = useTheme();
+    const location = useLocation();
 
     const scrollTo = (e, id) => {
         e.preventDefault();
@@ -20,6 +21,7 @@ const Footer = () => {
                  !location.pathname.startsWith('/contact') &&
                  !location.pathname.startsWith('/privacy-policy') &&
                  !location.pathname.startsWith('/terms');
+
 
     const serviceLinks = siteInfo.footerServiceLinks.map(link => {
         let name = link.name;

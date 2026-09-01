@@ -44,7 +44,7 @@
     },
     {
       "h2": "Bail Rights Under the Digital Security/Cyber Security Act",
-      "content": "<p>One of the most important immediate steps after arrest is securing bail. The bail position under the CSA depends on the specific section you are charged under:</p>\n<ul>\n<li><strong>Bailable Offences:</strong> For bailable CSA offences, bail is a right. You or your lawyer can apply for bail at the police station or before the Magistrate. The police/Magistrate must grant bail if the offence is bailable.</li>\n<li><strong>Non-Bailable Offences:</strong> For non-bailable offences, bail is discretionary. Apply to the Cyber Tribunal (or the Sessions Judge acting as Tribunal Judge). Factors considered include the nature of the offence, the accused's background, and the risk of flight or tampering with evidence.</li>\n<li><strong>High Court Bail:</strong> If the Tribunal refuses bail, the accused can approach the <a href=\"/services/bail-lawyer\" style=\"color:var(--accent)\">High Court Division</a> under Section 498 CrPC for bail. The High Court has broad discretion and has granted bail in many CSA cases where the Tribunal was reluctant.</li>\n<li><strong>Anticipatory Bail:</strong> If you apprehend arrest under the CSA before being arrested, you can apply for anticipatory bail before the Sessions Court or High Court Division — see our <a href=\"/blog/anticipatory-bail-high-court-bangladesh\" style=\"color:var(--accent)\">High Court anticipatory bail guide</a>.</li>\n</ul>\n<p>Given the complexity of bail proceedings in cyber cases, engaging an experienced <a href=\"/services/bail-lawyer\" style=\"color:var(--accent)\">bail lawyer in Bangladesh</a> immediately upon arrest is the most important step you can take.</p>"
+      "content": "<p>One of the most important immediate steps after arrest is securing bail. The bail position under the CSA depends on the specific section you are charged under:</p>\n<ul>\n<li><strong>Bailable Offences:</strong> For bailable CSA offences, bail is a right. You or your lawyer can apply for bail at the police station or before the Magistrate. The police/Magistrate must grant bail if the offence is bailable.</li>\n<li><strong>Non-Bailable Offences:</strong> For non-bailable offences, bail is discretionary. Apply to the Cyber Tribunal (or the Sessions Judge acting as Tribunal Judge). Factors considered include the nature of the offence, the accused's background, and the risk of flight or tampering with evidence.</li>\n<li><strong>High Court Bail:</strong> If the Tribunal refuses bail, the accused can approach the <a href=\"/services/bail-lawyer\" style=\"color:var(--accent)\">High Court Division</a> under Section 498 CrPC for bail. The High Court has broad discretion and has granted bail in many CSA cases where the Tribunal was reluctant.</li>\n<li><strong>Anticipatory Bail:</strong> If you apprehend arrest under the CSA before being arrested, you can apply for anticipatory bail before the Sessions Court or High Court Division — see our <a href=\"/blog/anticipatory-bail-bangladesh\" style=\"color:var(--accent)\">High Court anticipatory bail guide</a>.</li>\n</ul>\n<p>Given the complexity of bail proceedings in cyber cases, engaging an experienced <a href=\"/services/bail-lawyer\" style=\"color:var(--accent)\">bail lawyer in Bangladesh</a> immediately upon arrest is the most important step you can take.</p>"
     },
     {
       "h2": "Challenging Digital Evidence in Court",
@@ -91,9 +91,9 @@
     {"text": "Supreme Court Lawyer Bangladesh", "to": "/services/supreme-court-lawyer"}
   ],
   "relatedPosts": [
-    {"text": "Cybercrime Laws Bangladesh 2026", "to": "/blog/cybercrime-laws-bangladesh-2026"},
-    {"text": "DSA Rights and Defences in Bangladesh Courts", "to": "/blog/digital-security-act-rights-defences-bangladesh"},
-    {"text": "Anticipatory Bail from High Court Bangladesh", "to": "/blog/anticipatory-bail-high-court-bangladesh"}
+    {"text": "Cybercrime Laws Bangladesh 2026", "to": "/blog/cyber-crime-digital-security-act-bangladesh"},
+    {"text": "DSA Rights and Defences in Bangladesh Courts", "to": "/blog/cyber-crime-digital-security-act-bangladesh"},
+    {"text": "Anticipatory Bail from High Court Bangladesh", "to": "/blog/anticipatory-bail-bangladesh"}
   ],
   "isDraft": false,
   "lang": "en"

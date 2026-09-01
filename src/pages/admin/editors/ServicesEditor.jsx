@@ -18,7 +18,7 @@ function ServiceCard({ item, index, total, onChange, onRemove, onMove }) {
     onChange({ ...item, [key]: value });
   }
 
-  const selectedPreset = COLOR_PRESETS.find((p) => p.color === item.iconColor) || null;
+
 
   return (
     <div style={{

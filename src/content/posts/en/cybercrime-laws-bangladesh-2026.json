@@ -91,9 +91,9 @@
     {"text": "Company & Corporate Lawyer", "to": "/services/company-corporate-lawyer"}
   ],
   "relatedPosts": [
-    {"text": "Digital Security Act Bangladesh – Legal Rights and Defences", "to": "/blog/digital-security-act-bangladesh-legal-rights"},
-    {"text": "DSA Rights and Defences in Bangladesh Courts", "to": "/blog/digital-security-act-rights-defences-bangladesh"},
-    {"text": "Anticipatory Bail from High Court Bangladesh", "to": "/blog/anticipatory-bail-high-court-bangladesh"}
+    {"text": "Digital Security Act Bangladesh – Legal Rights and Defences", "to": "/blog/cyber-crime-digital-security-act-bangladesh"},
+    {"text": "DSA Rights and Defences in Bangladesh Courts", "to": "/blog/cyber-crime-digital-security-act-bangladesh"},
+    {"text": "Anticipatory Bail from High Court Bangladesh", "to": "/blog/anticipatory-bail-bangladesh"}
   ],
   "isDraft": false,
   "lang": "en"

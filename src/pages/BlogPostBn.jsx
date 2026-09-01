@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import {
     ArrowLeft, Clock, ChevronDown, ChevronUp, Phone, MessageCircle,
@@ -15,19 +15,20 @@ const allBnPosts = Object.values(_bnModules)
     .map(m => m.default ?? m)
     .filter(p => p && p.slug);
 
-/* ── "Most Popular" BN slugs ── */
+/* ── "Most Popular" BN slugs — curated from top verified posts ── */
 const POPULAR_BN_SLUGS = [
-    'jomi-nondoner-ain-bangladesh-bn',
-    'rs-survey-bangladesh-bn',
-    'talak-procedure-bangladesh-bn',
-    'child-custody-bangladesh-bn',
-    'yautuk-dowry-ain-bangladesh-bn',
-    'family-court-bangladesh-bn',
-    'land-mutation-porcha-bangladesh-bn',
-    'anticipatory-bail-bangladesh-bn',
-    'divorce-notice-bangladesh-bn',
-    'wrongful-termination-labour-law-bangladesh-bn',
+    'jomi-nibandhon-fee-2026-bn',
+    'sampatti-uttoradhikar-ain-2026-bn',
+    'mayer-sampatti-vibhajan-ain-bangladesh-2026',
+    'e-namjari-tracking-mutation-check-prokriya-bangladesh-2026',
+    'court-marriage-khoroch-niyom-papers-bangladesh-2026',
+    'jomi-registry-khoroch-sarkaree-fee-bd',
+    'cyber-crime-helpline-online-complaint-bangladesh',
+    'batwara-mamla-court-fee-prokriya-bd',
+    'court-marriage-kagojpatra-complete-guide-2026',
+    'heba-bil-ewaz-dalil-batil-niyom-bangladesh',
 ];
+
 
 /* Category color map */
 const CAT_COLOR = {
@@ -352,7 +353,7 @@ const ChamberBnPromoCard = () => (
                 <p style={{ fontSize: '0.63rem', color: 'rgba(255,255,255,0.55)', margin: '2px 0 0', lineHeight: 1.3, fontFamily: "'SolaimanLipi', 'Noto Sans Bengali', sans-serif" }}>বাংলাদেশ সুপ্রিম কোর্টের আইনজীবি</p>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '4px', marginTop: '4px' }}>
                     {['★','★','★','★','★'].map((s,i) => <span key={i} style={{ fontSize: '0.6rem', color: '#f59e0b' }}>{s}</span>)}
-                    <span style={{ fontSize: '0.58rem', color: 'rgba(255,255,255,0.4)', marginLeft: '2px' }}>5.0</span>
+                    <span style={{ fontSize: '0.58rem', color: 'rgba(255,255,255,0.4)', marginLeft: '2px' }}>4.9</span>
                 </div>
             </div>
         </div>
@@ -363,7 +364,7 @@ const ChamberBnPromoCard = () => (
             </div>
             <div style={{ background: 'rgba(198,167,94,0.07)', border: '1px solid rgba(198,167,94,0.15)', borderRadius: '0.625rem', padding: '0.625rem 0.75rem', marginBottom: '0.875rem' }}>
                 <p style={{ fontSize: '0.6rem', fontWeight: 800, color: '#c6a75e', textTransform: 'uppercase', letterSpacing: '0.08em', margin: '0 0 4px' }}>📍 উত্তরা শাখা</p>
-                <p style={{ fontSize: '0.7rem', color: 'rgba(255,255,255,0.65)', margin: 0, lineHeight: 1.5, fontFamily: "'SolaimanLipi', 'Noto Sans Bengali', sans-serif" }}>বাড়ি ৪, সড়ক ৭, সেক্টর ৪, উত্তরা, ঢাকা-১২৩০</p>
+                <p style={{ fontSize: '0.7rem', color: 'rgba(255,255,255,0.65)', margin: 0, lineHeight: 1.5, fontFamily: "'SolaimanLipi', 'Noto Sans Bengali', sans-serif" }}>বাড়ি ৪৬, সড়ক ৬/বি, সেক্টর ১২, উত্তরা পশ্চিম, ঢাকা-১২৩০</p>
             </div>
             <a href="https://wa.me/8801712655546?text=আমি+আইনি+পরামর্শ+চাই" target="_blank" rel="noopener noreferrer"
                 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', padding: '0.65rem', borderRadius: '0.5rem', fontSize: '0.78rem', fontWeight: 700, textDecoration: 'none', marginBottom: '0.4rem', background: 'linear-gradient(135deg, #22c55e, #16a34a)', color: '#fff', boxShadow: '0 3px 12px rgba(34,197,94,0.35)', transition: 'transform 0.15s', fontFamily: "'SolaimanLipi', 'Noto Sans Bengali', sans-serif" }}
@@ -430,6 +431,7 @@ const ConsultBnWidget = ({ postTitle }) => (
 ══════════════════════════════════════════════ */
 const BlogPostBnInner = () => {
     const { slug } = useParams();
+    const navigate = useNavigate();
     const post = allBnPosts.find(p => p.slug === slug);
     const [cName, setCName] = useState('');
     const [cPhone, setCPhone] = useState('');
@@ -440,10 +442,10 @@ const BlogPostBnInner = () => {
 
     React.useEffect(() => {
         if (!post) {
-            const t = setTimeout(() => window.location.replace('/bn/blog'), 3000);
+            const t = setTimeout(() => navigate('/bn/blog', { replace: true }), 2000);
             return () => clearTimeout(t);
         }
-    }, [post]);
+    }, [post, navigate]);
 
     useEffect(() => {
         if (!post) return;
@@ -470,7 +472,7 @@ const BlogPostBnInner = () => {
 
     if (!post) return (
         <>
-            <Helmet><title>পাওয়া যায়নি | অ্যাডভোকেট মো. শাহ আলম</title><meta name="robots" content="noindex" /><meta httpEquiv="refresh" content="3;url=/bn/blog" /></Helmet>
+            <Helmet><title>পাওয়া যায়নি | অ্যাডভোকেট মো. শাহ আলম</title><meta name="robots" content="noindex" /></Helmet>
             <div style={{ minHeight: '60vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <div style={{ textAlign: 'center' }}>
                     <BookOpen size={48} style={{ color: 'var(--accent)', marginBottom: '1rem' }} />

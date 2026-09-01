@@ -22,7 +22,7 @@
   "sections": [
     {
       "h2": "দেনমোহর কী?",
-      "content": "<p>কাবিননামায় উল্লিখিত পরিমাণ অর্থ যা স্বামী স্ত্রীকে দিতে বাধ্য। এটি আদায়ের জন্য <a href=\"/bn/services/divorce-lawyer\" style=\"color:var(--accent)\">পারিবারিক আইনজীবীর</a> সহায়তা নেওয়া যায়।</p>"
+      "content": "<p>কাবিননামায় উল্লিখিত পরিমাণ অর্থ যা স্বামী স্ত্রীকে দিতে বাধ্য। এটি আদায়ের জন্য <a href=\"/services/divorce-lawyer\" style=\"color:var(--accent)\">পারিবারিক আইনজীবীর</a> সহায়তা নেওয়া যায়।</p>"
     },
     {
       "h2": "আশু ও বিলম্বিত দেনমোহর",
@@ -38,7 +38,7 @@
   "relatedServiceLinks": [
     {
       "text": "ডিভোর্স ও ফ্যামিলি ল ইয়ার",
-      "to": "/bn/services/divorce-lawyer"
+      "to": "/services/divorce-lawyer"
     }
   ],
   "lang": "bn",

@@ -128,65 +128,9 @@ function NavItem({ path, label, icon: Icon, exact, collapsed, onNavClick }) {
   );
 }
 
-// ─── Main AdminLayout ───────────────────────────────────────────────────────
-export default function AdminLayout() {
-  const navigate = useNavigate();
-  const location = useLocation();
-
-  // ── State ──
-  const [isMobile, setIsMobile] = useState(window.innerWidth < MOBILE_BREAKPOINT);
-
-  // Desktop: collapsed/expanded (persisted)
-  const [collapsed, setCollapsed] = useState(() => {
-    try { return localStorage.getItem('admin-sidebar-collapsed') === 'true'; }
-    catch { return false; }
-  });
-
-  // Mobile: drawer open/closed
-  const [drawerOpen, setDrawerOpen] = useState(false);
-
-  const overlayRef = useRef(null);
-
-  // ── Responsive listener ──
-  useEffect(() => {
-    function onResize() {
-      const mobile = window.innerWidth < MOBILE_BREAKPOINT;
-      setIsMobile(mobile);
-      if (!mobile) setDrawerOpen(false); // close drawer on desktop resize
-    }
-    window.addEventListener('resize', onResize);
-    return () => window.removeEventListener('resize', onResize);
-  }, []);
-
-  // Close drawer on route change (mobile)
-  useEffect(() => {
-    setDrawerOpen(false);
-  }, [location.pathname]);
-
-  // ── Toggle logic ──
-  function toggleSidebar() {
-    if (isMobile) {
-      setDrawerOpen(d => !d);
-    } else {
-      setCollapsed(c => {
-        const next = !c;
-        try { localStorage.setItem('admin-sidebar-collapsed', String(next)); } catch {}
-        return next;
-      });
-    }
-  }
-
-  function handleLogout() {
-    auth.clearToken();
-    navigate('/admin', { replace: true });
-    window.location.reload();
-  }
-
-  // ── Sidebar width (desktop only) ──
-  const sidebarW = isMobile ? SIDEBAR_EXPANDED_W : (collapsed ? SIDEBAR_COLLAPSED_W : SIDEBAR_EXPANDED_W);
-
-  // ── Sidebar content (shared between desktop and mobile drawer) ──
-  const SidebarContent = ({ insideDrawer = false }) => (
+// ─── SidebarContent — defined OUTSIDE AdminLayout to avoid component-in-render bug ──
+function SidebarContent({ collapsed, insideDrawer, onNavClick, onLogout }) {
+  return (
     <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
       {/* Brand */}
       <div style={{
@@ -240,7 +184,7 @@ export default function AdminLayout() {
             key={item.path}
             {...item}
             collapsed={collapsed && !insideDrawer}
-            onNavClick={insideDrawer ? () => setDrawerOpen(false) : undefined}
+            onNavClick={onNavClick}
           />
         ))}
       </nav>
@@ -251,7 +195,7 @@ export default function AdminLayout() {
         borderTop: `1px solid ${T.border}`,
       }}>
         <button
-          onClick={handleLogout}
+          onClick={onLogout}
           title="Sign Out"
           style={{
             display: 'flex',
@@ -280,6 +224,63 @@ export default function AdminLayout() {
       </div>
     </div>
   );
+}
+
+// ─── Main AdminLayout ───────────────────────────────────────────────────────
+export default function AdminLayout() {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  // ── State ──
+  const [isMobile, setIsMobile] = useState(window.innerWidth < MOBILE_BREAKPOINT);
+
+  // Desktop: collapsed/expanded (persisted)
+  const [collapsed, setCollapsed] = useState(() => {
+    try { return localStorage.getItem('admin-sidebar-collapsed') === 'true'; }
+    catch { return false; }
+  });
+
+  // Mobile: drawer open/closed
+  const [drawerOpen, setDrawerOpen] = useState(false);
+
+  // ── Responsive listener ──
+  useEffect(() => {
+    function onResize() {
+      const mobile = window.innerWidth < MOBILE_BREAKPOINT;
+      setIsMobile(mobile);
+      if (!mobile) setDrawerOpen(false);
+    }
+    window.addEventListener('resize', onResize);
+    return () => window.removeEventListener('resize', onResize);
+  }, []);
+
+  // Close drawer on route change (mobile) — use functional callback to avoid
+  // direct setState() call inside effect body (react-hooks/set-state-in-effect)
+  useEffect(() => {
+    setDrawerOpen(prev => prev ? false : prev);
+  }, [location.pathname]);
+
+  // ── Toggle logic ──
+  function toggleSidebar() {
+    if (isMobile) {
+      setDrawerOpen(d => !d);
+    } else {
+      setCollapsed(c => {
+        const next = !c;
+        try { localStorage.setItem('admin-sidebar-collapsed', String(next)); } catch { /* ignore */ }
+        return next;
+      });
+    }
+  }
+
+  const handleLogout = useCallback(() => {
+    auth.clearToken();
+    navigate('/admin', { replace: true });
+    window.location.reload();
+  }, [navigate]);
+
+  // ── Sidebar width (desktop only) ──
+  const sidebarW = isMobile ? SIDEBAR_EXPANDED_W : (collapsed ? SIDEBAR_COLLAPSED_W : SIDEBAR_EXPANDED_W);
 
   return (
     <div style={{
@@ -342,7 +343,12 @@ export default function AdminLayout() {
               >
                 <X size={18} />
               </button>
-              <SidebarContent insideDrawer />
+              <SidebarContent
+                collapsed={false}
+                insideDrawer={true}
+                onNavClick={() => setDrawerOpen(false)}
+                onLogout={handleLogout}
+              />
             </motion.aside>
           )}
         </AnimatePresence>
@@ -363,7 +369,12 @@ export default function AdminLayout() {
             flexShrink: 0,
           }}
         >
-          <SidebarContent />
+          <SidebarContent
+            collapsed={collapsed}
+            insideDrawer={false}
+            onNavClick={undefined}
+            onLogout={handleLogout}
+          />
         </motion.aside>
       )}
 

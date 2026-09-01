@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { Search, Clock, ChevronRight, BookOpen, Flame, Award, ShieldCheck, UserCheck, Scale, ArrowUpRight, X, TrendingUp, Calendar, Sparkles } from 'lucide-react';
@@ -187,6 +187,9 @@ const BlogBn = () => {
     const [activeCategory, setActiveCategory] = useState('সব');
     const [searchQuery, setSearchQuery] = useState('');
     const [sortBy, setSortBy] = useState('recent'); // 'recent' | 'popular'
+    const [visibleCount, setVisibleCount] = useState(12);
+
+    const POSTS_PER_PAGE = 12;
 
     // Sort all published posts by publishedDate descending by default
     const allPublished = useMemo(() => {
@@ -276,6 +279,11 @@ const BlogBn = () => {
 
         return posts;
     }, [allPublished, activeCategory, searchQuery, sortBy]);
+
+    // Reset pagination whenever filters change
+    useEffect(() => {
+        setVisibleCount(POSTS_PER_PAGE);
+    }, [activeCategory, searchQuery, sortBy]);
 
     return (
         <>
@@ -457,7 +465,7 @@ const BlogBn = () => {
                                 <div className="flex-1">
                                     <div className="flex items-center gap-2 mb-3">
                                         <span className="inline-flex items-center gap-1 text-xs font-bold px-3 py-1 rounded-full text-white shadow-sm" style={{ background: 'linear-gradient(135deg, #f59e0b, #be185d)', fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif" }}>
-                                            <TrendingUp size={13} /> গুগলে সবচেয়ে জনপ্রিয় আইনি গাইড (Search Console Analytics)
+                                            <TrendingUp size={13} /> সম্পাদকের বাছাই — শীর্ষ আইনি নির্দেশিকা
                                         </span>
                                         <span className="text-xs text-[var(--text-muted)]" style={{ fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif" }}>
                                             {featuredPost.readTime}
@@ -557,11 +565,35 @@ const BlogBn = () => {
                             </button>
                         </div>
                     ) : (
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            {filtered.map((post, idx) => (
-                                <BlogCardBn key={post.slug} post={post} isRecent={sortBy === 'recent' ? idx < 12 : false} />
-                            ))}
-                        </div>
+                        <>
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                {filtered.slice(0, visibleCount).map((post, idx) => (
+                                    <BlogCardBn key={post.slug} post={post} isRecent={sortBy === 'recent' ? idx < POSTS_PER_PAGE : false} />
+                                ))}
+                            </div>
+
+                            {/* ── আরও লোড করুন বাটন ── */}
+                            {visibleCount < filtered.length && (
+                                <div className="mt-10 text-center">
+                                    <button
+                                        onClick={() => setVisibleCount(v => v + POSTS_PER_PAGE)}
+                                        className="inline-flex items-center gap-2 px-8 py-3 rounded-2xl text-sm font-bold border transition-all hover:scale-105 hover:shadow-lg"
+                                        style={{
+                                            background: 'var(--surface)',
+                                            color: 'var(--accent)',
+                                            borderColor: 'var(--accent)',
+                                            fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif"
+                                        }}
+                                    >
+                                        <BookOpen size={16} />
+                                        আরও {Math.min(POSTS_PER_PAGE, filtered.length - visibleCount)}টি আর্টিকেল লোড করুন
+                                    </button>
+                                    <p className="text-xs mt-3" style={{ color: 'var(--text-muted)', fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif" }}>
+                                        {filtered.length} টির মধ্যে {Math.min(visibleCount, filtered.length)} টি দেখানো হচ্ছে
+                                    </p>
+                                </div>
+                            )}
+                        </>
                     )}
 
                     {/* Language Switch Footer */}

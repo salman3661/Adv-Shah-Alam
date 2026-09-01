@@ -23,7 +23,7 @@
   "sections": [
     {
       "h2": "রিট পিটিশন কী?",
-      "content": "<p>এটি সংবিধানের ১০২ অনুচ্ছেদের অধীনে মৌলিক অধিকার লঙ্ঘনের প্রতিকার চেয়ে দায়ের করা হয়। এর জন্য একজন <a href=\"/bn/services/supreme-court-lawyer\" style=\"color:var(--accent)\">সুপ্রিম কোর্ট আইনজীবীর</a> প্রয়োজন।</p>"
+      "content": "<p>এটি সংবিধানের ১০২ অনুচ্ছেদের অধীনে মৌলিক অধিকার লঙ্ঘনের প্রতিকার চেয়ে দায়ের করা হয়। এর জন্য একজন <a href=\"/services/supreme-court-lawyer\" style=\"color:var(--accent)\">সুপ্রিম কোর্ট আইনজীবীর</a> প্রয়োজন।</p>"
     },
     {
       "h2": "পাঁচটি প্রধান রিট",
@@ -39,7 +39,7 @@
   "relatedServiceLinks": [
     {
       "text": "সুপ্রিম কোর্ট আইনজীবী বাংলাদেশ",
-      "to": "/bn/services/supreme-court-lawyer"
+      "to": "/services/supreme-court-lawyer"
     }
   ],
   "lang": "bn",

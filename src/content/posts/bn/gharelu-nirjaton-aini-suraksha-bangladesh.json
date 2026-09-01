@@ -22,7 +22,7 @@
   "sections": [
     {
       "h2": "পারিবারিক সহিংসতা কী?",
-      "content": "<p>শারীরিক, মানসিক, যৌন কিংবা অর্থনৈতিক—যেকোনো ধরনের অমানবিক আচরণ এর অন্তর্ভুক্ত। একজন <a href=\"/bn/services/divorce-lawyer\" style=\"color:var(--accent)\">পারিবারিক আইনজীবী</a> এ ধরনের মামলায় দ্রুত সুরক্ষা আদেশের আবেদন করতে পারেন। চরম পর্যায়ে <a href=\"/bn/blog/divorce-mamla-dakhil-bangladesh\" style=\"color:var(--accent); font-weight:500;\">পারিবারিক নির্যাতনের পর বিবাহ বিচ্ছেদের আবেদন</a> করতে হতে পারে। তবে প্রাথমিক সুরক্ষার জন্য <a href=\"/bn/blog/police-abiyog-hoirani-bangladesh\" style=\"color:var(--accent); font-weight:500;\">পারিবারিক নির্যাতনের বিরুদ্ধে থানায় এফআইআর</a> করা বুদ্ধিমানের কাজ।</p>"
+      "content": "<p>শারীরিক, মানসিক, যৌন কিংবা অর্থনৈতিক—যেকোনো ধরনের অমানবিক আচরণ এর অন্তর্ভুক্ত। একজন <a href=\"/services/divorce-lawyer\" style=\"color:var(--accent)\">পারিবারিক আইনজীবী</a> এ ধরনের মামলায় দ্রুত সুরক্ষা আদেশের আবেদন করতে পারেন। চরম পর্যায়ে <a href=\"/bn/blog/divorce-mamla-dakhil-bangladesh\" style=\"color:var(--accent); font-weight:500;\">পারিবারিক নির্যাতনের পর বিবাহ বিচ্ছেদের আবেদন</a> করতে হতে পারে। তবে প্রাথমিক সুরক্ষার জন্য <a href=\"/bn/blog/police-abiyog-hoirani-bangladesh\" style=\"color:var(--accent); font-weight:500;\">পারিবারিক নির্যাতনের বিরুদ্ধে থানায় এফআইআর</a> করা বুদ্ধিমানের কাজ।</p>"
     },
     {
       "h2": "সুরক্ষা আদেশ (Protection Order)",
@@ -38,7 +38,7 @@
   "relatedServiceLinks": [
     {
       "text": "ফ্যামিলি ও ডিভোর্স আইনজীবী",
-      "to": "/bn/services/divorce-lawyer"
+      "to": "/services/divorce-lawyer"
     }
   ],
   "lang": "bn",

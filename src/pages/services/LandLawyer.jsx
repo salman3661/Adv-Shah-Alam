@@ -76,11 +76,11 @@ const LandLawyer = () => (
         }}
         ctaText="Consult a Land Lawyer in Dhaka Today"
         relatedBlogLinks={[
-            { to: '/blog/mutation-process-bangladesh', title: 'Land Mutation (Namjari) Bangladesh (2026) – Complete Guide', desc: 'AC Land process, documents, fees, timeline and what to do if refused' },
+            { to: '/blog/e-namjari-online-check-bangladesh-2026', title: 'Land Mutation (Namjari) Bangladesh (2026) – Complete Guide', desc: 'AC Land process, documents, fees, timeline and what to do if refused' },
             { to: '/blog/land-law-bangladesh-complete-guide', title: 'Land Law Bangladesh – Complete Legal Guide (2026)', desc: 'Comprehensive A-Z guide to land ownership, disputes, and remedies' },
             { to: '/blog/land-dispute-legal-remedies-bangladesh', title: 'Land Dispute Bangladesh – Legal Remedies & How to Win', desc: 'Title suits, partition suits, injunctions and criminal remedies for land fraud' },
             { to: '/blog/how-to-register-land-bangladesh', title: 'How to Register Land in Bangladesh (2026)', desc: 'Sub-Registrar process, stamp duty, required documents, and deed registration' },
-            { to: '/blog/namjari-online-check-land-record-bangladesh', title: 'Check Land Records Online in Bangladesh – Khatian Guide', desc: 'How to check khatian, RS porcha and mutation status at land.gov.bd' },
+            { to: '/blog/e-namjari-online-check-bangladesh-2026', title: 'Check Land Records Online in Bangladesh – Khatian Guide', desc: 'How to check khatian, RS porcha and mutation status at land.gov.bd' },
         ]}
         relatedServices={ALL_SERVICES}
     />

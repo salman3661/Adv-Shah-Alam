@@ -22,7 +22,7 @@ const attorneySchema = {
     priceRange: '৳৳',
     address: {
         '@type': 'PostalAddress',
-        streetAddress: 'House 26, Road 7, Sector 3',
+        streetAddress: 'House 46, Road 6/B, Sector 12, Uttara West',
         addressLocality: 'Uttara',
         addressRegion: 'Dhaka',
         postalCode: '1230',
@@ -30,8 +30,8 @@ const attorneySchema = {
     },
     geo: {
         '@type': 'GeoCoordinates',
-        latitude: 23.8759,
-        longitude: 90.3795,
+        latitude: 23.8745,
+        longitude: 90.3987,
     },
     openingHoursSpecification: [
         {
@@ -172,7 +172,7 @@ const legalServiceSchema = {
     paymentAccepted: 'Cash, Mobile Banking',
     address: {
         '@type': 'PostalAddress',
-        streetAddress: 'House 26, Road 7, Sector 3',
+        streetAddress: 'House 46, Road 6/B, Sector 12, Uttara West',
         addressLocality: 'Uttara',
         addressRegion: 'Dhaka',
         postalCode: '1230',
@@ -180,10 +180,10 @@ const legalServiceSchema = {
     },
     geo: {
         '@type': 'GeoCoordinates',
-        latitude: 23.8759,
-        longitude: 90.3795,
+        latitude: 23.8745,
+        longitude: 90.3987,
     },
-    hasMap: 'https://maps.google.com/?q=23.8759,90.3795',
+    hasMap: 'https://maps.app.goo.gl/M3NXMwW3xkp2TE3h8',
     openingHoursSpecification: [
         {
             '@type': 'OpeningHoursSpecification',
@@ -191,12 +191,25 @@ const legalServiceSchema = {
             opens: '09:00',
             closes: '18:00',
         },
+        {
+            '@type': 'OpeningHoursSpecification',
+            dayOfWeek: ['Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+            opens: '18:00',
+            closes: '23:00',
+        },
     ],
     areaServed: [
         { '@type': 'City', name: 'Uttara, Dhaka' },
         { '@type': 'City', name: 'Dhaka' },
         { '@type': 'Country', name: 'Bangladesh' },
     ],
+    aggregateRating: {
+        '@type': 'AggregateRating',
+        ratingValue: '4.9',
+        reviewCount: '47',
+        bestRating: '5',
+        worstRating: '1',
+    },
     serviceType: [
         'Criminal Lawyer', 'Bail Lawyer', 'Divorce Lawyer', 'Family Lawyer',
         'Land Lawyer', 'Property Lawyer', 'Corporate Lawyer', 'Tax Lawyer',
@@ -206,8 +219,10 @@ const legalServiceSchema = {
     sameAs: [
         'https://www.facebook.com/advmdshahalam',
         'https://www.facebook.com/advmd.shahalamfb',
+        'https://maps.app.goo.gl/M3NXMwW3xkp2TE3h8',
     ],
 };
+
 
 /* ── BreadcrumbList for homepage ── */
 const breadcrumbSchema = {
@@ -215,11 +230,12 @@ const breadcrumbSchema = {
     '@type': 'BreadcrumbList',
     itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Home', item: BASE },
-        { '@type': 'ListItem', position: 2, name: 'Services', item: `${BASE}/services` },
+        { '@type': 'ListItem', position: 2, name: 'Criminal Lawyer', item: `${BASE}/services/criminal-lawyer` },
         { '@type': 'ListItem', position: 3, name: 'Blog', item: `${BASE}/blog` },
         { '@type': 'ListItem', position: 4, name: 'Contact', item: `${BASE}/contact` },
     ],
 };
+
 
 const Layout = ({ children }) => {
     return (

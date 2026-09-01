@@ -22,11 +22,11 @@
   "sections": [
     {
       "h2": "সাইবার সিকিউরিটি অ্যাক্ট ২০২৩",
-      "content": "<p>এটি ডিজিটাল নিরাপত্তা আইনের (DSA) স্থলাভিষিক্ত হয়েছে। এর অধীনে সাইবার ট্রাইব্যুনালে মামলা দায়ের ও বিচার হয়। সঠিক প্রমাণ থাকলে <a href=\"/bn/blog/mittha-mamla-kharej-bangladesh\" style=\"color:var(--accent); font-weight:500;\">ভিত্তিহীন সাইবার মামলা খারিজ</a> করা সহজ হয়। প্রাথমিক সুরক্ষার জন্য <a href=\"/bn/blog/police-abiyog-hoirani-bangladesh\" style=\"color:var(--accent); font-weight:500;\">অনলাইন হুমকির বিরুদ্ধে থানায় অভিযোগ</a> করা উচিত।</p>"
+      "content": "<p>এটি ডিজিটাল নিরাপত্তা আইনের (DSA) স্থলাভিষিক্ত হয়েছে। এর অধীনে সাইবার ট্রাইব্যুনালে মামলা দায়ের ও বিচার হয়। সঠিক প্রমাণ থাকলে <a href=\"/bn/blog/mittha-mamla-theke-bachar-upay-bangladesh\" style=\"color:var(--accent); font-weight:500;\">ভিত্তিহীন সাইবার মামলা খারিজ</a> করা সহজ হয়। প্রাথমিক সুরক্ষার জন্য <a href=\"/bn/blog/police-abiyog-hoirani-bangladesh\" style=\"color:var(--accent); font-weight:500;\">অনলাইন হুমকির বিরুদ্ধে থানায় অভিযোগ</a> করা উচিত।</p>"
     },
     {
       "h2": "সাইবার আইনজীবীর কাজ",
-      "content": "<p>প্রযুক্তিগত তথ্য বিশ্লেষণ, জামিন আবেদন এবং সাইবার ট্রাইব্যুনালে যথাযথ শুনানি নিশ্চিত করা একজন অভিজ্ঞ <a href=\"/bn/services/criminal-lawyer\" style=\"color:var(--accent)\">ক্রিমিনাল বা সাইবার আইনজীবীর</a> দায়িত্ব।</p><p style=\"margin-top:1.25rem;padding:1rem 1.25rem;background:rgba(198,167,94,0.08);border-left:4px solid var(--accent);border-radius:0.5rem;font-size:0.92rem;line-height:1.6;\">⚖️ <strong>বিশেষজ্ঞ আইনি পরামর্শের জন্য যোগাযোগ:</strong> আপনার আইনি বিষযটি নিয়ে সুপ্রিম কোর্টের অভিজ্ঞ আইনজীবী <a href=\"/advocate-md-shah-alam\" style=\"color:var(--accent);font-weight:700;\">অ্যাডভোকেট মো. শাহ আলম</a>-এর সাথে সরাসরি কথা বলুন বা আমাদের <a href=\"/services/criminal-lawyer\" style=\"color:var(--accent);font-weight:700;\">বিশেষজ্ঞ আইনি সেবা</a> গ্রহণ করুন। যেকোনো প্রয়োজনে সরাসরি <a href=\"/contact\" style=\"color:var(--accent);font-weight:700;\">যোগাযোগ পেজে ক্লিক করুন</a>।</p>"
+      "content": "<p>প্রযুক্তিগত তথ্য বিশ্লেষণ, জামিন আবেদন এবং সাইবার ট্রাইব্যুনালে যথাযথ শুনানি নিশ্চিত করা একজন অভিজ্ঞ <a href=\"/services/criminal-lawyer\" style=\"color:var(--accent)\">ক্রিমিনাল বা সাইবার আইনজীবীর</a> দায়িত্ব।</p><p style=\"margin-top:1.25rem;padding:1rem 1.25rem;background:rgba(198,167,94,0.08);border-left:4px solid var(--accent);border-radius:0.5rem;font-size:0.92rem;line-height:1.6;\">⚖️ <strong>বিশেষজ্ঞ আইনি পরামর্শের জন্য যোগাযোগ:</strong> আপনার আইনি বিষযটি নিয়ে সুপ্রিম কোর্টের অভিজ্ঞ আইনজীবী <a href=\"/advocate-md-shah-alam\" style=\"color:var(--accent);font-weight:700;\">অ্যাডভোকেট মো. শাহ আলম</a>-এর সাথে সরাসরি কথা বলুন বা আমাদের <a href=\"/services/criminal-lawyer\" style=\"color:var(--accent);font-weight:700;\">বিশেষজ্ঞ আইনি সেবা</a> গ্রহণ করুন। যেকোনো প্রয়োজনে সরাসরি <a href=\"/contact\" style=\"color:var(--accent);font-weight:700;\">যোগাযোগ পেজে ক্লিক করুন</a>।</p>"
     }
   ],
   "faqs": [
@@ -38,15 +38,15 @@
   "relatedServiceLinks": [
     {
       "text": "ফৌজদারি আইনজীবী ঢাকা",
-      "to": "/bn/services/criminal-lawyer"
+      "to": "/services/criminal-lawyer"
     },
     {
       "text": "জামিন আইনজীবী ঢাকা",
-      "to": "/bn/services/bail-lawyer"
+      "to": "/services/bail-lawyer"
     }
   ],
   "lang": "bn",
   "impressions": 41,
-  "clicks": 12,
+  "clicks": 10,
   "featured": false
 }

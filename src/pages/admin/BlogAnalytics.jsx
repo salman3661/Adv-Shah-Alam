@@ -185,7 +185,8 @@ export default function BlogAnalytics() {
     }
   }, []);
 
-  useEffect(() => { loadGSC(); loadGA4(); }, []);
+  useEffect(() => { loadGSC(); loadGA4(); }, [loadGSC, loadGA4]);
+
 
   const gsc = gscData?.data;
   const ga4 = ga4Data?.data;

@@ -2,7 +2,9 @@ import React, { lazy, Suspense } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Hero from '../components/Hero';
 import About from '../components/About';
+import TrustBar from '../components/TrustBar';
 import BackToTop from '../components/BackToTop';
+
 
 // Below-fold sections are lazy-loaded — reduces initial JS parse on mobile
 const Services       = lazy(() => import('../components/Services'));
@@ -56,7 +58,9 @@ const Home = ({ lang = 'en' }) => {
                 <meta name="twitter:image" content="https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.png" />
             </Helmet>
             <Hero lang={lang} />
+            <TrustBar lang={lang} />
             <About lang={lang} />
+
             <Suspense fallback={<SectionFallback />}>
                 <Services lang={lang} />
                 <FAQ lang={lang} />

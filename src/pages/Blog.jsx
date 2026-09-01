@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { Search, Clock, ChevronRight, BookOpen, Flame, Award, ShieldCheck, UserCheck, Scale, ArrowUpRight, X, Calendar, Sparkles } from 'lucide-react';
@@ -150,6 +150,9 @@ const Blog = () => {
     const [activeCategory, setActiveCategory] = useState('All');
     const [searchQuery, setSearchQuery] = useState('');
     const [sortBy, setSortBy] = useState('recent'); // 'recent' | 'popular'
+    const [visibleCount, setVisibleCount] = useState(12);
+
+    const POSTS_PER_PAGE = 12;
 
     // Sort all published posts by publishedDate descending by default
     const publishedPosts = useMemo(() => {
@@ -198,6 +201,11 @@ const Blog = () => {
 
         return posts;
     }, [publishedPosts, activeCategory, searchQuery, sortBy]);
+
+    // Reset pagination whenever filters change
+    useEffect(() => {
+        setVisibleCount(POSTS_PER_PAGE);
+    }, [activeCategory, searchQuery, sortBy]);
 
     return (
         <>
@@ -372,7 +380,7 @@ const Blog = () => {
                                 <div className="flex-1">
                                     <div className="flex items-center gap-2 mb-3">
                                         <span className="inline-flex items-center gap-1 text-xs font-bold px-3 py-1 rounded-full text-white" style={{ background: 'linear-gradient(135deg, #f59e0b, #be185d)' }}>
-                                            <Flame size={13} /> Featured Legal Guide
+                                            <Flame size={13} /> Editor's Pick — Top Legal Guide
                                         </span>
                                         <span className="text-xs text-[var(--text-muted)]">
                                             {featuredPost.readTime}
@@ -469,11 +477,34 @@ const Blog = () => {
                             </button>
                         </div>
                     ) : (
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            {filtered.map((post, idx) => (
-                                <BlogCardEn key={post.slug} post={post} isRecent={sortBy === 'recent' ? idx < 12 : false} />
-                            ))}
-                        </div>
+                        <>
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                {filtered.slice(0, visibleCount).map((post, idx) => (
+                                    <BlogCardEn key={post.slug} post={post} isRecent={sortBy === 'recent' ? idx < POSTS_PER_PAGE : false} />
+                                ))}
+                            </div>
+
+                            {/* ── Load More Button ── */}
+                            {visibleCount < filtered.length && (
+                                <div className="mt-10 text-center">
+                                    <button
+                                        onClick={() => setVisibleCount(v => v + POSTS_PER_PAGE)}
+                                        className="inline-flex items-center gap-2 px-8 py-3 rounded-2xl text-sm font-bold border transition-all hover:scale-105 hover:shadow-lg"
+                                        style={{
+                                            background: 'var(--surface)',
+                                            color: 'var(--accent)',
+                                            borderColor: 'var(--accent)',
+                                        }}
+                                    >
+                                        <BookOpen size={16} />
+                                        Load More Articles ({filtered.length - visibleCount} remaining)
+                                    </button>
+                                    <p className="text-xs mt-3" style={{ color: 'var(--text-muted)' }}>
+                                        Showing {Math.min(visibleCount, filtered.length)} of {filtered.length} legal guides
+                                    </p>
+                                </div>
+                            )}
+                        </>
                     )}
 
                     {/* Language Switch Footer */}

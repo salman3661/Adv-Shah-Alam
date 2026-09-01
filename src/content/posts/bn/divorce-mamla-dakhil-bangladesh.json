@@ -23,7 +23,7 @@
   "sections": [
     {
       "h2": "ডিভোর্সের ধরনসমূহ",
-      "content": "<p>আপনার ধর্ম এবং বৈবাহিক পরিস্থিতির ওপর ভিত্তি করে ডিভোর্সের প্রক্রিয়া ভিন্ন হতে পারে, যেমন: মুসলিম তালাক, খুলা বা আদালতের মাধ্যমে বিবাহ বিচ্ছেদ। <a href=\"/bn/services/divorce-lawyer\" style=\"color:var(--accent)\">ডিভোর্স আইনজীবী</a> আপনাকে সঠিক নির্দেশনা দিতে পারবেন। পরবর্তীতে <a href=\"/bn/blog/uttaradhikar-certificate-bangladesh\" style=\"color:var(--accent); font-weight:500;\">মৃত স্বামীর ব্যাংক অ্যাকাউন্ট থেকে মোহরানা তোলা</a> বা অন্যান্য আর্থিক বিষয়গুলোও সুরাহা করতে হতে পারে। প্রায়শই দেখা যায় <a href=\"/bn/blog/gharelu-nirjaton-aini-suraksha-bangladesh\" style=\"color:var(--accent); font-weight:500;\">শারীরিক ও মানসিক নির্যাতনের কারণে তালাক</a> বা বিচ্ছেদের সিদ্ধান্ত নিতে হয়।</p>"
+      "content": "<p>আপনার ধর্ম এবং বৈবাহিক পরিস্থিতির ওপর ভিত্তি করে ডিভোর্সের প্রক্রিয়া ভিন্ন হতে পারে, যেমন: মুসলিম তালাক, খুলা বা আদালতের মাধ্যমে বিবাহ বিচ্ছেদ। <a href=\"/services/divorce-lawyer\" style=\"color:var(--accent)\">ডিভোর্স আইনজীবী</a> আপনাকে সঠিক নির্দেশনা দিতে পারবেন। পরবর্তীতে <a href=\"/bn/blog/uttaradhikar-certificate-bangladesh\" style=\"color:var(--accent); font-weight:500;\">মৃত স্বামীর ব্যাংক অ্যাকাউন্ট থেকে মোহরানা তোলা</a> বা অন্যান্য আর্থিক বিষয়গুলোও সুরাহা করতে হতে পারে। প্রায়শই দেখা যায় <a href=\"/bn/blog/gharelu-nirjaton-aini-suraksha-bangladesh\" style=\"color:var(--accent); font-weight:500;\">শারীরিক ও মানসিক নির্যাতনের কারণে তালাক</a> বা বিচ্ছেদের সিদ্ধান্ত নিতে হয়।</p>"
     },
     {
       "h2": "প্রয়োজনীয় কাগজপত্র",
@@ -47,7 +47,7 @@
   "relatedServiceLinks": [
     {
       "text": "ডিভোর্স আইনজীবী উত্তরা",
-      "to": "/bn/services/divorce-lawyer"
+      "to": "/services/divorce-lawyer"
     }
   ],
   "lang": "bn",

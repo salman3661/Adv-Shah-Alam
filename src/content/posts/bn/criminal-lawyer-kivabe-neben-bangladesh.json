@@ -24,11 +24,11 @@
   "sections": [
     {
       "h2": "কেন বিশেষজ্ঞ ক্রিমিনাল আইনজীবী প্রয়োজন?",
-      "content": "<p>সাধারণ দেওয়ানি আইনজীবীর চেয়ে ফৌজদারি মামলার জন্য একজন বিশেষজ্ঞ ক্রিমিনাল আইনজীবী প্রয়োজন, যিনি আদালতের অভিজ্ঞতা, পুলিশ স্টেশনের সম্পর্ক এবং পদ্ধতিগত জ্ঞানে পারদর্শী। এছাড়া <a href=\"/bn/blog/jamin-khoroch-bangladesh\" style=\"color:var(--accent); font-weight:500;\">আদালতে জামিন ফি ও বন্ড</a> সম্পর্কে পূর্বধারণা রাখা জরুরি। সঠিক পদক্ষেপের মাধ্যমে <a href=\"/bn/blog/mittha-mamla-kharej-bangladesh\" style=\"color:var(--accent); font-weight:500;\">মিথ্যা অভিযোগ থেকে আইনি অব্যাহতি</a> পাওয়া সম্ভব।</p>"
+      "content": "<p>সাধারণ দেওয়ানি আইনজীবীর চেয়ে ফৌজদারি মামলার জন্য একজন বিশেষজ্ঞ ক্রিমিনাল আইনজীবী প্রয়োজন, যিনি আদালতের অভিজ্ঞতা, পুলিশ স্টেশনের সম্পর্ক এবং পদ্ধতিগত জ্ঞানে পারদর্শী। এছাড়া <a href=\"/bn/blog/madak-mamlar-jamin-prokriya-bangladesh-2026\" style=\"color:var(--accent); font-weight:500;\">আদালতে জামিন ফি ও বন্ড</a> সম্পর্কে পূর্বধারণা রাখা জরুরি। সঠিক পদক্ষেপের মাধ্যমে <a href=\"/bn/blog/mittha-mamla-theke-bachar-upay-bangladesh\" style=\"color:var(--accent); font-weight:500;\">মিথ্যা অভিযোগ থেকে আইনি অব্যাহতি</a> পাওয়া সম্ভব।</p>"
     },
     {
       "h2": "কখন আইনজীবী নিয়োগ করবেন?",
-      "content": "<p>হেফাজতে নেওয়ার জন্য অপেক্ষা করবেন না। একটি এফআইআর দায়ের হওয়ার সাথে সাথেই বা সমন পাওয়ার পর আপনার <a href=\"/bn/services/criminal-lawyer\" style=\"color:var(--accent)\">ক্রিমিনাল আইনজীবীর সাথে</a> যোগাযোগ করা উচিত।</p>"
+      "content": "<p>হেফাজতে নেওয়ার জন্য অপেক্ষা করবেন না। একটি এফআইআর দায়ের হওয়ার সাথে সাথেই বা সমন পাওয়ার পর আপনার <a href=\"/services/criminal-lawyer\" style=\"color:var(--accent)\">ক্রিমিনাল আইনজীবীর সাথে</a> যোগাযোগ করা উচিত।</p>"
     },
     {
       "h2": "বাংলাদেশে আইনি ফি কাঠামোর ধারণা",
@@ -48,11 +48,11 @@
   "relatedServiceLinks": [
     {
       "text": "ফৌজদারি আইনজীবী উত্তরা",
-      "to": "/bn/services/criminal-lawyer"
+      "to": "/services/criminal-lawyer"
     },
     {
       "text": "জামিন আইনজীবী ঢাকা",
-      "to": "/bn/services/bail-lawyer"
+      "to": "/services/bail-lawyer"
     }
   ],
   "lang": "bn",

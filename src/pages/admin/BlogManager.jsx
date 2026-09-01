@@ -1,5 +1,6 @@
-import React, { useState, useEffect, useCallback, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect, useCallback } from 'react';
+import { AnimatePresence } from 'framer-motion';
+
 import {
   FileText, Globe2, Search, RefreshCw, Plus, Edit3, Trash2,
   Eye, EyeOff, Save, Upload, ArrowLeft, CheckCircle, Clock,
@@ -40,14 +41,6 @@ function todayDhaka() {
   return new Date().toLocaleString('sv-SE', { timeZone: 'Asia/Dhaka' }).split(' ')[0];
 }
 
-function isPostPublished(post) {
-  try {
-    if (post.isDraft) return false;
-    const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Dhaka' }));
-    const pub = new Date(post.publishedDate + 'T00:00:00');
-    return pub <= now;
-  } catch { return true; }
-}
 
 function postStatus(post) {
   if (post.isDraft) return 'draft';

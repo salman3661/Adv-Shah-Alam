@@ -7231,7 +7231,7 @@ const posts = [
         sections: [
             {
                 h2: 'Why You Need a Specialist Criminal Lawyer',
-                content: `<p>Criminal law in Bangladesh is governed by the <strong>Penal Code 1860</strong>, the <strong>Code of Criminal Procedure 1898</strong>, and dozens of special laws including the Digital Security Act, Narcotics Control Act, and the Women and Children Repression Prevention Act. A general civil lawyer may lack the courtroom experience, police-station relationships, and procedural knowledge that a criminal case demands. Understanding <a href="/blog/company-registration-cost-bangladesh" style="color:var(--accent); font-weight:500;">corporate legal compliance for business owners</a> is also critical. In some situations, <a href="/blog/writ-petition-high-court-guide-bangladesh" style="color:var(--accent); font-weight:500;">quashing criminal proceedings via writ</a> can provide immediate relief. This is especially relevant when <a href="/blog/how-to-file-divorce-petition-bangladesh" style="color:var(--accent); font-weight:500;">defending against false dowry cases</a> in family disputes.</p>
+                content: `<p>Criminal law in Bangladesh is governed by the <strong>Penal Code 1860</strong>, the <strong>Code of Criminal Procedure 1898</strong>, and dozens of special laws including the Digital Security Act, Narcotics Control Act, and the Women and Children Repression Prevention Act. A general civil lawyer may lack the courtroom experience, police-station relationships, and procedural knowledge that a criminal case demands. Understanding <a href="/blog/company-registration-cost-bangladesh" style="color:var(--accent); font-weight:500;">corporate legal compliance for business owners</a> is also critical. In some situations, <a href="/blog/writ-petition-high-court-bangladesh" style="color:var(--accent); font-weight:500;">quashing criminal proceedings via writ</a> can provide immediate relief. This is especially relevant when <a href="/blog/how-to-file-divorce-court-bangladesh-2026" style="color:var(--accent); font-weight:500;">defending against false dowry cases</a> in family disputes.</p>
 <p>A specialist criminal lawyer in Dhaka can apply for <a href="/services/bail-lawyer" style="color:var(--accent)">urgent bail</a>, challenge an FIR at the earliest stage, and build a defence strategy before the prosecution consolidates its case against you.</p>`,
             },
             {
@@ -7331,7 +7331,7 @@ const posts = [
         sections: [
             {
                 h2: 'Divorce Options in Bangladesh: Which Applies to You?',
-                content: `<p>Your divorce procedure depends on your religion and marital circumstances: You should also consider the rules for <a href="/blog/land-registration-fees-process-bangladesh" style="color:var(--accent); font-weight:500;">transferring property ownership legally</a> if joint assets exist.</p>
+                content: `<p>Your divorce procedure depends on your religion and marital circumstances: You should also consider the rules for <a href="/blog/how-to-register-land-bangladesh" style="color:var(--accent); font-weight:500;">transferring property ownership legally</a> if joint assets exist.</p>
 <ul>
 <li><strong>Muslim Talaq (husband-initiated)</strong>: Written notice to the Union Parishad/City Corporation Chairman, followed by 90-day reconciliation period.</li>
 <li><strong>Khula (wife-initiated)</strong>: Wife returns mahr (dower) and applies through Chairman or family court.</li>
@@ -7439,7 +7439,7 @@ const posts = [
         sections: [
             {
                 h2: 'What is Land Registration in Bangladesh?',
-                content: `<p>Land registration is the formal recording of property ownership with the government through the Sub-Registrar's office under the <strong>Registration Act 1908</strong>. Without a registered deed, a property transaction is invalid and unenforceable. Registration transfers legal title from seller to buyer and creates a permanent public record. This applies whether you are an individual or <a href="/blog/company-registration-cost-bangladesh" style="color:var(--accent); font-weight:500;">registering a real estate company structure</a>. It is also crucial when <a href="/blog/how-to-file-divorce-petition-bangladesh" style="color:var(--accent); font-weight:500;">dividing joint property after marriage dissolution</a>. For major disputes, <a href="/blog/writ-petition-high-court-guide-bangladesh" style="color:var(--accent); font-weight:500;">challenging illegal land acquisition in court</a> might be necessary.</p>
+                content: `<p>Land registration is the formal recording of property ownership with the government through the Sub-Registrar's office under the <strong>Registration Act 1908</strong>. Without a registered deed, a property transaction is invalid and unenforceable. Registration transfers legal title from seller to buyer and creates a permanent public record. This applies whether you are an individual or <a href="/blog/company-registration-cost-bangladesh" style="color:var(--accent); font-weight:500;">registering a real estate company structure</a>. It is also crucial when <a href="/blog/how-to-file-divorce-court-bangladesh-2026" style="color:var(--accent); font-weight:500;">dividing joint property after marriage dissolution</a>. For major disputes, <a href="/blog/writ-petition-high-court-bangladesh" style="color:var(--accent); font-weight:500;">challenging illegal land acquisition in court</a> might be necessary.</p>
 <p>An unregistered sale is one of the most common causes of land disputes in Bangladesh. Always register with the help of a qualified <a href="/services/land-lawyer" style="color:var(--accent)">land and property lawyer</a>.</p>`,
             },
             {
@@ -7542,7 +7542,7 @@ const posts = [
         sections: [
             {
                 h2: 'Types of Companies You Can Register in Bangladesh',
-                content: `<p>Under the <strong>Companies Act 1994</strong>, the most common business structures are: Failing to comply may result in <a href="/blog/hire-criminal-lawyer-bangladesh" style="color:var(--accent); font-weight:500;">criminal liability in corporate fraud</a>. Additionally, if you are <a href="/blog/land-registration-fees-process-bangladesh" style="color:var(--accent); font-weight:500;">acquiring commercial land for your startup</a>, ensure proper vetting.</p>
+                content: `<p>Under the <strong>Companies Act 1994</strong>, the most common business structures are: Failing to comply may result in <a href="/services/criminal-lawyer" style="color:var(--accent); font-weight:500;">criminal liability in corporate fraud</a>. Additionally, if you are <a href="/blog/how-to-register-land-bangladesh" style="color:var(--accent); font-weight:500;">acquiring commercial land for your startup</a>, ensure proper vetting.</p>
 <ul>
 <li><strong>Private Limited Company (Ltd.)</strong>: 2–50 shareholders, limited liability. Most popular structure for SMEs and startups.</li>
 <li><strong>Public Limited Company (PLC)</strong>: 7+ shareholders, can raise capital from the public, requires more compliance.</li>
@@ -7634,7 +7634,7 @@ const posts = [
         sections: [
             {
                 h2: 'What is a Writ Petition in Bangladesh?',
-                content: `<p>A writ petition is an application filed directly in the <strong>High Court Division of the Supreme Court of Bangladesh</strong> under Article 102 of the Constitution. It is used to challenge the actions of public authorities, enforce fundamental rights guaranteed by Part III of the Constitution, or seek specific legal remedies that ordinary courts cannot provide. Before proceeding, <a href="/blog/hire-criminal-lawyer-bangladesh" style="color:var(--accent); font-weight:500;">consulting a criminal defense advocate</a> is highly recommended.</p>
+                content: `<p>A writ petition is an application filed directly in the <strong>High Court Division of the Supreme Court of Bangladesh</strong> under Article 102 of the Constitution. It is used to challenge the actions of public authorities, enforce fundamental rights guaranteed by Part III of the Constitution, or seek specific legal remedies that ordinary courts cannot provide. Before proceeding, <a href="/services/criminal-lawyer" style="color:var(--accent); font-weight:500;">consulting a criminal defense advocate</a> is highly recommended.</p>
 <p>Unlike regular civil or criminal cases that start in lower courts, a writ petition begins in the High Court. It requires a specialised <a href="/services/supreme-court-lawyer" style="color:var(--accent)">Supreme Court lawyer in Bangladesh</a> with experience in constitutional law.</p>`,
             },
             {

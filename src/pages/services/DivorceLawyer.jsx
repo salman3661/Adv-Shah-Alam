@@ -76,7 +76,7 @@ const DivorceLawyer = () => (
         }}
         ctaText="Speak to a Divorce Lawyer in Dhaka Today"
         relatedBlogLinks={[
-            { to: '/blog/divorce-procedure-bangladesh', title: 'Divorce Procedure in Bangladesh (2026) – Complete Guide', desc: 'Step-by-step talaq, khula, and family court divorce procedures explained' },
+            { to: '/blog/how-to-file-divorce-court-bangladesh-2026', title: 'Divorce Procedure in Bangladesh (2026) – Complete Guide', desc: 'Step-by-step talaq, khula, and family court divorce procedures explained' },
             { to: '/blog/child-custody-law-bangladesh', title: 'Child Custody Law in Bangladesh – Who Gets Custody?', desc: 'How courts decide custody and what both parents\' rights are' },
             { to: '/blog/divorce-alimony-maintenance-wife-bangladesh', title: 'Divorce Maintenance & Alimony for Wives (2026)', desc: 'Mahr, iddat, child maintenance — complete guide to wife\'s financial rights' },
             { to: '/blog/wife-rights-after-divorce-bangladesh', title: 'Wife\'s Rights After Divorce in Bangladesh', desc: 'Complete guide to mahr, custody, property, and enforcement through courts' },

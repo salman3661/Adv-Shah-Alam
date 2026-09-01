@@ -22,7 +22,7 @@
   "sections": [
     {
       "h2": "রেজিস্ট্রেশন কী?",
-      "content": "<p>রেজিস্ট্রার অ্যাক্ট ১৯০৮ অনুযায়ী জমি রেজিস্ট্রেশন করা বাধ্যতামূলক। এটি না করলে জমির মালিকানা আইনগতভাবে অকার্যকর হয়। একজন <a href=\"/bn/services/land-lawyer\" style=\"color:var(--accent)\">ভূমি আইনজীবীর</a> সাহায্য নেওয়া বুদ্ধিমানের কাজ। বিশেষ করে <a href=\"/bn/blog/uttaradhikar-certificate-bangladesh\" style=\"color:var(--accent); font-weight:500;\">পৈতৃক সম্পত্তি হস্তান্তরের আইনি প্রক্রিয়া</a> সম্পাদনে এটি অনেক কাজে দেয়। এছাড়া <a href=\"/bn/blog/bhara-tikki-bibad-bangladesh\" style=\"color:var(--accent); font-weight:500;\">বাণিজ্যিক স্পেস ভাড়ার চুক্তিপত্র প্রস্তুত</a> করার ক্ষেত্রেও আইনের সঠিক প্রয়োগ জরুরি।</p>"
+      "content": "<p>রেজিস্ট্রার অ্যাক্ট ১৯০৮ অনুযায়ী জমি রেজিস্ট্রেশন করা বাধ্যতামূলক। এটি না করলে জমির মালিকানা আইনগতভাবে অকার্যকর হয়। একজন <a href=\"/services/land-lawyer\" style=\"color:var(--accent)\">ভূমি আইনজীবীর</a> সাহায্য নেওয়া বুদ্ধিমানের কাজ। বিশেষ করে <a href=\"/bn/blog/uttaradhikar-certificate-bangladesh\" style=\"color:var(--accent); font-weight:500;\">পৈতৃক সম্পত্তি হস্তান্তরের আইনি প্রক্রিয়া</a> সম্পাদনে এটি অনেক কাজে দেয়। এছাড়া <a href=\"/bn/blog/bhara-tikki-bibad-bangladesh\" style=\"color:var(--accent); font-weight:500;\">বাণিজ্যিক স্পেস ভাড়ার চুক্তিপত্র প্রস্তুত</a> করার ক্ষেত্রেও আইনের সঠিক প্রয়োগ জরুরি।</p>"
     },
     {
       "h2": "স্ট্যাম্প ডিউটির হার",
@@ -38,7 +38,7 @@
   "relatedServiceLinks": [
     {
       "text": "ভূমি ও সম্পত্তি আইনজীবী",
-      "to": "/bn/services/land-lawyer"
+      "to": "/services/land-lawyer"
     }
   ],
   "lang": "bn",

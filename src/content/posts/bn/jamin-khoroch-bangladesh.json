@@ -22,7 +22,7 @@
   "sections": [
     {
       "h2": "আদালতের ফি",
-      "content": "<p>আদালতের মূল স্ট্যাম্প বা ফি খুবই সামান্য (৫০-৫০০ টাকা)। আসল খরচ নির্ভর করে <a href=\"/bn/services/bail-lawyer\" style=\"color:var(--accent)\">জামিন আইনজীবীর</a> পেশাদার ফির ওপর। জটিল মামলায় <a href=\"/bn/blog/criminal-lawyer-kivabe-neben-bangladesh\" style=\"color:var(--accent); font-weight:500;\">অভিজ্ঞ ক্রিমিনাল উকিলের পরামর্শ</a> নেওয়া সবচেয়ে বেশি দরকার।</p>"
+      "content": "<p>আদালতের মূল স্ট্যাম্প বা ফি খুবই সামান্য (৫০-৫০০ টাকা)। আসল খরচ নির্ভর করে <a href=\"/services/bail-lawyer\" style=\"color:var(--accent)\">জামিন আইনজীবীর</a> পেশাদার ফির ওপর। জটিল মামলায় <a href=\"/bn/blog/criminal-lawyer-kivabe-neben-bangladesh\" style=\"color:var(--accent); font-weight:500;\">অভিজ্ঞ ক্রিমিনাল উকিলের পরামর্শ</a> নেওয়া সবচেয়ে বেশি দরকার।</p>"
     },
     {
       "h2": "বেইল বন্ড (Bail Bond) কী?",
@@ -38,11 +38,11 @@
   "relatedServiceLinks": [
     {
       "text": "জামিন আইনজীবী ঢাকা",
-      "to": "/bn/services/bail-lawyer"
+      "to": "/services/bail-lawyer"
     },
     {
       "text": "ফৌজদারি আইনজীবী উত্তরা",
-      "to": "/bn/services/criminal-lawyer"
+      "to": "/services/criminal-lawyer"
     }
   ],
   "lang": "bn",

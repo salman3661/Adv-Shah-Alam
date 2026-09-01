@@ -235,8 +235,35 @@ const Hero = ({ lang = 'en' }) => {
                 </div>
               </motion.div>
 
+              {/* ── Google Rating Social Proof ── */}
+              <motion.div {...fade(0.23)} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1.1rem', flexWrap: 'wrap' }}>
+                <div style={{ display: 'flex', gap: '2px' }}>
+                  {[1,2,3,4,5].map(s => (
+                    <svg key={s} width="14" height="14" viewBox="0 0 24 24" fill="#C6A75E" aria-hidden="true">
+                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                  ))}
+                </div>
+                <span style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--hero-heading)' }}>4.9</span>
+                <span style={{ fontSize: '0.72rem', color: 'var(--hero-sub)' }}>
+                  {isBn ? '(৪৭+ গুগল রিভিউ)' : '(47+ Google Reviews)'}
+                </span>
+                <span style={{
+                  display: 'inline-flex', alignItems: 'center', gap: '0.3rem',
+                  fontSize: '0.7rem', fontWeight: 700,
+                  color: '#16a34a',
+                  background: 'rgba(34,197,94,0.1)',
+                  border: '1px solid rgba(34,197,94,0.25)',
+                  borderRadius: '9999px',
+                  padding: '0.15rem 0.55rem',
+                }}>
+                  <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#22c55e', display: 'inline-block', animation: 'dot-glow-green 1.8s ease-in-out infinite' }} />
+                  {isBn ? 'এখন উপলব্ধ' : 'Available Now'}
+                </span>
+              </motion.div>
+
               {/* ── CTAs ── */}
-              <motion.div {...fade(0.27)} style={{ display: 'flex', gap: '0.7rem', flexWrap: 'wrap' }}>
+              <motion.div {...fade(0.3)} style={{ display: 'flex', gap: '0.7rem', flexWrap: 'wrap' }}>
                 <a href={waLink()} target="_blank" rel="noopener noreferrer"
                   style={{
                     display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
@@ -266,9 +293,13 @@ const Hero = ({ lang = 'en' }) => {
                   onMouseEnter={e => { e.currentTarget.style.background = 'var(--hero-cta-sec-hover)'; e.currentTarget.style.transform = 'translateY(-2px)'; }}
                   onMouseLeave={e => { e.currentTarget.style.background = 'var(--hero-cta-sec-bg)'; e.currentTarget.style.transform = 'none'; }}
                 >
-                  📞 {heroContent.cta2Label}
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+                  </svg>
+                  {heroContent.cta2Label}
                 </a>
               </motion.div>
+
             </div>
 
             {/* ── RIGHT: Photo ── */}

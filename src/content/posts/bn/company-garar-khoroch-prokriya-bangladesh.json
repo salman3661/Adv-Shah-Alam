@@ -22,7 +22,7 @@
   "sections": [
     {
       "h2": "কোম্পানির ধরন",
-      "content": "<p>প্রাইভেট লিমিটেড, পাবলিক লিমিটেড এবং ওয়ান-পারসন কোম্পানি (OPC) উল্লেখযোগ্য। আপনার ব্যবসার ধরন অনুযায়ী একজন <a href=\"/bn/services/company-corporate-lawyer\" style=\"color:var(--accent)\">কোম্পানি আইনজীবী</a> আপনাকে সঠিক পরামর্শ দেবেন।</p>"
+      "content": "<p>প্রাইভেট লিমিটেড, পাবলিক লিমিটেড এবং ওয়ান-পারসন কোম্পানি (OPC) উল্লেখযোগ্য। আপনার ব্যবসার ধরন অনুযায়ী একজন <a href=\"/services/company-corporate-lawyer\" style=\"color:var(--accent)\">কোম্পানি আইনজীবী</a> আপনাকে সঠিক পরামর্শ দেবেন।</p>"
     },
     {
       "h2": "সরকারি ফি: ২০২৫",
@@ -38,7 +38,7 @@
   "relatedServiceLinks": [
     {
       "text": "কোম্পানি ও কর্পোরেট আইনজীবী",
-      "to": "/bn/services/company-corporate-lawyer"
+      "to": "/services/company-corporate-lawyer"
     }
   ],
   "lang": "bn",
