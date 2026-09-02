@@ -60,7 +60,7 @@ const BlogPreview = ({ lang: initialLang = 'en' }) => {
                             {activeLang === 'en' ? 'Legal Knowledge Hub' : 'আইনি জ্ঞানের ভাণ্ডার'}
                         </motion.span>
                         <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
-                            className="text-3xl md:text-4xl font-bold mb-2" style={{ color: 'var(--text)', fontFamily: activeLang === 'bn' ? "var(--font-bn), 'SolaimanLipi', 'Hind Siliguri', sans-serif" : "'Playfair Display', serif" }}>
+                            className="text-3xl md:text-4xl font-bold mb-2" style={{ color: 'var(--text)', fontFamily: activeLang === 'bn' ? "var(--font-bn), 'SolaimanLipi', 'Kalpurush', sans-serif" : "'Playfair Display', serif" }}>
                             {activeLang === 'en' ? 'Legal Guides & Case Insights' : 'আইনি পরামর্শ ও আপনার অধিকার'}
                         </motion.h2>
                         <motion.div initial={{ scaleX: 0 }} whileInView={{ scaleX: 1 }} viewport={{ once: true }} transition={{ delay: 0.2 }}

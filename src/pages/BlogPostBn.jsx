@@ -207,7 +207,7 @@ const PopularBnPosts = ({ currentSlug }) => {
                                     color: 'var(--text)',
                                     lineHeight: 1.45,
                                     margin: 0,
-                                    fontFamily: "'Hind Siliguri', 'SolaimanLipi', sans-serif",
+                                    fontFamily: "'SolaimanLipi', 'Kalpurush', 'Noto Serif Bengali', sans-serif",
                                     wordBreak: 'break-word'
                                 }}>
                                     {rp.title}
@@ -291,7 +291,7 @@ const RecentBnPosts = ({ currentSlug }) => {
                                     color: 'var(--text)',
                                     lineHeight: 1.45,
                                     margin: 0,
-                                    fontFamily: "'Hind Siliguri', 'SolaimanLipi', sans-serif",
+                                    fontFamily: "'SolaimanLipi', 'Kalpurush', 'Noto Serif Bengali', sans-serif",
                                     wordBreak: 'break-word'
                                 }}>
                                     {rp.title}
@@ -735,7 +735,7 @@ const BlogPostBnInner = () => {
 
                                             {/* Clean Headline with vertical accent bar */}
                                             <h2 style={{
-                                                fontFamily: "'Hind Siliguri', 'SolaimanLipi', sans-serif",
+                                                fontFamily: "'SolaimanLipi', 'Kalpurush', 'Noto Serif Bengali', sans-serif",
                                                 fontSize: 'clamp(1.35rem, 2.5vw, 1.75rem)',
                                                 fontWeight: 800,
                                                 lineHeight: 1.35,
@@ -760,7 +760,7 @@ const BlogPostBnInner = () => {
                                         </div>
 
                                         <div className="prose-bn-content"
-                                            style={{ color: 'var(--text)', fontSize: '1.1875rem', lineHeight: '2.05', letterSpacing: '0.005em', wordBreak: 'break-word', overflowWrap: 'anywhere', fontFamily: "'Hind Siliguri', 'SolaimanLipi', sans-serif" }}
+                                            style={{ color: 'var(--text)', fontSize: '1.1875rem', lineHeight: '2.05', letterSpacing: '0.005em', wordBreak: 'break-word', overflowWrap: 'anywhere', fontFamily: "'SolaimanLipi', 'Kalpurush', 'Noto Serif Bengali', sans-serif" }}
                                             dangerouslySetInnerHTML={{ __html: sec.content }}
                                         />
                                     </section>
@@ -936,8 +936,8 @@ const BlogPostBnInner = () => {
                 .prose-bn-content b { color: var(--text); font-weight: 700; }
                 .prose-bn-content a { color: var(--accent); text-decoration: underline; text-decoration-color: rgba(198,167,94,0.35); text-underline-offset: 4px; }
                 .prose-bn-content a:hover { text-decoration-color: var(--accent); }
-                .prose-bn-content h3 { font-family: 'Hind Siliguri', 'SolaimanLipi', sans-serif; font-size: 1.35rem; font-weight: 800; color: var(--text); margin: 2.5rem 0 1.1rem; padding: 0.5rem 0.875rem; border-left: 4px solid var(--accent); background: linear-gradient(90deg, rgba(198,167,94,0.06), transparent); border-radius: 0 0.5rem 0.5rem 0; }
-                .prose-bn-content h4 { font-size: 1.18rem; font-weight: 700; color: var(--text); margin: 2rem 0 0.85rem; }
+                .prose-bn-content h3 { font-family: 'SolaimanLipi', 'Kalpurush', 'Noto Serif Bengali', sans-serif; font-size: 1.35rem; font-weight: 800; color: var(--text); margin: 2.5rem 0 1.1rem; padding: 0.5rem 0.875rem; border-left: 4px solid var(--accent); background: linear-gradient(90deg, rgba(198,167,94,0.06), transparent); border-radius: 0 0.5rem 0.5rem 0; }
+                .prose-bn-content h4 { font-family: 'SolaimanLipi', 'Kalpurush', 'Noto Serif Bengali', sans-serif; font-size: 1.18rem; font-weight: 700; color: var(--text); margin: 2rem 0 0.85rem; }
                 .prose-bn-content blockquote { border-left: 4px solid var(--accent); padding: 1.25rem 1.5rem; margin: 2.25rem 0; color: var(--text); background: linear-gradient(90deg, rgba(198,167,94,0.06), rgba(198,167,94,0.02)); border-radius: 0 0.875rem 0.875rem 0; font-size: 1.15rem; line-height: 2.05; }
                 .prose-bn-content table { width: 100%; border-collapse: collapse; margin-bottom: 1.75rem; font-size: 1.05rem; border-radius: 0.625rem; overflow: hidden; }
                 .prose-bn-content th, .prose-bn-content td { padding: 0.9rem 1.25rem; border: 1px solid var(--card-border); color: var(--text); }

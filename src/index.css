@@ -72,7 +72,7 @@ body {
   --wa-green-hover: #1ebe5d;
 
   --font-en: 'DM Sans', system-ui, sans-serif;
-  --font-bn: 'Hind Siliguri', 'SolaimanLipi', 'Kalpurush', sans-serif;
+  --font-bn: 'SolaimanLipi', 'Kalpurush', 'Noto Serif Bengali', 'Tiro Bangla', 'Hind Siliguri', sans-serif;
 
   font-family: var(--font-en);
   font-size: 16px;
@@ -86,10 +86,40 @@ body {
 
 
 /* ══════════════════════════════════════════════════════════
-   BENGALI FONT — automatic when lang="bn" is on <html>
+   BENGALI FONT DEFINITIONS & DEFAULTS
    ══════════════════════════════════════════════════════════ */
 
-/* Every element on a Bengali page uses Hind Siliguri */
+@font-face {
+  font-family: 'SolaimanLipi';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/gh/maateen/solaiman-lipi@master/font.woff2') format('woff2'),
+       url('https://cdn.jsdelivr.net/gh/maateen/solaiman-lipi@master/font.woff') format('woff'),
+       url('https://cdn.jsdelivr.net/gh/maateen/solaiman-lipi@master/font.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'SolaimanLipi';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/gh/maateen/solaiman-lipi@master/font.woff2') format('woff2'),
+       url('https://cdn.jsdelivr.net/gh/maateen/solaiman-lipi@master/font.woff') format('woff'),
+       url('https://cdn.jsdelivr.net/gh/maateen/solaiman-lipi@master/font.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Kalpurush';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/gh/maateen/kalpurush@master/font.woff2') format('woff2'),
+       url('https://cdn.jsdelivr.net/gh/maateen/kalpurush@master/font.woff') format('woff'),
+       url('https://cdn.jsdelivr.net/gh/maateen/kalpurush@master/font.ttf') format('truetype');
+}
+
+/* Every element on a Bengali page uses SolaimanLipi / Kalpurush */
 html[lang="bn"] body,
 html[lang="bn"] h1,
 html[lang="bn"] h2,
@@ -105,15 +135,18 @@ html[lang="bn"] label,
 html[lang="bn"] input,
 html[lang="bn"] textarea,
 html[lang="bn"] li,
-html[lang="bn"] div {
-  font-family: var(--font-bn);
+html[lang="bn"] div,
+html[lang="bn"] table,
+html[lang="bn"] th,
+html[lang="bn"] td {
+  font-family: var(--font-bn) !important;
 }
 
 /* Mixed content: Bengali Unicode block always uses Bengali font
    regardless of lang attribute — covers inline BN in EN pages */
 :lang(bn),
 [lang="bn"] {
-  font-family: var(--font-bn);
+  font-family: var(--font-bn) !important;
 }
 
 /* Selector for any element that contains Bangla script characters */
@@ -582,6 +615,7 @@ body[data-theme="dark"] .status-current {
 /* Bangla article typography — high-end editorial readability */
 .prose-bn,
 .prose-bn-content {
+  font-family: var(--font-bn) !important;
   line-height: 2.05;
   word-break: break-word;
   overflow-wrap: anywhere;
@@ -590,11 +624,17 @@ body[data-theme="dark"] .status-current {
 
 .prose-bn p,
 .prose-bn-content p {
+  font-family: var(--font-bn) !important;
   margin-bottom: 1.25rem;
 }
 
+.prose-bn h1,
+.prose-bn h2,
 .prose-bn h3,
+.prose-bn-content h1,
+.prose-bn-content h2,
 .prose-bn-content h3 {
+  font-family: var(--font-bn) !important;
   font-size: 1.3rem;
   font-weight: 700;
   color: var(--text);
@@ -608,6 +648,7 @@ body[data-theme="dark"] .status-current {
 
 .prose-bn h4,
 .prose-bn-content h4 {
+  font-family: var(--font-bn) !important;
   font-size: 1.125rem;
   font-weight: 700;
   color: var(--gold, #c6a75e);
