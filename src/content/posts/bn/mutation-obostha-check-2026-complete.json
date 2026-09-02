@@ -1,0 +1,80 @@
+{
+  "slug": "mutation-obostha-check-2026-complete",
+  "category": "ভূমি আইন",
+  "title": "মিউটেশন আবেদনের সর্বশেষ অবস্থা কীভাবে চেক করবেন? সম্পূর্ণ গাইড ২০২৬",
+  "metaTitle": "মিউটেশন আবেদনের সর্বশেষ অবস্থা ২০২৬ | অনলাইনে মিউটেশন চেক",
+  "metaDescription": "মিউটেশন আবেদনের বর্তমান অবস্থা কীভাবে জানবেন? অনলাইন পোর্টালে ট্র্যাকিং, মিউটেশন আটকে গেলে করণীয় — সম্পূর্ণ গাইড বাংলায় ২০২৬।",
+  "keywords": [
+    "মিউটেশন আবেদনের সর্বশেষ অবস্থা",
+    "mutation check online bangladesh",
+    "মিউটেশন ট্র্যাকিং",
+    "নামজারি মিউটেশন পার্থক্য",
+    "online mutation status bangladesh"
+  ],
+  "publishedDate": "2026-09-02",
+  "lastModified": "2026-09-02",
+  "readTime": "১১ মিনিট",
+  "heroIntro": "<p>মিউটেশন আবেদন জমা দিয়েছেন মাসের পর মাস — কিন্তু কোনো আপডেট নেই? অনেকেই বুঝতে পারেন না মিউটেশন আর নামজারি কি একই জিনিস। আবার কোথায় গেলে অবস্থা জানা যাবে সেটাও অজানা। এই আর্টিকেলে সব জানুন। পরামর্শের জন্য: <a href=\"/advocate-md-shah-alam\" style=\"color:var(--gold);font-weight:bold\">অ্যাডভোকেট মোঃ শাহ আলম</a> — <a href=\"tel:01712655546\" style=\"color:var(--gold);font-weight:bold\">📞 01712655546</a></p>",
+  "quickAnswer": {
+    "heading": "⚡ মিউটেশন স্ট্যাটাস চেক — সংক্ষিপ্ত উত্তর",
+    "points": [
+      "বাংলাদেশে \"মিউটেশন\" ও \"নামজারি\" একই জিনিস",
+      "অনলাইনে চেক: land.gov.bd → ই-নামজারি",
+      "আবেদন নম্বর বা NID দিয়ে ট্র্যাক করুন",
+      "সমস্যা হলে: উপজেলা ভূমি অফিসে সরাসরি যান",
+      "ডিজিটাল পর্চা পেতে: eporcha.gov.bd"
+    ]
+  },
+  "toc": [
+    "মিউটেশন ও নামজারি কি একই?",
+    "মিউটেশন আবেদনের অবস্থা অনলাইনে কীভাবে দেখবেন?",
+    "মিউটেশনের জন্য কী কী কাগজ লাগে?",
+    "মিউটেশন ফি কত?",
+    "মিউটেশন আটকে গেলে কী করবেন?",
+    "মিউটেশনের পর কী করতে হবে?",
+    "আইনি সহায়তা"
+  ],
+  "sections": [
+    {
+      "heading": "১. মিউটেশন ও নামজারি কি একই?",
+      "content": "<p>অনেকে \"মিউটেশন\" আর \"নামজারি\" আলাদা মনে করেন। কিন্তু বাংলাদেশে এই দুটো শব্দ একই জিনিস বোঝায়।</p>\n<div style=\"background:var(--surface);border:1px solid var(--card-border);border-left:4px solid var(--accent);border-radius:0.75rem;padding:1.25rem;margin:1.25rem 0\">\n<h4 style=\"color:var(--accent);margin:0 0 0.75rem 0\">📌 বিভিন্ন নাম, একই কাজ</h4>\n<ul style=\"margin:0;padding-left:1.5rem;color:var(--text-secondary);line-height:2\">\n<li><strong>নামজারি</strong> — সাধারণ বাংলা পরিভাষা</li>\n<li><strong>খারিজ</strong> — গ্রামাঞ্চলে বহুল ব্যবহৃত</li>\n<li><strong>মিউটেশন</strong> — ইংরেজি শব্দ, সরকারি কাগজেও ব্যবহার হয়</li>\n<li><strong>রেকর্ড সংশোধন</strong> — প্রশাসনিক ভাষায়</li>\n</ul>\n<p style=\"margin:0.75rem 0 0 0;color:var(--text-secondary)\">সবগুলোর অর্থ একটাই — জমির সরকারি রেকর্ডে নতুন মালিকের নাম লেখানো।</p>\n</div>"
+    },
+    {
+      "heading": "২. মিউটেশন আবেদনের অবস্থা অনলাইনে কীভাবে দেখবেন?",
+      "content": "<p>দুটি প্রধান পোর্টালে মিউটেশনের অবস্থা দেখা যায়।</p>\n<div style=\"margin:1.25rem 0\">\n<div style=\"display:flex;align-items:flex-start;gap:1rem;margin-bottom:1rem;background:var(--surface);border:1px solid var(--card-border);border-radius:0.75rem;padding:1rem\">\n<div style=\"background:var(--accent);color:#fff;width:2rem;height:2rem;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;flex-shrink:0\">১</div>\n<div><h4 style=\"margin:0 0 0.4rem 0\">land.gov.bd-এ যান</h4><p style=\"margin:0;color:var(--text-secondary);font-size:0.9rem\">মেনু থেকে \"ই-নামজারি\" বা \"Mutation Status\" খুঁজুন।</p></div>\n</div>\n<div style=\"display:flex;align-items:flex-start;gap:1rem;margin-bottom:1rem;background:var(--surface);border:1px solid var(--card-border);border-radius:0.75rem;padding:1rem\">\n<div style=\"background:var(--accent);color:#fff;width:2rem;height:2rem;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;flex-shrink:0\">২</div>\n<div><h4 style=\"margin:0 0 0.4rem 0\">জেলা, উপজেলা ও আবেদন নম্বর দিন</h4><p style=\"margin:0;color:var(--text-secondary);font-size:0.9rem\">আবেদনের সময় পাওয়া রসিদে আবেদন নম্বর থাকে।</p></div>\n</div>\n<div style=\"display:flex;align-items:flex-start;gap:1rem;background:var(--surface);border:1px solid var(--card-border);border-radius:0.75rem;padding:1rem\">\n<div style=\"background:var(--gold);color:#fff;width:2rem;height:2rem;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;flex-shrink:0\">৩</div>\n<div><h4 style=\"margin:0 0 0.4rem 0\">স্ট্যাটাস দেখুন</h4><p style=\"margin:0;color:var(--text-secondary);font-size:0.9rem\">আপনার আবেদন কোন কর্মকর্তার কাছে আছে এবং কী সিদ্ধান্ত হয়েছে দেখতে পাবেন।</p></div>\n</div>\n</div>"
+    },
+    {
+      "heading": "৩. মিউটেশনের জন্য কী কী কাগজ লাগে?",
+      "content": "<div style=\"background:var(--surface);border:1px solid var(--card-border);border-radius:0.75rem;padding:1.25rem;margin:1.25rem 0\">\n<h4 style=\"color:var(--accent);margin:0 0 1rem 0\">📋 প্রয়োজনীয় কাগজপত্র</h4>\n<div style=\"display:grid;grid-template-columns:1fr 1fr;gap:1rem\">\n<div>\n<h5 style=\"color:var(--text);margin:0 0 0.5rem 0\">ক্রয়ের ক্ষেত্রে</h5>\n<ul style=\"margin:0;padding-left:1.25rem;color:var(--text-secondary);font-size:0.9rem;line-height:1.9\">\n<li>সাফ কবলা দলিল (রেজিস্ট্রিকৃত)</li>\n<li>NID কার্ড</li>\n<li>পাসপোর্ট সাইজ ছবি</li>\n<li>আবেদন ফরম</li>\n<li>খাজনার রসিদ</li>\n</ul>\n</div>\n<div>\n<h5 style=\"color:var(--text);margin:0 0 0.5rem 0\">উত্তরাধিকারের ক্ষেত্রে</h5>\n<ul style=\"margin:0;padding-left:1.25rem;color:var(--text-secondary);font-size:0.9rem;line-height:1.9\">\n<li>ওয়ারিশ সনদ</li>\n<li>মৃত্যু সনদ</li>\n<li>সকল ওয়ারিশের NID</li>\n<li>পূর্ববর্তী খতিয়ান</li>\n<li>আবেদন ফরম</li>\n</ul>\n</div>\n</div>\n</div>"
+    },
+    {
+      "heading": "৪. আইনি সহায়তা",
+      "content": "<div style=\"background:linear-gradient(135deg,rgba(26,63,191,0.08),rgba(198,167,94,0.08));padding:1.5rem;border-radius:1rem;border:1px solid var(--gold);margin:1.5rem 0\">\n<h3 style=\"margin:0 0 0.75rem 0;color:var(--text)\">⚖️ মিউটেশন সমস্যায় সহায়তা</h3>\n<p style=\"margin:0 0 1.25rem 0;color:var(--text-secondary);line-height:1.8\">মিউটেশন জটিলতায় অ্যাডভোকেট মোঃ শাহ আলমের সাথে যোগাযোগ করুন।</p>\n<div style=\"display:flex;gap:1rem;flex-wrap:wrap\">\n<a href=\"tel:01712655546\" style=\"background:linear-gradient(135deg,var(--accent),#1A3FBF);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none\">📞 কল করুন: 01712655546</a>\n<a href=\"https://wa.me/8801712655546\" target=\"_blank\" style=\"background:#25D366;color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none\">💬 WhatsApp</a>\n</div>\n</div>"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "মিউটেশন ও নামজারি কি আলাদা?",
+      "answer": "না, বাংলাদেশে মিউটেশন ও নামজারি একই জিনিস — জমির রেকর্ডে নতুন মালিকের নাম লেখানো।"
+    },
+    {
+      "question": "মিউটেশন কতদিনে হয়?",
+      "answer": "আইন অনুযায়ী ৪৫ কার্যদিবস। বাস্তবে ১-৬ মাস সময় লাগতে পারে।"
+    },
+    {
+      "question": "মিউটেশন ফি কত?",
+      "answer": "সরকারি আবেদন ফি মাত্র ১০০ টাকা। তবে আনুষঙ্গিক খরচ মিলিয়ে ৫০০-২০০০ টাকা হতে পারে।"
+    },
+    {
+      "question": "মিউটেশন না করলে কি খাজনা দেওয়া যাবে?",
+      "answer": "না, নামজারি না হলে নতুন মালিকের নামে খাজনা দেওয়া সম্ভব হয় না।"
+    },
+    {
+      "question": "অনলাইনে মিউটেশনের জন্য আবেদন করা যায় কি?",
+      "answer": "হ্যাঁ, land.gov.bd পোর্টালে অনলাইনে মিউটেশনের আবেদন করা যায়।"
+    }
+  ],
+  "featured": false,
+  "impressions": 109,
+  "clicks": 2
+}

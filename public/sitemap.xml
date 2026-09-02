@@ -3,97 +3,97 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.advmdshahalam.me/</loc>
-    <lastmod>2026-09-01</lastmod>
+    <lastmod>2026-09-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.advmdshahalam.me/en</loc>
-    <lastmod>2026-09-01</lastmod>
+    <lastmod>2026-09-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.advmdshahalam.me/advocate-md-shah-alam</loc>
-    <lastmod>2026-09-01</lastmod>
+    <lastmod>2026-09-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.advmdshahalam.me/contact</loc>
-    <lastmod>2026-09-01</lastmod>
+    <lastmod>2026-09-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.advmdshahalam.me/bn/contact</loc>
-    <lastmod>2026-09-01</lastmod>
+    <lastmod>2026-09-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.advmdshahalam.me/blog</loc>
-    <lastmod>2026-09-01</lastmod>
+    <lastmod>2026-09-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.advmdshahalam.me/education</loc>
-    <lastmod>2026-09-01</lastmod>
+    <lastmod>2026-09-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.advmdshahalam.me/privacy-policy</loc>
-    <lastmod>2026-09-01</lastmod>
+    <lastmod>2026-09-02</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://www.advmdshahalam.me/terms</loc>
-    <lastmod>2026-09-01</lastmod>
+    <lastmod>2026-09-02</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://www.advmdshahalam.me/services/criminal-lawyer</loc>
-    <lastmod>2026-09-01</lastmod>
+    <lastmod>2026-09-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.advmdshahalam.me/services/bail-lawyer</loc>
-    <lastmod>2026-09-01</lastmod>
+    <lastmod>2026-09-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.advmdshahalam.me/services/divorce-lawyer</loc>
-    <lastmod>2026-09-01</lastmod>
+    <lastmod>2026-09-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.advmdshahalam.me/services/land-lawyer</loc>
-    <lastmod>2026-09-01</lastmod>
+    <lastmod>2026-09-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.advmdshahalam.me/services/supreme-court-lawyer</loc>
-    <lastmod>2026-09-01</lastmod>
+    <lastmod>2026-09-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.advmdshahalam.me/services/company-corporate-lawyer</loc>
-    <lastmod>2026-09-01</lastmod>
+    <lastmod>2026-09-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.advmdshahalam.me/services/tax-lawyer</loc>
-    <lastmod>2026-09-01</lastmod>
+    <lastmod>2026-09-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -1083,7 +1083,7 @@
   </url>
   <url>
     <loc>https://www.advmdshahalam.me/bn/blog</loc>
-    <lastmod>2026-09-01</lastmod>
+    <lastmod>2026-09-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1216,6 +1216,12 @@
   <url>
     <loc>https://www.advmdshahalam.me/bn/blog/bangladeshe-company-registration-niyom-prokriya</loc>
     <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.advmdshahalam.me/bn/blog/bari-vara-ain-varatia-malikar-odhikar-2026</loc>
+    <lastmod>2026-09-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1808,6 +1814,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.advmdshahalam.me/bn/blog/haikort-agam-jamin-khoroch-niyom-2026</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.advmdshahalam.me/bn/blog/haikort-agham-jamin-prokriya-2026-bn</loc>
     <lastmod>2026-07-24</lastmod>
     <changefreq>monthly</changefreq>
@@ -1946,6 +1958,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.advmdshahalam.me/bn/blog/jomi-dalil-hariye-gele-koronio-2026</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.advmdshahalam.me/bn/blog/jomi-dalil-hariye-gele-koronio-bangladesh</loc>
     <lastmod>2026-08-04</lastmod>
     <changefreq>monthly</changefreq>
@@ -1960,6 +1978,12 @@
   <url>
     <loc>https://www.advmdshahalam.me/bn/blog/jomi-dokhol-punoruddhar-mamla-ain-bd</loc>
     <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.advmdshahalam.me/bn/blog/jomi-jorip-dag-nombor-check-online-2026</loc>
+    <lastmod>2026-09-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -2270,6 +2294,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.advmdshahalam.me/bn/blog/mutation-obostha-check-2026-complete</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.advmdshahalam.me/bn/blog/nabalok-sampatti-bikroy-ain-2026</loc>
     <lastmod>2026-08-10</lastmod>
     <changefreq>monthly</changefreq>
@@ -2302,6 +2332,12 @@
   <url>
     <loc>https://www.advmdshahalam.me/bn/blog/namjari-khatian-check-online-prokriya-bangladesh</loc>
     <lastmod>2026-07-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.advmdshahalam.me/bn/blog/namjari-online-check-korar-niyom-2026-complete</loc>
+    <lastmod>2026-09-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -2546,6 +2582,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.advmdshahalam.me/bn/blog/sampatti-uphar-danapatra-dalil-niyom-2026</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.advmdshahalam.me/bn/blog/sampatti-uttoradhikar-ain-2026-bn</loc>
     <lastmod>2026-07-12</lastmod>
     <changefreq>monthly</changefreq>
@@ -2660,6 +2702,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.advmdshahalam.me/bn/blog/swami-dwitio-biye-prothom-stree-odhikar-2026</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.advmdshahalam.me/bn/blog/swami-talak-dewa-niyom-2026</loc>
     <lastmod>2026-08-10</lastmod>
     <changefreq>monthly</changefreq>
@@ -2768,6 +2816,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.advmdshahalam.me/bn/blog/warish-sanad-kibhabe-paben-2026-complete</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.advmdshahalam.me/bn/blog/warish-sanad-orashinamah-sangraha-niyom-2026-bn</loc>
     <lastmod>2026-08-10</lastmod>
     <changefreq>monthly</changefreq>
@@ -2812,6 +2866,12 @@
   <url>
     <loc>https://www.advmdshahalam.me/bn/blog/yautuk-dowry-ain-bangladesh-bn</loc>
     <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.advmdshahalam.me/bn/blog/yautuk-mamla-theke-bachar-ain-prokriya-2026</loc>
+    <lastmod>2026-09-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
