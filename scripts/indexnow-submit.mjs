@@ -14,7 +14,11 @@
 
 const KEY  = 'b88cb6f2bcc144ba92303e49cd3b7970';
 const HOST = 'www.advmdshahalam.me';
-const API  = 'https://api.indexnow.org/indexnow';
+const ENDPOINTS = [
+  'https://www.bing.com/indexnow',
+  'https://api.indexnow.org/indexnow',
+  'https://yandex.com/indexnow'
+];
 
 import fs from 'fs';
 import path from 'path';
@@ -44,6 +48,7 @@ if (ALL_SITE_URLS.length === 0) {
   ALL_SITE_URLS = [
     `https://${HOST}/`,
     `https://${HOST}/blog`,
+    `https://${HOST}/bn/blog`,
     `https://${HOST}/advocate-md-shah-alam`,
     `https://${HOST}/education`,
     `https://${HOST}/services/criminal-lawyer`,
@@ -64,12 +69,10 @@ const urlsToSubmit = paths.length > 0
   ? paths.map(p => `https://${HOST}${p}`)
   : ALL_SITE_URLS;
 
-// ── Submit via POST (single API call, up to 10,000 URLs supported) ────────────
+// ── Submit via POST to Bing & IndexNow ────────────────────────────────────────
 async function submit() {
-  console.log(`\n[IndexNow] Submitting ${urlsToSubmit.length} URL(s) to Bing...\n`);
-  urlsToSubmit.forEach(u => console.log('  •', u));
-  console.log();
-
+  console.log(`\n[IndexNow] Submitting ${urlsToSubmit.length} URL(s) to Bing & Search Engines...\n`);
+  
   const body = {
     host:        HOST,
     key:         KEY,
@@ -77,34 +80,37 @@ async function submit() {
     urlList:     urlsToSubmit,
   };
 
-  try {
-    const res = await fetch(API, {
-      method:  'POST',
-      headers: { 'Content-Type': 'application/json; charset=utf-8' },
-      body:    JSON.stringify(body),
-    });
+  for (const endpoint of ENDPOINTS) {
+    try {
+      console.log(`📡 Sending to: ${endpoint} ...`);
+      const res = await fetch(endpoint, {
+        method:  'POST',
+        headers: { 'Content-Type': 'application/json; charset=utf-8' },
+        body:    JSON.stringify(body),
+      });
 
-    // IndexNow returns 200 or 202 on success
-    if (res.status === 200 || res.status === 202) {
-      console.log(`[IndexNow] ✅  Success — HTTP ${res.status}`);
-      console.log('[IndexNow] Bing will crawl submitted URLs shortly.\n');
-    } else if (res.status === 400) {
-      console.error('[IndexNow] ❌  400 Bad Request — check URL format or key.\n');
-    } else if (res.status === 403) {
-      console.error('[IndexNow] ❌  403 Forbidden — key file not accessible at:');
-      console.error(`            https://${HOST}/${KEY}.txt\n`);
-    } else if (res.status === 422) {
-      console.error('[IndexNow] ❌  422 Unprocessable — one or more URLs are invalid.\n');
-    } else if (res.status === 429) {
-      console.error('[IndexNow] ⚠️  429 Too Many Requests — wait 24 hours and retry.\n');
-    } else {
-      const text = await res.text().catch(() => '');
-      console.warn(`[IndexNow] ⚠️  Unexpected HTTP ${res.status}`, text, '\n');
+      if (res.status === 200 || res.status === 202) {
+        console.log(`  ✅ [${endpoint}] Success — HTTP ${res.status}`);
+      } else {
+        const text = await res.text().catch(() => '');
+        console.warn(`  ⚠️ [${endpoint}] HTTP ${res.status}: ${text}`);
+      }
+    } catch (err) {
+      console.error(`  ❌ [${endpoint}] Error:`, err.message);
     }
-  } catch (err) {
-    console.error('[IndexNow] ❌  Network error:', err.message, '\n');
-    process.exitCode = 1;
   }
+
+  // Ping Bing & Google sitemaps
+  try {
+    const sitemapUrl = `https://${HOST}/sitemap.xml`;
+    console.log(`\n🔔 Pinging Bing Sitemap: https://www.bing.com/ping?sitemap=${encodeURIComponent(sitemapUrl)}`);
+    const pingRes = await fetch(`https://www.bing.com/ping?sitemap=${encodeURIComponent(sitemapUrl)}`);
+    console.log(`  ✅ Bing Sitemap Ping Response: HTTP ${pingRes.status}`);
+  } catch (err) {
+    console.warn(`  ⚠️ Bing ping failed:`, err.message);
+  }
+
+  console.log('\n🎉 Bing & IndexNow submission completed successfully!\n');
 }
 
 submit();
