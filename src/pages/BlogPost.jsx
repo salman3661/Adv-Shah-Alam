@@ -937,13 +937,14 @@ const BlogPostInner = () => {
                 .prose-content b { color: var(--text); font-weight: 700; }
                 .prose-content a { color: var(--accent); text-decoration: underline; text-decoration-color: rgba(198,167,94,0.35); text-underline-offset: 3px; transition: text-decoration-color 0.2s; }
                 .prose-content a:hover { text-decoration-color: var(--accent); }
-                .prose-content h3 { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 800; color: var(--text); margin: 2.25rem 0 1rem; padding: 0.5rem 0.875rem; border-left: 3px solid var(--accent); background: linear-gradient(90deg, rgba(198,167,94,0.06), transparent); border-radius: 0 0.5rem 0.5rem 0; }
+                .prose-content h3 { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 800; color: var(--text); margin: 2.25rem 0 1rem; padding: 0.5rem 0.875rem; border-left: 3px solid var(--gold, #C6A75E); background: linear-gradient(90deg, rgba(198,167,94,0.06), transparent); border-radius: 0 0.5rem 0.5rem 0; }
                 .prose-content h4 { font-size: 1.05rem; font-weight: 700; color: var(--text); margin: 1.75rem 0 0.75rem; }
-                .prose-content blockquote { border-left: 4px solid var(--accent); padding: 1.125rem 1.375rem; margin: 2.25rem 0; color: var(--text-secondary); background: linear-gradient(90deg, rgba(198,167,94,0.06), rgba(198,167,94,0.02)); border-radius: 0 0.875rem 0.875rem 0; font-size: 1rem; line-height: 1.85; }
-                .prose-content table { width: 100%; border-collapse: collapse; margin-bottom: 1.75rem; font-size: 0.9rem; border-radius: 0.625rem; overflow: hidden; }
-                .prose-content th, .prose-content td { padding: 0.8rem 1.1rem; border: 1px solid var(--card-border); }
-                .prose-content th { background: linear-gradient(90deg, var(--surface), rgba(198,167,94,0.07)); font-weight: 700; color: var(--text); }
-                .prose-content tr:nth-child(even) td { background: rgba(255,255,255,0.018); }
+                .prose-content blockquote { border-left: 4px solid var(--gold, #C6A75E); padding: 1.125rem 1.375rem; margin: 2.25rem 0; color: var(--text-secondary); background: linear-gradient(90deg, rgba(198,167,94,0.06), rgba(198,167,94,0.02)); border-radius: 0 0.875rem 0.875rem 0; font-size: 1rem; line-height: 1.85; }
+                .prose-content table { width: 100%; border-collapse: separate; border-spacing: 0; margin-bottom: 1.75rem; font-size: 0.95rem; border-radius: 10px; overflow: hidden; border: 1px solid var(--card-border); }
+                .prose-content table thead tr { background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%) !important; }
+                .prose-content th { background: transparent !important; color: #FFFFFF !important; font-weight: 700; padding: 14px 18px !important; border-bottom: 2px solid var(--gold, #C6A75E) !important; text-align: left; }
+                .prose-content td { padding: 12px 18px !important; border-bottom: 1px solid var(--card-border); }
+                .prose-content tr:nth-child(even) td { background: rgba(15, 23, 42, 0.02); }
                 .prose-content ol { list-style: decimal; }
                 .prose-content ul { list-style: none; padding-left: 0; }
                 .prose-content ul li { padding-left: 1.5rem; position: relative; }

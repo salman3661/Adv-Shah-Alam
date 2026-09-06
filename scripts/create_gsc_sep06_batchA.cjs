@@ -57,7 +57,7 @@ const posts = [
         content: `<p>অনেকের মাঝেই একটি চরম বিভ্রান্তি রয়েছে যে, কাবিননামা রেজিস্ট্রেশনের জন্য কাজী সাহেবরা যে লাখ লাখ টাকা দাবি করেন তা সরকারি ফি। বাস্তবে আইন মন্ত্রণালয় কর্তৃক নির্ধারিত সরকারি ফি অত্যন্ত সীমিত এবং সুনির্দিষ্ট। মুসলিম বিবাহ ও তালাক (নিবন্ধন) বিধিমালা ২০০৯ (সংশোধিত) অনুযায়ী সরকারি ফি হিসাব নিচে তুলে ধরা হলো:</p>
 <div style="overflow-x:auto;margin:1.25rem 0">
 <table style="width:100%;border-collapse:collapse;font-size:0.95rem">
-<thead><tr style="background:linear-gradient(135deg,var(--accent),#1A3FBF);color:#fff">
+<thead><tr style="background:linear-gradient(135deg,#0F172A,#1E293B);color:#fff">
 <th style="padding:0.85rem 1rem;text-align:left">দেনমোহরের স্ল্যাব</th>
 <th style="padding:0.85rem 1rem;text-align:center">সরকারি ফি-র হার</th>
 <th style="padding:0.85rem 1rem;text-align:right">মোট সরকারি ফি</th>
@@ -134,7 +134,7 @@ const posts = [
 <h3 style="margin:0 0 0.75rem 0;color:var(--text)">⚖️ পারিবারিক ও বিবাহ আইনের যে কোনো জটিলতায় পরামর্শ নিন</h3>
 <p style="margin:0 0 1.25rem 0;color:var(--text-secondary);line-height:1.8">কোর্ট ম্যারেজ, কাবিননামার শর্তাবলী সুরক্ষা, দেনমোহর বিরোধ কিংবা নিকাহ রেজিস্ট্রেশনের যে কোনো জটিল আইনি সমস্যায় সুপ্রিম কোর্টের প্রবীণ আইনজীবী অ্যাডভোকেট মোঃ শাহ আলমের সরাসরি সহায়তা গ্রহণ করুন।</p>
 <div style="display:flex;gap:1rem;flex-wrap:wrap">
-<a href="tel:01712655546" style="background:linear-gradient(135deg,var(--accent),#1A3FBF);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">📞 সরাসরি কল: 01712655546</a>
+<a href="tel:01712655546" style="background:linear-gradient(135deg,#0F172A,#1E293B);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">📞 সরাসরি কল: 01712655546</a>
 <a href="https://wa.me/8801712655546" target="_blank" style="background:#25D366;color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">💬 WhatsApp পরামর্শ</a>
 <a href="/bn/contact" style="background:var(--surface);color:var(--text);padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none;border:1px solid var(--card-border)">📍 চেম্বার ঠিকানা</a>
 </div>
@@ -277,7 +277,7 @@ const posts = [
 <h3 style="margin:0 0 0.75rem 0;color:var(--text)">⚖️ মাদক মামলায় সঠিক আইনি সহায়তা নিন</h3>
 <p style="margin:0 0 1.25rem 0;color:var(--text-secondary);line-height:1.8">মাদক মামলায় জামিন শুনানি এবং চার্জশিটের আইনি ত্রুটি খুঁজে বের করতে সুপ্রিম কোর্টের দীর্ঘ অভিজ্ঞতাসম্পন্ন ফৌজদারি আইনজীবী অ্যাডভোকেট মোঃ শাহ আলমের সুচিন্তিত আইনি পরামর্শ গ্রহণ করুন।</p>
 <div style="display:flex;gap:1rem;flex-wrap:wrap">
-<a href="tel:01712655546" style="background:linear-gradient(135deg,var(--accent),#1A3FBF);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">📞 সরাসরি কল: 01712655546</a>
+<a href="tel:01712655546" style="background:linear-gradient(135deg,#0F172A,#1E293B);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">📞 সরাসরি কল: 01712655546</a>
 <a href="https://wa.me/8801712655546" target="_blank" style="background:#25D366;color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">💬 WhatsApp পরামর্শ</a>
 <a href="/bn/contact" style="background:var(--surface);color:var(--text);padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none;border:1px solid var(--card-border)">📍 চেম্বার ঠিকানা</a>
 </div>
@@ -364,7 +364,7 @@ const posts = [
         content: `<p>সাধারণ মানুষের মধ্যে প্রায়ই জিডি ও এফআইআর বা এজাহার নিয়ে চরম বিভ্রান্তি তৈরি হয়। দুটি কখনোই এক নয়।</p>
 <div style="overflow-x:auto;margin:1.25rem 0">
 <table style="width:100%;border-collapse:collapse;font-size:0.95rem">
-<thead><tr style="background:linear-gradient(135deg,var(--accent),#1A3FBF);color:#fff">
+<thead><tr style="background:linear-gradient(135deg,#0F172A,#1E293B);color:#fff">
 <th style="padding:0.85rem 1rem;text-align:left">বিষয়</th>
 <th style="padding:0.85rem 1rem;text-align:left">সাধারণ ডায়েরি (GD)</th>
 <th style="padding:0.85rem 1rem;text-align:left">এজাহার বা এফআইআর (FIR)</th>
@@ -441,7 +441,7 @@ const posts = [
 <h3 style="margin:0 0 0.75rem 0;color:var(--text)">⚖️ আইনি সুরক্ষায় অভিজ্ঞ আইনজীবীর শরণাপন্ন হোন</h3>
 <p style="margin:0 0 1.25rem 0;color:var(--text-secondary);line-height:1.8">থানায় অভিযোগ ড্রাফটিং, হুমকির বিরুদ্ধে যথাযথ আইনি নিরাপত্তা এবং আদালতে শক্তিশালী সিআর মামলা পরিচালনার জন্য সুপ্রিম কোর্টের বিজ্ঞ আইনজীবী অ্যাডভোকেট মোঃ শাহ আলমের সরাসরি আইনি দিকনির্দেশনা গ্রহণ করুন।</p>
 <div style="display:flex;gap:1rem;flex-wrap:wrap">
-<a href="tel:01712655546" style="background:linear-gradient(135deg,var(--accent),#1A3FBF);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">📞 সরাসরি কল: 01712655546</a>
+<a href="tel:01712655546" style="background:linear-gradient(135deg,#0F172A,#1E293B);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">📞 সরাসরি কল: 01712655546</a>
 <a href="https://wa.me/8801712655546" target="_blank" style="background:#25D366;color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">💬 WhatsApp পরামর্শ</a>
 <a href="/bn/contact" style="background:var(--surface);color:var(--text);padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none;border:1px solid var(--card-border)">📍 চেম্বার ঠিকানা</a>
 </div>
@@ -584,7 +584,7 @@ const posts = [
 <h3 style="margin:0 0 0.75rem 0;color:var(--text)">⚖️ খ্রিস্টান উত্তরাধিকার ও প্রবেট মামলায় অভিজ্ঞ পরামর্শ</h3>
 <p style="margin:0 0 1.25rem 0;color:var(--text-secondary);line-height:1.8">খ্রিস্টান উত্তরাধিকার বণ্টননামা দলিল তৈরি, জেলা জজ আদালতে প্রবেট ও লেটার্স অব অ্যাডমিনিস্ট্রেশন মামলা পরিচালনায় সুপ্রিম কোর্টের অভিজ্ঞ দেওয়ানি আইনজীবী অ্যাডভোকেট মোঃ শাহ আলমের সরাসরি আইনি সহায়তা নিন।</p>
 <div style="display:flex;gap:1rem;flex-wrap:wrap">
-<a href="tel:01712655546" style="background:linear-gradient(135deg,var(--accent),#1A3FBF);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">📞 সরাসরি কল: 01712655546</a>
+<a href="tel:01712655546" style="background:linear-gradient(135deg,#0F172A,#1E293B);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">📞 সরাসরি কল: 01712655546</a>
 <a href="https://wa.me/8801712655546" target="_blank" style="background:#25D366;color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">💬 WhatsApp পরামর্শ</a>
 <a href="/bn/contact" style="background:var(--surface);color:var(--text);padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none;border:1px solid var(--card-border)">📍 চেম্বার ঠিকানা</a>
 </div>
@@ -667,7 +667,7 @@ const posts = [
         content: `<p>পৌরসভা এলাকায় একটি সাফ-কবলা (বিক্রয়) দলিল রেজিস্ট্রি করতে হলে সরকারিভাবে প্রধানত ৫টি খাতে ফি পরিশোধ করতে হয়:</p>
 <div style="overflow-x:auto;margin:1.25rem 0">
 <table style="width:100%;border-collapse:collapse;font-size:0.95rem">
-<thead><tr style="background:linear-gradient(135deg,var(--accent),#1A3FBF);color:#fff">
+<thead><tr style="background:linear-gradient(135deg,#0F172A,#1E293B);color:#fff">
 <th style="padding:0.85rem 1rem;text-align:left">খাতের নাম</th>
 <th style="padding:0.85rem 1rem;text-align:center">সরকারি হার (পৌরসভা এলাকা)</th>
 <th style="padding:0.85rem 1rem;text-align:left">পরিশোধের মাধ্যম</th>
@@ -703,7 +703,7 @@ const posts = [
         heading: '৫. ইউনিয়ন পরিষদ বনাম পৌরসভা বনাম সিটি কর্পোরেশন তুলনামূলক চার্ট',
         content: `<div style="overflow-x:auto;margin:1.25rem 0">
 <table style="width:100%;border-collapse:collapse;font-size:0.95rem">
-<thead><tr style="background:linear-gradient(135deg,var(--accent),#1A3FBF);color:#fff">
+<thead><tr style="background:linear-gradient(135deg,#0F172A,#1E293B);color:#fff">
 <th style="padding:0.85rem 1rem;text-align:left">এলাকার ধরন</th>
 <th style="padding:0.85rem 1rem;text-align:center">রেজিস্ট্রেশন ফি</th>
 <th style="padding:0.85rem 1rem;text-align:center">স্ট্যাম্প ডিউটি</th>
@@ -749,7 +749,7 @@ const posts = [
 <h3 style="margin:0 0 0.75rem 0;color:var(--text)">⚖️ নিরাপদ জমি রেজিস্ট্রিতে অভিজ্ঞ আইনজীবীর মতামত নিন</h3>
 <p style="margin:0 0 1.25rem 0;color:var(--text-secondary);line-height:1.8">পৌরসভা এলাকায় জমি কেনার পূর্বে সিএস, এসএ, আরএস খতিয়ান যাচাই, নামজারি ট্র্যাকিং এবং দলিলের নির্ভুল ড্রাফটিংয়ে সুপ্রিম কোর্টের প্রবীণ ভূমি আইনজীবী অ্যাডভোকেট মোঃ শাহ আলমের সুচিন্তিত আইনি মতামত গ্রহণ করুন।</p>
 <div style="display:flex;gap:1rem;flex-wrap:wrap">
-<a href="tel:01712655546" style="background:linear-gradient(135deg,var(--accent),#1A3FBF);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">📞 সরাসরি কল: 01712655546</a>
+<a href="tel:01712655546" style="background:linear-gradient(135deg,#0F172A,#1E293B);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">📞 সরাসরি কল: 01712655546</a>
 <a href="https://wa.me/8801712655546" target="_blank" style="background:#25D366;color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">💬 WhatsApp পরামর্শ</a>
 <a href="/bn/contact" style="background:var(--surface);color:var(--text);padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none;border:1px solid var(--card-border)">📍 চেম্বার ঠিকানা</a>
 </div>

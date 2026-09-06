@@ -53,7 +53,7 @@ const articles = [
         content: `<p>মুসলিম পারিবারিক আইন অধ্যাদেশ ১৯৬১ অনুযায়ী স্ত্রী তিনটি উপায়ে তালাক দিতে পারেন। কোনটি আপনার ক্ষেত্রে প্রযোজ্য তা নির্ভর করে আপনার কাবিননামা ও পরিস্থিতির উপর।</p>
 <div style="overflow-x:auto;margin:1.25rem 0">
 <table style="width:100%;border-collapse:collapse;font-size:0.95rem">
-<thead><tr style="background:linear-gradient(135deg,var(--accent),#1A3FBF);color:#fff">
+<thead><tr style="background:linear-gradient(135deg,#0F172A,#1E293B);color:#fff">
 <th style="padding:0.85rem 1rem;text-align:left">পদ্ধতি</th>
 <th style="padding:0.85rem 1rem;text-align:left">শর্ত</th>
 <th style="padding:0.85rem 1rem;text-align:center">সময়</th>
@@ -135,7 +135,7 @@ const articles = [
 <h3 style="margin:0 0 0.75rem 0;color:var(--text)">⚖️ তালাক বিষয়ক আইনি সহায়তা</h3>
 <p style="margin:0 0 1.25rem 0;color:var(--text-secondary);line-height:1.8">তালাক প্রক্রিয়া জটিল হতে পারে। অ্যাডভোকেট মোঃ শাহ আলম পারিবারিক আইনে অভিজ্ঞ — তিনি আপনার পাশে থেকে সঠিক পথ দেখাবেন।</p>
 <div style="display:flex;gap:1rem;flex-wrap:wrap">
-<a href="tel:01712655546" style="background:linear-gradient(135deg,var(--accent),#1A3FBF);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">📞 কল করুন: 01712655546</a>
+<a href="tel:01712655546" style="background:linear-gradient(135deg,#0F172A,#1E293B);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">📞 কল করুন: 01712655546</a>
 <a href="https://wa.me/8801712655546" target="_blank" style="background:#25D366;color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">💬 WhatsApp</a>
 </div>
 </div>`
@@ -246,7 +246,7 @@ const articles = [
         content: `<p>কোর্ট ম্যারেজের খরচ অনেকেই অতিরিক্ত বলে শুনেছেন — কিন্তু সরকারি হার মেনে করলে এটি খুব সাশ্রয়ী।</p>
 <div style="overflow-x:auto;margin:1.25rem 0">
 <table style="width:100%;border-collapse:collapse;font-size:0.95rem">
-<thead><tr style="background:linear-gradient(135deg,var(--accent),#1A3FBF);color:#fff">
+<thead><tr style="background:linear-gradient(135deg,#0F172A,#1E293B);color:#fff">
 <th style="padding:0.85rem 1rem;text-align:left">খরচের খাত</th>
 <th style="padding:0.85rem 1rem;text-align:center">সরকারি হার</th>
 <th style="padding:0.85rem 1rem;text-align:left">মন্তব্য</th>
@@ -296,7 +296,7 @@ const articles = [
 <h3 style="margin:0 0 0.75rem 0;color:var(--text)">⚖️ কোর্ট ম্যারেজে আইনি সহায়তা</h3>
 <p style="margin:0 0 1.25rem 0;color:var(--text-secondary);line-height:1.8">নিরাপদ ও আইনসম্মত কোর্ট ম্যারেজের জন্য অ্যাডভোকেট মোঃ শাহ আলমের সাথে যোগাযোগ করুন।</p>
 <div style="display:flex;gap:1rem;flex-wrap:wrap">
-<a href="tel:01712655546" style="background:linear-gradient(135deg,var(--accent),#1A3FBF);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">📞 কল করুন: 01712655546</a>
+<a href="tel:01712655546" style="background:linear-gradient(135deg,#0F172A,#1E293B);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">📞 কল করুন: 01712655546</a>
 <a href="https://wa.me/8801712655546" target="_blank" style="background:#25D366;color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">💬 WhatsApp</a>
 </div>
 </div>`
@@ -397,7 +397,7 @@ const articles = [
         content: `<p>১৩৮ ধারার মামলায় আসামির জামিন পাওয়া তুলনামূলক সহজ। তবে সাজা অনেক কঠিন হতে পারে।</p>
 <div style="overflow-x:auto;margin:1.25rem 0">
 <table style="width:100%;border-collapse:collapse;font-size:0.95rem">
-<thead><tr style="background:linear-gradient(135deg,var(--accent),#1A3FBF);color:#fff">
+<thead><tr style="background:linear-gradient(135deg,#0F172A,#1E293B);color:#fff">
 <th style="padding:0.85rem 1rem;text-align:left">বিষয়</th>
 <th style="padding:0.85rem 1rem;text-align:left">বিবরণ</th>
 </tr></thead>
@@ -416,7 +416,7 @@ const articles = [
 <h3 style="margin:0 0 0.75rem 0;color:var(--text)">⚖️ চেক বাউন্স মামলায় সহায়তা</h3>
 <p style="margin:0 0 1.25rem 0;color:var(--text-secondary);line-height:1.8">চেক বাউন্সের ক্ষেত্রে দ্রুত পদক্ষেপ নিন। অ্যাডভোকেট মোঃ শাহ আলম ব্যবসায়িক আইন ও চেক বাউন্স মামলায় অভিজ্ঞ।</p>
 <div style="display:flex;gap:1rem;flex-wrap:wrap">
-<a href="tel:01712655546" style="background:linear-gradient(135deg,var(--accent),#1A3FBF);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">📞 কল করুন: 01712655546</a>
+<a href="tel:01712655546" style="background:linear-gradient(135deg,#0F172A,#1E293B);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">📞 কল করুন: 01712655546</a>
 <a href="https://wa.me/8801712655546" target="_blank" style="background:#25D366;color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">💬 WhatsApp</a>
 </div>
 </div>`
@@ -543,7 +543,7 @@ const articles = [
 <h3 style="margin:0 0 0.75rem 0;color:var(--text)">⚖️ তালাক বিষয়ক আইনি সহায়তা</h3>
 <p style="margin:0 0 1.25rem 0;color:var(--text-secondary);line-height:1.8">তালাকনামা সঠিকভাবে লেখা ও নোটিশ পাঠানোর জন্য আইনজীবীর সাহায্য নেওয়া নিরাপদ।</p>
 <div style="display:flex;gap:1rem;flex-wrap:wrap">
-<a href="tel:01712655546" style="background:linear-gradient(135deg,var(--accent),#1A3FBF);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">📞 কল করুন: 01712655546</a>
+<a href="tel:01712655546" style="background:linear-gradient(135deg,#0F172A,#1E293B);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">📞 কল করুন: 01712655546</a>
 <a href="https://wa.me/8801712655546" target="_blank" style="background:#25D366;color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">💬 WhatsApp</a>
 </div>
 </div>`

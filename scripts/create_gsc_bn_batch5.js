@@ -63,7 +63,7 @@ const articles = [
         content: `<p>মুসলিম পারিবারিক আইনে (Muslim Personal Law — Shariat Application Act 1937) মায়ের মৃত্যুর পর সম্পত্তি ফারায়েজ নীতি অনুযায়ী বণ্টন হয়।</p>
 <div style="overflow-x:auto;margin:1.25rem 0">
 <table style="width:100%;border-collapse:collapse;font-size:0.95rem">
-<thead><tr style="background:linear-gradient(135deg,var(--accent),#1A3FBF);color:#fff">
+<thead><tr style="background:linear-gradient(135deg,#0F172A,#1E293B);color:#fff">
 <th style="padding:0.85rem 1rem;text-align:left">পরিস্থিতি</th>
 <th style="padding:0.85rem 1rem;text-align:left">স্বামী পাবেন</th>
 <th style="padding:0.85rem 1rem;text-align:left">ছেলে পাবে</th>
@@ -173,7 +173,7 @@ const articles = [
 <h3 style="margin:0 0 0.75rem 0;color:var(--text)">⚖️ সম্পত্তি বিভাগে সরাসরি সহায়তা পান</h3>
 <p style="margin:0 0 1.25rem 0;color:var(--text-secondary);line-height:1.8">মায়ের সম্পত্তির ন্যায্য ভাগ পেতে বা পরিবারে বিরোধ মেটাতে অ্যাডভোকেট মোঃ শাহ আলম-এর সাথে যোগাযোগ করুন। তিনি সম্পত্তি বণ্টন মামলায় অভিজ্ঞ।</p>
 <div style="display:flex;gap:1rem;flex-wrap:wrap">
-<a href="tel:01712655546" style="background:linear-gradient(135deg,var(--accent),#1A3FBF);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">📞 কল করুন: 01712655546</a>
+<a href="tel:01712655546" style="background:linear-gradient(135deg,#0F172A,#1E293B);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">📞 কল করুন: 01712655546</a>
 <a href="https://wa.me/8801712655546" target="_blank" style="background:#25D366;color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">💬 WhatsApp</a>
 <a href="/bn/contact" style="background:var(--surface);color:var(--text);padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none;border:1px solid var(--card-border)">📍 চেম্বার ঠিকানা</a>
 </div>
@@ -256,7 +256,7 @@ const articles = [
         content: `<p>স্ট্যাম্প ডিউটি হলো সবচেয়ে বড় খরচ। ২০২৬ সালের নিয়ম অনুযায়ী এটি দলিলের মূল্যের উপর ভিত্তি করে নির্ধারণ হয়।</p>
 <div style="overflow-x:auto;margin:1.25rem 0">
 <table style="width:100%;border-collapse:collapse;font-size:0.95rem">
-<thead><tr style="background:linear-gradient(135deg,var(--accent),#1A3FBF);color:#fff">
+<thead><tr style="background:linear-gradient(135deg,#0F172A,#1E293B);color:#fff">
 <th style="padding:0.85rem 1rem;text-align:left">জমির ধরন</th>
 <th style="padding:0.85rem 1rem;text-align:center">স্ট্যাম্প ডিউটি</th>
 <th style="padding:0.85rem 1rem;text-align:left">মন্তব্য</th>
@@ -275,7 +275,7 @@ const articles = [
         content: `<p>রেজিস্ট্রেশন ফি ও গেইন ট্যাক্স দুটি আলাদা চার্জ। অনেকে এ দুটো এক মনে করেন।</p>
 <div style="overflow-x:auto;margin:1.25rem 0">
 <table style="width:100%;border-collapse:collapse;font-size:0.95rem">
-<thead><tr style="background:linear-gradient(135deg,var(--accent),#1A3FBF);color:#fff">
+<thead><tr style="background:linear-gradient(135deg,#0F172A,#1E293B);color:#fff">
 <th style="padding:0.85rem 1rem;text-align:left">চার্জের নাম</th>
 <th style="padding:0.85rem 1rem;text-align:center">হার</th>
 <th style="padding:0.85rem 1rem;text-align:left">কে দেয়?</th>
@@ -315,7 +315,7 @@ const articles = [
         content: `<p>চলুন একটি বাস্তব উদাহরণ দিয়ে বুঝি। ধরুন আপনি ঢাকার পাশে ৫০ লক্ষ টাকার একটি জমি কিনছেন।</p>
 <div style="overflow-x:auto;margin:1.25rem 0">
 <table style="width:100%;border-collapse:collapse;font-size:0.95rem">
-<thead><tr style="background:linear-gradient(135deg,var(--accent),#1A3FBF);color:#fff">
+<thead><tr style="background:linear-gradient(135deg,#0F172A,#1E293B);color:#fff">
 <th style="padding:0.85rem 1rem;text-align:left">খরচের খাত</th>
 <th style="padding:0.85rem 1rem;text-align:center">হার</th>
 <th style="padding:0.85rem 1rem;text-align:right">৫০ লক্ষে পরিমাণ</th>
@@ -361,7 +361,7 @@ const articles = [
 <h3 style="margin:0 0 0.75rem 0;color:var(--text)">⚖️ জমি রেজিস্ট্রিতে আইনি সহায়তা</h3>
 <p style="margin:0 0 1.25rem 0;color:var(--text-secondary);line-height:1.8">দলিল তৈরি থেকে রেজিস্ট্রি সম্পন্ন করা পর্যন্ত অ্যাডভোকেট মোঃ শাহ আলম আপনাকে গাইড করবেন। জমির সঠিক যাচাই ও নিরাপদ রেজিস্ট্রির জন্য যোগাযোগ করুন।</p>
 <div style="display:flex;gap:1rem;flex-wrap:wrap">
-<a href="tel:01712655546" style="background:linear-gradient(135deg,var(--accent),#1A3FBF);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">📞 কল করুন: 01712655546</a>
+<a href="tel:01712655546" style="background:linear-gradient(135deg,#0F172A,#1E293B);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">📞 কল করুন: 01712655546</a>
 <a href="https://wa.me/8801712655546" target="_blank" style="background:#25D366;color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">💬 WhatsApp</a>
 </div>
 </div>`
@@ -523,7 +523,7 @@ const articles = [
 <h3 style="margin:0 0 0.75rem 0;color:var(--text)">⚖️ সাইবার ক্রাইমে আইনি সহায়তা</h3>
 <p style="margin:0 0 1.25rem 0;color:var(--text-secondary);line-height:1.8">সাইবার ক্রাইমের শিকার হলে একা লড়াই না করে আইনজীবীর সাহায্য নিন। অ্যাডভোকেট মোঃ শাহ আলম সাইবার আইন মামলায় অভিজ্ঞ।</p>
 <div style="display:flex;gap:1rem;flex-wrap:wrap">
-<a href="tel:01712655546" style="background:linear-gradient(135deg,var(--accent),#1A3FBF);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">📞 কল করুন: 01712655546</a>
+<a href="tel:01712655546" style="background:linear-gradient(135deg,#0F172A,#1E293B);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">📞 কল করুন: 01712655546</a>
 <a href="https://wa.me/8801712655546" target="_blank" style="background:#25D366;color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">💬 WhatsApp</a>
 </div>
 </div>`

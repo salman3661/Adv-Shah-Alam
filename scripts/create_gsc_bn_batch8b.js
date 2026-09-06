@@ -70,7 +70,7 @@ const articles = [
         content: `<p>অনেকের মনে প্রশ্ন — অনুমতি ছাড়া দ্বিতীয় বিয়ে কি আদৌ বৈধ? উত্তর একটু জটিল।</p>
 <div style="overflow-x:auto;margin:1.25rem 0">
 <table style="width:100%;border-collapse:collapse;font-size:0.95rem">
-<thead><tr style="background:linear-gradient(135deg,var(--accent),#1A3FBF);color:#fff">
+<thead><tr style="background:linear-gradient(135deg,#0F172A,#1E293B);color:#fff">
 <th style="padding:0.85rem 1rem;text-align:left">বিষয়</th>
 <th style="padding:0.85rem 1rem;text-align:left">উত্তর</th>
 </tr></thead>
@@ -133,7 +133,7 @@ const articles = [
 <h3 style="margin:0 0 0.75rem 0;color:var(--text)">⚖️ পারিবারিক আইনি সহায়তা</h3>
 <p style="margin:0 0 1.25rem 0;color:var(--text-secondary);line-height:1.8">স্বামীর দ্বিতীয় বিয়ের ঘটনায় দিশেহারা হবেন না। অ্যাডভোকেট মোঃ শাহ আলম আপনার আইনি অধিকার রক্ষায় সহায়তা করবেন।</p>
 <div style="display:flex;gap:1rem;flex-wrap:wrap">
-<a href="tel:01712655546" style="background:linear-gradient(135deg,var(--accent),#1A3FBF);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">📞 কল করুন: 01712655546</a>
+<a href="tel:01712655546" style="background:linear-gradient(135deg,#0F172A,#1E293B);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">📞 কল করুন: 01712655546</a>
 <a href="https://wa.me/8801712655546" target="_blank" style="background:#25D366;color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">💬 WhatsApp</a>
 </div>
 </div>`
@@ -246,7 +246,7 @@ const articles = [
 <h3 style="margin:0 0 0.75rem 0;color:var(--text)">⚖️ দলিল সংক্রান্ত সহায়তা</h3>
 <p style="margin:0 0 1.25rem 0;color:var(--text-secondary);line-height:1.8">দলিল হারানো বা দলিল সংক্রান্ত যেকোনো সমস্যায় অ্যাডভোকেট মোঃ শাহ আলমের সাথে যোগাযোগ করুন।</p>
 <div style="display:flex;gap:1rem;flex-wrap:wrap">
-<a href="tel:01712655546" style="background:linear-gradient(135deg,var(--accent),#1A3FBF);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">📞 কল করুন: 01712655546</a>
+<a href="tel:01712655546" style="background:linear-gradient(135deg,#0F172A,#1E293B);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">📞 কল করুন: 01712655546</a>
 <a href="https://wa.me/8801712655546" target="_blank" style="background:#25D366;color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">💬 WhatsApp</a>
 </div>
 </div>`
@@ -312,7 +312,7 @@ const articles = [
         content: `<p>বাংলাদেশে যৌতুক সংক্রান্ত দুটি প্রধান আইন আছে।</p>
 <div style="overflow-x:auto;margin:1.25rem 0">
 <table style="width:100%;border-collapse:collapse;font-size:0.95rem">
-<thead><tr style="background:linear-gradient(135deg,var(--accent),#1A3FBF);color:#fff">
+<thead><tr style="background:linear-gradient(135deg,#0F172A,#1E293B);color:#fff">
 <th style="padding:0.85rem 1rem;text-align:left">আইন</th>
 <th style="padding:0.85rem 1rem;text-align:left">অভিযোগ</th>
 <th style="padding:0.85rem 1rem;text-align:left">সর্বোচ্চ শাস্তি</th>
@@ -373,7 +373,7 @@ const articles = [
 <h3 style="margin:0 0 0.75rem 0;color:var(--text)">⚖️ যৌতুক মামলায় তাৎক্ষণিক সহায়তা</h3>
 <p style="margin:0 0 1.25rem 0;color:var(--text-secondary);line-height:1.8">মিথ্যা যৌতুক মামলায় একা লড়বেন না। অ্যাডভোকেট মোঃ শাহ আলম এখনই সাহায্য করবেন।</p>
 <div style="display:flex;gap:1rem;flex-wrap:wrap">
-<a href="tel:01712655546" style="background:linear-gradient(135deg,var(--accent),#1A3FBF);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">📞 এখনই কল করুন: 01712655546</a>
+<a href="tel:01712655546" style="background:linear-gradient(135deg,#0F172A,#1E293B);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">📞 এখনই কল করুন: 01712655546</a>
 <a href="https://wa.me/8801712655546" target="_blank" style="background:#25D366;color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">💬 WhatsApp</a>
 </div>
 </div>`
@@ -489,7 +489,7 @@ const articles = [
 <h3 style="margin:0 0 0.75rem 0;color:var(--text)">⚖️ জমি কেনার আগে আইনি পরামর্শ নিন</h3>
 <p style="margin:0 0 1.25rem 0;color:var(--text-secondary);line-height:1.8">অ্যাডভোকেট মোঃ শাহ আলম জমির সম্পূর্ণ আইনি যাচাই করে নিরাপদ কেনাকাটায় সহায়তা করবেন।</p>
 <div style="display:flex;gap:1rem;flex-wrap:wrap">
-<a href="tel:01712655546" style="background:linear-gradient(135deg,var(--accent),#1A3FBF);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">📞 কল করুন: 01712655546</a>
+<a href="tel:01712655546" style="background:linear-gradient(135deg,#0F172A,#1E293B);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">📞 কল করুন: 01712655546</a>
 <a href="https://wa.me/8801712655546" target="_blank" style="background:#25D366;color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">💬 WhatsApp</a>
 </div>
 </div>`
@@ -568,7 +568,7 @@ const articles = [
         content: `<p>ধর্মীয় ব্যক্তিগত আইন অনুযায়ী মুসলিম ও হিন্দু সম্প্রদায়ে দান করার পদ্ধতি ভিন্ন।</p>
 <div style="overflow-x:auto;margin:1.25rem 0">
 <table style="width:100%;border-collapse:collapse;font-size:0.95rem">
-<thead><tr style="background:linear-gradient(135deg,var(--accent),#1A3FBF);color:#fff">
+<thead><tr style="background:linear-gradient(135deg,#0F172A,#1E293B);color:#fff">
 <th style="padding:0.85rem 1rem;text-align:left">বিষয়</th>
 <th style="padding:0.85rem 1rem;text-align:left">মুসলিম</th>
 <th style="padding:0.85rem 1rem;text-align:left">হিন্দু</th>
@@ -610,7 +610,7 @@ const articles = [
 <h3 style="margin:0 0 0.75rem 0;color:var(--text)">⚖️ দানপত্র তৈরিতে সহায়তা</h3>
 <p style="margin:0 0 1.25rem 0;color:var(--text-secondary);line-height:1.8">দানপত্র একবার করলে পরিবর্তন কঠিন। তাই সঠিকভাবে করুন। অ্যাডভোকেট মোঃ শাহ আলমের সাথে যোগাযোগ করুন।</p>
 <div style="display:flex;gap:1rem;flex-wrap:wrap">
-<a href="tel:01712655546" style="background:linear-gradient(135deg,var(--accent),#1A3FBF);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">📞 কল করুন: 01712655546</a>
+<a href="tel:01712655546" style="background:linear-gradient(135deg,#0F172A,#1E293B);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">📞 কল করুন: 01712655546</a>
 <a href="https://wa.me/8801712655546" target="_blank" style="background:#25D366;color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">💬 WhatsApp</a>
 </div>
 </div>`

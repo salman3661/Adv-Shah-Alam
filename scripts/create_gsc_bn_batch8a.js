@@ -107,7 +107,7 @@ const articles = [
         content: `<p>আইন অনুযায়ী নামজারি আবেদনের ৪৫ কার্যদিবসের মধ্যে নিষ্পত্তি হওয়ার কথা। কিন্তু বাস্তবে বিভিন্ন সময় লাগে।</p>
 <div style="overflow-x:auto;margin:1.25rem 0">
 <table style="width:100%;border-collapse:collapse;font-size:0.95rem">
-<thead><tr style="background:linear-gradient(135deg,var(--accent),#1A3FBF);color:#fff">
+<thead><tr style="background:linear-gradient(135deg,#0F172A,#1E293B);color:#fff">
 <th style="padding:0.85rem 1rem;text-align:left">পরিস্থিতি</th>
 <th style="padding:0.85rem 1rem;text-align:center">আনুমানিক সময়</th>
 </tr></thead>
@@ -149,7 +149,7 @@ const articles = [
 <h3 style="margin:0 0 0.75rem 0;color:var(--text)">⚖️ নামজারি জটিলতায় সহায়তা</h3>
 <p style="margin:0 0 1.25rem 0;color:var(--text-secondary);line-height:1.8">নামজারি আটকে থাকলে বা নামঞ্জুর হলে অ্যাডভোকেট মোঃ শাহ আলম আপনাকে সঠিক পথ দেখাবেন।</p>
 <div style="display:flex;gap:1rem;flex-wrap:wrap">
-<a href="tel:01712655546" style="background:linear-gradient(135deg,var(--accent),#1A3FBF);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">📞 কল করুন: 01712655546</a>
+<a href="tel:01712655546" style="background:linear-gradient(135deg,#0F172A,#1E293B);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">📞 কল করুন: 01712655546</a>
 <a href="https://wa.me/8801712655546" target="_blank" style="background:#25D366;color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">💬 WhatsApp</a>
 <a href="/bn/contact" style="background:var(--surface);color:var(--text);padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none;border:1px solid var(--card-border)">📍 চেম্বার ঠিকানা</a>
 </div>
@@ -277,7 +277,7 @@ const articles = [
 <h3 style="margin:0 0 0.75rem 0;color:var(--text)">⚖️ মিউটেশন সমস্যায় সহায়তা</h3>
 <p style="margin:0 0 1.25rem 0;color:var(--text-secondary);line-height:1.8">মিউটেশন জটিলতায় অ্যাডভোকেট মোঃ শাহ আলমের সাথে যোগাযোগ করুন।</p>
 <div style="display:flex;gap:1rem;flex-wrap:wrap">
-<a href="tel:01712655546" style="background:linear-gradient(135deg,var(--accent),#1A3FBF);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">📞 কল করুন: 01712655546</a>
+<a href="tel:01712655546" style="background:linear-gradient(135deg,#0F172A,#1E293B);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">📞 কল করুন: 01712655546</a>
 <a href="https://wa.me/8801712655546" target="_blank" style="background:#25D366;color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">💬 WhatsApp</a>
 </div>
 </div>`
@@ -357,7 +357,7 @@ const articles = [
         content: `<p>হাইকোর্টে আগাম জামিনের খরচ কয়েকটি অংশে ভাগ করা যায়।</p>
 <div style="overflow-x:auto;margin:1.25rem 0">
 <table style="width:100%;border-collapse:collapse;font-size:0.95rem">
-<thead><tr style="background:linear-gradient(135deg,var(--accent),#1A3FBF);color:#fff">
+<thead><tr style="background:linear-gradient(135deg,#0F172A,#1E293B);color:#fff">
 <th style="padding:0.85rem 1rem;text-align:left">খরচের খাত</th>
 <th style="padding:0.85rem 1rem;text-align:center">পরিমাণ</th>
 <th style="padding:0.85rem 1rem;text-align:left">মন্তব্য</th>
@@ -408,7 +408,7 @@ const articles = [
 <h3 style="margin:0 0 0.75rem 0;color:var(--text)">⚖️ আগাম জামিনে তাৎক্ষণিক সহায়তা</h3>
 <p style="margin:0 0 1.25rem 0;color:var(--text-secondary);line-height:1.8">গ্রেফতারের আশঙ্কায় থাকলে দেরি না করে অ্যাডভোকেট মোঃ শাহ আলমকে এখনই ফোন করুন।</p>
 <div style="display:flex;gap:1rem;flex-wrap:wrap">
-<a href="tel:01712655546" style="background:linear-gradient(135deg,var(--accent),#1A3FBF);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">📞 এখনই কল করুন: 01712655546</a>
+<a href="tel:01712655546" style="background:linear-gradient(135deg,#0F172A,#1E293B);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">📞 এখনই কল করুন: 01712655546</a>
 <a href="https://wa.me/8801712655546" target="_blank" style="background:#25D366;color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">💬 WhatsApp</a>
 </div>
 </div>`
@@ -504,7 +504,7 @@ const articles = [
         content: `<p>অনেক বাড়িওয়ালা মনে করেন যেকোনো সময় যত খুশি ভাড়া বাড়ানো যায়। কিন্তু আইনে সীমা আছে।</p>
 <div style="overflow-x:auto;margin:1.25rem 0">
 <table style="width:100%;border-collapse:collapse;font-size:0.95rem">
-<thead><tr style="background:linear-gradient(135deg,var(--accent),#1A3FBF);color:#fff">
+<thead><tr style="background:linear-gradient(135deg,#0F172A,#1E293B);color:#fff">
 <th style="padding:0.85rem 1rem;text-align:left">বিষয়</th>
 <th style="padding:0.85rem 1rem;text-align:left">নিয়ম</th>
 </tr></thead>
@@ -547,7 +547,7 @@ const articles = [
 <h3 style="margin:0 0 0.75rem 0;color:var(--text)">⚖️ বাড়ি ভাড়া বিরোধে সহায়তা</h3>
 <p style="margin:0 0 1.25rem 0;color:var(--text-secondary);line-height:1.8">বাড়িওয়ালার অন্যায় থেকে নিজেকে রক্ষা করুন। অ্যাডভোকেট মোঃ শাহ আলম আপনার পাশে আছেন।</p>
 <div style="display:flex;gap:1rem;flex-wrap:wrap">
-<a href="tel:01712655546" style="background:linear-gradient(135deg,var(--accent),#1A3FBF);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">📞 কল করুন: 01712655546</a>
+<a href="tel:01712655546" style="background:linear-gradient(135deg,#0F172A,#1E293B);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">📞 কল করুন: 01712655546</a>
 <a href="https://wa.me/8801712655546" target="_blank" style="background:#25D366;color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">💬 WhatsApp</a>
 </div>
 </div>`
@@ -666,7 +666,7 @@ const articles = [
 <h3 style="margin:0 0 0.75rem 0;color:var(--text)">⚖️ উত্তরাধিকার বিষয়ে সহায়তা</h3>
 <p style="margin:0 0 1.25rem 0;color:var(--text-secondary);line-height:1.8">ওয়ারিশ সনদে সমস্যা বা সম্পত্তি বণ্টনে বিরোধ হলে যোগাযোগ করুন।</p>
 <div style="display:flex;gap:1rem;flex-wrap:wrap">
-<a href="tel:01712655546" style="background:linear-gradient(135deg,var(--accent),#1A3FBF);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">📞 কল করুন: 01712655546</a>
+<a href="tel:01712655546" style="background:linear-gradient(135deg,#0F172A,#1E293B);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">📞 কল করুন: 01712655546</a>
 <a href="https://wa.me/8801712655546" target="_blank" style="background:#25D366;color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">💬 WhatsApp</a>
 </div>
 </div>`

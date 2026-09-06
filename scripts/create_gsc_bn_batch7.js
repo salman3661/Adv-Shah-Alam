@@ -67,7 +67,7 @@ const articles = [
         content: `<p>বাটোয়ারা মামলায় সবচেয়ে বড় খরচ হলো কোর্ট ফি — এটি সম্পত্তির মূল্যের উপর নির্ভর করে।</p>
 <div style="overflow-x:auto;margin:1.25rem 0">
 <table style="width:100%;border-collapse:collapse;font-size:0.95rem">
-<thead><tr style="background:linear-gradient(135deg,var(--accent),#1A3FBF);color:#fff">
+<thead><tr style="background:linear-gradient(135deg,#0F172A,#1E293B);color:#fff">
 <th style="padding:0.85rem 1rem;text-align:left">খরচের খাত</th>
 <th style="padding:0.85rem 1rem;text-align:center">পরিমাণ</th>
 <th style="padding:0.85rem 1rem;text-align:left">মন্তব্য</th>
@@ -106,7 +106,7 @@ const articles = [
         content: `<p>এটি সবচেয়ে জিজ্ঞাসিত প্রশ্ন। সত্যি কথা হলো — বাটোয়ারা মামলা কতদিন চলবে তা নির্ভর করে মামলার জটিলতা ও সম্পত্তির পরিস্থিতির উপর।</p>
 <div style="overflow-x:auto;margin:1.25rem 0">
 <table style="width:100%;border-collapse:collapse;font-size:0.95rem">
-<thead><tr style="background:linear-gradient(135deg,var(--accent),#1A3FBF);color:#fff">
+<thead><tr style="background:linear-gradient(135deg,#0F172A,#1E293B);color:#fff">
 <th style="padding:0.85rem 1rem;text-align:left">পরিস্থিতি</th>
 <th style="padding:0.85rem 1rem;text-align:center">আনুমানিক সময়</th>
 </tr></thead>
@@ -149,7 +149,7 @@ const articles = [
 <h3 style="margin:0 0 0.75rem 0;color:var(--text)">⚖️ সম্পত্তি বিরোধে সহায়তা</h3>
 <p style="margin:0 0 1.25rem 0;color:var(--text-secondary);line-height:1.8">বাটোয়ারা মামলায় অভিজ্ঞ আইনজীবীর সাহায্য ছাড়া এগোনো কঠিন। অ্যাডভোকেট মোঃ শাহ আলমের সাথে যোগাযোগ করুন।</p>
 <div style="display:flex;gap:1rem;flex-wrap:wrap">
-<a href="tel:01712655546" style="background:linear-gradient(135deg,var(--accent),#1A3FBF);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">📞 কল করুন: 01712655546</a>
+<a href="tel:01712655546" style="background:linear-gradient(135deg,#0F172A,#1E293B);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">📞 কল করুন: 01712655546</a>
 <a href="https://wa.me/8801712655546" target="_blank" style="background:#25D366;color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">💬 WhatsApp</a>
 </div>
 </div>`
@@ -228,7 +228,7 @@ const articles = [
         content: `<p>হেবা বিল এওয়াজ (Heba Bil Ewaz) মানে "বিনিময়ে দান" — অর্থাৎ প্রতীকীভাবে কিছু একটার বিনিময়ে সম্পত্তি দান করা।</p>
 <div style="overflow-x:auto;margin:1.25rem 0">
 <table style="width:100%;border-collapse:collapse;font-size:0.95rem">
-<thead><tr style="background:linear-gradient(135deg,var(--accent),#1A3FBF);color:#fff">
+<thead><tr style="background:linear-gradient(135deg,#0F172A,#1E293B);color:#fff">
 <th style="padding:0.85rem 1rem;text-align:left">বিষয়</th>
 <th style="padding:0.85rem 1rem;text-align:left">সাধারণ হেবা</th>
 <th style="padding:0.85rem 1rem;text-align:left">হেবা বিল এওয়াজ</th>
@@ -250,7 +250,7 @@ const articles = [
         content: `<p>এটিই সবচেয়ে গুরুত্বপূর্ণ প্রশ্ন। চলুন ৩০ লক্ষ টাকার জমির জন্য তুলনা করি।</p>
 <div style="overflow-x:auto;margin:1.25rem 0">
 <table style="width:100%;border-collapse:collapse;font-size:0.95rem">
-<thead><tr style="background:linear-gradient(135deg,var(--accent),#1A3FBF);color:#fff">
+<thead><tr style="background:linear-gradient(135deg,#0F172A,#1E293B);color:#fff">
 <th style="padding:0.85rem 1rem;text-align:left">খরচের খাত</th>
 <th style="padding:0.85rem 1rem;text-align:center">সাফ কবলায়</th>
 <th style="padding:0.85rem 1rem;text-align:center">হেবা বিল এওয়াজে</th>
@@ -300,7 +300,7 @@ const articles = [
 <h3 style="margin:0 0 0.75rem 0;color:var(--text)">⚖️ হেবা দলিল তৈরিতে সহায়তা</h3>
 <p style="margin:0 0 1.25rem 0;color:var(--text-secondary);line-height:1.8">হেবা বিল এওয়াজ দলিল সঠিকভাবে তৈরি না করলে পরে বিপদ হতে পারে। অ্যাডভোকেট মোঃ শাহ আলমের সাথে যোগাযোগ করুন।</p>
 <div style="display:flex;gap:1rem;flex-wrap:wrap">
-<a href="tel:01712655546" style="background:linear-gradient(135deg,var(--accent),#1A3FBF);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">📞 কল করুন: 01712655546</a>
+<a href="tel:01712655546" style="background:linear-gradient(135deg,#0F172A,#1E293B);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">📞 কল করুন: 01712655546</a>
 <a href="https://wa.me/8801712655546" target="_blank" style="background:#25D366;color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">💬 WhatsApp</a>
 </div>
 </div>`
@@ -423,7 +423,7 @@ const articles = [
         content: `<p>আপনি যদি নিশ্চিত হন যে মামলাটি সম্পূর্ণ মিথ্যা ও হয়রানির উদ্দেশ্যে করা হয়েছে, তাহলে পাল্টা মামলা করতে পারেন।</p>
 <div style="overflow-x:auto;margin:1.25rem 0">
 <table style="width:100%;border-collapse:collapse;font-size:0.95rem">
-<thead><tr style="background:linear-gradient(135deg,var(--accent),#1A3FBF);color:#fff">
+<thead><tr style="background:linear-gradient(135deg,#0F172A,#1E293B);color:#fff">
 <th style="padding:0.85rem 1rem;text-align:left">পাল্টা মামলার ধরন</th>
 <th style="padding:0.85rem 1rem;text-align:left">আইনি ধারা</th>
 <th style="padding:0.85rem 1rem;text-align:left">শাস্তি</th>
@@ -442,7 +442,7 @@ const articles = [
 <h3 style="margin:0 0 0.75rem 0;color:var(--text)">⚖️ মিথ্যা মামলায় তাৎক্ষণিক সহায়তা</h3>
 <p style="margin:0 0 1.25rem 0;color:var(--text-secondary);line-height:1.8">মিথ্যা মামলায় একা লড়বেন না। অ্যাডভোকেট মোঃ শাহ আলম ফৌজদারি প্রতিরক্ষায় অভিজ্ঞ — এখনই যোগাযোগ করুন।</p>
 <div style="display:flex;gap:1rem;flex-wrap:wrap">
-<a href="tel:01712655546" style="background:linear-gradient(135deg,var(--accent),#1A3FBF);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">📞 কল করুন: 01712655546</a>
+<a href="tel:01712655546" style="background:linear-gradient(135deg,#0F172A,#1E293B);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">📞 কল করুন: 01712655546</a>
 <a href="https://wa.me/8801712655546" target="_blank" style="background:#25D366;color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">💬 WhatsApp</a>
 </div>
 </div>`
@@ -561,7 +561,7 @@ const articles = [
 <h3 style="margin:0 0 0.75rem 0;color:var(--text)">⚖️ সরকারি সেবায় আইনি সহায়তা</h3>
 <p style="margin:0 0 1.25rem 0;color:var(--text-secondary);line-height:1.8">পুলিশ ক্লিয়ারেন্স পেতে বাধা বা কোনো সমস্যা হলে অ্যাডভোকেট মোঃ শাহ আলমের সাথে যোগাযোগ করুন।</p>
 <div style="display:flex;gap:1rem;flex-wrap:wrap">
-<a href="tel:01712655546" style="background:linear-gradient(135deg,var(--accent),#1A3FBF);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">📞 কল করুন: 01712655546</a>
+<a href="tel:01712655546" style="background:linear-gradient(135deg,#0F172A,#1E293B);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">📞 কল করুন: 01712655546</a>
 <a href="https://wa.me/8801712655546" target="_blank" style="background:#25D366;color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">💬 WhatsApp</a>
 </div>
 </div>`
@@ -627,7 +627,7 @@ const articles = [
         content: `<p>খতিয়ান হলো জমির সরকারি রেকর্ড — কার নামে কতটুকু জমি আছে তার তালিকা। বাংলাদেশে বিভিন্ন সময়ে জরিপ হয়েছে, তাই বিভিন্ন ধরনের খতিয়ান আছে।</p>
 <div style="overflow-x:auto;margin:1.25rem 0">
 <table style="width:100%;border-collapse:collapse;font-size:0.95rem">
-<thead><tr style="background:linear-gradient(135deg,var(--accent),#1A3FBF);color:#fff">
+<thead><tr style="background:linear-gradient(135deg,#0F172A,#1E293B);color:#fff">
 <th style="padding:0.85rem 1rem;text-align:left">খতিয়ানের ধরন</th>
 <th style="padding:0.85rem 1rem;text-align:left">পূর্ণ নাম</th>
 <th style="padding:0.85rem 1rem;text-align:left">সময়কাল</th>
@@ -694,7 +694,7 @@ const articles = [
 <h3 style="margin:0 0 0.75rem 0;color:var(--text)">⚖️ জমির রেকর্ড যাচাইয়ে সহায়তা</h3>
 <p style="margin:0 0 1.25rem 0;color:var(--text-secondary);line-height:1.8">জমি কেনার আগে আইনজীবীর মাধ্যমে পূর্ণ যাচাই করুন। অ্যাডভোকেট মোঃ শাহ আলম ভূমি আইনে অভিজ্ঞ।</p>
 <div style="display:flex;gap:1rem;flex-wrap:wrap">
-<a href="tel:01712655546" style="background:linear-gradient(135deg,var(--accent),#1A3FBF);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">📞 কল করুন: 01712655546</a>
+<a href="tel:01712655546" style="background:linear-gradient(135deg,#0F172A,#1E293B);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">📞 কল করুন: 01712655546</a>
 <a href="https://wa.me/8801712655546" target="_blank" style="background:#25D366;color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">💬 WhatsApp</a>
 </div>
 </div>`

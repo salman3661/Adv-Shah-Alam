@@ -105,7 +105,7 @@ const posts = [
 <h3 style="margin:0 0 0.75rem 0;color:var(--text)">⚖️ জামিন বাতিল সংক্রান্ত জটিলতায় বিশেষজ্ঞ আইনি সহায়তা</h3>
 <p style="margin:0 0 1.25rem 0;color:var(--text-secondary);line-height:1.8">আসামির জামিন বাতিলের আবেদন দায়ের কিংবা অপ্রত্যাশিতভাবে জামিন নাকচ হয়ে গেলে দ্রুত উচ্চ আদালত থেকে জামিন বহাল করার জন্য সুপ্রিম কোর্টের প্রবীণ আইনজীবী অ্যাডভোকেট মোঃ শাহ আলমের সরাসরি পরামর্শ নিন।</p>
 <div style="display:flex;gap:1rem;flex-wrap:wrap">
-<a href="tel:01712655546" style="background:linear-gradient(135deg,var(--accent),#1A3FBF);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">📞 সরাসরি কল: 01712655546</a>
+<a href="tel:01712655546" style="background:linear-gradient(135deg,#0F172A,#1E293B);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">📞 সরাসরি কল: 01712655546</a>
 <a href="https://wa.me/8801712655546" target="_blank" style="background:#25D366;color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">💬 WhatsApp পরামর্শ</a>
 <a href="/bn/contact" style="background:var(--surface);color:var(--text);padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none;border:1px solid var(--card-border)">📍 চেম্বার ঠিকানা</a>
 </div>
@@ -249,7 +249,7 @@ const posts = [
 <h3 style="margin:0 0 0.75rem 0;color:var(--text)">⚖️ পৈত্রিক সম্পত্তি বিরোধ নিষ্পত্তিতে সরাসরি পরামর্শ নিন</h3>
 <p style="margin:0 0 1.25rem 0;color:var(--text-secondary);line-height:1.8">ফারায়েজ হিসাবের নিখুঁত ক্যালকুলেশন, আপস বণ্টননামা দলিল প্রস্তুত কিংবা আদালতে বাটোয়ারা মামলা সফলভাবে পরিচালনার জন্য সুপ্রিম কোর্টের প্রবীণ আইনজীবী অ্যাডভোকেট মোঃ শাহ আলমের সরাসরি দিকনির্দেশনা গ্রহণ করুন।</p>
 <div style="display:flex;gap:1rem;flex-wrap:wrap">
-<a href="tel:01712655546" style="background:linear-gradient(135deg,var(--accent),#1A3FBF);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">📞 সরাসরি কল: 01712655546</a>
+<a href="tel:01712655546" style="background:linear-gradient(135deg,#0F172A,#1E293B);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">📞 সরাসরি কল: 01712655546</a>
 <a href="https://wa.me/8801712655546" target="_blank" style="background:#25D366;color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">💬 WhatsApp পরামর্শ</a>
 <a href="/bn/contact" style="background:var(--surface);color:var(--text);padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none;border:1px solid var(--card-border)">📍 চেম্বার ঠিকানা</a>
 </div>
@@ -380,7 +380,7 @@ const posts = [
 <h3 style="margin:0 0 0.75rem 0;color:var(--text)">⚖️ পাওয়ার অব অ্যাটর্নি সংক্রান্ত জটিলতায় আইনি সুরক্ষা</h3>
 <p style="margin:0 0 1.25rem 0;color:var(--text-secondary);line-height:1.8">অপ্রত্যাহারযোগ্য পাওয়ার অব অ্যাটর্নি বাতিলের আইনি নোটিশ ড্রাফটিং, জমি হস্তান্তরে নিষেধাজ্ঞা এবং আদালতে ৩৯ ধারায় মামলায় সুপ্রিম কোর্টের প্রবীণ আইনজীবী অ্যাডভোকেট মোঃ শাহ আলমের সরাসরি আইনি সহায়তা নিন।</p>
 <div style="display:flex;gap:1rem;flex-wrap:wrap">
-<a href="tel:01712655546" style="background:linear-gradient(135deg,var(--accent),#1A3FBF);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">📞 সরাসরি কল: 01712655546</a>
+<a href="tel:01712655546" style="background:linear-gradient(135deg,#0F172A,#1E293B);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">📞 সরাসরি কল: 01712655546</a>
 <a href="https://wa.me/8801712655546" target="_blank" style="background:#25D366;color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">💬 WhatsApp পরামর্শ</a>
 <a href="/bn/contact" style="background:var(--surface);color:var(--text);padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none;border:1px solid var(--card-border)">📍 চেম্বার ঠিকানা</a>
 </div>
@@ -510,7 +510,7 @@ const posts = [
 <h3 style="margin:0 0 0.75rem 0;color:var(--text)">⚖️ নাবালকের সম্পত্তি ফেরত ও অভিভাবকত্ব মামলায় পরামর্শ নিন</h3>
 <p style="margin:0 0 1.25rem 0;color:var(--text-secondary);line-height:1.8">নাবালক অবস্থায় বিক্রি হওয়া পৈত্রিক জমি উদ্ধার, আদালতে দলিল বাতিলের মোকদ্দমা কিংবা নাবালকের জমি বিক্রির আইনি পারমিশন পেতে সুপ্রিম কোর্টের প্রবীণ আইনজীবী অ্যাডভোকেট মোঃ শাহ আলমের সরাসরি আইনি সহায়তা নিন।</p>
 <div style="display:flex;gap:1rem;flex-wrap:wrap">
-<a href="tel:01712655546" style="background:linear-gradient(135deg,var(--accent),#1A3FBF);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">📞 সরাসরি কল: 01712655546</a>
+<a href="tel:01712655546" style="background:linear-gradient(135deg,#0F172A,#1E293B);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">📞 সরাসরি কল: 01712655546</a>
 <a href="https://wa.me/8801712655546" target="_blank" style="background:#25D366;color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">💬 WhatsApp পরামর্শ</a>
 <a href="/bn/contact" style="background:var(--surface);color:var(--text);padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none;border:1px solid var(--card-border)">📍 চেম্বার ঠিকানা</a>
 </div>
@@ -641,7 +641,7 @@ const posts = [
 <h3 style="margin:0 0 0.75rem 0;color:var(--text)">⚖️ তালাক ও দেনমোহর আদায়ে নির্ভুল আইনি সমাধান নিন</h3>
 <p style="margin:0 0 1.25rem 0;color:var(--text-secondary);line-height:1.8">স্ত্রী কর্তৃক তালাক নোটিশ প্রস্তুত, চেয়ারম্যান অফিসে সালিশি মোকাবিলা এবং পারিবারিক আদালতে দেনমোহর ও ভরণপোষণ আদায়ের মামলায় সুপ্রিম কোর্টের অভিজ্ঞ পারিবারিক আইনজীবী অ্যাডভোকেট মোঃ শাহ আলমের সরাসরি আইনি সহায়তা নিন।</p>
 <div style="display:flex;gap:1rem;flex-wrap:wrap">
-<a href="tel:01712655546" style="background:linear-gradient(135deg,var(--accent),#1A3FBF);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">📞 সরাসরি কল: 01712655546</a>
+<a href="tel:01712655546" style="background:linear-gradient(135deg,#0F172A,#1E293B);color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">📞 সরাসরি কল: 01712655546</a>
 <a href="https://wa.me/8801712655546" target="_blank" style="background:#25D366;color:#fff;padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none">💬 WhatsApp পরামর্শ</a>
 <a href="/bn/contact" style="background:var(--surface);color:var(--text);padding:0.75rem 1.5rem;border-radius:0.75rem;font-weight:bold;text-decoration:none;border:1px solid var(--card-border)">📍 চেম্বার ঠিকানা</a>
 </div>

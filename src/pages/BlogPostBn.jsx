@@ -751,7 +751,7 @@ const BlogPostBnInner = () => {
                                                     width: '4px',
                                                     minHeight: '1.35em',
                                                     borderRadius: '4px',
-                                                    background: `linear-gradient(180deg, var(--gold, #c6a75e), ${cc.bg})`,
+                                                    background: 'var(--gold, #C6A75E)',
                                                     flexShrink: 0,
                                                     marginTop: '0.12em'
                                                 }}></span>
@@ -936,13 +936,14 @@ const BlogPostBnInner = () => {
                 .prose-bn-content b { color: var(--text); font-weight: 700; }
                 .prose-bn-content a { color: var(--accent); text-decoration: underline; text-decoration-color: rgba(198,167,94,0.35); text-underline-offset: 4px; }
                 .prose-bn-content a:hover { text-decoration-color: var(--accent); }
-                .prose-bn-content h3 { font-family: 'SolaimanLipi', 'Kalpurush', 'Noto Serif Bengali', sans-serif; font-size: 1.35rem; font-weight: 800; color: var(--text); margin: 2.5rem 0 1.1rem; padding: 0.5rem 0.875rem; border-left: 4px solid var(--accent); background: linear-gradient(90deg, rgba(198,167,94,0.06), transparent); border-radius: 0 0.5rem 0.5rem 0; }
+                .prose-bn-content h3 { font-family: 'SolaimanLipi', 'Kalpurush', 'Noto Serif Bengali', sans-serif; font-size: 1.35rem; font-weight: 800; color: var(--text); margin: 2.5rem 0 1.1rem; padding: 0.5rem 0.875rem; border-left: 4px solid var(--gold, #C6A75E); background: linear-gradient(90deg, rgba(198,167,94,0.06), transparent); border-radius: 0 0.5rem 0.5rem 0; }
                 .prose-bn-content h4 { font-family: 'SolaimanLipi', 'Kalpurush', 'Noto Serif Bengali', sans-serif; font-size: 1.18rem; font-weight: 700; color: var(--text); margin: 2rem 0 0.85rem; }
-                .prose-bn-content blockquote { border-left: 4px solid var(--accent); padding: 1.25rem 1.5rem; margin: 2.25rem 0; color: var(--text); background: linear-gradient(90deg, rgba(198,167,94,0.06), rgba(198,167,94,0.02)); border-radius: 0 0.875rem 0.875rem 0; font-size: 1.15rem; line-height: 2.05; }
-                .prose-bn-content table { width: 100%; border-collapse: collapse; margin-bottom: 1.75rem; font-size: 1.05rem; border-radius: 0.625rem; overflow: hidden; }
-                .prose-bn-content th, .prose-bn-content td { padding: 0.9rem 1.25rem; border: 1px solid var(--card-border); color: var(--text); }
-                .prose-bn-content th { background: linear-gradient(90deg, var(--surface), rgba(198,167,94,0.07)); font-weight: 700; color: var(--text); }
-                .prose-bn-content tr:nth-child(even) td { background: rgba(255,255,255,0.018); }
+                .prose-bn-content blockquote { border-left: 4px solid var(--gold, #C6A75E); padding: 1.25rem 1.5rem; margin: 2.25rem 0; color: var(--text); background: linear-gradient(90deg, rgba(198,167,94,0.06), rgba(198,167,94,0.02)); border-radius: 0 0.875rem 0.875rem 0; font-size: 1.15rem; line-height: 2.05; }
+                .prose-bn-content table { width: 100%; border-collapse: separate; border-spacing: 0; margin-bottom: 1.75rem; font-size: 1.02rem; border-radius: 10px; overflow: hidden; border: 1px solid var(--card-border); }
+                .prose-bn-content table thead tr { background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%) !important; }
+                .prose-bn-content th { background: transparent !important; color: #FFFFFF !important; font-weight: 700; padding: 14px 18px !important; border-bottom: 2px solid var(--gold, #C6A75E) !important; text-align: left; }
+                .prose-bn-content td { padding: 13px 18px !important; border-bottom: 1px solid var(--card-border); color: var(--text); }
+                .prose-bn-content tr:nth-child(even) td { background: rgba(15, 23, 42, 0.02); }
                 .prose-bn-content ol { list-style: decimal; }
                 .prose-bn-content ul { list-style: none; padding-left: 0; }
                 .prose-bn-content ul li { padding-left: 1.6rem; position: relative; }
