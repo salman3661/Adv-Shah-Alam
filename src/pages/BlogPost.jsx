@@ -467,11 +467,11 @@ const BlogPostInner = () => {
         headline: post.title, description: post.metaDescription,
         datePublished: post.publishedDate, dateModified: post.lastModified || post.publishedDate,
         inLanguage: 'en',
-        author: { '@type': 'Person', name: 'Advocate Md. Shah Alam', jobTitle: 'Advocate – Supreme Court of Bangladesh', url: 'https://www.advmdshahalam.me/advocate-md-shah-alam', sameAs: ['https://www.facebook.com/advmd.shahalamfb'] },
-        publisher: { '@type': 'Organization', name: 'Advocate Md. Shah Alam Law Chambers', url: 'https://www.advmdshahalam.me', logo: { '@type': 'ImageObject', url: 'https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.png' } },
+        author: { '@type': 'Person', name: 'Advocate Md. Shah Alam', jobTitle: 'Advocate – Supreme Court of Bangladesh', url: 'https://www.advmdshahalam.me/advocate-md-shah-alam', sameAs: ['https://www.facebook.com/advmd.shahalamfb', 'https://www.linkedin.com/in/advmdshahalam/'] },
+        publisher: { '@type': 'Organization', name: 'Advocate Md. Shah Alam Law Chambers', url: 'https://www.advmdshahalam.me', logo: { '@type': 'ImageObject', url: 'https://www.advmdshahalam.me/adv-md-shah-alam.png' } },
         url: `https://www.advmdshahalam.me/blog/${post.slug}`,
         mainEntityOfPage: { '@type': 'WebPage', '@id': `https://www.advmdshahalam.me/blog/${post.slug}` },
-        image: 'https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.png',
+        image: 'https://www.advmdshahalam.me/adv-md-shah-alam.png',
         keywords: post.keywords.join(', '),
     };
     const breadcrumbSchema = {
@@ -484,7 +484,7 @@ const BlogPostInner = () => {
     };
     const faqSchema = post.faqs?.length ? {
         '@context': 'https://schema.org', '@type': 'FAQPage',
-        mainEntity: post.faqs.map(faq => ({ '@type': 'Question', name: faq.question, acceptedAnswer: { '@type': 'Answer', text: faq.answer } })),
+        mainEntity: post.faqs.map(faq => ({ '@type': 'Question', name: faq.question || faq.q, acceptedAnswer: { '@type': 'Answer', text: faq.answer || faq.a } })),
     } : null;
 
     return (
@@ -575,10 +575,24 @@ const BlogPostInner = () => {
                     </h1>
 
                     {/* Hero intro */}
-                    <p
-                        style={{ fontSize: '1.0625rem', lineHeight: 1.8, color: 'var(--hero-text-2)', maxWidth: '680px', marginBottom: '2rem', opacity: 0.88 }}
-                        dangerouslySetInnerHTML={{ __html: post.heroIntro }}
-                    />
+                    {post.heroIntro && (
+                        <div className="bpbn-hero-intro-card">
+                            <div className="bpbn-intro-header">
+                                <div className="bpbn-intro-badge">
+                                    <span className="bpbn-intro-dot" />
+                                    <span>Legal Insights & Executive Brief</span>
+                                </div>
+                                <a href="tel:01712655546" className="bpbn-intro-call-chip">
+                                    <Phone size={13} />
+                                    <span>Direct Consultation: 01712655546</span>
+                                </a>
+                            </div>
+                            <div
+                                className="bpbn-intro-content"
+                                dangerouslySetInnerHTML={{ __html: post.heroIntro }}
+                            />
+                        </div>
+                    )}
 
                     {/* Author / date row */}
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.875rem', flexWrap: 'wrap', paddingTop: '1.25rem', borderTop: '1px solid rgba(255,255,255,0.08)' }}>
@@ -875,8 +889,19 @@ const BlogPostInner = () => {
                 </div>
             </div>
 
+            {/* ── STICKY MOBILE CONVERSION BAR ── */}
+            <div className="bpbn-mobile-sticky-bar">
+                <a href="tel:01712655546" className="bpbn-msb-btn bpbn-msb-call">
+                    <Phone size={15} />
+                    <span>Direct Call: 01712655546</span>
+                </a>
+                <a href={`https://wa.me/8801712655546?text=${encodeURIComponent(`I read: ${post.title}. Need legal help.`)}`} target="_blank" rel="noopener noreferrer" className="bpbn-msb-btn bpbn-msb-wa">
+                    <MessageCircle size={15} />
+                    <span>WhatsApp Chat</span>
+                </a>
+            </div>
+
             <style>{`
-                /* ── Full-width hero container ── */
                 .bp-hero-container {
                     max-width: 1600px;
                     margin: 0 auto;
@@ -884,23 +909,17 @@ const BlogPostInner = () => {
                     position: relative;
                     z-index: 1;
                 }
-
-                /* ── Full-width body wrapper ── */
                 .bp-body-container {
                     max-width: 1600px;
                     margin: 0 auto;
                     padding: 2rem 2.5rem 5rem;
                 }
-
-                /* ── 2-col: wide article | sidebar ── */
                 .bp-main-grid {
                     display: grid;
                     grid-template-columns: 1fr 320px;
                     gap: 3rem;
                     align-items: start;
                 }
-
-                /* TOC inline only shown on medium screens where sidebar is hidden */
                 .bp-sidebar { display: block; }
                 .bp-toc-inline { display: none; }
                 .bp-mobile-toc { display: none; }
@@ -928,6 +947,91 @@ const BlogPostInner = () => {
                     .bp-body-container, .bp-hero-container { padding-left: 1rem; padding-right: 1rem; }
                 }
 
+                /* ─── Premium Executive Hero Intro Box ─── */
+                .bpbn-hero-intro-card {
+                    margin: 1.5rem 0 2.25rem;
+                    max-width: 900px;
+                    padding: 1.5rem 1.75rem;
+                    background: linear-gradient(135deg, rgba(15, 23, 42, 0.92) 0%, rgba(30, 41, 59, 0.82) 100%);
+                    border: 1px solid rgba(198, 167, 94, 0.35);
+                    border-left: 5px solid var(--gold, #C6A75E);
+                    border-radius: 1rem;
+                    box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.5), 0 0 25px -6px rgba(198, 167, 94, 0.15);
+                    position: relative;
+                    backdrop-filter: blur(12px);
+                }
+                .bpbn-intro-header {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    gap: 0.75rem;
+                    margin-bottom: 1rem;
+                    padding-bottom: 0.85rem;
+                    border-bottom: 1px solid rgba(198, 167, 94, 0.22);
+                }
+                .bpbn-intro-badge {
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                    font-size: 0.85rem;
+                    font-weight: 800;
+                    letter-spacing: 0.05em;
+                    color: var(--gold, #C6A75E);
+                }
+                .bpbn-intro-dot {
+                    width: 9px;
+                    height: 9px;
+                    border-radius: 50%;
+                    background: var(--gold, #C6A75E);
+                    box-shadow: 0 0 10px var(--gold, #C6A75E);
+                    display: inline-block;
+                }
+                .bpbn-intro-call-chip {
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 0.375rem;
+                    padding: 0.35rem 0.95rem;
+                    border-radius: 9999px;
+                    background: rgba(198, 167, 94, 0.16);
+                    border: 1px solid rgba(198, 167, 94, 0.45);
+                    color: #F8EDD1;
+                    font-size: 0.82rem;
+                    font-weight: 700;
+                    text-decoration: none;
+                    transition: all 0.2s ease;
+                }
+                .bpbn-intro-call-chip:hover {
+                    background: var(--gold, #C6A75E);
+                    color: #0F172A;
+                }
+                .bpbn-intro-content {
+                    font-size: 1.125rem;
+                    line-height: 1.95;
+                    color: #F1F5F9;
+                }
+                .bpbn-intro-content p {
+                    margin: 0;
+                }
+                .bpbn-intro-content strong, .bpbn-intro-content b {
+                    color: #FFFFFF;
+                    font-weight: 700;
+                    background: rgba(198, 167, 94, 0.16);
+                    padding: 0.12rem 0.4rem;
+                    border-radius: 4px;
+                    border-bottom: 1.5px solid rgba(198, 167, 94, 0.4);
+                }
+                .bpbn-intro-content em {
+                    color: #CBD5E1;
+                    font-style: italic;
+                }
+                .bpbn-intro-content a {
+                    color: var(--gold, #C6A75E) !important;
+                    font-weight: 700;
+                    text-decoration: underline;
+                    text-underline-offset: 4px;
+                }
+
                 /* ── Prose typography — full-width, premium reading ── */
                 .prose-content p { margin-bottom: 1.5rem; }
                 .prose-content ul, .prose-content ol { padding-left: 1.75rem; margin-bottom: 1.5rem; }
@@ -940,17 +1044,122 @@ const BlogPostInner = () => {
                 .prose-content h3 { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 800; color: var(--text); margin: 2.25rem 0 1rem; padding: 0.5rem 0.875rem; border-left: 3px solid var(--gold, #C6A75E); background: linear-gradient(90deg, rgba(198,167,94,0.06), transparent); border-radius: 0 0.5rem 0.5rem 0; }
                 .prose-content h4 { font-size: 1.05rem; font-weight: 700; color: var(--text); margin: 1.75rem 0 0.75rem; }
                 .prose-content blockquote { border-left: 4px solid var(--gold, #C6A75E); padding: 1.125rem 1.375rem; margin: 2.25rem 0; color: var(--text-secondary); background: linear-gradient(90deg, rgba(198,167,94,0.06), rgba(198,167,94,0.02)); border-radius: 0 0.875rem 0.875rem 0; font-size: 1rem; line-height: 1.85; }
-                .prose-content table { width: 100%; border-collapse: separate; border-spacing: 0; margin-bottom: 1.75rem; font-size: 0.95rem; border-radius: 10px; overflow: hidden; border: 1px solid var(--card-border); }
-                .prose-content table thead tr { background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%) !important; }
-                .prose-content th { background: transparent !important; color: #FFFFFF !important; font-weight: 700; padding: 14px 18px !important; border-bottom: 2px solid var(--gold, #C6A75E) !important; text-align: left; }
-                .prose-content td { padding: 12px 18px !important; border-bottom: 1px solid var(--card-border); }
-                .prose-content tr:nth-child(even) td { background: rgba(15, 23, 42, 0.02); }
+                
+                /* ─── Theme-Aware Executive Table Styling ─── */
+                .prose-content table {
+                    width: 100%;
+                    border-collapse: separate;
+                    border-spacing: 0;
+                    margin: 2rem 0;
+                    font-size: 1rem;
+                    border-radius: 12px;
+                    overflow: hidden;
+                    border: 1px solid var(--card-border, #E2E8F0);
+                    box-shadow: 0 4px 16px -2px rgba(0, 0, 0, 0.05);
+                    background: var(--card-bg, #FFFFFF);
+                }
+                .prose-content table thead tr {
+                    background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%) !important;
+                }
+                .prose-content th {
+                    background: transparent !important;
+                    color: #FFFFFF !important;
+                    font-weight: 700;
+                    padding: 14px 18px !important;
+                    border-bottom: 2px solid var(--gold, #C6A75E) !important;
+                    text-align: left;
+                    font-size: 1.02rem;
+                }
+                .prose-content td {
+                    padding: 14px 18px !important;
+                    border-bottom: 1px solid var(--card-border, #E2E8F0) !important;
+                    color: var(--text, #1E293B) !important;
+                    line-height: 1.6;
+                }
+                .prose-content tbody tr {
+                    background-color: var(--card-bg, #FFFFFF) !important;
+                    transition: background-color 0.15s ease;
+                }
+                .prose-content tbody tr:nth-child(even) {
+                    background-color: rgba(15, 23, 42, 0.025) !important;
+                }
+                .prose-content tbody tr:hover {
+                    background-color: rgba(198, 167, 94, 0.06) !important;
+                }
+                .dark .prose-content table {
+                    border-color: rgba(198, 167, 94, 0.22) !important;
+                    background: #0B132B !important;
+                }
+                .dark .prose-content td {
+                    color: #E2E8F0 !important;
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+                }
+                .dark .prose-content tbody tr {
+                    background-color: #0E1726 !important;
+                }
+                .dark .prose-content tbody tr:nth-child(even) {
+                    background-color: #131F33 !important;
+                }
+                .dark .prose-content tbody tr:hover {
+                    background-color: rgba(198, 167, 94, 0.12) !important;
+                }
+
                 .prose-content ol { list-style: decimal; }
                 .prose-content ul { list-style: none; padding-left: 0; }
                 .prose-content ul li { padding-left: 1.5rem; position: relative; }
                 .prose-content ul li::before { content: '▸'; position: absolute; left: 0; top: 0; color: var(--accent); font-size: 0.85em; font-weight: 700; }
                 .prose-content div[style] { margin: 1.5rem 0; }
                 .prose-content hr { border: none; height: 1px; background: linear-gradient(90deg, transparent, var(--card-border), transparent); margin: 2rem 0; }
+
+                /* ─── Sticky Mobile Action Bar ─── */
+                .bpbn-mobile-sticky-bar {
+                    display: none;
+                    position: fixed;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background: rgba(15, 23, 42, 0.95);
+                    backdrop-filter: blur(12px);
+                    border-top: 1px solid rgba(198, 167, 94, 0.35);
+                    padding: 0.65rem 1rem;
+                    z-index: 9999;
+                    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.35);
+                    gap: 0.75rem;
+                }
+                .bpbn-msb-btn {
+                    flex: 1;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 0.4rem;
+                    padding: 0.75rem 0.5rem;
+                    border-radius: 0.625rem;
+                    font-size: 0.9rem;
+                    font-weight: 700;
+                    text-decoration: none;
+                    transition: transform 0.15s ease;
+                }
+                .bpbn-msb-btn:active {
+                    transform: scale(0.97);
+                }
+                .bpbn-msb-call {
+                    background: linear-gradient(135deg, #C6A75E 0%, #A38438 100%);
+                    color: #0F172A;
+                    box-shadow: 0 2px 10px rgba(198, 167, 94, 0.35);
+                }
+                .bpbn-msb-wa {
+                    background: #25D366;
+                    color: #FFFFFF;
+                    box-shadow: 0 2px 10px rgba(37, 211, 102, 0.35);
+                }
+                @media (max-width: 900px) {
+                    .bpbn-mobile-sticky-bar {
+                        display: flex;
+                    }
+                    .bpbn-hero-intro-card {
+                        padding: 1.25rem 1.25rem;
+                    }
+                }
             `}</style>
         </>
     );
