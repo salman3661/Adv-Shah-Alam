@@ -22,8 +22,10 @@ function getPosts(dir, prefix) {
         .filter(f => f.endsWith('.json'))
         .map(f => {
             try {
-                const data = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8'));
+                const fullPath = path.join(dir, f);
+                const data = JSON.parse(fs.readFileSync(fullPath, 'utf8'));
                 data._prefix = prefix;
+                data._mtime = fs.statSync(fullPath).mtimeMs;
                 return data;
             } catch {
                 return null;
@@ -42,9 +44,10 @@ const enPosts = getPosts(path.join('src', 'content', 'posts', 'en'), '/blog');
 
 function sortPosts(posts) {
     return posts.sort((a, b) => {
-        const dateA = new Date(a.publishedDate || a.lastModified || '2026-01-01');
-        const dateB = new Date(b.publishedDate || b.lastModified || '2026-01-01');
-        return dateB - dateA;
+        const dateA = new Date(a.publishedDate || a.lastModified || '2026-01-01').getTime();
+        const dateB = new Date(b.publishedDate || b.lastModified || '2026-01-01').getTime();
+        if (dateB !== dateA) return dateB - dateA;
+        return (b._mtime || 0) - (a._mtime || 0);
     });
 }
 
