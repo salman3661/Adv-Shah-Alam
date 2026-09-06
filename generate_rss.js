@@ -54,7 +54,7 @@ function sortPosts(posts) {
 function buildRssXml(items, title, description, feedUrl, lang = 'bn') {
     const channelItems = items.map(post => {
         const postUrl = `${BASE_URL}${post._prefix || (lang === 'bn' ? '/bn/blog' : '/blog')}/${post.slug}`;
-        const pubDate = new Date(post.publishedDate || post.lastModified || TODAY).toUTCString();
+        const pubDate = post._mtime ? new Date(post._mtime).toUTCString() : new Date().toUTCString();
         const rawDesc = post.metaDescription || (post.heroIntro ? post.heroIntro.replace(/<[^>]+>/g, '').slice(0, 300) : '');
         const desc = rawDesc.replace(/]]>/g, '').trim();
         const author = 'Advocate Md. Shah Alam';
