@@ -10,8 +10,9 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "sitemap": "node generate_sitemap.js",
+    "rss": "node generate_rss.js",
     "gsc-sync": "node scripts/gsc-fetch.mjs",
-    "prebuild": "node scripts/gsc-fetch.mjs && node generate_sitemap.js",
+    "prebuild": "node scripts/gsc-fetch.mjs && node generate_sitemap.js && node generate_rss.js",
     "indexnow": "node scripts/indexnow-submit.mjs"
   },
   "dependencies": {
