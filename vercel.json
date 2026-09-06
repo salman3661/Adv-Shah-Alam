@@ -427,6 +427,31 @@
           "value": "*"
         }
       ]
+    },
+    {
+      "source": "/(rss\\.xml|rss-bn\\.xml|feed\\.xml|feed|rss)",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/rss+xml; charset=utf-8"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=1800, s-maxage=3600"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        },
+        {
+          "key": "Access-Control-Allow-Methods",
+          "value": "GET, HEAD, OPTIONS"
+        },
+        {
+          "key": "Access-Control-Allow-Headers",
+          "value": "*"
+        }
+      ]
     }
   ],
   "rewrites": [
@@ -441,6 +466,26 @@
     {
       "source": "/sitemap.xml",
       "destination": "/sitemap.xml"
+    },
+    {
+      "source": "/rss-bn.xml",
+      "destination": "/rss-bn.xml"
+    },
+    {
+      "source": "/rss.xml",
+      "destination": "/rss.xml"
+    },
+    {
+      "source": "/feed.xml",
+      "destination": "/rss-bn.xml"
+    },
+    {
+      "source": "/rss",
+      "destination": "/rss-bn.xml"
+    },
+    {
+      "source": "/feed",
+      "destination": "/rss-bn.xml"
     },
     {
       "source": "/(.*)",

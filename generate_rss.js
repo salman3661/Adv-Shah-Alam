@@ -1,12 +1,13 @@
 // generate_rss.js
-// Generates standard RSS 2.0 feeds for automated social media syndication (LinkedIn, Buffer, Make.com, IFTTT)
-// Produces: public/rss.xml (all latest posts) and public/rss-bn.xml (Bengali posts)
+// Generates standard RSS 2.0 feeds with full Media & Dublin Core syndication
+// Fully compatible with Buffer, Make.com, Zapier, Feedly, and social aggregators
 
 const fs = require('fs');
 const path = require('path');
 
 const BASE_URL = 'https://www.advmdshahalam.me';
 const TODAY = new Date().toISOString().split('T')[0];
+const DEFAULT_IMAGE = `${BASE_URL}/images/hero/hero-md-shah-alam.png`;
 
 const vercelConfig = JSON.parse(fs.readFileSync('vercel.json', 'utf8'));
 const redirectSources = new Set(
@@ -21,7 +22,9 @@ function getPosts(dir, prefix) {
         .filter(f => f.endsWith('.json'))
         .map(f => {
             try {
-                return JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8'));
+                const data = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8'));
+                data._prefix = prefix;
+                return data;
             } catch {
                 return null;
             }
@@ -47,24 +50,35 @@ function sortPosts(posts) {
 
 function buildRssXml(items, title, description, feedUrl, lang = 'bn') {
     const channelItems = items.map(post => {
-        const postUrl = post.enSlug !== undefined ? `${BASE_URL}/bn/blog/${post.slug}` : `${BASE_URL}/blog/${post.slug}`;
+        const postUrl = `${BASE_URL}${post._prefix || (lang === 'bn' ? '/bn/blog' : '/blog')}/${post.slug}`;
         const pubDate = new Date(post.publishedDate || post.lastModified || TODAY).toUTCString();
-        const desc = post.metaDescription || (post.heroIntro ? post.heroIntro.replace(/<[^>]+>/g, '').slice(0, 300) : '');
+        const rawDesc = post.metaDescription || (post.heroIntro ? post.heroIntro.replace(/<[^>]+>/g, '').slice(0, 300) : '');
+        const desc = rawDesc.replace(/]]>/g, '').trim();
         const author = 'Advocate Md. Shah Alam';
+        const category = (post.category || 'Law').replace(/]]>/g, '');
+        const cleanTitle = (post.title || '').replace(/]]>/g, '');
 
         return `    <item>
-      <title><![CDATA[${post.title}]]></title>
+      <title><![CDATA[${cleanTitle}]]></title>
       <link>${postUrl}</link>
       <guid isPermaLink="true">${postUrl}</guid>
       <description><![CDATA[${desc}]]></description>
-      <category>${post.category || 'Law'}</category>
-      <author>contact@advmdshahalam.me (${author})</author>
+      <content:encoded><![CDATA[<p>${desc}</p>]]></content:encoded>
+      <dc:creator><![CDATA[${author}]]></dc:creator>
+      <category><![CDATA[${category}]]></category>
       <pubDate>${pubDate}</pubDate>
+      <enclosure url="${DEFAULT_IMAGE}" length="76800" type="image/png" />
+      <media:content url="${DEFAULT_IMAGE}" medium="image" type="image/png" />
+      <media:thumbnail url="${DEFAULT_IMAGE}" />
     </item>`;
     }).join('\n');
 
     return `<?xml version="1.0" encoding="UTF-8" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>${title}</title>
     <link>${BASE_URL}</link>
@@ -73,17 +87,19 @@ function buildRssXml(items, title, description, feedUrl, lang = 'bn') {
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
     <atom:link href="${feedUrl}" rel="self" type="application/rss+xml" />
     <image>
-      <url>${BASE_URL}/images/hero/hero-md-shah-alam.png</url>
+      <url>${DEFAULT_IMAGE}</url>
       <title>${title}</title>
       <link>${BASE_URL}</link>
+      <width>144</width>
+      <height>144</height>
     </image>
 ${channelItems}
   </channel>
 </rss>`;
 }
 
-// 1. Bengali RSS (Top 50 latest posts)
-const sortedBn = sortPosts([...bnPosts]).slice(0, 50);
+// 1. Bengali RSS (Top 30 latest posts)
+const sortedBn = sortPosts([...bnPosts]).slice(0, 30);
 const bnRss = buildRssXml(
     sortedBn,
     'অ্যাডভোকেট মো. শাহ আলম — আইন কানুন ও আইনি পরামর্শ ব্লগ',
@@ -93,8 +109,13 @@ const bnRss = buildRssXml(
 );
 fs.writeFileSync('public/rss-bn.xml', bnRss, 'utf8');
 
-// 2. Main RSS (Combined latest 60 posts)
-const combined = sortPosts([...bnPosts, ...enPosts]).slice(0, 60);
+// Also write common aliases for buffer / aggregators
+fs.writeFileSync('public/feed.xml', bnRss, 'utf8');
+fs.writeFileSync('public/rss', bnRss, 'utf8');
+fs.writeFileSync('public/feed', bnRss, 'utf8');
+
+// 2. Main RSS (Combined latest 30 posts)
+const combined = sortPosts([...bnPosts, ...enPosts]).slice(0, 30);
 const mainRss = buildRssXml(
     combined,
     'Advocate Md. Shah Alam Law Chambers — Legal Insights & Case Guides',
@@ -107,3 +128,4 @@ fs.writeFileSync('public/rss.xml', mainRss, 'utf8');
 console.log(`✓ RSS feeds generated successfully:`);
 console.log(`  - public/rss-bn.xml (${sortedBn.length} latest Bengali articles)`);
 console.log(`  - public/rss.xml (${combined.length} combined latest articles)`);
+console.log(`  - public/feed.xml & aliases created`);
