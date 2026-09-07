@@ -903,23 +903,24 @@ const BlogPostBnInner = () => {
                 </div>
             </div>
 
-            {/* ── STICKY MOBILE CONVERSION BAR (Premium) ── */}
-            <div className="bpbn-mobile-sticky-bar">
-                <div className="bpbn-msb-inner">
-                    <div className="bpbn-msb-label">
-                        <span className="bpbn-msb-dot" />
-                        <span>অ্যাডভোকেট মো. শাহ আলম · বাংলাদেশ সুপ্রিম কোর্ট</span>
+            {/* ── STICKY MOBILE CONVERSION BAR ── */}
+            <div className="msb-bar">
+                <div className="msb-left">
+                    <span className="msb-live-dot" />
+                    <div className="msb-identity">
+                        <span className="msb-name">অ্যাডভোকেট মো. শাহ আলম</span>
+                        <span className="msb-sub">বাংলাদেশ সুপ্রিম কোর্ট · এখন উপলব্ধ</span>
                     </div>
-                    <div className="bpbn-msb-actions">
-                        <a href="tel:01712655546" className="bpbn-msb-btn bpbn-msb-call">
-                            <Phone size={13} strokeWidth={2.5} />
-                            <span>এখনই কল</span>
-                        </a>
-                        <a href={waLink(`আমি পড়লাম: ${post.title}। আইনি পরামর্শ দরকার।`)} target="_blank" rel="noopener noreferrer" className="bpbn-msb-btn bpbn-msb-wa">
-                            <MessageCircle size={13} strokeWidth={2.5} />
-                            <span>WhatsApp</span>
-                        </a>
-                    </div>
+                </div>
+                <div className="msb-right">
+                    <a href="tel:01712655546" className="msb-btn msb-call">
+                        <Phone size={14} strokeWidth={2.5} />
+                        <span>কল করুন</span>
+                    </a>
+                    <a href={waLink(`আমি পড়লাম: ${post.title}। আইনি পরামর্শ দরকার।`)} target="_blank" rel="noopener noreferrer" className="msb-btn msb-wa">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        <span>WhatsApp</span>
+                    </a>
                 </div>
             </div>
 
@@ -1139,115 +1140,111 @@ const BlogPostBnInner = () => {
                 .prose-bn-content div[style] { margin: 1.5rem 0; }
                 .prose-bn-content hr { border: none; height: 1px; background: linear-gradient(90deg, transparent, var(--card-border), transparent); margin: 2rem 0; }
 
-                /* ─── Premium Sticky Mobile Bar ─── */
-                .bpbn-mobile-sticky-bar {
+                /* ═══ PREMIUM MOBILE STICKY BAR ═══ */
+                .msb-bar {
                     display: none;
                     position: fixed;
-                    bottom: 0;
-                    left: 0;
-                    right: 0;
+                    bottom: 0; left: 0; right: 0;
                     z-index: 9999;
-                    padding: 0 1rem 0.5rem;
-                    padding-bottom: calc(0.5rem + env(safe-area-inset-bottom, 0px));
-                    background: rgba(8, 14, 28, 0.82);
-                    backdrop-filter: blur(20px) saturate(180%);
-                    -webkit-backdrop-filter: blur(20px) saturate(180%);
-                    border-top: 1px solid rgba(198, 167, 94, 0.18);
-                    box-shadow: 0 -8px 32px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.04);
+                    background: rgba(6, 10, 22, 0.92);
+                    backdrop-filter: blur(24px) saturate(180%);
+                    -webkit-backdrop-filter: blur(24px) saturate(180%);
+                    border-top: 1px solid rgba(198, 167, 94, 0.2);
+                    box-shadow: 0 -4px 40px rgba(0,0,0,0.5);
+                    padding: 0.7rem 1rem calc(0.7rem + env(safe-area-inset-bottom, 0px));
                 }
-                .bpbn-msb-inner {
-                    max-width: 600px;
-                    margin: 0 auto;
-                    padding: 0.55rem 0 0;
+                .msb-bar > * {
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
                     gap: 0.75rem;
+                    max-width: 560px;
+                    margin: 0 auto;
                 }
-                .bpbn-msb-label {
-                    display: flex;
-                    align-items: center;
-                    gap: 0.45rem;
-                    font-size: 0.68rem;
-                    font-weight: 500;
-                    color: rgba(226, 232, 240, 0.55);
-                    letter-spacing: 0.01em;
-                    font-family: 'SolaimanLipi', 'Kalpurush', sans-serif;
+                .msb-left {
+                    display: flex !important;
+                    align-items: center !important;
+                    gap: 0.55rem;
                     flex: 1;
                     min-width: 0;
-                    overflow: hidden;
-                    white-space: nowrap;
-                    text-overflow: ellipsis;
                 }
-                .bpbn-msb-dot {
-                    width: 6px;
-                    height: 6px;
+                .msb-live-dot {
+                    width: 7px;
+                    height: 7px;
                     border-radius: 50%;
                     background: #22c55e;
                     flex-shrink: 0;
-                    box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.25);
-                    animation: bpbn-pulse 2s ease-in-out infinite;
+                    animation: msbPulse 2.2s ease-in-out infinite;
                 }
-                @keyframes bpbn-pulse {
-                    0%, 100% { box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.25); }
-                    50% { box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.12); }
+                @keyframes msbPulse {
+                    0%, 100% { box-shadow: 0 0 0 0 rgba(34,197,94,0.5); }
+                    50% { box-shadow: 0 0 0 5px rgba(34,197,94,0); }
                 }
-                .bpbn-msb-actions {
+                .msb-identity {
                     display: flex;
-                    align-items: center;
+                    flex-direction: column;
+                    min-width: 0;
+                    gap: 0.1rem;
+                }
+                .msb-name {
+                    font-size: 0.72rem;
+                    font-weight: 700;
+                    color: rgba(248, 250, 252, 0.92);
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    font-family: 'SolaimanLipi', 'Kalpurush', sans-serif;
+                    letter-spacing: 0.01em;
+                }
+                .msb-sub {
+                    font-size: 0.6rem;
+                    font-weight: 400;
+                    color: rgba(198, 167, 94, 0.7);
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    font-family: 'SolaimanLipi', 'Kalpurush', sans-serif;
+                    letter-spacing: 0.01em;
+                }
+                .msb-right {
+                    display: flex !important;
+                    align-items: center !important;
                     gap: 0.5rem;
                     flex-shrink: 0;
                 }
-                .bpbn-msb-btn {
+                .msb-btn {
                     display: inline-flex;
                     align-items: center;
-                    gap: 0.35rem;
-                    padding: 0.5rem 1rem;
+                    gap: 0.32rem;
+                    padding: 0.48rem 0.95rem;
                     border-radius: 100px;
-                    font-size: 0.78rem;
+                    font-size: 0.75rem;
                     font-weight: 700;
                     text-decoration: none;
-                    letter-spacing: 0.01em;
-                    font-family: 'SolaimanLipi', 'Kalpurush', sans-serif;
-                    transition: all 0.18s cubic-bezier(0.34, 1.56, 0.64, 1);
                     white-space: nowrap;
+                    font-family: 'SolaimanLipi', 'Kalpurush', sans-serif;
+                    transition: transform 0.15s ease, box-shadow 0.15s ease;
+                    -webkit-tap-highlight-color: transparent;
                 }
-                .bpbn-msb-btn:active {
-                    transform: scale(0.94);
+                .msb-btn:active { transform: scale(0.93); }
+                .msb-call {
+                    background: linear-gradient(135deg, #C6A75E 0%, #a8873a 100%);
+                    color: #0a0f1e;
+                    box-shadow: 0 2px 14px rgba(198,167,94,0.45),
+                                inset 0 1px 0 rgba(255,255,255,0.25);
                 }
-                .bpbn-msb-call {
-                    background: linear-gradient(135deg, #C6A75E 0%, #B8933E 100%);
-                    color: #0B1120;
-                    box-shadow: 0 2px 12px rgba(198, 167, 94, 0.4), inset 0 1px 0 rgba(255,255,255,0.2);
-                }
-                .bpbn-msb-call:hover {
-                    background: linear-gradient(135deg, #D4B96E 0%, #C6A75E 100%);
-                    box-shadow: 0 4px 18px rgba(198, 167, 94, 0.55);
-                    transform: translateY(-1px);
-                }
-                .bpbn-msb-wa {
-                    background: rgba(255,255,255,0.07);
-                    color: rgba(226, 232, 240, 0.9);
-                    border: 1px solid rgba(255,255,255,0.12);
-                    box-shadow: inset 0 1px 0 rgba(255,255,255,0.06);
-                }
-                .bpbn-msb-wa:hover {
-                    background: rgba(37, 211, 102, 0.15);
-                    border-color: rgba(37, 211, 102, 0.35);
-                    color: #4ade80;
-                    transform: translateY(-1px);
+                .msb-wa {
+                    background: #128C7E;
+                    color: #fff;
+                    box-shadow: 0 2px 14px rgba(18,140,126,0.4),
+                                inset 0 1px 0 rgba(255,255,255,0.15);
                 }
                 @media (max-width: 900px) {
-                    .bpbn-mobile-sticky-bar {
-                        display: block;
-                    }
-                    .bpbn-hero-intro-card {
-                        padding: 1.25rem 1.25rem;
-                    }
-                    .bpbn-intro-content {
-                        font-size: 1.05rem;
-                        line-height: 2.0;
-                    }
+                    .msb-bar { display: block; }
+                }
+                @media (max-width: 360px) {
+                    .msb-sub { display: none; }
+                    .msb-btn { padding: 0.45rem 0.75rem; font-size: 0.7rem; }
                 }
             `}</style>
         </>
