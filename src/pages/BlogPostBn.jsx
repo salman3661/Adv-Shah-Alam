@@ -903,16 +903,24 @@ const BlogPostBnInner = () => {
                 </div>
             </div>
 
-            {/* ── STICKY MOBILE CONVERSION BAR ── */}
+            {/* ── STICKY MOBILE CONVERSION BAR (Premium) ── */}
             <div className="bpbn-mobile-sticky-bar">
-                <a href="tel:01712655546" className="bpbn-msb-btn bpbn-msb-call">
-                    <Phone size={15} />
-                    <span>সরাসরি কল: 01712655546</span>
-                </a>
-                <a href={waLink(`আমি পড়লাম: ${post.title}। আইনি পরামর্শ দরকার।`)} target="_blank" rel="noopener noreferrer" className="bpbn-msb-btn bpbn-msb-wa">
-                    <MessageCircle size={15} />
-                    <span>WhatsApp মেসেজ</span>
-                </a>
+                <div className="bpbn-msb-inner">
+                    <div className="bpbn-msb-label">
+                        <span className="bpbn-msb-dot" />
+                        <span>অ্যাডভোকেট মো. শাহ আলম · বাংলাদেশ সুপ্রিম কোর্ট</span>
+                    </div>
+                    <div className="bpbn-msb-actions">
+                        <a href="tel:01712655546" className="bpbn-msb-btn bpbn-msb-call">
+                            <Phone size={13} strokeWidth={2.5} />
+                            <span>এখনই কল</span>
+                        </a>
+                        <a href={waLink(`আমি পড়লাম: ${post.title}। আইনি পরামর্শ দরকার।`)} target="_blank" rel="noopener noreferrer" className="bpbn-msb-btn bpbn-msb-wa">
+                            <MessageCircle size={13} strokeWidth={2.5} />
+                            <span>WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
             </div>
 
             <style>{`
@@ -1131,57 +1139,113 @@ const BlogPostBnInner = () => {
                 .prose-bn-content div[style] { margin: 1.5rem 0; }
                 .prose-bn-content hr { border: none; height: 1px; background: linear-gradient(90deg, transparent, var(--card-border), transparent); margin: 2rem 0; }
 
-                /* ─── Sticky Mobile Action Bar ─── */
+                /* ─── Premium Sticky Mobile Bar ─── */
                 .bpbn-mobile-sticky-bar {
                     display: none;
                     position: fixed;
                     bottom: 0;
                     left: 0;
                     right: 0;
-                    background: rgba(15, 23, 42, 0.95);
-                    backdrop-filter: blur(12px);
-                    border-top: 1px solid rgba(198, 167, 94, 0.35);
-                    padding: 0.65rem 1rem;
                     z-index: 9999;
-                    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.35);
+                    padding: 0 1rem 0.5rem;
+                    padding-bottom: calc(0.5rem + env(safe-area-inset-bottom, 0px));
+                    background: rgba(8, 14, 28, 0.82);
+                    backdrop-filter: blur(20px) saturate(180%);
+                    -webkit-backdrop-filter: blur(20px) saturate(180%);
+                    border-top: 1px solid rgba(198, 167, 94, 0.18);
+                    box-shadow: 0 -8px 32px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.04);
+                }
+                .bpbn-msb-inner {
+                    max-width: 600px;
+                    margin: 0 auto;
+                    padding: 0.55rem 0 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
                     gap: 0.75rem;
                 }
-                .bpbn-msb-btn {
+                .bpbn-msb-label {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.45rem;
+                    font-size: 0.68rem;
+                    font-weight: 500;
+                    color: rgba(226, 232, 240, 0.55);
+                    letter-spacing: 0.01em;
+                    font-family: 'SolaimanLipi', 'Kalpurush', sans-serif;
                     flex: 1;
+                    min-width: 0;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                }
+                .bpbn-msb-dot {
+                    width: 6px;
+                    height: 6px;
+                    border-radius: 50%;
+                    background: #22c55e;
+                    flex-shrink: 0;
+                    box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.25);
+                    animation: bpbn-pulse 2s ease-in-out infinite;
+                }
+                @keyframes bpbn-pulse {
+                    0%, 100% { box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.25); }
+                    50% { box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.12); }
+                }
+                .bpbn-msb-actions {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                    flex-shrink: 0;
+                }
+                .bpbn-msb-btn {
                     display: inline-flex;
                     align-items: center;
-                    justify-content: center;
-                    gap: 0.4rem;
-                    padding: 0.75rem 0.5rem;
-                    border-radius: 0.625rem;
-                    font-size: 0.9rem;
+                    gap: 0.35rem;
+                    padding: 0.5rem 1rem;
+                    border-radius: 100px;
+                    font-size: 0.78rem;
                     font-weight: 700;
                     text-decoration: none;
+                    letter-spacing: 0.01em;
                     font-family: 'SolaimanLipi', 'Kalpurush', sans-serif;
-                    transition: transform 0.15s ease;
+                    transition: all 0.18s cubic-bezier(0.34, 1.56, 0.64, 1);
+                    white-space: nowrap;
                 }
                 .bpbn-msb-btn:active {
-                    transform: scale(0.97);
+                    transform: scale(0.94);
                 }
                 .bpbn-msb-call {
-                    background: linear-gradient(135deg, #C6A75E 0%, #A38438 100%);
-                    color: #0F172A;
-                    box-shadow: 0 2px 10px rgba(198, 167, 94, 0.35);
+                    background: linear-gradient(135deg, #C6A75E 0%, #B8933E 100%);
+                    color: #0B1120;
+                    box-shadow: 0 2px 12px rgba(198, 167, 94, 0.4), inset 0 1px 0 rgba(255,255,255,0.2);
+                }
+                .bpbn-msb-call:hover {
+                    background: linear-gradient(135deg, #D4B96E 0%, #C6A75E 100%);
+                    box-shadow: 0 4px 18px rgba(198, 167, 94, 0.55);
+                    transform: translateY(-1px);
                 }
                 .bpbn-msb-wa {
-                    background: #25D366;
-                    color: #FFFFFF;
-                    box-shadow: 0 2px 10px rgba(37, 211, 102, 0.35);
+                    background: rgba(255,255,255,0.07);
+                    color: rgba(226, 232, 240, 0.9);
+                    border: 1px solid rgba(255,255,255,0.12);
+                    box-shadow: inset 0 1px 0 rgba(255,255,255,0.06);
+                }
+                .bpbn-msb-wa:hover {
+                    background: rgba(37, 211, 102, 0.15);
+                    border-color: rgba(37, 211, 102, 0.35);
+                    color: #4ade80;
+                    transform: translateY(-1px);
                 }
                 @media (max-width: 900px) {
                     .bpbn-mobile-sticky-bar {
-                        display: flex;
+                        display: block;
                     }
                     .bpbn-hero-intro-card {
                         padding: 1.25rem 1.25rem;
                     }
                     .bpbn-intro-content {
-                        font-size: 1.1rem;
+                        font-size: 1.05rem;
                         line-height: 2.0;
                     }
                 }
@@ -1197,4 +1261,5 @@ const BlogPostBn = () => (
 );
 
 export default BlogPostBn;
+
 
