@@ -41,6 +41,7 @@ const LOCAL_BUSINESS_SCHEMA = {
     priceRange: 'Contact for consultation',
     sameAs: [
         'https://www.facebook.com/advmd.shahalamfb',
+        'https://www.linkedin.com/in/advmdshahalam/',
         'https://maps.app.goo.gl/M3NXMwW3xkp2TE3h8',
     ],
 };

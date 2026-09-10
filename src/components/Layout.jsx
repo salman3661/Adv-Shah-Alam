@@ -56,6 +56,8 @@ const attorneySchema = {
     sameAs: [
         'https://www.facebook.com/advmdshahalam',
         'https://www.facebook.com/advmd.shahalamfb',
+        'https://www.linkedin.com/in/advmdshahalam/',
+        'https://maps.app.goo.gl/M3NXMwW3xkp2TE3h8',
     ],
 };
 
@@ -149,6 +151,8 @@ const personSchema = {
     sameAs: [
         'https://www.facebook.com/advmdshahalam',
         'https://www.facebook.com/advmd.shahalamfb',
+        'https://www.linkedin.com/in/advmdshahalam/',
+        'https://maps.app.goo.gl/M3NXMwW3xkp2TE3h8',
         `${BASE}/advocate-md-shah-alam`,
     ],
 };
@@ -219,6 +223,7 @@ const legalServiceSchema = {
     sameAs: [
         'https://www.facebook.com/advmdshahalam',
         'https://www.facebook.com/advmd.shahalamfb',
+        'https://www.linkedin.com/in/advmdshahalam/',
         'https://maps.app.goo.gl/M3NXMwW3xkp2TE3h8',
     ],
 };

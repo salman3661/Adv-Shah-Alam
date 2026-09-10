@@ -1,5 +1,5 @@
 import React from 'react';
-import { Facebook, MessageCircle, Phone, MapPin, Mail } from 'lucide-react';
+import { Facebook, MessageCircle, Phone, MapPin, Mail, Linkedin } from 'lucide-react';
 import { CALL_DISPLAY, telLink, waLink } from '../data/contactInfo';
 import { Link, useLocation } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
@@ -128,6 +128,14 @@ const Footer = () => {
                                 style={{ background: 'var(--card-bg)', border: '1px solid var(--card-border)' }}>
                                 <Facebook size={16} className="icon-facebook" />
                             </a>
+                            {siteInfo.linkedinUrl && (
+                                <a href={siteInfo.linkedinUrl} target="_blank" rel="noopener noreferrer"
+                                    aria-label="Connect on LinkedIn"
+                                    className="w-9 h-9 rounded-xl flex items-center justify-center hover:scale-110 transition-transform shadow-sm text-[#0A66C2]"
+                                    style={{ background: 'var(--card-bg)', border: '1px solid var(--card-border)' }}>
+                                    <Linkedin size={16} />
+                                </a>
+                            )}
                         </div>
                         <a href={siteInfo.googleMapsUrl} target="_blank" rel="noopener noreferrer"
                             className="inline-flex items-center gap-1.5 text-xs px-3 py-2 rounded-full transition-all hover:opacity-90 font-semibold"

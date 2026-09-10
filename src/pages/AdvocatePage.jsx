@@ -104,6 +104,7 @@ const personSchema = {
     email: 'contact@advmdshahalam.me',
     sameAs: [
         'https://www.facebook.com/advmd.shahalamfb',
+        'https://www.linkedin.com/in/advmdshahalam/',
         'https://maps.app.goo.gl/M3NXMwW3xkp2TE3h8',
         'https://www.advmdshahalam.me',
     ],
@@ -219,6 +220,7 @@ const organizationSchema = {
     ],
     sameAs: [
         'https://www.facebook.com/advmd.shahalamfb',
+        'https://www.linkedin.com/in/advmdshahalam/',
         'https://maps.app.goo.gl/M3NXMwW3xkp2TE3h8',
     ],
 };
