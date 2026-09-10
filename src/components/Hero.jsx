@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { waLink } from '../data/contactInfo';
 import heroEn from '../content/hero.json';
 import heroBn from '../content/hero_bn.json';
+import SocialShare from './SocialShare';
 
 /* ── keyframe injection ── */
 const STYLES = `
@@ -19,16 +20,16 @@ const STYLES = `
   50%      { transform: translateY(-5px); }
 }
 @keyframes dot-glow-blue {
-  0%,100% { box-shadow: 0 0 0 0 rgba(26,63,191,0.6); opacity:1; }
-  50%      { box-shadow: 0 0 0 5px rgba(26,63,191,0);  opacity:0.6; }
+  0%,100% { opacity:1; transform: scale(1); }
+  50%      { opacity:0.5; transform: scale(1.3); }
 }
 @keyframes dot-glow-gold {
-  0%,100% { box-shadow: 0 0 0 0 rgba(198,167,94,0.7); opacity:1; }
-  50%      { box-shadow: 0 0 0 5px rgba(198,167,94,0);  opacity:0.55; }
+  0%,100% { opacity:1; transform: scale(1); }
+  50%      { opacity:0.5; transform: scale(1.3); }
 }
 @keyframes dot-glow-green {
-  0%,100% { box-shadow: 0 0 0 0 rgba(34,197,94,0.7); opacity:1; }
-  50%      { box-shadow: 0 0 0 5px rgba(34,197,94,0);  opacity:0.55; }
+  0%,100% { opacity:1; transform: scale(1); }
+  50%      { opacity:0.5; transform: scale(1.3); }
 }
 @keyframes badge-shine {
   0%   { background-position: -200% center; }
@@ -300,6 +301,47 @@ const Hero = ({ lang = 'en' }) => {
                 </a>
               </motion.div>
 
+              {/* ── Social Share ── */}
+              <motion.div {...fade(0.36)} style={{ marginTop: '1.1rem' }}>
+                <SocialShare lang={lang} />
+              </motion.div>
+
+              {/* ── Quick internal navigation links (boosts SEO internal linking) ── */}
+              <motion.div {...fade(0.4)} style={{ marginTop: '1.1rem', display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
+                {(isBn ? [
+                  { label: 'আইনজীবী সম্পর্কে', href: '/advocate-md-shah-alam' },
+                  { label: 'আইনি সেবা', href: '/#services' },
+                  { label: 'ব্লগ', href: '/bn/blog' },
+                  { label: 'যোগাযোগ', href: '/contact' },
+                  { label: 'প্রশ্নোত্তর', href: '/#faq' },
+                ] : [
+                  { label: 'About Advocate', href: '/advocate-md-shah-alam' },
+                  { label: 'Our Services', href: '/en#services' },
+                  { label: 'Legal Blog', href: '/blog' },
+                  { label: 'Contact Us', href: '/contact' },
+                  { label: 'FAQ', href: '/en#faq' },
+                ]).map((link) => (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    style={{
+                      fontSize: '0.7rem', fontWeight: 600,
+                      padding: '0.22rem 0.7rem', borderRadius: '9999px',
+                      background: 'var(--hero-pill-bg)',
+                      border: '1px solid var(--hero-pill-border)',
+                      color: 'var(--text-2)',
+                      textDecoration: 'none',
+                      transition: 'opacity 0.15s',
+                      opacity: 0.75,
+                    }}
+                    onMouseEnter={(e) => { e.currentTarget.style.opacity = '1'; }}
+                    onMouseLeave={(e) => { e.currentTarget.style.opacity = '0.75'; }}
+                  >
+                    {link.label}
+                  </a>
+                ))}
+              </motion.div>
+
             </div>
 
             {/* ── RIGHT: Photo ── */}
@@ -319,10 +361,12 @@ const Hero = ({ lang = 'en' }) => {
                 }}>
                   <img
                       src="/images/hero/hero-md-shah-alam.webp"
+                      srcSet="/images/hero/hero-md-shah-alam.webp 828w, /hero-md-shah-alam.webp 420w"
+                      sizes="(max-width: 768px) 420px, 600px"
                       alt={heroContent.photoAlt}
                       loading="eager"
                       fetchPriority="high"
-                      decoding="sync"
+                      decoding="async"
                       width="600"
                       height="750"
                       style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top', display: 'block' }}

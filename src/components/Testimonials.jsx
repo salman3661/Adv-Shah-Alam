@@ -125,13 +125,16 @@ const reviewSchema = {
 };
 
 const StarRating = ({ rating }) => (
-    <div className="flex gap-0.5" aria-label={`${rating} out of 5 stars`}>
+    // role="img" required: aria-label on a plain div is a prohibited ARIA attribute.
+    // role="img" makes the aria-label valid and meaningful to screen readers.
+    <div role="img" aria-label={`${rating} out of 5 stars`} className="flex gap-0.5">
         {[1, 2, 3, 4, 5].map(i => (
             <Star
                 key={i}
                 size={14}
                 fill={i <= rating ? '#F59E0B' : 'none'}
                 stroke={i <= rating ? '#F59E0B' : '#D1D5DB'}
+                aria-hidden="true"
             />
         ))}
     </div>
@@ -219,9 +222,9 @@ const Testimonials = ({ lang = 'en' }) => {
                             </span>
                             <span className="text-xs font-semibold" style={{ color: 'var(--text-muted)' }}>Criminal Defence · Uttara, Dhaka</span>
                         </div>
-                        <h4 className="text-lg font-serif font-bold mb-3" style={{ color: 'var(--text)', fontFamily: isBn ? 'inherit' : "'Playfair Display', serif" }}>
+                        <h3 className="text-lg font-serif font-bold mb-3" style={{ color: 'var(--text)', fontFamily: isBn ? 'inherit' : "'Playfair Display', serif" }}>
                             {isBn ? '"৪৮ ঘণ্টায় জামিন — একটি পরিবার রক্ষার গল্প"' : '"Bail in 48 Hours — A Family Saved"'}
-                        </h4>
+                        </h3>
                         <p className="text-sm leading-relaxed mb-4" style={{ color: 'var(--text-2)' }}>
                             {isBn 
                                 ? 'রাত ১১টায় ফোন এলো — ছেলেকে আটক করা হয়েছে, পরিবার কী করবে বুঝতে পারছে না। পরদিন সকালে আমরা মামলার কাগজ দেখলাম, আইনি ফাঁক খুঁজে বের করলাম, এবং ৪৮ ঘণ্টার মধ্যে জামিন আদায় করলাম। পরিবারটি আজও কৃতজ্ঞ।'
@@ -329,21 +332,35 @@ const Testimonials = ({ lang = 'en' }) => {
                             >
                                 <ChevronLeft size={18} />
                             </button>
-                            <div className="flex gap-2">
-                                {testimonials.map((_, i) => (
-                                    <button
-                                        key={i}
-                                        onClick={() => setActive(i)}
-                                        aria-label={`Go to testimonial ${i + 1}`}
+                        {/* Dot indicators — each has min 24×24px touch target */}
+                        <div className="flex gap-2">
+                            {testimonials.map((_, i) => (
+                                <button
+                                    key={i}
+                                    onClick={() => setActive(i)}
+                                    aria-label={`Go to testimonial ${i + 1}`}
+                                    style={{
+                                        /* Min 24×24 touch target via padding */
+                                        padding: '8px 4px',
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        background: 'none',
+                                        border: 'none',
+                                        cursor: 'pointer',
+                                    }}
+                                >
+                                    <span
                                         className="rounded-full transition-all duration-300"
                                         style={{
+                                            display: 'block',
                                             width: i === active ? '24px' : '8px',
                                             height: '8px',
                                             background: i === active ? 'var(--accent)' : 'var(--card-border)',
                                         }}
                                     />
-                                ))}
-                            </div>
+                                </button>
+                            ))}
+                        </div>
                             <button
                                 onClick={next}
                                 aria-label="Next testimonial"

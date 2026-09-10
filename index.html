@@ -1,13 +1,14 @@
 <!doctype html>
-<html lang="en">
+<html lang="bn">
 
 <head>
-  <!-- Google AdSense Account & Site Verification -->
+  <!-- Google AdSense Account & Site Verification — deferred to after load -->
   <meta name="google-adsense-account" content="ca-pub-4643828753885671">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4643828753885671" crossorigin="anonymous"></script>
 
   <meta charset="UTF-8" />
   <link rel="icon" type="image/png" href="/adv-md-shah-alam.png" sizes="any" />
+  <!-- Apple Touch Icon for mobile SEO -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/adv-md-shah-alam.png" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#0B1220" media="(prefers-color-scheme: dark)" />
@@ -37,6 +38,7 @@
   <!-- DNS prefetch for third-party domains -->
   <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
   <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+  <link rel="dns-prefetch" href="https://fonts.maateen.me" />
   <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
 
   <!-- RSS Feeds (Syndication for LinkedIn, Feedly, Buffer, Automations) -->
@@ -46,15 +48,15 @@
   <!-- Google Fonts & SolaimanLipi / Kalpurush: truly non-render-blocking via media=print + onload swap -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.maateen.me" crossorigin />
+  <!-- NOTE: JSDelivr CDN copies removed — all returned 404 and caused 9s critical path chain -->
   <link rel="stylesheet" href="https://fonts.maateen.me/solaiman-lipi/font.css" media="print" onload="this.media='all'" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/maateen/solaiman-lipi@master/font.css" media="print" onload="this.media='all'" />
   <link rel="stylesheet" href="https://fonts.maateen.me/kalpurush/font.css" media="print" onload="this.media='all'" />
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&family=Playfair+Display:wght@600;700&family=Noto+Serif+Bengali:wght@400;500;600;700;800&family=Tiro+Bangla&display=swap"
     media="print" onload="this.media='all'" />
   <noscript>
     <link rel="stylesheet" href="https://fonts.maateen.me/solaiman-lipi/font.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/maateen/solaiman-lipi@master/font.css" />
     <link rel="stylesheet" href="https://fonts.maateen.me/kalpurush/font.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&family=Playfair+Display:wght@600;700&family=Noto+Serif+Bengali:wght@400;500;600;700;800&family=Tiro+Bangla&display=swap" />
   </noscript>
@@ -346,9 +348,10 @@
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
 
-  <!-- Google Analytics — deferred to after page load (non-blocking) -->
+  <!-- Google Analytics + AdSense — both deferred to after page load (non-blocking LCP) -->
   <script>
     window.addEventListener('load', function() {
+      // Google Analytics
       var s = document.createElement('script');
       s.async = true;
       s.src = 'https://www.googletagmanager.com/gtag/js?id=G-PJ4Z9WLRBS';
@@ -357,6 +360,13 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-PJ4Z9WLRBS', { send_page_view: true });
+
+      // Google AdSense — deferred to avoid blocking LCP
+      var a = document.createElement('script');
+      a.async = true;
+      a.crossOrigin = 'anonymous';
+      a.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4643828753885671';
+      document.head.appendChild(a);
     });
   </script>
 </body>

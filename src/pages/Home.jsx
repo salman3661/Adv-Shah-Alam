@@ -22,10 +22,10 @@ const SectionFallback = () => <div style={{ minHeight: '200px' }} aria-hidden="t
 const Home = ({ lang = 'en' }) => {
     const isBn = lang === 'bn';
     const title = isBn 
-        ? "বিশ্বস্ত আইনজীবী বাংলাদেশ | এডভোকেট মোঃ শাহ আলম — উত্তরা, ঢাকা" 
+        ? "বিশ্বস্ত আইনজীবী | এডভোকেট মোঃ শাহ আলম — উত্তরা, ঢাকা" 
         : "Trusted Lawyer in Bangladesh | Advocate Md. Shah Alam — Uttara, Dhaka";
     const description = isBn
-        ? "এডভোকেট মোঃ শাহ আলম — বাংলাদেশ সুপ্রীম কোর্টের অভিজ্ঞ আইনজীবী। ফৌজদারি মামলা, বিবাহবিচ্ছেদ, জামিন, ভূমি বিরোধ ও করপোরেট আইনে বিশেষজ্ঞ। উত্তরা, ঢাকায় আমাদের চেম্বারে আসুন অথবা সরাসরি WhatsApp করুন।"
+        ? "এডভোকেট মোঃ শাহ আলম — সুপ্রীম কোর্টের অভিজ্ঞ আইনজীবী। ফৌজদারি, জামিন, বিবাহবিচ্ছেদ ও ভূমি বিরোধে বিশেষজ্ঞ। উত্তরা, ঢাকা।"
         : "Advocate Md. Shah Alam is a trusted lawyer in Bangladesh for criminal, divorce, bail & land cases. Visit our Uttara chamber in Dhaka – 10+ years of legal excellence.";
     const canonical = isBn
         ? "https://www.advmdshahalam.me/"

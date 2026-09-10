@@ -52,9 +52,12 @@ function sortPosts(posts) {
 }
 
 function buildRssXml(items, title, description, feedUrl, lang = 'bn') {
-    const channelItems = items.map(post => {
+    const nowMs = Date.now();
+    const channelItems = items.map((post, idx) => {
         const postUrl = `${BASE_URL}${post._prefix || (lang === 'bn' ? '/bn/blog' : '/blog')}/${post.slug}`;
-        const pubDate = post._mtime ? new Date(post._mtime).toUTCString() : new Date().toUTCString();
+        // Stagger publication dates so every item has a unique, fresh, strictly descending timestamp for RSS triggers (Make.com, Buffer, Zapier)
+        const itemTime = nowMs - (idx * 60 * 1000);
+        const pubDate = new Date(itemTime).toUTCString();
         const rawDesc = post.metaDescription || (post.heroIntro ? post.heroIntro.replace(/<[^>]+>/g, '').slice(0, 300) : '');
         const desc = rawDesc.replace(/]]>/g, '').trim();
         const author = 'Advocate Md. Shah Alam';

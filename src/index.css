@@ -886,18 +886,18 @@ body[data-theme="dark"] .hero-available-badge {
   border-color: rgba(34, 197, 94, 0.30) !important;
 }
 
-/* WhatsApp breathing: scale 1 → 1.02 → 1 */
+/* WhatsApp breathing: scale 1 → 1.02 → 1 (GPU composited — no box-shadow) */
 @keyframes wa-breathe {
 
   0%,
   100% {
     transform: scale(1);
-    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.28);
+    opacity: 1;
   }
 
   50% {
-    transform: scale(1.02);
-    box-shadow: 0 10px 26px rgba(37, 211, 102, 0.38);
+    transform: scale(1.04);
+    opacity: 0.92;
   }
 }
 
