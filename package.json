@@ -13,7 +13,8 @@
     "rss": "node generate_rss.js",
     "gsc-sync": "node scripts/gsc-fetch.mjs",
     "prebuild": "node scripts/gsc-fetch.mjs && node generate_sitemap.js && node generate_rss.js",
-    "indexnow": "node scripts/indexnow-submit.mjs"
+    "indexnow": "node scripts/indexnow-submit.mjs",
+    "sync:social": "node scripts/sync-social.mjs"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
