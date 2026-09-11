@@ -51,9 +51,9 @@ const pillsBn = [
 ];
 
 const fade = (delay = 0) => ({
-  initial: { opacity: 0, y: 18 },
+  initial: { opacity: 1, y: 0 },
   animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.65, ease: [0.22, 1, 0.36, 1], delay },
+  transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1], delay },
 });
 
 const Hero = ({ lang = 'en' }) => {
@@ -67,13 +67,13 @@ const Hero = ({ lang = 'en' }) => {
       <section
         id="home"
         className="relative overflow-hidden"
-        style={{ background: 'var(--hero-section-bg)', minHeight: '100vh', display: 'flex', alignItems: 'center' }}
+        style={{ background: 'var(--hero-section-bg)', minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}
       >
         {/* Background glows */}
         <div style={{ position: 'absolute', inset: 0, pointerEvents: 'none', background: 'radial-gradient(ellipse 70% 55% at 68% 50%, var(--hero-glow-a) 0%, transparent 72%)' }} />
         <div style={{ position: 'absolute', top: '-6%', left: '-3%', width: '380px', height: '380px', borderRadius: '50%', background: 'var(--hero-glow-b)', filter: 'blur(80px)', opacity: 0.5, pointerEvents: 'none' }} />
 
-        <div className="container mx-auto px-6 relative z-10" style={{ paddingTop: '5.5rem', paddingBottom: '3rem' }}>
+        <div className="container mx-auto px-6 relative z-10" style={{ paddingTop: '6.75rem', paddingBottom: '3.5rem' }}>
           <div className="grid md:grid-cols-2 gap-8 lg:gap-16 items-center">
 
             {/* ── LEFT ── */}
@@ -377,9 +377,9 @@ const Hero = ({ lang = 'en' }) => {
 
             {/* ── RIGHT: Photo ── */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.97 }}
+              initial={{ opacity: 1, scale: 1 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
+              transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
               className="order-1 md:order-2 flex justify-center md:justify-end"
             >
               <div style={{ position: 'relative', width: '100%', maxWidth: '340px', aspectRatio: '4/5' }}>
