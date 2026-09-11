@@ -8,6 +8,7 @@ import {
 } from 'lucide-react';
 import { waLink, telLink } from '../data/contactInfo';
 import Disclaimer from '../components/Disclaimer';
+import popularBnSlugs from '../content/popular_bn.json';
 
 /* ── Load all BN posts ── */
 const _bnModules = import.meta.glob('../content/posts/bn/*.json', { eager: true });
@@ -15,19 +16,21 @@ const allBnPosts = Object.values(_bnModules)
     .map(m => m.default ?? m)
     .filter(p => p && p.slug);
 
-/* ── "Most Popular" BN slugs — curated from top verified posts ── */
-const POPULAR_BN_SLUGS = [
-    'jomi-nibandhon-fee-2026-bn',
-    'sampatti-uttoradhikar-ain-2026-bn',
-    'mayer-sampatti-vibhajan-ain-bangladesh-2026',
-    'e-namjari-tracking-mutation-check-prokriya-bangladesh-2026',
-    'court-marriage-khoroch-niyom-papers-bangladesh-2026',
-    'jomi-registry-khoroch-sarkaree-fee-bd',
-    'cyber-crime-helpline-online-complaint-bangladesh',
-    'batwara-mamla-court-fee-prokriya-bd',
-    'court-marriage-kagojpatra-complete-guide-2026',
-    'heba-bil-ewaz-dalil-batil-niyom-bangladesh',
-];
+/* ── "Most Popular" BN slugs — dynamic from live 7-day Google Search Console data ── */
+const POPULAR_BN_SLUGS = Array.isArray(popularBnSlugs) && popularBnSlugs.length > 0
+    ? popularBnSlugs
+    : [
+        'sampatti-uttoradhikar-ain-2026-bn',
+        'jomi-nibandhon-fee-2026-bn',
+        'babar-sampatti-banton-ain-bangladesh-2026',
+        'mayer-sampatti-vibhajan-ain-shathik-niyom',
+        'bangladesh-uttaradhikar-ain-dhorm-2026',
+        'cyber-crime-helpline-online-complaint-bangladesh',
+        'jomi-registry-khoroch-sarkaree-fee-bd',
+        'land-registration-fee-calculator-bangladesh-2026',
+        'stree-swami-talak-dite-parbe-bangladesh-ain-2026',
+        'jomi-kharij-e-namjari-niyom-khoroch-2026'
+    ];
 
 
 /* Category color map */
@@ -384,11 +387,11 @@ const ChamberBnPromoCard = () => (
             </div>
         </div>
         <div style={{ height: '1px', background: 'linear-gradient(90deg, transparent, rgba(198,167,94,0.2), transparent)' }} />
-        <a href="/bn/contact" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.375rem', padding: '0.6rem', fontSize: '0.68rem', fontWeight: 600, color: 'rgba(198,167,94,0.75)', textDecoration: 'none', transition: 'color 0.15s', fontFamily: "'SolaimanLipi', 'Noto Sans Bengali', sans-serif" }}
+        <Link to="/bn/contact" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.375rem', padding: '0.6rem', fontSize: '0.68rem', fontWeight: 600, color: 'rgba(198,167,94,0.75)', textDecoration: 'none', transition: 'color 0.15s', fontFamily: "'SolaimanLipi', 'Noto Sans Bengali', sans-serif" }}
             onMouseEnter={e => e.currentTarget.style.color = '#c6a75e'}
             onMouseLeave={e => e.currentTarget.style.color = 'rgba(198,167,94,0.75)'}>
             📋 যোগাযোগের সম্পূর্ণ বিবরণ দেখুন →
-        </a>
+        </Link>
     </div>
 );
 
@@ -510,7 +513,7 @@ const BlogPostBnInner = () => {
         url: `https://www.advmdshahalam.me/bn/blog/${post.slug}`,
         mainEntityOfPage: { '@type': 'WebPage', '@id': `https://www.advmdshahalam.me/bn/blog/${post.slug}` },
         image: 'https://www.advmdshahalam.me/adv-md-shah-alam.png',
-        keywords: post.keywords.join(', '),
+        keywords: (Array.isArray(post.keywords) ? post.keywords : []).join(', '),
     };
     const breadcrumbSchema = {
         '@context': 'https://schema.org', '@type': 'BreadcrumbList',
@@ -532,7 +535,7 @@ const BlogPostBnInner = () => {
                 <link rel="stylesheet" href="https://fonts.maateen.me/solaiman-lipi/font.css" />
                 <title>{post.metaTitle}</title>
                 <meta name="description" content={post.metaDescription} />
-                <meta name="keywords" content={post.keywords.join(', ')} />
+                <meta name="keywords" content={(Array.isArray(post.keywords) ? post.keywords : []).join(', ')} />
                 <link rel="canonical" href={`https://www.advmdshahalam.me/bn/blog/${post.slug}`} />
                 <meta name="robots" content="index, follow" />
                 {post.enSlug && <link rel="alternate" hrefLang="en" href={`https://www.advmdshahalam.me/blog/${post.enSlug}`} />}
@@ -552,7 +555,7 @@ const BlogPostBnInner = () => {
                 <meta property="article:published_time" content={post.publishedDate} />
                 <meta property="article:modified_time" content={post.lastModified || post.publishedDate} />
                 <meta property="article:section" content={post.category} />
-                <meta property="article:tag" content={post.keywords.slice(0, 5).join(', ')} />
+                <meta property="article:tag" content={(Array.isArray(post.keywords) ? post.keywords.slice(0, 5) : []).join(', ')} />
                 <script type="application/ld+json">{JSON.stringify(blogPostingSchema)}</script>
                 <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
                 {faqSchema && <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>}
@@ -565,7 +568,14 @@ const BlogPostBnInner = () => {
 
                 <div className="bpbn-hero-container">
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.25rem', flexWrap: 'wrap', gap: '0.625rem' }}>
-                        <Link to="/bn/blog" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.375rem', fontSize: '0.8125rem', fontWeight: 500, color: 'var(--hero-text-2)', opacity: 0.75, textDecoration: 'none' }}
+                        <Link to="/bn/blog"
+                            onClick={(e) => {
+                                if (window.history.length > 2) {
+                                    e.preventDefault();
+                                    navigate(-1);
+                                }
+                            }}
+                            style={{ display: 'inline-flex', alignItems: 'center', gap: '0.375rem', fontSize: '0.8125rem', fontWeight: 500, color: 'var(--hero-text-2)', opacity: 0.75, textDecoration: 'none' }}
                             onMouseEnter={e => e.currentTarget.style.opacity = '1'} onMouseLeave={e => e.currentTarget.style.opacity = '0.75'}>
                             <ArrowLeft size={14} /> ব্লগে ফিরুন
                         </Link>
@@ -656,15 +666,18 @@ const BlogPostBnInner = () => {
                         {tocOpen && (
                             <div style={{ marginTop: '0.375rem', padding: '1rem 1.125rem', borderRadius: '0.875rem', background: 'var(--surface)', border: '1px solid var(--card-border)' }}>
                                 <ol style={{ margin: 0, padding: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
-                                    {post.toc?.map((h, i) => (
-                                        <li key={i}>
-                                            <a href={`#bnsec-${i}`} onClick={() => setTocOpen(false)}
-                                                style={{ display: 'flex', alignItems: 'flex-start', gap: '0.5rem', fontSize: '0.875rem', padding: '0.4rem 0', textDecoration: 'none', color: i === activeSection ? 'var(--accent)' : 'var(--text-secondary)', fontWeight: i === activeSection ? 600 : 400 }}>
-                                                <span style={{ fontSize: '0.7rem', fontFamily: 'monospace', opacity: 0.5, marginTop: '3px', flexShrink: 0 }}>{String(i + 1).padStart(2, '0')}</span>
-                                                {h}
-                                            </a>
-                                        </li>
-                                    ))}
+                                    {post.toc?.map((h, i) => {
+                                        const headingText = typeof h === 'string' ? h : (h?.title || h?.heading || h?.text || '');
+                                        return (
+                                            <li key={i}>
+                                                <a href={`#bnsec-${i}`} onClick={() => setTocOpen(false)}
+                                                    style={{ display: 'flex', alignItems: 'flex-start', gap: '0.5rem', fontSize: '0.875rem', padding: '0.4rem 0', textDecoration: 'none', color: i === activeSection ? 'var(--accent)' : 'var(--text-secondary)', fontWeight: i === activeSection ? 600 : 400 }}>
+                                                    <span style={{ fontSize: '0.7rem', fontFamily: 'monospace', opacity: 0.5, marginTop: '3px', flexShrink: 0 }}>{String(i + 1).padStart(2, '0')}</span>
+                                                    {headingText}
+                                                </a>
+                                            </li>
+                                        );
+                                    })}
                                 </ol>
                             </div>
                         )}
@@ -683,14 +696,17 @@ const BlogPostBnInner = () => {
                                         <List size={12} /> বিষয়সূচি
                                     </p>
                                     <ol style={{ margin: '0.75rem 0 0', padding: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.125rem' }}>
-                                        {post.toc?.map((h, i) => (
-                                            <li key={i}>
-                                                <a href={`#bnsec-${i}`} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.5rem', padding: '0.375rem 0.5rem', borderRadius: '0.5rem', fontSize: '0.8125rem', lineHeight: 1.4, textDecoration: 'none', color: i === activeSection ? 'var(--accent)' : 'var(--text-muted)', fontWeight: i === activeSection ? 600 : 400, background: i === activeSection ? 'rgba(198,167,94,0.07)' : 'transparent', borderLeft: i === activeSection ? '2px solid var(--accent)' : '2px solid transparent', transition: 'all 0.15s' }}>
-                                                    <span style={{ fontSize: '0.65rem', fontFamily: 'monospace', opacity: 0.4, marginTop: '2px', flexShrink: 0 }}>{String(i + 1).padStart(2, '0')}</span>
-                                                    {h}
-                                                </a>
-                                            </li>
-                                        ))}
+                                        {post.toc?.map((h, i) => {
+                                            const headingText = typeof h === 'string' ? h : (h?.title || h?.heading || h?.text || '');
+                                            return (
+                                                <li key={i}>
+                                                    <a href={`#bnsec-${i}`} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.5rem', padding: '0.375rem 0.5rem', borderRadius: '0.5rem', fontSize: '0.8125rem', lineHeight: 1.4, textDecoration: 'none', color: i === activeSection ? 'var(--accent)' : 'var(--text-muted)', fontWeight: i === activeSection ? 600 : 400, background: i === activeSection ? 'rgba(198,167,94,0.07)' : 'transparent', borderLeft: i === activeSection ? '2px solid var(--accent)' : '2px solid transparent', transition: 'all 0.15s' }}>
+                                                        <span style={{ fontSize: '0.65rem', fontFamily: 'monospace', opacity: 0.4, marginTop: '2px', flexShrink: 0 }}>{String(i + 1).padStart(2, '0')}</span>
+                                                        {headingText}
+                                                    </a>
+                                                </li>
+                                            );
+                                        })}
                                     </ol>
                                 </div>
                             </div>
@@ -701,15 +717,23 @@ const BlogPostBnInner = () => {
                                 {/* Quick Answer */}
                                 {post.quickAnswer && (
                                     <div style={{ marginBottom: '2.5rem', padding: '1.375rem 1.5rem', borderRadius: '1rem', background: 'linear-gradient(135deg, rgba(184,146,42,0.08), rgba(184,146,42,0.02))', border: '1.5px solid rgba(184,146,42,0.22)' }}>
-                                        <p style={{ fontSize: '0.875rem', fontWeight: 800, color: 'var(--gold)', marginBottom: '0.875rem', fontFamily: "'SolaimanLipi', 'Noto Sans Bengali', sans-serif" }}>{post.quickAnswer.heading}</p>
-                                        <ul style={{ margin: 0, padding: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
-                                            {post.quickAnswer.points.map((pt, i) => (
-                                                <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.625rem', fontSize: '0.9375rem', color: 'var(--text-secondary)', lineHeight: 1.7, fontFamily: "'SolaimanLipi', 'Noto Sans Bengali', sans-serif" }}>
-                                                    <span style={{ flexShrink: 0, width: '5px', height: '5px', borderRadius: '50%', background: 'var(--accent)', marginTop: '9px' }} />
-                                                    {pt}
-                                                </li>
-                                            ))}
-                                        </ul>
+                                        <p style={{ fontSize: '0.875rem', fontWeight: 800, color: 'var(--gold)', marginBottom: '0.875rem', fontFamily: "'SolaimanLipi', 'Noto Sans Bengali', sans-serif" }}>
+                                            {typeof post.quickAnswer === 'object' && post.quickAnswer?.heading ? post.quickAnswer.heading : 'আইনি সারসংক্ষেপ ও তাৎক্ষণিক পরামর্শ'}
+                                        </p>
+                                        {Array.isArray(post.quickAnswer?.points) ? (
+                                            <ul style={{ margin: 0, padding: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
+                                                {post.quickAnswer.points.map((pt, i) => (
+                                                    <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.625rem', fontSize: '0.9375rem', color: 'var(--text-secondary)', lineHeight: 1.7, fontFamily: "'SolaimanLipi', 'Noto Sans Bengali', sans-serif" }}>
+                                                        <span style={{ flexShrink: 0, width: '5px', height: '5px', borderRadius: '50%', background: 'var(--accent)', marginTop: '9px' }} />
+                                                        {pt}
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        ) : (
+                                            <p style={{ margin: 0, fontSize: '0.9375rem', color: 'var(--text-secondary)', lineHeight: 1.7, fontFamily: "'SolaimanLipi', 'Noto Sans Bengali', sans-serif" }}>
+                                                {typeof post.quickAnswer === 'string' ? post.quickAnswer : ''}
+                                            </p>
+                                        )}
                                     </div>
                                 )}
 
@@ -769,7 +793,7 @@ const BlogPostBnInner = () => {
                                                     flexShrink: 0,
                                                     marginTop: '0.12em'
                                                 }}></span>
-                                                <span style={{ flex: 1 }}>{cleanHeadingText(sec.heading || sec.h2)}</span>
+                                                <span style={{ flex: 1 }}>{cleanHeadingText(sec.heading || sec.h2 || sec.title || '')}</span>
                                             </h2>
                                         </div>
 
@@ -806,7 +830,14 @@ const BlogPostBnInner = () => {
                                             সাধারণ জিজ্ঞাসা (FAQ)
                                         </h2>
                                         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.625rem' }}>
-                                            {post.faqs.map((faq, i) => <FAQItem key={i} index={i} question={faq.question} answer={faq.answer} />)}
+                                            {post.faqs.map((faq, i) => (
+                                                <FAQItem 
+                                                    key={i} 
+                                                    index={i} 
+                                                    question={faq.question || faq.q || ''} 
+                                                    answer={faq.answer || faq.a || ''} 
+                                                />
+                                            ))}
                                         </div>
                                     </div>
                                 )}

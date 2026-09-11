@@ -187,9 +187,16 @@ const BlogBn = () => {
     const [activeCategory, setActiveCategory] = useState('সব');
     const [searchQuery, setSearchQuery] = useState('');
     const [sortBy, setSortBy] = useState('recent'); // 'recent' | 'popular'
-    const [visibleCount, setVisibleCount] = useState(12);
-
     const POSTS_PER_PAGE = 12;
+    const [visibleCount, setVisibleCount] = useState(() => {
+        try {
+            const saved = sessionStorage.getItem('blog_bn_visible_count');
+            return saved ? Math.max(12, parseInt(saved, 10)) : 12;
+        } catch {
+            return 12;
+        }
+    });
+    const isFirstRender = React.useRef(true);
 
     // Sort all published posts by publishedDate descending by default
     const allPublished = useMemo(() => {
@@ -280,10 +287,23 @@ const BlogBn = () => {
         return posts;
     }, [allPublished, activeCategory, searchQuery, sortBy]);
 
-    // Reset pagination whenever filters change
+    // Reset pagination only when user actually changes filters after mount
     useEffect(() => {
+        if (isFirstRender.current) {
+            isFirstRender.current = false;
+            return;
+        }
         setVisibleCount(POSTS_PER_PAGE);
+        try {
+            sessionStorage.setItem('blog_bn_visible_count', String(POSTS_PER_PAGE));
+        } catch {}
     }, [activeCategory, searchQuery, sortBy]);
+
+    useEffect(() => {
+        try {
+            sessionStorage.setItem('blog_bn_visible_count', String(visibleCount));
+        } catch {}
+    }, [visibleCount]);
 
     return (
         <>

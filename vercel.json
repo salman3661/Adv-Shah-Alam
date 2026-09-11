@@ -239,32 +239,12 @@
     },
     {
       "source": "/bn/services/civil-lawyer",
-      "destination": "/services/land-lawyer",
+      "destination": "/bn/services/land-lawyer",
       "statusCode": 301
     },
     {
       "source": "/bn/services/property-lawyer",
-      "destination": "/services/land-lawyer",
-      "statusCode": 301
-    },
-    {
-      "source": "/bn/services/criminal-lawyer",
-      "destination": "/services/criminal-lawyer",
-      "statusCode": 301
-    },
-    {
-      "source": "/bn/services/divorce-lawyer",
-      "destination": "/services/divorce-lawyer",
-      "statusCode": 301
-    },
-    {
-      "source": "/bn/services/land-lawyer",
-      "destination": "/services/land-lawyer",
-      "statusCode": 301
-    },
-    {
-      "source": "/bn/services/bail-lawyer",
-      "destination": "/services/bail-lawyer",
+      "destination": "/bn/services/land-lawyer",
       "statusCode": 301
     },
     {
@@ -285,21 +265,6 @@
     {
       "source": "/bn/blog/ghoroa-nir-jatan-suraksha-adesh-bangladesh",
       "destination": "/bn/blog/gharelu-nirjaton-aini-suraksha-bangladesh",
-      "statusCode": 301
-    },
-    {
-      "source": "/bn/services/supreme-court-lawyer",
-      "destination": "/services/supreme-court-lawyer",
-      "statusCode": 301
-    },
-    {
-      "source": "/bn/services/tax-lawyer",
-      "destination": "/services/tax-lawyer",
-      "statusCode": 301
-    },
-    {
-      "source": "/bn/services/company-corporate-lawyer",
-      "destination": "/services/company-corporate-lawyer",
       "statusCode": 301
     },
     {

@@ -28,6 +28,15 @@ const BailLawyer = lazy(() => import('./pages/services/BailLawyer'));
 const SupremeCourtLawyer = lazy(() => import('./pages/services/SupremeCourtLawyer'));
 const TaxLawyer = lazy(() => import('./pages/services/TaxLawyer'));
 const CompanyCorporateLawyer = lazy(() => import('./pages/services/CompanyCorporateLawyer'));
+
+// Bengali Services
+const CriminalLawyerBn = lazy(() => import('./pages/services/bn/CriminalLawyerBn'));
+const DivorceLawyerBn = lazy(() => import('./pages/services/bn/DivorceLawyerBn'));
+const LandLawyerBn = lazy(() => import('./pages/services/bn/LandLawyerBn'));
+const BailLawyerBn = lazy(() => import('./pages/services/bn/BailLawyerBn'));
+const SupremeCourtLawyerBn = lazy(() => import('./pages/services/bn/SupremeCourtLawyerBn'));
+const TaxLawyerBn = lazy(() => import('./pages/services/bn/TaxLawyerBn'));
+const CompanyCorporateLawyerBn = lazy(() => import('./pages/services/bn/CompanyCorporateLawyerBn'));
 const AdvocatePage = lazy(() => import('./pages/AdvocatePage'));
 const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
 const TermsConditions = lazy(() => import('./pages/TermsConditions'));
@@ -71,7 +80,7 @@ function App() {
                       <Route path="/education" element={<Education />} />
                       <Route path="/advocate-md-shah-alam" element={<AdvocatePage />} />
 
-                      {/* Services */}
+                      {/* Services (English) */}
                       <Route path="/services/criminal-lawyer" element={<CriminalLawyer />} />
                       <Route path="/services/divorce-lawyer" element={<DivorceLawyer />} />
                       <Route path="/services/land-lawyer" element={<LandLawyer />} />
@@ -80,6 +89,15 @@ function App() {
                       <Route path="/services/tax-lawyer" element={<TaxLawyer />} />
                       <Route path="/services/company-corporate-lawyer" element={<CompanyCorporateLawyer />} />
 
+                      {/* Services (Bengali) */}
+                      <Route path="/bn/services/criminal-lawyer" element={<CriminalLawyerBn />} />
+                      <Route path="/bn/services/divorce-lawyer" element={<DivorceLawyerBn />} />
+                      <Route path="/bn/services/land-lawyer" element={<LandLawyerBn />} />
+                      <Route path="/bn/services/bail-lawyer" element={<BailLawyerBn />} />
+                      <Route path="/bn/services/supreme-court-lawyer" element={<SupremeCourtLawyerBn />} />
+                      <Route path="/bn/services/tax-lawyer" element={<TaxLawyerBn />} />
+                      <Route path="/bn/services/company-corporate-lawyer" element={<CompanyCorporateLawyerBn />} />
+
                       {/* Blog */}
                       <Route path="/blog" element={<Blog />} />
                       <Route path="/blog/:slug" element={<BlogPost />} />
@@ -87,9 +105,10 @@ function App() {
                       <Route path="/bn/blog" element={<BlogBn />} />
                       <Route path="/bn/blog/:slug" element={<BlogPostBn />} />
 
-                      {/* Contact page — standalone */}
-                      <Route path="/contact" element={<ContactPage />} />
+                      {/* Contact page — default Bengali */}
+                      <Route path="/contact" element={<ContactPage lang="bn" />} />
                       <Route path="/bn/contact" element={<ContactPage lang="bn" />} />
+                      <Route path="/en/contact" element={<ContactPage lang="en" />} />
 
 
                       {/* Legal pages (AdSense compliance) */}

@@ -70,7 +70,7 @@ const urls = [
     url('/privacy-policy', TODAY, 'yearly', '0.3'),
     url('/terms', TODAY, 'yearly', '0.3'),
 
-    // ── Service Pages ────────────────────────────────────────────────────────
+    // ── Service Pages (English & Bengali) ───────────────────────────────────
     url('/services/criminal-lawyer', TODAY, 'monthly', '0.9'),
     url('/services/bail-lawyer', TODAY, 'monthly', '0.9'),
     url('/services/divorce-lawyer', TODAY, 'monthly', '0.9'),
@@ -78,6 +78,14 @@ const urls = [
     url('/services/supreme-court-lawyer', TODAY, 'monthly', '0.9'),
     url('/services/company-corporate-lawyer', TODAY, 'monthly', '0.9'),
     url('/services/tax-lawyer', TODAY, 'monthly', '0.9'),
+
+    url('/bn/services/criminal-lawyer', TODAY, 'monthly', '0.9'),
+    url('/bn/services/bail-lawyer', TODAY, 'monthly', '0.9'),
+    url('/bn/services/divorce-lawyer', TODAY, 'monthly', '0.9'),
+    url('/bn/services/land-lawyer', TODAY, 'monthly', '0.9'),
+    url('/bn/services/supreme-court-lawyer', TODAY, 'monthly', '0.9'),
+    url('/bn/services/company-corporate-lawyer', TODAY, 'monthly', '0.9'),
+    url('/bn/services/tax-lawyer', TODAY, 'monthly', '0.9'),
 
     // ── All EN Blog Posts (auto-detected, excluding redirected slugs) ────────
     ...enPosts.map(post => url('/blog/' + post.slug, getDate(post), 'monthly', '0.7')),

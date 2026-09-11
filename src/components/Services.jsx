@@ -69,7 +69,7 @@ const Services = ({ lang = 'en' }) => {
                                 {isBn && service.descBn ? service.descBn : service.desc}
                             </p>
 
-                            <Link to={service.link}
+                            <Link to={isBn ? `/bn${service.link}` : service.link}
                                 className="inline-flex items-center gap-1.5 text-sm font-semibold hover:gap-2.5 transition-all duration-200"
                                 style={{ color: 'var(--accent)' }}
                                 aria-label={`View details for ${service.title}`}>

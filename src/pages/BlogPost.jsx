@@ -339,11 +339,11 @@ const ChamberPromoCard = () => (
             </div>
         </div>
         <div style={{ height: '1px', background: 'linear-gradient(90deg, transparent, rgba(198,167,94,0.2), transparent)' }} />
-        <a href="/contact" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.375rem', padding: '0.6rem', fontSize: '0.7rem', fontWeight: 600, color: 'rgba(198,167,94,0.75)', textDecoration: 'none', transition: 'color 0.15s' }}
+        <Link to="/contact" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.375rem', padding: '0.6rem', fontSize: '0.7rem', fontWeight: 600, color: 'rgba(198,167,94,0.75)', textDecoration: 'none', transition: 'color 0.15s' }}
             onMouseEnter={e => e.currentTarget.style.color = '#c6a75e'}
             onMouseLeave={e => e.currentTarget.style.color = 'rgba(198,167,94,0.75)'}>
             📋 View Full Contact Details →
-        </a>
+        </Link>
     </div>
 );
 
@@ -462,6 +462,8 @@ const BlogPostInner = () => {
     const cc = catColor(post.category);
 
     /* ── Schema ── */
+    const keywordsList = Array.isArray(post.keywords) ? post.keywords : (typeof post.keywords === 'string' ? [post.keywords] : []);
+
     const blogPostingSchema = {
         '@context': 'https://schema.org', '@type': 'BlogPosting',
         headline: post.title, description: post.metaDescription,
@@ -472,7 +474,7 @@ const BlogPostInner = () => {
         url: `https://www.advmdshahalam.me/blog/${post.slug}`,
         mainEntityOfPage: { '@type': 'WebPage', '@id': `https://www.advmdshahalam.me/blog/${post.slug}` },
         image: 'https://www.advmdshahalam.me/adv-md-shah-alam.png',
-        keywords: post.keywords.join(', '),
+        keywords: keywordsList.join(', '),
     };
     const breadcrumbSchema = {
         '@context': 'https://schema.org', '@type': 'BreadcrumbList',
@@ -492,7 +494,7 @@ const BlogPostInner = () => {
             <Helmet>
                 <title>{post.metaTitle}</title>
                 <meta name="description" content={post.metaDescription} />
-                <meta name="keywords" content={post.keywords.join(', ')} />
+                {keywordsList.length > 0 && <meta name="keywords" content={keywordsList.join(', ')} />}
                 <link rel="canonical" href={`https://www.advmdshahalam.me/blog/${post.slug}`} />
                 <meta name="robots" content="index, follow" />
                 <meta property="og:title" content={post.metaTitle} />
@@ -504,7 +506,7 @@ const BlogPostInner = () => {
                 <meta property="article:published_time" content={post.publishedDate} />
                 <meta property="article:modified_time" content={post.lastModified || post.publishedDate} />
                 <meta property="article:section" content={post.category} />
-                <meta property="article:tag" content={post.keywords.slice(0, 5).join(', ')} />
+                {keywordsList.length > 0 && <meta property="article:tag" content={keywordsList.slice(0, 5).join(', ')} />}
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content={post.metaTitle} />
                 <meta name="twitter:description" content={post.metaDescription} />
@@ -528,7 +530,14 @@ const BlogPostInner = () => {
                 <div className="bp-hero-container">
                     {/* Nav row */}
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.25rem', flexWrap: 'wrap', gap: '0.625rem' }}>
-                        <Link to="/blog" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.375rem', fontSize: '0.8125rem', fontWeight: 500, color: 'var(--hero-text-2)', opacity: 0.75, textDecoration: 'none' }}
+                        <Link to="/blog"
+                            onClick={(e) => {
+                                if (window.history.length > 2) {
+                                    e.preventDefault();
+                                    navigate(-1);
+                                }
+                            }}
+                            style={{ display: 'inline-flex', alignItems: 'center', gap: '0.375rem', fontSize: '0.8125rem', fontWeight: 500, color: 'var(--hero-text-2)', opacity: 0.75, textDecoration: 'none' }}
                             onMouseEnter={e => e.currentTarget.style.opacity = '1'} onMouseLeave={e => e.currentTarget.style.opacity = '0.75'}>
                             <ArrowLeft size={14} /> Back to Blog
                         </Link>
@@ -633,15 +642,18 @@ const BlogPostInner = () => {
                         {tocOpen && (
                             <div style={{ marginTop: '0.375rem', padding: '1rem 1.125rem', borderRadius: '0.875rem', background: 'var(--surface)', border: '1px solid var(--card-border)' }}>
                                 <ol style={{ margin: 0, padding: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
-                                    {post.toc.map((h, i) => (
-                                        <li key={i}>
-                                            <a href={`#section-${i}`} onClick={() => setTocOpen(false)}
-                                                style={{ display: 'flex', alignItems: 'flex-start', gap: '0.5rem', fontSize: '0.875rem', padding: '0.4rem 0', textDecoration: 'none', color: i === activeSection ? 'var(--accent)' : 'var(--text-secondary)', fontWeight: i === activeSection ? 600 : 400 }}>
-                                                <span style={{ fontSize: '0.7rem', fontFamily: 'monospace', opacity: 0.5, marginTop: '3px', flexShrink: 0 }}>{String(i + 1).padStart(2, '0')}</span>
-                                                {h}
-                                            </a>
-                                        </li>
-                                    ))}
+                                    {post.toc.map((h, i) => {
+                                        const tocText = typeof h === 'string' ? h : (h?.title || h?.heading || h?.text || '');
+                                        return (
+                                            <li key={i}>
+                                                <a href={`#section-${i}`} onClick={() => setTocOpen(false)}
+                                                    style={{ display: 'flex', alignItems: 'flex-start', gap: '0.5rem', fontSize: '0.875rem', padding: '0.4rem 0', textDecoration: 'none', color: i === activeSection ? 'var(--accent)' : 'var(--text-secondary)', fontWeight: i === activeSection ? 600 : 400 }}>
+                                                    <span style={{ fontSize: '0.7rem', fontFamily: 'monospace', opacity: 0.5, marginTop: '3px', flexShrink: 0 }}>{String(i + 1).padStart(2, '0')}</span>
+                                                    {tocText}
+                                                </a>
+                                            </li>
+                                        );
+                                    })}
                                 </ol>
                             </div>
                         )}
@@ -660,23 +672,26 @@ const BlogPostInner = () => {
                                         <List size={12} /> In This Article
                                     </p>
                                     <ol style={{ margin: '0.75rem 0 0', padding: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.125rem' }}>
-                                        {post.toc.map((h, i) => (
-                                            <li key={i}>
-                                                <a href={`#section-${i}`} style={{
-                                                    display: 'flex', alignItems: 'flex-start', gap: '0.5rem',
-                                                    padding: '0.375rem 0.5rem', borderRadius: '0.5rem',
-                                                    fontSize: '0.8125rem', lineHeight: 1.4, textDecoration: 'none',
-                                                    color: i === activeSection ? 'var(--accent)' : 'var(--text-muted)',
-                                                    fontWeight: i === activeSection ? 600 : 400,
-                                                    background: i === activeSection ? 'rgba(198,167,94,0.07)' : 'transparent',
-                                                    borderLeft: i === activeSection ? '2px solid var(--accent)' : '2px solid transparent',
-                                                    transition: 'all 0.15s',
-                                                }}>
-                                                    <span style={{ fontSize: '0.65rem', fontFamily: 'monospace', opacity: 0.4, marginTop: '2px', flexShrink: 0 }}>{String(i + 1).padStart(2, '0')}</span>
-                                                    {h}
-                                                </a>
-                                            </li>
-                                        ))}
+                                        {post.toc.map((h, i) => {
+                                            const tocText = typeof h === 'string' ? h : (h?.title || h?.heading || h?.text || '');
+                                            return (
+                                                <li key={i}>
+                                                    <a href={`#section-${i}`} style={{
+                                                        display: 'flex', alignItems: 'flex-start', gap: '0.5rem',
+                                                        padding: '0.375rem 0.5rem', borderRadius: '0.5rem',
+                                                        fontSize: '0.8125rem', lineHeight: 1.4, textDecoration: 'none',
+                                                        color: i === activeSection ? 'var(--accent)' : 'var(--text-muted)',
+                                                        fontWeight: i === activeSection ? 600 : 400,
+                                                        background: i === activeSection ? 'rgba(198,167,94,0.07)' : 'transparent',
+                                                        borderLeft: i === activeSection ? '2px solid var(--accent)' : '2px solid transparent',
+                                                        transition: 'all 0.15s',
+                                                    }}>
+                                                        <span style={{ fontSize: '0.65rem', fontFamily: 'monospace', opacity: 0.4, marginTop: '2px', flexShrink: 0 }}>{String(i + 1).padStart(2, '0')}</span>
+                                                        {tocText}
+                                                    </a>
+                                                </li>
+                                            );
+                                        })}
                                     </ol>
                                 </div>
                             </div>
@@ -687,15 +702,23 @@ const BlogPostInner = () => {
                                 {/* Quick Answer */}
                                 {post.quickAnswer && (
                                     <div style={{ marginBottom: '2.5rem', padding: '1.375rem 1.5rem', borderRadius: '1rem', background: 'linear-gradient(135deg, rgba(198,167,94,0.07), rgba(198,167,94,0.02))', border: '1.5px solid rgba(198,167,94,0.22)' }}>
-                                        <p style={{ fontSize: '0.875rem', fontWeight: 800, color: 'var(--gold)', marginBottom: '0.875rem' }}>{post.quickAnswer.heading}</p>
-                                        <ul style={{ margin: 0, padding: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
-                                            {post.quickAnswer.points.map((pt, i) => (
-                                                <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.625rem', fontSize: '0.9375rem', color: 'var(--text-secondary)', lineHeight: 1.55 }}>
-                                                    <span style={{ flexShrink: 0, width: '5px', height: '5px', borderRadius: '50%', background: 'var(--accent)', marginTop: '9px' }} />
-                                                    {pt}
-                                                </li>
-                                            ))}
-                                        </ul>
+                                        <p style={{ fontSize: '0.875rem', fontWeight: 800, color: 'var(--gold)', marginBottom: '0.875rem' }}>
+                                            {typeof post.quickAnswer === 'string' ? 'Quick Answer' : (post.quickAnswer.heading || 'Quick Answer')}
+                                        </p>
+                                        {typeof post.quickAnswer === 'string' ? (
+                                            <p style={{ fontSize: '0.9375rem', color: 'var(--text-secondary)', lineHeight: 1.6, margin: 0 }}>
+                                                {post.quickAnswer}
+                                            </p>
+                                        ) : Array.isArray(post.quickAnswer?.points) ? (
+                                            <ul style={{ margin: 0, padding: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
+                                                {post.quickAnswer.points.map((pt, i) => (
+                                                    <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.625rem', fontSize: '0.9375rem', color: 'var(--text-secondary)', lineHeight: 1.55 }}>
+                                                        <span style={{ flexShrink: 0, width: '5px', height: '5px', borderRadius: '50%', background: 'var(--accent)', marginTop: '9px' }} />
+                                                        {pt}
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        ) : null}
                                     </div>
                                 )}
 
@@ -755,7 +778,7 @@ const BlogPostInner = () => {
                                                     flexShrink: 0,
                                                     marginTop: '0.12em'
                                                 }}></span>
-                                                <span style={{ flex: 1 }}>{cleanHeadingText(sec.heading || sec.h2)}</span>
+                                                <span style={{ flex: 1 }}>{cleanHeadingText(sec.heading || sec.h2 || sec.title || '')}</span>
                                             </h2>
                                         </div>
 
@@ -792,7 +815,7 @@ const BlogPostInner = () => {
                                             Frequently Asked Questions
                                         </h2>
                                         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.625rem' }}>
-                                            {post.faqs.map((faq, i) => <FAQItem key={i} index={i} question={faq.question} answer={faq.answer} />)}
+                                            {post.faqs.map((faq, i) => <FAQItem key={i} index={i} question={faq.question || faq.q} answer={faq.answer || faq.a} />)}
                                         </div>
                                     </div>
                                 )}

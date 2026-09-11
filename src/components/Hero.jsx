@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { waLink } from '../data/contactInfo';
 import heroEn from '../content/hero.json';
 import heroBn from '../content/hero_bn.json';
@@ -306,40 +307,70 @@ const Hero = ({ lang = 'en' }) => {
                 <SocialShare lang={lang} />
               </motion.div>
 
-              {/* ── Quick internal navigation links (boosts SEO internal linking) ── */}
+              {/* ── Quick internal navigation links (boosts SEO internal linking + instant smooth scroll) ── */}
               <motion.div {...fade(0.4)} style={{ marginTop: '1.1rem', display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
                 {(isBn ? [
                   { label: 'আইনজীবী সম্পর্কে', href: '/advocate-md-shah-alam' },
-                  { label: 'আইনি সেবা', href: '/#services' },
+                  { label: 'আইনি সেবা', href: '#services', isAnchor: true },
                   { label: 'ব্লগ', href: '/bn/blog' },
-                  { label: 'যোগাযোগ', href: '/contact' },
-                  { label: 'প্রশ্নোত্তর', href: '/#faq' },
+                  { label: 'যোগাযোগ', href: '/bn/contact' },
+                  { label: 'প্রশ্নোত্তর', href: '#faq', isAnchor: true },
                 ] : [
                   { label: 'About Advocate', href: '/advocate-md-shah-alam' },
-                  { label: 'Our Services', href: '/en#services' },
+                  { label: 'Our Services', href: '#services', isAnchor: true },
                   { label: 'Legal Blog', href: '/blog' },
                   { label: 'Contact Us', href: '/contact' },
-                  { label: 'FAQ', href: '/en#faq' },
-                ]).map((link) => (
-                  <a
-                    key={link.href}
-                    href={link.href}
-                    style={{
-                      fontSize: '0.7rem', fontWeight: 600,
-                      padding: '0.22rem 0.7rem', borderRadius: '9999px',
-                      background: 'var(--hero-pill-bg)',
-                      border: '1px solid var(--hero-pill-border)',
-                      color: 'var(--text-2)',
-                      textDecoration: 'none',
-                      transition: 'opacity 0.15s',
-                      opacity: 0.75,
-                    }}
-                    onMouseEnter={(e) => { e.currentTarget.style.opacity = '1'; }}
-                    onMouseLeave={(e) => { e.currentTarget.style.opacity = '0.75'; }}
-                  >
-                    {link.label}
-                  </a>
-                ))}
+                  { label: 'FAQ', href: '#faq', isAnchor: true },
+                ]).map((link) => {
+                  const style = {
+                    fontSize: '0.75rem', fontWeight: 600,
+                    padding: '0.25rem 0.75rem', borderRadius: '9999px',
+                    background: 'var(--hero-pill-bg)',
+                    border: '1px solid var(--hero-pill-border)',
+                    color: 'var(--text-2)',
+                    textDecoration: 'none',
+                    transition: 'all 0.15s',
+                    opacity: 0.85,
+                    cursor: 'pointer',
+                  };
+
+                  if (link.isAnchor) {
+                    return (
+                      <a
+                        key={link.label}
+                        href={`#${link.href.replace('#', '')}`}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          const id = link.href.replace('#', '');
+                          const element = document.getElementById(id);
+                          if (element) {
+                            const offset = 85;
+                            const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+                            window.scrollTo({ behavior: 'smooth', top: elementPosition - offset });
+                            window.history.pushState(null, '', `#${id}`);
+                          }
+                        }}
+                        style={style}
+                        onMouseEnter={(e) => { e.currentTarget.style.opacity = '1'; }}
+                        onMouseLeave={(e) => { e.currentTarget.style.opacity = '0.85'; }}
+                      >
+                        {link.label}
+                      </a>
+                    );
+                  }
+
+                  return (
+                    <Link
+                      key={link.label}
+                      to={link.href}
+                      style={style}
+                      onMouseEnter={(e) => { e.currentTarget.style.opacity = '1'; }}
+                      onMouseLeave={(e) => { e.currentTarget.style.opacity = '0.85'; }}
+                    >
+                      {link.label}
+                    </Link>
+                  );
+                })}
               </motion.div>
 
             </div>

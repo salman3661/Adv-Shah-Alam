@@ -16,11 +16,8 @@ const Footer = () => {
     };
 
     const isBn = !location.pathname.startsWith('/en') &&
-                 !location.pathname.startsWith('/blog') &&
-                 !location.pathname.startsWith('/advocate-md-shah-alam') &&
-                 !location.pathname.startsWith('/contact') &&
-                 !location.pathname.startsWith('/privacy-policy') &&
-                 !location.pathname.startsWith('/terms');
+                 location.pathname !== '/blog' &&
+                 !location.pathname.startsWith('/blog/');
 
 
     const serviceLinks = siteInfo.footerServiceLinks.map(link => {
@@ -37,12 +34,12 @@ const Footer = () => {
     });
 
     const quickLinks = [
-        { name: isBn ? 'হোম' : 'Home', path: isBn ? '/' : '/en' },
-        { name: isBn ? 'আইনজীবী সম্পর্কে' : 'About Advocate', path: '/advocate-md-shah-alam' },
-        { name: isBn ? 'সেবাসমূহ' : 'Services', path: isBn ? '/#services' : '/en#services' },
-        { name: isBn ? 'প্রশ্নোত্তর' : 'FAQ', path: isBn ? '/#faq' : '/en#faq' },
-        { name: isBn ? 'ব্লগ' : 'Blog', path: isBn ? '/bn/blog' : '/blog' },
-        { name: isBn ? 'যোগাযোগ' : 'Contact Us', path: '/contact' },
+        { name: isBn ? 'হোম' : 'Home', path: isBn ? '/' : '/en', id: null },
+        { name: isBn ? 'আইনজীবী সম্পর্কে' : 'About Advocate', path: '/advocate-md-shah-alam', id: null },
+        { name: isBn ? 'সেবাসমূহ' : 'Services', path: isBn ? '/#services' : '/en#services', id: 'services' },
+        { name: isBn ? 'প্রশ্নোত্তর' : 'FAQ', path: isBn ? '/#faq' : '/en#faq', id: 'faq' },
+        { name: isBn ? 'ব্লগ' : 'Blog', path: isBn ? '/bn/blog' : '/blog', id: null },
+        { name: isBn ? 'যোগাযোগ' : 'Contact Us', path: isBn ? '/bn/contact' : '/contact', id: null },
     ];
 
     const linkClass = "block text-sm transition-colors duration-200 hover:opacity-100 opacity-70 hover:underline decoration-dotted";
@@ -81,10 +78,36 @@ const Footer = () => {
                             {isBn ? 'সহজ লিঙ্ক' : 'Quick Links'}
                         </h4>
                         <nav className="space-y-2">
-                            {quickLinks.map((link) => (
-                                <Link key={link.path} to={link.path}
-                                    className={linkClass} style={{ color: 'var(--text-2)' }}>{link.name}</Link>
-                            ))}
+                            {quickLinks.map((link) => {
+                                if (link.id) {
+                                    return (
+                                        <a
+                                            key={link.path}
+                                            href={link.path}
+                                            onClick={(e) => {
+                                                if (location.pathname === '/' || location.pathname === '/en') {
+                                                    e.preventDefault();
+                                                    const element = document.getElementById(link.id);
+                                                    if (element) {
+                                                        const offset = 85;
+                                                        const pos = element.getBoundingClientRect().top + window.pageYOffset;
+                                                        window.scrollTo({ behavior: 'smooth', top: pos - offset });
+                                                        window.history.pushState(null, '', `#${link.id}`);
+                                                    }
+                                                }
+                                            }}
+                                            className={linkClass}
+                                            style={{ color: 'var(--text-2)' }}
+                                        >
+                                            {link.name}
+                                        </a>
+                                    );
+                                }
+                                return (
+                                    <Link key={link.path} to={link.path}
+                                        className={linkClass} style={{ color: 'var(--text-2)' }}>{link.name}</Link>
+                                );
+                            })}
                         </nav>
                     </div>
 

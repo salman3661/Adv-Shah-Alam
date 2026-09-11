@@ -42,28 +42,27 @@ const Header = () => {
         }
     }, [location]);
 
+    const isBn = !location.pathname.startsWith('/en') &&
+                 location.pathname !== '/blog' &&
+                 !location.pathname.startsWith('/blog/');
+
     const handleNavClick = (e, id) => {
         e.preventDefault();
-        if (location.pathname !== '/') {
-            navigate(`/#${id}`);
+        const homePath = isBn ? '/' : '/en';
+        if (location.pathname !== '/' && location.pathname !== '/en') {
+            navigate(`${homePath}#${id}`);
             return;
         }
         const element = document.getElementById(id);
         if (element) {
-            const offset = 80;
+            const offset = 85;
             const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
             window.scrollTo({ behavior: 'smooth', top: elementPosition - offset });
             window.history.pushState(null, '', `#${id}`);
+        } else {
+            navigate(`${homePath}#${id}`);
         }
     };
-
-    const isBn = location.pathname.startsWith('/bn') || 
-                 (location.pathname !== '/en' &&
-                  !location.pathname.startsWith('/blog') &&
-                  !location.pathname.startsWith('/advocate-md-shah-alam') &&
-                  !location.pathname.startsWith('/contact') &&
-                  !location.pathname.startsWith('/privacy-policy') &&
-                  !location.pathname.startsWith('/terms'));
 
     const navLinks = [
         { name: isBn ? 'হোম'       : 'Home',     nameBn: 'হোম',       href: isBn ? '/' : '/en',            icon: Home,     isPage: true },
@@ -150,36 +149,46 @@ const Header = () => {
                         {/* Divider */}
                         <div className="w-px h-4 bg-current opacity-10 mx-1 flex-shrink-0" />
 
-                        {/* Language Switcher */}
+                        {/* Language Switcher — Crystal clear active language indicator */}
                         <motion.button
                             onClick={() => {
-                                const isCurrentlyBn = isBn;
-                                if (isCurrentlyBn) {
+                                if (isBn) {
                                     if (location.pathname.startsWith('/bn/blog')) {
                                         navigate(location.pathname.replace(/^\/bn/, ''));
+                                    } else if (location.pathname.startsWith('/bn/services')) {
+                                        navigate(location.pathname.replace(/^\/bn/, ''));
+                                    } else if (location.pathname === '/bn/contact') {
+                                        navigate('/en/contact');
                                     } else {
                                         navigate('/en');
                                     }
                                 } else {
                                     if (location.pathname.startsWith('/blog')) {
                                         navigate('/bn' + location.pathname);
+                                    } else if (location.pathname.startsWith('/services')) {
+                                        navigate('/bn' + location.pathname);
+                                    } else if (location.pathname.includes('/contact')) {
+                                        navigate('/contact');
                                     } else {
                                         navigate('/');
                                     }
                                 }
                             }}
-                            whileHover={{ scale: 1.06 }}
-                            whileTap={{ scale: 0.94 }}
-                            className="flex items-center gap-1 px-2.5 py-1.5 rounded-full text-xs font-bold flex-shrink-0"
+                            whileHover={{ scale: 1.04 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold flex-shrink-0"
                             style={{
                                 background: 'var(--hero-pill-bg, rgba(26,63,191,0.08))',
-                                border: '1.5px solid var(--hero-pill-border, rgba(26,63,191,0.15))',
+                                border: '1.5px solid var(--hero-pill-border, rgba(26,63,191,0.18))',
                                 color: 'var(--text)',
                                 marginRight: '0.25rem'
                             }}
-                            aria-label="Switch language"
+                            aria-label={isBn ? "Switch to English" : "বাংলায় দেখুন"}
+                            title={isBn ? "Switch to English" : "বাংলায় দেখুন"}
                         >
-                            {isBn ? '🇬🇧 EN' : '🇧🇩 বাংলা'}
+                            <span style={{ color: isBn ? 'var(--accent)' : 'var(--text-muted)', fontWeight: isBn ? 800 : 500 }}>বাংলা</span>
+                            <span style={{ opacity: 0.35 }}>|</span>
+                            <span style={{ color: !isBn ? 'var(--accent)' : 'var(--text-muted)', fontWeight: !isBn ? 800 : 500 }}>EN</span>
                         </motion.button>
 
                         {/* Theme Toggle */}

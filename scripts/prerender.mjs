@@ -87,9 +87,17 @@ const BN_DISCLAIMER = `<div style="background:#fff8e1;border-left:4px solid #f5a
 const CTA = `<div style="margin-top:40px;padding:20px;background:#e8f0fe;border-radius:8px;text-align:center">
   <strong>Need Legal Help in Bangladesh?</strong><br>
   Contact <strong>Advocate Md. Shah Alam</strong>: <a href="tel:+8801712655546" style="color:#1a56db">+880 1712-655546</a> &nbsp;|&nbsp;
-  <a href="https://wa.me/8801955802007" style="color:#25D366">WhatsApp</a><br>
+  <a href="https://wa.me/8801712655546" style="color:#25D366">WhatsApp</a><br>
   <small style="color:#555">Uttara Chamber: House 46, Road 6/B, Sector 12, Uttara, Dhaka-1230<br>
   Court Chamber: Ainjeebi Samity Bhaban, 4th Floor, 6/7 Court House Street, Kotwali, Dhaka-1100</small>
+</div>`;
+
+const BN_CTA = `<div style="margin-top:40px;padding:20px;background:#e8f0fe;border-radius:8px;text-align:center">
+  <strong>আইনি সহায়তা বা জরুরি পরামর্শের প্রয়োজন?</strong><br>
+  যোগাযোগ করুন <strong>এডভোকেট মোঃ শাহ আলম</strong>: <a href="tel:+8801712655546" style="color:#1a56db">+880 1712-655546</a> &nbsp;|&nbsp;
+  <a href="https://wa.me/8801712655546" style="color:#25D366">WhatsApp</a><br>
+  <small style="color:#555">উত্তরা চেম্বার: বাড়ি ৪৬, রোড ৬/বি, সেক্টর ১২, উত্তরা, ঢাকা-১২৩০<br>
+  কোর্ট চেম্বার: আইনজীবী সমিতি ভবন, ৪র্থ তলা, ৬/৭ কোর্ট হাউস স্ট্রিট, কোতোয়ালি, ঢাকা-১১০০</small>
 </div>`;
 
 // ── blog post body builder ───────────────────────────────────────────────────
@@ -97,20 +105,23 @@ function buildPostBody(post) {
   const toc = (post.toc||[]).length ? `<nav style="background:#f4f6fb;padding:16px 20px;border-radius:8px;margin-bottom:28px">
     <strong>📋 In This Article</strong>
     <ol style="margin-top:8px;padding-left:20px">
-      ${post.toc.map((h,i)=>`<li style="margin:4px 0"><a href="#s${i}" style="color:#1a56db">${escHtml(h)}</a></li>`).join('')}
+      ${post.toc.map((h,i)=>{
+        const text = typeof h === 'string' ? h : (h?.title || h?.heading || h?.text || '');
+        return `<li style="margin:4px 0"><a href="#s${i}" style="color:#1a56db">${escHtml(text)}</a></li>`;
+      }).join('')}
     </ol></nav>` : '';
 
   const sections = (post.sections||[]).map((s,i)=>`
     <section id="s${i}" style="margin-bottom:32px">
-      <h2 style="font-size:22px;font-weight:700;margin-bottom:12px;color:#111">${escHtml(s.h2)}</h2>
+      <h2 style="font-size:22px;font-weight:700;margin-bottom:12px;color:#111">${escHtml(s.h2 || s.heading || s.title || '')}</h2>
       <div style="font-size:15px;color:#333">${s.content||''}</div>
     </section>`).join('');
 
   const faqs = (post.faqs||[]).length ? `<section style="margin-top:32px">
     <h2 style="font-size:22px;font-weight:700;margin-bottom:16px">Frequently Asked Questions</h2>
     ${post.faqs.map(f=>`<div style="margin-bottom:16px;padding:12px 16px;background:#f9f9f9;border-radius:8px">
-      <strong style="color:#111">${escHtml(f.question)}</strong>
-      <p style="margin:6px 0 0;color:#444;font-size:14px">${escHtml(f.answer)}</p></div>`).join('')}
+      <strong style="color:#111">${escHtml(f.question || f.q || '')}</strong>
+      <p style="margin:6px 0 0;color:#444;font-size:14px">${escHtml(f.answer || f.a || '')}</p></div>`).join('')}
     </section>` : '';
 
   return `<h1 style="font-size:30px;font-weight:700;margin-bottom:8px;color:#0a0a0a">${escHtml(post.title)}</h1>
@@ -245,11 +256,111 @@ function getServiceMeta(slug) {
   return map[slug] || null;
 }
 
+function getBnServiceMeta(slug) {
+  const map = {
+    'criminal-lawyer': {
+      title: 'ফৌজদারি আইনজীবী উত্তরা ঢাকা — এজাহার, জামিন ও মামলা প্রতিরক্ষা (২০২৬)',
+      desc: 'উত্তরা ঢাকায় অভিজ্ঞ ফৌজদারি আইনজীবী। এজাহার প্রতিরক্ষা, জামিন আবেদন, সাইবার অপরাধ মামলা, মিথ্যা মামলা খারিজ ও বিচার প্রতিনিধিত্ব। ২০+ বছরের অভিজ্ঞতা।',
+      h1: 'ফৌজদারি আইনজীবী বাংলাদেশ | এডভোকেট মোঃ শাহ Alam',
+      body: `<p>এডভোকেট মোঃ শাহ আলম বাংলাদেশের একজন অত্যন্ত অভিজ্ঞ ফৌজদারি আইনজীবী, যিনি ২০+ বছরেরও বেশি সময় ধরে ফৌজদারি প্রতিরক্ষা, এজাহার বিষয়, জামিন আবেদন এবং ম্যাজিস্ট্রেট কোর্ট, দায়রা আদালত ও বাংলাদেশ সুপ্রিম কোর্টে বিচার প্রতিনিধিত্বে দক্ষতা অর্জন করেছেন।</p>
+<h2 style="font-size:20px;font-weight:700;margin:20px 0 10px">আইনি সেবাসমূহ</h2>
+<ul style="padding-left:20px;color:#333;line-height:2">
+  <li>এজাহার (FIR) — প্রতিরক্ষা, খারিজ ও পুলিশ বিষয়</li>
+  <li>ফৌজদারি বিচার প্রতিনিধিত্ব — ম্যাজিস্ট্রেট ও দায়রা আদালত</li>
+  <li>জামিন আবেদন — জামিনযোগ্য ও অ-জামিনযোগ্য অপরাধ, সকল আদালত</li>
+  <li>হাইকোর্ট বিভাগ ও আপিল বিভাগে ফৌজদারি আপিল</li>
+  <li>হত্যা, আক্রমণ, ডাকাতি, জালিয়াতি ও আর্থিক অপরাধ প্রতিরক্ষা</li>
+  <li>ডিজিটাল নিরাপত্তা আইন / সাইবার নিরাপত্তা আইন প্রতিরক্ষা</li>
+</ul>`,
+    },
+    'bail-lawyer': {
+      title: 'জামিন আইনজীবী ঢাকা — দ্রুত জামিন আবেদন ও হাইকোর্ট বেল (২০২৬)',
+      desc: 'জরুরি জামিন আইনজীবী ঢাকা। নিয়মিত জামিন, আগাম জামিন (Anticipatory Bail) ও হাইকোর্টে জামিন আবেদন। উত্তরা চেম্বার। কল: ০১৭১২-৬৫৫৫৪৬।',
+      h1: 'জামিন আইনজীবী বাংলাদেশ | এডভোকেট মোঃ শাহ আলম',
+      body: `<p>বাংলাদেশে জামিন আবেদন একটি জটিল আইনি প্রক্রিয়া। এডভোকেট মোঃ শাহ আলম নিম্ন আদালত থেকে শুরু করে বাংলাদেশ সুপ্রিম কোর্টের হাইকোর্ট বিভাগ পর্যন্ত নিয়মিত ও আগাম জামিন পরিচালনা করেন।</p>
+<h2 style="font-size:20px;font-weight:700;margin:20px 0 10px">আমরা যেসকল জামিন পরিচালনা করি</h2>
+<ul style="padding-left:20px;color:#333;line-height:2">
+  <li>নিয়মিত জামিন (Regular Bail) — ম্যাজিস্ট্রেট ও দায়রা আদালত</li>
+  <li>অগ্রিম জামিন (Anticipatory Bail) — হাইকোর্ট বিভাগ</li>
+  <li>অন্তর্বর্তীকালীন জামিন (Interim Bail)</li>
+  <li>হাইকোর্ট জামিন বাতিল বা আপিল</li>
+</ul>`,
+    },
+    'divorce-lawyer': {
+      title: 'তালাক ও বিবাহবিচ্ছেদ আইনজীবী ঢাকা — পারিবারিক আদালত ও পরামর্শ (২০২৬)',
+      desc: 'অভিজ্ঞ তালাক ও পারিবারিক আইনজীবী ঢাকা। মুসলিম তালাক নোটিশ, দেনমোহর, খোরপোষ, সন্তানের হেফাজত। উত্তরা চেম্বার। কল: ০১৭১২-৬৫৫৫৪৬।',
+      h1: 'তালাক ও পারিবারিক আইনজীবী বাংলাদেশ | এডভোকেট মোঃ শাহ আলম',
+      body: `<p>মুসলিম পারিবারিক আইন অধ্যাদেশ ১৯৬১ এবং পারিবারিক আদালত আইন ২০২৩ অনুযায়ী বিবাহবিচ্ছেদ, তালাক নোটিশ, দেনমোহর ও খোরপোষ আদায়ের মামলায় এডভোকেট শাহ আলম ২০+ বছরের অভিজ্ঞ।</p>
+<h2 style="font-size:20px;font-weight:700;margin:20px 0 10px">পারিবারিক আইনি সেবাসমূহ</h2>
+<ul style="padding-left:20px;color:#333;line-height:2">
+  <li>মুসলিম তালাক নোটিশ (তালাক-এ-আহসান, খোলা তালাক)</li>
+  <li>পারিবারিক আদালতে দেনমোহর ও খোরপোষ মামলা</li>
+  <li>সন্তানের অভিভাবকত্ব ও জিম্মাদারি (হিযানাত)</li>
+  <li>প্রবাসীদের জন্য আমমোক্তারনামার মাধ্যমে তালাক প্রক্রিয়া</li>
+</ul>`,
+    },
+    'land-lawyer': {
+      title: 'ভূমি ও সম্পত্তি আইনজীবী ঢাকা — জমি রেজিস্ট্রি, নামজারি ও বাটোয়ারা মামলা (২০২৬)',
+      desc: 'অভিজ্ঞ ভূমি ও সম্পত্তি আইনজীবী ঢাকা। জমি বিরোধ, নামজারি, খতিয়ান যাচাই, দলিল বাতিল ও বাটোয়ারা মামলা। উত্তরা চেম্বার। কল: ০১৭১২-৬৫৫৫৪৬।',
+      h1: 'ভূমি ও সম্পত্তি আইনজীবী বাংলাদেশ | এডভোকেট মোঃ শাহ আলম',
+      body: `<p>জমির বিরোধ বাংলাদেশের সবচেয়ে সাধারণ আইনি সমস্যা। সাব-রেজিস্ট্রার অফিস, ভূমি রাজস্ব অফিস এবং দেওয়ানি আদালতে জমি সংক্রান্ত যাবতীয় আইনি সুরক্ষায় এডভোকেট মোঃ শাহ আলম বিশ্বস্ত সেবা প্রদান করেন।</p>
+<h2 style="font-size:20px;font-weight:700;margin:20px 0 10px">ভূমি আইনের সেবাসমূহ</h2>
+<ul style="padding-left:20px;color:#333;line-height:2">
+  <li>জমির স্বত্ব ঘোষণা ও বাটোয়ারা মামলা (Partition Suit)</li>
+  <li>দলিল রেজিস্ট্রেশন ও খতিয়ান (CS, SA, RS, BS) যাচাই</li>
+  <li>ই-নামজারি (মিউটেশন) সংক্রান্ত জটিলতা নিরসন</li>
+  <li>জমি জবরদখল প্রতিরোধ ও নিষেধাজ্ঞা আবেদন (Injunction)</li>
+  <li>উত্তরাধিকার সম্পত্তি বণ্টন বিরোধ নিষ্পত্তি</li>
+</ul>`,
+    },
+    'supreme-court-lawyer': {
+      title: 'সুপ্রিম কোর্টের আইনজীবী বাংলাদেশ — হাইকোর্ট রিট ও ফৌজদারি আপিল (২০২৬)',
+      desc: 'অভিজ্ঞ সুপ্রিম কোর্ট আইনজীবী বাংলাদেশ। রিট পিটিশন, হাইকোর্ট আপিল, ফৌজদারি রিভিশন ও অন্তর্বর্তীকালীন আদেশ। কল: ০১৭১২-৬৫৫৫৪৬।',
+      h1: 'সুপ্রিম কোর্ট আইনজীবী বাংলাদেশ | এডভোকেট মোঃ শাহ আলম',
+      body: `<p>এডভোকেট মোঃ শাহ আলম বাংলাদেশ বার কাউন্সিলের তালিকাভুক্ত এবং বাংলাদেশ সুপ্রিম কোর্টের হাইকোর্ট বিভাগ ও আপিল বিভাগে প্র্যাকটিস করার পূর্ণ অনুমতিপ্রাপ্ত অভিজ্ঞ আইনজীবী।</p>
+<h2 style="font-size:20px;font-weight:700;margin:20px 0 10px">সুপ্রিম কোর্ট সেবা</h2>
+<ul style="padding-left:20px;color:#333;line-height:2">
+  <li>সংবিধানের ১০২ অনুচ্ছেদে রিট পিটিশন (Writ Petition)</li>
+  <li>হাইকোর্ট বিভাগে আগাম জামিন ও ফৌজদারি আপিল</li>
+  <li>দায়রা আদালতের রায়ের বিরুদ্ধে রিভিশন আবেদন</li>
+  <li>আদালত অবমাননা (Contempt of Court) কার্যক্রম</li>
+</ul>`,
+    },
+    'company-corporate-lawyer': {
+      title: 'কোম্পানি ও কর্পোরেট আইনজীবী ঢাকা — কোম্পানি গঠন ও বাণিজ্যিক চুক্তি (২০২৬)',
+      desc: 'অভিজ্ঞ কোম্পানি ও কর্পোরেট আইনজীবী ঢাকা। RJSC কোম্পানি নিবন্ধন, শেয়ারহোল্ডার বিরোধ, বাণিজ্যিক চুক্তি ও আইনি কমপ্লায়েন্স। উত্তরা চেম্বার। কল: ০১৭১২-৬৫৫৫৪৬।',
+      h1: 'কোম্পানি ও কর্পোরেট আইনজীবী বাংলাদেশ | এডভোকেট মোঃ শাহ আলম',
+      body: `<p>নতুন কোম্পানি গঠন থেকে শুরু করে জটিল বাণিজ্যিক বিরোধ সমাধান — কোম্পানি আইন ১৯৯৪ অনুযায়ী কর্পোরেট প্রতিষ্ঠান ও ব্যবসায়ীদের সার্বিক আইনি সেবা প্রদান করেন এডভোকেট মোঃ শাহ আলম।</p>
+<h2 style="font-size:20px;font-weight:700;margin:20px 0 10px">কর্পোরেট আইনি সেবা</h2>
+<ul style="padding-left:20px;color:#333;line-height:2">
+  <li>আরজেএসসি (RJSC) কোম্পানি ও পার্টনারশিপ ফার্ম নিবন্ধন</li>
+  <li>বাণিজ্যিক চুক্তি ও সমঝোতা স্মারক (MOU) ড্রাফটিং</li>
+  <li>পরিচালক ও শেয়ারহোল্ডারদের অভ্যন্তরীণ বিরোধ নিষ্পত্তি</li>
+  <li>অর্থঋণ আদালত আইন ও বাণিজ্যিক বিরোধ মামলা</li>
+</ul>`,
+    },
+    'tax-lawyer': {
+      title: 'আয়কর ও ভ্যাট আইনজীবী ঢাকা — কর বিরোধ ও ট্রাইব্যুনাল আপিল (২০২৬)',
+      desc: 'অভিজ্ঞ আয়কর ও ভ্যাট আইনজীবী ঢাকা। আয়কর রিটার্ন বিরোধ, কর নির্ধারণ চ্যালেঞ্জ, ট্যাক্সেস আপিলেট ট্রাইব্যুনাল ও ভ্যাট পরামর্শ। কল: ০১৭১২-৬৫৫৫৪৬।',
+      h1: 'আয়কর ও ভ্যাট আইনজীবী বাংলাদেশ | এডভোকেট মোঃ শাহ আলম',
+      body: `<p>আয়কর আইন ২০২৩ ও মূল্য সংযোজন কর ও সম্পূরক শুল্ক আইন ২০১২ অনুযায়ী ব্যক্তি ও প্রতিষ্ঠানের কর বিরোধ এবং ট্যাক্সেস আপিলেট ট্রাইব্যুনালে দক্ষ প্রতিনিধিত্ব নিশ্চিত করেন এডভোকেট মোঃ শাহ আলম।</p>
+<h2 style="font-size:20px;font-weight:700;margin:20px 0 10px">কর আইনি সেবা</h2>
+<ul style="padding-left:20px;color:#333;line-height:2">
+  <li>আয়কর নির্ধারণ আদেশ চ্যালেঞ্জ ও আপিল</li>
+  <li>ট্যাক্সেস আপিলেট ট্রাইব্যুনালে মামলা পরিচালনা</li>
+  <li>উৎস কর (TDS) ও ভ্যাট বিরোধ নিষ্পত্তি</li>
+  <li>হাইকোর্ট বিভাগে রেফারেন্স ও রিট আবেদন</li>
+</ul>`,
+    },
+  };
+  return map[slug] || null;
+}
+
 // ── page-specific content builders ────────────────────────────────────────────
 
 function homeBodyBn() {
   const serviceList = services.items.map(s =>
-    `<li style="margin-bottom:8px"><a href="${s.link}" style="color:#1a56db;font-weight:600">${escHtml(s.titleBn || s.title)}</a> — ${escHtml(s.descBn || s.desc)}</li>`
+    `<li style="margin-bottom:8px"><a href="/bn${s.link}" style="color:#1a56db;font-weight:600">${escHtml(s.titleBn || s.title)}</a> — ${escHtml(s.descBn || s.desc)}</li>`
   ).join('');
 
   const faqList = faq.items.map(f =>
@@ -565,20 +676,35 @@ async function main() {
   }
 
   // ── Service pages ──────────────────────────────────────────────────────────
-  console.log('\n⚖️  Pre-rendering service pages...');
+  console.log('\n⚖️  Pre-rendering service pages (EN & BN)...');
   const serviceSlugs = ['criminal-lawyer','bail-lawyer','divorce-lawyer','land-lawyer','supreme-court-lawyer','company-corporate-lawyer','tax-lawyer'];
   for (const slug of serviceSlugs) {
     const meta = getServiceMeta(slug);
-    if (!meta) continue;
-    const html = buildPage(base, {
-      title: meta.title,
-      description: meta.desc,
-      canonical: `${BASE}/services/${slug}`,
-      body: `<h1 style="font-size:28px;font-weight:700;margin-bottom:16px;color:#0a0a0a">${meta.h1}</h1>
+    if (meta) {
+      const html = buildPage(base, {
+        title: meta.title,
+        description: meta.desc,
+        canonical: `${BASE}/services/${slug}`,
+        body: `<h1 style="font-size:28px;font-weight:700;margin-bottom:16px;color:#0a0a0a">${meta.h1}</h1>
 ${DISCLAIMER}${meta.body}${CTA}`,
-    });
-    write(path.join(DIST, 'services', slug, 'index.html'), html);
-    console.log(`  ✓ /services/${slug}`);
+      });
+      write(path.join(DIST, 'services', slug, 'index.html'), html);
+      console.log(`  ✓ /services/${slug}`);
+    }
+
+    const bnMeta = getBnServiceMeta(slug);
+    if (bnMeta) {
+      const bnHtml = buildPage(base, {
+        title: bnMeta.title,
+        description: bnMeta.desc,
+        canonical: `${BASE}/bn/services/${slug}`,
+        body: `<h1 style="font-size:28px;font-weight:700;margin-bottom:16px;color:#0a0a0a">${bnMeta.h1}</h1>
+${BN_DISCLAIMER}${bnMeta.body}${BN_CTA}`,
+        lang: 'bn',
+      });
+      write(path.join(DIST, 'bn', 'services', slug, 'index.html'), bnHtml);
+      console.log(`  ✓ /bn/services/${slug}`);
+    }
   }
 
   // ── Blog indexes ───────────────────────────────────────────────────────────
@@ -631,7 +757,7 @@ ${DISCLAIMER}${meta.body}${CTA}`,
   let bnCount = 0;
   for (const post of bnPosts) {
     const bnSections = (post.sections||[]).map((s,i)=>
-      `<section id="s${i}" style="margin-bottom:24px"><h2 style="font-size:20px;font-weight:700;margin-bottom:8px">${escHtml(s.h2||'')}</h2><div>${s.content||''}</div></section>`
+      `<section id="s${i}" style="margin-bottom:24px"><h2 style="font-size:20px;font-weight:700;margin-bottom:8px">${escHtml(s.h2 || s.heading || s.title || '')}</h2><div>${s.content||''}</div></section>`
     ).join('');
 
     const html = buildPage(base, {

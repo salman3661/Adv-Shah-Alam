@@ -83,7 +83,7 @@ async function runGscSync() {
       const now = new Date();
       const endDate = now.toISOString().split('T')[0];
       const startDateDate = new Date();
-      startDateDate.setDate(now.getDate() - 30);
+      startDateDate.setDate(now.getDate() - 7); // Last 7 days dynamic calculation
       const startDate = startDateDate.toISOString().split('T')[0];
 
       for (const siteUrl of siteVariants) {
@@ -110,9 +110,15 @@ async function runGscSync() {
             }
           });
 
-          const sorted = Object.keys(pageStats).sort((a, b) => pageStats[b].impressions - pageStats[a].impressions);
+          // Sort by clicks descending, then impressions descending (last 7 days)
+          const sorted = Object.keys(pageStats).sort((a, b) => {
+            const scoreB = (pageStats[b].clicks * 10) + pageStats[b].impressions;
+            const scoreA = (pageStats[a].clicks * 10) + pageStats[a].impressions;
+            return scoreB - scoreA;
+          });
+
           if (sorted.length) {
-            updatePosts(pageStats, sorted[0]);
+            updatePosts(pageStats, sorted[0], sorted.slice(0, 10));
             updatedFromApi = true;
             break;
           }
@@ -125,12 +131,23 @@ async function runGscSync() {
 
   if (!updatedFromApi) {
     console.log('[GSC Analytics] Using fallback top post for spotlight banner...');
-    const topSlug = 'jomi-nibandhon-fee-2026-bn';
-    updatePosts({}, topSlug);
+    const topSlug = 'sampatti-uttoradhikar-ain-2026-bn';
+    updatePosts({}, topSlug, [
+      'sampatti-uttoradhikar-ain-2026-bn',
+      'cyber-crime-helpline-online-complaint-bangladesh',
+      'bangladesh-uttaradhikar-ain-dhorm-2026',
+      'stree-swami-talak-dite-parbe-bangladesh-ain-2026',
+      'babar-sampatti-banton-ain-bangladesh-2026',
+      'jomi-nibandhon-fee-2026-bn',
+      'land-registration-fee-calculator-bangladesh-2026',
+      'batwara-mamla-din-khoroch-prokriya-2026',
+      'jomi-kharij-e-namjari-niyom-khoroch-2026',
+      'mayer-sampatti-theke-chele-meyer-odhikar-2026'
+    ]);
   }
 }
 
-function updatePosts(pageStats, topSlug) {
+function updatePosts(pageStats, topSlug, popularList = []) {
   try {
     const bnDir = path.resolve('src/content/posts/bn');
     if (!fs.existsSync(bnDir)) return;
@@ -154,6 +171,13 @@ function updatePosts(pageStats, topSlug) {
 
       fs.writeFileSync(filePath, JSON.stringify(post, null, 2), 'utf8');
     });
+
+    // Save popular_bn.json for dynamic popular sidebar
+    if (popularList && popularList.length > 0) {
+      const popPath = path.resolve('src/content/popular_bn.json');
+      fs.writeFileSync(popPath, JSON.stringify(popularList, null, 2), 'utf8');
+      console.log(`[GSC Sync Success] Updated popular_bn.json with ${popularList.length} 7-day trending posts.`);
+    }
 
     console.log(`[GSC Sync Success] Featured Spotlight post set to: ${topSlug}`);
   } catch (e) {
