@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import {
     Phone, MessageCircle, MapPin, Award, BookOpen,
-    ChevronDown, ChevronUp, ExternalLink, ArrowRight, Scale
+    ChevronDown, ChevronUp, ExternalLink, ArrowRight, Scale,
+    ShieldCheck, Briefcase, Landmark, CheckCircle2, Camera
 } from 'lucide-react';
 import { telLink, waLink } from '../data/contactInfo';
 import blogPosts from '../data/blogPosts';
@@ -127,10 +128,31 @@ const personSchema = {
             name: 'Metro Police Ideal Law College, Dhaka',
         },
     ],
-    memberOf: {
-        '@type': 'Organization',
-        name: 'Bangladesh Bar Council',
-    },
+    memberOf: [
+        {
+            '@type': 'Organization',
+            name: 'Bangladesh Bar Council',
+        },
+        {
+            '@type': 'Organization',
+            name: 'Supreme Court Bar Association (SCBA)',
+        },
+        {
+            '@type': 'Organization',
+            name: 'Dhaka Bar Association',
+        },
+    ],
+    hasCredential: [
+        {
+            '@type': 'EducationalOccupationalCredential',
+            name: 'Advocate, Supreme Court of Bangladesh',
+            credentialCategory: 'Professional License',
+            recognizedBy: {
+                '@type': 'Organization',
+                name: 'Bangladesh Bar Council',
+            },
+        },
+    ],
 };
 
 const legalServiceSchema = {
@@ -273,6 +295,7 @@ const faqSchema = {
 
 /* ─── Main Component ─────────────────────────────────── */
 const AdvocatePage = () => {
+    const [mediaImgError, setMediaImgError] = useState(false);
     // Latest 3 published articles for the knowledge hub section
     const today = new Date();
     const latestArticles = blogPosts
@@ -522,9 +545,181 @@ const AdvocatePage = () => {
                 </div>
             </section>
 
+            {/* ── Notable Cases & Legal Engagements ── */}
+            <section className="py-16" style={{ background: 'var(--bg)' }}>
+                <div className="container mx-auto px-6 max-w-5xl">
+                    <span className="label-accent block mb-3" style={{ color: 'var(--gold)' }}>
+                        Courtroom Record & High-Profile Experience
+                    </span>
+                    <h2
+                        className="text-2xl md:text-3xl font-serif font-bold mb-3"
+                        style={{ color: 'var(--text)', fontFamily: "'Playfair Display', serif" }}
+                    >
+                        Notable Cases & Legal Engagements
+                    </h2>
+                    <p className="text-sm max-w-2xl mb-10 leading-relaxed" style={{ color: 'var(--text-muted)' }}>
+                        Over a decade of active practice before the Supreme Court of Bangladesh, Dhaka Metropolitan
+                        Sessions Court, and Magistrate Courts. Key highlights include participating in defense legal teams
+                        in major corporate and criminal proceedings, as well as complex civil and land litigation.
+                    </p>
+
+                    <div className="grid md:grid-cols-3 gap-6 mb-10">
+                        {/* Case 1: Corporate & High-Profile Defence */}
+                        <div className="glass-card p-6 rounded-2xl flex flex-col justify-between" style={{ borderTop: '3px solid var(--accent)' }}>
+                            <div>
+                                <div className="flex items-center gap-2 mb-3">
+                                    <Briefcase size={20} style={{ color: 'var(--accent)' }} />
+                                    <span className="text-xs font-bold uppercase tracking-wider" style={{ color: 'var(--gold)' }}>
+                                        High-Profile Defence
+                                    </span>
+                                </div>
+                                <h3 className="font-bold text-base mb-2" style={{ color: 'var(--text)' }}>
+                                    Regent Group Legal Defence Team
+                                </h3>
+                                <p className="text-xs font-semibold mb-3" style={{ color: 'var(--text-muted)' }}>
+                                    CMM & Metropolitan Sessions Court, Dhaka
+                                </p>
+                                <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
+                                    Appeared as part of the legal defence counsel team in widely publicised proceedings
+                                    involving corporate defendants in Dhaka courts. Engaged in case coordination, remand hearings,
+                                    and courtroom briefings alongside senior defence advocates.
+                                </p>
+                            </div>
+                            <div className="mt-4 pt-3 border-t text-xs font-medium" style={{ borderColor: 'var(--card-border)', color: 'var(--accent)' }}>
+                                ⚖ Assisting Defence Counsel
+                            </div>
+                        </div>
+
+                        {/* Case 2: Supreme Court High Court Division */}
+                        <div className="glass-card p-6 rounded-2xl flex flex-col justify-between" style={{ borderTop: '3px solid var(--gold)' }}>
+                            <div>
+                                <div className="flex items-center gap-2 mb-3">
+                                    <Landmark size={20} style={{ color: 'var(--gold)' }} />
+                                    <span className="text-xs font-bold uppercase tracking-wider" style={{ color: 'var(--gold)' }}>
+                                        Supreme Court Practice
+                                    </span>
+                                </div>
+                                <h3 className="font-bold text-base mb-2" style={{ color: 'var(--text)' }}>
+                                    High Court Division Matters
+                                </h3>
+                                <p className="text-xs font-semibold mb-3" style={{ color: 'var(--text-muted)' }}>
+                                    Appellate & Writ Jurisdiction
+                                </p>
+                                <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
+                                    Conducted and filed numerous anticipatory bail applications under Section 498 CrPC,
+                                    criminal revisions, and quashment petitions (Section 561A) before various benches of the
+                                    Supreme Court of Bangladesh.
+                                </p>
+                            </div>
+                            <div className="mt-4 pt-3 border-t text-xs font-medium" style={{ borderColor: 'var(--card-border)', color: 'var(--gold)' }}>
+                                ⚖ Enrolled Supreme Court Advocate
+                            </div>
+                        </div>
+
+                        {/* Case 3: Land & Commercial Property */}
+                        <div className="glass-card p-6 rounded-2xl flex flex-col justify-between" style={{ borderTop: '3px solid var(--accent)' }}>
+                            <div>
+                                <div className="flex items-center gap-2 mb-3">
+                                    <ShieldCheck size={20} style={{ color: 'var(--accent)' }} />
+                                    <span className="text-xs font-bold uppercase tracking-wider" style={{ color: 'var(--gold)' }}>
+                                        Property & Civil
+                                    </span>
+                                </div>
+                                <h3 className="font-bold text-base mb-2" style={{ color: 'var(--text)' }}>
+                                    Commercial Land & Title Litigation
+                                </h3>
+                                <p className="text-xs font-semibold mb-3" style={{ color: 'var(--text-muted)' }}>
+                                    Uttara, Gazipur & Metropolitan Dhaka
+                                </p>
+                                <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
+                                    Successfully represented land owners, real estate promoters, and families in high-stake
+                                    partition suits, permanent injunctions, and contested land ownership trials protecting valuable
+                                    real estate assets.
+                                </p>
+                            </div>
+                            <div className="mt-4 pt-3 border-t text-xs font-medium" style={{ borderColor: 'var(--card-border)', color: 'var(--accent)' }}>
+                                ⚖ Lead Trial & Injunction Counsel
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Courtroom Media Archive & Professional Credentials Card */}
+                    <div
+                        className="rounded-2xl p-6 md:p-8 border"
+                        style={{
+                            background: 'var(--surface)',
+                            borderColor: 'var(--card-border)',
+                        }}
+                    >
+                        <div className="grid md:grid-cols-[1fr_320px] gap-8 items-center">
+                            <div>
+                                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold mb-3"
+                                    style={{ background: 'rgba(198,167,94,0.12)', color: 'var(--gold)' }}>
+                                    <Camera size={14} /> Courtroom Appearance & Media Archive
+                                </div>
+                                <h3 className="text-lg md:text-xl font-serif font-bold mb-2" style={{ color: 'var(--text)', fontFamily: "'Playfair Display', serif" }}>
+                                    Official Legal Standing & Public Record
+                                </h3>
+                                <p className="text-sm leading-relaxed mb-5" style={{ color: 'var(--text-secondary)' }}>
+                                    Advocate Md. Shah Alam's professional appearances before Dhaka CMM Court, Metropolitan Sessions
+                                    Courts, and Supreme Court benches are corroborated by official court cause lists, senior counsel
+                                    defense briefings, and accredited Bar Council registries.
+                                </p>
+
+                                <div className="space-y-2 text-xs md:text-sm" style={{ color: 'var(--text)' }}>
+                                    <div className="flex items-center gap-2">
+                                        <CheckCircle2 size={16} style={{ color: 'var(--accent)' }} />
+                                        <span><strong>Bangladesh Bar Council:</strong> Enrolled & Licensed Advocate</span>
+                                    </div>
+                                    <div className="flex items-center gap-2">
+                                        <CheckCircle2 size={16} style={{ color: 'var(--accent)' }} />
+                                        <span><strong>Supreme Court Bar Association (SCBA):</strong> Active Member</span>
+                                    </div>
+                                    <div className="flex items-center gap-2">
+                                        <CheckCircle2 size={16} style={{ color: 'var(--accent)' }} />
+                                        <span><strong>Dhaka Bar Association:</strong> Enrolled Advocate</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Media briefing image container with graceful fallback */}
+                            <div
+                                className="relative rounded-xl overflow-hidden border p-4 text-center flex flex-col items-center justify-center min-h-[190px]"
+                                style={{
+                                    background: 'var(--card-bg)',
+                                    borderColor: 'var(--card-border)',
+                                }}
+                            >
+                                {!mediaImgError ? (
+                                    <img
+                                        src="/images/notable/regent-case-briefing.jpg"
+                                        alt="Advocate Md. Shah Alam with senior defence counsel during Dhaka court briefing"
+                                        className="w-full h-auto rounded-lg object-cover mb-2"
+                                        onError={() => setMediaImgError(true)}
+                                    />
+                                ) : (
+                                    <div className="flex flex-col items-center justify-center py-4 text-center">
+                                        <div className="w-12 h-12 rounded-full flex items-center justify-center mb-3"
+                                            style={{ background: 'rgba(198,167,94,0.15)', color: 'var(--gold)' }}>
+                                            <Landmark size={22} />
+                                        </div>
+                                        <p className="text-xs font-bold mb-1" style={{ color: 'var(--text)' }}>
+                                            Court Briefing & Legal Defense Record
+                                        </p>
+                                        <p className="text-[11px] leading-relaxed" style={{ color: 'var(--text-muted)' }}>
+                                            CMM Court Media Briefing Archive
+                                        </p>
+                                    </div>
+                                )}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* ── Latest Articles ── */}
             {latestArticles.length > 0 && (
-                <section className="py-16" style={{ background: 'var(--bg)' }}>
+                <section className="py-16" style={{ background: 'var(--surface)' }}>
                     <div className="container mx-auto px-6 max-w-5xl">
                         <h2
                             className="text-2xl md:text-3xl font-serif font-bold mb-3"
@@ -575,7 +770,7 @@ const AdvocatePage = () => {
             )}
 
             {/* ── FAQ ── */}
-            <section className="py-16" style={{ background: 'var(--surface)' }}>
+            <section className="py-16" style={{ background: 'var(--bg)' }}>
                 <div className="container mx-auto px-6 max-w-5xl">
                     <h2
                         className="text-2xl md:text-3xl font-serif font-bold mb-8"
