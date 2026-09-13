@@ -7,7 +7,7 @@ import {
     ShieldCheck, Briefcase, Landmark, CheckCircle2, Camera
 } from 'lucide-react';
 import { telLink, waLink } from '../data/contactInfo';
-import blogPosts from '../data/blogPosts';
+import blogPosts from '../data/blogPostsMeta.json';
 
 /* ─── FAQ Accordion ──────────────────────────────────── */
 const FAQItem = ({ question, answer }) => {

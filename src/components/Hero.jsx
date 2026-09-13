@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { waLink } from '../data/contactInfo';
 import heroEn from '../content/hero.json';
@@ -50,11 +49,7 @@ const pillsBn = [
   { label: 'উত্তরা, ঢাকা',          anim: 'pill-float-2', dur: '3.5s', dot: 'dot-glow-green', dotColor: '#22C55E' },
 ];
 
-const fade = (delay = 0) => ({
-  initial: { opacity: 1, y: 0 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1], delay },
-});
+
 
 const Hero = ({ lang = 'en' }) => {
   const isBn = lang === 'bn';
@@ -80,7 +75,7 @@ const Hero = ({ lang = 'en' }) => {
             <div className="order-2 md:order-1">
 
               {/* ── Animated wave pills ── */}
-              <motion.div {...fade(0)} style={{ display: 'flex', flexWrap: 'wrap', gap: '0.6rem', marginBottom: '1.5rem' }}>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.6rem', marginBottom: '1.5rem' }}>
                 {pills.map((p, i) => (
                   <span key={i} style={{
                     display: 'inline-flex', alignItems: 'center', gap: '0.42rem',
@@ -103,11 +98,11 @@ const Hero = ({ lang = 'en' }) => {
                     {p.label}
                   </span>
                 ))}
-              </motion.div>
+              </div>
 
               {/* Emergency badge */}
               {heroContent.emergencyBadge && (
-                <motion.div {...fade(0.05)} style={{ marginBottom: '1.25rem' }}>
+                <div style={{ marginBottom: '1.25rem' }}>
                   <span style={{
                     display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
                     padding: '0.38rem 0.95rem', borderRadius: '9999px',
@@ -119,29 +114,29 @@ const Hero = ({ lang = 'en' }) => {
                     <span style={{ width: '7px', height: '7px', borderRadius: '50%', background: '#ef4444', flexShrink: 0, animation: 'dot-glow-gold 1.4s ease-in-out infinite' }} />
                     {heroContent.emergencyBadge}
                   </span>
-                </motion.div>
+                </div>
               )}
 
               {/* H1 */}
-              <motion.h1 {...fade(0.07)} style={{
+              <h1 style={{
                 fontSize: 'clamp(2rem, 4.5vw, 3.2rem)',
                 fontWeight: 800, lineHeight: 1.13, marginBottom: '0.75rem',
                 color: 'var(--hero-heading)', letterSpacing: '-0.03em',
               }}>
                 {heroContent.headline}{' '}
                 <span style={{ color: 'var(--hero-accent)' }}>{heroContent.headlineAccent}</span>
-              </motion.h1>
+              </h1>
 
               {/* Subheading */}
-              <motion.p {...fade(0.13)} style={{
+              <p style={{
                 fontSize: '0.97rem', lineHeight: 1.68, marginBottom: '1.4rem',
                 color: 'var(--hero-sub)', fontWeight: 400, maxWidth: '450px',
               }}>
                 {heroContent.subheading}
-              </motion.p>
+              </p>
 
               {/* ── Credential cards ── */}
-              <motion.div {...fade(0.2)} style={{ display: 'flex', flexDirection: 'column', gap: '0.55rem', marginBottom: '1.5rem' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.55rem', marginBottom: '1.5rem' }}>
 
                 {/* Card 1 — Designation */}
                 <div style={{
@@ -235,10 +230,10 @@ const Hero = ({ lang = 'en' }) => {
                     {isBn ? 'উত্তরা, ঢাকা' : 'Uttara, Dhaka'}
                   </div>
                 </div>
-              </motion.div>
+              </div>
 
               {/* ── Google Rating Social Proof ── */}
-              <motion.div {...fade(0.23)} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1.1rem', flexWrap: 'wrap' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1.1rem', flexWrap: 'wrap' }}>
                 <div style={{ display: 'flex', gap: '2px' }}>
                   {[1,2,3,4,5].map(s => (
                     <svg key={s} width="14" height="14" viewBox="0 0 24 24" fill="#C6A75E" aria-hidden="true">
@@ -262,10 +257,10 @@ const Hero = ({ lang = 'en' }) => {
                   <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#22c55e', display: 'inline-block', animation: 'dot-glow-green 1.8s ease-in-out infinite' }} />
                   {isBn ? 'এখন উপলব্ধ' : 'Available Now'}
                 </span>
-              </motion.div>
+              </div>
 
               {/* ── CTAs ── */}
-              <motion.div {...fade(0.3)} style={{ display: 'flex', gap: '0.7rem', flexWrap: 'wrap' }}>
+              <div style={{ display: 'flex', gap: '0.7rem', flexWrap: 'wrap' }}>
                 <a href={waLink()} target="_blank" rel="noopener noreferrer"
                   style={{
                     display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
@@ -300,15 +295,15 @@ const Hero = ({ lang = 'en' }) => {
                   </svg>
                   {heroContent.cta2Label}
                 </a>
-              </motion.div>
+              </div>
 
               {/* ── Social Share ── */}
-              <motion.div {...fade(0.36)} style={{ marginTop: '1.1rem' }}>
+              <div style={{ marginTop: '1.1rem' }}>
                 <SocialShare lang={lang} />
-              </motion.div>
+              </div>
 
               {/* ── Quick internal navigation links (boosts SEO internal linking + instant smooth scroll) ── */}
-              <motion.div {...fade(0.4)} style={{ marginTop: '1.1rem', display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
+              <div style={{ marginTop: '1.1rem', display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
                 {(isBn ? [
                   { label: 'আইনজীবী সম্পর্কে', href: '/advocate-md-shah-alam' },
                   { label: 'আইনি সেবা', href: '#services', isAnchor: true },
@@ -371,17 +366,12 @@ const Hero = ({ lang = 'en' }) => {
                     </Link>
                   );
                 })}
-              </motion.div>
+              </div>
 
             </div>
 
             {/* ── RIGHT: Photo ── */}
-            <motion.div
-              initial={{ opacity: 1, scale: 1 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
-              className="order-1 md:order-2 flex justify-center md:justify-end"
-            >
+            <div className="order-1 md:order-2 flex justify-center md:justify-end">
               <div style={{ position: 'relative', width: '100%', maxWidth: '340px', aspectRatio: '4/5' }}>
                 <div style={{ position: 'absolute', inset: '-14px', borderRadius: '2rem', background: 'var(--hero-photo-glow)', filter: 'blur(28px)', zIndex: 0 }} />
                 <div style={{
@@ -392,7 +382,7 @@ const Hero = ({ lang = 'en' }) => {
                 }}>
                   <img
                       src="/images/hero/hero-md-shah-alam.webp"
-                      srcSet="/images/hero/hero-md-shah-alam.webp 828w, /hero-md-shah-alam.webp 420w"
+                      srcSet="/images/hero/hero-md-shah-alam-420.webp 420w, /images/hero/hero-md-shah-alam.webp 828w"
                       sizes="(max-width: 768px) 420px, 600px"
                       alt={heroContent.photoAlt}
                       loading="eager"
@@ -424,7 +414,7 @@ const Hero = ({ lang = 'en' }) => {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>

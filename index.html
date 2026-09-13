@@ -2,9 +2,9 @@
 <html lang="bn">
 
 <head>
-  <!-- Google AdSense Official Verification & Ad Script -->
+  <!-- Google AdSense Official Verification (meta only) -->
   <meta name="google-adsense-account" content="ca-pub-1781126556775676">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1781126556775676" crossorigin="anonymous"></script>
+  <!-- AdSense script deferred via load event to avoid render-blocking LCP -->
 
   <meta charset="UTF-8" />
   <link rel="icon" type="image/png" href="/adv-md-shah-alam.png" sizes="any" />
@@ -33,8 +33,12 @@
     })();
   </script>
 
-  <!-- Preload LCP hero image with fetchpriority=high — signals browser to prioritise this above all else -->
-  <link rel="preload" as="image" href="/images/hero/hero-md-shah-alam.webp" type="image/webp" fetchpriority="high" />
+  <!-- Preload LCP hero image with responsive srcset for mobile vs desktop -->
+  <link rel="preload" as="image"
+        href="/images/hero/hero-md-shah-alam.webp"
+        imagesrcset="/images/hero/hero-md-shah-alam-420.webp 420w, /images/hero/hero-md-shah-alam.webp 828w"
+        imagesizes="(max-width: 768px) 420px, 600px"
+        fetchpriority="high" />
 
   <!-- DNS prefetch for third-party domains -->
   <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
@@ -395,9 +399,16 @@
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
 
-  <!-- Google Analytics — deferred to after page load (non-blocking LCP) -->
+  <!-- AdSense + Google Analytics — both deferred to after page load (non-blocking LCP) -->
   <script>
     window.addEventListener('load', function() {
+      // Google AdSense — deferred to not block LCP
+      var ads = document.createElement('script');
+      ads.async = true;
+      ads.crossOrigin = 'anonymous';
+      ads.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1781126556775676';
+      document.head.appendChild(ads);
+
       // Google Analytics
       var s = document.createElement('script');
       s.async = true;

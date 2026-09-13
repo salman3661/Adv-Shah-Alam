@@ -32,6 +32,10 @@ export default defineConfig({
           if (id.includes('node_modules/lucide-react')) {
             return 'vendor-lucide';
           }
+          // Isolate large blog content JSON files from homepage bundle
+          if (id.includes('blog-bn-index') || id.includes('blog-en-index')) {
+            return 'blog-index-data';
+          }
         }
       }
     }
