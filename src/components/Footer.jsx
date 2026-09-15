@@ -40,6 +40,7 @@ const Footer = () => {
         { name: isBn ? 'প্রশ্নোত্তর' : 'FAQ', path: isBn ? '/#faq' : '/en#faq', id: 'faq' },
         { name: isBn ? 'ব্লগ' : 'Blog', path: isBn ? '/bn/blog' : '/blog', id: null },
         { name: isBn ? 'যোগাযোগ' : 'Contact Us', path: isBn ? '/bn/contact' : '/contact', id: null },
+        { name: isBn ? '⭐ গুগল রিভিউ দিন' : '⭐ Leave a Review', path: '/review', id: null },
     ];
 
     const linkClass = "block text-sm transition-colors duration-200 hover:opacity-100 opacity-70 hover:underline decoration-dotted";

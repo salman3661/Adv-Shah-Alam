@@ -675,6 +675,23 @@ async function main() {
     console.log('  ✓ /privacy-policy');
   }
 
+  // ── Review page ────────────────────────────────────────────────────────────
+  {
+    const html = buildPage(base, {
+      title: 'গুগলে ৫-স্টার রিভিউ দিন | এডভোকেট মোঃ শাহ আলম — বাংলাদেশ সুপ্রিম কোর্ট',
+      description: 'অ্যাডভোকেট মো. শাহ আলম স্যারের আইনি পরামর্শ ও সেবার অভিজ্ঞতা গুগলে শেয়ার করুন। আপনার মতামত অন্যদের সঠিক আইনি সাহায্য পেতে সহায়তা করবে।',
+      canonical: `${BASE}/review`,
+      body: `<div style="max-width:500px;margin:40px auto;text-align:center;padding:30px;background:#fff;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.08)">
+        <h1 style="font-size:24px;font-weight:700;margin-bottom:12px">আইনি সেবায় আপনি কি সন্তুষ্ট?</h1>
+        <p style="color:#555;margin-bottom:20px">অ্যাডভোকেট মো. শাহ আলম স্যারের আইনি পরামর্শ ও সহায়তায় আপনার অভিজ্ঞতা কেমন ছিল? গুগলে আপনার মূল্যবান ২ মিনিটের মতামত শেয়ার করুন।</p>
+        <div style="font-size:28px;color:#f59e0b;margin-bottom:20px">★★★★★</div>
+        <a href="https://maps.app.goo.gl/M3NXMwW3xkp2TE3h8" style="display:inline-block;padding:12px 28px;background:#1a56db;color:#fff;text-decoration:none;border-radius:8px;font-weight:700">সরাসরি গুগলে ৫-স্টার রিভিউ দিন</a>
+      </div>`,
+    });
+    write(path.join(DIST, 'review', 'index.html'), html);
+    console.log('  ✓ /review');
+  }
+
   // ── Service pages ──────────────────────────────────────────────────────────
   console.log('\n⚖️  Pre-rendering service pages (EN & BN)...');
   const serviceSlugs = ['criminal-lawyer','bail-lawyer','divorce-lawyer','land-lawyer','supreme-court-lawyer','company-corporate-lawyer','tax-lawyer'];

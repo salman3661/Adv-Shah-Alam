@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { Star, Quote, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { waLink } from '../data/contactInfo';
 
 const testimonialsEn = [
@@ -424,14 +425,27 @@ const Testimonials = ({ lang = 'en' }) => {
                         <p className="text-sm mb-4" style={{ color: 'var(--text-muted)' }}>
                             {isBn ? 'আপনার পাশে দাঁড়ানোর জন্য আমরা সবসময় প্রস্তুত।' : 'We are ready to stand by your side in your hour of need.'}
                         </p>
-                        <a
-                            href={waLink()}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="btn-whatsapp inline-flex items-center gap-2 text-sm"
-                        >
-                            {isBn ? 'আজই আমাদের সাথে কথা বলুন' : 'Speak with Us Today'}
-                        </a>
+                        <div className="flex flex-wrap items-center justify-center gap-4">
+                            <a
+                                href={waLink()}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="btn-whatsapp inline-flex items-center gap-2 text-sm"
+                            >
+                                {isBn ? 'আজই আমাদের সাথে কথা বলুন' : 'Speak with Us Today'}
+                            </a>
+                            <Link
+                                to="/review"
+                                className="inline-flex items-center gap-2 text-sm font-semibold px-5 py-2.5 rounded-xl border transition-all hover:opacity-90"
+                                style={{
+                                    borderColor: 'var(--accent)',
+                                    color: 'var(--accent)',
+                                    background: 'rgba(26,63,191,0.06)'
+                                }}
+                            >
+                                <span>⭐ {isBn ? 'গুগলে ৫-স্টার রিভিউ দিন' : 'Leave a Google Review'}</span>
+                            </Link>
+                        </div>
                     </motion.div>
                 </div>
             </section>

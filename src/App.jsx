@@ -41,6 +41,7 @@ const AdvocatePage = lazy(() => import('./pages/AdvocatePage'));
 const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
 const TermsConditions = lazy(() => import('./pages/TermsConditions'));
 const ContactPage = lazy(() => import('./pages/ContactPage'));
+const ReviewPage = lazy(() => import('./pages/ReviewPage'));
 
 // Visible fallback — prevents perceived blank page during lazy chunk loading
 const PageFallback = () => (
@@ -109,6 +110,11 @@ function App() {
                       <Route path="/contact" element={<ContactPage lang="bn" />} />
                       <Route path="/bn/contact" element={<ContactPage lang="bn" />} />
                       <Route path="/en/contact" element={<ContactPage lang="en" />} />
+
+                      {/* Google Review direct routes */}
+                      <Route path="/review" element={<ReviewPage />} />
+                      <Route path="/bn/review" element={<ReviewPage />} />
+                      <Route path="/google-review" element={<ReviewPage />} />
 
 
                       {/* Legal pages (AdSense compliance) */}
