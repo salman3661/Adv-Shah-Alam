@@ -16,8 +16,8 @@ const SocialShare = ({ lang = 'bn', url, title }) => {
 
     const shareUrl  = url   || (typeof window !== 'undefined' ? window.location.href : 'https://www.advmdshahalam.me/');
     const shareText = title || (isBn
-        ? 'বিশ্বস্ত আইনজীবী | এডভোকেট মোঃ শাহ আলম — উত্তরা, ঢাকা'
-        : 'Trusted Lawyer in Bangladesh | Advocate Md. Shah Alam — Uttara, Dhaka');
+        ? 'এডভোকেট মোঃ শাহ আলম — বাংলাদেশ সুপ্রিম কোর্টের আইনজীবী | উত্তরা, ঢাকা'
+        : 'Advocate Md. Shah Alam — Supreme Court Lawyer in Bangladesh | Uttara, Dhaka');
 
     const encodedUrl  = encodeURIComponent(shareUrl);
     const encodedText = encodeURIComponent(shareText);
