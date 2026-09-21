@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-21T13:22:49.403Z",
+  "updatedAt": "2026-09-21T13:34:01.080Z",
   "propertyId": "520583213",
   "channels": [
     {
@@ -19,20 +19,20 @@
       "engagementRate": "32.1%"
     },
     {
-      "channel": "Unassigned",
-      "sourceMedium": "(not set)",
-      "activeUsers": 57,
-      "sessions": 60,
-      "pageViews": 28,
-      "engagementRate": "0.0%"
-    },
-    {
       "channel": "Cross-network",
       "sourceMedium": "(data not available)",
-      "activeUsers": 55,
-      "sessions": 55,
-      "pageViews": 65,
-      "engagementRate": "1.8%"
+      "activeUsers": 59,
+      "sessions": 59,
+      "pageViews": 69,
+      "engagementRate": "1.7%"
+    },
+    {
+      "channel": "Unassigned",
+      "sourceMedium": "(not set)",
+      "activeUsers": 59,
+      "sessions": 62,
+      "pageViews": 29,
+      "engagementRate": "0.0%"
     },
     {
       "channel": "Organic Search",
@@ -181,8 +181,8 @@
     {
       "path": "/bn/blog",
       "title": "বাংলা আইনি ব্লগ ও সমাধান নির্দেশিকা | অ্যাডভোকেট মো. শাহ আলম",
-      "activeUsers": 63,
-      "pageViews": 147
+      "activeUsers": 64,
+      "pageViews": 148
     },
     {
       "path": "/blog/bangladesh-cyber-crime-complaint-portal-guide-2026",
@@ -205,8 +205,8 @@
     {
       "path": "/bn/blog/sampatti-uttoradhikar-ain-2026-bn",
       "title": "বাবার সম্পত্তি বন্টন আইন বাংলাদেশ | উত্তরাধিকার গাইড",
-      "activeUsers": 65,
-      "pageViews": 79
+      "activeUsers": 66,
+      "pageViews": 80
     },
     {
       "path": "/blog/rs-khatian-online-check-bangladesh-2026",
@@ -289,7 +289,7 @@
     {
       "path": "/bn/blog/heba-bil-ewaz-dalil-khoroch-2026",
       "title": "হেবা বিল এওয়াজ দলিল কী ২০২৬ – খরচ, নিয়ম ও বাতিল পদ্ধতি",
-      "activeUsers": 23,
+      "activeUsers": 24,
       "pageViews": 31
     },
     {
@@ -323,6 +323,12 @@
       "pageViews": 26
     },
     {
+      "path": "/bn/blog/bangladesh-uttaradhikar-ain-dhorm-2026",
+      "title": "উত্তরাধিকার আইন বাংলাদেশ ২০২৬ – ধর্ম অনুযায়ী সম্পত্তি বণ্টন",
+      "activeUsers": 24,
+      "pageViews": 25
+    },
+    {
       "path": "/bn/blog/agam-jamin-haikort-khoroch-2026",
       "title": "হাইকোর্ট আগাম জামিন খরচ ২০২৬ | কোর্ট ফি, আইনজীবী ফি ও সম্পূর্ণ প্রক্রিয়া",
       "activeUsers": 20,
@@ -332,12 +338,6 @@
       "path": "/blog/eporcha-land-record-bangladesh-guide",
       "title": "eporcha Bangladesh – Check Land Records, Khatian & Porcha Online at eporcha.gov.bd",
       "activeUsers": 24,
-      "pageViews": 24
-    },
-    {
-      "path": "/bn/blog/bangladesh-uttaradhikar-ain-dhorm-2026",
-      "title": "উত্তরাধিকার আইন বাংলাদেশ ২০২৬ – ধর্ম অনুযায়ী সম্পত্তি বণ্টন",
-      "activeUsers": 23,
       "pageViews": 24
     },
     {
@@ -477,7 +477,7 @@
     {
       "country": "Bangladesh",
       "city": "Dhaka",
-      "activeUsers": 852
+      "activeUsers": 854
     },
     {
       "country": "Bangladesh",
@@ -492,7 +492,7 @@
     {
       "country": "Bangladesh",
       "city": "Khulna",
-      "activeUsers": 104
+      "activeUsers": 105
     },
     {
       "country": "Bangladesh",
@@ -561,6 +561,11 @@
     },
     {
       "country": "Bangladesh",
+      "city": "",
+      "activeUsers": 16
+    },
+    {
+      "country": "Bangladesh",
       "city": "Bogura",
       "activeUsers": 16
     },
@@ -573,11 +578,6 @@
       "country": "United Kingdom",
       "city": "London",
       "activeUsers": 16
-    },
-    {
-      "country": "Bangladesh",
-      "city": "",
-      "activeUsers": 15
     },
     {
       "country": "Saudi Arabia",
