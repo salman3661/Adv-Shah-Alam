@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-21T13:34:01.080Z",
+  "updatedAt": "2026-09-21T13:57:27.556Z",
   "propertyId": "520583213",
   "channels": [
     {
@@ -13,26 +13,26 @@
     {
       "channel": "Direct",
       "sourceMedium": "(direct) / (none)",
-      "activeUsers": 450,
-      "sessions": 473,
-      "pageViews": 676,
-      "engagementRate": "32.1%"
-    },
-    {
-      "channel": "Cross-network",
-      "sourceMedium": "(data not available)",
-      "activeUsers": 59,
-      "sessions": 59,
-      "pageViews": 69,
-      "engagementRate": "1.7%"
+      "activeUsers": 453,
+      "sessions": 476,
+      "pageViews": 680,
+      "engagementRate": "31.9%"
     },
     {
       "channel": "Unassigned",
       "sourceMedium": "(not set)",
-      "activeUsers": 59,
-      "sessions": 62,
-      "pageViews": 29,
+      "activeUsers": 65,
+      "sessions": 68,
+      "pageViews": 42,
       "engagementRate": "0.0%"
+    },
+    {
+      "channel": "Cross-network",
+      "sourceMedium": "(data not available)",
+      "activeUsers": 61,
+      "sessions": 61,
+      "pageViews": 71,
+      "engagementRate": "1.6%"
     },
     {
       "channel": "Organic Search",
@@ -182,7 +182,7 @@
       "path": "/bn/blog",
       "title": "বাংলা আইনি ব্লগ ও সমাধান নির্দেশিকা | অ্যাডভোকেট মো. শাহ আলম",
       "activeUsers": 64,
-      "pageViews": 148
+      "pageViews": 149
     },
     {
       "path": "/blog/bangladesh-cyber-crime-complaint-portal-guide-2026",
@@ -193,8 +193,8 @@
     {
       "path": "/",
       "title": "এডভোকেট মোঃ শাহ আলম | আইনজীবী উত্তরা, ঢাকা",
-      "activeUsers": 61,
-      "pageViews": 90
+      "activeUsers": 63,
+      "pageViews": 101
     },
     {
       "path": "/blog/cyber-crime-helpline-bangladesh-2026",
@@ -307,8 +307,8 @@
     {
       "path": "/bn/blog/land-registration-fee-calculator-bangladesh-2026",
       "title": "জমি রেজিস্ট্রি খরচ ক্যালকুলেটর ২০২৬ | সরকারি ফি ও স্ট্যাম্প শুল্ক",
-      "activeUsers": 26,
-      "pageViews": 28
+      "activeUsers": 27,
+      "pageViews": 29
     },
     {
       "path": "/blog/how-to-report-cyber-crime-bangladesh-2026",
@@ -477,7 +477,7 @@
     {
       "country": "Bangladesh",
       "city": "Dhaka",
-      "activeUsers": 854
+      "activeUsers": 856
     },
     {
       "country": "Bangladesh",
@@ -492,7 +492,7 @@
     {
       "country": "Bangladesh",
       "city": "Khulna",
-      "activeUsers": 105
+      "activeUsers": 106
     },
     {
       "country": "Bangladesh",
@@ -560,6 +560,11 @@
       "activeUsers": 18
     },
     {
+      "country": "United States",
+      "city": "Des Moines",
+      "activeUsers": 17
+    },
+    {
       "country": "Bangladesh",
       "city": "",
       "activeUsers": 16
@@ -592,11 +597,6 @@
     {
       "country": "Canada",
       "city": "Toronto",
-      "activeUsers": 13
-    },
-    {
-      "country": "United States",
-      "city": "Des Moines",
       "activeUsers": 13
     },
     {

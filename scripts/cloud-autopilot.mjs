@@ -45,54 +45,88 @@ const candidateTopics = [
     topic: "জাল দলিল চেনার উপায় ও বালাম বই তল্লাশি ২০২৬",
     category: "ভূমি আইন",
     keyword: "জাল দলিল চেনার উপায়",
+    slugKey: "jal-d",
     concept: "সাব-রেজিস্ট্রি অফিসের বালাম বই ও সূচি বই তল্লাশির নিয়ম, নকল দলিল পরীক্ষা এবং জাল দলিল ধরা পড়লে ফৌজদারি ও দেওয়ানি প্রতিকার।"
   },
   {
     topic: "পৈতৃক সম্পত্তি বেদখল হলে উদ্ধার ও দখল পুনরুদ্ধার মোকদ্দমা ২০২৬",
     category: "দেওয়ানি আইন",
     keyword: "জমি বেদখল হলে করণীয়",
+    slugKey: "bedokhol",
     concept: "সুনির্দিষ্ট প্রতিকার আইন (Specific Relief Act)-এর ৮ ও ৯ ধারায় জমি দখল পুনরুদ্ধারের মামলা, ১৪৫ ধারায় ম্যাজিস্ট্রেটের নিষেধাজ্ঞা ও খরচ।"
   },
   {
     topic: "অনলাইন জিডি (Online GD) করার পূর্ণাঙ্গ নিয়ম ও পাসপোর্ট-মোবাইল হারানো জিডি",
     category: "ফৌজদারি আইন",
     keyword: "অনলাইন জিডি করার নিয়ম",
+    slugKey: "online-gd",
     concept: "পুলিশ অনলাইন জিডি অ্যাপস, পাসপোর্ট, সার্টিফিকেট বা মোবাইল ফোন হারিয়ে গেলে অনলাইনে সাধারণ ডায়েরি দাখিল ও কোর্টে প্রমাণ।"
   },
   {
     topic: "স্ত্রী ডিভোর্স দিলে স্বামীর দেনমোহর ও ভরণপোষণ আইন ২০২৬",
     category: "পারিবারিক আইন",
     keyword: "স্ত্রী ডিভোর্স দিলে দেনমোহর পাবে কি",
+    slugKey: "stree-divorce",
     concept: "খোলা তালাক, মোবারাত ও তালাক-ই-তৌফিজের মধ্যে পার্থক্য, স্ত্রী স্বেচ্ছায় ডিভোর্স দিলে দেনমোহর বা খোরপোশ মওকুফ হয় কি না।"
   },
   {
     topic: "চেক ডিজঅনার নোটিশ পাওয়ার পর আসামির আইনি আত্মরক্ষা ২০২৬",
     category: "ফৌজদারি আইন",
     keyword: "চেক ডিজঅনার নোটিশের জবাব",
+    slugKey: "dishonour",
     concept: "এন আই অ্যাক্ট ১৩৮ ধারায় উকিল নোটিশ পাওয়ার ৩০ দিনের মধ্যে সঠিক লিগ্যাল রিপ্লাই পাঠানো, সিকিউরিটি চেক ও প্রতারণার বিরুদ্ধে ডিফেন্স।"
   },
   {
     topic: "আমমোক্তারনামা (Power of Attorney) তৈরি ও বাতিলের সম্পূর্ণ আইনি নিয়ম ২০২৬",
     category: "দলিল ও চুক্তি আইন",
     keyword: "পাওয়ার অফ অ্যাটর্নি বাতিলের নিয়ম",
-    concept: "পাওয়ার অফ অ্যাটর্নি আইন ২০১৫ অনুযায়ী প্রত্যাহারযোগ্য ও অপ্রত্যাহারযোগ্য আমমোক্তারনামা নিবন্ধন, বাতিল নোটিশ ও কোর্টে চ্যালেঞ্জ।"
+    slugKey: "ammoktarnama-batil",
+    concept: "পাওয়ার অফ অ্যাটর্নি আইন ২০১৫ অনুযায়ী প্রত্যাহারযোগ্য ও অপ্রত্যাহারযোগ্য আমমোক্তারনামা নিবন্ধন, বাতিল নোটিউট ও কোর্টে চ্যালেঞ্জ।"
   },
   {
     topic: "সরকারি খাস জমি বন্দোবস্ত ও ডিসি অফিসে আবেদনের নিয়ম ২০২৬",
     category: "ভূমি আইন",
     keyword: "খাস জমি বন্দোবস্ত নিয়ম 2026",
+    slugKey: "khas-jomi",
     concept: "কৃষি ও অকৃষি খাস জমি পাওয়ার যোগ্যতা, ভূমিহীন সনদ, সহকারী কমিশনার (ভূমি) ও জেলা প্রশাসকের নিকট আবেদনের ধাপ ও কবুলিয়ত।"
+  },
+  {
+    topic: "বাড়ি ভাড়া চুক্তি ও ভাড়াটিয়া উচ্ছেদ আইনি নোটিশ ২০২৬",
+    category: "চুক্তি ও দেওয়ানি আইন",
+    keyword: "বাড়ি ভাড়া চুক্তি নিয়ম 2026",
+    slugKey: "bari-bhara-chukti",
+    concept: "বাড়ি ভাড়া নিয়ন্ত্রণ আইন ও চুক্তিপত্রের ধারা, নোটিশ প্রদানের মেয়াদ এবং ভাড়াটিয়া উচ্ছেদে দেওয়ানি আদালতের কার্যপ্রণালী।"
+  },
+  {
+    topic: "পারিবারিক সহিংসতা প্রতিরোধ ও সুরক্ষা আইন ২০২৬",
+    category: "পারিবারিক আইন",
+    keyword: "পারিবারিক সহিংসতা প্রতিরোধ আইন",
+    slugKey: "paribarik-sohingshota-ain",
+    concept: "পারিবারিক সহিংসতা (প্রতিরোধ ও সুরক্ষা) আইন ২০১০-এর আওতায় সুরক্ষা আদেশ, বসবাসের অধিকার ও ক্ষতিপূরণ দাবি।"
+  },
+  {
+    topic: "দোকান পজেশন ক্রয়-বিক্রয় চুক্তি ও জালিয়াতি প্রতিরোধ ২০২৬",
+    category: "ব্যবসা ও চুক্তি আইন",
+    keyword: "দোকান পজেশন চুক্তি",
+    slugKey: "dokon-possession",
+    concept: "দোকান পজেশন স্ট্যাম্প এগ্রিমেন্ট, মূল মালিকের অনুমতিপত্র ও পজেশন হস্তান্তর নিয়ে আইনি বিরোধের সমাধান।"
+  },
+  {
+    topic: "সাইবার বুলিং ও ব্ল্যাকমেইল থেকে আইনি রক্ষা ২০২৬",
+    category: "সাইবার আইন",
+    keyword: "সাইবার বুলিং আইনি প্রতিকার",
+    slugKey: "cyber-bullying-helpline",
+    concept: "সাইবার সুরক্ষা অধ্যাদেশ, পুলিশ সাইবার সাপোর্ট ফর উইমেন ও ডিজিটাল প্রমাণ সংরক্ষণ করে মামলা দায়েরের নিয়ম।"
   }
 ];
 
-// Pick the first candidate topic that does not have an exact matching post slug yet
+// Pick the first candidate topic that does not have an existing post slug yet
 let selectedTopic = candidateTopics.find(t => {
-  const simplifiedSlug = t.keyword.replace(/\s+/g, '-');
-  return !Array.from(existingSlugs).some(s => s.includes(simplifiedSlug));
+  return !Array.from(existingSlugs).some(s => s.toLowerCase().includes(t.slugKey));
 });
 
 if (!selectedTopic) {
-  selectedTopic = candidateTopics[0];
+  selectedTopic = candidateTopics[Math.floor(Math.random() * candidateTopics.length)];
 }
 
 console.log(`[Cloud Autopilot] Selected Topic: "${selectedTopic.topic}" (${selectedTopic.category})`);
