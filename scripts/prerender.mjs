@@ -67,8 +67,8 @@ function buildPage(base, { title, description, canonical, body, lang='en' }) {
   h = h.replace(/<link rel="canonical"[^>]*>/g, '');
   h = h.replace('</head>', `<link rel="canonical" href="${canonical}">\n</head>`);
 
-  // Visible, clean semantic HTML — readable by search crawlers, AdSense bots, and users
-  const prerendered = `\n<div id="prerendered-content" class="prerendered-content" style="max-width:920px;margin:0 auto;padding:40px 24px;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Noto Sans Bengali',sans-serif;color:#1e293b;line-height:1.75">\n${body}\n</div>`;
+  // Hidden from users, visible to crawlers — no flash, no layout shift
+  const prerendered = `\n<div id="prerendered-content" aria-hidden="true" style="position:absolute;width:1px;height:1px;overflow:hidden;visibility:hidden;clip:rect(0,0,0,0);white-space:nowrap">\n${body}\n</div>`;
   h = h.replace('<div id="root"></div>', `<div id="root">${prerendered}</div>`);
   return h;
 }
