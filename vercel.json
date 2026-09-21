@@ -338,6 +338,76 @@
       "source": "/bn/blog/nbr-tax-raid-bangladesh",
       "destination": "/bn/blog",
       "statusCode": 301
+    },
+    {
+      "source": "/terms-and-conditions",
+      "destination": "/terms",
+      "statusCode": 301
+    },
+    {
+      "source": "/terms-of-service",
+      "destination": "/terms",
+      "statusCode": 301
+    },
+    {
+      "source": "/criminal-lawyer-uttara",
+      "destination": "/services/criminal-lawyer",
+      "statusCode": 301
+    },
+    {
+      "source": "/tax-vat-lawyer-dhaka",
+      "destination": "/services/tax-lawyer",
+      "statusCode": 301
+    },
+    {
+      "source": "/land-property-lawyer-uttara",
+      "destination": "/services/land-lawyer",
+      "statusCode": 301
+    },
+    {
+      "source": "/divorce-lawyer-uttara",
+      "destination": "/services/divorce-lawyer",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/property-law",
+      "destination": "/bn/services/land-lawyer",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/cyber-crime-law",
+      "destination": "/bn/services/criminal-lawyer",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/services/family-lawyer",
+      "destination": "/bn/services/divorce-lawyer",
+      "statusCode": 301
+    },
+    {
+      "source": "/services",
+      "destination": "/#services",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/services",
+      "destination": "/#services",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/posts/:slug*",
+      "destination": "/bn/blog/:slug*",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/posts/:slug*",
+      "destination": "/blog/:slug*",
+      "statusCode": 301
+    },
+    {
+      "source": "/posts/:slug*",
+      "destination": "/blog/:slug*",
+      "statusCode": 301
     }
   ],
   "headers": [
@@ -420,6 +490,10 @@
     {
       "source": "/(rss\\.xml|rss-bn\\.xml|feed\\.xml|feed|rss)",
       "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, follow"
+        },
         {
           "key": "Content-Type",
           "value": "application/rss+xml; charset=utf-8"

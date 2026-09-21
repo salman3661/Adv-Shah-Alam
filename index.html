@@ -2,9 +2,9 @@
 <html lang="bn">
 
 <head>
-  <!-- Google AdSense Official Verification (meta only) -->
+  <!-- Google AdSense Official Script & Account Verification -->
   <meta name="google-adsense-account" content="ca-pub-1781126556775676">
-  <!-- AdSense script deferred via load event to avoid render-blocking LCP -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1781126556775676" crossorigin="anonymous"></script>
 
   <meta charset="UTF-8" />
   <link rel="icon" type="image/png" href="/adv-md-shah-alam.png" sizes="any" />
@@ -399,16 +399,9 @@
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
 
-  <!-- AdSense + Google Analytics — both deferred to after page load (non-blocking LCP) -->
+  <!-- Google Analytics — deferred to after page load (non-blocking LCP) -->
   <script>
     window.addEventListener('load', function() {
-      // Google AdSense — deferred to not block LCP
-      var ads = document.createElement('script');
-      ads.async = true;
-      ads.crossOrigin = 'anonymous';
-      ads.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1781126556775676';
-      document.head.appendChild(ads);
-
       // Google Analytics
       var s = document.createElement('script');
       s.async = true;

@@ -5,6 +5,7 @@ import Footer from './Footer';
 import FloatingWhatsApp from './FloatingWhatsApp';
 import MobileCallButton from './MobileCallButton';
 import ReadingProgress from './ReadingProgress';
+import CookieConsent from './CookieConsent';
 
 const BASE = 'https://www.advmdshahalam.me';
 
@@ -261,6 +262,7 @@ const Layout = ({ children }) => {
             <Footer />
             <FloatingWhatsApp />
             <MobileCallButton />
+            <CookieConsent />
         </div>
     );
 };

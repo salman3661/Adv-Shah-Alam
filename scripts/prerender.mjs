@@ -67,8 +67,8 @@ function buildPage(base, { title, description, canonical, body, lang='en' }) {
   h = h.replace(/<link rel="canonical"[^>]*>/g, '');
   h = h.replace('</head>', `<link rel="canonical" href="${canonical}">\n</head>`);
 
-  // Hidden from users, visible to crawlers — no flash, no cloaking
-  const prerendered = `\n<div id="prerendered-content" aria-hidden="true" style="position:absolute;width:1px;height:1px;overflow:hidden;visibility:hidden;clip:rect(0,0,0,0);white-space:nowrap">\n${body}\n</div>`;
+  // Visible, clean semantic HTML — readable by search crawlers, AdSense bots, and users
+  const prerendered = `\n<div id="prerendered-content" class="prerendered-content" style="max-width:920px;margin:0 auto;padding:40px 24px;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Noto Sans Bengali',sans-serif;color:#1e293b;line-height:1.75">\n${body}\n</div>`;
   h = h.replace('<div id="root"></div>', `<div id="root">${prerendered}</div>`);
   return h;
 }
@@ -129,6 +129,43 @@ function buildPostBody(post) {
 ${DISCLAIMER}
 <p style="font-size:16px;color:#333;margin-bottom:24px">${escHtml(post.heroIntro||'')}</p>
 ${toc}${sections}${faqs}${CTA}`;
+}
+
+function buildBnPostBody(post) {
+  const quickAns = post.quickAnswer ? `<div style="background:#f0fdf4;border-left:4px solid #16a34a;padding:16px 20px;border-radius:8px;margin-bottom:28px">
+    <strong style="color:#166534;font-size:16px">${escHtml(post.quickAnswer.heading || '⚡ এক নজরে')}</strong>
+    <ul style="margin-top:8px;padding-left:20px;color:#14532d;line-height:1.8">
+      ${(post.quickAnswer.points || []).map(p => `<li>${escHtml(p)}</li>`).join('')}
+    </ul>
+  </div>` : '';
+
+  const toc = (post.toc || []).length ? `<nav style="background:#f4f6fb;padding:16px 20px;border-radius:8px;margin-bottom:28px">
+    <strong style="color:#1e293b">📋 সূচিপত্র</strong>
+    <ol style="margin-top:8px;padding-left:20px">
+      ${post.toc.map((h, i) => {
+        const text = typeof h === 'string' ? h : (h?.title || h?.heading || h?.text || '');
+        return `<li style="margin:4px 0"><a href="#s${i}" style="color:#1a56db">${escHtml(text)}</a></li>`;
+      }).join('')}
+    </ol></nav>` : '';
+
+  const sections = (post.sections || []).map((s, i) => `
+    <section id="s${i}" style="margin-bottom:32px">
+      <h2 style="font-size:22px;font-weight:700;margin-bottom:12px;color:#111">${escHtml(s.heading || s.h2 || s.title || '')}</h2>
+      <div style="font-size:15px;color:#333;line-height:1.8">${s.content || ''}</div>
+    </section>`).join('');
+
+  const faqs = (post.faqs || []).length ? `<section style="margin-top:32px">
+    <h2 style="font-size:22px;font-weight:700;margin-bottom:16px;color:#111">সাধারণ প্রশ্নোত্তর (FAQ)</h2>
+    ${post.faqs.map(f => `<div style="margin-bottom:16px;padding:14px 18px;background:#f9f9f9;border-radius:8px;border:1px solid #eee">
+      <strong style="color:#111">${escHtml(f.question || f.q || '')}</strong>
+      <p style="margin:6px 0 0;color:#444;font-size:14px;line-height:1.7">${escHtml(f.answer || f.a || '')}</p></div>`).join('')}
+    </section>` : '';
+
+  return `<h1 style="font-size:30px;font-weight:700;margin-bottom:8px;color:#0a0a0a">${escHtml(post.title || '')}</h1>
+<p style="color:#555;font-size:14px;margin-bottom:20px">লেখক: <strong>অ্যাডভোকেট মো. শাহ আলম</strong> &middot; ${escHtml(post.publishedDate || '')} &middot; ${escHtml(post.readTime || '')}</p>
+${BN_DISCLAIMER}
+<p style="font-size:16px;color:#333;margin-bottom:24px;line-height:1.8">${escHtml(post.heroIntro || '')}</p>
+${quickAns}${toc}${sections}${faqs}${BN_CTA}`;
 }
 
 // ── service page lookup ──────────────────────────────────────────────────────
@@ -579,14 +616,63 @@ function contactBody() {
 }
 
 function privacyBody() {
-  return `<h1 style="font-size:26px;font-weight:700;margin-bottom:12px">Privacy Policy — advmdshahalam.me</h1>
-<p style="color:#555;font-size:13px;margin-bottom:20px">This Privacy Policy describes how advmdshahalam.me collects and uses information.</p>
-<h2 style="font-size:18px;font-weight:700;margin:16px 0 8px">Information We Collect</h2>
-<p style="color:#333">We collect contact information you voluntarily provide through our contact form (name, phone number, case details) which is sent via WhatsApp. We use Google Analytics to understand site traffic. We do not sell or share your personal data.</p>
-<h2 style="font-size:18px;font-weight:700;margin:16px 0 8px">Cookies</h2>
-<p style="color:#333">We use cookies for Google Analytics and AdSense. You may disable cookies in your browser settings.</p>
-<h2 style="font-size:18px;font-weight:700;margin:16px 0 8px">Contact</h2>
-<p style="color:#333">For privacy enquiries: <a href="mailto:contact@advmdshahalam.me" style="color:#1a56db">contact@advmdshahalam.me</a></p>`;
+  return `<h1 style="font-size:30px;font-weight:700;margin-bottom:12px;color:#0f172a">Privacy Policy | Advocate Md. Shah Alam</h1>
+<p style="color:#64748b;font-size:14px;margin-bottom:24px">Last updated: May 18, 2026</p>
+<div style="font-size:15px;color:#334155;line-height:1.8">
+  <h2 style="font-size:20px;font-weight:700;margin:24px 0 10px;color:#0f172a">1. Introduction</h2>
+  <p>Welcome to <strong>advmdshahalam.me</strong> ("Website"), operated by <strong>Advocate Md. Shah Alam</strong> ("we", "us", or "our"). We are dedicated to maintaining the confidentiality and integrity of personal information. This Privacy Policy details how we collect, use, disclose, and safeguard user data when you access or use our website.</p>
+
+  <h2 style="font-size:20px;font-weight:700;margin:24px 0 10px;color:#0f172a">2. Information We Collect</h2>
+  <p>We may collect personal details that you voluntarily submit through our consultation form, email, or WhatsApp, including your name, contact phone number, email address, and summary of your legal inquiry. In addition, we collect automated browsing data such as IP address, browser type, referral URLs, operating system, and pages viewed.</p>
+
+  <h2 style="font-size:20px;font-weight:700;margin:24px 0 10px;color:#0f172a">3. How We Use Your Information</h2>
+  <p>Information gathered is utilized to respond directly to client consultations, provide legal assistance, monitor and improve site performance, analyze traffic metrics, and present relevant advertisements.</p>
+
+  <h2 style="font-size:20px;font-weight:700;margin:24px 0 10px;color:#0f172a">4. Google AdSense &amp; Advertising Cookie Policy</h2>
+  <p>This Website uses <strong>Google AdSense</strong>, a third-party advertising service provided by Google LLC (1600 Amphitheatre Parkway, Mountain View, CA 94043, USA). Google and its third-party advertising partners utilize cookies—including the <strong>DoubleClick DART cookie</strong>—to serve advertisements to users based on their prior visits to this website and other websites across the Internet.</p>
+  <p>Third-party advertising vendors and ad networks display advertisements on advmdshahalam.me. These cookies enable Google and its network partners to show targeted ads tailored to user browsing history. We do not control cookies placed by Google AdSense.</p>
+  <p><strong>Opt-Out:</strong> Users may opt out of personalized advertising at any time by visiting <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer" style="color:#1a56db;text-decoration:underline">Google Ads Settings</a> or through the <a href="https://optout.aboutads.info/" target="_blank" rel="noopener noreferrer" style="color:#1a56db;text-decoration:underline">Digital Advertising Alliance opt-out portal</a>. You may also adjust cookie preferences directly in your browser settings.</p>
+
+  <h2 style="font-size:20px;font-weight:700;margin:24px 0 10px;color:#0f172a">5. Google Analytics Disclosures</h2>
+  <p>We implement Google Analytics to examine traffic patterns, audience demographics, and user behavior. Google Analytics relies on cookies to collect non-personally identifiable statistical metrics. For further information on Google data handling, visit <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer" style="color:#1a56db;text-decoration:underline">Google's Privacy &amp; Terms</a>.</p>
+
+  <h2 style="font-size:20px;font-weight:700;margin:24px 0 10px;color:#0f172a">6. Data Protection, Security &amp; User Rights</h2>
+  <p>We implement administrative and technical security measures to protect your personal data from unauthorized access or disclosure. Under applicable data privacy frameworks (including GDPR principles), you have the right to request access to, correction of, or deletion of your personal data submitted to us.</p>
+
+  <h2 style="font-size:20px;font-weight:700;margin:24px 0 10px;color:#0f172a">7. Contact Information</h2>
+  <p>For any privacy inquiries, requests, or questions regarding this Privacy Policy, please contact:<br>
+  <strong>Advocate Md. Shah Alam</strong><br>
+  Chamber: House 46, Road 6/B, Sector 12, Uttara West, Dhaka-1230, Bangladesh<br>
+  Email: <a href="mailto:contact@advmdshahalam.me" style="color:#1a56db">contact@advmdshahalam.me</a> | Phone: <a href="tel:+8801712655546" style="color:#1a56db">+880 1712-655546</a></p>
+</div>`;
+}
+
+function termsBody() {
+  return `<h1 style="font-size:30px;font-weight:700;margin-bottom:12px;color:#0f172a">Terms &amp; Conditions | Advocate Md. Shah Alam</h1>
+<p style="color:#64748b;font-size:14px;margin-bottom:24px">Last updated: May 12, 2026</p>
+<div style="font-size:15px;color:#334155;line-height:1.8">
+  <h2 style="font-size:20px;font-weight:700;margin:24px 0 10px;color:#0f172a">1. Acceptance of Terms</h2>
+  <p>By browsing, accessing, or using <strong>advmdshahalam.me</strong> ("Website"), you agree to be bound by these Terms and Conditions. If you do not accept these terms, you must refrain from using the Website.</p>
+
+  <h2 style="font-size:20px;font-weight:700;margin:24px 0 10px;color:#0f172a">2. Legal Disclaimer &amp; No Attorney-Client Relationship</h2>
+  <p>The information, articles, guides, and legal calculators published on this website are provided solely for <strong>general informational and educational purposes</strong>. Nothing on this website constitutes formal legal counsel or legal advice under the laws of Bangladesh.</p>
+  <p>Accessing this website, sending messages via contact forms, or initiating WhatsApp communications does not establish an attorney-client relationship. You must consult directly with a qualified advocate licensed by the Bangladesh Bar Council for advice specific to your case.</p>
+
+  <h2 style="font-size:20px;font-weight:700;margin:24px 0 10px;color:#0f172a">3. Intellectual Property Rights</h2>
+  <p>All original content, legal guides, articles, logos, graphics, and code on this Website are the exclusive intellectual property of Advocate Md. Shah Alam and are protected by applicable copyright and trademark laws of Bangladesh.</p>
+
+  <h2 style="font-size:20px;font-weight:700;margin:24px 0 10px;color:#0f172a">4. Third-Party Advertisements (Google AdSense)</h2>
+  <p>This Website displays third-party advertisements served through Google AdSense. We do not endorse, guarantee, or assume liability for products, claims, or services advertised by third parties. Please refer to our <a href="/privacy-policy" style="color:#1a56db;text-decoration:underline">Privacy Policy</a> for details on advertising cookies.</p>
+
+  <h2 style="font-size:20px;font-weight:700;margin:24px 0 10px;color:#0f172a">5. Limitation of Liability &amp; Governing Law</h2>
+  <p>To the maximum extent permitted by law, Advocate Md. Shah Alam and associated chambers shall not be held liable for any loss or damages arising from reliance on general information provided on this Website.</p>
+  <p>These terms are governed by and construed under the laws of the People's Republic of Bangladesh. Any dispute arising in connection with the Website shall fall under the exclusive jurisdiction of the competent courts in Dhaka, Bangladesh.</p>
+
+  <h2 style="font-size:20px;font-weight:700;margin:24px 0 10px;color:#0f172a">6. Contact Us</h2>
+  <p>Advocate Md. Shah Alam Law Chambers<br>
+  House 46, Road 6/B, Sector 12, Uttara West, Dhaka-1230, Bangladesh<br>
+  Phone: <a href="tel:+8801712655546" style="color:#1a56db">+880 1712-655546</a> | Email: <a href="mailto:contact@advmdshahalam.me" style="color:#1a56db">contact@advmdshahalam.me</a></p>
+</div>`;
 }
 
 // ── main ─────────────────────────────────────────────────────────────────────
@@ -673,6 +759,18 @@ async function main() {
     });
     write(path.join(DIST, 'privacy-policy', 'index.html'), html);
     console.log('  ✓ /privacy-policy');
+  }
+
+  // ── Terms & Conditions ─────────────────────────────────────────────────────
+  {
+    const html = buildPage(base, {
+      title: 'Terms & Conditions | Advocate Md. Shah Alam',
+      description: 'Terms and Conditions for using advmdshahalam.me — the official website of Advocate Md. Shah Alam, trusted lawyer in Uttara, Dhaka.',
+      canonical: `${BASE}/terms`,
+      body: termsBody(),
+    });
+    write(path.join(DIST, 'terms', 'index.html'), html);
+    console.log('  ✓ /terms');
   }
 
   // ── Review page ────────────────────────────────────────────────────────────
@@ -773,19 +871,11 @@ ${BN_DISCLAIMER}${bnMeta.body}${BN_CTA}`,
   console.log('\n📚 Pre-rendering BN blog posts...');
   let bnCount = 0;
   for (const post of bnPosts) {
-    const bnSections = (post.sections||[]).map((s,i)=>
-      `<section id="s${i}" style="margin-bottom:24px"><h2 style="font-size:20px;font-weight:700;margin-bottom:8px">${escHtml(s.h2 || s.heading || s.title || '')}</h2><div>${s.content||''}</div></section>`
-    ).join('');
-
     const html = buildPage(base, {
       title: post.metaTitle || post.title || 'বাংলাদেশ আইনি গাইড',
       description: post.metaDescription || (post.heroIntro||'').slice(0,160),
       canonical: `${BASE}/bn/blog/${post.slug}`,
-      body: `<h1 style="font-size:28px;font-weight:700;margin-bottom:8px">${escHtml(post.title||'')}</h1>
-<p style="color:#555;font-size:14px;margin-bottom:20px">লেখক: <strong>অ্যাডভোকেট মো. শাহ আলম</strong> &middot; ${escHtml(post.publishedDate||'')}</p>
-${BN_DISCLAIMER}
-<p style="margin-bottom:20px">${escHtml(post.heroIntro||'')}</p>
-${bnSections}`,
+      body: buildBnPostBody(post),
       lang: 'bn',
     });
     write(path.join(DIST,'bn','blog',post.slug,'index.html'), html);
@@ -793,7 +883,7 @@ ${bnSections}`,
   }
   console.log(`  ✓ ${bnCount} BN posts`);
 
-  const total = enCount + bnCount + serviceSlugs.length + 7; // +7 core pages
+  const total = enCount + bnCount + serviceSlugs.length + 8; // +8 core pages
   console.log(`\n✅ Pre-rendering complete: ${total} pages total\n`);
 }
 

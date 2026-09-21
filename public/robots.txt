@@ -11,18 +11,21 @@ Allow: /
 # --- Block admin, API, and utility paths ---
 Disallow: /admin/
 Disallow: /api/
+Disallow: /*?q=*
 
 # ── Googlebot: no crawl rate limit (Googlebot self-manages) ──
 User-agent: Googlebot
 Allow: /
 Disallow: /admin/
 Disallow: /api/
+Disallow: /*?q=*
 
 # ── Bingbot: optimized crawl rate (Bing respects Crawl-delay) ──
 User-agent: Bingbot
 Allow: /
 Disallow: /admin/
 Disallow: /api/
+Disallow: /*?q=*
 Crawl-delay: 2
 
 # ── Canonical Sitemap (www only) ──
