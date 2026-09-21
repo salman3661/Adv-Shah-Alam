@@ -1,4 +1,4 @@
-﻿// src/data/blogPostsBn.js
+// src/data/blogPostsBn.js
 // বাংলা ব্লগ পোস্ট — সকল ১২টি পোস্ট
 
 const PUBLISHED = '2026-03-02';
@@ -6304,22 +6304,13 @@ const postsBn = [
     }
 ];
 
+];
+
 export default postsBn;
 
 /**
  * Returns true if the post's publishedDate is today or in the past (Asia/Dhaka TZ).
  */
 export const isPublishedBn = (post) => {
-    try {
-        const now = new Date(
-            new Date().toLocaleString('en-US', { timeZone: 'Asia/Dhaka' })
-        );
-        const pub = new Date(post.publishedDate + 'T00:00:00');
-        return pub <= now;
-    } catch {
-        return true;
-    }
+    return Boolean(post && !post.isDraft && !post._draft);
 };
-
-
-

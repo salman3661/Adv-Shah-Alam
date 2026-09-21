@@ -9,11 +9,7 @@ const _enModules = import.meta.glob('../content/posts/en/*.json', { eager: true 
 const _bnModules = import.meta.glob('../content/posts/bn/*.json', { eager: true });
 
 function isPublished(post) {
-  try {
-    const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Dhaka' }));
-    const pub = new Date(post.publishedDate + 'T00:00:00');
-    return pub <= now && !post.isDraft;
-  } catch { return true; }
+  return Boolean(post && !post.isDraft && !post._draft);
 }
 
 const latestEn = Object.values(_enModules)

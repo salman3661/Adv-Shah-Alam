@@ -69,12 +69,7 @@ class BlogPostErrorBoundary extends React.Component {
 }
 
 function isPublished(post) {
-    try {
-        if (post.isDraft) return false;
-        if (!post.publishedDate) return true;
-        const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Dhaka' }));
-        return new Date(post.publishedDate + 'T00:00:00') <= now;
-    } catch { return true; }
+    return Boolean(post && !post.isDraft && !post._draft);
 }
 
 /* ─── FAQ Item ─── */

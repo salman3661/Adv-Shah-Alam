@@ -11,11 +11,7 @@ const blogPosts = Object.values(_postModules)
     .filter((p) => p && p.slug && p.title);
 
 function isPublished(post) {
-  try {
-    const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Dhaka' }));
-    const pub = new Date(post.publishedDate + 'T00:00:00');
-    return pub <= now && !post.isDraft;
-  } catch { return true; }
+  return Boolean(post && !post.isDraft && !post._draft);
 }
 
 function stripHtml(html) {

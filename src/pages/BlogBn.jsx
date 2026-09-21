@@ -8,11 +8,7 @@ const _bnModules = import.meta.glob('../content/posts/bn/*.json', { eager: true 
 const postsBn = Object.values(_bnModules).map((m) => m.default ?? m);
 
 function isPublishedBn(post) {
-  try {
-    const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Dhaka' }));
-    const pub = new Date(post.publishedDate + 'T00:00:00');
-    return pub <= now && !post.isDraft;
-  } catch { return true; }
+  return Boolean(post && !post.isDraft && !post._draft);
 }
 
 // Helper to strip HTML tags for clean card snippet display

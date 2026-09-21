@@ -69,7 +69,7 @@ function buildPage(base, { title, description, canonical, body, lang='en' }) {
 
   // Hidden from users, visible to crawlers — no flash, no layout shift
   const prerendered = `\n<div id="prerendered-content" aria-hidden="true" style="position:absolute;width:1px;height:1px;overflow:hidden;visibility:hidden;clip:rect(0,0,0,0);white-space:nowrap">\n${body}\n</div>`;
-  h = h.replace('<div id="root"></div>', `<div id="root">${prerendered}</div>`);
+  h = h.replace(/<div id="root">[\s\S]*?<\/div>/, `<div id="root">${prerendered}</div>`);
   return h;
 }
 
@@ -537,7 +537,8 @@ ${CTA}`;
 }
 
 function blogIndexBody(posts, lang='en') {
-  const recentPosts = posts.slice(0, 30);
+  const sorted = [...posts].sort((a, b) => new Date(b.publishedDate || 0) - new Date(a.publishedDate || 0));
+  const recentPosts = sorted.slice(0, 50);
   const listItems = recentPosts.map(p => {
     const path = lang === 'bn' ? `/bn/blog/${p.slug}` : `/blog/${p.slug}`;
     return `<li style="margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid #eee">
