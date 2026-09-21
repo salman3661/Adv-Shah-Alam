@@ -11,7 +11,7 @@ const CookieConsent = () => {
             const consent = localStorage.getItem('adv_cookie_consent');
             if (!consent) {
                 // Short delay so it doesn't pop aggressively on initial paint
-                const timer = setTimeout(() => setVisible(true), 1500);
+                const timer = setTimeout(() => setVisible(true), 1200);
                 return () => clearTimeout(timer);
             }
         } catch {
@@ -38,31 +38,39 @@ const CookieConsent = () => {
         <aside
             role="region"
             aria-label={isBn ? "কুকি সম্মতি বিজ্ঞপ্তি" : "Cookie consent banner"}
-            className="fixed bottom-3 left-3 right-3 sm:left-auto sm:right-6 sm:max-w-md z-[100] transition-all duration-300 animate-fade-in"
+            className="fixed bottom-20 left-3 right-3 sm:bottom-6 sm:left-6 sm:right-auto sm:max-w-md z-[1200] transition-all duration-300 animate-fade-in"
         >
             <div
-                className="p-4 sm:p-5 rounded-2xl shadow-2xl border backdrop-blur-xl"
+                className="p-4 sm:p-5 rounded-2xl border transition-colors duration-200"
                 style={{
-                    background: 'var(--surface-elevated, rgba(15, 23, 42, 0.95))',
-                    borderColor: 'var(--card-border, rgba(198, 167, 94, 0.25))',
-                    color: 'var(--text, #f8fafc)',
-                    boxShadow: '0 20px 40px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(198, 167, 94, 0.15)'
+                    backgroundColor: 'var(--surface)',
+                    borderColor: 'var(--card-border)',
+                    color: 'var(--text)',
+                    boxShadow: '0 12px 32px -4px rgba(13, 27, 46, 0.16), 0 4px 12px -2px rgba(13, 27, 46, 0.08)'
                 }}
             >
                 <div className="flex items-start gap-3 mb-3">
-                    <div className="p-2 rounded-xl flex-shrink-0" style={{ background: 'rgba(198, 167, 94, 0.15)', color: 'var(--accent, #c6a75e)' }}>
+                    <div
+                        className="p-2 rounded-xl flex-shrink-0"
+                        style={{
+                            background: 'var(--accent-subtle, rgba(27, 54, 93, 0.08))',
+                            color: 'var(--gold, #B8922A)'
+                        }}
+                    >
                         <Cookie size={20} />
                     </div>
                     <div className="flex-1 min-w-0">
-                        <h4 className="text-sm font-bold font-serif flex items-center gap-1.5" style={{ color: 'var(--text, #f8fafc)' }}>
-                            <ShieldCheck size={16} className="text-emerald-400" />
-                            {isBn ? 'কুকি ও গোপনীয়তা নীতি' : 'Cookie & Privacy Settings'}
-                        </h4>
-                        <p className="text-xs leading-relaxed mt-1" style={{ color: 'var(--text-muted, #94a3b8)' }}>
+                        <div className="flex items-center gap-1.5 mb-1">
+                            <ShieldCheck size={16} className="text-emerald-600 dark:text-emerald-400 flex-shrink-0" />
+                            <h4 className="text-sm font-bold font-serif leading-tight" style={{ color: 'var(--text)' }}>
+                                {isBn ? 'কুকি ও গোপনীয়তা নীতি' : 'Cookie & Privacy Settings'}
+                            </h4>
+                        </div>
+                        <p className="text-xs leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
                             {isBn ? (
                                 <>
                                     আমরা আপনার ব্রাউজিং অভিজ্ঞতা উন্নত করতে এবং Google AdSense ও Analytics-এর জন্য কুকি ব্যবহার করি। বিস্তারিত জানতে আমাদের{' '}
-                                    <Link to="/privacy-policy" className="underline font-medium hover:text-amber-300" style={{ color: 'var(--accent, #c6a75e)' }}>
+                                    <Link to="/privacy-policy" className="underline font-semibold hover:opacity-80" style={{ color: 'var(--gold, #B8922A)' }}>
                                         গোপনীয়তা নীতি
                                     </Link>{' '}
                                     দেখুন।
@@ -70,7 +78,7 @@ const CookieConsent = () => {
                             ) : (
                                 <>
                                     We use cookies to enhance your experience, analyze traffic, and serve relevant ads via Google AdSense. Learn more in our{' '}
-                                    <Link to="/privacy-policy" className="underline font-medium hover:text-amber-300" style={{ color: 'var(--accent, #c6a75e)' }}>
+                                    <Link to="/privacy-policy" className="underline font-semibold hover:opacity-80" style={{ color: 'var(--gold, #B8922A)' }}>
                                         Privacy Policy
                                     </Link>.
                                 </>
@@ -80,26 +88,30 @@ const CookieConsent = () => {
                     <button
                         onClick={() => setVisible(false)}
                         aria-label="Close cookie banner"
-                        className="text-gray-400 hover:text-gray-200 transition-colors p-1"
+                        className="p-1 rounded-lg transition-colors hover:bg-black/5 dark:hover:bg-white/10"
+                        style={{ color: 'var(--text-muted)' }}
                     >
                         <X size={16} />
                     </button>
                 </div>
 
-                <div className="flex items-center justify-end gap-2 pt-2 border-t border-slate-700/40">
+                <div
+                    className="flex items-center justify-end gap-2 pt-3 mt-2"
+                    style={{ borderTop: '1px solid var(--divider)' }}
+                >
                     <Link
                         to="/privacy-policy"
-                        className="text-xs px-3 py-1.5 rounded-lg transition-colors hover:bg-white/5 font-medium"
-                        style={{ color: 'var(--text-muted, #94a3b8)' }}
+                        className="text-xs px-3 py-1.5 rounded-lg transition-colors hover:opacity-80 font-medium"
+                        style={{ color: 'var(--text-muted)' }}
                     >
                         {isBn ? 'নীতিমালা পড়ুন' : 'Learn More'}
                     </Link>
                     <button
                         onClick={handleAccept}
-                        className="text-xs px-4 py-1.5 rounded-lg font-semibold transition-transform hover:scale-[1.02] active:scale-[0.98] shadow-md"
+                        className="text-xs px-4 py-2 rounded-xl font-semibold transition-all duration-150 hover:opacity-95 active:scale-95 shadow-sm cursor-pointer"
                         style={{
-                            background: 'linear-gradient(135deg, #c6a75e 0%, #a8873a 100%)',
-                            color: '#0B1120'
+                            background: 'var(--btn-primary-bg, #1B365D)',
+                            color: '#FFFFFF'
                         }}
                     >
                         {isBn ? 'সম্মতি দিচ্ছি' : 'Accept All'}
