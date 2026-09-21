@@ -537,7 +537,11 @@ ${CTA}`;
 }
 
 function blogIndexBody(posts, lang='en') {
-  const sorted = [...posts].sort((a, b) => new Date(b.publishedDate || 0) - new Date(a.publishedDate || 0));
+  const sorted = [...posts].sort((a, b) => {
+    const timeA = new Date(a.publishedAt || a.publishedDate || 0).getTime();
+    const timeB = new Date(b.publishedAt || b.publishedDate || 0).getTime();
+    return timeB - timeA;
+  });
   const recentPosts = sorted.slice(0, 50);
   const listItems = recentPosts.map(p => {
     const path = lang === 'bn' ? `/bn/blog/${p.slug}` : `/blog/${p.slug}`;

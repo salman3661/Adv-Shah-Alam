@@ -248,7 +248,39 @@ async function main() {
     post.slug = `${post.slug}-2026`;
   }
 
-  const targetFile = path.join(BN_POSTS_DIR, `${post.slug}.json`);
+  // Ensure publishedAt timestamp is recorded so it ranks #1 in blog list
+  const now = new Date();
+  post.publishedDate = now.toISOString().split('T')[0];
+  post.publishedAt = now.toISOString();
+  post.lastModified = now.toISOString().split('T')[0];
+
+  // High-converting CTA and WhatsApp Card injection for Section 7 / final section
+  const ctaCard = `
+<div style="margin:28px 0;padding:24px;background:linear-gradient(135deg,#0c0a1e,#1a1435);border:1.5px solid #c6a75e;border-radius:16px;color:#fff;box-shadow:0 10px 30px rgba(0,0,0,0.3)">
+  <h3 style="margin:0 0 12px;color:#f0d98a;font-size:20px;font-weight:700">⚖️ ${post.title} — আইনি পরামর্শের জন্য যোগাযোগ করুন</h3>
+  <p style="margin:0 0 18px;color:#e2e8f0;font-size:15px;line-height:1.6">যেকোনো আইনি জটিলতা, মামলা পরিচালনা বা লিগ্যাল নোটিশ পাঠানোর জন্য সরাসরি বাংলাদেশ সুপ্রিম কোর্টের প্রবীণ আইনজীবীর সাথে কথা বলুন:</p>
+  <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:20px">
+    <a href="https://wa.me/8801712655546?text=${encodeURIComponent('আমি ' + post.title + ' নিয়ে পরামর্শ চাই')}" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:8px;background:#22c55e;color:#fff;font-weight:700;padding:12px 22px;border-radius:10px;text-decoration:none;box-shadow:0 4px 15px rgba(34,197,94,0.4)">
+      💬 WhatsApp-এ মেসেজ দিন
+    </a>
+    <a href="tel:+8801712655546" style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.1);color:#f0d98a;border:1px solid rgba(240,217,138,0.4);font-weight:700;padding:12px 22px;border-radius:10px;text-decoration:none">
+      📞 সরাসরি কল করুন: ০১৭১২-৬৫৫৫৪৬
+    </a>
+  </div>
+  <div style="border-top:1px solid rgba(198,167,94,0.25);padding-top:14px;font-size:13.5px;color:#cbd5e1;line-height:1.7">
+    <div><strong>📍 চেম্বার ১ (উত্তরা):</strong> বাড়ি ৪৬, সড়ক ৬/বি, সেক্টর ১২, উত্তরা পশ্চিম, ঢাকা-১২৩০</div>
+    <div><strong>📍 চেম্বার ২ (কোর্ট হাউস স্ট্রিট):</strong> আইনজীবী সমিতি ভবন (৪র্থ তলা), ৬/৭ কোর্ট হাউস স্ট্রিট, কোতোয়ালি, ঢাকা-১১০০</div>
+  </div>
+</div>`;
+
+  // Sanitize last section and embed CTA card
+  const lastSec = post.sections[post.sections.length - 1];
+  if (lastSec) {
+    lastSec.content = lastSec.content
+      .replace(/০১৭[^\s<]*যোগাযোগ[^\s<]*/g, '')
+      .replace(/সরাসরি ফোন:[^<]+/g, 'সরাসরি ফোন: ০১৭১২-৬৫৫৫৪৬');
+    lastSec.content += ctaCard;
+  }
   fs.writeFileSync(targetFile, JSON.stringify(post, null, 2), 'utf8');
   console.log(`✅ [Cloud Autopilot] Saved new post: ${targetFile}`);
 

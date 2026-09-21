@@ -194,11 +194,15 @@ const BlogBn = () => {
     });
     const isFirstRender = React.useRef(true);
 
-    // Sort all published posts by publishedDate descending by default
+    // Sort all published posts by publishedAt or publishedDate descending
     const allPublished = useMemo(() => {
         return [...postsBn]
             .filter(isPublishedBn)
-            .sort((a, b) => new Date(b.publishedDate || 0) - new Date(a.publishedDate || 0));
+            .sort((a, b) => {
+                const timeA = new Date(a.publishedAt || a.publishedDate || 0).getTime();
+                const timeB = new Date(b.publishedAt || b.publishedDate || 0).getTime();
+                return timeB - timeA;
+            });
     }, []);
 
     // Get 4 most recent posts for top showcase
@@ -275,7 +279,11 @@ const BlogBn = () => {
 
         // Apply sorting
         if (sortBy === 'recent') {
-            posts.sort((a, b) => new Date(b.publishedDate || 0) - new Date(a.publishedDate || 0));
+            posts.sort((a, b) => {
+                const timeA = new Date(a.publishedAt || a.publishedDate || 0).getTime();
+                const timeB = new Date(b.publishedAt || b.publishedDate || 0).getTime();
+                return timeB - timeA;
+            });
         } else if (sortBy === 'popular') {
             posts.sort((a, b) => (b.impressions || 0) - (a.impressions || 0));
         }

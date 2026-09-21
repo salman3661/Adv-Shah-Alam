@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-21T13:57:27.556Z",
+  "updatedAt": "2026-09-21T14:05:48.449Z",
   "propertyId": "520583213",
   "channels": [
     {
@@ -13,9 +13,9 @@
     {
       "channel": "Direct",
       "sourceMedium": "(direct) / (none)",
-      "activeUsers": 453,
-      "sessions": 476,
-      "pageViews": 680,
+      "activeUsers": 454,
+      "sessions": 477,
+      "pageViews": 681,
       "engagementRate": "31.9%"
     },
     {
@@ -23,7 +23,7 @@
       "sourceMedium": "(not set)",
       "activeUsers": 65,
       "sessions": 68,
-      "pageViews": 42,
+      "pageViews": 43,
       "engagementRate": "0.0%"
     },
     {
@@ -194,7 +194,7 @@
       "path": "/",
       "title": "এডভোকেট মোঃ শাহ আলম | আইনজীবী উত্তরা, ঢাকা",
       "activeUsers": 63,
-      "pageViews": 101
+      "pageViews": 102
     },
     {
       "path": "/blog/cyber-crime-helpline-bangladesh-2026",
