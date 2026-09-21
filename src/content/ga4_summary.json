@@ -1,0 +1,628 @@
+{
+  "updatedAt": "2026-09-21T13:22:49.403Z",
+  "propertyId": "520583213",
+  "channels": [
+    {
+      "channel": "Organic Search",
+      "sourceMedium": "google / organic",
+      "activeUsers": 1988,
+      "sessions": 2272,
+      "pageViews": 2929,
+      "engagementRate": "45.9%"
+    },
+    {
+      "channel": "Direct",
+      "sourceMedium": "(direct) / (none)",
+      "activeUsers": 450,
+      "sessions": 473,
+      "pageViews": 676,
+      "engagementRate": "32.1%"
+    },
+    {
+      "channel": "Unassigned",
+      "sourceMedium": "(not set)",
+      "activeUsers": 57,
+      "sessions": 60,
+      "pageViews": 28,
+      "engagementRate": "0.0%"
+    },
+    {
+      "channel": "Cross-network",
+      "sourceMedium": "(data not available)",
+      "activeUsers": 55,
+      "sessions": 55,
+      "pageViews": 65,
+      "engagementRate": "1.8%"
+    },
+    {
+      "channel": "Organic Search",
+      "sourceMedium": "bing / organic",
+      "activeUsers": 41,
+      "sessions": 48,
+      "pageViews": 55,
+      "engagementRate": "52.1%"
+    },
+    {
+      "channel": "AI Assistant",
+      "sourceMedium": "gemini.google.com / ai-assistant",
+      "activeUsers": 18,
+      "sessions": 21,
+      "pageViews": 31,
+      "engagementRate": "57.1%"
+    },
+    {
+      "channel": "Organic Search",
+      "sourceMedium": "yahoo / organic",
+      "activeUsers": 6,
+      "sessions": 8,
+      "pageViews": 7,
+      "engagementRate": "37.5%"
+    },
+    {
+      "channel": "Unassigned",
+      "sourceMedium": "gemini / (not set)",
+      "activeUsers": 6,
+      "sessions": 6,
+      "pageViews": 14,
+      "engagementRate": "50.0%"
+    },
+    {
+      "channel": "AI Assistant",
+      "sourceMedium": "gemini / ai-assistant",
+      "activeUsers": 4,
+      "sessions": 5,
+      "pageViews": 4,
+      "engagementRate": "20.0%"
+    },
+    {
+      "channel": "Unassigned",
+      "sourceMedium": "copilot.com / (not set)",
+      "activeUsers": 4,
+      "sessions": 4,
+      "pageViews": 4,
+      "engagementRate": "0.0%"
+    },
+    {
+      "channel": "AI Assistant",
+      "sourceMedium": "copilot.com / ai-assistant",
+      "activeUsers": 3,
+      "sessions": 3,
+      "pageViews": 3,
+      "engagementRate": "66.7%"
+    },
+    {
+      "channel": "Organic Search",
+      "sourceMedium": "duckduckgo / organic",
+      "activeUsers": 3,
+      "sessions": 3,
+      "pageViews": 4,
+      "engagementRate": "66.7%"
+    },
+    {
+      "channel": "Organic Social",
+      "sourceMedium": "m.facebook.com / referral",
+      "activeUsers": 3,
+      "sessions": 3,
+      "pageViews": 3,
+      "engagementRate": "0.0%"
+    },
+    {
+      "channel": "AI Assistant",
+      "sourceMedium": "perplexity.ai / ai-assistant",
+      "activeUsers": 2,
+      "sessions": 2,
+      "pageViews": 2,
+      "engagementRate": "100.0%"
+    },
+    {
+      "channel": "Referral",
+      "sourceMedium": "search.brave.com / referral",
+      "activeUsers": 2,
+      "sessions": 4,
+      "pageViews": 5,
+      "engagementRate": "50.0%"
+    },
+    {
+      "channel": "Unassigned",
+      "sourceMedium": "gemini / ",
+      "activeUsers": 2,
+      "sessions": 2,
+      "pageViews": 2,
+      "engagementRate": "0.0%"
+    },
+    {
+      "channel": "Organic Search",
+      "sourceMedium": "au.search.yahoo.com / referral",
+      "activeUsers": 1,
+      "sessions": 2,
+      "pageViews": 3,
+      "engagementRate": "100.0%"
+    },
+    {
+      "channel": "Organic Search",
+      "sourceMedium": "ca.search.yahoo.com / referral",
+      "activeUsers": 1,
+      "sessions": 1,
+      "pageViews": 1,
+      "engagementRate": "0.0%"
+    },
+    {
+      "channel": "Organic Social",
+      "sourceMedium": "lm.facebook.com / referral",
+      "activeUsers": 1,
+      "sessions": 1,
+      "pageViews": 1,
+      "engagementRate": "0.0%"
+    },
+    {
+      "channel": "Referral",
+      "sourceMedium": "search-dra.dt.dbankcloud.com / referral",
+      "activeUsers": 1,
+      "sessions": 1,
+      "pageViews": 1,
+      "engagementRate": "0.0%"
+    },
+    {
+      "channel": "Referral",
+      "sourceMedium": "startpage.com / referral",
+      "activeUsers": 1,
+      "sessions": 2,
+      "pageViews": 5,
+      "engagementRate": "50.0%"
+    }
+  ],
+  "topPages": [
+    {
+      "path": "/blog/land-registration-cost-fees-calculator-bangladesh-2026",
+      "title": "জমি রেজিস্ট্রি খরচ ২০২৬ — Land Registration Fee Calculator Bangladesh",
+      "activeUsers": 136,
+      "pageViews": 173
+    },
+    {
+      "path": "/bn/blog",
+      "title": "বাংলা আইনি ব্লগ ও সমাধান নির্দেশিকা | অ্যাডভোকেট মো. শাহ আলম",
+      "activeUsers": 63,
+      "pageViews": 147
+    },
+    {
+      "path": "/blog/bangladesh-cyber-crime-complaint-portal-guide-2026",
+      "title": "Bangladesh Cyber Crime Complaint Portal – Online Guide",
+      "activeUsers": 114,
+      "pageViews": 146
+    },
+    {
+      "path": "/",
+      "title": "এডভোকেট মোঃ শাহ আলম | আইনজীবী উত্তরা, ঢাকা",
+      "activeUsers": 61,
+      "pageViews": 90
+    },
+    {
+      "path": "/blog/cyber-crime-helpline-bangladesh-2026",
+      "title": "Cyber Crime Helpline Bangladesh 2026 — Call 01320-000888 or Report Online",
+      "activeUsers": 60,
+      "pageViews": 89
+    },
+    {
+      "path": "/bn/blog/sampatti-uttoradhikar-ain-2026-bn",
+      "title": "বাবার সম্পত্তি বন্টন আইন বাংলাদেশ | উত্তরাধিকার গাইড",
+      "activeUsers": 65,
+      "pageViews": 79
+    },
+    {
+      "path": "/blog/rs-khatian-online-check-bangladesh-2026",
+      "title": "RS Khatian Online Check Bangladesh 2026 Guide",
+      "activeUsers": 51,
+      "pageViews": 74
+    },
+    {
+      "path": "/blog/bangladesh-land-record-by-name-online-2026",
+      "title": "Bangladesh Land Record Online by Name – Free Search Guide",
+      "activeUsers": 59,
+      "pageViews": 71
+    },
+    {
+      "path": "/blog/nid-correction-legal-process-bangladesh",
+      "title": "NID Correction Bangladesh – Name, DOB & Address Guide",
+      "activeUsers": 43,
+      "pageViews": 59
+    },
+    {
+      "path": "/advocate-md-shah-alam",
+      "title": "Advocate Shah Alam | Lawyer in Bangladesh, Uttara",
+      "activeUsers": 57,
+      "pageViews": 53
+    },
+    {
+      "path": "/blog",
+      "title": "Legal Guides & Articles | Advocate Md. Shah Alam – Supreme Court Lawyer",
+      "activeUsers": 23,
+      "pageViews": 51
+    },
+    {
+      "path": "/blog/land-registration-fee-bangladesh-2026",
+      "title": "Land Registration Fee Bangladesh – Stamp Duty Guide",
+      "activeUsers": 37,
+      "pageViews": 45
+    },
+    {
+      "path": "/bn/blog/biye-notun-ain-2026-kabinnama-sarkari-fee-hisab",
+      "title": "বিয়ে নিয়ে নতুন আইন ২০২৬ ও কাবিননামা সরকারি ফি | নিকাহ রেজিস্ট্রেশন গাইড",
+      "activeUsers": 37,
+      "pageViews": 44
+    },
+    {
+      "path": "/en",
+      "title": "Trusted Lawyer in Bangladesh | Advocate Md. Shah Alam — Uttara, Dhaka",
+      "activeUsers": 36,
+      "pageViews": 41
+    },
+    {
+      "path": "/bn/blog/sole-nama-solenama-deyani-adalat-niyom-2026",
+      "title": "সোলেনামা কি ও আপস নিষ্পত্তির নিয়ম ২০২৬ | সোলে ডিক্রি বাতিলের আইন",
+      "activeUsers": 28,
+      "pageViews": 40
+    },
+    {
+      "path": "/blog/land-survey-map-dag-mouza-bangladesh",
+      "title": "Dag Number, Mouza Map & Land Survey Bangladesh",
+      "activeUsers": 33,
+      "pageViews": 38
+    },
+    {
+      "path": "/blog/land-record-check-online-bangladesh-2026",
+      "title": "Bangladesh Land Record Online Check 2026 — Khatian, Porcha & Mutation at land.gov.bd",
+      "activeUsers": 32,
+      "pageViews": 38
+    },
+    {
+      "path": "/bn/blog/arpon-sampatti-vitti-kharij-release-niyom-2026-bn",
+      "title": "অর্পিত সম্পত্তি অবমুক্তির নিয়ম ও মামলা ২০২৬ | ক ও খ তফসিল জমি অবমুক্তি",
+      "activeUsers": 25,
+      "pageViews": 36
+    },
+    {
+      "path": "/bn/blog/talaknama-lekhari-niyom-fee-prokriya-bangladesh-2026",
+      "title": "তালাকনামা লেখার নিয়ম ও খরচ | কাজী অফিস ও নোটিশ গাইড",
+      "activeUsers": 27,
+      "pageViews": 31
+    },
+    {
+      "path": "/bn/blog/heba-bil-ewaz-dalil-khoroch-2026",
+      "title": "হেবা বিল এওয়াজ দলিল কী ২০২৬ – খরচ, নিয়ম ও বাতিল পদ্ধতি",
+      "activeUsers": 23,
+      "pageViews": 31
+    },
+    {
+      "path": "/blog/court-marriage-procedure-bangladesh",
+      "title": "Court Marriage Bangladesh: Procedure, Cost & Documents",
+      "activeUsers": 21,
+      "pageViews": 31
+    },
+    {
+      "path": "/bn/blog/kabinnama-nikahnama-tolar-niyom-fee-bangladesh-2026",
+      "title": "কাবিননামা তোলার নিয়ম ও সরকারি ফি ২০২৬ | নকল নিকাহনামা সংগ্রহ",
+      "activeUsers": 26,
+      "pageViews": 30
+    },
+    {
+      "path": "/bn/blog/land-registration-fee-calculator-bangladesh-2026",
+      "title": "জমি রেজিস্ট্রি খরচ ক্যালকুলেটর ২০২৬ | সরকারি ফি ও স্ট্যাম্প শুল্ক",
+      "activeUsers": 26,
+      "pageViews": 28
+    },
+    {
+      "path": "/blog/how-to-report-cyber-crime-bangladesh-2026",
+      "title": "How to Report Cyber Crime Bangladesh",
+      "activeUsers": 22,
+      "pageViews": 28
+    },
+    {
+      "path": "/bn/blog/babar-sampatti-banton-ain-bangladesh-2026",
+      "title": "বাবার সম্পত্তি বণ্টন আইন ও ভাই-বোনের অধিকার ২০২৬",
+      "activeUsers": 22,
+      "pageViews": 26
+    },
+    {
+      "path": "/bn/blog/agam-jamin-haikort-khoroch-2026",
+      "title": "হাইকোর্ট আগাম জামিন খরচ ২০২৬ | কোর্ট ফি, আইনজীবী ফি ও সম্পূর্ণ প্রক্রিয়া",
+      "activeUsers": 20,
+      "pageViews": 25
+    },
+    {
+      "path": "/blog/eporcha-land-record-bangladesh-guide",
+      "title": "eporcha Bangladesh – Check Land Records, Khatian & Porcha Online at eporcha.gov.bd",
+      "activeUsers": 24,
+      "pageViews": 24
+    },
+    {
+      "path": "/bn/blog/bangladesh-uttaradhikar-ain-dhorm-2026",
+      "title": "উত্তরাধিকার আইন বাংলাদেশ ২০২৬ – ধর্ম অনুযায়ী সম্পত্তি বণ্টন",
+      "activeUsers": 23,
+      "pageViews": 24
+    },
+    {
+      "path": "/blog/cid-cyber-crime-unit-bangladesh-2026",
+      "title": "CID Cyber Crime Unit Bangladesh – Contact & Complaint",
+      "activeUsers": 17,
+      "pageViews": 23
+    },
+    {
+      "path": "/bn/blog/cyber-crime-helpline-online-complaint-bangladesh",
+      "title": "সাইবার ক্রাইম হেল্পলাইন ও অনলাইন অভিযোগের নিয়ম",
+      "activeUsers": 17,
+      "pageViews": 23
+    },
+    {
+      "path": "/bn/blog/court-marriage-kagojpatra-complete-guide-2026",
+      "title": "কোর্ট ম্যারেজের কাগজপত্র ২০২৬ – কী লাগে, খরচ কত, কীভাবে করবেন",
+      "activeUsers": 16,
+      "pageViews": 23
+    },
+    {
+      "path": "/bn/blog/jomi-kharij-namjari-khoroch-niyom-2026-bn",
+      "title": "জমি খারিজ করতে কত টাকা লাগে ২০২৬ | ই-নামজারি সরকারি ফি ও নিয়ম",
+      "activeUsers": 21,
+      "pageViews": 22
+    },
+    {
+      "path": "/bn/blog/jomi-registry-khoroch-sarkaree-fee-bd",
+      "title": "জমি রেজিস্ট্রি খরচ ও সরকারি ফি | আপডেট তালিকা",
+      "activeUsers": 20,
+      "pageViews": 22
+    },
+    {
+      "path": "/blog/property-inheritance-distribution-bangladesh-2026",
+      "title": "বাবার সম্পত্তি ভাগের নিয়ম ২০২৬ — Muslim & Hindu Inheritance Law Bangladesh",
+      "activeUsers": 19,
+      "pageViews": 22
+    },
+    {
+      "path": "/bn/blog/mayer-sampatti-theke-chele-meyer-odhikar-2026",
+      "title": "মায়ের সম্পত্তি ভাগের নিয়ম ২০২৬ | ছেলেমেয়ে কতটুকু পাবে?",
+      "activeUsers": 18,
+      "pageViews": 21
+    },
+    {
+      "path": "/blog/cyber-crime-unit-bangladesh-complaint-2026",
+      "title": "Cyber Crime Unit Bangladesh – File CID Complaint Guide",
+      "activeUsers": 17,
+      "pageViews": 21
+    },
+    {
+      "path": "/bn/blog/mayer-sampatti-vibhajan-ain-bangladesh-2026",
+      "title": "মায়ের সম্পত্তি ভাগের নিয়ম | সন্তান ও স্বামীর আইনি অংশ",
+      "activeUsers": 16,
+      "pageViews": 21
+    },
+    {
+      "path": "/blog/police-verification-certificate-bangladesh",
+      "title": "Police Verification Certificate Bangladesh – Full Guide",
+      "activeUsers": 17,
+      "pageViews": 20
+    },
+    {
+      "path": "/bn/blog/batwara-mamla-din-khoroch-prokriya-2026",
+      "title": "বাটোয়ারা মামলার খরচ ও সময় ২০২৬ | জমি ভাগের মামলার সম্পূর্ণ গাইড",
+      "activeUsers": 17,
+      "pageViews": 20
+    },
+    {
+      "path": "/bn/blog/batwara-mamla-court-fee-2026",
+      "title": "বাটোয়ারা মামলার কোর্ট ফি কত ২০২৬ – সম্পূর্ণ হিসাব ও সময়কাল",
+      "activeUsers": 16,
+      "pageViews": 18
+    },
+    {
+      "path": "/bn/blog/paurosabha-elakay-jomi-registry-khoroch-hisab-2026",
+      "title": "পৌরসভার জমি রেজিস্ট্রি খরচ ২০২৬ | সাব-রেজিস্ট্রি ফি ও ক্যালকুলেটর",
+      "activeUsers": 16,
+      "pageViews": 18
+    },
+    {
+      "path": "/bn/blog/cyber-crime-complaint-online-police-helpline-2026",
+      "title": "সাইবার ক্রাইম অভিযোগ করার নিয়ম অনলাইন ও হেল্পলাইন ২০২৬ | সাইবার ট্রাইব্যুনাল",
+      "activeUsers": 15,
+      "pageViews": 18
+    },
+    {
+      "path": "/bn/blog/nabaloker-jomi-bikroy-ferot-guardian-ain-2026",
+      "title": "নাবালকের সম্পত্তি বিক্রি ও ফেরত পাওয়ার নিয়ম ২০২৬ | গার্ডিয়ানস অ্যাক্ট",
+      "activeUsers": 15,
+      "pageViews": 18
+    },
+    {
+      "path": "/bn/blog/khas-jomi-chenar-upay-bondobasto-niyom-bangladesh",
+      "title": "খাস জমি চেনার উপায় ও বন্দোবস্ত নেওয়ার নিয়ম |",
+      "activeUsers": 16,
+      "pageViews": 17
+    },
+    {
+      "path": "/bn/blog/mayer-sampatti-vibhajan-ain-shathik-niyom",
+      "title": "মায়ের সম্পত্তি ভাগের নিয়ম ও উত্তরাধিকার আইন",
+      "activeUsers": 16,
+      "pageViews": 17
+    },
+    {
+      "path": "/bn/blog/nabalok-sampatti-bikroy-ain-2026",
+      "title": "নাবালকের সম্পত্তি বিক্রির আইন ২০২৬ – অনুমতি ছাড়া বিক্রি করলে কী হয়",
+      "activeUsers": 15,
+      "pageViews": 17
+    },
+    {
+      "path": "/bn/blog/nabalok-sampatti-bikroy-court-permission-bangladesh",
+      "title": "নাবালকের জমি বিক্রির নিয়ম ও কোর্ট পারমিশন |",
+      "activeUsers": 15,
+      "pageViews": 17
+    },
+    {
+      "path": "/bn/blog/stree-korthrik-swamike-divorce-talak-tawfiz-niyom-2026",
+      "title": "স্ত্রী স্বামীকে ডিভোর্স দেওয়ার নিয়ম ২০২৬ | তালাক-ই-তৌফিজ ও দেনমোহর আইন",
+      "activeUsers": 15,
+      "pageViews": 17
+    },
+    {
+      "path": "/bn/blog/cyber-crime-abiyog-korar-poripurno-niyom-2026",
+      "title": "সাইবার ক্রাইম অভিযোগ করার নিয়ম ২০২৬ | অনলাইনে কীভাবে রিপোর্ট করবেন?",
+      "activeUsers": 10,
+      "pageViews": 17
+    },
+    {
+      "path": "/bn/blog/stree-korthrik-talak-dewar-niyom-bangladesh",
+      "title": "স্ত্রী কর্তৃক স্বামীকে তালাক দেওয়ার নিয়ম ও পদ্ধতি",
+      "activeUsers": 14,
+      "pageViews": 16
+    }
+  ],
+  "locations": [
+    {
+      "country": "Bangladesh",
+      "city": "Dhaka",
+      "activeUsers": 852
+    },
+    {
+      "country": "Bangladesh",
+      "city": "(not set)",
+      "activeUsers": 346
+    },
+    {
+      "country": "Bangladesh",
+      "city": "Chattogram",
+      "activeUsers": 163
+    },
+    {
+      "country": "Bangladesh",
+      "city": "Khulna",
+      "activeUsers": 104
+    },
+    {
+      "country": "Bangladesh",
+      "city": "Rajshahi",
+      "activeUsers": 68
+    },
+    {
+      "country": "Bangladesh",
+      "city": "Sylhet",
+      "activeUsers": 55
+    },
+    {
+      "country": "Singapore",
+      "city": "Singapore",
+      "activeUsers": 54
+    },
+    {
+      "country": "Bangladesh",
+      "city": "Cumilla",
+      "activeUsers": 33
+    },
+    {
+      "country": "China",
+      "city": "(not set)",
+      "activeUsers": 30
+    },
+    {
+      "country": "Bangladesh",
+      "city": "Mymensingh",
+      "activeUsers": 27
+    },
+    {
+      "country": "Saudi Arabia",
+      "city": "Riyadh",
+      "activeUsers": 23
+    },
+    {
+      "country": "Malaysia",
+      "city": "Kuala Lumpur",
+      "activeUsers": 21
+    },
+    {
+      "country": "United States",
+      "city": "(not set)",
+      "activeUsers": 20
+    },
+    {
+      "country": "Bangladesh",
+      "city": "Gazipur",
+      "activeUsers": 19
+    },
+    {
+      "country": "Bangladesh",
+      "city": "Narayanganj",
+      "activeUsers": 19
+    },
+    {
+      "country": "(not set)",
+      "city": "(not set)",
+      "activeUsers": 18
+    },
+    {
+      "country": "Bangladesh",
+      "city": "Savar",
+      "activeUsers": 18
+    },
+    {
+      "country": "Bangladesh",
+      "city": "Bogura",
+      "activeUsers": 16
+    },
+    {
+      "country": "India",
+      "city": "Kolkata",
+      "activeUsers": 16
+    },
+    {
+      "country": "United Kingdom",
+      "city": "London",
+      "activeUsers": 16
+    },
+    {
+      "country": "Bangladesh",
+      "city": "",
+      "activeUsers": 15
+    },
+    {
+      "country": "Saudi Arabia",
+      "city": "Jeddah",
+      "activeUsers": 15
+    },
+    {
+      "country": "Bangladesh",
+      "city": "Jashore",
+      "activeUsers": 14
+    },
+    {
+      "country": "Canada",
+      "city": "Toronto",
+      "activeUsers": 13
+    },
+    {
+      "country": "United States",
+      "city": "Des Moines",
+      "activeUsers": 13
+    },
+    {
+      "country": "Bangladesh",
+      "city": "Dinajpur",
+      "activeUsers": 12
+    },
+    {
+      "country": "Bangladesh",
+      "city": "Kushtia",
+      "activeUsers": 12
+    },
+    {
+      "country": "Bangladesh",
+      "city": "Chapai Nawabganj",
+      "activeUsers": 11
+    },
+    {
+      "country": "Bangladesh",
+      "city": "Tongi",
+      "activeUsers": 11
+    },
+    {
+      "country": "Singapore",
+      "city": "(not set)",
+      "activeUsers": 11
+    }
+  ]
+}
