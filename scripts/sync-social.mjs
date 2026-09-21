@@ -50,14 +50,17 @@ const allPosts = [...bnPosts, ...enPosts].sort((a, b) => {
     return (b._mtime || 0) - (a._mtime || 0);
 });
 
-// Check if specific slug passed via argument: node scripts/sync-social.mjs --slug <slug>
+// Check if specific slug or limit passed via argument: node scripts/sync-social.mjs --slug <slug> --limit <n>
 const args = process.argv.slice(2);
 const slugArgIdx = args.indexOf('--slug');
 const targetSlug = slugArgIdx !== -1 ? args[slugArgIdx + 1] : null;
 
+const limitArgIdx = args.indexOf('--limit');
+const limit = limitArgIdx !== -1 ? parseInt(args[limitArgIdx + 1], 10) : 12;
+
 const toSync = targetSlug 
     ? allPosts.filter(p => p.slug === targetSlug)
-    : allPosts.filter(p => !syncedSlugs.has(p.slug)).slice(0, 10);
+    : allPosts.filter(p => !syncedSlugs.has(p.slug)).slice(0, limit);
 
 console.log(`[Social Sync] Found ${toSync.length} post(s) to send to Make.com Webhook...`);
 
