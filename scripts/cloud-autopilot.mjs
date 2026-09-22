@@ -33,49 +33,103 @@ if (!apiKey) {
   process.exit(1);
 }
 
-// Candidate Gemini models in priority order
+// Candidate Gemini models in priority order (gemini-3.8-flash is primary)
 const CANDIDATE_MODELS = [
   'gemini-3.8-flash',
   'gemini-3.7-flash',
   'gemini-3.6-flash',
+  'gemini-3.5-flash',
   'gemini-3.5-flash-lite',
   'gemini-3.1-flash-lite',
   'gemini-3-flash-preview',
   'gemini-3.1-pro-preview'
 ];
 
+function extractJson(str) {
+  if (!str) throw new Error('Empty response string');
+  let trimmed = str.trim();
+  trimmed = trimmed.replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/i, '').trim();
+
+  const firstBrace = trimmed.indexOf('{');
+  const firstBracket = trimmed.indexOf('[');
+  let startIdx = 0;
+  if (firstBrace !== -1 && (firstBracket === -1 || firstBrace < firstBracket)) {
+    startIdx = firstBrace;
+  } else if (firstBracket !== -1) {
+    startIdx = firstBracket;
+  }
+
+  const lastBrace = trimmed.lastIndexOf('}');
+  const lastBracket = trimmed.lastIndexOf(']');
+  let endIdx = trimmed.length;
+  if (lastBrace !== -1 && (lastBracket === -1 || lastBrace > lastBracket)) {
+    endIdx = lastBrace + 1;
+  } else if (lastBracket !== -1) {
+    endIdx = lastBracket + 1;
+  }
+
+  const candidate = trimmed.slice(startIdx, endIdx);
+  try {
+    return JSON.parse(candidate);
+  } catch (err) {
+    const sanitized = candidate
+      .replace(/[\u0000-\u001F]+/g, (m) => (m === '\n' || m === '\r' || m === '\t' ? m : ''));
+    return JSON.parse(sanitized);
+  }
+}
+
 async function callGemini(prompt, temperature = 0.3) {
   let lastError = null;
 
   for (const model of CANDIDATE_MODELS) {
-    try {
-      console.log(`[Cloud Autopilot] Trying model: ${model}...`);
-      const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          contents: [{ parts: [{ text: prompt }] }],
-          generationConfig: {
-            temperature,
-            responseMimeType: 'application/json'
-          }
-        })
-      });
+    // Retry up to 2 times per model for temporary 503/high-demand spikes
+    for (let attempt = 1; attempt <= 2; attempt++) {
+      try {
+        console.log(`[Cloud Autopilot] Trying model: ${model} (attempt ${attempt}/2)...`);
+        const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            contents: [{ parts: [{ text: prompt }] }],
+            generationConfig: {
+              temperature,
+              responseMimeType: 'application/json',
+              maxOutputTokens: 8192
+            }
+          }),
+          signal: AbortSignal.timeout(25000)
+        });
 
-      const json = await res.json();
-      if (json.candidates && json.candidates[0]?.content?.parts[0]?.text) {
-        console.log(`✅ [Cloud Autopilot] Successfully generated content using ${model}`);
-        const rawText = json.candidates[0].content.parts[0].text.trim();
-        const cleaned = rawText.replace(/^```json/i, '').replace(/```$/i, '').trim();
-        return JSON.parse(cleaned);
-      } else {
-        const errMsg = json.error?.message?.slice(0, 100) || JSON.stringify(json).slice(0, 100);
-        console.warn(`⚠️ [Cloud Autopilot] ${model} unavailable:`, errMsg);
-        lastError = new Error(errMsg);
+        if (res.status === 503) {
+          console.warn(`⚠️ [Cloud Autopilot] ${model} hit 503 (high demand). Retrying in 2s (attempt ${attempt}/2)...`);
+          await new Promise(r => setTimeout(r, 2000));
+          continue;
+        }
+
+        const json = await res.json();
+        if (json.candidates && json.candidates[0]?.content?.parts[0]?.text) {
+          console.log(`✅ [Cloud Autopilot] Successfully generated content using ${model}`);
+          const rawText = json.candidates[0].content.parts[0].text;
+          const parsed = extractJson(rawText);
+          parsed._usedModel = model;
+          return parsed;
+        } else {
+          const errMsg = json.error?.message?.slice(0, 120) || JSON.stringify(json).slice(0, 120);
+          console.warn(`⚠️ [Cloud Autopilot] ${model} response issue:`, errMsg);
+          lastError = new Error(errMsg);
+          if (attempt < 2 && (errMsg.includes('demand') || errMsg.includes('rate') || errMsg.includes('spikes') || errMsg.includes('503'))) {
+            await new Promise(r => setTimeout(r, 2000));
+            continue;
+          }
+          break; // move to next candidate model
+        }
+      } catch (err) {
+        console.warn(`⚠️ [Cloud Autopilot] Error with ${model} (attempt ${attempt}/2):`, err.message);
+        lastError = err;
+        if (attempt < 2) {
+          await new Promise(r => setTimeout(r, 2000));
+        }
       }
-    } catch (err) {
-      console.warn(`⚠️ [Cloud Autopilot] Error with ${model}:`, err.message);
-      lastError = err;
     }
   }
 
@@ -405,7 +459,7 @@ REQUIREMENTS:
 5. Quick Answer: 3 to 4 actionable summary bullet points.
 6. Sections: 6 to 8 structured sections, each with a clear 'h2' and rich HTML content (using <p>, <ul>, <li>, <ol>, <strong>).
 7. FAQs: 4 practical frequently asked questions with direct answers.
-8. Output Format: Return ONLY raw, valid JSON (no markdown triple backticks around the json, no preamble).
+8. CRITICAL JSON ESCAPING: Return ONLY raw, valid JSON. Ensure all quotes inside Bengali text or HTML attributes are safe: use single quotes (') for HTML attributes like <a href='...'> or Bengali quotes (” বা “). Never use unescaped double quotes inside strings.
 
 JSON SCHEMA:
 {
@@ -444,7 +498,10 @@ JSON SCHEMA:
 
 // ── 6. Main Autopilot Execution Pipeline ──────────────────────────────────────
 async function main() {
-  console.log('🚀 [Cloud Autopilot] Starting automated legal publisher...');
+  const countArgIdx = process.argv.indexOf('--count');
+  const totalPostsToGenerate = countArgIdx !== -1 && process.argv[countArgIdx + 1] ? parseInt(process.argv[countArgIdx + 1], 10) : 1;
+
+  console.log(`🚀 [Cloud Autopilot] Starting automated legal publisher (Target posts: ${totalPostsToGenerate})...`);
 
   // Step A: Load existing slugs to guarantee zero duplication
   if (!fs.existsSync(BN_POSTS_DIR)) {
@@ -470,39 +527,49 @@ async function main() {
     fetchGA4Pages(auth)
   ]);
 
-  // Step C: Dynamically extract the highest-demand legal topic
-  const selectedTopic = await extractDynamicTopic({ gscQueries, ga4Pages, existingSlugs });
-  console.log(`📌 [Cloud Autopilot] Final Selected Topic: "${selectedTopic.topic}" [${selectedTopic.category}] (Slug: ${selectedTopic.slug})`);
+  const newlyGeneratedPosts = [];
 
-  // Step D: Generate Full Article via Gemini
-  const post = await generateArticle(selectedTopic);
+  for (let postIndex = 1; postIndex <= totalPostsToGenerate; postIndex++) {
+    console.log(`\n────────────────────────────────────────────────────────────`);
+    console.log(`📝 [Cloud Autopilot] Generating Post ${postIndex} of ${totalPostsToGenerate}...`);
+    console.log(`────────────────────────────────────────────────────────────`);
 
-  if (!post.slug || !post.title || !post.sections || post.sections.length === 0) {
-    throw new Error('Generated post missing required fields (slug, title, sections)');
-  }
+    // Step C: Dynamically extract the highest-demand legal topic
+    const selectedTopic = await extractDynamicTopic({ gscQueries, ga4Pages, existingSlugs });
+    console.log(`📌 [Cloud Autopilot] Selected Topic (${postIndex}/${totalPostsToGenerate}): "${selectedTopic.topic}" [${selectedTopic.category}] (Slug: ${selectedTopic.slug})`);
 
-  // Guarantee slug ends with -2026
-  if (!post.slug.endsWith('2026')) {
-    post.slug = `${post.slug}-2026`;
-  }
+    // Step D: Generate Full Article via Gemini (Primary: gemini-3.8-flash)
+    const post = await generateArticle(selectedTopic);
 
-  // Safeguard against duplicate slug
-  let finalSlug = post.slug;
-  let targetFile = path.join(BN_POSTS_DIR, `${finalSlug}.json`);
-  if (existingSlugs.has(finalSlug) || fs.existsSync(targetFile)) {
-    finalSlug = `${finalSlug.replace(/-2026$/, '')}-${Date.now().toString().slice(-4)}-2026`;
-    post.slug = finalSlug;
-    targetFile = path.join(BN_POSTS_DIR, `${finalSlug}.json`);
-  }
+    if (!post.slug || !post.title || !post.sections || post.sections.length === 0) {
+      throw new Error(`Generated post ${postIndex} missing required fields (slug, title, sections)`);
+    }
 
-  // Record published timestamps so it ranks #1 at the top of the blog page
-  const now = new Date();
-  post.publishedDate = now.toISOString().split('T')[0];
-  post.publishedAt = now.toISOString();
-  post.lastModified = now.toISOString().split('T')[0];
+    // Guarantee slug ends with -2026
+    if (!post.slug.endsWith('2026')) {
+      post.slug = `${post.slug}-2026`;
+    }
 
-  // High-converting CTA and WhatsApp Consultation Card injection for Section 7 / final section
-  const ctaCard = `
+    // Safeguard against duplicate slug
+    let finalSlug = post.slug;
+    let targetFile = path.join(BN_POSTS_DIR, `${finalSlug}.json`);
+    if (existingSlugs.has(finalSlug) || fs.existsSync(targetFile)) {
+      finalSlug = `${finalSlug.replace(/-2026$/, '')}-${Date.now().toString().slice(-4)}-2026`;
+      post.slug = finalSlug;
+      targetFile = path.join(BN_POSTS_DIR, `${finalSlug}.json`);
+    }
+
+    // Add finalSlug to existingSlugs immediately so next loop iteration knows about it
+    existingSlugs.add(finalSlug);
+
+    // Record published timestamps so it ranks #1 at the top of the blog page
+    const now = new Date(Date.now() + (postIndex * 1000));
+    post.publishedDate = now.toISOString().split('T')[0];
+    post.publishedAt = now.toISOString();
+    post.lastModified = now.toISOString().split('T')[0];
+
+    // High-converting CTA and WhatsApp Consultation Card injection for Section 7 / final section
+    const ctaCard = `
 <div style="margin:28px 0;padding:24px;background:linear-gradient(135deg,#0c0a1e,#1a1435);border:1.5px solid #c6a75e;border-radius:16px;color:#fff;box-shadow:0 10px 30px rgba(0,0,0,0.3)">
   <h3 style="margin:0 0 12px;color:#f0d98a;font-size:20px;font-weight:700">⚖️ ${post.title} — আইনি পরামর্শের জন্য যোগাযোগ করুন</h3>
   <p style="margin:0 0 18px;color:#e2e8f0;font-size:15px;line-height:1.6">যেকোনো আইনি জটিলতা, মামলা পরিচালনা বা লিগ্যাল নোটিশ পাঠানোর জন্য সরাসরি বাংলাদেশ সুপ্রিম কোর্টের প্রবীণ আইনজীবীর সাথে কথা বলুন:</p>
@@ -520,18 +587,31 @@ async function main() {
   </div>
 </div>`;
 
-  // Sanitize last section and embed CTA card
-  const lastSec = post.sections[post.sections.length - 1];
-  if (lastSec) {
-    lastSec.content = lastSec.content
-      .replace(/০১৭[^\s<]*যোগাযোগ[^\s<]*/g, '')
-      .replace(/সরাসরি ফোন:[^<]+/g, 'সরাসরি ফোন: ০১৭১২-৬৫৫৫৪৬');
-    lastSec.content += ctaCard;
+    // Sanitize last section and embed CTA card
+    const lastSec = post.sections[post.sections.length - 1];
+    if (lastSec) {
+      lastSec.content = lastSec.content
+        .replace(/০১৭[^\s<]*যোগাযোগ[^\s<]*/g, '')
+        .replace(/সরাসরি ফোন:[^<]+/g, 'সরাসরি ফোন: ০১৭১২-৬৫৫৫৪৬');
+      lastSec.content += ctaCard;
+    }
+
+    // Step E: Save new post JSON cleanly
+    fs.writeFileSync(targetFile, JSON.stringify(post, null, 2), 'utf8');
+    console.log(`✅ [Cloud Autopilot] Saved post ${postIndex}: ${targetFile}`);
+
+    // Step G: Dispatch post to Make.com Webhook (LinkedIn + Google Business Profile)
+    console.log(`📡 [Cloud Autopilot] Dispatching post ${postIndex} to Make.com Webhook...`);
+    try {
+      execSync(`node scripts/sync-social.mjs --slug ${post.slug}`, { stdio: 'inherit' });
+    } catch (e) {
+      console.warn('  ⚠️ Social sync warning:', e.message);
+    }
+
+    newlyGeneratedPosts.push(post);
   }
 
-  // Step E: Save new post JSON cleanly
-  fs.writeFileSync(targetFile, JSON.stringify(post, null, 2), 'utf8');
-  console.log(`✅ [Cloud Autopilot] Saved new post: ${targetFile}`);
+  console.log(`\n🎉 [Cloud Autopilot] All ${newlyGeneratedPosts.length} posts generated successfully!`);
 
   // Step F: Re-generate sitemap, RSS, build, and pre-render
   console.log('\n🔄 [Cloud Autopilot] Re-generating sitemap and RSS...');
@@ -541,20 +621,14 @@ async function main() {
   console.log('\n🚀 [Cloud Autopilot] Building and pre-rendering static HTML...');
   execSync('npm run build', { stdio: 'inherit' });
 
-  // Step G: Dispatch post to Make.com Webhook (LinkedIn + Google Business Profile)
-  console.log('\n📡 [Cloud Autopilot] Dispathing new post to Make.com Webhook (LinkedIn + GBM)...');
-  try {
-    execSync(`node scripts/sync-social.mjs --slug ${post.slug}`, { stdio: 'inherit' });
-  } catch (e) {
-    console.warn('  ⚠️ Social sync warning:', e.message);
-  }
-
-  // Step H: Submit new post to Bing IndexNow
-  console.log('\n🔔 [Cloud Autopilot] Submitting new post to Bing IndexNow...');
-  try {
-    execSync(`node scripts/indexnow-submit.mjs /bn/blog/${post.slug}`, { stdio: 'inherit' });
-  } catch (e) {
-    console.warn('  ⚠️ IndexNow warning:', e.message);
+  // Step H: Submit all new posts to Bing IndexNow
+  console.log('\n🔔 [Cloud Autopilot] Submitting new posts to Bing IndexNow...');
+  for (const p of newlyGeneratedPosts) {
+    try {
+      execSync(`node scripts/indexnow-submit.mjs /bn/blog/${p.slug}`, { stdio: 'inherit' });
+    } catch (e) {
+      console.warn(`  ⚠️ IndexNow warning for ${p.slug}:`, e.message);
+    }
   }
 
   // Step I: Automatically commit & push to GitHub if running inside GitHub Actions
@@ -563,7 +637,7 @@ async function main() {
     execSync('git config user.name "Advocate Shah Alam Autopilot"', { stdio: 'inherit' });
     execSync('git config user.email "bot@advmdshahalam.me"', { stdio: 'inherit' });
     execSync('git add src/content/ public/ scripts/.synced_social_posts.json', { stdio: 'inherit' });
-    execSync(`git commit -m "feat(autopilot): publish new legal guide '${post.title.slice(0, 50)}'"`, { stdio: 'inherit' });
+    execSync(`git commit -m "feat(autopilot): publish ${newlyGeneratedPosts.length} legal guides [${newlyGeneratedPosts.map(p => p.slug).join(', ')}]"`, { stdio: 'inherit' });
     execSync('git push origin main', { stdio: 'inherit' });
     console.log('🎉 [Cloud Autopilot] Successfully committed & pushed to GitHub main branch!');
   } else {
