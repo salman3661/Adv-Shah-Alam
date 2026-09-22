@@ -523,6 +523,68 @@ const BlogPostBnInner = () => {
         mainEntity: post.faqs.map(faq => ({ '@type': 'Question', name: faq.question || faq.q, acceptedAnswer: { '@type': 'Answer', text: faq.answer || faq.a } })),
     } : null;
 
+    // LegalService schema — helps Google show lawyer contact info in rich results
+    const legalServiceSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'LegalService',
+        name: 'অ্যাডভোকেট মো. শাহ আলম — আইন চেম্বার',
+        alternateName: 'Advocate Md. Shah Alam Law Chambers',
+        description: 'বাংলাদেশ সুপ্রীম কোর্টের অভিজ্ঞ আইনজীবী। ফৌজদারি, জামিন, বিবাহবিচ্ছেদ, ভূমি বিরোধ ও সাইবার আইনে বিশেষজ্ঞ। উত্তরা, ঢাকা।',
+        url: 'https://www.advmdshahalam.me/',
+        telephone: '+8801712655546',
+        priceRange: '$$',
+        areaServed: { '@type': 'Country', name: 'Bangladesh' },
+        address: {
+            '@type': 'PostalAddress',
+            streetAddress: 'উত্তরা, ঢাকা',
+            addressLocality: 'Dhaka',
+            addressCountry: 'BD',
+        },
+        contactPoint: {
+            '@type': 'ContactPoint',
+            contactType: 'customer service',
+            telephone: '+8801955802007',
+            availableLanguage: ['Bengali', 'English'],
+        },
+        sameAs: [
+            'https://www.facebook.com/advmd.shahalamfb',
+            'https://www.linkedin.com/in/advmdshahalam/',
+        ],
+        hasOfferCatalog: {
+            '@type': 'OfferCatalog',
+            name: 'আইনি সেবাসমূহ',
+            itemListElement: [
+                { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'ফৌজদারি মামলা ও জামিন' } },
+                { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'বিবাহবিচ্ছেদ ও পারিবারিক আইন' } },
+                { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'ভূমি বিরোধ ও সম্পত্তি আইন' } },
+                { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'সাইবার অপরাধ ও ডিজিটাল নিরাপত্তা আইন' } },
+                { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'হাইকোর্ট রিট পিটিশন' } },
+            ],
+        },
+    };
+
+    // HowTo schema — generated from sections if they contain numbered steps
+    const howToSchema = (() => {
+        if (!post.sections || post.sections.length < 3) return null;
+        const stepSections = post.sections.filter(s =>
+            s.h2 && (s.h2.match(/^\d+\./) || s.h2.match(/^ধাপ/) || s.h2.match(/^পদক্ষেপ/))
+        );
+        if (stepSections.length < 2) return null;
+        return {
+            '@context': 'https://schema.org',
+            '@type': 'HowTo',
+            name: post.title,
+            description: post.metaDescription,
+            inLanguage: 'bn',
+            step: stepSections.map((s, i) => ({
+                '@type': 'HowToStep',
+                position: i + 1,
+                name: s.h2.replace(/^\d+\.\s*/, '').replace(/^ধাপ\s*\d+[:।]\s*/, '').trim(),
+                text: typeof s.content === 'string' ? s.content.substring(0, 300) : '',
+            })),
+        };
+    })();
+
     return (
         <>
             <Helmet>
@@ -553,7 +615,9 @@ const BlogPostBnInner = () => {
                 <meta property="article:tag" content={(Array.isArray(post.keywords) ? post.keywords.slice(0, 5) : []).join(', ')} />
                 <script type="application/ld+json">{JSON.stringify(blogPostingSchema)}</script>
                 <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
+                <script type="application/ld+json">{JSON.stringify(legalServiceSchema)}</script>
                 {faqSchema && <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>}
+                {howToSchema && <script type="application/ld+json">{JSON.stringify(howToSchema)}</script>}
             </Helmet>
 
             {/* ════ HERO ════ */}
@@ -798,6 +862,60 @@ const BlogPostBnInner = () => {
                                         />
                                     </section>
                                 ))}
+
+                                {/* ══ Mid-Article WhatsApp CTA (Phase 4) ══ */}
+                                <div style={{
+                                    margin: '2.5rem 0',
+                                    padding: '1.5rem 1.75rem',
+                                    borderRadius: '1.125rem',
+                                    background: 'linear-gradient(135deg, rgba(34,197,94,0.07) 0%, rgba(198,167,94,0.07) 100%)',
+                                    border: '1px solid rgba(34,197,94,0.22)',
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    gap: '1rem',
+                                }}>
+                                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.875rem' }}>
+                                        <span style={{ fontSize: '1.75rem', flexShrink: 0, marginTop: '2px' }}>⚖️</span>
+                                        <div style={{ flex: 1 }}>
+                                            <p style={{ margin: 0, fontWeight: 800, fontSize: '1.0625rem', color: 'var(--text)', fontFamily: "'SolaimanLipi','Noto Sans Bengali',sans-serif", lineHeight: 1.5, marginBottom: '0.375rem' }}>
+                                                এই বিষয়ে আপনার নিজের পরিস্থিতি কি আলাদা?
+                                            </p>
+                                            <p style={{ margin: 0, fontSize: '0.875rem', color: 'var(--text-secondary)', fontFamily: "'SolaimanLipi','Noto Sans Bengali',sans-serif", lineHeight: 1.65 }}>
+                                                প্রতিটি মামলার তথ্য ও পরিস্থিতি আলাদা। <strong style={{ color: 'var(--text)' }}>অ্যাডভোকেট মো. শাহ আলম</strong>-এর সাথে সরাসরি কথা বলুন — বিনামূল্যে প্রাথমিক পরামর্শ পান।
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div style={{ display: 'flex', gap: '0.625rem', flexWrap: 'wrap' }}>
+                                        <a
+                                            href={waLink(`আমি "${post.title}" পড়ে পরামর্শ চাই। আমার পরিস্থিতি একটু আলাদা।`)}
+                                            target="_blank" rel="noopener noreferrer"
+                                            style={{
+                                                flex: '1 1 160px',
+                                                display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+                                                gap: '0.5rem', padding: '0.8rem 1.25rem', borderRadius: '0.75rem',
+                                                fontSize: '0.875rem', fontWeight: 700, textDecoration: 'none',
+                                                background: 'linear-gradient(135deg, #22c55e, #16a34a)', color: '#fff',
+                                                boxShadow: '0 4px 14px rgba(34,197,94,0.30)',
+                                                fontFamily: "'SolaimanLipi','Noto Sans Bengali',sans-serif",
+                                            }}>
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                                            এখনই WhatsApp করুন
+                                        </a>
+                                        <a
+                                            href={telLink()}
+                                            style={{
+                                                flex: '1 1 120px',
+                                                display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+                                                gap: '0.5rem', padding: '0.8rem 1.25rem', borderRadius: '0.75rem',
+                                                fontSize: '0.875rem', fontWeight: 600, textDecoration: 'none',
+                                                border: '1.5px solid rgba(34,197,94,0.4)', color: 'var(--text)',
+                                                background: 'transparent',
+                                                fontFamily: "'SolaimanLipi','Noto Sans Bengali',sans-serif",
+                                            }}>
+                                            <Phone size={14} /> ফোন করুন
+                                        </a>
+                                    </div>
+                                </div>
 
                                 {/* Related Services */}
                                 {post.relatedServiceLinks?.length > 0 && (
