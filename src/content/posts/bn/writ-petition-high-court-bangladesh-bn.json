@@ -2,7 +2,7 @@
   "slug": "writ-petition-high-court-bangladesh-bn",
   "enSlug": "writ-petition-high-court-bangladesh",
   "title": "বাংলাদেশে রিট পিটিশন: সম্পূর্ণ আইনি গাইড",
-  "category": "দেওয়ানি আইন",
+  "category": "সম্পত্তি আইন",
   "readTime": "৮ মিনিট পড়ুন",
   "metaTitle": "রিট আবেদন হাইকোর্ট বাংলাদেশ: মৌলিক অধিকার রক্ষা ও",
   "metaDescription": "বাংলাদেশে রিট পিটিশন কীভাবে করবেন — হেবিয়াস কর্পাস, ম্যান্ডামাস, সার্টিওরারি, প্রহিবিশন, কো ওয়ারেন্টো — প্রকার, প্রক্রিয়া ও গুরুত্ব।",
@@ -83,5 +83,6 @@
   "lang": "bn",
   "impressions": 5,
   "clicks": 0,
-  "featured": false
+  "featured": false,
+  "lastModified": "2026-09-22"
 }
