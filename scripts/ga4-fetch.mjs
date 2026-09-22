@@ -46,7 +46,8 @@ async function getAccessToken(credentials) {
     body: new URLSearchParams({
       grant_type: 'urn:ietf:params:oauth:grant-type:jwt-bearer',
       assertion: jwt
-    })
+    }),
+    signal: AbortSignal.timeout(5000)
   });
 
   const data = await res.json();
@@ -64,7 +65,8 @@ async function runReport(token, requestBody) {
       'Authorization': `Bearer ${token}`,
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify(requestBody)
+    body: JSON.stringify(requestBody),
+    signal: AbortSignal.timeout(5000)
   });
 
   const data = await res.json();
@@ -162,9 +164,7 @@ export async function fetchGA4Analytics() {
 // Auto-run if executed directly
 if (process.argv[1] && process.argv[1].endsWith('ga4-fetch.mjs')) {
   fetchGA4Analytics()
-    .then(() => process.exit(0))
     .catch(err => {
-      console.error('❌ [GA4 Error]:', err.message);
-      process.exit(1);
+      console.warn('⚠️ [GA4 Note]:', err.message);
     });
 }

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-22T12:27:21.453Z",
+  "updatedAt": "2026-09-22T12:59:30.861Z",
   "propertyId": "520583213",
   "channels": [
     {
@@ -13,25 +13,25 @@
     {
       "channel": "Direct",
       "sourceMedium": "(direct) / (none)",
-      "activeUsers": 461,
-      "sessions": 484,
-      "pageViews": 713,
-      "engagementRate": "36.2%"
+      "activeUsers": 463,
+      "sessions": 486,
+      "pageViews": 715,
+      "engagementRate": "36.0%"
     },
     {
       "channel": "Cross-network",
       "sourceMedium": "(data not available)",
-      "activeUsers": 146,
-      "sessions": 148,
-      "pageViews": 165,
-      "engagementRate": "0.7%"
+      "activeUsers": 152,
+      "sessions": 155,
+      "pageViews": 173,
+      "engagementRate": "0.6%"
     },
     {
       "channel": "Unassigned",
       "sourceMedium": "(not set)",
-      "activeUsers": 64,
-      "sessions": 64,
-      "pageViews": 35,
+      "activeUsers": 67,
+      "sessions": 67,
+      "pageViews": 36,
       "engagementRate": "0.0%"
     },
     {
@@ -167,8 +167,8 @@
     {
       "path": "/bn/blog",
       "title": "বাংলা আইনি ব্লগ ও সমাধান নির্দেশিকা | অ্যাডভোকেট মো. শাহ আলম",
-      "activeUsers": 64,
-      "pageViews": 159
+      "activeUsers": 65,
+      "pageViews": 160
     },
     {
       "path": "/blog/land-registration-cost-fees-calculator-bangladesh-2026",
@@ -186,7 +186,7 @@
       "path": "/",
       "title": "এডভোকেট মোঃ শাহ আলম | আইনজীবী উত্তরা, ঢাকা",
       "activeUsers": 60,
-      "pageViews": 106
+      "pageViews": 107
     },
     {
       "path": "/bn/blog/sampatti-uttoradhikar-ain-2026-bn",
@@ -405,6 +405,12 @@
       "pageViews": 19
     },
     {
+      "path": "/bn/blog/cyber-harassment-emergency-helpline-online-complaint-2026",
+      "title": "অনলাইনে হয়রানির হেল্পলাইন ও সাইবার অভিযোগ ২০২৬ | এডভোকেট মোঃ শাহ আলম",
+      "activeUsers": 18,
+      "pageViews": 18
+    },
+    {
       "path": "/bn/blog/khas-jomi-chenar-upay-bondobasto-niyom-bangladesh",
       "title": "খাস জমি চেনার উপায় ও বন্দোবস্ত নেওয়ার নিয়ম |",
       "activeUsers": 18,
@@ -415,12 +421,6 @@
       "title": "নাবালকের জমি বিক্রির নিয়ম ও কোর্ট পারমিশন |",
       "activeUsers": 16,
       "pageViews": 18
-    },
-    {
-      "path": "/bn/blog/cyber-harassment-emergency-helpline-online-complaint-2026",
-      "title": "অনলাইনে হয়রানির হেল্পলাইন ও সাইবার অভিযোগ ২০২৬ | এডভোকেট মোঃ শাহ আলম",
-      "activeUsers": 17,
-      "pageViews": 17
     },
     {
       "path": "/bn/blog/paurosabha-elakay-jomi-registry-khoroch-hisab-2026",
@@ -447,6 +447,12 @@
       "pageViews": 17
     },
     {
+      "path": "/blog/e-namjari-online-check-bangladesh-2026",
+      "title": "E-Namjari Online Check Bangladesh 2026 — Apply, Track & Download Mutation",
+      "activeUsers": 13,
+      "pageViews": 17
+    },
+    {
       "path": "/bn/blog/cyber-crime-abiyog-korar-poripurno-niyom-2026",
       "title": "সাইবার ক্রাইম অভিযোগ করার নিয়ম ২০২৬ | অনলাইনে কীভাবে রিপোর্ট করবেন?",
       "activeUsers": 10,
@@ -457,19 +463,13 @@
       "title": "বাটোয়ারা মামলার কোর্ট ফি কত ২০২৬ – সম্পূর্ণ হিসাব ও সময়কাল",
       "activeUsers": 14,
       "pageViews": 16
-    },
-    {
-      "path": "/blog/e-namjari-online-check-bangladesh-2026",
-      "title": "E-Namjari Online Check Bangladesh 2026 — Apply, Track & Download Mutation",
-      "activeUsers": 12,
-      "pageViews": 16
     }
   ],
   "locations": [
     {
       "country": "Bangladesh",
       "city": "Dhaka",
-      "activeUsers": 835
+      "activeUsers": 836
     },
     {
       "country": "Bangladesh",
@@ -479,7 +479,7 @@
     {
       "country": "Bangladesh",
       "city": "Chattogram",
-      "activeUsers": 160
+      "activeUsers": 161
     },
     {
       "country": "Bangladesh",
@@ -494,12 +494,12 @@
     {
       "country": "Bangladesh",
       "city": "Sylhet",
-      "activeUsers": 54
+      "activeUsers": 55
     },
     {
       "country": "Singapore",
       "city": "Singapore",
-      "activeUsers": 53
+      "activeUsers": 54
     },
     {
       "country": "Bangladesh",
@@ -527,14 +527,14 @@
       "activeUsers": 24
     },
     {
-      "country": "United States",
-      "city": "Flint Hill",
+      "country": "Bangladesh",
+      "city": "",
       "activeUsers": 22
     },
     {
-      "country": "Bangladesh",
-      "city": "",
-      "activeUsers": 20
+      "country": "United States",
+      "city": "Flint Hill",
+      "activeUsers": 22
     },
     {
       "country": "Bangladesh",

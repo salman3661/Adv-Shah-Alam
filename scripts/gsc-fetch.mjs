@@ -42,7 +42,8 @@ async function getAccessToken(credentials) {
     body: new URLSearchParams({
       grant_type: 'urn:ietf:params:oauth:grant-type:jwt-bearer',
       assertion: jwt
-    })
+    }),
+    signal: AbortSignal.timeout(5000)
   });
 
   const data = await res.json();
