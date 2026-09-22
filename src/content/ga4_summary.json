@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-22T12:59:30.861Z",
+  "updatedAt": "2026-09-22T13:03:58.246Z",
   "propertyId": "520583213",
   "channels": [
     {
@@ -287,8 +287,8 @@
     {
       "path": "/bn/blog/talaknama-lekhari-niyom-fee-prokriya-bangladesh-2026",
       "title": "তালাকনামা লেখার নিয়ম ও খরচ | কাজী অফিস ও নোটিশ গাইড",
-      "activeUsers": 23,
-      "pageViews": 27
+      "activeUsers": 24,
+      "pageViews": 28
     },
     {
       "path": "/bn/blog/heba-bil-ewaz-dalil-khoroch-2026",
@@ -469,7 +469,7 @@
     {
       "country": "Bangladesh",
       "city": "Dhaka",
-      "activeUsers": 836
+      "activeUsers": 837
     },
     {
       "country": "Bangladesh",
@@ -529,7 +529,7 @@
     {
       "country": "Bangladesh",
       "city": "",
-      "activeUsers": 22
+      "activeUsers": 23
     },
     {
       "country": "United States",
@@ -587,6 +587,11 @@
       "activeUsers": 13
     },
     {
+      "country": "Bangladesh",
+      "city": "Barishal",
+      "activeUsers": 12
+    },
+    {
       "country": "Canada",
       "city": "Toronto",
       "activeUsers": 12
@@ -595,11 +600,6 @@
       "country": "India",
       "city": "Kolkata",
       "activeUsers": 12
-    },
-    {
-      "country": "Bangladesh",
-      "city": "Barishal",
-      "activeUsers": 11
     },
     {
       "country": "Bangladesh",

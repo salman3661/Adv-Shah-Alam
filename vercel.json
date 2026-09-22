@@ -408,6 +408,111 @@
       "source": "/posts/:slug*",
       "destination": "/blog/:slug*",
       "statusCode": 301
+    },
+    {
+      "source": "/bn/blog/babar-sampatti-banton-ain-bangladesh-2026",
+      "destination": "/bn/blog/babar-sampatti-banton-ain-bangladesh",
+      "permanent": true
+    },
+    {
+      "source": "/bn/blog/cyber-harassment-emergency-helpline-online-complaint-2026",
+      "destination": "/bn/blog/cyber-crime-complaint-online-police-helpline",
+      "permanent": true
+    },
+    {
+      "source": "/bn/blog/cyber-crime-complaint-online-police-helpline-2026",
+      "destination": "/bn/blog/cyber-crime-complaint-online-police-helpline",
+      "permanent": true
+    },
+    {
+      "source": "/bn/blog/jomi-registry-khoroch-calculator-stamp-shulko-2026",
+      "destination": "/bn/blog/jomi-registry-khoroch-calculator-stamp-shulko",
+      "permanent": true
+    },
+    {
+      "source": "/bn/blog/e-namjari-tracking-status-check-online-mutation-2026",
+      "destination": "/bn/blog/e-namjari-tracking-status-check-online-mutation",
+      "permanent": true
+    },
+    {
+      "source": "/bn/blog/mayer-sampatti-vibhajan-ain-faraiz-hisab-2026",
+      "destination": "/bn/blog/mayer-sampatti-vibhajan-ain-faraiz-hisab",
+      "permanent": true
+    },
+    {
+      "source": "/bn/blog/swami-stree-talak-notice-niyom-dhap-2026",
+      "destination": "/bn/blog/swamike-talak-dewar-niyom-talak-tawfeez",
+      "permanent": true
+    },
+    {
+      "source": "/bn/blog/court-marriage-niyom-khoroch-bangladesh-2026",
+      "destination": "/bn/blog/court-marriage-niyom-khoroch-bangladesh",
+      "permanent": true
+    },
+    {
+      "source": "/bn/blog/batoara-mamla-kotodin-chole-khoroch-partition-suit-2026",
+      "destination": "/bn/blog/batoara-mamla-kotodin-chole-khoroch-partition-suit",
+      "permanent": true
+    },
+    {
+      "source": "/bn/blog/batwara-mamla-khoroch-somoy-timeline-2026",
+      "destination": "/bn/blog/batoara-mamla-kotodin-chole-khoroch-partition-suit",
+      "permanent": true
+    },
+    {
+      "source": "/bn/blog/high-court-agam-jamin-anticipatory-bail-khoroch-2026",
+      "destination": "/bn/blog/high-court-agam-jamin-anticipatory-bail-khoroch",
+      "permanent": true
+    },
+    {
+      "source": "/bn/blog/high-court-agam-jamin-niyom-khoroch-2026",
+      "destination": "/bn/blog/high-court-agam-jamin-anticipatory-bail-khoroch",
+      "permanent": true
+    },
+    {
+      "source": "/bn/blog/rit-petition-ki-kivabe-korte-hoy-high-court-2026",
+      "destination": "/bn/blog/rit-petition-ki-kivabe-korte-hoy-high-court",
+      "permanent": true
+    },
+    {
+      "source": "/blog/baba-sampatti-vantan-ain-bangladesh-2026",
+      "destination": "/blog/father-property-distribution-law-bangladesh",
+      "permanent": true
+    },
+    {
+      "source": "/blog/father-property-distribution-law-bangladesh-2026",
+      "destination": "/blog/father-property-distribution-law-bangladesh",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-report-cyber-crime-bangladesh-2026",
+      "destination": "/blog/cyber-crime-complaint-online-police-helpline-bangladesh",
+      "permanent": true
+    },
+    {
+      "source": "/blog/land-registration-cost-fees-calculator-bangladesh-2026",
+      "destination": "/blog/land-registration-cost-fees-calculator-bangladesh",
+      "permanent": true
+    },
+    {
+      "source": "/blog/online-mutation-check-bangladesh-2026",
+      "destination": "/blog/online-mutation-check-bangladesh",
+      "permanent": true
+    },
+    {
+      "source": "/blog/divorce-cost-bangladesh-2026-complete-guide",
+      "destination": "/blog/wife-divorce-rights-talaq-e-tawfeez-bangladesh",
+      "permanent": true
+    },
+    {
+      "source": "/blog/court-marriage-bangladesh-process-cost-documents-2026",
+      "destination": "/blog/court-marriage-bangladesh-process-cost-documents",
+      "permanent": true
+    },
+    {
+      "source": "/blog/anticipatory-bail-high-court-bangladesh-cost-process-2026",
+      "destination": "/blog/anticipatory-bail-high-court-bangladesh-cost-process",
+      "permanent": true
     }
   ],
   "headers": [
