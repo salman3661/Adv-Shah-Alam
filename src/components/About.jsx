@@ -7,23 +7,11 @@ import aboutBn from '../content/about_bn.json';
 // Icon map
 const STAT_ICONS = [Clock, Scale, Trophy, Users];
 
-const AnimatedCounter = ({ value, suffix }) => {
-    const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, margin: "-100px" });
-    const count = useMotionValue(0);
-    const rounded = useTransform(count, Math.round);
-
-    useEffect(() => {
-        if (isInView) {
-            const animation = animate(count, value, { duration: 2.5, ease: "easeOut" });
-            return animation.stop;
-        }
-    }, [isInView, value, count]);
-
+const StatCounter = ({ value, suffix }) => {
     return (
-        <span ref={ref} className="inline-flex">
-            <motion.span>{rounded}</motion.span>
-            <span>{suffix}</span>
+        <span className="inline-flex items-baseline">
+            <span>{value}</span>
+            {suffix && <span>{suffix}</span>}
         </span>
     );
 };
@@ -156,7 +144,7 @@ const About = ({ lang = 'en' }) => {
                                     <stat.icon size={24} />
                                 </div>
                                 <h3 className="text-3xl md:text-4xl font-bold mb-1" style={{ color: 'var(--text)' }}>
-                                    <AnimatedCounter value={stat.value} suffix={stat.suffix} />
+                                    <StatCounter value={stat.value} suffix={stat.suffix} />
                                 </h3>
                                 <p className="text-sm font-medium" style={{ color: 'var(--text-muted)' }}>{stat.label}</p>
                             </motion.div>

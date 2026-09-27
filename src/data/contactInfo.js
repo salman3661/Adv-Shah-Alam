@@ -15,6 +15,10 @@ export const CALL_DISPLAY = '+880 1712-655546';
 export const WA_NUMBER = '8801955802007';   // no plus — wa.me format
 export const WA_DISPLAY = '+880 1955-802007';
 
+/** Aliases for component convenience */
+export const PRIMARY_PHONE = CALL_NUMBER;
+export const SECONDARY_PHONE = '+8801955802007';
+
 /** Build a wa.me URL with a pre-filled message.
  *  Every message includes a source tag so the lawyer knows it came from
  *  the website (via Google SEO) rather than a random WhatsApp contact. */

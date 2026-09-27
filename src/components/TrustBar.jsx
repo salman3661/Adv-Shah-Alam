@@ -6,7 +6,7 @@ const trustItemsEn = [
     { icon: Shield, text: 'Supreme Court Advocate', sub: 'Bangladesh Bar Council' },
     { icon: Star, text: '4.9★ Google Rating', sub: '47+ Reviews', accent: '#C6A75E' },
     { icon: Clock, text: '10+ Years Practice', sub: 'Since 2015' },
-    { icon: Users, text: '500+ Cases Handled', sub: 'Criminal · Family · Land' },
+    { icon: Users, text: '5000+ Cases Handled', sub: 'Criminal · Family · Land' },
     { icon: CheckCircle, text: 'Asst. Public Prosecutor', sub: 'Metro Sessions Court, Dhaka', accent: '#22C55E' },
 ];
 
@@ -14,7 +14,7 @@ const trustItemsBn = [
     { icon: Shield, text: 'সুপ্রীম কোর্টের আইনজীবী', sub: 'বাংলাদেশ বার কাউন্সিল' },
     { icon: Star, text: '৪.৯★ গুগল রেটিং', sub: '৪৭+ রিভিউ', accent: '#C6A75E' },
     { icon: Clock, text: '১০+ বছরের অভিজ্ঞতা', sub: '২০১৫ সাল থেকে' },
-    { icon: Users, text: '৫০০+ মামলা পরিচালনা', sub: 'ফৌজদারি · পারিবারিক · ভূমি' },
+    { icon: Users, text: '৫০০০+ মামলা পরিচালনা', sub: 'ফৌজদারি · পারিবারিক · ভূমি' },
     { icon: CheckCircle, text: 'অ্যাসিস্ট্যান্ট পাবলিক প্রসিকিউটর', sub: 'মেট্রো সেশনস কোর্ট, ঢাকা', accent: '#22C55E' },
 ];
 

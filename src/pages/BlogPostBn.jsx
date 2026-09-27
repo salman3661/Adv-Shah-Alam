@@ -8,6 +8,7 @@ import {
 } from 'lucide-react';
 import { waLink, telLink } from '../data/contactInfo';
 import Disclaimer from '../components/Disclaimer';
+import MidArticleLeadCapture from '../components/MidArticleLeadCapture';
 import popularBnSlugs from '../content/popular_bn.json';
 
 /* ── Load all BN posts ── */
@@ -503,11 +504,23 @@ const BlogPostBnInner = () => {
         headline: post.title, description: post.metaDescription,
         datePublished: post.publishedDate, dateModified: post.lastModified || post.publishedDate,
         inLanguage: 'bn',
-        author: { '@type': 'Person', name: 'অ্যাডভোকেট মো. শাহ আলম', alternateName: 'Advocate Md. Shah Alam', jobTitle: 'Advocate – Supreme Court of Bangladesh', url: 'https://www.advmdshahalam.me/advocate-md-shah-alam', sameAs: ['https://www.facebook.com/advmd.shahalamfb', 'https://www.linkedin.com/in/advmdshahalam/'] },
-        publisher: { '@type': 'Organization', name: 'Advocate Md. Shah Alam Law Chambers', url: 'https://www.advmdshahalam.me', logo: { '@type': 'ImageObject', url: 'https://www.advmdshahalam.me/adv-md-shah-alam.png' } },
+        author: {
+            '@type': 'LegalService',
+            '@id': 'https://www.advmdshahalam.me/#legalservice',
+            name: 'Advocate Md. Shah Alam',
+            alternateName: 'এডভোকেট মোঃ শাহ আলম',
+            url: 'https://www.advmdshahalam.me',
+        },
+        publisher: {
+            '@type': 'LegalService',
+            '@id': 'https://www.advmdshahalam.me/#legalservice',
+            name: 'Advocate Md. Shah Alam Law Chambers',
+            url: 'https://www.advmdshahalam.me',
+            logo: { '@type': 'ImageObject', url: 'https://www.advmdshahalam.me/favicon.ico' }
+        },
         url: `https://www.advmdshahalam.me/bn/blog/${post.slug}`,
         mainEntityOfPage: { '@type': 'WebPage', '@id': `https://www.advmdshahalam.me/bn/blog/${post.slug}` },
-        image: 'https://www.advmdshahalam.me/adv-md-shah-alam.png',
+        image: 'https://www.advmdshahalam.me/images/advocate-shah-alam.jpg',
         keywords: (Array.isArray(post.keywords) ? post.keywords : []).join(', '),
     };
     const breadcrumbSchema = {
@@ -523,44 +536,59 @@ const BlogPostBnInner = () => {
         mainEntity: post.faqs.map(faq => ({ '@type': 'Question', name: faq.question || faq.q, acceptedAnswer: { '@type': 'Answer', text: faq.answer || faq.a } })),
     } : null;
 
-    // LegalService schema — helps Google show lawyer contact info in rich results
+    // Master LegalService schema — linking to #legalservice
     const legalServiceSchema = {
         '@context': 'https://schema.org',
         '@type': 'LegalService',
-        name: 'অ্যাডভোকেট মো. শাহ আলম — আইন চেম্বার',
-        alternateName: 'Advocate Md. Shah Alam Law Chambers',
-        description: 'বাংলাদেশ সুপ্রীম কোর্টের অভিজ্ঞ আইনজীবী। ফৌজদারি, জামিন, বিবাহবিচ্ছেদ, ভূমি বিরোধ ও সাইবার আইনে বিশেষজ্ঞ। উত্তরা, ঢাকা।',
-        url: 'https://www.advmdshahalam.me/',
+        '@id': 'https://www.advmdshahalam.me/#legalservice',
+        name: 'Advocate Md. Shah Alam',
+        alternateName: 'এডভোকেট মোঃ শাহ আলম',
+        url: 'https://www.advmdshahalam.me',
+        logo: 'https://www.advmdshahalam.me/favicon.ico',
+        image: 'https://www.advmdshahalam.me/images/advocate-shah-alam.jpg',
         telephone: '+8801712655546',
+        email: 'contact@advmdshahalam.me',
         priceRange: '$$',
-        areaServed: { '@type': 'Country', name: 'Bangladesh' },
-        address: {
-            '@type': 'PostalAddress',
-            streetAddress: 'উত্তরা, ঢাকা',
-            addressLocality: 'Dhaka',
-            addressCountry: 'BD',
-        },
-        contactPoint: {
-            '@type': 'ContactPoint',
-            contactType: 'customer service',
-            telephone: '+8801955802007',
-            availableLanguage: ['Bengali', 'English'],
-        },
-        sameAs: [
-            'https://www.facebook.com/advmd.shahalamfb',
-            'https://www.linkedin.com/in/advmdshahalam/',
+        address: [
+            {
+                '@type': 'PostalAddress',
+                streetAddress: 'House 46, Road 6/B, Sector 12',
+                addressLocality: 'Uttara',
+                addressRegion: 'Dhaka',
+                postalCode: '1230',
+                addressCountry: 'BD'
+            },
+            {
+                '@type': 'PostalAddress',
+                streetAddress: 'Lawyers Association Building, 4th Floor, 6/7 Court House Street, Kotwali',
+                addressLocality: 'Judge Court',
+                addressRegion: 'Dhaka',
+                postalCode: '1100',
+                addressCountry: 'BD'
+            }
         ],
-        hasOfferCatalog: {
-            '@type': 'OfferCatalog',
-            name: 'আইনি সেবাসমূহ',
-            itemListElement: [
-                { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'ফৌজদারি মামলা ও জামিন' } },
-                { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'বিবাহবিচ্ছেদ ও পারিবারিক আইন' } },
-                { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'ভূমি বিরোধ ও সম্পত্তি আইন' } },
-                { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'সাইবার অপরাধ ও ডিজিটাল নিরাপত্তা আইন' } },
-                { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'হাইকোর্ট রিট পিটিশন' } },
-            ],
-        },
+        alumniOf: [
+            {
+                '@type': 'EducationalOrganization',
+                name: 'Dhaka International University',
+                award: 'LL.M.'
+            },
+            {
+                '@type': 'EducationalOrganization',
+                name: 'Bangladesh Bar Council',
+                award: 'Supreme Court Advocate Enrolment'
+            }
+        ],
+        memberOf: [
+            {
+                '@type': 'Organization',
+                name: 'Supreme Court Bar Association (SCBA)'
+            },
+            {
+                '@type': 'Organization',
+                name: 'Dhaka Bar Association'
+            }
+        ]
     };
 
     // HowTo schema — generated from sections if they contain numbered steps
@@ -798,69 +826,74 @@ const BlogPostBnInner = () => {
 
                                 {/* Sections — High-End Editorial Design */}
                                 {post.sections?.map((sec, i) => (
-                                    <section key={i} id={`bnsec-${i}`} style={{ marginBottom: '3.5rem', scrollMarginTop: '5rem' }}>
-                                        {/* Editorial Section Header */}
-                                        <div style={{
-                                            position: 'relative',
-                                            marginBottom: '1.75rem',
-                                            paddingBottom: '1.125rem',
-                                            borderBottom: '1px solid var(--card-border)',
-                                            display: 'flex',
-                                            flexDirection: 'column',
-                                            gap: '0.625rem'
-                                        }}>
-                                            {/* Sub-pill badge */}
-                                            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                                                <span style={{
-                                                    display: 'inline-flex',
-                                                    alignItems: 'center',
-                                                    gap: '0.375rem',
-                                                    fontSize: '0.75rem',
+                                    <React.Fragment key={i}>
+                                        <section id={`bnsec-${i}`} style={{ marginBottom: '3.5rem', scrollMarginTop: '5rem' }}>
+                                            {/* Editorial Section Header */}
+                                            <div style={{
+                                                position: 'relative',
+                                                marginBottom: '1.75rem',
+                                                paddingBottom: '1.125rem',
+                                                borderBottom: '1px solid var(--card-border)',
+                                                display: 'flex',
+                                                flexDirection: 'column',
+                                                gap: '0.625rem'
+                                            }}>
+                                                {/* Sub-pill badge */}
+                                                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                                                    <span style={{
+                                                        display: 'inline-flex',
+                                                        alignItems: 'center',
+                                                        gap: '0.375rem',
+                                                        fontSize: '0.75rem',
+                                                        fontWeight: 800,
+                                                        letterSpacing: '0.06em',
+                                                        textTransform: 'uppercase',
+                                                        color: 'var(--gold, #c6a75e)',
+                                                        background: 'rgba(198, 167, 94, 0.08)',
+                                                        border: '1px solid rgba(198, 167, 94, 0.22)',
+                                                        padding: '0.25rem 0.65rem',
+                                                        borderRadius: '9999px',
+                                                    }}>
+                                                        <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: 'var(--gold, #c6a75e)' }}></span>
+                                                        <span>ধাপ {toBnDigits(i + 1)}</span>
+                                                    </span>
+                                                </div>
+
+                                                {/* Clean Headline with vertical accent bar */}
+                                                <h2 style={{
+                                                    fontFamily: "'SolaimanLipi', 'Kalpurush', 'Noto Serif Bengali', sans-serif",
+                                                    fontSize: 'clamp(1.35rem, 2.5vw, 1.75rem)',
                                                     fontWeight: 800,
-                                                    letterSpacing: '0.06em',
-                                                    textTransform: 'uppercase',
-                                                    color: 'var(--gold, #c6a75e)',
-                                                    background: 'rgba(198, 167, 94, 0.08)',
-                                                    border: '1px solid rgba(198, 167, 94, 0.22)',
-                                                    padding: '0.25rem 0.65rem',
-                                                    borderRadius: '9999px',
+                                                    lineHeight: 1.35,
+                                                    color: 'var(--text)',
+                                                    margin: 0,
+                                                    letterSpacing: '-0.01em',
+                                                    display: 'flex',
+                                                    alignItems: 'flex-start',
+                                                    gap: '0.75rem'
                                                 }}>
-                                                    <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: 'var(--gold, #c6a75e)' }}></span>
-                                                    <span>ধাপ {toBnDigits(i + 1)}</span>
-                                                </span>
+                                                    <span style={{
+                                                        display: 'inline-block',
+                                                        width: '4px',
+                                                        minHeight: '1.35em',
+                                                        borderRadius: '4px',
+                                                        background: 'var(--gold, #C6A75E)',
+                                                        flexShrink: 0,
+                                                        marginTop: '0.12em'
+                                                    }}></span>
+                                                    <span style={{ flex: 1 }}>{cleanHeadingText(sec.heading || sec.h2 || sec.title || '')}</span>
+                                                </h2>
                                             </div>
 
-                                            {/* Clean Headline with vertical accent bar */}
-                                            <h2 style={{
-                                                fontFamily: "'SolaimanLipi', 'Kalpurush', 'Noto Serif Bengali', sans-serif",
-                                                fontSize: 'clamp(1.35rem, 2.5vw, 1.75rem)',
-                                                fontWeight: 800,
-                                                lineHeight: 1.35,
-                                                color: 'var(--text)',
-                                                margin: 0,
-                                                letterSpacing: '-0.01em',
-                                                display: 'flex',
-                                                alignItems: 'flex-start',
-                                                gap: '0.75rem'
-                                            }}>
-                                                <span style={{
-                                                    display: 'inline-block',
-                                                    width: '4px',
-                                                    minHeight: '1.35em',
-                                                    borderRadius: '4px',
-                                                    background: 'var(--gold, #C6A75E)',
-                                                    flexShrink: 0,
-                                                    marginTop: '0.12em'
-                                                }}></span>
-                                                <span style={{ flex: 1 }}>{cleanHeadingText(sec.heading || sec.h2 || sec.title || '')}</span>
-                                            </h2>
-                                        </div>
-
-                                        <div className="prose-bn-content"
-                                            style={{ color: 'var(--text)', fontSize: '1.1875rem', lineHeight: '2.05', letterSpacing: '0.005em', wordBreak: 'break-word', overflowWrap: 'anywhere', fontFamily: "'SolaimanLipi', 'Kalpurush', 'Noto Serif Bengali', sans-serif" }}
-                                            dangerouslySetInnerHTML={{ __html: sec.content }}
-                                        />
-                                    </section>
+                                            <div className="prose-bn-content"
+                                                style={{ color: 'var(--text)', fontSize: '1.1875rem', lineHeight: '2.05', letterSpacing: '0.005em', wordBreak: 'break-word', overflowWrap: 'anywhere', fontFamily: "'SolaimanLipi', 'Kalpurush', 'Noto Serif Bengali', sans-serif" }}
+                                                dangerouslySetInnerHTML={{ __html: sec.content }}
+                                            />
+                                        </section>
+                                        {i === Math.floor(((post.sections || []).length - 1) / 2) && (
+                                            <MidArticleLeadCapture lang="bn" />
+                                        )}
+                                    </React.Fragment>
                                 ))}
 
                                 {/* ══ Mid-Article WhatsApp CTA (Phase 4) ══ */}
@@ -1004,6 +1037,11 @@ const BlogPostBnInner = () => {
                                             </form>
                                         )}
                                     </div>
+                                </div>
+
+                                {/* Mandatory Article Disclaimer Box (AdSense & YMYL E-E-A-T Step 6) */}
+                                <div className="legal-disclaimer-box p-4 bg-gray-50 dark:bg-gray-800/40 border-l-4 border-amber-600 my-6 text-sm text-gray-700 dark:text-gray-300 rounded-r-lg">
+                                    <strong>দায়বর্জন (Disclaimer):</strong> এই আর্টিকেলে পরিবেশিত তথ্যসমূহ কেবল আইনি সচেতনতা ও সাধারণ শিক্ষার উদ্দেশ্যে প্রকাশিত। এটি কোনো প্রত্যক্ষ আইনি পরামর্শ (Legal Advice) নয় এবং এর মাধ্যমে কোনো আইনজীবী-মক্কেল সম্পর্ক (Attorney-Client Relationship) তৈরি হয় না। আপনার সুনির্দিষ্ট মামলার আইনি প্রতিকারের জন্য সরাসরি বাংলাদেশ সুপ্রিম কোর্ট বা জজ কোর্টের তালিকাভুক্ত বিজ্ঞ আইনজীবীর সাথে পরামর্শ করুন।
                                 </div>
                             </article>
                         </div>

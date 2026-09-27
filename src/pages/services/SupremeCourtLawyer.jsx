@@ -13,10 +13,10 @@ const ALL_SERVICES = [
 const SupremeCourtLawyer = () => (
     <ServicePage
         metaTitle="Supreme Court & High Court Lawyer — Writs, Appeals & Bail | Bangladesh"
-        metaDesc="Lower court failed you? Adv. Shah Alam handles writ petitions, criminal appeals & High Court bail. 20+ years at the Supreme Court."
+        metaDesc="Lower court failed you? Adv. Shah Alam handles writ petitions, criminal appeals & High Court bail. 10+ years at the Supreme Court."
         canonicalUrl="https://www.advmdshahalam.me/services/supreme-court-lawyer"
         h1="Supreme Court Lawyer in Bangladesh — High Court & Appellate Division"
-        intro="Advocate Md. Shah Alam is a seasoned <strong>Supreme Court lawyer in Bangladesh</strong>, practicing at the High Court Division and Appellate Division of the Supreme Court of Bangladesh. With 20+ years of experience before the highest courts in the country, he handles writ petitions, constitutional matters, criminal appeals, civil appellate cases, High Court bail applications, and administrative law proceedings with precision and deep expertise."
+        intro="Advocate Md. Shah Alam is a seasoned <strong>Supreme Court lawyer in Bangladesh</strong>, practicing at the High Court Division and Appellate Division of the Supreme Court of Bangladesh. With 10+ years of experience (Supreme Court of Bangladesh & Bangladesh Bar Council enrolled advocate since 2015) before the courts in the country, he handles writ petitions, constitutional matters, criminal appeals, civil appellate cases, High Court bail applications, and administrative law proceedings with precision and deep expertise."
         coverage={[
             'Writ petition under Article 102 — certiorari, mandamus, prohibition, habeas corpus',
             'Criminal appeals from Sessions Court to High Court Division',

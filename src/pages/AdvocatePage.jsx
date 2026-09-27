@@ -316,7 +316,7 @@ const AdvocatePage = () => {
                 <meta property="og:title" content="Advocate Shah Alam | Lawyer in Bangladesh, Uttara" />
                 <meta
                     property="og:description"
-                    content="Experienced criminal, family, property &amp; Supreme Court lawyer in Uttara, Dhaka. 20+ years of legal excellence. Book a consultation today."
+                    content="Experienced criminal, family, property &amp; Supreme Court lawyer in Uttara, Dhaka. 10+ years of legal excellence (practising since 2015). Book a consultation today."
                 />
                 <meta property="og:url" content="https://www.advmdshahalam.me/advocate-md-shah-alam" />
                 <meta property="og:type" content="profile" />

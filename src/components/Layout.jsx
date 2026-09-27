@@ -158,55 +158,58 @@ const personSchema = {
     ],
 };
 
-/* ── LegalService / LocalBusiness schema ── */
+/* ── Master LegalService Schema (Sitewide Layout - Step 5) ── */
 const legalServiceSchema = {
     '@context': 'https://schema.org',
-    '@type': ['LegalService', 'LocalBusiness'],
-    '@id': `${BASE}/#lawchambers`,
-    name: 'Advocate Md. Shah Alam Law Chambers',
-    alternateName: 'এডভোকেট মোঃ শাহ আলম আইন চেম্বার',
+    '@type': 'LegalService',
+    '@id': `${BASE}/#legalservice`,
+    name: 'Advocate Md. Shah Alam',
+    alternateName: 'এডভোকেট মোঃ শাহ আলম',
     url: BASE,
-    logo: `${BASE}/images/logo.png`,
-    image: `${BASE}/images/hero/hero-md-shah-alam.png`,
+    logo: `${BASE}/favicon.ico`,
+    image: `${BASE}/images/advocate-shah-alam.jpg`,
     telephone: '+8801712655546',
     email: 'contact@advmdshahalam.me',
-    description: 'Law Chambers of Advocate Md. Shah Alam — Supreme Court Advocate, Bangladesh. 10+ years experience. Criminal Law, Family Law, Land Law, Company Law & Tax Law. Located in Uttara, Dhaka.',
-    foundingDate: '2015',
-    priceRange: '৳৳',
-    currenciesAccepted: 'BDT',
-    paymentAccepted: 'Cash, Mobile Banking',
-    address: {
-        '@type': 'PostalAddress',
-        streetAddress: 'House 46, Road 6/B, Sector 12, Uttara West',
-        addressLocality: 'Uttara',
-        addressRegion: 'Dhaka',
-        postalCode: '1230',
-        addressCountry: 'BD',
-    },
-    geo: {
-        '@type': 'GeoCoordinates',
-        latitude: 23.8745,
-        longitude: 90.3987,
-    },
-    hasMap: 'https://maps.app.goo.gl/M3NXMwW3xkp2TE3h8',
-    openingHoursSpecification: [
+    priceRange: '$$',
+    address: [
         {
-            '@type': 'OpeningHoursSpecification',
-            dayOfWeek: ['Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday'],
-            opens: '09:00',
-            closes: '18:00',
+            '@type': 'PostalAddress',
+            streetAddress: 'House 46, Road 6/B, Sector 12',
+            addressLocality: 'Uttara',
+            addressRegion: 'Dhaka',
+            postalCode: '1230',
+            addressCountry: 'BD',
         },
         {
-            '@type': 'OpeningHoursSpecification',
-            dayOfWeek: ['Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-            opens: '18:00',
-            closes: '23:00',
+            '@type': 'PostalAddress',
+            streetAddress: 'Lawyers Association Building, 4th Floor, 6/7 Court House Street, Kotwali',
+            addressLocality: 'Judge Court',
+            addressRegion: 'Dhaka',
+            postalCode: '1100',
+            addressCountry: 'BD',
         },
     ],
-    areaServed: [
-        { '@type': 'City', name: 'Uttara, Dhaka' },
-        { '@type': 'City', name: 'Dhaka' },
-        { '@type': 'Country', name: 'Bangladesh' },
+    alumniOf: [
+        {
+            '@type': 'EducationalOrganization',
+            name: 'Dhaka International University',
+            award: 'LL.M.',
+        },
+        {
+            '@type': 'EducationalOrganization',
+            name: 'Bangladesh Bar Council',
+            award: 'Supreme Court Advocate Enrolment',
+        },
+    ],
+    memberOf: [
+        {
+            '@type': 'Organization',
+            name: 'Supreme Court Bar Association (SCBA)',
+        },
+        {
+            '@type': 'Organization',
+            name: 'Dhaka Bar Association',
+        },
     ],
     aggregateRating: {
         '@type': 'AggregateRating',
@@ -215,12 +218,14 @@ const legalServiceSchema = {
         bestRating: '5',
         worstRating: '1',
     },
-    serviceType: [
-        'Criminal Lawyer', 'Bail Lawyer', 'Divorce Lawyer', 'Family Lawyer',
-        'Land Lawyer', 'Property Lawyer', 'Corporate Lawyer', 'Tax Lawyer',
-        'Supreme Court Lawyer Bangladesh',
+    openingHoursSpecification: [
+        {
+            '@type': 'OpeningHoursSpecification',
+            dayOfWeek: ['Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday'],
+            opens: '09:00',
+            closes: '21:00',
+        },
     ],
-    employee: { '@id': `${BASE}/#person` },
     sameAs: [
         'https://www.facebook.com/advmdshahalam',
         'https://www.facebook.com/advmd.shahalamfb',

@@ -13,7 +13,7 @@ const ALL_SERVICES = [
 const CompanyCorporateLawyer = () => (
     <ServicePage
         metaTitle="Company & Corporate Lawyer Dhaka — RJSC, Shareholder Disputes & Business Law (2026)"
-        metaDesc="Expert company lawyer in Dhaka. RJSC registration, shareholder disputes, commercial contracts & corporate litigation. 20+ years. Free first consultation."
+        metaDesc="Expert company lawyer in Dhaka. RJSC registration, shareholder disputes, commercial contracts & corporate litigation. 10+ years experience. Free consultation."
         canonicalUrl="https://www.advmdshahalam.me/services/company-corporate-lawyer"
         h1="Company & Corporate Lawyer in Dhaka — From Formation to Litigation"
         intro="Advocate Md. Shah Alam provides comprehensive <strong>company and corporate legal services in Bangladesh</strong>, advising businesses, entrepreneurs, and investors on company formation, commercial contracts, shareholder disputes, regulatory compliance, and corporate litigation. With deep expertise in the Companies Act 1994 and strong courtroom experience before the High Court Division — Adv. Shah Alam is the trusted legal partner for businesses operating in Bangladesh."

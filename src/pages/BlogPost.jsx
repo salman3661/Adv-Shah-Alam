@@ -8,6 +8,7 @@ import {
 } from 'lucide-react';
 import { telLink, waLink } from '../data/contactInfo';
 import Disclaimer from '../components/Disclaimer';
+import MidArticleLeadCapture from '../components/MidArticleLeadCapture';
 
 /* ── Load all EN posts ── */
 const _postModules = import.meta.glob('../content/posts/en/*.json', { eager: true });
@@ -464,11 +465,22 @@ const BlogPostInner = () => {
         headline: post.title, description: post.metaDescription,
         datePublished: post.publishedDate, dateModified: post.lastModified || post.publishedDate,
         inLanguage: 'en',
-        author: { '@type': 'Person', name: 'Advocate Md. Shah Alam', jobTitle: 'Advocate – Supreme Court of Bangladesh', url: 'https://www.advmdshahalam.me/advocate-md-shah-alam', sameAs: ['https://www.facebook.com/advmd.shahalamfb', 'https://www.linkedin.com/in/advmdshahalam/'] },
-        publisher: { '@type': 'Organization', name: 'Advocate Md. Shah Alam Law Chambers', url: 'https://www.advmdshahalam.me', logo: { '@type': 'ImageObject', url: 'https://www.advmdshahalam.me/adv-md-shah-alam.png' } },
+        author: {
+            '@type': 'LegalService',
+            '@id': 'https://www.advmdshahalam.me/#legalservice',
+            name: 'Advocate Md. Shah Alam',
+            url: 'https://www.advmdshahalam.me',
+        },
+        publisher: {
+            '@type': 'LegalService',
+            '@id': 'https://www.advmdshahalam.me/#legalservice',
+            name: 'Advocate Md. Shah Alam Law Chambers',
+            url: 'https://www.advmdshahalam.me',
+            logo: { '@type': 'ImageObject', url: 'https://www.advmdshahalam.me/favicon.ico' }
+        },
         url: `https://www.advmdshahalam.me/blog/${post.slug}`,
         mainEntityOfPage: { '@type': 'WebPage', '@id': `https://www.advmdshahalam.me/blog/${post.slug}` },
-        image: 'https://www.advmdshahalam.me/adv-md-shah-alam.png',
+        image: 'https://www.advmdshahalam.me/images/advocate-shah-alam.jpg',
         keywords: keywordsList.join(', '),
     };
     const breadcrumbSchema = {
@@ -719,69 +731,74 @@ const BlogPostInner = () => {
 
                                 {/* Article Sections — High-End Editorial Design */}
                                 {post.sections.map((sec, i) => (
-                                    <section key={i} id={`section-${i}`} style={{ marginBottom: '3.5rem', scrollMarginTop: '5rem' }}>
-                                        {/* Editorial Section Header */}
-                                        <div style={{
-                                            position: 'relative',
-                                            marginBottom: '1.75rem',
-                                            paddingBottom: '1.125rem',
-                                            borderBottom: '1px solid var(--card-border)',
-                                            display: 'flex',
-                                            flexDirection: 'column',
-                                            gap: '0.625rem'
-                                        }}>
-                                            {/* Sub-pill badge */}
-                                            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                                                <span style={{
-                                                    display: 'inline-flex',
-                                                    alignItems: 'center',
-                                                    gap: '0.375rem',
-                                                    fontSize: '0.75rem',
+                                    <React.Fragment key={i}>
+                                        <section id={`section-${i}`} style={{ marginBottom: '3.5rem', scrollMarginTop: '5rem' }}>
+                                            {/* Editorial Section Header */}
+                                            <div style={{
+                                                position: 'relative',
+                                                marginBottom: '1.75rem',
+                                                paddingBottom: '1.125rem',
+                                                borderBottom: '1px solid var(--card-border)',
+                                                display: 'flex',
+                                                flexDirection: 'column',
+                                                gap: '0.625rem'
+                                            }}>
+                                                {/* Sub-pill badge */}
+                                                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                                                    <span style={{
+                                                        display: 'inline-flex',
+                                                        alignItems: 'center',
+                                                        gap: '0.375rem',
+                                                        fontSize: '0.75rem',
+                                                        fontWeight: 800,
+                                                        letterSpacing: '0.08em',
+                                                        textTransform: 'uppercase',
+                                                        color: 'var(--gold, #c6a75e)',
+                                                        background: 'rgba(198, 167, 94, 0.08)',
+                                                        border: '1px solid rgba(198, 167, 94, 0.22)',
+                                                        padding: '0.25rem 0.65rem',
+                                                        borderRadius: '9999px',
+                                                    }}>
+                                                        <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: 'var(--gold, #c6a75e)' }}></span>
+                                                        <span>SECTION {String(i + 1).padStart(2, '0')}</span>
+                                                    </span>
+                                                </div>
+
+                                                {/* Clean Headline with vertical accent bar */}
+                                                <h2 style={{
+                                                    fontFamily: "'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+                                                    fontSize: 'clamp(1.35rem, 2.5vw, 1.75rem)',
                                                     fontWeight: 800,
-                                                    letterSpacing: '0.08em',
-                                                    textTransform: 'uppercase',
-                                                    color: 'var(--gold, #c6a75e)',
-                                                    background: 'rgba(198, 167, 94, 0.08)',
-                                                    border: '1px solid rgba(198, 167, 94, 0.22)',
-                                                    padding: '0.25rem 0.65rem',
-                                                    borderRadius: '9999px',
+                                                    lineHeight: 1.35,
+                                                    color: 'var(--text)',
+                                                    margin: 0,
+                                                    letterSpacing: '-0.02em',
+                                                    display: 'flex',
+                                                    alignItems: 'flex-start',
+                                                    gap: '0.75rem'
                                                 }}>
-                                                    <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: 'var(--gold, #c6a75e)' }}></span>
-                                                    <span>SECTION {String(i + 1).padStart(2, '0')}</span>
-                                                </span>
+                                                    <span style={{
+                                                        display: 'inline-block',
+                                                        width: '4px',
+                                                        minHeight: '1.35em',
+                                                        borderRadius: '4px',
+                                                        background: `linear-gradient(180deg, var(--gold, #c6a75e), ${cc.bg})`,
+                                                        flexShrink: 0,
+                                                        marginTop: '0.12em'
+                                                    }}></span>
+                                                    <span style={{ flex: 1 }}>{cleanHeadingText(sec.heading || sec.h2 || sec.title || '')}</span>
+                                                </h2>
                                             </div>
 
-                                            {/* Clean Headline with vertical accent bar */}
-                                            <h2 style={{
-                                                fontFamily: "'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
-                                                fontSize: 'clamp(1.35rem, 2.5vw, 1.75rem)',
-                                                fontWeight: 800,
-                                                lineHeight: 1.35,
-                                                color: 'var(--text)',
-                                                margin: 0,
-                                                letterSpacing: '-0.02em',
-                                                display: 'flex',
-                                                alignItems: 'flex-start',
-                                                gap: '0.75rem'
-                                            }}>
-                                                <span style={{
-                                                    display: 'inline-block',
-                                                    width: '4px',
-                                                    minHeight: '1.35em',
-                                                    borderRadius: '4px',
-                                                    background: `linear-gradient(180deg, var(--gold, #c6a75e), ${cc.bg})`,
-                                                    flexShrink: 0,
-                                                    marginTop: '0.12em'
-                                                }}></span>
-                                                <span style={{ flex: 1 }}>{cleanHeadingText(sec.heading || sec.h2 || sec.title || '')}</span>
-                                            </h2>
-                                        </div>
-
-                                        <div className="prose-content"
-                                            style={{ color: 'var(--text-secondary)', fontSize: '1.0625rem', lineHeight: '1.9', letterSpacing: '0.005em', wordBreak: 'break-word', overflowWrap: 'anywhere' }}
-                                            dangerouslySetInnerHTML={{ __html: sec.content }}
-                                        />
-                                    </section>
+                                            <div className="prose-content"
+                                                style={{ color: 'var(--text-secondary)', fontSize: '1.0625rem', lineHeight: '1.9', letterSpacing: '0.005em', wordBreak: 'break-word', overflowWrap: 'anywhere' }}
+                                                dangerouslySetInnerHTML={{ __html: sec.content }}
+                                            />
+                                        </section>
+                                        {i === Math.floor(((post.sections || []).length - 1) / 2) && (
+                                            <MidArticleLeadCapture lang="en" />
+                                        )}
+                                    </React.Fragment>
                                 ))}
 
                                 {/* Related Services */}
@@ -864,6 +881,11 @@ const BlogPostInner = () => {
                                             </form>
                                         )}
                                     </div>
+                                </div>
+
+                                {/* Mandatory Article Disclaimer Box (AdSense & YMYL E-E-A-T Step 6) */}
+                                <div className="legal-disclaimer-box p-4 bg-gray-50 dark:bg-gray-800/40 border-l-4 border-amber-600 my-6 text-sm text-gray-700 dark:text-gray-300 rounded-r-lg">
+                                    <strong>Legal Disclaimer:</strong> The information provided in this article is for general legal awareness and educational purposes only. It does not constitute formal legal advice and does not establish an attorney-client relationship. For specific legal remedies tailored to your case, please consult directly with an enrolled advocate of the Supreme Court of Bangladesh or the Judges Court.
                                 </div>
                             </article>
                         </div>

@@ -23,7 +23,8 @@ function getPosts(dir, prefix) {
         .map(f => {
             try {
                 const fullPath = path.join(dir, f);
-                const data = JSON.parse(fs.readFileSync(fullPath, 'utf8'));
+                const raw = fs.readFileSync(fullPath, 'utf8').replace(/^\uFEFF/, '');
+                const data = JSON.parse(raw);
                 data._prefix = prefix;
                 data._mtime = fs.statSync(fullPath).mtimeMs;
                 return data;

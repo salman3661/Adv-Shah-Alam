@@ -180,8 +180,8 @@ const Footer = () => {
                             <Link to="/privacy-policy" className="text-xs hover:underline transition-opacity opacity-60 hover:opacity-100"
                                 style={{ color: 'var(--text-muted)' }}>Privacy Policy</Link>
                             <span className="text-xs opacity-30" style={{ color: 'var(--text-muted)' }}>|</span>
-                            <Link to="/terms" className="text-xs hover:underline transition-opacity opacity-60 hover:opacity-100"
-                                style={{ color: 'var(--text-muted)' }}>Terms & Conditions</Link>
+                            <Link to="/terms-of-service" className="text-xs hover:underline transition-opacity opacity-60 hover:opacity-100"
+                                style={{ color: 'var(--text-muted)' }}>Terms of Service</Link>
                         </div>
                         <p className="text-xs mt-3 max-w-2xl mx-auto" style={{ color: 'var(--text-muted)', opacity: 0.55, lineHeight: 1.6 }}>
                             {isBn ? (

@@ -120,6 +120,7 @@ function App() {
                       {/* Legal pages (AdSense compliance) */}
                       <Route path="/privacy-policy" element={<PrivacyPolicy />} />
                       <Route path="/terms" element={<TermsConditions />} />
+                      <Route path="/terms-of-service" element={<TermsConditions />} />
 
                       {/* 404 — must be last */}
                       <Route path="*" element={<NotFound />} />

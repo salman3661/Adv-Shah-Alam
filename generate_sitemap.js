@@ -22,7 +22,8 @@ const redirectSources = new Set(
 const enPostDir = path.join('src', 'content', 'posts', 'en');
 const enJsonFiles = fs.readdirSync(enPostDir).filter(f => f.endsWith('.json'));
 const enPosts = enJsonFiles.map(f => {
-    const data = JSON.parse(fs.readFileSync(path.join(enPostDir, f), 'utf8'));
+    const raw = fs.readFileSync(path.join(enPostDir, f), 'utf8').replace(/^\uFEFF/, '');
+    const data = JSON.parse(raw);
     return data;
 }).filter(post => {
     // Exclude drafts
@@ -38,7 +39,8 @@ const enPosts = enJsonFiles.map(f => {
 const bnPostDir = path.join('src', 'content', 'posts', 'bn');
 const bnJsonFiles = fs.readdirSync(bnPostDir).filter(f => f.endsWith('.json'));
 const bnPosts = bnJsonFiles.map(f => {
-    const data = JSON.parse(fs.readFileSync(path.join(bnPostDir, f), 'utf8'));
+    const raw = fs.readFileSync(path.join(bnPostDir, f), 'utf8').replace(/^\uFEFF/, '');
+    const data = JSON.parse(raw);
     return data;
 }).filter(post => {
     if (post.isDraft) return false;
@@ -68,7 +70,7 @@ const urls = [
     url('/blog', TODAY, 'weekly', '0.8'),
     url('/education', TODAY, 'monthly', '0.6'),
     url('/privacy-policy', TODAY, 'yearly', '0.3'),
-    url('/terms', TODAY, 'yearly', '0.3'),
+    url('/terms-of-service', TODAY, 'yearly', '0.3'),
 
     // ── Service Pages (English & Bengali) ───────────────────────────────────
     url('/services/criminal-lawyer', TODAY, 'monthly', '0.9'),

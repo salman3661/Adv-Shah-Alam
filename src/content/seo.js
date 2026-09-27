@@ -30,7 +30,7 @@ const seo = {
     pages: {
         home: {
             title: 'Trusted Lawyer in Bangladesh | Advocate Md. Shah Alam — Uttara, Dhaka',
-            desc:  'Need a trusted lawyer in Bangladesh? Advocate Md. Shah Alam offers expert criminal, divorce, bail & land legal services. 20+ years experience. Free consultation at our Uttara chamber.',
+            desc:  'Need a trusted lawyer in Bangladesh? Advocate Md. Shah Alam offers expert criminal, divorce, bail & land legal services. 10+ years experience (Supreme Court advocate). Chamber in Uttara.',
         },
         blog: {
             title: 'Legal Guides Bangladesh | Advocate Shah Alam, Uttara',                  // 53 chars
@@ -50,19 +50,19 @@ const seo = {
         },
         services: {
             criminal:    { title: 'Charged With a Crime? Expert Criminal Lawyer in Dhaka, Bangladesh',
-                           desc:  'Facing arrest or criminal charges? Adv. Shah Alam defends FIR, bail & trial cases in Dhaka — 20+ years in all courts. Same-day consultation.' },
+                           desc:  'Facing arrest or criminal charges? Adv. Shah Alam defends FIR, bail & trial cases in Dhaka — 10+ years experience. Same-day consultation.' },
             bail:        { title: 'Arrested? Get Bail Fast — Top Bail Lawyer in Dhaka, Bangladesh',
-                           desc:  'Need urgent bail? Same-day filing at Magistrate, Sessions & High Court. Anticipatory bail available. 20+ years. Call Adv. Shah Alam now.' },
+                           desc:  'Need urgent bail? Same-day filing at Magistrate, Sessions & High Court. Anticipatory bail available. 10+ years. Call Adv. Shah Alam now.' },
             divorce:     { title: 'Need a Divorce? Trusted Family Lawyer in Dhaka, Bangladesh',
-                           desc:  'Talaq, khula, custody & maintenance — handled with care. 20+ years in Family Courts. Confidential WhatsApp consultation. Call Adv. Shah Alam.' },
+                           desc:  'Talaq, khula, custody & maintenance — handled with care. 10+ years in Family Courts. Confidential WhatsApp consultation. Call Adv. Shah Alam.' },
             land:        { title: 'Land Dispute? Expert Property Lawyer in Dhaka, Bangladesh',
-                           desc:  'Title suits, mutation fraud & partition cases — resolved. 20+ years protecting land rights in Dhaka courts. Free consultation. Call now.' },
+                           desc:  'Title suits, mutation fraud & partition cases — resolved. 10+ years protecting land rights in Dhaka courts. Free consultation. Call now.' },
             supremeCourt:{ title: 'Supreme Court & High Court Lawyer — Writs, Appeals & Bail | Bangladesh',
-                           desc:  'Lower court failed you? Adv. Shah Alam handles writ petitions, criminal appeals & High Court bail. 20+ years at the Supreme Court.' },
+                           desc:  'Lower court failed you? Adv. Shah Alam handles writ petitions, criminal appeals & High Court bail. 10+ years at the Supreme Court.' },
             tax:         { title: 'Tax & VAT Lawyer in Dhaka — NBR & Tax Tribunal | Adv. Shah Alam',
                            desc:  'Tax dispute in Bangladesh? Income tax appeals, VAT disputes & NBR cases. Experienced tax lawyer in Dhaka. Free consultation.' },
             company:     { title: 'Starting a Business? Company & Corporate Lawyer in Dhaka, Bangladesh',
-                           desc:  'RJSC registration, shareholder disputes & corporate litigation. Expert business lawyer in Dhaka — 20+ years. Free first consultation.' },
+                           desc:  'RJSC registration, shareholder disputes & corporate litigation. Expert business lawyer in Dhaka — 10+ years. Free first consultation.' },
         },
     },
 
