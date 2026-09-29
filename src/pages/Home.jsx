@@ -68,7 +68,7 @@ const Home = ({ lang = 'en' }) => {
                 {/* ── Homepage Ad 1: After Services (high CTR position) ── */}
                 <div style={{ maxWidth: '900px', margin: '0 auto', padding: '0 1rem 2rem' }}>
                     <AdSenseAd
-                        slot="7958640804"
+                        slot="8630877987"
                         format="auto"
                         responsive={true}
                         labelText={isBn ? 'বিজ্ঞাপন' : 'Advertisement'}
@@ -83,7 +83,7 @@ const Home = ({ lang = 'en' }) => {
                 {/* ── Homepage Ad 2: Before Blog Preview (reader engagement peak) ── */}
                 <div style={{ maxWidth: '900px', margin: '0 auto', padding: '0 1rem 2rem' }}>
                     <AdSenseAd
-                        slot="7958640804"
+                        slot="8630877987"
                         format="auto"
                         responsive={true}
                         labelText={isBn ? 'বিজ্ঞাপন' : 'Advertisement'}

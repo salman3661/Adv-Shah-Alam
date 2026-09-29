@@ -9,9 +9,9 @@
   "personalNote": "I chose to practice law because I saw how often ordinary people suffer simply because they don't understand their legal rights. Today, my mission is to stand by those who need a voice.",
   "personalNoteAuthor": "Adv. Md. Shah Alam",
   "stats": [
-    { "value": "10+", "suffix": "", "label": "Years of Experience" },
-    { "value": "Thousands", "suffix": "", "label": "Families Assisted" },
-    { "value": "5000+", "suffix": "", "label": "Cases Disposed" },
-    { "value": "4.9★", "suffix": "", "label": "Client Rating (47+ Reviews)" }
+    { "target": 10, "suffix": "+", "label": "Years of Experience" },
+    { "target": 1000, "suffix": "+", "label": "Families Assisted" },
+    { "target": 5000, "suffix": "+", "label": "Cases Handled" },
+    { "target": 4.9, "decimals": 1, "suffix": " ★", "label": "Client Rating (47+ Reviews)" }
   ]
 }

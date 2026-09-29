@@ -26,11 +26,7 @@ const MobileCallButton = () => {
         return () => clearTimeout(t);
     }, []);
 
-    const waMsg = isBn
-        ? 'আইনি পরামর্শের জন্য যোগাযোগ করছি'
-        : 'Hello Advocate Md. Shah Alam, I need legal consultation.';
-
-    const waHref = `https://wa.me/8801955802007?text=${encodeURIComponent(waMsg)}`;
+    const waHref = waLink('', isBn);
 
     return (
         <>
@@ -49,8 +45,15 @@ const MobileCallButton = () => {
                         bottom: calc(10px + env(safe-area-inset-bottom, 0px));
                         z-index: 1050;
                         gap: 8px;
+                        padding: 6px;
+                        border-radius: 100px;
+                        background: rgba(11, 19, 43, 0.94);
+                        backdrop-filter: blur(24px) saturate(190%);
+                        -webkit-backdrop-filter: blur(24px) saturate(190%);
+                        border: 1px solid rgba(255, 255, 255, 0.16);
+                        box-shadow: 0 10px 32px rgba(0, 0, 0, 0.45), 0 2px 8px rgba(0, 0, 0, 0.25);
                         align-items: stretch;
-                        transform: translateY(${visible ? '0' : '110%'});
+                        transform: translateY(${visible ? '0' : '130%'});
                         opacity: ${visible ? '1' : '0'};
                         transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1),
                                     opacity 0.35s ease;
@@ -63,9 +66,9 @@ const MobileCallButton = () => {
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                        gap: 7px;
-                        padding: 0 16px;
-                        height: 50px;
+                        gap: 8px;
+                        padding: 0 14px;
+                        height: 48px;
                         border-radius: 100px;
                         font-size: 0.82rem;
                         font-weight: 700;
@@ -74,9 +77,6 @@ const MobileCallButton = () => {
                         position: relative;
                         overflow: hidden;
                         -webkit-tap-highlight-color: transparent;
-                        /* Frosted glass */
-                        backdrop-filter: blur(20px) saturate(180%);
-                        -webkit-backdrop-filter: blur(20px) saturate(180%);
                         transition: transform 0.18s cubic-bezier(0.34, 1.56, 0.64, 1),
                                     box-shadow 0.18s ease;
                         user-select: none;
@@ -87,30 +87,29 @@ const MobileCallButton = () => {
                         transition-duration: 0.1s !important;
                     }
 
-                    /* WhatsApp pill — glassy green with live beep radar */
+                    /* WhatsApp pill — solid vibrant green with live beep radar */
                     .gcta-wa {
-                        background: linear-gradient(135deg, rgba(37, 211, 102, 0.24) 0%, rgba(18, 140, 126, 0.28) 100%);
-                        border: 1.5px solid rgba(37, 211, 102, 0.55);
+                        background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+                        border: 1px solid rgba(255, 255, 255, 0.35);
                         color: #ffffff;
                         box-shadow:
-                            0 6px 26px rgba(37, 211, 102, 0.32),
-                            inset 0 1px 1px rgba(255, 255, 255, 0.25),
-                            inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+                            0 4px 18px rgba(37, 211, 102, 0.42),
+                            inset 0 1px 1px rgba(255, 255, 255, 0.4);
                     }
 
                     .gcta-wa:hover {
                         box-shadow:
-                            0 8px 34px rgba(37, 211, 102, 0.48),
-                            inset 0 1px 1px rgba(255, 255, 255, 0.35);
+                            0 6px 24px rgba(37, 211, 102, 0.55),
+                            inset 0 1px 1px rgba(255, 255, 255, 0.5);
                         transform: translateY(-1px);
                     }
 
                     /* Live Beep-Beep Radar Wave Pulse */
                     .gcta-beep-wave {
                         position: absolute;
-                        inset: -4px;
+                        inset: -3px;
                         border-radius: 100px;
-                        border: 1.5px solid rgba(37, 211, 102, 0.8);
+                        border: 1.8px solid rgba(37, 211, 102, 0.85);
                         pointer-events: none;
                         animation: gcta-beep-pulse 2.2s cubic-bezier(0.25, 1, 0.5, 1) infinite;
                     }
@@ -124,27 +123,25 @@ const MobileCallButton = () => {
                             opacity: 0.35;
                         }
                         100% {
-                            transform: scale(1.06, 1.25);
+                            transform: scale(1.05, 1.25);
                             opacity: 0;
                         }
                     }
 
-                    /* Call pill — glassy gold */
+                    /* Call pill — solid rich gold */
                     .gcta-call {
-                        background: linear-gradient(135deg, rgba(198, 167, 94, 0.24) 0%, rgba(217, 119, 6, 0.22) 100%);
-                        border: 1.5px solid rgba(198, 167, 94, 0.55);
+                        background: linear-gradient(135deg, #C6A75E 0%, #B8860B 60%, #996515 100%);
+                        border: 1px solid rgba(255, 255, 255, 0.35);
                         color: #ffffff;
                         box-shadow:
-                            0 6px 26px rgba(198, 167, 94, 0.28),
-                            inset 0 1px 1px rgba(255, 255, 255, 0.25),
-                            inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+                            0 4px 18px rgba(198, 167, 94, 0.38),
+                            inset 0 1px 1px rgba(255, 255, 255, 0.4);
                     }
 
                     .gcta-call:hover {
                         box-shadow:
-                            0 6px 32px rgba(198, 167, 94, 0.35),
-                            inset 0 1px 0 rgba(255, 255, 255, 0.15),
-                            inset 0 -1px 0 rgba(0, 0, 0, 0.08);
+                            0 6px 24px rgba(198, 167, 94, 0.5),
+                            inset 0 1px 1px rgba(255, 255, 255, 0.5);
                         transform: translateY(-1px);
                     }
 

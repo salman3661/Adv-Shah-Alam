@@ -28,10 +28,9 @@ const FloatingWhatsApp = () => {
                 }
 
                 @media (max-width: 768px) {
-                    /* On mobile, lift above the floating call dock if visible */
+                    /* On mobile (< 768px), MobileCallButton bottom dock handles WhatsApp & Call — avoid collision */
                     .wa-floating-container {
-                        right: 16px;
-                        bottom: calc(76px + env(safe-area-inset-bottom, 0px));
+                        display: none !important;
                     }
                 }
 
@@ -156,7 +155,7 @@ const FloatingWhatsApp = () => {
             `}</style>
 
             <a
-                href={waLink()}
+                href={waLink('', isBn)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="wa-floating-container group"

@@ -1,37 +1,37 @@
 {
-  "updatedAt": "2026-09-29T13:10:23.194Z",
+  "updatedAt": "2026-09-29T13:27:20.016Z",
   "propertyId": "520583213",
   "channels": [
     {
       "channel": "Organic Search",
       "sourceMedium": "google / organic",
       "activeUsers": 1894,
-      "sessions": 2142,
-      "pageViews": 2760,
-      "engagementRate": "47.9%"
+      "sessions": 2143,
+      "pageViews": 2762,
+      "engagementRate": "47.8%"
     },
     {
       "channel": "Direct",
       "sourceMedium": "(direct) / (none)",
-      "activeUsers": 404,
-      "sessions": 422,
-      "pageViews": 531,
-      "engagementRate": "23.5%"
+      "activeUsers": 406,
+      "sessions": 425,
+      "pageViews": 534,
+      "engagementRate": "23.3%"
     },
     {
       "channel": "Cross-network",
       "sourceMedium": "(data not available)",
-      "activeUsers": 153,
-      "sessions": 154,
-      "pageViews": 182,
-      "engagementRate": "1.9%"
+      "activeUsers": 158,
+      "sessions": 159,
+      "pageViews": 190,
+      "engagementRate": "2.5%"
     },
     {
       "channel": "Unassigned",
       "sourceMedium": "(not set)",
-      "activeUsers": 90,
-      "sessions": 91,
-      "pageViews": 75,
+      "activeUsers": 97,
+      "sessions": 98,
+      "pageViews": 77,
       "engagementRate": "0.0%"
     },
     {
@@ -165,14 +165,14 @@
     {
       "path": "/bn/blog",
       "title": "বাংলা আইনি ব্লগ ও সমাধান নির্দেশিকা | অ্যাডভোকেট মো. শাহ আলম",
-      "activeUsers": 75,
-      "pageViews": 147
+      "activeUsers": 76,
+      "pageViews": 149
     },
     {
       "path": "/bn/blog/sampatti-uttoradhikar-ain-2026-bn",
       "title": "বাবার সম্পত্তি বন্টন আইন বাংলাদেশ | উত্তরাধিকার গাইড",
       "activeUsers": 92,
-      "pageViews": 106
+      "pageViews": 107
     },
     {
       "path": "/",
@@ -189,8 +189,8 @@
     {
       "path": "/blog/bangladesh-land-record-by-name-online-2026",
       "title": "Bangladesh Land Record Online by Name – Free Search Guide",
-      "activeUsers": 65,
-      "pageViews": 92
+      "activeUsers": 66,
+      "pageViews": 93
     },
     {
       "path": "/bn/blog/jomi-registry-khoroch-sarkaree-fee-bd",
@@ -213,8 +213,8 @@
     {
       "path": "/bn/blog/stree-kortrik-swamike-talak-deyar-sothik-niyom",
       "title": "শীঘ্রই আসছে | অ্যাডভোকেট মো. শাহ আলম",
-      "activeUsers": 45,
-      "pageViews": 58
+      "activeUsers": 46,
+      "pageViews": 59
     },
     {
       "path": "/blog/cyber-crime-helpline-bangladesh-2026",
@@ -243,7 +243,7 @@
     {
       "path": "/bn/blog/mayer-sampatti-vibhajan-ain-bangladesh-2026",
       "title": "মায়ের সম্পত্তি ভাগের নিয়ম | সন্তান ও স্বামীর আইনি অংশ",
-      "activeUsers": 35,
+      "activeUsers": 36,
       "pageViews": 46
     },
     {
@@ -255,7 +255,7 @@
     {
       "path": "/bn/blog/arpon-sampatti-vitti-kharij-release-niyom-2026-bn",
       "title": "অর্পিত সম্পত্তি অবমুক্তির নিয়ম ও মামলা ২০২৬ | ক ও খ তফসিল জমি অবমুক্তি",
-      "activeUsers": 34,
+      "activeUsers": 35,
       "pageViews": 43
     },
     {
@@ -283,6 +283,12 @@
       "pageViews": 36
     },
     {
+      "path": "/blog/e-namjari-online-check-bangladesh-2026",
+      "title": "E-Namjari Online Check Bangladesh 2026 — Apply, Track & Download Mutation",
+      "activeUsers": 27,
+      "pageViews": 36
+    },
+    {
       "path": "/bn/blog/e-namjari-tracking-mutation-check-prokriya-bangladesh-2026",
       "title": "ই-নামজারি ট্র্যাকিং ও খতিয়ান চেক করার নিয়ম | ভূমি",
       "activeUsers": 26,
@@ -304,12 +310,6 @@
       "path": "/en",
       "title": "Trusted Lawyer in Bangladesh | Advocate Md. Shah Alam — Uttara, Dhaka",
       "activeUsers": 27,
-      "pageViews": 35
-    },
-    {
-      "path": "/blog/e-namjari-online-check-bangladesh-2026",
-      "title": "E-Namjari Online Check Bangladesh 2026 — Apply, Track & Download Mutation",
-      "activeUsers": 26,
       "pageViews": 35
     },
     {
@@ -361,6 +361,12 @@
       "pageViews": 25
     },
     {
+      "path": "/bn/blog/court-marriage-kagojpatra-complete-guide-2026",
+      "title": "কোর্ট ম্যারেজ করার নিয়ম ও কাগজপত্র (২০২৬) — খরচ ও আইনি প্রক্রিয়া | এডভোকেট শাহ আলম",
+      "activeUsers": 22,
+      "pageViews": 24
+    },
+    {
       "path": "/bn/blog/cyber-harassment-emergency-helpline-online-complaint-2026",
       "title": "অনলাইনে হয়রানির হেল্পলাইন ও সাইবার অভিযোগ ২০২৬ | এডভোকেট মোঃ শাহ আলম",
       "activeUsers": 23,
@@ -371,12 +377,6 @@
       "title": "যোগাযোগ ও আইনি চেম্বার | অ্যাডভোকেট মো. শাহ আলম – উত্তরা ও ঢাকা কোর্ট",
       "activeUsers": 20,
       "pageViews": 23
-    },
-    {
-      "path": "/bn/blog/court-marriage-kagojpatra-complete-guide-2026",
-      "title": "কোর্ট ম্যারেজ করার নিয়ম ও কাগজপত্র (২০২৬) — খরচ ও আইনি প্রক্রিয়া | এডভোকেট শাহ আলম",
-      "activeUsers": 21,
-      "pageViews": 22
     },
     {
       "path": "/bn/blog/jomi-kharij-namjari-khoroch-niyom-2026-bn",
@@ -409,14 +409,14 @@
       "pageViews": 19
     },
     {
-      "path": "/bn/blog/494-dhara-talak-chara-dwitio-biye-shasti-2026",
-      "title": "তালাক না দিয়ে দ্বিতীয় বিয়ের শাস্তি ২০২৬ | দণ্ডবিধি ৪৯৪ ধারা ও প্রতিকার",
-      "activeUsers": 15,
-      "pageViews": 18
-    },
-    {
       "path": "/bn/blog/stree-babar-bari-chole-gele-shamir-koroniyo-dampotto-adhikar-2026",
       "title": "স্ত্রী বাবার বাড়ি চলে গেলে স্বামীর করণীয় | দাম্পত্য অধিকার পুনরুদ্ধার",
+      "activeUsers": 15,
+      "pageViews": 19
+    },
+    {
+      "path": "/bn/blog/494-dhara-talak-chara-dwitio-biye-shasti-2026",
+      "title": "তালাক না দিয়ে দ্বিতীয় বিয়ের শাস্তি ২০২৬ | দণ্ডবিধি ৪৯৪ ধারা ও প্রতিকার",
       "activeUsers": 15,
       "pageViews": 18
     },
@@ -461,7 +461,7 @@
     {
       "country": "Bangladesh",
       "city": "Dhaka",
-      "activeUsers": 858
+      "activeUsers": 861
     },
     {
       "country": "Bangladesh",
@@ -486,7 +486,7 @@
     {
       "country": "Singapore",
       "city": "Singapore",
-      "activeUsers": 81
+      "activeUsers": 83
     },
     {
       "country": "Bangladesh",
@@ -496,7 +496,7 @@
     {
       "country": "Bangladesh",
       "city": "",
-      "activeUsers": 44
+      "activeUsers": 47
     },
     {
       "country": "China",
@@ -540,22 +540,22 @@
     },
     {
       "country": "Bangladesh",
-      "city": "Rangpur",
+      "city": "Pabna",
       "activeUsers": 19
     },
     {
       "country": "Bangladesh",
-      "city": "Pabna",
-      "activeUsers": 18
-    },
-    {
-      "country": "United Arab Emirates",
-      "city": "Dubai",
-      "activeUsers": 18
+      "city": "Rangpur",
+      "activeUsers": 19
     },
     {
       "country": "United Kingdom",
       "city": "London",
+      "activeUsers": 19
+    },
+    {
+      "country": "United Arab Emirates",
+      "city": "Dubai",
       "activeUsers": 18
     },
     {

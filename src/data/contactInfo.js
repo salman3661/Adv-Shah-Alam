@@ -21,14 +21,32 @@ export const SECONDARY_PHONE = '+8801955802007';
 
 /** Build a wa.me URL with a pre-filled message.
  *  Every message includes a source tag so the lawyer knows it came from
- *  the website (via Google SEO) rather than a random WhatsApp contact. */
-export const waLink = (msg = '') => {
-    const source = '🌐 *advmdshahalam.me (Google Website)*';
-    const defaultMsg = `${source}\n\nAssalamu Alaikum, I found you on Google and need legal advice.`;
-    const fullMsg = msg
-        ? `${source}\n\n${msg}`
-        : defaultMsg;
-    return `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(fullMsg)}`;
+ *  the official website (advmdshahalam.me) rather than an unknown contact. */
+export const waLink = (msg = '', isBn = false, articleTitle = '') => {
+    const siteTagBn = '🌐 *advmdshahalam.me* (অফিসিয়াল ওয়েবসাইট)';
+    const siteTagEn = '🌐 *advmdshahalam.me* (Official Website)';
+
+    if (articleTitle) {
+        const fullMsg = isBn
+            ? `${siteTagBn}\n\nআসসালামু আলাইকুম অ্যাডভোকেট মো. শাহ আলম,\nআমি আপনার ওয়েবসাইটের "${articleTitle}" লেখাটি পড়েছি এবং এ বিষয়ে জরুরি আইনি পরামর্শ চাই।`
+            : `${siteTagEn}\n\nAssalamu Alaikum Advocate Md. Shah Alam,\nI read your article "${articleTitle}" on your website and need urgent legal consultation.`;
+        return `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(fullMsg)}`;
+    }
+
+    if (msg) {
+        if (msg.includes('advmdshahalam.me')) {
+            return `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`;
+        }
+        const isMsgBn = isBn || /[\u0980-\u09FF]/.test(msg);
+        const tag = isMsgBn ? siteTagBn : siteTagEn;
+        return `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(`${tag}\n\n${msg}`)}`;
+    }
+
+    const defaultMsg = isBn
+        ? `${siteTagBn}\n\nআসসালামু আলাইকুম অ্যাডভোকেট মো. শাহ আলম,\nআমি আপনার ওয়েবসাইট advmdshahalam.me দেখে সরাসরি আইনি পরামর্শের জন্য যোগাযোগ করছি।`
+        : `${siteTagEn}\n\nAssalamu Alaikum Advocate Md. Shah Alam,\nI found your website advmdshahalam.me and would like legal consultation.`;
+
+    return `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(defaultMsg)}`;
 };
 
 /** Build a tel: href */

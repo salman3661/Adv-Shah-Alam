@@ -7,11 +7,53 @@ import aboutBn from '../content/about_bn.json';
 // Icon map
 const STAT_ICONS = [Clock, Scale, Trophy, Users];
 
-const StatCounter = ({ value, suffix }) => {
+const toBnDigit = (num) => {
+    const bnDigits = ['০', '১', '২', '৩', '৪', '৫', '৬', '৭', '৮', '৯'];
+    return String(num).replace(/[0-9]/g, (d) => bnDigits[parseInt(d, 10)]);
+};
+
+const AnimatedCounter = ({ target, isBn, suffix = '', decimals = 0, fallback = '' }) => {
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true, margin: '-40px' });
+    const [displayVal, setDisplayVal] = React.useState(0);
+
+    useEffect(() => {
+        if (!isInView || target === undefined) return;
+        const num = parseFloat(target) || 0;
+        const controls = animate(0, num, {
+            duration: 2.2,
+            ease: [0.16, 1, 0.3, 1], // easeOutExpo
+            onUpdate: (latest) => {
+                setDisplayVal(decimals > 0 ? latest.toFixed(decimals) : Math.round(latest));
+            }
+        });
+        return () => controls.stop();
+    }, [isInView, target, decimals]);
+
+    if (target === undefined) {
+        return (
+            <span className="inline-flex items-baseline">
+                <span>{fallback}</span>
+                {suffix && <span style={{ marginLeft: suffix.startsWith(' ') ? undefined : '2px' }}>{suffix}</span>}
+            </span>
+        );
+    }
+
+    const formatNum = (v) => {
+        if (decimals > 0) return String(v);
+        const n = Number(v);
+        if (n >= 1000) {
+            return n.toLocaleString('en-US');
+        }
+        return String(v);
+    };
+
+    const formatted = isBn ? toBnDigit(formatNum(displayVal)) : formatNum(displayVal);
+
     return (
-        <span className="inline-flex items-baseline">
-            <span>{value}</span>
-            {suffix && <span>{suffix}</span>}
+        <span ref={ref} className="inline-flex items-baseline font-bold tracking-tight">
+            <span>{formatted}</span>
+            {suffix && <span style={{ marginLeft: suffix.startsWith(' ') ? undefined : '2px' }}>{suffix}</span>}
         </span>
     );
 };
@@ -22,8 +64,10 @@ const About = ({ lang = 'en' }) => {
 
     const stats = (aboutContent.stats || []).map((s, i) => ({
         icon: STAT_ICONS[i % STAT_ICONS.length],
+        target: s.target,
+        decimals: s.decimals || 0,
         value: s.value,
-        suffix: s.suffix,
+        suffix: s.suffix || '',
         label: s.label,
     }));
 
@@ -144,7 +188,13 @@ const About = ({ lang = 'en' }) => {
                                     <stat.icon size={24} />
                                 </div>
                                 <h3 className="text-3xl md:text-4xl font-bold mb-1" style={{ color: 'var(--text)' }}>
-                                    <StatCounter value={stat.value} suffix={stat.suffix} />
+                                    <AnimatedCounter
+                                        target={stat.target}
+                                        decimals={stat.decimals}
+                                        isBn={isBn}
+                                        suffix={stat.suffix}
+                                        fallback={stat.value}
+                                    />
                                 </h3>
                                 <p className="text-sm font-medium" style={{ color: 'var(--text-muted)' }}>{stat.label}</p>
                             </motion.div>
