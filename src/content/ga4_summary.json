@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-29T13:47:27.017Z",
+  "updatedAt": "2026-09-29T13:53:15.293Z",
   "propertyId": "520583213",
   "channels": [
     {
@@ -168,13 +168,13 @@
       "path": "/blog/bangladesh-cyber-crime-complaint-portal-guide-2026",
       "title": "Bangladesh Cyber Crime Complaint Portal – Online Guide",
       "activeUsers": 164,
-      "pageViews": 206
+      "pageViews": 207
     },
     {
       "path": "/bn/blog",
       "title": "বাংলা আইনি ব্লগ ও সমাধান নির্দেশিকা | অ্যাডভোকেট মো. শাহ আলম",
       "activeUsers": 77,
-      "pageViews": 151
+      "pageViews": 152
     },
     {
       "path": "/bn/blog/sampatti-uttoradhikar-ain-2026-bn",
@@ -185,8 +185,8 @@
     {
       "path": "/",
       "title": "এডভোকেট মোঃ শাহ আলম | আইনজীবী উত্তরা, ঢাকা",
-      "activeUsers": 64,
-      "pageViews": 102
+      "activeUsers": 65,
+      "pageViews": 103
     },
     {
       "path": "/blog/rs-khatian-online-check-bangladesh-2026",
@@ -203,8 +203,8 @@
     {
       "path": "/bn/blog/jomi-registry-khoroch-sarkaree-fee-bd",
       "title": "জমি রেজিস্ট্রি খরচ ও সরকারি ফি | আপডেট তালিকা",
-      "activeUsers": 66,
-      "pageViews": 83
+      "activeUsers": 67,
+      "pageViews": 84
     },
     {
       "path": "/blog/land-registration-cost-fees-calculator-bangladesh-2026",
@@ -269,14 +269,20 @@
     {
       "path": "/blog",
       "title": "Legal Guides & Articles | Advocate Md. Shah Alam – Supreme Court Lawyer",
-      "activeUsers": 31,
-      "pageViews": 42
+      "activeUsers": 32,
+      "pageViews": 43
     },
     {
       "path": "/bn/blog/cyber-harassment-emergency-helpline-online-complaint-2026",
       "title": "অনলাইনে হয়রানি হলে জরুরি হেল্পলাইন ও সাইবার অভিযোগ নিয়ম ২০২৬ — আইনি সমাধান",
       "activeUsers": 30,
       "pageViews": 39
+    },
+    {
+      "path": "/bn/blog/e-namjari-tracking-mutation-check-prokriya-bangladesh-2026",
+      "title": "ই-নামজারি ট্র্যাকিং ও খতিয়ান চেক করার নিয়ম | ভূমি",
+      "activeUsers": 28,
+      "pageViews": 38
     },
     {
       "path": "/bn/blog/talaknama-lekhari-niyom-fee-prokriya-bangladesh-2026",
@@ -291,10 +297,10 @@
       "pageViews": 37
     },
     {
-      "path": "/bn/blog/e-namjari-tracking-mutation-check-prokriya-bangladesh-2026",
-      "title": "ই-নামজারি ট্র্যাকিং ও খতিয়ান চেক করার নিয়ম | ভূমি",
-      "activeUsers": 27,
-      "pageViews": 37
+      "path": "/en",
+      "title": "Trusted Lawyer in Bangladesh | Advocate Md. Shah Alam — Uttara, Dhaka",
+      "activeUsers": 28,
+      "pageViews": 36
     },
     {
       "path": "/blog/e-namjari-online-check-bangladesh-2026",
@@ -312,12 +318,6 @@
       "path": "/bn/blog/cheque-dishonour-legal-notice-pathanor-niyom-ni-act",
       "title": "চেক ডিজঅনার হলে লিগ্যাল নোটিশ পাঠানোর নিয়ম ও সময়সীমা (১৩৮ ধারা)",
       "activeUsers": 28,
-      "pageViews": 35
-    },
-    {
-      "path": "/en",
-      "title": "Trusted Lawyer in Bangladesh | Advocate Md. Shah Alam — Uttara, Dhaka",
-      "activeUsers": 27,
       "pageViews": 35
     },
     {
@@ -353,8 +353,8 @@
     {
       "path": "/bn/blog/flat-apartment-registration-fee-bangladesh",
       "title": "ফ্ল্যাট রেজিস্ট্রি খরচ কত ২০২৬ | স্ট্যাম্প ডিউটি ও ভ্যাট",
-      "activeUsers": 19,
-      "pageViews": 27
+      "activeUsers": 20,
+      "pageViews": 28
     },
     {
       "path": "/blog/property-inheritance-distribution-bangladesh-2026",
@@ -469,7 +469,7 @@
     {
       "country": "Bangladesh",
       "city": "Dhaka",
-      "activeUsers": 863
+      "activeUsers": 864
     },
     {
       "country": "Bangladesh",
@@ -528,13 +528,13 @@
     },
     {
       "country": "Bangladesh",
-      "city": "Gazipur",
+      "city": "Barishal",
       "activeUsers": 21
     },
     {
       "country": "Bangladesh",
-      "city": "Barishal",
-      "activeUsers": 20
+      "city": "Gazipur",
+      "activeUsers": 21
     },
     {
       "country": "Bangladesh",

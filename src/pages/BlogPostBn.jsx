@@ -740,14 +740,14 @@ const BlogPostBnInner = () => {
                         {post.title}
                     </h1>
 
-                    {/* ── Above-the-Fold Header Banner Ad (Prothom Alo style) ── */}
-                    <div style={{ margin: '1rem 0 1.5rem', maxWidth: '850px' }}>
+                    {/* ── Above-the-Fold Header Banner Ad (Prothom Alo style: Slim Horizontal Leaderboard) ── */}
+                    <div style={{ margin: '0.875rem auto 1.25rem', maxWidth: '850px', maxHeight: '120px', overflow: 'hidden' }}>
                         <AdSenseAd
                             slot="8630877987"
-                            format="auto"
+                            format="horizontal"
                             responsive={true}
                             labelText="বিজ্ঞাপন"
-                            style={{ borderRadius: '0.75rem', overflow: 'hidden' }}
+                            style={{ borderRadius: '0.5rem', overflow: 'hidden', maxHeight: '110px' }}
                         />
                     </div>
                     {post.heroIntro && (
