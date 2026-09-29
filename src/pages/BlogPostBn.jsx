@@ -739,6 +739,17 @@ const BlogPostBnInner = () => {
                     <h1 style={{ fontFamily: "'SolaimanLipi', 'Noto Sans Bengali', 'Playfair Display', serif", fontSize: 'clamp(1.75rem, 4vw, 3rem)', fontWeight: 800, lineHeight: 1.22, color: 'var(--hero-text)', marginBottom: '1.375rem', letterSpacing: '-0.01em', maxWidth: '900px' }}>
                         {post.title}
                     </h1>
+
+                    {/* ── Above-the-Fold Header Banner Ad (Prothom Alo style) ── */}
+                    <div style={{ margin: '1rem 0 1.5rem', maxWidth: '850px' }}>
+                        <AdSenseAd
+                            slot="8630877987"
+                            format="auto"
+                            responsive={true}
+                            labelText="বিজ্ঞাপন"
+                            style={{ borderRadius: '0.75rem', overflow: 'hidden' }}
+                        />
+                    </div>
                     {post.heroIntro && (
                         <div className="bpbn-hero-intro-card">
                             <div className="bpbn-intro-header">

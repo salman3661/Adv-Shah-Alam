@@ -1,37 +1,37 @@
 {
-  "updatedAt": "2026-09-29T13:27:20.016Z",
+  "updatedAt": "2026-09-29T13:47:27.017Z",
   "propertyId": "520583213",
   "channels": [
     {
       "channel": "Organic Search",
       "sourceMedium": "google / organic",
-      "activeUsers": 1894,
-      "sessions": 2143,
-      "pageViews": 2762,
-      "engagementRate": "47.8%"
+      "activeUsers": 1897,
+      "sessions": 2149,
+      "pageViews": 2767,
+      "engagementRate": "47.7%"
     },
     {
       "channel": "Direct",
       "sourceMedium": "(direct) / (none)",
-      "activeUsers": 406,
-      "sessions": 425,
-      "pageViews": 534,
-      "engagementRate": "23.3%"
+      "activeUsers": 407,
+      "sessions": 426,
+      "pageViews": 535,
+      "engagementRate": "23.2%"
     },
     {
       "channel": "Cross-network",
       "sourceMedium": "(data not available)",
-      "activeUsers": 158,
-      "sessions": 159,
-      "pageViews": 190,
+      "activeUsers": 159,
+      "sessions": 160,
+      "pageViews": 191,
       "engagementRate": "2.5%"
     },
     {
       "channel": "Unassigned",
       "sourceMedium": "(not set)",
-      "activeUsers": 97,
-      "sessions": 98,
-      "pageViews": 77,
+      "activeUsers": 99,
+      "sessions": 100,
+      "pageViews": 80,
       "engagementRate": "0.0%"
     },
     {
@@ -116,6 +116,14 @@
     },
     {
       "channel": "AI Assistant",
+      "sourceMedium": "chatgpt.com / ai-assistant",
+      "activeUsers": 1,
+      "sessions": 1,
+      "pageViews": 1,
+      "engagementRate": "0.0%"
+    },
+    {
+      "channel": "AI Assistant",
       "sourceMedium": "copilot.com / ai-assistant",
       "activeUsers": 1,
       "sessions": 1,
@@ -165,8 +173,8 @@
     {
       "path": "/bn/blog",
       "title": "বাংলা আইনি ব্লগ ও সমাধান নির্দেশিকা | অ্যাডভোকেট মো. শাহ আলম",
-      "activeUsers": 76,
-      "pageViews": 149
+      "activeUsers": 77,
+      "pageViews": 151
     },
     {
       "path": "/bn/blog/sampatti-uttoradhikar-ain-2026-bn",
@@ -177,8 +185,8 @@
     {
       "path": "/",
       "title": "এডভোকেট মোঃ শাহ আলম | আইনজীবী উত্তরা, ঢাকা",
-      "activeUsers": 63,
-      "pageViews": 101
+      "activeUsers": 64,
+      "pageViews": 102
     },
     {
       "path": "/blog/rs-khatian-online-check-bangladesh-2026",
@@ -201,8 +209,8 @@
     {
       "path": "/blog/land-registration-cost-fees-calculator-bangladesh-2026",
       "title": "Coming Soon | Advocate Md. Shah Alam",
-      "activeUsers": 63,
-      "pageViews": 77
+      "activeUsers": 64,
+      "pageViews": 78
     },
     {
       "path": "/bn/blog/cyber-crime-complaint-online-police-helpline",
@@ -244,7 +252,7 @@
       "path": "/bn/blog/mayer-sampatti-vibhajan-ain-bangladesh-2026",
       "title": "মায়ের সম্পত্তি ভাগের নিয়ম | সন্তান ও স্বামীর আইনি অংশ",
       "activeUsers": 36,
-      "pageViews": 46
+      "pageViews": 47
     },
     {
       "path": "/advocate-md-shah-alam",
@@ -271,27 +279,27 @@
       "pageViews": 39
     },
     {
+      "path": "/bn/blog/talaknama-lekhari-niyom-fee-prokriya-bangladesh-2026",
+      "title": "তালাকনামা লেখার নিয়ম ও খরচ | কাজী অফিস ও নোটিশ গাইড",
+      "activeUsers": 35,
+      "pageViews": 37
+    },
+    {
       "path": "/bn/blog/batwara-mamla-din-khoroch-prokriya-2026",
       "title": "বাটোয়ারা মামলা কতদিন চলে ও খরচ কত ২০২৬ — দেওয়ানি আদালত ও জমি বণ্টন | এডভোকেট শাহ আলম",
       "activeUsers": 30,
       "pageViews": 37
     },
     {
-      "path": "/bn/blog/talaknama-lekhari-niyom-fee-prokriya-bangladesh-2026",
-      "title": "তালাকনামা লেখার নিয়ম ও খরচ | কাজী অফিস ও নোটিশ গাইড",
-      "activeUsers": 35,
-      "pageViews": 36
+      "path": "/bn/blog/e-namjari-tracking-mutation-check-prokriya-bangladesh-2026",
+      "title": "ই-নামজারি ট্র্যাকিং ও খতিয়ান চেক করার নিয়ম | ভূমি",
+      "activeUsers": 27,
+      "pageViews": 37
     },
     {
       "path": "/blog/e-namjari-online-check-bangladesh-2026",
       "title": "E-Namjari Online Check Bangladesh 2026 — Apply, Track & Download Mutation",
       "activeUsers": 27,
-      "pageViews": 36
-    },
-    {
-      "path": "/bn/blog/e-namjari-tracking-mutation-check-prokriya-bangladesh-2026",
-      "title": "ই-নামজারি ট্র্যাকিং ও খতিয়ান চেক করার নিয়ম | ভূমি",
-      "activeUsers": 26,
       "pageViews": 36
     },
     {
@@ -334,7 +342,7 @@
       "path": "/blog/land-survey-map-dag-mouza-bangladesh",
       "title": "Dag Number, Mouza Map & Land Survey Bangladesh",
       "activeUsers": 26,
-      "pageViews": 28
+      "pageViews": 29
     },
     {
       "path": "/bn/blog/heba-bil-ewaz-dalil-khoroch-2026",
@@ -391,15 +399,15 @@
       "pageViews": 21
     },
     {
-      "path": "/bn/blog/kabinnama-nikahnama-tolar-niyom-fee-bangladesh-2026",
-      "title": "কাবিননামা তোলার নিয়ম ও সরকারি ফি ২০২৬ | নকল নিকাহনামা সংগ্রহ",
-      "activeUsers": 18,
-      "pageViews": 20
-    },
-    {
       "path": "/bn/blog/sole-nama-solenama-deyani-adalat-niyom-2026",
       "title": "সোলেনামা কি ও আপস নিষ্পত্তির নিয়ম ২০২৬ | সোলে ডিক্রি বাতিলের আইন",
       "activeUsers": 16,
+      "pageViews": 21
+    },
+    {
+      "path": "/bn/blog/kabinnama-nikahnama-tolar-niyom-fee-bangladesh-2026",
+      "title": "কাবিননামা তোলার নিয়ম ও সরকারি ফি ২০২৬ | নকল নিকাহনামা সংগ্রহ",
+      "activeUsers": 18,
       "pageViews": 20
     },
     {
@@ -411,7 +419,7 @@
     {
       "path": "/bn/blog/stree-babar-bari-chole-gele-shamir-koroniyo-dampotto-adhikar-2026",
       "title": "স্ত্রী বাবার বাড়ি চলে গেলে স্বামীর করণীয় | দাম্পত্য অধিকার পুনরুদ্ধার",
-      "activeUsers": 15,
+      "activeUsers": 16,
       "pageViews": 19
     },
     {
@@ -461,7 +469,7 @@
     {
       "country": "Bangladesh",
       "city": "Dhaka",
-      "activeUsers": 861
+      "activeUsers": 863
     },
     {
       "country": "Bangladesh",
@@ -491,7 +499,7 @@
     {
       "country": "Bangladesh",
       "city": "Sylhet",
-      "activeUsers": 51
+      "activeUsers": 52
     },
     {
       "country": "Bangladesh",

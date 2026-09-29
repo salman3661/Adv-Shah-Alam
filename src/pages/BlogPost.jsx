@@ -634,6 +634,17 @@ const BlogPostInner = () => {
                         {post.title}
                     </h1>
 
+                    {/* ── Above-the-Fold Header Banner Ad (Prothom Alo style) ── */}
+                    <div style={{ margin: '1rem 0 1.5rem', maxWidth: '850px' }}>
+                        <AdSenseAd
+                            slot="8630877987"
+                            format="auto"
+                            responsive={true}
+                            labelText="Advertisement"
+                            style={{ borderRadius: '0.75rem', overflow: 'hidden' }}
+                        />
+                    </div>
+
                     {/* Hero intro */}
                     {post.heroIntro && (
                         <div className="bpbn-hero-intro-card">

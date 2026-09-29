@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { ShieldCheck, Cookie, X } from 'lucide-react';
 
+/**
+ * CookieConsent — Ultra-minimal, non-intrusive 1-line Privacy bar (Prothom Alo style).
+ * Sits slimly at the bottom with a simple [OK] button. Never blocks content or photos.
+ */
 const CookieConsent = () => {
     const [visible, setVisible] = useState(false);
     const location = useLocation();
@@ -10,21 +13,16 @@ const CookieConsent = () => {
         try {
             const consent = localStorage.getItem('adv_cookie_consent');
             if (!consent) {
-                // Short delay so it doesn't pop aggressively on initial paint
-                const timer = setTimeout(() => setVisible(true), 1200);
+                const timer = setTimeout(() => setVisible(true), 600);
                 return () => clearTimeout(timer);
             }
-        } catch {
-            // Ignore localStorage errors
-        }
+        } catch {}
     }, []);
 
     const handleAccept = () => {
         try {
             localStorage.setItem('adv_cookie_consent', 'accepted');
-        } catch {
-            // Ignore
-        }
+        } catch {}
         setVisible(false);
     };
 
@@ -37,84 +35,79 @@ const CookieConsent = () => {
     return (
         <aside
             role="region"
-            aria-label={isBn ? "কুকি সম্মতি বিজ্ঞপ্তি" : "Cookie consent banner"}
-            className="fixed bottom-20 left-3 right-3 sm:bottom-6 sm:left-6 sm:right-auto sm:max-w-md z-[1200] transition-all duration-300 animate-fade-in"
+            aria-label={isBn ? "গোপনীয়তা সম্মতি" : "Privacy consent"}
+            style={{
+                position: 'fixed',
+                bottom: 0,
+                left: 0,
+                right: 0,
+                zIndex: 1040,
+                background: '#0B132B',
+                borderTop: '1px solid rgba(198, 167, 94, 0.25)',
+                padding: '6px 14px',
+                boxShadow: '0 -2px 10px rgba(0, 0, 0, 0.4)',
+            }}
         >
-            <div
-                className="p-4 sm:p-5 rounded-2xl border transition-colors duration-200"
-                style={{
-                    backgroundColor: 'var(--surface)',
-                    borderColor: 'var(--card-border)',
-                    color: 'var(--text)',
-                    boxShadow: '0 12px 32px -4px rgba(13, 27, 46, 0.16), 0 4px 12px -2px rgba(13, 27, 46, 0.08)'
-                }}
-            >
-                <div className="flex items-start gap-3 mb-3">
-                    <div
-                        className="p-2 rounded-xl flex-shrink-0"
-                        style={{
-                            background: 'var(--accent-subtle, rgba(27, 54, 93, 0.08))',
-                            color: 'var(--gold, #B8922A)'
-                        }}
-                    >
-                        <Cookie size={20} />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                        <div className="flex items-center gap-1.5 mb-1">
-                            <ShieldCheck size={16} className="text-emerald-600 dark:text-emerald-400 flex-shrink-0" />
-                            <h4 className="text-sm font-bold font-serif leading-tight" style={{ color: 'var(--text)' }}>
-                                {isBn ? 'কুকি ও গোপনীয়তা নীতি' : 'Cookie & Privacy Settings'}
-                            </h4>
-                        </div>
-                        <p className="text-xs leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
-                            {isBn ? (
-                                <>
-                                    আমরা আপনার ব্রাউজিং অভিজ্ঞতা উন্নত করতে এবং Google AdSense ও Analytics-এর জন্য কুকি ব্যবহার করি। বিস্তারিত জানতে আমাদের{' '}
-                                    <Link to="/privacy-policy" className="underline font-semibold hover:opacity-80" style={{ color: 'var(--gold, #B8922A)' }}>
-                                        গোপনীয়তা নীতি
-                                    </Link>{' '}
-                                    দেখুন।
-                                </>
-                            ) : (
-                                <>
-                                    We use cookies to enhance your experience, analyze traffic, and serve relevant ads via Google AdSense. Learn more in our{' '}
-                                    <Link to="/privacy-policy" className="underline font-semibold hover:opacity-80" style={{ color: 'var(--gold, #B8922A)' }}>
-                                        Privacy Policy
-                                    </Link>.
-                                </>
-                            )}
-                        </p>
-                    </div>
-                    <button
-                        onClick={() => setVisible(false)}
-                        aria-label="Close cookie banner"
-                        className="p-1 rounded-lg transition-colors hover:bg-black/5 dark:hover:bg-white/10"
-                        style={{ color: 'var(--text-muted)' }}
-                    >
-                        <X size={16} />
-                    </button>
-                </div>
-
-                <div
-                    className="flex items-center justify-end gap-2 pt-3 mt-2"
-                    style={{ borderTop: '1px solid var(--divider)' }}
-                >
-                    <Link
-                        to="/privacy-policy"
-                        className="text-xs px-3 py-1.5 rounded-lg transition-colors hover:opacity-80 font-medium"
-                        style={{ color: 'var(--text-muted)' }}
-                    >
-                        {isBn ? 'নীতিমালা পড়ুন' : 'Learn More'}
-                    </Link>
+            <div style={{
+                maxWidth: '1200px',
+                margin: '0 auto',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                flexWrap: 'wrap',
+                gap: '8px',
+                fontSize: '0.74rem',
+                color: '#E2E8F0',
+            }}>
+                <p style={{ margin: 0, lineHeight: 1.4, flex: 1, minWidth: '220px' }}>
+                    {isBn ? (
+                        <>
+                            আমাদের সাইট ব্যবহার করে আপনি আমাদের{' '}
+                            <Link to="/privacy-policy" style={{ color: '#C6A75E', fontWeight: 600, textDecoration: 'underline' }}>
+                                Privacy Policy
+                            </Link>{' '}
+                            মেনে নিচ্ছেন।
+                        </>
+                    ) : (
+                        <>
+                            By using this site, you agree to our{' '}
+                            <Link to="/privacy-policy" style={{ color: '#C6A75E', fontWeight: 600, textDecoration: 'underline' }}>
+                                Privacy Policy
+                            </Link>.
+                        </>
+                    )}
+                </p>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
                     <button
                         onClick={handleAccept}
-                        className="text-xs px-4 py-2 rounded-xl font-semibold transition-all duration-150 hover:opacity-95 active:scale-95 shadow-sm cursor-pointer"
                         style={{
-                            background: 'var(--btn-primary-bg, #1B365D)',
-                            color: '#FFFFFF'
+                            background: '#1A3FBF',
+                            color: '#FFFFFF',
+                            border: 'none',
+                            borderRadius: '4px',
+                            padding: '3px 12px',
+                            fontSize: '0.72rem',
+                            fontWeight: 700,
+                            cursor: 'pointer',
+                            letterSpacing: '0.02em',
                         }}
                     >
-                        {isBn ? 'সম্মতি দিচ্ছি' : 'Accept All'}
+                        OK
+                    </button>
+                    <button
+                        onClick={handleAccept}
+                        aria-label="Close"
+                        style={{
+                            background: 'transparent',
+                            color: '#94A3B8',
+                            border: 'none',
+                            padding: '2px 6px',
+                            fontSize: '0.85rem',
+                            cursor: 'pointer',
+                            lineHeight: 1,
+                        }}
+                    >
+                        ✕
                     </button>
                 </div>
             </div>
