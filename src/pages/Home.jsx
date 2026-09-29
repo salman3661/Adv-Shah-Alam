@@ -4,6 +4,7 @@ import Hero from '../components/Hero';
 import About from '../components/About';
 import TrustBar from '../components/TrustBar';
 import BackToTop from '../components/BackToTop';
+import AdSenseAd from '../components/AdSenseAd';
 
 
 // Below-fold sections are lazy-loaded — reduces initial JS parse on mobile
@@ -63,9 +64,33 @@ const Home = ({ lang = 'en' }) => {
 
             <Suspense fallback={<SectionFallback />}>
                 <Services lang={lang} />
+
+                {/* ── Homepage Ad 1: After Services (high CTR position) ── */}
+                <div style={{ maxWidth: '900px', margin: '0 auto', padding: '0 1rem 2rem' }}>
+                    <AdSenseAd
+                        slot="7958640804"
+                        format="auto"
+                        responsive={true}
+                        labelText={isBn ? 'বিজ্ঞাপন' : 'Advertisement'}
+                        style={{ borderRadius: '0.75rem', overflow: 'hidden' }}
+                    />
+                </div>
+
                 <FAQ lang={lang} />
                 <Testimonials lang={lang} />
                 <HumanStory lang={lang} />
+
+                {/* ── Homepage Ad 2: Before Blog Preview (reader engagement peak) ── */}
+                <div style={{ maxWidth: '900px', margin: '0 auto', padding: '0 1rem 2rem' }}>
+                    <AdSenseAd
+                        slot="7958640804"
+                        format="auto"
+                        responsive={true}
+                        labelText={isBn ? 'বিজ্ঞাপন' : 'Advertisement'}
+                        style={{ borderRadius: '0.75rem', overflow: 'hidden' }}
+                    />
+                </div>
+
                 <BlogPreview lang={lang} />
                 <Timeline lang={lang} />
                 <Chambers lang={lang} />

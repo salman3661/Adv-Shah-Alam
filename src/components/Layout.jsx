@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useLocation } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
 import FloatingWhatsApp from './FloatingWhatsApp';
@@ -249,6 +250,10 @@ const breadcrumbSchema = {
 
 
 const Layout = ({ children }) => {
+    const location = useLocation();
+    // Blog post pages have their own sticky bar — hide the global one to avoid duplication
+    const isBlogPost = /^\/(blog|bn\/blog)\/[^/]+/.test(location.pathname);
+
     return (
         <div className="min-h-screen font-sans flex flex-col transition-colors duration-300"
             style={{ background: 'var(--bg)', color: 'var(--text)' }}>
@@ -266,10 +271,12 @@ const Layout = ({ children }) => {
             </main>
             <Footer />
             <FloatingWhatsApp />
-            <MobileCallButton />
+            {/* Only show generic mobile CTA on non-blog-post pages */}
+            {!isBlogPost && <MobileCallButton />}
             <CookieConsent />
         </div>
     );
 };
 
 export default Layout;
+

@@ -4,11 +4,12 @@ import { Helmet } from 'react-helmet-async';
 import {
     ArrowLeft, Clock, ChevronDown, ChevronUp, Phone, MessageCircle,
     ExternalLink, BookOpen, AlertTriangle, List, Calendar,
-    TrendingUp, Newspaper, Flame
+    TrendingUp, Newspaper, Flame, Scale, MapPin
 } from 'lucide-react';
 import { telLink, waLink } from '../data/contactInfo';
 import Disclaimer from '../components/Disclaimer';
 import MidArticleLeadCapture from '../components/MidArticleLeadCapture';
+import AdSenseAd from '../components/AdSenseAd';
 
 /* ── Load all EN posts ── */
 const _postModules = import.meta.glob('../content/posts/en/*.json', { eager: true });
@@ -310,11 +311,15 @@ const ChamberPromoCard = () => (
         {/* Office Info */}
         <div style={{ padding: '0 1.125rem 0.875rem' }}>
             <div style={{ background: 'rgba(198,167,94,0.07)', border: '1px solid rgba(198,167,94,0.15)', borderRadius: '0.625rem', padding: '0.625rem 0.75rem', marginBottom: '0.5rem' }}>
-                <p style={{ fontSize: '0.6rem', fontWeight: 800, color: '#c6a75e', textTransform: 'uppercase', letterSpacing: '0.08em', margin: '0 0 4px' }}>📍 Supreme Court Chamber</p>
+                <p style={{ fontSize: '0.6rem', fontWeight: 800, color: '#c6a75e', textTransform: 'uppercase', letterSpacing: '0.08em', margin: '0 0 4px', display: 'flex', alignItems: 'center', gap: '4px' }}>
+                    <MapPin size={10} style={{ color: '#c6a75e' }} /> Supreme Court Chamber
+                </p>
                 <p style={{ fontSize: '0.72rem', color: 'rgba(255,255,255,0.65)', margin: 0, lineHeight: 1.5 }}>Moktob Bhaban (3rd Floor), Near Supreme Court, Dhaka-1000</p>
             </div>
             <div style={{ background: 'rgba(198,167,94,0.07)', border: '1px solid rgba(198,167,94,0.15)', borderRadius: '0.625rem', padding: '0.625rem 0.75rem', marginBottom: '0.875rem' }}>
-                <p style={{ fontSize: '0.6rem', fontWeight: 800, color: '#c6a75e', textTransform: 'uppercase', letterSpacing: '0.08em', margin: '0 0 4px' }}>📍 Uttara Branch</p>
+                <p style={{ fontSize: '0.6rem', fontWeight: 800, color: '#c6a75e', textTransform: 'uppercase', letterSpacing: '0.08em', margin: '0 0 4px', display: 'flex', alignItems: 'center', gap: '4px' }}>
+                    <MapPin size={10} style={{ color: '#c6a75e' }} /> Uttara Branch
+                </p>
                 <p style={{ fontSize: '0.72rem', color: 'rgba(255,255,255,0.65)', margin: 0, lineHeight: 1.5 }}>House 46, Road 6/B, Sector 12, Uttara West, Dhaka-1230</p>
             </div>
             <a href="https://wa.me/8801712655546?text=I+need+legal+consultation" target="_blank" rel="noopener noreferrer"
@@ -338,7 +343,7 @@ const ChamberPromoCard = () => (
         <Link to="/contact" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.375rem', padding: '0.6rem', fontSize: '0.7rem', fontWeight: 600, color: 'rgba(198,167,94,0.75)', textDecoration: 'none', transition: 'color 0.15s' }}
             onMouseEnter={e => e.currentTarget.style.color = '#c6a75e'}
             onMouseLeave={e => e.currentTarget.style.color = 'rgba(198,167,94,0.75)'}>
-            📋 View Full Contact Details →
+            <BookOpen size={12} /> View Full Contact Details →
         </Link>
     </div>
 );
@@ -357,8 +362,8 @@ const ConsultWidget = ({ postTitle }) => (
         {/* Gold shimmer line */}
         <div style={{ height: '2.5px', background: 'linear-gradient(90deg, transparent, #c6a75e, #e8c97d, #c6a75e, transparent)' }} />
         <div style={{ padding: '1rem 1.125rem' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.375rem', marginBottom: '0.625rem' }}>
-                <span style={{ fontSize: '0.9rem' }}>⚖️</span>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.625rem' }}>
+                <Scale size={16} style={{ color: '#e8c97d' }} />
                 <span style={{ fontSize: '0.7rem', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.1em', background: 'linear-gradient(90deg, #c6a75e, #e8c97d)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Free Legal Consultation</span>
             </div>
             <p style={{ fontSize: '0.8125rem', color: 'rgba(255,255,255,0.7)', lineHeight: 1.6, marginBottom: '0.875rem' }}>
@@ -495,6 +500,45 @@ const BlogPostInner = () => {
         '@context': 'https://schema.org', '@type': 'FAQPage',
         mainEntity: post.faqs.map(faq => ({ '@type': 'Question', name: faq.question || faq.q, acceptedAnswer: { '@type': 'Answer', text: faq.answer || faq.a } })),
     } : null;
+
+    // Modernize in-article consultation CTA boxes: remove cheap emojis, apply executive legal styling
+    const formatArticleContent = (html) => {
+        if (!html) return '';
+        return html.replace(
+            /<div[^>]*>[\s\S]*?(?:01712655546|8801712655546)[\s\S]*?<\/div>(?:\s*<\/div>)?/gi,
+            (match) => {
+                const hMatch = match.match(/<h[34][^>]*>([\s\S]*?)<\/h[34]>/i);
+                const pMatch = match.match(/<p[^>]*>([\s\S]*?)<\/p>/i);
+                const clean = (str) => (str || '').replace(/[\u{1F300}-\u{1F9FF}]|[\u{2600}-\u{26FF}]|[\u{2700}-\u{27BF}]|[\u{FE00}-\u{FE0F}]|[\u{1F000}-\u{1F2FF}]|\?\?/gu, '').trim();
+                const heading = hMatch ? clean(hMatch[1]) : 'Direct Legal Consultation';
+                const desc = pMatch ? clean(pMatch[1]) : 'Consult directly with Advocate Md. Shah Alam, Supreme Court of Bangladesh, for strategic counsel.';
+                
+                return `
+                <div class="legal-exec-card">
+                    <div class="lec-header">
+                        <span class="lec-live-dot"></span>
+                        <span class="lec-badge">Supreme Court Practice • Chamber Consultation</span>
+                    </div>
+                    <h3 class="lec-title">${heading}</h3>
+                    <p class="lec-desc">${desc}</p>
+                    <div class="lec-actions">
+                        <a href="tel:01712655546" class="lec-btn lec-call">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            <span>Direct Call: 01712-655546</span>
+                        </a>
+                        <a href="https://wa.me/8801955802007?text=${encodeURIComponent('Inquiring about legal consultation')}" target="_blank" rel="noopener noreferrer" class="lec-btn lec-wa">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
+                            <span>WhatsApp Consult</span>
+                        </a>
+                        <a href="/contact" class="lec-btn lec-chambers">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            <span>Chamber Locations</span>
+                        </a>
+                    </div>
+                </div>`;
+            }
+        );
+    };
 
     return (
         <>
@@ -729,6 +773,17 @@ const BlogPostInner = () => {
                                     </div>
                                 )}
 
+                                {/* ── 1. Top In-Article High-RPM AdSense Unit (Above-the-Fold Viewability) ── */}
+                                <div style={{ margin: '1.75rem 0 2.5rem' }}>
+                                    <AdSenseAd
+                                        slot="7958640804"
+                                        format="auto"
+                                        responsive={true}
+                                        labelText="Advertisement"
+                                        style={{ borderRadius: '0.75rem', overflow: 'hidden' }}
+                                    />
+                                </div>
+
                                 {/* Article Sections — High-End Editorial Design */}
                                 {post.sections.map((sec, i) => (
                                     <React.Fragment key={i}>
@@ -792,20 +847,46 @@ const BlogPostInner = () => {
 
                                             <div className="prose-content"
                                                 style={{ color: 'var(--text-secondary)', fontSize: '1.0625rem', lineHeight: '1.9', letterSpacing: '0.005em', wordBreak: 'break-word', overflowWrap: 'anywhere' }}
-                                                dangerouslySetInnerHTML={{ __html: sec.content }}
+                                                dangerouslySetInnerHTML={{ __html: formatArticleContent(sec.content) }}
                                             />
                                         </section>
+
+                                        {/* Mid-article lead capture at exact center section */}
                                         {i === Math.floor(((post.sections || []).length - 1) / 2) && (
                                             <MidArticleLeadCapture lang="en" />
+                                        )}
+
+                                        {/* ── 2. In-Content AdSense Ads: after every 2nd section (Balanced Monetization) ── */}
+                                        {(i + 1) % 2 === 0 && i < post.sections.length - 1 && (
+                                            <div style={{ margin: '2rem 0 3rem' }}>
+                                                <AdSenseAd
+                                                    slot="7958640804"
+                                                    format="auto"
+                                                    responsive={true}
+                                                    labelText="Advertisement"
+                                                    style={{ borderRadius: '0.75rem', overflow: 'hidden' }}
+                                                />
+                                            </div>
                                         )}
                                     </React.Fragment>
                                 ))}
 
+                                {/* ── 3. Bottom In-Article AdSense Banner (Before Conclusion / FAQs) ── */}
+                                <div style={{ margin: '2.5rem 0' }}>
+                                    <AdSenseAd
+                                        slot="7958640804"
+                                        format="auto"
+                                        responsive={true}
+                                        labelText="Advertisement"
+                                        style={{ borderRadius: '0.75rem', overflow: 'hidden' }}
+                                    />
+                                </div>
+
                                 {/* Related Services */}
                                 {post.relatedServiceLinks?.length > 0 && (
                                     <div style={{ margin: '2rem 0', padding: '1.25rem 1.5rem', borderRadius: '1rem', background: 'var(--surface)', border: '1px solid var(--card-border)' }}>
-                                        <h2 style={{ fontSize: '0.9rem', fontWeight: 800, color: 'var(--text)', marginBottom: '0.875rem', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
-                                            🔗 Related Legal Services
+                                        <h2 style={{ fontSize: '0.9rem', fontWeight: 800, color: 'var(--text)', marginBottom: '0.875rem', textTransform: 'uppercase', letterSpacing: '0.06em', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+                                            <ExternalLink size={13} style={{ color: 'var(--gold)' }} /> Related Legal Services
                                         </h2>
                                         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
                                             {post.relatedServiceLinks.map((link, i) => (
@@ -834,8 +915,9 @@ const BlogPostInner = () => {
 
                                 {/* CTA Form */}
                                 <div style={{ borderRadius: '1.375rem', overflow: 'hidden', background: 'linear-gradient(135deg, var(--hero-bg) 0%, var(--hero-surface, #1c1c35) 100%)', border: '1px solid rgba(198,167,94,0.18)', marginBottom: '3rem' }}>
-                                    <div style={{ background: `linear-gradient(90deg, ${cc.bg}, var(--gold))`, padding: '0.625rem 1.5rem' }}>
-                                        <p style={{ fontSize: '0.7rem', fontWeight: 800, color: '#fff', textTransform: 'uppercase', letterSpacing: '0.1em', margin: 0 }}>⚖️ Direct Legal Consultation</p>
+                                    <div style={{ background: `linear-gradient(90deg, ${cc.bg}, var(--gold))`, padding: '0.625rem 1.5rem', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+                                        <Scale size={13} style={{ color: '#fff' }} />
+                                        <p style={{ fontSize: '0.7rem', fontWeight: 800, color: '#fff', textTransform: 'uppercase', letterSpacing: '0.1em', margin: 0 }}>Direct Legal Consultation</p>
                                     </div>
                                     <div style={{ padding: '2rem 2rem 1.75rem' }}>
                                         {cSubmitted ? (
@@ -894,14 +976,45 @@ const BlogPostInner = () => {
                         <aside className="bp-sidebar">
                             <div style={{ position: 'sticky', top: '5rem' }}>
                                 <ConsultWidget postTitle={post.title} />
+
+                                {/* ── Sidebar AdSense Ad (Square/Rectangle) ── */}
+                                <AdSenseAd
+                                    slot="9714516992"
+                                    format="auto"
+                                    responsive={true}
+                                    labelText="Advertisement"
+                                    style={{ marginBottom: '1.125rem', borderRadius: '0.875rem', overflow: 'hidden' }}
+                                />
+
                                 <PopularPosts currentSlug={post.slug} />
+
+                                {/* ── Sidebar AdSense Ad 2 ── */}
+                                <AdSenseAd
+                                    slot="9714516992"
+                                    format="auto"
+                                    responsive={true}
+                                    label={false}
+                                    style={{ marginBottom: '1.125rem', borderRadius: '0.875rem', overflow: 'hidden' }}
+                                />
+
                                 <RecentPosts currentSlug={post.slug} />
                             </div>
                         </aside>
                     </div>
 
+
                     {/* Mobile: bottom related posts */}
                     <div className="bp-mobile-bottom">
+                        {/* ── Mobile In-Feed Ad ── */}
+                        <div style={{ margin: '1rem 0 1.5rem' }}>
+                            <AdSenseAd
+                                slot="7958640804"
+                                format="auto"
+                                responsive={true}
+                                labelText="Advertisement"
+                                style={{ borderRadius: '0.75rem', overflow: 'hidden' }}
+                            />
+                        </div>
                         <div style={{ borderTop: '2px solid var(--accent)', paddingTop: '2rem', marginTop: '1rem' }}>
                             <p style={{ fontSize: '0.8rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.08em', color: 'var(--text)', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.375rem' }}>
                                 <Flame size={14} style={{ color: 'var(--accent)' }} /> More Articles
@@ -1162,21 +1275,21 @@ const BlogPostInner = () => {
                 .prose-content div[style] { margin: 1.5rem 0; }
                 .prose-content hr { border: none; height: 1px; background: linear-gradient(90deg, transparent, var(--card-border), transparent); margin: 2rem 0; }
 
-                /* ═══ ULTRA-SLIM GLASSY LAG-FREE MOBILE BAR ═══ */
+                /* ═══ GOOGLE GLASSY FLOATING ISLAND MOBILE BAR ═══ */
                 .msb-bar {
                     display: none;
                     position: fixed;
-                    bottom: 0;
-                    left: 0;
-                    right: 0;
+                    bottom: calc(10px + env(safe-area-inset-bottom, 0px));
+                    left: 10px;
+                    right: 10px;
                     z-index: 9999;
-                    background: rgba(11, 18, 32, 0.88);
-                    backdrop-filter: blur(10px);
-                    -webkit-backdrop-filter: blur(10px);
-                    border-top: 1px solid rgba(198, 167, 94, 0.28);
-                    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.22);
-                    padding: 6px 12px;
-                    padding-bottom: max(6px, env(safe-area-inset-bottom, 6px));
+                    background: rgba(15, 23, 42, 0.82);
+                    backdrop-filter: blur(24px) saturate(200%);
+                    -webkit-backdrop-filter: blur(24px) saturate(200%);
+                    border: 1.5px solid rgba(255, 255, 255, 0.18);
+                    border-radius: 100px;
+                    box-shadow: 0 10px 36px rgba(0, 0, 0, 0.45), inset 0 1px 1px rgba(255, 255, 255, 0.22);
+                    padding: 7px 14px;
                     transform: translateZ(0);
                     will-change: transform;
                 }
@@ -1192,17 +1305,22 @@ const BlogPostInner = () => {
                 .msb-left {
                     display: flex !important;
                     align-items: center !important;
-                    gap: 6px !important;
+                    gap: 7px !important;
                     min-width: 0 !important;
                     flex: 1 1 auto !important;
                 }
                 .msb-live-dot {
-                    width: 7px;
-                    height: 7px;
+                    width: 8px;
+                    height: 8px;
                     border-radius: 50%;
                     background: #22c55e;
                     flex-shrink: 0;
-                    box-shadow: 0 0 6px #22c55e;
+                    box-shadow: 0 0 8px #22c55e, 0 0 14px rgba(34, 197, 94, 0.85);
+                    animation: msb-dot-ping 1.3s ease-in-out infinite;
+                }
+                @keyframes msb-dot-ping {
+                    0%, 100% { transform: scale(1); opacity: 1; }
+                    50% { transform: scale(1.35); opacity: 0.45; }
                 }
                 .msb-identity {
                     display: flex !important;
@@ -1211,63 +1329,80 @@ const BlogPostInner = () => {
                     line-height: 1.18 !important;
                 }
                 .msb-name {
-                    font-size: 0.76rem !important;
+                    font-size: 0.78rem !important;
                     font-weight: 700 !important;
-                    color: #F8FAFC !important;
+                    color: #FFFFFF !important;
                     white-space: nowrap !important;
                     overflow: hidden !important;
                     text-overflow: ellipsis !important;
                 }
                 .msb-sub {
-                    font-size: 0.6rem !important;
+                    font-size: 0.62rem !important;
                     color: #C6A75E !important;
                     white-space: nowrap !important;
                     overflow: hidden !important;
                     text-overflow: ellipsis !important;
+                    font-weight: 600 !important;
                 }
                 .msb-right {
                     display: flex !important;
                     align-items: center !important;
-                    gap: 6px !important;
+                    gap: 7px !important;
                     flex-shrink: 0 !important;
                 }
                 .msb-btn {
                     display: inline-flex !important;
                     align-items: center !important;
                     justify-content: center !important;
-                    gap: 4px !important;
-                    height: 32px !important;
-                    padding: 0 11px !important;
+                    gap: 5px !important;
+                    height: 35px !important;
+                    padding: 0 13px !important;
                     border-radius: 9999px !important;
-                    font-size: 0.74rem !important;
+                    font-size: 0.76rem !important;
                     font-weight: 700 !important;
                     text-decoration: none !important;
                     white-space: nowrap !important;
-                    transition: transform 0.12s ease !important;
+                    transition: transform 0.14s ease !important;
                     -webkit-tap-highlight-color: transparent !important;
+                    position: relative;
                 }
                 .msb-btn:active {
-                    transform: scale(0.94) !important;
+                    transform: scale(0.93) !important;
                 }
                 .msb-call {
                     background: linear-gradient(135deg, #C6A75E 0%, #A8873A 100%) !important;
                     color: #0B1120 !important;
-                    box-shadow: 0 2px 8px rgba(198, 167, 94, 0.35) !important;
+                    box-shadow: 0 3px 12px rgba(198, 167, 94, 0.4) !important;
+                    border: 1px solid rgba(255, 255, 255, 0.25) !important;
                 }
                 .msb-wa {
-                    background: #128C7E !important;
+                    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%) !important;
                     color: #FFFFFF !important;
-                    box-shadow: 0 2px 8px rgba(18, 140, 126, 0.35) !important;
+                    box-shadow: 0 3px 14px rgba(37, 211, 102, 0.45) !important;
+                    border: 1px solid rgba(255, 255, 255, 0.35) !important;
+                }
+                /* WhatsApp radar live beep pulse */
+                .msb-wa::after {
+                    content: '';
+                    position: absolute;
+                    inset: -3px;
+                    border-radius: 9999px;
+                    border: 1.5px solid rgba(37, 211, 102, 0.85);
+                    animation: msb-beep 2.2s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+                    pointer-events: none;
+                }
+                @keyframes msb-beep {
+                    0% { transform: scale(0.96); opacity: 0.9; }
+                    60% { opacity: 0.35; }
+                    100% { transform: scale(1.1, 1.25); opacity: 0; }
                 }
                 @media (max-width: 900px) {
                     .msb-bar {
                         display: block !important;
                     }
-                    /* Hide duplicate floating WhatsApp button on mobile so bottom bar is clean */
                     .whatsapp-float {
                         display: none !important;
                     }
-                    /* Add clearance at bottom so content never gets covered */
                     .bp-body-container {
                         padding-bottom: 5.5rem !important;
                     }
@@ -1277,8 +1412,8 @@ const BlogPostInner = () => {
                         display: none !important;
                     }
                     .msb-btn {
-                        padding: 0 8px !important;
-                        font-size: 0.7rem !important;
+                        padding: 0 9px !important;
+                        font-size: 0.72rem !important;
                     }
                 }
             `}</style>
