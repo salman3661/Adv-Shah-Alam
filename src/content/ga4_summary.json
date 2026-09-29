@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-09-29T14:02:23.118Z",
+  "updatedAt": "2026-09-29T14:09:08.607Z",
   "propertyId": "520583213",
   "channels": [
     {
       "channel": "Organic Search",
       "sourceMedium": "google / organic",
       "activeUsers": 1897,
-      "sessions": 2150,
-      "pageViews": 2770,
+      "sessions": 2151,
+      "pageViews": 2775,
       "engagementRate": "47.7%"
     },
     {
@@ -21,17 +21,17 @@
     {
       "channel": "Cross-network",
       "sourceMedium": "(data not available)",
-      "activeUsers": 161,
-      "sessions": 162,
-      "pageViews": 193,
-      "engagementRate": "2.5%"
+      "activeUsers": 163,
+      "sessions": 164,
+      "pageViews": 195,
+      "engagementRate": "2.4%"
     },
     {
       "channel": "Unassigned",
       "sourceMedium": "(not set)",
-      "activeUsers": 99,
-      "sessions": 100,
-      "pageViews": 87,
+      "activeUsers": 102,
+      "sessions": 103,
+      "pageViews": 88,
       "engagementRate": "0.0%"
     },
     {
@@ -180,18 +180,18 @@
       "path": "/bn/blog/sampatti-uttoradhikar-ain-2026-bn",
       "title": "বাবার সম্পত্তি বন্টন আইন বাংলাদেশ | উত্তরাধিকার গাইড",
       "activeUsers": 92,
-      "pageViews": 107
+      "pageViews": 108
     },
     {
       "path": "/",
       "title": "এডভোকেট মোঃ শাহ আলম | আইনজীবী উত্তরা, ঢাকা",
-      "activeUsers": 65,
-      "pageViews": 103
+      "activeUsers": 66,
+      "pageViews": 106
     },
     {
       "path": "/blog/rs-khatian-online-check-bangladesh-2026",
       "title": "RS Khatian Online Check Bangladesh 2026 Guide",
-      "activeUsers": 74,
+      "activeUsers": 75,
       "pageViews": 93
     },
     {
@@ -275,7 +275,7 @@
     {
       "path": "/bn/blog/cyber-harassment-emergency-helpline-online-complaint-2026",
       "title": "অনলাইনে হয়রানি হলে জরুরি হেল্পলাইন ও সাইবার অভিযোগ নিয়ম ২০২৬ — আইনি সমাধান",
-      "activeUsers": 30,
+      "activeUsers": 31,
       "pageViews": 39
     },
     {
@@ -330,7 +330,7 @@
       "path": "/bn/blog/swami-korthrik-streeke-talak-notis-prokriya-2026",
       "title": "স্বামী স্ত্রীকে তালাক দেওয়ার সঠিক নিয়ম ২০২৬ | ৯০ দিনের তালাক নোটিশ আইন",
       "activeUsers": 23,
-      "pageViews": 32
+      "pageViews": 33
     },
     {
       "path": "/privacy-policy",
@@ -393,15 +393,15 @@
       "pageViews": 22
     },
     {
+      "path": "/bn/blog/sole-nama-solenama-deyani-adalat-niyom-2026",
+      "title": "সোলেনামা কি ও আপস নিষ্পত্তির নিয়ম ২০২৬ | সোলে ডিক্রি বাতিলের আইন",
+      "activeUsers": 17,
+      "pageViews": 22
+    },
+    {
       "path": "/blog/land-registration-cost-fees-calculator-bangladesh-2026",
       "title": "জমি রেজিস্ট্রি খরচ ২০২৬ — Land Registration Fee Calculator Bangladesh",
       "activeUsers": 19,
-      "pageViews": 21
-    },
-    {
-      "path": "/bn/blog/sole-nama-solenama-deyani-adalat-niyom-2026",
-      "title": "সোলেনামা কি ও আপস নিষ্পত্তির নিয়ম ২০২৬ | সোলে ডিক্রি বাতিলের আইন",
-      "activeUsers": 16,
       "pageViews": 21
     },
     {
@@ -469,7 +469,7 @@
     {
       "country": "Bangladesh",
       "city": "Dhaka",
-      "activeUsers": 864
+      "activeUsers": 867
     },
     {
       "country": "Bangladesh",
@@ -499,7 +499,7 @@
     {
       "country": "Bangladesh",
       "city": "Sylhet",
-      "activeUsers": 52
+      "activeUsers": 53
     },
     {
       "country": "Bangladesh",

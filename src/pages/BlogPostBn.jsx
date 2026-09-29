@@ -740,14 +740,15 @@ const BlogPostBnInner = () => {
                         {post.title}
                     </h1>
 
-                    {/* ── Above-the-Fold Header Banner Ad (Prothom Alo style: Slim Horizontal Leaderboard) ── */}
-                    <div style={{ margin: '0.875rem auto 1.25rem', maxWidth: '850px', maxHeight: '120px', overflow: 'hidden' }}>
+                    {/* ── Above-the-Fold Header Banner Ad ── */}
+                    <div style={{ margin: '0.875rem auto 1.25rem', maxWidth: '850px' }}>
                         <AdSenseAd
+                            key={`ad-head-${post.slug}`}
                             slot="8630877987"
-                            format="horizontal"
+                            format="auto"
                             responsive={true}
                             labelText="বিজ্ঞাপন"
-                            style={{ borderRadius: '0.5rem', overflow: 'hidden', maxHeight: '110px' }}
+                            style={{ borderRadius: '0.5rem', overflow: 'hidden' }}
                         />
                     </div>
                     {post.heroIntro && (
@@ -881,6 +882,7 @@ const BlogPostBnInner = () => {
                                 {/* ── 1. Top In-Article Native AdSense Unit ── */}
                                 <div style={{ margin: '1.75rem 0 2.5rem' }}>
                                     <AdSenseAd
+                                        key={`ad-top-${post.slug}`}
                                         slot="6519719969"
                                         layout="in-article"
                                         format="fluid"
@@ -966,6 +968,7 @@ const BlogPostBnInner = () => {
                                         {(i + 1) % 2 === 0 && i < post.sections.length - 1 && (
                                             <div style={{ margin: '2rem 0 3rem' }}>
                                                 <AdSenseAd
+                                                    key={`ad-sec-${i}-${post.slug}`}
                                                     slot="6519719969"
                                                     layout="in-article"
                                                     format="fluid"
@@ -981,6 +984,7 @@ const BlogPostBnInner = () => {
                                 {/* ── 3. Bottom Multiplex AdSense Grid (Recommended Content & Ads) ── */}
                                 <div style={{ margin: '2.5rem 0' }}>
                                     <AdSenseAd
+                                        key={`ad-bot-${post.slug}`}
                                         slot="3667074343"
                                         format="autorelaxed"
                                         responsive={true}
