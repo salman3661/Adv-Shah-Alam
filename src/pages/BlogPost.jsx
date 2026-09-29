@@ -784,11 +784,12 @@ const BlogPostInner = () => {
                                     </div>
                                 )}
 
-                                {/* ── 1. Top In-Article High-RPM AdSense Unit (Above-the-Fold Viewability) ── */}
+                                {/* ── 1. Top In-Article Native AdSense Unit ── */}
                                 <div style={{ margin: '1.75rem 0 2.5rem' }}>
                                     <AdSenseAd
-                                        slot="8630877987"
-                                        format="auto"
+                                        slot="6519719969"
+                                        layout="in-article"
+                                        format="fluid"
                                         responsive={true}
                                         labelText="Advertisement"
                                         style={{ borderRadius: '0.75rem', overflow: 'hidden' }}
@@ -867,12 +868,13 @@ const BlogPostInner = () => {
                                             <MidArticleLeadCapture lang="en" />
                                         )}
 
-                                        {/* ── 2. In-Content AdSense Ads: after every 2nd section (Balanced Monetization) ── */}
+                                        {/* ── 2. In-Content In-Article Native AdSense Ads: after every 2nd section (Balanced Monetization) ── */}
                                         {(i + 1) % 2 === 0 && i < post.sections.length - 1 && (
                                             <div style={{ margin: '2rem 0 3rem' }}>
                                                 <AdSenseAd
-                                                    slot="8630877987"
-                                                    format="auto"
+                                                    slot="6519719969"
+                                                    layout="in-article"
+                                                    format="fluid"
                                                     responsive={true}
                                                     labelText="Advertisement"
                                                     style={{ borderRadius: '0.75rem', overflow: 'hidden' }}
@@ -882,13 +884,13 @@ const BlogPostInner = () => {
                                     </React.Fragment>
                                 ))}
 
-                                {/* ── 3. Bottom In-Article AdSense Banner (Before Conclusion / FAQs) ── */}
+                                {/* ── 3. Bottom Multiplex AdSense Grid (Recommended Content & Ads) ── */}
                                 <div style={{ margin: '2.5rem 0' }}>
                                     <AdSenseAd
-                                        slot="8630877987"
-                                        format="auto"
+                                        slot="3667074343"
+                                        format="autorelaxed"
                                         responsive={true}
-                                        labelText="Advertisement"
+                                        labelText="Recommended Articles & Sponsored"
                                         style={{ borderRadius: '0.75rem', overflow: 'hidden' }}
                                     />
                                 </div>

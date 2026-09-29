@@ -1,29 +1,29 @@
 {
-  "updatedAt": "2026-09-29T13:53:15.293Z",
+  "updatedAt": "2026-09-29T14:02:23.118Z",
   "propertyId": "520583213",
   "channels": [
     {
       "channel": "Organic Search",
       "sourceMedium": "google / organic",
       "activeUsers": 1897,
-      "sessions": 2149,
-      "pageViews": 2767,
+      "sessions": 2150,
+      "pageViews": 2770,
       "engagementRate": "47.7%"
     },
     {
       "channel": "Direct",
       "sourceMedium": "(direct) / (none)",
-      "activeUsers": 407,
-      "sessions": 426,
-      "pageViews": 535,
+      "activeUsers": 408,
+      "sessions": 427,
+      "pageViews": 537,
       "engagementRate": "23.2%"
     },
     {
       "channel": "Cross-network",
       "sourceMedium": "(data not available)",
-      "activeUsers": 159,
-      "sessions": 160,
-      "pageViews": 191,
+      "activeUsers": 161,
+      "sessions": 162,
+      "pageViews": 193,
       "engagementRate": "2.5%"
     },
     {
@@ -31,7 +31,7 @@
       "sourceMedium": "(not set)",
       "activeUsers": 99,
       "sessions": 100,
-      "pageViews": 80,
+      "pageViews": 87,
       "engagementRate": "0.0%"
     },
     {
@@ -174,7 +174,7 @@
       "path": "/bn/blog",
       "title": "বাংলা আইনি ব্লগ ও সমাধান নির্দেশিকা | অ্যাডভোকেট মো. শাহ আলম",
       "activeUsers": 77,
-      "pageViews": 152
+      "pageViews": 153
     },
     {
       "path": "/bn/blog/sampatti-uttoradhikar-ain-2026-bn",
@@ -203,8 +203,8 @@
     {
       "path": "/bn/blog/jomi-registry-khoroch-sarkaree-fee-bd",
       "title": "জমি রেজিস্ট্রি খরচ ও সরকারি ফি | আপডেট তালিকা",
-      "activeUsers": 67,
-      "pageViews": 84
+      "activeUsers": 68,
+      "pageViews": 85
     },
     {
       "path": "/blog/land-registration-cost-fees-calculator-bangladesh-2026",
@@ -411,15 +411,15 @@
       "pageViews": 20
     },
     {
-      "path": "/bn/blog/bangladesh-uttaradhikar-ain-dhorm-2026",
-      "title": "উত্তরাধিকার আইন বাংলাদেশ ২০২৬ – ধর্ম অনুযায়ী সম্পত্তি বণ্টন",
-      "activeUsers": 17,
-      "pageViews": 19
-    },
-    {
       "path": "/bn/blog/stree-babar-bari-chole-gele-shamir-koroniyo-dampotto-adhikar-2026",
       "title": "স্ত্রী বাবার বাড়ি চলে গেলে স্বামীর করণীয় | দাম্পত্য অধিকার পুনরুদ্ধার",
       "activeUsers": 16,
+      "pageViews": 20
+    },
+    {
+      "path": "/bn/blog/bangladesh-uttaradhikar-ain-dhorm-2026",
+      "title": "উত্তরাধিকার আইন বাংলাদেশ ২০২৬ – ধর্ম অনুযায়ী সম্পত্তি বণ্টন",
+      "activeUsers": 17,
       "pageViews": 19
     },
     {

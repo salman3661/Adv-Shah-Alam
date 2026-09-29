@@ -6,7 +6,6 @@ import Footer from './Footer';
 import FloatingWhatsApp from './FloatingWhatsApp';
 import MobileCallButton from './MobileCallButton';
 import ReadingProgress from './ReadingProgress';
-import CookieConsent from './CookieConsent';
 
 const BASE = 'https://www.advmdshahalam.me';
 
@@ -273,7 +272,6 @@ const Layout = ({ children }) => {
             <FloatingWhatsApp />
             {/* Only show generic mobile CTA on non-blog-post pages */}
             {!isBlogPost && <MobileCallButton />}
-            <CookieConsent />
         </div>
     );
 };
