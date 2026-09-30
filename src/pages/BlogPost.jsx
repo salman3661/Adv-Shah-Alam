@@ -10,7 +10,6 @@ import { telLink, waLink } from '../data/contactInfo';
 import Disclaimer from '../components/Disclaimer';
 import MidArticleLeadCapture from '../components/MidArticleLeadCapture';
 import AdSenseAd from '../components/AdSenseAd';
-import StickyBottomAd from '../components/StickyBottomAd';
 
 /* ── Load all EN posts ── */
 const _postModules = import.meta.glob('../content/posts/en/*.json', { eager: true });
@@ -1443,9 +1442,6 @@ const BlogPostInner = () => {
                     }
                 }
             `}</style>
-
-            {/* ── Sticky Bottom Banner Ad (bd-pratidin style) ── */}
-            <StickyBottomAd slot="8630877987" labelText="Advertisement" />
         </>
     );
 };

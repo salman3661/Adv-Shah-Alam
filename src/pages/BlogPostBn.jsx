@@ -10,7 +10,6 @@ import { waLink, telLink } from '../data/contactInfo';
 import Disclaimer from '../components/Disclaimer';
 import MidArticleLeadCapture from '../components/MidArticleLeadCapture';
 import AdSenseAd from '../components/AdSenseAd';
-import StickyBottomAd from '../components/StickyBottomAd';
 import popularBnSlugs from '../content/popular_bn.json';
 
 /* ── Load all BN posts ── */
@@ -1613,9 +1612,6 @@ const BlogPostBnInner = () => {
                     }
                 }
             `}</style>
-
-            {/* ── Sticky Bottom Banner Ad (bd-pratidin style) ── */}
-            <StickyBottomAd slot="8630877987" labelText="বিজ্ঞাপন" />
         </>
     );
 };

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-30T06:16:25.197Z",
+  "updatedAt": "2026-09-30T06:30:08.579Z",
   "propertyId": "520583213",
   "channels": [
     {
@@ -21,8 +21,8 @@
     {
       "channel": "Cross-network",
       "sourceMedium": "(data not available)",
-      "activeUsers": 66,
-      "sessions": 66,
+      "activeUsers": 67,
+      "sessions": 67,
       "pageViews": 73,
       "engagementRate": "1.5%"
     },
@@ -477,7 +477,7 @@
     {
       "country": "Bangladesh",
       "city": "Dhaka",
-      "activeUsers": 803
+      "activeUsers": 804
     },
     {
       "country": "Bangladesh",
