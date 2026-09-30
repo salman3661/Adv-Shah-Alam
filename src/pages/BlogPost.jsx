@@ -10,6 +10,7 @@ import { telLink, waLink } from '../data/contactInfo';
 import Disclaimer from '../components/Disclaimer';
 import MidArticleLeadCapture from '../components/MidArticleLeadCapture';
 import AdSenseAd from '../components/AdSenseAd';
+import NotFound from './NotFound';
 
 /* ── Load all EN posts ── */
 const _postModules = import.meta.glob('../content/posts/en/*.json', { eager: true });
@@ -407,14 +408,6 @@ const BlogPostInner = () => {
     const [activeSection, setActiveSection] = useState(0);
     const [tocOpen, setTocOpen] = useState(false);
 
-    /* Redirect on 404 — use React Router navigate, not window.location */
-    React.useEffect(() => {
-        if (!post) {
-            const t = setTimeout(() => navigate('/blog', { replace: true }), 2000);
-            return () => clearTimeout(t);
-        }
-    }, [post, navigate]);
-
     /* Track active TOC section */
     useEffect(() => {
         if (!post) return;
@@ -440,19 +433,7 @@ const BlogPostInner = () => {
     };
 
     /* ── Error / Coming Soon states ── */
-    if (!post) return (
-        <>
-            <Helmet><title>Not Found | Advocate Md. Shah Alam</title><meta name="robots" content="noindex" /></Helmet>
-            <div style={{ minHeight: '60vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <div style={{ textAlign: 'center' }}>
-                    <BookOpen size={48} style={{ color: 'var(--accent)', marginBottom: '1rem' }} />
-                    <h1 style={{ fontSize: '1.5rem', fontWeight: 700, color: 'var(--text)', marginBottom: '0.5rem', fontFamily: "'Playfair Display', serif" }}>Article Not Found</h1>
-                    <p style={{ color: 'var(--text-muted)', marginBottom: '1rem' }}>Redirecting to blog...</p>
-                    <Link to="/blog" className="btn-primary">← Back to Blog</Link>
-                </div>
-            </div>
-        </>
-    );
+    if (!post) return <NotFound />;
 
     if (!isPublished(post)) return (
         <>

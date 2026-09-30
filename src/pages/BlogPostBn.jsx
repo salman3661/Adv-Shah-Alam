@@ -11,6 +11,7 @@ import Disclaimer from '../components/Disclaimer';
 import MidArticleLeadCapture from '../components/MidArticleLeadCapture';
 import AdSenseAd from '../components/AdSenseAd';
 import popularBnSlugs from '../content/popular_bn.json';
+import NotFound from './NotFound';
 
 /* ── Load all BN posts ── */
 const _bnModules = import.meta.glob('../content/posts/bn/*.json', { eager: true });
@@ -451,13 +452,6 @@ const BlogPostBnInner = () => {
     const [activeSection, setActiveSection] = useState(0);
     const [tocOpen, setTocOpen] = useState(false);
 
-    React.useEffect(() => {
-        if (!post) {
-            const t = setTimeout(() => navigate('/bn/blog', { replace: true }), 2000);
-            return () => clearTimeout(t);
-        }
-    }, [post, navigate]);
-
     useEffect(() => {
         if (!post) return;
         const obs = new IntersectionObserver(
@@ -481,19 +475,7 @@ const BlogPostBnInner = () => {
         setTimeout(() => { setCSubmitted(false); setCName(''); setCPhone(''); setCMessage(''); }, 5000);
     };
 
-    if (!post) return (
-        <>
-            <Helmet><title>পাওয়া যায়নি | অ্যাডভোকেট মো. শাহ আলম</title><meta name="robots" content="noindex" /></Helmet>
-            <div style={{ minHeight: '60vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <div style={{ textAlign: 'center' }}>
-                    <BookOpen size={48} style={{ color: 'var(--accent)', marginBottom: '1rem' }} />
-                    <h1 style={{ fontSize: '1.5rem', fontWeight: 700, color: 'var(--text)', marginBottom: '0.5rem', fontFamily: "'Playfair Display', serif" }}>নিবন্ধটি পাওয়া যায়নি</h1>
-                    <p style={{ color: 'var(--text-muted)', marginBottom: '1rem' }}>ব্লগে নিয়ে যাওয়া হচ্ছে...</p>
-                    <Link to="/bn/blog" className="btn-primary">← ব্লগে ফিরুন</Link>
-                </div>
-            </div>
-        </>
-    );
+    if (!post) return <NotFound />;
 
     if (!isPublishedBn(post)) return (
         <>

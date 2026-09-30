@@ -33,6 +33,24 @@
     })();
   </script>
 
+  <!-- Critical Anti-White-Flash & Pre-render Isolation Style -->
+  <style>
+    body {
+      background-color: var(--bg, #0B1220);
+      margin: 0;
+    }
+    #prerendered-content {
+      display: none !important;
+      visibility: hidden !important;
+      opacity: 0 !important;
+      height: 0 !important;
+      width: 0 !important;
+      overflow: hidden !important;
+      position: absolute !important;
+      pointer-events: none !important;
+    }
+  </style>
+
   <!-- Preload LCP hero image with responsive srcset for mobile vs desktop -->
   <link rel="preload" as="image"
         href="/images/hero/hero-md-shah-alam.webp"

@@ -86,7 +86,7 @@ function buildPage(base, { title, description, canonical, body, lang='en', extra
   h = h.replace('</head>', `${headInjections}</head>`);
 
   // Hidden from users, visible to crawlers — no flash, no layout shift
-  const prerendered = `\n<div id="prerendered-content" aria-hidden="true" style="position:absolute;width:1px;height:1px;overflow:hidden;visibility:hidden;clip:rect(0,0,0,0);white-space:nowrap">\n${body}\n</div>`;
+  const prerendered = `\n<div id="prerendered-content" aria-hidden="true" style="display:none !important;visibility:hidden !important;opacity:0 !important;height:0 !important;width:0 !important;overflow:hidden !important;position:absolute !important;pointer-events:none !important">\n${body}\n</div>`;
   h = h.replace(/<div id="root">[\s\S]*?<\/div>/, `<div id="root">${prerendered}</div>`);
   return h;
 }
