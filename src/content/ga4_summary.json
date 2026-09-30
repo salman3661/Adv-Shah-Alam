@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-09-30T05:35:54.731Z",
+  "updatedAt": "2026-09-30T06:16:25.197Z",
   "propertyId": "520583213",
   "channels": [
     {
       "channel": "Organic Search",
       "sourceMedium": "google / organic",
       "activeUsers": 1883,
-      "sessions": 2115,
+      "sessions": 2116,
       "pageViews": 2820,
       "engagementRate": "50.6%"
     },
@@ -21,10 +21,10 @@
     {
       "channel": "Cross-network",
       "sourceMedium": "(data not available)",
-      "activeUsers": 53,
-      "sessions": 53,
-      "pageViews": 55,
-      "engagementRate": "0.0%"
+      "activeUsers": 66,
+      "sessions": 66,
+      "pageViews": 73,
+      "engagementRate": "1.5%"
     },
     {
       "channel": "Unassigned",
@@ -45,9 +45,9 @@
     {
       "channel": "Unassigned",
       "sourceMedium": "(not set)",
-      "activeUsers": 31,
-      "sessions": 31,
-      "pageViews": 29,
+      "activeUsers": 34,
+      "sessions": 34,
+      "pageViews": 30,
       "engagementRate": "0.0%"
     },
     {
@@ -175,20 +175,20 @@
     {
       "path": "/blog/bangladesh-cyber-crime-complaint-portal-guide-2026",
       "title": "Bangladesh Cyber Crime Complaint Portal – Online Guide",
-      "activeUsers": 169,
-      "pageViews": 213
+      "activeUsers": 170,
+      "pageViews": 215
     },
     {
       "path": "/bn/blog",
       "title": "বাংলা আইনি ব্লগ ও সমাধান নির্দেশিকা | অ্যাডভোকেট মো. শাহ আলম",
-      "activeUsers": 64,
-      "pageViews": 141
+      "activeUsers": 65,
+      "pageViews": 142
     },
     {
       "path": "/",
       "title": "এডভোকেট মোঃ শাহ আলম | আইনজীবী উত্তরা, ঢাকা",
-      "activeUsers": 71,
-      "pageViews": 127
+      "activeUsers": 72,
+      "pageViews": 128
     },
     {
       "path": "/blog/rs-khatian-online-check-bangladesh-2026",
@@ -229,26 +229,26 @@
     {
       "path": "/bn/blog/stree-kortrik-swamike-talak-deyar-sothik-niyom",
       "title": "শীঘ্রই আসছে | অ্যাডভোকেট মো. শাহ আলম",
-      "activeUsers": 46,
-      "pageViews": 59
+      "activeUsers": 47,
+      "pageViews": 60
     },
     {
       "path": "/blog/namjari-tracking-status-check-bangladesh-2026",
       "title": "Namjari Tracking & Status Check Bangladesh",
-      "activeUsers": 46,
-      "pageViews": 53
+      "activeUsers": 47,
+      "pageViews": 54
+    },
+    {
+      "path": "/bn/blog/talaknama-lekhari-niyom-fee-prokriya-bangladesh-2026",
+      "title": "তালাকনামা লেখার নিয়ম ও খরচ | কাজী অফিস ও নোটিশ গাইড",
+      "activeUsers": 41,
+      "pageViews": 52
     },
     {
       "path": "/bn/blog/swami-korthrik-streeke-talak-notis-prokriya-2026",
       "title": "স্বামী স্ত্রীকে তালাক দেওয়ার সঠিক নিয়ম ২০২৬ | ৯০ দিনের তালাক নোটিশ আইন",
       "activeUsers": 27,
       "pageViews": 51
-    },
-    {
-      "path": "/bn/blog/talaknama-lekhari-niyom-fee-prokriya-bangladesh-2026",
-      "title": "তালাকনামা লেখার নিয়ম ও খরচ | কাজী অফিস ও নোটিশ গাইড",
-      "activeUsers": 39,
-      "pageViews": 48
     },
     {
       "path": "/bn/blog/biye-notun-ain-2026-kabinnama-sarkari-fee-hisab",
@@ -259,8 +259,8 @@
     {
       "path": "/bn/blog/batwara-mamla-din-khoroch-prokriya-2026",
       "title": "বাটোয়ারা মামলা কতদিন চলে ও খরচ কত ২০২৬ — দেওয়ানি আদালত ও জমি বণ্টন | এডভোকেট শাহ আলম",
-      "activeUsers": 34,
-      "pageViews": 44
+      "activeUsers": 37,
+      "pageViews": 47
     },
     {
       "path": "/bn/blog/e-namjari-tracking-mutation-check-prokriya-bangladesh-2026",
@@ -311,6 +311,12 @@
       "pageViews": 37
     },
     {
+      "path": "/en",
+      "title": "Trusted Lawyer in Bangladesh | Advocate Md. Shah Alam — Uttara, Dhaka",
+      "activeUsers": 29,
+      "pageViews": 37
+    },
+    {
       "path": "/bn/blog/police-verification-passport-job-rules-problems-2026",
       "title": "পুলিশ ভেরিফিকেশন নিয়ম ও মামলা থাকলে করণীয় ২০২৬ | এডভোকেট মো. শাহ আলম",
       "activeUsers": 32,
@@ -320,12 +326,6 @@
       "path": "/bn/blog/cheque-dishonour-legal-notice-pathanor-niyom-ni-act",
       "title": "চেক ডিজঅনার হলে লিগ্যাল নোটিশ পাঠানোর নিয়ম ও সময়সীমা (১৩৮ ধারা)",
       "activeUsers": 29,
-      "pageViews": 36
-    },
-    {
-      "path": "/en",
-      "title": "Trusted Lawyer in Bangladesh | Advocate Md. Shah Alam — Uttara, Dhaka",
-      "activeUsers": 28,
       "pageViews": 36
     },
     {
@@ -449,6 +449,12 @@
       "pageViews": 15
     },
     {
+      "path": "/bn/blog/cyber-harassment-emergency-helpline-online-complaint-2026",
+      "title": "অনলাইনে হয়রানির শিকার হলে জরুরি হেল্পলাইন ও সাইবার অভিযোগ নিয়ম ২০২৬",
+      "activeUsers": 14,
+      "pageViews": 14
+    },
+    {
       "path": "/blog/heba-gift-deed-law-bangladesh",
       "title": "Heba Gift Deed Law Bangladesh – Property Transfer to Family",
       "activeUsers": 12,
@@ -465,19 +471,13 @@
       "title": "Flat Registration Fee & Stamp Duty in Bangladesh 2026",
       "activeUsers": 11,
       "pageViews": 14
-    },
-    {
-      "path": "/blog/power-of-attorney-land-transfer-bangladesh",
-      "title": "Power of Attorney for Land Transfer Bangladesh 2026 — Full Guide",
-      "activeUsers": 10,
-      "pageViews": 14
     }
   ],
   "locations": [
     {
       "country": "Bangladesh",
       "city": "Dhaka",
-      "activeUsers": 794
+      "activeUsers": 803
     },
     {
       "country": "Bangladesh",
@@ -492,7 +492,7 @@
     {
       "country": "Bangladesh",
       "city": "Khulna",
-      "activeUsers": 96
+      "activeUsers": 97
     },
     {
       "country": "Singapore",
@@ -531,6 +531,11 @@
     },
     {
       "country": "Bangladesh",
+      "city": "Barishal",
+      "activeUsers": 20
+    },
+    {
+      "country": "Bangladesh",
       "city": "Gazipur",
       "activeUsers": 20
     },
@@ -538,11 +543,6 @@
       "country": "Bangladesh",
       "city": "Rangpur",
       "activeUsers": 20
-    },
-    {
-      "country": "Bangladesh",
-      "city": "Barishal",
-      "activeUsers": 19
     },
     {
       "country": "Bangladesh",
@@ -566,6 +566,11 @@
     },
     {
       "country": "Bangladesh",
+      "city": "",
+      "activeUsers": 16
+    },
+    {
+      "country": "Bangladesh",
       "city": "Pabna",
       "activeUsers": 16
     },
@@ -578,11 +583,6 @@
       "country": "United Arab Emirates",
       "city": "Dubai",
       "activeUsers": 15
-    },
-    {
-      "country": "Bangladesh",
-      "city": "",
-      "activeUsers": 14
     },
     {
       "country": "Bangladesh",

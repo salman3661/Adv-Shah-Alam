@@ -35,8 +35,15 @@ const POPULAR_BN_SLUGS = Array.isArray(popularBnSlugs) && popularBnSlugs.length 
         'jomi-kharij-e-namjari-niyom-khoroch-2026'
     ];
 
+/* Dedicated 5 In-Article Ad Units (Rotated across sections to prevent duplicate unit collisions) */
+const IN_ARTICLE_SLOTS = [
+    '9118178745', // Article Body 1
+    '5230990345', // Article Body 2
+    '3423084657', // Article Body 3
+    '1128008083', // Article Body 4
+    '4824719678', // Article Body 5
+];
 
-/* Category color map */
 const CAT_COLOR = {
     'ভূমি আইন':      { bg: '#0369a1', text: '#fff' },
     'পারিবারিক আইন': { bg: '#7c3aed', text: '#fff' },
@@ -880,12 +887,13 @@ const BlogPostBnInner = () => {
                                     </div>
                                 )}
 
-                                {/* ── 1. Top Display Ad (proven working unit) ── */}
+                                {/* ── 1. Top In-Article Native AdSense Unit (Article Body 1) ── */}
                                 <div style={{ margin: '1.75rem 0 2rem' }}>
                                     <AdSenseAd
                                         key={`ad-top-${post.slug}`}
-                                        slot="8630877987"
-                                        format="auto"
+                                        slot={IN_ARTICLE_SLOTS[0]}
+                                        layout="in-article"
+                                        format="fluid"
                                         responsive={true}
                                         labelText="বিজ্ঞাপন"
                                         style={{ borderRadius: '0.75rem', overflow: 'hidden' }}
@@ -964,13 +972,14 @@ const BlogPostBnInner = () => {
                                             <MidArticleLeadCapture lang="bn" />
                                         )}
 
-                                        {/* ── 2. In-Content Display Ad: after every section (proven working unit) ── */}
+                                        {/* ── 2. In-Content Native AdSense Ads: distinct units (Article Body 2 to 5) ── */}
                                         {i < post.sections.length - 1 && (
                                             <div style={{ margin: '2rem 0 2.5rem' }}>
                                                 <AdSenseAd
                                                     key={`ad-sec-${i}-${post.slug}`}
-                                                    slot="8630877987"
-                                                    format="auto"
+                                                    slot={IN_ARTICLE_SLOTS[(i + 1) % IN_ARTICLE_SLOTS.length]}
+                                                    layout="in-article"
+                                                    format="fluid"
                                                     responsive={true}
                                                     labelText="বিজ্ঞাপন"
                                                     style={{ borderRadius: '0.75rem', overflow: 'hidden' }}
