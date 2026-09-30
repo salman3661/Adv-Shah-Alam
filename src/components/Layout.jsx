@@ -6,6 +6,7 @@ import Footer from './Footer';
 import FloatingWhatsApp from './FloatingWhatsApp';
 import MobileCallButton from './MobileCallButton';
 import ReadingProgress from './ReadingProgress';
+import CategoryStrip from './CategoryStrip';
 
 const BASE = 'https://www.advmdshahalam.me';
 
@@ -265,6 +266,7 @@ const Layout = ({ children }) => {
                 <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
             </Helmet>
             <Header />
+            <CategoryStrip />
             <main className="flex-grow">
                 {children}
             </main>

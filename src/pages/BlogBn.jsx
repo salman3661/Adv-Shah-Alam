@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { Search, Clock, ChevronRight, BookOpen, Flame, Award, ShieldCheck, UserCheck, Scale, ArrowUpRight, X, TrendingUp, Calendar, Sparkles } from 'lucide-react';
 
@@ -180,7 +180,11 @@ const BlogCardBn = ({ post, isRecent = false }) => {
 };
 
 const BlogBn = () => {
-    const [activeCategory, setActiveCategory] = useState('সব');
+    const location = useLocation();
+    const [activeCategory, setActiveCategory] = useState(() => {
+        const params = new URLSearchParams(location.search);
+        return params.get('cat') || 'সব';
+    });
     const [searchQuery, setSearchQuery] = useState('');
     const [sortBy, setSortBy] = useState('recent'); // 'recent' | 'popular'
     const POSTS_PER_PAGE = 12;
@@ -193,6 +197,13 @@ const BlogBn = () => {
         }
     });
     const isFirstRender = React.useRef(true);
+
+    // Sync activeCategory when URL ?cat= param changes (from CategoryStrip clicks)
+    useEffect(() => {
+        const params = new URLSearchParams(location.search);
+        const catParam = params.get('cat') || 'সব';
+        setActiveCategory(catParam);
+    }, [location.search]);
 
     // Sort all published posts by publishedAt or publishedDate descending
     const allPublished = useMemo(() => {
