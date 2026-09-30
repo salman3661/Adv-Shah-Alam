@@ -10,6 +10,7 @@ import { telLink, waLink } from '../data/contactInfo';
 import Disclaimer from '../components/Disclaimer';
 import MidArticleLeadCapture from '../components/MidArticleLeadCapture';
 import AdSenseAd from '../components/AdSenseAd';
+import StickyBottomAd from '../components/StickyBottomAd';
 
 /* ── Load all EN posts ── */
 const _postModules = import.meta.glob('../content/posts/en/*.json', { eager: true });
@@ -785,13 +786,12 @@ const BlogPostInner = () => {
                                     </div>
                                 )}
 
-                                {/* ── 1. Top In-Article Native AdSense Unit ── */}
-                                <div style={{ margin: '1.75rem 0 2.5rem' }}>
+                                {/* ── 1. Top Display Ad (proven working unit) ── */}
+                                <div style={{ margin: '1.75rem 0 2rem' }}>
                                     <AdSenseAd
                                         key={`ad-top-${post.slug}`}
-                                        slot="6519719969"
-                                        layout="in-article"
-                                        format="fluid"
+                                        slot="8630877987"
+                                        format="auto"
                                         responsive={true}
                                         labelText="Advertisement"
                                         style={{ borderRadius: '0.75rem', overflow: 'hidden' }}
@@ -870,14 +870,13 @@ const BlogPostInner = () => {
                                             <MidArticleLeadCapture lang="en" />
                                         )}
 
-                                        {/* ── 2. In-Content In-Article Native AdSense Ads: after every 2nd section (Balanced Monetization) ── */}
-                                        {(i + 1) % 2 === 0 && i < post.sections.length - 1 && (
-                                            <div style={{ margin: '2rem 0 3rem' }}>
+                                        {/* ── 2. In-Content Display Ad: after every section (proven working unit) ── */}
+                                        {i < post.sections.length - 1 && (
+                                            <div style={{ margin: '2rem 0 2.5rem' }}>
                                                 <AdSenseAd
                                                     key={`ad-sec-${i}-${post.slug}`}
-                                                    slot="6519719969"
-                                                    layout="in-article"
-                                                    format="fluid"
+                                                    slot="8630877987"
+                                                    format="auto"
                                                     responsive={true}
                                                     labelText="Advertisement"
                                                     style={{ borderRadius: '0.75rem', overflow: 'hidden' }}
@@ -1434,6 +1433,9 @@ const BlogPostInner = () => {
                     }
                 }
             `}</style>
+
+            {/* ── Sticky Bottom Banner Ad (bd-pratidin style) ── */}
+            <StickyBottomAd slot="8630877987" labelText="Advertisement" />
         </>
     );
 };

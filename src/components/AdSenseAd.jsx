@@ -63,16 +63,20 @@ const AdSenseAd = ({
             observer.observe(adRef.current, { attributes: true });
         }
 
-        // Push to AdSense queue if not yet requested
+        // Push to AdSense queue after next paint (critical for React SPA)
         if (!pushed.current) {
             pushed.current = true;
-            try {
-                const adsByGoogle = window.adsbygoogle || [];
-                adsByGoogle.push({});
-                window.adsbygoogle = adsByGoogle;
-            } catch (e) {
-                // Silently ignore AdSense script loading race conditions
-            }
+            // requestAnimationFrame ensures the <ins> element is in the painted DOM
+            // before AdSense processes it — fixes "unfilled" issue in React SPAs
+            requestAnimationFrame(() => {
+                setTimeout(() => {
+                    try {
+                        (window.adsbygoogle = window.adsbygoogle || []).push({});
+                    } catch (e) {
+                        // Silently ignore AdSense script loading race conditions
+                    }
+                }, 100);
+            });
         }
 
         return () => {
