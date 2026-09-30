@@ -868,13 +868,12 @@ const BlogPostBnInner = () => {
                                     </div>
                                 )}
 
-                                {/* ── 1. Top In-Article Native AdSense Unit (Article Body 1) ── */}
+                                {/* ── 1. Top In-Content Ad (Proven active slot 8630877987 — displays immediately) ── */}
                                 <div style={{ margin: '1.75rem 0 2rem' }}>
                                     <AdSenseAd
                                         key={`ad-top-${post.slug}`}
-                                        slot={IN_ARTICLE_SLOTS[0]}
-                                        layout="in-article"
-                                        format="fluid"
+                                        slot="8630877987"
+                                        format="auto"
                                         responsive={true}
                                         labelText="বিজ্ঞাপন"
                                         style={{ borderRadius: '0.75rem', overflow: 'hidden' }}
@@ -882,93 +881,101 @@ const BlogPostBnInner = () => {
                                 </div>
 
                                 {/* Sections — High-End Editorial Design */}
-                                {post.sections?.map((sec, i) => (
-                                    <React.Fragment key={i}>
-                                        <section id={`bnsec-${i}`} style={{ marginBottom: '3.5rem', scrollMarginTop: '5rem' }}>
-                                            {/* Editorial Section Header */}
-                                            <div style={{
-                                                position: 'relative',
-                                                marginBottom: '1.75rem',
-                                                paddingBottom: '1.125rem',
-                                                borderBottom: '1px solid var(--card-border)',
-                                                display: 'flex',
-                                                flexDirection: 'column',
-                                                gap: '0.625rem'
-                                            }}>
-                                                {/* Sub-pill badge */}
-                                                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                                                    <span style={{
-                                                        display: 'inline-flex',
-                                                        alignItems: 'center',
-                                                        gap: '0.375rem',
-                                                        fontSize: '0.75rem',
+                                {post.sections?.map((sec, i) => {
+                                    // Alternating strategy: Even sections use proven active unit 8630877987, Odd sections use dedicated in-article units
+                                    const isProvenSlot = i % 2 === 0;
+                                    const adSlot = isProvenSlot ? '8630877987' : IN_ARTICLE_SLOTS[Math.floor(i / 2) % IN_ARTICLE_SLOTS.length];
+                                    const adFormat = isProvenSlot ? 'auto' : 'fluid';
+                                    const adLayout = isProvenSlot ? '' : 'in-article';
+
+                                    return (
+                                        <React.Fragment key={i}>
+                                            <section id={`bnsec-${i}`} style={{ marginBottom: '3.5rem', scrollMarginTop: '5rem' }}>
+                                                {/* Editorial Section Header */}
+                                                <div style={{
+                                                    position: 'relative',
+                                                    marginBottom: '1.75rem',
+                                                    paddingBottom: '1.125rem',
+                                                    borderBottom: '1px solid var(--card-border)',
+                                                    display: 'flex',
+                                                    flexDirection: 'column',
+                                                    gap: '0.625rem'
+                                                }}>
+                                                    {/* Sub-pill badge */}
+                                                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                                                        <span style={{
+                                                            display: 'inline-flex',
+                                                            alignItems: 'center',
+                                                            gap: '0.375rem',
+                                                            fontSize: '0.75rem',
+                                                            fontWeight: 800,
+                                                            letterSpacing: '0.06em',
+                                                            textTransform: 'uppercase',
+                                                            color: 'var(--gold, #c6a75e)',
+                                                            background: 'rgba(198, 167, 94, 0.08)',
+                                                            border: '1px solid rgba(198, 167, 94, 0.22)',
+                                                            padding: '0.25rem 0.65rem',
+                                                            borderRadius: '9999px',
+                                                        }}>
+                                                            <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: 'var(--gold, #c6a75e)' }}></span>
+                                                            <span>ধাপ {toBnDigits(i + 1)}</span>
+                                                        </span>
+                                                    </div>
+
+                                                    {/* Clean Headline with vertical accent bar */}
+                                                    <h2 style={{
+                                                        fontFamily: "'SolaimanLipi', 'Kalpurush', 'Noto Serif Bengali', sans-serif",
+                                                        fontSize: 'clamp(1.35rem, 2.5vw, 1.75rem)',
                                                         fontWeight: 800,
-                                                        letterSpacing: '0.06em',
-                                                        textTransform: 'uppercase',
-                                                        color: 'var(--gold, #c6a75e)',
-                                                        background: 'rgba(198, 167, 94, 0.08)',
-                                                        border: '1px solid rgba(198, 167, 94, 0.22)',
-                                                        padding: '0.25rem 0.65rem',
-                                                        borderRadius: '9999px',
+                                                        lineHeight: 1.35,
+                                                        color: 'var(--text)',
+                                                        margin: 0,
+                                                        letterSpacing: '-0.01em',
+                                                        display: 'flex',
+                                                        alignItems: 'flex-start',
+                                                        gap: '0.75rem'
                                                     }}>
-                                                        <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: 'var(--gold, #c6a75e)' }}></span>
-                                                        <span>ধাপ {toBnDigits(i + 1)}</span>
-                                                    </span>
+                                                        <span style={{
+                                                            display: 'inline-block',
+                                                            width: '4px',
+                                                            minHeight: '1.35em',
+                                                            borderRadius: '4px',
+                                                            background: 'var(--gold, #C6A75E)',
+                                                            flexShrink: 0,
+                                                            marginTop: '0.12em'
+                                                        }}></span>
+                                                        <span style={{ flex: 1 }}>{cleanHeadingText(sec.heading || sec.h2 || sec.title || '')}</span>
+                                                    </h2>
                                                 </div>
 
-                                                {/* Clean Headline with vertical accent bar */}
-                                                <h2 style={{
-                                                    fontFamily: "'SolaimanLipi', 'Kalpurush', 'Noto Serif Bengali', sans-serif",
-                                                    fontSize: 'clamp(1.35rem, 2.5vw, 1.75rem)',
-                                                    fontWeight: 800,
-                                                    lineHeight: 1.35,
-                                                    color: 'var(--text)',
-                                                    margin: 0,
-                                                    letterSpacing: '-0.01em',
-                                                    display: 'flex',
-                                                    alignItems: 'flex-start',
-                                                    gap: '0.75rem'
-                                                }}>
-                                                    <span style={{
-                                                        display: 'inline-block',
-                                                        width: '4px',
-                                                        minHeight: '1.35em',
-                                                        borderRadius: '4px',
-                                                        background: 'var(--gold, #C6A75E)',
-                                                        flexShrink: 0,
-                                                        marginTop: '0.12em'
-                                                    }}></span>
-                                                    <span style={{ flex: 1 }}>{cleanHeadingText(sec.heading || sec.h2 || sec.title || '')}</span>
-                                                </h2>
-                                            </div>
-
-                                            <div className="prose-bn-content"
-                                                style={{ color: 'var(--text)', fontSize: '1.1875rem', lineHeight: '2.05', letterSpacing: '0.005em', wordBreak: 'break-word', overflowWrap: 'anywhere', fontFamily: "'SolaimanLipi', 'Kalpurush', 'Noto Serif Bengali', sans-serif" }}
-                                                dangerouslySetInnerHTML={{ __html: formatArticleContent(sec.content) }}
-                                            />
-                                        </section>
-
-                                        {/* Mid-article lead capture at center */}
-                                        {i === Math.floor(((post.sections || []).length - 1) / 2) && (
-                                            <MidArticleLeadCapture lang="bn" />
-                                        )}
-
-                                        {/* ── 2. In-Content Native AdSense Ads: distinct units (Article Body 2 to 5) ── */}
-                                        {i < post.sections.length - 1 && (
-                                            <div style={{ margin: '2rem 0 2.5rem' }}>
-                                                <AdSenseAd
-                                                    key={`ad-sec-${i}-${post.slug}`}
-                                                    slot={IN_ARTICLE_SLOTS[(i + 1) % IN_ARTICLE_SLOTS.length]}
-                                                    layout="in-article"
-                                                    format="fluid"
-                                                    responsive={true}
-                                                    labelText="বিজ্ঞাপন"
-                                                    style={{ borderRadius: '0.75rem', overflow: 'hidden' }}
+                                                <div className="prose-bn-content"
+                                                    style={{ color: 'var(--text)', fontSize: '1.1875rem', lineHeight: '2.05', letterSpacing: '0.005em', wordBreak: 'break-word', overflowWrap: 'anywhere', fontFamily: "'SolaimanLipi', 'Kalpurush', 'Noto Serif Bengali', sans-serif" }}
+                                                    dangerouslySetInnerHTML={{ __html: formatArticleContent(sec.content) }}
                                                 />
-                                            </div>
-                                        )}
-                                    </React.Fragment>
-                                ))}
+                                            </section>
+
+                                            {/* Mid-article lead capture at center */}
+                                            {i === Math.floor(((post.sections || []).length - 1) / 2) && (
+                                                <MidArticleLeadCapture lang="bn" />
+                                            )}
+
+                                            {/* ── 2. In-Content Ad: Alternating active display + native in-article units ── */}
+                                            {i < post.sections.length - 1 && (
+                                                <div style={{ margin: '2rem 0 2.5rem' }}>
+                                                    <AdSenseAd
+                                                        key={`ad-sec-${i}-${post.slug}`}
+                                                        slot={adSlot}
+                                                        layout={adLayout}
+                                                        format={adFormat}
+                                                        responsive={true}
+                                                        labelText="বিজ্ঞাপন"
+                                                        style={{ borderRadius: '0.75rem', overflow: 'hidden' }}
+                                                    />
+                                                </div>
+                                            )}
+                                        </React.Fragment>
+                                    );
+                                })}
 
                                 {/* ── 3. Bottom Multiplex AdSense Grid (Recommended Content & Ads) ── */}
                                 <div style={{ margin: '2.5rem 0' }}>

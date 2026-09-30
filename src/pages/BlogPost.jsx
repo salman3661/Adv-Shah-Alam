@@ -774,13 +774,12 @@ const BlogPostInner = () => {
                                     </div>
                                 )}
 
-                                {/* ── 1. Top In-Article Native AdSense Unit (Article Body 1) ── */}
+                                {/* ── 1. Top In-Content Ad (Proven active slot 8630877987 — displays immediately) ── */}
                                 <div style={{ margin: '1.75rem 0 2rem' }}>
                                     <AdSenseAd
                                         key={`ad-top-${post.slug}`}
-                                        slot={IN_ARTICLE_SLOTS[0]}
-                                        layout="in-article"
-                                        format="fluid"
+                                        slot="8630877987"
+                                        format="auto"
                                         responsive={true}
                                         labelText="Advertisement"
                                         style={{ borderRadius: '0.75rem', overflow: 'hidden' }}
@@ -788,93 +787,100 @@ const BlogPostInner = () => {
                                 </div>
 
                                 {/* Article Sections — High-End Editorial Design */}
-                                {post.sections.map((sec, i) => (
-                                    <React.Fragment key={i}>
-                                        <section id={`section-${i}`} style={{ marginBottom: '3.5rem', scrollMarginTop: '5rem' }}>
-                                            {/* Editorial Section Header */}
-                                            <div style={{
-                                                position: 'relative',
-                                                marginBottom: '1.75rem',
-                                                paddingBottom: '1.125rem',
-                                                borderBottom: '1px solid var(--card-border)',
-                                                display: 'flex',
-                                                flexDirection: 'column',
-                                                gap: '0.625rem'
-                                            }}>
-                                                {/* Sub-pill badge */}
-                                                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                                                    <span style={{
-                                                        display: 'inline-flex',
-                                                        alignItems: 'center',
-                                                        gap: '0.375rem',
-                                                        fontSize: '0.75rem',
+                                {post.sections.map((sec, i) => {
+                                    const isProvenSlot = i % 2 === 0;
+                                    const adSlot = isProvenSlot ? '8630877987' : IN_ARTICLE_SLOTS[Math.floor(i / 2) % IN_ARTICLE_SLOTS.length];
+                                    const adFormat = isProvenSlot ? 'auto' : 'fluid';
+                                    const adLayout = isProvenSlot ? '' : 'in-article';
+
+                                    return (
+                                        <React.Fragment key={i}>
+                                            <section id={`section-${i}`} style={{ marginBottom: '3.5rem', scrollMarginTop: '5rem' }}>
+                                                {/* Editorial Section Header */}
+                                                <div style={{
+                                                    position: 'relative',
+                                                    marginBottom: '1.75rem',
+                                                    paddingBottom: '1.125rem',
+                                                    borderBottom: '1px solid var(--card-border)',
+                                                    display: 'flex',
+                                                    flexDirection: 'column',
+                                                    gap: '0.625rem'
+                                                }}>
+                                                    {/* Sub-pill badge */}
+                                                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                                                        <span style={{
+                                                            display: 'inline-flex',
+                                                            alignItems: 'center',
+                                                            gap: '0.375rem',
+                                                            fontSize: '0.75rem',
+                                                            fontWeight: 800,
+                                                            letterSpacing: '0.08em',
+                                                            textTransform: 'uppercase',
+                                                            color: 'var(--gold, #c6a75e)',
+                                                            background: 'rgba(198, 167, 94, 0.08)',
+                                                            border: '1px solid rgba(198, 167, 94, 0.22)',
+                                                            padding: '0.25rem 0.65rem',
+                                                            borderRadius: '9999px',
+                                                        }}>
+                                                            <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: 'var(--gold, #c6a75e)' }}></span>
+                                                            <span>SECTION {String(i + 1).padStart(2, '0')}</span>
+                                                        </span>
+                                                    </div>
+
+                                                    {/* Clean Headline with vertical accent bar */}
+                                                    <h2 style={{
+                                                        fontFamily: "'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+                                                        fontSize: 'clamp(1.35rem, 2.5vw, 1.75rem)',
                                                         fontWeight: 800,
-                                                        letterSpacing: '0.08em',
-                                                        textTransform: 'uppercase',
-                                                        color: 'var(--gold, #c6a75e)',
-                                                        background: 'rgba(198, 167, 94, 0.08)',
-                                                        border: '1px solid rgba(198, 167, 94, 0.22)',
-                                                        padding: '0.25rem 0.65rem',
-                                                        borderRadius: '9999px',
+                                                        lineHeight: 1.35,
+                                                        color: 'var(--text)',
+                                                        margin: 0,
+                                                        letterSpacing: '-0.02em',
+                                                        display: 'flex',
+                                                        alignItems: 'flex-start',
+                                                        gap: '0.75rem'
                                                     }}>
-                                                        <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: 'var(--gold, #c6a75e)' }}></span>
-                                                        <span>SECTION {String(i + 1).padStart(2, '0')}</span>
-                                                    </span>
+                                                        <span style={{
+                                                            display: 'inline-block',
+                                                            width: '4px',
+                                                            minHeight: '1.35em',
+                                                            borderRadius: '4px',
+                                                            background: `linear-gradient(180deg, var(--gold, #c6a75e), ${cc.bg})`,
+                                                            flexShrink: 0,
+                                                            marginTop: '0.12em'
+                                                        }}></span>
+                                                        <span style={{ flex: 1 }}>{cleanHeadingText(sec.heading || sec.h2 || sec.title || '')}</span>
+                                                    </h2>
                                                 </div>
 
-                                                {/* Clean Headline with vertical accent bar */}
-                                                <h2 style={{
-                                                    fontFamily: "'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
-                                                    fontSize: 'clamp(1.35rem, 2.5vw, 1.75rem)',
-                                                    fontWeight: 800,
-                                                    lineHeight: 1.35,
-                                                    color: 'var(--text)',
-                                                    margin: 0,
-                                                    letterSpacing: '-0.02em',
-                                                    display: 'flex',
-                                                    alignItems: 'flex-start',
-                                                    gap: '0.75rem'
-                                                }}>
-                                                    <span style={{
-                                                        display: 'inline-block',
-                                                        width: '4px',
-                                                        minHeight: '1.35em',
-                                                        borderRadius: '4px',
-                                                        background: `linear-gradient(180deg, var(--gold, #c6a75e), ${cc.bg})`,
-                                                        flexShrink: 0,
-                                                        marginTop: '0.12em'
-                                                    }}></span>
-                                                    <span style={{ flex: 1 }}>{cleanHeadingText(sec.heading || sec.h2 || sec.title || '')}</span>
-                                                </h2>
-                                            </div>
-
-                                            <div className="prose-content"
-                                                style={{ color: 'var(--text-secondary)', fontSize: '1.0625rem', lineHeight: '1.9', letterSpacing: '0.005em', wordBreak: 'break-word', overflowWrap: 'anywhere' }}
-                                                dangerouslySetInnerHTML={{ __html: formatArticleContent(sec.content) }}
-                                            />
-                                        </section>
-
-                                        {/* Mid-article lead capture at exact center section */}
-                                        {i === Math.floor(((post.sections || []).length - 1) / 2) && (
-                                            <MidArticleLeadCapture lang="en" />
-                                        )}
-
-                                        {/* ── 2. In-Content Native AdSense Ads: distinct units (Article Body 2 to 5) ── */}
-                                        {i < post.sections.length - 1 && (
-                                            <div style={{ margin: '2rem 0 2.5rem' }}>
-                                                <AdSenseAd
-                                                    key={`ad-sec-${i}-${post.slug}`}
-                                                    slot={IN_ARTICLE_SLOTS[(i + 1) % IN_ARTICLE_SLOTS.length]}
-                                                    layout="in-article"
-                                                    format="fluid"
-                                                    responsive={true}
-                                                    labelText="Advertisement"
-                                                    style={{ borderRadius: '0.75rem', overflow: 'hidden' }}
+                                                <div className="prose-content"
+                                                    style={{ color: 'var(--text-secondary)', fontSize: '1.0625rem', lineHeight: '1.9', letterSpacing: '0.005em', wordBreak: 'break-word', overflowWrap: 'anywhere' }}
+                                                    dangerouslySetInnerHTML={{ __html: formatArticleContent(sec.content) }}
                                                 />
-                                            </div>
-                                        )}
-                                    </React.Fragment>
-                                ))}
+                                            </section>
+
+                                            {/* Mid-article lead capture at exact center section */}
+                                            {i === Math.floor(((post.sections || []).length - 1) / 2) && (
+                                                <MidArticleLeadCapture lang="en" />
+                                            )}
+
+                                            {/* ── 2. In-Content Ad: Alternating active display + native in-article units ── */}
+                                            {i < post.sections.length - 1 && (
+                                                <div style={{ margin: '2rem 0 2.5rem' }}>
+                                                    <AdSenseAd
+                                                        key={`ad-sec-${i}-${post.slug}`}
+                                                        slot={adSlot}
+                                                        layout={adLayout}
+                                                        format={adFormat}
+                                                        responsive={true}
+                                                        labelText="Advertisement"
+                                                        style={{ borderRadius: '0.75rem', overflow: 'hidden' }}
+                                                    />
+                                                </div>
+                                            )}
+                                        </React.Fragment>
+                                    );
+                                })}
 
                                 {/* ── 3. Bottom Multiplex AdSense Grid (Recommended Content & Ads) ── */}
                                 <div style={{ margin: '2.5rem 0' }}>

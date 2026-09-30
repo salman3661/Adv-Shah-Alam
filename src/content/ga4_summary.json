@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-30T06:44:23.788Z",
+  "updatedAt": "2026-09-30T06:53:46.263Z",
   "propertyId": "520583213",
   "channels": [
     {
@@ -13,9 +13,9 @@
     {
       "channel": "Direct",
       "sourceMedium": "(direct) / (none)",
-      "activeUsers": 386,
-      "sessions": 406,
-      "pageViews": 499,
+      "activeUsers": 387,
+      "sessions": 407,
+      "pageViews": 500,
       "engagementRate": "23.6%"
     },
     {
@@ -47,7 +47,7 @@
       "sourceMedium": "(not set)",
       "activeUsers": 37,
       "sessions": 37,
-      "pageViews": 36,
+      "pageViews": 37,
       "engagementRate": "0.0%"
     },
     {
@@ -205,7 +205,7 @@
     {
       "path": "/blog/bangladesh-land-record-by-name-online-2026",
       "title": "Bangladesh Land Record Online by Name – Free Search Guide",
-      "activeUsers": 64,
+      "activeUsers": 65,
       "pageViews": 88
     },
     {
@@ -455,6 +455,12 @@
       "pageViews": 14
     },
     {
+      "path": "/blog/land-gov-bd-bhumi-seba-complete-guide-2026",
+      "title": "land.gov.bd ভূমি সেবা – Full Guide to Bangladesh Land Portal",
+      "activeUsers": 13,
+      "pageViews": 14
+    },
+    {
       "path": "/blog/heba-gift-deed-law-bangladesh",
       "title": "Heba Gift Deed Law Bangladesh – Property Transfer to Family",
       "activeUsers": 12,
@@ -463,12 +469,6 @@
     {
       "path": "/blog/father-property-distribution-law-bangladesh",
       "title": "Father's Property Distribution Law Bangladesh",
-      "activeUsers": 11,
-      "pageViews": 14
-    },
-    {
-      "path": "/blog/flat-apartment-registration-fee-bangladesh",
-      "title": "Flat Registration Fee & Stamp Duty in Bangladesh 2026",
       "activeUsers": 11,
       "pageViews": 14
     }
@@ -497,7 +497,7 @@
     {
       "country": "Singapore",
       "city": "Singapore",
-      "activeUsers": 91
+      "activeUsers": 92
     },
     {
       "country": "Bangladesh",
