@@ -106,43 +106,31 @@ const AdSenseAd = ({
             });
         }
 
-        // Safety timeout: if after 5s still pending, mark as unfilled to clean up
-        const safetyTimeout = setTimeout(() => {
-            setAdStatus(prev => prev === 'pending' ? 'unfilled' : prev);
-        }, 5000);
-
         return () => {
             if (observer) observer.disconnect();
             clearInterval(checkFillViaIframe);
-            clearTimeout(safetyTimeout);
         };
     }, [slot]);
 
     // Fluid (In-Article) and Autorelaxed (Multiplex) native units do not take full-width-responsive
     const isFluidOrRelaxed = format === 'fluid' || format === 'autorelaxed' || layout === 'in-article';
 
-    // Hide completely when unfilled or still pending (no gap)
+    // Collapse cleanly if AdSense officially confirms unfilled
     if (adStatus === 'unfilled') return null;
 
     return (
         <div
             className={`adsense-wrapper ${className}`}
             style={{
-                // While pending: render in DOM (needed for AdSense to detect) but invisible + no height
-                // Once filled: show normally
                 display: 'block',
                 textAlign: 'center',
                 overflow: 'hidden',
-                visibility: adStatus === 'filled' ? 'visible' : 'hidden',
-                height: adStatus === 'filled' ? 'auto' : '0',
-                maxHeight: adStatus === 'filled' ? 'none' : '0',
-                margin: adStatus === 'filled' ? undefined : '0',
-                padding: adStatus === 'filled' ? undefined : '0',
+                minHeight: isFluidOrRelaxed ? '90px' : '100px',
+                transition: 'opacity 0.2s ease',
                 ...style,
-                ...(adStatus !== 'filled' ? { margin: 0, padding: 0 } : {}),
             }}
         >
-            {label && adStatus === 'filled' && (
+            {label && (
                 <p style={{
                     fontSize: '0.58rem',
                     color: 'var(--text-muted, #94a3b8)',

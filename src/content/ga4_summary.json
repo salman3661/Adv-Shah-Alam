@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-10-02T12:28:00.033Z",
+  "updatedAt": "2026-10-02T12:35:11.130Z",
   "propertyId": "520583213",
   "channels": [
     {
       "channel": "Organic Search",
       "sourceMedium": "google / organic",
-      "activeUsers": 1898,
-      "sessions": 2122,
-      "pageViews": 2881,
+      "activeUsers": 1899,
+      "sessions": 2123,
+      "pageViews": 2882,
       "engagementRate": "54.3%"
     },
     {
@@ -29,8 +29,8 @@
     {
       "channel": "Unassigned",
       "sourceMedium": "(not set)",
-      "activeUsers": 54,
-      "sessions": 55,
+      "activeUsers": 55,
+      "sessions": 56,
       "pageViews": 39,
       "engagementRate": "0.0%"
     },
@@ -558,13 +558,13 @@
       "activeUsers": 19
     },
     {
-      "country": "Bangladesh",
-      "city": "Jashore",
-      "activeUsers": 17
-    },
-    {
       "country": "Malaysia",
       "city": "Kuala Lumpur",
+      "activeUsers": 18
+    },
+    {
+      "country": "Bangladesh",
+      "city": "Jashore",
       "activeUsers": 17
     },
     {

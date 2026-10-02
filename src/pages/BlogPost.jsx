@@ -853,8 +853,8 @@ const BlogPostInner = () => {
                                                 <MidArticleLeadCapture lang="en" />
                                             )}
 
-                                            {/* ── 2. In-Content Ad: Alternating active display + native in-article units ── */}
-                                            {i < post.sections.length - 1 && (
+                                            {/* ── 2. In-Content Ad: Well-spaced native in-article units (every 3 sections) ── */}
+                                            {i % 3 === 1 && i < post.sections.length - 1 && (
                                                 <div style={{ margin: '2rem 0 2.5rem' }}>
                                                     <AdSenseAd
                                                         key={`ad-sec-${i}-${post.slug}`}
@@ -988,15 +988,6 @@ const BlogPostInner = () => {
                                 />
 
                                 <PopularPosts currentSlug={post.slug} />
-
-                                {/* ── Sidebar AdSense Ad 2 ── */}
-                                <AdSenseAd
-                                    slot="5064091502"
-                                    format="auto"
-                                    responsive={true}
-                                    label={false}
-                                    style={{ marginBottom: '1.125rem', borderRadius: '0.875rem', overflow: 'hidden' }}
-                                />
 
                                 <RecentPosts currentSlug={post.slug} />
                             </div>
