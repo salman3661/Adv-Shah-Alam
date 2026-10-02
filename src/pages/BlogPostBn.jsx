@@ -867,13 +867,26 @@ const BlogPostBnInner = () => {
                                     </div>
                                 )}
 
+                                {/* ── 1. Top In-Content Ad (Proven active slot 8630877987 — displays immediately) ── */}
+                                <div style={{ margin: '1.75rem 0 2.25rem' }}>
+                                    <AdSenseAd
+                                        key={`ad-top-${post.slug}`}
+                                        slot="8630877987"
+                                        format="auto"
+                                        responsive={true}
+                                        labelText="বিজ্ঞাপন"
+                                        style={{ borderRadius: '0.75rem', overflow: 'hidden' }}
+                                    />
+                                </div>
+
                                 {/* Sections — High-End Editorial Design */}
                                 {post.sections?.map((sec, i) => {
-                                    // Use IN_ARTICLE_SLOTS cycling — each section gets a unique slot
-                                    // Slots: 9118178745, 5230990345, 3423084657, 1128008083, 4824719678 (cycle repeats for >5 sections)
-                                    const adSlot = IN_ARTICLE_SLOTS[i % IN_ARTICLE_SLOTS.length];
-                                    const adFormat = 'fluid';
-                                    const adLayout = 'in-article';
+                                    // Alternating strategy: Section 1 and 5 use proven active unit 8630877987 (immediate live fill)
+                                    // Other sections cycle through dedicated in-article units
+                                    const isProvenSlot = (i === 1 || i % 4 === 1);
+                                    const adSlot = isProvenSlot ? '8630877987' : IN_ARTICLE_SLOTS[Math.floor(i / 2) % IN_ARTICLE_SLOTS.length];
+                                    const adFormat = isProvenSlot ? 'auto' : 'fluid';
+                                    const adLayout = isProvenSlot ? '' : 'in-article';
 
                                     return (
                                         <React.Fragment key={i}>

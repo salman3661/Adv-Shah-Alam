@@ -15,9 +15,6 @@ import React, { useEffect, useRef, useState } from 'react';
  *  labelText   — override label text (e.g., বিজ্ঞাপন for BN pages)
  *
  * Publisher ID: ca-pub-1781126556775676
- *
- * KEY FIX: Start hidden (height:0 + overflow:hidden) → show only when AdSense marks "filled"
- * This eliminates the blank gap that appears while Google decides whether to fill or not.
  */
 
 const PUB_ID = 'ca-pub-1781126556775676';
@@ -35,30 +32,30 @@ const AdSenseAd = ({
 }) => {
     const adRef = useRef(null);
     const pushed = useRef(false);
-    // Start as hidden — only show once AdSense confirms "filled"
-    // This prevents the blank gap/space from showing while waiting for ad response
-    const [adStatus, setAdStatus] = useState('pending'); // 'pending' | 'filled' | 'unfilled'
+    const [isFilled, setIsFilled] = useState(false);
+    const [isUnfilled, setIsUnfilled] = useState(false);
 
     // Reset status when slot changes (e.g. route change)
     useEffect(() => {
-        setAdStatus('pending');
+        setIsFilled(false);
+        setIsUnfilled(false);
         pushed.current = false;
     }, [slot]);
 
     useEffect(() => {
         if (!slot || !adRef.current) return;
 
-        // MutationObserver — detect when AdSense sets data-ad-status
+        // MutationObserver to detect AdSense attribute changes on <ins>
         let observer = null;
         if (typeof window !== 'undefined' && window.MutationObserver) {
             observer = new MutationObserver((mutations) => {
                 for (const mutation of mutations) {
-                    if (mutation.type === 'attributes' && mutation.attributeName === 'data-ad-status') {
+                    if (mutation.type === 'attributes') {
                         const status = adRef.current?.getAttribute('data-ad-status');
                         if (status === 'unfilled') {
-                            setAdStatus('unfilled');
+                            setIsUnfilled(true);
                         } else if (status === 'filled') {
-                            setAdStatus('filled');
+                            setIsFilled(true);
                         }
                     }
                 }
@@ -66,33 +63,40 @@ const AdSenseAd = ({
             observer.observe(adRef.current, { attributes: true });
         }
 
-        // Also check data-adsbygoogle-status="done" to detect fill via iframe injection
-        const checkFillViaIframe = setInterval(() => {
-            if (!adRef.current) return clearInterval(checkFillViaIframe);
+        // Check if an actual Google ad iframe with content is present
+        const checkIframe = setInterval(() => {
+            if (!adRef.current) return clearInterval(checkIframe);
             const insEl = adRef.current;
-            const done = insEl.getAttribute('data-adsbygoogle-status') === 'done';
-            if (done) {
-                clearInterval(checkFillViaIframe);
-                const adStatus = insEl.getAttribute('data-ad-status');
-                if (adStatus === 'unfilled') {
-                    setAdStatus('unfilled');
-                } else {
-                    // Has iframe child = filled
-                    const iframe = insEl.querySelector('iframe');
-                    if (iframe && parseInt(iframe.height || '0') > 0) {
-                        setAdStatus('filled');
-                    } else if (!adStatus) {
-                        // status not set yet but done — give it 500ms more
-                        setTimeout(() => {
-                            const st = insEl.getAttribute('data-ad-status');
-                            setAdStatus(st === 'unfilled' ? 'unfilled' : 'filled');
-                        }, 500);
-                    }
+            const iframe = insEl.querySelector('iframe');
+            if (iframe) {
+                const src = iframe.getAttribute('src') || '';
+                // Real AdSense ad has doubleclick/googleads src
+                if (src.includes('googleads') || src.includes('doubleclick')) {
+                    setIsFilled(true);
+                    clearInterval(checkIframe);
+                    return;
                 }
             }
-        }, 300);
 
-        // Push to AdSense queue after next paint (critical for React SPA)
+            // If Google marked status as done but there's no ad iframe, it's unfilled
+            if (insEl.getAttribute('data-adsbygoogle-status') === 'done') {
+                const status = insEl.getAttribute('data-ad-status');
+                if (status === 'unfilled' || (!iframe && insEl.querySelector('div[id^="aswift_"]'))) {
+                    // Empty host div with no ad iframe
+                    setTimeout(() => {
+                        const retryIframe = insEl.querySelector('iframe');
+                        if (!retryIframe) {
+                            setIsUnfilled(true);
+                        } else {
+                            setIsFilled(true);
+                        }
+                        clearInterval(checkIframe);
+                    }, 800);
+                }
+            }
+        }, 400);
+
+        // Push to AdSense queue after DOM mount
         if (!pushed.current) {
             pushed.current = true;
             requestAnimationFrame(() => {
@@ -100,23 +104,29 @@ const AdSenseAd = ({
                     try {
                         (window.adsbygoogle = window.adsbygoogle || []).push({});
                     } catch (e) {
-                        // Silently ignore AdSense script loading race conditions
+                        // Silently handle AdSense queue errors
                     }
                 }, 100);
             });
         }
 
+        // 6-second timeout: if neither filled nor explicitly unfilled, leave as is
+        const timeout = setTimeout(() => {
+            clearInterval(checkIframe);
+        }, 6000);
+
         return () => {
             if (observer) observer.disconnect();
-            clearInterval(checkFillViaIframe);
+            clearInterval(checkIframe);
+            clearTimeout(timeout);
         };
     }, [slot]);
 
     // Fluid (In-Article) and Autorelaxed (Multiplex) native units do not take full-width-responsive
     const isFluidOrRelaxed = format === 'fluid' || format === 'autorelaxed' || layout === 'in-article';
 
-    // Collapse cleanly if AdSense officially confirms unfilled
-    if (adStatus === 'unfilled') return null;
+    // Completely collapse if confirmed unfilled (zero space, zero gap)
+    if (isUnfilled) return null;
 
     return (
         <div
@@ -125,12 +135,12 @@ const AdSenseAd = ({
                 display: 'block',
                 textAlign: 'center',
                 overflow: 'hidden',
-                minHeight: isFluidOrRelaxed ? '90px' : '100px',
-                transition: 'opacity 0.2s ease',
+                // Avoid forced large min-height so unfilled or loading ads don't create blank boxes
+                minHeight: 'auto',
                 ...style,
             }}
         >
-            {label && (
+            {label && isFilled && (
                 <p style={{
                     fontSize: '0.58rem',
                     color: 'var(--text-muted, #94a3b8)',
