@@ -87,37 +87,34 @@ body {
 
 /* ══════════════════════════════════════════════════════════
    BENGALI FONT DEFINITIONS & DEFAULTS
+   font-display: optional — zero FOUT, no re-render flash
+   Fonts hosted locally in /public/fonts/ — no CDN wait
    ══════════════════════════════════════════════════════════ */
 
 @font-face {
   font-family: 'SolaimanLipi';
   font-style: normal;
   font-weight: 400;
-  font-display: swap;
-  src: url('https://cdn.jsdelivr.net/gh/maateen/solaiman-lipi@master/font.woff2') format('woff2'),
-       url('https://cdn.jsdelivr.net/gh/maateen/solaiman-lipi@master/font.woff') format('woff'),
-       url('https://cdn.jsdelivr.net/gh/maateen/solaiman-lipi@master/font.ttf') format('truetype');
+  font-display: optional;
+  src: url('/fonts/SolaimanLipi.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'SolaimanLipi';
   font-style: normal;
   font-weight: 700;
-  font-display: swap;
-  src: url('https://cdn.jsdelivr.net/gh/maateen/solaiman-lipi@master/font.woff2') format('woff2'),
-       url('https://cdn.jsdelivr.net/gh/maateen/solaiman-lipi@master/font.woff') format('woff'),
-       url('https://cdn.jsdelivr.net/gh/maateen/solaiman-lipi@master/font.ttf') format('truetype');
+  font-display: optional;
+  src: url('/fonts/SolaimanLipiBold.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'Kalpurush';
   font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('https://cdn.jsdelivr.net/gh/maateen/kalpurush@master/font.woff2') format('woff2'),
-       url('https://cdn.jsdelivr.net/gh/maateen/kalpurush@master/font.woff') format('woff'),
-       url('https://cdn.jsdelivr.net/gh/maateen/kalpurush@master/font.ttf') format('truetype');
+  font-weight: 100 900;
+  font-display: optional;
+  src: url('/fonts/Kalpurush.woff2') format('woff2');
 }
+
 
 /* Every element on a Bengali page uses SolaimanLipi / Kalpurush */
 html[lang="bn"] body,

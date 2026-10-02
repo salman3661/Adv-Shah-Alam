@@ -68,19 +68,18 @@
   <link rel="alternate" type="application/rss+xml" title="Advocate Md. Shah Alam Law Chambers (All Articles)" href="https://www.advmdshahalam.me/rss.xml" />
   <link rel="alternate" type="application/rss+xml" title="অ্যাডভোকেট মো. শাহ আলম — আইন কানুন ও পরামর্শ ব্লগ" href="https://www.advmdshahalam.me/rss-bn.xml" />
 
-  <!-- Google Fonts & SolaimanLipi / Kalpurush: truly non-render-blocking via media=print + onload swap -->
+  <!-- Bengali Fonts: Preloaded locally — zero FOUT, no external CDN wait -->
+  <!-- Preload triggers highest-priority download before first paint -->
+  <link rel="preload" href="/fonts/SolaimanLipi.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+  <link rel="preload" href="/fonts/SolaimanLipiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+  <link rel="preload" href="/fonts/Kalpurush.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+  <!-- Google Fonts (EN only — DM Sans, Playfair Display): non-blocking async -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preconnect" href="https://fonts.maateen.me" crossorigin />
-  <!-- NOTE: JSDelivr CDN copies removed — all returned 404 and caused 9s critical path chain -->
-  <link rel="stylesheet" href="https://fonts.maateen.me/solaiman-lipi/font.css" media="print" onload="this.media='all'" />
-  <link rel="stylesheet" href="https://fonts.maateen.me/kalpurush/font.css" media="print" onload="this.media='all'" />
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&family=Playfair+Display:wght@600;700&family=Noto+Serif+Bengali:wght@400;500;600;700;800&family=Tiro+Bangla&display=swap"
     media="print" onload="this.media='all'" />
   <noscript>
-    <link rel="stylesheet" href="https://fonts.maateen.me/solaiman-lipi/font.css" />
-    <link rel="stylesheet" href="https://fonts.maateen.me/kalpurush/font.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&family=Playfair+Display:wght@600;700&family=Noto+Serif+Bengali:wght@400;500;600;700;800&family=Tiro+Bangla&display=swap" />
   </noscript>
 

@@ -649,7 +649,6 @@ const BlogPostBnInner = () => {
         <>
             <Helmet>
                 <html lang="bn" />
-                <link rel="stylesheet" href="https://fonts.maateen.me/solaiman-lipi/font.css" />
                 <title>{post.metaTitle}</title>
                 <meta name="description" content={post.metaDescription} />
                 <meta name="keywords" content={(Array.isArray(post.keywords) ? post.keywords : []).join(', ')} />
