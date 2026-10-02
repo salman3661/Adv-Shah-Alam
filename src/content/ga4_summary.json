@@ -1,14 +1,14 @@
 {
-  "updatedAt": "2026-10-02T13:08:16.046Z",
+  "updatedAt": "2026-10-02T14:03:46.900Z",
   "propertyId": "520583213",
   "channels": [
     {
       "channel": "Organic Search",
       "sourceMedium": "google / organic",
-      "activeUsers": 1900,
-      "sessions": 2124,
-      "pageViews": 2886,
-      "engagementRate": "54.2%"
+      "activeUsers": 1902,
+      "sessions": 2128,
+      "pageViews": 2893,
+      "engagementRate": "54.1%"
     },
     {
       "channel": "Direct",
@@ -21,17 +21,17 @@
     {
       "channel": "Cross-network",
       "sourceMedium": "(data not available)",
-      "activeUsers": 81,
-      "sessions": 81,
-      "pageViews": 89,
+      "activeUsers": 87,
+      "sessions": 87,
+      "pageViews": 98,
       "engagementRate": "0.0%"
     },
     {
       "channel": "Unassigned",
       "sourceMedium": "(not set)",
-      "activeUsers": 59,
-      "sessions": 61,
-      "pageViews": 46,
+      "activeUsers": 61,
+      "sessions": 63,
+      "pageViews": 47,
       "engagementRate": "0.0%"
     },
     {
@@ -184,19 +184,19 @@
       "path": "/blog/bangladesh-cyber-crime-complaint-portal-guide-2026",
       "title": "Bangladesh Cyber Crime Complaint Portal – Online Guide",
       "activeUsers": 150,
-      "pageViews": 191
+      "pageViews": 192
     },
     {
       "path": "/bn/blog",
       "title": "বাংলা আইনি ব্লগ ও সমাধান নির্দেশিকা | অ্যাডভোকেট মো. শাহ আলম",
-      "activeUsers": 61,
-      "pageViews": 138
+      "activeUsers": 62,
+      "pageViews": 139
     },
     {
       "path": "/",
       "title": "এডভোকেট মোঃ শাহ আলম | আইনজীবী উত্তরা, ঢাকা",
       "activeUsers": 71,
-      "pageViews": 134
+      "pageViews": 136
     },
     {
       "path": "/blog/land-registration-cost-fees-calculator-bangladesh-2026",
@@ -214,7 +214,7 @@
       "path": "/blog/bangladesh-land-record-by-name-online-2026",
       "title": "Bangladesh Land Record Online by Name – Free Search Guide",
       "activeUsers": 68,
-      "pageViews": 88
+      "pageViews": 89
     },
     {
       "path": "/bn/blog/sampatti-uttoradhikar-ain-2026-bn",
@@ -225,8 +225,8 @@
     {
       "path": "/bn/blog/batwara-mamla-din-khoroch-prokriya-2026",
       "title": "বাটোয়ারা মামলা কতদিন চলে ও খরচ কত ২০২৬ — দেওয়ানি আদালত ও জমি বণ্টন | এডভোকেট শাহ আলম",
-      "activeUsers": 48,
-      "pageViews": 62
+      "activeUsers": 49,
+      "pageViews": 63
     },
     {
       "path": "/bn/blog/stree-kortrik-swamike-talak-deyar-sothik-niyom",
@@ -237,8 +237,8 @@
     {
       "path": "/bn/blog/talaknama-lekhari-niyom-fee-prokriya-bangladesh-2026",
       "title": "তালাকনামা লেখার নিয়ম ও খরচ | কাজী অফিস ও নোটিশ গাইড",
-      "activeUsers": 41,
-      "pageViews": 53
+      "activeUsers": 42,
+      "pageViews": 54
     },
     {
       "path": "/bn/blog/jomi-registry-khoroch-sarkaree-fee-bd",
@@ -267,8 +267,8 @@
     {
       "path": "/en",
       "title": "Trusted Lawyer in Bangladesh | Advocate Md. Shah Alam — Uttara, Dhaka",
-      "activeUsers": 35,
-      "pageViews": 44
+      "activeUsers": 36,
+      "pageViews": 45
     },
     {
       "path": "/bn/blog/court-marriage-kagojpatra-complete-guide-2026",
@@ -291,8 +291,8 @@
     {
       "path": "/bn/blog/sampatti-uttoradhikar-ain-2026-bn",
       "title": "বাবার সম্পত্তি ভাগের নিয়ম ও উত্তরাধিকার আইন ২০২৬ — ছেলে, মেয়ে ও স্ত্রীর অংশ",
-      "activeUsers": 33,
-      "pageViews": 41
+      "activeUsers": 34,
+      "pageViews": 42
     },
     {
       "path": "/blog/land-survey-map-dag-mouza-bangladesh",
@@ -357,8 +357,8 @@
     {
       "path": "/bn/blog/flat-apartment-registration-fee-bangladesh",
       "title": "ফ্ল্যাট রেজিস্ট্রি খরচ কত ২০২৬ | স্ট্যাম্প ডিউটি ও ভ্যাট",
-      "activeUsers": 22,
-      "pageViews": 30
+      "activeUsers": 23,
+      "pageViews": 31
     },
     {
       "path": "/bn/blog/court-marriage-kagojpatra-complete-guide-2026",
@@ -463,6 +463,12 @@
       "pageViews": 18
     },
     {
+      "path": "/bn/blog/mayer-sampatti-vibhajan-ain-bangladesh-2026",
+      "title": "মায়ের সম্পত্তি ভাগের নিয়ম ২০২৬ | সন্তান ও স্বামীর ফারায়েজ হিসাব",
+      "activeUsers": 16,
+      "pageViews": 17
+    },
+    {
       "path": "/bn/blog/jomi-kharij-namjari-khoroch-niyom-2026-bn",
       "title": "জমি খারিজ করতে কত টাকা লাগে ২০২৬ | ই-নামজারি সরকারি ফি ও নিয়ম",
       "activeUsers": 15,
@@ -473,19 +479,13 @@
       "title": "উত্তরাধিকার আইন বাংলাদেশ ২০২৬ – ধর্ম অনুযায়ী সম্পত্তি বণ্টন",
       "activeUsers": 16,
       "pageViews": 16
-    },
-    {
-      "path": "/bn/blog/mayer-sampatti-vibhajan-ain-bangladesh-2026",
-      "title": "মায়ের সম্পত্তি ভাগের নিয়ম ২০২৬ | সন্তান ও স্বামীর ফারায়েজ হিসাব",
-      "activeUsers": 15,
-      "pageViews": 16
     }
   ],
   "locations": [
     {
       "country": "Bangladesh",
       "city": "Dhaka",
-      "activeUsers": 821
+      "activeUsers": 824
     },
     {
       "country": "Bangladesh",
@@ -495,7 +495,7 @@
     {
       "country": "Bangladesh",
       "city": "Chattogram",
-      "activeUsers": 143
+      "activeUsers": 144
     },
     {
       "country": "Bangladesh",
@@ -520,7 +520,7 @@
     {
       "country": "Bangladesh",
       "city": "Cumilla",
-      "activeUsers": 30
+      "activeUsers": 31
     },
     {
       "country": "China",
@@ -574,13 +574,13 @@
     },
     {
       "country": "Bangladesh",
-      "city": "Bogura",
+      "city": "",
       "activeUsers": 16
     },
     {
       "country": "Bangladesh",
-      "city": "",
-      "activeUsers": 15
+      "city": "Bogura",
+      "activeUsers": 16
     },
     {
       "country": "United States",

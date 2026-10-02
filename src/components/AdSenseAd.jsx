@@ -1,18 +1,18 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 /**
- * AdSenseAd — Production-ready Google AdSense component
+ * AdSenseAd — Clean, standard production Google AdSense component
  *
  * Props:
- *  slot        — Ad unit slot ID (from AdSense dashboard)
- *  format      — 'auto' | 'rectangle' | 'horizontal' | 'vertical' | 'fluid' | 'autorelaxed'
- *  layout      — 'in-article' | '' (for native in-article ad units)
- *  layoutKey   — layout key for in-feed ad units
- *  responsive  — boolean (default true) — enables data-full-width-responsive
+ *  slot        — Ad unit slot ID
+ *  format      — 'auto' | 'fluid' | 'autorelaxed'
+ *  layout      — 'in-article' | ''
+ *  layoutKey   — layout key for in-feed units
+ *  responsive  — boolean (default true)
  *  className   — extra CSS class
- *  style       — extra inline style on the outer wrapper
- *  label       — boolean (default true) — show "Advertisement" label
- *  labelText   — override label text (e.g., বিজ্ঞাপন for BN pages)
+ *  style       — extra inline style
+ *  label       — boolean (default true) — show "বিজ্ঞাপন" / "Advertisement"
+ *  labelText   — override label text
  *
  * Publisher ID: ca-pub-1781126556775676
  */
@@ -27,106 +27,31 @@ const AdSenseAd = ({
     className = '',
     style = {},
     label = true,
-    labelText = 'Advertisement',
+    labelText = 'বিজ্ঞাপন',
     layoutKey = '',
 }) => {
     const adRef = useRef(null);
     const pushed = useRef(false);
-    const [isFilled, setIsFilled] = useState(false);
-    const [isUnfilled, setIsUnfilled] = useState(false);
 
-    // Reset status when slot changes (e.g. route change)
     useEffect(() => {
-        setIsFilled(false);
-        setIsUnfilled(false);
         pushed.current = false;
     }, [slot]);
 
     useEffect(() => {
         if (!slot || !adRef.current) return;
 
-        // MutationObserver to detect AdSense attribute changes on <ins>
-        let observer = null;
-        if (typeof window !== 'undefined' && window.MutationObserver) {
-            observer = new MutationObserver((mutations) => {
-                for (const mutation of mutations) {
-                    if (mutation.type === 'attributes') {
-                        const status = adRef.current?.getAttribute('data-ad-status');
-                        if (status === 'unfilled') {
-                            setIsUnfilled(true);
-                        } else if (status === 'filled') {
-                            setIsFilled(true);
-                        }
-                    }
-                }
-            });
-            observer.observe(adRef.current, { attributes: true });
-        }
-
-        // Check if an actual Google ad iframe with content is present
-        const checkIframe = setInterval(() => {
-            if (!adRef.current) return clearInterval(checkIframe);
-            const insEl = adRef.current;
-            const iframe = insEl.querySelector('iframe');
-            if (iframe) {
-                const src = iframe.getAttribute('src') || '';
-                // Real AdSense ad has doubleclick/googleads src
-                if (src.includes('googleads') || src.includes('doubleclick')) {
-                    setIsFilled(true);
-                    clearInterval(checkIframe);
-                    return;
-                }
-            }
-
-            // If Google marked status as done but there's no ad iframe, it's unfilled
-            if (insEl.getAttribute('data-adsbygoogle-status') === 'done') {
-                const status = insEl.getAttribute('data-ad-status');
-                if (status === 'unfilled' || (!iframe && insEl.querySelector('div[id^="aswift_"]'))) {
-                    // Empty host div with no ad iframe
-                    setTimeout(() => {
-                        const retryIframe = insEl.querySelector('iframe');
-                        if (!retryIframe) {
-                            setIsUnfilled(true);
-                        } else {
-                            setIsFilled(true);
-                        }
-                        clearInterval(checkIframe);
-                    }, 800);
-                }
-            }
-        }, 400);
-
-        // Push to AdSense queue after DOM mount
+        // Push to AdSense queue once the DOM element is mounted
         if (!pushed.current) {
             pushed.current = true;
-            requestAnimationFrame(() => {
-                setTimeout(() => {
-                    try {
-                        (window.adsbygoogle = window.adsbygoogle || []).push({});
-                    } catch (e) {
-                        // Silently handle AdSense queue errors
-                    }
-                }, 100);
-            });
+            try {
+                (window.adsbygoogle = window.adsbygoogle || []).push({});
+            } catch (e) {
+                // Silently ignore if AdSense script is still loading
+            }
         }
-
-        // 6-second timeout: if neither filled nor explicitly unfilled, leave as is
-        const timeout = setTimeout(() => {
-            clearInterval(checkIframe);
-        }, 6000);
-
-        return () => {
-            if (observer) observer.disconnect();
-            clearInterval(checkIframe);
-            clearTimeout(timeout);
-        };
     }, [slot]);
 
-    // Fluid (In-Article) and Autorelaxed (Multiplex) native units do not take full-width-responsive
     const isFluidOrRelaxed = format === 'fluid' || format === 'autorelaxed' || layout === 'in-article';
-
-    // Completely collapse if confirmed unfilled (zero space, zero gap)
-    if (isUnfilled) return null;
 
     return (
         <div
@@ -134,29 +59,33 @@ const AdSenseAd = ({
             style={{
                 display: 'block',
                 textAlign: 'center',
-                overflow: 'hidden',
-                // Avoid forced large min-height so unfilled or loading ads don't create blank boxes
-                minHeight: 'auto',
+                margin: '1.75rem auto',
+                maxWidth: '100%',
+                clear: 'both',
                 ...style,
             }}
         >
-            {label && isFilled && (
-                <p style={{
-                    fontSize: '0.58rem',
+            {label && (
+                <div style={{
+                    fontSize: '0.625rem',
                     color: 'var(--text-muted, #94a3b8)',
                     textTransform: 'uppercase',
-                    letterSpacing: '0.1em',
+                    letterSpacing: '0.08em',
                     marginBottom: '4px',
-                    opacity: 0.55,
+                    opacity: 0.65,
                     userSelect: 'none',
+                    textAlign: 'center',
                 }}>
                     {labelText}
-                </p>
+                </div>
             )}
             <ins
                 ref={adRef}
                 className="adsbygoogle"
-                style={{ display: 'block', textAlign: 'center' }}
+                style={{
+                    display: 'block',
+                    textAlign: 'center',
+                }}
                 data-ad-client={PUB_ID}
                 data-ad-slot={slot}
                 data-ad-format={format}

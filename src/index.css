@@ -139,6 +139,21 @@ html[lang="bn"] td {
   font-family: var(--font-bn) !important;
 }
 
+/* ══════════════════════════════════════════════════════════
+   ADSENSE STYLING & UNFILLED COLLAPSE
+   ══════════════════════════════════════════════════════════ */
+.adsense-wrapper {
+  transition: opacity 0.25s ease;
+}
+
+ins.adsbygoogle[data-ad-status="unfilled"],
+.adsense-wrapper:has(ins.adsbygoogle[data-ad-status="unfilled"]) {
+  display: none !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
 /* Mixed content: Bengali Unicode block always uses Bengali font
    regardless of lang attribute — covers inline BN in EN pages */
 :lang(bn),
