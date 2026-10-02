@@ -13,9 +13,11 @@ import React, { useEffect, useRef, useState } from 'react';
  *  style       — extra inline style on the outer wrapper
  *  label       — boolean (default true) — show "Advertisement" label
  *  labelText   — override label text (e.g., বিজ্ঞাপন for BN pages)
- *  minHeight   — minimum height placeholder (optional)
  *
  * Publisher ID: ca-pub-1781126556775676
+ *
+ * KEY FIX: Start hidden (height:0 + overflow:hidden) → show only when AdSense marks "filled"
+ * This eliminates the blank gap that appears while Google decides whether to fill or not.
  */
 
 const PUB_ID = 'ca-pub-1781126556775676';
@@ -30,22 +32,23 @@ const AdSenseAd = ({
     label = true,
     labelText = 'Advertisement',
     layoutKey = '',
-    minHeight = 0,
 }) => {
     const adRef = useRef(null);
     const pushed = useRef(false);
-    const [isUnfilled, setIsUnfilled] = useState(false);
+    // Start as hidden — only show once AdSense confirms "filled"
+    // This prevents the blank gap/space from showing while waiting for ad response
+    const [adStatus, setAdStatus] = useState('pending'); // 'pending' | 'filled' | 'unfilled'
 
-    // Reset status when slot changes
+    // Reset status when slot changes (e.g. route change)
     useEffect(() => {
-        setIsUnfilled(false);
+        setAdStatus('pending');
         pushed.current = false;
     }, [slot]);
 
     useEffect(() => {
         if (!slot || !adRef.current) return;
 
-        // MutationObserver to collapse wrapper if AdSense explicitly marks status="unfilled"
+        // MutationObserver — detect when AdSense sets data-ad-status
         let observer = null;
         if (typeof window !== 'undefined' && window.MutationObserver) {
             observer = new MutationObserver((mutations) => {
@@ -53,9 +56,9 @@ const AdSenseAd = ({
                     if (mutation.type === 'attributes' && mutation.attributeName === 'data-ad-status') {
                         const status = adRef.current?.getAttribute('data-ad-status');
                         if (status === 'unfilled') {
-                            setIsUnfilled(true);
+                            setAdStatus('unfilled');
                         } else if (status === 'filled') {
-                            setIsUnfilled(false);
+                            setAdStatus('filled');
                         }
                     }
                 }
@@ -63,11 +66,35 @@ const AdSenseAd = ({
             observer.observe(adRef.current, { attributes: true });
         }
 
+        // Also check data-adsbygoogle-status="done" to detect fill via iframe injection
+        const checkFillViaIframe = setInterval(() => {
+            if (!adRef.current) return clearInterval(checkFillViaIframe);
+            const insEl = adRef.current;
+            const done = insEl.getAttribute('data-adsbygoogle-status') === 'done';
+            if (done) {
+                clearInterval(checkFillViaIframe);
+                const adStatus = insEl.getAttribute('data-ad-status');
+                if (adStatus === 'unfilled') {
+                    setAdStatus('unfilled');
+                } else {
+                    // Has iframe child = filled
+                    const iframe = insEl.querySelector('iframe');
+                    if (iframe && parseInt(iframe.height || '0') > 0) {
+                        setAdStatus('filled');
+                    } else if (!adStatus) {
+                        // status not set yet but done — give it 500ms more
+                        setTimeout(() => {
+                            const st = insEl.getAttribute('data-ad-status');
+                            setAdStatus(st === 'unfilled' ? 'unfilled' : 'filled');
+                        }, 500);
+                    }
+                }
+            }
+        }, 300);
+
         // Push to AdSense queue after next paint (critical for React SPA)
         if (!pushed.current) {
             pushed.current = true;
-            // requestAnimationFrame ensures the <ins> element is in the painted DOM
-            // before AdSense processes it — fixes "unfilled" issue in React SPAs
             requestAnimationFrame(() => {
                 setTimeout(() => {
                     try {
@@ -79,27 +106,43 @@ const AdSenseAd = ({
             });
         }
 
+        // Safety timeout: if after 5s still pending, mark as unfilled to clean up
+        const safetyTimeout = setTimeout(() => {
+            setAdStatus(prev => prev === 'pending' ? 'unfilled' : prev);
+        }, 5000);
+
         return () => {
             if (observer) observer.disconnect();
+            clearInterval(checkFillViaIframe);
+            clearTimeout(safetyTimeout);
         };
     }, [slot]);
 
     // Fluid (In-Article) and Autorelaxed (Multiplex) native units do not take full-width-responsive
     const isFluidOrRelaxed = format === 'fluid' || format === 'autorelaxed' || layout === 'in-article';
 
+    // Hide completely when unfilled or still pending (no gap)
+    if (adStatus === 'unfilled') return null;
+
     return (
         <div
             className={`adsense-wrapper ${className}`}
             style={{
-                display: isUnfilled ? 'none' : 'block',
+                // While pending: render in DOM (needed for AdSense to detect) but invisible + no height
+                // Once filled: show normally
+                display: 'block',
                 textAlign: 'center',
                 overflow: 'hidden',
-                minHeight: (!isUnfilled && minHeight > 0) ? `${minHeight}px` : undefined,
+                visibility: adStatus === 'filled' ? 'visible' : 'hidden',
+                height: adStatus === 'filled' ? 'auto' : '0',
+                maxHeight: adStatus === 'filled' ? 'none' : '0',
+                margin: adStatus === 'filled' ? undefined : '0',
+                padding: adStatus === 'filled' ? undefined : '0',
                 ...style,
-                ...(isUnfilled ? { display: 'none', margin: 0, padding: 0, height: 0 } : {}),
+                ...(adStatus !== 'filled' ? { margin: 0, padding: 0 } : {}),
             }}
         >
-            {label && !isUnfilled && (
+            {label && adStatus === 'filled' && (
                 <p style={{
                     fontSize: '0.58rem',
                     color: 'var(--text-muted, #94a3b8)',

@@ -774,24 +774,13 @@ const BlogPostInner = () => {
                                     </div>
                                 )}
 
-                                {/* ── 1. Top In-Content Ad (Proven active slot 8630877987 — displays immediately) ── */}
-                                <div style={{ margin: '1.75rem 0 2rem' }}>
-                                    <AdSenseAd
-                                        key={`ad-top-${post.slug}`}
-                                        slot="8630877987"
-                                        format="auto"
-                                        responsive={true}
-                                        labelText="Advertisement"
-                                        style={{ borderRadius: '0.75rem', overflow: 'hidden' }}
-                                    />
-                                </div>
-
                                 {/* Article Sections — High-End Editorial Design */}
                                 {post.sections.map((sec, i) => {
-                                    const isProvenSlot = i % 2 === 0;
-                                    const adSlot = isProvenSlot ? '8630877987' : IN_ARTICLE_SLOTS[Math.floor(i / 2) % IN_ARTICLE_SLOTS.length];
-                                    const adFormat = isProvenSlot ? 'auto' : 'fluid';
-                                    const adLayout = isProvenSlot ? '' : 'in-article';
+                                    // Use IN_ARTICLE_SLOTS cycling — each section gets a unique slot
+                                    // Slots: 9118178745, 5230990345, 3423084657, 1128008083, 4824719678 (cycle repeats for >5 sections)
+                                    const adSlot = IN_ARTICLE_SLOTS[i % IN_ARTICLE_SLOTS.length];
+                                    const adFormat = 'fluid';
+                                    const adLayout = 'in-article';
 
                                     return (
                                         <React.Fragment key={i}>
