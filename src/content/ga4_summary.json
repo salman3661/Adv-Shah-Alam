@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-02T12:35:11.130Z",
+  "updatedAt": "2026-10-02T12:44:53.839Z",
   "propertyId": "520583213",
   "channels": [
     {
@@ -7,7 +7,7 @@
       "sourceMedium": "google / organic",
       "activeUsers": 1899,
       "sessions": 2123,
-      "pageViews": 2882,
+      "pageViews": 2883,
       "engagementRate": "54.3%"
     },
     {
@@ -21,16 +21,16 @@
     {
       "channel": "Cross-network",
       "sourceMedium": "(data not available)",
-      "activeUsers": 77,
-      "sessions": 77,
-      "pageViews": 85,
+      "activeUsers": 78,
+      "sessions": 78,
+      "pageViews": 86,
       "engagementRate": "0.0%"
     },
     {
       "channel": "Unassigned",
       "sourceMedium": "(not set)",
-      "activeUsers": 55,
-      "sessions": 56,
+      "activeUsers": 56,
+      "sessions": 57,
       "pageViews": 39,
       "engagementRate": "0.0%"
     },
@@ -183,7 +183,7 @@
     {
       "path": "/blog/bangladesh-cyber-crime-complaint-portal-guide-2026",
       "title": "Bangladesh Cyber Crime Complaint Portal – Online Guide",
-      "activeUsers": 149,
+      "activeUsers": 150,
       "pageViews": 190
     },
     {
@@ -201,8 +201,8 @@
     {
       "path": "/blog/land-registration-cost-fees-calculator-bangladesh-2026",
       "title": "Coming Soon | Advocate Md. Shah Alam",
-      "activeUsers": 102,
-      "pageViews": 121
+      "activeUsers": 103,
+      "pageViews": 122
     },
     {
       "path": "/blog/rs-khatian-online-check-bangladesh-2026",
@@ -485,7 +485,7 @@
     {
       "country": "Bangladesh",
       "city": "Dhaka",
-      "activeUsers": 817
+      "activeUsers": 819
     },
     {
       "country": "Bangladesh",

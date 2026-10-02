@@ -853,8 +853,8 @@ const BlogPostInner = () => {
                                                 <MidArticleLeadCapture lang="en" />
                                             )}
 
-                                            {/* ── 2. In-Content Ad: Well-spaced native in-article units (every 3 sections) ── */}
-                                            {i % 3 === 1 && i < post.sections.length - 1 && (
+                                            {/* ── 2. In-Content Ad: Well-spaced native in-article units (every 2 sections) ── */}
+                                            {i % 2 === 1 && i < post.sections.length - 1 && (
                                                 <div style={{ margin: '2rem 0 2.5rem' }}>
                                                     <AdSenseAd
                                                         key={`ad-sec-${i}-${post.slug}`}
