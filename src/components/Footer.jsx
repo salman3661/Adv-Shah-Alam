@@ -39,6 +39,7 @@ const Footer = () => {
         { name: isBn ? 'সেবাসমূহ' : 'Services', path: isBn ? '/#services' : '/en#services', id: 'services' },
         { name: isBn ? 'প্রশ্নোত্তর' : 'FAQ', path: isBn ? '/#faq' : '/en#faq', id: 'faq' },
         { name: isBn ? 'ব্লগ' : 'Blog', path: isBn ? '/bn/blog' : '/blog', id: null },
+        { name: isBn ? 'প্রবাসীদের আইনি সহায়তা (NRB)' : 'NRB Legal Help', path: '/nrb-legal-help', id: null },
         { name: isBn ? 'যোগাযোগ' : 'Contact Us', path: isBn ? '/bn/contact' : '/contact', id: null },
         { name: isBn ? '⭐ গুগল রিভিউ দিন' : '⭐ Leave a Review', path: '/review', id: null },
     ];

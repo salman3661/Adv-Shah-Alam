@@ -1,5 +1,6 @@
 import React, { lazy, Suspense } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import Hero from '../components/Hero';
 import About from '../components/About';
 import TrustBar from '../components/TrustBar';
@@ -89,6 +90,29 @@ const Home = ({ lang = 'en' }) => {
                         labelText={isBn ? 'বিজ্ঞাপন' : 'Advertisement'}
                         style={{ borderRadius: '0.75rem', overflow: 'hidden' }}
                     />
+                </div>
+
+                <div style={{ maxWidth: '900px', margin: '0 auto', padding: '0 1rem 2rem' }}>
+                    <Link
+                        to="/nrb-legal-help"
+                        style={{
+                            display: 'block',
+                            padding: '1.25rem 1.5rem',
+                            borderRadius: '1rem',
+                            background: 'var(--surface)',
+                            border: '1px solid var(--card-border)',
+                            textDecoration: 'none',
+                        }}
+                    >
+                        <div style={{ fontSize: '0.75rem', fontWeight: 800, letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--accent)', marginBottom: '0.25rem' }}>
+                            {isBn ? 'প্রবাসী বাংলাদেশিদের জন্য' : 'For Bangladeshis Abroad (NRB)'}
+                        </div>
+                        <div style={{ fontWeight: 700, color: 'var(--text)', lineHeight: 1.5 }}>
+                            {isBn
+                                ? 'বিদেশে থাকেন? জমি, পাওয়ার অব অ্যাটর্নি, বিবাহবিচ্ছেদ ও আদালতের মামলায় আইনি সহায়তা নিন →'
+                                : 'Living abroad? Land, Power of Attorney, divorce and court-case guides for NRBs →'}
+                        </div>
+                    </Link>
                 </div>
 
                 <BlogPreview lang={lang} />

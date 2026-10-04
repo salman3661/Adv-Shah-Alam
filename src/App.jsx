@@ -19,6 +19,7 @@ import NotFound from './pages/NotFound';
 const Education = lazy(() => import('./pages/Education'));
 const Blog = lazy(() => import('./pages/Blog'));
 const BlogPost = lazy(() => import('./pages/BlogPost'));
+const NrbLegalHelp = lazy(() => import('./pages/NrbLegalHelp'));
 const BlogBn = lazy(() => import('./pages/BlogBn'));
 const BlogPostBn = lazy(() => import('./pages/BlogPostBn'));
 const CriminalLawyer = lazy(() => import('./pages/services/CriminalLawyer'));
@@ -102,6 +103,7 @@ function App() {
                       {/* Blog */}
                       <Route path="/blog" element={<Blog />} />
                       <Route path="/blog/:slug" element={<BlogPost />} />
+                      <Route path="/nrb-legal-help" element={<NrbLegalHelp />} />
 
                       <Route path="/bn/blog" element={<BlogBn />} />
                       <Route path="/bn/blog/:slug" element={<BlogPostBn />} />

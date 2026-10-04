@@ -68,6 +68,7 @@ const urls = [
     url('/contact', TODAY, 'monthly', '0.9'),
     url('/bn/contact', TODAY, 'monthly', '0.9'),
     url('/blog', TODAY, 'weekly', '0.8'),
+    url('/nrb-legal-help', TODAY, 'weekly', '0.9'),
     url('/education', TODAY, 'monthly', '0.6'),
     url('/privacy-policy', TODAY, 'yearly', '0.3'),
     url('/terms-of-service', TODAY, 'yearly', '0.3'),
