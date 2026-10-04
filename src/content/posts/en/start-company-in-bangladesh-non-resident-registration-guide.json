@@ -1,0 +1,101 @@
+{
+  "slug": "start-company-in-bangladesh-non-resident-registration-guide",
+  "bnSlug": null,
+  "title": "Starting a Company in Bangladesh as a Non-Resident: Registration, Directors, Tax and Banking",
+  "category": "Corporate Law",
+  "readTime": "11 min read",
+  "metaTitle": "Start a Company in Bangladesh as an NRB or Foreigner: Step-by-Step",
+  "metaDescription": "How to register a company in Bangladesh as a non-resident Bangladeshi or foreign investor: RJSC registration, directors, TIN, trade licence, bank account and compliance.",
+  "keywords": [
+    "company registration Bangladesh non resident",
+    "start business in Bangladesh NRB",
+    "RJSC registration",
+    "foreign company Bangladesh BIDA",
+    "private limited company Bangladesh",
+    "one person company Bangladesh"
+  ],
+  "publishedDate": "2026-10-04",
+  "lastModified": "2026-10-04",
+  "heroIntro": "Many NRBs want to start a business back home: a trading company, software house, real estate firm or consultancy. You can do it from abroad, but you need to choose the right structure and complete every registration step, or you risk penalties and a blocked bank account. This guide is written by <a href=\"/advocate-md-shah-alam\" style=\"color:var(--gold);font-weight:bold\">Advocate Md. Shah Alam</a>, Supreme Court of Bangladesh, for Bangladeshis living in the UK, USA, UAE, Canada and elsewhere. For case-specific help call or WhatsApp the chamber on <a href=\"tel:01712655546\" style=\"color:var(--gold);font-weight:bold\">01712655546</a>.",
+  "quickAnswer": {
+    "heading": "Company Registration in Brief",
+    "points": [
+      "Companies are registered with the Registrar of Joint Stock Companies and Firms (RJSC) under the Companies Act 1994.",
+      "Common structures: private limited company, one-person company, partnership or sole proprietorship.",
+      "NRBs and foreigners can usually hold 100% of a private company in most sectors; some sectors are restricted or need approval.",
+      "After incorporation you need a TIN, trade licence, VAT/BIN registration where applicable and a bank account.",
+      "Foreign investors can use BIDA's one-stop service for approvals."
+    ]
+  },
+  "toc": [
+    "Choose the Right Structure",
+    "Can a Non-Resident Be a Director or Owner?",
+    "Step-by-Step Registration",
+    "After Incorporation",
+    "Bringing Capital and Taking Profit",
+    "Compliance Checklist"
+  ],
+  "sections": [
+    {
+      "h2": "Choose the Right Structure",
+      "content": "<ul><li><strong>Private limited company:</strong> limited liability, shareholders and directors, widely used.</li><li><strong>One Person Company (OPC):</strong> a single shareholder with a nominee, suitable for small ventures.</li><li><strong>Partnership firm:</strong> simple but partners are personally liable.</li><li><strong>Sole proprietorship:</strong> registered through trade licence only; no separate legal entity.</li><li><strong>Branch or liaison office of a foreign company:</strong> requires BIDA/Bangladesh Bank approval.</li></ul><p><em>This article is general legal information, not legal advice. Fees, forms and procedures change; confirm current requirements with the relevant office or a qualified advocate before acting.</em></p>"
+    },
+    {
+      "h2": "Can a Non-Resident Be a Director or Owner?",
+      "content": "<p>Yes, generally. A non-resident Bangladeshi or foreigner can be a shareholder, and often a director, of a private company. Some structures require at least one local director or a local company secretary for practical reasons. Foreign ownership in restricted sectors (for example some media, defence or agriculture activities) requires government clearance. Check the sector before you invest.</p>"
+    },
+    {
+      "h2": "Step-by-Step Registration",
+      "content": "<ol><li>Choose a unique company name and apply for name clearance at RJSC.</li><li>Prepare the Memorandum and Articles of Association.</li><li>Collect passport or NID copies of shareholders and directors; foreigners' documents need attestation (see <a href=\"/blog/attest-documents-for-bangladesh-embassy-mofa-notary-guide\">attestation guide</a>).</li><li>Appoint an advocate or company secretary through a Power of Attorney if you are abroad (see <a href=\"/blog/power-of-attorney-bangladesh-property-from-abroad\">PoA guide</a>).</li><li>File incorporation forms and pay the stamp duty and RJSC fee.</li><li>Receive the Certificate of Incorporation.</li></ol>"
+    },
+    {
+      "h2": "After Incorporation",
+      "content": "<ul><li>Get a TIN for the company and the directors from the National Board of Revenue.</li><li>Obtain a trade licence from the City Corporation or Pourashava.</li><li>Register for VAT (BIN) if the turnover requires it.</li><li>Open a company bank account; foreign shareholders usually need inward remittance proof for capital.</li><li>Register with relevant regulators for your sector.</li><li>File annual returns with RJSC and income tax returns every year.</li></ul>"
+    },
+    {
+      "h2": "Bringing Capital and Taking Profit",
+      "content": "<p>Capital should be brought through banking channels and recorded so it can later be repatriated. A foreign investor registers the inward remittance with Bangladesh Bank through the bank, which helps with dividend repatriation and exit. Keep share certificates, board resolutions and audited accounts.</p>"
+    },
+    {
+      "h2": "Compliance Checklist",
+      "content": "<ol><li>Annual general meeting and audited accounts.</li><li>RJSC annual return filing.</li><li>Income tax return and withholding taxes.</li><li>VAT returns monthly if registered.</li><li>Maintain statutory registers and minutes.</li><li>Keep a Bangladesh-based representative or company secretary for notices.</li></ol><p><em>This article is general legal information, not legal advice. Fees, forms and procedures change; confirm current requirements with the relevant office or a qualified advocate before acting.</em></p>"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Can an NRB register a company from abroad?",
+      "answer": "Yes, through an advocate or company secretary with a Power of Attorney and attested documents."
+    },
+    {
+      "question": "Can a foreigner own 100% of a company in Bangladesh?",
+      "answer": "In most sectors, yes. Some sectors are restricted or need approval. Check the BIDA rules."
+    },
+    {
+      "question": "How long does company registration take?",
+      "answer": "Once documents are complete, incorporation can take days to a couple of weeks; TIN, trade licence and bank account add more time."
+    },
+    {
+      "question": "Do I need a local director?",
+      "answer": "Rules and practice differ; many companies keep at least one local director or representative for practical compliance."
+    },
+    {
+      "question": "Can I repatriate profits?",
+      "answer": "Yes, if capital was brought in through proper channels and taxes are paid, subject to Bangladesh Bank rules."
+    }
+  ],
+  "relatedServiceLinks": [
+    {
+      "text": "Company & Corporate Lawyer Dhaka",
+      "to": "/services/company-corporate-lawyer"
+    },
+    {
+      "text": "Tax Lawyer in Bangladesh",
+      "to": "/services/tax-lawyer"
+    },
+    {
+      "text": "Supreme Court Lawyer Bangladesh",
+      "to": "/services/supreme-court-lawyer"
+    }
+  ],
+  "lang": "en"
+}
