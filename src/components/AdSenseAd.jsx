@@ -38,17 +38,32 @@ const AdSenseAd = ({
     }, [slot]);
 
     useEffect(() => {
-        if (!slot || !adRef.current) return;
+        const el = adRef.current;
+        if (!slot || !el) return;
 
-        // Push to AdSense queue once the DOM element is mounted
-        if (!pushed.current) {
+        const push = () => {
+            if (pushed.current) return;
             pushed.current = true;
             try {
                 (window.adsbygoogle = window.adsbygoogle || []).push({});
             } catch (e) {
                 // Silently ignore if AdSense script is still loading
             }
+        };
+
+        // Lazy request: only fire when the ad is close to the viewport (better viewability / RPM)
+        if (typeof IntersectionObserver === 'undefined') {
+            push();
+            return;
         }
+        const io = new IntersectionObserver((entries) => {
+            if (entries.some((e) => e.isIntersecting)) {
+                push();
+                io.disconnect();
+            }
+        }, { rootMargin: '300px 0px' });
+        io.observe(el);
+        return () => io.disconnect();
     }, [slot]);
 
     const isFluidOrRelaxed = format === 'fluid' || format === 'autorelaxed' || layout === 'in-article';

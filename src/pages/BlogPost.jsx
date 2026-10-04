@@ -774,23 +774,11 @@ const BlogPostInner = () => {
                                     </div>
                                 )}
 
-                                {/* ── 1. Top In-Content Ad (Proven active slot 8630877987 — displays immediately) ── */}
-                                <div style={{ margin: '1.75rem 0 2.25rem' }}>
-                                    <AdSenseAd
-                                        key={`ad-top-${post.slug}`}
-                                        slot="8630877987"
-                                        format="auto"
-                                        responsive={true}
-                                        labelText="Advertisement"
-                                        style={{ borderRadius: '0.75rem', overflow: 'hidden' }}
-                                    />
-                                </div>
-
                                 {/* Article Sections — High-End Editorial Design */}
                                 {post.sections.map((sec, i) => {
                                     // Alternating strategy: Section 1 and 5 use proven active unit 8630877987 (immediate live fill)
                                     // Other sections cycle through dedicated in-article units
-                                    const isProvenSlot = (i === 1 || i % 4 === 1);
+                                    const isProvenSlot = (i % 6 === 2);
                                     const adSlot = isProvenSlot ? '8630877987' : IN_ARTICLE_SLOTS[Math.floor(i / 2) % IN_ARTICLE_SLOTS.length];
                                     const adFormat = isProvenSlot ? 'auto' : 'fluid';
                                     const adLayout = isProvenSlot ? '' : 'in-article';
@@ -867,7 +855,7 @@ const BlogPostInner = () => {
                                             )}
 
                                             {/* ── 2. In-Content Ad: Well-spaced native in-article units (every 2 sections) ── */}
-                                            {i % 2 === 1 && i < post.sections.length - 1 && (
+                                            {i % 3 === 2 && i < post.sections.length - 1 && (
                                                 <div style={{ margin: '2rem 0 2.5rem' }}>
                                                     <AdSenseAd
                                                         key={`ad-sec-${i}-${post.slug}`}
@@ -1010,16 +998,6 @@ const BlogPostInner = () => {
 
                     {/* Mobile: bottom related posts */}
                     <div className="bp-mobile-bottom">
-                        {/* ── Mobile In-Feed Ad ── */}
-                        <div style={{ margin: '1rem 0 1.5rem' }}>
-                            <AdSenseAd
-                                slot="8630877987"
-                                format="auto"
-                                responsive={true}
-                                labelText="Advertisement"
-                                style={{ borderRadius: '0.75rem', overflow: 'hidden' }}
-                            />
-                        </div>
                         <div style={{ borderTop: '2px solid var(--accent)', paddingTop: '2rem', marginTop: '1rem' }}>
                             <p style={{ fontSize: '0.8rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.08em', color: 'var(--text)', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.375rem' }}>
                                 <Flame size={14} style={{ color: 'var(--accent)' }} /> More Articles
