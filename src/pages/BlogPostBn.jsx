@@ -14,7 +14,10 @@ import popularBnSlugs from '../content/popular_bn.json';
 import NotFound from './NotFound';
 
 /* ── Load all BN posts ── */
-const _bnModules = import.meta.glob('../content/posts/bn/*.json', { eager: true });
+import postsMeta_bn from '../content/posts-meta-bn.json';
+const _bnModules = postsMeta_bn;
+// Full article text is loaded on demand (one small chunk per post) instead of bundling all posts.
+const _postLoaders = import.meta.glob('../content/posts/bn/*.json', { import: 'default' });
 const allBnPosts = Object.values(_bnModules)
     .map(m => m.default ?? m)
     .filter(p => p && p.slug);
@@ -444,7 +447,19 @@ const ConsultBnWidget = ({ postTitle }) => (
 const BlogPostBnInner = () => {
     const { slug } = useParams();
     const navigate = useNavigate();
-    const post = allBnPosts.find(p => p.slug === slug);
+    const [loadedPost, setLoadedPost] = useState(null);
+    const [postStatus, setPostStatus] = useState('loading');
+    useEffect(() => {
+        let alive = true;
+        const loader = _postLoaders[`../content/posts/bn/${slug}.json`];
+        if (!loader) { setLoadedPost(null); setPostStatus('missing'); return undefined; }
+        setPostStatus('loading');
+        loader()
+            .then((m) => { if (alive) { setLoadedPost(m); setPostStatus('ok'); } })
+            .catch(() => { if (alive) setPostStatus('missing'); });
+        return () => { alive = false; };
+    }, [slug]);
+    const post = loadedPost && loadedPost.slug === slug ? loadedPost : null;
     const [cName, setCName] = useState('');
     const [cPhone, setCPhone] = useState('');
     const [cMessage, setCMessage] = useState('');
@@ -475,7 +490,7 @@ const BlogPostBnInner = () => {
         setTimeout(() => { setCSubmitted(false); setCName(''); setCPhone(''); setCMessage(''); }, 5000);
     };
 
-    if (!post) return <NotFound />;
+    if (!post) return postStatus === 'loading' ? <div style={{ minHeight: '70vh' }} /> : <NotFound />;
 
     if (!isPublishedBn(post)) return (
         <>

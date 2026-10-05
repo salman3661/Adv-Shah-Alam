@@ -5,7 +5,8 @@ import { Search, Clock, ChevronRight, BookOpen, Flame, Award, ShieldCheck, UserC
 import seo from '../content/seo.js';
 
 // Load all EN blog posts from JSON files (bundled at build time by Vite)
-const _postModules = import.meta.glob('../content/posts/en/*.json', { eager: true });
+import postsMeta_en from '../content/posts-meta-en.json';
+const _postModules = postsMeta_en;
 const blogPosts = Object.values(_postModules)
     .map((m) => m.default ?? m)
     .filter((p) => p && p.slug && p.title);

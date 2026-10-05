@@ -4,7 +4,8 @@ import { Helmet } from 'react-helmet-async';
 import { Search, Clock, ChevronRight, BookOpen, Flame, Award, ShieldCheck, UserCheck, Scale, ArrowUpRight, X, TrendingUp, Calendar, Sparkles } from 'lucide-react';
 
 // Load all BN blog posts from JSON files (bundled at build time by Vite)
-const _bnModules = import.meta.glob('../content/posts/bn/*.json', { eager: true });
+import postsMeta_bn from '../content/posts-meta-bn.json';
+const _bnModules = postsMeta_bn;
 const postsBn = Object.values(_bnModules).map((m) => m.default ?? m);
 
 function isPublishedBn(post) {

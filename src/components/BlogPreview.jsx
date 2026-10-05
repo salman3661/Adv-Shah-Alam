@@ -5,8 +5,10 @@ import { Link } from 'react-router-dom';
 import seo from '../content/seo.js';
 
 // Load latest 3 published posts from each language using the JSON glob
-const _enModules = import.meta.glob('../content/posts/en/*.json', { eager: true });
-const _bnModules = import.meta.glob('../content/posts/bn/*.json', { eager: true });
+import postsMeta_en from '../content/posts-meta-en.json';
+const _enModules = postsMeta_en;
+import postsMeta_bn from '../content/posts-meta-bn.json';
+const _bnModules = postsMeta_bn;
 
 function isPublished(post) {
   return Boolean(post && !post.isDraft && !post._draft);

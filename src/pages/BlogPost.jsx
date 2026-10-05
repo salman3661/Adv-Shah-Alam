@@ -13,7 +13,10 @@ import AdSenseAd from '../components/AdSenseAd';
 import NotFound from './NotFound';
 
 /* ── Load all EN posts ── */
-const _postModules = import.meta.glob('../content/posts/en/*.json', { eager: true });
+import postsMeta_en from '../content/posts-meta-en.json';
+const _postModules = postsMeta_en;
+// Full article text is loaded on demand (one small chunk per post) instead of bundling all posts.
+const _postLoaders = import.meta.glob('../content/posts/en/*.json', { import: 'default' });
 const allPosts = Object.values(_postModules)
     .map(m => m.default ?? m)
     .filter(p => p && p.slug);
@@ -400,7 +403,19 @@ const ConsultWidget = ({ postTitle }) => (
 const BlogPostInner = () => {
     const { slug } = useParams();
     const navigate = useNavigate();
-    const post = allPosts.find(p => p.slug === slug);
+    const [loadedPost, setLoadedPost] = useState(null);
+    const [postStatus, setPostStatus] = useState('loading');
+    useEffect(() => {
+        let alive = true;
+        const loader = _postLoaders[`../content/posts/en/${slug}.json`];
+        if (!loader) { setLoadedPost(null); setPostStatus('missing'); return undefined; }
+        setPostStatus('loading');
+        loader()
+            .then((m) => { if (alive) { setLoadedPost(m); setPostStatus('ok'); } })
+            .catch(() => { if (alive) setPostStatus('missing'); });
+        return () => { alive = false; };
+    }, [slug]);
+    const post = loadedPost && loadedPost.slug === slug ? loadedPost : null;
     const [cName, setCName] = useState('');
     const [cPhone, setCPhone] = useState('');
     const [cMessage, setCMessage] = useState('');
@@ -433,7 +448,7 @@ const BlogPostInner = () => {
     };
 
     /* ── Error / Coming Soon states ── */
-    if (!post) return <NotFound />;
+    if (!post) return postStatus === 'loading' ? <div style={{ minHeight: '70vh' }} /> : <NotFound />;
 
     if (!isPublished(post)) return (
         <>

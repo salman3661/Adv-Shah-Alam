@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Phone, MessageCircle, Globe2 } from 'lucide-react';
 import AdSenseAd from '../components/AdSenseAd';
 
-const _postModules = import.meta.glob('../content/posts/en/*.json', { eager: true });
+import postsMeta_en from '../content/posts-meta-en.json';
+const _postModules = postsMeta_en;
 const allPosts = Object.values(_postModules).map((m) => m.default ?? m);
 const bySlug = Object.fromEntries(allPosts.map((p) => [p.slug, p]));
 
