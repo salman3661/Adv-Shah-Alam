@@ -51,7 +51,7 @@ const AdSenseAd = ({
             }
         };
 
-        // Lazy request: only fire when the ad is close to the viewport (better viewability / RPM)
+        // Request ads well before they scroll into view (1500px lookahead) so they are ready when the reader arrives
         if (typeof IntersectionObserver === 'undefined') {
             push();
             return;
@@ -61,7 +61,7 @@ const AdSenseAd = ({
                 push();
                 io.disconnect();
             }
-        }, { rootMargin: '300px 0px' });
+        }, { rootMargin: '1500px 0px' });
         io.observe(el);
         return () => io.disconnect();
     }, [slot]);
