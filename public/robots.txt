@@ -27,6 +27,5 @@ Disallow: /blog?q=*
 Disallow: /?q=
 Disallow: /*?q=*
 Disallow: /bn/posts/
-Crawl-delay: 2
 
 Sitemap: https://www.advmdshahalam.me/sitemap.xml
