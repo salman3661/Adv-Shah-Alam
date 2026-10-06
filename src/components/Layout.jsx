@@ -16,7 +16,14 @@ const attorneySchema = {
     name: 'Advocate Md. Shah Alam',
     alternateName: 'এডভোকেট মোঃ শাহ আলম',
     url: BASE,
-    image: `${BASE}/images/hero/hero-md-shah-alam.png`,
+    image: {
+        '@type': 'ImageObject',
+        url: `${BASE}/images/hero/hero-md-shah-alam.png`,
+        caption: 'Advocate Md. Shah Alam — Supreme Court Lawyer Bangladesh',
+        width: 1024,
+        height: 1038,
+        representativeOfPage: true,
+    },
     telephone: '+8801712655546',
     email: 'contact@advmdshahalam.me',
     description: 'Advocate Md. Shah Alam is a Supreme Court lawyer in Bangladesh with 10+ years of experience in Criminal, Family, Land, Company, and Tax Law. Based in Uttara, Dhaka.',
@@ -59,6 +66,10 @@ const attorneySchema = {
         'https://www.facebook.com/advmd.shahalamfb',
         'https://www.linkedin.com/in/advmdshahalam/',
         'https://maps.app.goo.gl/M3NXMwW3xkp2TE3h8',
+        'https://about.me/advmd.shahalam',
+        'https://advmdshahalam.blogspot.com/',
+        'https://bdadvocates.com/profile/1583',
+        `${BASE}/advocate-md-shah-alam`,
     ],
 };
 
@@ -91,8 +102,10 @@ const personSchema = {
     image: {
         '@type': 'ImageObject',
         url: `${BASE}/images/hero/hero-md-shah-alam.png`,
-        width: 600,
-        height: 750,
+        caption: 'Advocate Md. Shah Alam — Supreme Court Lawyer Bangladesh',
+        width: 1024,
+        height: 1038,
+        representativeOfPage: true,
     },
     jobTitle: 'Advocate, Supreme Court of Bangladesh',
     description: 'Advocate Md. Shah Alam is a Supreme Court Advocate of Bangladesh with 10+ years of experience. Assistant Public Prosecutor at Metro Sessions Court, Dhaka. Specialises in Criminal Law, Family Law, Land Law, Company Law and Tax Law. Chamber in Uttara, Dhaka.',
@@ -154,6 +167,9 @@ const personSchema = {
         'https://www.facebook.com/advmd.shahalamfb',
         'https://www.linkedin.com/in/advmdshahalam/',
         'https://maps.app.goo.gl/M3NXMwW3xkp2TE3h8',
+        'https://about.me/advmd.shahalam',
+        'https://advmdshahalam.blogspot.com/',
+        'https://bdadvocates.com/profile/1583',
         `${BASE}/advocate-md-shah-alam`,
     ],
 };
@@ -166,7 +182,7 @@ const legalServiceSchema = {
     name: 'Advocate Md. Shah Alam',
     alternateName: 'এডভোকেট মোঃ শাহ আলম',
     url: BASE,
-    logo: `${BASE}/favicon.ico`,
+    logo: `${BASE}/adv-md-shah-alam.png`,
     image: `${BASE}/images/advocate-shah-alam.jpg`,
     telephone: '+8801712655546',
     email: 'contact@advmdshahalam.me',
@@ -231,6 +247,9 @@ const legalServiceSchema = {
         'https://www.facebook.com/advmd.shahalamfb',
         'https://www.linkedin.com/in/advmdshahalam/',
         'https://maps.app.goo.gl/M3NXMwW3xkp2TE3h8',
+        'https://about.me/advmd.shahalam',
+        'https://advmdshahalam.blogspot.com/',
+        'https://bdadvocates.com/profile/1583',
     ],
 };
 

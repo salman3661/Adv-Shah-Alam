@@ -10,6 +10,7 @@ import { telLink, waLink } from '../data/contactInfo';
 import Disclaimer from '../components/Disclaimer';
 import MidArticleLeadCapture from '../components/MidArticleLeadCapture';
 import AdSenseAd from '../components/AdSenseAd';
+import ArticleSkeleton from '../components/ArticleSkeleton';
 import NotFound from './NotFound';
 
 /* ── Load all EN posts ── */
@@ -448,7 +449,32 @@ const BlogPostInner = () => {
     };
 
     /* ── Error / Coming Soon states ── */
-    if (!post) return postStatus === 'loading' ? <div style={{ minHeight: '70vh' }} /> : <NotFound />;
+        /* Notify AdSense of SPA route change to trigger Auto Ads & Vignettes */
+    useEffect(() => {
+        try {
+            (window.adsbygoogle = window.adsbygoogle || []).push({});
+        } catch (e) {}
+    }, [slug]);
+
+    const metaFallback = allPosts.find(p => p.slug === slug);
+
+    /* ── Error / Loading / Coming Soon states ── */
+    if (!post) {
+        if (postStatus === 'loading') {
+            return (
+                <>
+                    {metaFallback && (
+                        <Helmet>
+                            <title>{metaFallback.metaTitle || metaFallback.title}</title>
+                            {metaFallback.metaDescription && <meta name="description" content={metaFallback.metaDescription} />}
+                        </Helmet>
+                    )}
+                    <ArticleSkeleton meta={metaFallback} lang="en" />
+                </>
+            );
+        }
+        return <NotFound />;
+    }
 
     if (!isPublished(post)) return (
         <>
@@ -789,12 +815,25 @@ const BlogPostInner = () => {
                                     </div>
                                 )}
 
-                                {/* Article Sections — High-End Editorial Design */}
+                                {/* ── Dedicated Top In-Article Ad (Directly Below Quick Response) ── */}
+                                <div style={{ margin: '1.75rem 0 2.25rem' }}>
+                                    <AdSenseAd
+                                        key={`ad-top-qa-${post.slug}`}
+                                        slot="9118178745"
+                                        format="fluid"
+                                        layout="in-article"
+                                        responsive={true}
+                                        labelText="Advertisement"
+                                        style={{ borderRadius: '0.75rem', overflow: 'hidden' }}
+                                    />
+                                </div>
+
+{/* Article Sections — High-End Editorial Design */}
                                 {post.sections.map((sec, i) => {
                                     // Alternating strategy: Section 1 and 5 use proven active unit 8630877987 (immediate live fill)
                                     // Other sections cycle through dedicated in-article units
                                     const isProvenSlot = (i % 6 === 2);
-                                    const adSlot = isProvenSlot ? '8630877987' : IN_ARTICLE_SLOTS[Math.floor(i / 2) % IN_ARTICLE_SLOTS.length];
+                                    const adSlot = isProvenSlot ? '8630877987' : IN_ARTICLE_SLOTS[(Math.floor(i / 2) + 1) % IN_ARTICLE_SLOTS.length];
                                     const adFormat = isProvenSlot ? 'auto' : 'fluid';
                                     const adLayout = isProvenSlot ? '' : 'in-article';
 

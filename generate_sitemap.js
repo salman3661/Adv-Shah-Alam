@@ -55,16 +55,28 @@ function getDate(post) {
     return post.lastModified || post.publishedDate || TODAY;
 }
 
+const HERO_IMAGE = [
+    {
+        loc: `${BASE_URL}/images/hero/hero-md-shah-alam.png`,
+        title: 'Advocate Md. Shah Alam - Supreme Court Lawyer Bangladesh',
+        caption: 'Advocate Md. Shah Alam, Supreme Court of Bangladesh, Uttara Dhaka',
+    }
+];
+
 // ── Build URL entries ───────────────────────────────────────────────────────
-function url(loc, lastmod, changefreq, priority) {
-    return `  <url>\n    <loc>${BASE_URL}${loc}</loc>\n    <lastmod>${lastmod}</lastmod>\n    <changefreq>${changefreq}</changefreq>\n    <priority>${priority}</priority>\n  </url>`;
+function url(loc, lastmod, changefreq, priority, images = []) {
+    let imgBlock = '';
+    if (images && images.length > 0) {
+        imgBlock = images.map(img => `\n    <image:image>\n      <image:loc>${img.loc}</image:loc>\n      <image:title>${img.title}</image:title>\n      <image:caption>${img.caption}</image:caption>\n    </image:image>`).join('');
+    }
+    return `  <url>\n    <loc>${BASE_URL}${loc}</loc>\n    <lastmod>${lastmod}</lastmod>\n    <changefreq>${changefreq}</changefreq>\n    <priority>${priority}</priority>${imgBlock}\n  </url>`;
 }
 
 const urls = [
     // ── Core Pages ───────────────────────────────────────────────────────────
-    url('/', TODAY, 'weekly', '1.0'),
-    url('/en', TODAY, 'weekly', '1.0'),
-    url('/advocate-md-shah-alam', TODAY, 'monthly', '0.9'),
+    url('/', TODAY, 'weekly', '1.0', HERO_IMAGE),
+    url('/en', TODAY, 'weekly', '1.0', HERO_IMAGE),
+    url('/advocate-md-shah-alam', TODAY, 'monthly', '0.9', HERO_IMAGE),
     url('/contact', TODAY, 'monthly', '0.9'),
     url('/bn/contact', TODAY, 'monthly', '0.9'),
     url('/blog', TODAY, 'weekly', '0.8'),
@@ -103,7 +115,8 @@ const urls = [
 // ── Generate XML ────────────────────────────────────────────────────────────
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 ${urls.join('\n')}
 </urlset>`;
 

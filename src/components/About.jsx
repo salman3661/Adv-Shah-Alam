@@ -133,7 +133,23 @@ const About = ({ lang = 'en' }) => {
                                     ❝ {aboutContent.personalNote} ❞
                                 </p>
                                 {/* Signature */}
-                                <div className="flex items-center gap-3 pt-2" style={{ borderTop: '1px solid rgba(198,167,94,0.15)' }}>
+                                <div className="flex items-center gap-4 pt-3" style={{ borderTop: '1px solid rgba(198,167,94,0.2)' }}>
+                                    <div className="relative flex-shrink-0">
+                                        <img
+                                            src="/images/hero/hero-md-shah-alam.webp"
+                                            srcSet="/images/hero/hero-md-shah-alam-420.webp 420w, /images/hero/hero-md-shah-alam.webp 828w"
+                                            sizes="64px"
+                                            alt={isBn ? "অ্যাডভোকেট মো. শাহ আলম" : "Advocate Md. Shah Alam"}
+                                            className="w-16 h-16 rounded-full object-cover shadow-md"
+                                            style={{
+                                                border: '2px solid var(--gold)',
+                                                boxShadow: '0 4px 14px rgba(198,167,94,0.25)'
+                                            }}
+                                            width="64"
+                                            height="64"
+                                            loading="lazy"
+                                        />
+                                    </div>
                                     <div>
                                         <span style={{
                                             fontFamily: isBn ? "'Noto Serif Bengali', serif" : "'Dancing Script', 'Brush Script MT', cursive",

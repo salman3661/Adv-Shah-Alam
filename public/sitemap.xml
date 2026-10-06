@@ -1,141 +1,163 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.advmdshahalam.me/</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.png</image:loc>
+      <image:title>Advocate Md. Shah Alam - Supreme Court Lawyer Bangladesh</image:title>
+      <image:caption>Advocate Md. Shah Alam, Supreme Court of Bangladesh, Uttara Dhaka</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.advmdshahalam.me/en</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.png</image:loc>
+      <image:title>Advocate Md. Shah Alam - Supreme Court Lawyer Bangladesh</image:title>
+      <image:caption>Advocate Md. Shah Alam, Supreme Court of Bangladesh, Uttara Dhaka</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.advmdshahalam.me/advocate-md-shah-alam</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.png</image:loc>
+      <image:title>Advocate Md. Shah Alam - Supreme Court Lawyer Bangladesh</image:title>
+      <image:caption>Advocate Md. Shah Alam, Supreme Court of Bangladesh, Uttara Dhaka</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.advmdshahalam.me/contact</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.advmdshahalam.me/bn/contact</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.advmdshahalam.me/blog</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.advmdshahalam.me/nrb-legal-help</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://www.advmdshahalam.me/education</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.advmdshahalam.me/privacy-policy</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://www.advmdshahalam.me/terms-of-service</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://www.advmdshahalam.me/services/criminal-lawyer</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.advmdshahalam.me/services/bail-lawyer</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.advmdshahalam.me/services/divorce-lawyer</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.advmdshahalam.me/services/land-lawyer</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.advmdshahalam.me/services/supreme-court-lawyer</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.advmdshahalam.me/services/company-corporate-lawyer</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.advmdshahalam.me/services/tax-lawyer</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.advmdshahalam.me/bn/services/criminal-lawyer</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.advmdshahalam.me/bn/services/bail-lawyer</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.advmdshahalam.me/bn/services/divorce-lawyer</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.advmdshahalam.me/bn/services/land-lawyer</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.advmdshahalam.me/bn/services/supreme-court-lawyer</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.advmdshahalam.me/bn/services/company-corporate-lawyer</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.advmdshahalam.me/bn/services/tax-lawyer</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -172,6 +194,12 @@
   <url>
     <loc>https://www.advmdshahalam.me/blog/artha-rin-adalat-loan-recovery-bangladesh</loc>
     <lastmod>2026-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.advmdshahalam.me/blog/attest-documents-for-bangladesh-embassy-mofa-notary-guide</loc>
+    <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -236,6 +264,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.advmdshahalam.me/blog/birth-death-certificate-correction-bangladesh-nrb</loc>
+    <lastmod>2026-10-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.advmdshahalam.me/blog/bkash-nagad-online-fraud-police-complaint-bangladesh</loc>
     <lastmod>2026-08-26</lastmod>
     <changefreq>monthly</changefreq>
@@ -248,14 +282,32 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.advmdshahalam.me/blog/buy-land-in-bangladesh-from-abroad-nrb-legal-checklist</loc>
+    <lastmod>2026-10-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.advmdshahalam.me/blog/buying-land-dhaka-legal-guide</loc>
     <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.advmdshahalam.me/blog/can-foreigner-or-dual-citizen-own-property-in-bangladesh</loc>
+    <lastmod>2026-10-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.advmdshahalam.me/blog/challenge-court-order-revision-review-bangladesh</loc>
     <lastmod>2026-04-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.advmdshahalam.me/blog/check-land-ownership-bangladesh-online-khatian-mutation-porcha</loc>
+    <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -284,6 +336,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.advmdshahalam.me/blog/cheque-dishonour-case-section-138-bangladesh-expats</loc>
+    <lastmod>2026-10-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.advmdshahalam.me/blog/cheque-dishonour-penalty-bangladesh-138-ni-act</loc>
     <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
@@ -292,6 +350,12 @@
   <url>
     <loc>https://www.advmdshahalam.me/blog/child-adoption-law-bangladesh</loc>
     <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.advmdshahalam.me/blog/child-custody-bangladesh-when-parent-lives-abroad</loc>
+    <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -464,6 +528,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.advmdshahalam.me/blog/divorce-in-bangladesh-for-expats-foreign-divorce-valid</loc>
+    <lastmod>2026-10-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.advmdshahalam.me/blog/divorce-lawyer-dhaka-how-to-choose</loc>
     <lastmod>2026-07-12</lastmod>
     <changefreq>monthly</changefreq>
@@ -482,8 +552,20 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.advmdshahalam.me/blog/dower-denmohor-maintenance-claim-from-abroad-bangladesh</loc>
+    <lastmod>2026-10-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.advmdshahalam.me/blog/dowry-law-bangladesh</loc>
     <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.advmdshahalam.me/blog/dual-citizenship-nvr-bangladesh-nrb-guide</loc>
+    <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -520,6 +602,12 @@
   <url>
     <loc>https://www.advmdshahalam.me/blog/father-property-distribution-law-bangladesh</loc>
     <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.advmdshahalam.me/blog/file-case-in-bangladesh-without-travelling-virtual-hearing</loc>
+    <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -716,6 +804,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.advmdshahalam.me/blog/land-mutation-namjari-from-abroad-step-by-step</loc>
+    <lastmod>2026-10-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.advmdshahalam.me/blog/land-possession-recovery-suit-bangladesh-2026</loc>
     <lastmod>2026-08-26</lastmod>
     <changefreq>monthly</changefreq>
@@ -736,6 +830,12 @@
   <url>
     <loc>https://www.advmdshahalam.me/blog/maintenance-after-divorce-bangladesh</loc>
     <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.advmdshahalam.me/blog/marriage-registration-bangladesh-nrb-foreign-spouse</loc>
+    <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -860,6 +960,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.advmdshahalam.me/blog/police-clearance-certificate-bangladesh-from-abroad</loc>
+    <lastmod>2026-10-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.advmdshahalam.me/blog/police-complaint-harassment-bangladesh</loc>
     <lastmod>2026-03-24</lastmod>
     <changefreq>monthly</changefreq>
@@ -884,6 +990,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.advmdshahalam.me/blog/power-of-attorney-bangladesh-property-from-abroad</loc>
+    <lastmod>2026-10-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.advmdshahalam.me/blog/power-of-attorney-land-transfer-bangladesh</loc>
     <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
@@ -898,6 +1010,12 @@
   <url>
     <loc>https://www.advmdshahalam.me/blog/power-of-attorney-types-registration-bangladesh</loc>
     <lastmod>2026-04-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.advmdshahalam.me/blog/property-inheritance-bangladesh-nrb-muslim-hindu-christian-law</loc>
+    <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -950,14 +1068,38 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.advmdshahalam.me/blog/sell-property-in-bangladesh-while-living-overseas</loc>
+    <lastmod>2026-10-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.advmdshahalam.me/blog/send-money-to-bangladesh-legally-remittance-rules-tax</loc>
+    <lastmod>2026-10-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.advmdshahalam.me/blog/sexual-harassment-law-workplace-bangladesh</loc>
     <lastmod>2026-07-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.advmdshahalam.me/blog/start-company-in-bangladesh-non-resident-registration-guide</loc>
+    <lastmod>2026-10-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.advmdshahalam.me/blog/stay-order-bangladesh-court</loc>
     <lastmod>2026-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.advmdshahalam.me/blog/stop-land-grabbing-bangladesh-nrb-legal-remedies</loc>
+    <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1083,7 +1225,7 @@
   </url>
   <url>
     <loc>https://www.advmdshahalam.me/bn/blog</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>

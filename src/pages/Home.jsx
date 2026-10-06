@@ -52,6 +52,9 @@ const Home = ({ lang = 'en' }) => {
                 <meta property="og:description" content={description} />
                 <meta property="og:url" content={canonical} />
                 <meta property="og:image" content="https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.png" />
+                <meta property="og:image:width" content="1024" />
+                <meta property="og:image:height" content="1038" />
+                <meta property="og:image:alt" content="Advocate Md. Shah Alam — Supreme Court Lawyer Bangladesh" />
                 <meta property="og:site_name" content={isBn ? 'এডভোকেট মোঃ শাহ আলম' : 'Advocate Md. Shah Alam'} />
                 {/* Twitter Card */}
                 <meta name="twitter:card" content="summary_large_image" />

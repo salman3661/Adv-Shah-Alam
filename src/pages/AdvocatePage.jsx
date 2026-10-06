@@ -80,11 +80,27 @@ const personSchema = {
     '@context': 'https://schema.org',
     '@type': 'Person',
     name: 'Advocate Md. Shah Alam',
-    alternateName: 'Adv. Md. Shah Alam',
+    alternateName: [
+        'Md. Shah Alam',
+        'Shah Alam',
+        'Adv. Md. Shah Alam',
+        'Advocate Shah Alam',
+        'মো. শাহ আলম',
+        'শাহ আলম',
+        'এডভোকেট শাহ আলম',
+        'অ্যাডভোকেট মো. শাহ আলম',
+    ],
     description:
         'Experienced advocate practising at the Supreme Court of Bangladesh, Metro Sessions Court Dhaka, and all subordinate courts. 10+ years specialising in criminal, family, property, and company & corporate law.',
     url: 'https://www.advmdshahalam.me/advocate-md-shah-alam',
-    image: 'https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.webp',
+    image: {
+        '@type': 'ImageObject',
+        url: 'https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.png',
+        caption: 'Advocate Md. Shah Alam — Supreme Court Lawyer Bangladesh',
+        width: 1024,
+        height: 1038,
+        representativeOfPage: true,
+    },
     worksFor: {
         '@type': 'LegalService',
         name: 'Supreme Court of Bangladesh',
@@ -107,6 +123,9 @@ const personSchema = {
         'https://www.facebook.com/advmd.shahalamfb',
         'https://www.linkedin.com/in/advmdshahalam/',
         'https://maps.app.goo.gl/M3NXMwW3xkp2TE3h8',
+        'https://about.me/advmd.shahalam',
+        'https://advmdshahalam.blogspot.com/',
+        'https://bdadvocates.com/profile/1583',
         'https://www.advmdshahalam.me',
     ],
     knowsAbout: [
@@ -162,7 +181,8 @@ const legalServiceSchema = {
     url: 'https://www.advmdshahalam.me',
     telephone: '+8801712655546',
     email: 'contact@advmdshahalam.me',
-    image: 'https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.webp',
+    logo: 'https://www.advmdshahalam.me/adv-md-shah-alam.png',
+    image: 'https://www.advmdshahalam.me/images/advocate-shah-alam.jpg',
     description:
         'Full-service legal practice in Uttara and Dhaka, Bangladesh. Criminal, family, property, and company & corporate law.',
     address: {
@@ -218,7 +238,8 @@ const organizationSchema = {
     '@type': 'Organization',
     name: 'Advocate Md. Shah Alam Law Chambers',
     url: 'https://www.advmdshahalam.me',
-    logo: 'https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.webp',
+    logo: 'https://www.advmdshahalam.me/adv-md-shah-alam.png',
+    image: 'https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.png',
     foundingDate: '2003',
     address: {
         '@type': 'PostalAddress',
@@ -320,7 +341,11 @@ const AdvocatePage = () => {
                 />
                 <meta property="og:url" content="https://www.advmdshahalam.me/advocate-md-shah-alam" />
                 <meta property="og:type" content="profile" />
-                <meta property="og:image" content="https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.webp" />
+                <meta property="og:image" content="https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.png" />
+                <meta property="og:image:width" content="1024" />
+                <meta property="og:image:height" content="1038" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:image" content="https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.png" />
                 <script type="application/ld+json">{JSON.stringify(personSchema)}</script>
                 <script type="application/ld+json">{JSON.stringify(legalServiceSchema)}</script>
                 <script type="application/ld+json">{JSON.stringify(organizationSchema)}</script>
@@ -342,32 +367,81 @@ const AdvocatePage = () => {
                         </ol>
                     </nav>
 
-                    <span className="label-accent block mb-4" style={{ color: 'var(--gold)' }}>
-                        Official Profile · Uttara, Dhaka
-                    </span>
-                    <h1
-                        className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold leading-tight mb-4"
-                        style={{ color: 'var(--hero-text)', fontFamily: "'Playfair Display', serif" }}
-                    >
-                        Advocate Md. Shah Alam – Trusted Lawyer in Bangladesh
-                    </h1>
-                    <p className="text-lg md:text-xl font-medium mb-6" style={{ color: 'var(--accent)' }}>
-                        Lawyer in Bangladesh · Supreme Court of Bangladesh
-                    </p>
-                    <p className="text-base leading-relaxed max-w-2xl mb-8" style={{ color: 'var(--hero-text-2)' }}>
-                        With over 10 years of experience, Advocate Md. Shah Alam is a trusted legal authority
-                        in Bangladesh, providing expert counsel in criminal, family, property, and
-                        company & corporate law at all court levels in Bangladesh.
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-4">
-                        <a href={waLink('I need legal advice')} target="_blank" rel="noopener noreferrer"
-                            className="btn-whatsapp text-sm">
-                            <MessageCircle size={17} /> WhatsApp Consultation
-                        </a>
-                        <a href={telLink()} className="btn-secondary text-sm"
-                            style={{ borderColor: 'var(--hero-border)', color: 'var(--hero-text-2)' }}>
-                            <Phone size={17} /> Call Now
-                        </a>
+                    <div className="grid md:grid-cols-12 gap-8 lg:gap-12 items-center">
+                        <div className="md:col-span-7">
+                            <span className="label-accent block mb-4" style={{ color: 'var(--gold)' }}>
+                                Official Profile · Uttara, Dhaka
+                            </span>
+                            <h1
+                                className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold leading-tight mb-4"
+                                style={{ color: 'var(--hero-text)', fontFamily: "'Playfair Display', serif" }}
+                            >
+                                Advocate Md. Shah Alam – Trusted Lawyer in Bangladesh
+                            </h1>
+                            <p className="text-lg md:text-xl font-medium mb-6" style={{ color: 'var(--accent)' }}>
+                                Lawyer in Bangladesh · Supreme Court of Bangladesh
+                            </p>
+                            <p className="text-base leading-relaxed mb-8" style={{ color: 'var(--hero-text-2)' }}>
+                                With over 10 years of experience, Advocate Md. Shah Alam is a trusted legal authority
+                                in Bangladesh, providing expert counsel in criminal, family, property, and
+                                company & corporate law at all court levels in Bangladesh.
+                            </p>
+                            <div className="flex flex-col sm:flex-row gap-4">
+                                <a href={waLink('I need legal advice')} target="_blank" rel="noopener noreferrer"
+                                    className="btn-whatsapp text-sm">
+                                    <MessageCircle size={17} /> WhatsApp Consultation
+                                </a>
+                                <a href={telLink()} className="btn-secondary text-sm"
+                                    style={{ borderColor: 'var(--hero-border)', color: 'var(--hero-text-2)' }}>
+                                    <Phone size={17} /> Call Now
+                                </a>
+                            </div>
+                        </div>
+
+                        {/* Portrait Photo */}
+                        <div className="md:col-span-5 flex justify-center md:justify-end">
+                            <div style={{ position: 'relative', width: '100%', maxWidth: '320px', aspectRatio: '4/5' }}>
+                                <div style={{ position: 'absolute', inset: '-12px', borderRadius: '2rem', background: 'var(--hero-photo-glow, rgba(198,167,94,0.15))', filter: 'blur(24px)', zIndex: 0 }} />
+                                <div style={{
+                                    position: 'relative', borderRadius: '1.5rem', overflow: 'hidden',
+                                    border: '1px solid var(--hero-photo-border, rgba(198,167,94,0.3))',
+                                    boxShadow: '0 20px 50px rgba(0,0,0,0.35)',
+                                    height: '100%', zIndex: 1,
+                                }}>
+                                    <img
+                                        src="/images/hero/hero-md-shah-alam.webp"
+                                        srcSet="/images/hero/hero-md-shah-alam-420.webp 420w, /images/hero/hero-md-shah-alam.webp 828w"
+                                        sizes="(max-width: 768px) 300px, 400px"
+                                        alt="Advocate Md. Shah Alam — Supreme Court Lawyer Bangladesh"
+                                        loading="eager"
+                                        fetchPriority="high"
+                                        width="600"
+                                        height="750"
+                                        style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top', display: 'block' }}
+                                    />
+                                    <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '36%', background: 'linear-gradient(to top, rgba(10,17,36,0.8) 0%, transparent 100%)' }} />
+                                    <div style={{
+                                        position: 'absolute', bottom: '0.85rem', right: '0.85rem',
+                                        background: 'linear-gradient(135deg, #1A3FBF 0%, #3B5FD4 100%)',
+                                        color: '#fff', fontSize: '0.7rem', fontWeight: 700,
+                                        padding: '0.35rem 0.8rem', borderRadius: '0.5rem',
+                                        boxShadow: '0 3px 10px rgba(26,63,191,0.4)',
+                                    }}>
+                                        Supreme Court of Bangladesh
+                                    </div>
+                                    <div style={{
+                                        position: 'absolute', top: '0.85rem', left: '0.85rem',
+                                        background: 'rgba(10,17,36,0.8)', backdropFilter: 'blur(10px)',
+                                        WebkitBackdropFilter: 'blur(10px)',
+                                        color: '#C6A75E', fontSize: '0.65rem', fontWeight: 700,
+                                        padding: '0.35rem 0.7rem', borderRadius: '0.5rem',
+                                        border: '1px solid rgba(198,167,94,0.35)',
+                                    }}>
+                                        10+ Years Experience
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>

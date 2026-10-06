@@ -545,8 +545,14 @@ function homeBody() {
 
 function advocateBody() {
   return `
-<h1 style="font-size:30px;font-weight:700;margin-bottom:8px;color:#0a0a0a">About Advocate Md. Shah Alam — Lawyer in Bangladesh</h1>
-<p style="font-size:16px;color:#555;margin-bottom:24px">LL.M (Dhaka International University) | Enrolled: Bangladesh Bar Council | Supreme Court of Bangladesh</p>
+<div style="display:flex;flex-wrap:wrap;gap:24px;align-items:center;margin-bottom:28px">
+  <img src="/images/hero/hero-md-shah-alam.png" alt="Advocate Md. Shah Alam — Supreme Court Lawyer Bangladesh" width="220" height="223" style="border-radius:16px;border:2px solid #c6a75e;object-fit:cover;box-shadow:0 8px 24px rgba(0,0,0,0.15);max-width:100%;height:auto" />
+  <div>
+    <h1 style="font-size:30px;font-weight:700;margin-bottom:8px;color:#0a0a0a">About Advocate Md. Shah Alam — Lawyer in Bangladesh</h1>
+    <p style="font-size:16px;color:#555;margin-bottom:12px">LL.M (Dhaka International University) | Enrolled: Bangladesh Bar Council | Supreme Court of Bangladesh</p>
+    <p style="font-size:14px;color:#777">Supreme Court &amp; Judge Court Advocate with 10+ years of legal practice in Uttara, Dhaka, Bangladesh.</p>
+  </div>
+</div>
 
 <section style="margin-bottom:28px">
   <h2 style="font-size:22px;font-weight:700;margin-bottom:12px;color:#111">Professional Profile</h2>
@@ -1012,7 +1018,7 @@ ${BN_DISCLAIMER}${bnMeta.body}${BN_CTA}`,
         '@id': `${BASE}/#legalservice`,
         name: 'Advocate Md. Shah Alam Law Chambers',
         url: BASE,
-        logo: { '@type': 'ImageObject', url: `${BASE}/favicon.ico` },
+        logo: { '@type': 'ImageObject', url: `${BASE}/adv-md-shah-alam.png` },
       },
       image: post.featuredImage || `${BASE}/images/hero/hero-md-shah-alam.png`,
     };
@@ -1100,7 +1106,7 @@ ${BN_DISCLAIMER}${bnMeta.body}${BN_CTA}`,
         '@id': `${BASE}/#legalservice`,
         name: 'Advocate Md. Shah Alam Law Chambers',
         url: BASE,
-        logo: { '@type': 'ImageObject', url: `${BASE}/favicon.ico` },
+        logo: { '@type': 'ImageObject', url: `${BASE}/adv-md-shah-alam.png` },
       },
       image: post.featuredImage || `${BASE}/images/hero/hero-md-shah-alam.png`,
     };
