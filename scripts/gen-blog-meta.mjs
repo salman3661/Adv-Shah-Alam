@@ -13,13 +13,20 @@ const KEEP = ['slug', 'title', 'category', 'readTime', 'publishedDate', 'lastMod
 
 const plain = (html = '', n = 300) => String(html).replace(/<[^>]+>/g, ' ').replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ').trim().slice(0, n);
 
+// Posts whose URL is a plain (unconditional) 301 source in vercel.json are consolidated into a master pillar.
+// Keep them out of list / related / popular widgets so internal links never point at redirected URLs.
+const vercelCfg = JSON.parse(fs.readFileSync(path.join(root, 'vercel.json'), 'utf8'));
+const redirectSources = new Set((vercelCfg.redirects || []).filter((r) => !r.has).map((r) => r.source));
+
 for (const lang of ['en', 'bn']) {
   const dir = path.join(root, 'src', 'content', 'posts', lang);
   const out = [];
+  const urlPrefix = lang === 'en' ? '/blog/' : '/bn/blog/';
   for (const f of fs.readdirSync(dir).filter((x) => x.endsWith('.json')).sort()) {
     try {
       const j = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8'));
       if (!j || !j.slug) continue;
+      if (redirectSources.has(urlPrefix + j.slug)) continue;
       const m = {};
       for (const k of KEEP) if (j[k] !== undefined) m[k] = j[k];
       m.heroIntro = plain(j.heroIntro, 170);

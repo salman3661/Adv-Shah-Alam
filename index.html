@@ -4,7 +4,9 @@
 <head>
   <!-- Google AdSense Official Script & Account Verification -->
   <meta name="google-adsense-account" content="ca-pub-1781126556775676">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1781126556775676" crossorigin="anonymous"></script>
+  <!-- Auto Ads: overlay formats restricted to the bottom anchor (data-overlays="bottom").
+       Vignette ads + the Ad-load (density) slider are account-level settings: AdSense > Ads > Site > Edit > Vignette = OFF, Ad load = Low/Min. -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1781126556775676" data-overlays="bottom" crossorigin="anonymous"></script>
 
   <meta charset="UTF-8" />
   <link rel="icon" type="image/png" href="/adv-md-shah-alam.png" sizes="any" />
@@ -59,30 +61,16 @@
         fetchpriority="high" />
 
   <!-- DNS prefetch for third-party domains -->
-  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-  <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
-  <link rel="dns-prefetch" href="https://fonts.maateen.me" />
   <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
 
   <!-- RSS Feeds (Syndication for LinkedIn, Feedly, Buffer, Automations) -->
   <link rel="alternate" type="application/rss+xml" title="Advocate Md. Shah Alam Law Chambers (All Articles)" href="https://www.advmdshahalam.me/rss.xml" />
   <link rel="alternate" type="application/rss+xml" title="অ্যাডভোকেট মো. শাহ আলম — আইন কানুন ও পরামর্শ ব্লগ" href="https://www.advmdshahalam.me/rss-bn.xml" />
 
-  <!-- Bengali Fonts: Preloaded locally — zero FOUT, no external CDN wait -->
-  <!-- Preload triggers highest-priority download before first paint -->
-  <link rel="preload" href="/fonts/SolaimanLipi.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
-  <link rel="preload" href="/fonts/SolaimanLipiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
-  <link rel="preload" href="/fonts/Kalpurush.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
-  <!-- Google Fonts (EN only — DM Sans, Playfair Display): non-blocking async -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&family=Playfair+Display:wght@600;700&family=Noto+Serif+Bengali:wght@400;500;600;700;800&family=Tiro+Bangla&display=swap"
-    media="print" onload="this.media='all'" />
-  <noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&family=Playfair+Display:wght@600;700&family=Noto+Serif+Bengali:wght@400;500;600;700;800&family=Tiro+Bangla&display=swap" />
-  </noscript>
-
+  <!-- Fonts: ONE self-hosted family (Noto Serif Bengali, variable woff2, font-display: swap — see src/index.css).
+       No render-blocking stylesheet, no third-party font origins. Only the Bengali subset is preloaded;
+       the tiny latin subset is fetched on demand by unicode-range. prerender.mjs strips these on EN pages. -->
+  <link rel="preload" href="/fonts/NotoSerifBengali-var-bengali.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
 
   <!-- Primary Meta Tags (fallback — React Helmet overrides these per page) -->
   <title>Trusted Lawyer in Bangladesh | Advocate Md. Shah Alam — Uttara, Dhaka</title>
@@ -124,6 +112,8 @@
       "@type": "Attorney",
       "@id": "https://www.advmdshahalam.me/#attorney",
       "name": "Advocate Md. Shah Alam",
+      "jobTitle": "Advocate, Supreme Court of Bangladesh",
+      "worksFor": { "@id": "https://www.advmdshahalam.me/#legalservice" },
       "image": {
         "@type": "ImageObject",
         "url": "https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.png",
@@ -199,15 +189,9 @@
           "degree": "SSC"
         }
       ],
-      "worksFor": [
-        {
-          "@type": "LegalService",
-          "name": "Supreme Court of Bangladesh"
-        },
-        {
-          "@type": "LegalService",
-          "name": "APP Metro Sessions Court, Dhaka"
-        }
+      "affiliation": [
+        { "@type": "Organization", "name": "Supreme Court of Bangladesh" },
+        { "@type": "Organization", "name": "APP Metro Sessions Court, Dhaka" }
       ],
       "hasOccupation": {
         "@type": "Occupation",
@@ -275,7 +259,7 @@
     "@context": "https://schema.org",
     "@type": "LegalService",
     "@id": "https://www.advmdshahalam.me/#legalservice",
-    "name": "Advocate Md. Shah Alam",
+    "name": "Advocate Md. Shah Alam Law Chamber",
     "alternateName": "এডভোকেট মোঃ শাহ আলম",
     "url": "https://www.advmdshahalam.me",
     "logo": "https://www.advmdshahalam.me/adv-md-shah-alam.png",
@@ -286,8 +270,8 @@
     "address": [
       {
         "@type": "PostalAddress",
-        "streetAddress": "House 46, Road 6/B, Sector 12",
-        "addressLocality": "Uttara",
+        "streetAddress": "House 46, Road 6/B, Sector 12, Uttara",
+        "addressLocality": "Dhaka",
         "addressRegion": "Dhaka",
         "postalCode": "1230",
         "addressCountry": "BD"

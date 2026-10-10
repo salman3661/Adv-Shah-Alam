@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import { createPortal } from 'react-dom';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import {
@@ -10,6 +11,10 @@ import { telLink, waLink } from '../data/contactInfo';
 import Disclaimer from '../components/Disclaimer';
 import MidArticleLeadCapture from '../components/MidArticleLeadCapture';
 import AdSenseAd from '../components/AdSenseAd';
+import FeeCalculator from '../components/FeeCalculator';
+import { AD_SLOTS, DESKTOP_QUERY, useMediaQuery, useParagraphAnchors } from '../components/ads/adLayout';
+import { FEE_CALCULATORS, calculatorSectionIndex } from '../data/feeCalculators';
+import { SITE, buildEntityGraph, buildHreflang, jsonLd } from '../utils/seoSchema.mjs';
 import ArticleSkeleton from '../components/ArticleSkeleton';
 import NotFound from './NotFound';
 
@@ -36,14 +41,7 @@ const POPULAR_SLUGS = [
     'affidavit-bangladesh-types-process',
 ];
 
-/* Dedicated 5 In-Article Ad Units (Rotated across sections to prevent duplicate unit collisions) */
-const IN_ARTICLE_SLOTS = [
-    '9118178745', // Article Body 1
-    '5230990345', // Article Body 2
-    '3423084657', // Article Body 3
-    '1128008083', // Article Body 4
-    '4824719678', // Article Body 5
-];
+/* Ad units live in components/ads/adLayout.js (AD_SLOTS). Article Body 3/4 + Bottom Grid are decommissioned. */
 
 /* Category color map */
 const CAT_COLOR = {
@@ -449,12 +447,15 @@ const BlogPostInner = () => {
     };
 
     /* ── Error / Coming Soon states ── */
-        /* Notify AdSense of SPA route change to trigger Auto Ads & Vignettes */
-    useEffect(() => {
-        try {
-            (window.adsbygoogle = window.adsbygoogle || []).push({});
-        } catch (e) {}
-    }, [slug]);
+    /* NOTE: the former empty adsbygoogle.push({}) on every route change was removed on purpose - it re-armed
+       Auto-Ads overlays (mobile vignettes) on internal navigation, which drives bounce. */
+    const articleRef = useRef(null);
+    const isDesktop = useMediaQuery(DESKTOP_QUERY);
+    /* Unit 1: after the 2nd paragraph (below the first H2) | Unit 2 (mobile): after the 5th paragraph */
+    const adAnchors = useParagraphAnchors(articleRef, [
+        { id: 'top', n: 2, fallbackToLast: true },
+        { id: 'mid', n: 5, skip: isDesktop },
+    ], `${slug}|${isDesktop}|${post ? post.slug : 'loading'}`);
 
     const metaFallback = allPosts.find(p => p.slug === slug);
 
@@ -482,7 +483,7 @@ const BlogPostInner = () => {
             <div style={{ minHeight: '60vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <div style={{ textAlign: 'center' }}>
                     <Clock size={48} style={{ color: 'var(--accent)', marginBottom: '1rem' }} />
-                    <h1 style={{ fontSize: '1.5rem', fontWeight: 700, color: 'var(--text)', fontFamily: "'Playfair Display', serif" }}>Coming Soon</h1>
+                    <h1 style={{ fontSize: '1.5rem', fontWeight: 700, color: 'var(--text)', fontFamily: "Georgia, serif" }}>Coming Soon</h1>
                     <Link to="/blog" className="btn-primary" style={{ marginTop: '1rem', display: 'inline-block' }}>← Back to Blog</Link>
                 </div>
             </div>
@@ -526,10 +527,11 @@ const BlogPostInner = () => {
             { '@type': 'ListItem', position: 3, name: post.title, item: `https://www.advmdshahalam.me/blog/${post.slug}` },
         ],
     };
-    const faqSchema = post.faqs?.length ? {
-        '@context': 'https://schema.org', '@type': 'FAQPage',
-        mainEntity: post.faqs.map(faq => ({ '@type': 'Question', name: faq.question || faq.q, acceptedAnswer: { '@type': 'Answer', text: faq.answer || faq.a } })),
-    } : null;
+    const pageUrl = `${SITE}/blog/${post.slug}`;
+    const entityGraph = buildEntityGraph({ url: pageUrl, lang: 'en', faqs: post.faqs });
+    const hreflangTags = buildHreflang({ lang: 'en', slug: post.slug, pairedSlug: post.bnSlug });
+    const calcCfg = FEE_CALCULATORS[post.slug];
+    const calcIdx = calcCfg ? calculatorSectionIndex(post.slug, post.sections) : -1;
 
     // Modernize in-article consultation CTA boxes: remove cheap emojis, apply executive legal styling
     const formatArticleContent = (html) => {
@@ -593,12 +595,10 @@ const BlogPostInner = () => {
                 <meta name="twitter:description" content={post.metaDescription} />
                 <meta name="twitter:image" content="https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.png" />
                 <meta name="author" content="Advocate Md. Shah Alam" />
-                <link rel="alternate" hrefLang="en" href={`https://www.advmdshahalam.me/blog/${post.slug}`} />
-                <link rel="alternate" hrefLang="x-default" href={`https://www.advmdshahalam.me/blog/${post.slug}`} />
-                {post.bnSlug && <link rel="alternate" hrefLang="bn" href={`https://www.advmdshahalam.me/bn/blog/${post.bnSlug}`} />}
+                {hreflangTags.map((h) => <link key={h.hrefLang} rel="alternate" hrefLang={h.hrefLang} href={h.href} />)}
                 <script type="application/ld+json">{JSON.stringify(blogPostingSchema)}</script>
                 <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
-                {faqSchema && <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>}
+                <script type="application/ld+json">{jsonLd(entityGraph)}</script>
             </Helmet>
 
             {/* ════════════════ HERO ════════════════ */}
@@ -653,7 +653,7 @@ const BlogPostInner = () => {
 
                     {/* Title — full-width, no max-width cap on hero */}
                     <h1 style={{
-                        fontFamily: "'Playfair Display', serif",
+                        fontFamily: "Georgia, serif",
                         fontSize: 'clamp(1.875rem, 4vw, 3.5rem)',
                         fontWeight: 800, lineHeight: 1.18,
                         color: 'var(--hero-text)',
@@ -664,17 +664,6 @@ const BlogPostInner = () => {
                         {post.title}
                     </h1>
 
-                    {/* ── Above-the-Fold Header Banner Ad ── */}
-                    <div style={{ margin: '0.875rem auto 1.25rem', maxWidth: '850px' }}>
-                        <AdSenseAd
-                            key={`ad-head-${post.slug}`}
-                            slot="8630877987"
-                            format="auto"
-                            responsive={true}
-                            labelText="Advertisement"
-                            style={{ borderRadius: '0.5rem', overflow: 'hidden' }}
-                        />
-                    </div>
 
                     {/* Hero intro */}
                     {post.heroIntro && (
@@ -789,7 +778,7 @@ const BlogPostInner = () => {
                                 </div>
                             </div>
 
-                            <article>
+                            <article ref={articleRef}>
                                 <Disclaimer lang="en" />
 
                                 {/* Quick Answer */}
@@ -815,28 +804,9 @@ const BlogPostInner = () => {
                                     </div>
                                 )}
 
-                                {/* ── Dedicated Top In-Article Ad (Directly Below Quick Response) ── */}
-                                <div style={{ margin: '1.75rem 0 2.25rem' }}>
-                                    <AdSenseAd
-                                        key={`ad-top-qa-${post.slug}`}
-                                        slot="9118178745"
-                                        format="fluid"
-                                        layout="in-article"
-                                        responsive={true}
-                                        labelText="Advertisement"
-                                        style={{ borderRadius: '0.75rem', overflow: 'hidden' }}
-                                    />
-                                </div>
 
 {/* Article Sections — High-End Editorial Design */}
                                 {post.sections.map((sec, i) => {
-                                    // Alternating strategy: Section 1 and 5 use proven active unit 8630877987 (immediate live fill)
-                                    // Other sections cycle through dedicated in-article units
-                                    const isProvenSlot = (i % 6 === 2);
-                                    const adSlot = isProvenSlot ? '8630877987' : IN_ARTICLE_SLOTS[(Math.floor(i / 2) + 1) % IN_ARTICLE_SLOTS.length];
-                                    const adFormat = isProvenSlot ? 'auto' : 'fluid';
-                                    const adLayout = isProvenSlot ? '' : 'in-article';
-
                                     return (
                                         <React.Fragment key={i}>
                                             <section id={`section-${i}`} style={{ marginBottom: '3.5rem', scrollMarginTop: '5rem' }}>
@@ -908,35 +878,11 @@ const BlogPostInner = () => {
                                                 <MidArticleLeadCapture lang="en" />
                                             )}
 
-                                            {/* ── 2. In-Content Ad: Well-spaced native in-article units (every 2 sections) ── */}
-                                            {i % 3 === 2 && i < post.sections.length - 1 && (
-                                                <div style={{ margin: '2rem 0 2.5rem' }}>
-                                                    <AdSenseAd
-                                                        key={`ad-sec-${i}-${post.slug}`}
-                                                        slot={adSlot}
-                                                        layout={adLayout}
-                                                        format={adFormat}
-                                                        responsive={true}
-                                                        labelText="Advertisement"
-                                                        style={{ borderRadius: '0.75rem', overflow: 'hidden' }}
-                                                    />
-                                                </div>
-                                            )}
+                                            {/* Unit 3: interactive fee calculator (only on pages registered in data/feeCalculators.js) */}
+                                            {i === calcIdx && calcCfg && <FeeCalculator type={calcCfg.type} lang="en" />}
                                         </React.Fragment>
                                     );
                                 })}
-
-                                {/* ── 3. Bottom Multiplex AdSense Grid (Recommended Content & Ads) ── */}
-                                <div style={{ margin: '2.5rem 0' }}>
-                                    <AdSenseAd
-                                        key={`ad-bot-${post.slug}`}
-                                        slot="3667074343"
-                                        format="autorelaxed"
-                                        responsive={true}
-                                        labelText="Recommended Articles & Sponsored"
-                                        style={{ borderRadius: '0.75rem', overflow: 'hidden' }}
-                                    />
-                                </div>
 
                                 {/* Related Services */}
                                 {post.relatedServiceLinks?.length > 0 && (
@@ -960,7 +906,7 @@ const BlogPostInner = () => {
                                 {/* FAQ */}
                                 {post.faqs?.length > 0 && (
                                     <div style={{ marginBottom: '3rem' }}>
-                                        <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(1.3rem, 2.2vw, 1.6rem)', fontWeight: 700, color: 'var(--text)', marginBottom: '1.375rem' }}>
+                                        <h2 style={{ fontFamily: "Georgia, serif", fontSize: 'clamp(1.3rem, 2.2vw, 1.6rem)', fontWeight: 700, color: 'var(--text)', marginBottom: '1.375rem' }}>
                                             Frequently Asked Questions
                                         </h2>
                                         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.625rem' }}>
@@ -1025,6 +971,14 @@ const BlogPostInner = () => {
                                 <div className="legal-disclaimer-box p-4 bg-gray-50 dark:bg-gray-800/40 border-l-4 border-amber-600 my-6 text-sm text-gray-700 dark:text-gray-300 rounded-r-lg">
                                     <strong>Legal Disclaimer:</strong> The information provided in this article is for general legal awareness and educational purposes only. It does not constitute formal legal advice and does not establish an attorney-client relationship. For specific legal remedies tailored to your case, please consult directly with an enrolled advocate of the Supreme Court of Bangladesh or the Judges Court.
                                 </div>
+                                {adAnchors.top && createPortal(
+                                    <AdSenseAd key={`ad-top-${post.slug}`} slot={AD_SLOTS.topInArticle} format="auto" responsive={true} labelText="Advertisement" minHeight={280} densityGroup="content" style={{ borderRadius: '0.75rem', overflow: 'hidden', margin: '1.75rem auto' }} />,
+                                    adAnchors.top
+                                )}
+                                {adAnchors.mid && createPortal(
+                                    <AdSenseAd key={`ad-mid-${post.slug}`} slot={AD_SLOTS.midNative} format="fluid" layout="in-article" responsive={true} labelText="Advertisement" minHeight={250} densityGroup="content" style={{ borderRadius: '0.75rem', overflow: 'hidden', margin: '1.75rem auto' }} />,
+                                    adAnchors.mid
+                                )}
                             </article>
                         </div>
 
@@ -1034,13 +988,17 @@ const BlogPostInner = () => {
                                 <ConsultWidget postTitle={post.title} />
 
                                 {/* ── Sidebar AdSense Ad (Square/Rectangle) ── */}
-                                <AdSenseAd
-                                    slot="5064091502"
-                                    format="auto"
-                                    responsive={true}
-                                    labelText="Advertisement"
-                                    style={{ marginBottom: '1.125rem', borderRadius: '0.875rem', overflow: 'hidden' }}
-                                />
+                                {isDesktop && (
+                                    <AdSenseAd
+                                        slot={AD_SLOTS.sidebar}
+                                        format="auto"
+                                        responsive={true}
+                                        labelText="Advertisement"
+                                        minHeight={250}
+                                        densityGroup="rail"
+                                        style={{ marginBottom: '1.125rem', borderRadius: '0.875rem', overflow: 'hidden' }}
+                                    />
+                                )}
 
                                 <PopularPosts currentSlug={post.slug} />
 
@@ -1242,7 +1200,7 @@ const BlogPostInner = () => {
                 .prose-content b { color: var(--text); font-weight: 700; }
                 .prose-content a { color: var(--accent); text-decoration: underline; text-decoration-color: rgba(198,167,94,0.35); text-underline-offset: 3px; transition: text-decoration-color 0.2s; }
                 .prose-content a:hover { text-decoration-color: var(--accent); }
-                .prose-content h3 { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 800; color: var(--text); margin: 2.25rem 0 1rem; padding: 0.5rem 0.875rem; border-left: 3px solid var(--gold, #C6A75E); background: linear-gradient(90deg, rgba(198,167,94,0.06), transparent); border-radius: 0 0.5rem 0.5rem 0; }
+                .prose-content h3 { font-family: Georgia, serif; font-size: 1.2rem; font-weight: 800; color: var(--text); margin: 2.25rem 0 1rem; padding: 0.5rem 0.875rem; border-left: 3px solid var(--gold, #C6A75E); background: linear-gradient(90deg, rgba(198,167,94,0.06), transparent); border-radius: 0 0.5rem 0.5rem 0; }
                 .prose-content h4 { font-size: 1.05rem; font-weight: 700; color: var(--text); margin: 1.75rem 0 0.75rem; }
                 .prose-content blockquote { border-left: 4px solid var(--gold, #C6A75E); padding: 1.125rem 1.375rem; margin: 2.25rem 0; color: var(--text-secondary); background: linear-gradient(90deg, rgba(198,167,94,0.06), rgba(198,167,94,0.02)); border-radius: 0 0.875rem 0.875rem 0; font-size: 1rem; line-height: 1.85; }
                 

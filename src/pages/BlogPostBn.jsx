@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import { createPortal } from 'react-dom';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import {
@@ -10,6 +11,10 @@ import { waLink, telLink } from '../data/contactInfo';
 import Disclaimer from '../components/Disclaimer';
 import MidArticleLeadCapture from '../components/MidArticleLeadCapture';
 import AdSenseAd from '../components/AdSenseAd';
+import FeeCalculator from '../components/FeeCalculator';
+import { AD_SLOTS, DESKTOP_QUERY, useMediaQuery, useParagraphAnchors } from '../components/ads/adLayout';
+import { FEE_CALCULATORS, calculatorSectionIndex } from '../data/feeCalculators';
+import { SITE, buildEntityGraph, buildHreflang, jsonLd } from '../utils/seoSchema.mjs';
 import ArticleSkeleton from '../components/ArticleSkeleton';
 import popularBnSlugs from '../content/popular_bn.json';
 import NotFound from './NotFound';
@@ -39,14 +44,7 @@ const POPULAR_BN_SLUGS = Array.isArray(popularBnSlugs) && popularBnSlugs.length 
         'jomi-kharij-e-namjari-niyom-khoroch-2026'
     ];
 
-/* Dedicated 5 In-Article Ad Units (Rotated across sections to prevent duplicate unit collisions) */
-const IN_ARTICLE_SLOTS = [
-    '9118178745', // Article Body 1
-    '5230990345', // Article Body 2
-    '3423084657', // Article Body 3
-    '1128008083', // Article Body 4
-    '4824719678', // Article Body 5
-];
+/* Ad units live in components/ads/adLayout.js (AD_SLOTS). Article Body 3/4 + Bottom Grid are decommissioned. */
 
 const CAT_COLOR = {
     'ভূমি আইন':      { bg: '#0369a1', text: '#fff' },
@@ -135,7 +133,7 @@ const SbCard = ({ children, accentColor }) => (
 const SbHeader = ({ icon: Icon, label, color = 'var(--accent)' }) => (
     <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.7rem 1.125rem', background: `linear-gradient(135deg, ${color}20 0%, transparent 60%)`, borderBottom: `1px solid ${color}22` }}>
         <Icon size={13} style={{ color, flexShrink: 0 }} />
-        <span style={{ fontSize: '0.7rem', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--text)', fontFamily: "'SolaimanLipi', 'Noto Sans Bengali', sans-serif" }}>{label}</span>
+        <span style={{ fontSize: '0.7rem', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--text)', fontFamily: "'Noto Serif Bengali', 'Noto Sans Bengali', sans-serif" }}>{label}</span>
         <div style={{ flex: 1, height: '1px', background: `linear-gradient(90deg, ${color}30, transparent)`, marginLeft: '0.25rem' }} />
     </div>
 );
@@ -219,7 +217,7 @@ const PopularBnPosts = ({ currentSlug }) => {
                                     color: 'var(--text)',
                                     lineHeight: 1.45,
                                     margin: 0,
-                                    fontFamily: "'SolaimanLipi', 'Kalpurush', 'Noto Serif Bengali', sans-serif",
+                                    fontFamily: "'Noto Serif Bengali', sans-serif",
                                     wordBreak: 'break-word'
                                 }}>
                                     {rp.title}
@@ -303,7 +301,7 @@ const RecentBnPosts = ({ currentSlug }) => {
                                     color: 'var(--text)',
                                     lineHeight: 1.45,
                                     margin: 0,
-                                    fontFamily: "'SolaimanLipi', 'Kalpurush', 'Noto Serif Bengali', sans-serif",
+                                    fontFamily: "'Noto Serif Bengali', sans-serif",
                                     wordBreak: 'break-word'
                                 }}>
                                     {rp.title}
@@ -333,7 +331,7 @@ const RelatedBnByCategory = ({ category, currentSlug }) => {
                         onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.borderColor = 'transparent'; e.currentTarget.style.transform = 'translateX(0)'; }}>
                         <span style={{ flexShrink: 0, width: '6px', height: '6px', borderRadius: '50%', background: cc.bg, marginTop: '6px', boxShadow: `0 0 6px ${cc.bg}88` }} />
                         <div style={{ flex: 1, minWidth: 0 }}>
-                            <p style={{ fontSize: '0.8rem', fontWeight: 600, color: 'var(--text)', lineHeight: 1.45, margin: 0, fontFamily: "'SolaimanLipi', 'Noto Sans Bengali', sans-serif" }}>{rp.title}</p>
+                            <p style={{ fontSize: '0.8rem', fontWeight: 600, color: 'var(--text)', lineHeight: 1.45, margin: 0, fontFamily: "'Noto Serif Bengali', 'Noto Sans Bengali', sans-serif" }}>{rp.title}</p>
                             <span style={{ fontSize: '0.68rem', color: 'var(--text-muted)' }}>{rp.readTime}</span>
                         </div>
                     </Link>
@@ -361,8 +359,8 @@ const ChamberBnPromoCard = () => (
                 loading="lazy" width="52" height="52"
             />
             <div style={{ minWidth: 0 }}>
-                <p style={{ fontSize: '0.78rem', fontWeight: 800, color: '#e8c97d', margin: 0, lineHeight: 1.2, fontFamily: "'SolaimanLipi', 'Noto Sans Bengali', sans-serif" }}>অ্যাডভ. মো. শাহ আলম</p>
-                <p style={{ fontSize: '0.63rem', color: 'rgba(255,255,255,0.55)', margin: '2px 0 0', lineHeight: 1.3, fontFamily: "'SolaimanLipi', 'Noto Sans Bengali', sans-serif" }}>বাংলাদেশ সুপ্রিম কোর্টের আইনজীবি</p>
+                <p style={{ fontSize: '0.78rem', fontWeight: 800, color: '#e8c97d', margin: 0, lineHeight: 1.2, fontFamily: "'Noto Serif Bengali', 'Noto Sans Bengali', sans-serif" }}>অ্যাডভ. মো. শাহ আলম</p>
+                <p style={{ fontSize: '0.63rem', color: 'rgba(255,255,255,0.55)', margin: '2px 0 0', lineHeight: 1.3, fontFamily: "'Noto Serif Bengali', 'Noto Sans Bengali', sans-serif" }}>বাংলাদেশ সুপ্রিম কোর্টের আইনজীবি</p>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '4px', marginTop: '4px' }}>
                     {['★','★','★','★','★'].map((s,i) => <span key={i} style={{ fontSize: '0.6rem', color: '#f59e0b' }}>{s}</span>)}
                     <span style={{ fontSize: '0.58rem', color: 'rgba(255,255,255,0.4)', marginLeft: '2px' }}>4.9</span>
@@ -374,33 +372,33 @@ const ChamberBnPromoCard = () => (
                 <p style={{ fontSize: '0.6rem', fontWeight: 800, color: '#c6a75e', textTransform: 'uppercase', letterSpacing: '0.08em', margin: '0 0 4px', display: 'flex', alignItems: 'center', gap: '4px' }}>
                     <MapPin size={10} style={{ color: '#c6a75e' }} /> সুপ্রিম কোর্ট চেম্বার
                 </p>
-                <p style={{ fontSize: '0.7rem', color: 'rgba(255,255,255,0.65)', margin: 0, lineHeight: 1.5, fontFamily: "'SolaimanLipi', 'Noto Sans Bengali', sans-serif" }}>মক্তব ভবন (তৃতীয় তলা), সুপ্রিম কোর্টের নিকটে, ঢাকা-১০০০</p>
+                <p style={{ fontSize: '0.7rem', color: 'rgba(255,255,255,0.65)', margin: 0, lineHeight: 1.5, fontFamily: "'Noto Serif Bengali', 'Noto Sans Bengali', sans-serif" }}>মক্তব ভবন (তৃতীয় তলা), সুপ্রিম কোর্টের নিকটে, ঢাকা-১০০০</p>
             </div>
             <div style={{ background: 'rgba(198,167,94,0.07)', border: '1px solid rgba(198,167,94,0.15)', borderRadius: '0.625rem', padding: '0.625rem 0.75rem', marginBottom: '0.875rem' }}>
                 <p style={{ fontSize: '0.6rem', fontWeight: 800, color: '#c6a75e', textTransform: 'uppercase', letterSpacing: '0.08em', margin: '0 0 4px', display: 'flex', alignItems: 'center', gap: '4px' }}>
                     <MapPin size={10} style={{ color: '#c6a75e' }} /> উত্তরা শাখা
                 </p>
-                <p style={{ fontSize: '0.7rem', color: 'rgba(255,255,255,0.65)', margin: 0, lineHeight: 1.5, fontFamily: "'SolaimanLipi', 'Noto Sans Bengali', sans-serif" }}>বাড়ি ৪৬, সড়ক ৬/বি, সেক্টর ১২, উত্তরা পশ্চিম, ঢাকা-১২৩০</p>
+                <p style={{ fontSize: '0.7rem', color: 'rgba(255,255,255,0.65)', margin: 0, lineHeight: 1.5, fontFamily: "'Noto Serif Bengali', 'Noto Sans Bengali', sans-serif" }}>বাড়ি ৪৬, সড়ক ৬/বি, সেক্টর ১২, উত্তরা পশ্চিম, ঢাকা-১২৩০</p>
             </div>
             <a href={waLink('আমি আপনার চেম্বার পরিদর্শন ও আইনি পরামর্শের বিষয়ে জানতে চাই।', true)} target="_blank" rel="noopener noreferrer"
-                style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', padding: '0.65rem', borderRadius: '0.5rem', fontSize: '0.78rem', fontWeight: 700, textDecoration: 'none', marginBottom: '0.4rem', background: 'linear-gradient(135deg, #22c55e, #16a34a)', color: '#fff', boxShadow: '0 3px 12px rgba(34,197,94,0.35)', transition: 'transform 0.15s', fontFamily: "'SolaimanLipi', 'Noto Sans Bengali', sans-serif" }}
+                style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', padding: '0.65rem', borderRadius: '0.5rem', fontSize: '0.78rem', fontWeight: 700, textDecoration: 'none', marginBottom: '0.4rem', background: 'linear-gradient(135deg, #22c55e, #16a34a)', color: '#fff', boxShadow: '0 3px 12px rgba(34,197,94,0.35)', transition: 'transform 0.15s', fontFamily: "'Noto Serif Bengali', 'Noto Sans Bengali', sans-serif" }}
                 onMouseEnter={e => e.currentTarget.style.transform = 'translateY(-1px)'}
                 onMouseLeave={e => e.currentTarget.style.transform = 'translateY(0)'}>
                 <MessageCircle size={13} /> WhatsApp করুন
             </a>
             <a href="tel:01712655546"
-                style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', padding: '0.6rem', borderRadius: '0.5rem', fontSize: '0.78rem', fontWeight: 600, textDecoration: 'none', color: 'rgba(255,255,255,0.7)', border: '1px solid rgba(255,255,255,0.12)', transition: 'all 0.15s', fontFamily: "'SolaimanLipi', 'Noto Sans Bengali', sans-serif" }}
+                style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', padding: '0.6rem', borderRadius: '0.5rem', fontSize: '0.78rem', fontWeight: 600, textDecoration: 'none', color: 'rgba(255,255,255,0.7)', border: '1px solid rgba(255,255,255,0.12)', transition: 'all 0.15s', fontFamily: "'Noto Serif Bengali', 'Noto Sans Bengali', sans-serif" }}
                 onMouseEnter={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.07)'; e.currentTarget.style.color = '#fff'; }}
                 onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = 'rgba(255,255,255,0.7)'; }}>
                 <Phone size={12} /> ০১৭১২-৬৫৫৫৪৬
             </a>
             <div style={{ marginTop: '0.75rem', padding: '0.5rem 0.75rem', borderRadius: '0.5rem', background: 'rgba(34,197,94,0.07)', border: '1px solid rgba(34,197,94,0.15)', display: 'flex', alignItems: 'center', gap: '6px' }}>
                 <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#22c55e', boxShadow: '0 0 6px #22c55e', flexShrink: 0 }} />
-                <span style={{ fontSize: '0.62rem', color: 'rgba(255,255,255,0.55)', fontFamily: "'SolaimanLipi', 'Noto Sans Bengali', sans-serif" }}>রবি-বৃহ: ১০টা-৬টা | শুক্র: ১০টা-১টা</span>
+                <span style={{ fontSize: '0.62rem', color: 'rgba(255,255,255,0.55)', fontFamily: "'Noto Serif Bengali', 'Noto Sans Bengali', sans-serif" }}>রবি-বৃহ: ১০টা-৬টা | শুক্র: ১০টা-১টা</span>
             </div>
         </div>
         <div style={{ height: '1px', background: 'linear-gradient(90deg, transparent, rgba(198,167,94,0.2), transparent)' }} />
-        <Link to="/bn/contact" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.375rem', padding: '0.6rem', fontSize: '0.68rem', fontWeight: 600, color: 'rgba(198,167,94,0.75)', textDecoration: 'none', transition: 'color 0.15s', fontFamily: "'SolaimanLipi', 'Noto Sans Bengali', sans-serif" }}
+        <Link to="/bn/contact" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.375rem', padding: '0.6rem', fontSize: '0.68rem', fontWeight: 600, color: 'rgba(198,167,94,0.75)', textDecoration: 'none', transition: 'color 0.15s', fontFamily: "'Noto Serif Bengali', 'Noto Sans Bengali', sans-serif" }}
             onMouseEnter={e => e.currentTarget.style.color = '#c6a75e'}
             onMouseLeave={e => e.currentTarget.style.color = 'rgba(198,167,94,0.75)'}>
             <BookOpen size={12} /> যোগাযোগের সম্পূর্ণ বিবরণ দেখুন →
@@ -421,19 +419,19 @@ const ConsultBnWidget = ({ postTitle }) => (
         <div style={{ padding: '1rem 1.125rem' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.625rem' }}>
                 <Scale size={16} style={{ color: '#e8c97d' }} />
-                <span style={{ fontSize: '0.7rem', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.08em', background: 'linear-gradient(90deg, #c6a75e, #e8c97d)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', fontFamily: "'SolaimanLipi', 'Noto Sans Bengali', sans-serif" }}>বিনামূল্যে আইনি পরামর্শ</span>
+                <span style={{ fontSize: '0.7rem', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.08em', background: 'linear-gradient(90deg, #c6a75e, #e8c97d)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', fontFamily: "'Noto Serif Bengali', 'Noto Sans Bengali', sans-serif" }}>বিনামূল্যে আইনি পরামর্শ</span>
             </div>
-            <p style={{ fontSize: '0.8125rem', color: 'rgba(255,255,255,0.7)', lineHeight: 1.6, marginBottom: '0.875rem', fontFamily: "'SolaimanLipi', 'Noto Sans Bengali', sans-serif" }}>
+            <p style={{ fontSize: '0.8125rem', color: 'rgba(255,255,255,0.7)', lineHeight: 1.6, marginBottom: '0.875rem', fontFamily: "'Noto Serif Bengali', 'Noto Sans Bengali', sans-serif" }}>
                 <strong style={{ color: '#e8c97d' }}>অ্যাডভোকেট মো. শাহ আলম</strong> — বাংলাদেশ সুপ্রিম কোর্টের আইনজীবীর কাছ থেকে বিশেষজ্ঞ পরামর্শ নিন।
             </p>
             <a href={waLink(`আমি পড়লাম: ${postTitle}। আইনি সাহায্য দরকার।`)} target="_blank" rel="noopener noreferrer"
-                style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', padding: '0.75rem', borderRadius: '0.625rem', fontSize: '0.8125rem', fontWeight: 700, textDecoration: 'none', marginBottom: '0.5rem', background: 'linear-gradient(135deg, #22c55e, #16a34a)', color: '#fff', boxShadow: '0 4px 14px rgba(34,197,94,0.35)', transition: 'transform 0.15s, box-shadow 0.15s', fontFamily: "'SolaimanLipi', 'Noto Sans Bengali', sans-serif" }}
+                style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', padding: '0.75rem', borderRadius: '0.625rem', fontSize: '0.8125rem', fontWeight: 700, textDecoration: 'none', marginBottom: '0.5rem', background: 'linear-gradient(135deg, #22c55e, #16a34a)', color: '#fff', boxShadow: '0 4px 14px rgba(34,197,94,0.35)', transition: 'transform 0.15s, box-shadow 0.15s', fontFamily: "'Noto Serif Bengali', 'Noto Sans Bengali', sans-serif" }}
                 onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-1px)'; e.currentTarget.style.boxShadow = '0 6px 20px rgba(34,197,94,0.45)'; }}
                 onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 4px 14px rgba(34,197,94,0.35)'; }}>
                 <MessageCircle size={14} /> এখনই WhatsApp করুন
             </a>
             <a href={telLink()}
-                style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', padding: '0.625rem', borderRadius: '0.625rem', fontSize: '0.8125rem', fontWeight: 600, textDecoration: 'none', color: 'rgba(255,255,255,0.65)', border: '1px solid rgba(255,255,255,0.1)', transition: 'all 0.15s', fontFamily: "'SolaimanLipi', 'Noto Sans Bengali', sans-serif" }}
+                style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', padding: '0.625rem', borderRadius: '0.625rem', fontSize: '0.8125rem', fontWeight: 600, textDecoration: 'none', color: 'rgba(255,255,255,0.65)', border: '1px solid rgba(255,255,255,0.1)', transition: 'all 0.15s', fontFamily: "'Noto Serif Bengali', 'Noto Sans Bengali', sans-serif" }}
                 onMouseEnter={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.06)'; e.currentTarget.style.color = '#fff'; }}
                 onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = 'rgba(255,255,255,0.65)'; }}>
                 <Phone size={13} /> ফোন করুন
@@ -491,12 +489,15 @@ const BlogPostBnInner = () => {
         setTimeout(() => { setCSubmitted(false); setCName(''); setCPhone(''); setCMessage(''); }, 5000);
     };
 
-        /* Notify AdSense of SPA route change to trigger Auto Ads & Vignettes */
-    useEffect(() => {
-        try {
-            (window.adsbygoogle = window.adsbygoogle || []).push({});
-        } catch (e) {}
-    }, [slug]);
+    /* NOTE: the former empty adsbygoogle.push({}) on every route change was removed on purpose - it re-armed
+       Auto-Ads overlays (mobile vignettes) on internal navigation, which drives bounce. */
+    const articleRef = useRef(null);
+    const isDesktop = useMediaQuery(DESKTOP_QUERY);
+    /* Unit 1: after the 2nd paragraph (below the first H2) | Unit 2 (mobile): after the 5th paragraph */
+    const adAnchors = useParagraphAnchors(articleRef, [
+        { id: 'top', n: 2, fallbackToLast: true },
+        { id: 'mid', n: 5, skip: isDesktop },
+    ], `${slug}|${isDesktop}|${post ? post.slug : 'loading'}`);
 
     const metaFallback = allBnPosts.find(p => p.slug === slug);
 
@@ -524,7 +525,7 @@ const BlogPostBnInner = () => {
             <div style={{ minHeight: '60vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <div style={{ textAlign: 'center' }}>
                     <Clock size={48} style={{ color: 'var(--accent)', marginBottom: '1rem' }} />
-                    <h1 style={{ fontSize: '1.5rem', fontWeight: 700, color: 'var(--text)', fontFamily: "'Playfair Display', serif" }}>শীঘ্রই আসছে</h1>
+                    <h1 style={{ fontSize: '1.5rem', fontWeight: 700, color: 'var(--text)', fontFamily: "Georgia, serif" }}>শীঘ্রই আসছে</h1>
                     <Link to="/bn/blog" className="btn-primary" style={{ marginTop: '1rem', display: 'inline-block' }}>← ব্লগে ফিরুন</Link>
                 </div>
             </div>
@@ -566,65 +567,12 @@ const BlogPostBnInner = () => {
             { '@type': 'ListItem', position: 3, name: post.title, item: `https://www.advmdshahalam.me/bn/blog/${post.slug}` },
         ],
     };
-    const faqSchema = post.faqs?.length ? {
-        '@context': 'https://schema.org', '@type': 'FAQPage',
-        mainEntity: post.faqs.map(faq => ({ '@type': 'Question', name: faq.question || faq.q, acceptedAnswer: { '@type': 'Answer', text: faq.answer || faq.a } })),
-    } : null;
+    const pageUrl = `${SITE}/bn/blog/${post.slug}`;
+    const entityGraph = buildEntityGraph({ url: pageUrl, lang: 'bn', faqs: post.faqs });
+    const hreflangTags = buildHreflang({ lang: 'bn', slug: post.slug, pairedSlug: post.enSlug });
+    const calcCfg = FEE_CALCULATORS[post.slug];
+    const calcIdx = calcCfg ? calculatorSectionIndex(post.slug, post.sections) : -1;
 
-    // Master LegalService schema — linking to #legalservice
-    const legalServiceSchema = {
-        '@context': 'https://schema.org',
-        '@type': 'LegalService',
-        '@id': 'https://www.advmdshahalam.me/#legalservice',
-        name: 'Advocate Md. Shah Alam',
-        alternateName: 'এডভোকেট মোঃ শাহ আলম',
-        url: 'https://www.advmdshahalam.me',
-        logo: 'https://www.advmdshahalam.me/favicon.ico',
-        image: 'https://www.advmdshahalam.me/images/advocate-shah-alam.jpg',
-        telephone: '+8801712655546',
-        email: 'contact@advmdshahalam.me',
-        priceRange: '$$',
-        address: [
-            {
-                '@type': 'PostalAddress',
-                streetAddress: 'House 46, Road 6/B, Sector 12',
-                addressLocality: 'Uttara',
-                addressRegion: 'Dhaka',
-                postalCode: '1230',
-                addressCountry: 'BD'
-            },
-            {
-                '@type': 'PostalAddress',
-                streetAddress: 'Lawyers Association Building, 4th Floor, 6/7 Court House Street, Kotwali',
-                addressLocality: 'Judge Court',
-                addressRegion: 'Dhaka',
-                postalCode: '1100',
-                addressCountry: 'BD'
-            }
-        ],
-        alumniOf: [
-            {
-                '@type': 'EducationalOrganization',
-                name: 'Dhaka International University',
-                award: 'LL.M.'
-            },
-            {
-                '@type': 'EducationalOrganization',
-                name: 'Bangladesh Bar Council',
-                award: 'Supreme Court Advocate Enrolment'
-            }
-        ],
-        memberOf: [
-            {
-                '@type': 'Organization',
-                name: 'Supreme Court Bar Association (SCBA)'
-            },
-            {
-                '@type': 'Organization',
-                name: 'Dhaka Bar Association'
-            }
-        ]
-    };
 
     // HowTo schema — generated from sections if they contain numbered steps
     const howToSchema = (() => {
@@ -695,9 +643,7 @@ const BlogPostBnInner = () => {
                 <meta name="keywords" content={(Array.isArray(post.keywords) ? post.keywords : []).join(', ')} />
                 <link rel="canonical" href={`https://www.advmdshahalam.me/bn/blog/${post.slug}`} />
                 <meta name="robots" content="index, follow" />
-                {post.enSlug && <link rel="alternate" hrefLang="en" href={`https://www.advmdshahalam.me/blog/${post.enSlug}`} />}
-                <link rel="alternate" hrefLang="bn" href={`https://www.advmdshahalam.me/bn/blog/${post.slug}`} />
-                <link rel="alternate" hrefLang="x-default" href={post.enSlug ? `https://www.advmdshahalam.me/blog/${post.enSlug}` : 'https://www.advmdshahalam.me/'} />
+                {hreflangTags.map((h) => <link key={h.hrefLang} rel="alternate" hrefLang={h.hrefLang} href={h.href} />)}
                 <meta property="og:title" content={post.metaTitle} />
                 <meta property="og:description" content={post.metaDescription} />
                 <meta property="og:type" content="article" />
@@ -715,8 +661,7 @@ const BlogPostBnInner = () => {
                 <meta property="article:tag" content={(Array.isArray(post.keywords) ? post.keywords.slice(0, 5) : []).join(', ')} />
                 <script type="application/ld+json">{JSON.stringify(blogPostingSchema)}</script>
                 <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
-                <script type="application/ld+json">{JSON.stringify(legalServiceSchema)}</script>
-                {faqSchema && <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>}
+                <script type="application/ld+json">{jsonLd(entityGraph)}</script>
                 {howToSchema && <script type="application/ld+json">{JSON.stringify(howToSchema)}</script>}
             </Helmet>
 
@@ -765,21 +710,10 @@ const BlogPostBnInner = () => {
                         </span>
                     </div>
 
-                    <h1 style={{ fontFamily: "'SolaimanLipi', 'Noto Sans Bengali', 'Playfair Display', serif", fontSize: 'clamp(1.75rem, 4vw, 3rem)', fontWeight: 800, lineHeight: 1.22, color: 'var(--hero-text)', marginBottom: '1.375rem', letterSpacing: '-0.01em', maxWidth: '900px' }}>
+                    <h1 style={{ fontFamily: "'Noto Serif Bengali', 'Noto Sans Bengali', Georgia, serif", fontSize: 'clamp(1.75rem, 4vw, 3rem)', fontWeight: 800, lineHeight: 1.22, color: 'var(--hero-text)', marginBottom: '1.375rem', letterSpacing: '-0.01em', maxWidth: '900px' }}>
                         {post.title}
                     </h1>
 
-                    {/* ── Above-the-Fold Header Banner Ad ── */}
-                    <div style={{ margin: '0.875rem auto 1.25rem', maxWidth: '850px' }}>
-                        <AdSenseAd
-                            key={`ad-head-${post.slug}`}
-                            slot="8630877987"
-                            format="auto"
-                            responsive={true}
-                            labelText="বিজ্ঞাপন"
-                            style={{ borderRadius: '0.5rem', overflow: 'hidden' }}
-                        />
-                    </div>
                     {post.heroIntro && (
                         <div className="bpbn-hero-intro-card">
                             <div className="bpbn-intro-header">
@@ -882,54 +816,35 @@ const BlogPostBnInner = () => {
                                 </div>
                             </div>
 
-                            <article>
+                            <article ref={articleRef}>
                                 <Disclaimer lang="bn" />
 
                                 {/* Quick Answer */}
                                 {post.quickAnswer && (
                                     <div style={{ marginBottom: '2.5rem', padding: '1.375rem 1.5rem', borderRadius: '1rem', background: 'linear-gradient(135deg, rgba(184,146,42,0.08), rgba(184,146,42,0.02))', border: '1.5px solid rgba(184,146,42,0.22)' }}>
-                                        <p style={{ fontSize: '0.875rem', fontWeight: 800, color: 'var(--gold)', marginBottom: '0.875rem', fontFamily: "'SolaimanLipi', 'Noto Sans Bengali', sans-serif" }}>
+                                        <p style={{ fontSize: '0.875rem', fontWeight: 800, color: 'var(--gold)', marginBottom: '0.875rem', fontFamily: "'Noto Serif Bengali', 'Noto Sans Bengali', sans-serif" }}>
                                             {typeof post.quickAnswer === 'object' && post.quickAnswer?.heading ? post.quickAnswer.heading : 'আইনি সারসংক্ষেপ ও তাৎক্ষণিক পরামর্শ'}
                                         </p>
                                         {Array.isArray(post.quickAnswer?.points) ? (
                                             <ul style={{ margin: 0, padding: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
                                                 {post.quickAnswer.points.map((pt, i) => (
-                                                    <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.625rem', fontSize: '0.9375rem', color: 'var(--text-secondary)', lineHeight: 1.7, fontFamily: "'SolaimanLipi', 'Noto Sans Bengali', sans-serif" }}>
+                                                    <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.625rem', fontSize: '0.9375rem', color: 'var(--text-secondary)', lineHeight: 1.7, fontFamily: "'Noto Serif Bengali', 'Noto Sans Bengali', sans-serif" }}>
                                                         <span style={{ flexShrink: 0, width: '5px', height: '5px', borderRadius: '50%', background: 'var(--accent)', marginTop: '9px' }} />
                                                         {pt}
                                                     </li>
                                                 ))}
                                             </ul>
                                         ) : (
-                                            <p style={{ margin: 0, fontSize: '0.9375rem', color: 'var(--text-secondary)', lineHeight: 1.7, fontFamily: "'SolaimanLipi', 'Noto Sans Bengali', sans-serif" }}>
+                                            <p style={{ margin: 0, fontSize: '0.9375rem', color: 'var(--text-secondary)', lineHeight: 1.7, fontFamily: "'Noto Serif Bengali', 'Noto Sans Bengali', sans-serif" }}>
                                                 {typeof post.quickAnswer === 'string' ? post.quickAnswer : ''}
                                             </p>
                                         )}
                                     </div>
                                 )}
 
-                                {/* ── Dedicated Top In-Article Ad (Directly Below Quick Response) ── */}
-                                <div style={{ margin: '1.75rem 0 2.25rem' }}>
-                                    <AdSenseAd
-                                        key={`ad-top-qa-${post.slug}`}
-                                        slot="9118178745"
-                                        format="fluid"
-                                        layout="in-article"
-                                        responsive={true}
-                                        labelText="বিজ্ঞাপন"
-                                        style={{ borderRadius: '0.75rem', overflow: 'hidden' }}
-                                    />
-                                </div>
 
 {/* Sections — High-End Editorial Design */}
                                 {post.sections?.map((sec, i) => {
-                                    // Alternating strategy: Section 1 and 5 use proven active unit 8630877987 (immediate live fill)
-                                    // Other sections cycle through dedicated in-article units
-                                    const isProvenSlot = (i % 6 === 2);
-                                    const adSlot = isProvenSlot ? '8630877987' : IN_ARTICLE_SLOTS[(Math.floor(i / 2) + 1) % IN_ARTICLE_SLOTS.length];
-                                    const adFormat = isProvenSlot ? 'auto' : 'fluid';
-                                    const adLayout = isProvenSlot ? '' : 'in-article';
-
                                     return (
                                         <React.Fragment key={i}>
                                             <section id={`bnsec-${i}`} style={{ marginBottom: '3.5rem', scrollMarginTop: '5rem' }}>
@@ -966,7 +881,7 @@ const BlogPostBnInner = () => {
 
                                                     {/* Clean Headline with vertical accent bar */}
                                                     <h2 style={{
-                                                        fontFamily: "'SolaimanLipi', 'Kalpurush', 'Noto Serif Bengali', sans-serif",
+                                                        fontFamily: "'Noto Serif Bengali', sans-serif",
                                                         fontSize: 'clamp(1.35rem, 2.5vw, 1.75rem)',
                                                         fontWeight: 800,
                                                         lineHeight: 1.35,
@@ -991,7 +906,7 @@ const BlogPostBnInner = () => {
                                                 </div>
 
                                                 <div className="prose-bn-content"
-                                                    style={{ color: 'var(--text)', fontSize: '1.1875rem', lineHeight: '2.05', letterSpacing: '0.005em', wordBreak: 'break-word', overflowWrap: 'anywhere', fontFamily: "'SolaimanLipi', 'Kalpurush', 'Noto Serif Bengali', sans-serif" }}
+                                                    style={{ color: 'var(--text)', fontSize: '1.1875rem', lineHeight: '2.05', letterSpacing: '0.005em', wordBreak: 'break-word', overflowWrap: 'anywhere', fontFamily: "'Noto Serif Bengali', sans-serif" }}
                                                     dangerouslySetInnerHTML={{ __html: formatArticleContent(sec.content) }}
                                                 />
                                             </section>
@@ -1001,35 +916,11 @@ const BlogPostBnInner = () => {
                                                 <MidArticleLeadCapture lang="bn" />
                                             )}
 
-                                            {/* ── 2. In-Content Ad: Well-spaced native in-article units (every 2 sections) ── */}
-                                            {i % 3 === 2 && i < post.sections.length - 1 && (
-                                                <div style={{ margin: '2rem 0 2.5rem' }}>
-                                                    <AdSenseAd
-                                                        key={`ad-sec-${i}-${post.slug}`}
-                                                        slot={adSlot}
-                                                        layout={adLayout}
-                                                        format={adFormat}
-                                                        responsive={true}
-                                                        labelText="বিজ্ঞাপন"
-                                                        style={{ borderRadius: '0.75rem', overflow: 'hidden' }}
-                                                    />
-                                                </div>
-                                            )}
+                                            {/* Unit 3: interactive fee calculator (only on pages registered in data/feeCalculators.js) */}
+                                            {i === calcIdx && calcCfg && <FeeCalculator type={calcCfg.type} lang="bn" />}
                                         </React.Fragment>
                                     );
                                 })}
-
-                                {/* ── 3. Bottom Multiplex AdSense Grid (Recommended Content & Ads) ── */}
-                                <div style={{ margin: '2.5rem 0' }}>
-                                    <AdSenseAd
-                                        key={`ad-bot-${post.slug}`}
-                                        slot="3667074343"
-                                        format="autorelaxed"
-                                        responsive={true}
-                                        labelText="সম্পর্কিত সুপারিশ ও বিজ্ঞাপন"
-                                        style={{ borderRadius: '0.75rem', overflow: 'hidden' }}
-                                    />
-                                </div>
 
                                 {/* ══ Mid-Article WhatsApp CTA (Modern Minimal Legal Card) ══ */}
                                 <div style={{
@@ -1052,10 +943,10 @@ const BlogPostBnInner = () => {
                                             <Scale size={20} />
                                         </div>
                                         <div style={{ flex: 1 }}>
-                                            <p style={{ margin: 0, fontWeight: 800, fontSize: '1.0625rem', color: 'var(--text)', fontFamily: "'SolaimanLipi','Noto Sans Bengali',sans-serif", lineHeight: 1.5, marginBottom: '0.375rem' }}>
+                                            <p style={{ margin: 0, fontWeight: 800, fontSize: '1.0625rem', color: 'var(--text)', fontFamily: "'Noto Serif Bengali','Noto Sans Bengali',sans-serif", lineHeight: 1.5, marginBottom: '0.375rem' }}>
                                                 এই বিষয়ে আপনার নিজের পরিস্থিতি কি আলাদা?
                                             </p>
-                                            <p style={{ margin: 0, fontSize: '0.875rem', color: 'var(--text-secondary)', fontFamily: "'SolaimanLipi','Noto Sans Bengali',sans-serif", lineHeight: 1.65 }}>
+                                            <p style={{ margin: 0, fontSize: '0.875rem', color: 'var(--text-secondary)', fontFamily: "'Noto Serif Bengali','Noto Sans Bengali',sans-serif", lineHeight: 1.65 }}>
                                                 প্রতিটি মামলার তথ্য ও পরিস্থিতি আলাদা। <strong style={{ color: 'var(--text)' }}>অ্যাডভোকেট মো. শাহ আলম</strong>-এর সাথে সরাসরি কথা বলুন — বিনামূল্যে প্রাথমিক পরামর্শ পান।
                                             </p>
                                         </div>
@@ -1071,7 +962,7 @@ const BlogPostBnInner = () => {
                                                 fontSize: '0.875rem', fontWeight: 700, textDecoration: 'none',
                                                 background: 'linear-gradient(135deg, #22c55e, #16a34a)', color: '#fff',
                                                 boxShadow: '0 4px 14px rgba(34,197,94,0.30)',
-                                                fontFamily: "'SolaimanLipi','Noto Sans Bengali',sans-serif",
+                                                fontFamily: "'Noto Serif Bengali','Noto Sans Bengali',sans-serif",
                                             }}>
                                             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                                             এখনই WhatsApp করুন
@@ -1085,7 +976,7 @@ const BlogPostBnInner = () => {
                                                 fontSize: '0.875rem', fontWeight: 600, textDecoration: 'none',
                                                 border: '1.5px solid rgba(34,197,94,0.4)', color: 'var(--text)',
                                                 background: 'transparent',
-                                                fontFamily: "'SolaimanLipi','Noto Sans Bengali',sans-serif",
+                                                fontFamily: "'Noto Serif Bengali','Noto Sans Bengali',sans-serif",
                                             }}>
                                             <Phone size={14} /> ফোন করুন
                                         </a>
@@ -1114,7 +1005,7 @@ const BlogPostBnInner = () => {
                                 {/* FAQ */}
                                 {post.faqs?.length > 0 && (
                                     <div style={{ marginBottom: '3rem' }}>
-                                        <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(1.3rem, 2.2vw, 1.6rem)', fontWeight: 700, color: 'var(--text)', marginBottom: '1.375rem' }}>
+                                        <h2 style={{ fontFamily: "Georgia, serif", fontSize: 'clamp(1.3rem, 2.2vw, 1.6rem)', fontWeight: 700, color: 'var(--text)', marginBottom: '1.375rem' }}>
                                             সাধারণ জিজ্ঞাসা (FAQ)
                                         </h2>
                                         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.625rem' }}>
@@ -1186,6 +1077,14 @@ const BlogPostBnInner = () => {
                                 <div className="legal-disclaimer-box p-4 bg-gray-50 dark:bg-gray-800/40 border-l-4 border-amber-600 my-6 text-sm text-gray-700 dark:text-gray-300 rounded-r-lg">
                                     <strong>দায়বর্জন (Disclaimer):</strong> এই আর্টিকেলে পরিবেশিত তথ্যসমূহ কেবল আইনি সচেতনতা ও সাধারণ শিক্ষার উদ্দেশ্যে প্রকাশিত। এটি কোনো প্রত্যক্ষ আইনি পরামর্শ (Legal Advice) নয় এবং এর মাধ্যমে কোনো আইনজীবী-মক্কেল সম্পর্ক (Attorney-Client Relationship) তৈরি হয় না। আপনার সুনির্দিষ্ট মামলার আইনি প্রতিকারের জন্য সরাসরি বাংলাদেশ সুপ্রিম কোর্ট বা জজ কোর্টের তালিকাভুক্ত বিজ্ঞ আইনজীবীর সাথে পরামর্শ করুন।
                                 </div>
+                                {adAnchors.top && createPortal(
+                                    <AdSenseAd key={`ad-top-${post.slug}`} slot={AD_SLOTS.topInArticle} format="auto" responsive={true} labelText="বিজ্ঞাপন" minHeight={280} densityGroup="content" style={{ borderRadius: '0.75rem', overflow: 'hidden', margin: '1.75rem auto' }} />,
+                                    adAnchors.top
+                                )}
+                                {adAnchors.mid && createPortal(
+                                    <AdSenseAd key={`ad-mid-${post.slug}`} slot={AD_SLOTS.midNative} format="fluid" layout="in-article" responsive={true} labelText="বিজ্ঞাপন" minHeight={250} densityGroup="content" style={{ borderRadius: '0.75rem', overflow: 'hidden', margin: '1.75rem auto' }} />,
+                                    adAnchors.mid
+                                )}
                             </article>
                         </div>
 
@@ -1195,13 +1094,17 @@ const BlogPostBnInner = () => {
                                 <ConsultBnWidget postTitle={post.title} />
 
                                 {/* ── Sidebar AdSense Ad 1 (BN) ── */}
-                                <AdSenseAd
-                                    slot="5064091502"
-                                    format="auto"
-                                    responsive={true}
-                                    labelText="বিজ্ঞাপন"
-                                    style={{ marginBottom: '1.125rem', borderRadius: '0.875rem', overflow: 'hidden' }}
-                                />
+                                {isDesktop && (
+                                    <AdSenseAd
+                                        slot={AD_SLOTS.sidebar}
+                                        format="auto"
+                                        responsive={true}
+                                        labelText="বিজ্ঞাপন"
+                                        minHeight={250}
+                                        densityGroup="rail"
+                                        style={{ marginBottom: '1.125rem', borderRadius: '0.875rem', overflow: 'hidden' }}
+                                    />
+                                )}
 
                                 <PopularBnPosts currentSlug={post.slug} />
 
@@ -1334,7 +1237,7 @@ const BlogPostBnInner = () => {
                     font-weight: 800;
                     letter-spacing: 0.05em;
                     color: var(--gold, #C6A75E);
-                    font-family: 'SolaimanLipi', 'Kalpurush', sans-serif;
+                    font-family: 'Noto Serif Bengali', sans-serif;
                 }
                 .bpbn-intro-dot {
                     width: 9px;
@@ -1357,7 +1260,7 @@ const BlogPostBnInner = () => {
                     font-weight: 700;
                     text-decoration: none;
                     transition: all 0.2s ease;
-                    font-family: 'SolaimanLipi', 'Kalpurush', sans-serif;
+                    font-family: 'Noto Serif Bengali', sans-serif;
                 }
                 .bpbn-intro-call-chip:hover {
                     background: var(--gold, #C6A75E);
@@ -1367,7 +1270,7 @@ const BlogPostBnInner = () => {
                     font-size: 1.2rem;
                     line-height: 2.15;
                     color: #F1F5F9;
-                    font-family: 'SolaimanLipi', 'Kalpurush', 'Noto Sans Bengali', sans-serif;
+                    font-family: 'Noto Serif Bengali', 'Noto Sans Bengali', sans-serif;
                 }
                 .bpbn-intro-content p {
                     margin: 0;
@@ -1399,8 +1302,8 @@ const BlogPostBnInner = () => {
                 .prose-bn-content b { color: var(--text); font-weight: 700; }
                 .prose-bn-content a { color: var(--accent); text-decoration: underline; text-decoration-color: rgba(198,167,94,0.35); text-underline-offset: 4px; }
                 .prose-bn-content a:hover { text-decoration-color: var(--accent); }
-                .prose-bn-content h3 { font-family: 'SolaimanLipi', 'Kalpurush', 'Noto Serif Bengali', sans-serif; font-size: 1.35rem; font-weight: 800; color: var(--text); margin: 2.5rem 0 1.1rem; padding: 0.5rem 0.875rem; border-left: 4px solid var(--gold, #C6A75E); background: linear-gradient(90deg, rgba(198,167,94,0.06), transparent); border-radius: 0 0.5rem 0.5rem 0; }
-                .prose-bn-content h4 { font-family: 'SolaimanLipi', 'Kalpurush', 'Noto Serif Bengali', sans-serif; font-size: 1.18rem; font-weight: 700; color: var(--text); margin: 2rem 0 0.85rem; }
+                .prose-bn-content h3 { font-family: 'Noto Serif Bengali', sans-serif; font-size: 1.35rem; font-weight: 800; color: var(--text); margin: 2.5rem 0 1.1rem; padding: 0.5rem 0.875rem; border-left: 4px solid var(--gold, #C6A75E); background: linear-gradient(90deg, rgba(198,167,94,0.06), transparent); border-radius: 0 0.5rem 0.5rem 0; }
+                .prose-bn-content h4 { font-family: 'Noto Serif Bengali', sans-serif; font-size: 1.18rem; font-weight: 700; color: var(--text); margin: 2rem 0 0.85rem; }
                 .prose-bn-content blockquote { border-left: 4px solid var(--gold, #C6A75E); padding: 1.25rem 1.5rem; margin: 2.25rem 0; color: var(--text); background: linear-gradient(90deg, rgba(198,167,94,0.06), rgba(198,167,94,0.02)); border-radius: 0 0.875rem 0.875rem 0; font-size: 1.15rem; line-height: 2.05; }
                 
                 /* ─── Theme-Aware Executive Table Styling ─── */
@@ -1539,7 +1442,7 @@ const BlogPostBnInner = () => {
                     white-space: nowrap !important;
                     overflow: hidden !important;
                     text-overflow: ellipsis !important;
-                    font-family: 'SolaimanLipi', 'Kalpurush', sans-serif !important;
+                    font-family: 'Noto Serif Bengali', sans-serif !important;
                 }
                 .msb-sub {
                     font-size: 0.62rem !important;
@@ -1547,7 +1450,7 @@ const BlogPostBnInner = () => {
                     white-space: nowrap !important;
                     overflow: hidden !important;
                     text-overflow: ellipsis !important;
-                    font-family: 'SolaimanLipi', 'Kalpurush', sans-serif !important;
+                    font-family: 'Noto Serif Bengali', sans-serif !important;
                     font-weight: 600 !important;
                 }
                 .msb-right {
@@ -1568,7 +1471,7 @@ const BlogPostBnInner = () => {
                     font-weight: 700 !important;
                     text-decoration: none !important;
                     white-space: nowrap !important;
-                    font-family: 'SolaimanLipi', 'Kalpurush', sans-serif !important;
+                    font-family: 'Noto Serif Bengali', sans-serif !important;
                     transition: transform 0.14s ease !important;
                     -webkit-tap-highlight-color: transparent !important;
                     position: relative;

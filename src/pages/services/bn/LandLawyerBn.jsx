@@ -64,7 +64,7 @@ const LandLawyerBn = () => (
         }}
         ctaText="আজই ঢাকায় ভূমি আইনজীবীর সাথে পরামর্শ করুন"
         relatedBlogLinks={[
-            { to: '/bn/blog/jomi-registration-bangladesh-bn', title: 'ভূমি নামজারি (নামজারি) বাংলাদেশ (২০২৬) – সম্পূর্ণ গাইড', desc: 'এসি ল্যান্ড প্রক্রিয়া, কাগজপত্র, ফি, সময়সীমা' },
+            { to: '/bn/blog/jomi-registry-khoroch-sarkaree-fee-bd', title: 'ভূমি নামজারি (নামজারি) বাংলাদেশ (২০২৬) – সম্পূর্ণ গাইড', desc: 'এসি ল্যান্ড প্রক্রিয়া, কাগজপত্র, ফি, সময়সীমা' },
             { to: '/bn/blog/khas-jomi-chenar-upay-bondobasto-niyom-bangladesh', title: 'খাস জমি বাংলাদেশ – আইনি গাইড', desc: 'খাস জমির মালিকানা, বিরোধ এবং প্রতিকারের সম্পূর্ণ গাইড' },
             { to: '/bn/blog/adalat-adesh-challenge-revision-bangladesh', title: 'আদালতের আদেশ চ্যালেঞ্জ – রিভিশন গাইড', desc: 'ভূমি মামলায় আদালতের আদেশ কীভাবে চ্যালেঞ্জ করবেন' },
         ]}

@@ -1,0 +1,70 @@
+{
+  "_comment": "Single source of truth for keyword-cannibalization 301 consolidation. Applied to vercel.json by scripts/apply-seo-redirects.mjs. Slugs are relative to /bn/blog/.",
+  "basePath": "/bn/blog/",
+  "clusters": [
+    {
+      "name": "Court Marriage",
+      "master": "court-marriage-kagojpatra-complete-guide-2026",
+      "sources": [
+        "court-marriage-niyom-khoroch-bangladesh",
+        "court-marriage-total-khoroch-prokriya-bangladesh-2026",
+        "court-marriage-kagojpatra-niyom-bd",
+        "court-marriage-khoroch-vua-kazi-sotorkota-2026-bn",
+        "court-marriage-procedure-bangladesh-bn",
+        "court-marriage-kagoj-patro-sarkari-khoroch-2026",
+        "court-marriage-process-cost-bangladesh-2026",
+        "court-marriage-khoroch-niyom-papers-bangladesh-2026"
+      ]
+    },
+    {
+      "name": "Mutation & Namjari",
+      "master": "jomi-kharij-namjari-khoroch-niyom-2026-bn",
+      "sources": [
+        "jomi-kharij-e-namjari-niyom-khoroch-2026",
+        "e-namjari-tracking-mutation-check-prokriya-bangladesh-2026",
+        "e-namjari-tracking-online-check-bd",
+        "flat-namjari-mutation-acland-niyom-2026-bn",
+        "namjari-khatian-check-online-prokriya-bangladesh",
+        "online-mutation-check-bangladesh-2026-bn",
+        "land-mutation-check-online-2026",
+        "miss-case-namjari-batil-prokriya-ac-land-2026-bn"
+      ]
+    },
+    {
+      "name": "Heba & Heba-bil-Ewaz",
+      "master": "heba-dalil-khoroch-o-heba-bil-ewaz-parthokko-2026",
+      "sources": [
+        "heba-bil-ewaz-dalil-batil-mamla-prokriya-2026-bn",
+        "heba-bil-ewaz-dalil-khoroch-2026",
+        "heba-bil-ewaz-dalil-ki-shadharon-heba-parthokko-batil",
+        "heba-bil-ewaz-dalil-batil-korar-niyom-2026",
+        "heba-bil-ewaz-dalil-ki-batil-niyom-2026",
+        "heba-danpatra-ain-bangladesh"
+      ]
+    },
+    {
+      "name": "Land Registration Cost",
+      "master": "jomi-registry-khoroch-sarkaree-fee-bd",
+      "sources": [
+        "flat-apartment-registration-fee-bangladesh",
+        "jomi-nibondhon-kharch-bangladesh-2026",
+        "jomi-registry-sub-registry-office-gopon-khoroch-dalal-syndicate",
+        "jomi-registry-motel-khoroch-hisab-2026",
+        "jomi-registration-bangladesh-bn"
+      ]
+    },
+    {
+      "name": "Bail & High Court Bail",
+      "master": "agam-jamin-haikort-khoroch-2026",
+      "sources": [
+        "bail-bond-ki-jamin-bond-rules-bangladesh-2026",
+        "asami-jamin-batil-crpc-497-2026-bn",
+        "bail-er-jonno-ki-ki-lagbe-bangladesh",
+        "jamin-batil-hobar-karon-crpc-cancellation-of-bail",
+        "faujdari-mamlay-jaminer-niyom-khoroch-2026-bn",
+        "how-to-get-bail-bangladesh-2026-bn",
+        "high-court-agham-jamin-khoroch-niyom-2026-bn"
+      ]
+    }
+  ]
+}

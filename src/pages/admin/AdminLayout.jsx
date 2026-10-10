@@ -287,7 +287,7 @@ export default function AdminLayout() {
       minHeight: '100vh',
       background: T.bg,
       display: 'flex',
-      fontFamily: "'DM Sans', system-ui, sans-serif",
+      fontFamily: "system-ui, system-ui, sans-serif",
       color: T.text,
     }}>
 

@@ -24,7 +24,7 @@ const TermsConditions = () => {
                     </Link>
 
                     <h1 className="text-3xl md:text-4xl font-serif font-bold mb-3"
-                        style={{ color: 'var(--text)', fontFamily: "'Playfair Display', serif" }}>
+                        style={{ color: 'var(--text)', fontFamily: "Georgia, serif" }}>
                         Terms of Service (ব্যবহারের শর্তাবলী)
                     </h1>
                     <p className="text-sm mb-10" style={{ color: 'var(--text-muted)' }}>

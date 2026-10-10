@@ -1,0 +1,6 @@
+{
+  "_comment": "Editorial EN<->BN hreflang pairs, forced in both directions by scripts/audit-hreflang.mjs --fix. Format: bn-slug -> en-slug.",
+  "pairs": {
+    "court-marriage-kagojpatra-complete-guide-2026": "court-marriage-procedure-bangladesh"
+  }
+}

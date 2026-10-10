@@ -786,17 +786,17 @@
     },
     {
       "source": "/bn/blog/e-namjari-tracking-online-check-bd",
-      "destination": "/bn/blog/e-namjari-tracking-mutation-check-prokriya-bangladesh-2026",
+      "destination": "/bn/blog/jomi-kharij-namjari-khoroch-niyom-2026-bn",
       "statusCode": 301
     },
     {
       "source": "/bn/blog/e-namjari-tracking-status-check-online-mutation",
-      "destination": "/bn/blog/e-namjari-tracking-mutation-check-prokriya-bangladesh-2026",
+      "destination": "/bn/blog/jomi-kharij-namjari-khoroch-niyom-2026-bn",
       "statusCode": 301
     },
     {
       "source": "/bn/blog/e-namjari-tracking-status-check-online-mutation-2026",
-      "destination": "/bn/blog/e-namjari-tracking-mutation-check-prokriya-bangladesh-2026",
+      "destination": "/bn/blog/jomi-kharij-namjari-khoroch-niyom-2026-bn",
       "statusCode": 301
     },
     {
@@ -906,12 +906,12 @@
     },
     {
       "source": "/bn/blog/land-mutation-check-online-2026",
-      "destination": "/bn/blog/e-namjari-tracking-mutation-check-prokriya-bangladesh-2026",
+      "destination": "/bn/blog/jomi-kharij-namjari-khoroch-niyom-2026-bn",
       "statusCode": 301
     },
     {
       "source": "/bn/blog/land-mutation-procedure-bangladesh-bn",
-      "destination": "/bn/blog/e-namjari-tracking-mutation-check-prokriya-bangladesh-2026",
+      "destination": "/bn/blog/jomi-kharij-namjari-khoroch-niyom-2026-bn",
       "statusCode": 301
     },
     {
@@ -966,7 +966,7 @@
     },
     {
       "source": "/bn/blog/miss-case-namjari-batil-prokriya-ac-land-2026-bn",
-      "destination": "/bn/blog/e-namjari-tracking-mutation-check-prokriya-bangladesh-2026",
+      "destination": "/bn/blog/jomi-kharij-namjari-khoroch-niyom-2026-bn",
       "statusCode": 301
     },
     {
@@ -981,22 +981,22 @@
     },
     {
       "source": "/bn/blog/mutation-obostha-check-2026-complete",
-      "destination": "/bn/blog/e-namjari-tracking-mutation-check-prokriya-bangladesh-2026",
+      "destination": "/bn/blog/jomi-kharij-namjari-khoroch-niyom-2026-bn",
       "statusCode": 301
     },
     {
       "source": "/bn/blog/namjari-khatian-check-online-prokriya-bangladesh",
-      "destination": "/bn/blog/e-namjari-tracking-mutation-check-prokriya-bangladesh-2026",
+      "destination": "/bn/blog/jomi-kharij-namjari-khoroch-niyom-2026-bn",
       "statusCode": 301
     },
     {
       "source": "/bn/blog/namjari-online-check-korar-niyom-2026-complete",
-      "destination": "/bn/blog/e-namjari-tracking-mutation-check-prokriya-bangladesh-2026",
+      "destination": "/bn/blog/jomi-kharij-namjari-khoroch-niyom-2026-bn",
       "statusCode": 301
     },
     {
       "source": "/bn/blog/namjari-tracking-check-bangladesh-2026",
-      "destination": "/bn/blog/e-namjari-tracking-mutation-check-prokriya-bangladesh-2026",
+      "destination": "/bn/blog/jomi-kharij-namjari-khoroch-niyom-2026-bn",
       "statusCode": 301
     },
     {
@@ -1016,17 +1016,17 @@
     },
     {
       "source": "/bn/blog/online-mutation-check-bangladesh-2026-bn",
-      "destination": "/bn/blog/e-namjari-tracking-mutation-check-prokriya-bangladesh-2026",
+      "destination": "/bn/blog/jomi-kharij-namjari-khoroch-niyom-2026-bn",
       "statusCode": 301
     },
     {
       "source": "/bn/blog/online-namjari-tracking-check-2026",
-      "destination": "/bn/blog/e-namjari-tracking-mutation-check-prokriya-bangladesh-2026",
+      "destination": "/bn/blog/jomi-kharij-namjari-khoroch-niyom-2026-bn",
       "statusCode": 301
     },
     {
       "source": "/bn/blog/online-namzari-application-tracking-mutation-correction-2026",
-      "destination": "/bn/blog/e-namjari-tracking-mutation-check-prokriya-bangladesh-2026",
+      "destination": "/bn/blog/jomi-kharij-namjari-khoroch-niyom-2026-bn",
       "statusCode": 301
     },
     {
@@ -1222,6 +1222,96 @@
     {
       "source": "/terms-and-conditions",
       "destination": "/terms-of-service",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/blog/jomi-kharij-e-namjari-niyom-khoroch-2026",
+      "destination": "/bn/blog/jomi-kharij-namjari-khoroch-niyom-2026-bn",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/blog/e-namjari-tracking-mutation-check-prokriya-bangladesh-2026",
+      "destination": "/bn/blog/jomi-kharij-namjari-khoroch-niyom-2026-bn",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/blog/flat-namjari-mutation-acland-niyom-2026-bn",
+      "destination": "/bn/blog/jomi-kharij-namjari-khoroch-niyom-2026-bn",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/blog/heba-bil-ewaz-dalil-batil-mamla-prokriya-2026-bn",
+      "destination": "/bn/blog/heba-dalil-khoroch-o-heba-bil-ewaz-parthokko-2026",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/blog/heba-bil-ewaz-dalil-khoroch-2026",
+      "destination": "/bn/blog/heba-dalil-khoroch-o-heba-bil-ewaz-parthokko-2026",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/blog/heba-bil-ewaz-dalil-ki-shadharon-heba-parthokko-batil",
+      "destination": "/bn/blog/heba-dalil-khoroch-o-heba-bil-ewaz-parthokko-2026",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/blog/heba-bil-ewaz-dalil-batil-korar-niyom-2026",
+      "destination": "/bn/blog/heba-dalil-khoroch-o-heba-bil-ewaz-parthokko-2026",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/blog/heba-bil-ewaz-dalil-ki-batil-niyom-2026",
+      "destination": "/bn/blog/heba-dalil-khoroch-o-heba-bil-ewaz-parthokko-2026",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/blog/heba-danpatra-ain-bangladesh",
+      "destination": "/bn/blog/heba-dalil-khoroch-o-heba-bil-ewaz-parthokko-2026",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/blog/flat-apartment-registration-fee-bangladesh",
+      "destination": "/bn/blog/jomi-registry-khoroch-sarkaree-fee-bd",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/blog/jomi-nibondhon-kharch-bangladesh-2026",
+      "destination": "/bn/blog/jomi-registry-khoroch-sarkaree-fee-bd",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/blog/jomi-registry-sub-registry-office-gopon-khoroch-dalal-syndicate",
+      "destination": "/bn/blog/jomi-registry-khoroch-sarkaree-fee-bd",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/blog/bail-bond-ki-jamin-bond-rules-bangladesh-2026",
+      "destination": "/bn/blog/agam-jamin-haikort-khoroch-2026",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/blog/asami-jamin-batil-crpc-497-2026-bn",
+      "destination": "/bn/blog/agam-jamin-haikort-khoroch-2026",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/blog/bail-er-jonno-ki-ki-lagbe-bangladesh",
+      "destination": "/bn/blog/agam-jamin-haikort-khoroch-2026",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/blog/jamin-batil-hobar-karon-crpc-cancellation-of-bail",
+      "destination": "/bn/blog/agam-jamin-haikort-khoroch-2026",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/blog/faujdari-mamlay-jaminer-niyom-khoroch-2026-bn",
+      "destination": "/bn/blog/agam-jamin-haikort-khoroch-2026",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/blog/how-to-get-bail-bangladesh-2026-bn",
+      "destination": "/bn/blog/agam-jamin-haikort-khoroch-2026",
       "statusCode": 301
     }
   ],

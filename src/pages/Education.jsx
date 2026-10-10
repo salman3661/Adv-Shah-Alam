@@ -27,7 +27,7 @@ const Education = () => {
             >
                 <div className="container mx-auto px-6 mb-12 text-center">
                     <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4"
-                        style={{ color: 'var(--text)', fontFamily: "'Playfair Display', serif" }}>
+                        style={{ color: 'var(--text)', fontFamily: "Georgia, serif" }}>
                         Advocate Md. Shah Alam – Career &amp; Education Journey
                     </h1>
                     <p className="max-w-2xl mx-auto"

@@ -137,7 +137,7 @@ const ServicePage = ({ metaTitle, metaDesc, canonicalUrl, h1, intro, coverage, f
 
                     <h1
                         className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold leading-tight mb-6"
-                        style={{ color: '#EEF2F8', fontFamily: "'Playfair Display', serif" }}>
+                        style={{ color: '#EEF2F8', fontFamily: "Georgia, serif" }}>
                         {h1}
                     </h1>
 
@@ -165,7 +165,7 @@ const ServicePage = ({ metaTitle, metaDesc, canonicalUrl, h1, intro, coverage, f
             <section className="py-16" style={{ background: 'var(--bg)' }}>
                 <div className="container mx-auto px-6 max-w-5xl">
                     <h2 className="text-2xl md:text-3xl font-serif font-bold mb-8"
-                        style={{ color: 'var(--text)', fontFamily: "'Playfair Display', serif" }}>
+                        style={{ color: 'var(--text)', fontFamily: "Georgia, serif" }}>
                         What We Cover
                     </h2>
                     <div className="grid sm:grid-cols-2 gap-4">
@@ -191,7 +191,7 @@ const ServicePage = ({ metaTitle, metaDesc, canonicalUrl, h1, intro, coverage, f
                     <div className="container mx-auto px-6 max-w-5xl">
                         <motion.h2 initial={{ opacity: 0, y: 14 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
                             className="text-2xl md:text-3xl font-serif font-bold mb-10"
-                            style={{ color: 'var(--text)', fontFamily: "'Playfair Display', serif" }}>
+                            style={{ color: 'var(--text)', fontFamily: "Georgia, serif" }}>
                             How We Help You
                         </motion.h2>
 
@@ -279,7 +279,7 @@ const ServicePage = ({ metaTitle, metaDesc, canonicalUrl, h1, intro, coverage, f
                 <section className="py-16" style={{ background: 'var(--surface)' }}>
                     <div className="container mx-auto px-6 max-w-5xl">
                         <h2 className="text-2xl md:text-3xl font-serif font-bold mb-8"
-                            style={{ color: 'var(--text)', fontFamily: "'Playfair Display', serif" }}>
+                            style={{ color: 'var(--text)', fontFamily: "Georgia, serif" }}>
                             Frequently Asked Questions
                         </h2>
                         <div className="space-y-3">
@@ -387,7 +387,7 @@ const ServicePage = ({ metaTitle, metaDesc, canonicalUrl, h1, intro, coverage, f
                         className="glass-card p-10 text-center" style={{ borderColor: 'var(--accent)' }}>
                         <span className="label-accent block mb-3">Book a Consultation</span>
                         <h2 className="text-2xl md:text-3xl font-serif font-bold mb-4"
-                            style={{ color: 'var(--text)', fontFamily: "'Playfair Display', serif" }}>
+                            style={{ color: 'var(--text)', fontFamily: "Georgia, serif" }}>
                             {ctaText || 'Need Expert Legal Help?'}
                         </h2>
                         <p className="text-sm mb-2 max-w-xl mx-auto" style={{ color: 'var(--text-muted)' }}>

@@ -113,7 +113,7 @@ const Contact = ({ lang = 'en' }) => {
                         {isBn ? 'আপনার কথা আমরা শুনতে চাই' : 'Get in Touch'}
                     </motion.span>
                     <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
-                        className="text-4xl md:text-5xl font-serif font-bold mb-4" style={{ color: 'var(--text)', fontFamily: isBn ? 'inherit' : "'Playfair Display', serif" }}>
+                        className="text-4xl md:text-5xl font-serif font-bold mb-4" style={{ color: 'var(--text)', fontFamily: isBn ? 'inherit' : "Georgia, serif" }}>
                         {isBn ? 'যোগাযোগ করুন' : 'Contact Us'}
                     </motion.h2>
                     <motion.div initial={{ scaleX: 0 }} whileInView={{ scaleX: 1 }} viewport={{ once: true }} transition={{ delay: 0.2 }}
@@ -129,7 +129,7 @@ const Contact = ({ lang = 'en' }) => {
                 <div className="grid lg:grid-cols-2 gap-12">
                     {/* Left: Info + Map */}
                     <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="space-y-4">
-                        <h3 className="text-2xl font-serif font-bold mb-2" style={{ color: 'var(--text)', fontFamily: isBn ? 'inherit' : "'Playfair Display', serif" }}>
+                        <h3 className="text-2xl font-serif font-bold mb-2" style={{ color: 'var(--text)', fontFamily: isBn ? 'inherit' : "Georgia, serif" }}>
                             {isBn ? 'আসুন, আপনার সমস্যা নিয়ে কথা বলি' : "Let's Discuss Your Case"}
                         </h3>
                         <p className="text-sm leading-relaxed mb-3" style={{ color: 'var(--text-muted)' }}>
@@ -211,7 +211,7 @@ const Contact = ({ lang = 'en' }) => {
                                     <motion.div key="whatsapp"
                                         initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -8 }}
                                         transition={{ duration: 0.2 }}>
-                                        <h3 className="text-xl font-serif font-bold mb-1" style={{ color: 'var(--text)', fontFamily: isBn ? 'inherit' : "'Playfair Display', serif" }}>
+                                        <h3 className="text-xl font-serif font-bold mb-1" style={{ color: 'var(--text)', fontFamily: isBn ? 'inherit' : "Georgia, serif" }}>
                                             {isBn ? 'আপনার কথা শেয়ার করুন' : 'Send Case Details'}
                                         </h3>
                                         <p className="text-sm mb-6" style={{ color: 'var(--text-muted)' }}>
@@ -291,7 +291,7 @@ const Contact = ({ lang = 'en' }) => {
                                     <motion.div key="callback"
                                         initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -8 }}
                                         transition={{ duration: 0.2 }}>
-                                        <h3 className="text-xl font-serif font-bold mb-1" style={{ color: 'var(--text)', fontFamily: isBn ? 'inherit' : "'Playfair Display', serif" }}>
+                                        <h3 className="text-xl font-serif font-bold mb-1" style={{ color: 'var(--text)', fontFamily: isBn ? 'inherit' : "Georgia, serif" }}>
                                             {isBn ? 'সরাসরি কথা বলুন' : 'Request a Direct Call'}
                                         </h3>
                                         <p className="text-sm mb-6" style={{ color: 'var(--text-muted)' }}>

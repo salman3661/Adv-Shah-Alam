@@ -82,7 +82,7 @@ const BlogCardEn = ({ post, isRecent = false }) => {
                     className="text-lg md:text-xl font-bold leading-snug mb-3 group-hover:text-[var(--accent)] transition-colors"
                     style={{
                         color: 'var(--text)',
-                        fontFamily: "'Playfair Display', serif",
+                        fontFamily: "Georgia, serif",
                         lineHeight: 1.35
                     }}
                 >
@@ -262,7 +262,7 @@ const Blog = () => {
                         className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold mb-6 leading-tight"
                         style={{
                             color: 'var(--text)',
-                            fontFamily: "'Playfair Display', serif",
+                            fontFamily: "Georgia, serif",
                             letterSpacing: '-0.02em'
                         }}
                     >
@@ -405,7 +405,7 @@ const Blog = () => {
                                     </div>
                                     <h2
                                         className="text-2xl md:text-3xl font-serif font-bold mb-3 leading-snug"
-                                        style={{ color: 'var(--text)', fontFamily: "'Playfair Display', serif" }}
+                                        style={{ color: 'var(--text)', fontFamily: "Georgia, serif" }}
                                     >
                                         <Link to={`/blog/${featuredPost.slug}`} className="hover:text-[var(--accent)] transition-colors">
                                             {featuredPost.title}
@@ -529,7 +529,7 @@ const Blog = () => {
                         <Link
                             to="/bn/blog"
                             className="inline-flex items-center gap-2 text-sm font-bold px-6 py-3 rounded-2xl border transition-all hover:bg-[var(--accent-subtle)] shadow-sm"
-                            style={{ color: 'var(--accent)', borderColor: 'var(--accent)', fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif" }}
+                            style={{ color: 'var(--accent)', borderColor: 'var(--accent)', fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif" }}
                         >
                             🇧🇩 বাংলা আইনি জ্ঞান কেন্দ্র ও ব্লগ দেখুন
                         </Link>

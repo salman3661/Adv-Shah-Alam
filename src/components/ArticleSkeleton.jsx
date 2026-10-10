@@ -35,7 +35,7 @@ const ArticleSkeleton = ({ meta, lang = 'en' }) => {
                     {/* Title */}
                     {title ? (
                         <h1 style={{
-                            fontFamily: isBn ? "'SolaimanLipi', 'Noto Serif Bengali', serif" : "'Playfair Display', serif",
+                            fontFamily: isBn ? "'Noto Serif Bengali', serif" : "Georgia, serif",
                             fontSize: 'clamp(1.875rem, 4vw, 3.5rem)',
                             fontWeight: 800, lineHeight: 1.2,
                             color: 'var(--hero-text)',

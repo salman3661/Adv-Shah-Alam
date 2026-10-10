@@ -374,7 +374,7 @@ const AdvocatePage = () => {
                             </span>
                             <h1
                                 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold leading-tight mb-4"
-                                style={{ color: 'var(--hero-text)', fontFamily: "'Playfair Display', serif" }}
+                                style={{ color: 'var(--hero-text)', fontFamily: "Georgia, serif" }}
                             >
                                 Advocate Md. Shah Alam – Trusted Lawyer in Bangladesh
                             </h1>
@@ -452,7 +452,7 @@ const AdvocatePage = () => {
                     <div className="glass-card p-8 rounded-2xl">
                         <h2
                             className="text-xl font-bold mb-6 flex items-center gap-2"
-                            style={{ color: 'var(--accent)', fontFamily: "'Playfair Display', serif" }}
+                            style={{ color: 'var(--accent)', fontFamily: "Georgia, serif" }}
                         >
                             <Scale size={20} /> Quick Facts
                         </h2>
@@ -494,7 +494,7 @@ const AdvocatePage = () => {
                         <div>
                             <h2
                                 className="text-2xl md:text-3xl font-serif font-bold mb-6"
-                                style={{ color: 'var(--text)', fontFamily: "'Playfair Display', serif" }}
+                                style={{ color: 'var(--text)', fontFamily: "Georgia, serif" }}
                             >
                                 Professional Background
                             </h2>
@@ -584,7 +584,7 @@ const AdvocatePage = () => {
                 <div className="container mx-auto px-6 max-w-5xl">
                     <h2
                         className="text-2xl md:text-3xl font-serif font-bold mb-3"
-                        style={{ color: 'var(--text)', fontFamily: "'Playfair Display', serif" }}
+                        style={{ color: 'var(--text)', fontFamily: "Georgia, serif" }}
                     >
                         Practice Areas
                     </h2>
@@ -627,7 +627,7 @@ const AdvocatePage = () => {
                     </span>
                     <h2
                         className="text-2xl md:text-3xl font-serif font-bold mb-3"
-                        style={{ color: 'var(--text)', fontFamily: "'Playfair Display', serif" }}
+                        style={{ color: 'var(--text)', fontFamily: "Georgia, serif" }}
                     >
                         Notable Cases & Legal Engagements
                     </h2>
@@ -731,7 +731,7 @@ const AdvocatePage = () => {
                                     style={{ background: 'rgba(198,167,94,0.12)', color: 'var(--gold)' }}>
                                     <Camera size={14} /> Courtroom Appearance & Media Archive
                                 </div>
-                                <h3 className="text-lg md:text-xl font-serif font-bold mb-2" style={{ color: 'var(--text)', fontFamily: "'Playfair Display', serif" }}>
+                                <h3 className="text-lg md:text-xl font-serif font-bold mb-2" style={{ color: 'var(--text)', fontFamily: "Georgia, serif" }}>
                                     Official Legal Standing & Public Record
                                 </h3>
                                 <p className="text-sm leading-relaxed mb-5" style={{ color: 'var(--text-secondary)' }}>
@@ -797,7 +797,7 @@ const AdvocatePage = () => {
                     <div className="container mx-auto px-6 max-w-5xl">
                         <h2
                             className="text-2xl md:text-3xl font-serif font-bold mb-3"
-                            style={{ color: 'var(--text)', fontFamily: "'Playfair Display', serif" }}
+                            style={{ color: 'var(--text)', fontFamily: "Georgia, serif" }}
                         >
                             Latest Legal Articles
                         </h2>
@@ -848,7 +848,7 @@ const AdvocatePage = () => {
                 <div className="container mx-auto px-6 max-w-5xl">
                     <h2
                         className="text-2xl md:text-3xl font-serif font-bold mb-8"
-                        style={{ color: 'var(--text)', fontFamily: "'Playfair Display', serif" }}
+                        style={{ color: 'var(--text)', fontFamily: "Georgia, serif" }}
                     >
                         Frequently Asked Questions
                     </h2>
@@ -875,7 +875,7 @@ const AdvocatePage = () => {
                         </span>
                         <h2
                             className="text-2xl md:text-3xl font-serif font-bold mb-3"
-                            style={{ color: 'var(--hero-text)', fontFamily: "'Playfair Display', serif" }}
+                            style={{ color: 'var(--hero-text)', fontFamily: "Georgia, serif" }}
                         >
                             Speak with Advocate Shah Alam Today
                         </h2>

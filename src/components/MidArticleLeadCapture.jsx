@@ -28,7 +28,7 @@ const MidArticleLeadCapture = ({ lang = 'bn' }) => {
                         {isBn ? 'আইনি কেস মূল্যায়ন ও অ্যাপয়েন্টমেন্ট' : 'Legal Case Evaluation & Chamber Appointment'}
                     </div>
 
-                    <h3 className="text-xl md:text-2xl font-bold mb-2.5" style={{ color: 'var(--text, #fff)', fontFamily: isBn ? "'SolaimanLipi', sans-serif" : "'Playfair Display', serif" }}>
+                    <h3 className="text-xl md:text-2xl font-bold mb-2.5" style={{ color: 'var(--text, #fff)', fontFamily: isBn ? "'Noto Serif Bengali', sans-serif" : "Georgia, serif" }}>
                         {isBn 
                             ? 'আপনার মামলার নথি ও কাগজপত্র নিয়ে বিজ্ঞ আইনজীবীর সাথে বসুন' 
                             : 'Have Your Case Documents Reviewed by a Supreme Court Advocate'}

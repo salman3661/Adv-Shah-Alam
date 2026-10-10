@@ -22,6 +22,7 @@
 import fs   from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { buildEntityGraph, buildHreflang, jsonLd } from '../src/utils/seoSchema.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT   = path.resolve(__dirname, '..');
@@ -61,6 +62,7 @@ function jsonLoad(p) { try { return JSON.parse(fs.readFileSync(p,'utf8').replace
 function buildPage(base, { title, description, canonical, body, lang='en', extraHead='', ogImage='' }) {
   let h = base;
   h = h.replace(/<html lang="[^"]*"/, `<html lang="${lang}"`);
+  if (lang !== 'bn') h = h.replace(/\s*<link rel="preload" href="\/fonts\/NotoSerifBengali[^>]*>/g, '');
   h = h.replace(/<title>[^<]*<\/title>/, `<title>${escHtml(title)}</title>`);
   h = h.replace(/<meta name="description"[^>]*>/, `<meta name="description" content="${escHtml(description)}">`);
   
@@ -991,12 +993,9 @@ ${BN_DISCLAIMER}${bnMeta.body}${BN_CTA}`,
     const postCanonical = `${BASE}/blog/${post.slug}`;
     const enMetaDesc = (post.metaDescription || (post.heroIntro || '').replace(/<[^>]*>/g, '').trim()).slice(0, 160);
 
-    const pairedBnSlug = post.bnSlug || (bnPosts.find(b => b.slug === post.slug) ? post.slug : null);
-
-    let hreflangTags = `<link rel="alternate" hreflang="en" href="${postCanonical}" />\n<link rel="alternate" hreflang="x-default" href="${postCanonical}" />`;
-    if (pairedBnSlug) {
-      hreflangTags += `\n<link rel="alternate" hreflang="bn" href="${BASE}/bn/blog/${pairedBnSlug}" />`;
-    }
+    // Explicit, reciprocal pairs only (scripts/audit-hreflang.mjs keeps the data clean) - same tags as the React page
+    const hreflangTags = buildHreflang({ lang: 'en', slug: post.slug, pairedSlug: post.bnSlug })
+      .map((h) => `<link rel="alternate" hreflang="${h.hrefLang}" href="${h.href}" />`).join('\n');
 
     const articleSchema = {
       '@context': 'https://schema.org',
@@ -1033,26 +1032,12 @@ ${BN_DISCLAIMER}${bnMeta.body}${BN_CTA}`,
       ],
     };
 
-    let faqSchemaStr = '';
-    if (Array.isArray(post.faqs) && post.faqs.length > 0) {
-      const faqSchema = {
-        '@context': 'https://schema.org',
-        '@type': 'FAQPage',
-        mainEntity: post.faqs.map(f => ({
-          '@type': 'Question',
-          name: f.question || f.q || '',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: f.answer || f.a || '',
-          },
-        })),
-      };
-      faqSchemaStr = `\n<script type="application/ld+json">${JSON.stringify(faqSchema)}</script>`;
-    }
+    const entityGraph = buildEntityGraph({ url: postCanonical, lang: 'en', faqs: post.faqs });
 
     const extraHead = `${hreflangTags}
-<script type="application/ld+json">${JSON.stringify(articleSchema)}</script>
-<script type="application/ld+json">${JSON.stringify(breadcrumbSchema)}</script>${faqSchemaStr}`;
+<script type="application/ld+json">${jsonLd(articleSchema)}</script>
+<script type="application/ld+json">${jsonLd(breadcrumbSchema)}</script>
+<script type="application/ld+json">${jsonLd(entityGraph)}</script>`;
 
     const html = buildPage(base, {
       title: post.metaTitle || post.title,
@@ -1075,15 +1060,8 @@ ${BN_DISCLAIMER}${bnMeta.body}${BN_CTA}`,
     const postCanonical = `${BASE}/bn/blog/${post.slug}`;
     const bnMetaDesc = (post.metaDescription || (post.heroIntro || '').replace(/<[^>]*>/g, '').trim()).slice(0, 160);
 
-    const pairedEnSlug = post.enSlug || (enPosts.find(e => e.slug === post.slug) ? post.slug : null);
-
-    let hreflangTags = `<link rel="alternate" hreflang="bn" href="${postCanonical}" />`;
-    if (pairedEnSlug) {
-      hreflangTags += `\n<link rel="alternate" hreflang="en" href="${BASE}/blog/${pairedEnSlug}" />`;
-      hreflangTags += `\n<link rel="alternate" hreflang="x-default" href="${BASE}/blog/${pairedEnSlug}" />`;
-    } else {
-      hreflangTags += `\n<link rel="alternate" hreflang="x-default" href="${BASE}/" />`;
-    }
+    const hreflangTags = buildHreflang({ lang: 'bn', slug: post.slug, pairedSlug: post.enSlug })
+      .map((h) => `<link rel="alternate" hreflang="${h.hrefLang}" href="${h.href}" />`).join('\n');
 
     const articleSchema = {
       '@context': 'https://schema.org',
@@ -1121,26 +1099,12 @@ ${BN_DISCLAIMER}${bnMeta.body}${BN_CTA}`,
       ],
     };
 
-    let faqSchemaStr = '';
-    if (Array.isArray(post.faqs) && post.faqs.length > 0) {
-      const faqSchema = {
-        '@context': 'https://schema.org',
-        '@type': 'FAQPage',
-        mainEntity: post.faqs.map(f => ({
-          '@type': 'Question',
-          name: f.question || f.q || '',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: f.answer || f.a || '',
-          },
-        })),
-      };
-      faqSchemaStr = `\n<script type="application/ld+json">${JSON.stringify(faqSchema)}</script>`;
-    }
+    const entityGraph = buildEntityGraph({ url: postCanonical, lang: 'bn', faqs: post.faqs });
 
     const extraHead = `${hreflangTags}
-<script type="application/ld+json">${JSON.stringify(articleSchema)}</script>
-<script type="application/ld+json">${JSON.stringify(breadcrumbSchema)}</script>${faqSchemaStr}`;
+<script type="application/ld+json">${jsonLd(articleSchema)}</script>
+<script type="application/ld+json">${jsonLd(breadcrumbSchema)}</script>
+<script type="application/ld+json">${jsonLd(entityGraph)}</script>`;
 
     const html = buildPage(base, {
       title: post.metaTitle || post.title || 'বাংলাদেশ আইনি গাইড',

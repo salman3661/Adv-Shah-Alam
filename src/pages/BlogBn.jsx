@@ -89,7 +89,7 @@ const BlogCardBn = ({ post, isRecent = false }) => {
                             style={{
                                 background: catColor + '18',
                                 color: catColor,
-                                fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif"
+                                fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif"
                             }}
                         >
                             {post.category}
@@ -97,7 +97,7 @@ const BlogCardBn = ({ post, isRecent = false }) => {
                         {isRecent && (
                             <span
                                 className="inline-flex items-center gap-0.5 text-[10px] font-extrabold px-2 py-0.5 rounded-full text-white shadow-sm"
-                                style={{ background: 'linear-gradient(135deg, #10b981, #059669)', fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif" }}
+                                style={{ background: 'linear-gradient(135deg, #10b981, #059669)', fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif" }}
                             >
                                 <Sparkles size={10} /> নতুন
                             </span>
@@ -105,7 +105,7 @@ const BlogCardBn = ({ post, isRecent = false }) => {
                     </div>
                     <span
                         className="inline-flex items-center gap-1 text-xs"
-                        style={{ color: 'var(--text-muted)', fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif" }}
+                        style={{ color: 'var(--text-muted)', fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif" }}
                     >
                         <Clock size={13} style={{ color: catColor }} />
                         {post.readTime}
@@ -117,7 +117,7 @@ const BlogCardBn = ({ post, isRecent = false }) => {
                     className="text-lg md:text-xl font-bold leading-snug mb-3 group-hover:text-[var(--accent)] transition-colors"
                     style={{
                         color: 'var(--text)',
-                        fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif",
+                        fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif",
                         lineHeight: 1.35
                     }}
                 >
@@ -131,7 +131,7 @@ const BlogCardBn = ({ post, isRecent = false }) => {
                     className="text-sm leading-relaxed line-clamp-3 mb-4 flex-1"
                     style={{
                         color: 'var(--text-secondary)',
-                        fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif",
+                        fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif",
                         fontSize: '0.925rem',
                         lineHeight: 1.7
                     }}
@@ -151,11 +151,11 @@ const BlogCardBn = ({ post, isRecent = false }) => {
                             height="28"
                         />
                         <div className="flex flex-col">
-                            <span className="text-xs font-semibold leading-tight" style={{ color: 'var(--text)', fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif" }}>
+                            <span className="text-xs font-semibold leading-tight" style={{ color: 'var(--text)', fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif" }}>
                                 অ্যাডভোকেট মো. শাহ আলম
                             </span>
                             {pubDateFormatted && (
-                                <span className="text-[11px] leading-tight mt-0.5 flex items-center gap-1" style={{ color: 'var(--text-muted)', fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif" }}>
+                                <span className="text-[11px] leading-tight mt-0.5 flex items-center gap-1" style={{ color: 'var(--text-muted)', fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif" }}>
                                     <Calendar size={10} /> {pubDateFormatted}
                                 </span>
                             )}
@@ -168,7 +168,7 @@ const BlogCardBn = ({ post, isRecent = false }) => {
                         style={{
                             background: 'var(--accent-subtle)',
                             color: 'var(--accent)',
-                            fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif"
+                            fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif"
                         }}
                         aria-label={`পড়ুন: ${post.title}`}
                     >
@@ -347,7 +347,7 @@ const BlogBn = () => {
                             background: 'var(--accent-subtle)',
                             color: 'var(--accent)',
                             borderColor: 'rgba(198,167,94,0.25)',
-                            fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif"
+                            fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif"
                         }}
                     >
                         <Scale size={15} style={{ color: 'var(--gold)' }} />
@@ -358,7 +358,7 @@ const BlogBn = () => {
                         className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
                         style={{
                             color: 'var(--text)',
-                            fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif",
+                            fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif",
                             letterSpacing: '-0.02em'
                         }}
                     >
@@ -369,14 +369,14 @@ const BlogBn = () => {
                         className="text-base md:text-lg mb-8 max-w-2xl mx-auto leading-relaxed"
                         style={{
                             color: 'var(--text-secondary)',
-                            fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif"
+                            fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif"
                         }}
                     >
                         জমি জমা, জামিন, পারিবারিক বিবাদ ও ফৌজদারি মামলার নির্ভরযোগ্য ও সহজ বাংলা আইনি নির্দেশিকা।
                     </p>
 
                     {/* Trust Badges */}
-                    <div className="flex flex-wrap justify-center items-center gap-6 mb-10 text-xs font-semibold" style={{ color: 'var(--text-muted)', fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif" }}>
+                    <div className="flex flex-wrap justify-center items-center gap-6 mb-10 text-xs font-semibold" style={{ color: 'var(--text-muted)', fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif" }}>
                         <span className="flex items-center gap-1.5">
                             <ShieldCheck size={16} className="text-emerald-500" /> ১০০% আইনি ও নজিরনির্ভর
                         </span>
@@ -400,7 +400,7 @@ const BlogBn = () => {
                             style={{
                                 background: 'transparent',
                                 color: 'var(--text)',
-                                fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif"
+                                fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif"
                             }}
                         />
 
@@ -413,7 +413,7 @@ const BlogBn = () => {
                                         style={{
                                             background: 'var(--accent-subtle)',
                                             color: 'var(--accent)',
-                                            fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif"
+                                            fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif"
                                         }}
                                     >
                                         {filtered.length} টি ফলাফল
@@ -431,7 +431,7 @@ const BlogBn = () => {
                                     className="text-xs px-4 py-2 rounded-lg font-bold text-white shadow-md transition-all hover:scale-105"
                                     style={{
                                         background: 'linear-gradient(135deg, var(--accent), #1e1b4b)',
-                                        fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif"
+                                        fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif"
                                     }}
                                 >
                                     খুঁজুন
@@ -458,13 +458,13 @@ const BlogBn = () => {
                                                 color: '#fff',
                                                 borderColor: 'var(--accent)',
                                                 boxShadow: '0 4px 14px rgba(26,63,191,0.3)',
-                                                fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif"
+                                                fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif"
                                             }
                                             : {
                                                 background: 'var(--surface)',
                                                 color: 'var(--text-secondary)',
                                                 borderColor: 'var(--card-border)',
-                                                fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif"
+                                                fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif"
                                             }
                                     }
                                 >
@@ -500,16 +500,16 @@ const BlogBn = () => {
                             <div className="flex flex-col md:flex-row gap-6 items-start justify-between">
                                 <div className="flex-1">
                                     <div className="flex items-center gap-2 mb-3">
-                                        <span className="inline-flex items-center gap-1 text-xs font-bold px-3 py-1 rounded-full text-white shadow-sm" style={{ background: 'linear-gradient(135deg, #f59e0b, #be185d)', fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif" }}>
+                                        <span className="inline-flex items-center gap-1 text-xs font-bold px-3 py-1 rounded-full text-white shadow-sm" style={{ background: 'linear-gradient(135deg, #f59e0b, #be185d)', fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif" }}>
                                             <TrendingUp size={13} /> সম্পাদকের বাছাই — শীর্ষ আইনি নির্দেশিকা
                                         </span>
-                                        <span className="text-xs text-[var(--text-muted)]" style={{ fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif" }}>
+                                        <span className="text-xs text-[var(--text-muted)]" style={{ fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif" }}>
                                             {featuredPost.readTime}
                                         </span>
                                     </div>
                                     <h2
                                         className="text-2xl md:text-3xl font-bold mb-3 leading-snug"
-                                        style={{ color: 'var(--text)', fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif" }}
+                                        style={{ color: 'var(--text)', fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif" }}
                                     >
                                         <Link to={`/bn/blog/${featuredPost.slug}`} className="hover:text-[var(--accent)] transition-colors">
                                             {featuredPost.title}
@@ -517,7 +517,7 @@ const BlogBn = () => {
                                     </h2>
                                     <p
                                         className="text-sm md:text-base leading-relaxed line-clamp-3 mb-5"
-                                        style={{ color: 'var(--text-secondary)', fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif" }}
+                                        style={{ color: 'var(--text-secondary)', fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif" }}
                                     >
                                         {stripHtml(featuredPost.heroIntro)}
                                     </p>
@@ -532,9 +532,9 @@ const BlogBn = () => {
                                             style={{ objectPosition: 'center top' }}
                                         />
                                         <div>
-                                            <p className="text-xs font-bold" style={{ color: 'var(--text)', fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif" }}>অ্যাডভোকেট মো. শাহ আলম</p>
+                                            <p className="text-xs font-bold" style={{ color: 'var(--text)', fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif" }}>অ্যাডভোকেট মো. শাহ আলম</p>
                                             {featuredPost.publishedDate && (
-                                                <p className="text-xs" style={{ color: 'var(--text-muted)', fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif" }}>
+                                                <p className="text-xs" style={{ color: 'var(--text-muted)', fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif" }}>
                                                     {new Date(featuredPost.publishedDate).toLocaleDateString('bn-BD', { day: 'numeric', month: 'short', year: 'numeric' })}
                                                 </p>
                                             )}
@@ -543,7 +543,7 @@ const BlogBn = () => {
                                     <Link
                                         to={`/bn/blog/${featuredPost.slug}`}
                                         className="inline-flex items-center gap-2 text-sm font-bold px-6 py-3 rounded-xl text-white shadow-lg transition-all hover:scale-105"
-                                        style={{ background: 'linear-gradient(135deg, var(--accent), #1e1b4b)', fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif" }}
+                                        style={{ background: 'linear-gradient(135deg, var(--accent), #1e1b4b)', fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif" }}
                                     >
                                         সম্পূর্ণ আইনি নিবন্ধটি পড়ুন <ChevronRight size={18} />
                                     </Link>
@@ -560,10 +560,10 @@ const BlogBn = () => {
                     {/* ── Sort & Results Control Bar ── */}
                     <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-8 pb-4 border-b" style={{ borderColor: 'var(--card-border)' }}>
                         <div className="flex items-center gap-2">
-                            <span className="text-sm md:text-base font-bold" style={{ color: 'var(--text)', fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif" }}>
+                            <span className="text-sm md:text-base font-bold" style={{ color: 'var(--text)', fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif" }}>
                                 {activeCategory === 'সব' ? 'সকল আইনি নির্দেশিকা' : activeCategory}
                             </span>
-                            <span className="text-xs px-2.5 py-0.5 rounded-full font-bold" style={{ background: 'var(--accent-subtle)', color: 'var(--accent)', fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif" }}>
+                            <span className="text-xs px-2.5 py-0.5 rounded-full font-bold" style={{ background: 'var(--accent-subtle)', color: 'var(--accent)', fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif" }}>
                                 {filtered.length} টি আর্টিকেল
                             </span>
                         </div>
@@ -573,14 +573,14 @@ const BlogBn = () => {
                             <button
                                 onClick={() => setSortBy('recent')}
                                 className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all ${sortBy === 'recent' ? 'bg-[var(--accent)] text-white shadow-sm' : 'text-[var(--text-secondary)] hover:text-[var(--text)]'}`}
-                                style={{ fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif" }}
+                                style={{ fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif" }}
                             >
                                 <Sparkles size={13} /> 🆕 সর্বশেষ প্রকাশিত (Newest)
                             </button>
                             <button
                                 onClick={() => setSortBy('popular')}
                                 className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all ${sortBy === 'popular' ? 'bg-[var(--accent)] text-white shadow-sm' : 'text-[var(--text-secondary)] hover:text-[var(--text)]'}`}
-                                style={{ fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif" }}
+                                style={{ fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif" }}
                             >
                                 <Flame size={13} /> 🔥 সর্বাধিক পঠিত (Popular)
                             </button>
@@ -590,12 +590,12 @@ const BlogBn = () => {
                     {filtered.length === 0 ? (
                         <div className="text-center py-20 rounded-2xl border" style={{ background: 'var(--surface)', borderColor: 'var(--card-border)', color: 'var(--text-muted)' }}>
                             <BookOpen size={48} className="mx-auto mb-4 text-[var(--accent)] opacity-50" />
-                            <h3 className="text-lg font-bold mb-2" style={{ fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif" }}>কোনো আইনি নিবন্ধ পাওয়া যায়নি</h3>
-                            <p className="text-sm mb-4" style={{ fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif" }}>অন্য কোনো শব্দ দিয়ে পুনরায় অনুসন্ধান করুন।</p>
+                            <h3 className="text-lg font-bold mb-2" style={{ fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif" }}>কোনো আইনি নিবন্ধ পাওয়া যায়নি</h3>
+                            <p className="text-sm mb-4" style={{ fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif" }}>অন্য কোনো শব্দ দিয়ে পুনরায় অনুসন্ধান করুন।</p>
                             <button
                                 onClick={() => { setSearchQuery(''); setActiveCategory('সব'); }}
                                 className="px-5 py-2 rounded-lg text-xs font-bold text-white bg-[var(--accent)] shadow-md transition-all hover:scale-105"
-                                style={{ fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif" }}
+                                style={{ fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif" }}
                             >
                                 সব পোস্ট দেখুন
                             </button>
@@ -618,13 +618,13 @@ const BlogBn = () => {
                                             background: 'var(--surface)',
                                             color: 'var(--accent)',
                                             borderColor: 'var(--accent)',
-                                            fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif"
+                                            fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif"
                                         }}
                                     >
                                         <BookOpen size={16} />
                                         আরও {Math.min(POSTS_PER_PAGE, filtered.length - visibleCount)}টি আর্টিকেল লোড করুন
                                     </button>
-                                    <p className="text-xs mt-3" style={{ color: 'var(--text-muted)', fontFamily: "var(--font-bn), 'SolaimanLipi', sans-serif" }}>
+                                    <p className="text-xs mt-3" style={{ color: 'var(--text-muted)', fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif" }}>
                                         {filtered.length} টির মধ্যে {Math.min(visibleCount, filtered.length)} টি দেখানো হচ্ছে
                                     </p>
                                 </div>

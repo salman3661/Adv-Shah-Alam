@@ -71,8 +71,8 @@ body {
   --wa-green: #25D366;
   --wa-green-hover: #1ebe5d;
 
-  --font-en: 'DM Sans', system-ui, sans-serif;
-  --font-bn: 'SolaimanLipi', 'Kalpurush', 'Noto Serif Bengali', 'Tiro Bangla', 'Hind Siliguri', sans-serif;
+  --font-en: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-bn: 'Noto Serif Bengali', 'Noto Sans Bengali', 'Nirmala UI', 'Vrinda', serif;
 
   font-family: var(--font-en);
   font-size: 16px;
@@ -86,37 +86,35 @@ body {
 
 
 /* ══════════════════════════════════════════════════════════
-   BENGALI FONT DEFINITIONS & DEFAULTS
-   font-display: optional — zero FOUT, no re-render flash
-   Fonts hosted locally in /public/fonts/ — no CDN wait
+   FONTS - one self-hosted family, zero third-party requests
+   Noto Serif Bengali (variable, wght 400-800), woff2, font-display: swap.
+   Split into two unicode-range subsets so the browser only downloads what a page uses:
+     bengali (U+0980-09FF ...) is preloaded in index.html; latin is tiny and loads on demand.
+   Everything else (DM Sans, Playfair Display, Tiro Bangla, SolaimanLipi, Kalpurush) was removed.
    ══════════════════════════════════════════════════════════ */
 
 @font-face {
-  font-family: 'SolaimanLipi';
+  font-family: 'Noto Serif Bengali';
   font-style: normal;
-  font-weight: 400;
-  font-display: optional;
-  src: url('/fonts/SolaimanLipi.woff2') format('woff2');
+  font-weight: 400 800;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url('/fonts/NotoSerifBengali-var-bengali.woff2') format('woff2');
+  unicode-range: U+0951-0952, U+0964-0965, U+0980-09FE, U+1CD0, U+1CD2, U+1CD5-1CD6, U+1CD8, U+1CE1, U+1CEA, U+1CED, U+1CF2, U+1CF5-1CF7, U+200C-200D, U+20B9, U+25CC, U+A8F1, U+11DF0-11DF1;
 }
 
 @font-face {
-  font-family: 'SolaimanLipi';
+  font-family: 'Noto Serif Bengali';
   font-style: normal;
-  font-weight: 700;
-  font-display: optional;
-  src: url('/fonts/SolaimanLipiBold.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Kalpurush';
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: optional;
-  src: url('/fonts/Kalpurush.woff2') format('woff2');
+  font-weight: 400 800;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url('/fonts/NotoSerifBengali-var-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 
-/* Every element on a Bengali page uses SolaimanLipi / Kalpurush */
+/* Every element on a Bengali page uses Noto Serif Bengali */
 html[lang="bn"] body,
 html[lang="bn"] h1,
 html[lang="bn"] h2,
@@ -166,7 +164,7 @@ ins.adsbygoogle[data-ad-status="unfilled"],
   font-family: var(--font-bn) !important;
 }
 
-/* English elements inside a Bengali page keep DM Sans */
+/* English elements inside a Bengali page use the system UI font */
 html[lang="bn"] .en-text,
 html[lang="bn"] [lang="en"] {
   font-family: var(--font-en);
@@ -291,8 +289,8 @@ html {
   --radius-full: 9999px;
 
   /* fonts */
-  --font-sans: 'DM Sans', system-ui, -apple-system, sans-serif;
-  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-serif: Georgia, 'Times New Roman', serif;
 }
 
 /* ============================================================

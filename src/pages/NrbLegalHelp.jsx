@@ -13,6 +13,8 @@ const GROUPS = [
     {
         title: 'Property & Land (Buying, Selling, Inheritance)',
         slugs: [
+            'power-of-attorney-from-abroad-bangladesh-land-sale-attestation-guide',
+            'nrb-inherited-property-recover-grabbed-land-dhaka',
             'buy-land-in-bangladesh-from-abroad-nrb-legal-checklist',
             'check-land-ownership-bangladesh-online-khatian-mutation-porcha',
             'land-mutation-namjari-from-abroad-step-by-step',
@@ -26,6 +28,7 @@ const GROUPS = [
     {
         title: 'Family Law (Divorce, Marriage, Custody)',
         slugs: [
+            'foreign-divorce-validity-bangladesh-talaq-registration-nrb-uk-usa',
             'divorce-in-bangladesh-for-expats-foreign-divorce-valid',
             'marriage-registration-bangladesh-nrb-foreign-spouse',
             'child-custody-bangladesh-when-parent-lives-abroad',
@@ -35,6 +38,7 @@ const GROUPS = [
     {
         title: 'Documents, Citizenship & Certificates',
         slugs: [
+            'dual-citizenship-nvr-bangladeshi-americans-legal-guide',
             'attest-documents-for-bangladesh-embassy-mofa-notary-guide',
             'dual-citizenship-nvr-bangladesh-nrb-guide',
             'police-clearance-certificate-bangladesh-from-abroad',
@@ -44,6 +48,7 @@ const GROUPS = [
     {
         title: 'Money, Business & Court Cases',
         slugs: [
+            'remittance-tax-nbr-scrutiny-property-purchase-bangladesh-nrb',
             'send-money-to-bangladesh-legally-remittance-rules-tax',
             'start-company-in-bangladesh-non-resident-registration-guide',
             'file-case-in-bangladesh-without-travelling-virtual-hearing',
@@ -77,7 +82,7 @@ const NrbLegalHelp = () => {
                     </span>
                     <h1
                         className="text-3xl md:text-5xl font-bold mb-4"
-                        style={{ color: 'var(--text)', fontFamily: "'Playfair Display', serif", lineHeight: 1.2 }}
+                        style={{ color: 'var(--text)', fontFamily: "Georgia, serif", lineHeight: 1.2 }}
                     >
                         Legal Help for NRBs in Bangladesh
                     </h1>
@@ -116,7 +121,7 @@ const NrbLegalHelp = () => {
                             <React.Fragment key={group.title}>
                                 <h2
                                     className="text-xl md:text-2xl font-bold mt-10 mb-4"
-                                    style={{ color: 'var(--text)', fontFamily: "'Playfair Display', serif" }}
+                                    style={{ color: 'var(--text)', fontFamily: "Georgia, serif" }}
                                 >
                                     {group.title}
                                 </h2>

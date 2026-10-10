@@ -53,7 +53,7 @@ const Footer = () => {
 
                     {/* Brand */}
                     <div className="sm:col-span-2 lg:col-span-1">
-                        <h3 className="font-serif font-bold text-2xl mb-1" style={{ color: 'var(--text)', fontFamily: isBn ? 'inherit' : "'Playfair Display', serif" }}>
+                        <h3 className="font-serif font-bold text-2xl mb-1" style={{ color: 'var(--text)', fontFamily: isBn ? 'inherit' : "Georgia, serif" }}>
                             {isBn ? 'এডভোকেট মোঃ শাহ আলম' : 'Adv. Md. Shah Alam'}
                         </h3>
                         <p className="text-sm font-semibold mb-3" style={{ color: 'var(--accent)' }}>

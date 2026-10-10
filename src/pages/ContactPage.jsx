@@ -230,20 +230,20 @@ const ContactForm = ({ isBn }) => {
         fontSize: '0.875rem',
         outline: 'none',
         transition: 'border-color 0.2s',
-        fontFamily: isBn ? "var(--font-bn), 'SolaimanLipi', sans-serif" : "var(--font-en), sans-serif"
+        fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : "var(--font-en), sans-serif"
     };
 
     if (submitted) {
         return (
             <div className="glass-card p-10 text-center rounded-2xl border" style={{ borderColor: 'var(--card-border)' }}>
                 <div className="text-4xl mb-4">✅</div>
-                <h3 className="text-xl font-bold mb-2" style={{ color: 'var(--text)', fontFamily: isBn ? "var(--font-bn), 'SolaimanLipi', sans-serif" : 'inherit' }}>
+                <h3 className="text-xl font-bold mb-2" style={{ color: 'var(--text)', fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>
                     {isBn ? 'বার্তা সফলভাবে পাঠানো হয়েছে!' : 'Message Sent!'}
                 </h3>
-                <p className="text-sm mb-6" style={{ color: 'var(--text-muted)', fontFamily: isBn ? "var(--font-bn), 'SolaimanLipi', sans-serif" : 'inherit' }}>
+                <p className="text-sm mb-6" style={{ color: 'var(--text-muted)', fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>
                     {isBn ? 'আপনার বার্তাটি সরাসরি হোয়াটসঅ্যাপে পাঠানো হয়েছে। অ্যাডভোকেট মো. শাহ আলম খুব শীঘ্রই যোগাযোগ করবেন।' : "Your inquiry has been sent via WhatsApp."}
                 </p>
-                <button onClick={() => setSubmitted(false)} className="btn-primary text-sm" style={{ fontFamily: isBn ? "var(--font-bn), 'SolaimanLipi', sans-serif" : 'inherit' }}>
+                <button onClick={() => setSubmitted(false)} className="btn-primary text-sm" style={{ fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>
                     {isBn ? 'আরেকটি বার্তা পাঠান' : 'Send Another Message'}
                 </button>
             </div>
@@ -253,10 +253,10 @@ const ContactForm = ({ isBn }) => {
     return (
         <div className="glass-card p-8 md:p-10 rounded-2xl shadow-xl border" style={{ borderColor: 'var(--card-border)' }}>
             <h2 className="text-2xl font-bold mb-2"
-                style={{ color: 'var(--text)', fontFamily: isBn ? "var(--font-bn), 'SolaimanLipi', sans-serif" : "'Playfair Display', serif" }}>
+                style={{ color: 'var(--text)', fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : "Georgia, serif" }}>
                 {isBn ? 'আইনি পরামর্শের জন্য বার্তা পাঠান' : 'Send Your Case Details'}
             </h2>
-            <p className="text-sm mb-7" style={{ color: 'var(--text-muted)', fontFamily: isBn ? "var(--font-bn), 'SolaimanLipi', sans-serif" : 'inherit' }}>
+            <p className="text-sm mb-7" style={{ color: 'var(--text-muted)', fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>
                 {isBn ? 'নিচের ফর্মে আপনার আইনি তথ্য দিন, সরাসরি হোয়াটসঅ্যাপে পরামর্শ দেওয়া হবে।' : "Fill out the form below and we'll respond via WhatsApp within a few hours."}
             </p>
 
@@ -264,7 +264,7 @@ const ContactForm = ({ isBn }) => {
                 <div className="grid sm:grid-cols-2 gap-5">
                     <div>
                         <label className="text-xs font-bold uppercase tracking-wider block mb-1.5"
-                            style={{ color: 'var(--text-muted)', fontFamily: isBn ? "var(--font-bn), 'SolaimanLipi', sans-serif" : 'inherit' }}>
+                            style={{ color: 'var(--text-muted)', fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>
                             {isBn ? 'আপনার পূর্ণ নাম *' : 'Full Name *'}
                         </label>
                         <input
@@ -277,7 +277,7 @@ const ContactForm = ({ isBn }) => {
                     </div>
                     <div>
                         <label className="text-xs font-bold uppercase tracking-wider block mb-1.5"
-                            style={{ color: 'var(--text-muted)', fontFamily: isBn ? "var(--font-bn), 'SolaimanLipi', sans-serif" : 'inherit' }}>
+                            style={{ color: 'var(--text-muted)', fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>
                             {isBn ? 'মোবাইল নম্বর *' : 'Phone Number *'}
                         </label>
                         <input
@@ -292,7 +292,7 @@ const ContactForm = ({ isBn }) => {
 
                 <div>
                     <label className="text-xs font-bold uppercase tracking-wider block mb-1.5"
-                        style={{ color: 'var(--text-muted)', fontFamily: isBn ? "var(--font-bn), 'SolaimanLipi', sans-serif" : 'inherit' }}>
+                        style={{ color: 'var(--text-muted)', fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>
                         {isBn ? 'আইনি বিষয়ের ক্যাটাগরি *' : 'Legal Matter Type *'}
                     </label>
                     <select
@@ -333,7 +333,7 @@ const ContactForm = ({ isBn }) => {
 
                 <div>
                     <label className="text-xs font-bold uppercase tracking-wider block mb-1.5"
-                        style={{ color: 'var(--text-muted)', fontFamily: isBn ? "var(--font-bn), 'SolaimanLipi', sans-serif" : 'inherit' }}>
+                        style={{ color: 'var(--text-muted)', fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>
                         {isBn ? 'মামলা বা ঘটনার বিবরণ *' : 'Case Details *'}
                     </label>
                     <textarea
@@ -348,11 +348,11 @@ const ContactForm = ({ isBn }) => {
 
                 <button type="submit" id="contact-submit-btn"
                     className="btn-primary w-full flex items-center justify-center gap-2 py-4 font-bold text-sm shadow-md rounded-xl"
-                    style={{ fontFamily: isBn ? "var(--font-bn), 'SolaimanLipi', sans-serif" : 'inherit' }}>
+                    style={{ fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>
                     <Send size={17} /> {isBn ? 'হোয়াটসঅ্যাপে পাঠান' : 'Send via WhatsApp'}
                 </button>
 
-                <p className="text-xs text-center" style={{ color: 'var(--text-muted)', fontFamily: isBn ? "var(--font-bn), 'SolaimanLipi', sans-serif" : 'inherit' }}>
+                <p className="text-xs text-center" style={{ color: 'var(--text-muted)', fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>
                     {isBn ? '🔒 আপনার পাঠানো তথ্য শতভাগ গোপন রাখা হয়।' : 'All consultations are strictly confidential.'}
                 </p>
             </form>
@@ -397,31 +397,31 @@ const ContactPage = ({ lang }) => {
                     style={{ background: 'radial-gradient(ellipse at 60% 50%, rgba(198,167,94,0.08) 0%, transparent 70%)' }} />
                 <div className="container mx-auto px-6 max-w-5xl relative z-10">
                     <nav className="mb-6 text-xs" aria-label="Breadcrumb">
-                        <ol className="flex items-center gap-2" style={{ color: 'var(--hero-muted)', fontFamily: isBn ? "var(--font-bn), 'SolaimanLipi', sans-serif" : 'inherit' }}>
+                        <ol className="flex items-center gap-2" style={{ color: 'var(--hero-muted)', fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>
                             <li><Link to={isBn ? '/bn/blog' : '/'} className="hover:underline" style={{ color: 'var(--hero-text-2)' }}>{isBn ? 'হোম' : 'Home'}</Link></li>
                             <li aria-hidden="true">/</li>
                             <li aria-current="page" style={{ color: 'var(--gold)' }}>{isBn ? 'যোগাযোগ' : 'Contact'}</li>
                         </ol>
                     </nav>
 
-                    <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold mb-4 border" style={{ background: 'rgba(198,167,94,0.1)', color: 'var(--gold)', borderColor: 'rgba(198,167,94,0.3)', fontFamily: isBn ? "var(--font-bn), 'SolaimanLipi', sans-serif" : 'inherit' }}>
+                    <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold mb-4 border" style={{ background: 'rgba(198,167,94,0.1)', color: 'var(--gold)', borderColor: 'rgba(198,167,94,0.3)', fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>
                         <Scale size={14} />
                         {isBn ? 'সুপ্রিম কোর্ট আইনজীবী সরাসরি পরামর্শ কার্যালয়' : 'Get Expert Legal Help'}
                     </div>
 
                     <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-4"
-                        style={{ color: 'var(--hero-text)', fontFamily: isBn ? "var(--font-bn), 'SolaimanLipi', sans-serif" : "'Playfair Display', serif" }}>
+                        style={{ color: 'var(--hero-text)', fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : "Georgia, serif" }}>
                         {isBn ? 'অ্যাডভোকেট মো. শাহ আলম – সরাসরি যোগাযোগ ও চেম্বার' : 'Contact Advocate Md. Shah Alam'}
                     </h1>
 
-                    <p className="text-base md:text-lg leading-relaxed max-w-3xl mb-8" style={{ color: 'var(--hero-text-2)', fontFamily: isBn ? "var(--font-bn), 'SolaimanLipi', sans-serif" : 'inherit' }}>
+                    <p className="text-base md:text-lg leading-relaxed max-w-3xl mb-8" style={{ color: 'var(--hero-text-2)', fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>
                         {isBn
                             ? 'বাংলাদেশ সুপ্রিম কোর্ট ও ঢাকা জজ কোর্টের অভিজ্ঞ আইনজীবীর সাথে ফোন, হোয়াটসঅ্যাপ বা উত্তরা ও কোর্ট চেম্বারে সরাসরি সাক্ষাতের মাধ্যমে পূর্ণাঙ্গ আইনি সমাধান নিশ্চিত করুন।'
                             : 'Trusted criminal, divorce, bail, and property lawyer in Uttara, Dhaka. Contact us for a confidential consultation — available 6 days a week.'}
                     </p>
 
                     <div className="flex flex-wrap gap-4">
-                        <a href={`tel:${CALL_NUMBER}`} className="btn-primary flex items-center gap-2 text-sm px-6 py-3.5 shadow-lg" style={{ fontFamily: isBn ? "var(--font-bn), 'SolaimanLipi', sans-serif" : 'inherit' }}>
+                        <a href={`tel:${CALL_NUMBER}`} className="btn-primary flex items-center gap-2 text-sm px-6 py-3.5 shadow-lg" style={{ fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>
                             <Phone size={17} /> {isBn ? 'সরাসরি কল করুন' : 'Call Now'}
                         </a>
                         <a href={waLink(isBn ? 'আমি সরাসরি আইনি পরামর্শ নিতে চাই' : 'I need legal advice')} target="_blank" rel="noopener noreferrer"
@@ -451,8 +451,8 @@ const ContactPage = ({ lang }) => {
                                     <Icon size={20} />
                                 </div>
                                 <div>
-                                    <p className="text-xs font-bold uppercase tracking-wider" style={{ color: 'var(--text-muted)', fontFamily: isBn ? "var(--font-bn), 'SolaimanLipi', sans-serif" : 'inherit' }}>{label}</p>
-                                    <p className="text-sm font-bold" style={{ color: 'var(--text)', fontFamily: isBn ? "var(--font-bn), 'SolaimanLipi', sans-serif" : 'inherit' }}>{value}</p>
+                                    <p className="text-xs font-bold uppercase tracking-wider" style={{ color: 'var(--text-muted)', fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>{label}</p>
+                                    <p className="text-sm font-bold" style={{ color: 'var(--text)', fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>{value}</p>
                                 </div>
                             </a>
                         ))}
@@ -469,7 +469,7 @@ const ContactPage = ({ lang }) => {
                         <div className="space-y-8">
                             <div>
                                 <h2 className="text-2xl font-bold mb-6"
-                                    style={{ color: 'var(--text)', fontFamily: isBn ? "var(--font-bn), 'SolaimanLipi', sans-serif" : "'Playfair Display', serif" }}>
+                                    style={{ color: 'var(--text)', fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : "Georgia, serif" }}>
                                     {isBn ? 'আইনি চেম্বারের সরাসরি ঠিকানা' : 'Chamber Locations'}
                                 </h2>
                                 <div className="space-y-4">
@@ -481,12 +481,12 @@ const ContactPage = ({ lang }) => {
                                                     <MapPin size={22} />
                                                 </div>
                                                 <div className="flex-1">
-                                                    <p className="font-bold text-lg mb-1" style={{ color: 'var(--accent)', fontFamily: isBn ? "var(--font-bn), 'SolaimanLipi', sans-serif" : 'inherit' }}>{ch.name}</p>
-                                                    <p className="text-sm font-semibold mb-1.5 leading-relaxed" style={{ color: 'var(--text)', fontFamily: isBn ? "var(--font-bn), 'SolaimanLipi', sans-serif" : 'inherit' }}>{ch.address}</p>
-                                                    <p className="text-xs mb-3" style={{ color: 'var(--text-muted)', fontFamily: isBn ? "var(--font-bn), 'SolaimanLipi', sans-serif" : 'inherit' }}>{ch.note}</p>
+                                                    <p className="font-bold text-lg mb-1" style={{ color: 'var(--accent)', fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>{ch.name}</p>
+                                                    <p className="text-sm font-semibold mb-1.5 leading-relaxed" style={{ color: 'var(--text)', fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>{ch.address}</p>
+                                                    <p className="text-xs mb-3" style={{ color: 'var(--text-muted)', fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>{ch.note}</p>
                                                     <a href={ch.mapLink} target="_blank" rel="noopener noreferrer"
                                                         className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-lg border transition-all hover:bg-[var(--accent)] hover:text-white"
-                                                        style={{ color: 'var(--accent)', borderColor: 'var(--accent)', fontFamily: isBn ? "var(--font-bn), 'SolaimanLipi', sans-serif" : 'inherit' }}>
+                                                        style={{ color: 'var(--accent)', borderColor: 'var(--accent)', fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>
                                                         <ExternalLink size={13} /> {isBn ? 'গুগল ম্যাপে নেভিগেট করুন' : 'View on Google Maps'}
                                                     </a>
                                                 </div>
@@ -503,14 +503,14 @@ const ContactPage = ({ lang }) => {
                                         style={{ background: 'var(--accent-subtle)', color: 'var(--accent)' }}>
                                         <Clock size={18} />
                                     </div>
-                                    <p className="font-bold text-base" style={{ color: 'var(--text)', fontFamily: isBn ? "var(--font-bn), 'SolaimanLipi', sans-serif" : 'inherit' }}>
+                                    <p className="font-bold text-base" style={{ color: 'var(--text)', fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>
                                         {isBn ? 'চেম্বার সময়সূচি ও সাক্ষাতের সময়' : 'Office Hours'}
                                     </p>
                                 </div>
-                                <p className="text-sm font-bold" style={{ color: 'var(--text)', fontFamily: isBn ? "var(--font-bn), 'SolaimanLipi', sans-serif" : 'inherit' }}>
+                                <p className="text-sm font-bold" style={{ color: 'var(--text)', fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>
                                     {isBn ? 'শনিবার – বৃহস্পতিবার: সকাল ৯:০০ – রাত ৯:০০' : 'Saturday – Thursday: 9:00 AM – 9:00 PM'}
                                 </p>
-                                <p className="text-xs mt-1" style={{ color: 'var(--text-muted)', fontFamily: isBn ? "var(--font-bn), 'SolaimanLipi', sans-serif" : 'inherit' }}>
+                                <p className="text-xs mt-1" style={{ color: 'var(--text-muted)', fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>
                                     {isBn ? 'শুক্রবার: চেম্বার বন্ধ | অনলাইন ও হোয়াটসঅ্যাপ ২৪/৭ সচল' : 'Friday: Closed | WhatsApp available 7 days'}
                                 </p>
                             </div>
@@ -532,15 +532,15 @@ const ContactPage = ({ lang }) => {
                             <ContactForm isBn={isBn} />
                             <div className="mt-6 p-6 rounded-2xl text-center shadow-md border"
                                 style={{ background: 'var(--surface)', borderColor: 'var(--card-border)' }}>
-                                <p className="text-xs font-bold mb-2" style={{ color: 'var(--text)', fontFamily: isBn ? "var(--font-bn), 'SolaimanLipi', sans-serif" : 'inherit' }}>
+                                <p className="text-xs font-bold mb-2" style={{ color: 'var(--text)', fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>
                                     {isBn ? 'জরুরি প্রয়োজনে সরাসরি কল করুন:' : 'Prefer to call directly?'}
                                 </p>
                                 <a href={`tel:${CALL_NUMBER}`}
                                     className="inline-flex items-center gap-2 text-xl font-bold hover:scale-105 transition-transform"
-                                    style={{ color: 'var(--accent)', fontFamily: isBn ? "var(--font-bn), 'SolaimanLipi', sans-serif" : 'inherit' }}>
+                                    style={{ color: 'var(--accent)', fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>
                                     <Phone size={22} /> {CALL_DISPLAY}
                                 </a>
-                                <p className="text-xs mt-2" style={{ color: 'var(--text-muted)', fontFamily: isBn ? "var(--font-bn), 'SolaimanLipi', sans-serif" : 'inherit' }}>
+                                <p className="text-xs mt-2" style={{ color: 'var(--text-muted)', fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>
                                     {isBn ? 'শনিবার–বৃহস্পতিবার (সকাল ৯টা - রাত ৯টা)' : 'Calls answered Sat–Thu, 9 AM – 9 PM'}
                                 </p>
                             </div>
@@ -551,11 +551,11 @@ const ContactPage = ({ lang }) => {
                     <div className="pt-12 border-t" style={{ borderColor: 'var(--card-border)' }}>
                         <div className="text-center max-w-2xl mx-auto mb-10">
                             <span className="text-xs font-bold px-3.5 py-1.5 rounded-full mb-3 inline-block"
-                                style={{ background: 'var(--accent-subtle)', color: 'var(--accent)', fontFamily: isBn ? "var(--font-bn), 'SolaimanLipi', sans-serif" : 'inherit' }}>
+                                style={{ background: 'var(--accent-subtle)', color: 'var(--accent)', fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>
                                 {isBn ? 'আইনি সেবাসমূহ' : 'Legal Services & Solutions'}
                             </span>
                             <h2 className="text-2xl md:text-3xl font-bold"
-                                style={{ color: 'var(--text)', fontFamily: isBn ? "var(--font-bn), 'SolaimanLipi', sans-serif" : "'Playfair Display', serif" }}>
+                                style={{ color: 'var(--text)', fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : "Georgia, serif" }}>
                                 {isBn ? 'আইনজীবীর সুনির্দিষ্ট বিশেষত্ব ও আইনি সেবা ক্ষেত্র' : 'Expert Practice Areas & Consultation'}
                             </h2>
                         </div>
@@ -570,19 +570,19 @@ const ContactPage = ({ lang }) => {
                                     <div>
                                         <div className="flex items-center justify-between mb-3">
                                             <span className="text-[11px] font-bold px-2.5 py-1 rounded-md"
-                                                style={{ background: service.color + '18', color: service.color, fontFamily: isBn ? "var(--font-bn), 'SolaimanLipi', sans-serif" : 'inherit' }}>
+                                                style={{ background: service.color + '18', color: service.color, fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>
                                                 {service.badge}
                                             </span>
                                             <Scale size={18} style={{ color: service.color }} />
                                         </div>
 
                                         <h3 className="text-lg font-bold mb-2 leading-snug"
-                                            style={{ color: 'var(--text)', fontFamily: isBn ? "var(--font-bn), 'SolaimanLipi', sans-serif" : 'inherit' }}>
+                                            style={{ color: 'var(--text)', fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>
                                             {service.title}
                                         </h3>
 
                                         <p className="text-xs leading-relaxed mb-4"
-                                            style={{ color: 'var(--text-secondary)', fontFamily: isBn ? "var(--font-bn), 'SolaimanLipi', sans-serif" : 'inherit' }}>
+                                            style={{ color: 'var(--text-secondary)', fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>
                                             {service.desc}
                                         </p>
                                     </div>
@@ -590,7 +590,7 @@ const ContactPage = ({ lang }) => {
                                     <Link
                                         to={service.link}
                                         className="inline-flex items-center gap-1 text-xs font-bold group hover:underline"
-                                        style={{ color: 'var(--accent)', fontFamily: isBn ? "var(--font-bn), 'SolaimanLipi', sans-serif" : 'inherit' }}
+                                        style={{ color: 'var(--accent)', fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}
                                     >
                                         {isBn ? 'আইনি গাইড দেখুন' : 'Learn More'} <ChevronRight size={14} className="group-hover:translate-x-1 transition-transform" />
                                     </Link>
@@ -603,10 +603,10 @@ const ContactPage = ({ lang }) => {
                     <div className="mt-16 pt-12 border-t" style={{ borderColor: 'var(--card-border)' }}>
                         <div className="text-center max-w-xl mx-auto mb-10">
                             <h2 className="text-2xl font-bold mb-2"
-                                style={{ color: 'var(--text)', fontFamily: isBn ? "var(--font-bn), 'SolaimanLipi', sans-serif" : "'Playfair Display', serif" }}>
+                                style={{ color: 'var(--text)', fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : "Georgia, serif" }}>
                                 {isBn ? 'যোগাযোগ সংক্রান্ত সাধারণ প্রশ্নাবলী (FAQ)' : 'Frequently Asked Questions'}
                             </h2>
-                            <p className="text-xs" style={{ color: 'var(--text-muted)', fontFamily: isBn ? "var(--font-bn), 'SolaimanLipi', sans-serif" : 'inherit' }}>
+                            <p className="text-xs" style={{ color: 'var(--text-muted)', fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>
                                 {isBn ? 'চেম্বার অ্যাপয়েন্টমেন্ট ও কনসালটেশন সংক্রান্ত দরকারি তথ্য।' : 'Everything you need to know before contacting us.'}
                             </p>
                         </div>
@@ -641,12 +641,12 @@ const ContactPage = ({ lang }) => {
                             ]).map((faq, i) => (
                                 <div key={i} className="glass-card p-5 rounded-2xl border" style={{ borderColor: 'var(--card-border)' }}>
                                     <h3 className="text-sm font-bold mb-2 flex items-center gap-2"
-                                        style={{ color: 'var(--text)', fontFamily: isBn ? "var(--font-bn), 'SolaimanLipi', sans-serif" : 'inherit' }}>
+                                        style={{ color: 'var(--text)', fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>
                                         <HelpCircle size={16} style={{ color: 'var(--accent)', flexShrink: 0 }} />
                                         {faq.q}
                                     </h3>
                                     <p className="text-xs leading-relaxed pl-6"
-                                        style={{ color: 'var(--text-secondary)', fontFamily: isBn ? "var(--font-bn), 'SolaimanLipi', sans-serif" : 'inherit' }}>
+                                        style={{ color: 'var(--text-secondary)', fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>
                                         {faq.a}
                                     </p>
                                 </div>
@@ -660,7 +660,7 @@ const ContactPage = ({ lang }) => {
             {/* ── Disclaimer ── */}
             <section className="py-8" style={{ background: 'var(--surface)', borderTop: '1px solid var(--card-border)' }}>
                 <div className="container mx-auto px-6 max-w-5xl">
-                    <p className="text-xs text-center leading-relaxed" style={{ color: 'var(--text-muted)', fontFamily: isBn ? "var(--font-bn), 'SolaimanLipi', sans-serif" : 'inherit' }}>
+                    <p className="text-xs text-center leading-relaxed" style={{ color: 'var(--text-muted)', fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>
                         <strong>{isBn ? 'আইনি সতর্কবার্তা:' : 'Disclaimer:'}</strong> {isBn
                             ? 'মেসেজ বা ফোন কল করার মাধ্যমে সরাসরি আইনজীবী-ক্লায়েন্ট চুক্তি গঠিত হয় না। প্রেরিত সকল তথ্য সম্পূর্ণ গোপন রাখা হয়। জরুরি আইনি বিষয়ে সরাসরি ফোনে যোগাযোগের অনুরোধ করা যাচ্ছে। অ্যাডভোকেট মো. শাহ আলম বাংলাদেশ বার কাউন্সিলের তালিকাভুক্ত আইনজীবী।'
                             : 'Contacting us does not create an attorney-client relationship. Information submitted is kept confidential. For urgent legal matters, please call directly. Advocate Md. Shah Alam is enrolled with the Bangladesh Bar Council.'}

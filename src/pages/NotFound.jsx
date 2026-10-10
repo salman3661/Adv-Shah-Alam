@@ -45,7 +45,7 @@ const NotFound = () => {
                             <p className="label-accent mb-3">{isBn ? 'এরর ৪০৪' : 'Error 404'}</p>
                             <h1
                                 className="text-3xl md:text-4xl font-serif font-bold mb-4"
-                                style={{ color: 'var(--text)', fontFamily: "'Playfair Display', serif" }}
+                                style={{ color: 'var(--text)', fontFamily: "Georgia, serif" }}
                             >
                                 {isBn ? 'পেজ পাওয়া যায়নি' : 'Page Not Found'}
                             </h1>
