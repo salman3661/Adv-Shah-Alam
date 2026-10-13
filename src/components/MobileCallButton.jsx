@@ -247,7 +247,7 @@ const MobileCallButton = () => {
                 }
             `}</style>
 
-            <nav className="gcta-bar" aria-label="Mobile Legal Contact">
+            <nav className="gcta-bar google-anno-skip" aria-label="Mobile Legal Contact">
                 {/* WhatsApp Button with Live Beep Radar */}
                 <a
                     href={waHref}

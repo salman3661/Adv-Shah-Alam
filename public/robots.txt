@@ -7,7 +7,6 @@ Disallow: /api/
 Disallow: /blog?q=*
 Disallow: /?q=
 Disallow: /*?q=*
-Disallow: /bn/posts/
 Allow: /
 
 User-agent: Googlebot
@@ -17,7 +16,6 @@ Disallow: /api/
 Disallow: /blog?q=*
 Disallow: /?q=
 Disallow: /*?q=*
-Disallow: /bn/posts/
 
 User-agent: Bingbot
 Allow: /
@@ -26,6 +24,5 @@ Disallow: /api/
 Disallow: /blog?q=*
 Disallow: /?q=
 Disallow: /*?q=*
-Disallow: /bn/posts/
 
 Sitemap: https://www.advmdshahalam.me/sitemap.xml

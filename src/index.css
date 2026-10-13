@@ -152,6 +152,22 @@ ins.adsbygoogle[data-ad-status="unfilled"],
   padding: 0 !important;
 }
 
+/* Strict isolation: prevent Google Auto-Ads from injecting ads inside Hero, Navbar, TrustBar, and Mobile CTA */
+.google-anno-skip .google-auto-placed,
+#home .google-auto-placed,
+.hero-section .google-auto-placed,
+.gcta-bar .google-auto-placed,
+header .google-auto-placed,
+nav .google-auto-placed {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+}
+
 /* Mixed content: Bengali Unicode block always uses Bengali font
    regardless of lang attribute — covers inline BN in EN pages */
 :lang(bn),

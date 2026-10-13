@@ -61,7 +61,7 @@ const Hero = ({ lang = 'en' }) => {
       <style>{STYLES}</style>
       <section
         id="home"
-        className="relative overflow-hidden"
+        className="relative overflow-hidden google-anno-skip"
         style={{ background: 'var(--hero-section-bg)', minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}
       >
         {/* Background glows */}
@@ -371,8 +371,8 @@ const Hero = ({ lang = 'en' }) => {
             </div>
 
             {/* ── RIGHT: Photo ── */}
-            <div className="order-1 md:order-2 flex justify-center md:justify-end">
-              <div style={{ position: 'relative', width: '100%', maxWidth: '340px', aspectRatio: '4/5' }}>
+            <div className="order-1 md:order-2 flex justify-center md:justify-end google-anno-skip">
+              <div className="google-anno-skip" style={{ position: 'relative', width: '100%', maxWidth: '340px', aspectRatio: '4/5' }}>
                 <div style={{ position: 'absolute', inset: '-14px', borderRadius: '2rem', background: 'var(--hero-photo-glow)', filter: 'blur(28px)', zIndex: 0 }} />
                 <div style={{
                   position: 'relative', borderRadius: '1.5rem', overflow: 'hidden',

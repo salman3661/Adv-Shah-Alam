@@ -25,6 +25,7 @@ const TrustBar = ({ lang = 'en' }) => {
     return (
         <section
             aria-label={isBn ? 'বিশ্বাসযোগ্যতার সূচক' : 'Trust indicators'}
+            className="google-anno-skip"
             style={{
                 background: 'var(--surface)',
                 borderTop: '1px solid var(--card-border)',

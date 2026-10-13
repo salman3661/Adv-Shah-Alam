@@ -45,6 +45,46 @@
       "statusCode": 301
     },
     {
+      "source": "/services/corporate-lawyer",
+      "destination": "/services/company-corporate-lawyer",
+      "statusCode": 301
+    },
+    {
+      "source": "/services/property-lawyer",
+      "destination": "/services/land-lawyer",
+      "statusCode": 301
+    },
+    {
+      "source": "/bail-lawyer-dhaka",
+      "destination": "/services/bail-lawyer",
+      "statusCode": 301
+    },
+    {
+      "source": "/faq",
+      "destination": "/#faq",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/faq",
+      "destination": "/#faq",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/blog/family-law",
+      "destination": "/bn/blog",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/blog/land-law-bangladesh-complete-guide-bn",
+      "destination": "/bn/blog/jomi-registry-khoroch-sarkaree-fee-bd",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/blog/bail-refusal-appeal-bangladesh-bn",
+      "destination": "/bn/blog/agam-jamin-haikort-khoroch-2026",
+      "statusCode": 301
+    },
+    {
       "source": "/blog/anticipatory-bail-high-court-bangladesh",
       "destination": "/blog/anticipatory-bail-bangladesh",
       "statusCode": 301
