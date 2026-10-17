@@ -14,7 +14,7 @@ import AdSenseAd from '../components/AdSenseAd';
 import FeeCalculator from '../components/FeeCalculator';
 import { AD_SLOTS, DESKTOP_QUERY, useMediaQuery, useParagraphAnchors } from '../components/ads/adLayout';
 import { FEE_CALCULATORS, calculatorSectionIndex } from '../data/feeCalculators';
-import { SITE, buildEntityGraph, buildHreflang, jsonLd } from '../utils/seoSchema.mjs';
+import { SITE, buildEntityGraph, buildHreflang, resolveMasterPillar, resolveQuickAnswerTable, jsonLd } from '../utils/seoSchema.mjs';
 import ArticleSkeleton from '../components/ArticleSkeleton';
 import NotFound from './NotFound';
 
@@ -421,6 +421,14 @@ const BlogPostInner = () => {
     const [cSubmitted, setCSubmitted] = useState(false);
     const [activeSection, setActiveSection] = useState(0);
     const [tocOpen, setTocOpen] = useState(false);
+    const [showStickyBar, setShowStickyBar] = useState(false);
+
+    useEffect(() => {
+        const onScroll = () => setShowStickyBar(window.scrollY > 250);
+        onScroll();
+        window.addEventListener('scroll', onScroll, { passive: true });
+        return () => window.removeEventListener('scroll', onScroll);
+    }, []);
 
     /* Track active TOC section */
     useEffect(() => {
@@ -451,10 +459,10 @@ const BlogPostInner = () => {
        Auto-Ads overlays (mobile vignettes) on internal navigation, which drives bounce. */
     const articleRef = useRef(null);
     const isDesktop = useMediaQuery(DESKTOP_QUERY);
-    /* Unit 1: after the 2nd paragraph (below the first H2) | Unit 2 (mobile): after the 5th paragraph */
+    /* Phase 2.1: Zero ads before H1 & first 2 paragraphs — Unit 1 placed ONLY after paragraph 3 | Unit 2 (mobile): after paragraph 6 */
     const adAnchors = useParagraphAnchors(articleRef, [
-        { id: 'top', n: 2, fallbackToLast: true },
-        { id: 'mid', n: 5, skip: isDesktop },
+        { id: 'top', n: 3, fallbackToLast: false },
+        { id: 'mid', n: 6, skip: isDesktop },
     ], `${slug}|${isDesktop}|${post ? post.slug : 'loading'}`);
 
     const metaFallback = allPosts.find(p => p.slug === slug);
@@ -495,9 +503,11 @@ const BlogPostInner = () => {
 
     /* ── Schema ── */
     const keywordsList = Array.isArray(post.keywords) ? post.keywords : (typeof post.keywords === 'string' ? [post.keywords] : []);
+    const pageUrl = `${SITE}/blog/${post.slug}`;
+    const canonicalHref = post.canonicalUrl || pageUrl;
 
     const blogPostingSchema = {
-        '@context': 'https://schema.org', '@type': 'BlogPosting',
+        '@context': 'https://schema.org', '@type': ['Article', 'BlogPosting'],
         headline: post.title, description: post.metaDescription,
         datePublished: post.publishedDate, dateModified: post.lastModified || post.publishedDate,
         inLanguage: 'en',
@@ -514,8 +524,8 @@ const BlogPostInner = () => {
             url: 'https://www.advmdshahalam.me',
             logo: { '@type': 'ImageObject', url: 'https://www.advmdshahalam.me/favicon.ico' }
         },
-        url: `https://www.advmdshahalam.me/blog/${post.slug}`,
-        mainEntityOfPage: { '@type': 'WebPage', '@id': `https://www.advmdshahalam.me/blog/${post.slug}` },
+        url: canonicalHref,
+        mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalHref },
         image: 'https://www.advmdshahalam.me/images/advocate-shah-alam.jpg',
         keywords: keywordsList.join(', '),
     };
@@ -524,14 +534,15 @@ const BlogPostInner = () => {
         itemListElement: [
             { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.advmdshahalam.me/' },
             { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.advmdshahalam.me/blog' },
-            { '@type': 'ListItem', position: 3, name: post.title, item: `https://www.advmdshahalam.me/blog/${post.slug}` },
+            { '@type': 'ListItem', position: 3, name: post.title, item: canonicalHref },
         ],
     };
-    const pageUrl = `${SITE}/blog/${post.slug}`;
-    const entityGraph = buildEntityGraph({ url: pageUrl, lang: 'en', faqs: post.faqs });
+    const entityGraph = buildEntityGraph({ url: canonicalHref, lang: 'en', faqs: post.faqs });
     const hreflangTags = buildHreflang({ lang: 'en', slug: post.slug, pairedSlug: post.bnSlug });
     const calcCfg = FEE_CALCULATORS[post.slug];
     const calcIdx = calcCfg ? calculatorSectionIndex(post.slug, post.sections) : -1;
+    const pillarInfo = resolveMasterPillar(post, 'en');
+    const quickTable = resolveQuickAnswerTable(post, 'en');
 
     // Modernize in-article consultation CTA boxes: remove cheap emojis, apply executive legal styling
     const formatArticleContent = (html) => {
@@ -578,12 +589,12 @@ const BlogPostInner = () => {
                 <title>{post.metaTitle}</title>
                 <meta name="description" content={post.metaDescription} />
                 {keywordsList.length > 0 && <meta name="keywords" content={keywordsList.join(', ')} />}
-                <link rel="canonical" href={`https://www.advmdshahalam.me/blog/${post.slug}`} />
+                <link rel="canonical" href={canonicalHref} />
                 <meta name="robots" content="index, follow" />
                 <meta property="og:title" content={post.metaTitle} />
                 <meta property="og:description" content={post.metaDescription} />
                 <meta property="og:type" content="article" />
-                <meta property="og:url" content={`https://www.advmdshahalam.me/blog/${post.slug}`} />
+                <meta property="og:url" content={canonicalHref} />
                 <meta property="og:image" content="https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.png" />
                 <meta property="og:site_name" content="Advocate Md. Shah Alam" />
                 <meta property="article:published_time" content={post.publishedDate} />
@@ -601,8 +612,8 @@ const BlogPostInner = () => {
                 <script type="application/ld+json">{jsonLd(entityGraph)}</script>
             </Helmet>
 
-            {/* ════════════════ HERO ════════════════ */}
-            <section style={{ background: 'var(--hero-bg)', paddingTop: '6.5rem', paddingBottom: '3.5rem', position: 'relative', overflow: 'hidden' }}>
+            {/* ════════════════ HERO (Phase 2.2: Protected Floating Navbar & Immediate H1 Visibility) ════════════════ */}
+            <section className="hero-section google-anno-skip pt-24" style={{ background: 'var(--hero-bg)', paddingTop: '88px', paddingBottom: '2.5rem', position: 'relative', overflow: 'hidden' }}>
                 {/* Top accent bar */}
                 <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: `linear-gradient(90deg, ${cc.bg}, var(--gold), ${cc.bg})`, opacity: 0.9 }} />
                 {/* Radial glow */}
@@ -610,7 +621,7 @@ const BlogPostInner = () => {
 
                 <div className="bp-hero-container">
                     {/* Nav row */}
-                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.25rem', flexWrap: 'wrap', gap: '0.625rem' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '0.75rem', flexWrap: 'wrap', gap: '0.5rem' }}>
                         <Link to="/blog"
                             onClick={(e) => {
                                 if (window.history.length > 2) {
@@ -631,18 +642,18 @@ const BlogPostInner = () => {
                     </div>
 
                     {/* Breadcrumb */}
-                    <nav aria-label="Breadcrumb" style={{ marginBottom: '1rem' }}>
-                        <ol style={{ display: 'flex', alignItems: 'center', gap: '0.375rem', listStyle: 'none', padding: 0, margin: 0, fontSize: '0.75rem', flexWrap: 'wrap' }}>
-                            <li><Link to="/" style={{ color: 'var(--hero-text-2)', textDecoration: 'none', opacity: 0.7 }}>Home</Link></li>
-                            <li style={{ opacity: 0.3, color: 'var(--hero-muted)' }}>/</li>
-                            <li><Link to="/blog" style={{ color: 'var(--hero-text-2)', textDecoration: 'none', opacity: 0.7 }}>Blog</Link></li>
-                            <li style={{ opacity: 0.3, color: 'var(--hero-muted)' }}>/</li>
+                    <nav aria-label="Breadcrumb" style={{ marginBottom: '0.625rem' }}>
+                        <ol style={{ display: 'flex', alignItems: 'center', gap: '0.375rem', listStyle: 'none', padding: 0, margin: 0, fontSize: '0.78rem', flexWrap: 'wrap' }}>
+                            <li><Link to="/" style={{ color: 'var(--hero-text-2)', textDecoration: 'none', opacity: 0.85 }}>Home</Link></li>
+                            <li style={{ opacity: 0.4, color: 'var(--hero-muted)' }}>&gt;</li>
+                            <li><Link to="/blog" style={{ color: 'var(--hero-text-2)', textDecoration: 'none', opacity: 0.85 }}>Blog</Link></li>
+                            <li style={{ opacity: 0.4, color: 'var(--hero-muted)' }}>&gt;</li>
                             <li style={{ color: 'var(--gold)', fontWeight: 600 }}>{post.category}</li>
                         </ol>
                     </nav>
 
                     {/* Category + time pills */}
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.625rem', flexWrap: 'wrap', marginBottom: '1.25rem' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.625rem', flexWrap: 'wrap', marginBottom: '0.875rem' }}>
                         <span style={{ fontSize: '0.7rem', fontWeight: 800, padding: '0.3rem 0.875rem', borderRadius: '9999px', background: cc.bg, color: cc.text, letterSpacing: '0.07em', textTransform: 'uppercase' }}>
                             {post.category}
                         </span>
@@ -654,10 +665,10 @@ const BlogPostInner = () => {
                     {/* Title — full-width, no max-width cap on hero */}
                     <h1 style={{
                         fontFamily: "Georgia, serif",
-                        fontSize: 'clamp(1.875rem, 4vw, 3.5rem)',
-                        fontWeight: 800, lineHeight: 1.18,
+                        fontSize: 'clamp(1.75rem, 4vw, 3.1rem)',
+                        fontWeight: 800, lineHeight: 1.2,
                         color: 'var(--hero-text)',
-                        marginBottom: '1.375rem',
+                        marginBottom: '1.125rem',
                         letterSpacing: '-0.025em',
                         maxWidth: '900px',
                     }}>
@@ -781,9 +792,64 @@ const BlogPostInner = () => {
                             <article ref={articleRef}>
                                 <Disclaimer lang="en" />
 
+                                {/* Phase 4.3: Topic Cluster Internal Linking (Hub & Spoke Master Pillar Guide) */}
+                                {pillarInfo && (
+                                    <div className="master-pillar-box" style={{ marginBottom: '1.75rem', padding: '1.15rem 1.35rem', borderRadius: '0.95rem', background: 'linear-gradient(135deg, rgba(27,54,93,0.08), rgba(198,167,94,0.08))', border: '1.5px solid rgba(198,167,94,0.35)' }}>
+                                        <p style={{ margin: '0 0 0.65rem', fontSize: '0.92rem', fontWeight: 800, color: 'var(--gold, #b8922a)' }}>
+                                            📌 মূল গাইড ও ক্যালকুলেটর (Master Pillar Guide)
+                                        </p>
+                                        <ul style={{ margin: 0, paddingLeft: '1.15rem', display: 'flex', flexDirection: 'column', gap: '0.45rem', fontSize: '0.95rem', lineHeight: 1.65 }}>
+                                            <li>
+                                                <Link to={pillarInfo.primaryUrl} style={{ color: 'var(--accent)', fontWeight: 700, textDecoration: 'underline', textUnderlineOffset: '3px' }}>
+                                                    {pillarInfo.primaryAnchor}
+                                                </Link>
+                                            </li>
+                                            <li>
+                                                <Link to={pillarInfo.secondaryUrl} style={{ color: 'var(--text)', fontWeight: 600, textDecoration: 'underline', textUnderlineOffset: '3px' }}>
+                                                    {pillarInfo.secondaryAnchor}
+                                                </Link>
+                                            </li>
+                                            <li>
+                                                <Link to={pillarInfo.serviceUrl} style={{ color: 'var(--gold, #b8922a)', fontWeight: 700, textDecoration: 'underline', textUnderlineOffset: '3px' }}>
+                                                    ⚖️ {pillarInfo.serviceAnchor}
+                                                </Link>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                )}
+
+                                {/* Phase 5.2: Featured Snippet & AI Overview (GEO) Quick Answer Table */}
+                                {quickTable && (
+                                    <div className="quick-answer-table-box" style={{ marginBottom: '2rem', borderRadius: '1rem', overflow: 'hidden', border: '1.5px solid rgba(184,146,42,0.28)', background: 'var(--surface)' }}>
+                                        <div style={{ padding: '0.85rem 1.25rem', background: 'linear-gradient(135deg, #0F172A 0%, #1E293B 100%)', borderBottom: '2px solid var(--gold, #C6A75E)' }}>
+                                            <h2 style={{ margin: 0, fontSize: '1.05rem', fontWeight: 800, color: '#FFFFFF' }}>
+                                                ⚡ {quickTable.heading}
+                                            </h2>
+                                        </div>
+                                        <div style={{ overflowX: 'auto' }}>
+                                            <table style={{ width: '100%', borderCollapse: 'collapse', margin: 0 }}>
+                                                <thead>
+                                                    <tr style={{ background: 'rgba(198,167,94,0.1)' }}>
+                                                        <th style={{ padding: '0.75rem 1rem', textAlign: 'left', fontSize: '0.88rem', fontWeight: 700, color: 'var(--text)', borderBottom: '1px solid var(--card-border)' }}>{quickTable.col1}</th>
+                                                        <th style={{ padding: '0.75rem 1rem', textAlign: 'left', fontSize: '0.88rem', fontWeight: 700, color: 'var(--text)', borderBottom: '1px solid var(--card-border)' }}>{quickTable.col2}</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    {quickTable.rows.map(([k, v], idx) => (
+                                                        <tr key={idx} style={{ borderBottom: idx < quickTable.rows.length - 1 ? '1px solid var(--card-border)' : 'none' }}>
+                                                            <td style={{ padding: '0.75rem 1rem', fontWeight: 700, fontSize: '0.92rem', color: 'var(--text)', width: '38%' }}>{k}</td>
+                                                            <td style={{ padding: '0.75rem 1rem', fontSize: '0.92rem', color: 'var(--text-secondary)', lineHeight: 1.65 }}>{v}</td>
+                                                        </tr>
+                                                    ))}
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                )}
+
                                 {/* Quick Answer */}
                                 {post.quickAnswer && (
-                                    <div style={{ marginBottom: '2.5rem', padding: '1.375rem 1.5rem', borderRadius: '1rem', background: 'linear-gradient(135deg, rgba(198,167,94,0.07), rgba(198,167,94,0.02))', border: '1.5px solid rgba(198,167,94,0.22)' }}>
+                                    <div style={{ marginBottom: '2.25rem', padding: '1.375rem 1.5rem', borderRadius: '1rem', background: 'linear-gradient(135deg, rgba(198,167,94,0.07), rgba(198,167,94,0.02))', border: '1.5px solid rgba(198,167,94,0.22)' }}>
                                         <p style={{ fontSize: '0.875rem', fontWeight: 800, color: 'var(--gold)', marginBottom: '0.875rem' }}>
                                             {typeof post.quickAnswer === 'string' ? 'Quick Answer' : (post.quickAnswer.heading || 'Quick Answer')}
                                         </p>
@@ -804,8 +870,10 @@ const BlogPostInner = () => {
                                     </div>
                                 )}
 
+                                {/* Phase 5.1: Interactive Legal Calculator right after the introduction on pillar pages */}
+                                {calcIdx === -2 && calcCfg && <FeeCalculator type={calcCfg.type} lang="en" />}
 
-{/* Article Sections — High-End Editorial Design */}
+                                {/* Article Sections — High-End Editorial Design */}
                                 {post.sections.map((sec, i) => {
                                     return (
                                         <React.Fragment key={i}>
@@ -878,7 +946,7 @@ const BlogPostInner = () => {
                                                 <MidArticleLeadCapture lang="en" />
                                             )}
 
-                                            {/* Unit 3: interactive fee calculator (only on pages registered in data/feeCalculators.js) */}
+                                            {/* Unit 3: interactive fee calculator (when matched to a specific section) */}
                                             {i === calcIdx && calcCfg && <FeeCalculator type={calcCfg.type} lang="en" />}
                                         </React.Fragment>
                                     );
@@ -1037,8 +1105,8 @@ const BlogPostInner = () => {
                 </div>
             </div>
 
-            {/* ── STICKY MOBILE CONVERSION BAR (Slim, Glassy, Lag-Free) ── */}
-            <div className="msb-bar">
+            {/* ── STICKY MOBILE CONVERSION BAR (Slim, Glassy, Lag-Free, Visible After 250px Scroll) ── */}
+            <div className={`msb-bar google-anno-skip ${showStickyBar ? 'msb-visible' : ''}`}>
                 <div className="msb-inner">
                     <div className="msb-left">
                         <span className="msb-live-dot" />
@@ -1272,19 +1340,20 @@ const BlogPostInner = () => {
 
                 /* ═══ GOOGLE GLASSY FLOATING ISLAND MOBILE BAR ═══ */
                 .msb-bar {
-                    display: none;
+                    display: none !important;
                     position: fixed;
                     bottom: calc(10px + env(safe-area-inset-bottom, 0px));
                     left: 10px;
                     right: 10px;
-                    z-index: 9999;
-                    background: rgba(15, 23, 42, 0.82);
+                    z-index: 40;
+                    max-height: 56px;
+                    background: rgba(15, 23, 42, 0.88);
                     backdrop-filter: blur(24px) saturate(200%);
                     -webkit-backdrop-filter: blur(24px) saturate(200%);
                     border: 1.5px solid rgba(255, 255, 255, 0.18);
                     border-radius: 100px;
                     box-shadow: 0 10px 36px rgba(0, 0, 0, 0.45), inset 0 1px 1px rgba(255, 255, 255, 0.22);
-                    padding: 7px 14px;
+                    padding: 6px 14px;
                     transform: translateZ(0);
                     will-change: transform;
                 }
@@ -1392,14 +1461,14 @@ const BlogPostInner = () => {
                     100% { transform: scale(1.1, 1.25); opacity: 0; }
                 }
                 @media (max-width: 900px) {
-                    .msb-bar {
+                    .msb-bar.msb-visible {
                         display: block !important;
                     }
                     .whatsapp-float {
                         display: none !important;
                     }
                     .bp-body-container {
-                        padding-bottom: 5.5rem !important;
+                        padding-bottom: 100px !important;
                     }
                 }
                 @media (max-width: 360px) {

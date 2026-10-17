@@ -22,7 +22,7 @@
 import fs   from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { buildEntityGraph, buildHreflang, jsonLd } from '../src/utils/seoSchema.mjs';
+import { buildEntityGraph, buildHreflang, jsonLd, resolveMasterPillar, resolveQuickAnswerTable } from '../src/utils/seoSchema.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT   = path.resolve(__dirname, '..');
@@ -144,6 +144,24 @@ const BN_CTA = `<div style="margin-top:40px;padding:20px;background:#e8f0fe;bord
   কোর্ট চেম্বার: আইনজীবী সমিতি ভবন, ৪র্থ তলা, ৬/৭ কোর্ট হাউস স্ট্রিট, কোতোয়ালি, ঢাকা-১১০০</small>
 </div>`;
 
+function buildPillarAndTableHtml(post, lang) {
+  const pillar = resolveMasterPillar(post, lang);
+  const qaTable = resolveQuickAnswerTable(post, lang);
+  const pillarHtml = pillar ? `<div style="margin:16px 0;padding:14px 18px;border:1.5px solid #c6a75e;border-radius:10px;background:#fdfaf2">
+    <strong>${escHtml(pillar.label)}:</strong> <a href="${pillar.url}" style="color:#1a56db;font-weight:700">${escHtml(pillar.anchor)}</a>
+    ${pillar.serviceUrl ? ` &middot; <a href="${pillar.serviceUrl}" style="color:#b45309;font-weight:700">${escHtml(pillar.serviceAnchor)}</a>` : ''}
+  </div>` : '';
+  const tableHtml = qaTable ? `<div style="margin:20px 0">
+    <h2 style="font-size:18px;font-weight:700;margin-bottom:8px">${escHtml(qaTable.heading)}</h2>
+    <table style="width:100%;border-collapse:collapse;border:1px solid #e2e8f0">
+      <thead><tr style="background:#0f172a;color:#fff"><th style="padding:10px;text-align:left">${lang === 'bn' ? 'বিষয় / শর্ত' : 'Key Legal Aspect'}</th><th style="padding:10px;text-align:left">${lang === 'bn' ? 'সরকারি নিয়ম, ফি ও আইন (২০২৬)' : 'Official Rule, Fee & Law (2026)'}</th></tr></thead>
+      <tbody>${qaTable.rows.map(([k, v]) => `<tr><td style="padding:10px;border-bottom:1px solid #e2e8f0;font-weight:700">${escHtml(k)}</td><td style="padding:10px;border-bottom:1px solid #e2e8f0">${escHtml(v)}</td></tr>`).join('')}</tbody>
+    </table>
+    ${qaTable.portal ? `<p style="font-size:13px;margin-top:6px"><a href="${qaTable.portal.url}" target="_blank" rel="noopener noreferrer">${escHtml(qaTable.portal.label)}</a></p>` : ''}
+  </div>` : '';
+  return pillarHtml + tableHtml;
+}
+
 // ── blog post body builder ───────────────────────────────────────────────────
 function buildPostBody(post) {
   const toc = (post.toc||[]).length ? `<nav style="background:#f4f6fb;padding:16px 20px;border-radius:8px;margin-bottom:28px">
@@ -176,7 +194,7 @@ function buildPostBody(post) {
 <p style="color:#555;font-size:14px;margin-bottom:20px">By <strong>Advocate Md. Shah Alam</strong> &middot; ${escHtml(post.publishedDate||'')} &middot; ${escHtml(post.readTime||'')}</p>
 ${DISCLAIMER}
 <p style="font-size:16px;color:#333;margin-bottom:24px">${escHtml(post.heroIntro||'')}</p>
-${toc}${sections}${faqs}${CONCLUSION_DISCLAIMER_EN}${CTA}`;
+${buildPillarAndTableHtml(post, 'en')}${toc}${sections}${faqs}${CONCLUSION_DISCLAIMER_EN}${CTA}`;
 }
 
 function buildBnPostBody(post) {
@@ -217,7 +235,7 @@ function buildBnPostBody(post) {
 <p style="color:#555;font-size:14px;margin-bottom:20px">লেখক: <strong>অ্যাডভোকেট মো. শাহ আলম</strong> &middot; ${escHtml(post.publishedDate || '')} &middot; ${escHtml(post.readTime || '')}</p>
 ${BN_DISCLAIMER}
 <p style="font-size:16px;color:#333;margin-bottom:24px;line-height:1.8">${escHtml(post.heroIntro || '')}</p>
-${quickAns}${toc}${sections}${faqs}${CONCLUSION_DISCLAIMER_BN}${BN_CTA}`;
+${buildPillarAndTableHtml(post, 'bn')}${quickAns}${toc}${sections}${faqs}${CONCLUSION_DISCLAIMER_BN}${BN_CTA}`;
 }
 
 // ── service page lookup ──────────────────────────────────────────────────────
@@ -990,7 +1008,7 @@ ${BN_DISCLAIMER}${bnMeta.body}${BN_CTA}`,
   console.log('\n📚 Pre-rendering EN blog posts...');
   let enCount = 0;
   for (const post of enPosts) {
-    const postCanonical = `${BASE}/blog/${post.slug}`;
+    const postCanonical = post.canonicalUrl || `${BASE}/blog/${post.slug}`;
     const enMetaDesc = (post.metaDescription || (post.heroIntro || '').replace(/<[^>]*>/g, '').trim()).slice(0, 160);
 
     // Explicit, reciprocal pairs only (scripts/audit-hreflang.mjs keeps the data clean) - same tags as the React page
@@ -999,7 +1017,7 @@ ${BN_DISCLAIMER}${bnMeta.body}${BN_CTA}`,
 
     const articleSchema = {
       '@context': 'https://schema.org',
-      '@type': 'Article',
+      '@type': ['Article', 'BlogPosting'],
       headline: post.title,
       description: enMetaDesc,
       datePublished: post.publishedDate || TODAY,
@@ -1057,7 +1075,7 @@ ${BN_DISCLAIMER}${bnMeta.body}${BN_CTA}`,
   console.log('\n📚 Pre-rendering BN blog posts...');
   let bnCount = 0;
   for (const post of bnPosts) {
-    const postCanonical = `${BASE}/bn/blog/${post.slug}`;
+    const postCanonical = post.canonicalUrl || `${BASE}/bn/blog/${post.slug}`;
     const bnMetaDesc = (post.metaDescription || (post.heroIntro || '').replace(/<[^>]*>/g, '').trim()).slice(0, 160);
 
     const hreflangTags = buildHreflang({ lang: 'bn', slug: post.slug, pairedSlug: post.enSlug })
@@ -1065,7 +1083,7 @@ ${BN_DISCLAIMER}${bnMeta.body}${BN_CTA}`,
 
     const articleSchema = {
       '@context': 'https://schema.org',
-      '@type': 'Article',
+      '@type': ['Article', 'BlogPosting'],
       headline: post.title,
       description: bnMetaDesc,
       datePublished: post.publishedDate || TODAY,

@@ -284,7 +284,7 @@ const Layout = ({ children }) => {
                 <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
             </Helmet>
             <Header />
-            <main className="flex-grow">
+            <main className="flex-grow pb-24" style={{ paddingBottom: '100px' }}>
                 {children}
             </main>
             <Footer />

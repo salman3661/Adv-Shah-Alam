@@ -85,21 +85,6 @@
       "statusCode": 301
     },
     {
-      "source": "/blog/anticipatory-bail-high-court-bangladesh",
-      "destination": "/blog/anticipatory-bail-bangladesh",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/anticipatory-bail-high-court-bangladesh-cost-process-2026",
-      "destination": "/blog/anticipatory-bail-high-court-bangladesh-cost-process",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/baba-sampatti-vantan-ain-bangladesh-2026",
-      "destination": "/blog/father-property-distribution-law-bangladesh",
-      "statusCode": 301
-    },
-    {
       "source": "/blog/bail-process-bangladesh",
       "destination": "/blog/how-to-get-bail-in-bangladesh",
       "statusCode": 301
@@ -130,16 +115,6 @@
       "statusCode": 301
     },
     {
-      "source": "/blog/child-custody-2026-bangladesh",
-      "destination": "/blog/child-custody-law-bangladesh",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/child-custody-bangladesh-muslim-law",
-      "destination": "/blog/child-custody-law-bangladesh",
-      "statusCode": 301
-    },
-    {
       "source": "/blog/cid-cyber-crime-unit-bangladesh-2026",
       "destination": "/blog/bangladesh-cyber-crime-complaint-portal-guide-2026",
       "statusCode": 301
@@ -147,16 +122,6 @@
     {
       "source": "/blog/company-tax-registration-tin-bangladesh",
       "destination": "/blog",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/contract-breach-specific-performance-bangladesh",
-      "destination": "/blog/contract-breach-legal-action-bangladesh",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/court-marriage-bangladesh-process-cost-documents-2026",
-      "destination": "/blog/court-marriage-bangladesh-process-cost-documents",
       "statusCode": 301
     },
     {
@@ -215,31 +180,6 @@
       "statusCode": 301
     },
     {
-      "source": "/blog/digital-security-act-bangladesh-legal-rights",
-      "destination": "/blog/bangladesh-cyber-crime-complaint-portal-guide-2026",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/digital-security-act-rights-defences-bangladesh",
-      "destination": "/blog/bangladesh-cyber-crime-complaint-portal-guide-2026",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/divorce-cost-bangladesh-2026-complete-guide",
-      "destination": "/blog/wife-divorce-rights-talaq-e-tawfeez-bangladesh",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/divorce-from-court-bangladesh-muslim-law",
-      "destination": "/blog/how-to-file-divorce-court-bangladesh-2026",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/divorce-procedure-bangladesh",
-      "destination": "/blog/how-to-file-divorce-court-bangladesh-2026",
-      "statusCode": 301
-    },
-    {
       "source": "/blog/divorce-process-bangladesh",
       "destination": "/blog/how-to-file-divorce-court-bangladesh-2026",
       "statusCode": 301
@@ -250,22 +190,12 @@
       "statusCode": 301
     },
     {
-      "source": "/blog/divorce-process-bangladesh-complete-guide",
-      "destination": "/blog/how-to-file-divorce-court-bangladesh-2026",
-      "statusCode": 301
-    },
-    {
       "source": "/blog/dlrms-land-record-management-bangladesh-2026",
       "destination": "/blog/bangladesh-land-record-by-name-online-2026",
       "statusCode": 301
     },
     {
       "source": "/blog/domestic-violence-legal-protection-bangladesh",
-      "destination": "/blog/domestic-violence-law-bangladesh",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/domestic-violence-protection-order-bangladesh",
       "destination": "/blog/domestic-violence-law-bangladesh",
       "statusCode": 301
     },
@@ -295,16 +225,6 @@
       "statusCode": 301
     },
     {
-      "source": "/blog/how-to-challenge-false-criminal-case-bangladesh",
-      "destination": "/blog/how-to-stop-false-criminal-case-bangladesh",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/how-to-file-divorce-bangladesh",
-      "destination": "/blog/how-to-file-divorce-court-bangladesh-2026",
-      "statusCode": 301
-    },
-    {
       "source": "/blog/how-to-file-divorce-petition-bangladesh",
       "destination": "/blog/how-to-file-divorce-court-bangladesh-2026",
       "statusCode": 301
@@ -325,11 +245,6 @@
       "statusCode": 301
     },
     {
-      "source": "/blog/inheritance-law-bangladesh-legal-guide",
-      "destination": "/blog/property-inheritance-distribution-bangladesh-2026",
-      "statusCode": 301
-    },
-    {
       "source": "/blog/kabinnama-mahr-maintenance-family-court-bangladesh",
       "destination": "/blog/wife-rights-after-divorce-bangladesh",
       "statusCode": 301
@@ -346,11 +261,6 @@
     },
     {
       "source": "/blog/land-dispute-bangladesh",
-      "destination": "/blog/land-dispute-legal-remedies-bangladesh",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/land-dispute-case-bangladesh",
       "destination": "/blog/land-dispute-legal-remedies-bangladesh",
       "statusCode": 301
     },
@@ -395,11 +305,6 @@
       "statusCode": 301
     },
     {
-      "source": "/blog/mahr-dower-rights-wife-bangladesh",
-      "destination": "/blog/wife-rights-after-divorce-bangladesh",
-      "statusCode": 301
-    },
-    {
       "source": "/blog/mutation-process-bangladesh",
       "destination": "/blog/e-namjari-online-check-bangladesh-2026",
       "statusCode": 301
@@ -427,11 +332,6 @@
     {
       "source": "/blog/porcha-khatian-online-verification-guide-bangladesh",
       "destination": "/blog/bangladesh-land-record-by-name-online-2026",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/property-registration-process-bangladesh",
-      "destination": "/blog/how-to-register-land-bangladesh",
       "statusCode": 301
     },
     {
@@ -546,11 +446,6 @@
     },
     {
       "source": "/bn/blog/batoara-mamla-kotodin-chole-khoroch-partition-suit",
-      "destination": "/bn/blog/batwara-mamla-din-khoroch-prokriya-2026",
-      "statusCode": 301
-    },
-    {
-      "source": "/bn/blog/batoara-mamla-kotodin-chole-khoroch-partition-suit-2026",
       "destination": "/bn/blog/batwara-mamla-din-khoroch-prokriya-2026",
       "statusCode": 301
     },
@@ -720,11 +615,6 @@
       "statusCode": 301
     },
     {
-      "source": "/bn/blog/court-marriage-niyom-khoroch-bangladesh",
-      "destination": "/bn/blog/court-marriage-kagojpatra-complete-guide-2026",
-      "statusCode": 301
-    },
-    {
       "source": "/bn/blog/court-marriage-niyom-khoroch-bangladesh-2026",
       "destination": "/bn/blog/court-marriage-kagojpatra-complete-guide-2026",
       "statusCode": 301
@@ -747,41 +637,6 @@
     {
       "source": "/bn/blog/court-marriage-total-khoroch-prokriya-bangladesh-2026",
       "destination": "/bn/blog/court-marriage-kagojpatra-complete-guide-2026",
-      "statusCode": 301
-    },
-    {
-      "source": "/bn/blog/cyber-crime-abiyog-bangladesh",
-      "destination": "/bn/blog/cyber-harassment-emergency-helpline-online-complaint-2026",
-      "statusCode": 301
-    },
-    {
-      "source": "/bn/blog/cyber-crime-abiyog-korar-niyom-bangladesh",
-      "destination": "/bn/blog/cyber-harassment-emergency-helpline-online-complaint-2026",
-      "statusCode": 301
-    },
-    {
-      "source": "/bn/blog/cyber-crime-abiyog-korar-poripurno-niyom-2026",
-      "destination": "/bn/blog/cyber-harassment-emergency-helpline-online-complaint-2026",
-      "statusCode": 301
-    },
-    {
-      "source": "/bn/blog/cyber-crime-complaint-online-police-helpline",
-      "destination": "/bn/blog/cyber-harassment-emergency-helpline-online-complaint-2026",
-      "statusCode": 301
-    },
-    {
-      "source": "/bn/blog/cyber-crime-complaint-online-police-helpline-2026",
-      "destination": "/bn/blog/cyber-harassment-emergency-helpline-online-complaint-2026",
-      "statusCode": 301
-    },
-    {
-      "source": "/bn/blog/cyber-crime-helpline-online-complaint-bangladesh",
-      "destination": "/bn/blog/cyber-harassment-emergency-helpline-online-complaint-2026",
-      "statusCode": 301
-    },
-    {
-      "source": "/bn/blog/cyber-crime-kivabe-report-korben-bangladesh-2026",
-      "destination": "/bn/blog/cyber-harassment-emergency-helpline-online-complaint-2026",
       "statusCode": 301
     },
     {
@@ -840,11 +695,6 @@
       "statusCode": 301
     },
     {
-      "source": "/bn/blog/ghoroa-nir-jatan-suraksha-adesh-bangladesh",
-      "destination": "/bn/blog/gharelu-nirjaton-aini-suraksha-bangladesh",
-      "statusCode": 301
-    },
-    {
       "source": "/bn/blog/haikort-agam-jamin-khoroch-niyom-2026",
       "destination": "/bn/blog/agam-jamin-haikort-khoroch-2026",
       "statusCode": 301
@@ -900,11 +750,6 @@
       "statusCode": 301
     },
     {
-      "source": "/bn/blog/jamin-khoroch-bangladesh",
-      "destination": "/bn/blog/madak-mamlar-jamin-prokriya-bangladesh-2026",
-      "statusCode": 301
-    },
-    {
       "source": "/bn/blog/jibito-mayer-sampatti-vager-ain-adhikar-2026",
       "destination": "/bn/blog/mayer-sampatti-vibhajan-ain-bangladesh-2026",
       "statusCode": 301
@@ -932,11 +777,6 @@
     {
       "source": "/bn/blog/jomi-registry-motel-khoroch-hisab-2026",
       "destination": "/bn/blog/jomi-registry-khoroch-sarkaree-fee-bd",
-      "statusCode": 301
-    },
-    {
-      "source": "/bn/blog/khas-jomi-bangladesh",
-      "destination": "/bn/blog/khas-jomi-chenar-upay-bondobasto-niyom-bangladesh",
       "statusCode": 301
     },
     {
@@ -1010,11 +850,6 @@
       "statusCode": 301
     },
     {
-      "source": "/bn/blog/mittha-mamla-kharej-bangladesh",
-      "destination": "/bn/blog/mittha-mamla-theke-bachar-upay-bangladesh",
-      "statusCode": 301
-    },
-    {
       "source": "/bn/blog/mrito-babar-sampatti-banton-faraiz-hisab-2026",
       "destination": "/bn/blog/sampatti-uttoradhikar-ain-2026-bn",
       "statusCode": 301
@@ -1037,11 +872,6 @@
     {
       "source": "/bn/blog/namjari-tracking-check-bangladesh-2026",
       "destination": "/bn/blog/jomi-kharij-namjari-khoroch-niyom-2026-bn",
-      "statusCode": 301
-    },
-    {
-      "source": "/bn/blog/nbr-tax-raid-bangladesh",
-      "destination": "/bn/blog",
       "statusCode": 301
     },
     {
@@ -1077,11 +907,6 @@
     {
       "source": "/bn/blog/probashi-divorce-talak-notish-consulate-niyom-2026-bn",
       "destination": "/bn/blog/stree-kortrik-swamike-talak-deyar-sothik-niyom",
-      "statusCode": 301
-    },
-    {
-      "source": "/bn/blog/rit-petition-ki-kivabe-korte-hoy-high-court-2026",
-      "destination": "/bn/blog/rit-petition-ki-kivabe-korte-hoy-high-court",
       "statusCode": 301
     },
     {
@@ -1265,93 +1090,8 @@
       "statusCode": 301
     },
     {
-      "source": "/bn/blog/jomi-kharij-e-namjari-niyom-khoroch-2026",
-      "destination": "/bn/blog/jomi-kharij-namjari-khoroch-niyom-2026-bn",
-      "statusCode": 301
-    },
-    {
-      "source": "/bn/blog/e-namjari-tracking-mutation-check-prokriya-bangladesh-2026",
-      "destination": "/bn/blog/jomi-kharij-namjari-khoroch-niyom-2026-bn",
-      "statusCode": 301
-    },
-    {
-      "source": "/bn/blog/flat-namjari-mutation-acland-niyom-2026-bn",
-      "destination": "/bn/blog/jomi-kharij-namjari-khoroch-niyom-2026-bn",
-      "statusCode": 301
-    },
-    {
-      "source": "/bn/blog/heba-bil-ewaz-dalil-batil-mamla-prokriya-2026-bn",
-      "destination": "/bn/blog/heba-dalil-khoroch-o-heba-bil-ewaz-parthokko-2026",
-      "statusCode": 301
-    },
-    {
-      "source": "/bn/blog/heba-bil-ewaz-dalil-khoroch-2026",
-      "destination": "/bn/blog/heba-dalil-khoroch-o-heba-bil-ewaz-parthokko-2026",
-      "statusCode": 301
-    },
-    {
-      "source": "/bn/blog/heba-bil-ewaz-dalil-ki-shadharon-heba-parthokko-batil",
-      "destination": "/bn/blog/heba-dalil-khoroch-o-heba-bil-ewaz-parthokko-2026",
-      "statusCode": 301
-    },
-    {
-      "source": "/bn/blog/heba-bil-ewaz-dalil-batil-korar-niyom-2026",
-      "destination": "/bn/blog/heba-dalil-khoroch-o-heba-bil-ewaz-parthokko-2026",
-      "statusCode": 301
-    },
-    {
-      "source": "/bn/blog/heba-bil-ewaz-dalil-ki-batil-niyom-2026",
-      "destination": "/bn/blog/heba-dalil-khoroch-o-heba-bil-ewaz-parthokko-2026",
-      "statusCode": 301
-    },
-    {
-      "source": "/bn/blog/heba-danpatra-ain-bangladesh",
-      "destination": "/bn/blog/heba-dalil-khoroch-o-heba-bil-ewaz-parthokko-2026",
-      "statusCode": 301
-    },
-    {
-      "source": "/bn/blog/flat-apartment-registration-fee-bangladesh",
-      "destination": "/bn/blog/jomi-registry-khoroch-sarkaree-fee-bd",
-      "statusCode": 301
-    },
-    {
-      "source": "/bn/blog/jomi-nibondhon-kharch-bangladesh-2026",
-      "destination": "/bn/blog/jomi-registry-khoroch-sarkaree-fee-bd",
-      "statusCode": 301
-    },
-    {
-      "source": "/bn/blog/jomi-registry-sub-registry-office-gopon-khoroch-dalal-syndicate",
-      "destination": "/bn/blog/jomi-registry-khoroch-sarkaree-fee-bd",
-      "statusCode": 301
-    },
-    {
-      "source": "/bn/blog/bail-bond-ki-jamin-bond-rules-bangladesh-2026",
-      "destination": "/bn/blog/agam-jamin-haikort-khoroch-2026",
-      "statusCode": 301
-    },
-    {
-      "source": "/bn/blog/asami-jamin-batil-crpc-497-2026-bn",
-      "destination": "/bn/blog/agam-jamin-haikort-khoroch-2026",
-      "statusCode": 301
-    },
-    {
-      "source": "/bn/blog/bail-er-jonno-ki-ki-lagbe-bangladesh",
-      "destination": "/bn/blog/agam-jamin-haikort-khoroch-2026",
-      "statusCode": 301
-    },
-    {
-      "source": "/bn/blog/jamin-batil-hobar-karon-crpc-cancellation-of-bail",
-      "destination": "/bn/blog/agam-jamin-haikort-khoroch-2026",
-      "statusCode": 301
-    },
-    {
-      "source": "/bn/blog/faujdari-mamlay-jaminer-niyom-khoroch-2026-bn",
-      "destination": "/bn/blog/agam-jamin-haikort-khoroch-2026",
-      "statusCode": 301
-    },
-    {
-      "source": "/bn/blog/how-to-get-bail-bangladesh-2026-bn",
-      "destination": "/bn/blog/agam-jamin-haikort-khoroch-2026",
+      "source": "/bn/blog/heba-bil-ewaz-dalil-batil-korar-niyom",
+      "destination": "/bn/blog/heba-bil-ewaz-dalil-batil-korar-niyom-2026",
       "statusCode": 301
     }
   ],

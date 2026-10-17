@@ -138,9 +138,11 @@ html[lang="bn"] td {
 }
 
 /* ══════════════════════════════════════════════════════════
-   ADSENSE STYLING & UNFILLED COLLAPSE
+   ADSENSE STYLING, CLS PREVENTION & ZERO ADS ABOVE THE FOLD
    ══════════════════════════════════════════════════════════ */
 .adsense-wrapper {
+  min-height: 250px;
+  overflow: hidden;
   transition: opacity 0.25s ease;
 }
 
@@ -148,17 +150,29 @@ ins.adsbygoogle[data-ad-status="unfilled"],
 .adsense-wrapper:has(ins.adsbygoogle[data-ad-status="unfilled"]) {
   display: none !important;
   height: 0 !important;
+  min-height: 0 !important;
   margin: 0 !important;
   padding: 0 !important;
 }
 
-/* Strict isolation: prevent Google Auto-Ads from injecting ads inside Hero, Navbar, TrustBar, and Mobile CTA */
+/* Phase 2.1: Strict Zero Ads Above the Fold & Auto-Ads / Intent Chip Blocker */
+header .google-auto-placed,
+nav .google-auto-placed,
+.hero-section .google-auto-placed,
+article > .google-auto-placed:first-of-type {
+  display: none !important;
+}
+
 .google-anno-skip .google-auto-placed,
 #home .google-auto-placed,
-.hero-section .google-auto-placed,
 .gcta-bar .google-auto-placed,
-header .google-auto-placed,
-nav .google-auto-placed {
+.msb-bar .google-auto-placed,
+main > .google-auto-placed:first-of-type,
+body > .google-auto-placed,
+#root > .google-auto-placed,
+.google-anno-sc,
+.google-anno-t,
+div[class*="google-anno"] {
   display: none !important;
   visibility: hidden !important;
   height: 0 !important;
@@ -166,6 +180,7 @@ nav .google-auto-placed {
   margin: 0 !important;
   padding: 0 !important;
   overflow: hidden !important;
+  pointer-events: none !important;
 }
 
 /* Mixed content: Bengali Unicode block always uses Bengali font
@@ -996,9 +1011,11 @@ body[data-theme="dark"] .hero-available-badge {
     --mobile-bar-height: 52px;
   }
 
-  /* Reserve bottom space so fixed call bar never hides scrollable content */
-  body {
-    padding-bottom: calc(var(--mobile-bar-height) + 20px + env(safe-area-inset-bottom, 0px));
+  /* Reserve 100px bottom space so fixed call bar never hides scrollable content */
+  body,
+  main,
+  footer {
+    padding-bottom: 100px;
   }
 
   /* ── Floating pill CTA ── */
@@ -1007,7 +1024,8 @@ body[data-theme="dark"] .hero-available-badge {
     left: 14px;
     right: 14px;
     bottom: calc(10px + env(safe-area-inset-bottom, 0px));
-    z-index: 1000;
+    z-index: 40;
+    max-height: 56px;
     height: var(--mobile-bar-height);
     padding: 0 20px;
     display: flex;
@@ -1030,10 +1048,10 @@ body[data-theme="dark"] .hero-available-badge {
     bottom: calc(var(--mobile-bar-height) + 28px + env(safe-area-inset-bottom, 0px));
   }
 
-  /* Nav always on top of everything */
+  /* Nav always on top of everything with clean z-index: 50 */
   .site-header,
   nav[class*="fixed"] {
-    z-index: 1200;
+    z-index: 50;
   }
 
   /* Blog container — consistent padding on narrow screens */

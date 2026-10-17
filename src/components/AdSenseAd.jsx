@@ -51,7 +51,7 @@ const AdSenseAd = ({
     label = true,
     labelText = 'বিজ্ঞাপন',
     layoutKey = '',
-    minHeight = 0,
+    minHeight = 250,
     densityGroup = null,
 }) => {
     const wrapRef = useRef(null);
@@ -129,7 +129,8 @@ const AdSenseAd = ({
                 margin: '1.75rem auto',
                 maxWidth: '100%',
                 clear: 'both',
-                ...(minHeight ? { minHeight: `${minHeight + (label ? 18 : 0)}px` } : {}),
+                overflow: 'hidden',
+                minHeight: `${Math.max(250, minHeight) + (label ? 18 : 0)}px`,
                 ...style,
             }}
         >

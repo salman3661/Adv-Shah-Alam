@@ -80,6 +80,7 @@ const Header = () => {
     };
 
     return (
+        <header className="site-header google-anno-skip">
         <AnimatePresence>
             {isVisible && (
                 <motion.nav
@@ -87,7 +88,8 @@ const Header = () => {
                     animate={{ y: 0, opacity: 1 }}
                     exit={{ y: -80, opacity: 0 }}
                     transition={{ duration: 0.35, ease: [0.25, 0.46, 0.45, 0.94] }}
-                    className="fixed top-3 left-0 right-0 z-[60] flex justify-center px-4 pointer-events-none google-anno-skip"
+                    className="fixed top-3 left-0 right-0 z-50 flex justify-center px-4 pointer-events-none google-anno-skip"
+                    style={{ zIndex: 50 }}
                 >
                     <div className={`
                         pointer-events-auto
@@ -231,6 +233,7 @@ const Header = () => {
                 </motion.nav>
             )}
         </AnimatePresence>
+        </header>
     );
 };
 

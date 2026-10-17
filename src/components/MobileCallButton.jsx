@@ -20,10 +20,14 @@ const MobileCallButton = () => {
                  !location.pathname.startsWith('/privacy-policy') &&
                  !location.pathname.startsWith('/terms');
 
-    // Slide up after 600ms for smooth entry
+    // Only appear after scrolling down 250px (window.scrollY > 250) to keep Above-the-Fold 100% clutter-free
     useEffect(() => {
-        const t = setTimeout(() => setVisible(true), 600);
-        return () => clearTimeout(t);
+        const onScroll = () => {
+            setVisible(window.scrollY > 250);
+        };
+        onScroll();
+        window.addEventListener('scroll', onScroll, { passive: true });
+        return () => window.removeEventListener('scroll', onScroll);
     }, []);
 
     const waHref = waLink('', isBn);
@@ -43,20 +47,22 @@ const MobileCallButton = () => {
                         left: 12px;
                         right: 12px;
                         bottom: calc(10px + env(safe-area-inset-bottom, 0px));
-                        z-index: 1050;
+                        z-index: 40;
+                        max-height: 56px;
                         gap: 8px;
-                        padding: 6px;
+                        padding: 4px 6px;
                         border-radius: 100px;
                         background: rgba(11, 19, 43, 0.94);
                         backdrop-filter: blur(24px) saturate(190%);
                         -webkit-backdrop-filter: blur(24px) saturate(190%);
                         border: 1px solid rgba(255, 255, 255, 0.16);
                         box-shadow: 0 10px 32px rgba(0, 0, 0, 0.45), 0 2px 8px rgba(0, 0, 0, 0.25);
-                        align-items: stretch;
-                        transform: translateY(${visible ? '0' : '130%'});
+                        align-items: center;
+                        transform: translateY(${visible ? '0' : '140%'});
                         opacity: ${visible ? '1' : '0'};
-                        transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1),
-                                    opacity 0.35s ease;
+                        pointer-events: ${visible ? 'auto' : 'none'};
+                        transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+                                    opacity 0.28s ease;
                         will-change: transform, opacity;
                     }
 
@@ -68,7 +74,8 @@ const MobileCallButton = () => {
                         justify-content: center;
                         gap: 8px;
                         padding: 0 14px;
-                        height: 48px;
+                        height: 44px;
+                        max-height: 46px;
                         border-radius: 100px;
                         font-size: 0.82rem;
                         font-weight: 700;

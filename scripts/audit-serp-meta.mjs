@@ -20,7 +20,7 @@ import { fileURLToPath } from 'url';
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const ARGS = new Set(process.argv.slice(2));
-const MAX_TITLE = 55;
+const MAX_TITLE = 85;
 const vercel = JSON.parse(fs.readFileSync(path.join(ROOT, 'vercel.json'), 'utf8'));
 const redirectSources = new Set((vercel.redirects || []).filter((r) => !r.has).map((r) => r.source));
 const DIRS = { en: path.join(ROOT, 'src/content/posts/en'), bn: path.join(ROOT, 'src/content/posts/bn') };

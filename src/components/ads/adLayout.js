@@ -61,7 +61,9 @@ export function useParagraphAnchors(rootRef, specs, depKey) {
         const used = new Set();
         for (const s of specs) {
             if (s.skip) continue;
-            let target = paras[s.n - 1] || (s.fallbackToLast ? paras[paras.length - 1] : null);
+            // Phase 2.1: Never place an ad before the 3rd paragraph
+            const minIndex = Math.max(3, s.n || 3) - 1;
+            let target = paras[minIndex] || (s.fallbackToLast && paras.length >= 3 ? paras[paras.length - 1] : null);
             if (!target || used.has(target)) continue;
             used.add(target);
             const el = document.createElement('div');
