@@ -172,7 +172,7 @@ body > .google-auto-placed,
 #root > .google-auto-placed,
 .google-anno-sc,
 .google-anno-t,
-div[class*="google-anno"] {
+div[class*="google-anno-"]:not(.google-anno-skip) {
   display: none !important;
   visibility: hidden !important;
   height: 0 !important;

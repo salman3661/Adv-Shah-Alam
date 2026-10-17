@@ -1470,7 +1470,7 @@ const BlogPostBnInner = () => {
                     bottom: calc(10px + env(safe-area-inset-bottom, 0px));
                     left: 10px;
                     right: 10px;
-                    z-index: 40;
+                    z-index: 2147483640;
                     max-height: 56px;
                     background: rgba(15, 23, 42, 0.90);
                     backdrop-filter: blur(24px) saturate(200%);

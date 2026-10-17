@@ -47,7 +47,7 @@ const MobileCallButton = () => {
                         left: 12px;
                         right: 12px;
                         bottom: calc(10px + env(safe-area-inset-bottom, 0px));
-                        z-index: 40;
+                        z-index: 2147483640;
                         max-height: 56px;
                         gap: 8px;
                         padding: 4px 6px;

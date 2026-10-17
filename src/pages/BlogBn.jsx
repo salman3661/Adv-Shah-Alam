@@ -5,8 +5,10 @@ import { Search, Clock, ChevronRight, BookOpen, Flame, Award, ShieldCheck, UserC
 
 // Load all BN blog posts from JSON files (bundled at build time by Vite)
 import postsMeta_bn from '../content/posts-meta-bn.json';
+import popularBnSlugs from '../content/popular_bn.json';
 const _bnModules = postsMeta_bn;
 const postsBn = Object.values(_bnModules).map((m) => m.default ?? m);
+const popularRankMap = new Map((Array.isArray(popularBnSlugs) ? popularBnSlugs : []).map((s, idx) => [s, (popularBnSlugs.length - idx) * 500]));
 
 function isPublishedBn(post) {
   return Boolean(post && !post.isDraft && !post._draft);
@@ -17,6 +19,15 @@ function isPublishedBn(post) {
 function freshnessBn(post) {
   const t = (d) => (d ? new Date(d).getTime() || 0 : 0);
   return Math.max(t(post.publishedAt), t(post.publishedDate), t(post.lastModified));
+}
+
+function popularityBn(post) {
+  if (!post) return 0;
+  const clicksScore = (Number(post.clicks) || 0) * 10;
+  const impScore = Number(post.impressions) || 0;
+  const viewsScore = (Number(post.pageViews) || 0) * 5;
+  const curatedBoost = popularRankMap.get(post.slug) || 0;
+  return clicksScore + impScore + viewsScore + curatedBoost;
 }
 
 // Helper to strip HTML tags for clean card snippet display
@@ -68,9 +79,12 @@ const categoryColors = {
 const getCatColor = (cat) => categoryColors[cat] || 'var(--accent)';
 
 /* ─── Premium Glassmorphic Blog Card ─── */
-const BlogCardBn = ({ post, isRecent = false }) => {
+const BlogCardBn = ({ post, isRecent = false, isPopular = false }) => {
     const catColor = getCatColor(post.category);
-    const pubDateFormatted = post.publishedDate ? new Date(post.publishedDate).toLocaleDateString('bn-BD', { day: 'numeric', month: 'short', year: 'numeric' }) : null;
+    const displayDate = post.lastModified && new Date(post.lastModified) > new Date(post.publishedDate || 0)
+        ? post.lastModified
+        : post.publishedDate;
+    const pubDateFormatted = displayDate ? new Date(displayDate).toLocaleDateString('bn-BD', { day: 'numeric', month: 'short', year: 'numeric' }) : null;
 
     return (
         <article
@@ -107,6 +121,14 @@ const BlogCardBn = ({ post, isRecent = false }) => {
                                 style={{ background: 'linear-gradient(135deg, #10b981, #059669)', fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif" }}
                             >
                                 <Sparkles size={10} /> নতুন
+                            </span>
+                        )}
+                        {isPopular && (
+                            <span
+                                className="inline-flex items-center gap-0.5 text-[10px] font-extrabold px-2 py-0.5 rounded-full text-white shadow-sm"
+                                style={{ background: 'linear-gradient(135deg, #f59e0b, #dc2626)', fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif" }}
+                            >
+                                <Flame size={10} /> জনপ্রিয়
                             </span>
                         )}
                     </div>
@@ -296,7 +318,7 @@ const BlogBn = () => {
         if (sortBy === 'recent') {
             posts.sort((a, b) => freshnessBn(b) - freshnessBn(a));
         } else if (sortBy === 'popular') {
-            posts.sort((a, b) => (b.impressions || 0) - (a.impressions || 0));
+            posts.sort((a, b) => popularityBn(b) - popularityBn(a) || freshnessBn(b) - freshnessBn(a));
         }
 
         return posts;
@@ -603,7 +625,12 @@ const BlogBn = () => {
                         <>
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                                 {filtered.slice(0, visibleCount).map((post, idx) => (
-                                    <BlogCardBn key={post.slug} post={post} isRecent={sortBy === 'recent' ? idx < POSTS_PER_PAGE : false} />
+                                    <BlogCardBn
+                                        key={post.slug}
+                                        post={post}
+                                        isRecent={sortBy === 'recent' ? idx < POSTS_PER_PAGE : false}
+                                        isPopular={sortBy === 'popular' ? idx < POSTS_PER_PAGE : false}
+                                    />
                                 ))}
                             </div>
 

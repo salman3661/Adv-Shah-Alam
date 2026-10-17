@@ -22,6 +22,14 @@ function freshness(post) {
   return Math.max(t(post.publishedDate), t(post.lastModified));
 }
 
+function popularity(post) {
+  if (!post) return 0;
+  const clicksScore = (Number(post.clicks) || 0) * 10;
+  const impScore = Number(post.impressions) || 0;
+  const viewsScore = (Number(post.pageViews) || 0) * 5;
+  return clicksScore + impScore + viewsScore;
+}
+
 function stripHtml(html) {
   if (!html) return '';
   return String(html).replace(/<[^>]*>?/gm, '').trim();
@@ -33,9 +41,12 @@ const categoryColors = seo.categoryColors;
 const getCatColor = (cat) => categoryColors[cat] || 'var(--accent)';
 
 /* ─── Premium Glassmorphic Blog Card ─── */
-const BlogCardEn = ({ post, isRecent = false }) => {
+const BlogCardEn = ({ post, isRecent = false, isPopular = false }) => {
     const catColor = getCatColor(post.category);
-    const pubDateFormatted = post.publishedDate ? new Date(post.publishedDate).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }) : null;
+    const displayDate = post.lastModified && new Date(post.lastModified) > new Date(post.publishedDate || 0)
+        ? post.lastModified
+        : post.publishedDate;
+    const pubDateFormatted = displayDate ? new Date(displayDate).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }) : null;
 
     return (
         <article
@@ -72,6 +83,14 @@ const BlogCardEn = ({ post, isRecent = false }) => {
                                 style={{ background: 'linear-gradient(135deg, #10b981, #059669)' }}
                             >
                                 <Sparkles size={10} /> NEW
+                            </span>
+                        )}
+                        {isPopular && (
+                            <span
+                                className="inline-flex items-center gap-0.5 text-[10px] font-extrabold px-2 py-0.5 rounded-full text-white shadow-sm"
+                                style={{ background: 'linear-gradient(135deg, #f59e0b, #dc2626)' }}
+                            >
+                                <Flame size={10} /> POPULAR
                             </span>
                         )}
                     </div>
@@ -207,7 +226,7 @@ const Blog = () => {
         if (sortBy === 'recent') {
             posts.sort((a, b) => freshness(b) - freshness(a));
         } else if (sortBy === 'popular') {
-            posts.sort((a, b) => (b.impressions || 0) - (a.impressions || 0));
+            posts.sort((a, b) => popularity(b) - popularity(a) || freshness(b) - freshness(a));
         }
 
         return posts;
@@ -504,7 +523,12 @@ const Blog = () => {
                         <>
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                                 {filtered.slice(0, visibleCount).map((post, idx) => (
-                                    <BlogCardEn key={post.slug} post={post} isRecent={sortBy === 'recent' ? idx < POSTS_PER_PAGE : false} />
+                                    <BlogCardEn
+                                        key={post.slug}
+                                        post={post}
+                                        isRecent={sortBy === 'recent' ? idx < POSTS_PER_PAGE : false}
+                                        isPopular={sortBy === 'popular' ? idx < POSTS_PER_PAGE : false}
+                                    />
                                 ))}
                             </div>
 
