@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useEffect, useRef, useState } from 'react';
+import React, { createContext, useContext, useEffect, useLayoutEffect, useRef, useState } from 'react';
 
 const ThemeContext = createContext();
 
@@ -34,7 +34,7 @@ export const ThemeProvider = ({ children }) => {
     const [theme, setTheme] = useState(getInitialTheme);
 
     // Sync to DOM whenever theme changes
-    useEffect(() => {
+    useLayoutEffect(() => {
         applyThemeToDom(theme);
         if (manualOverride.current) {
             localStorage.setItem('theme', theme);

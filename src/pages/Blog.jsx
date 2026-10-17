@@ -15,6 +15,13 @@ function isPublished(post) {
   return Boolean(post && !post.isDraft && !post._draft);
 }
 
+// "Recent" ordering uses the later of publish date and last-updated date, so freshly published or
+// substantially updated guides surface at the top of the blog section instead of sitting at their old publish date.
+function freshness(post) {
+  const t = (d) => (d ? new Date(d).getTime() || 0 : 0);
+  return Math.max(t(post.publishedDate), t(post.lastModified));
+}
+
 function stripHtml(html) {
   if (!html) return '';
   return String(html).replace(/<[^>]*>?/gm, '').trim();
@@ -162,7 +169,7 @@ const Blog = () => {
     const publishedPosts = useMemo(() => {
         return [...blogPosts]
             .filter(isPublished)
-            .sort((a, b) => new Date(b.publishedDate || 0) - new Date(a.publishedDate || 0));
+            .sort((a, b) => freshness(b) - freshness(a));
     }, []);
 
     // Dynamic Spotlight Featured Post
@@ -170,7 +177,7 @@ const Blog = () => {
         if (!publishedPosts.length) return null;
         const explicitFeatured = publishedPosts.find(p => p.featured === true);
         if (explicitFeatured) return explicitFeatured;
-        return [...publishedPosts].sort((a, b) => new Date(b.publishedDate || 0) - new Date(a.publishedDate || 0))[0];
+        return [...publishedPosts].sort((a, b) => freshness(b) - freshness(a))[0];
     }, [publishedPosts]);
 
     const categoryCounts = useMemo(() => {
@@ -198,7 +205,7 @@ const Blog = () => {
 
         // Apply sorting
         if (sortBy === 'recent') {
-            posts.sort((a, b) => new Date(b.publishedDate || 0) - new Date(a.publishedDate || 0));
+            posts.sort((a, b) => freshness(b) - freshness(a));
         } else if (sortBy === 'popular') {
             posts.sort((a, b) => (b.impressions || 0) - (a.impressions || 0));
         }

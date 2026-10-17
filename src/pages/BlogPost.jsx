@@ -11,6 +11,7 @@ import { telLink, waLink } from '../data/contactInfo';
 import Disclaimer from '../components/Disclaimer';
 import MidArticleLeadCapture from '../components/MidArticleLeadCapture';
 import AdSenseAd from '../components/AdSenseAd';
+import { evergreenYear } from '../utils/evergreenYear.mjs';
 import FeeCalculator from '../components/FeeCalculator';
 import { AD_SLOTS, DESKTOP_QUERY, useMediaQuery, useParagraphAnchors } from '../components/ads/adLayout';
 import { FEE_CALCULATORS, calculatorSectionIndex } from '../data/feeCalculators';
@@ -424,7 +425,7 @@ const BlogPostInner = () => {
     const [showStickyBar, setShowStickyBar] = useState(false);
 
     useEffect(() => {
-        const onScroll = () => setShowStickyBar(window.scrollY > 250);
+        const onScroll = () => setShowStickyBar(window.scrollY > 200);
         onScroll();
         window.addEventListener('scroll', onScroll, { passive: true });
         return () => window.removeEventListener('scroll', onScroll);
@@ -474,8 +475,8 @@ const BlogPostInner = () => {
                 <>
                     {metaFallback && (
                         <Helmet>
-                            <title>{metaFallback.metaTitle || metaFallback.title}</title>
-                            {metaFallback.metaDescription && <meta name="description" content={metaFallback.metaDescription} />}
+                            <title>{evergreenYear(metaFallback.metaTitle || metaFallback.title)}</title>
+                            {metaFallback.metaDescription && <meta name="description" content={evergreenYear(metaFallback.metaDescription)} />}
                         </Helmet>
                     )}
                     <ArticleSkeleton meta={metaFallback} lang="en" />
@@ -508,7 +509,7 @@ const BlogPostInner = () => {
 
     const blogPostingSchema = {
         '@context': 'https://schema.org', '@type': ['Article', 'BlogPosting'],
-        headline: post.title, description: post.metaDescription,
+        headline: post.title, description: evergreenYear(post.metaDescription),
         datePublished: post.publishedDate, dateModified: post.lastModified || post.publishedDate,
         inLanguage: 'en',
         author: {
@@ -586,13 +587,13 @@ const BlogPostInner = () => {
     return (
         <>
             <Helmet>
-                <title>{post.metaTitle}</title>
-                <meta name="description" content={post.metaDescription} />
+                <title>{evergreenYear(post.metaTitle)}</title>
+                <meta name="description" content={evergreenYear(post.metaDescription)} />
                 {keywordsList.length > 0 && <meta name="keywords" content={keywordsList.join(', ')} />}
                 <link rel="canonical" href={canonicalHref} />
                 <meta name="robots" content="index, follow" />
-                <meta property="og:title" content={post.metaTitle} />
-                <meta property="og:description" content={post.metaDescription} />
+                <meta property="og:title" content={evergreenYear(post.metaTitle)} />
+                <meta property="og:description" content={evergreenYear(post.metaDescription)} />
                 <meta property="og:type" content="article" />
                 <meta property="og:url" content={canonicalHref} />
                 <meta property="og:image" content="https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.png" />
@@ -602,8 +603,8 @@ const BlogPostInner = () => {
                 <meta property="article:section" content={post.category} />
                 {keywordsList.length > 0 && <meta property="article:tag" content={keywordsList.slice(0, 5).join(', ')} />}
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content={post.metaTitle} />
-                <meta name="twitter:description" content={post.metaDescription} />
+                <meta name="twitter:title" content={evergreenYear(post.metaTitle)} />
+                <meta name="twitter:description" content={evergreenYear(post.metaDescription)} />
                 <meta name="twitter:image" content="https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.png" />
                 <meta name="author" content="Advocate Md. Shah Alam" />
                 {hreflangTags.map((h) => <link key={h.hrefLang} rel="alternate" hrefLang={h.hrefLang} href={h.href} />)}
@@ -1112,7 +1113,7 @@ const BlogPostInner = () => {
                         <span className="msb-live-dot" />
                         <div className="msb-identity">
                             <span className="msb-name">Adv. Md. Shah Alam</span>
-                            <span className="msb-sub">Supreme Court of Bangladesh</span>
+                            <span className="msb-sub">Online • Chamber &amp; High Court Consultation</span>
                         </div>
                     </div>
                     <div className="msb-right">
@@ -1120,7 +1121,7 @@ const BlogPostInner = () => {
                             <Phone size={13} strokeWidth={2.5} />
                             <span>Call</span>
                         </a>
-                        <a href={waLink('', false, post.title)} target="_blank" rel="noopener noreferrer" className="msb-btn msb-wa" aria-label="WhatsApp">
+                        <a href={waLink(`Assalamu Alaikum, I would like legal advice on this topic: ${post.title} - https://www.advmdshahalam.me/blog/${post.slug}`, false)} target="_blank" rel="noopener noreferrer" className="msb-btn msb-wa" aria-label="WhatsApp">
                             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                             <span>WhatsApp</span>
                         </a>
@@ -1337,6 +1338,18 @@ const BlogPostInner = () => {
                 .prose-content ul li::before { content: '▸'; position: absolute; left: 0; top: 0; color: var(--accent); font-size: 0.85em; font-weight: 700; }
                 .prose-content div[style] { margin: 1.5rem 0; }
                 .prose-content hr { border: none; height: 1px; background: linear-gradient(90deg, transparent, var(--card-border), transparent); margin: 2rem 0; }
+
+                /* Layout stability: let grid children shrink + make wide article tables scroll instead of clipping */
+                .bp-main-grid > * { min-width: 0; }
+                .prose-content img, .prose-content iframe, .prose-content video { max-width: 100%; height: auto; }
+                @media (max-width: 900px) {
+                    .prose-content table {
+                        display: block;
+                        max-width: 100%;
+                        overflow-x: auto;
+                        -webkit-overflow-scrolling: touch;
+                    }
+                }
 
                 /* ═══ GOOGLE GLASSY FLOATING ISLAND MOBILE BAR ═══ */
                 .msb-bar {

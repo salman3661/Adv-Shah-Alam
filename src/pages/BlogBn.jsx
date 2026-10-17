@@ -12,6 +12,13 @@ function isPublishedBn(post) {
   return Boolean(post && !post.isDraft && !post._draft);
 }
 
+// "Recent" ordering uses the later of publish date and last-updated date, so freshly published or
+// substantially updated guides surface at the top of the blog section instead of sitting at their old publish date.
+function freshnessBn(post) {
+  const t = (d) => (d ? new Date(d).getTime() || 0 : 0);
+  return Math.max(t(post.publishedAt), t(post.publishedDate), t(post.lastModified));
+}
+
 // Helper to strip HTML tags for clean card snippet display
 function stripHtml(html) {
   if (!html) return '';
@@ -210,11 +217,7 @@ const BlogBn = () => {
     const allPublished = useMemo(() => {
         return [...postsBn]
             .filter(isPublishedBn)
-            .sort((a, b) => {
-                const timeA = new Date(a.publishedAt || a.publishedDate || 0).getTime();
-                const timeB = new Date(b.publishedAt || b.publishedDate || 0).getTime();
-                return timeB - timeA;
-            });
+            .sort((a, b) => freshnessBn(b) - freshnessBn(a));
     }, []);
 
     // Get 4 most recent posts for top showcase
@@ -291,11 +294,7 @@ const BlogBn = () => {
 
         // Apply sorting
         if (sortBy === 'recent') {
-            posts.sort((a, b) => {
-                const timeA = new Date(a.publishedAt || a.publishedDate || 0).getTime();
-                const timeB = new Date(b.publishedAt || b.publishedDate || 0).getTime();
-                return timeB - timeA;
-            });
+            posts.sort((a, b) => freshnessBn(b) - freshnessBn(a));
         } else if (sortBy === 'popular') {
             posts.sort((a, b) => (b.impressions || 0) - (a.impressions || 0));
         }

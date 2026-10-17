@@ -36,10 +36,12 @@
 
   <!-- Critical Anti-White-Flash & Pre-render Isolation Style -->
   <style>
-    body {
-      background-color: var(--bg, #0B1220);
-      margin: 0;
-    }
+    /* Colours are baked in per theme (match --bg in src/index.css). The head script above sets html[data-theme]
+       before first paint, so neither the canvas nor <body> ever shows the wrong colour while CSS/JS load. */
+    html { background-color: #F8F9FC; color-scheme: light; }
+    html[data-theme="dark"] { background-color: #0B1220; color-scheme: dark; }
+    body { background-color: #F8F9FC; margin: 0; }
+    html[data-theme="dark"] body { background-color: #0B1220; }
     #prerendered-content {
       display: none !important;
       visibility: hidden !important;
@@ -479,7 +481,11 @@
 </head>
 
 <body>
-  <div id="root"></div>
+<script>
+  /* Sync theme onto <body> before first paint (all dark CSS vars are scoped to body[data-theme="dark"]). */
+  try { document.body.setAttribute('data-theme', document.documentElement.getAttribute('data-theme') || 'light'); } catch (e) { }
+</script>
+<div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
 
   <!-- Google Analytics — deferred to after page load (non-blocking LCP) -->

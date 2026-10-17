@@ -23,6 +23,7 @@ import fs   from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { buildEntityGraph, buildHreflang, jsonLd, resolveMasterPillar, resolveQuickAnswerTable } from '../src/utils/seoSchema.mjs';
+import { evergreenYear } from '../src/utils/evergreenYear.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT   = path.resolve(__dirname, '..');
@@ -1009,7 +1010,7 @@ ${BN_DISCLAIMER}${bnMeta.body}${BN_CTA}`,
   let enCount = 0;
   for (const post of enPosts) {
     const postCanonical = post.canonicalUrl || `${BASE}/blog/${post.slug}`;
-    const enMetaDesc = (post.metaDescription || (post.heroIntro || '').replace(/<[^>]*>/g, '').trim()).slice(0, 160);
+    const enMetaDesc = evergreenYear(post.metaDescription || (post.heroIntro || '').replace(/<[^>]*>/g, '').trim()).slice(0, 160);
 
     // Explicit, reciprocal pairs only (scripts/audit-hreflang.mjs keeps the data clean) - same tags as the React page
     const hreflangTags = buildHreflang({ lang: 'en', slug: post.slug, pairedSlug: post.bnSlug })
@@ -1058,7 +1059,7 @@ ${BN_DISCLAIMER}${bnMeta.body}${BN_CTA}`,
 <script type="application/ld+json">${jsonLd(entityGraph)}</script>`;
 
     const html = buildPage(base, {
-      title: post.metaTitle || post.title,
+      title: evergreenYear(post.metaTitle || post.title),
       description: enMetaDesc,
       canonical: postCanonical,
       body: buildPostBody(post),
@@ -1076,7 +1077,7 @@ ${BN_DISCLAIMER}${bnMeta.body}${BN_CTA}`,
   let bnCount = 0;
   for (const post of bnPosts) {
     const postCanonical = post.canonicalUrl || `${BASE}/bn/blog/${post.slug}`;
-    const bnMetaDesc = (post.metaDescription || (post.heroIntro || '').replace(/<[^>]*>/g, '').trim()).slice(0, 160);
+    const bnMetaDesc = evergreenYear(post.metaDescription || (post.heroIntro || '').replace(/<[^>]*>/g, '').trim()).slice(0, 160);
 
     const hreflangTags = buildHreflang({ lang: 'bn', slug: post.slug, pairedSlug: post.enSlug })
       .map((h) => `<link rel="alternate" hreflang="${h.hrefLang}" href="${h.href}" />`).join('\n');
@@ -1125,7 +1126,7 @@ ${BN_DISCLAIMER}${bnMeta.body}${BN_CTA}`,
 <script type="application/ld+json">${jsonLd(entityGraph)}</script>`;
 
     const html = buildPage(base, {
-      title: post.metaTitle || post.title || 'বাংলাদেশ আইনি গাইড',
+      title: evergreenYear(post.metaTitle || post.title || 'বাংলাদেশ আইনি গাইড'),
       description: bnMetaDesc,
       canonical: postCanonical,
       body: buildBnPostBody(post),
