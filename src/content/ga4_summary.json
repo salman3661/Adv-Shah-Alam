@@ -1,14 +1,14 @@
 {
-  "updatedAt": "2026-10-19T12:51:40.457Z",
+  "updatedAt": "2026-10-19T12:58:14.636Z",
   "propertyId": "520583213",
   "channels": [
     {
       "channel": "Organic Search",
       "sourceMedium": "google / organic",
-      "activeUsers": 1686,
-      "sessions": 1899,
-      "pageViews": 2411,
-      "engagementRate": "64.2%"
+      "activeUsers": 1688,
+      "sessions": 1901,
+      "pageViews": 2413,
+      "engagementRate": "64.3%"
     },
     {
       "channel": "Direct",
@@ -211,15 +211,15 @@
       "pageViews": 59
     },
     {
+      "path": "/bn/blog/talaknama-lekhari-niyom-fee-prokriya-bangladesh-2026",
+      "title": "তালাকনামা লেখার নিয়ম ও খরচ | কাজী অফিস ও নোটিশ গাইড",
+      "activeUsers": 35,
+      "pageViews": 52
+    },
+    {
       "path": "/bn/blog/sampatti-uttoradhikar-ain-2026-bn",
       "title": "বাবার সম্পত্তি বন্টন আইন বাংলাদেশ ২০২৬ | ছেলে-মেয়ের ভাগের নিয়ম ও ফারায়েজ হিসাব",
       "activeUsers": 42,
-      "pageViews": 51
-    },
-    {
-      "path": "/bn/blog/talaknama-lekhari-niyom-fee-prokriya-bangladesh-2026",
-      "title": "তালাকনামা লেখার নিয়ম ও খরচ | কাজী অফিস ও নোটিশ গাইড",
-      "activeUsers": 34,
       "pageViews": 51
     },
     {
@@ -533,14 +533,14 @@
       "activeUsers": 15
     },
     {
-      "country": "China",
-      "city": "(not set)",
+      "country": "Bangladesh",
+      "city": "Gazipur",
       "activeUsers": 15
     },
     {
-      "country": "Bangladesh",
-      "city": "Gazipur",
-      "activeUsers": 14
+      "country": "China",
+      "city": "(not set)",
+      "activeUsers": 15
     },
     {
       "country": "India",
@@ -579,6 +579,11 @@
     },
     {
       "country": "Bangladesh",
+      "city": "",
+      "activeUsers": 11
+    },
+    {
+      "country": "Bangladesh",
       "city": "Cox's Bazar",
       "activeUsers": 11
     },
@@ -600,11 +605,6 @@
     {
       "country": "(not set)",
       "city": "(not set)",
-      "activeUsers": 10
-    },
-    {
-      "country": "Bangladesh",
-      "city": "",
       "activeUsers": 10
     },
     {
