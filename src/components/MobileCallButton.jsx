@@ -20,14 +20,23 @@ const MobileCallButton = () => {
                  !location.pathname.startsWith('/privacy-policy') &&
                  !location.pathname.startsWith('/terms');
 
-    // Only appear after scrolling down 250px (window.scrollY > 250) to keep Above-the-Fold 100% clutter-free
+    // Smoothly appear after 1.5s or slight scroll (40px) so mobile users immediately see WhatsApp & Call options
     useEffect(() => {
+        const timer = setTimeout(() => {
+            setVisible(true);
+        }, 1500);
+
         const onScroll = () => {
-            setVisible(window.scrollY > 250);
+            if (window.scrollY > 40) {
+                setVisible(true);
+            }
         };
         onScroll();
         window.addEventListener('scroll', onScroll, { passive: true });
-        return () => window.removeEventListener('scroll', onScroll);
+        return () => {
+            clearTimeout(timer);
+            window.removeEventListener('scroll', onScroll);
+        };
     }, []);
 
     const waHref = waLink('', isBn);
