@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-10-19T12:27:06.356Z",
+  "updatedAt": "2026-10-19T12:51:40.457Z",
   "propertyId": "520583213",
   "channels": [
     {
       "channel": "Organic Search",
       "sourceMedium": "google / organic",
-      "activeUsers": 1683,
-      "sessions": 1896,
-      "pageViews": 2406,
+      "activeUsers": 1686,
+      "sessions": 1899,
+      "pageViews": 2411,
       "engagementRate": "64.2%"
     },
     {
@@ -249,8 +249,8 @@
     {
       "path": "/blog/land-registration-cost-fees-calculator-bangladesh-2026",
       "title": "Land & Flat Registration Fee Calculator Bangladesh 2026 (Official Cost Chart)",
-      "activeUsers": 32,
-      "pageViews": 40
+      "activeUsers": 33,
+      "pageViews": 41
     },
     {
       "path": "/blog/rs-khatian-online-check-bangladesh-2026",
@@ -265,15 +265,15 @@
       "pageViews": 36
     },
     {
+      "path": "/blog/bangladesh-cyber-crime-complaint-portal-guide-2026",
+      "title": "Bangladesh Cyber Crime Complaint Online 2026 | Police Helpline, WhatsApp & GD",
+      "activeUsers": 24,
+      "pageViews": 36
+    },
+    {
       "path": "/bn/blog/sole-nama-solenama-deyani-adalat-niyom-2026",
       "title": "সোলেনামা কি ও আপস নিষ্পত্তির নিয়ম ২০২৬",
       "activeUsers": 26,
-      "pageViews": 34
-    },
-    {
-      "path": "/blog/bangladesh-cyber-crime-complaint-portal-guide-2026",
-      "title": "Bangladesh Cyber Crime Complaint Online 2026 | Police Helpline, WhatsApp & GD",
-      "activeUsers": 23,
       "pageViews": 34
     },
     {
@@ -485,7 +485,7 @@
     {
       "country": "Bangladesh",
       "city": "Dhaka",
-      "activeUsers": 715
+      "activeUsers": 716
     },
     {
       "country": "Bangladesh",
@@ -505,7 +505,7 @@
     {
       "country": "Bangladesh",
       "city": "Khulna",
-      "activeUsers": 70
+      "activeUsers": 71
     },
     {
       "country": "Bangladesh",
