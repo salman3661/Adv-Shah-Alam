@@ -8,7 +8,6 @@ import {
     TrendingUp, Newspaper, Flame, Scale, MapPin
 } from 'lucide-react';
 import { waLink, telLink } from '../data/contactInfo';
-import Disclaimer from '../components/Disclaimer';
 import MidArticleLeadCapture from '../components/MidArticleLeadCapture';
 import AdSenseAd from '../components/AdSenseAd';
 import { evergreenYear } from '../utils/evergreenYear.mjs';
@@ -123,12 +122,10 @@ const FAQItem = ({ question, answer, index }) => {
 /* ─── Sidebar Glass Wrappers ─── */
 const SbCard = ({ children, accentColor }) => (
     <div style={{
-        background: 'rgba(255,255,255,0.025)',
-        backdropFilter: 'blur(14px)',
-        WebkitBackdropFilter: 'blur(14px)',
-        border: `1px solid ${accentColor ? accentColor + '25' : 'rgba(198,167,94,0.14)'}`,
+        background: 'var(--card-bg, #fff)',
+        border: `1px solid ${accentColor ? accentColor + '38' : 'var(--card-border)'}`,
         borderRadius: '1rem', overflow: 'hidden', marginBottom: '1.125rem',
-        boxShadow: '0 4px 28px rgba(0,0,0,0.18), inset 0 1px 0 rgba(255,255,255,0.05)',
+        boxShadow: '0 1px 2px rgba(15,23,42,0.05), 0 12px 30px -16px rgba(15,23,42,0.28)',
     }}>{children}</div>
 );
 const SbHeader = ({ icon: Icon, label, color = 'var(--accent)' }) => (
@@ -164,7 +161,7 @@ const PopularBnPosts = ({ currentSlug }) => {
                                 textDecoration: 'none',
                                 transition: 'all 0.2s cubic-bezier(0.16, 1, 0.3, 1)',
                                 marginBottom: '0.25rem',
-                                borderBottom: idx !== popular.length - 1 ? '1px solid rgba(255,255,255,0.05)' : 'none',
+                                borderBottom: idx !== popular.length - 1 ? '1px solid var(--card-border)' : 'none',
                                 background: 'transparent'
                             }}
                             onMouseEnter={e => {
@@ -185,9 +182,9 @@ const PopularBnPosts = ({ currentSlug }) => {
                                 justifyContent: 'center',
                                 fontWeight: 900,
                                 fontSize: '0.75rem',
-                                background: isTop3 ? 'linear-gradient(135deg, #c6a75e, #e8c97d)' : 'rgba(255,255,255,0.06)',
+                                background: isTop3 ? 'linear-gradient(135deg, #c6a75e, #e8c97d)' : 'var(--surface)',
                                 color: isTop3 ? '#111' : 'var(--text-muted)',
-                                border: isTop3 ? 'none' : '1px solid rgba(255,255,255,0.08)',
+                                border: isTop3 ? 'none' : '1px solid var(--card-border)',
                                 boxShadow: isTop3 ? '0 2px 8px rgba(198,167,94,0.35)' : 'none',
                                 marginTop: '2px'
                             }}>
@@ -256,7 +253,7 @@ const RecentBnPosts = ({ currentSlug }) => {
                                 textDecoration: 'none',
                                 transition: 'all 0.2s cubic-bezier(0.16, 1, 0.3, 1)',
                                 marginBottom: '0.25rem',
-                                borderBottom: idx !== recent.length - 1 ? '1px solid rgba(255,255,255,0.05)' : 'none',
+                                borderBottom: idx !== recent.length - 1 ? '1px solid var(--card-border)' : 'none',
                                 background: 'transparent'
                             }}
                             onMouseEnter={e => {
@@ -433,7 +430,7 @@ const ConsultBnWidget = ({ postTitle }) => (
             </a>
             <a href={telLink()}
                 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', padding: '0.625rem', borderRadius: '0.625rem', fontSize: '0.8125rem', fontWeight: 600, textDecoration: 'none', color: 'rgba(255,255,255,0.65)', border: '1px solid rgba(255,255,255,0.1)', transition: 'all 0.15s', fontFamily: "'Noto Serif Bengali', 'Noto Sans Bengali', sans-serif" }}
-                onMouseEnter={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.06)'; e.currentTarget.style.color = '#fff'; }}
+                onMouseEnter={e => { e.currentTarget.style.background = 'var(--surface)'; e.currentTarget.style.color = '#fff'; }}
                 onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = 'rgba(255,255,255,0.65)'; }}>
                 <Phone size={13} /> ফোন করুন
             </a>
@@ -719,7 +716,7 @@ const BlogPostBnInner = () => {
                         <span style={{ fontSize: '0.7rem', fontWeight: 800, padding: '0.3rem 0.875rem', borderRadius: '9999px', background: cc.bg, color: cc.text, letterSpacing: '0.07em', textTransform: 'uppercase' }}>
                             {post.category}
                         </span>
-                        <span style={{ display: 'flex', alignItems: 'center', gap: '0.3rem', fontSize: '0.75rem', color: 'var(--hero-muted)', padding: '0.3rem 0.75rem', borderRadius: '9999px', background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.08)' }}>
+                        <span style={{ display: 'flex', alignItems: 'center', gap: '0.3rem', fontSize: '0.75rem', color: 'var(--hero-muted)', padding: '0.3rem 0.75rem', borderRadius: '9999px', background: 'rgba(255,255,255,0.05)', border: '1px solid var(--card-border)' }}>
                             <Clock size={12} /> {post.readTime}
                         </span>
                     </div>
@@ -747,7 +744,7 @@ const BlogPostBnInner = () => {
                         </div>
                     )}
 
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.875rem', flexWrap: 'wrap', paddingTop: '1.25rem', borderTop: '1px solid rgba(255,255,255,0.08)' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.875rem', flexWrap: 'wrap', paddingTop: '1.25rem', borderTop: '1px solid var(--card-border)' }}>
                         <img
                             src="/images/hero/hero-md-shah-alam.webp"
                             alt="অ্যাডভোকেট মো. শাহ আলম"
@@ -831,33 +828,7 @@ const BlogPostBnInner = () => {
                             </div>
 
                             <article ref={articleRef}>
-                                <Disclaimer lang="bn" />
 
-                                {/* Phase 4.3: Topic Cluster Internal Linking (Hub & Spoke Master Pillar Guide) */}
-                                {pillarInfo && (
-                                    <div className="master-pillar-box" style={{ marginBottom: '1.75rem', padding: '1.15rem 1.35rem', borderRadius: '0.95rem', background: 'linear-gradient(135deg, rgba(27,54,93,0.08), rgba(198,167,94,0.08))', border: '1.5px solid rgba(198,167,94,0.35)' }}>
-                                        <p style={{ margin: '0 0 0.65rem', fontSize: '0.92rem', fontWeight: 800, color: 'var(--gold, #b8922a)' }}>
-                                            📌 মূল গাইড ও ক্যালকুলেটর (Master Pillar Guide)
-                                        </p>
-                                        <ul style={{ margin: 0, paddingLeft: '1.15rem', display: 'flex', flexDirection: 'column', gap: '0.45rem', fontSize: '0.95rem', lineHeight: 1.65 }}>
-                                            <li>
-                                                <Link to={pillarInfo.primaryUrl} style={{ color: 'var(--accent)', fontWeight: 700, textDecoration: 'underline', textUnderlineOffset: '3px' }}>
-                                                    {pillarInfo.primaryAnchor}
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link to={pillarInfo.secondaryUrl} style={{ color: 'var(--text)', fontWeight: 600, textDecoration: 'underline', textUnderlineOffset: '3px' }}>
-                                                    {pillarInfo.secondaryAnchor}
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link to={pillarInfo.serviceUrl} style={{ color: 'var(--gold, #b8922a)', fontWeight: 700, textDecoration: 'underline', textUnderlineOffset: '3px' }}>
-                                                    ⚖️ {pillarInfo.serviceAnchor}
-                                                </Link>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                )}
 
                                 {/* Phase 5.2: Featured Snippet & AI Overview (GEO) Quick Answer Table */}
                                 {quickTable && (
@@ -889,7 +860,7 @@ const BlogPostBnInner = () => {
                                 )}
 
                                 {/* Quick Answer Bullet Points (if present in JSON) */}
-                                {post.quickAnswer && (
+                                {post.quickAnswer && !quickTable && (
                                     <div style={{ marginBottom: '2.25rem', padding: '1.375rem 1.5rem', borderRadius: '1rem', background: 'linear-gradient(135deg, rgba(184,146,42,0.08), rgba(184,146,42,0.02))', border: '1.5px solid rgba(184,146,42,0.22)' }}>
                                         <p style={{ fontSize: '0.875rem', fontWeight: 800, color: 'var(--gold)', marginBottom: '0.875rem', fontFamily: "'Noto Serif Bengali', 'Noto Sans Bengali', sans-serif" }}>
                                             {typeof post.quickAnswer === 'object' && post.quickAnswer?.heading ? post.quickAnswer.heading : 'আইনি সারসংক্ষেপ ও তাৎক্ষণিক পরামর্শ'}
@@ -929,51 +900,21 @@ const BlogPostBnInner = () => {
                                                     flexDirection: 'column',
                                                     gap: '0.625rem'
                                                 }}>
-                                                    {/* Sub-pill badge */}
-                                                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                                                        <span style={{
-                                                            display: 'inline-flex',
-                                                            alignItems: 'center',
-                                                            gap: '0.375rem',
-                                                            fontSize: '0.75rem',
-                                                            fontWeight: 800,
-                                                            letterSpacing: '0.06em',
-                                                            textTransform: 'uppercase',
-                                                            color: 'var(--gold, #c6a75e)',
-                                                            background: 'rgba(198, 167, 94, 0.08)',
-                                                            border: '1px solid rgba(198, 167, 94, 0.22)',
-                                                            padding: '0.25rem 0.65rem',
-                                                            borderRadius: '9999px',
-                                                        }}>
-                                                            <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: 'var(--gold, #c6a75e)' }}></span>
-                                                            <span>ধাপ {toBnDigits(i + 1)}</span>
-                                                        </span>
+                                                    {/* Numbered editorial header: gold number tile + headline */}
+                                                    <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                                                        <span aria-hidden="true" style={{
+                                                            flexShrink: 0, width: '3.1rem', height: '3.1rem', borderRadius: '0.9rem',
+                                                            display: 'flex', alignItems: 'center', justifyContent: 'center',
+                                                            fontWeight: 800, fontSize: '1.15rem', color: '#1a1405', fontFamily: "'Noto Serif Bengali', sans-serif",
+                                                            background: 'linear-gradient(135deg, #f0d98a 0%, #c6a75e 100%)',
+                                                            boxShadow: '0 8px 18px -8px rgba(198,167,94,0.85), inset 0 1px 0 rgba(255,255,255,0.5)',
+                                                        }}>{toBnDigits(i + 1)}</span>
+                                                        <h2 style={{
+                                                            fontFamily: "'Noto Serif Bengali', sans-serif",
+                                                            fontSize: 'clamp(1.3rem, 2.5vw, 1.7rem)', fontWeight: 800, lineHeight: 1.35,
+                                                            color: 'var(--text)', margin: 0, letterSpacing: '-0.01em', flex: 1,
+                                                        }}>{cleanHeadingText(sec.heading || sec.h2 || sec.title || '')}</h2>
                                                     </div>
-
-                                                    {/* Clean Headline with vertical accent bar */}
-                                                    <h2 style={{
-                                                        fontFamily: "'Noto Serif Bengali', sans-serif",
-                                                        fontSize: 'clamp(1.35rem, 2.5vw, 1.75rem)',
-                                                        fontWeight: 800,
-                                                        lineHeight: 1.35,
-                                                        color: 'var(--text)',
-                                                        margin: 0,
-                                                        letterSpacing: '-0.01em',
-                                                        display: 'flex',
-                                                        alignItems: 'flex-start',
-                                                        gap: '0.75rem'
-                                                    }}>
-                                                        <span style={{
-                                                            display: 'inline-block',
-                                                            width: '4px',
-                                                            minHeight: '1.35em',
-                                                            borderRadius: '4px',
-                                                            background: 'var(--gold, #C6A75E)',
-                                                            flexShrink: 0,
-                                                            marginTop: '0.12em'
-                                                        }}></span>
-                                                        <span style={{ flex: 1 }}>{cleanHeadingText(sec.heading || sec.h2 || sec.title || '')}</span>
-                                                    </h2>
                                                 </div>
 
                                                 <div className="prose-bn-content"
@@ -1144,24 +1085,50 @@ const BlogPostBnInner = () => {
                                     </div>
                                 </div>
 
+                                {/* Phase 4.3: Topic Cluster Internal Linking (Hub & Spoke Master Pillar Guide) */}
+                                {pillarInfo && (
+                                    <div className="master-pillar-box" style={{ marginBottom: '1.75rem', padding: '1.15rem 1.35rem', borderRadius: '0.95rem', background: 'linear-gradient(135deg, rgba(27,54,93,0.08), rgba(198,167,94,0.08))', border: '1.5px solid rgba(198,167,94,0.35)' }}>
+                                        <p style={{ margin: '0 0 0.65rem', fontSize: '0.92rem', fontWeight: 800, color: 'var(--gold, #b8922a)' }}>
+                                            📌 মূল গাইড ও ক্যালকুলেটর (Master Pillar Guide)
+                                        </p>
+                                        <ul style={{ margin: 0, paddingLeft: '1.15rem', display: 'flex', flexDirection: 'column', gap: '0.45rem', fontSize: '0.95rem', lineHeight: 1.65 }}>
+                                            <li>
+                                                <Link to={pillarInfo.primaryUrl} style={{ color: 'var(--accent)', fontWeight: 700, textDecoration: 'underline', textUnderlineOffset: '3px' }}>
+                                                    {pillarInfo.primaryAnchor}
+                                                </Link>
+                                            </li>
+                                            <li>
+                                                <Link to={pillarInfo.secondaryUrl} style={{ color: 'var(--text)', fontWeight: 600, textDecoration: 'underline', textUnderlineOffset: '3px' }}>
+                                                    {pillarInfo.secondaryAnchor}
+                                                </Link>
+                                            </li>
+                                            <li>
+                                                <Link to={pillarInfo.serviceUrl} style={{ color: 'var(--gold, #b8922a)', fontWeight: 700, textDecoration: 'underline', textUnderlineOffset: '3px' }}>
+                                                    ⚖️ {pillarInfo.serviceAnchor}
+                                                </Link>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                )}
+
                                 {/* Mandatory Article Disclaimer Box (AdSense & YMYL E-E-A-T Step 6) */}
                                 <div className="legal-disclaimer-box p-4 bg-gray-50 dark:bg-gray-800/40 border-l-4 border-amber-600 my-6 text-sm text-gray-700 dark:text-gray-300 rounded-r-lg">
                                     <strong>দায়বর্জন (Disclaimer):</strong> এই আর্টিকেলে পরিবেশিত তথ্যসমূহ কেবল আইনি সচেতনতা ও সাধারণ শিক্ষার উদ্দেশ্যে প্রকাশিত। এটি কোনো প্রত্যক্ষ আইনি পরামর্শ (Legal Advice) নয় এবং এর মাধ্যমে কোনো আইনজীবী-মক্কেল সম্পর্ক (Attorney-Client Relationship) তৈরি হয় না। আপনার সুনির্দিষ্ট মামলার আইনি প্রতিকারের জন্য সরাসরি বাংলাদেশ সুপ্রিম কোর্ট বা জজ কোর্টের তালিকাভুক্ত বিজ্ঞ আইনজীবীর সাথে পরামর্শ করুন।
                                 </div>
                                 {adAnchors.top && createPortal(
-                                    <AdSenseAd key={`ad-top-${post.slug}`} slot={AD_SLOTS.topInArticle} format="auto" responsive={true} labelText="বিজ্ঞাপন" minHeight={280} densityGroup="content" style={{ borderRadius: '0.75rem', overflow: 'hidden', margin: '1.75rem auto' }} />,
+                                    <AdSenseAd key={`ad-top-${post.slug}`} slot={AD_SLOTS.topInArticle} format="auto" responsive={true} labelText="বিজ্ঞাপন" minHeight={280} densityGroup="content" style={{ borderRadius: '0.75rem', overflow: 'hidden', margin: '2.5rem auto' }} />,
                                     adAnchors.top
                                 )}
                                 {adAnchors.mid && createPortal(
-                                    <AdSenseAd key={`ad-mid-${post.slug}`} slot={AD_SLOTS.midNative} format="fluid" layout="in-article" responsive={true} labelText="বিজ্ঞাপন" minHeight={250} densityGroup="content" style={{ borderRadius: '0.75rem', overflow: 'hidden', margin: '1.75rem auto' }} />,
+                                    <AdSenseAd key={`ad-mid-${post.slug}`} slot={AD_SLOTS.midNative} format="fluid" layout="in-article" responsive={true} labelText="বিজ্ঞাপন" minHeight={250} densityGroup="content" style={{ borderRadius: '0.75rem', overflow: 'hidden', margin: '2.5rem auto' }} />,
                                     adAnchors.mid
                                 )}
                                 {adAnchors.mid2 && createPortal(
-                                    <AdSenseAd key={`ad-mid2-${post.slug}`} slot={AD_SLOTS.topInArticle} format="auto" responsive={true} labelText="বিজ্ঞাপন" minHeight={250} densityGroup="content" style={{ borderRadius: '0.75rem', overflow: 'hidden', margin: '1.75rem auto' }} />,
+                                    <AdSenseAd key={`ad-mid2-${post.slug}`} slot={AD_SLOTS.topInArticle} format="auto" responsive={true} labelText="বিজ্ঞাপন" minHeight={250} densityGroup="content" style={{ borderRadius: '0.75rem', overflow: 'hidden', margin: '2.5rem auto' }} />,
                                     adAnchors.mid2
                                 )}
                                 {adAnchors.end && createPortal(
-                                    <AdSenseAd key={`ad-end-${post.slug}`} slot={AD_SLOTS.midNative} format="fluid" layout="in-article" responsive={true} labelText="বিজ্ঞাপন" minHeight={250} densityGroup="content" style={{ borderRadius: '0.75rem', overflow: 'hidden', margin: '1.75rem auto' }} />,
+                                    <AdSenseAd key={`ad-end-${post.slug}`} slot={AD_SLOTS.midNative} format="fluid" layout="in-article" responsive={true} labelText="বিজ্ঞাপন" minHeight={250} densityGroup="content" style={{ borderRadius: '0.75rem', overflow: 'hidden', margin: '2.5rem auto' }} />,
                                     adAnchors.end
                                 )}
                             </article>
@@ -1196,7 +1163,7 @@ const BlogPostBnInner = () => {
                     {/* Mobile bottom related */}
                     <div className="bpbn-mobile-bottom">
                         <div style={{ borderTop: '2px solid var(--accent)', paddingTop: '2rem', marginTop: '1rem' }}>
-                            <p style={{ fontSize: '0.8rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.08em', color: 'var(--text)', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.375rem' }}>
+                            <p style={{ fontSize: '1.05rem', fontWeight: 800, color: 'var(--text)', marginBottom: '1.1rem', display: 'flex', alignItems: 'center', gap: '0.375rem' }}>
                                 <Flame size={14} style={{ color: 'var(--accent)' }} /> আরও নিবন্ধ
                             </p>
                             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))', gap: '0.875rem' }}>
@@ -1204,10 +1171,10 @@ const BlogPostBnInner = () => {
                                     const rc = catColor(rp.category);
                                     return (
                                         <Link key={rp.slug} to={`/bn/blog/${rp.slug}`}
-                                            style={{ display: 'block', borderRadius: '0.875rem', overflow: 'hidden', textDecoration: 'none', background: 'var(--card-bg)', border: '1px solid var(--card-border)', transition: 'transform 0.2s, border-color 0.2s' }}
+                                            style={{ display: 'block', borderRadius: '0.875rem', overflow: 'hidden', textDecoration: 'none', background: 'var(--card-bg)', border: '1px solid var(--card-border)', boxShadow: '0 10px 26px -16px rgba(15,23,42,0.35)', transition: 'transform 0.2s, border-color 0.2s' }}
                                             onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.borderColor = rc.bg; }}
                                             onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.borderColor = 'var(--card-border)'; }}>
-                                            <div style={{ height: '4px', background: rc.bg }} />
+                                            <div style={{ height: '5px', background: `linear-gradient(90deg, ${rc.bg}, ${rc.bg}55)` }} />
                                             <div style={{ padding: '0.875rem' }}>
                                                 <span style={{ fontSize: '0.65rem', fontWeight: 800, color: rc.bg, textTransform: 'uppercase', letterSpacing: '0.06em', display: 'block', marginBottom: '0.375rem' }}>{rp.category}</span>
                                                 <p style={{ fontSize: '0.875rem', fontWeight: 600, color: 'var(--text)', lineHeight: 1.4, margin: 0, marginBottom: '0.5rem', wordBreak: 'break-word' }}>{rp.title}</p>

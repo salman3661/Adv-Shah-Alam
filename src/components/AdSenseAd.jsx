@@ -126,7 +126,7 @@ const AdSenseAd = ({
             style={{
                 display: 'block',
                 textAlign: 'center',
-                margin: '1.75rem auto',
+                margin: '2.5rem auto',
                 maxWidth: '100%',
                 clear: 'both',
                 overflow: 'hidden',
