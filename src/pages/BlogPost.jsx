@@ -762,7 +762,7 @@ const BlogPostInner = () => {
                                         <span>Direct Call: 01712655546</span>
                                     </a>
                                     <a
-                                        href={`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(`Assalamu Alaikum, I would like legal consultation regarding "${post.title}".`)}`}
+                                        href={waLink(`Assalamu Alaikum, I would like legal consultation regarding "${post.title}".`, false)}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="bpbn-intro-wa-chip"

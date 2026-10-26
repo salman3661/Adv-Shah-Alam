@@ -812,7 +812,7 @@ const BlogPostBnInner = () => {
                                         <span>জরুরি পরামর্শ: 01712655546</span>
                                     </a>
                                     <a
-                                        href={`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(`আসসালামু আলাইকুম, "${post.title}" বিষয়ে আপনার আইনি পরামর্শ চাই।`)}`}
+                                        href={waLink(`আসসালামু আলাইকুম, "${post.title}" বিষয়ে আপনার আইনি পরামর্শ চাই।`, true)}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="bpbn-intro-wa-chip"
