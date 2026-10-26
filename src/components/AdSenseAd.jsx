@@ -23,13 +23,15 @@ import React, { useEffect, useRef, useState } from 'react';
 
 const PUB_ID = 'ca-pub-1781126556775676';
 
-/** Minimum clear vertical space (as a fraction of the viewport height) between two ads of one group. */
-const MIN_GAP_VH = 0.6;
+/** Minimum clear vertical space between two ads of one group. */
+const MIN_GAP_VH = 0.55;
 
 /** True when another already-requested ad of the same group sits closer than the minimum gap. */
 function tooCloseToAnotherAd(wrapper, group) {
     if (!wrapper || typeof window === 'undefined') return false;
-    const gap = MIN_GAP_VH * window.innerHeight;
+    const gap = group === 'rail'
+        ? Math.min(240, 0.28 * window.innerHeight)
+        : MIN_GAP_VH * window.innerHeight;
     const me = wrapper.getBoundingClientRect();
     const others = document.querySelectorAll(`.adsense-wrapper[data-ad-group="${group}"][data-ad-requested="1"]`);
     for (const o of others) {
@@ -48,10 +50,10 @@ const AdSenseAd = ({
     responsive = true,
     className = '',
     style = {},
-    label = true,
+    label = false,
     labelText = 'বিজ্ঞাপন',
     layoutKey = '',
-    minHeight = 250,
+    minHeight = 0,
     densityGroup = null,
 }) => {
     const wrapRef = useRef(null);
@@ -121,6 +123,18 @@ const AdSenseAd = ({
 
     const isFluidOrRelaxed = format === 'fluid' || format === 'autorelaxed' || layout === 'in-article';
 
+    // Strip any legacy large margins or card borders passed via inline style so ads sit directly between paragraphs like BD Pratidin
+    const {
+        margin: _ignoredMargin,
+        marginBottom: _ignoredMarginBottom,
+        borderRadius: _ignoredRadius,
+        border: _ignoredBorder,
+        background: _ignoredBg,
+        boxShadow: _ignoredShadow,
+        padding: _ignoredPadding,
+        ...cleanStyle
+    } = style || {};
+
     return (
         <div
             ref={wrapRef}
@@ -129,46 +143,19 @@ const AdSenseAd = ({
             style={{
                 display: 'block',
                 textAlign: 'center',
-                margin: '2.5rem auto',
+                margin: '0.5rem auto 0.85rem',
+                padding: 0,
                 maxWidth: '100%',
                 clear: 'both',
                 overflow: 'hidden',
                 boxSizing: 'border-box',
-                /* Premium news-portal style card frame (the ad itself is untouched inside) */
-                padding: '0.5rem 0.75rem 0.75rem',
-                background: 'var(--surface, rgba(148,163,184,0.06))',
-                border: '1px solid var(--card-border, rgba(148,163,184,0.25))',
-                borderRadius: '1rem',
-                boxShadow: '0 1px 2px rgba(15,23,42,0.04), 0 6px 18px -8px rgba(15,23,42,0.12)',
-                minHeight: `${Math.max(250, minHeight) + (label ? 30 : 12)}px`,
-                ...style,
+                background: 'transparent',
+                border: 'none',
+                boxShadow: 'none',
+                minHeight: 0,
+                ...cleanStyle,
             }}
         >
-            {label && (
-                <div style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '0.5rem',
-                    marginBottom: '0.5rem',
-                    userSelect: 'none',
-                }}>
-                    <span style={{ flex: 1, height: '1px', background: 'var(--card-border, rgba(148,163,184,0.3))' }} />
-                    <span style={{
-                        fontSize: '0.625rem',
-                        fontWeight: 700,
-                        color: 'var(--text-muted, #94a3b8)',
-                        textTransform: 'uppercase',
-                        letterSpacing: '0.12em',
-                        padding: '0.125rem 0.625rem',
-                        borderRadius: '999px',
-                        border: '1px solid var(--card-border, rgba(148,163,184,0.3))',
-                        background: 'var(--bg, transparent)',
-                    }}>
-                        {labelText}
-                    </span>
-                    <span style={{ flex: 1, height: '1px', background: 'var(--card-border, rgba(148,163,184,0.3))' }} />
-                </div>
-            )}
             <ins
                 ref={adRef}
                 className="adsbygoogle"

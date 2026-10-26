@@ -5,7 +5,7 @@ import seo from '../content/seo.js';
 import postsPreview from '../content/posts-preview.json';
 import { coverFor } from '../utils/coverImage';
 
-const stripHtml = (s) => (s ? String(s).replace(/<[^>]*>?/gm, '').trim() : '');
+const stripHtml = (s) => (s ? String(s).replace(/<[^>]*>?/gm, '').replace(/\*\*([^*]+)\*\*/g, '$1').trim() : '');
 
 const latestEn = Array.isArray(postsPreview?.en) ? postsPreview.en : [];
 const latestBn = Array.isArray(postsPreview?.bn) ? postsPreview.bn : [];

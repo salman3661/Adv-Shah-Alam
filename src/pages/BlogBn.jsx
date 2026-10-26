@@ -34,7 +34,7 @@ function popularityBn(post) {
 // Helper to strip HTML tags for clean card snippet display
 function stripHtml(html) {
   if (!html) return '';
-  return String(html).replace(/<[^>]*>?/gm, '').trim();
+  return String(html).replace(/<[^>]*>?/gm, '').replace(/\*\*([^*]+)\*\*/g, '$1').trim();
 }
 
 // Bengali unicode normalization helper

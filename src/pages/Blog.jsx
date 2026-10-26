@@ -33,7 +33,7 @@ function popularity(post) {
 
 function stripHtml(html) {
   if (!html) return '';
-  return String(html).replace(/<[^>]*>?/gm, '').trim();
+  return String(html).replace(/<[^>]*>?/gm, '').replace(/\*\*([^*]+)\*\*/g, '$1').trim();
 }
 
 const CATEGORIES = seo.categoriesEn;

@@ -18,7 +18,7 @@ import { FEE_CALCULATORS, calculatorSectionIndex } from '../data/feeCalculators'
 import { SITE, buildEntityGraph, buildHreflang, resolveMasterPillar, resolveQuickAnswerTable, jsonLd } from '../utils/seoSchema.mjs';
 import ArticleSkeleton from '../components/ArticleSkeleton';
 import NotFound from './NotFound';
-import { sanitizeHtml } from '../utils/sanitizeHtml';
+import { sanitizeHtml, formatHeroIntro } from '../utils/sanitizeHtml';
 
 /* ── Load all EN posts ── */
 import postsMeta_en from '../content/posts-meta-en.json';
@@ -671,37 +671,17 @@ const BlogPostInner = () => {
                             {/* Title */}
                             <h1 style={{
                                 fontFamily: "Georgia, serif",
-                                fontSize: 'clamp(1.7rem, 3.6vw, 2.75rem)',
-                                fontWeight: 800, lineHeight: 1.24,
+                                fontSize: 'clamp(1.65rem, 3.5vw, 2.55rem)',
+                                fontWeight: 800, lineHeight: 1.26,
                                 color: '#FFFFFF',
-                                marginBottom: '1.25rem',
+                                marginBottom: '1.35rem',
                                 letterSpacing: '-0.025em',
                             }}>
                                 {post.title}
                             </h1>
 
-                            {/* Hero intro */}
-                            {post.heroIntro && (
-                                <div className="bpbn-hero-intro-card">
-                                    <div className="bpbn-intro-header">
-                                        <div className="bpbn-intro-badge">
-                                            <span className="bpbn-intro-dot" />
-                                            <span>Legal Insights & Executive Brief</span>
-                                        </div>
-                                        <a href="tel:01712655546" className="bpbn-intro-call-chip">
-                                            <Phone size={13} />
-                                            <span>Direct Consultation: 01712655546</span>
-                                        </a>
-                                    </div>
-                                    <div
-                                        className="bpbn-intro-content"
-                                        dangerouslySetInnerHTML={{ __html: sanitizeHtml(post.heroIntro) }}
-                                    />
-                                </div>
-                            )}
-
                             {/* Author / date row */}
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '0.875rem', flexWrap: 'wrap', paddingTop: '1.15rem', borderTop: '1px solid rgba(255,255,255,0.18)' }}>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '0.875rem', flexWrap: 'wrap', paddingTop: '1.1rem', borderTop: '1px solid rgba(255,255,255,0.18)' }}>
                                 <img
                                     src="/images/hero/hero-md-shah-alam.webp"
                                     alt="Advocate Md. Shah Alam"
@@ -767,6 +747,42 @@ const BlogPostInner = () => {
                             </div>
                         </div>
                     </div>
+
+                    {/* Tier 2: Full-Width Luxury White Executive Summary Box */}
+                    {post.heroIntro && (
+                        <div className="bpbn-hero-intro-card">
+                            <div className="bpbn-intro-header">
+                                <div className="bpbn-intro-badge">
+                                    <span className="bpbn-intro-dot" />
+                                    <span>Legal Insights & Executive Brief</span>
+                                </div>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                                    <a href="tel:01712655546" className="bpbn-intro-call-chip">
+                                        <Phone size={13} />
+                                        <span>Direct Call: 01712655546</span>
+                                    </a>
+                                    <a
+                                        href={`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(`Assalamu Alaikum, I would like legal consultation regarding "${post.title}".`)}`}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="bpbn-intro-wa-chip"
+                                    >
+                                        <MessageCircle size={13} />
+                                        <span>WhatsApp Consultation</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div
+                                className="bpbn-intro-content"
+                                dangerouslySetInnerHTML={{ __html: formatHeroIntro(post.heroIntro) }}
+                            />
+                            <div className="bpbn-intro-footer">
+                                <span>✓ Supreme Court of Bangladesh Legal Guide (2026)</span>
+                                <span>⚖️ Uttara & Dhaka Judge Court Chambers</span>
+                                <span>⚡ Direct Case & Document Assessment</span>
+                            </div>
+                        </div>
+                    )}
                 </div>
             </section>
 
@@ -1083,27 +1099,71 @@ const BlogPostInner = () => {
                             </article>
                         </div>
 
-                        {/* ══ RIGHT SIDEBAR ══ */}
+                        {/* ══ RIGHT SIDEBAR (Full-Height Interleaved Editorial & Diverse Ad Rail) ══ */}
                         <aside className="bp-sidebar google-anno-skip">
-                            <div style={{ position: 'sticky', top: '5rem' }}>
+                            <div className="bp-sidebar-rail">
                                 <ConsultWidget postTitle={post.title} />
 
-                                {/* ── Sidebar AdSense Ad (Square/Rectangle) ── */}
+                                {/* ── Sidebar Ad 1: Display Auto ── */}
                                 {isDesktop && (
                                     <AdSenseAd
                                         slot={AD_SLOTS.sidebar}
                                         format="auto"
                                         responsive={true}
-                                        labelText="Advertisement"
-                                        minHeight={250}
                                         densityGroup="rail"
-                                        style={{ marginBottom: '1.125rem', borderRadius: '0.875rem', overflow: 'hidden' }}
                                     />
                                 )}
 
                                 <PopularPosts currentSlug={post.slug} />
 
+                                {/* ── Sidebar Ad 2: Native Fluid In-Article ── */}
+                                {isDesktop && (
+                                    <AdSenseAd
+                                        slot={AD_SLOTS.midNative}
+                                        format="fluid"
+                                        layout="in-article"
+                                        responsive={true}
+                                        densityGroup="rail"
+                                    />
+                                )}
+
+                                <RelatedByCategory category={post.category} currentSlug={post.slug} />
+
+                                {/* ── Sidebar Ad 3: Display Banner Unit ── */}
+                                {isDesktop && (
+                                    <AdSenseAd
+                                        slot={AD_SLOTS.topInArticle}
+                                        format="auto"
+                                        responsive={true}
+                                        densityGroup="rail"
+                                    />
+                                )}
+
                                 <RecentPosts currentSlug={post.slug} />
+
+                                {/* ── Sidebar Ad 4: Native Fluid Card ── */}
+                                {isDesktop && (
+                                    <AdSenseAd
+                                        slot={AD_SLOTS.midNative}
+                                        format="fluid"
+                                        layout="in-article"
+                                        responsive={true}
+                                        densityGroup="rail"
+                                    />
+                                )}
+
+                                {/* ── Sticky Bottom Follower ── */}
+                                <div style={{ position: 'sticky', top: '5.25rem' }}>
+                                    <ChamberPromoCard />
+                                    {isDesktop && (
+                                        <AdSenseAd
+                                            slot={AD_SLOTS.sidebar}
+                                            format="auto"
+                                            responsive={true}
+                                            densityGroup="rail"
+                                        />
+                                    )}
+                                </div>
                             </div>
                         </aside>
                     </div>
@@ -1221,11 +1281,19 @@ const BlogPostInner = () => {
                 }
                 .bp-main-grid {
                     display: grid;
-                    grid-template-columns: 1fr 320px;
-                    gap: 3rem;
-                    align-items: start;
+                    grid-template-columns: 1fr 330px;
+                    gap: 2.75rem;
+                    align-items: stretch;
                 }
-                .bp-sidebar { display: block; }
+                .bp-sidebar {
+                    display: block;
+                    height: 100%;
+                }
+                .bp-sidebar-rail {
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+                }
                 .bp-toc-inline { display: none; }
                 .bp-mobile-toc { display: none; }
                 .bp-mobile-bottom { display: block; }
@@ -1250,22 +1318,16 @@ const BlogPostInner = () => {
                     .bp-mobile-bottom { display: block; }
                 }
 
-                @media (max-width: 640px) {
-                    .bp-toc-inline { display: none; }
-                    .bp-mobile-toc { display: block; }
-                    .bp-body-container, .bp-hero-container { padding-left: 1rem; padding-right: 1rem; }
-                }
-
-                /* ─── Luminous Executive Hero Intro Box ─── */
+                /* ─── Luminous Full-Width Executive Hero Intro Box ─── */
                 .bpbn-hero-intro-card {
-                    margin: 1.35rem 0 2rem;
-                    max-width: 920px;
+                    margin: 1.75rem 0 0.25rem;
+                    max-width: 100%;
                     padding: 0;
                     background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFF 100%);
-                    border: 1.5px solid rgba(212, 175, 55, 0.55);
+                    border: 1.5px solid rgba(212, 175, 55, 0.65);
                     border-left: 6px solid #D4AF37;
                     border-radius: 1.15rem;
-                    box-shadow: 0 22px 48px -14px rgba(6, 15, 36, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.65) inset;
+                    box-shadow: 0 24px 52px -14px rgba(6, 15, 36, 0.58), 0 0 0 1px rgba(255, 255, 255, 0.75) inset;
                     position: relative;
                     overflow: hidden;
                 }
@@ -1276,7 +1338,7 @@ const BlogPostInner = () => {
                     flex-wrap: wrap;
                     gap: 0.75rem;
                     margin-bottom: 0;
-                    padding: 0.9rem 1.45rem;
+                    padding: 0.95rem 1.75rem;
                     background: linear-gradient(90deg, #0B1938 0%, #1B3B7B 100%);
                     border-bottom: 1px solid rgba(212, 175, 55, 0.35);
                 }
@@ -1284,9 +1346,9 @@ const BlogPostInner = () => {
                     display: inline-flex;
                     align-items: center;
                     gap: 0.5rem;
-                    font-size: 0.85rem;
+                    font-size: 0.88rem;
                     font-weight: 800;
-                    letter-spacing: 0.05em;
+                    letter-spacing: 0.04em;
                     color: #FDE68A;
                 }
                 .bpbn-intro-dot {
@@ -1301,7 +1363,7 @@ const BlogPostInner = () => {
                     display: inline-flex;
                     align-items: center;
                     gap: 0.375rem;
-                    padding: 0.36rem 1rem;
+                    padding: 0.38rem 1rem;
                     border-radius: 9999px;
                     background: linear-gradient(135deg, #FDE68A 0%, #D4AF37 100%);
                     border: 1px solid #FFF3B0;
@@ -1316,22 +1378,48 @@ const BlogPostInner = () => {
                     transform: translateY(-1px);
                     box-shadow: 0 6px 16px rgba(212, 175, 55, 0.45);
                 }
+                .bpbn-intro-wa-chip {
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 0.375rem;
+                    padding: 0.38rem 0.95rem;
+                    border-radius: 9999px;
+                    background: rgba(34, 197, 94, 0.18);
+                    border: 1px solid rgba(74, 222, 128, 0.55);
+                    color: #DCFCE7;
+                    font-size: 0.8rem;
+                    font-weight: 700;
+                    text-decoration: none;
+                    transition: all 0.2s ease;
+                }
+                .bpbn-intro-wa-chip:hover {
+                    background: rgba(34, 197, 94, 0.28);
+                    transform: translateY(-1px);
+                }
                 .bpbn-intro-content {
-                    font-size: 1.1rem;
-                    line-height: 1.95;
+                    font-size: 1.12rem;
+                    line-height: 2.02;
                     color: #0F172A;
-                    padding: 1.35rem 1.55rem 1.45rem;
+                    padding: 1.5rem 1.85rem;
                 }
                 .bpbn-intro-content p {
                     margin: 0;
                 }
+                .bpbn-intro-content p + p,
+                .bpbn-intro-content p.bpbn-intro-para + p.bpbn-intro-para {
+                    margin-top: 1rem;
+                    padding-top: 0.95rem;
+                    border-top: 1px dashed rgba(29, 78, 216, 0.16);
+                }
                 .bpbn-intro-content strong, .bpbn-intro-content b {
                     color: #1E3A8A;
                     font-weight: 800;
-                    background: rgba(29, 78, 216, 0.08);
-                    padding: 0.1rem 0.42rem;
-                    border-radius: 5px;
-                    border-bottom: 2px solid rgba(212, 175, 55, 0.65);
+                    background: linear-gradient(90deg, rgba(29, 78, 216, 0.09) 0%, rgba(212, 175, 55, 0.14) 100%);
+                    padding: 0.12rem 0.48rem;
+                    border-radius: 6px;
+                    border-bottom: 2px solid rgba(212, 175, 55, 0.7);
+                    box-decoration-break: clone;
+                    -webkit-box-decoration-break: clone;
                 }
                 .bpbn-intro-content em {
                     color: #334155;
@@ -1343,13 +1431,30 @@ const BlogPostInner = () => {
                     text-decoration: underline;
                     text-underline-offset: 4px;
                 }
+                .bpbn-intro-footer {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    gap: 0.65rem;
+                    padding: 0.75rem 1.85rem;
+                    background: linear-gradient(90deg, #F1F5FE 0%, #FFFBEB 100%);
+                    border-top: 1px solid rgba(29, 78, 216, 0.14);
+                    font-size: 0.78rem;
+                    font-weight: 700;
+                    color: #1E3A8A;
+                }
                 body[data-theme="dark"] .bpbn-hero-intro-card {
                     background: linear-gradient(145deg, rgba(15, 27, 52, 0.96) 0%, rgba(10, 19, 38, 0.98) 100%);
-                    border: 1.5px solid rgba(212, 175, 55, 0.4);
+                    border: 1.5px solid rgba(212, 175, 55, 0.45);
                     border-left: 6px solid #D4AF37;
                 }
                 body[data-theme="dark"] .bpbn-intro-content {
                     color: #F1F5F9;
+                }
+                body[data-theme="dark"] .bpbn-intro-content p + p,
+                body[data-theme="dark"] .bpbn-intro-content p.bpbn-intro-para + p.bpbn-intro-para {
+                    border-top-color: rgba(253, 230, 138, 0.18);
                 }
                 body[data-theme="dark"] .bpbn-intro-content strong,
                 body[data-theme="dark"] .bpbn-intro-content b {
@@ -1362,6 +1467,23 @@ const BlogPostInner = () => {
                 }
                 body[data-theme="dark"] .bpbn-intro-content a {
                     color: #FDE68A !important;
+                }
+                body[data-theme="dark"] .bpbn-intro-footer {
+                    background: rgba(9, 18, 38, 0.85);
+                    border-top-color: rgba(212, 175, 55, 0.25);
+                    color: #FDE68A;
+                }
+
+                @media (max-width: 640px) {
+                    .bp-toc-inline { display: none; }
+                    .bp-mobile-toc { display: block; }
+                    .bp-body-container, .bp-hero-container { padding-left: 0.9rem; padding-right: 0.9rem; }
+                    .bpbn-hero-intro-card { margin-top: 1.25rem; border-radius: 1rem; border-left-width: 5px; }
+                    .bpbn-intro-header { padding: 0.8rem 1rem; gap: 0.5rem; }
+                    .bpbn-intro-badge { font-size: 0.82rem; }
+                    .bpbn-intro-call-chip, .bpbn-intro-wa-chip { font-size: 0.74rem; padding: 0.32rem 0.75rem; }
+                    .bpbn-intro-content { padding: 1.15rem 1.05rem; font-size: 1.02rem; line-height: 1.9; }
+                    .bpbn-intro-footer { padding: 0.65rem 1rem; font-size: 0.72rem; gap: 0.4rem; }
                 }
 
                 /* ── Prose typography — full-width, premium reading ── */

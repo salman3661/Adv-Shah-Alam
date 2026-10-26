@@ -19,7 +19,7 @@ import { SITE, buildEntityGraph, buildHreflang, resolveMasterPillar, resolveQuic
 import ArticleSkeleton from '../components/ArticleSkeleton';
 import popularBnSlugs from '../content/popular_bn.json';
 import NotFound from './NotFound';
-import { sanitizeHtml } from '../utils/sanitizeHtml';
+import { sanitizeHtml, formatHeroIntro } from '../utils/sanitizeHtml';
 
 /* ── Load all BN posts ── */
 import postsMeta_bn from '../content/posts-meta-bn.json';
@@ -727,30 +727,11 @@ const BlogPostBnInner = () => {
                                 </span>
                             </div>
 
-                            <h1 style={{ fontFamily: "'Noto Serif Bengali', 'Noto Sans Bengali', Georgia, serif", fontSize: 'clamp(1.7rem, 3.6vw, 2.65rem)', fontWeight: 800, lineHeight: 1.28, color: '#FFFFFF', marginBottom: '1.25rem', letterSpacing: '-0.01em' }}>
+                            <h1 style={{ fontFamily: "'Noto Serif Bengali', 'Noto Sans Bengali', Georgia, serif", fontSize: 'clamp(1.65rem, 3.5vw, 2.55rem)', fontWeight: 800, lineHeight: 1.3, color: '#FFFFFF', marginBottom: '1.35rem', letterSpacing: '-0.01em' }}>
                                 {post.title}
                             </h1>
 
-                            {post.heroIntro && (
-                                <div className="bpbn-hero-intro-card">
-                                    <div className="bpbn-intro-header">
-                                        <div className="bpbn-intro-badge">
-                                            <span className="bpbn-intro-dot" />
-                                            <span>বিজ্ঞ আইনজীবীর আইনি পর্যবেক্ষণ ও সারসংক্ষেপ</span>
-                                        </div>
-                                        <a href="tel:01712655546" className="bpbn-intro-call-chip">
-                                            <Phone size={13} />
-                                            <span>জরুরি পরামর্শ: 01712655546</span>
-                                        </a>
-                                    </div>
-                                    <div
-                                        className="bpbn-intro-content"
-                                        dangerouslySetInnerHTML={{ __html: sanitizeHtml(post.heroIntro) }}
-                                    />
-                                </div>
-                            )}
-
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '0.875rem', flexWrap: 'wrap', paddingTop: '1.15rem', borderTop: '1px solid rgba(255,255,255,0.18)' }}>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '0.875rem', flexWrap: 'wrap', paddingTop: '1.1rem', borderTop: '1px solid rgba(255,255,255,0.18)' }}>
                                 <img
                                     src="/images/hero/hero-md-shah-alam.webp"
                                     alt="অ্যাডভোকেট মো. শাহ আলম"
@@ -816,6 +797,42 @@ const BlogPostBnInner = () => {
                             </div>
                         </div>
                     </div>
+
+                    {/* Tier 2: Full-Width Luxury White Executive Summary Box */}
+                    {post.heroIntro && (
+                        <div className="bpbn-hero-intro-card">
+                            <div className="bpbn-intro-header">
+                                <div className="bpbn-intro-badge">
+                                    <span className="bpbn-intro-dot" />
+                                    <span>বিজ্ঞ আইনজীবীর আইনি পর্যবেক্ষণ ও সারসংক্ষেপ</span>
+                                </div>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                                    <a href="tel:01712655546" className="bpbn-intro-call-chip">
+                                        <Phone size={13} />
+                                        <span>জরুরি পরামর্শ: 01712655546</span>
+                                    </a>
+                                    <a
+                                        href={`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(`আসসালামু আলাইকুম, "${post.title}" বিষয়ে আপনার আইনি পরামর্শ চাই।`)}`}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="bpbn-intro-wa-chip"
+                                    >
+                                        <MessageCircle size={13} />
+                                        <span>WhatsApp পরামর্শ</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div
+                                className="bpbn-intro-content"
+                                dangerouslySetInnerHTML={{ __html: formatHeroIntro(post.heroIntro) }}
+                            />
+                            <div className="bpbn-intro-footer">
+                                <span>✓ বাংলাদেশ সুপ্রিম কোর্ট আইন নির্দেশিকা (২০২৬)</span>
+                                <span>⚖️ উত্তরা ও ঢাকা জজ কোর্ট চেম্বার</span>
+                                <span>⚡ সরাসরি দলিল ও কেস মূল্যায়ন</span>
+                            </div>
+                        </div>
+                    )}
                 </div>
             </section>
 
@@ -826,11 +843,14 @@ const BlogPostBnInner = () => {
                     {/* Mobile TOC */}
                     <div className="bpbn-mobile-toc" style={{ marginBottom: '1.25rem' }}>
                         <button onClick={() => setTocOpen(o => !o)}
-                            style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0.875rem 1.125rem', borderRadius: '0.875rem', cursor: 'pointer', background: 'var(--surface)', border: '1px solid var(--card-border)', color: 'var(--text)', fontWeight: 600, fontSize: '0.875rem' }}>
-                            <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                                <List size={14} style={{ color: 'var(--accent)' }} /> বিষয়সূচি
+                            style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0.95rem 1.15rem', borderRadius: '0.95rem', cursor: 'pointer', background: 'linear-gradient(135deg, #0D1F45 0%, #173470 100%)', border: '1.5px solid rgba(212, 175, 55, 0.5)', color: '#FFFFFF', fontWeight: 700, fontSize: '0.92rem', boxShadow: '0 10px 24px -8px rgba(10, 22, 48, 0.35)' }}>
+                            <span style={{ display: 'flex', alignItems: 'center', gap: '0.55rem' }}>
+                                <List size={16} style={{ color: '#FDE68A' }} /> সম্পূর্ণ গাইডের বিষয়সূচি
+                                <span style={{ fontSize: '0.72rem', fontWeight: 800, padding: '0.16rem 0.55rem', borderRadius: '9999px', background: 'rgba(253, 230, 138, 0.18)', color: '#FDE68A', border: '1px solid rgba(253, 230, 138, 0.35)' }}>
+                                    {post.toc?.length || 0}টি অধ্যায়
+                                </span>
                             </span>
-                            {tocOpen ? <ChevronUp size={15} /> : <ChevronDown size={15} />}
+                            {tocOpen ? <ChevronUp size={17} style={{ color: '#FDE68A' }} /> : <ChevronDown size={17} style={{ color: '#FDE68A' }} />}
                         </button>
                         {tocOpen && (
                             <div style={{ marginTop: '0.375rem', padding: '1rem 1.125rem', borderRadius: '0.875rem', background: 'var(--surface)', border: '1px solid var(--card-border)' }}>
@@ -1191,27 +1211,86 @@ const BlogPostBnInner = () => {
                             </article>
                         </div>
 
-                        {/* ── RIGHT SIDEBAR ── */}
+                        {/* ── RIGHT SIDEBAR (Full-Height Interleaved Editorial & Diverse Ad Rail) ── */}
                         <aside className="bpbn-sidebar google-anno-skip">
-                            <div style={{ position: 'sticky', top: '5rem' }}>
+                            <div className="bpbn-sidebar-rail">
                                 <ConsultBnWidget postTitle={post.title} />
 
-                                {/* ── Sidebar AdSense Ad 1 (BN) ── */}
+                                {/* ── Sidebar Ad 1: Display Auto (High-Visibility Rectangle) ── */}
                                 {isDesktop && (
                                     <AdSenseAd
                                         slot={AD_SLOTS.sidebar}
                                         format="auto"
                                         responsive={true}
                                         labelText="বিজ্ঞাপন"
-                                        minHeight={250}
+                                        minHeight={260}
                                         densityGroup="rail"
-                                        style={{ marginBottom: '1.125rem', borderRadius: '0.875rem', overflow: 'hidden' }}
+                                        style={{ marginBottom: '1.25rem', borderRadius: '0.875rem', overflow: 'hidden' }}
                                     />
                                 )}
 
                                 <PopularBnPosts currentSlug={post.slug} />
 
+                                {/* ── Sidebar Ad 2: Native Fluid In-Article Card (Different Format = Diverse Auction) ── */}
+                                {isDesktop && (
+                                    <AdSenseAd
+                                        slot={AD_SLOTS.midNative}
+                                        format="fluid"
+                                        layout="in-article"
+                                        responsive={true}
+                                        labelText="বিজ্ঞাপন"
+                                        minHeight={250}
+                                        densityGroup="rail"
+                                        style={{ marginBottom: '1.25rem', borderRadius: '0.875rem', overflow: 'hidden' }}
+                                    />
+                                )}
+
+                                <RelatedBnByCategory category={post.category} currentSlug={post.slug} />
+
+                                {/* ── Sidebar Ad 3: Display Banner Unit ── */}
+                                {isDesktop && (
+                                    <AdSenseAd
+                                        slot={AD_SLOTS.topInArticle}
+                                        format="auto"
+                                        responsive={true}
+                                        labelText="বিজ্ঞাপন"
+                                        minHeight={260}
+                                        densityGroup="rail"
+                                        style={{ marginBottom: '1.25rem', borderRadius: '0.875rem', overflow: 'hidden' }}
+                                    />
+                                )}
+
                                 <RecentBnPosts currentSlug={post.slug} />
+
+                                {/* ── Sidebar Ad 4: Native Fluid Card ── */}
+                                {isDesktop && (
+                                    <AdSenseAd
+                                        slot={AD_SLOTS.midNative}
+                                        format="fluid"
+                                        layout="in-article"
+                                        responsive={true}
+                                        labelText="বিজ্ঞাপন"
+                                        minHeight={250}
+                                        densityGroup="rail"
+                                        style={{ marginBottom: '1.25rem', borderRadius: '0.875rem', overflow: 'hidden' }}
+                                    />
+                                )}
+
+                                {/* ── Sticky Bottom Follower: Stays visible all the way to the end of the article ── */}
+                                <div style={{ position: 'sticky', top: '5.25rem' }}>
+                                    <ChamberBnPromoCard />
+                                    {isDesktop && (
+                                        <AdSenseAd
+                                            slot={AD_SLOTS.sidebar}
+                                            format="auto"
+                                            responsive={true}
+                                            labelText="বিজ্ঞাপন"
+                                            minHeight={260}
+                                            densityGroup="rail"
+                                            style={{ marginBottom: '1.25rem', borderRadius: '0.875rem', overflow: 'hidden' }}
+                                        />
+                                    )}
+                                </div>
                             </div>
                         </aside>
                     </div>
@@ -1329,11 +1408,19 @@ const BlogPostBnInner = () => {
                 }
                 .bpbn-main-grid {
                     display: grid;
-                    grid-template-columns: 1fr 320px;
-                    gap: 3rem;
-                    align-items: start;
+                    grid-template-columns: 1fr 330px;
+                    gap: 2.75rem;
+                    align-items: stretch;
                 }
-                .bpbn-sidebar { display: block; }
+                .bpbn-sidebar {
+                    display: block;
+                    height: 100%;
+                }
+                .bpbn-sidebar-rail {
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+                }
                 .bpbn-toc-inline { display: none; }
                 .bpbn-mobile-toc { display: none; }
                 .bpbn-mobile-bottom { display: block; }
@@ -1352,22 +1439,17 @@ const BlogPostBnInner = () => {
                     .bpbn-toc-inline { display: block; }
                     .bpbn-mobile-bottom { display: block; }
                 }
-                @media (max-width: 640px) {
-                    .bpbn-toc-inline { display: none; }
-                    .bpbn-mobile-toc { display: block; }
-                    .bpbn-body-container, .bpbn-hero-container { padding-left: 1rem; padding-right: 1rem; }
-                }
 
-                /* ─── Luminous Executive Hero Intro Box ─── */
+                /* ─── Luminous Full-Width Executive Hero Intro Box ─── */
                 .bpbn-hero-intro-card {
-                    margin: 1.35rem 0 2rem;
-                    max-width: 920px;
+                    margin: 1.75rem 0 0.25rem;
+                    max-width: 100%;
                     padding: 0;
                     background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFF 100%);
-                    border: 1.5px solid rgba(212, 175, 55, 0.55);
+                    border: 1.5px solid rgba(212, 175, 55, 0.65);
                     border-left: 6px solid #D4AF37;
                     border-radius: 1.15rem;
-                    box-shadow: 0 22px 48px -14px rgba(6, 15, 36, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.65) inset;
+                    box-shadow: 0 24px 52px -14px rgba(6, 15, 36, 0.58), 0 0 0 1px rgba(255, 255, 255, 0.75) inset;
                     position: relative;
                     overflow: hidden;
                 }
@@ -1378,7 +1460,7 @@ const BlogPostBnInner = () => {
                     flex-wrap: wrap;
                     gap: 0.75rem;
                     margin-bottom: 0;
-                    padding: 0.9rem 1.45rem;
+                    padding: 0.95rem 1.75rem;
                     background: linear-gradient(90deg, #0B1938 0%, #1B3B7B 100%);
                     border-bottom: 1px solid rgba(212, 175, 55, 0.35);
                 }
@@ -1386,9 +1468,9 @@ const BlogPostBnInner = () => {
                     display: inline-flex;
                     align-items: center;
                     gap: 0.5rem;
-                    font-size: 0.88rem;
+                    font-size: 0.92rem;
                     font-weight: 800;
-                    letter-spacing: 0.04em;
+                    letter-spacing: 0.03em;
                     color: #FDE68A;
                     font-family: 'Noto Serif Bengali', sans-serif;
                 }
@@ -1404,7 +1486,7 @@ const BlogPostBnInner = () => {
                     display: inline-flex;
                     align-items: center;
                     gap: 0.375rem;
-                    padding: 0.36rem 1rem;
+                    padding: 0.38rem 1rem;
                     border-radius: 9999px;
                     background: linear-gradient(135deg, #FDE68A 0%, #D4AF37 100%);
                     border: 1px solid #FFF3B0;
@@ -1420,23 +1502,51 @@ const BlogPostBnInner = () => {
                     transform: translateY(-1px);
                     box-shadow: 0 6px 16px rgba(212, 175, 55, 0.45);
                 }
+                .bpbn-intro-wa-chip {
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 0.375rem;
+                    padding: 0.38rem 0.95rem;
+                    border-radius: 9999px;
+                    background: rgba(34, 197, 94, 0.18);
+                    border: 1px solid rgba(74, 222, 128, 0.55);
+                    color: #DCFCE7;
+                    font-size: 0.8rem;
+                    font-weight: 700;
+                    text-decoration: none;
+                    transition: all 0.2s ease;
+                    font-family: 'Noto Serif Bengali', sans-serif;
+                }
+                .bpbn-intro-wa-chip:hover {
+                    background: rgba(34, 197, 94, 0.28);
+                    transform: translateY(-1px);
+                }
                 .bpbn-intro-content {
                     font-size: 1.16rem;
-                    line-height: 2.1;
+                    line-height: 2.12;
                     color: #0F172A;
-                    padding: 1.35rem 1.55rem 1.45rem;
+                    padding: 1.55rem 1.85rem;
                     font-family: 'Noto Serif Bengali', 'Noto Sans Bengali', sans-serif;
+                    letter-spacing: 0.005em;
                 }
                 .bpbn-intro-content p {
                     margin: 0;
                 }
+                .bpbn-intro-content p + p,
+                .bpbn-intro-content p.bpbn-intro-para + p.bpbn-intro-para {
+                    margin-top: 1rem;
+                    padding-top: 0.95rem;
+                    border-top: 1px dashed rgba(29, 78, 216, 0.16);
+                }
                 .bpbn-intro-content strong, .bpbn-intro-content b {
                     color: #1E3A8A;
                     font-weight: 800;
-                    background: rgba(29, 78, 216, 0.08);
-                    padding: 0.1rem 0.42rem;
-                    border-radius: 5px;
-                    border-bottom: 2px solid rgba(212, 175, 55, 0.65);
+                    background: linear-gradient(90deg, rgba(29, 78, 216, 0.09) 0%, rgba(212, 175, 55, 0.14) 100%);
+                    padding: 0.12rem 0.48rem;
+                    border-radius: 6px;
+                    border-bottom: 2px solid rgba(212, 175, 55, 0.7);
+                    box-decoration-break: clone;
+                    -webkit-box-decoration-break: clone;
                 }
                 .bpbn-intro-content em {
                     color: #334155;
@@ -1448,13 +1558,31 @@ const BlogPostBnInner = () => {
                     text-decoration: underline;
                     text-underline-offset: 4px;
                 }
+                .bpbn-intro-footer {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    gap: 0.65rem;
+                    padding: 0.75rem 1.85rem;
+                    background: linear-gradient(90deg, #F1F5FE 0%, #FFFBEB 100%);
+                    border-top: 1px solid rgba(29, 78, 216, 0.14);
+                    font-size: 0.78rem;
+                    font-weight: 700;
+                    color: #1E3A8A;
+                    font-family: 'Noto Serif Bengali', sans-serif;
+                }
                 body[data-theme="dark"] .bpbn-hero-intro-card {
                     background: linear-gradient(145deg, rgba(15, 27, 52, 0.96) 0%, rgba(10, 19, 38, 0.98) 100%);
-                    border: 1.5px solid rgba(212, 175, 55, 0.4);
+                    border: 1.5px solid rgba(212, 175, 55, 0.45);
                     border-left: 6px solid #D4AF37;
                 }
                 body[data-theme="dark"] .bpbn-intro-content {
                     color: #F1F5F9;
+                }
+                body[data-theme="dark"] .bpbn-intro-content p + p,
+                body[data-theme="dark"] .bpbn-intro-content p.bpbn-intro-para + p.bpbn-intro-para {
+                    border-top-color: rgba(253, 230, 138, 0.18);
                 }
                 body[data-theme="dark"] .bpbn-intro-content strong,
                 body[data-theme="dark"] .bpbn-intro-content b {
@@ -1467,6 +1595,25 @@ const BlogPostBnInner = () => {
                 }
                 body[data-theme="dark"] .bpbn-intro-content a {
                     color: #FDE68A !important;
+                }
+                body[data-theme="dark"] .bpbn-intro-footer {
+                    background: rgba(9, 18, 38, 0.85);
+                    border-top-color: rgba(212, 175, 55, 0.25);
+                    color: #FDE68A;
+                }
+
+                @media (max-width: 640px) {
+                    .bpbn-toc-inline { display: none; }
+                    .bpbn-mobile-toc { display: block; }
+                    .bpbn-body-container, .bpbn-hero-container { padding-left: 0.9rem; padding-right: 0.9rem; }
+                    .bpbn-hero-intro-card { margin-top: 1.25rem; border-radius: 1rem; border-left-width: 5px; }
+                    .bpbn-intro-header { padding: 0.8rem 1rem; gap: 0.5rem; }
+                    .bpbn-intro-badge { font-size: 0.82rem; }
+                    .bpbn-intro-call-chip, .bpbn-intro-wa-chip { font-size: 0.74rem; padding: 0.32rem 0.75rem; }
+                    .bpbn-intro-content { padding: 1.15rem 1.05rem; font-size: 1.04rem; line-height: 1.98; }
+                    .bpbn-intro-footer { padding: 0.65rem 1rem; font-size: 0.72rem; gap: 0.4rem; }
+                    .prose-bn-content p { font-size: 1.12rem !important; line-height: 2.02 !important; margin-bottom: 1.35rem !important; }
+                    .prose-bn-content li { font-size: 1.08rem !important; line-height: 1.95 !important; }
                 }
 
                 .prose-bn-content p { margin-bottom: 1.6rem; font-size: 1.25rem; line-height: 2.15; color: var(--text); text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
