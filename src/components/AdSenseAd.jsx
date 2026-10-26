@@ -130,22 +130,40 @@ const AdSenseAd = ({
                 maxWidth: '100%',
                 clear: 'both',
                 overflow: 'hidden',
-                minHeight: `${Math.max(250, minHeight) + (label ? 18 : 0)}px`,
+                boxSizing: 'border-box',
+                /* Premium news-portal style card frame (the ad itself is untouched inside) */
+                padding: '0.5rem 0.75rem 0.75rem',
+                background: 'var(--surface, rgba(148,163,184,0.06))',
+                border: '1px solid var(--card-border, rgba(148,163,184,0.25))',
+                borderRadius: '1rem',
+                boxShadow: '0 1px 2px rgba(15,23,42,0.04), 0 6px 18px -8px rgba(15,23,42,0.12)',
+                minHeight: `${Math.max(250, minHeight) + (label ? 30 : 12)}px`,
                 ...style,
             }}
         >
             {label && (
                 <div style={{
-                    fontSize: '0.625rem',
-                    color: 'var(--text-muted, #94a3b8)',
-                    textTransform: 'uppercase',
-                    letterSpacing: '0.08em',
-                    marginBottom: '4px',
-                    opacity: 0.65,
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '0.5rem',
+                    marginBottom: '0.5rem',
                     userSelect: 'none',
-                    textAlign: 'center',
                 }}>
-                    {labelText}
+                    <span style={{ flex: 1, height: '1px', background: 'var(--card-border, rgba(148,163,184,0.3))' }} />
+                    <span style={{
+                        fontSize: '0.625rem',
+                        fontWeight: 700,
+                        color: 'var(--text-muted, #94a3b8)',
+                        textTransform: 'uppercase',
+                        letterSpacing: '0.12em',
+                        padding: '0.125rem 0.625rem',
+                        borderRadius: '999px',
+                        border: '1px solid var(--card-border, rgba(148,163,184,0.3))',
+                        background: 'var(--bg, transparent)',
+                    }}>
+                        {labelText}
+                    </span>
+                    <span style={{ flex: 1, height: '1px', background: 'var(--card-border, rgba(148,163,184,0.3))' }} />
                 </div>
             )}
             <ins
