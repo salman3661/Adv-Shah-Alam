@@ -6,6 +6,7 @@ import seo from '../content/seo.js';
 
 // Load all EN blog posts from JSON files (bundled at build time by Vite)
 import postsMeta_en from '../content/posts-meta-en.json';
+import { coverFor } from '../utils/coverImage';
 const _postModules = postsMeta_en;
 const blogPosts = Object.values(_postModules)
     .map((m) => m.default ?? m)
@@ -52,26 +53,27 @@ const BlogCardEn = ({ post, isRecent = false, isPopular = false }) => {
         <article
             className="group relative flex flex-col h-full overflow-hidden transition-all duration-300 hover:-translate-y-1.5"
             style={{
-                background: 'rgba(255, 255, 255, 0.03)',
-                backdropFilter: 'blur(16px)',
-                WebkitBackdropFilter: 'blur(16px)',
-                border: '1px solid var(--card-border)',
+                background: 'var(--surface)',
+                border: '1.5px solid var(--card-border)',
                 borderRadius: '1.25rem',
-                boxShadow: '0 4px 20px rgba(0,0,0,0.06)',
+                boxShadow: '0 10px 28px -12px rgba(15, 23, 42, 0.14)',
             }}
         >
-            {/* Top Color Accent Line */}
-            <div style={{ height: '3px', background: `linear-gradient(90deg, ${catColor}, var(--accent))` }} />
-
-            <div className="p-6 flex flex-col flex-1">
-                {/* Header Meta: Category Badge, Date & Read Time */}
-                <div className="flex items-center justify-between mb-3.5 gap-2 flex-wrap">
+            {/* Top Cover Artwork Banner */}
+            <Link to={`/blog/${post.slug}`} className="block relative overflow-hidden" style={{ height: '162px', background: '#0B1938' }} aria-hidden="true" tabIndex={-1}>
+                <img
+                    src={coverFor(post.category)}
+                    alt=""
+                    loading="lazy"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(9,21,46,0.12) 0%, rgba(9,21,46,0.78) 100%)' }} />
+                <div className="absolute bottom-3 left-3.5 right-3.5 flex items-center justify-between gap-2 flex-wrap">
                     <div className="flex items-center gap-1.5 flex-wrap">
                         <span
-                            className="text-xs font-bold px-3 py-1 rounded-md transition-transform group-hover:scale-105"
+                            className="text-xs font-extrabold px-3 py-1 rounded-full text-white shadow"
                             style={{
-                                background: catColor + '18',
-                                color: catColor,
+                                background: catColor,
                                 letterSpacing: '0.04em',
                             }}
                         >
@@ -95,13 +97,16 @@ const BlogCardEn = ({ post, isRecent = false, isPopular = false }) => {
                         )}
                     </div>
                     <span
-                        className="inline-flex items-center gap-1 text-xs"
-                        style={{ color: 'var(--text-muted)' }}
+                        className="inline-flex items-center gap-1 text-xs font-semibold px-2.5 py-0.5 rounded-full"
+                        style={{ color: '#F8FAFC', background: 'rgba(15,23,42,0.72)', border: '1px solid rgba(255,255,255,0.2)' }}
                     >
-                        <Clock size={13} style={{ color: catColor }} />
+                        <Clock size={12} style={{ color: '#FDE68A' }} />
                         {post.readTime}
                     </span>
                 </div>
+            </Link>
+
+            <div className="p-6 flex flex-col flex-1">
 
                 {/* Post Title */}
                 <h2

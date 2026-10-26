@@ -3,6 +3,9 @@ import { BookOpen, ArrowRight, Clock } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import seo from '../content/seo.js';
 import postsPreview from '../content/posts-preview.json';
+import { coverFor } from '../utils/coverImage';
+
+const stripHtml = (s) => (s ? String(s).replace(/<[^>]*>?/gm, '').trim() : '');
 
 const latestEn = Array.isArray(postsPreview?.en) ? postsPreview.en : [];
 const latestBn = Array.isArray(postsPreview?.bn) ? postsPreview.bn : [];
@@ -89,47 +92,63 @@ const BlogPreview = ({ lang: initialLang = 'en' }) => {
                         </p>
                         </div>
                     ) : articles.map((article, i) => {
-                        const colors = categoryColors[article.category] || { bg: 'rgba(100,116,139,0.1)', color: '#64748B' };
+                        const colors = categoryColors[article.category] || { bg: 'rgba(29,78,216,0.1)', color: '#1D4ED8' };
+                        const cleanIntro = stripHtml(article.heroIntro);
                         return (
                             <article key={article.slug || i}
-                                className="glass-card p-6 flex flex-col group"
+                                className="glass-card overflow-hidden flex flex-col group transition-all duration-300 hover:-translate-y-1.5"
+                                style={{ padding: 0, borderRadius: '1.15rem', border: '1.5px solid var(--card-border)' }}
                             >
-                                <div className="flex items-center justify-between mb-4">
-                                    <span className="text-xs font-bold px-3 py-1 rounded-full"
-                                        style={{ background: colors.bg, color: colors.color, letterSpacing: activeLang === 'bn' ? '0' : '0.04em', fontFamily: activeLang === 'bn' ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>
-                                        {article.category}
-                                    </span>
-                                    <div className="flex items-center gap-2 text-xs" style={{ color: 'var(--text-muted)' }}>
-                                        {article.publishedDate && (
-                                            <span>{new Date(article.publishedDate).toLocaleDateString(
-                                            activeLang === 'bn' ? 'bn-BD' : 'en-GB',
-                                            { day: 'numeric', month: 'short', year: 'numeric' }
-                                        )}</span>
-                                        )}
-                                        <span className="flex items-center gap-1">
-                                            <Clock size={11} /> {article.readTime}{activeLang === 'en' ? ' read' : ''}
+                                <Link to={`${linkBase}${article.slug}`} className="block relative overflow-hidden" style={{ height: '156px', background: '#0B1938' }} aria-hidden="true" tabIndex={-1}>
+                                    <img
+                                        src={coverFor(article.category)}
+                                        alt=""
+                                        loading="lazy"
+                                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                    />
+                                    <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(9,21,46,0.1) 0%, rgba(9,21,46,0.76) 100%)' }} />
+                                    <div className="absolute bottom-3 left-4 right-4 flex items-center justify-between gap-2">
+                                        <span className="text-xs font-extrabold px-3 py-1 rounded-full text-white shadow"
+                                            style={{ background: colors.color, letterSpacing: activeLang === 'bn' ? '0' : '0.04em', fontFamily: activeLang === 'bn' ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>
+                                            {article.category}
+                                        </span>
+                                        <span className="flex items-center gap-1 text-xs font-semibold px-2.5 py-0.5 rounded-full" style={{ color: '#F8FAFC', background: 'rgba(15,23,42,0.72)', border: '1px solid rgba(255,255,255,0.2)' }}>
+                                            <Clock size={11} style={{ color: '#FDE68A' }} /> {article.readTime}{activeLang === 'en' ? ' read' : ''}
                                         </span>
                                     </div>
-                                </div>
-
-                                <h3 className="font-bold text-base leading-snug mb-3 flex-1 group-hover:underline decoration-dotted" style={{ color: 'var(--text)', fontFamily: activeLang === 'bn' ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>
-                                    {article.title}
-                                </h3>
-
-                                <p className="text-sm leading-relaxed mb-5" style={{ color: 'var(--text-muted)', fontFamily: activeLang === 'bn' ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>
-                                    {article.heroIntro
-                                        ? article.heroIntro.slice(0, 120) + (article.heroIntro.length > 120 ? '…' : '')
-                                        : ''}
-                                </p>
-
-                                <Link
-                                    to={`${linkBase}${article.slug}`}
-                                    className="inline-flex items-center gap-1.5 text-sm font-semibold"
-                                    style={{ color: 'var(--accent)' }}
-                                    aria-label={readLabel(article)}
-                                >
-                                    <BookOpen size={14} /> {readShort}
                                 </Link>
+
+                                <div className="p-6 flex flex-col flex-1">
+                                    {article.publishedDate && (
+                                        <div className="text-xs mb-2 font-medium" style={{ color: 'var(--text-muted)' }}>
+                                            {new Date(article.publishedDate).toLocaleDateString(
+                                                activeLang === 'bn' ? 'bn-BD' : 'en-GB',
+                                                { day: 'numeric', month: 'short', year: 'numeric' }
+                                            )}
+                                        </div>
+                                    )}
+
+                                    <h3 className="font-bold text-base md:text-lg leading-snug mb-3 flex-1 group-hover:text-[var(--accent)] transition-colors" style={{ color: 'var(--text)', fontFamily: activeLang === 'bn' ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>
+                                        <Link to={`${linkBase}${article.slug}`} className="hover:underline">
+                                            {article.title}
+                                        </Link>
+                                    </h3>
+
+                                    <p className="text-sm leading-relaxed mb-5" style={{ color: 'var(--text-secondary)', fontFamily: activeLang === 'bn' ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>
+                                        {cleanIntro
+                                            ? cleanIntro.slice(0, 125) + (cleanIntro.length > 125 ? '…' : '')
+                                            : ''}
+                                    </p>
+
+                                    <Link
+                                        to={`${linkBase}${article.slug}`}
+                                        className="inline-flex items-center gap-1.5 text-sm font-bold mt-auto"
+                                        style={{ color: 'var(--accent)' }}
+                                        aria-label={readLabel(article)}
+                                    >
+                                        <BookOpen size={14} /> {readShort} <ArrowRight size={14} />
+                                    </Link>
+                                </div>
                             </article>
                         );
                     })}
