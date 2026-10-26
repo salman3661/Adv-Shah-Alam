@@ -1,28 +1,57 @@
-import React, { lazy, Suspense } from 'react';
+import React, { lazy, Suspense, useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import Hero from '../components/Hero';
-import About from '../components/About';
 import TrustBar from '../components/TrustBar';
 import BackToTop from '../components/BackToTop';
 import AdSenseAd from '../components/AdSenseAd';
 
-
-// Below-fold sections are lazy-loaded — reduces initial JS parse on mobile
-const Services       = lazy(() => import('../components/Services'));
-const FAQ            = lazy(() => import('../components/FAQ'));
-const Testimonials   = lazy(() => import('../components/Testimonials'));
-const HumanStory     = lazy(() => import('../components/HumanStory'));
-const BlogPreview    = lazy(() => import('../components/BlogPreview'));
-const Timeline       = lazy(() => import('../components/Timeline'));
-const Chambers       = lazy(() => import('../components/Chambers'));
-const Contact        = lazy(() => import('../components/Contact'));
+// Below-fold sections are lazy-loaded — reduces initial JS parse & network contention on mobile
+const About        = lazy(() => import('../components/About'));
+const Services     = lazy(() => import('../components/Services'));
+const FAQ          = lazy(() => import('../components/FAQ'));
+const Testimonials = lazy(() => import('../components/Testimonials'));
+const HumanStory   = lazy(() => import('../components/HumanStory'));
+const BlogPreview  = lazy(() => import('../components/BlogPreview'));
+const Timeline     = lazy(() => import('../components/Timeline'));
+const Chambers     = lazy(() => import('../components/Chambers'));
+const Contact      = lazy(() => import('../components/Contact'));
 
 // Minimal in-place fallback — preserves document height to avoid CLS
 const SectionFallback = () => <div style={{ minHeight: '200px' }} aria-hidden="true" />;
 
 const Home = ({ lang = 'en' }) => {
     const isBn = lang === 'bn';
+    // Defer below-the-fold chunk fetching until after LCP/load or first user interaction (or immediately if URL has #hash)
+    const [loadBelowFold, setLoadBelowFold] = useState(() =>
+        typeof window !== 'undefined' && Boolean(window.location.hash)
+    );
+
+    useEffect(() => {
+        if (loadBelowFold) return;
+        let timer = null;
+        const trigger = () => {
+            setLoadBelowFold(true);
+            cleanup();
+        };
+        const onLoad = () => {
+            timer = setTimeout(trigger, 350);
+        };
+        const events = ['scroll', 'touchstart', 'pointerdown', 'mousemove', 'keydown', 'hashchange'];
+        const cleanup = () => {
+            if (timer) clearTimeout(timer);
+            window.removeEventListener('load', onLoad);
+            events.forEach((ev) => window.removeEventListener(ev, trigger));
+        };
+        events.forEach((ev) => window.addEventListener(ev, trigger, { passive: true, once: true }));
+        if (document.readyState === 'complete') {
+            timer = setTimeout(trigger, 350);
+        } else {
+            window.addEventListener('load', onLoad, { once: true });
+        }
+        return cleanup;
+    }, [loadBelowFold]);
+
     const title = isBn 
         ? "এডভোকেট মোঃ শাহ আলম | আইনজীবী উত্তরা, ঢাকা" 
         : "Trusted Lawyer in Bangladesh | Advocate Md. Shah Alam — Uttara, Dhaka";
@@ -64,65 +93,69 @@ const Home = ({ lang = 'en' }) => {
             </Helmet>
             <Hero lang={lang} />
             <TrustBar lang={lang} />
-            <About lang={lang} />
 
-            <Suspense fallback={<SectionFallback />}>
-                <Services lang={lang} />
+            {loadBelowFold ? (
+                <Suspense fallback={<SectionFallback />}>
+                    <About lang={lang} />
+                    <Services lang={lang} />
 
-                {/* ── Homepage Ad 1: After Services (high CTR position) ── */}
-                <div style={{ maxWidth: '900px', margin: '0 auto', padding: '0 1rem 2rem' }}>
-                    <AdSenseAd
-                        slot="8630877987"
-                        format="auto"
-                        responsive={true}
-                        labelText={isBn ? 'বিজ্ঞাপন' : 'Advertisement'}
-                        style={{ borderRadius: '0.75rem', overflow: 'hidden' }}
-                    />
-                </div>
+                    {/* ── Homepage Ad 1: After Services (high CTR position) ── */}
+                    <div style={{ maxWidth: '900px', margin: '0 auto', padding: '0 1rem 2rem' }}>
+                        <AdSenseAd
+                            slot="8630877987"
+                            format="auto"
+                            responsive={true}
+                            labelText={isBn ? 'বিজ্ঞাপন' : 'Advertisement'}
+                            style={{ borderRadius: '0.75rem', overflow: 'hidden' }}
+                        />
+                    </div>
 
-                <FAQ lang={lang} />
-                <Testimonials lang={lang} />
-                <HumanStory lang={lang} />
+                    <FAQ lang={lang} />
+                    <Testimonials lang={lang} />
+                    <HumanStory lang={lang} />
 
-                {/* ── Homepage Ad 2: Before Blog Preview (reader engagement peak) ── */}
-                <div style={{ maxWidth: '900px', margin: '0 auto', padding: '0 1rem 2rem' }}>
-                    <AdSenseAd
-                        slot="8630877987"
-                        format="auto"
-                        responsive={true}
-                        labelText={isBn ? 'বিজ্ঞাপন' : 'Advertisement'}
-                        style={{ borderRadius: '0.75rem', overflow: 'hidden' }}
-                    />
-                </div>
+                    {/* ── Homepage Ad 2: Before Blog Preview (reader engagement peak) ── */}
+                    <div style={{ maxWidth: '900px', margin: '0 auto', padding: '0 1rem 2rem' }}>
+                        <AdSenseAd
+                            slot="8630877987"
+                            format="auto"
+                            responsive={true}
+                            labelText={isBn ? 'বিজ্ঞাপন' : 'Advertisement'}
+                            style={{ borderRadius: '0.75rem', overflow: 'hidden' }}
+                        />
+                    </div>
 
-                <div style={{ maxWidth: '900px', margin: '0 auto', padding: '0 1rem 2rem' }}>
-                    <Link
-                        to="/nrb-legal-help"
-                        style={{
-                            display: 'block',
-                            padding: '1.25rem 1.5rem',
-                            borderRadius: '1rem',
-                            background: 'var(--surface)',
-                            border: '1px solid var(--card-border)',
-                            textDecoration: 'none',
-                        }}
-                    >
-                        <div style={{ fontSize: '0.75rem', fontWeight: 800, letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--accent)', marginBottom: '0.25rem' }}>
-                            {isBn ? 'প্রবাসী বাংলাদেশিদের জন্য' : 'For Bangladeshis Abroad (NRB)'}
-                        </div>
-                        <div style={{ fontWeight: 700, color: 'var(--text)', lineHeight: 1.5 }}>
-                            {isBn
-                                ? 'বিদেশে থাকেন? জমি, পাওয়ার অব অ্যাটর্নি, বিবাহবিচ্ছেদ ও আদালতের মামলায় আইনি সহায়তা নিন →'
-                                : 'Living abroad? Land, Power of Attorney, divorce and court-case guides for NRBs →'}
-                        </div>
-                    </Link>
-                </div>
+                    <div style={{ maxWidth: '900px', margin: '0 auto', padding: '0 1rem 2rem' }}>
+                        <Link
+                            to="/nrb-legal-help"
+                            style={{
+                                display: 'block',
+                                padding: '1.25rem 1.5rem',
+                                borderRadius: '1rem',
+                                background: 'var(--surface)',
+                                border: '1px solid var(--card-border)',
+                                textDecoration: 'none',
+                            }}
+                        >
+                            <div style={{ fontSize: '0.75rem', fontWeight: 800, letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--accent)', marginBottom: '0.25rem' }}>
+                                {isBn ? 'প্রবাসী বাংলাদেশিদের জন্য' : 'For Bangladeshis Abroad (NRB)'}
+                            </div>
+                            <div style={{ fontWeight: 700, color: 'var(--text)', lineHeight: 1.5 }}>
+                                {isBn
+                                    ? 'বিদেশে থাকেন? জমি, পাওয়ার অব অ্যাটর্নি, বিবাহবিচ্ছেদ ও আদালতের মামলায় আইনি সহায়তা নিন →'
+                                    : 'Living abroad? Land, Power of Attorney, divorce and court-case guides for NRBs →'}
+                            </div>
+                        </Link>
+                    </div>
 
-                <BlogPreview lang={lang} />
-                <Timeline lang={lang} />
-                <Chambers lang={lang} />
-                <Contact lang={lang} />
-            </Suspense>
+                    <BlogPreview lang={lang} />
+                    <Timeline lang={lang} />
+                    <Chambers lang={lang} />
+                    <Contact lang={lang} />
+                </Suspense>
+            ) : (
+                <SectionFallback />
+            )}
             <BackToTop />
         </>
     );

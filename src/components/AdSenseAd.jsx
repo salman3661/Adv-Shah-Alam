@@ -80,6 +80,9 @@ const AdSenseAd = ({
             pushed.current = true;
             wrap.setAttribute('data-ad-requested', '1');
             try {
+                if (typeof window.__ensureAdSenseLoaded === 'function') {
+                    window.__ensureAdSenseLoaded();
+                }
                 (window.adsbygoogle = window.adsbygoogle || []).push({});
             } catch {
                 // Silently ignore if AdSense script is still loading

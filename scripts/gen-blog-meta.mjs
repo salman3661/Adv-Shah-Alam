@@ -9,7 +9,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 const root = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
-const KEEP = ['slug', 'title', 'category', 'readTime', 'publishedDate', 'lastModified', 'isDraft', '_draft', 'bnSlug', 'enSlug', 'metaTitle', 'metaDescription', 'keywords', 'lang', 'impressions', 'clicks', 'featured'];
+const KEEP = ['slug', 'title', 'category', 'readTime', 'publishedDate', 'lastModified', 'bnSlug', 'enSlug', 'metaDescription', 'keywords', 'impressions', 'clicks'];
 
 const plain = (html = '', n = 300) => String(html).replace(/<[^>]+>/g, ' ').replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ').trim().slice(0, n);
 
@@ -50,6 +50,8 @@ try {
   }
 } catch {}
 
+const previewData = { en: [], bn: [] };
+
 for (const lang of ['en', 'bn']) {
   const dir = path.join(root, 'src', 'content', 'posts', lang);
   const out = [];
@@ -57,18 +59,23 @@ for (const lang of ['en', 'bn']) {
   for (const f of fs.readdirSync(dir).filter((x) => x.endsWith('.json')).sort()) {
     try {
       const j = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8'));
-      if (!j || !j.slug) continue;
+      if (!j || !j.slug || j.isDraft || j._draft) continue;
       if (redirectSources.has(urlPrefix + j.slug)) continue;
       const m = {};
-      for (const k of KEEP) if (j[k] !== undefined) m[k] = j[k];
+      for (const k of KEEP) {
+        if (j[k] !== undefined && j[k] !== null && j[k] !== false && j[k] !== 0) {
+          m[k] = j[k];
+        }
+      }
+      if (j.featured === true) m.featured = true;
       const gsc = gscMap[j.slug];
       const imp = Math.max(Number(m.impressions) || 0, gsc ? gsc.impressions : 0);
       const clk = Math.max(Number(m.clicks) || 0, gsc ? gsc.clicks : 0);
       const views = ga4Views[j.slug] || 0;
-      if (imp > 0) m.impressions = imp;
-      if (clk > 0) m.clicks = clk;
+      if (imp > 0) m.impressions = imp; else delete m.impressions;
+      if (clk > 0) m.clicks = clk; else delete m.clicks;
       if (views > 0) m.pageViews = views;
-      m.heroIntro = plain(j.heroIntro, 170);
+      m.heroIntro = plain(j.heroIntro, 140);
       out.push(m);
     } catch (e) {
       console.warn('[gen-blog-meta] skip', f, e.message);
@@ -77,4 +84,20 @@ for (const lang of ['en', 'bn']) {
   const target = path.join(root, 'src', 'content', `posts-meta-${lang}.json`);
   fs.writeFileSync(target, JSON.stringify(out));
   console.log(`[gen-blog-meta] ${lang}: ${out.length} posts, ${(fs.statSync(target).size / 1024).toFixed(0)} KB`);
+
+  previewData[lang] = [...out]
+    .sort((a, b) => new Date(b.publishedDate || 0) - new Date(a.publishedDate || 0))
+    .slice(0, 3)
+    .map((p) => ({
+      slug: p.slug,
+      title: p.title,
+      category: p.category,
+      readTime: p.readTime,
+      publishedDate: p.publishedDate,
+      heroIntro: plain(p.heroIntro, 125),
+    }));
 }
+
+const previewTarget = path.join(root, 'src', 'content', 'posts-preview.json');
+fs.writeFileSync(previewTarget, JSON.stringify(previewData));
+console.log(`[gen-blog-meta] preview: ${(fs.statSync(previewTarget).size / 1024).toFixed(1)} KB`);

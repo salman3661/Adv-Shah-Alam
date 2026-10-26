@@ -614,17 +614,17 @@ const BlogPostInner = () => {
             </Helmet>
 
             {/* ════════════════ HERO (Phase 2.2: Protected Floating Navbar & Immediate H1 Visibility) ════════════════ */}
-            <section className="hero-section google-anno-skip pt-24" style={{ background: 'var(--hero-bg)', paddingTop: '88px', paddingBottom: '2.5rem', position: 'relative', overflow: 'hidden' }}>
+            <section className="hero-section google-anno-skip pt-24" style={{ background: 'linear-gradient(135deg, #09152E 0%, #112654 52%, #1B3B7B 100%)', paddingTop: '88px', paddingBottom: '2.75rem', position: 'relative', overflow: 'hidden', borderBottom: '3px solid #D4AF37' }}>
                 {/* Top accent bar */}
-                <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: `linear-gradient(90deg, ${cc.bg}, var(--gold), ${cc.bg})`, opacity: 0.9 }} />
+                <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '4px', background: `linear-gradient(90deg, ${cc.bg}, #FDE68A, #D4AF37, ${cc.bg})` }} />
                 <div className="hero-cover-bg" aria-hidden="true" style={{ backgroundImage: `url(${coverFor(post.category)})` }} />
                 <div className="hero-cover-fade" aria-hidden="true" />
                 {/* Radial glow */}
-                <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse 70% 60% at 30% 50%, rgba(198,167,94,0.07) 0%, transparent 65%)', pointerEvents: 'none' }} />
+                <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse 70% 60% at 25% 45%, rgba(212,175,55,0.12) 0%, transparent 65%)', pointerEvents: 'none' }} />
 
                 <div className="bp-hero-container">
                     {/* Nav row */}
-                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '0.75rem', flexWrap: 'wrap', gap: '0.5rem' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '0.9rem', flexWrap: 'wrap', gap: '0.5rem' }}>
                         <Link to="/blog"
                             onClick={(e) => {
                                 if (window.history.length > 2) {
@@ -632,35 +632,35 @@ const BlogPostInner = () => {
                                     navigate(-1);
                                 }
                             }}
-                            style={{ display: 'inline-flex', alignItems: 'center', gap: '0.375rem', fontSize: '0.8125rem', fontWeight: 500, color: 'var(--hero-text-2)', opacity: 0.75, textDecoration: 'none' }}
-                            onMouseEnter={e => e.currentTarget.style.opacity = '1'} onMouseLeave={e => e.currentTarget.style.opacity = '0.75'}>
+                            style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.82rem', fontWeight: 700, color: '#FFFFFF', padding: '0.38rem 0.95rem', borderRadius: '9999px', background: 'rgba(255,255,255,0.13)', border: '1px solid rgba(255,255,255,0.26)', backdropFilter: 'blur(8px)', textDecoration: 'none', transition: 'all 0.2s' }}
+                            onMouseEnter={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.22)'; }} onMouseLeave={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.13)'; }}>
                             <ArrowLeft size={14} /> Back to Blog
                         </Link>
                         {post.bnSlug && (
                             <Link to={`/bn/blog/${post.bnSlug}`}
-                                style={{ display: 'inline-flex', alignItems: 'center', gap: '0.375rem', fontSize: '0.7rem', fontWeight: 700, padding: '0.3rem 0.875rem', borderRadius: '9999px', border: '1.5px solid var(--accent)', color: 'var(--accent)', background: 'rgba(198,167,94,0.07)', textDecoration: 'none' }}>
+                                style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.76rem', fontWeight: 800, padding: '0.4rem 1.05rem', borderRadius: '9999px', border: '1px solid #FFF3B0', color: '#0B1528', background: 'linear-gradient(135deg, #FDE68A 0%, #D4AF37 100%)', boxShadow: '0 4px 14px rgba(212,175,55,0.38)', textDecoration: 'none' }}>
                                 🇧🇩 বাংলায় পড়ুন
                             </Link>
                         )}
                     </div>
 
                     {/* Breadcrumb */}
-                    <nav aria-label="Breadcrumb" style={{ marginBottom: '0.625rem' }}>
-                        <ol style={{ display: 'flex', alignItems: 'center', gap: '0.375rem', listStyle: 'none', padding: 0, margin: 0, fontSize: '0.78rem', flexWrap: 'wrap' }}>
-                            <li><Link to="/" style={{ color: 'var(--hero-text-2)', textDecoration: 'none', opacity: 0.85 }}>Home</Link></li>
-                            <li style={{ opacity: 0.4, color: 'var(--hero-muted)' }}>&gt;</li>
-                            <li><Link to="/blog" style={{ color: 'var(--hero-text-2)', textDecoration: 'none', opacity: 0.85 }}>Blog</Link></li>
-                            <li style={{ opacity: 0.4, color: 'var(--hero-muted)' }}>&gt;</li>
-                            <li style={{ color: 'var(--gold)', fontWeight: 600 }}>{post.category}</li>
+                    <nav aria-label="Breadcrumb" style={{ marginBottom: '0.75rem' }}>
+                        <ol style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', listStyle: 'none', padding: 0, margin: 0, fontSize: '0.8rem', flexWrap: 'wrap' }}>
+                            <li><Link to="/" style={{ color: '#E2E8F0', textDecoration: 'none', fontWeight: 500 }}>Home</Link></li>
+                            <li style={{ opacity: 0.6, color: '#94A3B8' }}>&gt;</li>
+                            <li><Link to="/blog" style={{ color: '#E2E8F0', textDecoration: 'none', fontWeight: 500 }}>Blog</Link></li>
+                            <li style={{ opacity: 0.6, color: '#94A3B8' }}>&gt;</li>
+                            <li style={{ color: '#FDE68A', fontWeight: 700 }}>{post.category}</li>
                         </ol>
                     </nav>
 
                     {/* Category + time pills */}
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.625rem', flexWrap: 'wrap', marginBottom: '0.875rem' }}>
-                        <span style={{ fontSize: '0.7rem', fontWeight: 800, padding: '0.3rem 0.875rem', borderRadius: '9999px', background: cc.bg, color: cc.text, letterSpacing: '0.07em', textTransform: 'uppercase' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.625rem', flexWrap: 'wrap', marginBottom: '0.95rem' }}>
+                        <span style={{ fontSize: '0.74rem', fontWeight: 800, padding: '0.35rem 0.95rem', borderRadius: '9999px', background: cc.bg, color: '#FFFFFF', letterSpacing: '0.06em', textTransform: 'uppercase', boxShadow: '0 4px 12px rgba(0,0,0,0.28)', border: '1px solid rgba(255,255,255,0.22)' }}>
                             {post.category}
                         </span>
-                        <span style={{ display: 'flex', alignItems: 'center', gap: '0.3rem', fontSize: '0.75rem', color: 'var(--hero-muted)', padding: '0.3rem 0.75rem', borderRadius: '9999px', background: 'rgba(255,255,255,0.05)', border: '1px solid var(--card-border)' }}>
+                        <span style={{ display: 'flex', alignItems: 'center', gap: '0.35rem', fontSize: '0.78rem', fontWeight: 600, color: '#F8FAFC', padding: '0.35rem 0.85rem', borderRadius: '9999px', background: 'rgba(255,255,255,0.14)', border: '1px solid rgba(255,255,255,0.26)', backdropFilter: 'blur(6px)' }}>
                             <Clock size={12} /> {post.readTime}
                         </span>
                     </div>
@@ -669,11 +669,11 @@ const BlogPostInner = () => {
                     <h1 style={{
                         fontFamily: "Georgia, serif",
                         fontSize: 'clamp(1.75rem, 4vw, 3.1rem)',
-                        fontWeight: 800, lineHeight: 1.2,
-                        color: 'var(--hero-text)',
-                        marginBottom: '1.125rem',
+                        fontWeight: 800, lineHeight: 1.22,
+                        color: '#FFFFFF',
+                        marginBottom: '1.25rem',
                         letterSpacing: '-0.025em',
-                        maxWidth: '900px',
+                        maxWidth: '920px',
                     }}>
                         {post.title}
                     </h1>
@@ -700,21 +700,21 @@ const BlogPostInner = () => {
                     )}
 
                     {/* Author / date row */}
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.875rem', flexWrap: 'wrap', paddingTop: '1.25rem', borderTop: '1px solid var(--card-border)' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.875rem', flexWrap: 'wrap', paddingTop: '1.15rem', borderTop: '1px solid rgba(255,255,255,0.18)' }}>
                         <img
                             src="/images/hero/hero-md-shah-alam.webp"
                             alt="Advocate Md. Shah Alam"
-                            style={{ width: '2.375rem', height: '2.375rem', borderRadius: '50%', objectFit: 'cover', objectPosition: 'center top', border: `2px solid ${cc.bg}`, flexShrink: 0, boxShadow: '0 2px 8px rgba(0,0,0,0.3)' }}
+                            style={{ width: '2.65rem', height: '2.65rem', borderRadius: '50%', objectFit: 'cover', objectPosition: 'center top', border: '2px solid #FDE68A', flexShrink: 0, boxShadow: '0 4px 12px rgba(0,0,0,0.35)' }}
                             loading="lazy"
-                            width="38"
-                            height="38"
+                            width="42"
+                            height="42"
                         />
                         <div>
-                            <p style={{ fontSize: '0.875rem', fontWeight: 700, color: 'var(--hero-text)', margin: 0 }}>Advocate Md. Shah Alam</p>
-                            <p style={{ fontSize: '0.7rem', color: 'var(--hero-muted)', margin: 0 }}>Supreme Court of Bangladesh</p>
+                            <p style={{ fontSize: '0.9rem', fontWeight: 800, color: '#FFFFFF', margin: 0 }}>Advocate Md. Shah Alam</p>
+                            <p style={{ fontSize: '0.74rem', color: '#FDE68A', fontWeight: 600, margin: 0 }}>Supreme Court of Bangladesh • Uttara & Dhaka Judge Court</p>
                         </div>
                         {pubDate && (
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '0.3rem', fontSize: '0.75rem', color: 'var(--hero-muted)', marginLeft: 'auto' }}>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '0.35rem', fontSize: '0.78rem', fontWeight: 600, color: '#E2E8F0', marginLeft: 'auto', background: 'rgba(255,255,255,0.1)', padding: '0.3rem 0.75rem', borderRadius: '9999px', border: '1px solid rgba(255,255,255,0.18)' }}>
                                 <Calendar size={12} /> {pubDate}
                             </div>
                         )}
@@ -794,12 +794,57 @@ const BlogPostInner = () => {
 
                             <article ref={articleRef}>
 
+                                {/* Featured Topic Cover Visual Banner */}
+                                <div style={{
+                                    marginBottom: '2rem',
+                                    borderRadius: '1.15rem',
+                                    overflow: 'hidden',
+                                    position: 'relative',
+                                    height: 'clamp(185px, 26vw, 275px)',
+                                    border: '1.5px solid var(--card-border)',
+                                    boxShadow: '0 16px 36px -14px rgba(11, 25, 56, 0.22)',
+                                    background: '#0B1938',
+                                }}>
+                                    <img
+                                        src={coverFor(post.category)}
+                                        alt={`${post.title} — ${post.category}`}
+                                        style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block' }}
+                                        loading="eager"
+                                    />
+                                    <div style={{
+                                        position: 'absolute',
+                                        inset: 0,
+                                        background: 'linear-gradient(180deg, rgba(9,21,46,0.08) 0%, rgba(9,21,46,0.35) 55%, rgba(9,21,46,0.88) 100%)',
+                                        display: 'flex',
+                                        alignItems: 'flex-end',
+                                        justifyContent: 'space-between',
+                                        padding: '1.1rem 1.4rem',
+                                        gap: '0.75rem',
+                                        flexWrap: 'wrap',
+                                    }}>
+                                        <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', flexWrap: 'wrap' }}>
+                                            <span style={{
+                                                fontSize: '0.72rem', fontWeight: 800, padding: '0.3rem 0.85rem',
+                                                borderRadius: '9999px', background: cc.bg, color: '#FFFFFF',
+                                                letterSpacing: '0.05em', boxShadow: '0 4px 12px rgba(0,0,0,0.3)'
+                                            }}>
+                                                {post.category} Guide
+                                            </span>
+                                            <span style={{ fontSize: '0.8rem', fontWeight: 700, color: '#FDE68A' }}>
+                                                ⚖️ Bangladesh Supreme Court & District Court Legal Brief
+                                            </span>
+                                        </div>
+                                        <span style={{ fontSize: '0.74rem', color: '#E2E8F0', fontWeight: 600 }}>
+                                            By Advocate Md. Shah Alam
+                                        </span>
+                                    </div>
+                                </div>
 
                                 {/* Phase 5.2: Featured Snippet & AI Overview (GEO) Quick Answer Table */}
                                 {quickTable && (
-                                    <div className="quick-answer-table-box" style={{ marginBottom: '2rem', borderRadius: '1rem', overflow: 'hidden', border: '1.5px solid rgba(184,146,42,0.28)', background: 'var(--surface)' }}>
-                                        <div style={{ padding: '0.85rem 1.25rem', background: 'linear-gradient(135deg, #0F172A 0%, #1E293B 100%)', borderBottom: '2px solid var(--gold, #C6A75E)' }}>
-                                            <h2 style={{ margin: 0, fontSize: '1.05rem', fontWeight: 800, color: '#FFFFFF' }}>
+                                    <div className="quick-answer-table-box" style={{ marginBottom: '2rem', borderRadius: '1rem', overflow: 'hidden', border: '1.5px solid rgba(29, 78, 216, 0.22)', background: 'var(--surface)', boxShadow: '0 12px 28px -12px rgba(15, 23, 42, 0.12)' }}>
+                                        <div style={{ padding: '0.9rem 1.35rem', background: 'linear-gradient(90deg, #0B1938 0%, #1E3A8A 100%)', borderBottom: '2px solid #D4AF37' }}>
+                                            <h2 style={{ margin: 0, fontSize: '1.05rem', fontWeight: 800, color: '#FDE68A' }}>
                                                 ⚡ {quickTable.heading}
                                             </h2>
                                         </div>
@@ -859,8 +904,12 @@ const BlogPostInner = () => {
                                                 <div style={{
                                                     position: 'relative',
                                                     marginBottom: '1.75rem',
-                                                    paddingBottom: '1.125rem',
+                                                    padding: '1rem 1.25rem',
+                                                    borderRadius: '1rem',
+                                                    background: 'linear-gradient(90deg, rgba(29, 78, 216, 0.07) 0%, rgba(212, 175, 55, 0.09) 65%, transparent 100%)',
+                                                    borderLeft: '4px solid #D4AF37',
                                                     borderBottom: '1px solid var(--card-border)',
+                                                    boxShadow: '0 6px 20px -12px rgba(15, 23, 42, 0.12)',
                                                     display: 'flex',
                                                     flexDirection: 'column',
                                                     gap: '0.625rem'
@@ -868,11 +917,12 @@ const BlogPostInner = () => {
                                                     {/* Numbered editorial header: gold number tile + headline */}
                                                     <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
                                                         <span aria-hidden="true" style={{
-                                                            flexShrink: 0, width: '3.1rem', height: '3.1rem', borderRadius: '0.9rem',
+                                                            flexShrink: 0, width: '3.15rem', height: '3.15rem', borderRadius: '0.9rem',
                                                             display: 'flex', alignItems: 'center', justifyContent: 'center',
-                                                            fontWeight: 800, fontSize: '1.15rem', color: '#1a1405', fontFamily: "'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
-                                                            background: 'linear-gradient(135deg, #f0d98a 0%, #c6a75e 100%)',
-                                                            boxShadow: '0 8px 18px -8px rgba(198,167,94,0.85), inset 0 1px 0 rgba(255,255,255,0.5)',
+                                                            fontWeight: 800, fontSize: '1.15rem', color: '#FFFFFF', fontFamily: "'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+                                                            background: 'linear-gradient(135deg, #0B1938 0%, #1E3A8A 100%)',
+                                                            border: '1.5px solid #D4AF37',
+                                                            boxShadow: '0 8px 18px -6px rgba(11, 25, 56, 0.45)',
                                                         }}>{String(i + 1).padStart(2, '0')}</span>
                                                         <h2 style={{
                                                             fontFamily: "'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
@@ -1057,25 +1107,61 @@ const BlogPostInner = () => {
                     </div>
 
 
-                    {/* Mobile: bottom related posts */}
+                    {/* Bottom Related Articles Showcase (Visible on Desktop & Mobile) */}
                     <div className="bp-mobile-bottom">
-                        <div style={{ borderTop: '2px solid var(--accent)', paddingTop: '2rem', marginTop: '1rem' }}>
-                            <p style={{ fontSize: '1.05rem', fontWeight: 800, color: 'var(--text)', marginBottom: '1.1rem', display: 'flex', alignItems: 'center', gap: '0.375rem' }}>
-                                <Flame size={14} style={{ color: 'var(--accent)' }} /> More Articles
-                            </p>
-                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: '0.875rem' }}>
+                        <div style={{
+                            borderTop: '2px solid rgba(29, 78, 216, 0.25)',
+                            paddingTop: '2.5rem',
+                            marginTop: '2.5rem',
+                        }}>
+                            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '0.75rem', marginBottom: '1.5rem' }}>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
+                                    <span style={{
+                                        width: '2.25rem', height: '2.25rem', borderRadius: '0.65rem',
+                                        background: 'linear-gradient(135deg, #0B1938 0%, #1E3A8A 100%)',
+                                        border: '1px solid #D4AF37',
+                                        display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+                                        color: '#FDE68A', boxShadow: '0 6px 14px -4px rgba(11,25,56,0.35)'
+                                    }}>
+                                        <Flame size={15} />
+                                    </span>
+                                    <div>
+                                        <p style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--text)', margin: 0, lineHeight: 1.2 }}>
+                                            More Essential Legal Guides
+                                        </p>
+                                        <span style={{ fontSize: '0.78rem', color: 'var(--text-muted)', fontWeight: 500 }}>
+                                            Explore related Supreme Court & District Court legal procedures
+                                        </span>
+                                    </div>
+                                </div>
+                                <Link to="/blog" style={{
+                                    display: 'inline-flex', alignItems: 'center', gap: '0.35rem',
+                                    fontSize: '0.82rem', fontWeight: 800, color: 'var(--accent)',
+                                    padding: '0.45rem 1rem', borderRadius: '9999px',
+                                    background: 'var(--accent-subtle)', border: '1px solid rgba(29, 78, 216, 0.22)',
+                                    textDecoration: 'none'
+                                }}>
+                                    View All Guides →
+                                </Link>
+                            </div>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(265px, 1fr))', gap: '1.15rem' }}>
                                 {allPosts.filter(p => p.slug !== post.slug).slice(0, 4).map(rp => {
                                     const rc = catColor(rp.category);
                                     return (
                                         <Link key={rp.slug} to={`/blog/${rp.slug}`}
-                                            style={{ display: 'block', borderRadius: '0.875rem', overflow: 'hidden', textDecoration: 'none', background: 'var(--card-bg)', border: '1px solid var(--card-border)', boxShadow: '0 10px 26px -16px rgba(15,23,42,0.35)', transition: 'transform 0.2s, border-color 0.2s' }}
-                                            onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.borderColor = rc.bg; }}
-                                            onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.borderColor = 'var(--card-border)'; }}>
-                                            <div aria-hidden="true" style={{ height: '104px', position: 'relative', backgroundImage: `url(${coverFor(rp.category)})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundColor: rc.bg }}><div style={{ position: 'absolute', inset: 0, background: `linear-gradient(180deg, rgba(10,17,32,0.05) 30%, ${rc.bg}cc 100%)` }} /></div>
-                                            <div style={{ padding: '0.875rem' }}>
-                                                <span style={{ fontSize: '0.65rem', fontWeight: 800, color: rc.bg, textTransform: 'uppercase', letterSpacing: '0.06em', display: 'block', marginBottom: '0.375rem' }}>{rp.category}</span>
-                                                <p style={{ fontSize: '0.875rem', fontWeight: 600, color: 'var(--text)', lineHeight: 1.4, margin: 0, marginBottom: '0.5rem' }}>{rp.title}</p>
-                                                <span style={{ display: 'flex', alignItems: 'center', gap: '0.25rem', fontSize: '0.7rem', color: 'var(--text-muted)' }}><Clock size={10} /> {rp.readTime}</span>
+                                            style={{ display: 'flex', flexDirection: 'column', borderRadius: '1rem', overflow: 'hidden', textDecoration: 'none', background: 'var(--surface)', border: '1.5px solid var(--card-border)', boxShadow: '0 12px 28px -14px rgba(15,23,42,0.16)', transition: 'transform 0.22s, border-color 0.22s, box-shadow 0.22s' }}
+                                            onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.borderColor = rc.bg; e.currentTarget.style.boxShadow = '0 18px 34px -12px rgba(15,23,42,0.26)'; }}
+                                            onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.borderColor = 'var(--card-border)'; e.currentTarget.style.boxShadow = '0 12px 28px -14px rgba(15,23,42,0.16)'; }}>
+                                            <div aria-hidden="true" style={{ height: '136px', position: 'relative', backgroundImage: `url(${coverFor(rp.category)})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundColor: '#0B1938' }}>
+                                                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(10,17,32,0.1) 20%, rgba(10,17,32,0.75) 100%)' }} />
+                                                <span style={{ position: 'absolute', left: '0.75rem', bottom: '0.65rem', fontSize: '0.68rem', fontWeight: 800, color: '#FFFFFF', background: rc.bg, padding: '0.22rem 0.65rem', borderRadius: '9999px', textTransform: 'uppercase', letterSpacing: '0.05em', boxShadow: '0 2px 8px rgba(0,0,0,0.3)' }}>{rp.category}</span>
+                                            </div>
+                                            <div style={{ padding: '1rem 1.05rem', display: 'flex', flexDirection: 'column', flex: 1, justifyContent: 'space-between' }}>
+                                                <p style={{ fontSize: '0.95rem', fontWeight: 700, color: 'var(--text)', lineHeight: 1.48, margin: '0 0 0.75rem' }}>{rp.title}</p>
+                                                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', paddingTop: '0.6rem', borderTop: '1px solid var(--card-border)' }}>
+                                                    <span style={{ display: 'flex', alignItems: 'center', gap: '0.25rem', fontSize: '0.74rem', color: 'var(--text-muted)', fontWeight: 600 }}><Clock size={11} /> {rp.readTime}</span>
+                                                    <span style={{ fontSize: '0.76rem', fontWeight: 800, color: 'var(--accent)' }}>Read Guide →</span>
+                                                </div>
                                             </div>
                                         </Link>
                                     );
@@ -1131,7 +1217,7 @@ const BlogPostInner = () => {
                 .bp-sidebar { display: block; }
                 .bp-toc-inline { display: none; }
                 .bp-mobile-toc { display: none; }
-                .bp-mobile-bottom { display: none; }
+                .bp-mobile-bottom { display: block; }
 
                 @media (max-width: 1200px) {
                     .bp-body-container, .bp-hero-container { padding-left: 1.5rem; padding-right: 1.5rem; }
@@ -1155,18 +1241,18 @@ const BlogPostInner = () => {
                     .bp-body-container, .bp-hero-container { padding-left: 1rem; padding-right: 1rem; }
                 }
 
-                /* ─── Premium Executive Hero Intro Box ─── */
+                /* ─── Luminous Executive Hero Intro Box ─── */
                 .bpbn-hero-intro-card {
-                    margin: 1.5rem 0 2.25rem;
-                    max-width: 900px;
-                    padding: 1.5rem 1.75rem;
-                    background: linear-gradient(135deg, rgba(15, 23, 42, 0.92) 0%, rgba(30, 41, 59, 0.82) 100%);
-                    border: 1px solid rgba(198, 167, 94, 0.35);
-                    border-left: 5px solid var(--gold, #C6A75E);
-                    border-radius: 1rem;
-                    box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.5), 0 0 25px -6px rgba(198, 167, 94, 0.15);
+                    margin: 1.35rem 0 2rem;
+                    max-width: 920px;
+                    padding: 0;
+                    background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFF 100%);
+                    border: 1.5px solid rgba(212, 175, 55, 0.55);
+                    border-left: 6px solid #D4AF37;
+                    border-radius: 1.15rem;
+                    box-shadow: 0 22px 48px -14px rgba(6, 15, 36, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.65) inset;
                     position: relative;
-                    backdrop-filter: blur(12px);
+                    overflow: hidden;
                 }
                 .bpbn-intro-header {
                     display: flex;
@@ -1174,9 +1260,10 @@ const BlogPostInner = () => {
                     justify-content: space-between;
                     flex-wrap: wrap;
                     gap: 0.75rem;
-                    margin-bottom: 1rem;
-                    padding-bottom: 0.85rem;
-                    border-bottom: 1px solid rgba(198, 167, 94, 0.22);
+                    margin-bottom: 0;
+                    padding: 0.9rem 1.45rem;
+                    background: linear-gradient(90deg, #0B1938 0%, #1B3B7B 100%);
+                    border-bottom: 1px solid rgba(212, 175, 55, 0.35);
                 }
                 .bpbn-intro-badge {
                     display: inline-flex;
@@ -1185,59 +1272,81 @@ const BlogPostInner = () => {
                     font-size: 0.85rem;
                     font-weight: 800;
                     letter-spacing: 0.05em;
-                    color: var(--gold, #C6A75E);
+                    color: #FDE68A;
                 }
                 .bpbn-intro-dot {
                     width: 9px;
                     height: 9px;
                     border-radius: 50%;
-                    background: var(--gold, #C6A75E);
-                    box-shadow: 0 0 10px var(--gold, #C6A75E);
+                    background: #22C55E;
+                    box-shadow: 0 0 10px #22C55E;
                     display: inline-block;
                 }
                 .bpbn-intro-call-chip {
                     display: inline-flex;
                     align-items: center;
                     gap: 0.375rem;
-                    padding: 0.35rem 0.95rem;
+                    padding: 0.36rem 1rem;
                     border-radius: 9999px;
-                    background: rgba(198, 167, 94, 0.16);
-                    border: 1px solid rgba(198, 167, 94, 0.45);
-                    color: #F8EDD1;
+                    background: linear-gradient(135deg, #FDE68A 0%, #D4AF37 100%);
+                    border: 1px solid #FFF3B0;
+                    color: #0B1528;
                     font-size: 0.82rem;
-                    font-weight: 700;
+                    font-weight: 800;
                     text-decoration: none;
                     transition: all 0.2s ease;
+                    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
                 }
                 .bpbn-intro-call-chip:hover {
-                    background: var(--gold, #C6A75E);
-                    color: #0F172A;
+                    transform: translateY(-1px);
+                    box-shadow: 0 6px 16px rgba(212, 175, 55, 0.45);
                 }
                 .bpbn-intro-content {
-                    font-size: 1.125rem;
+                    font-size: 1.1rem;
                     line-height: 1.95;
-                    color: #F1F5F9;
+                    color: #0F172A;
+                    padding: 1.35rem 1.55rem 1.45rem;
                 }
                 .bpbn-intro-content p {
                     margin: 0;
                 }
                 .bpbn-intro-content strong, .bpbn-intro-content b {
-                    color: #FFFFFF;
-                    font-weight: 700;
-                    background: rgba(198, 167, 94, 0.16);
-                    padding: 0.12rem 0.4rem;
-                    border-radius: 4px;
-                    border-bottom: 1.5px solid rgba(198, 167, 94, 0.4);
+                    color: #1E3A8A;
+                    font-weight: 800;
+                    background: rgba(29, 78, 216, 0.08);
+                    padding: 0.1rem 0.42rem;
+                    border-radius: 5px;
+                    border-bottom: 2px solid rgba(212, 175, 55, 0.65);
                 }
                 .bpbn-intro-content em {
-                    color: #CBD5E1;
+                    color: #334155;
                     font-style: italic;
                 }
                 .bpbn-intro-content a {
-                    color: var(--gold, #C6A75E) !important;
-                    font-weight: 700;
+                    color: #1D4ED8 !important;
+                    font-weight: 800;
                     text-decoration: underline;
                     text-underline-offset: 4px;
+                }
+                body[data-theme="dark"] .bpbn-hero-intro-card {
+                    background: linear-gradient(145deg, rgba(15, 27, 52, 0.96) 0%, rgba(10, 19, 38, 0.98) 100%);
+                    border: 1.5px solid rgba(212, 175, 55, 0.4);
+                    border-left: 6px solid #D4AF37;
+                }
+                body[data-theme="dark"] .bpbn-intro-content {
+                    color: #F1F5F9;
+                }
+                body[data-theme="dark"] .bpbn-intro-content strong,
+                body[data-theme="dark"] .bpbn-intro-content b {
+                    color: #FDE68A;
+                    background: rgba(212, 175, 55, 0.16);
+                    border-bottom: 1.5px solid rgba(212, 175, 55, 0.45);
+                }
+                body[data-theme="dark"] .bpbn-intro-content em {
+                    color: #CBD5E1;
+                }
+                body[data-theme="dark"] .bpbn-intro-content a {
+                    color: #FDE68A !important;
                 }
 
                 /* ── Prose typography — full-width, premium reading ── */

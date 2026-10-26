@@ -2,17 +2,22 @@
 <html lang="bn">
 
 <head>
-  <!-- Google AdSense Official Script & Account Verification -->
-  <meta name="google-adsense-account" content="ca-pub-1781126556775676">
-  <!-- AdSense Script: manual units placed in code serve in-article. In the AdSense console, ONLY the Vignette overlay may be ON (it shows between page navigations, never touches layout). Keep Anchor, Side rail and all In-page formats (Banner/Multiplex) OFF, otherwise Google injects ads over the post content / covers the bottom CTA bar. -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1781126556775676" crossorigin="anonymous"></script>
-
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google AdSense Account Verification -->
+  <meta name="google-adsense-account" content="ca-pub-1781126556775676">
+
+  <!-- Preload LCP hero image with responsive srcset (240px on mobile * 1.75 DPR = 420w -> 12KB WebP!) -->
+  <link rel="preload" as="image"
+        href="/images/hero/hero-md-shah-alam.webp"
+        imagesrcset="/images/hero/hero-md-shah-alam-420.webp 420w, /images/hero/hero-md-shah-alam.webp 828w"
+        imagesizes="(max-width: 768px) 240px, 340px"
+        fetchpriority="high" />
+
   <link rel="icon" type="image/png" href="/adv-md-shah-alam.png" sizes="any" />
-  <!-- Apple Touch Icon for mobile SEO -->
   <link rel="apple-touch-icon" sizes="180x180" href="/adv-md-shah-alam.png" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#0B1220" media="(prefers-color-scheme: dark)" />
   <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)" />
 
@@ -36,8 +41,6 @@
 
   <!-- Critical Anti-White-Flash & Pre-render Isolation Style -->
   <style>
-    /* Colours are baked in per theme (match --bg in src/index.css). The head script above sets html[data-theme]
-       before first paint, so neither the canvas nor <body> ever shows the wrong colour while CSS/JS load. */
     html { background-color: #F8F9FC; color-scheme: light; }
     html[data-theme="dark"] { background-color: #0B1220; color-scheme: dark; }
     body { background-color: #F8F9FC; margin: 0; }
@@ -54,26 +57,15 @@
     }
   </style>
 
-  <!-- Preload LCP hero image with responsive srcset for mobile vs desktop -->
-  <link rel="preload" as="image"
-        href="/images/hero/hero-md-shah-alam.webp"
-        imagesrcset="/images/hero/hero-md-shah-alam-420.webp 420w, /images/hero/hero-md-shah-alam.webp 828w"
-        imagesizes="(max-width: 768px) 420px, 600px"
-        fetchpriority="high" />
-
-  <!-- DNS prefetch for third-party domains -->
+  <!-- DNS prefetch for deferred third-party domains -->
   <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+  <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com" />
 
-  <!-- RSS Feeds (Syndication for LinkedIn, Feedly, Buffer, Automations) -->
+  <!-- RSS Feeds -->
   <link rel="alternate" type="application/rss+xml" title="Advocate Md. Shah Alam Law Chambers (All Articles)" href="https://www.advmdshahalam.me/rss.xml" />
   <link rel="alternate" type="application/rss+xml" title="অ্যাডভোকেট মো. শাহ আলম — আইন কানুন ও পরামর্শ ব্লগ" href="https://www.advmdshahalam.me/rss-bn.xml" />
 
-  <!-- Fonts: ONE self-hosted family (Noto Serif Bengali, variable woff2, font-display: swap — see src/index.css).
-       No render-blocking stylesheet, no third-party font origins. Only the Bengali subset is preloaded;
-       the tiny latin subset is fetched on demand by unicode-range. prerender.mjs strips these on EN pages. -->
-  <link rel="preload" href="/fonts/NotoSerifBengali-var-bengali.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
-
-  <!-- Primary Meta Tags (fallback — React Helmet overrides these per page) -->
+  <!-- Primary Meta Tags (fallback — React Helmet / prerender overrides per page) -->
   <title>Trusted Lawyer in Bangladesh | Advocate Md. Shah Alam — Uttara, Dhaka</title>
   <link rel="canonical" href="https://www.advmdshahalam.me/" />
   <meta name="description"
@@ -83,7 +75,7 @@
   <meta name="author" content="Advocate Md. Shah Alam" />
   <meta name="robots" content="index, follow" />
 
-  <!-- Open Graph / Facebook (fallback — React Helmet overrides per page) -->
+  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.advmdshahalam.me/" />
   <meta property="og:title" content="Trusted Lawyer in Bangladesh | Advocate Md. Shah Alam — Uttara, Dhaka" />
@@ -97,7 +89,7 @@
   <meta property="og:locale" content="en_BD" />
   <meta property="article:author" content="https://www.facebook.com/advmd.shahalamfb" />
 
-  <!-- Twitter Card (fallback — React Helmet overrides per page) -->
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:url" content="https://www.advmdshahalam.me/" />
   <meta name="twitter:title" content="Trusted Lawyer in Bangladesh | Advocate Md. Shah Alam — Uttara, Dhaka" />
@@ -105,6 +97,15 @@
     content="Official website of Advocate Md. Shah Alam, experienced lawyer in Uttara, Dhaka. Criminal, divorce, bail &amp; property law. Supreme Court of Bangladesh." />
   <meta name="twitter:image" content="https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.png" />
   <meta name="twitter:creator" content="@advmd.shahalamfb" />
+</head>
+
+<body>
+<script>
+  /* Sync theme onto <body> before first paint (all dark CSS vars are scoped to body[data-theme="dark"]). */
+  try { document.body.setAttribute('data-theme', document.documentElement.getAttribute('data-theme') || 'light'); } catch (e) { }
+</script>
+<div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
 
   <!-- Structured Data - Attorney Schema -->
   <script type="application/ld+json">
@@ -127,7 +128,6 @@
       "url": "https://www.advmdshahalam.me/",
       "telephone": "+8801712655546",
       "email": "contact@advmdshahalam.me",
-
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "House 46, Road 6/B, Sector 12, Uttara West",
@@ -181,7 +181,7 @@
         },
         {
           "@type": "CollegeOrUniversity",
-          "name": "Tongi Govt. University &amp; College",
+          "name": "Tongi Govt. University & College",
           "degree": "HSC, BA"
         },
         {
@@ -201,36 +201,23 @@
         "yearsOfExperience": "10+"
       },
       "award": "10+ Years of Legal Excellence & Supreme Court Practice",
-
       "memberOf": [
-        {
-          "@type": "Organization",
-          "name": "Bangladesh Bar Council"
-        },
-        {
-          "@type": "Organization",
-          "name": "Supreme Court Bar Association"
-        },
-        {
-          "@type": "Organization",
-          "name": "Dhaka Bar Association"
-        }
+        { "@type": "Organization", "name": "Bangladesh Bar Council" },
+        { "@type": "Organization", "name": "Supreme Court Bar Association" },
+        { "@type": "Organization", "name": "Dhaka Bar Association" }
       ],
       "hasCredential": [
         {
           "@type": "EducationalOccupationalCredential",
           "name": "Advocate, Supreme Court of Bangladesh",
           "credentialCategory": "Professional License",
-          "recognizedBy": {
-            "@type": "Organization",
-            "name": "Bangladesh Bar Council"
-          }
+          "recognizedBy": { "@type": "Organization", "name": "Bangladesh Bar Council" }
         }
       ],
       "contactPoint": [
         {
           "@type": "ContactPoint",
-          "telephone": "+8801712655546",
+          "telephone": "+88017126555546",
           "contactType": "customer service",
           "areaServed": "BD",
           "availableLanguage": ["Bengali", "English"]
@@ -252,9 +239,9 @@
         "https://www.advmdshahalam.me/advocate-md-shah-alam"
       ]
     }
-    </script>
+  </script>
 
-  <!-- Master LegalService Schema (Sitewide Layout - Step 5) -->
+  <!-- Master LegalService Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -299,14 +286,8 @@
       }
     ],
     "memberOf": [
-      {
-        "@type": "Organization",
-        "name": "Supreme Court Bar Association (SCBA)"
-      },
-      {
-        "@type": "Organization",
-        "name": "Dhaka Bar Association"
-      }
+      { "@type": "Organization", "name": "Supreme Court Bar Association (SCBA)" },
+      { "@type": "Organization", "name": "Dhaka Bar Association" }
     ],
     "sameAs": [
       "https://www.facebook.com/advmd.shahalamfb",
@@ -319,7 +300,7 @@
   }
   </script>
 
-  <!-- Structured Data - Person Schema (helps Google AI Overview identify correct person & photo) -->
+  <!-- Structured Data - Person Schema -->
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -404,34 +385,22 @@
         "Family Law Bangladesh"
       ],
       "memberOf": [
-        {
-          "@type": "Organization",
-          "name": "Bangladesh Bar Council"
-        },
-        {
-          "@type": "Organization",
-          "name": "Supreme Court Bar Association"
-        },
-        {
-          "@type": "Organization",
-          "name": "Dhaka Bar Association"
-        }
+        { "@type": "Organization", "name": "Bangladesh Bar Council" },
+        { "@type": "Organization", "name": "Supreme Court Bar Association" },
+        { "@type": "Organization", "name": "Dhaka Bar Association" }
       ],
       "hasCredential": [
         {
           "@type": "EducationalOccupationalCredential",
           "name": "Advocate, Supreme Court of Bangladesh",
           "credentialCategory": "Professional License",
-          "recognizedBy": {
-            "@type": "Organization",
-            "name": "Bangladesh Bar Council"
-          }
+          "recognizedBy": { "@type": "Organization", "name": "Bangladesh Bar Council" }
         }
       ]
     }
-    </script>
+  </script>
 
-  <!-- Structured Data - WebSite (enables sitelinks search box) -->
+  <!-- Structured Data - WebSite -->
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -478,29 +447,59 @@
       ]
     }
   </script>
-</head>
 
-<body>
-<script>
-  /* Sync theme onto <body> before first paint (all dark CSS vars are scoped to body[data-theme="dark"]). */
-  try { document.body.setAttribute('data-theme', document.documentElement.getAttribute('data-theme') || 'light'); } catch (e) { }
-</script>
-<div id="root"></div>
-  <script type="module" src="/src/main.jsx"></script>
-
-  <!-- Google Analytics — deferred to after page load (non-blocking LCP) -->
+  <!-- Google Analytics & AdSense — deferred after LCP/interaction so they never block FCP/LCP/SI -->
   <script>
-    window.addEventListener('load', function() {
-      // Google Analytics
-      var s = document.createElement('script');
-      s.async = true;
-      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-PJ4Z9WLRBS';
-      document.head.appendChild(s);
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-PJ4Z9WLRBS', { send_page_view: true });
-    });
+    (function () {
+      var gaLoaded = false;
+      var adsLoaded = false;
+
+      function loadGA() {
+        if (gaLoaded) return;
+        gaLoaded = true;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-PJ4Z9WLRBS';
+        document.head.appendChild(s);
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', 'G-PJ4Z9WLRBS', { send_page_view: true });
+      }
+
+      function loadAds() {
+        if (adsLoaded || document.querySelector('script[src*="adsbygoogle.js"]')) {
+          adsLoaded = true;
+          return;
+        }
+        adsLoaded = true;
+        var a = document.createElement('script');
+        a.async = true;
+        a.crossOrigin = 'anonymous';
+        a.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1781126556775676';
+        document.head.appendChild(a);
+      }
+
+      window.__ensureAdSenseLoaded = loadAds;
+
+      var interactEvents = ['scroll', 'touchstart', 'pointerdown', 'keydown'];
+      function onFirstInteract() {
+        loadAds();
+        loadGA();
+        for (var i = 0; i < interactEvents.length; i++) {
+          window.removeEventListener(interactEvents[i], onFirstInteract);
+        }
+      }
+      for (var i = 0; i < interactEvents.length; i++) {
+        window.addEventListener(interactEvents[i], onFirstInteract, { passive: true, once: true });
+      }
+
+      window.addEventListener('load', function () {
+        setTimeout(loadGA, 1800);
+        setTimeout(loadAds, 2800);
+      });
+    })();
   </script>
 </body>
 

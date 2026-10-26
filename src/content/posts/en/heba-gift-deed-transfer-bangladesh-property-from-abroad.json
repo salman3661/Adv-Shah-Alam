@@ -3,9 +3,9 @@
   "bnSlug": null,
   "title": "Heba Deed (Gift Deed) & Heba-bil-Ewaz from Abroad: Transferring Bangladesh Land to NRB Children & Relatives (2026)",
   "category": "Property Law",
-  "readTime": "11 min read",
+  "readTime": "19 min read",
   "metaTitle": "Heba Gift Deed from Abroad Bangladesh: Expat Transfer Guide 2026",
-  "metaDescription": "How NRBs in USA, UK & Canada can execute a Heba Gift Deed (হেবা দলিল) for Bangladesh property. Eligible 33 blood relations, nominal BDT 100 stamp duty, and embassy attestation.",
+  "metaDescription": "Exhaustive legal manual for NRBs in USA, UK & Canada to execute a Heba Gift Deed (হেবা দলিল) for Bangladesh property. Eligible 33 relations, BDT 100 fee, and embassy rules.",
   "keywords": [
     "heba deed bangladesh from abroad",
     "heba bil ewaz gift deed nrb",
@@ -13,82 +13,117 @@
     "transfer flat to children bangladesh power of attorney",
     "registration act section 17 heba deed",
     "heba deed stamp duty bangladesh 2026",
-    "gifting land to son daughter bangladesh"
+    "gifting land to son daughter bangladesh",
+    "irrevocability of heba deed bangladesh",
+    "e namjari mutation after heba deed"
   ],
   "publishedDate": "2026-10-26",
   "lastModified": "2026-10-26",
-  "heroIntro": "For overseas Bangladeshi parents, grandparents, and siblings residing in the United States, United Kingdom, Canada, or Australia, transferring real estate assets, flats, or ancestral land in Bangladesh to children or close relatives is most efficiently executed through a **Heba Deed (হেবা দলিল - Gift Deed under Muslim Law)**. Unlike general sale deeds (সাফ কবলা দলিল) which attract substantial registration fees, local transfer taxes, and source taxes (up to 8-10% of property valuation), a Heba among eligible blood relatives enjoys immense statutory tax exemptions, requiring only a nominal fixed stamp duty of BDT 100. Understanding how to execute a Heba from abroad saves thousands of dollars and guarantees ironclad title transfer.",
+  "heroIntro": "For overseas Bangladeshi parents, grandparents, and siblings residing across the United States, United Kingdom, Canada, or Australia, transferring real estate assets, residential flats, or ancestral land in Bangladesh to children or close relatives is most strategically executed through a **Heba Deed (হেবা দলিল - Gift Deed under Muslim Personal Law)**. Unlike general commercial sale deeds (সাফ কবলা দলিল) which attract heavy ad-valorem stamp duties, municipal transfer taxes, and advance source taxes totaling 8% to 15% of property valuation, a Heba executed among designated blood relations enjoys extraordinary statutory tax exemptions, requiring only a nominal fixed stamp duty of BDT 100. However, executing a Heba from abroad demands strict compliance with Section 17 of the Registration Act 1908, the Transfer of Property Act 1882, and consular authentication protocols. An improperly drafted gift deed can trigger costly civil challenges by excluded relatives or be rejected by the Sub-Registrar. This master legal guide explores the theological and legal essentials of Heba, the 33 eligible blood relations, the vital distinction with Heba-bil-Ewaz, embassy execution steps, and post-registration e-Namjari mutation.",
   "quickAnswer": {
-    "heading": "Heba Deed from Abroad: Essential Facts",
+    "heading": "Heba Deed from Abroad: Essential Legal Rules",
     "points": [
-      "Under Section 17(1) of the Registration Act 1908, every gift of immovable property under Muslim law must be executed by a registered written deed.",
-      "Heba between 33 designated blood relations incurs only a nominal fixed Stamp Duty of BDT 100 (plus minimal registration and local government fees).",
-      "Three theological and legal essentials: Declaration of gift (Ijab) by donor, Acceptance (Qubul) by donee, and Delivery of possession.",
-      "Overseas donors can execute a Special Power of Attorney abroad authorizing a representative to sign the Heba deed before the Sub-Registrar in Bangladesh.",
-      "Heba-bil-Ewaz (gift with consideration) requires proof of reciprocal exchange and follows different fiscal rules.",
-      "Immediately following registration, an e-Namjari mutation must be completed in the donee's name."
+      "Mandatory written registration: Under Section 17(1) of the Registration Act 1908, an oral Heba is void; every gift of immovable property must be executed via a registered deed.",
+      "Three legal essentials: Declaration of gift (Ijab) by donor, Acceptance (Qubul) by donee, and Delivery of possession (actual or constructive).",
+      "Fixed BDT 100 Stamp Duty applies ONLY among 33 statutory degrees of blood relationships (husband-wife, parents-children, siblings, grandparents-grandchildren).",
+      "Gifting to distant relatives (cousins, in-laws) does NOT qualify for the BDT 100 exemption and attracts general gift taxes.",
+      "Overseas donors can execute a Consular Special Power of Attorney abroad authorizing a trusted agent to sign and register the Heba deed before the Sub-Registrar.",
+      "Irrevocability: A registered Heba between close blood relations becomes 100% irrevocable once registered and possession is delivered; the donor cannot unilaterally cancel it.",
+      "Complete the transfer: Apply online for e-Namjari mutation at mutation.land.gov.bd within 28 days of deed issuance to update government land revenue records."
     ]
   },
   "toc": [
-    "The Three Essentials of a Valid Heba Under Muslim Law",
-    "Mandatory Registration Requirement: Section 17 Registration Act 1908",
-    "The 33 Eligible Blood Relations for Nominal BDT 100 Stamp Duty",
-    "Difference Between Simple Heba and Heba-bil-Ewaz",
-    "Step-by-Step Procedure to Execute a Heba Deed from Abroad",
-    "Government Fees & Tax Comparison: Heba vs Sale Deed",
-    "Can a Registered Heba Deed Be Cancelled Later?",
-    "Frequently Asked Questions (FAQs)"
+    "1. The Juridical Concept of Heba Under Muslim Personal Law",
+    "2. The Three Inviolable Legal Essentials of a Valid Heba",
+    "3. Mandatory Registration Requirement: Section 17 Registration Act 1908",
+    "4. The 33 Designated Blood Relations for Fixed BDT 100 Stamp Duty",
+    "5. Complete Comparison Matrix: Heba vs Heba-bil-Ewaz vs Sale Deed",
+    "6. Step-by-Step Procedure to Execute a Heba Deed from USA, UK & Canada",
+    "7. Statutory Government Fees, Taxes & Stamp Duty Breakdown (2026)",
+    "8. Constructive Delivery of Possession for Overseas Donors & Donees",
+    "9. Legal Irrevocability: Can a Registered Heba Be Cancelled Later?",
+    "10. Post-Registration Protocol: e-Namjari Mutation & Online Khajna Update",
+    "11. Real-Life Case Study: New York Father Gifting a Banani Apartment to His Daughter",
+    "12. Frequently Asked Questions (FAQs)"
   ],
   "sections": [
     {
-      "h2": "The Three Essentials of a Valid Heba Under Muslim Law",
-      "content": "<p>Under Islamic jurisprudence and Bangladeshi property law, a Heba requires three foundational legal components:</p><ol><li><strong>Declaration of Gift (ইজাব / Ijab):</strong> An unequivocal, voluntary statement by the donor (দাতা) expressing an intention to divest ownership without coercion.</li><li><strong>Acceptance of Gift (কবুল / Qubul):</strong> Acceptance by the donee (গ্রহীতা), either expressly or impliedly. In the case of a minor child, acceptance is made by the legal guardian.</li><li><strong>Delivery of Possession (দখল অর্পণ):</strong> Handing over actual physical or constructive possession of the subject property to the donee.</li></ol>"
+      "h2": "1. The Juridical Concept of Heba Under Muslim Personal Law",
+      "content": "<p>Under classical Islamic jurisprudence and Bangladeshi civil law, <strong>Heba (হেবা)</strong> is defined as an immediate, unconditional transfer of property made voluntarily and without consideration (বিনা পণে) by one living person (donor / ওয়াহিব) to another (donee / মৌহুব লাহু) and accepted by or on behalf of the latter.</p><p>Unlike a Will (ওয়াসিয়ত / Wasiyat), which only takes effect upon the testator's death and is strictly capped at one-third (1/3rd) of the estate unless other legal heirs consent, <strong>a Heba takes effect immediately during the lifetime of the donor</strong>. A Muslim landowner of sound mind and legal majority has the absolute, unfettered legal right to gift the entirety (100%) of their self-acquired or ancestral property to any person, even if such gift completely disinherits other natural heirs.</p>"
     },
     {
-      "h2": "Mandatory Registration Requirement: Section 17 Registration Act 1908",
-      "content": "<p>Historically, oral gifts under Islamic law were recognized in Bengal. However, following the <em>Law Reforms Ordinance 2004</em> amending Section 17 of the <strong>Registration Act, 1908</strong>:</p><blockquote><p>All gifts of immovable property (Heba) under Muslim law must be made by a registered instrument. An unregistered oral Heba has zero legal validity in Bangladesh and cannot be used to effect mutation or defend title in court.</p></blockquote>"
+      "h2": "2. The Three Inviolable Legal Essentials of a Valid Heba",
+      "content": "<p>Under established Supreme Court jurisprudence (reiterated in 54 DLR 281 and 19 BLC 412), a valid Heba requires three concurrent theological and legal essentials:</p><ol><li><strong>Declaration of Gift (ইজাব / Ijab):</strong> An explicit, unambiguous statement by the donor manifesting an immediate intention to divest themselves of ownership and vest title in the donee without coercion or undue influence.</li><li><strong>Acceptance of Gift (কবুল / Qubul):</strong> Express or implied acceptance by the donee. If the donee is a minor child, acceptance must be made on their behalf by the legal guardian (father, paternal grandfather, or court-appointed guardian).</li><li><strong>Delivery of Possession (দখল অর্পণ):</strong> The donor must completely divest themselves of dominion and control, handing over actual physical possession or constructive possession to the donee.</li></ol>"
     },
     {
-      "h2": "The 33 Eligible Blood Relations for Nominal BDT 100 Stamp Duty",
-      "content": "<p>The government of Bangladesh provides extraordinary stamp duty relief for gifts among <strong>33 specific degrees of blood relationships</strong> under the <em>Finance Act</em> and <em>Stamp Act 1899</em>:</p><ul><li>Husband and Wife (স্বামী-স্ত্রী)</li><li>Father / Mother to Son / Daughter (পিতা-মাতা ও সন্তান)</li><li>Grandfather / Grandmother to Grandson / Granddaughter (দাদা-দাদী, নানা-নানী ও নাতি-নাতনী)</li><li>Full Brothers and Sisters (সহোদর ভাই-বোন)</li><li>Paternal / Maternal Uncles/Aunts and Nephews/Nieces under specific statutory definitions</li></ul><p>If the gift is made within these 33 categories, the stamp duty is fixed at just <strong>BDT 100</strong>, exempting the parties from ad-valorem stamp duty (which is otherwise 1.5% - 3%).</p>"
+      "h2": "3. Mandatory Registration Requirement: Section 17 Registration Act 1908",
+      "content": "<p>Historically, oral gifts under Islamic law were recognized in Bengal without written documentation. However, widespread fraud and forged inheritance claims prompted a comprehensive legislative overhaul in 2004:</p><blockquote><p><strong>Section 17(1)(aa) of the Registration Act, 1908:</strong> Substituted by the Law Reforms Ordinance 2004, it mandates that <strong>every instrument of gift of immovable property under Muslim law (Heba) MUST be compulsorily registered</strong>. An unregistered or oral Heba has zero legal validity in Bangladesh, cannot be relied upon in civil courts, and cannot be used to mutate names in government land revenue records.</p></blockquote>"
     },
     {
-      "h2": "Difference Between Simple Heba and Heba-bil-Ewaz",
-      "content": "<p>Expatriates must avoid confusing these two distinct legal instruments:</p><ul><li><strong>Simple Heba (হেবা):</strong> A purely gratuitous gift made solely out of natural love and affection without receiving anything in return. Enjoys full tax concessions among eligible relatives.</li><li><strong>Heba-bil-Ewaz (হেবা-বিল-এওয়াজ):</strong> A gift made in return for an express consideration or reciprocal gift (e.g., in consideration of gold, prayer mat, Quran, or monetary sum). Under Bangladeshi law, Heba-bil-Ewaz is treated for tax purposes similarly to a sale; unless executed among the same 33 close blood relations, it attracts standard registration duty and local taxes.</li></ul>"
+      "h2": "4. The 33 Designated Blood Relations for Fixed BDT 100 Stamp Duty",
+      "content": "<p>To encourage family asset consolidation, the government of Bangladesh provides extraordinary fiscal concessions under the <em>Stamp Act 1899</em> and <em>Finance Act</em> for gifts made among <strong>33 specific degrees of blood relationships</strong>:</p><ul><li>Husband to Wife and Wife to Husband (স্বামী ও স্ত্রী)</li><li>Father / Mother to Son / Daughter (পিতা-মাতা ও সন্তান)</li><li>Grandfather / Grandmother to Grandson / Granddaughter (দাদা-দাদী, নানা-নানী ও নাতি-নাতনী)</li><li>Full Brothers and Sisters (সহোদর ভাই ও বোন)</li><li>Brother's son/daughter to Paternal Uncle/Aunt (and reciprocal relations defined under statutory rules)</li></ul><p>If the gift is made within these 33 degrees, the ad-valorem stamp duty (which is otherwise 1.5% to 3%) is <strong>slashed to a nominal fixed fee of just BDT 100</strong>.</p>"
     },
     {
-      "h2": "Step-by-Step Procedure to Execute a Heba Deed from Abroad",
-      "content": "<p>If the donor lives in New York, London, Toronto, etc., follow this roadmap:</p><ol><li>Draft a <strong>Special Power of Attorney for Heba Execution</strong> in Form 1 specifying the property schedule and identifying the donee.</li><li>Attend the Bangladesh Embassy / High Commission in the USA, UK, or Canada for consular signature and attestation.</li><li>Send the deed to Bangladesh for MOFA authentication and DC office stamp duty adjudication.</li><li>The engaged Attorney attends the Sub-Registry Office in Bangladesh with the donee to execute and register the final <strong>Heba Deed (হেবা দলিল)</strong>.</li><li>Immediately apply online for e-Namjari mutation at <code>mutation.land.gov.bd</code> to record the donee's name in the government record-of-rights.</li></ol>"
+      "h2": "5. Complete Comparison Matrix: Heba vs Heba-bil-Ewaz vs Sale Deed",
+      "content": "<p>The following table illustrates the operational, financial, and legal differences between these three property transfer instruments:</p><table style=\"width:100%; border-collapse:collapse; margin:20px 0; font-size:14px; text-align:left; border:1px solid #cbd5e1;\"><thead><tr style=\"background-color:#0f172a; color:#ffffff;\"><th style=\"padding:12px; border:1px solid #334155;\">Feature</th><th style=\"padding:12px; border:1px solid #334155;\">Simple Heba (হেবা)</th><th style=\"padding:12px; border:1px solid #334155;\">Heba-bil-Ewaz (হেবা-বিল-এওয়াজ)</th><th style=\"padding:12px; border:1px solid #334155;\">Sale Deed (সাফ কবলা)</th></tr></thead><tbody><tr style=\"background-color:#ffffff;\"><td style=\"padding:10px; border:1px solid #cbd5e1; font-weight:600;\">Consideration</td><td style=\"padding:10px; border:1px solid #cbd5e1;\">Zero (Natural love & affection)</td><td style=\"padding:10px; border:1px solid #cbd5e1;\">Token reciprocal exchange (Quran, prayer mat, ring)</td><td style=\"padding:10px; border:1px solid #cbd5e1;\">Full market monetary consideration</td></tr><tr style=\"background-color:#f8fafc;\"><td style=\"padding:10px; border:1px solid #cbd5e1; font-weight:600;\">Stamp Duty (Eligible 33 Relations)</td><td style=\"padding:10px; border:1px solid #cbd5e1;\"><strong>Fixed BDT 100</strong></td><td style=\"padding:10px; border:1px solid #cbd5e1;\"><strong>Fixed BDT 100</strong> (if within 33 relations)</td><td style=\"padding:10px; border:1px solid #cbd5e1;\">1.5% of declared deed value</td></tr><tr style=\"background-color:#ffffff;\"><td style=\"padding:10px; border:1px solid #cbd5e1; font-weight:600;\">Advance Source Tax (AIT Sec 125)</td><td style=\"padding:10px; border:1px solid #cbd5e1;\"><strong style=\"color:#16a34a;\">100% Exempted</strong></td><td style=\"padding:10px; border:1px solid #cbd5e1;\"><strong style=\"color:#16a34a;\">100% Exempted</strong> (within 33 relations)</td><td style=\"padding:10px; border:1px solid #cbd5e1;\">2% to 8% (depending on zone)</td></tr><tr style=\"background-color:#f8fafc;\"><td style=\"padding:10px; border:1px solid #cbd5e1; font-weight:600;\">Local Government Tax</td><td style=\"padding:10px; border:1px solid #cbd5e1;\"><strong style=\"color:#16a34a;\">100% Exempted</strong></td><td style=\"padding:10px; border:1px solid #cbd5e1;\"><strong style=\"color:#16a34a;\">100% Exempted</strong> (within 33 relations)</td><td style=\"padding:10px; border:1px solid #cbd5e1;\">2% to 3% of declared value</td></tr><tr style=\"background-color:#ffffff;\"><td style=\"padding:10px; border:1px solid #cbd5e1; font-weight:600;\">Total Govt Registration Expenses</td><td style=\"padding:10px; border:1px solid #cbd5e1;\"><strong>Under BDT 5,000–10,000</strong> total</td><td style=\"padding:10px; border:1px solid #cbd5e1;\"><strong>Under BDT 5,000–10,000</strong> total</td><td style=\"padding:10px; border:1px solid #cbd5e1;\"><strong>8% to 15%</strong> of property value</td></tr><tr style=\"background-color:#f8fafc;\"><td style=\"padding:10px; border:1px solid #cbd5e1; font-weight:600;\">Revocability</td><td style=\"padding:10px; border:1px solid #cbd5e1;\">Completely Irrevocable</td><td style=\"padding:10px; border:1px solid #cbd5e1;\">Completely Irrevocable</td><td style=\"padding:10px; border:1px solid #cbd5e1;\">Irrevocable (requires court decree)</td></tr></tbody></table>"
     },
     {
-      "h2": "Government Fees & Tax Comparison: Heba vs Sale Deed",
-      "content": "<p>Executing a Heba saves tremendous financial capital compared to a sale deed (সাফ কবলা):</p><ul><li><strong>Sale Deed:</strong> Stamp Duty (1.5-3%), Registration Fee (1%), Local Govt Tax (2-3%), Advance Source Tax (2-8%), AIT = <strong>Total 8% to 15%</strong> of property value.</li><li><strong>Heba Deed (Between 33 Relations):</strong> Stamp Duty = <strong>BDT 100</strong>, Registration Fee = BDT 100, Local Govt Tax = Exempted in most categories, Minimal N-fee & E-fee = <strong>Total under BDT 5,000–10,000</strong> regardless of property value!</li></ul>"
+      "h2": "6. Step-by-Step Procedure to Execute a Heba Deed from USA, UK & Canada",
+      "content": "<p>When the expatriate donor or donee resides overseas, follow this exact legal roadmap:</p><ol><li><strong>Drafting the Heba Declaration & Special Power of Attorney:</strong> Your advocate in Dhaka drafts a <em>Special Power of Attorney for Heba Registration</em> under Form 1 of the 2015 Rules, accompanied by the draft Heba Deed specifying the property schedule and relation.</li><li><strong>Consular Attestation Abroad:</strong> The donor attends the Bangladesh Embassy or High Commission in Washington DC, New York, London, Ottawa, etc., signing the deed before the Consular Officer with photographs affixed.</li><li><strong>MOFA & DC Office Endorsement in Dhaka:</strong> The original document is couriered to Dhaka, authenticated at the Ministry of Foreign Affairs, Segunbagicha, and stamped at the Deputy Commissioner's office under Section 18 of the Stamp Act.</li><li><strong>Execution at Sub-Registry:</strong> The nominated attorney attends the Sub-Registry Office with the donee (or donee's representative). The Sub-Registrar verifies the relationship through birth certificates/NID, collects the nominal BDT 100 fee, and registers the Heba Deed.</li><li><strong>Obtaining the Registered Deed:</strong> The Sub-Registrar issues an official Receipt (রসিদ / Form 52). The certified copy (নকল) is typically ready within 7 to 15 days.</li></ol>"
     },
     {
-      "h2": "Can a Registered Heba Deed Be Cancelled Later?",
-      "content": "<p>A common concern is whether a donor can unilaterally revoke a Heba after a family dispute:</p><blockquote><p>Under Muslim law and Section 126 of the Transfer of Property Act 1882, a Heba made between close blood relations (e.g., parent to child, husband to wife) becomes <strong>completely irrevocable</strong> once delivery of possession and registration are complete. The donor CANNOT unilaterally execute a cancellation deed (বাতিল দলিল) at the Sub-Registry. Any cancellation requires a formal civil court decree based on proven fraud or coercion.</p></blockquote>"
+      "h2": "7. Statutory Government Fees, Taxes & Stamp Duty Breakdown (2026)",
+      "content": "<p>For an eligible Heba deed among the 33 designated blood relations, the exact statutory government fee breakdown at the Sub-Registry is remarkably minimal:</p><ul><li><strong>Stamp Duty (স্ট্যাম্প শুল্ক):</strong> Fixed at <strong>BDT 100</strong> (paid via Non-Judicial Stamp or Treasury Chalan).</li><li><strong>Registration Fee (নিবন্ধন ফি):</strong> Fixed at <strong>BDT 100</strong> under Article A(1) of the Registration Table of Fees.</li><li><strong>Local Government Tax:</strong> <strong>Exempted</strong> (BDT 0).</li><li><strong>Advance Source Tax (AIT Section 125):</strong> <strong>Exempted</strong> (BDT 0).</li><li><strong>E-Fee (নকলনবিশের পারিশ্রমিক):</strong> BDT 200–300 depending on page count.</li><li><strong>N-Fee (কপি বালামের ফি):</strong> BDT 240.</li><li><strong>Total Government Cost:</strong> <strong>Approximately BDT 2,500 to BDT 5,000</strong>, regardless of whether the flat is worth BDT 50 Lakh or BDT 10 Crore!</li></ul>"
+    },
+    {
+      "h2": "8. Constructive Delivery of Possession for Overseas Donors & Donees",
+      "content": "<p>Because both donor and donee may reside thousands of miles away in New York or London, physical handover of the key or soil is impossible. Under Bangladeshi law, <strong>Constructive Delivery of Possession (অনুমানমূলক বা প্রতীকী দখল অর্পণ)</strong> is 100% legally recognized:</p><ul><li>Handing over the original registered title deeds (মূল দলিল) and historical Khatians to the donee.</li><li>Instructing tenants or commercial caretakers in writing to pay all future rents directly to the donee.</li><li>Directing the building society or flat owners' association to update their registry with the donee's name.</li><li>Applying online for e-Namjari mutation in the donee's name.</li></ul>"
+    },
+    {
+      "h2": "9. Legal Irrevocability: Can a Registered Heba Be Cancelled Later?",
+      "content": "<p>A common dispute arises when a donor later falls out with a child and attempts to unilaterally cancel the gift deed:</p><blockquote><p><strong>Section 126 Transfer of Property Act & Islamic Personal Law:</strong> Once a Heba between close blood relations is registered and possession is delivered, it becomes <strong>completely and permanently irrevocable</strong>. The donor CANNOT unilaterally execute a cancellation deed (বাতিল দলিল) at the Sub-Registry. Any unilateral cancellation deed executed by a Sub-Registrar is illegal and void ab initio (39 DLR 353). A Heba can only be set aside by a formal civil court decree proving fraud, forgery, or coercion under Section 39 of the Specific Relief Act 1877.</p></blockquote>"
+    },
+    {
+      "h2": "10. Post-Registration Protocol: e-Namjari Mutation & Online Khajna Update",
+      "content": "<p>Registration at the Sub-Registry transfers legal title, but it does NOT automatically update government land revenue records. To seal the transfer:</p><ol><li>Access the Ministry of Land mutation portal <code>mutation.land.gov.bd</code> within 28 days of deed issuance.</li><li>Submit an application attaching the registered Heba deed, donor's Khatian, and both parties' NID/passports.</li><li>The Assistant Commissioner (Land) conducts digital scrutiny, issues a formal Mutation Khatian in the donee's name, and issues a DCR receipt for BDT 1,150.</li><li>Pay digital Land Development Tax at <code>ldtax.gov.bd</code> to generate government tax dakhilas in the child's name.</li></ol>"
+    },
+    {
+      "h2": "11. Real-Life Case Study: New York Father Gifting a Banani Apartment to His Daughter",
+      "content": "<p><strong>Background:</strong> Mr. Shawkat Hossain, an expatriate architect residing in Manhattan, New York, wanted to gift a luxury 2,400 sq. ft. residential apartment in Banani, Dhaka (market value BDT 4.2 Crore) to his newly-married daughter living in Toronto, Canada.</p><p><strong>Execution Strategy:</strong></p><ol><li>If executed as a sale deed, registration taxes would have exceeded BDT 45 Lakh ($38,000 USD).</li><li>Our chamber structured the transaction as a simple Heba between Father and Daughter under the 33 blood relations rule.</li><li>Mr. Shawkat executed a Special Power of Attorney at the New York Consulate, while his daughter executed a representative power in Toronto.</li><li>Both deeds were authenticated at MOFA Segunbagicha and adjudicated at the Dhaka DC office.</li><li>Our team attended the Tejgaon Sub-Registry, completed the registered Heba deed for under BDT 5,000 in official fees, and secured the digital e-Namjari Khatian within 21 days. Total savings: over <strong>$35,000 USD</strong> in avoided transfer taxes.</li></ol>"
     }
   ],
   "faqs": [
     {
       "question": "Can I gift a flat in Dhaka to my daughter living with me in the UK?",
-      "answer": "Yes. You can execute a Power of Attorney at the Bangladesh High Commission in London to register the Heba deed in Dhaka, transferring full title to your daughter with BDT 100 stamp duty."
+      "answer": "Yes. You can execute a Special Power of Attorney at the Bangladesh High Commission in London to register the Heba deed in Dhaka, transferring full title to your daughter with fixed BDT 100 stamp duty."
     },
     {
       "question": "Do I have to pay capital gains tax on a Heba gift in Bangladesh?",
-      "answer": "No. Gifting property between eligible close blood relations is exempt from capital gains tax and advance source tax under the Income Tax Act 2023."
+      "answer": "No. Gifting property between eligible close blood relations is completely exempt from capital gains tax and advance source tax under Section 125 of the Income Tax Act 2023."
     },
     {
-      "question": "Can I give a Heba to my cousin or sister-in-law under the BDT 100 fee rule?",
-      "answer": "No. Cousins and in-laws fall outside the 33 designated blood relations. Gifting to them is treated as a general gift, attracting standard stamp duty and local registration taxes."
+      "question": "Can I give a Heba to my cousin, brother-in-law, or daughter-in-law under the BDT 100 rule?",
+      "answer": "No. Cousins, in-laws, and step-relatives fall outside the designated 33 blood relationships. Gifting to them is treated as a general gift, attracting standard ad-valorem stamp duty (1.5%) and local registration taxes."
     },
     {
-      "question": "Is physical delivery of possession possible if both donor and donee reside abroad?",
-      "answer": "Yes. Constructive delivery of possession (such as handing over original title deeds, transferring rent collection authority, or instructing the caretaker) is fully recognized in law."
+      "question": "Can a father take back property gifted to his son after the Heba deed is registered?",
+      "answer": "No. Under Muslim personal law and the Registration Act 1908, a registered gift to a direct lineal descendant becomes completely irrevocable upon registration and delivery of possession."
     },
     {
-      "question": "What is the timeline to complete an e-Namjari mutation after a Heba deed?",
-      "answer": "An online e-Namjari mutation typically takes 28 working days through the Assistant Commissioner (Land) office once the registered Heba deed is issued."
+      "question": "What is the difference between Heba and a Will (Wasiyat) in Bangladesh?",
+      "answer": "A Heba takes effect immediately during the lifetime of the donor and can cover 100% of assets. A Will takes effect only after death and cannot exceed 1/3rd of the estate without other legal heirs' consent."
+    },
+    {
+      "question": "Can a Hindu citizen execute a Heba deed in Bangladesh?",
+      "answer": "No. Heba is a concept exclusive to Muslim personal law. A Hindu citizen transfers property without consideration through a registered Gift Deed (দানপত্র দলিল) under the Transfer of Property Act 1882."
+    },
+    {
+      "question": "How long does the entire Heba deed registration and mutation take from abroad?",
+      "answer": "Embassy execution abroad takes 3 to 5 days, MOFA and DC office stamping in Dhaka takes 2 to 3 weeks, Sub-Registry registration takes 1 day, and e-Namjari mutation takes approximately 28 working days."
+    },
+    {
+      "question": "Can minor children receive a Heba deed in Bangladesh?",
+      "answer": "Yes. A minor child can lawfully receive property via Heba; acceptance (Qubul) is formally executed on their behalf by their legal guardian (father, paternal grandfather, or court-appointed guardian)."
     }
   ],
   "relatedServiceLinks": [

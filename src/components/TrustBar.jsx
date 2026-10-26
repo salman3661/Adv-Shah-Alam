@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Shield, Star, Users, Clock, CheckCircle } from 'lucide-react';
 
 const trustItemsEn = [
@@ -47,12 +46,8 @@ const TrustBar = ({ lang = 'en' }) => {
                     style={{ gridTemplateColumns: `repeat(${items.length}, 1fr)`, gap: '0' }}
                 >
                     {items.map((item, i) => (
-                        <motion.div
+                        <div
                             key={i}
-                            initial={{ opacity: 0, y: 10 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: i * 0.07 }}
                             className="flex items-center gap-2.5 py-2 px-3"
                             style={{
                                 borderRight: i < items.length - 1 ? '1px solid var(--card-border)' : 'none',
@@ -83,7 +78,7 @@ const TrustBar = ({ lang = 'en' }) => {
                                     {item.sub}
                                 </div>
                             </div>
-                        </motion.div>
+                        </div>
                     ))}
                 </div>
 

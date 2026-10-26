@@ -1,22 +1,22 @@
 {
-  "updatedAt": "2026-10-26T05:11:17.038Z",
+  "updatedAt": "2026-10-26T05:27:04.850Z",
   "propertyId": "520583213",
   "channels": [
     {
       "channel": "Organic Search",
       "sourceMedium": "google / organic",
-      "activeUsers": 2109,
-      "sessions": 2364,
-      "pageViews": 3092,
-      "engagementRate": "64.8%"
+      "activeUsers": 2114,
+      "sessions": 2369,
+      "pageViews": 3103,
+      "engagementRate": "64.9%"
     },
     {
       "channel": "Direct",
       "sourceMedium": "(direct) / (none)",
-      "activeUsers": 396,
-      "sessions": 411,
-      "pageViews": 509,
-      "engagementRate": "37.7%"
+      "activeUsers": 397,
+      "sessions": 412,
+      "pageViews": 511,
+      "engagementRate": "37.9%"
     },
     {
       "channel": "Organic Search",
@@ -151,8 +151,8 @@
     {
       "path": "/bn/blog/sampatti-uttoradhikar-ain-2026-bn",
       "title": "বাবার সম্পত্তি বন্টন আইন বাংলাদেশ ২০২৬ | ছেলে-মেয়ের ভাগের নিয়ম ও ফারায়েজ হিসাব",
-      "activeUsers": 167,
-      "pageViews": 211
+      "activeUsers": 168,
+      "pageViews": 212
     },
     {
       "path": "/blog/cyber-crime-helpline-bangladesh-2026",
@@ -185,16 +185,16 @@
       "pageViews": 83
     },
     {
+      "path": "/bn/blog/e-namjari-tracking-mutation-check-prokriya-bangladesh-2026",
+      "title": "নামজারি আবেদন ট্র্যাকিং ২০২৬ [খতিয়ান চেক ও স্ট্যাটাস যাচাইয়ের সহজ নিয়ম]",
+      "activeUsers": 65,
+      "pageViews": 80
+    },
+    {
       "path": "/blog/bangladesh-land-record-by-name-online-2026",
       "title": "Bangladesh Land Record Online by Name – Free Search Guide",
       "activeUsers": 63,
       "pageViews": 78
-    },
-    {
-      "path": "/bn/blog/e-namjari-tracking-mutation-check-prokriya-bangladesh-2026",
-      "title": "নামজারি আবেদন ট্র্যাকিং ২০২৬ [খতিয়ান চেক ও স্ট্যাটাস যাচাইয়ের সহজ নিয়ম]",
-      "activeUsers": 64,
-      "pageViews": 76
     },
     {
       "path": "/bn/blog/batwara-mamla-din-khoroch-prokriya-2026",
@@ -233,16 +233,16 @@
       "pageViews": 45
     },
     {
+      "path": "/bn/blog/kabinnama-nikahnama-tolar-niyom-fee-bangladesh-2026",
+      "title": "কাবিননামা তোলার নিয়ম ও সরকারি ফি ২০২৬",
+      "activeUsers": 40,
+      "pageViews": 44
+    },
+    {
       "path": "/bn/blog/stree-kortrik-swamike-talak-deyar-sothik-niyom",
       "title": "স্ত্রী কর্তৃক স্বামীকে তালাক দেওয়ার নিয়ম ২০২৬ | তালাকের নোটিশ, খরচ ও দেনমোহর",
       "activeUsers": 39,
       "pageViews": 44
-    },
-    {
-      "path": "/bn/blog/kabinnama-nikahnama-tolar-niyom-fee-bangladesh-2026",
-      "title": "কাবিননামা তোলার নিয়ম ও সরকারি ফি ২০২৬",
-      "activeUsers": 39,
-      "pageViews": 43
     },
     {
       "path": "/bn/blog/talaknama-lekhari-niyom-fee-prokriya-bangladesh-2026",
@@ -289,8 +289,8 @@
     {
       "path": "/bn/blog/agam-jamin-haikort-khoroch-2026",
       "title": "হাইকোর্ট থেকে আগাম জামিন নিতে কত টাকা লাগে ২০২৬ | জামিনের নিয়ম ও খরচ",
-      "activeUsers": 19,
-      "pageViews": 23
+      "activeUsers": 20,
+      "pageViews": 24
     },
     {
       "path": "/bn/blog/high-court-writ-petition-khoroch-papers-2026",
@@ -453,7 +453,7 @@
     {
       "country": "Bangladesh",
       "city": "Dhaka",
-      "activeUsers": 779
+      "activeUsers": 783
     },
     {
       "country": "Bangladesh",
@@ -523,7 +523,7 @@
     {
       "country": "Saudi Arabia",
       "city": "Jeddah",
-      "activeUsers": 16
+      "activeUsers": 17
     },
     {
       "country": "United States",
