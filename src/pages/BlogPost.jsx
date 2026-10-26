@@ -656,69 +656,116 @@ const BlogPostInner = () => {
                         </ol>
                     </nav>
 
-                    {/* Category + time pills */}
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.625rem', flexWrap: 'wrap', marginBottom: '0.95rem' }}>
-                        <span style={{ fontSize: '0.74rem', fontWeight: 800, padding: '0.35rem 0.95rem', borderRadius: '9999px', background: cc.bg, color: '#FFFFFF', letterSpacing: '0.06em', textTransform: 'uppercase', boxShadow: '0 4px 12px rgba(0,0,0,0.28)', border: '1px solid rgba(255,255,255,0.22)' }}>
-                            {post.category}
-                        </span>
-                        <span style={{ display: 'flex', alignItems: 'center', gap: '0.35rem', fontSize: '0.78rem', fontWeight: 600, color: '#F8FAFC', padding: '0.35rem 0.85rem', borderRadius: '9999px', background: 'rgba(255,255,255,0.14)', border: '1px solid rgba(255,255,255,0.26)', backdropFilter: 'blur(6px)' }}>
-                            <Clock size={12} /> {post.readTime}
-                        </span>
-                    </div>
+                    <div className="bp-hero-split">
+                        <div style={{ minWidth: 0, flex: 1 }}>
+                            {/* Category + time pills */}
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '0.625rem', flexWrap: 'wrap', marginBottom: '0.95rem' }}>
+                                <span style={{ fontSize: '0.74rem', fontWeight: 800, padding: '0.35rem 0.95rem', borderRadius: '9999px', background: cc.bg, color: '#FFFFFF', letterSpacing: '0.06em', textTransform: 'uppercase', boxShadow: '0 4px 12px rgba(0,0,0,0.28)', border: '1px solid rgba(255,255,255,0.22)' }}>
+                                    {post.category}
+                                </span>
+                                <span style={{ display: 'flex', alignItems: 'center', gap: '0.35rem', fontSize: '0.78rem', fontWeight: 600, color: '#F8FAFC', padding: '0.35rem 0.85rem', borderRadius: '9999px', background: 'rgba(255,255,255,0.14)', border: '1px solid rgba(255,255,255,0.26)', backdropFilter: 'blur(6px)' }}>
+                                    <Clock size={12} /> {post.readTime}
+                                </span>
+                            </div>
 
-                    {/* Title — full-width, no max-width cap on hero */}
-                    <h1 style={{
-                        fontFamily: "Georgia, serif",
-                        fontSize: 'clamp(1.75rem, 4vw, 3.1rem)',
-                        fontWeight: 800, lineHeight: 1.22,
-                        color: '#FFFFFF',
-                        marginBottom: '1.25rem',
-                        letterSpacing: '-0.025em',
-                        maxWidth: '920px',
-                    }}>
-                        {post.title}
-                    </h1>
+                            {/* Title */}
+                            <h1 style={{
+                                fontFamily: "Georgia, serif",
+                                fontSize: 'clamp(1.7rem, 3.6vw, 2.75rem)',
+                                fontWeight: 800, lineHeight: 1.24,
+                                color: '#FFFFFF',
+                                marginBottom: '1.25rem',
+                                letterSpacing: '-0.025em',
+                            }}>
+                                {post.title}
+                            </h1>
 
-
-                    {/* Hero intro */}
-                    {post.heroIntro && (
-                        <div className="bpbn-hero-intro-card">
-                            <div className="bpbn-intro-header">
-                                <div className="bpbn-intro-badge">
-                                    <span className="bpbn-intro-dot" />
-                                    <span>Legal Insights & Executive Brief</span>
+                            {/* Hero intro */}
+                            {post.heroIntro && (
+                                <div className="bpbn-hero-intro-card">
+                                    <div className="bpbn-intro-header">
+                                        <div className="bpbn-intro-badge">
+                                            <span className="bpbn-intro-dot" />
+                                            <span>Legal Insights & Executive Brief</span>
+                                        </div>
+                                        <a href="tel:01712655546" className="bpbn-intro-call-chip">
+                                            <Phone size={13} />
+                                            <span>Direct Consultation: 01712655546</span>
+                                        </a>
+                                    </div>
+                                    <div
+                                        className="bpbn-intro-content"
+                                        dangerouslySetInnerHTML={{ __html: sanitizeHtml(post.heroIntro) }}
+                                    />
                                 </div>
-                                <a href="tel:01712655546" className="bpbn-intro-call-chip">
-                                    <Phone size={13} />
-                                    <span>Direct Consultation: 01712655546</span>
-                                </a>
-                            </div>
-                            <div
-                                className="bpbn-intro-content"
-                                dangerouslySetInnerHTML={{ __html: sanitizeHtml(post.heroIntro) }}
-                            />
-                        </div>
-                    )}
+                            )}
 
-                    {/* Author / date row */}
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.875rem', flexWrap: 'wrap', paddingTop: '1.15rem', borderTop: '1px solid rgba(255,255,255,0.18)' }}>
-                        <img
-                            src="/images/hero/hero-md-shah-alam.webp"
-                            alt="Advocate Md. Shah Alam"
-                            style={{ width: '2.65rem', height: '2.65rem', borderRadius: '50%', objectFit: 'cover', objectPosition: 'center top', border: '2px solid #FDE68A', flexShrink: 0, boxShadow: '0 4px 12px rgba(0,0,0,0.35)' }}
-                            loading="lazy"
-                            width="42"
-                            height="42"
-                        />
-                        <div>
-                            <p style={{ fontSize: '0.9rem', fontWeight: 800, color: '#FFFFFF', margin: 0 }}>Advocate Md. Shah Alam</p>
-                            <p style={{ fontSize: '0.74rem', color: '#FDE68A', fontWeight: 600, margin: 0 }}>Supreme Court of Bangladesh • Uttara & Dhaka Judge Court</p>
-                        </div>
-                        {pubDate && (
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '0.35rem', fontSize: '0.78rem', fontWeight: 600, color: '#E2E8F0', marginLeft: 'auto', background: 'rgba(255,255,255,0.1)', padding: '0.3rem 0.75rem', borderRadius: '9999px', border: '1px solid rgba(255,255,255,0.18)' }}>
-                                <Calendar size={12} /> {pubDate}
+                            {/* Author / date row */}
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '0.875rem', flexWrap: 'wrap', paddingTop: '1.15rem', borderTop: '1px solid rgba(255,255,255,0.18)' }}>
+                                <img
+                                    src="/images/hero/hero-md-shah-alam.webp"
+                                    alt="Advocate Md. Shah Alam"
+                                    style={{ width: '2.65rem', height: '2.65rem', borderRadius: '50%', objectFit: 'cover', objectPosition: 'center top', border: '2px solid #FDE68A', flexShrink: 0, boxShadow: '0 4px 12px rgba(0,0,0,0.35)' }}
+                                    loading="lazy"
+                                    width="42"
+                                    height="42"
+                                />
+                                <div>
+                                    <p style={{ fontSize: '0.9rem', fontWeight: 800, color: '#FFFFFF', margin: 0 }}>Advocate Md. Shah Alam</p>
+                                    <p style={{ fontSize: '0.74rem', color: '#FDE68A', fontWeight: 600, margin: 0 }}>Supreme Court of Bangladesh • Uttara & Dhaka Judge Court</p>
+                                </div>
+                                {pubDate && (
+                                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.35rem', fontSize: '0.78rem', fontWeight: 600, color: '#E2E8F0', marginLeft: 'auto', background: 'rgba(255,255,255,0.1)', padding: '0.3rem 0.75rem', borderRadius: '9999px', border: '1px solid rgba(255,255,255,0.18)' }}>
+                                        <Calendar size={12} /> {pubDate}
+                                    </div>
+                                )}
                             </div>
-                        )}
+                        </div>
+
+                        {/* Right Column in Top Hero: Framed Full-Aspect Topic Cover Card */}
+                        <div className="bp-hero-visual">
+                            <div style={{
+                                borderRadius: '1.15rem',
+                                overflow: 'hidden',
+                                position: 'relative',
+                                aspectRatio: '1200 / 630',
+                                border: '2px solid rgba(253, 230, 138, 0.5)',
+                                boxShadow: '0 24px 50px -12px rgba(0, 0, 0, 0.65)',
+                                background: '#09152E',
+                            }}>
+                                <img
+                                    src={coverFor(post.category)}
+                                    alt={`${post.title} — ${post.category}`}
+                                    style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block' }}
+                                    loading="eager"
+                                    width="600"
+                                    height="315"
+                                />
+                                <div style={{
+                                    position: 'absolute',
+                                    left: 0,
+                                    right: 0,
+                                    bottom: 0,
+                                    background: 'linear-gradient(180deg, transparent 0%, rgba(9,21,46,0.92) 100%)',
+                                    padding: '1.5rem 1rem 0.75rem',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'space-between',
+                                    gap: '0.5rem',
+                                    flexWrap: 'wrap',
+                                }}>
+                                    <span style={{
+                                        fontSize: '0.7rem', fontWeight: 800, padding: '0.24rem 0.75rem',
+                                        borderRadius: '9999px', background: cc.bg, color: '#FFFFFF',
+                                    }}>
+                                        {post.category} Guide
+                                    </span>
+                                    <span style={{ fontSize: '0.74rem', fontWeight: 700, color: '#FDE68A' }}>
+                                        ⚖️ Supreme Court Legal Brief
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -794,52 +841,6 @@ const BlogPostInner = () => {
                             </div>
 
                             <article ref={articleRef}>
-
-                                {/* Featured Topic Cover Visual Banner */}
-                                <div style={{
-                                    marginBottom: '2rem',
-                                    borderRadius: '1.15rem',
-                                    overflow: 'hidden',
-                                    position: 'relative',
-                                    height: 'clamp(185px, 26vw, 275px)',
-                                    border: '1.5px solid var(--card-border)',
-                                    boxShadow: '0 16px 36px -14px rgba(11, 25, 56, 0.22)',
-                                    background: '#0B1938',
-                                }}>
-                                    <img
-                                        src={coverFor(post.category)}
-                                        alt={`${post.title} — ${post.category}`}
-                                        style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block' }}
-                                        loading="eager"
-                                    />
-                                    <div style={{
-                                        position: 'absolute',
-                                        inset: 0,
-                                        background: 'linear-gradient(180deg, rgba(9,21,46,0.08) 0%, rgba(9,21,46,0.35) 55%, rgba(9,21,46,0.88) 100%)',
-                                        display: 'flex',
-                                        alignItems: 'flex-end',
-                                        justifyContent: 'space-between',
-                                        padding: '1.1rem 1.4rem',
-                                        gap: '0.75rem',
-                                        flexWrap: 'wrap',
-                                    }}>
-                                        <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', flexWrap: 'wrap' }}>
-                                            <span style={{
-                                                fontSize: '0.72rem', fontWeight: 800, padding: '0.3rem 0.85rem',
-                                                borderRadius: '9999px', background: cc.bg, color: '#FFFFFF',
-                                                letterSpacing: '0.05em', boxShadow: '0 4px 12px rgba(0,0,0,0.3)'
-                                            }}>
-                                                {post.category} Guide
-                                            </span>
-                                            <span style={{ fontSize: '0.8rem', fontWeight: 700, color: '#FDE68A' }}>
-                                                ⚖️ Bangladesh Supreme Court & District Court Legal Brief
-                                            </span>
-                                        </div>
-                                        <span style={{ fontSize: '0.74rem', color: '#E2E8F0', fontWeight: 600 }}>
-                                            By Advocate Md. Shah Alam
-                                        </span>
-                                    </div>
-                                </div>
 
                                 {/* Phase 5.2: Featured Snippet & AI Overview (GEO) Quick Answer Table */}
                                 {quickTable && (
@@ -1072,7 +1073,7 @@ const BlogPostInner = () => {
                                     adAnchors.mid
                                 )}
                                 {adAnchors.mid2 && createPortal(
-                                    <AdSenseAd key={`ad-mid2-${post.slug}`} slot={AD_SLOTS.topInArticle} format="auto" responsive={true} labelText="Advertisement" minHeight={250} densityGroup="content" style={{ borderRadius: '0.75rem', overflow: 'hidden', margin: '2.5rem auto' }} />,
+                                    <AdSenseAd key={`ad-mid2-${post.slug}`} slot={AD_SLOTS.sidebar} format="auto" responsive={true} labelText="Advertisement" minHeight={250} densityGroup="content" style={{ borderRadius: '0.75rem', overflow: 'hidden', margin: '2.5rem auto' }} />,
                                     adAnchors.mid2
                                 )}
                                 {adAnchors.end && createPortal(
@@ -1083,7 +1084,7 @@ const BlogPostInner = () => {
                         </div>
 
                         {/* ══ RIGHT SIDEBAR ══ */}
-                        <aside className="bp-sidebar">
+                        <aside className="bp-sidebar google-anno-skip">
                             <div style={{ position: 'sticky', top: '5rem' }}>
                                 <ConsultWidget postTitle={post.title} />
 
@@ -1204,6 +1205,15 @@ const BlogPostInner = () => {
                     position: relative;
                     z-index: 1;
                 }
+                .bp-hero-split {
+                    display: grid;
+                    grid-template-columns: 1fr 440px;
+                    gap: 2.25rem;
+                    align-items: center;
+                }
+                .bp-hero-visual {
+                    width: 100%;
+                }
                 .bp-body-container {
                     max-width: 1600px;
                     margin: 0 auto;
@@ -1222,10 +1232,14 @@ const BlogPostInner = () => {
 
                 @media (max-width: 1200px) {
                     .bp-body-container, .bp-hero-container { padding-left: 1.5rem; padding-right: 1.5rem; }
+                    .bp-hero-split { grid-template-columns: 1fr 360px; gap: 1.5rem; }
                     .bp-main-grid {
                         grid-template-columns: 1fr 300px;
                         gap: 2rem;
                     }
+                }
+                @media (max-width: 960px) {
+                    .bp-hero-split { grid-template-columns: 1fr; gap: 1.25rem; }
                 }
 
                 @media (max-width: 900px) {

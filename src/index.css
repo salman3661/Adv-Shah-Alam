@@ -1287,8 +1287,9 @@ body[data-theme="dark"] .blog-card-hover:hover {
 /* ══════════ Article hero: Royal Sapphire cover art + Luminous Executive Card ══════════ */
 .hero-cover-bg {
   position: absolute; inset: 0; pointer-events: none;
-  background-size: cover; background-position: right center; background-repeat: no-repeat;
-  opacity: 0.82;
+  background-size: cover; background-position: center; background-repeat: no-repeat;
+  opacity: 0.14;
+  filter: blur(8px);
 }
 .hero-cover-fade {
   position: absolute; inset: 0; pointer-events: none;

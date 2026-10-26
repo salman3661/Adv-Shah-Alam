@@ -1181,7 +1181,7 @@ const BlogPostBnInner = () => {
                                     adAnchors.mid
                                 )}
                                 {adAnchors.mid2 && createPortal(
-                                    <AdSenseAd key={`ad-mid2-${post.slug}`} slot={AD_SLOTS.topInArticle} format="auto" responsive={true} labelText="বিজ্ঞাপন" minHeight={250} densityGroup="content" style={{ borderRadius: '0.75rem', overflow: 'hidden', margin: '2.5rem auto' }} />,
+                                    <AdSenseAd key={`ad-mid2-${post.slug}`} slot={AD_SLOTS.sidebar} format="auto" responsive={true} labelText="বিজ্ঞাপন" minHeight={250} densityGroup="content" style={{ borderRadius: '0.75rem', overflow: 'hidden', margin: '2.5rem auto' }} />,
                                     adAnchors.mid2
                                 )}
                                 {adAnchors.end && createPortal(
@@ -1192,7 +1192,7 @@ const BlogPostBnInner = () => {
                         </div>
 
                         {/* ── RIGHT SIDEBAR ── */}
-                        <aside className="bpbn-sidebar">
+                        <aside className="bpbn-sidebar google-anno-skip">
                             <div style={{ position: 'sticky', top: '5rem' }}>
                                 <ConsultBnWidget postTitle={post.title} />
 
@@ -1313,6 +1313,15 @@ const BlogPostBnInner = () => {
                     position: relative;
                     z-index: 1;
                 }
+                .bpbn-hero-split {
+                    display: grid;
+                    grid-template-columns: 1fr 440px;
+                    gap: 2.25rem;
+                    align-items: center;
+                }
+                .bpbn-hero-visual {
+                    width: 100%;
+                }
                 .bpbn-body-container {
                     max-width: 1600px;
                     margin: 0 auto;
@@ -1331,7 +1340,11 @@ const BlogPostBnInner = () => {
 
                 @media (max-width: 1200px) {
                     .bpbn-body-container, .bpbn-hero-container { padding-left: 1.5rem; padding-right: 1.5rem; }
+                    .bpbn-hero-split { grid-template-columns: 1fr 360px; gap: 1.5rem; }
                     .bpbn-main-grid { grid-template-columns: 1fr 300px; gap: 2rem; }
+                }
+                @media (max-width: 960px) {
+                    .bpbn-hero-split { grid-template-columns: 1fr; gap: 1.25rem; }
                 }
                 @media (max-width: 900px) {
                     .bpbn-main-grid { grid-template-columns: 1fr; }
