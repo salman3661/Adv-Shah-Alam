@@ -270,7 +270,7 @@ const breadcrumbSchema = {
 const Layout = ({ children }) => {
     const location = useLocation();
     // Blog post pages have their own sticky bar — hide the global one to avoid duplication
-    const isBlogPost = /^\/(blog|bn\/blog)\/[^/]+/.test(location.pathname);
+    const isBlogPost = /^\/(blog|bn\/blog)(\/|$)/.test(location.pathname);
 
     return (
         <div className="min-h-screen font-sans flex flex-col transition-colors duration-300"
