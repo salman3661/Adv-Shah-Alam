@@ -1282,4 +1282,37 @@ body[data-theme="dark"] .blog-card-hover:hover {
     height: 44px !important;
     font-size: 0.95rem !important;
   }
-}
+}
+
+/* ══════════ Article hero: topic cover art + glass intro card ══════════ */
+.hero-cover-bg {
+  position: absolute; inset: 0; pointer-events: none;
+  background-size: cover; background-position: right center; background-repeat: no-repeat;
+  opacity: 0.55;
+}
+.hero-cover-fade {
+  position: absolute; inset: 0; pointer-events: none;
+  background:
+    linear-gradient(90deg, var(--hero-bg) 0%, rgba(10,17,32,0.90) 36%, rgba(10,17,32,0.45) 100%),
+    linear-gradient(180deg, transparent 65%, var(--hero-bg) 100%);
+}
+.hero-section .bpbn-hero-intro-card {
+  background: rgba(255,255,255,0.05);
+  -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px);
+  border: 1px solid rgba(255,255,255,0.13);
+  border-left: 4px solid var(--gold, #C6A75E);
+  border-radius: 1.1rem;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 28px 50px -26px rgba(0,0,0,0.75), inset 0 1px 0 rgba(255,255,255,0.08);
+}
+.hero-section .bpbn-intro-header { border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 0.85rem; padding-bottom: 0.75rem; }
+.hero-section .bpbn-intro-content { font-size: 1.04rem; line-height: 1.95; color: #E6ECF5; }
+.hero-section h1 { text-shadow: 0 2px 24px rgba(0,0,0,0.45); }
+@media (max-width: 700px) {
+  .hero-cover-bg { opacity: 0.38; background-position: center top; }
+  .hero-cover-fade {
+    background: linear-gradient(180deg, rgba(10,17,32,0.50) 0%, rgba(10,17,32,0.88) 55%, var(--hero-bg) 100%);
+  }
+  .hero-section .bpbn-hero-intro-card { padding: 1rem 1.1rem; }
+  .hero-section .bpbn-intro-content { font-size: 0.97rem; line-height: 1.85; }
+}

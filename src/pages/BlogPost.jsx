@@ -10,6 +10,7 @@ import {
 import { telLink, waLink } from '../data/contactInfo';
 import MidArticleLeadCapture from '../components/MidArticleLeadCapture';
 import AdSenseAd from '../components/AdSenseAd';
+import { coverFor, coverAbsolute } from '../utils/coverImage';
 import { evergreenYear } from '../utils/evergreenYear.mjs';
 import FeeCalculator from '../components/FeeCalculator';
 import { AD_SLOTS, DESKTOP_QUERY, useMediaQuery, useParagraphAnchors } from '../components/ads/adLayout';
@@ -595,7 +596,7 @@ const BlogPostInner = () => {
                 <meta property="og:description" content={evergreenYear(post.metaDescription)} />
                 <meta property="og:type" content="article" />
                 <meta property="og:url" content={canonicalHref} />
-                <meta property="og:image" content="https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.png" />
+                <meta property="og:image" content={coverAbsolute(post.category)} />
                 <meta property="og:site_name" content="Advocate Md. Shah Alam" />
                 <meta property="article:published_time" content={post.publishedDate} />
                 <meta property="article:modified_time" content={post.lastModified || post.publishedDate} />
@@ -604,7 +605,7 @@ const BlogPostInner = () => {
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content={evergreenYear(post.metaTitle)} />
                 <meta name="twitter:description" content={evergreenYear(post.metaDescription)} />
-                <meta name="twitter:image" content="https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.png" />
+                <meta name="twitter:image" content={coverAbsolute(post.category)} />
                 <meta name="author" content="Advocate Md. Shah Alam" />
                 {hreflangTags.map((h) => <link key={h.hrefLang} rel="alternate" hrefLang={h.hrefLang} href={h.href} />)}
                 <script type="application/ld+json">{JSON.stringify(blogPostingSchema)}</script>
@@ -616,6 +617,8 @@ const BlogPostInner = () => {
             <section className="hero-section google-anno-skip pt-24" style={{ background: 'var(--hero-bg)', paddingTop: '88px', paddingBottom: '2.5rem', position: 'relative', overflow: 'hidden' }}>
                 {/* Top accent bar */}
                 <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: `linear-gradient(90deg, ${cc.bg}, var(--gold), ${cc.bg})`, opacity: 0.9 }} />
+                <div className="hero-cover-bg" aria-hidden="true" style={{ backgroundImage: `url(${coverFor(post.category)})` }} />
+                <div className="hero-cover-fade" aria-hidden="true" />
                 {/* Radial glow */}
                 <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse 70% 60% at 30% 50%, rgba(198,167,94,0.07) 0%, transparent 65%)', pointerEvents: 'none' }} />
 
@@ -1068,7 +1071,7 @@ const BlogPostInner = () => {
                                             style={{ display: 'block', borderRadius: '0.875rem', overflow: 'hidden', textDecoration: 'none', background: 'var(--card-bg)', border: '1px solid var(--card-border)', boxShadow: '0 10px 26px -16px rgba(15,23,42,0.35)', transition: 'transform 0.2s, border-color 0.2s' }}
                                             onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.borderColor = rc.bg; }}
                                             onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.borderColor = 'var(--card-border)'; }}>
-                                            <div style={{ height: '5px', background: `linear-gradient(90deg, ${rc.bg}, ${rc.bg}55)` }} />
+                                            <div aria-hidden="true" style={{ height: '104px', position: 'relative', backgroundImage: `url(${coverFor(rp.category)})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundColor: rc.bg }}><div style={{ position: 'absolute', inset: 0, background: `linear-gradient(180deg, rgba(10,17,32,0.05) 30%, ${rc.bg}cc 100%)` }} /></div>
                                             <div style={{ padding: '0.875rem' }}>
                                                 <span style={{ fontSize: '0.65rem', fontWeight: 800, color: rc.bg, textTransform: 'uppercase', letterSpacing: '0.06em', display: 'block', marginBottom: '0.375rem' }}>{rp.category}</span>
                                                 <p style={{ fontSize: '0.875rem', fontWeight: 600, color: 'var(--text)', lineHeight: 1.4, margin: 0, marginBottom: '0.5rem' }}>{rp.title}</p>
