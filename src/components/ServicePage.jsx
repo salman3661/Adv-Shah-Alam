@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { telLink, waLink } from '../data/contactInfo';
 import { MessageCircle, Phone, CheckCircle, ArrowLeft, ArrowRight, ChevronDown, AlertTriangle, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { sanitizeHtml } from '../utils/sanitizeHtml';
 
 const BASE = 'https://www.advmdshahalam.me';
 
@@ -144,7 +145,7 @@ const ServicePage = ({ metaTitle, metaDesc, canonicalUrl, h1, intro, coverage, f
                     <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
                         className="text-lg leading-relaxed max-w-3xl"
                         style={{ color: '#C8D4E8' }}
-                        dangerouslySetInnerHTML={{ __html: intro }} />
+                        dangerouslySetInnerHTML={{ __html: sanitizeHtml(intro) }} />
 
                     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.35 }}
                         className="flex flex-col sm:flex-row gap-4 mt-8">
@@ -180,7 +181,7 @@ const ServicePage = ({ metaTitle, metaDesc, canonicalUrl, h1, intro, coverage, f
                     </div>
                     {contextNote && (
                         <p className="mt-6 text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}
-                            dangerouslySetInnerHTML={{ __html: contextNote }} />
+                            dangerouslySetInnerHTML={{ __html: sanitizeHtml(contextNote) }} />
                     )}
                 </div>
             </section>

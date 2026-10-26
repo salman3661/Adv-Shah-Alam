@@ -60,6 +60,60 @@ function jsonLoad(p) { try { return JSON.parse(fs.readFileSync(p,'utf8').replace
  * Inject page-specific title, description, canonical, Open Graph tags,
  * and structured data into the base HTML.
  */
+function buildHeroShell(lang = 'bn') {
+  const isBn = lang === 'bn';
+  const hc = isBn ? heroBn : hero;
+  const pills = isBn
+    ? [
+        { label: '১০+ বছরের অভিজ্ঞতা', dotColor: '#1A3FBF' },
+        { label: 'সুপ্রিম কোর্টের আইনজীবী', dotColor: '#C6A75E' },
+        { label: 'উত্তরা, ঢাকা', dotColor: '#22C55E' },
+      ]
+    : [
+        { label: '10+ Years Experience', dotColor: '#1A3FBF' },
+        { label: 'Supreme Court Advocate', dotColor: '#C6A75E' },
+        { label: 'Uttara, Dhaka', dotColor: '#22C55E' },
+      ];
+
+  const pillsHtml = pills
+    .map(
+      (p) =>
+        `<span style="display:inline-flex;align-items:center;gap:0.42rem;padding:0.32rem 1rem;border-radius:9999px;font-size:0.72rem;font-weight:700;letter-spacing:0.01em;background:var(--hero-pill-bg);border:1.5px solid var(--hero-pill-border);color:var(--hero-pill-text);box-shadow:0 2px 10px rgba(0,0,0,0.07)"><span style="width:7px;height:7px;border-radius:50%;background:${p.dotColor};flex-shrink:0"></span>${escHtml(p.label)}</span>`
+    )
+    .join('');
+
+  return `<section id="home" class="relative overflow-hidden google-anno-skip" style="background:var(--hero-section-bg);min-height:100vh;display:flex;flex-direction:column;justify-content:center">
+  <div class="container mx-auto px-6 relative z-10" style="padding-top:6.75rem;padding-bottom:3.5rem">
+    <div class="grid md:grid-cols-2 gap-8 lg:gap-16 items-center">
+      <div class="order-2 md:order-1">
+        <div style="display:flex;flex-wrap:wrap;gap:0.6rem;margin-bottom:1.5rem">${pillsHtml}</div>
+        ${
+          hc.emergencyBadge
+            ? `<div style="margin-bottom:1.25rem"><span style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.38rem 0.95rem;border-radius:9999px;font-size:0.72rem;font-weight:700;background:rgba(239,68,68,0.08);border:1.5px solid rgba(239,68,68,0.25);color:#dc2626"><span style="width:7px;height:7px;border-radius:50%;background:#ef4444;flex-shrink:0"></span>${escHtml(hc.emergencyBadge)}</span></div>`
+            : ''
+        }
+        <h1 style="font-size:clamp(2rem, 4.5vw, 3.2rem);font-weight:800;line-height:1.13;margin-bottom:0.75rem;color:var(--hero-heading);letter-spacing:-0.03em">${escHtml(hc.headline)} <span style="color:var(--hero-accent)">${escHtml(hc.headlineAccent)}</span></h1>
+        <p style="font-size:0.97rem;line-height:1.68;margin-bottom:1.4rem;color:var(--hero-sub);font-weight:400;max-width:450px">${escHtml(hc.subheading)}</p>
+        <div style="display:flex;gap:0.7rem;flex-wrap:wrap">
+          <a href="https://wa.me/8801712655546" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.72rem 1.4rem;border-radius:0.65rem;background:#25D366;color:#fff;font-size:0.875rem;font-weight:700;text-decoration:none;box-shadow:0 4px 16px rgba(37,211,102,0.4)">${escHtml(hc.cta1Label)}</a>
+          <a href="#contact" style="display:inline-flex;align-items:center;gap:0.45rem;padding:0.72rem 1.4rem;border-radius:0.65rem;background:var(--hero-cta-sec-bg);color:var(--hero-cta-sec-text);font-size:0.875rem;font-weight:600;text-decoration:none;border:1.5px solid var(--hero-cta-sec-border)">${escHtml(hc.cta2Label)}</a>
+        </div>
+      </div>
+      <div class="order-1 md:order-2 flex justify-center md:justify-end google-anno-skip">
+        <div class="google-anno-skip" style="position:relative;width:100%;max-width:340px;aspect-ratio:4/5">
+          <div style="position:relative;border-radius:1.5rem;overflow:hidden;border:1px solid var(--hero-photo-border);box-shadow:0 20px 56px var(--hero-photo-shadow);height:100%;z-index:1">
+            <img src="/images/hero/hero-md-shah-alam.webp" srcset="/images/hero/hero-md-shah-alam-420.webp 420w, /images/hero/hero-md-shah-alam.webp 828w" sizes="(max-width: 768px) 240px, 340px" alt="${escHtml(hc.photoAlt)}" loading="eager" fetchpriority="high" decoding="sync" width="600" height="750" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block" />
+            <div style="position:absolute;bottom:0;left:0;right:0;height:38%;background:linear-gradient(to top, rgba(10,17,36,0.7) 0%, transparent 100%)"></div>
+            <div style="position:absolute;bottom:0.875rem;right:0.875rem;background:linear-gradient(135deg, #1A3FBF 0%, #3B5FD4 100%);color:#fff;font-size:0.68rem;font-weight:700;padding:0.38rem 0.85rem;border-radius:0.5rem">${escHtml(hc.photoBadgeBottom)}</div>
+            <div style="position:absolute;top:0.875rem;left:0.875rem;background:rgba(10,17,36,0.7);color:#C6A75E;font-size:0.63rem;font-weight:700;padding:0.32rem 0.7rem;border-radius:0.5rem;border:1px solid rgba(198,167,94,0.35)">${escHtml(hc.photoBadgeTop)}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>`;
+}
+
 function buildPage(base, { title, description, canonical, body, lang='en', extraHead='', ogImage='' }) {
   let h = base;
   h = h.replace(/<html lang="[^"]*"/, `<html lang="${lang}"`);
@@ -69,6 +123,10 @@ function buildPage(base, { title, description, canonical, body, lang='en', extra
   
   // Clean canonical: strip any tracking params or trailing slashes
   const cleanCanonical = canonical.replace(/\/+$/, '') === BASE ? `${BASE}/` : canonical.replace(/\/+$/, '');
+  const isHomePage = cleanCanonical === `${BASE}/` || cleanCanonical === `${BASE}/en`;
+  if (!isHomePage) {
+    h = h.replace(/\s*<!--\s*Preload LCP hero image[\s\S]*?fetchpriority="high"\s*\/>/g, '');
+  }
   h = h.replace(/<link rel="canonical"[^>]*>/g, '');
 
   h = h.replace(/<meta property="og:title"[^>]*>/, `<meta property="og:title" content="${escHtml(title)}">`);
@@ -89,7 +147,8 @@ function buildPage(base, { title, description, canonical, body, lang='en', extra
   h = h.replace('</head>', `${headInjections}</head>`);
 
   // Hidden from users, visible to crawlers — no flash, no layout shift
-  const prerendered = `\n<div id="prerendered-content" aria-hidden="true" style="display:none !important;visibility:hidden !important;opacity:0 !important;height:0 !important;width:0 !important;overflow:hidden !important;position:absolute !important;pointer-events:none !important">\n${body}\n</div>`;
+  const visibleShell = isHomePage ? `\n${buildHeroShell(lang)}` : '';
+  const prerendered = `${visibleShell}\n<div id="prerendered-content" aria-hidden="true" style="display:none !important;visibility:hidden !important;opacity:0 !important;height:0 !important;width:0 !important;overflow:hidden !important;position:absolute !important;pointer-events:none !important">\n${body}\n</div>`;
   h = h.replace(/<div id="root">[\s\S]*?<\/div>/, `<div id="root">${prerendered}</div>`);
   return h;
 }

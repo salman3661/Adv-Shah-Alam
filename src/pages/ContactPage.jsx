@@ -205,18 +205,32 @@ const practiceServicesEn = [
 ];
 
 /* ─── Contact Form Component ─────────────────────────────────── */
+const cleanField = (val, maxLen = 200) =>
+    String(val || '').replace(/[\u0000-\u001F\u007F]/g, ' ').trim().slice(0, maxLen);
+
 const ContactForm = ({ isBn }) => {
-    const [formData, setFormData] = React.useState({ name: '', phone: '', subject: '', message: '' });
+    const [formData, setFormData] = React.useState({ name: '', phone: '', subject: '', message: '', website: '' });
     const [submitted, setSubmitted] = React.useState(false);
+    const mountedAt = React.useRef(Date.now());
+    const lastSubmitAt = React.useRef(0);
 
     const handleChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        const now = Date.now();
+        if (formData.website || now - mountedAt.current < 800 || now - lastSubmitAt.current < 4000) {
+            return;
+        }
+        lastSubmitAt.current = now;
+        const safeName = cleanField(formData.name, 80);
+        const safePhone = cleanField(formData.phone, 25);
+        const safeSub = cleanField(formData.subject, 120);
+        const safeMsg = cleanField(formData.message, 1000);
         const text = isBn
-            ? `*📋 আইনি পরমর্শ ও কেস সংক্রান্ত তথ্য (advmdshahalam.me)*\n\n*নাম:* ${formData.name}\n*ফোন:* ${formData.phone}\n*আইনি বিষয়:* ${formData.subject}\n*বিবরণ:* ${formData.message}`
-            : `*📋 New Case Inquiry from advmdshahalam.me*\n\n*Name:* ${formData.name}\n*Phone:* ${formData.phone}\n*Subject:* ${formData.subject}\n*Details:* ${formData.message}`;
-        window.open(waLink(text), '_blank');
+            ? `*📋 আইনি পরমর্শ ও কেস সংক্রান্ত তথ্য (advmdshahalam.me)*\n\n*নাম:* ${safeName}\n*ফোন:* ${safePhone}\n*আইনি বিষয়:* ${safeSub}\n*বিবরণ:* ${safeMsg}`
+            : `*📋 New Case Inquiry from advmdshahalam.me*\n\n*Name:* ${safeName}\n*Phone:* ${safePhone}\n*Subject:* ${safeSub}\n*Details:* ${safeMsg}`;
+        window.open(waLink(text), '_blank', 'noopener,noreferrer');
         setSubmitted(true);
     };
 
@@ -261,6 +275,10 @@ const ContactForm = ({ isBn }) => {
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-5">
+                {/* Honeypot anti-bot field */}
+                <div aria-hidden="true" style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, overflow: 'hidden', opacity: 0, pointerEvents: 'none' }}>
+                    <input name="website" type="text" tabIndex={-1} autoComplete="off" value={formData.website} onChange={handleChange} />
+                </div>
                 <div className="grid sm:grid-cols-2 gap-5">
                     <div>
                         <label className="text-xs font-bold uppercase tracking-wider block mb-1.5"

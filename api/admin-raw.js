@@ -1,8 +1,11 @@
-import { createHmac } from 'crypto';
+import {
+  applySecurity,
+  enforceRateLimit,
+  sendSafeError,
+  verifyToken,
+} from './_security.js';
 
 // ─── Constants ──────────────────────────────────────────────────────────────
-
-const TOKEN_TTL_MS = 24 * 60 * 60 * 1000; // 24 hours
 
 // Files allowed to be read via this endpoint (allowlist for security)
 const ALLOWED_PATHS = new Set([
@@ -10,43 +13,11 @@ const ALLOWED_PATHS = new Set([
   'src/data/blogPostsBn.js',
 ]);
 
-const CORS_HEADERS = {
-  'Access-Control-Allow-Origin':  '*',
-  'Access-Control-Allow-Methods': 'GET, OPTIONS',
-  'Access-Control-Allow-Headers': 'Content-Type, Authorization',
-};
-
-// ─── Auth helpers ────────────────────────────────────────────────────────────
-
-function verifyToken(authHeader) {
-  const secret = process.env.ADMIN_SECRET;
-  if (!secret || !authHeader?.startsWith('Bearer ')) return false;
-
-  try {
-    const raw = Buffer.from(authHeader.slice(7), 'base64url').toString('utf8');
-    const [ts, sig] = raw.split('.');
-    if (!ts || !sig) return false;
-
-    const age = Date.now() - parseInt(ts, 10);
-    if (isNaN(age) || age < 0 || age > TOKEN_TTL_MS) return false;
-
-    const expected = createHmac('sha256', secret).update(ts).digest('hex');
-    return sig === expected;
-  } catch {
-    return false;
-  }
-}
-
 // ─── Main handler ────────────────────────────────────────────────────────────
 
 export default async function handler(req, res) {
-  // CORS preflight
-  if (req.method === 'OPTIONS') {
-    return res.status(200).set(CORS_HEADERS).end();
-  }
-
-  Object.entries(CORS_HEADERS).forEach(([k, v]) => res.setHeader(k, v));
-  res.setHeader('Cache-Control', 'no-store');
+  if (applySecurity(req, res, 'GET, OPTIONS')) return;
+  if (enforceRateLimit(req, res, { bucket: 'admin-raw', max: 30, windowMs: 60_000 })) return;
 
   // Only GET supported
   if (req.method !== 'GET') {
@@ -76,11 +47,6 @@ export default async function handler(req, res) {
   if (!token || !owner || !repo) {
     return res.status(500).json({
       error: 'GitHub environment variables not configured',
-      missing: [
-        !token && 'GITHUB_TOKEN',
-        !owner && 'GITHUB_OWNER',
-        !repo  && 'GITHUB_REPO',
-      ].filter(Boolean),
     });
   }
 
@@ -111,7 +77,6 @@ export default async function handler(req, res) {
       size: ghData.size,
     });
   } catch (err) {
-    console.error('[admin-raw GET]', err.message);
-    return res.status(500).json({ error: err.message });
+    return sendSafeError(res, '[admin-raw GET]', err, 'Failed to load repository file');
   }
 }

@@ -18,6 +18,7 @@ import { FEE_CALCULATORS, calculatorSectionIndex } from '../data/feeCalculators'
 import { SITE, buildEntityGraph, buildHreflang, resolveMasterPillar, resolveQuickAnswerTable, jsonLd } from '../utils/seoSchema.mjs';
 import ArticleSkeleton from '../components/ArticleSkeleton';
 import NotFound from './NotFound';
+import { sanitizeHtml } from '../utils/sanitizeHtml';
 
 /* ── Load all EN posts ── */
 import postsMeta_en from '../content/posts-meta-en.json';
@@ -458,12 +459,12 @@ const BlogPostInner = () => {
        Auto-Ads overlays (mobile vignettes) on internal navigation, which drives bounce. */
     const articleRef = useRef(null);
     const isDesktop = useMediaQuery(DESKTOP_QUERY);
-    /* Phase 2.1: Zero ads before H1 & first 2 paragraphs — Unit 1 placed ONLY after paragraph 3 | Unit 2 (mobile): after paragraph 6 */
+    /* High Viewability: Unit 1 placed after paragraph 2 (right under intro) | Unit 2: after paragraph 5 */
     const adAnchors = useParagraphAnchors(articleRef, [
-        { id: 'top', n: 3, fallbackToLast: false },
-        { id: 'mid', n: 6 },
-        { id: 'mid2', n: 10 },
-        { id: 'end', n: 14, fallbackToLast: true },
+        { id: 'top', n: 2, fallbackToLast: false },
+        { id: 'mid', n: 5 },
+        { id: 'mid2', n: 9 },
+        { id: 'end', n: 13, fallbackToLast: true },
     ], `${slug}|${isDesktop}|${post ? post.slug : 'loading'}`);
 
     const metaFallback = allPosts.find(p => p.slug === slug);
@@ -694,7 +695,7 @@ const BlogPostInner = () => {
                             </div>
                             <div
                                 className="bpbn-intro-content"
-                                dangerouslySetInnerHTML={{ __html: post.heroIntro }}
+                                dangerouslySetInnerHTML={{ __html: sanitizeHtml(post.heroIntro) }}
                             />
                         </div>
                     )}
@@ -934,7 +935,7 @@ const BlogPostInner = () => {
 
                                                 <div className="prose-content"
                                                     style={{ color: 'var(--text-secondary)', fontSize: '1.0625rem', lineHeight: '1.9', letterSpacing: '0.005em', wordBreak: 'break-word', overflowWrap: 'anywhere' }}
-                                                    dangerouslySetInnerHTML={{ __html: formatArticleContent(sec.content) }}
+                                                    dangerouslySetInnerHTML={{ __html: sanitizeHtml(formatArticleContent(sec.content)) }}
                                                 />
                                             </section>
 

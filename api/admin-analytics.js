@@ -1,25 +1,9 @@
-import { createHmac } from 'crypto';
-
-const TOKEN_TTL_MS = 24 * 60 * 60 * 1000;
-const CORS_HEADERS = {
-  'Access-Control-Allow-Origin':  '*',
-  'Access-Control-Allow-Methods': 'GET, OPTIONS',
-  'Access-Control-Allow-Headers': 'Content-Type, Authorization',
-};
-
-function verifyToken(authHeader) {
-  const secret = process.env.ADMIN_SECRET;
-  if (!secret || !authHeader?.startsWith('Bearer ')) return false;
-  try {
-    const raw = Buffer.from(authHeader.slice(7), 'base64url').toString('utf8');
-    const [ts, sig] = raw.split('.');
-    if (!ts || !sig) return false;
-    const age = Date.now() - parseInt(ts, 10);
-    if (isNaN(age) || age < 0 || age > TOKEN_TTL_MS) return false;
-    const expected = createHmac('sha256', secret).update(ts).digest('hex');
-    return sig === expected;
-  } catch { return false; }
-}
+import {
+  applySecurity,
+  enforceRateLimit,
+  sendSafeError,
+  verifyToken,
+} from './_security.js';
 
 // ─── Google API helpers ──────────────────────────────────────────────────────
 
@@ -201,9 +185,8 @@ async function getGA4Data() {
 // ─── Handler ──────────────────────────────────────────────────────────────────
 
 export default async function handler(req, res) {
-  if (req.method === 'OPTIONS') return res.status(200).set(CORS_HEADERS).end();
-  Object.entries(CORS_HEADERS).forEach(([k, v]) => res.setHeader(k, v));
-  res.setHeader('Cache-Control', 'no-store');
+  if (applySecurity(req, res, 'GET, OPTIONS')) return;
+  if (enforceRateLimit(req, res, { bucket: 'admin-analytics', max: 30, windowMs: 60_000 })) return;
 
   if (req.method !== 'GET') return res.status(405).json({ error: 'Method not allowed' });
 
@@ -236,8 +219,7 @@ export default async function handler(req, res) {
       const data = await getSearchConsoleData();
       return res.status(200).json({ configured: true, data });
     } catch (err) {
-      console.error('[admin-analytics GSC]', err.message);
-      return res.status(500).json({ error: err.message });
+      return sendSafeError(res, '[admin-analytics GSC]', err, 'Failed to fetch Search Console analytics');
     }
   }
 
@@ -249,8 +231,7 @@ export default async function handler(req, res) {
       const data = await getGA4Data();
       return res.status(200).json({ configured: true, data });
     } catch (err) {
-      console.error('[admin-analytics GA4]', err.message);
-      return res.status(500).json({ error: err.message });
+      return sendSafeError(res, '[admin-analytics GA4]', err, 'Failed to fetch GA4 analytics');
     }
   }
 

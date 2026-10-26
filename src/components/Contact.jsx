@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { MapPin, Phone, MessageCircle, Mail, Send, PhoneCall, Clock, CheckCircle } from 'lucide-react';
 import { CALL_NUMBER, CALL_DISPLAY, waLink } from '../data/contactInfo';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -46,20 +46,31 @@ const LOCAL_BUSINESS_SCHEMA = {
     ],
 };
 
+const cleanInput = (val, maxLen = 200) =>
+    String(val || '').replace(/[\u0000-\u001F\u007F]/g, ' ').trim().slice(0, maxLen);
+
 const Contact = ({ lang = 'en' }) => {
     const isBn = lang === 'bn';
     const [activeTab, setActiveTab] = useState('whatsapp'); // 'whatsapp' | 'callback'
-    const [formData, setFormData] = useState({ name: '', phone: '', message: '' });
-    const [callbackData, setCallbackData] = useState({ name: '', phone: '', time: '' });
+    const [formData, setFormData] = useState({ name: '', phone: '', message: '', website: '' });
+    const [callbackData, setCallbackData] = useState({ name: '', phone: '', time: '', website: '' });
     const [submitted, setSubmitted] = useState(false);
     const [callbackSent, setCallbackSent] = useState(false);
     const [sending, setSending] = useState(false);
+    const mountedAt = useRef(Date.now());
+    const lastSubmitAt = useRef(0);
 
     const handleChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
     const handleCallbackChange = (e) => setCallbackData({ ...callbackData, [e.target.name]: e.target.value });
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        const now = Date.now();
+        // Anti-bot checks: honeypot filled, submitted < 800ms after load, or < 4s cooldown
+        if (formData.website || now - mountedAt.current < 800 || now - lastSubmitAt.current < 4000) {
+            return;
+        }
+        lastSubmitAt.current = now;
         setSending(true);
         setTimeout(() => {
             const prefix = isBn ? '*📋 নতুন আইনি পরামর্শের অনুরোধ*' : '*📋 New Case Inquiry*';
@@ -67,8 +78,12 @@ const Contact = ({ lang = 'en' }) => {
             const phoneLabel = isBn ? 'ফোন' : 'Phone';
             const msgLabel = isBn ? 'বিবরণ' : 'Details';
 
-            const text = `${prefix}\n\n*${nameLabel}:* ${formData.name}\n*${phoneLabel}:* ${formData.phone}\n*${msgLabel}:* ${formData.message}`;
-            window.open(waLink(text), '_blank');
+            const safeName = cleanInput(formData.name, 80);
+            const safePhone = cleanInput(formData.phone, 25);
+            const safeMsg = cleanInput(formData.message, 1000);
+
+            const text = `${prefix}\n\n*${nameLabel}:* ${safeName}\n*${phoneLabel}:* ${safePhone}\n*${msgLabel}:* ${safeMsg}`;
+            window.open(waLink(text), '_blank', 'noopener,noreferrer');
             setSending(false);
             setSubmitted(true);
             setTimeout(() => setSubmitted(false), 5000);
@@ -77,6 +92,11 @@ const Contact = ({ lang = 'en' }) => {
 
     const handleCallbackSubmit = (e) => {
         e.preventDefault();
+        const now = Date.now();
+        if (callbackData.website || now - mountedAt.current < 800 || now - lastSubmitAt.current < 4000) {
+            return;
+        }
+        lastSubmitAt.current = now;
         setSending(true);
         setTimeout(() => {
             const prefix = isBn ? '*📞 কলব্যাক অনুরোধ*' : '*📞 Callback Request*';
@@ -84,8 +104,12 @@ const Contact = ({ lang = 'en' }) => {
             const phoneLabel = isBn ? 'ফোন' : 'Phone';
             const timeLabel = isBn ? 'পছন্দের সময়' : 'Preferred Time';
 
-            const text = `${prefix}\n\n*${nameLabel}:* ${callbackData.name}\n*${phoneLabel}:* ${callbackData.phone}\n*${timeLabel}:* ${callbackData.time || (isBn ? 'যেকোনো সময়' : 'Anytime')}`;
-            window.open(waLink(text), '_blank');
+            const safeName = cleanInput(callbackData.name, 80);
+            const safePhone = cleanInput(callbackData.phone, 25);
+            const safeTime = cleanInput(callbackData.time, 50) || (isBn ? 'যেকোনো সময়' : 'Anytime');
+
+            const text = `${prefix}\n\n*${nameLabel}:* ${safeName}\n*${phoneLabel}:* ${safePhone}\n*${timeLabel}:* ${safeTime}`;
+            window.open(waLink(text), '_blank', 'noopener,noreferrer');
             setSending(false);
             setCallbackSent(true);
             setTimeout(() => setCallbackSent(false), 5000);
@@ -242,6 +266,10 @@ const Contact = ({ lang = 'en' }) => {
                                             </motion.div>
                                         ) : (
                                             <form onSubmit={handleSubmit} className="space-y-4">
+                                                {/* Honeypot anti-bot field */}
+                                                <div aria-hidden="true" style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, overflow: 'hidden', opacity: 0, pointerEvents: 'none' }}>
+                                                    <input name="website" type="text" tabIndex={-1} autoComplete="off" value={formData.website} onChange={handleChange} />
+                                                </div>
                                                 {[
                                                     { name: 'name', label: isBn ? 'আপনার নাম' : 'Your Name', type: 'text', placeholder: isBn ? 'পূর্ণ নাম লিখুন' : 'Full Name' },
                                                     { name: 'phone', label: isBn ? 'ফোন নম্বর' : 'Phone Number', type: 'tel', placeholder: '+880 XXXX-XXXXXX' },
@@ -322,6 +350,10 @@ const Contact = ({ lang = 'en' }) => {
                                             </motion.div>
                                         ) : (
                                             <form onSubmit={handleCallbackSubmit} className="space-y-4">
+                                                {/* Honeypot anti-bot field */}
+                                                <div aria-hidden="true" style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, overflow: 'hidden', opacity: 0, pointerEvents: 'none' }}>
+                                                    <input name="website" type="text" tabIndex={-1} autoComplete="off" value={callbackData.website} onChange={handleCallbackChange} />
+                                                </div>
                                                 {[
                                                     { name: 'name', label: isBn ? 'আপনার নাম' : 'Your Name', type: 'text', placeholder: isBn ? 'পূর্ণ নাম লিখুন' : 'Full Name' },
                                                     { name: 'phone', label: isBn ? 'ফোন নম্বর (যেখানে আমরা কল করবো)' : 'Phone Number (To Call)', type: 'tel', placeholder: '+880 XXXX-XXXXXX' },

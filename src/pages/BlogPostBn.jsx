@@ -19,6 +19,7 @@ import { SITE, buildEntityGraph, buildHreflang, resolveMasterPillar, resolveQuic
 import ArticleSkeleton from '../components/ArticleSkeleton';
 import popularBnSlugs from '../content/popular_bn.json';
 import NotFound from './NotFound';
+import { sanitizeHtml } from '../utils/sanitizeHtml';
 
 /* ── Load all BN posts ── */
 import postsMeta_bn from '../content/posts-meta-bn.json';
@@ -500,12 +501,12 @@ const BlogPostBnInner = () => {
        Auto-Ads overlays (mobile vignettes) on internal navigation, which drives bounce. */
     const articleRef = useRef(null);
     const isDesktop = useMediaQuery(DESKTOP_QUERY);
-    /* Phase 2.1: Zero ads before H1 & first 2 paragraphs — Unit 1 placed ONLY after paragraph 3 | Unit 2 (mobile): after paragraph 6 */
+    /* High Viewability: Unit 1 placed after paragraph 2 (right under intro) | Unit 2: after paragraph 5 */
     const adAnchors = useParagraphAnchors(articleRef, [
-        { id: 'top', n: 3, fallbackToLast: false },
-        { id: 'mid', n: 6 },
-        { id: 'mid2', n: 10 },
-        { id: 'end', n: 14, fallbackToLast: true },
+        { id: 'top', n: 2, fallbackToLast: false },
+        { id: 'mid', n: 5 },
+        { id: 'mid2', n: 9 },
+        { id: 'end', n: 13, fallbackToLast: true },
     ], `${slug}|${isDesktop}|${post ? post.slug : 'loading'}`);
 
     const metaFallback = allBnPosts.find(p => p.slug === slug);
@@ -715,56 +716,105 @@ const BlogPostBnInner = () => {
                         </ol>
                     </nav>
 
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.625rem', flexWrap: 'wrap', marginBottom: '0.95rem' }}>
-                        <span style={{ fontSize: '0.74rem', fontWeight: 800, padding: '0.35rem 0.95rem', borderRadius: '9999px', background: cc.bg, color: '#FFFFFF', letterSpacing: '0.06em', textTransform: 'uppercase', boxShadow: '0 4px 12px rgba(0,0,0,0.28)', border: '1px solid rgba(255,255,255,0.22)' }}>
-                            {post.category}
-                        </span>
-                        <span style={{ display: 'flex', alignItems: 'center', gap: '0.35rem', fontSize: '0.78rem', fontWeight: 600, color: '#F8FAFC', padding: '0.35rem 0.85rem', borderRadius: '9999px', background: 'rgba(255,255,255,0.14)', border: '1px solid rgba(255,255,255,0.26)', backdropFilter: 'blur(6px)' }}>
-                            <Clock size={12} /> {post.readTime}
-                        </span>
-                    </div>
+                    <div className="bpbn-hero-split">
+                        <div style={{ minWidth: 0, flex: 1 }}>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '0.625rem', flexWrap: 'wrap', marginBottom: '0.95rem' }}>
+                                <span style={{ fontSize: '0.74rem', fontWeight: 800, padding: '0.35rem 0.95rem', borderRadius: '9999px', background: cc.bg, color: '#FFFFFF', letterSpacing: '0.06em', textTransform: 'uppercase', boxShadow: '0 4px 12px rgba(0,0,0,0.28)', border: '1px solid rgba(255,255,255,0.22)' }}>
+                                    {post.category}
+                                </span>
+                                <span style={{ display: 'flex', alignItems: 'center', gap: '0.35rem', fontSize: '0.78rem', fontWeight: 600, color: '#F8FAFC', padding: '0.35rem 0.85rem', borderRadius: '9999px', background: 'rgba(255,255,255,0.14)', border: '1px solid rgba(255,255,255,0.26)', backdropFilter: 'blur(6px)' }}>
+                                    <Clock size={12} /> {post.readTime}
+                                </span>
+                            </div>
 
-                    <h1 style={{ fontFamily: "'Noto Serif Bengali', 'Noto Sans Bengali', Georgia, serif", fontSize: 'clamp(1.7rem, 4vw, 2.85rem)', fontWeight: 800, lineHeight: 1.28, color: '#FFFFFF', marginBottom: '1.25rem', letterSpacing: '-0.01em', maxWidth: '920px' }}>
-                        {post.title}
-                    </h1>
+                            <h1 style={{ fontFamily: "'Noto Serif Bengali', 'Noto Sans Bengali', Georgia, serif", fontSize: 'clamp(1.7rem, 3.6vw, 2.65rem)', fontWeight: 800, lineHeight: 1.28, color: '#FFFFFF', marginBottom: '1.25rem', letterSpacing: '-0.01em' }}>
+                                {post.title}
+                            </h1>
 
-                    {post.heroIntro && (
-                        <div className="bpbn-hero-intro-card">
-                            <div className="bpbn-intro-header">
-                                <div className="bpbn-intro-badge">
-                                    <span className="bpbn-intro-dot" />
-                                    <span>বিজ্ঞ আইনজীবীর আইনি পর্যবেক্ষণ ও সারসংক্ষেপ</span>
+                            {post.heroIntro && (
+                                <div className="bpbn-hero-intro-card">
+                                    <div className="bpbn-intro-header">
+                                        <div className="bpbn-intro-badge">
+                                            <span className="bpbn-intro-dot" />
+                                            <span>বিজ্ঞ আইনজীবীর আইনি পর্যবেক্ষণ ও সারসংক্ষেপ</span>
+                                        </div>
+                                        <a href="tel:01712655546" className="bpbn-intro-call-chip">
+                                            <Phone size={13} />
+                                            <span>জরুরি পরামর্শ: 01712655546</span>
+                                        </a>
+                                    </div>
+                                    <div
+                                        className="bpbn-intro-content"
+                                        dangerouslySetInnerHTML={{ __html: sanitizeHtml(post.heroIntro) }}
+                                    />
                                 </div>
-                                <a href="tel:01712655546" className="bpbn-intro-call-chip">
-                                    <Phone size={13} />
-                                    <span>জরুরি পরামর্শ: 01712655546</span>
-                                </a>
-                            </div>
-                            <div
-                                className="bpbn-intro-content"
-                                dangerouslySetInnerHTML={{ __html: post.heroIntro }}
-                            />
-                        </div>
-                    )}
+                            )}
 
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.875rem', flexWrap: 'wrap', paddingTop: '1.15rem', borderTop: '1px solid rgba(255,255,255,0.18)' }}>
-                        <img
-                            src="/images/hero/hero-md-shah-alam.webp"
-                            alt="অ্যাডভোকেট মো. শাহ আলম"
-                            style={{ width: '2.65rem', height: '2.65rem', borderRadius: '50%', objectFit: 'cover', border: '2px solid #FDE68A', flexShrink: 0, boxShadow: '0 4px 12px rgba(0,0,0,0.35)' }}
-                            loading="eager"
-                            width="42"
-                            height="42"
-                        />
-                        <div>
-                            <p style={{ fontSize: '0.9rem', fontWeight: 800, color: '#FFFFFF', margin: 0 }}>অ্যাডভোকেট মো. শাহ আলম</p>
-                            <p style={{ fontSize: '0.74rem', color: '#FDE68A', fontWeight: 600, margin: 0 }}>বাংলাদেশ সুপ্রিম কোর্ট • চেম্বার: উত্তরা ও ঢাকা জজ কোর্ট</p>
-                        </div>
-                        {pubDate && (
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '0.35rem', fontSize: '0.78rem', fontWeight: 600, color: '#E2E8F0', marginLeft: 'auto', background: 'rgba(255,255,255,0.1)', padding: '0.3rem 0.75rem', borderRadius: '9999px', border: '1px solid rgba(255,255,255,0.18)' }}>
-                                <Calendar size={12} /> {pubDate}
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '0.875rem', flexWrap: 'wrap', paddingTop: '1.15rem', borderTop: '1px solid rgba(255,255,255,0.18)' }}>
+                                <img
+                                    src="/images/hero/hero-md-shah-alam.webp"
+                                    alt="অ্যাডভোকেট মো. শাহ আলম"
+                                    style={{ width: '2.65rem', height: '2.65rem', borderRadius: '50%', objectFit: 'cover', border: '2px solid #FDE68A', flexShrink: 0, boxShadow: '0 4px 12px rgba(0,0,0,0.35)' }}
+                                    loading="eager"
+                                    width="42"
+                                    height="42"
+                                />
+                                <div>
+                                    <p style={{ fontSize: '0.9rem', fontWeight: 800, color: '#FFFFFF', margin: 0 }}>অ্যাডভোকেট মো. শাহ আলম</p>
+                                    <p style={{ fontSize: '0.74rem', color: '#FDE68A', fontWeight: 600, margin: 0 }}>বাংলাদেশ সুপ্রিম কোর্ট • চেম্বার: উত্তরা ও ঢাকা জজ কোর্ট</p>
+                                </div>
+                                {pubDate && (
+                                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.35rem', fontSize: '0.78rem', fontWeight: 600, color: '#E2E8F0', marginLeft: 'auto', background: 'rgba(255,255,255,0.1)', padding: '0.3rem 0.75rem', borderRadius: '9999px', border: '1px solid rgba(255,255,255,0.18)' }}>
+                                        <Calendar size={12} /> {pubDate}
+                                    </div>
+                                )}
                             </div>
-                        )}
+                        </div>
+
+                        {/* Right Column in Top Hero: Framed Full-Aspect Topic Cover Card */}
+                        <div className="bpbn-hero-visual">
+                            <div style={{
+                                borderRadius: '1.15rem',
+                                overflow: 'hidden',
+                                position: 'relative',
+                                aspectRatio: '1200 / 630',
+                                border: '2px solid rgba(253, 230, 138, 0.5)',
+                                boxShadow: '0 24px 50px -12px rgba(0, 0, 0, 0.65)',
+                                background: '#09152E',
+                            }}>
+                                <img
+                                    src={coverFor(post.category)}
+                                    alt={`${post.title} — ${post.category}`}
+                                    style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block' }}
+                                    loading="eager"
+                                    width="600"
+                                    height="315"
+                                />
+                                <div style={{
+                                    position: 'absolute',
+                                    left: 0,
+                                    right: 0,
+                                    bottom: 0,
+                                    background: 'linear-gradient(180deg, transparent 0%, rgba(9,21,46,0.92) 100%)',
+                                    padding: '1.5rem 1rem 0.75rem',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'space-between',
+                                    gap: '0.5rem',
+                                    flexWrap: 'wrap',
+                                }}>
+                                    <span style={{
+                                        fontSize: '0.7rem', fontWeight: 800, padding: '0.24rem 0.75rem',
+                                        borderRadius: '9999px', background: cc.bg, color: '#FFFFFF',
+                                    }}>
+                                        {post.category} গাইড
+                                    </span>
+                                    <span style={{ fontSize: '0.74rem', fontWeight: 700, color: '#FDE68A' }}>
+                                        ⚖️ সুপ্রিম কোর্ট আইন সহায়িকা
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -831,52 +881,6 @@ const BlogPostBnInner = () => {
                             </div>
 
                             <article ref={articleRef}>
-
-                                {/* Featured Topic Cover Visual Banner */}
-                                <div style={{
-                                    marginBottom: '2rem',
-                                    borderRadius: '1.15rem',
-                                    overflow: 'hidden',
-                                    position: 'relative',
-                                    height: 'clamp(185px, 26vw, 275px)',
-                                    border: '1.5px solid var(--card-border)',
-                                    boxShadow: '0 16px 36px -14px rgba(11, 25, 56, 0.22)',
-                                    background: '#0B1938',
-                                }}>
-                                    <img
-                                        src={coverFor(post.category)}
-                                        alt={`${post.title} — ${post.category}`}
-                                        style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block' }}
-                                        loading="eager"
-                                    />
-                                    <div style={{
-                                        position: 'absolute',
-                                        inset: 0,
-                                        background: 'linear-gradient(180deg, rgba(9,21,46,0.08) 0%, rgba(9,21,46,0.35) 55%, rgba(9,21,46,0.88) 100%)',
-                                        display: 'flex',
-                                        alignItems: 'flex-end',
-                                        justifyContent: 'space-between',
-                                        padding: '1.1rem 1.4rem',
-                                        gap: '0.75rem',
-                                        flexWrap: 'wrap',
-                                    }}>
-                                        <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', flexWrap: 'wrap' }}>
-                                            <span style={{
-                                                fontSize: '0.72rem', fontWeight: 800, padding: '0.3rem 0.85rem',
-                                                borderRadius: '9999px', background: cc.bg, color: '#FFFFFF',
-                                                letterSpacing: '0.05em', boxShadow: '0 4px 12px rgba(0,0,0,0.3)'
-                                            }}>
-                                                {post.category} গাইড
-                                            </span>
-                                            <span style={{ fontSize: '0.8rem', fontWeight: 700, color: '#FDE68A' }}>
-                                                ⚖️ বাংলাদেশ সুপ্রিম কোর্ট ও জজ কোর্ট আইন সহায়িকা
-                                            </span>
-                                        </div>
-                                        <span style={{ fontSize: '0.74rem', color: '#E2E8F0', fontWeight: 600 }}>
-                                            লেখক: অ্যাডভোকেট মো. শাহ আলম
-                                        </span>
-                                    </div>
-                                </div>
 
                                 {/* Phase 5.2: Featured Snippet & AI Overview (GEO) Quick Answer Table */}
                                 {quickTable && (
@@ -972,7 +976,7 @@ const BlogPostBnInner = () => {
 
                                                 <div className="prose-bn-content"
                                                     style={{ color: 'var(--text)', fontSize: '1.1875rem', lineHeight: '2.05', letterSpacing: '0.005em', wordBreak: 'break-word', overflowWrap: 'anywhere', fontFamily: "'Noto Serif Bengali', sans-serif" }}
-                                                    dangerouslySetInnerHTML={{ __html: formatArticleContent(sec.content) }}
+                                                    dangerouslySetInnerHTML={{ __html: sanitizeHtml(formatArticleContent(sec.content)) }}
                                                 />
                                             </section>
 

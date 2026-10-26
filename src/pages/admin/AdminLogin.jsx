@@ -20,25 +20,49 @@ const T = {
 
 export default function AdminLogin({ onLogin }) {
   const [password, setPassword]   = useState('');
+  const [honeypot, setHoneypot]   = useState('');
   const [showPw, setShowPw]       = useState(false);
   const [loading, setLoading]     = useState(false);
   const [error, setError]         = useState('');
+  const [lockedUntil, setLockedUntil] = useState(0);
   const inputRef = useRef(null);
+  const mountedAt = useRef(Date.now());
 
   useEffect(() => { inputRef.current?.focus(); }, []);
 
   async function handleSubmit(e) {
     e.preventDefault();
     if (!password.trim()) return;
+
+    const now = Date.now();
+    if (lockedUntil > now) {
+      const waitSec = Math.ceil((lockedUntil - now) / 1000);
+      setError(`Too many attempts. Please wait ${waitSec}s before trying again.`);
+      return;
+    }
+
+    // Block automated bot submissions faster than 400ms after mount
+    if (now - mountedAt.current < 400) {
+      setError('Please wait a moment and try again.');
+      return;
+    }
+
     setLoading(true);
     setError('');
 
     try {
-      const { token } = await adminApi.login(password);
+      const { token } = await adminApi.login(password, honeypot);
       auth.setToken(token);
       onLogin();
     } catch (err) {
-      setError(err.status === 401 ? 'Incorrect password. Please try again.' : `Error: ${err.message}`);
+      if (err.status === 429) {
+        setLockedUntil(Date.now() + 60_000);
+        setError(err.message || 'Too many failed attempts. Temporarily locked.');
+      } else if (err.status === 401) {
+        setError('Incorrect password. Please try again.');
+      } else {
+        setError(`Error: ${err.message}`);
+      }
     } finally {
       setLoading(false);
     }
@@ -52,7 +76,7 @@ export default function AdminLogin({ onLogin }) {
       alignItems: 'center',
       justifyContent: 'center',
       padding: '24px',
-      fontFamily: "system-ui, system-ui, sans-serif",
+      fontFamily: "system-ui, -apple-system, sans-serif",
       position: 'relative',
       overflow: 'hidden',
     }}>
@@ -80,10 +104,7 @@ export default function AdminLogin({ onLogin }) {
         backgroundSize: '40px 40px',
       }} />
 
-      <motion.div
-        initial={{ opacity: 0, y: 24, scale: 0.97 }}
-        animate={{ opacity: 1, y: 0, scale: 1 }}
-        transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+      <div
         style={{
           width: '100%',
           maxWidth: 420,
@@ -100,10 +121,7 @@ export default function AdminLogin({ onLogin }) {
       >
         {/* Logo / Brand */}
         <div style={{ textAlign: 'center', marginBottom: 32 }}>
-          <motion.div
-            initial={{ scale: 0, rotate: -10 }}
-            animate={{ scale: 1, rotate: 0 }}
-            transition={{ delay: 0.15, type: 'spring', stiffness: 260, damping: 20 }}
+          <div
             style={{
               width: 60, height: 60, borderRadius: 16,
               background: T.accentBg,
@@ -114,28 +132,36 @@ export default function AdminLogin({ onLogin }) {
             }}
           >
             <Shield size={28} color={T.accent} />
-          </motion.div>
+          </div>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.25 }}
+          <h1
             style={{ fontSize: '1.35rem', fontWeight: 700, color: T.text, margin: '0 0 6px', letterSpacing: '-0.02em' }}
           >
             Admin Panel
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.35 }}
+          </h1>
+          <p
             style={{ fontSize: '0.8rem', color: T.muted, margin: 0 }}
           >
             Advocate Md. Shah Alam — Website Management
-          </motion.p>
+          </p>
         </div>
 
         {/* Form */}
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} autoComplete="off">
+          {/* Honeypot field — hidden from humans, traps automated bots */}
+          <div aria-hidden="true" style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, overflow: 'hidden', opacity: 0, pointerEvents: 'none' }}>
+            <label htmlFor="admin-website-hp">Website</label>
+            <input
+              id="admin-website-hp"
+              name="website"
+              type="text"
+              tabIndex={-1}
+              autoComplete="off"
+              value={honeypot}
+              onChange={(e) => setHoneypot(e.target.value)}
+            />
+          </div>
+
           {/* Password Field */}
           <div style={{ marginBottom: 16 }}>
             <label style={{ display: 'block', fontSize: '0.75rem', fontWeight: 600, color: T.muted, marginBottom: 8, letterSpacing: '0.06em', textTransform: 'uppercase' }}>
@@ -149,6 +175,7 @@ export default function AdminLogin({ onLogin }) {
                 ref={inputRef}
                 type={showPw ? 'text' : 'password'}
                 value={password}
+                maxLength={256}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="Enter admin password"
                 disabled={loading}
@@ -184,9 +211,7 @@ export default function AdminLogin({ onLogin }) {
 
           {/* Error Message */}
           {error && (
-            <motion.div
-              initial={{ opacity: 0, y: -4 }}
-              animate={{ opacity: 1, y: 0 }}
+            <div
               style={{
                 background: T.errorBg,
                 border: `1px solid rgba(239,68,68,0.3)`,
@@ -200,15 +225,13 @@ export default function AdminLogin({ onLogin }) {
             >
               <AlertCircle size={14} color={T.error} style={{ flexShrink: 0 }} />
               <span style={{ fontSize: '0.8rem', color: T.error }}>{error}</span>
-            </motion.div>
+            </div>
           )}
 
           {/* Submit */}
-          <motion.button
+          <button
             type="submit"
             disabled={loading || !password.trim()}
-            whileHover={{ scale: loading ? 1 : 1.02 }}
-            whileTap={{ scale: loading ? 1 : 0.98 }}
             style={{
               width: '100%',
               background: loading ? 'rgba(34,197,94,0.4)' : T.accent,
@@ -223,7 +246,7 @@ export default function AdminLogin({ onLogin }) {
               alignItems: 'center',
               justifyContent: 'center',
               gap: 8,
-              transition: 'background 0.2s ease',
+              transition: 'background 0.2s ease, transform 0.15s ease',
               letterSpacing: '-0.01em',
               boxShadow: loading ? 'none' : '0 4px 20px rgba(34,197,94,0.25)',
             }}
@@ -236,14 +259,14 @@ export default function AdminLogin({ onLogin }) {
             ) : (
               'Sign In'
             )}
-          </motion.button>
+          </button>
         </form>
 
         {/* Security note */}
         <p style={{ textAlign: 'center', fontSize: '0.7rem', color: T.muted, marginTop: 20, marginBottom: 0 }}>
-          🔒 Secure session · Auto-expires in 24h
+          🔒 Brute-force protected · Session auto-expires in 24h
         </p>
-      </motion.div>
+      </div>
     </div>
   );
 }

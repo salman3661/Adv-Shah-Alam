@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-10-26T05:27:04.850Z",
+  "updatedAt": "2026-10-26T05:37:51.622Z",
   "propertyId": "520583213",
   "channels": [
     {
       "channel": "Organic Search",
       "sourceMedium": "google / organic",
-      "activeUsers": 2114,
-      "sessions": 2369,
-      "pageViews": 3103,
+      "activeUsers": 2115,
+      "sessions": 2370,
+      "pageViews": 3104,
       "engagementRate": "64.9%"
     },
     {
@@ -478,7 +478,7 @@
     {
       "country": "Bangladesh",
       "city": "Sylhet",
-      "activeUsers": 67
+      "activeUsers": 68
     },
     {
       "country": "Bangladesh",

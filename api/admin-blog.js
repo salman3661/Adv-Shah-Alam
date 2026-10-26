@@ -1,31 +1,13 @@
-import { createHmac } from 'crypto';
+import {
+  applySecurity,
+  enforceRateLimit,
+  sendSafeError,
+  verifyToken,
+} from './_security.js';
 
 // ─── Constants ──────────────────────────────────────────────────────────────
 
-const TOKEN_TTL_MS = 24 * 60 * 60 * 1000;
 const ALLOWED_LANGS = new Set(['en', 'bn']);
-
-const CORS_HEADERS = {
-  'Access-Control-Allow-Origin':  '*',
-  'Access-Control-Allow-Methods': 'GET, PUT, DELETE, OPTIONS',
-  'Access-Control-Allow-Headers': 'Content-Type, Authorization',
-};
-
-// ─── Auth ────────────────────────────────────────────────────────────────────
-
-function verifyToken(authHeader) {
-  const secret = process.env.ADMIN_SECRET;
-  if (!secret || !authHeader?.startsWith('Bearer ')) return false;
-  try {
-    const raw = Buffer.from(authHeader.slice(7), 'base64url').toString('utf8');
-    const [ts, sig] = raw.split('.');
-    if (!ts || !sig) return false;
-    const age = Date.now() - parseInt(ts, 10);
-    if (isNaN(age) || age < 0 || age > TOKEN_TTL_MS) return false;
-    const expected = createHmac('sha256', secret).update(ts).digest('hex');
-    return sig === expected;
-  } catch { return false; }
-}
 
 // ─── GitHub helpers ──────────────────────────────────────────────────────────
 
@@ -163,9 +145,8 @@ async function removeFromIndex(lang, slug) {
 // ─── Main handler ─────────────────────────────────────────────────────────────
 
 export default async function handler(req, res) {
-  if (req.method === 'OPTIONS') return res.status(200).set(CORS_HEADERS).end();
-  Object.entries(CORS_HEADERS).forEach(([k, v]) => res.setHeader(k, v));
-  res.setHeader('Cache-Control', 'no-store');
+  if (applySecurity(req, res, 'GET, PUT, DELETE, OPTIONS')) return;
+  if (enforceRateLimit(req, res, { bucket: 'admin-blog', max: 60, windowMs: 60_000 })) return;
 
   // Auth
   if (!verifyToken(req.headers.authorization)) {
@@ -202,11 +183,10 @@ export default async function handler(req, res) {
       const post = JSON.parse(decoded);
       return res.status(200).json({ post, sha: ghFile.sha });
     } catch (err) {
-      console.error('[admin-blog GET]', err.message);
-      if (err.message.includes('404')) {
+      if (err.message?.includes('404')) {
         return res.status(404).json({ error: 'Post not found' });
       }
-      return res.status(500).json({ error: err.message });
+      return sendSafeError(res, '[admin-blog GET]', err, 'Failed to load blog post');
     }
   }
 
@@ -242,6 +222,9 @@ export default async function handler(req, res) {
       }
 
       const postJson = JSON.stringify(post, null, 2);
+      if (postJson.length > 1_000_000) {
+        return res.status(413).json({ error: 'Post payload too large' });
+      }
       const commitMsg = `admin: ${currentSha ? 'update' : 'create'} ${lang} post "${slug}" [skip ci]`;
       const result = await ghPut(postPath(lang, slug), postJson, currentSha, commitMsg);
 
@@ -255,8 +238,7 @@ export default async function handler(req, res) {
         isNew: !currentSha,
       });
     } catch (err) {
-      console.error('[admin-blog PUT]', err.message);
-      return res.status(500).json({ error: err.message });
+      return sendSafeError(res, '[admin-blog PUT]', err, 'Failed to save blog post');
     }
   }
 
@@ -267,7 +249,7 @@ export default async function handler(req, res) {
     }
 
     const { sha } = req.body || {};
-    if (!sha) {
+    if (!sha || typeof sha !== 'string') {
       return res.status(400).json({ error: 'sha required for delete' });
     }
 
@@ -281,8 +263,7 @@ export default async function handler(req, res) {
 
       return res.status(200).json({ success: true });
     } catch (err) {
-      console.error('[admin-blog DELETE]', err.message);
-      return res.status(500).json({ error: err.message });
+      return sendSafeError(res, '[admin-blog DELETE]', err, 'Failed to delete blog post');
     }
   }
 

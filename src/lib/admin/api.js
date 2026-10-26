@@ -34,10 +34,10 @@ export const adminApi = {
   apiFetch,
 
   /** Login — returns token on success */
-  async login(password) {
+  async login(password, website = '') {
     return apiFetch('/admin-auth', {
       method: 'POST',
-      body: JSON.stringify({ password }),
+      body: JSON.stringify({ password, website }),
     });
   },
 

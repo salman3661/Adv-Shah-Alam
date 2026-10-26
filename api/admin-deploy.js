@@ -1,32 +1,13 @@
-import { createHmac } from 'crypto';
-
-const TOKEN_TTL_MS = 24 * 60 * 60 * 1000;
-
-const CORS_HEADERS = {
-  'Access-Control-Allow-Origin': '*',
-  'Access-Control-Allow-Methods': 'POST, OPTIONS',
-  'Access-Control-Allow-Headers': 'Content-Type, Authorization',
-};
-
-function verifyToken(authHeader) {
-  const secret = process.env.ADMIN_SECRET;
-  if (!secret || !authHeader?.startsWith('Bearer ')) return false;
-  try {
-    const raw = Buffer.from(authHeader.slice(7), 'base64url').toString('utf8');
-    const [ts, sig] = raw.split('.');
-    if (!ts || !sig) return false;
-    const age = Date.now() - parseInt(ts, 10);
-    if (isNaN(age) || age < 0 || age > TOKEN_TTL_MS) return false;
-    const expected = createHmac('sha256', secret).update(ts).digest('hex');
-    return sig === expected;
-  } catch {
-    return false;
-  }
-}
+import {
+  applySecurity,
+  enforceRateLimit,
+  sendSafeError,
+  verifyToken,
+} from './_security.js';
 
 export default async function handler(req, res) {
-  if (req.method === 'OPTIONS') return res.status(200).set(CORS_HEADERS).end();
-  Object.entries(CORS_HEADERS).forEach(([k, v]) => res.setHeader(k, v));
+  if (applySecurity(req, res, 'POST, OPTIONS')) return;
+  if (enforceRateLimit(req, res, { bucket: 'admin-deploy', max: 10, windowMs: 60_000 })) return;
 
   if (!verifyToken(req.headers.authorization)) {
     return res.status(401).json({ error: 'Unauthorized' });
@@ -38,7 +19,7 @@ export default async function handler(req, res) {
 
   const hookUrl = process.env.VERCEL_DEPLOY_HOOK;
   if (!hookUrl) {
-    return res.status(500).json({ error: 'VERCEL_DEPLOY_HOOK not configured' });
+    return res.status(500).json({ error: 'Deploy hook not configured' });
   }
 
   try {
@@ -50,7 +31,6 @@ export default async function handler(req, res) {
     const data = await response.json().catch(() => ({}));
     return res.status(200).json({ success: true, job: data?.job?.id || 'triggered' });
   } catch (err) {
-    console.error('[admin-deploy]', err.message);
-    return res.status(500).json({ error: err.message });
+    return sendSafeError(res, '[admin-deploy]', err, 'Failed to trigger deployment');
   }
 }
