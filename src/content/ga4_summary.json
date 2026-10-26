@@ -1,22 +1,22 @@
 {
-  "updatedAt": "2026-10-26T05:37:51.622Z",
+  "updatedAt": "2026-10-26T05:45:31.490Z",
   "propertyId": "520583213",
   "channels": [
     {
       "channel": "Organic Search",
       "sourceMedium": "google / organic",
-      "activeUsers": 2115,
-      "sessions": 2370,
-      "pageViews": 3104,
+      "activeUsers": 2117,
+      "sessions": 2372,
+      "pageViews": 3107,
       "engagementRate": "64.9%"
     },
     {
       "channel": "Direct",
       "sourceMedium": "(direct) / (none)",
-      "activeUsers": 397,
-      "sessions": 412,
-      "pageViews": 511,
-      "engagementRate": "37.9%"
+      "activeUsers": 399,
+      "sessions": 414,
+      "pageViews": 513,
+      "engagementRate": "37.7%"
     },
     {
       "channel": "Organic Search",
@@ -151,8 +151,8 @@
     {
       "path": "/bn/blog/sampatti-uttoradhikar-ain-2026-bn",
       "title": "বাবার সম্পত্তি বন্টন আইন বাংলাদেশ ২০২৬ | ছেলে-মেয়ের ভাগের নিয়ম ও ফারায়েজ হিসাব",
-      "activeUsers": 168,
-      "pageViews": 212
+      "activeUsers": 169,
+      "pageViews": 213
     },
     {
       "path": "/blog/cyber-crime-helpline-bangladesh-2026",
@@ -483,7 +483,7 @@
     {
       "country": "Bangladesh",
       "city": "Rajshahi",
-      "activeUsers": 59
+      "activeUsers": 60
     },
     {
       "country": "Bangladesh",

@@ -11,8 +11,7 @@ import ChunkErrorBoundary from './components/ChunkErrorBoundary';
 // Home is eager — it IS the first paint
 import Home from './pages/Home';
 
-// Admin panel & 404 — lazy-loaded so regular visitors never download admin CMS code
-const AdminApp = lazy(() => import('./pages/admin/AdminApp'));
+// 404 — lazy-loaded so regular visitors only download on demand
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 // All other pages are lazy-loaded (code split)
@@ -68,13 +67,6 @@ function App() {
           <Router>
             <ScrollToTop />
             <Routes>
-              {/* Admin panel — completely outside site Layout */}
-              <Route path="/admin/*" element={
-                <Suspense fallback={<PageFallback />}>
-                  <AdminApp />
-                </Suspense>
-              } />
-
               {/* Public site — wrapped in Layout */}
               <Route path="/*" element={
                 <Layout>
