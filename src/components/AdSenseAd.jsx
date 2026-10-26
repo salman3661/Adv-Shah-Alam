@@ -74,6 +74,13 @@ const AdSenseAd = ({
 
         const push = () => {
             if (pushed.current || el.getAttribute('data-adsbygoogle-status')) return;
+            // Ensure container has computed a non-zero responsive screen width before requesting ad size
+            if (wrap.offsetWidth === 0) {
+                requestAnimationFrame(() => {
+                    if (!pushed.current && wrap.offsetWidth > 0) push();
+                });
+                return;
+            }
             if (densityGroup && tooCloseToAnotherAd(wrap, densityGroup)) {
                 pushed.current = true;
                 setState('suppressed');
@@ -145,6 +152,7 @@ const AdSenseAd = ({
                 textAlign: 'center',
                 margin: '0.5rem auto 0.85rem',
                 padding: 0,
+                width: '100%',
                 maxWidth: '100%',
                 clear: 'both',
                 overflow: 'hidden',
@@ -162,11 +170,13 @@ const AdSenseAd = ({
                 style={{
                     display: 'block',
                     textAlign: 'center',
+                    width: '100%',
+                    maxWidth: '100%',
                 }}
                 data-ad-client={PUB_ID}
                 data-ad-slot={slot}
                 data-ad-format={format}
-                {...(!isFluidOrRelaxed && responsive ? { 'data-full-width-responsive': 'true' } : {})}
+                data-full-width-responsive={responsive ? 'true' : undefined}
                 {...(layout ? { 'data-ad-layout': layout } : {})}
                 {...(layoutKey ? { 'data-ad-layout-key': layoutKey } : {})}
             />
