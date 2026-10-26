@@ -463,7 +463,9 @@ const BlogPostInner = () => {
     /* Phase 2.1: Zero ads before H1 & first 2 paragraphs — Unit 1 placed ONLY after paragraph 3 | Unit 2 (mobile): after paragraph 6 */
     const adAnchors = useParagraphAnchors(articleRef, [
         { id: 'top', n: 3, fallbackToLast: false },
-        { id: 'mid', n: 6, skip: isDesktop },
+        { id: 'mid', n: 6 },
+        { id: 'mid2', n: 10 },
+        { id: 'end', n: 14, fallbackToLast: true },
     ], `${slug}|${isDesktop}|${post ? post.slug : 'loading'}`);
 
     const metaFallback = allPosts.find(p => p.slug === slug);
@@ -1047,6 +1049,14 @@ const BlogPostInner = () => {
                                 {adAnchors.mid && createPortal(
                                     <AdSenseAd key={`ad-mid-${post.slug}`} slot={AD_SLOTS.midNative} format="fluid" layout="in-article" responsive={true} labelText="Advertisement" minHeight={250} densityGroup="content" style={{ borderRadius: '0.75rem', overflow: 'hidden', margin: '1.75rem auto' }} />,
                                     adAnchors.mid
+                                )}
+                                {adAnchors.mid2 && createPortal(
+                                    <AdSenseAd key={`ad-mid2-${post.slug}`} slot={AD_SLOTS.topInArticle} format="auto" responsive={true} labelText="Advertisement" minHeight={250} densityGroup="content" style={{ borderRadius: '0.75rem', overflow: 'hidden', margin: '1.75rem auto' }} />,
+                                    adAnchors.mid2
+                                )}
+                                {adAnchors.end && createPortal(
+                                    <AdSenseAd key={`ad-end-${post.slug}`} slot={AD_SLOTS.midNative} format="fluid" layout="in-article" responsive={true} labelText="Advertisement" minHeight={250} densityGroup="content" style={{ borderRadius: '0.75rem', overflow: 'hidden', margin: '1.75rem auto' }} />,
+                                    adAnchors.end
                                 )}
                             </article>
                         </div>
