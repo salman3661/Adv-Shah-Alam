@@ -172,11 +172,11 @@ const Header = () => {
                             marginRight: '0.25rem',
                             cursor: 'pointer',
                         }}
-                        aria-label={isBn ? "Switch to English" : "বাংলায় দেখুন"}
+                        aria-label={isBn ? "বাংলা | EN — Switch to English" : "বাংলা | EN — বাংলায় দেখুন"}
                         title={isBn ? "Switch to English" : "বাংলায় দেখুন"}
                     >
                         <span style={{ color: isBn ? 'var(--accent)' : 'var(--text-muted)', fontWeight: isBn ? 800 : 500 }}>বাংলা</span>
-                        <span style={{ opacity: 0.35 }}>|</span>
+                        <span style={{ color: 'var(--text-muted)' }}>|</span>
                         <span style={{ color: !isBn ? 'var(--accent)' : 'var(--text-muted)', fontWeight: !isBn ? 800 : 500 }}>EN</span>
                     </button>
 

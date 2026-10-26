@@ -50,7 +50,19 @@ const redirectSources = new Set(
 );
 
 // ── helpers ─────────────────────────────────────────────────────────────────
-function readBase() { return fs.readFileSync(path.join(DIST,'index.html'),'utf8'); }
+function readBase() {
+  let html = fs.readFileSync(path.join(DIST, 'index.html'), 'utf8');
+  html = html.replace(/<link rel="stylesheet"[^>]*href="(\/assets\/[^"]+\.css)"[^>]*>/g, (match, href) => {
+    try {
+      const cssPath = path.join(DIST, href.replace(/^\//, ''));
+      const css = fs.readFileSync(cssPath, 'utf8');
+      return `<style id="inline-app-css">${css}</style>`;
+    } catch {
+      return match;
+    }
+  });
+  return html;
+}
 function ensureDir(d) { fs.mkdirSync(d, { recursive: true }); }
 function write(filePath, html) { ensureDir(path.dirname(filePath)); fs.writeFileSync(filePath, html, 'utf8'); }
 function escHtml(s='') { return String(s).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -95,7 +107,7 @@ function buildHeroShell(lang = 'bn') {
         <h1 style="font-size:clamp(2rem, 4.5vw, 3.2rem);font-weight:800;line-height:1.13;margin-bottom:0.75rem;color:var(--hero-heading);letter-spacing:-0.03em">${escHtml(hc.headline)} <span style="color:var(--hero-accent)">${escHtml(hc.headlineAccent)}</span></h1>
         <p style="font-size:0.97rem;line-height:1.68;margin-bottom:1.4rem;color:var(--hero-sub);font-weight:400;max-width:450px">${escHtml(hc.subheading)}</p>
         <div style="display:flex;gap:0.7rem;flex-wrap:wrap">
-          <a href="https://wa.me/8801712655546" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.72rem 1.4rem;border-radius:0.65rem;background:#25D366;color:#fff;font-size:0.875rem;font-weight:700;text-decoration:none;box-shadow:0 4px 16px rgba(37,211,102,0.4)">${escHtml(hc.cta1Label)}</a>
+          <a href="https://wa.me/8801712655546" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.72rem 1.4rem;border-radius:0.65rem;background:#128043;color:#fff;font-size:0.875rem;font-weight:700;text-decoration:none;box-shadow:0 4px 16px rgba(18,128,67,0.38)">${escHtml(hc.cta1Label)}</a>
           <a href="#contact" style="display:inline-flex;align-items:center;gap:0.45rem;padding:0.72rem 1.4rem;border-radius:0.65rem;background:var(--hero-cta-sec-bg);color:var(--hero-cta-sec-text);font-size:0.875rem;font-weight:600;text-decoration:none;border:1.5px solid var(--hero-cta-sec-border)">${escHtml(hc.cta2Label)}</a>
         </div>
       </div>

@@ -44,7 +44,7 @@ const Footer = () => {
         { name: isBn ? '⭐ গুগল রিভিউ দিন' : '⭐ Leave a Review', path: '/review', id: null },
     ];
 
-    const linkClass = "block text-sm transition-colors duration-200 hover:opacity-100 opacity-70 hover:underline decoration-dotted";
+    const linkClass = "block text-sm transition-colors duration-200 hover:underline decoration-dotted";
 
     return (
         <footer className="py-16 transition-colors" style={{ background: 'var(--surface)', borderTop: '1px solid var(--card-border)' }}>
@@ -178,13 +178,13 @@ const Footer = () => {
                             © {currentYear} {siteInfo.advocateName}. All Rights Reserved.
                         </p>
                         <div className="flex gap-3 justify-center mt-1">
-                            <Link to="/privacy-policy" className="text-xs hover:underline transition-opacity opacity-60 hover:opacity-100"
+                            <Link to="/privacy-policy" className="text-xs hover:underline"
                                 style={{ color: 'var(--text-muted)' }}>Privacy Policy</Link>
-                            <span className="text-xs opacity-30" style={{ color: 'var(--text-muted)' }}>|</span>
-                            <Link to="/terms-of-service" className="text-xs hover:underline transition-opacity opacity-60 hover:opacity-100"
+                            <span className="text-xs" style={{ color: 'var(--text-muted)' }}>|</span>
+                            <Link to="/terms-of-service" className="text-xs hover:underline"
                                 style={{ color: 'var(--text-muted)' }}>Terms of Service</Link>
                         </div>
-                        <p className="text-xs mt-3 max-w-2xl mx-auto" style={{ color: 'var(--text-muted)', opacity: 0.55, lineHeight: 1.6 }}>
+                        <p className="text-xs mt-3 max-w-2xl mx-auto" style={{ color: 'var(--text-muted)', lineHeight: 1.6 }}>
                             {isBn ? (
                                 <><strong>দায়বর্জন:</strong> এই ওয়েবসাইটের তথ্য শুধুমাত্র সাধারণ জ্ঞানের উদ্দেশ্যে প্রদান করা হয়েছে এবং এটি আইনি পরামর্শ নয়। এই সাইট পরিদর্শন বা যোগাযোগ করলে আইনজীবী-মক্কেল সম্পর্ক তৈরি হয় না। আপনার নির্দিষ্ট পরিস্থিতির জন্য একজন যোগ্য আইনজীবীর পরামর্শ নিন।</>
                             ) : (

@@ -28,8 +28,8 @@ const BlogPreview = ({ lang: initialLang = 'en' }) => {
     const articles = activeLang === 'en' ? latestEn : latestBn;
     const linkBase = activeLang === 'en' ? '/blog/' : '/bn/blog/';
     const readLabel = activeLang === 'en'
-        ? (a) => `Read the complete guide: ${a.title}`
-        : (a) => `পড়ুন: ${a.title}`;
+        ? (a) => `Read Full Guide: ${a.title}`
+        : (a) => `সম্পূর্ণ পড়ুন: ${a.title}`;
     const readShort = activeLang === 'en' ? 'Read Full Guide' : 'সম্পূর্ণ পড়ুন';
 
     return (
@@ -75,7 +75,7 @@ const BlogPreview = ({ lang: initialLang = 'en' }) => {
                         <Link
                             to={activeLang === 'en' ? '/blog' : '/bn/blog'}
                             className="btn-outline inline-flex items-center gap-2 py-2.5 px-6 text-sm font-semibold whitespace-nowrap"
-                            aria-label={activeLang === 'en' ? 'View all English legal articles' : 'আমাদের সব লেখা পড়ুন'}
+                            aria-label={activeLang === 'en' ? 'All Articles — View all English legal articles' : 'আরো পড়ুন — আমাদের সব লেখা পড়ুন'}
                         >
                             {activeLang === 'en' ? 'All Articles' : 'আরো পড়ুন'} <ArrowRight size={15} />
                         </Link>

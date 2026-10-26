@@ -1243,9 +1243,38 @@
           "value": "*"
         }
       ]
+    },
+    {
+      "source": "/(\\.well-known/ai-catalog\\.json|\\.well-known/ard\\.json|ai-catalog\\.json)",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/json; charset=utf-8"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, s-maxage=86400"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
     }
   ],
   "rewrites": [
+    {
+      "source": "/.well-known/ai-catalog.json",
+      "destination": "/.well-known/ai-catalog.json"
+    },
+    {
+      "source": "/.well-known/ard.json",
+      "destination": "/.well-known/ard.json"
+    },
+    {
+      "source": "/ai-catalog.json",
+      "destination": "/ai-catalog.json"
+    },
     {
       "source": "/ads.txt",
       "destination": "/ads.txt"

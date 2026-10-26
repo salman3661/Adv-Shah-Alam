@@ -248,7 +248,7 @@ const Hero = ({ lang = 'en' }) => {
                 <span style={{
                   display: 'inline-flex', alignItems: 'center', gap: '0.3rem',
                   fontSize: '0.7rem', fontWeight: 700,
-                  color: '#16a34a',
+                  color: '#15803d',
                   background: 'rgba(34,197,94,0.1)',
                   border: '1px solid rgba(34,197,94,0.25)',
                   borderRadius: '9999px',
@@ -265,9 +265,9 @@ const Hero = ({ lang = 'en' }) => {
                   style={{
                     display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
                     padding: '0.72rem 1.4rem', borderRadius: '0.65rem',
-                    background: '#25D366', color: '#fff',
+                    background: '#128043', color: '#fff',
                     fontSize: '0.875rem', fontWeight: 700, textDecoration: 'none',
-                    boxShadow: '0 4px 16px rgba(37,211,102,0.4)',
+                    boxShadow: '0 4px 16px rgba(18,128,67,0.38)',
                     transition: 'opacity 0.2s, transform 0.15s',
                   }}
                   onMouseEnter={e => { e.currentTarget.style.opacity = '0.88'; e.currentTarget.style.transform = 'translateY(-2px)'; }}

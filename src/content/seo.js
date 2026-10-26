@@ -70,20 +70,20 @@ const seo = {
     // Used in BlogPreview.jsx and Blog.jsx for the category badge.
     // Add new categories here as they are created.
     categoryColors: {
-        'Criminal Law': '#EF4444',
-        'Family Law': '#EC4899',
-        'Property Law': '#22C55E',
-        'Company & Corporate Law': '#D97706',
-        'Civil Law': '#3B82F6',
-        'Legal Procedures': '#8B5CF6',
-        'Cyber Law': '#06B6D4',
+        'Criminal Law': '#B91C1C',
+        'Family Law': '#BE185D',
+        'Property Law': '#15803D',
+        'Company & Corporate Law': '#B45309',
+        'Civil Law': '#1D4ED8',
+        'Legal Procedures': '#6D28D9',
+        'Cyber Law': '#0E7490',
         // Bangla
-        'ফৌজদারি আইন': '#EF4444',
-        'পারিবারিক আইন': '#EC4899',
-        'সম্পত্তি আইন': '#22C55E',
-        'দেওয়ানি আইন': '#3B82F6',
-        'সাইবার আইন': '#06B6D4',
-        'আইনি পদ্ধতি': '#8B5CF6',
+        'ফৌজদারি আইন': '#B91C1C',
+        'পারিবারিক আইন': '#BE185D',
+        'সম্পত্তি আইন': '#15803D',
+        'দেওয়ানি আইন': '#1D4ED8',
+        'সাইবার আইন': '#0E7490',
+        'আইনি পদ্ধতি': '#6D28D9',
     },
 
     // ─── Blog categories (for filter tabs in Blog.jsx) ───────────────

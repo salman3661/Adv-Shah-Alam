@@ -105,11 +105,12 @@ const MobileCallButton = () => {
 
                     /* WhatsApp pill — solid vibrant green with live beep radar */
                     .gcta-wa {
-                        background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+                        background: linear-gradient(135deg, #128043 0%, #0D6B5E 100%);
+                        background-color: #128043;
                         border: 1px solid rgba(255, 255, 255, 0.35);
                         color: #ffffff;
                         box-shadow:
-                            0 4px 18px rgba(37, 211, 102, 0.42),
+                            0 4px 18px rgba(18, 128, 67, 0.42),
                             inset 0 1px 1px rgba(255, 255, 255, 0.4);
                     }
 
@@ -146,11 +147,12 @@ const MobileCallButton = () => {
 
                     /* Call pill — solid rich gold */
                     .gcta-call {
-                        background: linear-gradient(135deg, #C6A75E 0%, #B8860B 60%, #996515 100%);
+                        background: linear-gradient(135deg, #854D0E 0%, #713F12 100%);
+                        background-color: #854D0E;
                         border: 1px solid rgba(255, 255, 255, 0.35);
                         color: #ffffff;
                         box-shadow:
-                            0 4px 18px rgba(198, 167, 94, 0.38),
+                            0 4px 18px rgba(133, 77, 14, 0.38),
                             inset 0 1px 1px rgba(255, 255, 255, 0.4);
                     }
 
@@ -234,7 +236,7 @@ const MobileCallButton = () => {
                     .gcta-sub {
                         font-size: 0.6rem;
                         font-weight: 500;
-                        opacity: 0.7;
+                        opacity: 0.92;
                         white-space: nowrap;
                     }
 
@@ -270,7 +272,7 @@ const MobileCallButton = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="gcta-pill gcta-wa"
-                    aria-label={isBn ? 'WhatsApp এ যোগাযোগ করুন' : 'Chat on WhatsApp'}
+                    aria-label={isBn ? 'WhatsApp 🟢 লাইভ আছেন' : 'WhatsApp 🟢 Online Now'}
                 >
                     <div className="gcta-beep-wave" />
                     <span className="gcta-wa-icon">
@@ -288,7 +290,7 @@ const MobileCallButton = () => {
                 <a
                     href="tel:+8801712655546"
                     className="gcta-pill gcta-call"
-                    aria-label={isBn ? 'সরাসরি কল করুন' : 'Direct Call'}
+                    aria-label={isBn ? 'কল করুন 01712-655546' : 'Call Now 01712-655546'}
                 >
                     <span className="gcta-call-icon">
                         <Phone size={17} />

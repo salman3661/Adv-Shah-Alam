@@ -29,26 +29,15 @@ const Home = ({ lang = 'en' }) => {
 
     useEffect(() => {
         if (loadBelowFold) return;
-        let timer = null;
         const trigger = () => {
             setLoadBelowFold(true);
             cleanup();
         };
-        const onLoad = () => {
-            timer = setTimeout(trigger, 350);
-        };
-        const events = ['scroll', 'touchstart', 'pointerdown', 'mousemove', 'keydown', 'hashchange'];
+        const events = ['scroll', 'wheel', 'touchstart', 'pointerdown', 'mousemove', 'keydown', 'hashchange'];
         const cleanup = () => {
-            if (timer) clearTimeout(timer);
-            window.removeEventListener('load', onLoad);
             events.forEach((ev) => window.removeEventListener(ev, trigger));
         };
         events.forEach((ev) => window.addEventListener(ev, trigger, { passive: true, once: true }));
-        if (document.readyState === 'complete') {
-            timer = setTimeout(trigger, 350);
-        } else {
-            window.addEventListener('load', onLoad, { once: true });
-        }
         return cleanup;
     }, [loadBelowFold]);
 

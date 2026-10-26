@@ -1,14 +1,14 @@
 {
-  "updatedAt": "2026-10-26T05:45:31.490Z",
+  "updatedAt": "2026-10-26T06:12:41.472Z",
   "propertyId": "520583213",
   "channels": [
     {
       "channel": "Organic Search",
       "sourceMedium": "google / organic",
-      "activeUsers": 2117,
-      "sessions": 2372,
-      "pageViews": 3107,
-      "engagementRate": "64.9%"
+      "activeUsers": 2119,
+      "sessions": 2374,
+      "pageViews": 3110,
+      "engagementRate": "65.0%"
     },
     {
       "channel": "Direct",
@@ -163,8 +163,8 @@
     {
       "path": "/blog/land-registration-cost-fees-calculator-bangladesh-2026",
       "title": "Land & Flat Registration Fee Calculator Bangladesh 2026 (Official Cost Chart)",
-      "activeUsers": 99,
-      "pageViews": 136
+      "activeUsers": 100,
+      "pageViews": 138
     },
     {
       "path": "/blog/bangladesh-cyber-crime-complaint-portal-guide-2026",
@@ -317,6 +317,12 @@
       "pageViews": 22
     },
     {
+      "path": "/bn/blog/nabaloker-jomi-bikroy-ferot-guardian-ain-2026",
+      "title": "নাবালকের সম্পত্তি বিক্রি ও ফেরত পাওয়ার নিয়ম ২০২৬ | গার্ডিয়ানস অ্যাক্ট",
+      "activeUsers": 16,
+      "pageViews": 21
+    },
+    {
       "path": "/bn/blog/cyber-crime-helpline-online-complaint-bangladesh",
       "title": "সাইবার ক্রাইম হেল্পলাইন ও অনলাইন অভিযোগের নিয়ম",
       "activeUsers": 15,
@@ -332,12 +338,6 @@
       "path": "/bn/blog/madok-mamla-jamin-niyom-madokdrobbo-ain-2026",
       "title": "মাদক মামলায় জামিনের নিয়ম ২০২৬ | মাদকদ্রব্য আইন",
       "activeUsers": 17,
-      "pageViews": 20
-    },
-    {
-      "path": "/bn/blog/nabaloker-jomi-bikroy-ferot-guardian-ain-2026",
-      "title": "নাবালকের সম্পত্তি বিক্রি ও ফেরত পাওয়ার নিয়ম ২০২৬ | গার্ডিয়ানস অ্যাক্ট",
-      "activeUsers": 15,
       "pageViews": 20
     },
     {
@@ -463,7 +463,7 @@
     {
       "country": "Bangladesh",
       "city": "Chattogram",
-      "activeUsers": 167
+      "activeUsers": 168
     },
     {
       "country": "Bangladesh",
@@ -483,7 +483,7 @@
     {
       "country": "Bangladesh",
       "city": "Rajshahi",
-      "activeUsers": 60
+      "activeUsers": 61
     },
     {
       "country": "Bangladesh",

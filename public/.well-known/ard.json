@@ -1,0 +1,19 @@
+{
+  "specVersion": "1.0",
+  "entries": [
+    {
+      "identifier": "urn:air:advmdshahalam:legal:bangladesh-legal-guides",
+      "displayName": "Advocate Md. Shah Alam Legal Knowledge Base",
+      "type": "text/markdown; profile=\"urn:air:agent-skills\"",
+      "url": "https://www.advmdshahalam.me/llms-full.txt",
+      "representativeQueries": [
+        "Supreme Court lawyer in Uttara Dhaka Bangladesh",
+        "Criminal bail divorce and land dispute legal guide Bangladesh",
+        "NRB power of attorney and property law Bangladesh"
+      ],
+      "trustManifest": {
+        "identity": "advmdshahalam.me"
+      }
+    }
+  ]
+}
