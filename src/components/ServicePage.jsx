@@ -335,7 +335,7 @@ const ServicePage = ({ metaTitle, metaDesc, canonicalUrl, h1, intro, coverage, f
                                     className="glass-card p-5 flex items-start gap-3 group no-underline"
                                     style={{ textDecoration: 'none' }}>
                                     <div className="w-8 h-8 rounded-xl flex items-center justify-center flex-shrink-0"
-                                        style={{ background: 'var(--accent-subtle)', color: 'var(--accent)' }}>
+                                        style={{ background: 'linear-gradient(135deg, #1E3A8A 0%, #2563EB 100%)', color: '#FFFFFF', boxShadow: '0 3px 8px rgba(37, 99, 235, 0.22)' }}>
                                         <ArrowRight size={15} />
                                     </div>
                                     <div>
@@ -366,7 +366,7 @@ const ServicePage = ({ metaTitle, metaDesc, canonicalUrl, h1, intro, coverage, f
                                     className="glass-card p-4 flex items-center gap-3 group no-underline"
                                     style={{ textDecoration: 'none' }}>
                                     <div className="w-7 h-7 rounded-lg flex items-center justify-center flex-shrink-0"
-                                        style={{ background: 'var(--accent-subtle)', color: 'var(--accent)' }}>
+                                        style={{ background: 'linear-gradient(135deg, #1E3A8A 0%, #2563EB 100%)', color: '#FFFFFF', boxShadow: '0 3px 8px rgba(37, 99, 235, 0.22)' }}>
                                         <ArrowRight size={13} />
                                     </div>
                                     <span className="text-sm font-medium group-hover:underline decoration-dotted"

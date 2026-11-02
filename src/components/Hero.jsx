@@ -6,15 +6,15 @@ import heroBn from '../content/hero_bn.json';
 import SocialShare from './SocialShare';
 
 const pillsEn = [
-  { label: '10+ Years Experience',   dotColor: 'var(--accent)' },
-  { label: 'Supreme Court Advocate', dotColor: 'var(--gold)' },
-  { label: 'Uttara, Dhaka',          dotColor: 'var(--accent)' },
+  { label: '10+ Years Experience',   bg: 'linear-gradient(135deg, #1E3A8A 0%, #1D4ED8 100%)', border: '#1E40AF', dotColor: '#93C5FD', shadow: 'rgba(29, 78, 216, 0.25)' },
+  { label: 'Supreme Court Advocate', bg: 'linear-gradient(135deg, #065F46 0%, #0F766E 100%)', border: '#0F766E', dotColor: '#5EEAD4', shadow: 'rgba(15, 118, 110, 0.25)' },
+  { label: 'Uttara, Dhaka',          bg: 'linear-gradient(135deg, #0C4A6E 0%, #0284C7 100%)', border: '#0369A1', dotColor: '#7DD3FC', shadow: 'rgba(2, 132, 199, 0.25)' },
 ];
 
 const pillsBn = [
-  { label: '১০+ বছরের অভিজ্ঞতা',       dotColor: 'var(--accent)' },
-  { label: 'সুপ্রিম কোর্টের আইনজীবী', dotColor: 'var(--gold)' },
-  { label: 'উত্তরা, ঢাকা',             dotColor: 'var(--accent)' },
+  { label: '১০+ বছরের অভিজ্ঞতা',       bg: 'linear-gradient(135deg, #1E3A8A 0%, #1D4ED8 100%)', border: '#1E40AF', dotColor: '#93C5FD', shadow: 'rgba(29, 78, 216, 0.25)' },
+  { label: 'সুপ্রিম কোর্টের আইনজীবী', bg: 'linear-gradient(135deg, #065F46 0%, #0F766E 100%)', border: '#0F766E', dotColor: '#5EEAD4', shadow: 'rgba(15, 118, 110, 0.25)' },
+  { label: 'উত্তরা, ঢাকা',             bg: 'linear-gradient(135deg, #0C4A6E 0%, #0284C7 100%)', border: '#0369A1', dotColor: '#7DD3FC', shadow: 'rgba(2, 132, 199, 0.25)' },
 ];
 
 const Hero = ({ lang = 'en' }) => {
@@ -44,10 +44,10 @@ const Hero = ({ lang = 'en' }) => {
                   display: 'inline-flex', alignItems: 'center', gap: '0.45rem',
                   padding: '0.32rem 0.95rem', borderRadius: '9999px',
                   fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.01em',
-                  background: 'var(--hero-pill-bg)',
-                  border: '1px solid var(--hero-pill-border)',
-                  color: 'var(--hero-pill-text)',
-                  boxShadow: 'var(--shadow-sm)',
+                  background: p.bg,
+                  border: `1px solid ${p.border}`,
+                  color: '#FFFFFF',
+                  boxShadow: `0 3px 10px ${p.shadow}`,
                 }}>
                   <span style={{
                     width: '6px', height: '6px', borderRadius: '50%',
@@ -65,11 +65,12 @@ const Hero = ({ lang = 'en' }) => {
                   display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
                   padding: '0.35rem 0.95rem', borderRadius: '9999px',
                   fontSize: '0.72rem', fontWeight: 700,
-                  background: 'var(--gold-subtle)',
-                  border: '1px solid var(--gold-border)',
-                  color: 'var(--gold)',
+                  background: 'linear-gradient(135deg, #0F172A 0%, #1E3A8A 100%)',
+                  border: '1px solid #1D4ED8',
+                  color: '#FFFFFF',
+                  boxShadow: '0 4px 12px rgba(15, 23, 42, 0.22)',
                 }}>
-                  <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: 'var(--gold)', flexShrink: 0 }} />
+                  <span style={{ width: '7px', height: '7px', borderRadius: '50%', background: '#4ADE80', boxShadow: '0 0 8px #4ADE80', flexShrink: 0 }} />
                   {heroContent.emergencyBadge}
                 </span>
               </div>
@@ -82,7 +83,12 @@ const Hero = ({ lang = 'en' }) => {
               color: 'var(--hero-heading)', letterSpacing: '-0.03em',
             }}>
               {heroContent.headline}{' '}
-              <span style={{ color: 'var(--hero-accent)' }}>{heroContent.headlineAccent}</span>
+              <span style={{
+                background: 'linear-gradient(135deg, #1E3A8A 0%, #1D4ED8 55%, #0F766E 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                color: '#1E3A8A',
+              }}>{heroContent.headlineAccent}</span>
             </h1>
 
             {/* Subheading */}
@@ -105,23 +111,24 @@ const Hero = ({ lang = 'en' }) => {
                 boxShadow: 'var(--shadow-sm)',
               }}>
                 <div style={{
-                  width: '3.5px', height: '40px', borderRadius: '4px',
-                  background: 'var(--accent)',
+                  width: '4px', height: '42px', borderRadius: '4px',
+                  background: 'linear-gradient(180deg, #1E3A8A 0%, #2563EB 100%)',
                   flexShrink: 0,
                 }} />
                 <div>
-                  <div style={{ fontSize: '0.6rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.12em', color: 'var(--hero-label)', marginBottom: '0.2rem' }}>
+                  <div style={{ fontSize: '0.62rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.12em', color: 'var(--hero-label)', marginBottom: '0.22rem' }}>
                     {isBn ? 'পদবি' : 'Designation'}
                   </div>
-                  <div style={{ fontSize: '0.9rem', fontWeight: 700, color: 'var(--hero-heading)', display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '0.35rem' }}>
+                  <div style={{ fontSize: '0.92rem', fontWeight: 700, color: 'var(--hero-heading)', display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '0.45rem' }}>
                     {isBn ? 'এডভোকেট,' : 'Advocate,'}
                     <span style={{
                       display: 'inline-block',
-                      background: 'var(--accent-subtle)',
-                      border: '1px solid var(--card-border)',
-                      color: 'var(--accent)', padding: '0.15rem 0.65rem',
-                      borderRadius: '0.4rem', fontSize: '0.81rem', fontWeight: 700,
+                      background: 'linear-gradient(135deg, #1E3A8A 0%, #1D4ED8 100%)',
+                      border: '1px solid #1E40AF',
+                      color: '#FFFFFF', padding: '0.22rem 0.78rem',
+                      borderRadius: '0.45rem', fontSize: '0.82rem', fontWeight: 700,
                       letterSpacing: '0.01em',
+                      boxShadow: '0 3px 10px rgba(29, 78, 216, 0.28)',
                     }}>
                       {isBn ? 'বাংলাদেশ সুপ্রীম কোর্ট' : 'Supreme Court of Bangladesh'}
                     </span>
@@ -138,23 +145,24 @@ const Hero = ({ lang = 'en' }) => {
                 boxShadow: 'var(--shadow-sm)',
               }}>
                 <div style={{
-                  width: '3.5px', height: '40px', borderRadius: '4px',
-                  background: 'var(--gold)',
+                  width: '4px', height: '42px', borderRadius: '4px',
+                  background: 'linear-gradient(180deg, #065F46 0%, #0D9488 100%)',
                   flexShrink: 0,
                 }} />
                 <div>
-                  <div style={{ fontSize: '0.6rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.12em', color: 'var(--hero-label)', marginBottom: '0.2rem' }}>
+                  <div style={{ fontSize: '0.62rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.12em', color: 'var(--hero-label)', marginBottom: '0.22rem' }}>
                     {isBn ? 'পদবি' : 'Designation'}
                   </div>
-                  <div style={{ fontSize: '0.9rem', fontWeight: 700, color: 'var(--hero-heading)', display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '0.35rem' }}>
+                  <div style={{ fontSize: '0.92rem', fontWeight: 700, color: 'var(--hero-heading)', display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '0.45rem' }}>
                     {isBn ? 'অ্যাসিস্ট্যান্ট পাবলিক প্রসিকিউটর,' : 'Asst. Public Prosecutor,'}
                     <span style={{
                       display: 'inline-block',
-                      background: 'var(--gold-subtle)',
-                      border: '1px solid var(--gold-border)',
-                      color: 'var(--gold)', padding: '0.15rem 0.65rem',
-                      borderRadius: '0.4rem', fontSize: '0.81rem', fontWeight: 700,
+                      background: 'linear-gradient(135deg, #065F46 0%, #0F766E 100%)',
+                      border: '1px solid #0F766E',
+                      color: '#FFFFFF', padding: '0.22rem 0.78rem',
+                      borderRadius: '0.45rem', fontSize: '0.82rem', fontWeight: 700,
                       letterSpacing: '0.01em',
+                      boxShadow: '0 3px 10px rgba(15, 118, 110, 0.28)',
                     }}>
                       {isBn ? 'অতিরিক্ত মহানগর দায়রা জজ আদালত-১৪, ঢাকা' : 'Addl. Metro Sessions Court-14, Dhaka'}
                     </span>
@@ -172,15 +180,27 @@ const Hero = ({ lang = 'en' }) => {
                 boxShadow: 'var(--shadow-sm)',
               }}>
                 <div style={{
-                  width: '3.5px', height: '30px', borderRadius: '4px',
-                  background: 'var(--accent)',
+                  width: '4px', height: '38px', borderRadius: '4px',
+                  background: 'linear-gradient(180deg, #0C4A6E 0%, #0284C7 100%)',
                   flexShrink: 0,
                 }} />
-                <div style={{ fontSize: '0.86rem', fontWeight: 700, color: 'var(--hero-heading)' }}>
-                  <span style={{ fontSize: '0.6rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.12em', color: 'var(--hero-label)', display: 'block', marginBottom: '0.15rem' }}>
+                <div>
+                  <span style={{ fontSize: '0.62rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.12em', color: 'var(--hero-label)', display: 'block', marginBottom: '0.2rem' }}>
                     {isBn ? 'চেম্বার' : 'Chamber'}
                   </span>
-                  {isBn ? 'উত্তরা, ঢাকা' : 'Uttara, Dhaka'}
+                  <div style={{ fontSize: '0.9rem', fontWeight: 700, color: 'var(--hero-heading)', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+                    <span style={{
+                      display: 'inline-block',
+                      background: 'linear-gradient(135deg, #0C4A6E 0%, #0284C7 100%)',
+                      border: '1px solid #0369A1',
+                      color: '#FFFFFF', padding: '0.2rem 0.75rem',
+                      borderRadius: '0.45rem', fontSize: '0.82rem', fontWeight: 700,
+                      letterSpacing: '0.01em',
+                      boxShadow: '0 3px 10px rgba(2, 132, 199, 0.25)',
+                    }}>
+                      {isBn ? 'উত্তরা, ঢাকা' : 'Uttara, Dhaka'}
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -189,7 +209,7 @@ const Hero = ({ lang = 'en' }) => {
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1.15rem', flexWrap: 'wrap' }}>
               <div style={{ display: 'flex', gap: '2px' }}>
                 {[1,2,3,4,5].map(s => (
-                  <svg key={s} width="14" height="14" viewBox="0 0 24 24" fill="var(--gold)" aria-hidden="true">
+                  <svg key={s} width="14" height="14" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true">
                     <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                   </svg>
                 ))}
@@ -201,13 +221,14 @@ const Hero = ({ lang = 'en' }) => {
               <span style={{
                 display: 'inline-flex', alignItems: 'center', gap: '0.35rem',
                 fontSize: '0.7rem', fontWeight: 700,
-                color: 'var(--accent)',
-                background: 'var(--accent-subtle)',
-                border: '1px solid var(--card-border)',
+                color: '#FFFFFF',
+                background: 'linear-gradient(135deg, #065F46 0%, #059669 100%)',
+                border: 'none',
                 borderRadius: '9999px',
-                padding: '0.15rem 0.6rem',
+                padding: '0.2rem 0.72rem',
+                boxShadow: '0 2px 8px rgba(5, 150, 105, 0.26)',
               }}>
-                <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#116B3A', display: 'inline-block' }} />
+                <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#6EE7B7', boxShadow: '0 0 6px #6EE7B7', display: 'inline-block' }} />
                 {isBn ? 'এখন উপলব্ধ' : 'Available Now'}
               </span>
             </div>
@@ -272,15 +293,15 @@ const Hero = ({ lang = 'en' }) => {
                 { label: 'FAQ', href: '#faq', isAnchor: true },
               ]).map((link) => {
                 const style = {
-                  fontSize: '0.75rem', fontWeight: 600,
-                  padding: '0.28rem 0.8rem', borderRadius: '9999px',
-                  background: 'var(--hero-pill-bg)',
-                  border: '1px solid var(--hero-pill-border)',
-                  color: 'var(--text-2)',
+                  fontSize: '0.75rem', fontWeight: 700,
+                  padding: '0.32rem 0.88rem', borderRadius: '9999px',
+                  background: '#EFF6FF',
+                  border: '1.5px solid #93C5FD',
+                  color: '#1E3A8A',
                   textDecoration: 'none',
                   transition: 'color 0.15s, border-color 0.15s, opacity 0.15s',
-                  opacity: 0.9,
                   cursor: 'pointer',
+                  boxShadow: '0 2px 6px rgba(30, 58, 138, 0.08)',
                 };
 
                 if (link.isAnchor) {
@@ -349,21 +370,21 @@ const Hero = ({ lang = 'en' }) => {
                 <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '38%', background: 'linear-gradient(to top, rgba(10, 20, 36, 0.78) 0%, transparent 100%)' }} />
                 <div style={{
                   position: 'absolute', bottom: '0.875rem', right: '0.875rem',
-                  background: '#0A1424',
-                  border: '1px solid rgba(147, 197, 253, 0.35)',
-                  color: '#F8FAFC', fontSize: '0.68rem', fontWeight: 700,
-                  padding: '0.38rem 0.85rem', borderRadius: '0.5rem',
-                  boxShadow: '0 4px 12px rgba(0, 0, 0, 0.35)',
+                  background: 'linear-gradient(135deg, #1E3A8A 0%, #1D4ED8 100%)',
+                  border: '1px solid rgba(147, 197, 253, 0.5)',
+                  color: '#FFFFFF', fontSize: '0.7rem', fontWeight: 700,
+                  padding: '0.4rem 0.9rem', borderRadius: '0.5rem',
+                  boxShadow: '0 6px 16px rgba(15, 23, 42, 0.45)',
                 }}>
                   {heroContent.photoBadgeBottom}
                 </div>
                 <div style={{
                   position: 'absolute', top: '0.875rem', left: '0.875rem',
-                  background: 'rgba(10, 20, 36, 0.84)', backdropFilter: 'blur(12px)',
-                  WebkitBackdropFilter: 'blur(12px)',
-                  color: '#93C5FD', fontSize: '0.65rem', fontWeight: 700,
-                  padding: '0.34rem 0.75rem', borderRadius: '0.5rem',
-                  border: '1px solid rgba(147, 197, 253, 0.32)',
+                  background: 'linear-gradient(135deg, #065F46 0%, #0F766E 100%)',
+                  color: '#FFFFFF', fontSize: '0.68rem', fontWeight: 700,
+                  padding: '0.38rem 0.82rem', borderRadius: '0.5rem',
+                  border: '1px solid rgba(94, 234, 212, 0.45)',
+                  boxShadow: '0 6px 16px rgba(15, 23, 42, 0.4)',
                 }}>
                   {heroContent.photoBadgeTop}
                 </div>

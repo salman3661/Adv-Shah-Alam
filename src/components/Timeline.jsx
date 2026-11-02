@@ -184,7 +184,7 @@ const Timeline = ({ isHome = false, lang = 'en' }) => {
                     >
                         <div
                             className="w-10 h-10 rounded-full flex items-center justify-center"
-                            style={{ background: 'var(--accent-subtle)', color: 'var(--accent)' }}
+                            style={{ background: 'linear-gradient(135deg, #1E3A8A 0%, #2563EB 100%)', color: '#FFFFFF', boxShadow: '0 3px 10px rgba(37, 99, 235, 0.24)' }}
                         >
                             <Briefcase size={18} />
                         </div>
@@ -251,7 +251,7 @@ const Timeline = ({ isHome = false, lang = 'en' }) => {
                     >
                         <div
                             className="w-10 h-10 rounded-full flex items-center justify-center"
-                            style={{ background: 'var(--accent-subtle)', color: 'var(--accent)' }}
+                            style={{ background: 'linear-gradient(135deg, #1E3A8A 0%, #2563EB 100%)', color: '#FFFFFF', boxShadow: '0 3px 10px rgba(37, 99, 235, 0.24)' }}
                         >
                             <GraduationCap size={18} />
                         </div>
@@ -294,8 +294,8 @@ const Timeline = ({ isHome = false, lang = 'en' }) => {
                                 </div>
                                 <div className="flex justify-end">
                                     <span
-                                        className="text-xs font-bold px-3 py-1 rounded-full"
-                                        style={{ background: 'var(--accent-subtle)', color: 'var(--accent)' }}
+                                        className="text-xs font-bold px-3.5 py-1 rounded-full"
+                                        style={{ background: 'linear-gradient(135deg, #1E3A8A 0%, #1D4ED8 100%)', color: '#FFFFFF', boxShadow: '0 2px 8px rgba(29, 78, 216, 0.24)' }}
                                     >
                                         {item.year}
                                     </span>

@@ -356,7 +356,7 @@ const AdvocatePage = () => {
             {/* ── Hero / Header ── */}
             <section className="pt-28 pb-16 relative overflow-hidden" style={{ background: 'var(--hero-bg)' }}>
                 <div className="absolute inset-0 pointer-events-none"
-                    style={{ background: 'radial-gradient(ellipse at 70% 50%, rgba(198,167,94,0.06) 0%, transparent 70%)' }} />
+                    style={{ background: 'radial-gradient(ellipse at 70% 50%, rgba(37, 99, 235,0.06) 0%, transparent 70%)' }} />
                 <div className="container mx-auto px-6 max-w-5xl relative z-10">
                     {/* Breadcrumb */}
                     <nav className="mb-6 text-xs" aria-label="Breadcrumb">
@@ -401,10 +401,10 @@ const AdvocatePage = () => {
                         {/* Portrait Photo */}
                         <div className="md:col-span-5 flex justify-center md:justify-end">
                             <div style={{ position: 'relative', width: '100%', maxWidth: '320px', aspectRatio: '4/5' }}>
-                                <div style={{ position: 'absolute', inset: '-12px', borderRadius: '2rem', background: 'var(--hero-photo-glow, rgba(198,167,94,0.15))', filter: 'blur(24px)', zIndex: 0 }} />
+                                <div style={{ position: 'absolute', inset: '-12px', borderRadius: '2rem', background: 'var(--hero-photo-glow, rgba(37, 99, 235,0.15))', filter: 'blur(24px)', zIndex: 0 }} />
                                 <div style={{
                                     position: 'relative', borderRadius: '1.5rem', overflow: 'hidden',
-                                    border: '1px solid var(--hero-photo-border, rgba(198,167,94,0.3))',
+                                    border: '1px solid var(--hero-photo-border, rgba(37, 99, 235,0.3))',
                                     boxShadow: '0 20px 50px rgba(0,0,0,0.35)',
                                     height: '100%', zIndex: 1,
                                 }}>
@@ -729,7 +729,7 @@ const AdvocatePage = () => {
                         <div className="grid md:grid-cols-[1fr_320px] gap-8 items-center">
                             <div>
                                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold mb-3"
-                                    style={{ background: 'rgba(198,167,94,0.12)', color: 'var(--gold)' }}>
+                                    style={{ background: 'rgba(37, 99, 235,0.12)', color: 'var(--gold)' }}>
                                     <Camera size={14} /> Courtroom Appearance & Media Archive
                                 </div>
                                 <h3 className="text-lg md:text-xl font-serif font-bold mb-2" style={{ color: 'var(--text)', fontFamily: "Georgia, serif" }}>
@@ -775,7 +775,7 @@ const AdvocatePage = () => {
                                 ) : (
                                     <div className="flex flex-col items-center justify-center py-4 text-center">
                                         <div className="w-12 h-12 rounded-full flex items-center justify-center mb-3"
-                                            style={{ background: 'rgba(198,167,94,0.15)', color: 'var(--gold)' }}>
+                                            style={{ background: 'rgba(37, 99, 235,0.15)', color: 'var(--gold)' }}>
                                             <Landmark size={22} />
                                         </div>
                                         <p className="text-xs font-bold mb-1" style={{ color: 'var(--text)' }}>
@@ -814,7 +814,7 @@ const AdvocatePage = () => {
                                 >
                                     <span
                                         className="text-xs font-bold px-2 py-0.5 rounded-full self-start"
-                                        style={{ background: 'rgba(198,167,94,0.15)', color: 'var(--gold)' }}
+                                        style={{ background: 'rgba(37, 99, 235,0.15)', color: 'var(--gold)' }}
                                     >
                                         {post.category}
                                     </span>

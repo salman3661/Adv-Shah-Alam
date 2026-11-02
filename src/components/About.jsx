@@ -197,8 +197,8 @@ const About = ({ lang = 'en' }) => {
                                 ? ['সততার সাথে কাজ করি', 'সরল ভাষায় বুঝিয়ে দিই', 'সময়মতো সাড়া দিই']
                                 : ['Dedicated & Honest Service', 'Clear & Plain Explanation', 'Responsive & Caring Communication']
                             ).map((item, i) => (
-                                <span key={i} className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full"
-                                    style={{ background: 'var(--accent-subtle)', color: 'var(--accent)', border: '1px solid var(--card-border)' }}>
+                                <span key={i} className="inline-flex items-center gap-1.5 text-xs font-bold px-3.5 py-1.5 rounded-full"
+                                    style={{ background: 'linear-gradient(135deg, #065F46 0%, #0F766E 100%)', color: '#FFFFFF', boxShadow: '0 3px 10px rgba(15, 118, 110, 0.24)' }}>
                                     <CheckCircle size={12} /> {item}
                                 </span>
                             ))}
@@ -212,7 +212,7 @@ const About = ({ lang = 'en' }) => {
                                 className="glass-card p-7 text-center group cursor-default"
                             >
                                 <div className="w-12 h-12 mx-auto mb-4 rounded-xl flex items-center justify-center transition-transform duration-300"
-                                    style={{ background: 'var(--accent-subtle)', color: 'var(--accent)', border: '1px solid var(--card-border)' }}>
+                                    style={{ background: 'linear-gradient(135deg, #1E3A8A 0%, #2563EB 100%)', color: '#FFFFFF', boxShadow: '0 4px 12px rgba(37, 99, 235, 0.25)' }}>
                                     <stat.icon size={22} />
                                 </div>
                                 <h3 className="text-3xl md:text-4xl font-bold mb-1" style={{ color: 'var(--text)' }}>

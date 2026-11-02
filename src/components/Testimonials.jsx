@@ -133,8 +133,8 @@ const StarRating = ({ rating }) => (
             <Star
                 key={i}
                 size={14}
-                fill={i <= rating ? '#CCA856' : 'none'}
-                stroke={i <= rating ? '#CCA856' : '#CBD5E1'}
+                fill={i <= rating ? '#F59E0B' : 'none'}
+                stroke={i <= rating ? '#F59E0B' : '#CBD5E1'}
                 aria-hidden="true"
             />
         ))}
@@ -200,7 +200,7 @@ const Testimonials = ({ lang = 'en' }) => {
                         >
                             <div className="flex gap-0.5">
                                 {[1,2,3,4,5].map(i => (
-                                    <Star key={i} size={18} fill="#CCA856" stroke="#CCA856" />
+                                    <Star key={i} size={18} fill="#F59E0B" stroke="#F59E0B" />
                                 ))}
                             </div>
                             <span className="text-sm font-bold" style={{ color: 'var(--text)' }}>5.0</span>
@@ -218,7 +218,7 @@ const Testimonials = ({ lang = 'en' }) => {
                         style={{ background: 'var(--surface)', border: '1px solid var(--card-border)', borderLeft: '3.5px solid var(--gold)', boxShadow: 'var(--shadow-sm)' }}
                     >
                         <div className="flex items-start gap-3 mb-4">
-                            <span className="text-xs font-bold px-3 py-1 rounded-full" style={{ background: 'var(--gold-subtle)', color: 'var(--gold)', border: '1px solid var(--gold-border)' }}>
+                            <span className="text-xs font-bold px-3.5 py-1 rounded-full" style={{ background: 'linear-gradient(135deg, #065F46 0%, #0F766E 100%)', color: '#FFFFFF', boxShadow: '0 2px 8px rgba(15, 118, 110, 0.25)' }}>
                                 {isBn ? 'বিশেষ ঘটনা' : 'Featured Story'}
                             </span>
                             <span className="text-xs font-semibold" style={{ color: 'var(--text-muted)' }}>Criminal Defence · Uttara, Dhaka</span>

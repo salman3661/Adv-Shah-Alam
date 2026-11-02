@@ -90,7 +90,7 @@ const HumanStory = ({ lang = 'en' }) => {
                         >
                             <div
                                 className="w-11 h-11 rounded-xl flex items-center justify-center mb-4"
-                                style={{ background: 'var(--accent-subtle)', color: 'var(--accent)', border: '1px solid var(--card-border)' }}
+                                style={{ background: 'linear-gradient(135deg, #1E3A8A 0%, #2563EB 100%)', color: '#FFFFFF', boxShadow: '0 4px 12px rgba(37, 99, 235, 0.24)' }}
                             >
                                 <item.icon size={22} />
                             </div>

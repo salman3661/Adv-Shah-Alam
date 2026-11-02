@@ -47,15 +47,15 @@ const POPULAR_SLUGS = [
 
 /* Category color map */
 const CAT_COLOR = {
-    'Criminal Law':     { bg: '#2563EB', text: '#fff' },
-    'Family Law':       { bg: '#0D9488', text: '#fff' },
+    'Criminal Law':     { bg: '#1D4ED8', text: '#fff' },
+    'Family Law':       { bg: '#0F766E', text: '#fff' },
     'Property Law':     { bg: '#0284C7', text: '#fff' },
     'Civil Law':        { bg: '#0891B2', text: '#fff' },
     'Cyber Law':        { bg: '#1D4ED8', text: '#fff' },
     'Legal Procedures': { bg: '#0369A1', text: '#fff' },
     'Labour Law':       { bg: '#0F766E', text: '#fff' },
 };
-const catColor = cat => CAT_COLOR[cat] || { bg: '#2563EB', text: '#fff' };
+const catColor = cat => CAT_COLOR[cat] || { bg: '#1D4ED8', text: '#fff' };
 
 /* Clean duplicate leading numbers from section headings */
 const cleanHeadingText = text => {
@@ -164,8 +164,8 @@ const PopularPosts = ({ currentSlug }) => {
                                 flexShrink: 0, width: '1.625rem', height: '1.625rem', borderRadius: '0.375rem',
                                 display: 'flex', alignItems: 'center', justifyContent: 'center',
                                 fontWeight: 900, fontSize: '0.75rem',
-                                background: isTop3 ? 'linear-gradient(135deg, #2563EB, #0D9488)' : 'var(--surface-2, #F0F7FF)',
-                                color: isTop3 ? '#FFFFFF' : 'var(--text-muted)',
+                                background: isTop3 ? 'linear-gradient(135deg, #1E3A8A 0%, #0F766E 100%)' : 'linear-gradient(135deg, #1E293B 0%, #334155 100%)',
+                                color: '#FFFFFF',
                                 border: isTop3 ? 'none' : '1px solid var(--card-border)',
                                 boxShadow: isTop3 ? '0 3px 10px rgba(13, 148, 136, 0.25)' : 'none',
                             }}>{idx + 1}</span>
@@ -232,11 +232,12 @@ const RecentPosts = ({ currentSlug }) => {
                                         display: 'inline-block',
                                         fontSize: '0.6rem',
                                         fontWeight: 700,
-                                        padding: '1px 6px',
-                                        borderRadius: '4px',
-                                        background: `${cc.bg}22`,
-                                        color: cc.bg,
-                                        border: `1px solid ${cc.bg}40`,
+                                        padding: '2px 8px',
+                                        borderRadius: '5px',
+                                        background: cc.bg,
+                                        color: '#FFFFFF',
+                                        border: 'none',
+                                        boxShadow: '0 2px 6px rgba(15, 23, 42, 0.16)',
                                         textTransform: 'uppercase'
                                     }}>
                                         {rp.category}
@@ -617,7 +618,7 @@ const BlogPostInner = () => {
             {/* ════════════════ HERO (Phase 2.2: Protected Floating Navbar & Immediate H1 Visibility) ════════════════ */}
             <section className="hero-section google-anno-skip pt-24" style={{ background: 'linear-gradient(135deg, #0B1938 0%, #1E3A8A 52%, #0F766E 100%)', paddingTop: '88px', paddingBottom: '2.75rem', position: 'relative', overflow: 'hidden', borderBottom: '1px solid rgba(148, 163, 184, 0.25)' }}>
                 {/* Top accent bar */}
-                <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '4px', background: 'linear-gradient(90deg, #2563EB, #0D9488, #38BDF8, #2563EB)' }} />
+                <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '4px', background: 'linear-gradient(90deg, #1D4ED8, #0F766E, #38BDF8, #1D4ED8)' }} />
                 <div className="hero-cover-bg" aria-hidden="true" style={{ backgroundImage: `url(${coverFor(post.category)})` }} />
                 <div className="hero-cover-fade" aria-hidden="true" />
                 {/* Radial glow */}
@@ -938,7 +939,7 @@ const BlogPostInner = () => {
                                                             flexShrink: 0, width: '3.15rem', height: '3.15rem', borderRadius: '0.9rem',
                                                             display: 'flex', alignItems: 'center', justifyContent: 'center',
                                                             fontWeight: 800, fontSize: '1.15rem', color: '#FFFFFF', fontFamily: "'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
-                                                            background: 'linear-gradient(135deg, #2563EB 0%, #0D9488 100%)',
+                                                            background: 'linear-gradient(135deg, #1D4ED8 0%, #0F766E 100%)',
                                                             border: '1px solid rgba(255, 255, 255, 0.28)',
                                                             boxShadow: '0 6px 16px -4px rgba(37, 99, 235, 0.34)',
                                                         }}>{String(i + 1).padStart(2, '0')}</span>
@@ -976,9 +977,9 @@ const BlogPostInner = () => {
                                         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
                                             {post.relatedServiceLinks.map((link, i) => (
                                                 <Link key={i} to={link.to}
-                                                    style={{ display: 'inline-flex', alignItems: 'center', gap: '0.3rem', fontSize: '0.8125rem', fontWeight: 600, padding: '0.4rem 0.875rem', borderRadius: '9999px', textDecoration: 'none', background: `${cc.bg}18`, color: cc.bg, border: `1px solid ${cc.bg}40`, transition: 'all 0.15s' }}
-                                                    onMouseEnter={e => e.currentTarget.style.background = `${cc.bg}30`}
-                                                    onMouseLeave={e => e.currentTarget.style.background = `${cc.bg}18`}>
+                                                    style={{ display: 'inline-flex', alignItems: 'center', gap: '0.35rem', fontSize: '0.8125rem', fontWeight: 700, padding: '0.42rem 0.95rem', borderRadius: '9999px', textDecoration: 'none', background: cc.bg, color: '#FFFFFF', border: 'none', boxShadow: '0 3px 10px rgba(15, 23, 42, 0.2)', transition: 'all 0.15s' }}
+                                                    onMouseEnter={e => e.currentTarget.style.opacity = '0.9'}
+                                                    onMouseLeave={e => e.currentTarget.style.opacity = '1'}>
                                                     <ExternalLink size={11} /> {link.text}
                                                 </Link>
                                             ))}

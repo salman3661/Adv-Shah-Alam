@@ -137,8 +137,8 @@ const Chambers = ({ lang = 'en' }) => {
 
                             {chamber.isPrimary && (
                                 <div className="absolute top-5 right-5">
-                                    <span className="text-xs font-bold px-3 py-1 rounded-full"
-                                        style={{ background: 'var(--accent-subtle)', color: 'var(--accent)' }}>
+                                    <span className="text-xs font-bold px-3.5 py-1 rounded-full"
+                                        style={{ background: 'linear-gradient(135deg, #1E3A8A 0%, #1D4ED8 100%)', color: '#FFFFFF', boxShadow: '0 3px 10px rgba(29, 78, 216, 0.26)' }}>
                                         {isBn ? 'প্রধান' : 'Primary'}
                                     </span>
                                 </div>
@@ -152,7 +152,7 @@ const Chambers = ({ lang = 'en' }) => {
                                 <div className="space-y-4">
                                     <div className="flex items-start gap-3">
                                         <div className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0"
-                                            style={{ background: 'var(--accent-subtle)', color: 'var(--accent)' }}>
+                                            style={{ background: 'linear-gradient(135deg, #1E3A8A 0%, #2563EB 100%)', color: '#FFFFFF', boxShadow: '0 3px 8px rgba(37, 99, 235, 0.22)' }}>
                                             <MapPin size={15} />
                                         </div>
                                         <div>
@@ -168,7 +168,7 @@ const Chambers = ({ lang = 'en' }) => {
 
                                     <div className="flex items-start gap-3">
                                         <div className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0"
-                                            style={{ background: 'var(--accent-subtle)', color: 'var(--accent)' }}>
+                                            style={{ background: 'linear-gradient(135deg, #1E3A8A 0%, #2563EB 100%)', color: '#FFFFFF', boxShadow: '0 3px 8px rgba(37, 99, 235, 0.22)' }}>
                                             <Phone size={15} />
                                         </div>
                                         <div>
@@ -184,7 +184,7 @@ const Chambers = ({ lang = 'en' }) => {
 
                                     <div className="flex items-start gap-3">
                                         <div className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0"
-                                            style={{ background: 'var(--accent-subtle)', color: 'var(--accent)' }}>
+                                            style={{ background: 'linear-gradient(135deg, #1E3A8A 0%, #2563EB 100%)', color: '#FFFFFF', boxShadow: '0 3px 8px rgba(37, 99, 235, 0.22)' }}>
                                             <Clock size={15} />
                                         </div>
                                         <div>

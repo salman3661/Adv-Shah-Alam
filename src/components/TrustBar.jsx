@@ -50,9 +50,9 @@ const TrustBar = ({ lang = 'en' }) => {
                             <div
                                 className="flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center"
                                 style={{
-                                    background: item.isGold ? 'var(--gold-subtle)' : 'var(--accent-subtle)',
-                                    border: item.isGold ? '1px solid var(--gold-border)' : '1px solid var(--card-border)',
-                                    color: item.isGold ? 'var(--gold)' : 'var(--accent)',
+                                    background: item.isGold ? 'linear-gradient(135deg, #065F46 0%, #0F766E 100%)' : 'linear-gradient(135deg, #1E3A8A 0%, #2563EB 100%)',
+                                    color: '#FFFFFF',
+                                    boxShadow: item.isGold ? '0 3px 8px rgba(15, 118, 110, 0.25)' : '0 3px 8px rgba(37, 99, 235, 0.25)',
                                 }}
                             >
                                 <item.icon size={16} />
@@ -86,9 +86,9 @@ const TrustBar = ({ lang = 'en' }) => {
                                 <div
                                     className="flex-shrink-0 w-7 h-7 rounded-lg flex items-center justify-center"
                                     style={{
-                                        background: item.isGold ? 'var(--gold-subtle)' : 'var(--accent-subtle)',
-                                        border: item.isGold ? '1px solid var(--gold-border)' : '1px solid var(--card-border)',
-                                        color: item.isGold ? 'var(--gold)' : 'var(--accent)',
+                                        background: item.isGold ? 'linear-gradient(135deg, #065F46 0%, #0F766E 100%)' : 'linear-gradient(135deg, #1E3A8A 0%, #2563EB 100%)',
+                                        color: '#FFFFFF',
+                                        boxShadow: item.isGold ? '0 3px 8px rgba(15, 118, 110, 0.25)' : '0 3px 8px rgba(37, 99, 235, 0.25)',
                                     }}
                                 >
                                     <item.icon size={14} />

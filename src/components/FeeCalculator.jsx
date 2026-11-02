@@ -307,8 +307,10 @@ export default function FeeCalculator({ type = 'land', lang = 'bn' }) {
 
     return (
         <section aria-label={title} style={card} data-fee-calculator={type}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '0.5rem' }}>
-                <Calculator size={20} style={{ color: 'var(--gold, #0D9488)' }} aria-hidden="true" />
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.7rem', marginBottom: '0.55rem' }}>
+                <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '2.1rem', height: '2.1rem', borderRadius: '0.55rem', background: 'linear-gradient(135deg, #1E3A8A 0%, #1D4ED8 100%)', color: '#FFFFFF', boxShadow: '0 3px 10px rgba(29, 78, 216, 0.25)', flexShrink: 0 }}>
+                    <Calculator size={17} aria-hidden="true" />
+                </span>
                 <h3 style={{ margin: 0, fontSize: '1.2rem', fontWeight: 800, color: 'var(--text, inherit)' }}>{title}</h3>
             </div>
             <p style={{ margin: '0 0 1.1rem', fontSize: '0.88rem', lineHeight: 1.65, color: 'var(--text-muted, #52647c)' }}>{note}</p>
@@ -403,7 +405,7 @@ export default function FeeCalculator({ type = 'land', lang = 'bn' }) {
             {adBlock}
 
             <button type="button" onClick={calculate}
-                style={{ width: '100%', padding: '0.95rem 1rem', borderRadius: '0.7rem', border: 'none', cursor: 'pointer', fontWeight: 800, fontSize: '1rem', background: 'linear-gradient(135deg, #2563EB 0%, #0284C7 52%, #0D9488 100%)', color: '#FFFFFF', boxShadow: '0 6px 20px -4px rgba(37, 99, 235, 0.34)', transition: 'background-color 0.15s ease' }}>
+                style={{ width: '100%', padding: '0.95rem 1rem', borderRadius: '0.7rem', border: 'none', cursor: 'pointer', fontWeight: 800, fontSize: '1rem', background: 'linear-gradient(135deg, #1E3A8A 0%, #1D4ED8 50%, #0F766E 100%)', color: '#FFFFFF', boxShadow: '0 6px 20px -4px rgba(30, 58, 138, 0.38)', transition: 'background-color 0.15s ease' }}>
                 {t.calc}
             </button>
 

@@ -200,8 +200,9 @@ const BlogCardBn = ({ post, isRecent = false, isPopular = false }) => {
                         to={`/bn/blog/${post.slug}`}
                         className="inline-flex items-center gap-1 text-xs font-bold px-3 py-1.5 rounded-lg transition-[color,background-color,border-color,box-shadow,opacity,transform] group-hover:bg-[var(--accent)] group-hover:text-white"
                         style={{
-                            background: 'var(--accent-subtle)',
-                            color: 'var(--accent)',
+                            background: 'linear-gradient(135deg, #1E3A8A 0%, #1D4ED8 100%)',
+                            color: '#FFFFFF',
+                            boxShadow: '0 3px 10px rgba(29, 78, 216, 0.22)',
                             fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif"
                         }}
                         aria-label={`পড়ুন: ${post.title}`}

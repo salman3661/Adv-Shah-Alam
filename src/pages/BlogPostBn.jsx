@@ -49,20 +49,20 @@ const POPULAR_BN_SLUGS = Array.isArray(popularBnSlugs) && popularBnSlugs.length 
 /* Ad units live in components/ads/adLayout.js (AD_SLOTS). Article Body 3/4 + Bottom Grid are decommissioned. */
 
 const CAT_COLOR = {
-    'ফৌজদারি আইন':   { bg: '#2563EB', text: '#fff' },
-    'পারিবারিক আইন': { bg: '#0D9488', text: '#fff' },
+    'ফৌজদারি আইন':   { bg: '#1D4ED8', text: '#fff' },
+    'পারিবারিক আইন': { bg: '#0F766E', text: '#fff' },
     'সম্পত্তি আইন':   { bg: '#0284C7', text: '#fff' },
     'দেওয়ানি আইন':   { bg: '#0891B2', text: '#fff' },
     'সাইবার আইন':    { bg: '#1D4ED8', text: '#fff' },
     'শ্রম আইন':      { bg: '#0F766E', text: '#fff' },
     'আইনি প্রক্রিয়া': { bg: '#0369A1', text: '#fff' },
-    'Criminal Law':  { bg: '#2563EB', text: '#fff' },
-    'Family Law':    { bg: '#0D9488', text: '#fff' },
+    'Criminal Law':  { bg: '#1D4ED8', text: '#fff' },
+    'Family Law':    { bg: '#0F766E', text: '#fff' },
     'Property Law':  { bg: '#0284C7', text: '#fff' },
     'Civil Law':     { bg: '#0891B2', text: '#fff' },
     'Labour Law':    { bg: '#0F766E', text: '#fff' },
 };
-const catColor = cat => CAT_COLOR[cat] || { bg: '#2563EB', text: '#fff' };
+const catColor = cat => CAT_COLOR[cat] || { bg: '#1D4ED8', text: '#fff' };
 
 /* Clean duplicate leading numbers from section headings */
 const cleanHeadingText = text => {
@@ -186,9 +186,9 @@ const PopularBnPosts = ({ currentSlug }) => {
                                 justifyContent: 'center',
                                 fontWeight: 900,
                                 fontSize: '0.75rem',
-                                background: isTop3 ? 'linear-gradient(135deg, #2563EB, #0D9488)' : 'var(--surface-2, #F0F7FF)',
-                                color: isTop3 ? '#FFFFFF' : 'var(--text-muted)',
-                                border: isTop3 ? 'none' : '1px solid var(--card-border)',
+                                background: isTop3 ? 'linear-gradient(135deg, #1E3A8A 0%, #0F766E 100%)' : 'linear-gradient(135deg, #1E293B 0%, #334155 100%)',
+                                color: '#FFFFFF',
+                                border: 'none',
                                 boxShadow: isTop3 ? '0 3px 10px rgba(13, 148, 136, 0.25)' : 'none',
                                 marginTop: '2px'
                             }}>
@@ -200,11 +200,12 @@ const PopularBnPosts = ({ currentSlug }) => {
                                         display: 'inline-block',
                                         fontSize: '0.6rem',
                                         fontWeight: 700,
-                                        padding: '1px 6px',
-                                        borderRadius: '4px',
-                                        background: `${cc.bg}22`,
-                                        color: cc.bg,
-                                        border: `1px solid ${cc.bg}40`,
+                                        padding: '2px 8px',
+                                        borderRadius: '5px',
+                                        background: cc.bg,
+                                        color: '#FFFFFF',
+                                        border: 'none',
+                                        boxShadow: '0 2px 6px rgba(15, 23, 42, 0.16)',
                                         textTransform: 'uppercase'
                                     }}>
                                         {rp.category}
@@ -283,11 +284,12 @@ const RecentBnPosts = ({ currentSlug }) => {
                                         display: 'inline-block',
                                         fontSize: '0.6rem',
                                         fontWeight: 700,
-                                        padding: '1px 6px',
-                                        borderRadius: '4px',
-                                        background: `${cc.bg}22`,
-                                        color: cc.bg,
-                                        border: `1px solid ${cc.bg}40`,
+                                        padding: '2px 8px',
+                                        borderRadius: '5px',
+                                        background: cc.bg,
+                                        color: '#FFFFFF',
+                                        border: 'none',
+                                        boxShadow: '0 2px 6px rgba(15, 23, 42, 0.16)',
                                         textTransform: 'uppercase'
                                     }}>
                                         {rp.category}
@@ -682,7 +684,7 @@ const BlogPostBnInner = () => {
 
             {/* ════ HERO (Phase 2.2: Protected Floating Navbar & Immediate H1 Visibility) ════ */}
             <section className="hero-section google-anno-skip pt-24" style={{ background: 'linear-gradient(135deg, #0B1938 0%, #1E3A8A 52%, #0F766E 100%)', paddingTop: '88px', paddingBottom: '2.75rem', position: 'relative', overflow: 'hidden', borderBottom: '1px solid rgba(148, 163, 184, 0.25)' }}>
-                <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '4px', background: 'linear-gradient(90deg, #2563EB, #0D9488, #38BDF8, #2563EB)' }} />
+                <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '4px', background: 'linear-gradient(90deg, #1D4ED8, #0F766E, #38BDF8, #1D4ED8)' }} />
                 <div className="hero-cover-bg" aria-hidden="true" style={{ backgroundImage: `url(${coverFor(post.category)})` }} />
                 <div className="hero-cover-fade" aria-hidden="true" />
                 <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse 70% 60% at 25% 45%, rgba(59, 130, 246, 0.10) 0%, transparent 65%)', pointerEvents: 'none' }} />
@@ -984,7 +986,7 @@ const BlogPostBnInner = () => {
                                                             flexShrink: 0, width: '3.15rem', height: '3.15rem', borderRadius: '0.9rem',
                                                             display: 'flex', alignItems: 'center', justifyContent: 'center',
                                                             fontWeight: 800, fontSize: '1.2rem', color: '#FFFFFF', fontFamily: "'Noto Serif Bengali', sans-serif",
-                                                            background: 'linear-gradient(135deg, #2563EB 0%, #0D9488 100%)',
+                                                            background: 'linear-gradient(135deg, #1E3A8A 0%, #0F766E 100%)',
                                                             border: '1px solid rgba(255, 255, 255, 0.28)',
                                                             boxShadow: '0 6px 16px -4px rgba(37, 99, 235, 0.34)',
                                                         }}>{toBnDigits(i + 1)}</span>
@@ -1083,9 +1085,9 @@ const BlogPostBnInner = () => {
                                         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
                                             {post.relatedServiceLinks.map((link, i) => (
                                                 <Link key={i} to={link.to}
-                                                    style={{ display: 'inline-flex', alignItems: 'center', gap: '0.3rem', fontSize: '0.8125rem', fontWeight: 600, padding: '0.4rem 0.875rem', borderRadius: '9999px', textDecoration: 'none', background: `${cc.bg}18`, color: cc.bg, border: `1px solid ${cc.bg}40`, transition: 'all 0.15s' }}
-                                                    onMouseEnter={e => e.currentTarget.style.background = `${cc.bg}30`}
-                                                    onMouseLeave={e => e.currentTarget.style.background = `${cc.bg}18`}>
+                                                    style={{ display: 'inline-flex', alignItems: 'center', gap: '0.35rem', fontSize: '0.8125rem', fontWeight: 700, padding: '0.42rem 0.95rem', borderRadius: '9999px', textDecoration: 'none', background: cc.bg, color: '#FFFFFF', border: 'none', boxShadow: '0 3px 10px rgba(15, 23, 42, 0.2)', transition: 'all 0.15s' }}
+                                                    onMouseEnter={e => e.currentTarget.style.opacity = '0.9'}
+                                                    onMouseLeave={e => e.currentTarget.style.opacity = '1'}>
                                                     <ExternalLink size={11} /> {link.text}
                                                 </Link>
                                             ))}
@@ -1517,12 +1519,12 @@ const BlogPostBnInner = () => {
                     border-top: 1px dashed rgba(29, 78, 216, 0.16);
                 }
                 .bpbn-intro-content strong, .bpbn-intro-content b {
-                    color: #1E3A8A;
-                    font-weight: 800;
-                    background: rgba(22, 58, 112, 0.07);
-                    padding: 0.12rem 0.48rem;
+                    color: #FFFFFF;
+                    font-weight: 700;
+                    background: linear-gradient(135deg, #1E3A8A 0%, #1D4ED8 100%);
+                    padding: 0.12rem 0.55rem;
                     border-radius: 6px;
-                    border-bottom: 2px solid rgba(22, 58, 112, 0.28);
+                    box-shadow: 0 2px 6px rgba(29, 78, 216, 0.24);
                     box-decoration-break: clone;
                     -webkit-box-decoration-break: clone;
                 }
@@ -1597,8 +1599,20 @@ const BlogPostBnInner = () => {
                 .prose-bn-content ul, .prose-bn-content ol { padding-left: 1.75rem; margin-bottom: 1.6rem; }
                 .prose-bn-content li { margin-bottom: 0.8rem; font-size: 1.2rem; line-height: 2.1; color: var(--text); }
                 .prose-bn-content li::marker { color: var(--accent); font-weight: 700; }
-                .prose-bn-content strong { color: var(--text); font-weight: 700; }
-                .prose-bn-content b { color: var(--text); font-weight: 700; }
+                .prose-bn-content strong, .prose-bn-content b {
+                    color: #1E3A8A;
+                    font-weight: 800;
+                    background: rgba(29, 78, 216, 0.10);
+                    padding: 0.06rem 0.4rem;
+                    border-radius: 5px;
+                    border-bottom: 2px solid rgba(29, 78, 216, 0.35);
+                }
+                body[data-theme="dark"] .prose-bn-content strong,
+                body[data-theme="dark"] .prose-bn-content b {
+                    color: #93C5FD;
+                    background: rgba(59, 130, 246, 0.18);
+                    border-bottom-color: rgba(96, 165, 250, 0.45);
+                }
                 .prose-bn-content a { color: var(--accent); text-decoration: underline; text-decoration-color: rgba(22, 58, 112, 0.35); text-underline-offset: 4px; }
                 .prose-bn-content a:hover { text-decoration-color: var(--accent); }
                 .prose-bn-content h3 { font-family: 'Noto Serif Bengali', sans-serif; font-size: 1.35rem; font-weight: 800; color: var(--text); margin: 2.5rem 0 1.1rem; padding: 0.5rem 0.875rem; background: linear-gradient(90deg, var(--accent-subtle), transparent); border-radius: 0 0.5rem 0.5rem 0; }

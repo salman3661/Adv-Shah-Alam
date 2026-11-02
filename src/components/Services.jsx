@@ -50,12 +50,12 @@ const Services = ({ lang = 'en' }) => {
                         >
                             <div className="flex items-start justify-between mb-5">
                                 <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 transition-transform duration-300"
-                                    style={{ background: 'var(--accent-subtle)', color: 'var(--accent)', border: '1px solid var(--card-border)' }}>
+                                    style={{ background: 'linear-gradient(135deg, #1E3A8A 0%, #2563EB 100%)', color: '#FFFFFF', boxShadow: '0 4px 12px rgba(37, 99, 235, 0.25)' }}>
                                     <service.icon size={24} />
                                 </div>
                                 <span
-                                    className="text-xs font-semibold px-2.5 py-1 rounded-full flex-shrink-0"
-                                    style={{ background: 'var(--gold-subtle)', color: 'var(--gold)', border: '1px solid var(--gold-border)' }}
+                                    className="text-xs font-bold px-3 py-1 rounded-full flex-shrink-0"
+                                    style={{ background: 'linear-gradient(135deg, #065F46 0%, #0F766E 100%)', color: '#FFFFFF', boxShadow: '0 2px 8px rgba(15, 118, 110, 0.24)' }}
                                 >
                                     {isBn ? 'পরামর্শ করুন' : 'Consultation'}
                                 </span>
