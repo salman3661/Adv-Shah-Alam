@@ -101,9 +101,6 @@ const About = ({ lang = 'en' }) => {
 
     return (
         <section id="about" className="py-24 relative overflow-hidden" style={{ background: 'var(--surface)' }}>
-            <div className="absolute right-0 top-1/3 w-1/3 h-1/2 rounded-full -z-10 pointer-events-none"
-                style={{ background: 'radial-gradient(circle, var(--accent-subtle) 0%, transparent 70%)' }}></div>
-
             <div className="container mx-auto px-6 max-w-6xl">
                 {/* Header */}
                 <div className="text-center mb-16">
@@ -113,15 +110,15 @@ const About = ({ lang = 'en' }) => {
                     <h2 className="text-4xl md:text-5xl font-serif font-bold mb-4" style={{ color: 'var(--text)', fontFamily: isBn ? 'inherit' : "Georgia, serif" }}>
                         {aboutContent.heading}
                     </h2>
-                    <div className="w-24 h-1 mx-auto rounded-full" style={{ background: 'var(--accent)' }}></div>
+                    <div className="divider-accent mx-auto"></div>
                 </div>
 
                 {/* Empathy reassurance banner */}
                 <div
                     className="mb-12 rounded-2xl px-6 py-5 flex items-start gap-4"
-                    style={{ background: 'linear-gradient(135deg, rgba(26,63,191,0.08) 0%, rgba(198,167,94,0.06) 100%)', border: '1px solid rgba(26,63,191,0.15)' }}
+                    style={{ background: 'var(--surface-2)', border: '1px solid var(--card-border)', borderLeft: '3.5px solid var(--accent)' }}
                 >
-                    <Heart size={22} style={{ color: 'var(--accent)', flexShrink: 0, marginTop: '2px' }} />
+                    <Heart size={20} style={{ color: 'var(--accent)', flexShrink: 0, marginTop: '3px' }} />
                     <p className="text-sm leading-relaxed" style={{ color: 'var(--text-2)' }}>
                         {isBn ? (
                             <>
@@ -149,13 +146,13 @@ const About = ({ lang = 'en' }) => {
                         {aboutContent.personalNote && (
                             <div
                                 className="rounded-2xl p-6 mt-2"
-                                style={{ background: 'linear-gradient(135deg, rgba(198,167,94,0.08) 0%, rgba(26,63,191,0.06) 100%)', border: '1px solid rgba(198,167,94,0.2)' }}
+                                style={{ background: 'var(--surface-2)', border: '1px solid var(--card-border)', borderLeft: '3.5px solid var(--gold)' }}
                             >
                                 <p className="text-sm leading-relaxed italic mb-4" style={{ color: 'var(--text-2)', fontFamily: isBn ? 'inherit' : "Georgia, serif" }}>
-                                    ❝ {aboutContent.personalNote} ❞
+                                    “{aboutContent.personalNote}”
                                 </p>
                                 {/* Signature */}
-                                <div className="flex items-center gap-4 pt-3" style={{ borderTop: '1px solid rgba(198,167,94,0.2)' }}>
+                                <div className="flex items-center gap-4 pt-3" style={{ borderTop: '1px solid var(--card-border)' }}>
                                     <div className="relative flex-shrink-0">
                                         <img
                                             src="/images/hero/hero-md-shah-alam-420.webp"
@@ -163,7 +160,6 @@ const About = ({ lang = 'en' }) => {
                                             className="w-16 h-16 rounded-full object-cover shadow-md"
                                             style={{
                                                 border: '2px solid var(--gold)',
-                                                boxShadow: '0 4px 14px rgba(198,167,94,0.25)'
                                             }}
                                             width="64"
                                             height="64"
@@ -202,7 +198,7 @@ const About = ({ lang = 'en' }) => {
                                 : ['Dedicated & Honest Service', 'Clear & Plain Explanation', 'Responsive & Caring Communication']
                             ).map((item, i) => (
                                 <span key={i} className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full"
-                                    style={{ background: 'rgba(26,63,191,0.08)', color: 'var(--accent)', border: '1px solid rgba(26,63,191,0.15)' }}>
+                                    style={{ background: 'var(--accent-subtle)', color: 'var(--accent)', border: '1px solid var(--card-border)' }}>
                                     <CheckCircle size={12} /> {item}
                                 </span>
                             ))}
@@ -215,9 +211,9 @@ const About = ({ lang = 'en' }) => {
                             <div key={index}
                                 className="glass-card p-7 text-center group cursor-default"
                             >
-                                <div className="w-12 h-12 mx-auto mb-4 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
-                                    style={{ background: 'var(--accent-subtle)', color: 'var(--accent)' }}>
-                                    <stat.icon size={24} />
+                                <div className="w-12 h-12 mx-auto mb-4 rounded-xl flex items-center justify-center transition-transform duration-300"
+                                    style={{ background: 'var(--accent-subtle)', color: 'var(--accent)', border: '1px solid var(--card-border)' }}>
+                                    <stat.icon size={22} />
                                 </div>
                                 <h3 className="text-3xl md:text-4xl font-bold mb-1" style={{ color: 'var(--text)' }}>
                                     <AnimatedCounter

@@ -133,8 +133,8 @@ const StarRating = ({ rating }) => (
             <Star
                 key={i}
                 size={14}
-                fill={i <= rating ? '#F59E0B' : 'none'}
-                stroke={i <= rating ? '#F59E0B' : '#D1D5DB'}
+                fill={i <= rating ? '#CCA856' : 'none'}
+                stroke={i <= rating ? '#CCA856' : '#CBD5E1'}
                 aria-hidden="true"
             />
         ))}
@@ -190,7 +190,7 @@ const Testimonials = ({ lang = 'en' }) => {
                         <motion.div
                             initial={{ scaleX: 0 }} whileInView={{ scaleX: 1 }}
                             viewport={{ once: true }} transition={{ delay: 0.2 }}
-                            className="w-24 h-1 mx-auto rounded-full" style={{ background: 'var(--accent)' }}
+                            className="divider-accent mx-auto"
                         />
                         {/* Aggregate rating badge */}
                         <motion.div
@@ -200,7 +200,7 @@ const Testimonials = ({ lang = 'en' }) => {
                         >
                             <div className="flex gap-0.5">
                                 {[1,2,3,4,5].map(i => (
-                                    <Star key={i} size={18} fill="#F59E0B" stroke="#F59E0B" />
+                                    <Star key={i} size={18} fill="#CCA856" stroke="#CCA856" />
                                 ))}
                             </div>
                             <span className="text-sm font-bold" style={{ color: 'var(--text)' }}>5.0</span>
@@ -215,11 +215,11 @@ const Testimonials = ({ lang = 'en' }) => {
                         initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }} transition={{ delay: 0.15 }}
                         className="mb-10 rounded-2xl p-6 md:p-8 relative overflow-hidden"
-                        style={{ background: 'linear-gradient(135deg, rgba(26,63,191,0.08) 0%, rgba(198,167,94,0.06) 100%)', border: '1px solid rgba(26,63,191,0.18)' }}
+                        style={{ background: 'var(--surface)', border: '1px solid var(--card-border)', borderLeft: '3.5px solid var(--gold)', boxShadow: 'var(--shadow-sm)' }}
                     >
                         <div className="flex items-start gap-3 mb-4">
-                            <span className="text-xs font-bold px-3 py-1 rounded-full" style={{ background: 'rgba(26,63,191,0.12)', color: 'var(--accent)' }}>
-                                ⭐ {isBn ? 'বিশেষ ঘটনা' : 'Featured Story'}
+                            <span className="text-xs font-bold px-3 py-1 rounded-full" style={{ background: 'var(--gold-subtle)', color: 'var(--gold)', border: '1px solid var(--gold-border)' }}>
+                                {isBn ? 'বিশেষ ঘটনা' : 'Featured Story'}
                             </span>
                             <span className="text-xs font-semibold" style={{ color: 'var(--text-muted)' }}>Criminal Defence · Uttara, Dhaka</span>
                         </div>
@@ -328,7 +328,7 @@ const Testimonials = ({ lang = 'en' }) => {
                             <button
                                 onClick={prev}
                                 aria-label="Previous testimonial"
-                                className="w-10 h-10 rounded-full flex items-center justify-center transition-all hover:scale-110 active:scale-95"
+                                className="w-10 h-10 rounded-full flex items-center justify-center transition-[color,background-color,border-color,box-shadow,opacity,transform] hover:scale-110 active:scale-95"
                                 style={{ background: 'var(--card-bg)', border: '1px solid var(--card-border)', color: 'var(--text)' }}
                             >
                                 <ChevronLeft size={18} />
@@ -351,7 +351,7 @@ const Testimonials = ({ lang = 'en' }) => {
                                     }}
                                 >
                                     <span
-                                        className="rounded-full transition-all duration-300"
+                                        className="rounded-full transition-[color,background-color,border-color,box-shadow,opacity,transform] duration-300"
                                         style={{
                                             display: 'block',
                                             width: i === active ? '24px' : '8px',
@@ -365,7 +365,7 @@ const Testimonials = ({ lang = 'en' }) => {
                             <button
                                 onClick={next}
                                 aria-label="Next testimonial"
-                                className="w-10 h-10 rounded-full flex items-center justify-center transition-all hover:scale-110 active:scale-95"
+                                className="w-10 h-10 rounded-full flex items-center justify-center transition-[color,background-color,border-color,box-shadow,opacity,transform] hover:scale-110 active:scale-95"
                                 style={{ background: 'var(--card-bg)', border: '1px solid var(--card-border)', color: 'var(--text)' }}
                             >
                                 <ChevronRight size={18} />
@@ -436,14 +436,14 @@ const Testimonials = ({ lang = 'en' }) => {
                             </a>
                             <Link
                                 to="/review"
-                                className="inline-flex items-center gap-2 text-sm font-semibold px-5 py-2.5 rounded-xl border transition-all hover:opacity-90"
+                                className="inline-flex items-center gap-2 text-sm font-semibold px-5 py-2.5 rounded-xl border transition-[color,background-color,border-color,box-shadow,opacity,transform] hover:opacity-90"
                                 style={{
                                     borderColor: 'var(--accent)',
                                     color: 'var(--accent)',
                                     background: 'rgba(26,63,191,0.06)'
                                 }}
                             >
-                                <span>⭐ {isBn ? 'গুগলে ৫-স্টার রিভিউ দিন' : 'Leave a Google Review'}</span>
+                                <span>{isBn ? 'গুগলে ৫-স্টার রিভিউ দিন' : 'Leave a Google Review'}</span>
                             </Link>
                         </div>
                     </motion.div>

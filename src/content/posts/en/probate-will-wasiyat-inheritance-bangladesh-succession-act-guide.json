@@ -1,0 +1,190 @@
+{
+  "slug": "probate-will-wasiyat-inheritance-bangladesh-succession-act-guide",
+  "bnSlug": "will-osiyotnama-heba-dalil-batil-rules",
+  "title": "Probate of Will & Letters of Administration in Bangladesh: Succession Act 1925 Guide for NRBs & Heirs",
+  "category": "Civil & Property Law",
+  "readTime": "12 min read",
+  "metaTitle": "Probate of Will & Letters of Administration in Bangladesh: Court Process & Fees",
+  "metaDescription": "Complete legal guide to probate of wills, wasiyat limits, and letters of administration under Succession Act 1925 in Bangladesh for NRBs, heirs, and estates.",
+  "keywords": [
+    "probate of will bangladesh",
+    "letters of administration bangladesh",
+    "succession act 1925 bangladesh",
+    "wasiyat rules muslim law bangladesh",
+    "probate court district judge dhaka",
+    "inheritance property transfer bangladesh",
+    "probate vs succession certificate bd",
+    "nrb estate administration bangladesh"
+  ],
+  "publishedDate": "2026-11-02",
+  "lastModified": "2026-11-02",
+  "heroIntro": "When a family member passes away leaving immovable property, land, commercial buildings, bank accounts, or corporate equity in Bangladesh, foreign heirs and Non-Resident Bangladeshis (NRBs) in the United States, UK, Canada, and Australia frequently face insurmountable administrative hurdles. Banks freeze deceased accounts, the Assistant Commissioner (Land) rejects mutation applications, and Sub-Registrars refuse title transfers without a conclusive court order. Under the Succession Act 1925, obtaining a Probate of Will or Letters of Administration from the District Judge Court is the only legally binding mechanism to establish testamentary title or administer an un-willed estate. This exhaustive legal guide breaks down the statutory differences between Muslim testamentary limits (Wasiyat) and Christian/Hindu wills, the filing procedure in the Court of the District Judge, court fee structures, citation requirements, and step-by-step estate resolution for expatriates.",
+  "quickAnswer": {
+    "title": "Quick Overview: Probate vs. Letters of Administration in Bangladesh",
+    "text": "A Probate is an official court decree granted exclusively to an executor named within a valid written Will certifying its genuineness under Section 276 of the Succession Act 1925. If the deceased left no Will (intestate) or named no surviving executor, the court issues Letters of Administration under Section 278 to universal legatee or statutory legal heirs. In Bangladesh, Muslim wills (Wasiyat) are strictly limited to one-third (1/3) of the net estate to non-heirs unless all natural heirs explicitly consent after the testator's demise. In contrast, Hindus, Christians, and foreigners testamentary rights allow disposition of up to 100% of property. Applications must be filed before the District Judge Court having territorial jurisdiction over the deceased person's property.",
+    "highlights": [
+      "Governing Law: The Succession Act 1925, Sections 213, 218, 222, 276, 278, and 370.",
+      "Jurisdiction: Court of the District Judge in the district where the deceased had fixed place of abode or where property is situated.",
+      "Muslim Wasiyat Limitation: Maximum 1/3rd of the estate can be willed to a non-heir; a bequest to a natural heir without post-mortem consent of other co-heirs is void ab initio.",
+      "Hindu, Buddhist & Christian Wills: Full 100% testamentary disposition allowed without limitation on share size.",
+      "Statutory Notice: Mandatory citation publication in two prominent daily newspapers to invite public objections within 30 to 45 days.",
+      "Maximum Ad Valorem Court Fee: Capped by the Court-Fees Act at statutory maximums depending on estate valuation.",
+      "NRB Remote Management: Expatriates can execute Power of Attorney abroad, authenticated by Bangladesh Embassy, to pursue probate."
+    ]
+  },
+  "toc": [
+    {
+      "id": "probate-vs-letters-vs-succession",
+      "title": "1. Distinguishing Probate, Letters of Administration, and Succession Certificates"
+    },
+    {
+      "id": "muslim-wasiyat-vs-general-wills",
+      "title": "2. Muslim Wasiyat Limits vs. Non-Muslim & Expat Wills"
+    },
+    {
+      "id": "statutory-jurisdiction-district-judge",
+      "title": "3. Court Jurisdiction & Filing Forum Under Succession Act 1925"
+    },
+    {
+      "id": "step-by-step-probate-process",
+      "title": "4. Step-by-Step Court Procedure for Probate in Bangladesh"
+    },
+    {
+      "id": "citations-and-public-notices",
+      "title": "5. General & Special Citations: Handling Caveats and Objections"
+    },
+    {
+      "id": "court-fees-and-valuation-table",
+      "title": "6. Comparative Overview: Estate Instruments, Fees & Timelines"
+    },
+    {
+      "id": "nrb-remote-probate-procedure",
+      "title": "7. How NRBs Living in USA, UK, Canada & Australia Can File Remotely"
+    },
+    {
+      "id": "executor-liabilities-and-inventory",
+      "title": "8. Executor Rights, Estate Duties, and Submitting the 6-Month Inventory"
+    },
+    {
+      "id": "common-pitfalls-and-frauds",
+      "title": "9. Common Pitfalls: Forged Wills, Unattested Codicils & Mutation Roadblocks"
+    },
+    {
+      "id": "practical-case-study",
+      "title": "10. Real-Life Expat Case Study: Resolving Disputed Gulshan Property Probate"
+    },
+    {
+      "id": "faqs",
+      "title": "11. Frequently Asked Questions (FAQs)"
+    }
+  ],
+  "sections": [
+    {
+      "id": "probate-vs-letters-vs-succession",
+      "title": "1. Distinguishing Probate, Letters of Administration, and Succession Certificates",
+      "content": "<p>One of the most persistent misconceptions among beneficiaries and legal practitioners alike in Bangladesh is confusing a Succession Certificate with a Probate or Letters of Administration. Under the <strong>Succession Act 1925</strong>, the legal nature of the deceased's assets dictates the specific judicial instrument required:</p><ul><li><strong>Probate (Section 222 & 276):</strong> A grant issued exclusively by the District Judge to an executor appointed under a Will, establishing the authenticity of the testamentary document and conferring absolute authority over both movable and immovable assets.</li><li><strong>Letters of Administration (Section 218 & 278):</strong> Granted when a person dies intestate (leaving no Will), or where a Will fails to name an executor, or the nominated executor renounces or predeceases the testator. This empowers an administrator to manage and distribute the entire real estate and financial holdings.</li><li><strong>Succession Certificate (Section 370):</strong> Issued by a Senior Assistant Judge Court <em>strictly for debts and securities</em> (bank deposits, national savings certificates, shares, and bonds). A Succession Certificate conveys <strong>no jurisdiction or authority whatsoever over immovable real estate or land</strong>. Attempting to use a Succession Certificate to mutate land or sell apartment properties is rejected by Land Revenue officers.</li></ul>"
+    },
+    {
+      "id": "muslim-wasiyat-vs-general-wills",
+      "title": "2. Muslim Wasiyat Limits vs. Non-Muslim & Expat Wills",
+      "content": "<p>Bangladesh operates under a dual system of secular statutory procedure and personal religious inheritance laws. For Muslim citizens and foreign Muslims owning property in Bangladesh, testamentary freedom is strictly circumscribed by classical Islamic jurisprudence as codified in Bangladeshi precedent:</p><ul><li><strong>The One-Third (1/3) Limitation:</strong> Under Sunni Hanafi law, a Muslim testator cannot bequeath more than one-third of their net estate (after paying funeral expenses and legitimate debts) via a Will (Wasiyat) without the explicit consent of the natural legal heirs.</li><li><strong>No Bequest to a Legal Heir:</strong> Under the famous principle of <em>'La wasiyata li-warith'</em> (no bequest to an heir), a Muslim cannot execute a Will giving extra property to one son or daughter to the exclusion of others. If such a will is executed, it remains invalid unless all other co-heirs grant their express, unequivocal consent <em>after the death of the testator</em>. Consent given during the testator's lifetime has no legal force.</li><li><strong>Hindu, Christian, and Secular Foreign Testators:</strong> Under the Succession Act 1925, Hindus, Christians, Parsis, and non-Muslim foreign investors have unlimited testamentary capacity. They may bequeath 100% of their self-acquired and ancestral property to any person, trust, or charitable foundation, entirely bypassing biological heirs if explicitly stated in a legally executed Will.</li></ul>"
+    },
+    {
+      "id": "statutory-jurisdiction-district-judge",
+      "title": "3. Court Jurisdiction & Filing Forum Under Succession Act 1925",
+      "content": "<p>Section 270 of the Succession Act 1925 vests testamentary jurisdiction in the <strong>Court of the District Judge</strong>. Where property is situated in multiple districts or the deceased died outside Bangladesh (e.g., in London, New York, Toronto, or Sydney), identifying the correct territorial jurisdiction is critical to avoid jurisdictional dismissals:</p><ul><li><strong>Primary Territorial Forum:</strong> The District Judge within whose territorial jurisdiction the deceased had a permanent or fixed place of abode at the time of death.</li><li><strong>Ancillary Property Forum:</strong> If the deceased had no fixed residence in Bangladesh at the time of death (common for long-term expatriates), the petition must be instituted before the District Judge within whose jurisdiction any portion of the immovable property or financial asset is situated (e.g., Dhaka District Judge Court for assets in Gulshan, Dhanmondi, or Uttara).</li><li><strong>Delegation to Additional District Judge:</strong> While original filings land in the District Judge Court, cases without contentious dispute are frequently transferred to an Additional District Judge for recording testimony and issuing final decrees.</li></ul>"
+    },
+    {
+      "id": "step-by-step-probate-process",
+      "title": "4. Step-by-Step Court Procedure for Probate in Bangladesh",
+      "content": "<p>Obtaining a certified Probate decree requires rigorous judicial scrutiny to prevent estate hijacking. The procedural stages proceed as follows:</p><ol><li><strong>Preparation & Drafting of Petition:</strong> The executor files a formal petition under Section 276 of the Succession Act 1925, verified by affidavit, attaching the original Will, original Death Certificate (registered with city corporation/Union Parishad or consular post), schedule of all immovable properties with CS/SA/RS/BS khatian numbers, and a complete schedule of liabilities.</li><li><strong>Attestation Affidavit:</strong> At least one surviving attesting witness who signed the Will must submit an affidavit swearing that the testator executed the Will in their presence while in sound mind and disposing capacity (Section 281).</li><li><strong>Court Registration & Inspection:</strong> The petition is registered as a Probate Miscellaneous Case (Probate Misc. Case). The original Will is placed in safe judicial custody in the court's vault.</li><li><strong>Issuance of Citations:</strong> The court issues notices to all natural legal heirs and orders general public citation.</li><li><strong>Recording of Deposition:</strong> If no caveat or objection is entered, the court records the oral deposition of the executor and the attesting witness.</li><li><strong>Payment of Ad Valorem Fees:</strong> The court orders calculation of court fees based on property valuation.</li><li><strong>Grant of Probate:</strong> Upon payment of court fees and execution of an administration bond, the court issues the formal grant bearing the seal of the District Court.</li></ol>"
+    },
+    {
+      "id": "citations-and-public-notices",
+      "title": "5. General & Special Citations: Handling Caveats and Objections",
+      "content": "<p>To protect absent heirs and prevent fraudulent probate grants, Section 283 of the Succession Act empowers the District Judge to issue two types of judicial citations:</p><ul><li><strong>Special Citations:</strong> Direct court summons served personally by process server or registered postal courier upon all immediate natural heirs (spouse, children, parents, siblings) who would have inherited the property under intestate rules had the Will not existed.</li><li><strong>General Public Citation:</strong> A court-mandated public notification published in two widely circulated national daily newspapers (one Bengali daily, e.g., The Daily Ittefaq, and one English daily, e.g., The Daily Star). The notice informs the global public that any person having interest or claim against the estate must lodge a formal <em>Caveat</em> within 30 to 45 days.</li><li><strong>Effect of a Caveat:</strong> If an aggrieved heir files a Caveat contesting the genuineness of the Will (alleging forgery, undue influence, fraud, or mental incompetence), the proceeding is instantly converted from a non-contentious miscellaneous case into a regular <strong>Testamentary Civil Suit</strong> under Section 295, tried identically to a regular civil lawsuit with full framing of issues, documentary discovery, cross-examination, and judicial trial.</li></ul>"
+    },
+    {
+      "id": "court-fees-and-valuation-table",
+      "title": "6. Comparative Overview: Estate Instruments, Fees & Timelines",
+      "content": "<p>Selecting the incorrect legal vehicle leads to years of stalled administrative processing. The table below delineates the essential comparative metrics under Bangladeshi statutory law:</p><div class=\"overflow-x-auto my-6\"><table class=\"w-full text-left border-collapse border border-slate-300 dark:border-slate-700 text-sm\"><thead><tr class=\"bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-100\"><th class=\"border border-slate-300 dark:border-slate-700 p-3\">Legal Instrument</th><th class=\"border border-slate-300 dark:border-slate-700 p-3\">Applicable Statute</th><th class=\"border border-slate-300 dark:border-slate-700 p-3\">Asset Coverage</th><th class=\"border border-slate-300 dark:border-slate-700 p-3\">Target Beneficiary</th><th class=\"border border-slate-300 dark:border-slate-700 p-3\">Estimated Timeline</th></tr></thead><tbody><tr><td class=\"border border-slate-300 dark:border-slate-700 p-3 font-semibold\">Probate of Will</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Succession Act 1925, Sec 276</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">All Immovable Land & Movable Assets</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Named Executor in a written Will</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">6 to 12 months (uncontested)</td></tr><tr><td class=\"border border-slate-300 dark:border-slate-700 p-3 font-semibold\">Letters of Administration</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Succession Act 1925, Sec 278</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Entire Real & Personal Estate</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Statutory Heirs (Intestate / No Executor)</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">8 to 14 months</td></tr><tr><td class=\"border border-slate-300 dark:border-slate-700 p-3 font-semibold\">Succession Certificate</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Succession Act 1925, Sec 370</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Debts, Bank Deposits & Securities ONLY</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Surviving Legal Heirs</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">3 to 6 months</td></tr><tr><td class=\"border border-slate-300 dark:border-slate-700 p-3 font-semibold\">Civil Partition Suit</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Partition Act 1893 & CPC 1908</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Immovable Real Estate Partition & Demarcation</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Co-sharer Heirs in Joint Title</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">18 to 36+ months</td></tr></tbody></table></div>"
+    },
+    {
+      "id": "nrb-remote-probate-procedure",
+      "title": "7. How NRBs Living in USA, UK, Canada & Australia Can File Remotely",
+      "content": "<p>Expatriates and dual nationals residing in London, New York, Toronto, or Sydney are not legally required to reside in Bangladesh throughout probate proceedings. The law provides an established extraterritorial mechanism under the <strong>Power of Attorney Act 2012</strong> and the <strong>Power of Attorney Rules 2015</strong>:</p><ul><li><strong>Drafting the Special Power of Attorney:</strong> A comprehensive Special Power of Attorney must be drafted specifically empowering a trusted relative or an enrolled Supreme Court advocate in Bangladesh to file the probate petition, depose on behalf of the principal, and sign verification affidavits.</li><li><strong>Consular Attestation Abroad:</strong> The foreign-based executor must execute the Power of Attorney before the Consular Officer at the Bangladesh Embassy or High Commission in their host country (e.g., London High Commission, Bangladesh Consulate in New York or Los Angeles, Ottawa or Canberra missions).</li><li><strong>Home Ministry & DC Office Stamping:</strong> Once mailed to Bangladesh, the power of attorney document must be counter-attested by the Ministry of Foreign Affairs (Consular Wing) in Segunbagicha, Dhaka, and subsequently validated and stamped by the Collector (Deputy Commissioner's Treasury Branch) within statutory deadlines.</li><li><strong>Appearance via Video Conferencing:</strong> Under current judicial digitalization circulars issued by the Supreme Court of Bangladesh, witness depositions can in exceptional cases be requested via recorded digital conferencing upon formal court application.</li></ul>"
+    },
+    {
+      "id": "executor-liabilities-and-inventory",
+      "title": "8. Executor Rights, Estate Duties, and Submitting the 6-Month Inventory",
+      "content": "<p>A grant of probate does not make the executor the absolute owner of the estate; rather, it clothes them with fiduciary responsibility as a trustee for all legitimate beneficiaries. Under Section 317 of the Succession Act 1925, the executor assumes stringent statutory duties:</p><ul><li><strong>Filing of Formal Inventory (6 Months):</strong> Within six (6) months from the grant of probate or letters of administration, the executor must exhibit in court a complete, itemized inventory containing an accurate appraisal of all real and personal property, credits, and debts of the deceased.</li><li><strong>Filing Final Estate Accounts (1 Year):</strong> Within twelve (12) months from the date of the grant, the administrator must submit a verified formal account of the estate, displaying all collections, disbursements, tax payments, and distributed shares to beneficiaries.</li><li><strong>Devastavit & Civil Liability:</strong> If an executor wastes estate funds, sells land below market price without beneficiary authorization, or misappropriates bank balances, they are personally liable under Section 368 for <em>devastavit</em> (misapplication of assets) and can face immediate revocation of probate under Section 263, alongside criminal breach of trust proceedings under Section 406 of the Penal Code.</li></ul>"
+    },
+    {
+      "id": "common-pitfalls-and-frauds",
+      "title": "9. Common Pitfalls: Forged Wills, Unattested Codicils & Mutation Roadblocks",
+      "content": "<p>Substantial delays and litigation disasters occur when estates stumble into predictable legal potholes:</p><ul><li><strong>Relying on Unregistered Wills:</strong> While an unregistered will is not automatically void under the Succession Act, it faces severe evidentiary suspicion. Sibling rivals frequently challenge unregistered wills alleging mental illness or post-mortem forgery. Registering a will during the testator's lifetime at the Sub-Registry Office establishes almost incontrovertible legal validity.</li><li><strong>Failing to Prove Attestation (Section 68, Evidence Act):</strong> Under Section 68 of the Evidence Act 1872, a Will cannot be used as evidence until at least one attesting witness has been called to prove its execution. If all attesting witnesses are deceased or untraceable, Section 69 mandates proving the handwriting of at least one witness and the signature of the testator through forensic handwriting examination.</li><li><strong>Attempting Land Sale Before AC (Land) Mutation:</strong> Merely holding a certified Probate decree does not instantly allow an executor to sell land. The executor must first submit the probate decree along with the original title deed to the Assistant Commissioner (Land) to mutate the property in the executor's name (or the beneficiaries' names) in the online Namjari portal and clear all ground rents (Khajna).</li></ul>"
+    },
+    {
+      "id": "practical-case-study",
+      "title": "10. Real-Life Expat Case Study: Resolving Disputed Gulshan Property Probate",
+      "content": "<p>A senior physician who migrated to the United Kingdom passed away in Manchester, leaving behind a 5-katha residential plot in Gulshan-2, Dhaka, and commercial bank accounts in Sonali Bank. In his registered 2018 Will executed in Dhaka, he appointed his London-based elder daughter as sole executrix, bequeathing the property equally between his two daughters while explicitly excluding an estranged son who had previously taken his entire UK share during lifetime.</p><p>Upon the physician's death, the London-based executrix engaged our chamber. Our legal team executed the following strategic workflow:</p><ol><li>Drafted a Special Power of Attorney in London, authenticated by the Bangladesh High Commission, London, and cleared MOFA and DC Dhaka stamping.</li><li>Filed a petition for Probate under Section 276 before the District Judge Court, Dhaka (Probate Misc. Case No. 84/2024).</li><li>Secured personal appearance affidavits from two retired senior civil servants in Dhaka who had signed as attesting witnesses to the 2018 registered Will.</li><li>Published mandatory general citations in The Daily Star and Prothom Alo. When the estranged son attempted to lodge an informal complaint with the Gulshan AC (Land), our advocates established before the court that no formal Caveat had been instituted within the statutory 30-day window.</li><li>Calculated the maximum statutory court fee cap, deposited the treasury challan, executed the judicial administrative bond, and secured the final sealed Grant of Probate within 7 months.</li><li>Successfully executed online mutation and tax clearances, enabling the overseas daughters to legally lease out the commercial ground floor to a multinational bank with full repatriation rights.</li></ol>"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is probate mandatory for all wills in Bangladesh?",
+      "answer": "Yes. Under Section 213 of the Succession Act 1925, no right as executor or legatee can be established in any Court of Justice unless a Court of competent jurisdiction has granted probate of the will under which the right is claimed or has granted letters of administration. Without probate, title cannot be transferred at the Sub-Registry office."
+    },
+    {
+      "question": "Can a Muslim in Bangladesh give their entire property away through a will?",
+      "answer": "No. Under Muslim personal law in Bangladesh, a Muslim can bequeath at most one-third (1/3) of their net surplus estate to persons who are not their natural legal heirs. Any bequest exceeding one-third, or any bequest made to a legal heir, is legally invalid unless all other natural heirs grant explicit consent after the testator has died."
+    },
+    {
+      "question": "What is the difference between Probate and Letters of Administration?",
+      "answer": "A Probate is granted exclusively to an executor named inside a valid Will. Letters of Administration are granted when the deceased died without leaving a Will (intestate), or when the Will failed to nominate an executor, or the nominated executor died or refused to act."
+    },
+    {
+      "question": "Can an NRB living in the US or UK apply for probate without traveling to Dhaka?",
+      "answer": "Yes. Under the Power of Attorney Act 2012, an overseas executor can execute a Special Power of Attorney before the Bangladesh Embassy or High Commission abroad, appointing an attorney or Supreme Court advocate in Bangladesh to file the petition, manage citations, and complete all court proceedings."
+    },
+    {
+      "question": "What happens if someone files a Caveat objecting to the Will?",
+      "answer": "If an heir or interested person files a Caveat within the citation window, the non-contentious probate proceeding is immediately converted into a regular Testamentary Civil Suit under Section 295 of the Succession Act. The court then conducts a formal trial with evidence, cross-examination, and judicial judgment."
+    },
+    {
+      "question": "How long does it take to obtain a Probate decree in Dhaka District Court?",
+      "answer": "For an uncontested probate case with cooperative attesting witnesses, the process typically takes between 6 to 10 months in Dhaka. If an objection or Caveat is lodged, converting it into a contentious suit, litigation can take 18 to 36 months depending on court backlogs."
+    },
+    {
+      "question": "Does a Succession Certificate allow heirs to take possession of deceased family land?",
+      "answer": "No. Section 370 of the Succession Act explicitly restricts Succession Certificates to debts and securities (bank funds, stock shares, national savings certificates). It confers zero authority or title over immovable landed property. Immovable land requires Probate, Letters of Administration, or a Partition Suit."
+    },
+    {
+      "question": "What are the court fees for probate in Bangladesh?",
+      "answer": "Court fees for probate and letters of administration are assessed ad valorem based on the net valuation of the estate under the Court-Fees Act 1870, subject to statutory maximum caps and exemptions for low-value estates. A treasury challan must be deposited prior to the final grant being issued."
+    }
+  ],
+  "relatedServiceLinks": [
+    {
+      "title": "Supreme Court Legal Services",
+      "url": "/services/supreme-court-lawyer"
+    },
+    {
+      "title": "Land & Property Dispute Lawyer",
+      "url": "/services/land-lawyer"
+    },
+    {
+      "title": "NRB Legal Assistance & Power of Attorney",
+      "url": "/nrb-legal-help"
+    },
+    {
+      "title": "Civil Litigation & Partition Suits",
+      "url": "/services/civil-litigation-lawyer"
+    },
+    {
+      "title": "Corporate & Inheritance Vetting",
+      "url": "/services/company-corporate-lawyer"
+    }
+  ],
+  "lang": "en"
+}

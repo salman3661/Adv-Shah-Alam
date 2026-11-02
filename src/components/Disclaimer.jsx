@@ -16,9 +16,9 @@ const Disclaimer = ({ lang = 'en' }) => {
                 role="note"
                 aria-label="আইনি দাবিত্যাগ"
                 style={{
-                    background: 'linear-gradient(135deg, rgba(245,166,35,0.08) 0%, rgba(245,166,35,0.04) 100%)',
-                    border: '1px solid rgba(245,166,35,0.35)',
-                    borderLeft: '4px solid #f5a623',
+                    background: 'var(--gold-subtle)',
+                    border: '1px solid var(--gold-border)',
+                    borderLeft: '4px solid var(--gold)',
                     borderRadius: '0.75rem',
                     padding: '1rem 1.25rem',
                     marginBottom: '2rem',
@@ -27,10 +27,10 @@ const Disclaimer = ({ lang = 'en' }) => {
                     gap: '0.75rem',
                 }}
             >
-                <AlertTriangle size={18} style={{ color: '#f5a623', flexShrink: 0, marginTop: '2px' }} />
+                <AlertTriangle size={18} style={{ color: 'var(--gold)', flexShrink: 0, marginTop: '2px' }} />
                 <div style={{ fontSize: '0.8125rem', lineHeight: '1.6', color: 'var(--text-secondary)' }}>
                     <strong style={{ color: 'var(--text)', display: 'block', marginBottom: '2px' }}>
-                        ⚠️ আইনি দাবিত্যাগ (Legal Disclaimer)
+                        আইনি দাবিত্যাগ (Legal Disclaimer)
                     </strong>
                     এই নিবন্ধটি শুধুমাত্র সাধারণ তথ্যের উদ্দেশ্যে প্রদান করা হয়েছে এবং এটি আইনি পরামর্শ নয়।
                     আপনার নির্দিষ্ট পরিস্থিতির জন্য একজন যোগ্য আইনজীবীর সাথে পরামর্শ করুন।
@@ -49,9 +49,9 @@ const Disclaimer = ({ lang = 'en' }) => {
             role="note"
             aria-label="Legal disclaimer"
             style={{
-                background: 'linear-gradient(135deg, rgba(245,166,35,0.08) 0%, rgba(245,166,35,0.04) 100%)',
-                border: '1px solid rgba(245,166,35,0.35)',
-                borderLeft: '4px solid #f5a623',
+                background: 'var(--gold-subtle)',
+                border: '1px solid var(--gold-border)',
+                borderLeft: '4px solid var(--gold)',
                 borderRadius: '0.75rem',
                 padding: '1rem 1.25rem',
                 marginBottom: '2rem',
@@ -60,7 +60,7 @@ const Disclaimer = ({ lang = 'en' }) => {
                 gap: '0.75rem',
             }}
         >
-            <Scale size={18} style={{ color: '#f5a623', flexShrink: 0, marginTop: '2px' }} />
+            <Scale size={18} style={{ color: 'var(--gold)', flexShrink: 0, marginTop: '2px' }} />
             <div style={{ fontSize: '0.8125rem', lineHeight: '1.6', color: 'var(--text-secondary)' }}>
                 <strong style={{ color: 'var(--text)', display: 'block', marginBottom: '2px' }}>
                     Legal Disclaimer

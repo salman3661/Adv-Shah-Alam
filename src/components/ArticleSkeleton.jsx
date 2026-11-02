@@ -13,7 +13,7 @@ const ArticleSkeleton = ({ meta, lang = 'en' }) => {
         <div style={{ minHeight: '85vh', background: 'var(--bg)' }}>
             {/* ── HERO SKELETON ── */}
             <section style={{ background: 'var(--hero-bg)', paddingTop: '6.5rem', paddingBottom: '3.5rem', position: 'relative', overflow: 'hidden' }}>
-                <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: 'linear-gradient(90deg, var(--gold), rgba(198,167,94,0.3))' }} />
+                <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: 'var(--gold)' }} />
                 <div className="bp-hero-container" style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 1.25rem' }}>
                     {/* Back link */}
                     <div style={{ marginBottom: '1.25rem' }}>
@@ -84,7 +84,7 @@ const ArticleSkeleton = ({ meta, lang = 'en' }) => {
                     <div style={{
                         padding: '1.5rem',
                         borderRadius: '1rem',
-                        background: 'linear-gradient(135deg, rgba(198,167,94,0.06), rgba(198,167,94,0.02))',
+                        background: 'rgba(198,167,94,0.06)',
                         border: '1.5px solid rgba(198,167,94,0.18)',
                         display: 'flex',
                         flexDirection: 'column',

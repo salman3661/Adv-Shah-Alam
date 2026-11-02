@@ -14,7 +14,7 @@ const FAQItem = ({ question, answer }) => {
     const [open, setOpen] = useState(false);
     return (
         <div
-            className="border rounded-xl overflow-hidden transition-all"
+            className="border rounded-xl overflow-hidden transition-[color,background-color,border-color,box-shadow,opacity,transform]"
             style={{ borderColor: 'var(--card-border)' }}
         >
             <button
@@ -363,13 +363,13 @@ const AdvocatePage = () => {
                         <ol className="flex items-center gap-2" style={{ color: 'var(--hero-muted)' }}>
                             <li><Link to="/" className="hover:underline" style={{ color: 'var(--hero-text-2)' }}>Home</Link></li>
                             <li aria-hidden="true">/</li>
-                            <li aria-current="page" style={{ color: 'var(--gold)' }}>Advocate Md. Shah Alam</li>
+                            <li aria-current="page" style={{ color: 'var(--footer-gold)' }}>Advocate Md. Shah Alam</li>
                         </ol>
                     </nav>
 
                     <div className="grid md:grid-cols-12 gap-8 lg:gap-12 items-center">
                         <div className="md:col-span-7">
-                            <span className="label-accent block mb-4" style={{ color: 'var(--gold)' }}>
+                            <span className="label-accent block mb-4" style={{ color: 'var(--footer-gold)' }}>
                                 Official Profile · Uttara, Dhaka
                             </span>
                             <h1
@@ -378,7 +378,7 @@ const AdvocatePage = () => {
                             >
                                 Advocate Md. Shah Alam – Trusted Lawyer in Bangladesh
                             </h1>
-                            <p className="text-lg md:text-xl font-medium mb-6" style={{ color: 'var(--accent)' }}>
+                            <p className="text-lg md:text-xl font-medium mb-6" style={{ color: 'var(--footer-gold)' }}>
                                 Lawyer in Bangladesh · Supreme Court of Bangladesh
                             </p>
                             <p className="text-base leading-relaxed mb-8" style={{ color: 'var(--hero-text-2)' }}>
@@ -422,20 +422,21 @@ const AdvocatePage = () => {
                                     <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '36%', background: 'linear-gradient(to top, rgba(10,17,36,0.8) 0%, transparent 100%)' }} />
                                     <div style={{
                                         position: 'absolute', bottom: '0.85rem', right: '0.85rem',
-                                        background: 'linear-gradient(135deg, #1A3FBF 0%, #3B5FD4 100%)',
-                                        color: '#fff', fontSize: '0.7rem', fontWeight: 700,
+                                        background: '#0A1424',
+                                        border: '1px solid rgba(204, 168, 86, 0.45)',
+                                        color: '#F8FAFC', fontSize: '0.7rem', fontWeight: 700,
                                         padding: '0.35rem 0.8rem', borderRadius: '0.5rem',
-                                        boxShadow: '0 3px 10px rgba(26,63,191,0.4)',
+                                        boxShadow: '0 4px 12px rgba(0, 0, 0, 0.35)',
                                     }}>
                                         Supreme Court of Bangladesh
                                     </div>
                                     <div style={{
                                         position: 'absolute', top: '0.85rem', left: '0.85rem',
-                                        background: 'rgba(10,17,36,0.8)', backdropFilter: 'blur(10px)',
+                                        background: 'rgba(10, 20, 36, 0.84)', backdropFilter: 'blur(10px)',
                                         WebkitBackdropFilter: 'blur(10px)',
-                                        color: '#C6A75E', fontSize: '0.65rem', fontWeight: 700,
+                                        color: '#CCA856', fontSize: '0.65rem', fontWeight: 700,
                                         padding: '0.35rem 0.7rem', borderRadius: '0.5rem',
-                                        border: '1px solid rgba(198,167,94,0.35)',
+                                        border: '1px solid rgba(204, 168, 86, 0.38)',
                                     }}>
                                         10+ Years Experience
                                     </div>
@@ -563,7 +564,7 @@ const AdvocatePage = () => {
                                 href="https://maps.app.goo.gl/M3NXMwW3xkp2TE3h8"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="flex items-center gap-2 text-sm px-4 py-3 rounded-xl transition-all hover:opacity-80"
+                                className="flex items-center gap-2 text-sm px-4 py-3 rounded-xl transition-[color,background-color,border-color,box-shadow,opacity,transform] hover:opacity-80"
                                 style={{
                                     background: 'var(--card-bg)',
                                     border: '1px solid var(--card-border)',
@@ -596,7 +597,7 @@ const AdvocatePage = () => {
                             <Link
                                 key={i}
                                 to={service.path}
-                                className="glass-card p-6 rounded-xl group no-underline flex flex-col gap-2 transition-all hover:shadow-lg"
+                                className="glass-card p-6 rounded-xl group no-underline flex flex-col gap-2 transition-[color,background-color,border-color,box-shadow,opacity,transform] hover:shadow-lg"
                             >
                                 <h3
                                     className="font-bold text-base group-hover:underline decoration-dotted"
@@ -660,7 +661,7 @@ const AdvocatePage = () => {
                                 </p>
                             </div>
                             <div className="mt-4 pt-3 border-t text-xs font-medium" style={{ borderColor: 'var(--card-border)', color: 'var(--accent)' }}>
-                                ⚖ Assisting Defence Counsel
+                                Assisting Defence Counsel
                             </div>
                         </div>
 
@@ -686,7 +687,7 @@ const AdvocatePage = () => {
                                 </p>
                             </div>
                             <div className="mt-4 pt-3 border-t text-xs font-medium" style={{ borderColor: 'var(--card-border)', color: 'var(--gold)' }}>
-                                ⚖ Enrolled Supreme Court Advocate
+                                Enrolled Supreme Court Advocate
                             </div>
                         </div>
 
@@ -712,7 +713,7 @@ const AdvocatePage = () => {
                                 </p>
                             </div>
                             <div className="mt-4 pt-3 border-t text-xs font-medium" style={{ borderColor: 'var(--card-border)', color: 'var(--accent)' }}>
-                                ⚖ Lead Trial & Injunction Counsel
+                                Lead Trial & Injunction Counsel
                             </div>
                         </div>
                     </div>
@@ -866,7 +867,7 @@ const AdvocatePage = () => {
                     <div
                         className="rounded-2xl p-10 text-center"
                         style={{
-                            background: 'linear-gradient(135deg, var(--hero-bg) 0%, var(--hero-surface) 100%)',
+                            background: 'var(--hero-bg)',
                             border: '1px solid var(--hero-border)',
                         }}
                     >

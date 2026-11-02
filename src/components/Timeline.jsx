@@ -142,7 +142,7 @@ const Timeline = ({ isHome = false, lang = 'en' }) => {
         <section
             id="timeline"
             className="py-24 relative overflow-hidden"
-            style={{ background: isHome ? 'var(--bg)' : 'transparent' }}
+            style={{ background: isHome ? 'var(--surface)' : 'transparent' }}
         >
             <div className="container mx-auto px-6 max-w-5xl relative z-10">
                 {/* Header */}

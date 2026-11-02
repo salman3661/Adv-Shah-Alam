@@ -8,25 +8,16 @@ const commitmentsEn = [
         icon: Heart,
         title: 'Free Initial Consultation',
         desc: 'We offer a free first consultation for families facing financial hardship. Everyone deserves access to justice.',
-        color: 'rgba(239,68,68,0.08)',
-        borderColor: 'rgba(239,68,68,0.2)',
-        iconColor: '#dc2626',
     },
     {
         icon: Users,
         title: 'Community Legal Aid',
         desc: 'We run pro bono legal aid camps and educate everyday citizens on their fundamental legal rights.',
-        color: 'rgba(26,63,191,0.08)',
-        borderColor: 'rgba(26,63,191,0.2)',
-        iconColor: 'var(--accent)',
     },
     {
         icon: BookOpen,
         title: 'Mentoring Young Lawyers',
         desc: 'I mentor junior advocates entering the bar. A stronger legal profession leads to a stronger justice system.',
-        color: 'rgba(198,167,94,0.08)',
-        borderColor: 'rgba(198,167,94,0.2)',
-        iconColor: '#b45309',
     },
 ];
 
@@ -35,25 +26,16 @@ const commitmentsBn = [
         icon: Heart,
         title: 'বিনামূল্যে প্রাথমিক পরামর্শ',
         desc: 'আর্থিক সংকটে থাকা পরিবারের জন্য আমরা প্রথম পরামর্শ বিনামূল্যে দিই। কারণ ন্যায়বিচার পাওয়ার অধিকার সবার আছে।',
-        color: 'rgba(239,68,68,0.08)',
-        borderColor: 'rgba(239,68,68,0.2)',
-        iconColor: '#dc2626',
     },
     {
         icon: Users,
         title: 'সমাজসেবা ও আইনি সচেতনতা',
         desc: 'আমরা নিয়মিত বিনামূল্যে আইনি সহায়তা শিবির পরিচালনা করি এবং সাধারণ মানুষকে তাদের আইনি অধিকার সম্পর্কে সচেতন করি।',
-        color: 'rgba(26,63,191,0.08)',
-        borderColor: 'rgba(26,63,191,0.2)',
-        iconColor: 'var(--accent)',
     },
     {
         icon: BookOpen,
         title: 'নতুন আইনজীবীদের পরামর্শদাতা',
         desc: 'আইন পেশায় নতুনদের গাইড করা আমার দায়িত্ব মনে করি। কারণ একটি শক্তিশালী আইন পেশা মানে শক্তিশালী বিচার ব্যবস্থা।',
-        color: 'rgba(198,167,94,0.08)',
-        borderColor: 'rgba(198,167,94,0.2)',
-        iconColor: '#b45309',
     },
 ];
 
@@ -67,12 +49,6 @@ const HumanStory = ({ lang = 'en' }) => {
             className="py-20 relative overflow-hidden"
             style={{ background: 'var(--surface)' }}
         >
-            {/* Background glow */}
-            <div
-                className="absolute left-0 bottom-0 w-1/3 h-1/2 rounded-full -z-10 pointer-events-none"
-                style={{ background: 'radial-gradient(circle, var(--accent-subtle) 0%, transparent 70%)' }}
-            />
-
             <div className="container mx-auto px-6 max-w-6xl">
                 {/* Header */}
                 <div className="text-center mb-16">
@@ -91,7 +67,7 @@ const HumanStory = ({ lang = 'en' }) => {
                     </motion.h2>
                     <motion.div
                         initial={{ scaleX: 0 }} whileInView={{ scaleX: 1 }} viewport={{ once: true }} transition={{ delay: 0.2 }}
-                        className="w-24 h-1 mx-auto rounded-full" style={{ background: 'var(--accent)' }}
+                        className="divider-accent mx-auto"
                     />
                     <motion.p
                         initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.25 }}
@@ -110,12 +86,11 @@ const HumanStory = ({ lang = 'en' }) => {
                             key={i}
                             initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }} transition={{ delay: i * 0.1 }}
-                            className="rounded-2xl p-6"
-                            style={{ background: item.color, border: `1px solid ${item.borderColor}` }}
+                            className="glass-card p-7"
                         >
                             <div
                                 className="w-11 h-11 rounded-xl flex items-center justify-center mb-4"
-                                style={{ background: 'var(--card-bg)', color: item.iconColor }}
+                                style={{ background: 'var(--accent-subtle)', color: 'var(--accent)', border: '1px solid var(--card-border)' }}
                             >
                                 <item.icon size={22} />
                             </div>
@@ -135,11 +110,12 @@ const HumanStory = ({ lang = 'en' }) => {
                     viewport={{ once: true }} transition={{ delay: 0.3 }}
                     className="rounded-2xl p-8 md:p-12 text-center"
                     style={{
-                        background: 'linear-gradient(135deg, rgba(26,63,191,0.07) 0%, rgba(198,167,94,0.05) 100%)',
-                        border: '1px solid rgba(26,63,191,0.15)',
+                        background: 'var(--surface-2)',
+                        border: '1px solid var(--card-border)',
+                        boxShadow: 'var(--shadow-sm)',
                     }}
                 >
-                    <Scale size={36} className="mx-auto mb-5" style={{ color: 'var(--accent)', opacity: 0.7 }} />
+                    <Scale size={34} className="mx-auto mb-5" style={{ color: 'var(--gold)' }} />
                     <blockquote
                         className="text-lg md:text-xl font-serif italic leading-relaxed mb-6 max-w-3xl mx-auto"
                         style={{ color: 'var(--text-2)', fontFamily: isBn ? 'inherit' : "Georgia, serif" }}

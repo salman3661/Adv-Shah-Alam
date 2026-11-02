@@ -56,7 +56,7 @@ const FAQ = ({ lang = 'en' }) => {
                         {faqs.map((faq, i) => (
                             <motion.div key={i}
                                 initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.06 }}
-                                className="glass-card overflow-hidden transition-all duration-200 border"
+                                className="glass-card overflow-hidden transition-[color,background-color,border-color,box-shadow,opacity,transform] duration-200 border"
                                 style={{ borderColor: openIndex === i ? 'var(--accent)' : 'var(--card-border)' }}
                             >
                                 <button onClick={() => toggle(i)}

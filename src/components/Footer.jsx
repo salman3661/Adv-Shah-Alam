@@ -41,42 +41,42 @@ const Footer = () => {
         { name: isBn ? 'ব্লগ' : 'Blog', path: isBn ? '/bn/blog' : '/blog', id: null },
         { name: isBn ? 'প্রবাসীদের আইনি সহায়তা (NRB)' : 'NRB Legal Help', path: '/nrb-legal-help', id: null },
         { name: isBn ? 'যোগাযোগ' : 'Contact Us', path: isBn ? '/bn/contact' : '/contact', id: null },
-        { name: isBn ? '⭐ গুগল রিভিউ দিন' : '⭐ Leave a Review', path: '/review', id: null },
+        { name: isBn ? 'গুগল রিভিউ দিন' : 'Leave a Review', path: '/review', id: null },
     ];
 
-    const linkClass = "block text-sm transition-colors duration-200 hover:underline decoration-dotted";
+    const linkClass = "block text-sm transition-colors duration-200 hover:underline decoration-dotted hover:text-white";
 
     return (
-        <footer className="py-16 transition-colors" style={{ background: 'var(--surface)', borderTop: '1px solid var(--card-border)' }}>
+        <footer className="pt-16 pb-28 md:pb-16 transition-colors" style={{ background: 'var(--footer-bg)', borderTop: '2px solid var(--footer-border)', color: 'var(--footer-text-2)' }}>
             <div className="container mx-auto px-6 max-w-7xl">
                 <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
 
                     {/* Brand */}
                     <div className="sm:col-span-2 lg:col-span-1">
-                        <h3 className="font-serif font-bold text-2xl mb-1" style={{ color: 'var(--text)', fontFamily: isBn ? 'inherit' : "Georgia, serif" }}>
+                        <h3 className="font-serif font-bold text-2xl mb-1" style={{ color: 'var(--footer-text)', fontFamily: isBn ? 'inherit' : "Georgia, serif" }}>
                             {isBn ? 'এডভোকেট মোঃ শাহ আলম' : 'Adv. Md. Shah Alam'}
                         </h3>
-                        <p className="text-sm font-semibold mb-3" style={{ color: 'var(--accent)' }}>
+                        <p className="text-sm font-semibold mb-3" style={{ color: 'var(--footer-gold)' }}>
                             {isBn ? 'বাংলাদেশ সুপ্রীম কোর্ট' : 'Supreme Court of Bangladesh'}
                         </p>
-                        <p className="text-xs leading-relaxed mb-4" style={{ color: 'var(--text-muted)' }}>
+                        <p className="text-xs leading-relaxed mb-4" style={{ color: 'var(--footer-muted)' }}>
                             {isBn
                                 ? 'এডভোকেট মোঃ শাহ আলম — ঢাকা উত্তরা ও সুপ্রীম কোর্টের একজন অভিজ্ঞ আইনজীবী। ১০ বছরেরও বেশি সময় ধরে তিনি ফৌজদারি, পারিবারিক, ভূমি ও করপোরেট আইনে সফলতার সাথে আইনি সেবা দিয়ে আসছেন।'
                                 : siteInfo.footerBio}
                         </p>
-                        <div className="flex items-start gap-2 text-xs mb-2" style={{ color: 'var(--text-muted)' }}>
-                            <MapPin size={12} className="mt-0.5 flex-shrink-0" style={{ color: 'var(--gold)' }} />
+                        <div className="flex items-start gap-2 text-xs mb-2" style={{ color: 'var(--footer-text-2)' }}>
+                            <MapPin size={13} className="mt-0.5 flex-shrink-0" style={{ color: 'var(--footer-gold)' }} />
                             {isBn ? 'বাড়ি ৪৬, রাস্তা ৬/বি, সেক্টর ১২, উত্তরা, ঢাকা-১২৩০' : siteInfo.chamberAddress}
                         </div>
-                        <div className="flex items-center gap-2 text-xs" style={{ color: 'var(--text-muted)' }}>
-                            <Phone size={12} className="flex-shrink-0" style={{ color: 'var(--gold)' }} />
+                        <div className="flex items-center gap-2 text-xs" style={{ color: 'var(--footer-text-2)' }}>
+                            <Phone size={13} className="flex-shrink-0" style={{ color: 'var(--footer-gold)' }} />
                             {CALL_DISPLAY}
                         </div>
                     </div>
 
                     {/* Quick Links */}
                     <div>
-                        <h4 className="font-bold text-xs uppercase tracking-wider mb-4" style={{ color: 'var(--text)' }}>
+                        <h4 className="font-bold text-xs uppercase tracking-wider mb-4" style={{ color: 'var(--footer-gold)' }}>
                             {isBn ? 'সহজ লিঙ্ক' : 'Quick Links'}
                         </h4>
                         <nav className="space-y-2">
@@ -99,7 +99,7 @@ const Footer = () => {
                                                 }
                                             }}
                                             className={linkClass}
-                                            style={{ color: 'var(--text-2)' }}
+                                            style={{ color: 'var(--footer-text-2)' }}
                                         >
                                             {link.name}
                                         </a>
@@ -107,7 +107,7 @@ const Footer = () => {
                                 }
                                 return (
                                     <Link key={link.path} to={link.path}
-                                        className={linkClass} style={{ color: 'var(--text-2)' }}>{link.name}</Link>
+                                        className={linkClass} style={{ color: 'var(--footer-text-2)' }}>{link.name}</Link>
                                 );
                             })}
                         </nav>
@@ -115,12 +115,12 @@ const Footer = () => {
 
                     {/* Services */}
                     <div>
-                        <h4 className="font-bold text-xs uppercase tracking-wider mb-4" style={{ color: 'var(--text)' }}>
+                        <h4 className="font-bold text-xs uppercase tracking-wider mb-4" style={{ color: 'var(--footer-gold)' }}>
                             {isBn ? 'আইনি সেবাসমূহ' : 'Practice Areas'}
                         </h4>
                         <nav className="space-y-2">
                             {serviceLinks.map((link) => (
-                                <Link key={link.path} to={link.path} className={linkClass} style={{ color: 'var(--text-2)' }}>
+                                <Link key={link.path} to={link.path} className={linkClass} style={{ color: 'var(--footer-text-2)' }}>
                                     {link.name}
                                 </Link>
                             ))}
@@ -129,62 +129,62 @@ const Footer = () => {
 
                     {/* Connect */}
                     <div>
-                        <h4 className="font-bold text-xs uppercase tracking-wider mb-4" style={{ color: 'var(--text)' }}>
+                        <h4 className="font-bold text-xs uppercase tracking-wider mb-4" style={{ color: 'var(--footer-gold)' }}>
                             {isBn ? 'যোগাযোগ করুন' : 'Connect With Us'}
                         </h4>
                         <div className="space-y-2 mb-5">
-                            <a href={telLink()} className="flex items-center gap-2 text-sm" style={{ color: 'var(--text-2)' }}>
-                                <Phone size={14} style={{ color: 'var(--accent)' }} />{CALL_DISPLAY}
+                            <a href={telLink()} className="flex items-center gap-2 text-sm hover:underline" style={{ color: 'var(--footer-text-2)' }}>
+                                <Phone size={14} style={{ color: 'var(--footer-gold)' }} />{CALL_DISPLAY}
                             </a>
-                            <a href={`mailto:${siteInfo.email}`} className="flex items-center gap-2 text-sm" style={{ color: 'var(--text-2)' }}>
-                                <Mail size={14} style={{ color: 'var(--accent)' }} />{siteInfo.email}
+                            <a href={`mailto:${siteInfo.email}`} className="flex items-center gap-2 text-sm hover:underline" style={{ color: 'var(--footer-text-2)' }}>
+                                <Mail size={14} style={{ color: 'var(--footer-gold)' }} />{siteInfo.email}
                             </a>
                         </div>
-                        <div className="flex gap-2 mb-5">
+                        <div className="flex gap-2.5 mb-5">
                             <a href={waLink()} target="_blank" rel="noopener noreferrer"
                                 aria-label="Chat on WhatsApp"
-                                className="w-9 h-9 rounded-xl flex items-center justify-center hover:scale-110 transition-transform shadow-sm"
-                                style={{ background: 'var(--card-bg)', border: '1px solid var(--card-border)' }}>
-                                <MessageCircle size={16} className="icon-whatsapp" />
+                                className="w-10 h-10 rounded-xl flex items-center justify-center transition-colors hover:border-[#CCA856]"
+                                style={{ background: 'var(--footer-surface)', border: '1px solid var(--footer-divider)', color: 'var(--footer-text-2)' }}>
+                                <MessageCircle size={16} />
                             </a>
                             <a href={siteInfo.facebookUrl} target="_blank" rel="noopener noreferrer"
                                 aria-label="Follow us on Facebook"
-                                className="w-9 h-9 rounded-xl flex items-center justify-center hover:scale-110 transition-transform shadow-sm"
-                                style={{ background: 'var(--card-bg)', border: '1px solid var(--card-border)' }}>
-                                <Facebook size={16} className="icon-facebook" />
+                                className="w-10 h-10 rounded-xl flex items-center justify-center transition-colors hover:border-[#CCA856]"
+                                style={{ background: 'var(--footer-surface)', border: '1px solid var(--footer-divider)', color: 'var(--footer-text-2)' }}>
+                                <Facebook size={16} />
                             </a>
                             {siteInfo.linkedinUrl && (
                                 <a href={siteInfo.linkedinUrl} target="_blank" rel="noopener noreferrer"
                                     aria-label="Connect on LinkedIn"
-                                    className="w-9 h-9 rounded-xl flex items-center justify-center hover:scale-110 transition-transform shadow-sm text-[#0A66C2]"
-                                    style={{ background: 'var(--card-bg)', border: '1px solid var(--card-border)' }}>
+                                    className="w-10 h-10 rounded-xl flex items-center justify-center transition-colors hover:border-[#CCA856]"
+                                    style={{ background: 'var(--footer-surface)', border: '1px solid var(--footer-divider)', color: 'var(--footer-text-2)' }}>
                                     <Linkedin size={16} />
                                 </a>
                             )}
                         </div>
                         <a href={siteInfo.googleMapsUrl} target="_blank" rel="noopener noreferrer"
-                            className="inline-flex items-center gap-1.5 text-xs px-3 py-2 rounded-full transition-all hover:opacity-90 font-semibold"
-                            style={{ border: '1px solid var(--card-border)', color: 'var(--gold)', background: 'var(--card-bg)' }}>
-                            ⭐ {isBn ? 'গুগল বিজনেস প্রোফাইল' : 'Google Business Profile'}
+                            className="inline-flex items-center gap-1.5 text-xs px-3.5 py-2 rounded-full transition-colors hover:opacity-90 font-semibold"
+                            style={{ border: '1px solid var(--footer-border)', color: 'var(--footer-gold)', background: 'var(--footer-surface)' }}>
+                            {isBn ? 'গুগল বিজনেস প্রোফাইল' : 'Google Business Profile'}
                         </a>
                     </div>
                 </div>
 
                 {/* Bottom */}
                 <div className="pt-8 flex flex-col items-center justify-center text-center gap-4"
-                    style={{ borderTop: '1px solid var(--card-border)' }}>
+                    style={{ borderTop: '1px solid var(--footer-divider)' }}>
                     <div className="w-full flex flex-col items-center">
-                        <p className="text-xs mb-1" style={{ color: 'var(--text-muted)' }}>
+                        <p className="text-xs mb-1" style={{ color: 'var(--footer-text-2)' }}>
                             © {currentYear} {siteInfo.advocateName}. All Rights Reserved.
                         </p>
                         <div className="flex gap-3 justify-center mt-1">
                             <Link to="/privacy-policy" className="text-xs hover:underline"
-                                style={{ color: 'var(--text-muted)' }}>Privacy Policy</Link>
-                            <span className="text-xs" style={{ color: 'var(--text-muted)' }}>|</span>
+                                style={{ color: 'var(--footer-muted)' }}>Privacy Policy</Link>
+                            <span className="text-xs" style={{ color: 'var(--footer-muted)' }}>|</span>
                             <Link to="/terms-of-service" className="text-xs hover:underline"
-                                style={{ color: 'var(--text-muted)' }}>Terms of Service</Link>
+                                style={{ color: 'var(--footer-muted)' }}>Terms of Service</Link>
                         </div>
-                        <p className="text-xs mt-3 max-w-2xl mx-auto" style={{ color: 'var(--text-muted)', lineHeight: 1.6 }}>
+                        <p className="text-xs mt-3 max-w-2xl mx-auto" style={{ color: 'var(--footer-muted)', lineHeight: 1.6 }}>
                             {isBn ? (
                                 <><strong>দায়বর্জন:</strong> এই ওয়েবসাইটের তথ্য শুধুমাত্র সাধারণ জ্ঞানের উদ্দেশ্যে প্রদান করা হয়েছে এবং এটি আইনি পরামর্শ নয়। এই সাইট পরিদর্শন বা যোগাযোগ করলে আইনজীবী-মক্কেল সম্পর্ক তৈরি হয় না। আপনার নির্দিষ্ট পরিস্থিতির জন্য একজন যোগ্য আইনজীবীর পরামর্শ নিন।</>
                             ) : (

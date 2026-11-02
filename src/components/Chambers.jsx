@@ -71,7 +71,7 @@ const Chambers = ({ lang = 'en' }) => {
     const nextPhoto = () => setLightboxIdx(i => (i + 1) % GALLERY.length);
 
     return (
-        <section id="chambers" className="py-20 relative overflow-hidden" style={{ background: 'var(--surface)' }}>
+        <section id="chambers" className="py-20 relative overflow-hidden" style={{ background: 'var(--bg)' }}>
             <div className="container mx-auto px-6 max-w-6xl">
                 {/* Header */}
                 <div className="text-center mb-14">
@@ -85,7 +85,7 @@ const Chambers = ({ lang = 'en' }) => {
                         {isBn ? 'চেম্বারের ঠিকানা' : 'Chamber Locations'}
                     </motion.h2>
                     <motion.div initial={{ scaleX: 0 }} whileInView={{ scaleX: 1 }} viewport={{ once: true }} transition={{ delay: 0.2 }}
-                        className="w-20 h-1 mx-auto rounded-full" style={{ background: 'var(--accent)' }} />
+                        className="divider-accent mx-auto" />
                 </div>
 
                 {/* Photo Gallery */}
@@ -109,7 +109,7 @@ const Chambers = ({ lang = 'en' }) => {
                                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                                     style={{ display: 'block' }}
                                 />
-                                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/25 transition-all duration-300 flex items-center justify-center">
+                                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/25 transition-[color,background-color,border-color,box-shadow,opacity,transform] duration-300 flex items-center justify-center">
                                     <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-white text-xs font-bold px-3 py-1.5 rounded-full"
                                         style={{ background: 'rgba(0,0,0,0.5)', backdropFilter: 'blur(6px)' }}>
                                         {isBn ? 'বড় করে দেখুন' : 'View'}
@@ -139,7 +139,7 @@ const Chambers = ({ lang = 'en' }) => {
                                 <div className="absolute top-5 right-5">
                                     <span className="text-xs font-bold px-3 py-1 rounded-full"
                                         style={{ background: 'var(--accent-subtle)', color: 'var(--accent)' }}>
-                                        {isBn ? '★ প্রধান' : '★ Primary'}
+                                        {isBn ? 'প্রধান' : 'Primary'}
                                     </span>
                                 </div>
                             )}
@@ -198,7 +198,7 @@ const Chambers = ({ lang = 'en' }) => {
 
                             <div className="mt-6 pt-5" style={{ borderTop: '1px solid var(--divider)' }}>
                                 <a href={chamber.mapUrl} target="_blank" rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-2 text-sm font-semibold hover:gap-3 transition-all group"
+                                    className="inline-flex items-center gap-2 text-sm font-semibold hover:gap-3 transition-[color,background-color,border-color,box-shadow,opacity,transform] group"
                                     style={{ color: 'var(--accent)' }}>
                                     {isBn ? 'গুগল ম্যাপে দেখুন' : 'View on Google Maps'}
                                     <ExternalLink size={14} className="group-hover:translate-x-1 transition-transform" />

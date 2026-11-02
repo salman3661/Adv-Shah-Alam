@@ -99,7 +99,7 @@ const NrbLegalHelp = () => {
                         <a
                             href="tel:01712655546"
                             className="inline-flex items-center gap-2 px-5 py-3 rounded-xl font-bold text-sm"
-                            style={{ background: 'var(--accent)', color: '#fff' }}
+                            style={{ background: 'var(--btn-primary-bg)', color: '#fff' }}
                         >
                             <Phone size={16} /> Call 01712655546
                         </a>
@@ -108,7 +108,7 @@ const NrbLegalHelp = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-2 px-5 py-3 rounded-xl font-bold text-sm"
-                            style={{ background: '#16a34a', color: '#fff' }}
+                            style={{ background: 'var(--wa-green)', color: '#fff' }}
                         >
                             <MessageCircle size={16} /> WhatsApp
                         </a>
@@ -130,7 +130,7 @@ const NrbLegalHelp = () => {
                                         <Link
                                             key={post.slug}
                                             to={`/blog/${post.slug}`}
-                                            className="group block p-4 rounded-xl transition-all"
+                                            className="group block p-4 rounded-xl transition-[color,background-color,border-color,box-shadow,opacity,transform]"
                                             style={{ background: 'var(--surface)', border: '1px solid var(--card-border)' }}
                                         >
                                             <div className="text-xs font-bold mb-1" style={{ color: 'var(--accent)' }}>

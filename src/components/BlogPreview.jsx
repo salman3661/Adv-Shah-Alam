@@ -53,23 +53,23 @@ const BlogPreview = ({ lang: initialLang = 'en' }) => {
                         <div className="flex rounded-full overflow-hidden border" style={{ borderColor: 'var(--card-border)' }}>
                             <button
                                 onClick={() => setLang('en')}
-                                className="px-4 py-1.5 text-xs font-bold transition-all"
+                                className="px-4 py-1.5 text-xs font-bold transition-[color,background-color,border-color,box-shadow,opacity,transform]"
                                 style={activeLang === 'en'
-                                    ? { background: 'var(--accent)', color: '#fff' }
+                                    ? { background: 'var(--btn-primary-bg)', color: '#fff' }
                                     : { background: 'transparent', color: 'var(--text-muted)' }}
                                 aria-pressed={activeLang === 'en'}
                             >
-                                🇬🇧 English
+                                English
                             </button>
                             <button
                                 onClick={() => setLang('bn')}
-                                className="px-4 py-1.5 text-xs font-bold transition-all"
+                                className="px-4 py-1.5 text-xs font-bold transition-[color,background-color,border-color,box-shadow,opacity,transform]"
                                 style={activeLang === 'bn'
-                                    ? { background: 'var(--accent)', color: '#fff' }
+                                    ? { background: 'var(--btn-primary-bg)', color: '#fff' }
                                     : { background: 'transparent', color: 'var(--text-muted)' }}
                                 aria-pressed={activeLang === 'bn'}
                             >
-                                🇧🇩 বাংলা
+                                বাংলা
                             </button>
                         </div>
                         <Link
@@ -96,7 +96,7 @@ const BlogPreview = ({ lang: initialLang = 'en' }) => {
                         const cleanIntro = stripHtml(article.heroIntro);
                         return (
                             <article key={article.slug || i}
-                                className="glass-card overflow-hidden flex flex-col group transition-all duration-300 hover:-translate-y-1.5"
+                                className="glass-card overflow-hidden flex flex-col group transition-[color,background-color,border-color,box-shadow,opacity,transform] duration-300 hover:-translate-y-1.5"
                                 style={{ padding: 0, borderRadius: '1.15rem', border: '1.5px solid var(--card-border)' }}
                             >
                                 <Link to={`${linkBase}${article.slug}`} className="block relative overflow-hidden" style={{ height: '156px', background: '#0B1938' }} aria-hidden="true" tabIndex={-1}>

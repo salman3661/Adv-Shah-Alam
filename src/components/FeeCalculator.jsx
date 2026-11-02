@@ -43,10 +43,10 @@ const MARRIAGE_ITEMS = {
 
 const T = {
     bn: {
-        landTitle: '🧮 জমি ও ফ্ল্যাট রেজিস্ট্রি খরচ ক্যালকুলেটর ২০২৬',
-        inheritanceTitle: '🧮 মুসলিম উত্তরাধিকার ও ফারায়েজ হিসাব ক্যালকুলেটর ২০২৬',
-        kabinnamaTitle: '🧮 কাবিননামা সরকারি ফি ক্যালকুলেটর ২০২৬',
-        marriageTitle: '🧮 কোর্ট ম্যারেজ ও কাবিন খরচ ক্যালকুলেটর ২০২৬',
+        landTitle: 'জমি ও ফ্ল্যাট রেজিস্ট্রি খরচ ক্যালকুলেটর ২০২৬',
+        inheritanceTitle: 'মুসলিম উত্তরাধিকার ও ফারায়েজ হিসাব ক্যালকুলেটর ২০২৬',
+        kabinnamaTitle: 'কাবিননামা সরকারি ফি ক্যালকুলেটর ২০২৬',
+        marriageTitle: 'কোর্ট ম্যারেজ ও কাবিন খরচ ক্যালকুলেটর ২০২৬',
         landNote: '২০২৬ সালের সরকারি ফি কাঠামো অনুযায়ী আনুমানিক হিসাব। এলাকাভেদে উৎস কর পরিবর্তিত হতে পারে — রেজিস্ট্রির আগে সাব-রেজিস্ট্রি অফিস থেকে যাচাই করুন।',
         inheritanceNote: 'মুসলিম পারিবারিক আইন অধ্যাদেশ ১৯৬১ ও হানাফি ফারায়েজ বিধান অনুযায়ী মৃত ব্যক্তির রেখে যাওয়া মোট জমি (শতাংশ) বা টাকার অংশ হিসাব করুন।',
         kabinnamaNote: 'মুসলিম বিবাহ ও তালাক (নিবন্ধন) বিধিমালা অনুযায়ী প্রথম ৪ লাখ টাকা পর্যন্ত প্রতি লাখে ১,২৫০ টাকা এবং পরবর্তী প্রতি লাখে ১০০ টাকা সরকারি কাবিন ফি (সর্বনিম্ন ২০০ টাকা)।',
@@ -80,10 +80,10 @@ const T = {
         locale: 'bn-BD',
     },
     en: {
-        landTitle: '🧮 Land & Flat Registration Fee Calculator 2026',
-        inheritanceTitle: '🧮 Muslim Inheritance (Faraiz) Share Calculator 2026',
-        kabinnamaTitle: '🧮 Kabinnama Government Fee Calculator 2026',
-        marriageTitle: '🧮 Court Marriage Cost Calculator 2026',
+        landTitle: 'Land & Flat Registration Fee Calculator 2026',
+        inheritanceTitle: 'Muslim Inheritance (Faraiz) Share Calculator 2026',
+        kabinnamaTitle: 'Kabinnama Government Fee Calculator 2026',
+        marriageTitle: 'Court Marriage Cost Calculator 2026',
         landNote: '2026 Official Fee Schedule estimate. Source tax varies by mouza classification — verify at the Sub-Registry office before registration.',
         inheritanceNote: 'Calculate exact Quranic & Hanafi Faraiz shares (in land decimals or BDT) for surviving spouse, parents, sons, and daughters.',
         kabinnamaNote: 'Under Bangladesh Muslim Marriage Registration Rules: BDT 1,250 per lakh up to 4 lakh Mahr, and BDT 100 per additional lakh (minimum BDT 200).',

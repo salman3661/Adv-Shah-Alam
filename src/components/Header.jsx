@@ -87,7 +87,7 @@ const Header = () => {
                     willChange: 'transform, opacity',
                 }}
             >
-                <div className="pointer-events-auto flex items-center gap-1 px-2 sm:px-3 py-1.5 rounded-full navbar-glass transition-all duration-500 max-w-[95vw] sm:max-w-fit overflow-x-auto no-scrollbar">
+                <div className="pointer-events-auto flex items-center gap-1 px-2 sm:px-3 py-1.5 rounded-full navbar-glass transition-[color,background-color,border-color,box-shadow,opacity,transform] duration-500 max-w-[95vw] sm:max-w-fit overflow-x-auto no-scrollbar">
                     {/* Nav Links */}
                     <div className="flex items-center gap-0">
                         {navLinks.map((link) => {
@@ -102,8 +102,8 @@ const Header = () => {
                                 >
                                     {active && (
                                         <span
-                                            className="absolute inset-0 rounded-full transition-all duration-200"
-                                            style={{ background: 'var(--accent)' }}
+                                            className="absolute inset-0 rounded-full transition-[color,background-color,border-color,box-shadow,opacity,transform] duration-200"
+                                            style={{ background: 'var(--btn-primary-bg)' }}
                                         />
                                     )}
                                     <span className="relative z-10 flex items-center gap-1.5">
@@ -122,7 +122,7 @@ const Header = () => {
                                     key={link.name}
                                     href={`#${link.id}`}
                                     onClick={(e) => handleNavClick(e, link.id)}
-                                    className="relative flex items-center justify-center px-2.5 sm:px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-200 hover:bg-black/5 dark:hover:bg-white/8 active:scale-95"
+                                    className="relative flex items-center justify-center px-2.5 sm:px-3 py-1.5 rounded-full text-sm font-medium transition-[color,background-color,border-color,box-shadow,opacity,transform] duration-200 hover:bg-black/5 dark:hover:bg-white/8 active:scale-95"
                                     style={{ color: 'var(--text-2)' }}
                                     title={link.name}
                                 >
@@ -186,7 +186,7 @@ const Header = () => {
                         onClick={toggleTheme}
                         className="flex items-center gap-1 px-2.5 py-1.5 rounded-full text-xs font-semibold flex-shrink-0 transition-transform duration-150 hover:scale-105 active:scale-95"
                         style={{
-                            background: 'var(--accent)',
+                            background: 'var(--btn-primary-bg)',
                             color: '#ffffff',
                             cursor: 'pointer',
                         }}

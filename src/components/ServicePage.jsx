@@ -118,21 +118,21 @@ const ServicePage = ({ metaTitle, metaDesc, canonicalUrl, h1, intro, coverage, f
 
             {/* Hero — always dark, theme-independent */}
             <section className="pt-28 pb-16 relative overflow-hidden"
-                style={{ background: 'linear-gradient(135deg, #0A1120 0%, #0E1A2E 100%)' }}>
+                style={{ background: '#0A1424' }}>
                 <div className="absolute inset-0 pointer-events-none"
-                    style={{ background: 'radial-gradient(ellipse at 70% 50%, rgba(29,78,216,0.12) 0%, transparent 70%)' }}></div>
+                    style={{ background: 'radial-gradient(ellipse at 70% 50%, rgba(22,58,112,0.18) 0%, transparent 70%)' }}></div>
 
                 <div className="container mx-auto px-6 max-w-5xl relative z-10">
                     <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }} className="mb-6">
                         <Link to="/"
                             className="inline-flex items-center gap-2 text-sm font-medium hover:underline transition-opacity hover:opacity-100 opacity-80"
-                            style={{ color: '#C8D4E8' }}>
+                            style={{ color: '#CBD5E1' }}>
                             <ArrowLeft size={15} /> Back to Home
                         </Link>
                     </motion.div>
 
                     <motion.span initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.08 }}
-                        className="label-accent block mb-4" style={{ color: 'var(--gold)' }}>
+                        className="label-accent block mb-4" style={{ color: '#CCA856' }}>
                         Legal Services · Advocate Md. Shah Alam
                     </motion.span>
 
@@ -227,7 +227,7 @@ const ServicePage = ({ metaTitle, metaDesc, canonicalUrl, h1, intro, coverage, f
                                             initial={{ opacity: 0, y: 14 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}
                                             className="glass-card p-5 text-center">
                                             <div className="w-9 h-9 rounded-full flex items-center justify-center mx-auto mb-3 text-sm font-bold"
-                                                style={{ background: 'var(--accent)', color: '#fff' }}>
+                                                style={{ background: 'var(--btn-primary-bg)', color: '#fff' }}>
                                                 {i + 1}
                                             </div>
                                             <p className="text-sm font-semibold mb-1" style={{ color: 'var(--text)' }}>{item.step}</p>
@@ -329,7 +329,7 @@ const ServicePage = ({ metaTitle, metaDesc, canonicalUrl, h1, intro, coverage, f
                     <div className="container mx-auto px-6 max-w-5xl">
                         <h2 className="text-xl font-bold mb-5 flex items-center gap-2"
                             style={{ color: 'var(--text)' }}>
-                            📖 Further Reading
+                            Further Reading
                         </h2>
                         <div className="grid sm:grid-cols-2 gap-4">
                             {relatedBlogLinks.map((link, i) => (
@@ -360,7 +360,7 @@ const ServicePage = ({ metaTitle, metaDesc, canonicalUrl, h1, intro, coverage, f
                 <section className="py-14" style={{ background: 'var(--surface)' }}>
                     <div className="container mx-auto px-6 max-w-5xl">
                         <h2 className="text-xl font-bold mb-5" style={{ color: 'var(--text)' }}>
-                            ⚖️ Other Legal Services in Bangladesh
+                            Other Legal Services in Bangladesh
                         </h2>
                         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
                             {relatedServices.map((svc, i) => (

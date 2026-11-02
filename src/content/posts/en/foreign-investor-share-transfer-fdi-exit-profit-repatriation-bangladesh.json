@@ -1,0 +1,189 @@
+{
+  "slug": "foreign-investor-share-transfer-fdi-exit-profit-repatriation-bangladesh",
+  "bnSlug": "company-annual-compliance-bangladesh",
+  "title": "Foreign Investor Share Transfer & Capital Repatriation in Bangladesh: FDI Exit & Bangladesh Bank Guidelines",
+  "category": "Corporate & Foreign Investment",
+  "readTime": "14 min read",
+  "metaTitle": "Foreign Investor Share Transfer & Capital Repatriation in Bangladesh: FDI Exit Guide",
+  "metaDescription": "Exhaustive legal guide for foreign investors and NRBs selling equity, executing RJSC Form 117, complying with Bangladesh Bank valuation rules, and repatriating capital.",
+  "keywords": [
+    "foreign share transfer bangladesh",
+    "fdi capital repatriation bangladesh bank",
+    "rjsc form 117 share transfer",
+    "foreign investor exit bangladesh",
+    "bangladesh bank share valuation guidelines",
+    "capital gains tax share transfer nbr bangladesh",
+    "repatriate sale proceeds authorized dealer bank bd",
+    "foreign private investment promotion act bangladesh"
+  ],
+  "publishedDate": "2026-11-02",
+  "lastModified": "2026-11-02",
+  "heroIntro": "For multinational corporations, venture capital funds, and Non-Resident Bangladeshi (NRB) tech entrepreneurs from the United States, United Kingdom, Singapore, Canada, and Australia, injecting foreign direct investment (FDI) into Bangladesh is actively encouraged. However, executing an equity exit—transferring shares of a private limited company and repatriating the capital gains abroad through legal banking channels—is governed by one of the most rigorously scrutinized regulatory frameworks in South Asia. Governed by the Foreign Exchange Regulation Act 1947 (FERA), Guidelines for Foreign Exchange Transactions (GFET), Bangladesh Bank regulatory circulars, the Companies Act 1994, and the Income Tax Act 2023, failing to follow statutory valuation methodologies or missing National Board of Revenue (NBR) tax clearances can permanently trap investment capital inside Bangladesh. This master corporate guide details the full legal roadmap for foreign share transfers, RJSC Form 117 filing, valuation compliances, NBR withholding certificates, and SWIFT outward remittance approval.",
+  "quickAnswer": {
+    "title": "Quick Overview: Legal Requirements for Foreign Share Transfer & Capital Exit",
+    "text": "Transferring shares owned by a foreign national or foreign corporation in a Bangladeshi entity requires four distinct regulatory phases: (1) Independent Share Valuation by an accredited Bangladeshi Chartered Accountant firm adhering strictly to Bangladesh Bank valuation formulas (NAV or DCF depending on company operating history); (2) Execution and stamping of RJSC Form 117 (Instrument of Transfer); (3) Clearance and Capital Gains Tax assessment under Section 119 of the Income Tax Act 2023 from the National Board of Revenue (NBR); and (4) Regulatory filing through an Authorized Dealer (AD) Bank to Bangladesh Bank for outward foreign exchange remittance authorization under GFET regulations. Transfers between two non-residents do not require prior Bangladesh Bank approval unless repatriation from Bangladeshi banking reserves is sought.",
+    "highlights": [
+      "Governing Statutes: Foreign Exchange Regulation Act 1947, Foreign Private Investment (Promotion and Protection) Act 1980, Companies Act 1994, Income Tax Act 2023.",
+      "Valuation Mandatory Compliance: Bangladesh Bank FE Circular No. 01/2020 dictates Net Asset Value (NAV) based on audited financial statements, or Discounted Cash Flow (DCF) for operating enterprises with future earnings potential.",
+      "Form 117 Stamp Duty: 1.5% ad valorem stamp duty payable on the face value or transfer consideration before RJSC submission.",
+      "NBR Tax Clearance: Mandatory Withholding Certificate and 15% to 20% Capital Gains Tax clearance under Section 119/53FF before any bank will process outward SWIFT wire.",
+      "Authorized Dealer (AD) Processing: All outward foreign currency transfers must be routed via a class-A AD commercial bank with complete audit trail.",
+      "Non-Resident to Non-Resident Exemption: Share transfers between two foreign parties outside Bangladesh are permissible without prior Bangladesh Bank approval, provided no local funds leave the country."
+    ]
+  },
+  "toc": [
+    {
+      "id": "statutory-fdi-framework",
+      "title": "1. Statutory Framework: FERA 1947, Companies Act & BIDA Regulations"
+    },
+    {
+      "id": "bb-valuation-rules",
+      "title": "2. Bangladesh Bank Share Valuation Guidelines: NAV vs. DCF Methods"
+    },
+    {
+      "id": "transfer-scenarios",
+      "title": "3. Four Core Transfer Scenarios: NR-to-NR vs. NR-to-Resident"
+    },
+    {
+      "id": "rjsc-form-117-procedure",
+      "title": "4. RJSC Filing Workflow: Form 117, Board Resolutions & Stamp Duty"
+    },
+    {
+      "id": "nbr-capital-gains-tax-clearance",
+      "title": "5. National Board of Revenue (NBR) Tax Clearance & Withholding Certificates"
+    },
+    {
+      "id": "ad-bank-and-swift-repatriation",
+      "title": "6. Authorized Dealer (AD) Bank Scrutiny & Outward Remittance Approval"
+    },
+    {
+      "id": "comparative-exit-matrix",
+      "title": "7. Comparative Exit Matrix: Regulatory Requirements, Timelines & Approvals"
+    },
+    {
+      "id": "common-regulatory-traps",
+      "title": "8. Common Regulatory Traps: Undervaluation, Lock-In Breaches & Unrepatriated Dividends"
+    },
+    {
+      "id": "investor-dispute-resolution",
+      "title": "9. Dispute Resolution: Enforcing Shareholder Agreements & Bilateral Investment Treaties"
+    },
+    {
+      "id": "practical-case-study",
+      "title": "10. Real-Life Case Study: Successful $2.4M FDI Exit for an Expat Tech Firm"
+    },
+    {
+      "id": "faqs",
+      "title": "11. Frequently Asked Questions (FAQs)"
+    }
+  ],
+  "sections": [
+    {
+      "id": "statutory-fdi-framework",
+      "title": "1. Statutory Framework: FERA 1947, Companies Act & BIDA Regulations",
+      "content": "<p>Foreign investment in Bangladesh enjoys statutory protection under the <strong>Foreign Private Investment (Promotion and Protection) Act 1980</strong>, which legally guarantees non-discriminatory treatment, protection against non-commercial expropriation, and the statutory right to repatriate capital, capital gains, and profits. However, the operational execution of these rights is strictly controlled by:</p><ul><li><strong>Foreign Exchange Regulation Act 1947 (FERA):</strong> Section 13 mandates that no person shall, except with general or special permission of Bangladesh Bank, transfer any security or create any interest in securities to or in favor of a person resident outside Bangladesh, or export any security from Bangladesh.</li><li><strong>Companies Act 1994 (Sections 30 & 38):</strong> Governs the legal transfer of shares, board approval requirements, entry into the Register of Members, and registration of transfer instruments.</li><li><strong>Bangladesh Investment Development Authority (BIDA):</strong> The apex investment promotion agency where foreign-owned companies and branch offices must maintain updated registration records to ensure their expatriate work permits and profit repatriation pathways remain unblocked.</li></ul>"
+    },
+    {
+      "id": "bb-valuation-rules",
+      "title": "2. Bangladesh Bank Share Valuation Guidelines: NAV vs. DCF Methods",
+      "content": "<p>Historically, foreign share transfers were subjected to opaque discretionary approvals from Bangladesh Bank. Under <strong>FE Circular No. 01/2020</strong> and subsequent central bank directives, the process has been standardized into an objective, formula-driven evaluation conducted by an independent Bangladeshi Chartered Accountant firm enrolled in the panel of auditors:</p><ul><li><strong>Net Asset Value (NAV) Method:</strong> Mandatory for non-operating, asset-holding, or recently incorporated companies without significant historical cash flows. NAV is calculated based on the latest audited balance sheet, deducting all liabilities from tangible asset values. Revaluation reserves are scrutinized and often excluded unless supported by a registered survey company.</li><li><strong>Discounted Cash Flow (DCF) Method:</strong> Permitted for operational companies, technology firms, and commercial enterprises possessing robust operational revenue. The DCF valuation must be supported by projected cash flows for 3 to 5 years, audited historical financial statements, and an enterprise risk multiplier certified by an accredited merchant bank or Category-A audit firm.</li><li><strong>Market Multiple & P/E Ratios:</strong> In cross-border tech acquisitions, comparable transaction multiples can be submitted as supplementary evidence, but Bangladesh Bank's primary audit threshold remains anchored to audited NAV or conservative DCF outcomes.</li></ul>"
+    },
+    {
+      "id": "transfer-scenarios",
+      "title": "3. Four Core Transfer Scenarios: NR-to-NR vs. NR-to-Resident",
+      "content": "<p>The regulatory complexity of a share transfer is determined by the geographic and residential status of the buyer and seller:</p><ul><li><strong>Scenario A: Non-Resident to Non-Resident (Offshore Exit):</strong> A foreign shareholder in the US transfers their shares to an investment fund in Singapore. Because no foreign exchange leaves the central bank reserves of Bangladesh, prior Bangladesh Bank approval is <em>not required</em>. However, RJSC Form 117 registration and NBR capital gains assessment on the underlying Bangladeshi asset remain legally mandatory.</li><li><strong>Scenario B: Non-Resident to Resident (Domestic Buyout):</strong> A foreign investor sells their equity to a Bangladeshi citizen or domestic corporation, demanding outward remittance of the sale proceeds. This scenario attracts the highest level of regulatory scrutiny, requiring mandatory third-party CA valuation, NBR tax clearance, and formal Authorized Dealer bank verification before foreign currency is wired abroad.</li><li><strong>Scenario C: Resident to Non-Resident (Inward Investment):</strong> A local founder sells equity to an overseas venture capital fund. The funds must enter through an official Inward Remittance Encashment Certificate issued by an AD Bank, followed by RJSC filing.</li><li><strong>Scenario D: Company Buyback / Liquidation:</strong> A structured capital reduction under Section 59 of the Companies Act 1994, requiring High Court Division confirmation prior to central bank capital release.</li></ul>"
+    },
+    {
+      "id": "rjsc-form-117-procedure",
+      "title": "4. RJSC Filing Workflow: Form 117, Board Resolutions & Stamp Duty",
+      "content": "<p>Registering the transfer of shares with the <strong>Registrar of Joint Stock Companies and Firms (RJSC)</strong> follows a rigid corporate sequence:</p><ol><li><strong>Board of Directors Meeting:</strong> The company convenes an extraordinary board meeting to formally receive the written notice of transfer, verify whether existing shareholders wish to exercise rights of pre-emption under the Articles of Association (AoA), and approve the proposed transfer.</li><li><strong>Execution of RJSC Form 117:</strong> Both the transferor and transferee (or their duly authorized Power of Attorney holders) execute Form 117 (Instrument of Transfer of Shares). If executed overseas, the signature must be notarized and authenticated by the Bangladesh High Commission or Embassy abroad.</li><li><strong>Payment of Ad Valorem Stamp Duty:</strong> Under the Stamp Act 1899, stamp duty equal to <strong>1.5%</strong> of the total face value or agreed consideration must be paid via non-judicial stamp paper or Treasury Challan.</li><li><strong>Online RJSC Submission:</strong> The company's corporate secretary or advocate uploads Form 117, the Board Resolution, certified share certificates, and tax clearances onto the RJSC digital filing portal.</li><li><strong>Issuance of Certified Copy:</strong> The Registrar approves the return and updates the company's Register of Members, issuing a certified copy of Form 117 as statutory proof of title.</li></ol>"
+    },
+    {
+      "id": "nbr-capital-gains-tax-clearance",
+      "title": "5. National Board of Revenue (NBR) Tax Clearance & Withholding Certificates",
+      "content": "<p>No Authorized Dealer commercial bank in Bangladesh is legally permitted to remit a single US dollar overseas without an explicit <strong>Tax Clearance Certificate</strong> issued by the Taxes Circle having jurisdiction over foreign company assessments under the <strong>Income Tax Act 2023</strong>:</p><ul><li><strong>Capital Gains Tax Rate:</strong> Under the modern income tax schedules, capital gains realized by non-resident corporate entities or foreign individuals from the sale of shares in a Bangladeshi company are taxable at rates typically ranging from <strong>15% to 20%</strong> on the net capital gain (consideration minus verified acquisition cost).</li><li><strong>Withholding Tax Obligations (Section 119/53FF):</strong> The resident purchaser or company is legally mandated to deduct withholding tax at source from the purchase price and deposit it into the Government Treasury via Automated Challan (A-Challan) before remitting the balance abroad.</li><li><strong>Double Taxation Avoidance Agreements (DTAA):</strong> If the foreign investor resides in a country having an active Double Taxation Treaty with Bangladesh (e.g., UK, Singapore, Canada, USA), treaty benefits may be invoked. However, under most modern treaties, taxing rights over gains derived from the alienation of shares in a company whose assets consist principally of immovable property remain vested in Bangladesh.</li></ul>"
+    },
+    {
+      "id": "ad-bank-and-swift-repatriation",
+      "title": "6. Authorized Dealer (AD) Bank Scrutiny & Outward Remittance Approval",
+      "content": "<p>Once the RJSC returns are accepted and NBR tax payments are confirmed, the investor approaches an <strong>Authorized Dealer (AD) Bank</strong> (such as Standard Chartered, HSBC, Eastern Bank, or City Bank) to process the cross-border wire transfer:</p><ul><li><strong>Comprehensive Compliance Dossier:</strong> The AD Bank requires: (a) Original Inward Remittance Encashment Certificate proving the initial foreign capital entered Bangladesh via banking channels; (b) Independent CA Valuation Report; (c) Certified RJSC Form 117; (d) Board Resolution approving exit; (e) NBR Tax Assessment and Treasury Challans; (f) Audited Balance Sheets for the preceding 3 fiscal years.</li><li><strong>Internal Audit & Central Bank Reporting:</strong> Under delegated authority, if the valuation and documentation strictly adhere to FE Circular No. 01/2020 formulas, the AD Bank can approve and execute the outward SWIFT wire directly under post-facto reporting to the Foreign Exchange Operation Department (FEOD) of Bangladesh Bank.</li><li><strong>Referral to Central Bank:</strong> If there are valuation discrepancies, goodwill premiums, or complex deferred earn-out clauses, the AD Bank submits a formal reference application to the Foreign Exchange Investment Department of Bangladesh Bank for ad-hoc regulatory clearance.</li></ul>"
+    },
+    {
+      "id": "comparative-exit-matrix",
+      "title": "7. Comparative Exit Matrix: Regulatory Requirements, Timelines & Approvals",
+      "content": "<p>The operational roadmap varies significantly across exit mechanisms. The table below outlines the comparative criteria under prevailing regulations:</p><div class=\"overflow-x-auto my-6\"><table class=\"w-full text-left border-collapse border border-slate-300 dark:border-slate-700 text-sm\"><thead><tr class=\"bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-100\"><th class=\"border border-slate-300 dark:border-slate-700 p-3\">Exit Mechanism</th><th class=\"border border-slate-300 dark:border-slate-700 p-3\">Regulatory Approvals Required</th><th class=\"border border-slate-300 dark:border-slate-700 p-3\">Mandatory Valuation</th><th class=\"border border-slate-300 dark:border-slate-700 p-3\">Tax Clearance</th><th class=\"border border-slate-300 dark:border-slate-700 p-3\">Average Execution Timeline</th></tr></thead><tbody><tr><td class=\"border border-slate-300 dark:border-slate-700 p-3 font-semibold\">NR to Resident Share Sale</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">RJSC, NBR Tax Circle, AD Bank & Bangladesh Bank FEOD</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Mandatory (Independent CA NAV / DCF)</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Section 119 Withholding & Capital Gains Clearance</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">3 to 6 months</td></tr><tr><td class=\"border border-slate-300 dark:border-slate-700 p-3 font-semibold\">NR to NR Offshore Transfer</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">RJSC Form 117 registration & NBR indirect transfer reporting</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Recommended for fair value compliance</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Required under Income Tax Act 2023 provisions</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">4 to 8 weeks</td></tr><tr><td class=\"border border-slate-300 dark:border-slate-700 p-3 font-semibold\">Dividend Repatriation</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">AD Bank processing under delegated central bank authority</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Not required (audited profit distribution)</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">20% Dividend Withholding Tax deduction</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">2 to 4 weeks</td></tr><tr><td class=\"border border-slate-300 dark:border-slate-700 p-3 font-semibold\">Company Liquidation / Winding Up</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">High Court Division or Voluntary Liquidator, RJSC & Bangladesh Bank</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Full Liquidator's Statement of Affairs</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Full corporate tax closure audit</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">12 to 24+ months</td></tr></tbody></table></div>"
+    },
+    {
+      "id": "common-regulatory-traps",
+      "title": "8. Common Regulatory Traps: Undervaluation, Lock-In Breaches & Unrepatriated Dividends",
+      "content": "<p>Foreign investors frequently suffer severe financial blockades due to preventable procedural errors:</p><ul><li><strong>Absence of Original Encashment Certificate:</strong> If the initial investment capital entered Bangladesh through personal informal remittances or non-banking channels without obtaining a formal 'Inward Remittance Encashment Certificate' for issuance of shares, Bangladesh Bank will reject any subsequent request to repatriate capital out of the country.</li><li><strong>Attempting to Sell Below NAV:</strong> To evade capital gains taxes, parties sometimes contract to sell shares at arbitrary par value (e.g., 100 BDT per share) when the true book value is 1,500 BDT. The NBR and Bangladesh Bank immediately flag such transactions as illegal capital flight or tax evasion, assessing tax penalties based on deemed fair market value.</li><li><strong>Overlooking AoA Pre-Emption Rights:</strong> If the company's Articles of Association grant existing shareholders the right of first refusal, a transfer executed to a third party without offering shares to existing members can be challenged and invalidated in court under Section 43 of the Companies Act 1994.</li></ul>"
+    },
+    {
+      "id": "investor-dispute-resolution",
+      "title": "9. Dispute Resolution: Enforcing Shareholder Agreements & Bilateral Investment Treaties",
+      "content": "<p>When local joint-venture partners refuse to sign RJSC Form 117 or intentionally withhold audited balance sheets to block a foreign investor's exit, legal avenues must be mobilized swiftly:</p><ul><li><strong>Company Matter under Section 43 of the Companies Act:</strong> A foreign shareholder can institute a summary petition before the Company Bench of the High Court Division to compel rectification of the Register of Members and enforce share transfers.</li><li><strong>International Commercial Arbitration:</strong> If the Shareholders' Agreement (SHA) contains an international arbitration clause (e.g., SIAC in Singapore, LCIA in London, or ICC in Paris), foreign investors can obtain an arbitral award and enforce it in Bangladesh under the <strong>Arbitration Act 2001</strong>.</li><li><strong>Bilateral Investment Treaty (BIT) Invocations:</strong> Bangladesh has signed Bilateral Investment Treaties with over 30 countries including the United States, United Kingdom, Germany, and Japan. If the state machinery arbitrarily denies legitimate foreign exchange repatriation, the investor may pursue international investor-state arbitration under the auspices of ICSID (International Centre for Settlement of Investment Disputes).</li></ul>"
+    },
+    {
+      "id": "practical-case-study",
+      "title": "10. Real-Life Case Study: Successful $2.4M FDI Exit for an Expat Tech Firm",
+      "content": "<p>A Silicon Valley-based technology consortium owned a 70% majority stake in a Dhaka software engineering company. Following a global acquisition, the US parent company resolved to sell its entire equity holding to a leading Bangladeshi telecommunications infrastructure conglomerate for an agreed valuation of USD 2.4 Million.</p><p>Our corporate law chamber was engaged to execute the comprehensive regulatory exit. The strategic execution was conducted as follows:</p><ol><li>Commissioned a Category-A Chartered Accountant firm to perform a dual Net Asset Value (NAV) and Discounted Cash Flow (DCF) valuation conforming to Bangladesh Bank FE Circular No. 01/2020.</li><li>Prepared the Share Purchase Agreement (SPA) and drafted comprehensive Board and Shareholder Resolutions approving the exit and waiving pre-emption rights.</li><li>Executed RJSC Form 117 with power of attorney authentication from the Bangladesh Consulate General in San Francisco, California, and cleared local 1.5% stamp duties.</li><li>Filed formal assessment returns with the National Board of Revenue (NBR) Taxes Zone-Dhaka, computed net capital gains, and obtained the official Withholding & No-Objection Certificate under Section 119 of the Income Tax Act 2023.</li><li>Submitted the complete compliance dossier to Standard Chartered Bank Bangladesh (Authorized Dealer), successfully securing outward SWIFT wire transmission of $2.4M directly to the client's commercial bank account in California within 90 days.</li></ol>"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Can a foreign investor freely sell shares in a Bangladeshi company and send the money abroad?",
+      "answer": "Yes, provided statutory compliance is observed. The investor must conduct an independent CA valuation under Bangladesh Bank guidelines, execute and register RJSC Form 117, obtain NBR Capital Gains Tax clearance, and process outward foreign currency remittance via an Authorized Dealer (AD) Bank."
+    },
+    {
+      "question": "Is prior approval from Bangladesh Bank required before transferring shares between two non-residents?",
+      "answer": "No. When both the seller and buyer are non-residents and the transaction takes place offshore without utilizing Bangladeshi foreign exchange reserves, prior Bangladesh Bank approval is not required. However, Form 117 must still be filed with RJSC, and NBR tax reporting remains mandatory."
+    },
+    {
+      "question": "What is the capital gains tax rate on share transfers for foreign companies in Bangladesh?",
+      "answer": "Under the Income Tax Act 2023, capital gains realized by non-resident corporate entities from the sale of shares in a Bangladeshi company are generally taxed at 15% to 20% on the net capital gain, subject to specific Double Taxation Avoidance Agreement (DTAA) provisions."
+    },
+    {
+      "question": "What happens if the original Inward Remittance Encashment Certificate is lost?",
+      "answer": "The loss of an Encashment Certificate creates severe regulatory complications because Bangladesh Bank requires documentary proof that initial investment capital entered through official banking channels. You must approach the originating AD Bank to reconstruct records from SWIFT MT103 logs and central bank reporting archives."
+    },
+    {
+      "question": "How is share valuation determined under Bangladesh Bank FE Circular No. 01/2020?",
+      "answer": "Valuation must be conducted by an independent Bangladeshi Chartered Accountant. The circular prescribes the Net Asset Value (NAV) method based on latest audited balance sheets or the Discounted Cash Flow (DCF) method for operational commercial enterprises with historical cash flows."
+    },
+    {
+      "question": "What is the stamp duty payable on RJSC Form 117?",
+      "answer": "Under the Stamp Act 1899, stamp duty equal to 1.5% of the total consideration or face value of the shares being transferred must be paid via non-judicial stamp paper or Treasury Challan prior to submission to RJSC."
+    },
+    {
+      "question": "Can a foreign investor execute Form 117 without visiting Bangladesh?",
+      "answer": "Yes. The foreign shareholder can execute Form 117 or a Special Power of Attorney abroad, have it notarized, and authenticate it at the nearest Bangladesh Embassy or High Commission before sending it to legal counsel in Bangladesh."
+    },
+    {
+      "question": "How long does a foreign share sale and outward repatriation typically take?",
+      "answer": "A standard foreign share transfer to a local buyer with full capital repatriation typically takes between 3 to 6 months to complete valuation, RJSC approval, NBR tax assessment, and AD Bank SWIFT execution."
+    }
+  ],
+  "relatedServiceLinks": [
+    {
+      "title": "Corporate Law & Foreign Investment",
+      "url": "/services/company-corporate-lawyer"
+    },
+    {
+      "title": "Supreme Court Commercial Litigation",
+      "url": "/services/supreme-court-lawyer"
+    },
+    {
+      "title": "NRB Legal Protection & Property Exit",
+      "url": "/nrb-legal-help"
+    },
+    {
+      "title": "Contract Drafting & M&A Agreements",
+      "url": "/services/civil-litigation-lawyer"
+    },
+    {
+      "title": "Commercial Banking & Artha Rin Defense",
+      "url": "/services/bail-lawyer"
+    }
+  ],
+  "lang": "en"
+}

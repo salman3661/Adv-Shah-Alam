@@ -37,7 +37,7 @@ const Services = ({ lang = 'en' }) => {
                             : 'From personal matters to complex litigation — visit our chamber in Uttara, Dhaka or contact us via WhatsApp.'}
                     </motion.p>
                     <motion.div initial={{ scaleX: 0 }} whileInView={{ scaleX: 1 }} viewport={{ once: true }} transition={{ delay: 0.2 }}
-                        className="w-24 h-1 mx-auto rounded-full" style={{ background: 'var(--accent)' }}></motion.div>
+                        className="divider-accent mx-auto"></motion.div>
                 </div>
 
                 {/* Grid */}
@@ -49,13 +49,13 @@ const Services = ({ lang = 'en' }) => {
                             className="glass-card p-7 flex flex-col group"
                         >
                             <div className="flex items-start justify-between mb-5">
-                                <div className="w-12 h-12 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300"
-                                    style={{ background: service.iconColor, color: service.iconText }}>
-                                    <service.icon size={26} />
+                                <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 transition-transform duration-300"
+                                    style={{ background: 'var(--accent-subtle)', color: 'var(--accent)', border: '1px solid var(--card-border)' }}>
+                                    <service.icon size={24} />
                                 </div>
                                 <span
                                     className="text-xs font-semibold px-2.5 py-1 rounded-full flex-shrink-0"
-                                    style={{ background: 'rgba(34,197,94,0.10)', color: '#16a34a', border: '1px solid rgba(34,197,94,0.25)' }}
+                                    style={{ background: 'var(--gold-subtle)', color: 'var(--gold)', border: '1px solid var(--gold-border)' }}
                                 >
                                     {isBn ? 'পরামর্শ করুন' : 'Consultation'}
                                 </span>
@@ -70,7 +70,7 @@ const Services = ({ lang = 'en' }) => {
                             </p>
 
                             <Link to={isBn ? `/bn${service.link}` : service.link}
-                                className="inline-flex items-center gap-1.5 text-sm font-semibold hover:gap-2.5 transition-all duration-200"
+                                className="inline-flex items-center gap-1.5 text-sm font-semibold hover:gap-2.5 transition-[color,background-color,border-color,box-shadow,opacity,transform] duration-200"
                                 style={{ color: 'var(--accent)' }}
                                 aria-label={`View details for ${service.title}`}>
                                 {isBn ? 'বিস্তারিত দেখুন' : 'Explore Service'} <ArrowRight size={15} />

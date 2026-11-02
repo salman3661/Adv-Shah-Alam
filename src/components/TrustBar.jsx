@@ -2,19 +2,19 @@ import React from 'react';
 import { Shield, Star, Users, Clock, CheckCircle } from 'lucide-react';
 
 const trustItemsEn = [
-    { icon: Shield, text: 'Supreme Court Advocate', sub: 'Bangladesh Bar Council' },
-    { icon: Star, text: '4.9★ Google Rating', sub: '47+ Reviews', accent: '#C6A75E' },
-    { icon: Clock, text: '10+ Years Practice', sub: 'Since 2015' },
-    { icon: Users, text: '5000+ Cases Handled', sub: 'Criminal · Family · Land' },
-    { icon: CheckCircle, text: 'Asst. Public Prosecutor', sub: 'Metro Sessions Court, Dhaka', accent: '#22C55E' },
+    { icon: Shield, text: 'Supreme Court Advocate', sub: 'Bangladesh Bar Council', isGold: false },
+    { icon: Star, text: '4.9 Google Rating', sub: '47+ Verified Reviews', isGold: true },
+    { icon: Clock, text: '10+ Years Practice', sub: 'Since 2015', isGold: false },
+    { icon: Users, text: '5000+ Cases Handled', sub: 'Criminal · Family · Land', isGold: false },
+    { icon: CheckCircle, text: 'Asst. Public Prosecutor', sub: 'Metro Sessions Court, Dhaka', isGold: true },
 ];
 
 const trustItemsBn = [
-    { icon: Shield, text: 'সুপ্রীম কোর্টের আইনজীবী', sub: 'বাংলাদেশ বার কাউন্সিল' },
-    { icon: Star, text: '৪.৯★ গুগল রেটিং', sub: '৪৭+ রিভিউ', accent: '#C6A75E' },
-    { icon: Clock, text: '১০+ বছরের অভিজ্ঞতা', sub: '২০১৫ সাল থেকে' },
-    { icon: Users, text: '৫০০০+ মামলা পরিচালনা', sub: 'ফৌজদারি · পারিবারিক · ভূমি' },
-    { icon: CheckCircle, text: 'অ্যাসিস্ট্যান্ট পাবলিক প্রসিকিউটর', sub: 'মেট্রো সেশনস কোর্ট, ঢাকা', accent: '#22C55E' },
+    { icon: Shield, text: 'সুপ্রীম কোর্টের আইনজীবী', sub: 'বাংলাদেশ বার কাউন্সিল', isGold: false },
+    { icon: Star, text: '৪.৯ গুগল রেটিং', sub: '৪৭+ যাচাইকৃত রিভিউ', isGold: true },
+    { icon: Clock, text: '১০+ বছরের অভিজ্ঞতা', sub: '২০১৫ সাল থেকে', isGold: false },
+    { icon: Users, text: '৫০০০+ মামলা পরিচালনা', sub: 'ফৌজদারি · পারিবারিক · ভূমি', isGold: false },
+    { icon: CheckCircle, text: 'অ্যাসিস্ট্যান্ট পাবলিক প্রসিকিউটর', sub: 'মেট্রো সেশনস কোর্ট, ঢাকা', isGold: true },
 ];
 
 const TrustBar = ({ lang = 'en' }) => {
@@ -33,16 +33,10 @@ const TrustBar = ({ lang = 'en' }) => {
                 position: 'relative',
             }}
         >
-            {/* Subtle gradient overlay */}
-            <div style={{
-                position: 'absolute', inset: 0, pointerEvents: 'none',
-                background: 'linear-gradient(135deg, rgba(26,63,191,0.03) 0%, rgba(198,167,94,0.02) 100%)',
-            }} />
-
             <div className="container mx-auto px-4" style={{ maxWidth: '1200px' }}>
-                {/* Desktop: horizontal grid | Mobile: scrollable row */}
+                {/* Desktop: horizontal grid */}
                 <div
-                    className="hidden md:grid py-3"
+                    className="hidden md:grid py-3.5"
                     style={{ gridTemplateColumns: `repeat(${items.length}, 1fr)`, gap: '0' }}
                 >
                     {items.map((item, i) => (
@@ -56,10 +50,9 @@ const TrustBar = ({ lang = 'en' }) => {
                             <div
                                 className="flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center"
                                 style={{
-                                    background: item.accent
-                                        ? `${item.accent}15`
-                                        : 'var(--accent-subtle)',
-                                    color: item.accent || 'var(--accent)',
+                                    background: item.isGold ? 'var(--gold-subtle)' : 'var(--accent-subtle)',
+                                    border: item.isGold ? '1px solid var(--gold-border)' : '1px solid var(--card-border)',
+                                    color: item.isGold ? 'var(--gold)' : 'var(--accent)',
                                 }}
                             >
                                 <item.icon size={16} />
@@ -82,8 +75,8 @@ const TrustBar = ({ lang = 'en' }) => {
                     ))}
                 </div>
 
-                {/* Mobile: auto-scrolling marquee */}
-                <div className="md:hidden py-2 overflow-x-auto no-scrollbar">
+                {/* Mobile: scrollable row */}
+                <div className="md:hidden py-2.5 overflow-x-auto no-scrollbar">
                     <div className="flex gap-4" style={{ width: 'max-content' }}>
                         {items.map((item, i) => (
                             <div
@@ -93,10 +86,9 @@ const TrustBar = ({ lang = 'en' }) => {
                                 <div
                                     className="flex-shrink-0 w-7 h-7 rounded-lg flex items-center justify-center"
                                     style={{
-                                        background: item.accent
-                                            ? `${item.accent}15`
-                                            : 'var(--accent-subtle)',
-                                        color: item.accent || 'var(--accent)',
+                                        background: item.isGold ? 'var(--gold-subtle)' : 'var(--accent-subtle)',
+                                        border: item.isGold ? '1px solid var(--gold-border)' : '1px solid var(--card-border)',
+                                        color: item.isGold ? 'var(--gold)' : 'var(--accent)',
                                     }}
                                 >
                                     <item.icon size={14} />

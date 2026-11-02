@@ -51,7 +51,7 @@ const BlogCardEn = ({ post, isRecent = false, isPopular = false }) => {
 
     return (
         <article
-            className="group relative flex flex-col h-full overflow-hidden transition-all duration-300 hover:-translate-y-1.5"
+            className="group relative flex flex-col h-full overflow-hidden transition-[color,background-color,border-color,box-shadow,opacity,transform] duration-300 hover:-translate-y-1.5"
             style={{
                 background: 'var(--surface)',
                 border: '1.5px solid var(--card-border)',
@@ -82,7 +82,7 @@ const BlogCardEn = ({ post, isRecent = false, isPopular = false }) => {
                         {isRecent && (
                             <span
                                 className="inline-flex items-center gap-0.5 text-[10px] font-extrabold px-2 py-0.5 rounded-full text-white shadow-sm"
-                                style={{ background: 'linear-gradient(135deg, #10b981, #059669)' }}
+                                style={{ background: '#163A70' }}
                             >
                                 <Sparkles size={10} /> NEW
                             </span>
@@ -90,7 +90,7 @@ const BlogCardEn = ({ post, isRecent = false, isPopular = false }) => {
                         {isPopular && (
                             <span
                                 className="inline-flex items-center gap-0.5 text-[10px] font-extrabold px-2 py-0.5 rounded-full text-white shadow-sm"
-                                style={{ background: 'linear-gradient(135deg, #f59e0b, #dc2626)' }}
+                                style={{ background: '#9A7420' }}
                             >
                                 <Flame size={10} /> POPULAR
                             </span>
@@ -159,7 +159,7 @@ const BlogCardEn = ({ post, isRecent = false, isPopular = false }) => {
 
                     <Link
                         to={`/blog/${post.slug}`}
-                        className="inline-flex items-center gap-1 text-xs font-bold px-3 py-1.5 rounded-lg transition-all group-hover:bg-[var(--accent)] group-hover:text-white"
+                        className="inline-flex items-center gap-1 text-xs font-bold px-3 py-1.5 rounded-lg transition-[color,background-color,border-color,box-shadow,opacity,transform] group-hover:bg-[var(--accent)] group-hover:text-white"
                         style={{
                             background: 'var(--accent-subtle)',
                             color: 'var(--accent)',
@@ -328,7 +328,7 @@ const Blog = () => {
                             placeholder="Search legal topic (e.g. bail, divorce, land mutation, cheque)..."
                             value={searchQuery}
                             onChange={e => setSearchQuery(e.target.value)}
-                            className="w-full pl-12 pr-28 py-4 text-sm md:text-base outline-none transition-all"
+                            className="w-full pl-12 pr-28 py-4 text-sm md:text-base outline-none transition-[color,background-color,border-color,box-shadow,opacity,transform]"
                             style={{
                                 background: 'transparent',
                                 color: 'var(--text)',
@@ -350,7 +350,7 @@ const Blog = () => {
                                     </span>
                                     <button
                                         onClick={() => setSearchQuery('')}
-                                        className="p-1.5 rounded-lg hover:bg-black/10 text-gray-400 hover:text-gray-600 transition-all"
+                                        className="p-1.5 rounded-lg hover:bg-black/10 text-gray-400 hover:text-gray-600 transition-[color,background-color,border-color,box-shadow,opacity,transform]"
                                         title="Clear search"
                                     >
                                         <X size={16} />
@@ -358,9 +358,9 @@ const Blog = () => {
                                 </>
                             ) : (
                                 <button
-                                    className="text-xs px-4 py-2 rounded-lg font-bold text-white shadow-md transition-all hover:scale-105"
+                                    className="text-xs px-4 py-2 rounded-lg font-bold text-white shadow-md transition-[color,background-color,border-color,box-shadow,opacity,transform] hover:scale-105"
                                     style={{
-                                        background: 'linear-gradient(135deg, var(--accent), #1e1b4b)',
+                                        background: 'var(--accent)',
                                     }}
                                 >
                                     Search
@@ -379,11 +379,11 @@ const Blog = () => {
                                 <button
                                     key={cat}
                                     onClick={() => setActiveCategory(cat)}
-                                    className="px-4 py-2 rounded-xl text-xs md:text-sm font-semibold border transition-all flex items-center gap-1.5"
+                                    className="px-4 py-2 rounded-xl text-xs md:text-sm font-semibold border transition-[color,background-color,border-color,box-shadow,opacity,transform] flex items-center gap-1.5"
                                     style={
                                         isActive
                                             ? {
-                                                background: 'linear-gradient(135deg, #1A3FBF, #0B1220)',
+                                                background: '#1A3FBF',
                                                 color: '#fff',
                                                 borderColor: 'var(--accent)',
                                                 boxShadow: '0 4px 14px rgba(26,63,191,0.3)',
@@ -417,17 +417,18 @@ const Blog = () => {
                 <section className="py-6" style={{ background: 'var(--bg)' }}>
                     <div className="container mx-auto px-6 max-w-6xl">
                         <div
-                            className="relative overflow-hidden p-6 md:p-8 rounded-3xl border transition-all duration-300 hover:shadow-2xl"
+                            className="relative overflow-hidden p-6 md:p-8 rounded-2xl border transition-[color,background-color,border-color,box-shadow,opacity,transform] duration-300"
                             style={{
-                                background: 'linear-gradient(135deg, rgba(26,63,191,0.06) 0%, rgba(198,167,94,0.05) 100%)',
-                                borderColor: 'rgba(198,167,94,0.3)',
-                                backdropFilter: 'blur(20px)'
+                                background: 'var(--surface)',
+                                borderColor: 'var(--card-border)',
+                                borderLeft: '3.5px solid var(--gold)',
+                                boxShadow: 'var(--shadow-sm)'
                             }}
                         >
                             <div className="flex flex-col md:flex-row gap-6 items-start justify-between">
                                 <div className="flex-1">
                                     <div className="flex items-center gap-2 mb-3">
-                                        <span className="inline-flex items-center gap-1 text-xs font-bold px-3 py-1 rounded-full text-white" style={{ background: 'linear-gradient(135deg, #f59e0b, #be185d)' }}>
+                                        <span className="inline-flex items-center gap-1 text-xs font-bold px-3 py-1 rounded-full" style={{ background: 'var(--gold-subtle)', color: 'var(--gold)', border: '1px solid var(--gold-border)' }}>
                                             <Flame size={13} /> Editor's Pick — Top Legal Guide
                                         </span>
                                         <span className="text-xs text-[var(--text-muted)]">
@@ -469,8 +470,8 @@ const Blog = () => {
                                     </div>
                                     <Link
                                         to={`/blog/${featuredPost.slug}`}
-                                        className="inline-flex items-center gap-2 text-sm font-bold px-6 py-3 rounded-xl text-white shadow-lg transition-all hover:scale-105"
-                                        style={{ background: 'linear-gradient(135deg, var(--accent), #1e1b4b)' }}
+                                        className="inline-flex items-center gap-2 text-sm font-bold px-6 py-3 rounded-xl text-white shadow-md transition-[color,background-color,border-color,box-shadow,opacity,transform]"
+                                        style={{ background: 'var(--btn-primary-bg)' }}
                                     >
                                         Read Full Legal Guide <ChevronRight size={18} />
                                     </Link>
@@ -499,15 +500,15 @@ const Blog = () => {
                         <div className="flex items-center gap-1.5 p-1 rounded-xl border" style={{ background: 'var(--surface)', borderColor: 'var(--card-border)' }}>
                             <button
                                 onClick={() => setSortBy('recent')}
-                                className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all ${sortBy === 'recent' ? 'bg-[var(--accent)] text-white shadow-sm' : 'text-[var(--text-secondary)] hover:text-[var(--text)]'}`}
+                                className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-bold transition-[color,background-color,border-color,box-shadow,opacity,transform] ${sortBy === 'recent' ? 'bg-[var(--btn-primary-bg)] text-white shadow-sm' : 'text-[var(--text-secondary)] hover:text-[var(--text)]'}`}
                             >
-                                <Sparkles size={13} /> 🆕 Newest First
+                                <Sparkles size={13} /> Newest First
                             </button>
                             <button
                                 onClick={() => setSortBy('popular')}
-                                className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all ${sortBy === 'popular' ? 'bg-[var(--accent)] text-white shadow-sm' : 'text-[var(--text-secondary)] hover:text-[var(--text)]'}`}
+                                className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-bold transition-[color,background-color,border-color,box-shadow,opacity,transform] ${sortBy === 'popular' ? 'bg-[var(--btn-primary-bg)] text-white shadow-sm' : 'text-[var(--text-secondary)] hover:text-[var(--text)]'}`}
                             >
-                                <Flame size={13} /> 🔥 Most Popular
+                                <Flame size={13} /> Most Popular
                             </button>
                         </div>
                     </div>
@@ -519,7 +520,7 @@ const Blog = () => {
                             <p className="text-sm mb-4">Try searching with a different legal term or keyword.</p>
                             <button
                                 onClick={() => { setSearchQuery(''); setActiveCategory('All'); }}
-                                className="px-5 py-2 rounded-lg text-xs font-bold text-white bg-[var(--accent)] shadow-md transition-all hover:scale-105"
+                                className="px-5 py-2 rounded-lg text-xs font-bold text-white bg-[var(--accent)] shadow-md transition-[color,background-color,border-color,box-shadow,opacity,transform] hover:scale-105"
                             >
                                 View All Articles
                             </button>
@@ -542,7 +543,7 @@ const Blog = () => {
                                 <div className="mt-10 text-center">
                                     <button
                                         onClick={() => setVisibleCount(v => v + POSTS_PER_PAGE)}
-                                        className="inline-flex items-center gap-2 px-8 py-3 rounded-2xl text-sm font-bold border transition-all hover:scale-105 hover:shadow-lg"
+                                        className="inline-flex items-center gap-2 px-8 py-3 rounded-2xl text-sm font-bold border transition-[color,background-color,border-color,box-shadow,opacity,transform] hover:scale-105 hover:shadow-lg"
                                         style={{
                                             background: 'var(--surface)',
                                             color: 'var(--accent)',
@@ -564,10 +565,10 @@ const Blog = () => {
                     <div className="mt-16 text-center">
                         <Link
                             to="/bn/blog"
-                            className="inline-flex items-center gap-2 text-sm font-bold px-6 py-3 rounded-2xl border transition-all hover:bg-[var(--accent-subtle)] shadow-sm"
+                            className="inline-flex items-center gap-2 text-sm font-bold px-6 py-3 rounded-2xl border transition-[color,background-color,border-color,box-shadow,opacity,transform] hover:bg-[var(--accent-subtle)] shadow-sm"
                             style={{ color: 'var(--accent)', borderColor: 'var(--accent)', fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif" }}
                         >
-                            🇧🇩 বাংলা আইনি জ্ঞান কেন্দ্র ও ব্লগ দেখুন
+                            বাংলা আইনি জ্ঞান কেন্দ্র ও ব্লগ দেখুন
                         </Link>
                     </div>
                 </div>

@@ -138,7 +138,7 @@ const Home = ({ lang = 'en' }) => {
                     </div>
 
                     <BlogPreview lang={lang} />
-                    <Timeline lang={lang} />
+                    <Timeline isHome={true} lang={lang} />
                     <Chambers lang={lang} />
                     <Contact lang={lang} />
                 </Suspense>

@@ -23,14 +23,11 @@ const ReviewPage = () => {
             </Helmet>
 
             <section className="min-h-[85vh] flex items-center justify-center px-4 py-16" style={{ background: 'var(--bg)' }}>
-                <div className="max-w-lg w-full text-center p-8 sm:p-10 rounded-3xl border shadow-2xl relative overflow-hidden"
+                <div className="max-w-lg w-full text-center p-8 sm:p-10 rounded-3xl border shadow-xl relative overflow-hidden"
                      style={{ background: 'var(--surface)', borderColor: 'var(--card-border)' }}>
                     
-                    {/* Top ambient glow */}
-                    <div className="absolute -top-12 left-1/2 -translate-x-1/2 w-48 h-48 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
-
                     <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold mb-6 border"
-                         style={{ background: 'rgba(217,119,6,0.08)', borderColor: 'rgba(217,119,6,0.25)', color: '#d97706' }}>
+                         style={{ background: 'var(--gold-subtle)', borderColor: 'var(--gold-border)', color: 'var(--gold)' }}>
                         <HeartHandshake size={15} />
                         আপনার মতামত আমাদের প্রেরণা
                     </div>
@@ -42,20 +39,19 @@ const ReviewPage = () => {
                         অ্যাডভোকেট মো. শাহ আলম স্যারের আইনি পরামর্শ ও সহায়তায় আপনার অভিজ্ঞতা কেমন ছিল? গুগলে আপনার মূল্যবান ২ মিনিটের মতামত শেয়ার করে অন্যদেরও সঠিক দিকনির্দেশনা পেতে সাহায্য করুন।
                     </p>
 
-                    {/* 5-Star interactive display */}
+                    {/* 5-Star display */}
                     <div className="flex justify-center items-center gap-2 mb-8">
                         {[1, 2, 3, 4, 5].map((star) => (
-                            <Star key={star} size={32} className="fill-amber-400 text-amber-400 animate-pulse" style={{ animationDelay: `${star * 150}ms` }} />
+                            <Star key={star} size={32} fill="#CCA856" stroke="#CCA856" />
                         ))}
                     </div>
 
                     {/* Primary CTA */}
                     <a
                         href={GOOGLE_REVIEW_URL}
-                        className="w-full py-4 px-6 rounded-2xl font-bold text-white shadow-lg flex items-center justify-center gap-3 text-base transition-all transform hover:-translate-y-0.5 active:translate-y-0"
+                        className="w-full py-4 px-6 rounded-2xl font-bold text-white shadow-md flex items-center justify-center gap-3 text-base transition-[color,background-color,border-color,box-shadow,opacity,transform] transform hover:-translate-y-0.5 active:translate-y-0"
                         style={{
-                            background: 'linear-gradient(135deg, #1A3FBF 0%, #3B5FD4 100%)',
-                            boxShadow: '0 8px 25px rgba(26,63,191,0.35)'
+                            background: 'var(--btn-primary-bg)',
                         }}
                     >
                         <span>সরাসরি গুগলে ৫-স্টার রিভিউ দিন</span>
@@ -69,7 +65,7 @@ const ReviewPage = () => {
                     <div className="mt-8 pt-6 border-t flex flex-col sm:flex-row items-center justify-between text-xs gap-3"
                          style={{ borderColor: 'var(--card-border)', color: 'var(--text-muted)' }}>
                         <div className="flex items-center gap-1.5">
-                            <MapPin size={14} className="text-amber-500" />
+                            <MapPin size={14} style={{ color: 'var(--gold)' }} />
                             <span>উত্তরা ও সুপ্রিম কোর্ট চেম্বার</span>
                         </div>
                         <Link to="/" className="hover:underline font-medium" style={{ color: 'var(--accent)' }}>

@@ -250,7 +250,7 @@ const ContactForm = ({ isBn }) => {
     if (submitted) {
         return (
             <div className="glass-card p-10 text-center rounded-2xl border" style={{ borderColor: 'var(--card-border)' }}>
-                <div className="text-4xl mb-4">✅</div>
+                <svg className="mb-4" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--success)" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="m8 12.5 2.5 2.5L16 9.5" /></svg>
                 <h3 className="text-xl font-bold mb-2" style={{ color: 'var(--text)', fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>
                     {isBn ? 'বার্তা সফলভাবে পাঠানো হয়েছে!' : 'Message Sent!'}
                 </h3>
@@ -371,7 +371,7 @@ const ContactForm = ({ isBn }) => {
                 </button>
 
                 <p className="text-xs text-center" style={{ color: 'var(--text-muted)', fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>
-                    {isBn ? '🔒 আপনার পাঠানো তথ্য শতভাগ গোপন রাখা হয়।' : 'All consultations are strictly confidential.'}
+                    {isBn ? 'আপনার পাঠানো তথ্য শতভাগ গোপন রাখা হয়।' : 'All consultations are strictly confidential.'}
                 </p>
             </form>
         </div>
@@ -462,7 +462,7 @@ const ContactPage = ({ lang }) => {
                             <a key={label} href={href}
                                 target={href.startsWith('http') ? '_blank' : undefined}
                                 rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                                className="glass-card flex items-center gap-4 p-4 group rounded-xl border transition-all hover:scale-105"
+                                className="glass-card flex items-center gap-4 p-4 group rounded-xl border transition-[color,background-color,border-color,box-shadow,opacity,transform] hover:scale-105"
                                 style={{ textDecoration: 'none', borderColor: 'var(--card-border)' }}>
                                 <div className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform"
                                     style={{ background: `${color}18`, color }}>
@@ -492,7 +492,7 @@ const ContactPage = ({ lang }) => {
                                 </h2>
                                 <div className="space-y-4">
                                     {chambers.map((ch, i) => (
-                                        <div key={i} className="glass-card p-6 rounded-2xl border shadow-md transition-all hover:-translate-y-1" style={{ borderColor: 'var(--card-border)' }}>
+                                        <div key={i} className="glass-card p-6 rounded-2xl border shadow-md transition-[color,background-color,border-color,box-shadow,opacity,transform] hover:-translate-y-1" style={{ borderColor: 'var(--card-border)' }}>
                                             <div className="flex items-start gap-4">
                                                 <div className="w-12 h-12 rounded-2xl flex items-center justify-center flex-shrink-0 mt-0.5"
                                                     style={{ background: 'var(--accent-subtle)', color: 'var(--accent)' }}>
@@ -503,7 +503,7 @@ const ContactPage = ({ lang }) => {
                                                     <p className="text-sm font-semibold mb-1.5 leading-relaxed" style={{ color: 'var(--text)', fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>{ch.address}</p>
                                                     <p className="text-xs mb-3" style={{ color: 'var(--text-muted)', fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>{ch.note}</p>
                                                     <a href={ch.mapLink} target="_blank" rel="noopener noreferrer"
-                                                        className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-lg border transition-all hover:bg-[var(--accent)] hover:text-white"
+                                                        className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-lg border transition-[color,background-color,border-color,box-shadow,opacity,transform] hover:bg-[var(--accent)] hover:text-white"
                                                         style={{ color: 'var(--accent)', borderColor: 'var(--accent)', fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>
                                                         <ExternalLink size={13} /> {isBn ? 'গুগল ম্যাপে নেভিগেট করুন' : 'View on Google Maps'}
                                                     </a>
@@ -582,16 +582,16 @@ const ContactPage = ({ lang }) => {
                             {practiceServices.map((service, idx) => (
                                 <div
                                     key={idx}
-                                    className="glass-card p-6 rounded-2xl border flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 shadow-sm"
+                                    className="glass-card p-6 rounded-2xl border flex flex-col justify-between transition-[color,background-color,border-color,box-shadow,opacity,transform] duration-300 hover:-translate-y-1 shadow-sm"
                                     style={{ borderColor: 'var(--card-border)' }}
                                 >
                                     <div>
                                         <div className="flex items-center justify-between mb-3">
                                             <span className="text-[11px] font-bold px-2.5 py-1 rounded-md"
-                                                style={{ background: service.color + '18', color: service.color, fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>
+                                                style={{ background: 'var(--accent-subtle)', color: 'var(--accent)', border: '1px solid var(--card-border)', fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>
                                                 {service.badge}
                                             </span>
-                                            <Scale size={18} style={{ color: service.color }} />
+                                            <Scale size={18} style={{ color: 'var(--gold)' }} />
                                         </div>
 
                                         <h3 className="text-lg font-bold mb-2 leading-snug"

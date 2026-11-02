@@ -69,12 +69,12 @@ const SYNONYMS = {
 const CATEGORIES = ['সব', 'ফৌজদারি আইন', 'পারিবারিক আইন', 'সম্পত্তি আইন', 'কর আইন', 'দেওয়ানী আইন', 'সাইবার আইন'];
 
 const categoryColors = {
-    'ফৌজদারি আইন': '#EF4444',
-    'পারিবারিক আইন': '#8B5CF6',
-    'সম্পত্তি আইন': '#10B981',
-    'কর আইন': '#F59E0B',
-    'দেওয়ানী আইন': '#3B82F6',
-    'সাইবার আইন': '#065F46',
+    'ফৌজদারি আইন': '#163A70',
+    'পারিবারিক আইন': '#1E293B',
+    'সম্পত্তি আইন': '#14532D',
+    'কর আইন': '#7C5E10',
+    'দেওয়ানী আইন': '#163A70',
+    'সাইবার আইন': '#0F5257',
 };
 
 const getCatColor = (cat) => categoryColors[cat] || 'var(--accent)';
@@ -89,7 +89,7 @@ const BlogCardBn = ({ post, isRecent = false, isPopular = false }) => {
 
     return (
         <article
-            className="group relative flex flex-col h-full overflow-hidden transition-all duration-300 hover:-translate-y-1.5"
+            className="group relative flex flex-col h-full overflow-hidden transition-[color,background-color,border-color,box-shadow,opacity,transform] duration-300 hover:-translate-y-1.5"
             style={{
                 background: 'var(--surface)',
                 border: '1.5px solid var(--card-border)',
@@ -120,7 +120,7 @@ const BlogCardBn = ({ post, isRecent = false, isPopular = false }) => {
                         {isRecent && (
                             <span
                                 className="inline-flex items-center gap-0.5 text-[10px] font-extrabold px-2 py-0.5 rounded-full text-white shadow-sm"
-                                style={{ background: 'linear-gradient(135deg, #10b981, #059669)', fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif" }}
+                                style={{ background: '#163A70', fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif" }}
                             >
                                 <Sparkles size={10} /> নতুন
                             </span>
@@ -128,7 +128,7 @@ const BlogCardBn = ({ post, isRecent = false, isPopular = false }) => {
                         {isPopular && (
                             <span
                                 className="inline-flex items-center gap-0.5 text-[10px] font-extrabold px-2 py-0.5 rounded-full text-white shadow-sm"
-                                style={{ background: 'linear-gradient(135deg, #f59e0b, #dc2626)', fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif" }}
+                                style={{ background: '#9A7420', fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif" }}
                             >
                                 <Flame size={10} /> জনপ্রিয়
                             </span>
@@ -198,7 +198,7 @@ const BlogCardBn = ({ post, isRecent = false, isPopular = false }) => {
 
                     <Link
                         to={`/bn/blog/${post.slug}`}
-                        className="inline-flex items-center gap-1 text-xs font-bold px-3 py-1.5 rounded-lg transition-all group-hover:bg-[var(--accent)] group-hover:text-white"
+                        className="inline-flex items-center gap-1 text-xs font-bold px-3 py-1.5 rounded-lg transition-[color,background-color,border-color,box-shadow,opacity,transform] group-hover:bg-[var(--accent)] group-hover:text-white"
                         style={{
                             background: 'var(--accent-subtle)',
                             color: 'var(--accent)',
@@ -422,7 +422,7 @@ const BlogBn = () => {
                             placeholder="আইনি বিষয় বা মামলা খুঁজুন (যেমন: জামিন, বাটোয়ারা, দেনমোহর, divorce, land)..."
                             value={searchQuery}
                             onChange={e => setSearchQuery(e.target.value)}
-                            className="w-full pl-12 pr-28 py-4 text-sm md:text-base outline-none transition-all"
+                            className="w-full pl-12 pr-28 py-4 text-sm md:text-base outline-none transition-[color,background-color,border-color,box-shadow,opacity,transform]"
                             style={{
                                 background: 'transparent',
                                 color: 'var(--text)',
@@ -446,7 +446,7 @@ const BlogBn = () => {
                                     </span>
                                     <button
                                         onClick={() => setSearchQuery('')}
-                                        className="p-1.5 rounded-lg hover:bg-black/10 text-gray-400 hover:text-gray-600 transition-all"
+                                        className="p-1.5 rounded-lg hover:bg-black/10 text-gray-400 hover:text-gray-600 transition-[color,background-color,border-color,box-shadow,opacity,transform]"
                                         title="অনুসন্ধান ক্লিয়ার করুন"
                                     >
                                         <X size={16} />
@@ -454,9 +454,9 @@ const BlogBn = () => {
                                 </>
                             ) : (
                                 <button
-                                    className="text-xs px-4 py-2 rounded-lg font-bold text-white shadow-md transition-all hover:scale-105"
+                                    className="text-xs px-4 py-2 rounded-lg font-bold text-white shadow-md transition-[color,background-color,border-color,box-shadow,opacity,transform] hover:scale-105"
                                     style={{
-                                        background: 'linear-gradient(135deg, var(--accent), #1e1b4b)',
+                                        background: 'var(--accent)',
                                         fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif"
                                     }}
                                 >
@@ -476,11 +476,11 @@ const BlogBn = () => {
                                 <button
                                     key={cat}
                                     onClick={() => setActiveCategory(cat)}
-                                    className="px-4 py-2 rounded-xl text-xs md:text-sm font-semibold border transition-all flex items-center gap-1.5"
+                                    className="px-4 py-2 rounded-xl text-xs md:text-sm font-semibold border transition-[color,background-color,border-color,box-shadow,opacity,transform] flex items-center gap-1.5"
                                     style={
                                         isActive
                                             ? {
-                                                background: 'linear-gradient(135deg, #1A3FBF, #0B1220)',
+                                                background: '#1A3FBF',
                                                 color: '#fff',
                                                 borderColor: 'var(--accent)',
                                                 boxShadow: '0 4px 14px rgba(26,63,191,0.3)',
@@ -516,17 +516,18 @@ const BlogBn = () => {
                 <section className="py-6" style={{ background: 'var(--bg)' }}>
                     <div className="container mx-auto px-6 max-w-6xl">
                         <div
-                            className="relative overflow-hidden p-6 md:p-8 rounded-3xl border transition-all duration-300 hover:shadow-2xl"
+                            className="relative overflow-hidden p-6 md:p-8 rounded-2xl border transition-[color,background-color,border-color,box-shadow,opacity,transform] duration-300"
                             style={{
-                                background: 'linear-gradient(135deg, rgba(26,63,191,0.06) 0%, rgba(198,167,94,0.05) 100%)',
-                                borderColor: 'rgba(198,167,94,0.3)',
-                                backdropFilter: 'blur(20px)'
+                                background: 'var(--surface)',
+                                borderColor: 'var(--card-border)',
+                                borderLeft: '3.5px solid var(--gold)',
+                                boxShadow: 'var(--shadow-sm)'
                             }}
                         >
                             <div className="flex flex-col md:flex-row gap-6 items-start justify-between">
                                 <div className="flex-1">
                                     <div className="flex items-center gap-2 mb-3">
-                                        <span className="inline-flex items-center gap-1 text-xs font-bold px-3 py-1 rounded-full text-white shadow-sm" style={{ background: 'linear-gradient(135deg, #f59e0b, #be185d)', fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif" }}>
+                                        <span className="inline-flex items-center gap-1 text-xs font-bold px-3 py-1 rounded-full" style={{ background: 'var(--gold-subtle)', color: 'var(--gold)', border: '1px solid var(--gold-border)', fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif" }}>
                                             <TrendingUp size={13} /> সম্পাদকের বাছাই — শীর্ষ আইনি নির্দেশিকা
                                         </span>
                                         <span className="text-xs text-[var(--text-muted)]" style={{ fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif" }}>
@@ -568,8 +569,8 @@ const BlogBn = () => {
                                     </div>
                                     <Link
                                         to={`/bn/blog/${featuredPost.slug}`}
-                                        className="inline-flex items-center gap-2 text-sm font-bold px-6 py-3 rounded-xl text-white shadow-lg transition-all hover:scale-105"
-                                        style={{ background: 'linear-gradient(135deg, var(--accent), #1e1b4b)', fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif" }}
+                                        className="inline-flex items-center gap-2 text-sm font-bold px-6 py-3 rounded-xl text-white shadow-md transition-[color,background-color,border-color,box-shadow,opacity,transform]"
+                                        style={{ background: 'var(--btn-primary-bg)', fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif" }}
                                     >
                                         সম্পূর্ণ আইনি নিবন্ধটি পড়ুন <ChevronRight size={18} />
                                     </Link>
@@ -598,17 +599,17 @@ const BlogBn = () => {
                         <div className="flex items-center gap-1.5 p-1 rounded-xl border" style={{ background: 'var(--surface)', borderColor: 'var(--card-border)' }}>
                             <button
                                 onClick={() => setSortBy('recent')}
-                                className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all ${sortBy === 'recent' ? 'bg-[var(--accent)] text-white shadow-sm' : 'text-[var(--text-secondary)] hover:text-[var(--text)]'}`}
+                                className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-bold transition-[color,background-color,border-color,box-shadow,opacity,transform] ${sortBy === 'recent' ? 'bg-[var(--btn-primary-bg)] text-white shadow-sm' : 'text-[var(--text-secondary)] hover:text-[var(--text)]'}`}
                                 style={{ fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif" }}
                             >
-                                <Sparkles size={13} /> 🆕 সর্বশেষ প্রকাশিত (Newest)
+                                <Sparkles size={13} /> সর্বশেষ প্রকাশিত (Newest)
                             </button>
                             <button
                                 onClick={() => setSortBy('popular')}
-                                className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all ${sortBy === 'popular' ? 'bg-[var(--accent)] text-white shadow-sm' : 'text-[var(--text-secondary)] hover:text-[var(--text)]'}`}
+                                className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-bold transition-[color,background-color,border-color,box-shadow,opacity,transform] ${sortBy === 'popular' ? 'bg-[var(--btn-primary-bg)] text-white shadow-sm' : 'text-[var(--text-secondary)] hover:text-[var(--text)]'}`}
                                 style={{ fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif" }}
                             >
-                                <Flame size={13} /> 🔥 সর্বাধিক পঠিত (Popular)
+                                <Flame size={13} /> সর্বাধিক পঠিত (Popular)
                             </button>
                         </div>
                     </div>
@@ -620,7 +621,7 @@ const BlogBn = () => {
                             <p className="text-sm mb-4" style={{ fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif" }}>অন্য কোনো শব্দ দিয়ে পুনরায় অনুসন্ধান করুন।</p>
                             <button
                                 onClick={() => { setSearchQuery(''); setActiveCategory('সব'); }}
-                                className="px-5 py-2 rounded-lg text-xs font-bold text-white bg-[var(--accent)] shadow-md transition-all hover:scale-105"
+                                className="px-5 py-2 rounded-lg text-xs font-bold text-white bg-[var(--accent)] shadow-md transition-[color,background-color,border-color,box-shadow,opacity,transform] hover:scale-105"
                                 style={{ fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif" }}
                             >
                                 সব পোস্ট দেখুন
@@ -644,7 +645,7 @@ const BlogBn = () => {
                                 <div className="mt-10 text-center">
                                     <button
                                         onClick={() => setVisibleCount(v => v + POSTS_PER_PAGE)}
-                                        className="inline-flex items-center gap-2 px-8 py-3 rounded-2xl text-sm font-bold border transition-all hover:scale-105 hover:shadow-lg"
+                                        className="inline-flex items-center gap-2 px-8 py-3 rounded-2xl text-sm font-bold border transition-[color,background-color,border-color,box-shadow,opacity,transform] hover:scale-105 hover:shadow-lg"
                                         style={{
                                             background: 'var(--surface)',
                                             color: 'var(--accent)',
@@ -667,10 +668,10 @@ const BlogBn = () => {
                     <div className="mt-16 text-center">
                         <Link
                             to="/blog"
-                            className="inline-flex items-center gap-2 text-sm font-bold px-6 py-3 rounded-2xl border transition-all hover:bg-[var(--accent-subtle)] shadow-sm"
+                            className="inline-flex items-center gap-2 text-sm font-bold px-6 py-3 rounded-2xl border transition-[color,background-color,border-color,box-shadow,opacity,transform] hover:bg-[var(--accent-subtle)] shadow-sm"
                             style={{ color: 'var(--accent)', borderColor: 'var(--accent)', fontFamily: "var(--font-en), sans-serif" }}
                         >
-                            🌐 Switch to English Legal Guides &amp; Articles
+                            Switch to English Legal Guides &amp; Articles
                         </Link>
                     </div>
                 </div>

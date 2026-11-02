@@ -122,7 +122,7 @@ const Contact = ({ lang = 'en' }) => {
         { icon: MapPin, label: isBn ? 'চেম্বার ঠিকানা' : 'Office Address', value: isBn ? 'House 46, Road 6/B, Sector 12, উত্তরা, ঢাকা-১২৩০' : 'House 46, Road 6/B, Sector 12, Uttara, Dhaka-1230', href: 'https://maps.google.com/?q=Sector+12+Uttara+West+Dhaka' },
     ];
 
-    const inputClass = "w-full px-4 py-3 rounded-xl text-sm outline-none transition-all duration-200";
+    const inputClass = "w-full px-4 py-3 rounded-xl text-sm outline-none transition-[color,background-color,border-color,box-shadow,opacity,transform] duration-200";
 
     return (
         <>
@@ -163,8 +163,8 @@ const Contact = ({ lang = 'en' }) => {
                         </p>
 
                         {/* Office hours */}
-                        <div className="flex items-center gap-2 text-xs font-semibold px-3 py-2 rounded-xl w-fit"
-                            style={{ background: 'rgba(34,197,94,0.08)', color: '#16a34a', border: '1px solid rgba(34,197,94,0.2)' }}>
+                        <div className="flex items-center gap-2 text-xs font-semibold px-3.5 py-2 rounded-xl w-fit"
+                            style={{ background: 'var(--gold-subtle)', color: 'var(--gold)', border: '1px solid var(--gold-border)' }}>
                             <Clock size={13} />
                             {isBn ? 'শনি–বৃহস্পতিবার, সকাল ৯টা – রাত ৯টা' : 'Sat–Thu, 9:00 AM – 9:00 PM'}
                         </div>
@@ -208,21 +208,21 @@ const Contact = ({ lang = 'en' }) => {
 
                             {/* Tab switcher */}
                             <div className="flex rounded-xl overflow-hidden mb-7 p-1"
-                                style={{ background: 'var(--input-bg)', border: '1px solid var(--card-border)' }}>
+                                style={{ background: 'var(--surface-2)', border: '1px solid var(--card-border)' }}>
                                 <button
                                     onClick={() => setActiveTab('whatsapp')}
-                                    className="flex-1 flex items-center justify-center gap-2 py-2.5 text-sm font-bold rounded-lg transition-all duration-200"
+                                    className="flex-1 flex items-center justify-center gap-2 py-2.5 text-sm font-bold rounded-lg transition-[color,background-color,border-color,box-shadow,opacity,transform] duration-200"
                                     style={activeTab === 'whatsapp'
-                                        ? { background: '#25D366', color: '#fff', boxShadow: '0 2px 8px rgba(37,211,102,0.3)' }
+                                        ? { background: 'var(--wa-green)', color: '#fff', boxShadow: '0 2px 8px rgba(17, 107, 58, 0.25)' }
                                         : { background: 'transparent', color: 'var(--text-muted)' }}
                                 >
                                     <MessageCircle size={15} /> WhatsApp
                                 </button>
                                 <button
                                     onClick={() => setActiveTab('callback')}
-                                    className="flex-1 flex items-center justify-center gap-2 py-2.5 text-sm font-bold rounded-lg transition-all duration-200"
+                                    className="flex-1 flex items-center justify-center gap-2 py-2.5 text-sm font-bold rounded-lg transition-[color,background-color,border-color,box-shadow,opacity,transform] duration-200"
                                     style={activeTab === 'callback'
-                                        ? { background: 'var(--accent)', color: '#fff', boxShadow: '0 2px 8px rgba(26,63,191,0.3)' }
+                                        ? { background: 'var(--btn-primary-bg)', color: '#fff', boxShadow: '0 2px 8px rgba(10, 22, 40, 0.25)' }
                                         : { background: 'transparent', color: 'var(--text-muted)' }}
                                 >
                                     <PhoneCall size={15} /> {isBn ? 'সরাসরি কল' : 'Request Call'}
@@ -404,7 +404,7 @@ const Contact = ({ lang = 'en' }) => {
 
                             {/* Privacy note */}
                             <p className="text-xs text-center mt-5" style={{ color: 'var(--text-muted)' }}>
-                                {isBn ? '🔒 আপনার তথ্য সম্পূর্ণ গোপনীয় — কখনো শেয়ার করা হয় না।' : '🔒 Your information is completely confidential and never shared.'}
+                                {isBn ? 'আপনার তথ্য সম্পূর্ণ গোপনীয় — কখনো শেয়ার করা হয় না।' : 'Your information is completely confidential and never shared.'}
                             </p>
                         </div>
                     </motion.div>
