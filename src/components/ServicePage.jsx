@@ -132,7 +132,7 @@ const ServicePage = ({ metaTitle, metaDesc, canonicalUrl, h1, intro, coverage, f
                     </motion.div>
 
                     <motion.span initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.08 }}
-                        className="label-accent block mb-4" style={{ color: '#CCA856' }}>
+                        className="label-accent block mb-4" style={{ color: '#93C5FD' }}>
                         Legal Services · Advocate Md. Shah Alam
                     </motion.span>
 
@@ -206,8 +206,7 @@ const ServicePage = ({ metaTitle, metaDesc, canonicalUrl, h1, intro, coverage, f
                                     {howWeHelp.problems.map((problem, i) => (
                                         <motion.div key={i}
                                             initial={{ opacity: 0, x: -10 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.06 }}
-                                            className="glass-card p-4 flex items-start gap-3"
-                                            style={{ borderLeft: '3px solid var(--accent)' }}>
+                                            className="glass-card p-4 flex items-start gap-3">
                                             <span className="text-sm" style={{ color: 'var(--text-secondary)' }}>{problem}</span>
                                         </motion.div>
                                     ))}
@@ -241,8 +240,7 @@ const ServicePage = ({ metaTitle, metaDesc, canonicalUrl, h1, intro, coverage, f
                         {/* Real-Life Scenario */}
                         {howWeHelp.scenario && (
                             <motion.div initial={{ opacity: 0, y: 14 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-                                className="glass-card p-6 mb-10"
-                                style={{ borderLeft: '4px solid var(--gold, var(--accent))' }}>
+                                className="glass-card p-6 mb-10">
                                 <h3 className="text-sm font-bold uppercase tracking-wider mb-3" style={{ color: 'var(--accent)' }}>
                                     Real Case Example
                                 </h3>

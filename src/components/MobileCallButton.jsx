@@ -118,7 +118,7 @@ const MobileCallButton = () => {
                     /* Call pill — Official Sovereign Navy with Antique Brass border */
                     .gcta-call {
                         background-color: #163A70;
-                        border: 1px solid rgba(204, 168, 86, 0.42);
+                        border: 1px solid rgba(147, 197, 253, 0.35);
                         color: #ffffff;
                         box-shadow: 0 2px 10px rgba(10, 22, 40, 0.35);
                     }
@@ -134,7 +134,7 @@ const MobileCallButton = () => {
 
                     .gcta-call-icon {
                         display: inline-flex;
-                        color: #CCA856;
+                        color: #93C5FD;
                     }
 
                     /* Text label */
@@ -159,7 +159,7 @@ const MobileCallButton = () => {
                         width: 6px;
                         height: 6px;
                         border-radius: 50%;
-                        background: #CCA856;
+                        background: #93C5FD;
                         flex-shrink: 0;
                     }
                 }

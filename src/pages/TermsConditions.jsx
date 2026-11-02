@@ -35,7 +35,7 @@ const TermsConditions = () => {
                         {/* 1 */}
                         <div className="glass-card p-6 md:p-8">
                             <h2 className="text-lg font-bold mb-3 flex items-center gap-2" style={{ color: 'var(--text)' }}>
-                                <FileText size={18} className="text-amber-500" /> 1. Acceptance of Terms
+                                <FileText size={18} style={{ color: "var(--accent)" }} /> 1. Acceptance of Terms
                             </h2>
                             <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
                                 By accessing, reading, or submitting inquiries through <strong>advmdshahalam.me</strong> ("Website"), you unconditionally agree to be bound by these Terms of Service, all applicable laws and regulations of Bangladesh, and agree that you are responsible for compliance with any applicable local laws. If you do not agree with any of these terms, you are prohibited from using or accessing this site.
@@ -43,9 +43,9 @@ const TermsConditions = () => {
                         </div>
 
                         {/* 2 - Consultation Boundaries */}
-                        <div className="glass-card p-6 md:p-8" style={{ borderLeft: '4px solid var(--accent)' }}>
+                        <div className="glass-card p-6 md:p-8">
                             <h2 className="text-lg font-bold mb-3 flex items-center gap-2" style={{ color: 'var(--text)' }}>
-                                <Scale size={18} className="text-amber-500" /> 2. Consultation Boundaries &amp; No Attorney-Client Relationship
+                                <Scale size={18} style={{ color: "var(--accent)" }} /> 2. Consultation Boundaries &amp; No Attorney-Client Relationship
                             </h2>
                             <p className="text-sm leading-relaxed mb-3" style={{ color: 'var(--text-secondary)' }}>
                                 <strong>General Informational Purpose Only:</strong> The legal articles, statutory breakdowns, court fee summaries, and guides published on this Website are prepared exclusively for public legal literacy and general education. None of the content constitutes formal legal counsel or judicial opinion.
@@ -64,7 +64,7 @@ const TermsConditions = () => {
                         </div>
 
                         {/* 3 - Retainer Conditions */}
-                        <div className="glass-card p-6 md:p-8" style={{ borderLeft: '4px solid #10b981' }}>
+                        <div className="glass-card p-6 md:p-8">
                             <h2 className="text-lg font-bold mb-3 flex items-center gap-2" style={{ color: 'var(--text)' }}>
                                 <ShieldCheck size={18} className="text-emerald-500" /> 3. Retainer Conditions &amp; Professional Representation
                             </h2>
@@ -80,9 +80,9 @@ const TermsConditions = () => {
                         </div>
 
                         {/* 4 - Payment Policies */}
-                        <div className="glass-card p-6 md:p-8" style={{ borderLeft: '4px solid #f59e0b' }}>
+                        <div className="glass-card p-6 md:p-8">
                             <h2 className="text-lg font-bold mb-3 flex items-center gap-2" style={{ color: 'var(--text)' }}>
-                                <AlertCircle size={18} className="text-amber-500" /> 4. Payment Policies &amp; Financial Terms
+                                <AlertCircle size={18} style={{ color: "var(--accent)" }} /> 4. Payment Policies &amp; Financial Terms
                             </h2>
                             <p className="text-sm leading-relaxed mb-3" style={{ color: 'var(--text-secondary)' }}>
                                 <strong>Consultation Fees:</strong> Dedicated in-chamber and structured telephonic consultations are subject to consultation fees discussed prior to the appointment.
@@ -123,7 +123,7 @@ const TermsConditions = () => {
                         </div>
 
                         {/* 8 - Exclusive Dhaka Jurisdiction */}
-                        <div className="glass-card p-6 md:p-8" style={{ borderLeft: '4px solid #ef4444' }}>
+                        <div className="glass-card p-6 md:p-8">
                             <h2 className="text-lg font-bold mb-3" style={{ color: 'var(--text)' }}>8. Governing Law &amp; Exclusive Dhaka Court Jurisdiction</h2>
                             <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
                                 These Terms of Service and any dispute, controversy, or claim arising out of or related to this Website or our professional services shall be governed exclusively by the laws of the People's Republic of Bangladesh.
@@ -134,7 +134,7 @@ const TermsConditions = () => {
                         </div>
 
                         {/* 9 - Contact */}
-                        <div className="glass-card p-6 md:p-8" style={{ borderLeft: '4px solid var(--gold, var(--accent))' }}>
+                        <div className="glass-card p-6 md:p-8">
                             <h2 className="text-lg font-bold mb-3" style={{ color: 'var(--text)' }}>9. Chamber Contact &amp; Inquiries</h2>
                             <p className="text-sm leading-relaxed mb-3" style={{ color: 'var(--text-secondary)' }}>
                                 For formal retainer questions, chamber appointments, or legal verification, contact our offices:

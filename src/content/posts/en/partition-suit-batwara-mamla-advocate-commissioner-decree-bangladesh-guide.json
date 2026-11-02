@@ -1,0 +1,190 @@
+{
+  "slug": "partition-suit-batwara-mamla-advocate-commissioner-decree-bangladesh-guide",
+  "bnSlug": "batwara-mamla-prothom-shesh-decree-advocate-commissioner-niyom-2026-bn",
+  "title": "Partition Suit (Batwara Mamla) in Bangladesh: Preliminary Decree, Advocate Commissioner & Court Partition Guide",
+  "category": "Civil & Property Litigation",
+  "readTime": "14 min read",
+  "metaTitle": "Partition Suit (Batwara Mamla) in Bangladesh: Court Process & Decrees",
+  "metaDescription": "Exhaustive legal guide to partition suits (Batwara Mamla) in Bangladesh: preliminary decrees, Advocate Commissioner demarcation, Saham allotments, and final decrees.",
+  "keywords": [
+    "partition suit bangladesh",
+    "batwara mamla procedure cost bangladesh",
+    "preliminary decree vs final decree partition",
+    "advocate commissioner partition bangladesh",
+    "saham allotment joint land batwara bd",
+    "partition act 1893 section 4 bangladesh",
+    "property partition lawyer supreme court dhaka",
+    "order 20 rule 18 cpc partition suit"
+  ],
+  "publishedDate": "2026-11-02",
+  "lastModified": "2026-11-02",
+  "heroIntro": "In Bangladesh, undivided ancestral real estate and joint property ownership are notorious breeding grounds for multi-generational familial warfare. When co-sharers (brothers, sisters, cousins, or paternal uncles) refuse to amicably demarcate land, block legitimate inheritance shares, or unlawfully attempt to construct commercial buildings on the most valuable roadside frontage, the only definitive legal mechanism to legally sever joint ownership is instituting a **Partition Suit (Batwara Mamla / বাটোয়ারা মামলা)** in the Civil Court. Governed by the **Partition Act 1893**, the **Code of Civil Procedure 1908 (CPC)**, and the **Court-Fees Act 1870**, a partition lawsuit is a unique, two-stage judicial procedure: obtaining a **Preliminary Decree** declaring each co-sharer's legal fractional share, followed by the appointment of a court-deputed **Advocate Commissioner** who physically surveys the ground, drafts separate lot allocations (Saham), and delivers a binding **Final Decree**. This guide details the step-by-step litigation roadmap, preventing co-sharer obstruction, court fees, and remote management for overseas heirs.",
+  "quickAnswer": {
+    "title": "Quick Overview: How a Partition Suit Works in Bangladesh",
+    "text": "A Partition Suit is filed in the competent Civil Court (Senior Assistant Judge or Joint District Judge Court depending on property valuation) by any co-sharer having undisputed joint title. The case proceeds through two mandatory judicial phases: (1) Preliminary Decree Phase: The court examines title deeds, CS/SA/RS/City khatians, and succession laws to declare the exact arithmetic fractional share (Saham) of every party; (2) Final Decree Phase: The court appoints an Advocate Commissioner with a licensed land surveyor (Amin) to physically measure the land, carve out independent boundaries with boundary pillars, prepare a partition map, and draw a final report. Once the court approves the Commissioner's report, a Final Decree is drawn up, registered in the Sub-Registry office, and executed through the Nazir with police assistance if necessary.",
+    "highlights": [
+      "Governing Statutes: The Partition Act 1893, Code of Civil Procedure 1908 (Order XX, Rule 18; Order XXVI, Rules 13-14), and Court-Fees Act 1870.",
+      "Two-Stage Judicial Process: Preliminary Decree (declaring legal shares) followed by Final Decree (physical demarcation and allotment of separate Saham).",
+      "Fixed Court Fee Advantage: If the plaintiff is in joint or constructive physical possession of any part of the land, the court fee is fixed at a modest statutory rate (approx. 300 to 1,000 BDT) under the Court-Fees Act.",
+      "Advocate Commissioner Role: Appointed by the court under Order XXVI Rule 13 CPC to survey the physical boundaries, value roadside vs. back portions, and draft the partition map.",
+      "Section 4 Partition Act Protection: If a stranger buys a share in an undivided family dwelling house, native family members have the statutory right to buy back that share at court valuation.",
+      "Injunction Against Construction: Plaintiffs can obtain immediate temporary injunctions under Order XXXIX CPC preventing rogue co-sharers from erecting permanent brick structures pending suit.",
+      "NRB Remote Prosecution: Overseas heirs residing in USA, UK, Canada, or Australia can institute and contest partition suits through an Embassy-attested Power of Attorney."
+    ]
+  },
+  "toc": [
+    {
+      "id": "nature-of-partition-suit",
+      "title": "1. Nature of Partition Suits: Joint Title, Possession & Causes of Action"
+    },
+    {
+      "id": "preliminary-decree-phase",
+      "title": "2. Stage One: The Preliminary Decree & Share Determination (Order XX Rule 18)"
+    },
+    {
+      "id": "advocate-commissioner-survey",
+      "title": "3. Stage Two: The Advocate Commissioner, Amin Survey & Saham Allotment"
+    },
+    {
+      "id": "final-decree-and-execution",
+      "title": "4. Stage Three: The Final Decree, Registration & Delivery of Possession"
+    },
+    {
+      "id": "dwelling-house-stranger-buyout",
+      "title": "5. Section 4 of the Partition Act: Buying Out Outside Strangers"
+    },
+    {
+      "id": "comparative-stages-table",
+      "title": "6. Comparative Matrix: Partition Stages, Timeframes, Fees & Required Actions"
+    },
+    {
+      "id": "preventing-illegal-construction",
+      "title": "7. Emergency Relief: Obtaining Injunctions Against Construction & Tree Cutting"
+    },
+    {
+      "id": "court-fees-and-valuation-rules",
+      "title": "8. Court Fees & Valuation: Fixed Partition Fee vs. Ad Valorem Dispute Fee"
+    },
+    {
+      "id": "nrb-remote-partition-strategy",
+      "title": "9. How NRBs Living Abroad Can Successfully Prosecute a Partition Suit"
+    },
+    {
+      "id": "practical-case-study",
+      "title": "10. Real-Life Case Study: Resolving a 40-Year Family Land Dispute in Gazipur"
+    },
+    {
+      "id": "faqs",
+      "title": "11. Frequently Asked Questions (FAQs)"
+    }
+  ],
+  "sections": [
+    {
+      "id": "nature-of-partition-suit",
+      "title": "1. Nature of Partition Suits: Joint Title, Possession & Causes of Action",
+      "content": "<p>A Partition Suit (বাটোয়ারা মামলা) is distinct from all other civil litigations in Bangladesh. In an ordinary property lawsuit, one party wins and the other loses. In a partition suit, <strong>every co-sharer is simultaneously a plaintiff and a defendant</strong>, because the court's decree definitively settles the boundaries of all parties involved.</p><ul><li><strong>Undivided Co-Ownership:</strong> Every co-sharer owns a mathematical fraction of every square foot of the land until a legal partition occurs. One co-sharer cannot unilaterally sell off the prime roadside corner without the written consent of all other joint heirs.</li><li><strong>Cause of Action:</strong> Arises the moment the plaintiff demands an amicable, registered partition deed (Aposh Batwara Dalil) and the other co-sharers refuse, delay, or attempt to grab more than their lawful share.</li><li><strong>Filing Forum:</strong> Governed by the Civil Courts Act 1887. Filed in the <strong>Court of the Senior Assistant Judge</strong> (for properties valued up to 25 Lakh BDT) or the <strong>Court of the Joint District Judge</strong> (for properties exceeding 25 Lakh BDT).</li></ul>"
+    },
+    {
+      "id": "preliminary-decree-phase",
+      "title": "2. Stage One: The Preliminary Decree & Share Determination (Order XX Rule 18)",
+      "content": "<p>The initial phase of a partition lawsuit strictly adjudicates <strong>legal title and entitlement</strong> under Order XX, Rule 18 of the Code of Civil Procedure 1908:</p><ol><li><strong>Institution of Plaint:</strong> The plaintiff submits a plaint setting out the complete pedigree genealogy (Khatiyan Warishan tree), the chain of title deeds (CS, SA, RS, BS khatians), and the specific property schedules.</li><li><strong>Written Statement (W.S.):</strong> Defendants submit their written statements either admitting the pedigree or alleging previous oral partition, heba deeds, or lifetime sales.</li><li><strong>Trial & Evidence:</strong> The court examines documentary exhibits and records oral depositions (P.W.s and D.W.s) regarding the legitimacy of the heirs.</li><li><strong>Pronouncement of Preliminary Decree:</strong> The judge delivers a formal preliminary judgment declaring the exact arithmetic share of every co-sharer (e.g., Plaintiff No. 1 gets 0.250 share, Defendant No. 1 gets 0.375 share) and grants the parties thirty (30) days to partition the property amicably based on those declared shares.</li></ol>"
+    },
+    {
+      "id": "advocate-commissioner-survey",
+      "title": "3. Stage Two: The Advocate Commissioner, Amin Survey & Saham Allotment",
+      "content": "<p>When co-sharers fail to execute an amicable partition within the court-stipulated window, the plaintiff files a petition for the appointment of a <strong>Pleader Commissioner / Advocate Commissioner</strong> under Order XXVI, Rule 13 of the CPC:</p><ul><li><strong>Writ of Commission:</strong> The court issues a formal writ commanding an enrolled advocate commissioner, accompanied by a government-licensed land surveyor (Amin), to visit the suit land.</li><li><strong>Notice of Field Survey:</strong> The Commissioner serves written notices upon all parties specifying the date and time of the physical field measurement.</li><li><strong>Allotment of Saham (Lots):</strong> The Commissioner measures the land on the ground, prepares an accurate topographical map (Poshani Map), and divides the property into distinct, numbered allotments (Saham). In doing so, the Commissioner must balance frontage, road access, depth, and preserve existing residential structures wherever equitable.</li><li><strong>Filing Commissioner's Report:</strong> The Commissioner submits a comprehensive written report, field map, and valuation schedule to the court. If any party is dissatisfied, they may file formal written objections under Order XXVI Rule 14.</li></ul>"
+    },
+    {
+      "id": "final-decree-and-execution",
+      "title": "4. Stage Three: The Final Decree, Registration & Delivery of Possession",
+      "content": "<p>Following the hearing of objections to the Commissioner's report, the civil court enters the final decree stage:</p><ul><li><strong>Final Decree (Order XX Rule 18):</strong> The judge confirms or modifies the Commissioner's allotment report and signs the <strong>Final Decree</strong>. The partition map prepared by the Commissioner forms an integral part of the decree.</li><li><strong>Mandatory Stamp Duty & Registration:</strong> Under the Stamp Act 1899, non-judicial stamp paper must be deposited by the parties based on the net valuation of their allotted shares to engrave the final decree. The decree is then forwarded to the Sub-Registry Office for official entry into Book 1.</li><li><strong>Execution of Decree (Title Execution Case):</strong> If stubborn co-sharers refuse to vacate the newly demarcated lots, the plaintiff files a <strong>Title Execution Case (Jari Mamla)</strong> under Order XXI CPC. The court deputes the Civil Court Nazir, who visits the land with police assistance, dismantles illegal fences, plants government demarcation boundary pillars, and hands over exclusive physical possession to the decree-holder.</li></ul>"
+    },
+    {
+      "id": "dwelling-house-stranger-buyout",
+      "title": "5. Section 4 of the Partition Act: Buying Out Outside Strangers",
+      "content": "<p>One of the most aggressive predatory tactics in Bangladesh is when a rogue co-sharer secretly sells their undivided share in an ancestral family home to a violent local land grabber or outside developer to intimidate the remaining family members.</p><p>To counteract this, <strong>Section 4 of the Partition Act 1893</strong> provides an extraordinary statutory shield:</p><blockquote><em>'Where a share of an undivided dwelling-house belonging to an undivided family has been transferred to a person who is not a member of such family, and such transferee sues for partition, the Court shall, if any member of the family being a shareholder shall undertake to buy the share of such transferee, make a valuation of such share... and direct the sale of such share to such shareholder.'</em></blockquote><p>Under settled Appellate Division rulings, the family member can compel the outsider to sell the share back to the family at the market value determined by the court, completely expelling the stranger from the ancestral home.</p>"
+    },
+    {
+      "id": "comparative-stages-table",
+      "title": "6. Comparative Matrix: Partition Stages, Timeframes, Fees & Required Actions",
+      "content": "<p>The judicial trajectory of a partition suit is outlined in the comparative table below:</p><div class=\"overflow-x-auto my-6\"><table class=\"w-full text-left border-collapse border border-slate-300 dark:border-slate-700 text-sm\"><thead><tr class=\"bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-100\"><th class=\"border border-slate-300 dark:border-slate-700 p-3\">Stage of Suit</th><th class=\"border border-slate-300 dark:border-slate-700 p-3\">Statutory Provision</th><th class=\"border border-slate-300 dark:border-slate-700 p-3\">Core Judicial Purpose</th><th class=\"border border-slate-300 dark:border-slate-700 p-3\">Average Duration</th><th class=\"border border-slate-300 dark:border-slate-700 p-3\">Key Documentation</th></tr></thead><tbody><tr><td class=\"border border-slate-300 dark:border-slate-700 p-3 font-semibold\">Preliminary Stage</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">CPC Order XX, Rule 18(2)</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Adjudication of title, genealogy & declaration of shares</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">12 to 24 months</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Plaint, Warishan Sanad, CS/SA/RS khatians, Bia deeds</td></tr><tr><td class=\"border border-slate-300 dark:border-slate-700 p-3 font-semibold\">Advocate Commission</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">CPC Order XXVI, Rule 13</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Field survey, measurement & Saham allotment</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">4 to 8 months</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Writ of commission, field book, Poshani partition map</td></tr><tr><td class=\"border border-slate-300 dark:border-slate-700 p-3 font-semibold\">Final Decree Stage</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">CPC Order XX, Rule 18</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Judicial confirmation of allotment & decree engraving</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">3 to 6 months</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Non-judicial stamp papers, Sub-Registry registration copy</td></tr><tr><td class=\"border border-slate-300 dark:border-slate-700 p-3 font-semibold\">Title Execution</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">CPC Order XXI, Rule 35</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Physical demarcation, pillar setting & delivery of possession</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">3 to 6 months</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Nazir execution report, police escort requisition</td></tr></tbody></table></div>"
+    },
+    {
+      "id": "preventing-illegal-construction",
+      "title": "7. Emergency Relief: Obtaining Injunctions Against Construction & Tree Cutting",
+      "content": "<p>A classic menace during pending partition cases is the aggressive co-sharer who brings bricks, cement, and labourers onto the suit land to construct a multi-story building on the best commercial portion, attempting to create 'settled possession' that the court will hesitate to demolish later.</p><p>Under <strong>Order XXXIX, Rules 1 and 2 of the CPC</strong>, the plaintiff must file an emergency application for a <strong>Temporary Injunction</strong> on Day 1 of instituting the suit. The Supreme Court has firmly established that no co-sharer has the right to alter the nature and character of joint property or construct permanent structures until a final decree of partition is signed. The court will grant an immediate Status Quo or Injunction order restraining all construction.</p>"
+    },
+    {
+      "id": "court-fees-and-valuation-rules",
+      "title": "8. Court Fees & Valuation: Fixed Partition Fee vs. Ad Valorem Dispute Fee",
+      "content": "<p>A major financial advantage of a partition suit in Bangladesh is the favorable court fee structure under the <strong>Court-Fees Act 1870</strong>:</p><ul><li><strong>Fixed Court Fee (Constructive Possession):</strong> If the plaintiff is in joint, actual, or constructive possession of any portion of the joint property, the court fee payable on the plaint is a <strong>fixed statutory fee of approximately 300 to 1,000 BDT</strong> under Article 17(vi) of Schedule II. The plaintiff does not have to pay expensive ad valorem fees on the multi-crore value of the ancestral estate.</li><li><strong>Ad Valorem Fee (Complete Ouster):</strong> If the plaintiff admits that they have been completely ousted and dispossessed from the entire property, the court will treat the suit as one for declaration of title and recovery of possession, demanding ad valorem court fees up to the statutory cap. Skillful legal drafting must emphasize joint constructive possession to preserve the fixed court fee status.</li></ul>"
+    },
+    {
+      "id": "nrb-remote-partition-strategy",
+      "title": "9. How NRBs Living Abroad Can Successfully Prosecute a Partition Suit",
+      "content": "<p>Non-Resident Bangladeshis (NRBs) in the United States, UK, Canada, and Australia are disproportionately targeted by resident relatives who consume all rental income and refuse to demarcate land. An overseas heir does not need to abandon their employment to pursue a partition suit in Bangladesh.</p><p>Under the <strong>Power of Attorney Act 2012</strong>, the expatriate executes a Special Power of Attorney before the Consular Wing of the Bangladesh Embassy or High Commission abroad, appointing an advocate or trusted representative in Dhaka. Once verified by MOFA and the DC Treasury, the attorney signs the plaint, adduces documentary evidence, attends the Advocate Commissioner's survey, and secures the final registered decree without the overseas heir ever needing to set foot in Bangladesh.</p>"
+    },
+    {
+      "id": "practical-case-study",
+      "title": "10. Real-Life Case Study: Resolving a 40-Year Family Land Dispute in Gazipur",
+      "content": "<p>Three expatriate sisters residing in Birmingham, UK, inherited a 2.5-acre prime highway-facing commercial land parcel in Gazipur following their father's demise. For over 35 years, their resident elder brother managed the entire property, collected commercial rents from truck terminals, and adamantly refused to divide the land, falsely claiming that their late father had gifted him the entire front section via an unrecorded oral Heba.</p><p>Engaging our legal chamber from the UK, our legal intervention proceeded as follows:</p><ol><li>Executed a Special Power of Attorney in London, authenticated by the Bangladesh High Commission, London, and cleared MOFA and DC Gazipur stamping.</li><li>Filed Partition Suit No. 118/2022 before the 1st Court of the Joint District Judge, Gazipur, securing an immediate Ad-Interim Injunction restraining the brother from erecting new warehouse structures.</li><li>At trial, our advocates dismantled the fraudulent oral Heba claim under Islamic jurisprudence, demonstrating that no change of possession or registered deed existed.</li><li>The Joint District Judge pronounced a Preliminary Decree declaring the three sisters' combined 0.600 legal share in the estate.</li><li>Upon the brother's refusal to demarcate amicably, our team secured the appointment of an Advocate Commissioner who surveyed the 2.5 acres, valued the frontage, and carved out a 1.5-acre independent commercial Saham with direct highway access for the three sisters.</li><li>The court confirmed the Commissioner's report, passed the Final Decree, and executed the decree with police assistance, successfully planting permanent boundary pillars and allowing the sisters to lease their independent commercial plot to a multinational logistics corporation.</li></ol>"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What is the difference between a Preliminary Decree and a Final Decree in a partition suit?",
+      "answer": "A Preliminary Decree declares the exact legal arithmetic shares of each co-sharer in the property. A Final Decree physically demarcates the land on the ground through an Advocate Commissioner, assigns numbered lots (Saham), and delivers separate registered title."
+    },
+    {
+      "question": "What is the court fee for filing a Partition Suit in Bangladesh?",
+      "answer": "If the plaintiff is in joint or constructive physical possession of any part of the land, the court fee is a fixed nominal fee of approximately 300 to 1,000 BDT under Article 17(vi) of Schedule II of the Court-Fees Act 1870."
+    },
+    {
+      "question": "Can a co-sharer construct a building on joint land while the case is pending?",
+      "answer": "No. Under Order XXXIX of the CPC, any co-sharer can obtain a temporary injunction restraining other parties from constructing permanent structures, cutting trees, or altering the physical state of joint land until the final decree is issued."
+    },
+    {
+      "question": "What does an Advocate Commissioner do in a partition suit?",
+      "answer": "The Advocate Commissioner is an independent officer of the court who visits the land with a licensed surveyor (Amin), measures the property, prepares a partition map, divides the land into separate Sahams (lots) based on road frontage and value, and files a report with the court."
+    },
+    {
+      "question": "What happens if an outside stranger buys land in our joint family home?",
+      "answer": "Under Section 4 of the Partition Act 1893, family members have the legal right to buy back the stranger's share at a court-determined market valuation, completely ejecting the outsider from the family dwelling house."
+    },
+    {
+      "question": "Can an NRB living in USA or UK file a partition suit without traveling to Bangladesh?",
+      "answer": "Yes. An overseas citizen can execute a Special Power of Attorney authenticated by the Bangladesh Embassy or High Commission abroad, empowering a Supreme Court advocate or representative in Bangladesh to institute and manage the entire lawsuit."
+    },
+    {
+      "question": "How long does a Partition Suit take in a Bangladeshi civil court?",
+      "answer": "A standard partition suit typically takes 18 to 36 months to progress through both the preliminary decree and final commissioner demarcation phases, depending on the number of co-sharers and court backlogs."
+    },
+    {
+      "question": "How is the final partition decree enforced on the ground?",
+      "answer": "If co-sharers refuse to honor the final decree, the decree-holder files a Title Execution Case under Order XXI CPC. The court deputes the Civil Court Nazir with police assistance to physically install boundary pillars and deliver possession."
+    }
+  ],
+  "relatedServiceLinks": [
+    {
+      "title": "Civil Litigation & Partition Suits",
+      "url": "/services/civil-litigation-lawyer"
+    },
+    {
+      "title": "Land & Property Dispute Lawyer",
+      "url": "/services/land-lawyer"
+    },
+    {
+      "title": "Supreme Court Land Appeals & Writs",
+      "url": "/services/supreme-court-lawyer"
+    },
+    {
+      "title": "NRB Inheritance & Property Protection",
+      "url": "/nrb-legal-help"
+    },
+    {
+      "title": "Bail & Criminal Land Dispute Defense",
+      "url": "/services/bail-lawyer"
+    }
+  ],
+  "lang": "en"
+}

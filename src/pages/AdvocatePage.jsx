@@ -423,7 +423,7 @@ const AdvocatePage = () => {
                                     <div style={{
                                         position: 'absolute', bottom: '0.85rem', right: '0.85rem',
                                         background: '#0A1424',
-                                        border: '1px solid rgba(204, 168, 86, 0.45)',
+                                        border: '1px solid rgba(147, 197, 253, 0.35)',
                                         color: '#F8FAFC', fontSize: '0.7rem', fontWeight: 700,
                                         padding: '0.35rem 0.8rem', borderRadius: '0.5rem',
                                         boxShadow: '0 4px 12px rgba(0, 0, 0, 0.35)',
@@ -434,9 +434,9 @@ const AdvocatePage = () => {
                                         position: 'absolute', top: '0.85rem', left: '0.85rem',
                                         background: 'rgba(10, 20, 36, 0.84)', backdropFilter: 'blur(10px)',
                                         WebkitBackdropFilter: 'blur(10px)',
-                                        color: '#CCA856', fontSize: '0.65rem', fontWeight: 700,
+                                        color: '#93C5FD', fontSize: '0.65rem', fontWeight: 700,
                                         padding: '0.35rem 0.7rem', borderRadius: '0.5rem',
-                                        border: '1px solid rgba(204, 168, 86, 0.38)',
+                                        border: '1px solid rgba(147, 197, 253, 0.32)',
                                     }}>
                                         10+ Years Experience
                                     </div>

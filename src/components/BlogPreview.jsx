@@ -113,7 +113,7 @@ const BlogPreview = ({ lang: initialLang = 'en' }) => {
                                             {article.category}
                                         </span>
                                         <span className="flex items-center gap-1 text-xs font-semibold px-2.5 py-0.5 rounded-full" style={{ color: '#F8FAFC', background: 'rgba(15,23,42,0.72)', border: '1px solid rgba(255,255,255,0.2)' }}>
-                                            <Clock size={11} style={{ color: '#FDE68A' }} /> {article.readTime}{activeLang === 'en' ? ' read' : ''}
+                                            <Clock size={11} style={{ color: '#93C5FD' }} /> {article.readTime}{activeLang === 'en' ? ' read' : ''}
                                         </span>
                                     </div>
                                 </Link>

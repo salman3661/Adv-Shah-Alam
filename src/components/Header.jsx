@@ -103,7 +103,7 @@ const Header = () => {
                                     {active && (
                                         <span
                                             className="absolute inset-0 rounded-full transition-[color,background-color,border-color,box-shadow,opacity,transform] duration-200"
-                                            style={{ background: 'var(--btn-primary-bg)' }}
+                                            style={{ background: 'linear-gradient(135deg, #2563EB 0%, #0D9488 100%)', boxShadow: '0 3px 10px rgba(37, 99, 235, 0.28)' }}
                                         />
                                     )}
                                     <span className="relative z-10 flex items-center gap-1.5">
@@ -186,8 +186,9 @@ const Header = () => {
                         onClick={toggleTheme}
                         className="flex items-center gap-1 px-2.5 py-1.5 rounded-full text-xs font-semibold flex-shrink-0 transition-transform duration-150 hover:scale-105 active:scale-95"
                         style={{
-                            background: 'var(--btn-primary-bg)',
-                            color: '#ffffff',
+                            background: 'var(--surface-2, #F0F7FF)',
+                            border: '1.5px solid var(--card-border, #DCE6F4)',
+                            color: 'var(--accent, #2563EB)',
                             cursor: 'pointer',
                         }}
                         aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}

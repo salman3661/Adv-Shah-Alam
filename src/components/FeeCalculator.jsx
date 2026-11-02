@@ -122,9 +122,9 @@ const card = {
     margin: '2rem 0 2.5rem',
     padding: '1.5rem',
     borderRadius: '1rem',
-    background: 'var(--card-bg, rgba(255,255,255,0.03))',
-    border: '1.5px solid var(--card-border, rgba(198,167,94,0.32))',
-    boxShadow: '0 8px 28px rgba(15, 23, 42, 0.06)',
+    background: 'var(--card-bg, #ffffff)',
+    border: '1.5px solid var(--card-border, #DCE6F4)',
+    boxShadow: '0 10px 30px -10px rgba(37, 99, 235, 0.08)',
 };
 const input = {
     width: '100%', boxSizing: 'border-box', padding: '0.75rem 0.9rem', borderRadius: '0.6rem', fontSize: '1rem',
@@ -308,10 +308,10 @@ export default function FeeCalculator({ type = 'land', lang = 'bn' }) {
     return (
         <section aria-label={title} style={card} data-fee-calculator={type}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '0.5rem' }}>
-                <Calculator size={20} style={{ color: 'var(--gold, #c6a75e)' }} aria-hidden="true" />
+                <Calculator size={20} style={{ color: 'var(--gold, #0D9488)' }} aria-hidden="true" />
                 <h3 style={{ margin: 0, fontSize: '1.2rem', fontWeight: 800, color: 'var(--text, inherit)' }}>{title}</h3>
             </div>
-            <p style={{ margin: '0 0 1.1rem', fontSize: '0.88rem', lineHeight: 1.65, color: 'var(--text-muted, #94a3b8)' }}>{note}</p>
+            <p style={{ margin: '0 0 1.1rem', fontSize: '0.88rem', lineHeight: 1.65, color: 'var(--text-muted, #52647c)' }}>{note}</p>
 
             {type === 'land' && (
                 <>
@@ -322,7 +322,7 @@ export default function FeeCalculator({ type = 'land', lang = 'bn' }) {
                         onKeyDown={(e) => { if (e.key === 'Enter') calculate(); }}
                     />
                     <button type="button" onClick={() => setShowRates((s) => !s)}
-                        style={{ marginTop: '0.75rem', background: 'none', border: 'none', padding: 0, cursor: 'pointer', fontSize: '0.82rem', color: 'var(--accent, #c6a75e)', textDecoration: 'underline' }}>
+                        style={{ marginTop: '0.75rem', background: 'none', border: 'none', padding: 0, cursor: 'pointer', fontSize: '0.82rem', color: 'var(--gold, #0D9488)', textDecoration: 'underline' }}>
                         {showRates ? t.hideRates : t.editRates}
                     </button>
                     {showRates && (
@@ -403,7 +403,7 @@ export default function FeeCalculator({ type = 'land', lang = 'bn' }) {
             {adBlock}
 
             <button type="button" onClick={calculate}
-                style={{ width: '100%', padding: '0.95rem 1rem', borderRadius: '0.7rem', border: 'none', cursor: 'pointer', fontWeight: 800, fontSize: '1rem', background: 'var(--gold, #c6a75e)', color: '#111' }}>
+                style={{ width: '100%', padding: '0.95rem 1rem', borderRadius: '0.7rem', border: 'none', cursor: 'pointer', fontWeight: 800, fontSize: '1rem', background: 'linear-gradient(135deg, #2563EB 0%, #0284C7 52%, #0D9488 100%)', color: '#FFFFFF', boxShadow: '0 6px 20px -4px rgba(37, 99, 235, 0.34)', transition: 'background-color 0.15s ease' }}>
                 {t.calc}
             </button>
 
@@ -433,7 +433,7 @@ export default function FeeCalculator({ type = 'land', lang = 'bn' }) {
                                         ? `${t.total} (~${(Math.round(result.pct * 100) / 100)}%)`
                                         : result.totalLabel || t.totalRange}
                                 </td>
-                                <td style={{ padding: '0.65rem 0.25rem', textAlign: 'right', whiteSpace: 'nowrap', color: 'var(--accent, #c6a75e)' }}>
+                                <td style={{ padding: '0.65rem 0.25rem', textAlign: 'right', whiteSpace: 'nowrap', color: 'var(--gold, #0D9488)' }}>
                                     {result.mode === 'inheritance'
                                         ? result.totalText
                                         : result.mode === 'land' || result.mode === 'kabinnama'
@@ -443,7 +443,7 @@ export default function FeeCalculator({ type = 'land', lang = 'bn' }) {
                             </tr>
                         </tbody>
                     </table>
-                    {result.mode === 'land' && <p style={{ margin: '0.75rem 0 0', fontSize: '0.8rem', color: 'var(--text-muted, #94a3b8)' }}>{t.excluded}</p>}
+                    {result.mode === 'land' && <p style={{ margin: '0.75rem 0 0', fontSize: '0.8rem', color: 'var(--text-muted, #52647c)' }}>{t.excluded}</p>}
                 </div>
             )}
         </section>

@@ -1,0 +1,190 @@
+{
+  "slug": "wrongful-employee-termination-gratuity-provident-fund-labour-act-bangladesh-guide",
+  "bnSlug": "bina-notishe-chakrichyuti-gratuity-provident-fund-adaya-shrom-ain-2026-bn",
+  "title": "Wrongful Employee Termination & Severance Pay in Bangladesh: Labour Act 2006 Gratuity & Compensation Guide",
+  "category": "Labour & Employment Law",
+  "readTime": "14 min read",
+  "metaTitle": "Wrongful Termination & Gratuity in Bangladesh: Labour Act 2006 Guide",
+  "metaDescription": "Exhaustive legal guide to wrongful termination, severance pay, gratuity, provident fund recovery, Section 33 grievance notices, and Labour Court suits in Bangladesh.",
+  "keywords": [
+    "wrongful termination bangladesh labour act 2006",
+    "gratuity calculation bangladesh labour law",
+    "section 33 grievance procedure labour court bd",
+    "termination simpliciter section 26 notice pay",
+    "provident fund recovery labour lawyer dhaka",
+    "labour court appeal tribunal bangladesh",
+    "unlawful dismissal compensation bangladesh",
+    "corporate employment lawyer supreme court bangladesh"
+  ],
+  "publishedDate": "2026-11-02",
+  "lastModified": "2026-11-02",
+  "heroIntro": "In Bangladesh's evolving corporate, readymade garment (RMG), banking, and IT sectors, sudden workplace terminations without legal process are pervasive. Multinationals, local conglomerates, and private commercial enterprises frequently fire permanent employees on verbal notice, fabricate disciplinary charges of 'misconduct' to evade end-of-service financial benefits, or withhold years of accumulated Provident Fund and Gratuity. Under the **Bangladesh Labour Act 2006 (BLA)** and the **Bangladesh Labour Rules 2015**, employees and workers enjoy strict statutory protections that employers cannot contract out of. Whether an employee is subjected to **Termination Simpliciter under Section 26**, **Retrenchment under Section 20**, or **Dismissal for Misconduct under Section 23**, employers must strictly adhere to statutory notice periods (or salary in lieu) and disburse 30 to 45 days of wages per year of service as Gratuity. This guide explains how to calculate complete separation benefits, draft a mandatory **Section 33 Grievance Notice**, and institute a lawsuit in the **Labour Court** to recover unpaid dues with commercial compensation.",
+  "quickAnswer": {
+    "title": "Quick Overview: Legal Rights Upon Termination in Bangladesh",
+    "text": "Under the Bangladesh Labour Act 2006, an employer cannot arbitrarily terminate a permanent worker without adhering to statutory protocols: (1) Termination Simpliciter (Section 26): Employer must provide 120 days written notice (for monthly rated workers) or pay 120 days' basic wages in lieu of notice, PLUS 30 days' wages for every completed year of service as compensation; (2) Gratuity Entitlement: Employees completing at least 5 years of service are entitled to 30 days' basic wages per completed year, increasing to 45 days' basic wages per year for service exceeding 10 years; (3) Mandatory Grievance Procedure (Section 33): An aggrieved worker must submit a written grievance to the employer within thirty (30) days of termination. If the employer fails to resolve the dispute within 30 days, the worker must file a formal complaint before the Labour Court within the subsequent 30 days.",
+    "highlights": [
+      "Governing Law: The Bangladesh Labour Act 2006 (BLA) and Bangladesh Labour Rules 2015.",
+      "Four Types of Separation: Retrenchment (Section 20), Discharge on health grounds (Section 22), Dismissal for misconduct (Section 23), and Termination Simpliciter (Section 26).",
+      "Notice Pay: 120 days written notice or wages in lieu for permanent monthly rated workers; 60 days for other workers.",
+      "Gratuity Calculation Formula: 30 days' basic wages per year for service between 5 and 10 years; 45 days' basic wages per year for service exceeding 10 years.",
+      "Contributory Provident Fund (CPF): Immediate release of both employee and employer matching contributions alongside accrued interest.",
+      "Earned Leave Encashment: Cash payment for all unavailed annual earned leave standing to the worker's credit at the time of separation.",
+      "Strict 30-Day Grievance Window: Missing the 30-day Section 33 notice window to the employer bars subsequent litigation in the Labour Court."
+    ]
+  },
+  "toc": [
+    {
+      "id": "statutory-separation-categories",
+      "title": "1. Legal Forms of Separation: Retrenchment, Discharge, Dismissal & Termination"
+    },
+    {
+      "id": "section-26-termination-notice-pay",
+      "title": "2. Termination Simpliciter Under Section 26: The 120-Day Notice Rule"
+    },
+    {
+      "id": "gratuity-and-provident-fund-math",
+      "title": "3. Calculating Separation Benefits: Gratuity, CPF & Earned Leave Encashment"
+    },
+    {
+      "id": "unlawful-dismissal-misconduct",
+      "title": "4. Defending Against Bogus Misconduct Charges: Domestic Inquiry Rules"
+    },
+    {
+      "id": "section-33-grievance-protocol",
+      "title": "5. The Mandatory Section 33 Grievance Notice: Procedural Deadlines"
+    },
+    {
+      "id": "separation-benefits-matrix-table",
+      "title": "6. Comparative Matrix: Separation Grounds, Notice Periods & Statutory Payouts"
+    },
+    {
+      "id": "instituting-labour-court-suit",
+      "title": "7. Filing a Lawsuit Before the Labour Court: Trial & Recovery Workflow"
+    },
+    {
+      "id": "labour-appellate-tribunal-writs",
+      "title": "8. Escalation: Labour Appellate Tribunal & High Court Division Writs"
+    },
+    {
+      "id": "corporate-executive-coverage",
+      "title": "9. Are Corporate Executives & Managers Protected as 'Workers'?"
+    },
+    {
+      "id": "practical-case-study",
+      "title": "10. Real-Life Case Study: Recovering 38 Lakh BDT Unpaid Dues for a Bank Official"
+    },
+    {
+      "id": "faqs",
+      "title": "11. Frequently Asked Questions (FAQs)"
+    }
+  ],
+  "sections": [
+    {
+      "id": "statutory-separation-categories",
+      "title": "1. Legal Forms of Separation: Retrenchment, Discharge, Dismissal & Termination",
+      "content": "<p>The Bangladesh Labour Act 2006 recognizes four distinct legal avenues through which an employment relationship can be lawfully severed by an employer:</p><ul><li><strong>Retrenchment (Section 20):</strong> Termination of workers on ground of redundancy due to downsizing or closure. Operates on the statutory principle of <em>'last in, first out'</em> (LIFO) and requires 1 month notice plus 30 days compensation per year of service.</li><li><strong>Discharge (Section 22):</strong> Separation from service on grounds of certified physical or mental incapacity or continued ill-health. Requires 30 days compensation per year of service.</li><li><strong>Dismissal for Misconduct (Section 23):</strong> Severe punitive termination for theft, fraud, riotous behavior, habitual absenteeism, or insubordination. Deprives the worker of Section 26 compensation, though accrued Provident Fund cannot be confiscated.</li><li><strong>Termination Simpliciter (Section 26):</strong> Termination of employment without casting any stigma or stating any reason, subject to extensive notice pay and statutory severance benefits.</li></ul>"
+    },
+    {
+      "id": "section-26-termination-notice-pay",
+      "title": "2. Termination Simpliciter Under Section 26: The 120-Day Notice Rule",
+      "content": "<p>When an employer desires to part ways with a permanent employee without alleging misconduct, Section 26 provides the sole statutory pathway:</p><ul><li><strong>Mandatory Notice Period:</strong> For monthly-rated permanent workers, the employer must provide <strong>one hundred and twenty (120) days' written notice</strong>, or pay 120 days' basic wages in lieu of notice.</li><li><strong>Additional Statutory Compensation:</strong> In addition to the notice pay, Section 26(4) mandates payment of <strong>thirty (30) days' wages for every completed year of service</strong> (or compensation in excess of six months), or gratuity, whichever is higher.</li><li><strong>Final Settlement Deadline:</strong> Under Section 30 of the BLA, all separation dues must be fully disbursed to the worker within <strong>thirty (30) working days</strong> following the date of termination.</li></ul>"
+    },
+    {
+      "id": "gratuity-and-provident-fund-math",
+      "title": "3. Calculating Separation Benefits: Gratuity, CPF & Earned Leave Encashment",
+      "content": "<p>Discharged or terminated workers are legally entitled to three substantial financial benefits under the Labour Act:</p><ul><li><strong>Gratuity Calculation (Section 2(10)):</strong> (a) For continuous service of 5 to 10 years: <strong>30 days' basic wages</strong> for every completed year of service; (b) For service exceeding 10 years: <strong>45 days' basic wages</strong> for every completed year of service exceeding 10 years, calculated based on the employee's last drawn basic wage rate.</li><li><strong>Contributory Provident Fund (CPF):</strong> Under Section 264, both the employee's deducted share and the employer's matching contribution, alongside all accumulated compound interest, must be released immediately without arbitrary deductions.</li><li><strong>Annual Leave Encashment (Section 117):</strong> Cash payment for all unavailed earned annual leave standing to the worker's balance at the time of release, calculated on the basis of full gross daily wages.</li></ul>"
+    },
+    {
+      "id": "unlawful-dismissal-misconduct",
+      "title": "4. Defending Against Bogus Misconduct Charges: Domestic Inquiry Rules",
+      "content": "<p>To evade massive Section 26 payouts, corrupt employers routinely fabricate false charges of 'misconduct' under Section 23. Under Section 24 of the BLA, a dismissal for misconduct is <strong>void ab initio</strong> unless the employer strictly complies with mandatory domestic inquiry procedures:</p><ol><li><strong>Show Cause Notice:</strong> Serving a written charge sheet giving the worker at least seven (7) days to reply.</li><li><strong>Independent Inquiry Committee:</strong> Constituting an impartial inquiry committee where the worker has the statutory right to be represented by an elected co-worker.</li><li><strong>Evidence & Cross-Examination:</strong> The employer must present witness testimony and allow the accused worker full opportunity to cross-examine company witnesses.</li><li><strong>Second Show Cause Notice:</strong> If found guilty, serving a second show cause notice proposing dismissal before issuing the final letter. If any procedural step is skipped, the Labour Court will strike down the dismissal and order immediate reinstatement with full back-wages.</li></ol>"
+    },
+    {
+      "id": "section-33-grievance-protocol",
+      "title": "5. The Mandatory Section 33 Grievance Notice: Procedural Deadlines",
+      "content": "<p>The single most fatal mistake terminated employees make is rushing to court without complying with the mandatory statutory pre-condition under <strong>Section 33 of the Bangladesh Labour Act 2006</strong>:</p><ul><li><strong>Step 1: The 30-Day Grievance Notice:</strong> The aggrieved worker must send a written grievance petition to the employer by registered post with A/D within <strong>thirty (30) days</strong> from the date of termination or cause of grievance.</li><li><strong>Step 2: Employer's 30-Day Response Window:</strong> The employer has thirty (30) days from the date of receipt to investigate and communicate a decision in writing.</li><li><strong>Step 3: The 30-Day Filing Window in Labour Court:</strong> If the employer fails to reply or issues an unsatisfactory decision, the worker must file a formal complaint before the <strong>Labour Court</strong> within <strong>thirty (30) days</strong> following the expiry of the employer's window. Filing on day 31 results in absolute dismissal on grounds of limitation.</li></ul>"
+    },
+    {
+      "id": "separation-benefits-matrix-table",
+      "title": "6. Comparative Matrix: Separation Grounds, Notice Periods & Statutory Payouts",
+      "content": "<p>The statutory entitlements across different modes of separation are delineated below:</p><div class=\"overflow-x-auto my-6\"><table class=\"w-full text-left border-collapse border border-slate-300 dark:border-slate-700 text-sm\"><thead><tr class=\"bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-100\"><th class=\"border border-slate-300 dark:border-slate-700 p-3\">Mode of Separation</th><th class=\"border border-slate-300 dark:border-slate-700 p-3\">Statutory Provision</th><th class=\"border border-slate-300 dark:border-slate-700 p-3\">Notice Period / Pay</th><th class=\"border border-slate-300 dark:border-slate-700 p-3\">Severance Compensation</th><th class=\"border border-slate-300 dark:border-slate-700 p-3\">CPF & Gratuity Status</th></tr></thead><tbody><tr><td class=\"border border-slate-300 dark:border-slate-700 p-3 font-semibold\">Termination Simpliciter</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">BLA 2006, Sec 26</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">120 days written notice or pay in lieu</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">30 days wages per completed year of service</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">100% CPF + Full Gratuity (30/45 days)</td></tr><tr><td class=\"border border-slate-300 dark:border-slate-700 p-3 font-semibold\">Retrenchment (Redundancy)</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">BLA 2006, Sec 20</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">1 month notice or pay in lieu</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">30 days wages per completed year</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Full CPF + Full Gratuity</td></tr><tr><td class=\"border border-slate-300 dark:border-slate-700 p-3 font-semibold\">Discharge (Ill-health)</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">BLA 2006, Sec 22</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Certified medical board report</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">30 days wages per completed year</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Full CPF + Full Gratuity</td></tr><tr><td class=\"border border-slate-300 dark:border-slate-700 p-3 font-semibold\">Dismissal for Misconduct</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">BLA 2006, Sec 23</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Zero notice pay (after domestic inquiry)</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Nil compensation</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Employee's share of CPF mandatory</td></tr></tbody></table></div>"
+    },
+    {
+      "id": "instituting-labour-court-suit",
+      "title": "7. Filing a Lawsuit Before the Labour Court: Trial & Recovery Workflow",
+      "content": "<p>When an employer ignores the Section 33 grievance notice, the dispute lands before the <strong>Labour Court (Shrom Adalat)</strong>:</p><ol><li><strong>Institution of Labour Court Case:</strong> The employee's advocate files a formal petition of complaint under Section 33(3) setting forth the terms of employment, service tenure, salary slips, and itemized calculations of unpaid dues.</li><li><strong>Zero Court Fees:</strong> One of the greatest pro-worker features of Bangladeshi labour law is that complaints filed under Section 33 are exempt from ad valorem court fees.</li><li><strong>Tripartite Bench:</strong> The Labour Court consists of a District Judge as Chairman and two Members (one representing employers, one representing workers).</li><li><strong>Summary Adjudication:</strong> The court conducts a summary trial, takes oral testimony, examines pay sheets, and delivers an enforceable judgment within 60 to 90 days.</li><li><strong>Execution & Penal Recovery:</strong> If the employer refuses to pay the decreed sum, the Chairman issues a distress warrant, attaches company bank accounts, or initiates criminal prosecution against the company directors under Section 307 BLA.</li></ol>"
+    },
+    {
+      "id": "labour-appellate-tribunal-writs",
+      "title": "8. Escalation: Labour Appellate Tribunal & High Court Division Writs",
+      "content": "<p>A party aggrieved by a final judgment of the Labour Court can appeal to the <strong>Labour Appellate Tribunal</strong> in Dhaka within sixty (60) days under Section 217 of the Act. Decisions of the Labour Appellate Tribunal are final on statutory facts. However, if the Tribunal commits a jurisdictional blunder or acts contrary to natural justice, an aggrieved employee can petition the <strong>High Court Division under Article 102 of the Constitution</strong> for a Writ of Certiorari to quash the unlawful order.</p>"
+    },
+    {
+      "id": "corporate-executive-coverage",
+      "title": "9. Are Corporate Executives & Managers Protected as 'Workers'?",
+      "content": "<p>A common legal contention raised by corporate employers is that senior managers, software engineers, and bank officers are 'managerial executives', not 'workers' under Section 2(65) of the Labour Act, and therefore cannot sue in the Labour Court.</p><p>However, the Supreme Court of Bangladesh in landmark decisions (including <em>Sonali Bank vs. Chairman, Labour Court</em>) established the <strong>'Dominant Nature of Work' test</strong>: Merely having an executive designation (e.g., Senior Officer, Assistant Vice President) does not exclude an employee from labour protections if their primary duties are clerical, technical, accounting, or administrative without independent power to hire, fire, or approve budgets. If excluded, the executive can still sue for breach of contract and damages in the Civil Court (Joint District Judge).</p>"
+    },
+    {
+      "id": "practical-case-study",
+      "title": "10. Real-Life Case Study: Recovering 38 Lakh BDT Unpaid Dues for a Bank Official",
+      "content": "<p>A Senior Principal Officer who served for 14 years at a private commercial bank in Gulshan, Dhaka, was abruptly terminated without notice or hearing, citing 'restructuring'. The bank disbursed only 1 month's basic salary, completely withholding his 14 years of Gratuity, unavailed earned leave encashment, and the bank's matching Provident Fund contribution.</p><p>The terminated banker engaged our labour law team. Our rapid legal intervention unfolded as follows:</p><ol><li>Within 21 days of the termination letter, drafted and served a comprehensive statutory Grievance Notice under Section 33 of the Labour Act demanding 120 days notice pay under Section 26, 45 days gratuity per year of service exceeding 10 years, and CPF liquidation.</li><li>The bank failed to issue a resolution within the 30-day statutory window.</li><li>On Day 52, filed a formal Labour Court Complaint (B.L.A. Case No. 89/2023) before the 1st Labour Court, Dhaka.</li><li>Our advocates dismantled the bank's preliminary objection regarding executive status, proving that the officer had no hiring/firing authority and performed technical financial audits.</li><li>The Labour Court delivered a conclusive judgment holding the termination unlawful under Section 26, ordering the bank to pay 38.4 Lakh BDT in unpaid notice pay, enhanced gratuity, and CPF within 30 days.</li><li>Facing distress warrants against their corporate headquarters, the bank deposited a Bank Pay Order for the full 38.4 Lakh BDT in court, fully vindicating our client's rights.</li></ol>"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What is the mandatory notice period for terminating a permanent worker in Bangladesh?",
+      "answer": "Under Section 26 of the Bangladesh Labour Act 2006, an employer must provide 120 days written notice (for monthly rated permanent workers) or pay 120 days' basic wages in lieu of notice."
+    },
+    {
+      "question": "How is Gratuity calculated under the Bangladesh Labour Act 2006?",
+      "answer": "For continuous service between 5 and 10 years, gratuity is 30 days' basic wages per completed year of service. For service exceeding 10 years, it increases to 45 days' basic wages for every completed year exceeding 10 years."
+    },
+    {
+      "question": "What is the deadline for sending a Section 33 grievance notice to the employer?",
+      "answer": "An aggrieved worker must send the written grievance notice to the employer by registered post within exactly thirty (30) days from the date of termination. Missing this 30-day deadline bars filing a case in the Labour Court."
+    },
+    {
+      "question": "Are private bank officers and software engineers covered under the Labour Act?",
+      "answer": "Yes, under the 'Dominant Nature of Work' test established by the Supreme Court. If their primary daily duties are technical, clerical, or operational without independent hiring and firing authority, they are protected as workers."
+    },
+    {
+      "question": "Can an employer deduct or withhold my Provident Fund upon termination?",
+      "answer": "No. Under Section 264 of the Labour Act, the accumulated Provident Fund (both employee and employer contributions plus interest) is a statutory debt that cannot be arbitrarily confiscated or withheld."
+    },
+    {
+      "question": "What happens if an employer terminates an employee without a domestic inquiry?",
+      "answer": "If an employee is dismissed for alleged misconduct without following the mandatory show-cause notice and domestic inquiry under Section 24, the dismissal is legally void, and the Labour Court will order reinstatement or full compensation."
+    },
+    {
+      "question": "Do I have to pay court fees to file a case in the Labour Court?",
+      "answer": "No. Grievance complaints under Section 33 of the Bangladesh Labour Act 2006 are completely exempt from ad valorem court fees, providing cost-effective access to justice for workers."
+    },
+    {
+      "question": "How long does a Labour Court take to dispose of a termination dispute in Dhaka?",
+      "answer": "A standard Section 33 grievance complaint in the Labour Court is generally adjudicated within 3 to 6 months through summary proceedings."
+    }
+  ],
+  "relatedServiceLinks": [
+    {
+      "title": "Corporate Employment & Labour Lawyers",
+      "url": "/services/company-corporate-lawyer"
+    },
+    {
+      "title": "Supreme Court Writs & Labour Appeals",
+      "url": "/services/supreme-court-lawyer"
+    },
+    {
+      "title": "Civil Litigation & Money Suits for Compensation",
+      "url": "/services/civil-litigation-lawyer"
+    },
+    {
+      "title": "Bail & Criminal Defense in Labour Disputes",
+      "url": "/services/bail-lawyer"
+    },
+    {
+      "title": "NRB Corporate Representation & Contracts",
+      "url": "/nrb-legal-help"
+    }
+  ],
+  "lang": "en"
+}

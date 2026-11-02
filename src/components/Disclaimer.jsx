@@ -18,7 +18,6 @@ const Disclaimer = ({ lang = 'en' }) => {
                 style={{
                     background: 'var(--gold-subtle)',
                     border: '1px solid var(--gold-border)',
-                    borderLeft: '4px solid var(--gold)',
                     borderRadius: '0.75rem',
                     padding: '1rem 1.25rem',
                     marginBottom: '2rem',
@@ -51,7 +50,6 @@ const Disclaimer = ({ lang = 'en' }) => {
             style={{
                 background: 'var(--gold-subtle)',
                 border: '1px solid var(--gold-border)',
-                borderLeft: '4px solid var(--gold)',
                 borderRadius: '0.75rem',
                 padding: '1rem 1.25rem',
                 marginBottom: '2rem',

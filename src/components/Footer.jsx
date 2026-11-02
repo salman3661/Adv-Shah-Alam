@@ -143,20 +143,20 @@ const Footer = () => {
                         <div className="flex gap-2.5 mb-5">
                             <a href={waLink()} target="_blank" rel="noopener noreferrer"
                                 aria-label="Chat on WhatsApp"
-                                className="w-10 h-10 rounded-xl flex items-center justify-center transition-colors hover:border-[#CCA856]"
+                                className="w-10 h-10 rounded-xl flex items-center justify-center transition-colors hover:border-[#93C5FD]"
                                 style={{ background: 'var(--footer-surface)', border: '1px solid var(--footer-divider)', color: 'var(--footer-text-2)' }}>
                                 <MessageCircle size={16} />
                             </a>
                             <a href={siteInfo.facebookUrl} target="_blank" rel="noopener noreferrer"
                                 aria-label="Follow us on Facebook"
-                                className="w-10 h-10 rounded-xl flex items-center justify-center transition-colors hover:border-[#CCA856]"
+                                className="w-10 h-10 rounded-xl flex items-center justify-center transition-colors hover:border-[#93C5FD]"
                                 style={{ background: 'var(--footer-surface)', border: '1px solid var(--footer-divider)', color: 'var(--footer-text-2)' }}>
                                 <Facebook size={16} />
                             </a>
                             {siteInfo.linkedinUrl && (
                                 <a href={siteInfo.linkedinUrl} target="_blank" rel="noopener noreferrer"
                                     aria-label="Connect on LinkedIn"
-                                    className="w-10 h-10 rounded-xl flex items-center justify-center transition-colors hover:border-[#CCA856]"
+                                    className="w-10 h-10 rounded-xl flex items-center justify-center transition-colors hover:border-[#93C5FD]"
                                     style={{ background: 'var(--footer-surface)', border: '1px solid var(--footer-divider)', color: 'var(--footer-text-2)' }}>
                                     <Linkedin size={16} />
                                 </a>

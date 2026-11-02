@@ -350,7 +350,7 @@ const Hero = ({ lang = 'en' }) => {
                 <div style={{
                   position: 'absolute', bottom: '0.875rem', right: '0.875rem',
                   background: '#0A1424',
-                  border: '1px solid rgba(204, 168, 86, 0.45)',
+                  border: '1px solid rgba(147, 197, 253, 0.35)',
                   color: '#F8FAFC', fontSize: '0.68rem', fontWeight: 700,
                   padding: '0.38rem 0.85rem', borderRadius: '0.5rem',
                   boxShadow: '0 4px 12px rgba(0, 0, 0, 0.35)',
@@ -361,9 +361,9 @@ const Hero = ({ lang = 'en' }) => {
                   position: 'absolute', top: '0.875rem', left: '0.875rem',
                   background: 'rgba(10, 20, 36, 0.84)', backdropFilter: 'blur(12px)',
                   WebkitBackdropFilter: 'blur(12px)',
-                  color: '#CCA856', fontSize: '0.65rem', fontWeight: 700,
+                  color: '#93C5FD', fontSize: '0.65rem', fontWeight: 700,
                   padding: '0.34rem 0.75rem', borderRadius: '0.5rem',
-                  border: '1px solid rgba(204, 168, 86, 0.38)',
+                  border: '1px solid rgba(147, 197, 253, 0.32)',
                 }}>
                   {heroContent.photoBadgeTop}
                 </div>

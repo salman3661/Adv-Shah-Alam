@@ -69,12 +69,12 @@ const SYNONYMS = {
 const CATEGORIES = ['সব', 'ফৌজদারি আইন', 'পারিবারিক আইন', 'সম্পত্তি আইন', 'কর আইন', 'দেওয়ানী আইন', 'সাইবার আইন'];
 
 const categoryColors = {
-    'ফৌজদারি আইন': '#163A70',
-    'পারিবারিক আইন': '#1E293B',
+    'ফৌজদারি আইন': '#2563EB',
+    'পারিবারিক আইন': '#0891B2',
     'সম্পত্তি আইন': '#14532D',
     'কর আইন': '#7C5E10',
-    'দেওয়ানী আইন': '#163A70',
-    'সাইবার আইন': '#0F5257',
+    'দেওয়ানী আইন': '#2563EB',
+    'সাইবার আইন': '#0284C7',
 };
 
 const getCatColor = (cat) => categoryColors[cat] || 'var(--accent)';
@@ -120,7 +120,7 @@ const BlogCardBn = ({ post, isRecent = false, isPopular = false }) => {
                         {isRecent && (
                             <span
                                 className="inline-flex items-center gap-0.5 text-[10px] font-extrabold px-2 py-0.5 rounded-full text-white shadow-sm"
-                                style={{ background: '#163A70', fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif" }}
+                                style={{ background: '#2563EB', fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif" }}
                             >
                                 <Sparkles size={10} /> নতুন
                             </span>
@@ -128,7 +128,7 @@ const BlogCardBn = ({ post, isRecent = false, isPopular = false }) => {
                         {isPopular && (
                             <span
                                 className="inline-flex items-center gap-0.5 text-[10px] font-extrabold px-2 py-0.5 rounded-full text-white shadow-sm"
-                                style={{ background: '#9A7420', fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif" }}
+                                style={{ background: '#0284C7', fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif" }}
                             >
                                 <Flame size={10} /> জনপ্রিয়
                             </span>
@@ -138,7 +138,7 @@ const BlogCardBn = ({ post, isRecent = false, isPopular = false }) => {
                         className="inline-flex items-center gap-1 text-xs font-semibold px-2.5 py-0.5 rounded-full"
                         style={{ color: '#F8FAFC', background: 'rgba(15,23,42,0.72)', border: '1px solid rgba(255,255,255,0.2)', fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif" }}
                     >
-                        <Clock size={12} style={{ color: '#FDE68A' }} />
+                        <Clock size={12} style={{ color: '#93C5FD' }} />
                         {post.readTime}
                     </span>
                 </div>
@@ -407,7 +407,7 @@ const BlogBn = () => {
                             <ShieldCheck size={16} className="text-emerald-500" /> ১০০% আইনি ও নজিরনির্ভর
                         </span>
                         <span className="flex items-center gap-1.5">
-                            <UserCheck size={16} className="text-amber-500" /> সুপ্রিম কোর্টের আইনজীবী পরামর্শ
+                            <UserCheck size={16} style={{ color: "var(--accent)" }} /> সুপ্রিম কোর্টের আইনজীবী পরামর্শ
                         </span>
                         <span className="flex items-center gap-1.5">
                             <Award size={16} className="text-blue-500" /> বিনামূল্যে তথ্য সংকলন

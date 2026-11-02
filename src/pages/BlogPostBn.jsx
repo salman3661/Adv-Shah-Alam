@@ -49,18 +49,20 @@ const POPULAR_BN_SLUGS = Array.isArray(popularBnSlugs) && popularBnSlugs.length 
 /* Ad units live in components/ads/adLayout.js (AD_SLOTS). Article Body 3/4 + Bottom Grid are decommissioned. */
 
 const CAT_COLOR = {
-    'ভূমি আইন':      { bg: '#0369a1', text: '#fff' },
-    'পারিবারিক আইন': { bg: '#7c3aed', text: '#fff' },
-    'ফৌজদারি আইন':   { bg: '#dc2626', text: '#fff' },
-    'সাইবার আইন':    { bg: '#065f46', text: '#fff' },
-    'শ্রম আইন':      { bg: '#be185d', text: '#fff' },
-    'দেওয়ানি আইন':  { bg: '#0891b2', text: '#fff' },
-    'Criminal Law':   { bg: '#dc2626', text: '#fff' },
-    'Family Law':     { bg: '#7c3aed', text: '#fff' },
-    'Property Law':   { bg: '#0369a1', text: '#fff' },
-    'Labour Law':     { bg: '#be185d', text: '#fff' },
+    'ফৌজদারি আইন':   { bg: '#2563EB', text: '#fff' },
+    'পারিবারিক আইন': { bg: '#0D9488', text: '#fff' },
+    'সম্পত্তি আইন':   { bg: '#0284C7', text: '#fff' },
+    'দেওয়ানি আইন':   { bg: '#0891B2', text: '#fff' },
+    'সাইবার আইন':    { bg: '#1D4ED8', text: '#fff' },
+    'শ্রম আইন':      { bg: '#0F766E', text: '#fff' },
+    'আইনি প্রক্রিয়া': { bg: '#0369A1', text: '#fff' },
+    'Criminal Law':  { bg: '#2563EB', text: '#fff' },
+    'Family Law':    { bg: '#0D9488', text: '#fff' },
+    'Property Law':  { bg: '#0284C7', text: '#fff' },
+    'Civil Law':     { bg: '#0891B2', text: '#fff' },
+    'Labour Law':    { bg: '#0F766E', text: '#fff' },
 };
-const catColor = cat => CAT_COLOR[cat] || { bg: 'var(--accent)', text: '#111' };
+const catColor = cat => CAT_COLOR[cat] || { bg: '#2563EB', text: '#fff' };
 
 /* Clean duplicate leading numbers from section headings */
 const cleanHeadingText = text => {
@@ -108,7 +110,7 @@ const FAQItem = ({ question, answer, index }) => {
                 <span style={{ fontWeight: 600, fontSize: '0.9375rem', lineHeight: 1.45, flex: 1, color: 'var(--text)' }}>
                     <span style={{ color: 'var(--accent)', marginRight: '6px', fontWeight: 700 }}>প্র{index + 1}.</span>{question}
                 </span>
-                <span style={{ flexShrink: 0, width: '1.625rem', height: '1.625rem', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', background: open ? 'var(--accent)' : 'var(--surface)', color: open ? '#111' : 'var(--text-muted)', transition: 'all 0.2s' }}>
+                <span style={{ flexShrink: 0, width: '1.625rem', height: '1.625rem', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', background: open ? 'var(--btn-primary-bg, #163A70)' : 'var(--surface)', color: open ? '#fff' : 'var(--text-muted)', transition: 'all 0.2s' }}>
                     {open ? <ChevronUp size={13} /> : <ChevronDown size={13} />}
                 </span>
             </button>
@@ -146,8 +148,8 @@ const PopularBnPosts = ({ currentSlug }) => {
         .slice(0, 6);
     if (popular.length === 0) return null;
     return (
-        <SbCard accentColor="#f59e0b">
-            <SbHeader icon={Flame} label="সর্বাধিক পঠিত" color="#f59e0b" />
+        <SbCard accentColor="var(--accent)">
+            <SbHeader icon={Flame} label="সর্বাধিক পঠিত" color="var(--accent)" />
             <div style={{ padding: '0.625rem 0.875rem 0.875rem' }}>
                 {popular.map((rp, idx) => {
                     const cc = catColor(rp.category);
@@ -184,10 +186,10 @@ const PopularBnPosts = ({ currentSlug }) => {
                                 justifyContent: 'center',
                                 fontWeight: 900,
                                 fontSize: '0.75rem',
-                                background: isTop3 ? 'linear-gradient(135deg, #c6a75e, #e8c97d)' : 'var(--surface)',
-                                color: isTop3 ? '#111' : 'var(--text-muted)',
+                                background: isTop3 ? 'linear-gradient(135deg, #2563EB, #0D9488)' : 'var(--surface-2, #F0F7FF)',
+                                color: isTop3 ? '#FFFFFF' : 'var(--text-muted)',
                                 border: isTop3 ? 'none' : '1px solid var(--card-border)',
-                                boxShadow: isTop3 ? '0 2px 8px rgba(198,167,94,0.35)' : 'none',
+                                boxShadow: isTop3 ? '0 3px 10px rgba(13, 148, 136, 0.25)' : 'none',
                                 marginTop: '2px'
                             }}>
                                 {idx + 1}
@@ -259,7 +261,7 @@ const RecentBnPosts = ({ currentSlug }) => {
                                 background: 'transparent'
                             }}
                             onMouseEnter={e => {
-                                e.currentTarget.style.background = 'rgba(198,167,94,0.07)';
+                                e.currentTarget.style.background = 'rgba(22, 58, 112, 0.06)';
                                 e.currentTarget.style.transform = 'translateX(4px)';
                             }}
                             onMouseLeave={e => {
@@ -345,21 +347,21 @@ const RelatedBnByCategory = ({ category, currentSlug }) => {
 const ChamberBnPromoCard = () => (
     <div style={{
         borderRadius: '1rem', overflow: 'hidden', marginBottom: '1.125rem',
-        background: 'linear-gradient(160deg, rgba(12,10,30,0.97) 0%, rgba(20,16,50,0.95) 100%)',
-        border: '1px solid rgba(198,167,94,0.3)',
+        background: '#0A1424',
+        border: '1px solid rgba(148, 163, 184, 0.22)',
         boxShadow: '0 8px 32px rgba(0,0,0,0.35)',
         backdropFilter: 'blur(16px)', WebkitBackdropFilter: 'blur(16px)',
     }}>
-        <div style={{ height: '3px', background: 'linear-gradient(90deg, transparent, #c6a75e, #f0d98a, #c6a75e, transparent)' }} />
+        <div style={{ height: '3px', background: 'linear-gradient(90deg, transparent, #3B82F6, #93C5FD, #3B82F6, transparent)' }} />
         <div style={{ padding: '1rem 1.125rem 0.75rem', display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
             <img
                 src="/images/hero/hero-md-shah-alam.webp"
                 alt="অ্যাডভোকেট মো. শাহ আলম"
-                style={{ width: '52px', height: '52px', borderRadius: '50%', objectFit: 'cover', border: '2px solid #c6a75e', flexShrink: 0, boxShadow: '0 4px 14px rgba(198,167,94,0.4)' }}
+                style={{ width: '52px', height: '52px', borderRadius: '50%', objectFit: 'cover', border: '2px solid rgba(147, 197, 253, 0.5)', flexShrink: 0, boxShadow: '0 4px 14px rgba(15, 23, 42, 0.4)' }}
                 loading="lazy" width="52" height="52"
             />
             <div style={{ minWidth: 0 }}>
-                <p style={{ fontSize: '0.78rem', fontWeight: 800, color: '#e8c97d', margin: 0, lineHeight: 1.2, fontFamily: "'Noto Serif Bengali', 'Noto Sans Bengali', sans-serif" }}>অ্যাডভ. মো. শাহ আলম</p>
+                <p style={{ fontSize: '0.78rem', fontWeight: 800, color: '#F8FAFC', margin: 0, lineHeight: 1.2, fontFamily: "'Noto Serif Bengali', 'Noto Sans Bengali', sans-serif" }}>অ্যাডভ. মো. শাহ আলম</p>
                 <p style={{ fontSize: '0.63rem', color: 'rgba(255,255,255,0.55)', margin: '2px 0 0', lineHeight: 1.3, fontFamily: "'Noto Serif Bengali', 'Noto Sans Bengali', sans-serif" }}>বাংলাদেশ সুপ্রিম কোর্টের আইনজীবি</p>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '4px', marginTop: '4px' }}>
                     {['★','★','★','★','★'].map((s,i) => <span key={i} style={{ fontSize: '0.6rem', color: '#f59e0b' }}>{s}</span>)}
@@ -368,15 +370,15 @@ const ChamberBnPromoCard = () => (
             </div>
         </div>
         <div style={{ padding: '0 1.125rem 0.875rem' }}>
-            <div style={{ background: 'rgba(198,167,94,0.07)', border: '1px solid rgba(198,167,94,0.15)', borderRadius: '0.625rem', padding: '0.625rem 0.75rem', marginBottom: '0.5rem' }}>
-                <p style={{ fontSize: '0.6rem', fontWeight: 800, color: '#c6a75e', textTransform: 'uppercase', letterSpacing: '0.08em', margin: '0 0 4px', display: 'flex', alignItems: 'center', gap: '4px' }}>
-                    <MapPin size={10} style={{ color: '#c6a75e' }} /> সুপ্রিম কোর্ট চেম্বার
+            <div style={{ background: 'rgba(22, 58, 112, 0.06)', border: '1px solid rgba(22, 58, 112, 0.15)', borderRadius: '0.625rem', padding: '0.625rem 0.75rem', marginBottom: '0.5rem' }}>
+                <p style={{ fontSize: '0.6rem', fontWeight: 800, color: '#5EEAD4', textTransform: 'uppercase', letterSpacing: '0.08em', margin: '0 0 4px', display: 'flex', alignItems: 'center', gap: '4px' }}>
+                    <MapPin size={10} style={{ color: '#5EEAD4' }} /> সুপ্রিম কোর্ট চেম্বার
                 </p>
                 <p style={{ fontSize: '0.7rem', color: 'rgba(255,255,255,0.65)', margin: 0, lineHeight: 1.5, fontFamily: "'Noto Serif Bengali', 'Noto Sans Bengali', sans-serif" }}>মক্তব ভবন (তৃতীয় তলা), সুপ্রিম কোর্টের নিকটে, ঢাকা-১০০০</p>
             </div>
-            <div style={{ background: 'rgba(198,167,94,0.07)', border: '1px solid rgba(198,167,94,0.15)', borderRadius: '0.625rem', padding: '0.625rem 0.75rem', marginBottom: '0.875rem' }}>
-                <p style={{ fontSize: '0.6rem', fontWeight: 800, color: '#c6a75e', textTransform: 'uppercase', letterSpacing: '0.08em', margin: '0 0 4px', display: 'flex', alignItems: 'center', gap: '4px' }}>
-                    <MapPin size={10} style={{ color: '#c6a75e' }} /> উত্তরা শাখা
+            <div style={{ background: 'rgba(22, 58, 112, 0.06)', border: '1px solid rgba(22, 58, 112, 0.15)', borderRadius: '0.625rem', padding: '0.625rem 0.75rem', marginBottom: '0.875rem' }}>
+                <p style={{ fontSize: '0.6rem', fontWeight: 800, color: '#5EEAD4', textTransform: 'uppercase', letterSpacing: '0.08em', margin: '0 0 4px', display: 'flex', alignItems: 'center', gap: '4px' }}>
+                    <MapPin size={10} style={{ color: '#5EEAD4' }} /> উত্তরা শাখা
                 </p>
                 <p style={{ fontSize: '0.7rem', color: 'rgba(255,255,255,0.65)', margin: 0, lineHeight: 1.5, fontFamily: "'Noto Serif Bengali', 'Noto Sans Bengali', sans-serif" }}>বাড়ি ৪৬, সড়ক ৬/বি, সেক্টর ১২, উত্তরা পশ্চিম, ঢাকা-১২৩০</p>
             </div>
@@ -397,10 +399,10 @@ const ChamberBnPromoCard = () => (
                 <span style={{ fontSize: '0.62rem', color: 'rgba(255,255,255,0.55)', fontFamily: "'Noto Serif Bengali', 'Noto Sans Bengali', sans-serif" }}>রবি-বৃহ: ১০টা-৬টা | শুক্র: ১০টা-১টা</span>
             </div>
         </div>
-        <div style={{ height: '1px', background: 'linear-gradient(90deg, transparent, rgba(198,167,94,0.2), transparent)' }} />
-        <Link to="/bn/contact" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.375rem', padding: '0.6rem', fontSize: '0.68rem', fontWeight: 600, color: 'rgba(198,167,94,0.75)', textDecoration: 'none', transition: 'color 0.15s', fontFamily: "'Noto Serif Bengali', 'Noto Sans Bengali', sans-serif" }}
-            onMouseEnter={e => e.currentTarget.style.color = '#c6a75e'}
-            onMouseLeave={e => e.currentTarget.style.color = 'rgba(198,167,94,0.75)'}>
+        <div style={{ height: '1px', background: 'linear-gradient(90deg, transparent, rgba(148, 163, 184, 0.2), transparent)' }} />
+        <Link to="/bn/contact" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.375rem', padding: '0.6rem', fontSize: '0.68rem', fontWeight: 600, color: 'rgba(147, 197, 253, 0.85)', textDecoration: 'none', transition: 'color 0.15s', fontFamily: "'Noto Serif Bengali', 'Noto Sans Bengali', sans-serif" }}
+            onMouseEnter={e => e.currentTarget.style.color = '#93C5FD'}
+            onMouseLeave={e => e.currentTarget.style.color = 'rgba(147, 197, 253, 0.85)'}>
             <BookOpen size={12} /> যোগাযোগের সম্পূর্ণ বিবরণ দেখুন →
         </Link>
     </div>
@@ -410,19 +412,19 @@ const ChamberBnPromoCard = () => (
 const ConsultBnWidget = ({ postTitle }) => (
     <div style={{
         borderRadius: '1rem', overflow: 'hidden', marginBottom: '1.125rem',
-        background: 'linear-gradient(145deg, rgba(12,10,30,0.95) 0%, rgba(25,20,55,0.92) 100%)',
-        border: '1px solid rgba(198,167,94,0.28)',
-        boxShadow: '0 8px 32px rgba(0,0,0,0.3), 0 0 0 1px rgba(198,167,94,0.06) inset',
+        background: '#0A1424',
+        border: '1px solid rgba(148, 163, 184, 0.22)',
+        boxShadow: '0 8px 32px rgba(0,0,0,0.3), 0 0 0 1px rgba(148, 163, 184, 0.08) inset',
         backdropFilter: 'blur(16px)', WebkitBackdropFilter: 'blur(16px)',
     }}>
-        <div style={{ height: '2.5px', background: 'linear-gradient(90deg, transparent, #c6a75e, #e8c97d, #c6a75e, transparent)' }} />
+        <div style={{ height: '2.5px', background: 'linear-gradient(90deg, transparent, #3B82F6, #93C5FD, #3B82F6, transparent)' }} />
         <div style={{ padding: '1rem 1.125rem' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.625rem' }}>
-                <Scale size={16} style={{ color: '#e8c97d' }} />
-                <span style={{ fontSize: '0.7rem', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.08em', background: 'linear-gradient(90deg, #c6a75e, #e8c97d)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', fontFamily: "'Noto Serif Bengali', 'Noto Sans Bengali', sans-serif" }}>বিনামূল্যে আইনি পরামর্শ</span>
+                <Scale size={16} style={{ color: '#F8FAFC' }} />
+                <span style={{ fontSize: '0.7rem', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#5EEAD4', fontFamily: "'Noto Serif Bengali', 'Noto Sans Bengali', sans-serif" }}>বিনামূল্যে আইনি পরামর্শ</span>
             </div>
             <p style={{ fontSize: '0.8125rem', color: 'rgba(255,255,255,0.7)', lineHeight: 1.6, marginBottom: '0.875rem', fontFamily: "'Noto Serif Bengali', 'Noto Sans Bengali', sans-serif" }}>
-                <strong style={{ color: '#e8c97d' }}>অ্যাডভোকেট মো. শাহ আলম</strong> — বাংলাদেশ সুপ্রিম কোর্টের আইনজীবীর কাছ থেকে বিশেষজ্ঞ পরামর্শ নিন।
+                <strong style={{ color: '#F8FAFC' }}>অ্যাডভোকেট মো. শাহ আলম</strong> — বাংলাদেশ সুপ্রিম কোর্টের আইনজীবীর কাছ থেকে বিশেষজ্ঞ পরামর্শ নিন।
             </p>
             <a href={waLink(`আমি পড়লাম: ${postTitle}। আইনি সাহায্য দরকার।`)} target="_blank" rel="noopener noreferrer"
                 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', padding: '0.75rem', borderRadius: '0.625rem', fontSize: '0.8125rem', fontWeight: 700, textDecoration: 'none', marginBottom: '0.5rem', background: 'linear-gradient(135deg, #22c55e, #16a34a)', color: '#fff', boxShadow: '0 4px 14px rgba(34,197,94,0.35)', transition: 'transform 0.15s, box-shadow 0.15s', fontFamily: "'Noto Serif Bengali', 'Noto Sans Bengali', sans-serif" }}
@@ -679,11 +681,11 @@ const BlogPostBnInner = () => {
             </Helmet>
 
             {/* ════ HERO (Phase 2.2: Protected Floating Navbar & Immediate H1 Visibility) ════ */}
-            <section className="hero-section google-anno-skip pt-24" style={{ background: 'linear-gradient(135deg, #09152E 0%, #112654 52%, #1B3B7B 100%)', paddingTop: '88px', paddingBottom: '2.75rem', position: 'relative', overflow: 'hidden', borderBottom: '3px solid #D4AF37' }}>
-                <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '4px', background: `linear-gradient(90deg, ${cc.bg}, #FDE68A, #D4AF37, ${cc.bg})` }} />
+            <section className="hero-section google-anno-skip pt-24" style={{ background: 'linear-gradient(135deg, #0B1938 0%, #1E3A8A 52%, #0F766E 100%)', paddingTop: '88px', paddingBottom: '2.75rem', position: 'relative', overflow: 'hidden', borderBottom: '1px solid rgba(148, 163, 184, 0.25)' }}>
+                <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '4px', background: 'linear-gradient(90deg, #2563EB, #0D9488, #38BDF8, #2563EB)' }} />
                 <div className="hero-cover-bg" aria-hidden="true" style={{ backgroundImage: `url(${coverFor(post.category)})` }} />
                 <div className="hero-cover-fade" aria-hidden="true" />
-                <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse 70% 60% at 25% 45%, rgba(212,175,55,0.12) 0%, transparent 65%)', pointerEvents: 'none' }} />
+                <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse 70% 60% at 25% 45%, rgba(59, 130, 246, 0.10) 0%, transparent 65%)', pointerEvents: 'none' }} />
 
                 <div className="bpbn-hero-container">
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '0.9rem', flexWrap: 'wrap', gap: '0.5rem' }}>
@@ -700,7 +702,7 @@ const BlogPostBnInner = () => {
                         </Link>
                         {post.enSlug && (
                             <Link to={`/blog/${post.enSlug}`}
-                                style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.76rem', fontWeight: 800, padding: '0.4rem 1.05rem', borderRadius: '9999px', border: '1px solid #FFF3B0', color: '#0B1528', background: 'linear-gradient(135deg, #FDE68A 0%, #D4AF37 100%)', boxShadow: '0 4px 14px rgba(212,175,55,0.38)', textDecoration: 'none' }}>
+                                style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.76rem', fontWeight: 800, padding: '0.4rem 1.05rem', borderRadius: '9999px', border: '1px solid rgba(255,255,255,0.4)', color: '#0A1424', background: '#FFFFFF', boxShadow: '0 4px 14px rgba(15, 23, 42, 0.25)', textDecoration: 'none' }}>
                                 🇬🇧 Read in English
                             </Link>
                         )}
@@ -712,7 +714,7 @@ const BlogPostBnInner = () => {
                             <li style={{ opacity: 0.6, color: '#94A3B8' }}>&gt;</li>
                             <li><Link to="/bn/blog" style={{ color: '#E2E8F0', textDecoration: 'none', fontWeight: 500 }}>ব্লগ</Link></li>
                             <li style={{ opacity: 0.6, color: '#94A3B8' }}>&gt;</li>
-                            <li style={{ color: '#FDE68A', fontWeight: 700 }}>{post.category}</li>
+                            <li style={{ color: '#5EEAD4', fontWeight: 700 }}>{post.category}</li>
                         </ol>
                     </nav>
 
@@ -735,14 +737,14 @@ const BlogPostBnInner = () => {
                                 <img
                                     src="/images/hero/hero-md-shah-alam.webp"
                                     alt="অ্যাডভোকেট মো. শাহ আলম"
-                                    style={{ width: '2.65rem', height: '2.65rem', borderRadius: '50%', objectFit: 'cover', border: '2px solid #FDE68A', flexShrink: 0, boxShadow: '0 4px 12px rgba(0,0,0,0.35)' }}
+                                    style={{ width: '2.65rem', height: '2.65rem', borderRadius: '50%', objectFit: 'cover', border: '2px solid rgba(147, 197, 253, 0.6)', flexShrink: 0, boxShadow: '0 4px 12px rgba(0,0,0,0.35)' }}
                                     loading="eager"
                                     width="42"
                                     height="42"
                                 />
                                 <div>
                                     <p style={{ fontSize: '0.9rem', fontWeight: 800, color: '#FFFFFF', margin: 0 }}>অ্যাডভোকেট মো. শাহ আলম</p>
-                                    <p style={{ fontSize: '0.74rem', color: '#FDE68A', fontWeight: 600, margin: 0 }}>বাংলাদেশ সুপ্রিম কোর্ট • চেম্বার: উত্তরা ও ঢাকা জজ কোর্ট</p>
+                                    <p style={{ fontSize: '0.74rem', color: '#5EEAD4', fontWeight: 600, margin: 0 }}>বাংলাদেশ সুপ্রিম কোর্ট • চেম্বার: উত্তরা ও ঢাকা জজ কোর্ট</p>
                                 </div>
                                 {pubDate && (
                                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.35rem', fontSize: '0.78rem', fontWeight: 600, color: '#E2E8F0', marginLeft: 'auto', background: 'rgba(255,255,255,0.1)', padding: '0.3rem 0.75rem', borderRadius: '9999px', border: '1px solid rgba(255,255,255,0.18)' }}>
@@ -759,7 +761,7 @@ const BlogPostBnInner = () => {
                                 overflow: 'hidden',
                                 position: 'relative',
                                 aspectRatio: '1200 / 630',
-                                border: '2px solid rgba(253, 230, 138, 0.5)',
+                                border: '1px solid rgba(148, 163, 184, 0.3)',
                                 boxShadow: '0 24px 50px -12px rgba(0, 0, 0, 0.65)',
                                 background: '#09152E',
                             }}>
@@ -790,7 +792,7 @@ const BlogPostBnInner = () => {
                                     }}>
                                         {post.category} গাইড
                                     </span>
-                                    <span style={{ fontSize: '0.74rem', fontWeight: 700, color: '#FDE68A' }}>
+                                    <span style={{ fontSize: '0.74rem', fontWeight: 700, color: '#5EEAD4' }}>
                                         ⚖️ সুপ্রিম কোর্ট আইন সহায়িকা
                                     </span>
                                 </div>
@@ -843,14 +845,14 @@ const BlogPostBnInner = () => {
                     {/* Mobile TOC */}
                     <div className="bpbn-mobile-toc" style={{ marginBottom: '1.25rem' }}>
                         <button onClick={() => setTocOpen(o => !o)}
-                            style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0.95rem 1.15rem', borderRadius: '0.95rem', cursor: 'pointer', background: 'linear-gradient(135deg, #0D1F45 0%, #173470 100%)', border: '1.5px solid rgba(212, 175, 55, 0.5)', color: '#FFFFFF', fontWeight: 700, fontSize: '0.92rem', boxShadow: '0 10px 24px -8px rgba(10, 22, 48, 0.35)' }}>
+                            style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0.95rem 1.15rem', borderRadius: '0.95rem', cursor: 'pointer', background: 'linear-gradient(135deg, #0D1F45 0%, #173470 100%)', border: '1px solid rgba(148, 163, 184, 0.3)', color: '#FFFFFF', fontWeight: 700, fontSize: '0.92rem', boxShadow: '0 10px 24px -8px rgba(10, 22, 48, 0.35)' }}>
                             <span style={{ display: 'flex', alignItems: 'center', gap: '0.55rem' }}>
-                                <List size={16} style={{ color: '#FDE68A' }} /> সম্পূর্ণ গাইডের বিষয়সূচি
-                                <span style={{ fontSize: '0.72rem', fontWeight: 800, padding: '0.16rem 0.55rem', borderRadius: '9999px', background: 'rgba(253, 230, 138, 0.18)', color: '#FDE68A', border: '1px solid rgba(253, 230, 138, 0.35)' }}>
+                                <List size={16} style={{ color: '#5EEAD4' }} /> সম্পূর্ণ গাইডের বিষয়সূচি
+                                <span style={{ fontSize: '0.72rem', fontWeight: 800, padding: '0.16rem 0.55rem', borderRadius: '9999px', background: 'rgba(147, 197, 253, 0.15)', color: '#5EEAD4', border: '1px solid rgba(147, 197, 253, 0.3)' }}>
                                     {post.toc?.length || 0}টি অধ্যায়
                                 </span>
                             </span>
-                            {tocOpen ? <ChevronUp size={17} style={{ color: '#FDE68A' }} /> : <ChevronDown size={17} style={{ color: '#FDE68A' }} />}
+                            {tocOpen ? <ChevronUp size={17} style={{ color: '#5EEAD4' }} /> : <ChevronDown size={17} style={{ color: '#5EEAD4' }} />}
                         </button>
                         {tocOpen && (
                             <div style={{ marginTop: '0.375rem', padding: '1rem 1.125rem', borderRadius: '0.875rem', background: 'var(--surface)', border: '1px solid var(--card-border)' }}>
@@ -889,7 +891,7 @@ const BlogPostBnInner = () => {
                                             const headingText = typeof h === 'string' ? h : (h?.title || h?.heading || h?.text || '');
                                             return (
                                                 <li key={i}>
-                                                    <a href={`#bnsec-${i}`} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.5rem', padding: '0.375rem 0.5rem', borderRadius: '0.5rem', fontSize: '0.8125rem', lineHeight: 1.4, textDecoration: 'none', color: i === activeSection ? 'var(--accent)' : 'var(--text-muted)', fontWeight: i === activeSection ? 600 : 400, background: i === activeSection ? 'rgba(198,167,94,0.07)' : 'transparent', borderLeft: i === activeSection ? '2px solid var(--accent)' : '2px solid transparent', transition: 'all 0.15s' }}>
+                                                    <a href={`#bnsec-${i}`} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.5rem', padding: '0.375rem 0.5rem', borderRadius: '0.5rem', fontSize: '0.8125rem', lineHeight: 1.4, textDecoration: 'none', color: i === activeSection ? 'var(--accent)' : 'var(--text-muted)', fontWeight: i === activeSection ? 600 : 400, background: i === activeSection ? 'rgba(22, 58, 112, 0.06)' : 'transparent', borderLeft: i === activeSection ? '2px solid var(--accent)' : '2px solid transparent', transition: 'all 0.15s' }}>
                                                         <span style={{ fontSize: '0.65rem', fontFamily: 'monospace', opacity: 0.4, marginTop: '2px', flexShrink: 0 }}>{String(i + 1).padStart(2, '0')}</span>
                                                         {headingText}
                                                     </a>
@@ -905,15 +907,15 @@ const BlogPostBnInner = () => {
                                 {/* Phase 5.2: Featured Snippet & AI Overview (GEO) Quick Answer Table */}
                                 {quickTable && (
                                     <div className="quick-answer-table-box" style={{ marginBottom: '2rem', borderRadius: '1rem', overflow: 'hidden', border: '1.5px solid rgba(29, 78, 216, 0.22)', background: 'var(--surface)', boxShadow: '0 12px 28px -12px rgba(15, 23, 42, 0.12)' }}>
-                                        <div style={{ padding: '0.9rem 1.35rem', background: 'linear-gradient(90deg, #0B1938 0%, #1E3A8A 100%)', borderBottom: '2px solid #D4AF37' }}>
-                                            <h2 style={{ margin: 0, fontSize: '1.05rem', fontWeight: 800, color: '#FDE68A' }}>
+                                        <div style={{ padding: '0.9rem 1.35rem', background: 'linear-gradient(90deg, #0B1938 0%, #1E3A8A 100%)', borderBottom: '1px solid rgba(148, 163, 184, 0.25)' }}>
+                                            <h2 style={{ margin: 0, fontSize: '1.05rem', fontWeight: 800, color: '#5EEAD4' }}>
                                                 ⚡ {quickTable.heading}
                                             </h2>
                                         </div>
                                         <div style={{ overflowX: 'auto' }}>
                                             <table style={{ width: '100%', borderCollapse: 'collapse', margin: 0 }}>
                                                 <thead>
-                                                    <tr style={{ background: 'rgba(198,167,94,0.1)' }}>
+                                                    <tr style={{ background: 'var(--surface-2)' }}>
                                                         <th style={{ padding: '0.75rem 1rem', textAlign: 'left', fontSize: '0.88rem', fontWeight: 700, color: 'var(--text)', borderBottom: '1px solid var(--card-border)' }}>{quickTable.col1}</th>
                                                         <th style={{ padding: '0.75rem 1rem', textAlign: 'left', fontSize: '0.88rem', fontWeight: 700, color: 'var(--text)', borderBottom: '1px solid var(--card-border)' }}>{quickTable.col2}</th>
                                                     </tr>
@@ -933,7 +935,7 @@ const BlogPostBnInner = () => {
 
                                 {/* Quick Answer Bullet Points (if present in JSON) */}
                                 {post.quickAnswer && !quickTable && (
-                                    <div style={{ marginBottom: '2.25rem', padding: '1.375rem 1.5rem', borderRadius: '1rem', background: 'linear-gradient(135deg, rgba(184,146,42,0.08), rgba(184,146,42,0.02))', border: '1.5px solid rgba(184,146,42,0.22)' }}>
+                                    <div style={{ marginBottom: '2.25rem', padding: '1.375rem 1.5rem', borderRadius: '1rem', background: 'var(--surface-2)', border: '1px solid var(--card-border)' }}>
                                         <p style={{ fontSize: '0.875rem', fontWeight: 800, color: 'var(--gold)', marginBottom: '0.875rem', fontFamily: "'Noto Serif Bengali', 'Noto Sans Bengali', sans-serif" }}>
                                             {typeof post.quickAnswer === 'object' && post.quickAnswer?.heading ? post.quickAnswer.heading : 'আইনি সারসংক্ষেপ ও তাৎক্ষণিক পরামর্শ'}
                                         </p>
@@ -968,8 +970,8 @@ const BlogPostBnInner = () => {
                                                     marginBottom: '1.75rem',
                                                     padding: '1rem 1.25rem',
                                                     borderRadius: '1rem',
-                                                    background: 'linear-gradient(90deg, rgba(29, 78, 216, 0.07) 0%, rgba(212, 175, 55, 0.09) 65%, transparent 100%)',
-                                                    borderLeft: '4px solid #D4AF37',
+                                                    background: 'linear-gradient(90deg, rgba(37, 99, 235, 0.06) 0%, rgba(13, 148, 136, 0.07) 100%)',
+                                                    border: '1px solid rgba(37, 99, 235, 0.16)',
                                                     borderBottom: '1px solid var(--card-border)',
                                                     boxShadow: '0 6px 20px -12px rgba(15, 23, 42, 0.12)',
                                                     display: 'flex',
@@ -982,9 +984,9 @@ const BlogPostBnInner = () => {
                                                             flexShrink: 0, width: '3.15rem', height: '3.15rem', borderRadius: '0.9rem',
                                                             display: 'flex', alignItems: 'center', justifyContent: 'center',
                                                             fontWeight: 800, fontSize: '1.2rem', color: '#FFFFFF', fontFamily: "'Noto Serif Bengali', sans-serif",
-                                                            background: 'linear-gradient(135deg, #0B1938 0%, #1E3A8A 100%)',
-                                                            border: '1.5px solid #D4AF37',
-                                                            boxShadow: '0 8px 18px -6px rgba(11, 25, 56, 0.45)',
+                                                            background: 'linear-gradient(135deg, #2563EB 0%, #0D9488 100%)',
+                                                            border: '1px solid rgba(255, 255, 255, 0.28)',
+                                                            boxShadow: '0 6px 16px -4px rgba(37, 99, 235, 0.34)',
                                                         }}>{toBnDigits(i + 1)}</span>
                                                         <h2 style={{
                                                             fontFamily: "'Noto Serif Bengali', sans-serif",
@@ -1016,7 +1018,7 @@ const BlogPostBnInner = () => {
                                     margin: '2.5rem 0',
                                     padding: '1.5rem 1.75rem',
                                     borderRadius: '1.125rem',
-                                    background: 'linear-gradient(135deg, rgba(34,197,94,0.07) 0%, rgba(198,167,94,0.07) 100%)',
+                                    background: 'linear-gradient(135deg, rgba(34,197,94,0.07) 0%, rgba(22, 58, 112, 0.06) 100%)',
                                     border: '1px solid rgba(34,197,94,0.22)',
                                     display: 'flex',
                                     flexDirection: 'column',
@@ -1025,9 +1027,9 @@ const BlogPostBnInner = () => {
                                     <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.875rem' }}>
                                         <div style={{
                                             width: '42px', height: '42px', borderRadius: '12px',
-                                            background: 'rgba(198,167,94,0.15)', border: '1px solid rgba(198,167,94,0.3)',
+                                            background: 'rgba(22, 58, 112, 0.15)', border: '1px solid rgba(148, 163, 184, 0.22)',
                                             display: 'flex', alignItems: 'center', justifyContent: 'center',
-                                            color: '#c6a75e', flexShrink: 0
+                                            color: '#5EEAD4', flexShrink: 0
                                         }}>
                                             <Scale size={20} />
                                         </div>
@@ -1111,8 +1113,8 @@ const BlogPostBnInner = () => {
                                 )}
 
                                 {/* CTA Form */}
-                                <div style={{ borderRadius: '1.375rem', overflow: 'hidden', background: 'linear-gradient(135deg, var(--hero-bg) 0%, var(--hero-surface, #1c1c35) 100%)', border: '1px solid rgba(198,167,94,0.18)', marginBottom: '3rem' }}>
-                                    <div style={{ background: `linear-gradient(90deg, ${cc.bg}, var(--gold))`, padding: '0.625rem 1.5rem', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+                                <div style={{ borderRadius: '1.375rem', overflow: 'hidden', background: 'linear-gradient(135deg, var(--hero-bg) 0%, var(--hero-surface, #1c1c35) 100%)', border: '1px solid rgba(148, 163, 184, 0.22)', marginBottom: '3rem' }}>
+                                    <div style={{ background: 'linear-gradient(90deg, #0F172A, #1E3A8A)', padding: '0.625rem 1.5rem', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
                                         <Scale size={13} style={{ color: '#fff' }} />
                                         <p style={{ fontSize: '0.7rem', fontWeight: 800, color: '#fff', textTransform: 'uppercase', letterSpacing: '0.1em', margin: 0 }}>সরাসরি আইনি পরামর্শ</p>
                                     </div>
@@ -1164,8 +1166,8 @@ const BlogPostBnInner = () => {
 
                                 {/* Phase 4.3: Topic Cluster Internal Linking (Hub & Spoke Master Pillar Guide) */}
                                 {pillarInfo && (
-                                    <div className="master-pillar-box" style={{ marginBottom: '1.75rem', padding: '1.15rem 1.35rem', borderRadius: '0.95rem', background: 'linear-gradient(135deg, rgba(27,54,93,0.08), rgba(198,167,94,0.08))', border: '1.5px solid rgba(198,167,94,0.35)' }}>
-                                        <p style={{ margin: '0 0 0.65rem', fontSize: '0.92rem', fontWeight: 800, color: 'var(--gold, #b8922a)' }}>
+                                    <div className="master-pillar-box" style={{ marginBottom: '1.75rem', padding: '1.15rem 1.35rem', borderRadius: '0.95rem', background: 'var(--surface-2)', border: '1px solid var(--card-border)' }}>
+                                        <p style={{ margin: '0 0 0.65rem', fontSize: '0.92rem', fontWeight: 800, color: 'var(--accent)' }}>
                                             📌 মূল গাইড ও ক্যালকুলেটর (Master Pillar Guide)
                                         </p>
                                         <ul style={{ margin: 0, paddingLeft: '1.15rem', display: 'flex', flexDirection: 'column', gap: '0.45rem', fontSize: '0.95rem', lineHeight: 1.65 }}>
@@ -1180,7 +1182,7 @@ const BlogPostBnInner = () => {
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link to={pillarInfo.serviceUrl} style={{ color: 'var(--gold, #b8922a)', fontWeight: 700, textDecoration: 'underline', textUnderlineOffset: '3px' }}>
+                                                <Link to={pillarInfo.serviceUrl} style={{ color: 'var(--accent)', fontWeight: 700, textDecoration: 'underline', textUnderlineOffset: '3px' }}>
                                                     ⚖️ {pillarInfo.serviceAnchor}
                                                 </Link>
                                             </li>
@@ -1189,7 +1191,7 @@ const BlogPostBnInner = () => {
                                 )}
 
                                 {/* Mandatory Article Disclaimer Box (AdSense & YMYL E-E-A-T Step 6) */}
-                                <div className="legal-disclaimer-box p-4 bg-gray-50 dark:bg-gray-800/40 border-l-4 border-amber-600 my-6 text-sm text-gray-700 dark:text-gray-300 rounded-r-lg">
+                                <div className="legal-disclaimer-box p-4 bg-gray-50 dark:bg-gray-800/40 border border-[var(--card-border)] rounded-lg my-6 text-sm text-gray-700 dark:text-gray-300 rounded-r-lg">
                                     <strong>দায়বর্জন (Disclaimer):</strong> এই আর্টিকেলে পরিবেশিত তথ্যসমূহ কেবল আইনি সচেতনতা ও সাধারণ শিক্ষার উদ্দেশ্যে প্রকাশিত। এটি কোনো প্রত্যক্ষ আইনি পরামর্শ (Legal Advice) নয় এবং এর মাধ্যমে কোনো আইনজীবী-মক্কেল সম্পর্ক (Attorney-Client Relationship) তৈরি হয় না। আপনার সুনির্দিষ্ট মামলার আইনি প্রতিকারের জন্য সরাসরি বাংলাদেশ সুপ্রিম কোর্ট বা জজ কোর্টের তালিকাভুক্ত বিজ্ঞ আইনজীবীর সাথে পরামর্শ করুন।
                                 </div>
                                 {adAnchors.top && createPortal(
@@ -1308,9 +1310,9 @@ const BlogPostBnInner = () => {
                                     <span style={{
                                         width: '2.25rem', height: '2.25rem', borderRadius: '0.65rem',
                                         background: 'linear-gradient(135deg, #0B1938 0%, #1E3A8A 100%)',
-                                        border: '1px solid #D4AF37',
+                                        border: '1px solid rgba(147, 197, 253, 0.35)',
                                         display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
-                                        color: '#FDE68A', boxShadow: '0 6px 14px -4px rgba(11,25,56,0.35)'
+                                        color: '#5EEAD4', boxShadow: '0 6px 14px -4px rgba(11,25,56,0.35)'
                                     }}>
                                         <Flame size={15} />
                                     </span>
@@ -1423,8 +1425,7 @@ const BlogPostBnInner = () => {
                     max-width: 100%;
                     padding: 0;
                     background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFF 100%);
-                    border: 1.5px solid rgba(212, 175, 55, 0.65);
-                    border-left: 6px solid #D4AF37;
+                    border: 1px solid rgba(148, 163, 184, 0.35);
                     border-radius: 1.15rem;
                     box-shadow: 0 24px 52px -14px rgba(6, 15, 36, 0.58), 0 0 0 1px rgba(255, 255, 255, 0.75) inset;
                     position: relative;
@@ -1439,7 +1440,7 @@ const BlogPostBnInner = () => {
                     margin-bottom: 0;
                     padding: 0.95rem 1.75rem;
                     background: linear-gradient(90deg, #0B1938 0%, #1B3B7B 100%);
-                    border-bottom: 1px solid rgba(212, 175, 55, 0.35);
+                    border-bottom: 1px solid rgba(148, 163, 184, 0.22);
                 }
                 .bpbn-intro-badge {
                     display: inline-flex;
@@ -1448,7 +1449,7 @@ const BlogPostBnInner = () => {
                     font-size: 0.92rem;
                     font-weight: 800;
                     letter-spacing: 0.03em;
-                    color: #FDE68A;
+                    color: #F8FAFC;
                     font-family: 'Noto Serif Bengali', sans-serif;
                 }
                 .bpbn-intro-dot {
@@ -1465,19 +1466,19 @@ const BlogPostBnInner = () => {
                     gap: 0.375rem;
                     padding: 0.38rem 1rem;
                     border-radius: 9999px;
-                    background: linear-gradient(135deg, #FDE68A 0%, #D4AF37 100%);
-                    border: 1px solid #FFF3B0;
-                    color: #0B1528;
+                    background: #FFFFFF;
+                    border: 1px solid rgba(255, 255, 255, 0.9);
+                    color: #0A1424;
                     font-size: 0.82rem;
                     font-weight: 800;
                     text-decoration: none;
                     transition: all 0.2s ease;
                     font-family: 'Noto Serif Bengali', sans-serif;
-                    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+                    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.2);
                 }
                 .bpbn-intro-call-chip:hover {
                     transform: translateY(-1px);
-                    box-shadow: 0 6px 16px rgba(212, 175, 55, 0.45);
+                    box-shadow: 0 6px 16px rgba(15, 23, 42, 0.3);
                 }
                 .bpbn-intro-wa-chip {
                     display: inline-flex;
@@ -1518,10 +1519,10 @@ const BlogPostBnInner = () => {
                 .bpbn-intro-content strong, .bpbn-intro-content b {
                     color: #1E3A8A;
                     font-weight: 800;
-                    background: linear-gradient(90deg, rgba(29, 78, 216, 0.09) 0%, rgba(212, 175, 55, 0.14) 100%);
+                    background: rgba(22, 58, 112, 0.07);
                     padding: 0.12rem 0.48rem;
                     border-radius: 6px;
-                    border-bottom: 2px solid rgba(212, 175, 55, 0.7);
+                    border-bottom: 2px solid rgba(22, 58, 112, 0.28);
                     box-decoration-break: clone;
                     -webkit-box-decoration-break: clone;
                 }
@@ -1542,7 +1543,7 @@ const BlogPostBnInner = () => {
                     flex-wrap: wrap;
                     gap: 0.65rem;
                     padding: 0.75rem 1.85rem;
-                    background: linear-gradient(90deg, #F1F5FE 0%, #FFFBEB 100%);
+                    background: #F1F5F9;
                     border-top: 1px solid rgba(29, 78, 216, 0.14);
                     font-size: 0.78rem;
                     font-weight: 700;
@@ -1551,39 +1552,38 @@ const BlogPostBnInner = () => {
                 }
                 body[data-theme="dark"] .bpbn-hero-intro-card {
                     background: linear-gradient(145deg, rgba(15, 27, 52, 0.96) 0%, rgba(10, 19, 38, 0.98) 100%);
-                    border: 1.5px solid rgba(212, 175, 55, 0.45);
-                    border-left: 6px solid #D4AF37;
+                    border: 1px solid rgba(148, 163, 184, 0.25);
                 }
                 body[data-theme="dark"] .bpbn-intro-content {
                     color: #F1F5F9;
                 }
                 body[data-theme="dark"] .bpbn-intro-content p + p,
                 body[data-theme="dark"] .bpbn-intro-content p.bpbn-intro-para + p.bpbn-intro-para {
-                    border-top-color: rgba(253, 230, 138, 0.18);
+                    border-top-color: rgba(148, 163, 184, 0.18);
                 }
                 body[data-theme="dark"] .bpbn-intro-content strong,
                 body[data-theme="dark"] .bpbn-intro-content b {
-                    color: #FDE68A;
-                    background: rgba(212, 175, 55, 0.16);
-                    border-bottom: 1.5px solid rgba(212, 175, 55, 0.45);
+                    color: #F8FAFC;
+                    background: rgba(59, 130, 246, 0.16);
+                    border-bottom: 1.5px solid rgba(147, 197, 253, 0.45);
                 }
                 body[data-theme="dark"] .bpbn-intro-content em {
                     color: #CBD5E1;
                 }
                 body[data-theme="dark"] .bpbn-intro-content a {
-                    color: #FDE68A !important;
+                    color: #5EEAD4 !important;
                 }
                 body[data-theme="dark"] .bpbn-intro-footer {
                     background: rgba(9, 18, 38, 0.85);
-                    border-top-color: rgba(212, 175, 55, 0.25);
-                    color: #FDE68A;
+                    border-top-color: rgba(148, 163, 184, 0.2);
+                    color: #F8FAFC;
                 }
 
                 @media (max-width: 640px) {
                     .bpbn-toc-inline { display: none; }
                     .bpbn-mobile-toc { display: block; }
                     .bpbn-body-container, .bpbn-hero-container { padding-left: 0.9rem; padding-right: 0.9rem; }
-                    .bpbn-hero-intro-card { margin-top: 1.25rem; border-radius: 1rem; border-left-width: 5px; }
+                    .bpbn-hero-intro-card { margin-top: 1.25rem; border-radius: 1rem; }
                     .bpbn-intro-header { padding: 0.8rem 1rem; gap: 0.5rem; }
                     .bpbn-intro-badge { font-size: 0.82rem; }
                     .bpbn-intro-call-chip, .bpbn-intro-wa-chip { font-size: 0.74rem; padding: 0.32rem 0.75rem; }
@@ -1599,11 +1599,11 @@ const BlogPostBnInner = () => {
                 .prose-bn-content li::marker { color: var(--accent); font-weight: 700; }
                 .prose-bn-content strong { color: var(--text); font-weight: 700; }
                 .prose-bn-content b { color: var(--text); font-weight: 700; }
-                .prose-bn-content a { color: var(--accent); text-decoration: underline; text-decoration-color: rgba(198,167,94,0.35); text-underline-offset: 4px; }
+                .prose-bn-content a { color: var(--accent); text-decoration: underline; text-decoration-color: rgba(22, 58, 112, 0.35); text-underline-offset: 4px; }
                 .prose-bn-content a:hover { text-decoration-color: var(--accent); }
-                .prose-bn-content h3 { font-family: 'Noto Serif Bengali', sans-serif; font-size: 1.35rem; font-weight: 800; color: var(--text); margin: 2.5rem 0 1.1rem; padding: 0.5rem 0.875rem; border-left: 4px solid var(--gold, #C6A75E); background: linear-gradient(90deg, rgba(198,167,94,0.06), transparent); border-radius: 0 0.5rem 0.5rem 0; }
+                .prose-bn-content h3 { font-family: 'Noto Serif Bengali', sans-serif; font-size: 1.35rem; font-weight: 800; color: var(--text); margin: 2.5rem 0 1.1rem; padding: 0.5rem 0.875rem; background: linear-gradient(90deg, var(--accent-subtle), transparent); border-radius: 0 0.5rem 0.5rem 0; }
                 .prose-bn-content h4 { font-family: 'Noto Serif Bengali', sans-serif; font-size: 1.18rem; font-weight: 700; color: var(--text); margin: 2rem 0 0.85rem; }
-                .prose-bn-content blockquote { border-left: 4px solid var(--gold, #C6A75E); padding: 1.25rem 1.5rem; margin: 2.25rem 0; color: var(--text); background: linear-gradient(90deg, rgba(198,167,94,0.06), rgba(198,167,94,0.02)); border-radius: 0 0.875rem 0.875rem 0; font-size: 1.15rem; line-height: 2.05; }
+                .prose-bn-content blockquote { padding: 1.25rem 1.5rem; margin: 2.25rem 0; color: var(--text); background: var(--surface-2); border-radius: 0 0.875rem 0.875rem 0; font-size: 1.15rem; line-height: 2.05; }
                 
                 /* ─── Theme-Aware Executive Table Styling ─── */
                 .prose-bn-content table {
@@ -1626,7 +1626,7 @@ const BlogPostBnInner = () => {
                     color: #FFFFFF !important;
                     font-weight: 700;
                     padding: 14px 18px !important;
-                    border-bottom: 2px solid var(--gold, #C6A75E) !important;
+                    border-bottom: 2px solid #3B82F6 !important;
                     text-align: left;
                     font-size: 1.05rem;
                     letter-spacing: 0.01em;
@@ -1650,10 +1650,10 @@ const BlogPostBnInner = () => {
                     background-color: rgba(15, 23, 42, 0.025) !important;
                 }
                 .prose-bn-content tbody tr:hover {
-                    background-color: rgba(198, 167, 94, 0.06) !important;
+                    background-color: rgba(22, 58, 112, 0.04) !important;
                 }
                 .dark .prose-bn-content table {
-                    border-color: rgba(198, 167, 94, 0.22) !important;
+                    border-color: rgba(148, 163, 184, 0.2) !important;
                     background: #0B132B !important;
                 }
                 .dark .prose-bn-content td {
@@ -1671,7 +1671,7 @@ const BlogPostBnInner = () => {
                     background-color: #131F33 !important;
                 }
                 .dark .prose-bn-content tbody tr:hover {
-                    background-color: rgba(198, 167, 94, 0.12) !important;
+                    background-color: rgba(59, 130, 246, 0.1) !important;
                 }
 
                 .prose-bn-content ol { list-style: decimal; }
@@ -1712,7 +1712,7 @@ const BlogPostBnInner = () => {
                     transform: translateY(140%);
                     opacity: 0;
                     pointer-events: none;
-                    transition: transform 0.32s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.25s ease;
+                    transition: transform 0.32s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.25s ease;
                     will-change: transform, opacity;
                 }
                 .msb-bar.msb-visible {
@@ -1766,7 +1766,7 @@ const BlogPostBnInner = () => {
                 }
                 .msb-sub {
                     font-size: 0.62rem !important;
-                    color: #C6A75E !important;
+                    color: #5EEAD4 !important;
                     white-space: nowrap !important;
                     overflow: hidden !important;
                     text-overflow: ellipsis !important;
@@ -1800,9 +1800,9 @@ const BlogPostBnInner = () => {
                     transform: scale(0.93) !important;
                 }
                 .msb-call {
-                    background: linear-gradient(135deg, #C6A75E 0%, #A8873A 100%) !important;
-                    color: #0B1120 !important;
-                    box-shadow: 0 3px 12px rgba(198, 167, 94, 0.4) !important;
+                    background: #FFFFFF !important;
+                    color: #0A1424 !important;
+                    box-shadow: 0 3px 12px rgba(15, 23, 42, 0.3) !important;
                     border: 1px solid rgba(255, 255, 255, 0.25) !important;
                 }
                 .msb-wa {

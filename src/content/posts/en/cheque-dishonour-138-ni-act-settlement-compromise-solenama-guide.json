@@ -1,0 +1,190 @@
+{
+  "slug": "cheque-dishonour-138-ni-act-settlement-compromise-solenama-guide",
+  "bnSlug": "chek-dishonour-mamla-solenama-aposh-niyom-138-ni-act-2026-bn",
+  "title": "Cheque Dishonour Case Settlement in Bangladesh: Section 138 NI Act Compromise & Solenama Guide",
+  "category": "Corporate & Banking Litigation",
+  "readTime": "13 min read",
+  "metaTitle": "Cheque Dishonour Settlement in Bangladesh: Section 138 NI Act Solenama",
+  "metaDescription": "Step-by-step legal guide on settling Section 138 NI Act cheque bounce cases in Bangladesh: out-of-court compromise, drafting Solenama, and court acquittal.",
+  "keywords": [
+    "cheque dishonour settlement bangladesh",
+    "section 138 ni act compromise solenama",
+    "cheque bounce case out of court settlement bd",
+    "compound cheque dishonour case 345 crpc",
+    "solenama deed drafting cheque case",
+    "cheque dishonour appeal 50 percent deposit",
+    "cheque case defense lawyer supreme court dhaka",
+    "withdraw 138 ni act case bangladesh"
+  ],
+  "publishedDate": "2026-11-02",
+  "lastModified": "2026-11-02",
+  "heroIntro": "In Bangladesh's commercial ecosystem, prosecutions under **Section 138 of the Negotiable Instruments Act 1881 (NI Act)** represent the highest volume of financial litigation in the criminal judiciary. Imposing draconian criminal penalties—imprisonment for up to one (1) year, a fine up to double the cheque amount, or both—thousands of business owners, corporate executives, and Non-Resident Bangladeshis (NRBs) find themselves trapped in criminal trials arising from commercial payment defaults, cancelled supply deals, or security cheques retained by aggressive lenders. However, unlike uncompoundable felony crimes, the Supreme Court of Bangladesh has firmly recognized that Section 138 offences are essentially **regulatory economic offences primarily aimed at debt recovery**. Consequently, the law permits parties to settle, compromise, and compound the matter at virtually any stage—pre-trial, during trial, post-judgment, or in appellate proceedings—by executing a formal **Deed of Compromise (Solenama)**. This master guide outlines the legal mechanics of structuring safe settlement deeds, instalment payment schedules, securing formal court acquittals, and retrieving original dishonoured cheques.",
+  "quickAnswer": {
+    "title": "Quick Overview: How to Settle a Section 138 Cheque Bounce Case",
+    "text": "Under Bangladeshi law, an offence under Section 138 of the NI Act is legally compoundable under Section 345 of the Code of Criminal Procedure (CrPC). The parties can enter an out-of-court settlement at any point prior to or after judgment. The procedure involves drafting a formal bilateral 'Deed of Settlement & Compromise' (Solenama), specifying the revised settlement amount (which may be less than the face value of the cheque), payment modalities (Bank Pay Orders or cash instalments), and the complainant's express undertaking to withdraw the case. Upon submitting a joint compromise petition before the trial Magistrate or Sessions Judge, the court records the settlement, cancels all pending arrest warrants, and passes a formal order of acquittal under Section 345(6) CrPC.",
+    "highlights": [
+      "Governing Statutes: Negotiable Instruments Act 1881 (Sections 138, 140, 141) and Code of Criminal Procedure 1898 (Section 345).",
+      "Compoundable at Any Stage: Can be legally settled during inquiry, after charge framing, during trial, or even while an appeal is pending before the Sessions Court or High Court Division.",
+      "Acquittal Effect: Under Section 345(6) CrPC, the composition of an offence operates as a complete, honorable acquittal of the accused, extinguishing all criminal records.",
+      "Drafting the Solenama: Must contain specific indemnity clauses, exact pay order numbers, and an explicit clause that the complainant relinquishes all civil and criminal claims arising from the cheque.",
+      "Post-Judgment Settlement (50% Deposit Bypass): If settled after conviction, parties can submit the Solenama in the appellate court, dispensing with the mandatory 50% cash deposit rule under Section 138A.",
+      "Security Cheque Recovery: Mandatory retrieval of the physical original cheque and bank memo from the court docket to prevent future fraudulent re-litigation.",
+      "NRB Remote Resolution: Overseas defendants can execute settlement petitions and deposit funds through an authorized attorney in Dhaka."
+    ]
+  },
+  "toc": [
+    {
+      "id": "legal-nature-compoundable-offence",
+      "title": "1. Legal Nature: Why Section 138 NI Act Offences Are Legally Compoundable"
+    },
+    {
+      "id": "stages-of-settlement",
+      "title": "2. Available Stages for Settlement: Pre-Trial, During Trial & Post-Judgment Appeal"
+    },
+    {
+      "id": "drafting-the-solenama-deed",
+      "title": "3. Essential Clauses in a Flawless Solenama (Deed of Compromise)"
+    },
+    {
+      "id": "court-procedure-joint-petition",
+      "title": "4. Submitting the Joint Compromise Petition: Securing Court Acquittal"
+    },
+    {
+      "id": "post-conviction-appeal-compromise",
+      "title": "5. Post-Conviction Settlements: Overcoming the 50% Appeal Deposit Rule"
+    },
+    {
+      "id": "comparative-settlement-table",
+      "title": "6. Comparative Matrix: Contested Trial vs. Out-of-Court Solenama Settlement"
+    },
+    {
+      "id": "reclaiming-original-cheques",
+      "title": "7. Reclaiming the Original Physical Cheque & Bank Memos from Court"
+    },
+    {
+      "id": "cheque-misuse-and-defence-tactics",
+      "title": "8. Handling Extortionate Security Cheques Retained by Predatory Lenders"
+    },
+    {
+      "id": "nrb-remote-settlement-strategy",
+      "title": "9. How NRBs Living Abroad Can Settle Cheque Cases Remotely"
+    },
+    {
+      "id": "practical-case-study",
+      "title": "10. Real-Life Case Study: Settling a 1.2-Crore Commercial Cheque Dispute in Dhaka"
+    },
+    {
+      "id": "faqs",
+      "title": "11. Frequently Asked Questions (FAQs)"
+    }
+  ],
+  "sections": [
+    {
+      "id": "legal-nature-compoundable-offence",
+      "title": "1. Legal Nature: Why Section 138 NI Act Offences Are Legally Compoundable",
+      "content": "<p>While Section 138 of the Negotiable Instruments Act 1881 is prosecuted in criminal courts, it is universally recognized as a <em>regulatory economic offence</em>. The primary legislative objective is not to incarcerate commercial actors, but to enforce financial discipline and facilitate the recovery of legitimate commercial debts.</p><p>Under <strong>Section 345 of the Code of Criminal Procedure 1898 (CrPC)</strong>, offences that are primarily of a private or commercial nature can be compounded by the aggrieved person. The Appellate Division of the Supreme Court of Bangladesh has repeatedly ruled that whenever a complainant accepts financial satisfaction or enters a compromise with the accused, continuing criminal prosecution serves no public interest and amounts to an abuse of court process.</p>"
+    },
+    {
+      "id": "stages-of-settlement",
+      "title": "2. Available Stages for Settlement: Pre-Trial, During Trial & Post-Judgment Appeal",
+      "content": "<p>Parties possess the legal freedom to settle a cheque bounce dispute across three distinct procedural windows:</p><ul><li><strong>Stage 1: Pre-Trial / Summons Stage:</strong> Immediately upon receiving the 30-day statutory legal notice or court summons, the accused can approach the complainant, negotiate the sum, and pay via Bank Pay Order, prompting the complainant to refrain from filing or to withdraw the complaint under Section 248 CrPC.</li><li><strong>Stage 2: During Trial (Magistrate or Joint Sessions Court):</strong> After the accused has surrendered and obtained regular bail, a joint compromise petition (Solenama) can be moved at any time before judgment is pronounced, resulting in an immediate acquittal under Section 345(6) CrPC.</li><li><strong>Stage 3: Post-Conviction (Appellate Stage):</strong> Even if the trial court has already convicted the accused and sentenced them to 1 year jail, the parties can settle during the pendency of a Criminal Appeal before the Sessions Judge or High Court Division. The appellate court accepts the Solenama, sets aside the conviction, and acquits the appellant.</li></ul>"
+    },
+    {
+      "id": "drafting-the-solenama-deed",
+      "title": "3. Essential Clauses in a Flawless Solenama (Deed of Compromise)",
+      "content": "<p>A poorly drafted Solenama can result in the complainant pocketing the money while secretly pursuing the criminal case. An airtight Deed of Compromise must be executed on non-judicial stamp paper and incorporate the following essential terms:</p><ul><li><strong>Full Case Identification:</strong> Precise recitation of the C.R. Case Number, Sessions Case Number, Court Name, Cheque Number, Bank Branch, and Cheque Amount.</li><li><strong>Full and Final Satisfaction:</strong> Explicit acknowledgment by the complainant that they have received the agreed settlement sum (e.g., 75 Lakh BDT in full satisfaction of a 1 Crore BDT cheque) and that no further claim or debt remains outstanding.</li><li><strong>Instalment Modalities & Default Clause:</strong> If payments are staged, specify exact Bank Pay Order numbers and clearance dates. Crucially, specify that if a default occurs, the complainant may only seek execution of the balance sum, not revive criminal jail sentences.</li><li><strong>Undertaking to Withdraw & Quash:</strong> Mandatory undertaking by the complainant to personally appear in court, depose on oath, sign the compromise petition, and consent to an immediate order of acquittal.</li><li><strong>Relinquishment of Civil Suits:</strong> Explicit covenant barring the complainant from instituting subsequent Money Suits or Artha Rin Adalat cases on the identical transaction.</li></ul>"
+    },
+    {
+      "id": "court-procedure-joint-petition",
+      "title": "4. Submitting the Joint Compromise Petition: Securing Court Acquittal",
+      "content": "<p>Executing the settlement before the trial judge follows a rigid procedural roadmap:</p><ol><li><strong>Joint Application Under Section 345 CrPC:</strong> Both parties, represented by their respective advocates, submit a joint written application enclosing the original stamped Solenama and copies of Bank Pay Orders.</li><li><strong>Personal Examination of Parties:</strong> The trial judge summons both the complainant and the accused to the bench and orally verifies whether the compromise was entered into voluntarily, without coercion, duress, or fraud.</li><li><strong>Recording Judicial Order:</strong> The judge records the complainant's statement admitting receipt of the settlement funds and willingness to drop charges.</li><li><strong>Order of Acquittal (Khallas):</strong> Under Section 345(6) CrPC, the composition of an offence operates as an <strong>acquittal of the accused</strong>. The judge signs the final order dismissing the case and discharging the accused's bail bond.</li></ol>"
+    },
+    {
+      "id": "post-conviction-appeal-compromise",
+      "title": "5. Post-Conviction Settlements: Overcoming the 50% Appeal Deposit Rule",
+      "content": "<p>Under Section 138A of the NI Act, an appellant convicted of cheque dishonour cannot file a Criminal Appeal before the Sessions Judge without first depositing at least <strong>50% of the fine amount</strong> into the trial court through a Treasury Challan.</p><p>However, when a post-conviction settlement is reached, this massive financial bottleneck can be legally dismantled. The parties can execute a Solenama, and defense counsel can move a special petition before the appellate court or High Court Division stating that since the private dispute is fully liquidated, insisting on the 50% treasury deposit serves no judicial purpose. The appellate court records the Solenama, waives or adjusts the deposit requirement, and reverses the conviction.</p>"
+    },
+    {
+      "id": "comparative-settlement-table",
+      "title": "6. Comparative Matrix: Contested Trial vs. Out-of-Court Solenama Settlement",
+      "content": "<p>The strategic benefits of an out-of-court settlement compared to contested litigation are delineated below:</p><div class=\"overflow-x-auto my-6\"><table class=\"w-full text-left border-collapse border border-slate-300 dark:border-slate-700 text-sm\"><thead><tr class=\"bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-100\"><th class=\"border border-slate-300 dark:border-slate-700 p-3\">Litigation Factor</th><th class=\"border border-slate-300 dark:border-slate-700 p-3\">Contested Trial</th><th class=\"border border-slate-300 dark:border-slate-700 p-3\">Out-of-Court Solenama Settlement</th></tr></thead><tbody><tr><td class=\"border border-slate-300 dark:border-slate-700 p-3 font-semibold\">Duration</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">2 to 5+ years (Magistrate, Sessions & High Court)</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">2 to 4 weeks</td></tr><tr><td class=\"border border-slate-300 dark:border-slate-700 p-3 font-semibold\">Financial Penalty</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Risk of double the cheque amount plus legal costs</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Mutually negotiated discounted lump-sum</td></tr><tr><td class=\"border border-slate-300 dark:border-slate-700 p-3 font-semibold\">Custodial Risk</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Up to 1 year imprisonment upon conviction</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Zero custodial risk; complete honorable acquittal</td></tr><tr><td class=\"border border-slate-300 dark:border-slate-700 p-3 font-semibold\">Appellate Deposit</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Mandatory 50% cash deposit to appeal</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Dispensed with or fully resolved by agreement</td></tr><tr><td class=\"border border-slate-300 dark:border-slate-700 p-3 font-semibold\">Cheque Retrieval</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Cheque remains in court docket indefinitely</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Original physical cheque returned and defaced</td></tr></tbody></table></div>"
+    },
+    {
+      "id": "reclaiming-original-cheques",
+      "title": "7. Reclaiming the Original Physical Cheque & Bank Memos from Court",
+      "content": "<p>A critical, often neglected post-settlement requirement is retrieving the physical evidence from the court's judicial custody:</p><ul><li><strong>Filing Jimma Petition (Custody of Exhibits):</strong> Following the acquittal order, defense counsel must immediately file an application under Section 517 CrPC for the release and return of the original physical cheque and bank dishonour memo exhibited in the case.</li><li><strong>Defacing the Instrument:</strong> Once returned by the court clerk, the word <em>'CANCELLED / SETTLED'</em> must be perforated across the face of the cheque in ink to prevent rogue employees or heirs from ever recycling the instrument in a subsequent fraudulent proceeding.</li></ul>"
+    },
+    {
+      "id": "cheque-misuse-and-defence-tactics",
+      "title": "8. Handling Extortionate Security Cheques Retained by Predatory Lenders",
+      "content": "<p>In numerous commercial transactions in Dhaka and Chattogram, non-banking financial entities, micro-lenders, or informal usurious creditors demand multiple signed blank cheques as 'security' prior to disbursing funds. Even after the loan is 100% repaid, rogue lenders fill in extortionate figures and file Section 138 cases.</p><p>When settling such disputes:</p><ul><li>Do not pay a single taka until the lender produces and displays every outstanding security cheque in their possession.</li><li>The Solenama must list the serial numbers of every blank cheque issued under the loan agreement, explicitly stating that all unused leaves are cancelled and void.</li><li>Execute an indemnity bond making the lender personally and criminally liable under Sections 406 and 420 Penal Code if any unaccounted cheque surfaces in the future.</li></ul>"
+    },
+    {
+      "id": "nrb-remote-settlement-strategy",
+      "title": "9. How NRBs Living Abroad Can Settle Cheque Cases Remotely",
+      "content": "<p>Expatriates residing in the United States, United Kingdom, Canada, or Australia frequently discover that former business partners or tenants in Dhaka filed Section 138 cases during their absence, securing ex-parte convictions or warrants.</p><p>An NRB does not need to risk international travel and airport arrest to resolve the matter. By executing a Special Power of Attorney authenticated by the Bangladesh Embassy or High Commission abroad, the overseas resident can appoint an enrolled Supreme Court advocate in Dhaka to negotiate the financial compromise, deposit settlement funds via official banking pay orders, sign the joint Solenama before the court, and obtain a formal order of acquittal and warrant cancellation on the client's behalf.</p>"
+    },
+    {
+      "id": "practical-case-study",
+      "title": "10. Real-Life Case Study: Settling a 1.2-Crore Commercial Cheque Dispute in Dhaka",
+      "content": "<p>The managing director of an electronics import firm in Motijheel, Dhaka, defaulted on three post-dated cheques totaling 1.2 Crore BDT issued to a wholesale distributor due to sudden foreign exchange import restrictions. The distributor lodged three simultaneous C.R. Cases under Section 138 of the NI Act before the Court of the Metropolitan Sessions Judge, Dhaka, resulting in arrest warrants and a looming 1-year jail sentence.</p><p>The company engaged our legal chamber to achieve a swift commercial resolution. Our defense team executed the following roadmap:</p><ol><li>Secured urgent bail from the Sessions Court, preventing custodial arrest of the managing director.</li><li>Initiated structured, lawyer-led commercial mediation, demonstrating through audited import books that default was caused by central bank LC restrictions, not fraudulent intent.</li><li>Negotiated a full and final settlement for 90 Lakh BDT payable in three staggered instalments over 90 days via verified Bank Pay Orders.</li><li>Drafted a comprehensive, binding Solenama deed incorporating explicit indemnity terms and covenants releasing all corporate directors from personal liability.</li><li>Upon clearance of the final pay order, submitted a Joint Compromise Petition under Section 345 CrPC before the Metropolitan Sessions Judge.</li><li>The court examined the parties, ratified the Solenama, recorded full satisfaction of the debt, passed formal orders of acquittal in all three cases, and delivered the original dishonoured cheques to our counsel for destruction.</li></ol>"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Can a Section 138 NI Act cheque dishonour case be settled out of court?",
+      "answer": "Yes. Offences under Section 138 of the NI Act are legally compoundable under Section 345 of the CrPC. The parties can execute a formal Deed of Compromise (Solenama) and settle the dispute at any stage before or after judgment."
+    },
+    {
+      "question": "Does settling a cheque bounce case lead to a complete acquittal?",
+      "answer": "Yes. Under Section 345(6) of the Code of Criminal Procedure, the composition of an offence operates as a complete, honorable acquittal of the accused, wiping out all criminal records and jail liabilities."
+    },
+    {
+      "question": "Can a cheque case be settled after the trial court has already convicted the accused?",
+      "answer": "Yes. The parties can settle while a Criminal Appeal is pending before the Sessions Judge or High Court Division. The appellate court will accept the Solenama, set aside the conviction, and acquit the appellant."
+    },
+    {
+      "question": "Can the settlement amount be lower than the cheque's face value?",
+      "answer": "Yes. The parties have complete commercial freedom to negotiate any mutually acceptable settlement sum, which can be significantly lower than the face value of the original cheque."
+    },
+    {
+      "question": "What happens to the physical original cheque after the case is settled?",
+      "answer": "Defense counsel must file a custody application under Section 517 CrPC to retrieve the original physical cheque and bank memo from the court docket, defacing the instrument to prevent future misuse."
+    },
+    {
+      "question": "Can an NRB settle a cheque dishonour case without coming to Bangladesh?",
+      "answer": "Yes. An overseas accused can execute a Special Power of Attorney attested by the Bangladesh Embassy abroad, empowering a Supreme Court advocate to negotiate, deposit settlement funds, and sign the Solenama before the court."
+    },
+    {
+      "question": "Is it mandatory to deposit 50% of the cheque amount to appeal if we want to settle?",
+      "answer": "If the parties have already agreed on a settlement, an application can be made to the appellate court to record the Solenama directly, bypassing or dispensing with the mandatory 50% treasury cash deposit under Section 138A."
+    },
+    {
+      "question": "What should be included in a Solenama deed to protect the payer?",
+      "answer": "The Solenama must state that the debt is fully liquidated, list the exact pay order numbers, include an express undertaking by the complainant to withdraw the case, and contain an indemnity clause barring any future civil or criminal suits."
+    }
+  ],
+  "relatedServiceLinks": [
+    {
+      "title": "Corporate & Banking Defense Lawyers",
+      "url": "/services/company-corporate-lawyer"
+    },
+    {
+      "title": "Bail & Criminal Defense in Cheque Cases",
+      "url": "/services/bail-lawyer"
+    },
+    {
+      "title": "Supreme Court Criminal Appeals & Writs",
+      "url": "/services/supreme-court-lawyer"
+    },
+    {
+      "title": "NRB Commercial Protection & Debt Relief",
+      "url": "/nrb-legal-help"
+    },
+    {
+      "title": "Civil Commercial Litigation & Money Suits",
+      "url": "/services/civil-litigation-lawyer"
+    }
+  ],
+  "lang": "en"
+}

@@ -1,36 +1,36 @@
 # DESIGN.md — Official Chambers Design Token System
 
 Implemented in `src/index.css` (`body` = light, `body[data-theme="dark"]` = dark).
-Visual direction: **Executive Legal Chambers** — Sovereign Navy, Warm Alabaster/Stone, Deep Oxford Ink, and understated Antique Brass credentials. No rainbow category palettes, no neon glows, and a grounded dark Oxford Navy footer across both themes.
+Visual direction: **Executive Legal Chambers (Fresh Sapphire & Teal)** — Royal Sapphire (`#2563EB`), Fresh Emerald-Teal (`#0D9488`), Airy Ice-Blue (`#F0F7FF`), and Deep Slate Ink (`#0F172A`). Zero deep yellow/mustard, zero purple gradients, and a grounded dark Midnight Sapphire footer across both themes.
 
 ## Color — Neutrals & Surfaces
 
 | Token | Light | Dark |
 |---|---|---|
-| `--bg` | `#F4F6F9` | `#080E1A` |
-| `--surface` | `#FFFFFF` | `#0D1626` |
-| `--surface-2` (subtle fill) | `#EAEFF5` | `#132036` |
-| `--card-bg` | `#FFFFFF` | `#101B2E` |
-| `--card-border` / `--border` | `#DCE3EE` | `rgba(148,163,184,.16)` |
-| `--border-strong` | `#B8C4D6` | `rgba(148,163,184,.30)` |
+| `--bg` | `#F8FAFC` | `#070E1B` |
+| `--surface` | `#FFFFFF` | `#0D182C` |
+| `--surface-2` (subtle fill) | `#F0F7FF` | `#13233F` |
+| `--card-bg` | `#FFFFFF` | `#0F1D33` |
+| `--card-border` / `--border` | `#DCE6F4` | `rgba(148,163,184,.15)` |
+| `--border-strong` | `#BFDBFE` | `rgba(148,163,184,.28)` |
 | `--divider` | `#E2E8F0` | `rgba(148,163,184,.12)` |
 | `--text` | `#0A1628` | `#F1F5F9` |
 | `--text-secondary` | `#1E2F47` | `#CBD5E1` |
 | `--text-2` | `#2C3E58` | `#CBD5E1` |
 | `--text-muted` | `#556982` | `#94A3B8` |
 
-## Color — Official Accents (Sovereign Navy & Antique Brass)
+## Color — Official Accents (Fresh Sapphire & Emerald-Teal)
 
 | Token | Light | Dark |
 |---|---|---|
-| `--accent` | `#163A70` | `#7AA2E3` |
-| `--accent-hover` | `#0F2952` | `#9BB8EC` |
-| `--accent-subtle` | `rgba(22,58,112,.07)` | `rgba(122,162,227,.12)` |
-| `--btn-primary-bg` | `#163A70` | `#1E40AF` |
+| `--accent` | `#2563EB` | `#38BDF8` |
+| `--accent-hover` | `#1D4ED8` | `#7DD3FC` |
+| `--accent-subtle` | `rgba(37,99,235,.08)` | `rgba(56,189,248,.12)` |
+| `--btn-primary-bg` | `#2563EB` | `#2563EB` |
 | `--accent-ink` (text on accent) | `#FFFFFF` | `#FFFFFF` |
-| `--gold` (credential marks) | `#9A7420` | `#CCA856` |
-| `--gold-subtle` | `rgba(154,116,32,.09)` | `rgba(204,168,86,.12)` |
-| `--gold-border` | `rgba(154,116,32,.25)` | `rgba(204,168,86,.28)` |
+| `--gold` (Fresh Teal secondary) | `#0D9488` | `#2DD4BF` |
+| `--gold-subtle` | `rgba(13,148,136,.08)` | `rgba(45,212,191,.12)` |
+| `--gold-border` | `rgba(13,148,136,.24)` | `rgba(45,212,191,.28)` |
 | `--wa-green` (WhatsApp action) | `#116B3A` | `#116B3A` |
 | `--wa-green-hover` | `#0D562E` | `#0F7B43` |
 | `--success` | `#0F7B43` | `#4ADE80` |
@@ -40,9 +40,9 @@ Visual direction: **Executive Legal Chambers** — Sovereign Navy, Warm Alabaste
 
 | Token | Light | Dark |
 |---|---|---|
-| `--footer-bg` | `#0A1424` | `#060B14` |
-| `--footer-surface` | `#111F36` | `#0D1626` |
-| `--footer-border` | `rgba(204,168,86,.24)` | `rgba(148,163,184,.14)` |
+| `--footer-bg` | `#0B1528` | `#050912` |
+| `--footer-surface` | `#13223E` | `#0A1322` |
+| `--footer-border` | `rgba(45,212,191,.22)` | `rgba(148,163,184,.16)` |
 | `--footer-divider` | `rgba(148,163,184,.14)` | `rgba(148,163,184,.12)` |
 | `--footer-text` | `#F8FAFC` | `#F8FAFC` |
 | `--footer-text-2` | `#CBD5E1` | `#CBD5E1` |

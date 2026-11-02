@@ -9,27 +9,27 @@
 
 /* ── LIGHT THEME (default) ── */
 body {
-  --bg: #F4F6F9;
+  --bg: #F8FAFC;
   --surface: #FFFFFF;
-  --surface-2: #EAEFF5;
+  --surface-2: #F0F7FF;
   --card-bg: #FFFFFF;
-  --card-border: #D8E0EB;
-  --border-strong: #B8C4D4;
+  --card-border: #DCE6F4;
+  --border-strong: #BFDBFE;
 
   --text: #0A1628;
   --text-secondary: #1E2E46;
   --text-2: #2C3E5A;
   --text-muted: #52647C;
 
-  --accent: #163A70;
-  --accent-hover: #0F2952;
-  --accent-subtle: rgba(22, 58, 112, 0.07);
-  --btn-primary-bg: #163A70;
-  --btn-primary-hover: #0F2952;
+  --accent: #2563EB;
+  --accent-hover: #1D4ED8;
+  --accent-subtle: rgba(37, 99, 235, 0.08);
+  --btn-primary-bg: #2563EB;
+  --btn-primary-hover: #3B82F6;
 
-  --gold: #9A7420;
-  --gold-subtle: rgba(154, 116, 32, 0.10);
-  --gold-border: rgba(154, 116, 32, 0.28);
+  --gold: #0D9488;
+  --gold-subtle: rgba(13, 148, 136, 0.08);
+  --gold-border: rgba(13, 148, 136, 0.24);
 
   --nav-bg: rgba(255, 255, 255, 0.94);
   --nav-border: rgba(216, 224, 235, 0.9);
@@ -40,40 +40,40 @@ body {
   --divider: #DCE3ED;
 
   /* Official Grounded Institutional Footer (Dark Executive Chambers) */
-  --footer-bg: #0A1424;
-  --footer-surface: #111F36;
-  --footer-border: rgba(204, 168, 86, 0.24);
+  --footer-bg: #0B1528;
+  --footer-surface: #13223E;
+  --footer-border: rgba(45, 212, 191, 0.22);
   --footer-divider: rgba(148, 163, 184, 0.14);
   --footer-text: #F8FAFC;
   --footer-text-2: #CBD5E1;
   --footer-muted: #94A3B8;
-  --footer-gold: #CCA856;
+  --footer-gold: #2DD4BF;
 
   --hero-bg: #0A1424;
   --hero-surface: #111F36;
   --hero-text: #F8FAFC;
   --hero-text-2: #E2E8F0;
   --hero-muted: #94A3B8;
-  --hero-border: rgba(204, 168, 86, 0.25);
+  --hero-border: rgba(148, 163, 184, 0.22);
 
   /* Hero Section Tokens */
-  --hero-section-bg: #F4F6F9;
-  --hero-glow-a: rgba(22, 58, 112, 0.05);
-  --hero-glow-b: rgba(154, 116, 32, 0.06);
+  --hero-section-bg: #F8FAFC;
+  --hero-glow-a: rgba(37, 99, 235, 0.06);
+  --hero-glow-b: rgba(13, 148, 136, 0.06);
   --hero-heading: #0A1628;
   --hero-sub: #2C3E5A;
   --hero-label: #52647C;
-  --hero-accent: #163A70;
-  --hero-gold: #9A7420;
-  --hero-dot: #163A70;
-  --hero-pill-bg: #FFFFFF;
-  --hero-pill-border: #D8E0EB;
-  --hero-pill-text: #163A70;
-  --hero-cta-primary-bg: #163A70;
+  --hero-accent: #2563EB;
+  --hero-gold: #0D9488;
+  --hero-dot: #0D9488;
+  --hero-pill-bg: #F0F7FF;
+  --hero-pill-border: #BFDBFE;
+  --hero-pill-text: #2563EB;
+  --hero-cta-primary-bg: #2563EB;
   --hero-cta-primary-text: #ffffff;
   --hero-cta-shadow: rgba(10, 22, 40, 0.18);
   --hero-cta-sec-bg: #FFFFFF;
-  --hero-cta-sec-text: #163A70;
+  --hero-cta-sec-text: #2563EB;
   --hero-cta-sec-border: #C4D0E0;
   --hero-cta-sec-hover: rgba(22, 58, 112, 0.05);
   --hero-photo-glow: rgba(22, 58, 112, 0.12);
@@ -215,15 +215,15 @@ body[data-theme="dark"] {
   --text-2: #CBD5E1;
   --text-muted: #94A3B8;
 
-  --accent: #7AA2E3;
-  --accent-hover: #9BBBF0;
-  --accent-subtle: rgba(122, 162, 227, 0.12);
-  --btn-primary-bg: #1E40AF;
-  --btn-primary-hover: #1D4ED8;
+  --accent: #38BDF8;
+  --accent-hover: #7DD3FC;
+  --accent-subtle: rgba(56, 189, 248, 0.12);
+  --btn-primary-bg: #2563EB;
+  --btn-primary-hover: #3B82F6;
 
-  --gold: #CCA856;
-  --gold-subtle: rgba(204, 168, 86, 0.12);
-  --gold-border: rgba(204, 168, 86, 0.30);
+  --gold: #2DD4BF;
+  --gold-subtle: rgba(45, 212, 191, 0.12);
+  --gold-border: rgba(45, 212, 191, 0.28);
 
   --nav-bg: rgba(8, 14, 26, 0.94);
   --nav-border: rgba(148, 163, 184, 0.14);
@@ -231,23 +231,23 @@ body[data-theme="dark"] {
   /* Official Grounded Institutional Footer (Dark Mode) */
   --footer-bg: #050912;
   --footer-surface: #0A1322;
-  --footer-border: rgba(204, 168, 86, 0.24);
+  --footer-border: rgba(45, 212, 191, 0.22);
   --footer-divider: rgba(148, 163, 184, 0.12);
   --footer-text: #F8FAFC;
   --footer-text-2: #CBD5E1;
   --footer-muted: #94A3B8;
-  --footer-gold: #CCA856;
+  --footer-gold: #2DD4BF;
 
   /* Hero Section dark tokens */
   --hero-section-bg: #080E1A;
   --hero-glow-a: rgba(30, 64, 175, 0.08);
-  --hero-glow-b: rgba(204, 168, 86, 0.06);
+  --hero-glow-b: rgba(30, 64, 175, 0.06);
   --hero-heading: #F1F5F9;
   --hero-sub: #CBD5E1;
   --hero-label: #94A3B8;
-  --hero-accent: #7AA2E3;
-  --hero-gold: #CCA856;
-  --hero-dot: #7AA2E3;
+  --hero-accent: #38BDF8;
+  --hero-gold: #2DD4BF;
+  --hero-dot: #2DD4BF;
   --hero-pill-bg: #101B2E;
   --hero-pill-border: rgba(148, 163, 184, 0.16);
   --hero-pill-text: #CBD5E1;
@@ -294,7 +294,7 @@ html {
 
 
 ::selection {
-  background-color: var(--btn-primary-bg);
+  background: linear-gradient(135deg, #2563EB 0%, #0D9488 100%);
   color: #fff;
 }
 
@@ -440,7 +440,7 @@ body[data-theme="dark"] .navbar-glass {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background-color: var(--btn-primary-bg);
+  background: linear-gradient(135deg, #2563EB 0%, #0D9488 100%);
   color: #ffffff !important;
   font-weight: 700;
   padding: 0.75rem 1.75rem;
@@ -456,7 +456,7 @@ body[data-theme="dark"] .navbar-glass {
 
 .btn-primary:hover,
 .btn-gold:hover {
-  background-color: var(--btn-primary-hover);
+  background: linear-gradient(135deg, #1D4ED8 0%, #0F766E 100%);
   transform: translateY(-1px);
   box-shadow: 0 6px 18px rgba(10, 22, 40, 0.20);
 }
@@ -679,8 +679,6 @@ body[data-theme="dark"] .status-current {
   margin-top: 2.25rem;
   margin-bottom: 0.875rem;
   line-height: 1.4;
-  padding-left: 0.75rem;
-  border-left: 3px solid var(--gold, #c6a75e);
   letter-spacing: -0.01em;
 }
 
@@ -689,7 +687,7 @@ body[data-theme="dark"] .status-current {
   font-family: var(--font-bn) !important;
   font-size: 1.125rem;
   font-weight: 700;
-  color: var(--gold, #c6a75e);
+  color: var(--accent);
   margin-top: 1.75rem;
   margin-bottom: 0.625rem;
   line-height: 1.45;
@@ -717,7 +715,7 @@ body[data-theme="dark"] .status-current {
 
 .prose-bn a,
 .prose-bn-content a {
-  color: var(--gold, #c6a75e);
+  color: var(--accent);
   text-decoration: underline;
   text-underline-offset: 3px;
   font-weight: 600;
@@ -763,7 +761,7 @@ table th {
   font-weight: 700 !important;
   font-size: 0.95rem !important;
   padding: 14px 18px !important;
-  border-bottom: 2px solid var(--gold, #C6A75E) !important;
+  border-bottom: 2px solid var(--accent) !important;
   text-align: left !important;
   letter-spacing: 0.01em !important;
 }
@@ -788,7 +786,7 @@ table td {
 .prose-bn tbody tr:hover,
 .prose-bn-content tbody tr:hover,
 .prose-content tbody tr:hover {
-  background: rgba(198, 167, 94, 0.05) !important;
+  background: rgba(22, 58, 112, 0.04) !important;
 }
 
 .prose-bn tr:last-child td,
@@ -817,15 +815,13 @@ table td {
   margin-top: 2.25rem;
   margin-bottom: 0.875rem;
   line-height: 1.4;
-  padding-left: 0.75rem;
-  border-left: 3px solid var(--gold, #c6a75e);
   letter-spacing: -0.01em;
 }
 
 .prose-content h4 {
   font-size: 1.1rem;
   font-weight: 700;
-  color: var(--gold, #c6a75e);
+  color: var(--accent);
   margin-top: 1.75rem;
   margin-bottom: 0.625rem;
   line-height: 1.45;
@@ -848,7 +844,7 @@ table td {
 }
 
 .prose-content a {
-  color: var(--gold, #c6a75e);
+  color: var(--accent);
   text-decoration: underline;
   text-underline-offset: 3px;
   font-weight: 600;
@@ -871,8 +867,8 @@ table td {
 }
 
 .prose-content th {
-  background: rgba(198, 167, 94, 0.08);
-  color: var(--gold, #c6a75e);
+  background: rgba(22, 58, 112, 0.06);
+  color: var(--accent);
   font-weight: 700;
   padding: 12px 16px;
   border-bottom: 1px solid var(--card-border);
@@ -1129,7 +1125,7 @@ body[data-theme="dark"] .blog-card-hover:hover {
   margin: 2.5rem 0;
   padding: 1.75rem 2rem;
   background: #0A1424;
-  border: 1px solid rgba(204, 168, 86, 0.28);
+  border: 1px solid rgba(148, 163, 184, 0.22);
   border-radius: 16px;
   box-shadow: 0 12px 32px -8px rgba(10, 22, 40, 0.30);
   overflow: hidden;
@@ -1162,7 +1158,7 @@ body[data-theme="dark"] .blog-card-hover:hover {
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #E5C378;
+  color: #93C5FD;
   font-family: var(--font-bn);
 }
 .lec-title {
@@ -1215,13 +1211,13 @@ body[data-theme="dark"] .blog-card-hover:hover {
   transform: translateY(0) scale(0.96);
 }
 .lec-call {
-  background: #C6A75E !important;
-  color: #0B1120 !important;
-  box-shadow: 0 3px 14px rgba(198, 167, 94, 0.35) !important;
+  background: #FFFFFF !important;
+  color: #0A1424 !important;
+  box-shadow: 0 3px 14px rgba(15, 23, 42, 0.25) !important;
   border: 1px solid rgba(255, 255, 255, 0.25) !important;
 }
 .lec-call:hover {
-  box-shadow: 0 6px 20px rgba(198, 167, 94, 0.5) !important;
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.22) !important;
   color: #000000 !important;
 }
 .lec-wa {
@@ -1242,7 +1238,7 @@ body[data-theme="dark"] .blog-card-hover:hover {
 }
 .lec-chambers:hover {
   background: rgba(255, 255, 255, 0.16) !important;
-  border-color: rgba(198, 167, 94, 0.45) !important;
+  border-color: rgba(147, 197, 253, 0.45) !important;
   color: #FFFFFF !important;
 }
 @media (max-width: 640px) {
@@ -1309,9 +1305,9 @@ ins.adsbygoogle[data-anchor-status] {
    motion, focus, touch targets, reduced-motion.
    ============================================================ */
 body {
-  --surface-2: #F1F3F7;
+  --surface-2: #F0F7FF;
   --border: var(--card-border);
-  --border-strong: #C9D0DB;
+  --border-strong: #BFDBFE;
   --accent-ink: #FFFFFF;
   --success: #0F7B43;
   --danger: #B42318;

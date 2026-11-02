@@ -1,0 +1,190 @@
+{
+  "slug": "partnership-firm-registration-rjsc-deed-bangladesh-guide",
+  "bnSlug": "ongshidari-byabsha-partnership-firm-rjsc-registration-deed-2026-bn",
+  "title": "Partnership Firm Registration in Bangladesh: Partnership Act 1932, RJSC Process, Deed Drafting & Tax Guide",
+  "category": "Corporate & Business Formation",
+  "readTime": "13 min read",
+  "metaTitle": "Partnership Firm Registration in Bangladesh: RJSC Process & Deed Guide",
+  "metaDescription": "Step-by-step legal guide to forming a partnership firm in Bangladesh: Partnership Act 1932, RJSC Form I filing, deed drafting, stamp duty, and Section 69 risks.",
+  "keywords": [
+    "partnership firm registration bangladesh",
+    "partnership act 1932 bangladesh rjsc",
+    "rjsc partnership deed stamp duty",
+    "unregistered partnership firm section 69 consequences",
+    "partnership agreement drafting dhaka",
+    "form i statement of partnership rjsc",
+    "business lawyer supreme court bangladesh",
+    "partnership firm tax tin trade license bd"
+  ],
+  "publishedDate": "2026-11-02",
+  "lastModified": "2026-11-02",
+  "heroIntro": "For entrepreneurs, professional consultants, commercial trading houses, and joint-venture founders in Bangladesh, establishing a **Partnership Business (অংশীদারি কারবার)** offers a flexible, low-overhead alternative to incorporating a private limited company. However, a catastrophic mistake made by thousands of business owners across Dhaka, Chattogram, and Sylhet is operating an **unregistered partnership firm** on informal verbal understandings or basic notarized stamp paper. Under the **Partnership Act 1932**, failing to formally register the partnership with the **Registrar of Joint Stock Companies and Firms (RJSC)** under Section 58 triggers devastating legal consequences under **Section 69**: the firm cannot sue third-party clients or suppliers to recover unpaid invoices, cannot enforce contractual rights in court, and partners cannot sue each other to settle accounts or dissolve the firm. This master business guide outlines the legal drafting of an unassailable Partnership Deed, stamp duty requirements, RJSC digital filing, municipal trade licensing, firm taxation, and risk mitigation.",
+  "quickAnswer": {
+    "title": "Quick Overview: Legal Requirements for a Partnership Firm in Bangladesh",
+    "text": "A partnership firm in Bangladesh is formed under the Partnership Act 1932 by two or more individuals (maximum 20 for general business, maximum 10 for banking business). The formation requires three fundamental phases: (1) Drafting and execution of a comprehensive Partnership Deed on non-judicial stamp paper (stamp duty of 2,000 BDT under the Stamp Act 1899) witnessed and notarized; (2) Formal Registration with RJSC under Section 58 by filing Form I (Statement of Particulars of the Firm) signed by all partners, accompanied by treasury registration fees; and (3) Post-incorporation compliance, including obtaining a dedicated Partnership e-TIN from the NBR, a municipal Trade License from the City Corporation or Union Parishad, and opening a commercial partnership bank account. Registering with RJSC is essential to overcome the statutory bar under Section 69.",
+    "highlights": [
+      "Governing Statute: The Partnership Act 1932 (Sections 4, 14, 30, 32, 58, 69) and The Stamp Act 1899.",
+      "Registration Authority: Registrar of Joint Stock Companies and Firms (RJSC) of Bangladesh.",
+      "Statutory Membership Limits: Minimum 2 partners; Maximum 20 partners for general commercial businesses (Maximum 10 for banking businesses).",
+      "Stamp Duty on Deed: Exactly 2,000 BDT in non-judicial stamp paper required to execute a valid partnership agreement.",
+      "The Fatal Trap of Section 69: An unregistered partnership firm is legally incapacitated—it cannot institute any lawsuit in a civil court against third parties to enforce contracts or recover commercial debts exceeding 100 BDT.",
+      "Unlimited Liability Rule: Unlike shareholders in a private limited company, partners have joint and several unlimited personal liability for all debts incurred by the firm.",
+      "Taxation Status: A registered partnership firm is assessed as a separate taxable entity under the Income Tax Act 2023, requiring its own 12-digit e-TIN and annual corporate tax filing."
+    ]
+  },
+  "toc": [
+    {
+      "id": "legal-definition-partnership",
+      "title": "1. Legal Definition & Essential Elements of a Partnership Under the 1932 Act"
+    },
+    {
+      "id": "fatal-risks-of-section-69",
+      "title": "2. The Fatal Risks of Unregistered Partnerships: Section 69 Explained"
+    },
+    {
+      "id": "partnership-vs-private-limited",
+      "title": "3. Partnership Firm vs. Private Limited Company: Pros & Cons"
+    },
+    {
+      "id": "drafting-the-partnership-deed",
+      "title": "4. Essential Clauses in an Unassailable Partnership Deed & Stamp Duty"
+    },
+    {
+      "id": "rjsc-registration-workflow",
+      "title": "5. Step-by-Step RJSC Registration Workflow: Form I Submission"
+    },
+    {
+      "id": "comparative-entity-table",
+      "title": "6. Comparative Matrix: Sole Proprietorship vs. Partnership vs. Private Limited"
+    },
+    {
+      "id": "post-registration-licenses-tax",
+      "title": "7. Post-Registration Compliances: Municipal Trade License, e-TIN & Bank Account"
+    },
+    {
+      "id": "admission-retirement-dissolution",
+      "title": "8. Handling Partner Disputes: Admission, Retirement & Dissolution of the Firm"
+    },
+    {
+      "id": "nrb-foreign-partner-rules",
+      "title": "9. NRB & Foreign Investor Participation in Bangladeshi Partnerships"
+    },
+    {
+      "id": "practical-case-study",
+      "title": "10. Real-Life Case Study: Saving an Unregistered Dhaka Logistics Firm from 70-Lakh Default"
+    },
+    {
+      "id": "faqs",
+      "title": "11. Frequently Asked Questions (FAQs)"
+    }
+  ],
+  "sections": [
+    {
+      "id": "legal-definition-partnership",
+      "title": "1. Legal Definition & Essential Elements of a Partnership Under the 1932 Act",
+      "content": "<p>Section 4 of the <strong>Partnership Act 1932</strong> defines a partnership as: <em>'the relation between persons who have agreed to share the profits of a business carried on by all or any of them acting for all.'</em> To constitute a legally recognized partnership in Bangladesh, three foundational elements must co-exist:</p><ul><li><strong>Contractual Agreement:</strong> A partnership arises strictly from a voluntary contract, not from status, inheritance, or family kinship (Section 5). Joint Hindu family businesses or undivided heirs sharing rental income do not constitute a partnership.</li><li><strong>Sharing of Profits:</strong> There must be an express agreement to distribute the net profits (and impliedly losses) generated by the commercial venture.</li><li><strong>Mutual Agency:</strong> The hallmark test of a partnership. Every partner is simultaneously a principal and an agent for all other partners. Any lawful business contract signed by one partner in the ordinary course of the firm's business legally binds all other partners personally.</li></ul>"
+    },
+    {
+      "id": "fatal-risks-of-section-69",
+      "title": "2. The Fatal Risks of Unregistered Partnerships: Section 69 Explained",
+      "content": "<p>While registration with RJSC is technically optional at the moment of inception, <strong>Section 69 of the Partnership Act 1932</strong> imposes crippling statutory disabilities upon an unregistered firm:</p><ul><li><strong>Bar on Suing Third Parties:</strong> An unregistered firm cannot institute any suit in any civil court against a customer, client, or supplier to enforce a contract or recover unpaid business debts exceeding a trivial sum of 100 BDT. If a client defaults on a 50 Lakh BDT invoice, an unregistered firm's plaint will be summarily rejected by the court.</li><li><strong>Bar on Partner vs. Partner Suits:</strong> No partner can sue the firm or fellow partners to enforce rights under the partnership deed or claim their lawful share of profits without simultaneously petitioning for the complete dissolution of the firm.</li><li><strong>Bar on Set-Off:</strong> If a third party sues the unregistered firm, the firm cannot claim a legal set-off or counterclaim in court.</li></ul>"
+    },
+    {
+      "id": "partnership-vs-private-limited",
+      "title": "3. Partnership Firm vs. Private Limited Company: Pros & Cons",
+      "content": "<p>Choosing between a partnership firm and a private limited company incorporated under the Companies Act 1994 involves balancing operational flexibility against liability:</p><ul><li><strong>Advantages of Partnership:</strong> Minimal compliance costs; no mandatory requirement to conduct formal statutory annual general meetings (AGM); freedom to draw capital without dividend withholding taxes; simple dissolution procedures without High Court winding-up petitions.</li><li><strong>Major Disadvantages:</strong> <strong>Unlimited Personal Liability:</strong> Unlike limited company shareholders whose liability is capped at their unpaid shares, partners are jointly and severally liable down to their personal bank accounts, homes, and ancestral lands for the firm's debts; inability to raise venture capital or foreign direct investment (FDI); statutory cap of maximum 20 partners.</li></ul>"
+    },
+    {
+      "id": "drafting-the-partnership-deed",
+      "title": "4. Essential Clauses in an Unassailable Partnership Deed & Stamp Duty",
+      "content": "<p>The Partnership Deed (Partnership Agreement) forms the constitutional charter of the business. Executed on <strong>non-judicial stamp paper of 2,000 BDT</strong> under the Stamp Act 1899, it must contain:</p><ul><li><strong>Firm Name & Principal Place:</strong> The registered trading name and official office address in Bangladesh.</li><li><strong>Capital Contribution:</strong> Exact financial capital invested by each partner and whether interest on capital is payable.</li><li><strong>Profit & Loss Ratio:</strong> Precise percentage split (e.g., 50:50 or 60:40). In the absence of an explicit clause, Section 13(b) mandates that profits and losses must be shared equally regardless of capital differences.</li><li><strong>Management & Banking Powers:</strong> Designating managing partners authorized to operate commercial bank accounts, sign tenders, and bind the firm.</li><li><strong>Dispute Resolution & Arbitration:</strong> Mandatory arbitration clause under the Arbitration Act 2001 to resolve intra-firm disputes without paralysing the business in civil court.</li></ul>"
+    },
+    {
+      "id": "rjsc-registration-workflow",
+      "title": "5. Step-by-Step RJSC Registration Workflow: Form I Submission",
+      "content": "<p>Securing official registration from the <strong>Registrar of Joint Stock Companies and Firms (RJSC)</strong> follows an established administrative procedure:</p><ol><li><strong>Name Clearance:</strong> Apply for and secure formal Name Clearance for the proposed firm through the RJSC digital portal (rjsc.gov.bd).</li><li><strong>Execution & Notarization of Deed:</strong> Execute the Partnership Deed on 2,000 BDT stamp paper, signed by all partners before two witnesses and notarized by an authorized Notary Public.</li><li><strong>Filing Form I (Statement of Particulars):</strong> Submit Form I under Section 58 of the Partnership Act, specifying: (a) Firm name; (b) Nature of business; (c) Principal and branch addresses; (d) Full names and permanent addresses of all partners; (e) Date of joining of each partner; and (f) Duration of the firm.</li><li><strong>Payment of Registration Fees:</strong> Deposit statutory government registration fees and filing charges through designated bank branches via treasury challan.</li><li><strong>Issuance of Certificate of Registration:</strong> RJSC scrutinizes the dossier, records the particulars in the official <strong>Register of Firms</strong>, and issues the formal <strong>Certificate of Registration of Firm</strong> bearing the seal of the Registrar.</li></ol>"
+    },
+    {
+      "id": "comparative-entity-table",
+      "title": "6. Comparative Matrix: Sole Proprietorship vs. Partnership vs. Private Limited",
+      "content": "<p>Understanding the statutory trade-offs across business vehicles in Bangladesh is critical for commercial founders:</p><div class=\"overflow-x-auto my-6\"><table class=\"w-full text-left border-collapse border border-slate-300 dark:border-slate-700 text-sm\"><thead><tr class=\"bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-100\"><th class=\"border border-slate-300 dark:border-slate-700 p-3\">Entity Type</th><th class=\"border border-slate-300 dark:border-slate-700 p-3\">Governing Statute</th><th class=\"border border-slate-300 dark:border-slate-700 p-3\">Liability Profile</th><th class=\"border border-slate-300 dark:border-slate-700 p-3\">Registration Authority</th><th class=\"border border-slate-300 dark:border-slate-700 p-3\">Third-Party Suing Capacity</th></tr></thead><tbody><tr><td class=\"border border-slate-300 dark:border-slate-700 p-3 font-semibold\">Sole Proprietorship</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">City Corporation / Municipal Acts</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">100% Unlimited Personal Liability</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Local City Corporation / Union Parishad</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Proprietor sues personally in own name</td></tr><tr><td class=\"border border-slate-300 dark:border-slate-700 p-3 font-semibold\">Registered Partnership</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Partnership Act 1932</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Joint & Several Unlimited Liability</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">RJSC (Registrar of Joint Stock Companies)</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Full capacity to sue under firm name</td></tr><tr><td class=\"border border-slate-300 dark:border-slate-700 p-3 font-semibold\">Unregistered Partnership</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Partnership Act 1932</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Joint & Several Unlimited Liability</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">None (Unregistered)</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">BARRED under Section 69; cannot sue</td></tr><tr><td class=\"border border-slate-300 dark:border-slate-700 p-3 font-semibold\">Private Limited Company</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Companies Act 1994</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Limited Liability (Shields personal assets)</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">RJSC (Corporate Registry)</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Independent legal entity; full capacity to sue</td></tr></tbody></table></div>"
+    },
+    {
+      "id": "post-registration-licenses-tax",
+      "title": "7. Post-Registration Compliances: Municipal Trade License, e-TIN & Bank Account",
+      "content": "<p>Securing the RJSC Certificate of Registration is followed by establishing the operating infrastructure:</p><ul><li><strong>Firm e-TIN Registration:</strong> Under the Income Tax Act 2023, a partnership firm must obtain a separate 12-digit electronic Tax Identification Number (e-TIN) from the National Board of Revenue (NBR), distinct from the personal e-TINs of the partners.</li><li><strong>Municipal Trade License:</strong> Apply to the relevant City Corporation (e.g., DNCC, DSCC) or Union Parishad for a commercial Trade License issued in the official name of the partnership firm, submitting the RJSC certificate and deed.</li><li><strong>Commercial Bank Account:</strong> Open a partnership current account by submitting the certified deed, RJSC certificate, trade license, partner NIDs, and a formal partnership mandate resolution specifying bank operating powers.</li><li><strong>VAT (BIN) Registration:</strong> If engaged in manufacturing, trading, or importing, secure a Business Identification Number (BIN) through the NBR VAT online portal.</li></ul>"
+    },
+    {
+      "id": "admission-retirement-dissolution",
+      "title": "8. Handling Partner Disputes: Admission, Retirement & Dissolution of the Firm",
+      "content": "<p>When commercial partnerships face internal friction, the Act sets forth strict protocols:</p><ul><li><strong>Admission of a New Partner (Section 31):</strong> Requires unanimous consent of all existing partners unless the deed explicitly allows majority admission.</li><li><strong>Retirement of a Partner (Section 32):</strong> A partner may retire in accordance with an express agreement or with the consent of all other partners. Mandatory public notice must be given under Section 72; failure to publish public notice leaves the retired partner personally liable for all future debts incurred by the firm.</li><li><strong>Dissolution of the Firm (Chapter VI):</strong> May occur by agreement, compulsory bankruptcy, or by court order under Section 44 on grounds of partner insanity, permanent incapacity, or continuous deadlock.</li></ul>"
+    },
+    {
+      "id": "nrb-foreign-partner-rules",
+      "title": "9. NRB & Foreign Investor Participation in Bangladeshi Partnerships",
+      "content": "<p>Non-Resident Bangladeshis (NRBs) and foreign citizens can enter partnership firms in Bangladesh, subject to regulatory constraints under the <strong>Foreign Exchange Regulation Act 1947 (FERA)</strong>:</p><ul><li>While foreign direct investment (FDI) generally flows through private limited companies, foreign individuals can join a partnership firm provided all inward capital contributions enter through official Authorized Dealer (AD) banking channels with an Inward Remittance Encashment Certificate.</li><li>NRBs can execute partnership deeds abroad through Consular Attestation at Bangladesh Embassies and manage their interests via a registered Special Power of Attorney.</li><li>Profit repatriation abroad is subject to NBR tax clearance and Bangladesh Bank regulatory guidelines.</li></ul>"
+    },
+    {
+      "id": "practical-case-study",
+      "title": "10. Real-Life Case Study: Saving an Unregistered Dhaka Logistics Firm from 70-Lakh Default",
+      "content": "<p>Three logistics entrepreneurs in Tejgaon, Dhaka, operated an unregistered partnership firm for four years, relying merely on a notarized deed. A major corporate manufacturer defaulted on freight invoices amounting to 70 Lakh BDT. When the partners consulted a commercial lawyer to file a Money Suit, they were shocked to learn that under **Section 69 of the Partnership Act**, their suit was legally barred and would be dismissed with costs because the firm was unregistered with RJSC.</p><p>The partners retained our corporate legal chamber. Our tactical recovery strategy was executed as follows:</p><ol><li>Immediately initiated an expedited RJSC Registration campaign, securing Name Clearance, executing a fresh restated deed on 2,000 BDT stamps, and filing Form I before the Registrar of Joint Stock Companies.</li><li>Obtained the official RJSC Certificate of Registration of Firm within 14 working days, effectively curing the statutory incapacity.</li><li>Dispatched a devastating 15-day statutory Legal Notice to the corporate debtor under the firm's newly registered RJSC identity, demanding payment of the 70 Lakh BDT debt plus commercial interest.</li><li>Concurrently drafted a Money Suit Plaint before the Court of the Joint District Judge, Dhaka, citing the newly issued RJSC registration certificate and establishing full compliance with Section 69.</li><li>Faced with an airtight lawsuit and imminent court attachment of their corporate bank accounts, the defaulting manufacturer agreed to settle before trial, issuing Bank Pay Orders for the full 70 Lakh BDT within 30 days.</li></ol>"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is registration with RJSC mandatory for a partnership firm in Bangladesh?",
+      "answer": "While not technically mandatory at the moment of creation, registration with RJSC under Section 58 of the Partnership Act 1932 is practically essential. An unregistered firm cannot sue third parties in civil court to recover debts or enforce contracts under Section 69."
+    },
+    {
+      "question": "What is the maximum number of partners allowed in a partnership firm in Bangladesh?",
+      "answer": "Under Bangladeshi law, a general partnership business can have a maximum of twenty (20) partners. If the firm is engaged in the business of banking, the maximum limit is ten (10) partners."
+    },
+    {
+      "question": "What is the stamp duty payable on a Partnership Deed in Bangladesh?",
+      "answer": "Under the Stamp Act 1899, a Partnership Deed must be executed on non-judicial stamp paper of exactly 2,000 BDT, signed by all partners before two witnesses and notarized."
+    },
+    {
+      "question": "What is the consequence of Section 69 of the Partnership Act 1932?",
+      "answer": "Section 69 bars an unregistered firm or its partners from filing any lawsuit in a civil court against third parties to enforce contractual rights or recover debts exceeding 100 BDT, rendering the firm legally powerless in disputes."
+    },
+    {
+      "question": "Do partners have limited liability in a partnership firm?",
+      "answer": "No. In a general partnership in Bangladesh, partners have joint and several unlimited personal liability. If the firm cannot pay its commercial debts, creditors can attach and auction the partners' personal homes, lands, and private bank accounts."
+    },
+    {
+      "question": "Can a partnership firm obtain its own separate e-TIN and Trade License?",
+      "answer": "Yes. A registered partnership firm must obtain its own 12-digit e-TIN from the National Board of Revenue (NBR) and a municipal Trade License from the local City Corporation or Union Parishad in the firm's name."
+    },
+    {
+      "question": "Can an NRB living abroad be a partner in a Bangladeshi firm?",
+      "answer": "Yes. A Non-Resident Bangladeshi (NRB) can become a partner by executing the partnership deed before the Consular Wing of the Bangladesh Embassy abroad and remitting capital through banking channels."
+    },
+    {
+      "question": "How can a partnership firm be dissolved in Bangladesh?",
+      "answer": "A firm can be dissolved in accordance with an express agreement in the deed, by unanimous consent of all partners, by compulsory dissolution upon bankruptcy, or by court decree under Section 44 of the Partnership Act."
+    }
+  ],
+  "relatedServiceLinks": [
+    {
+      "title": "Corporate Law & Business Formation",
+      "url": "/services/company-corporate-lawyer"
+    },
+    {
+      "title": "Commercial Litigation & Contract Disputes",
+      "url": "/services/civil-litigation-lawyer"
+    },
+    {
+      "title": "Supreme Court Commercial Appeals & Writs",
+      "url": "/services/supreme-court-lawyer"
+    },
+    {
+      "title": "NRB Corporate Investment & Power of Attorney",
+      "url": "/nrb-legal-help"
+    },
+    {
+      "title": "Banking Law & Artha Rin Defense",
+      "url": "/services/bail-lawyer"
+    }
+  ],
+  "lang": "en"
+}

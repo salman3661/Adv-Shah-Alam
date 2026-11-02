@@ -82,7 +82,7 @@ const BlogCardEn = ({ post, isRecent = false, isPopular = false }) => {
                         {isRecent && (
                             <span
                                 className="inline-flex items-center gap-0.5 text-[10px] font-extrabold px-2 py-0.5 rounded-full text-white shadow-sm"
-                                style={{ background: '#163A70' }}
+                                style={{ background: '#2563EB' }}
                             >
                                 <Sparkles size={10} /> NEW
                             </span>
@@ -90,7 +90,7 @@ const BlogCardEn = ({ post, isRecent = false, isPopular = false }) => {
                         {isPopular && (
                             <span
                                 className="inline-flex items-center gap-0.5 text-[10px] font-extrabold px-2 py-0.5 rounded-full text-white shadow-sm"
-                                style={{ background: '#9A7420' }}
+                                style={{ background: '#0284C7' }}
                             >
                                 <Flame size={10} /> POPULAR
                             </span>
@@ -100,7 +100,7 @@ const BlogCardEn = ({ post, isRecent = false, isPopular = false }) => {
                         className="inline-flex items-center gap-1 text-xs font-semibold px-2.5 py-0.5 rounded-full"
                         style={{ color: '#F8FAFC', background: 'rgba(15,23,42,0.72)', border: '1px solid rgba(255,255,255,0.2)' }}
                     >
-                        <Clock size={12} style={{ color: '#FDE68A' }} />
+                        <Clock size={12} style={{ color: '#93C5FD' }} />
                         {post.readTime}
                     </span>
                 </div>
@@ -313,7 +313,7 @@ const Blog = () => {
                             <ShieldCheck size={16} className="text-emerald-500" /> 100% Law &amp; Precedent Verified
                         </span>
                         <span className="flex items-center gap-1.5">
-                            <UserCheck size={16} className="text-amber-500" /> Supreme Court Advocate Author
+                            <UserCheck size={16} style={{ color: "var(--accent)" }} /> Supreme Court Advocate Author
                         </span>
                         <span className="flex items-center gap-1.5">
                             <Award size={16} className="text-blue-500" /> Free Information Access

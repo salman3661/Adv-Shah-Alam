@@ -1,0 +1,190 @@
+{
+  "slug": "land-mutation-namjari-rejection-miss-case-appeal-bangladesh-guide",
+  "bnSlug": "jomi-kharij-namjari-batil-miss-case-appeal-niyom-2026-bn",
+  "title": "Land Mutation Rejection & Namjari Appeal in Bangladesh: AC (Land) Miss Case & ADC Revenue Guide",
+  "category": "Land & Property Law",
+  "readTime": "13 min read",
+  "metaTitle": "Land Mutation Rejection & Namjari Appeal in Bangladesh: Complete Guide",
+  "metaDescription": "Step-by-step legal guide on challenging rejected e-namjari applications, filing Miss Cases before AC (Land), and appealing to ADC (Revenue) in Bangladesh.",
+  "keywords": [
+    "land mutation rejection bangladesh",
+    "namjari rejection miss case ac land",
+    "adc revenue appeal mutation bangladesh",
+    "state acquisition tenancy act section 150",
+    "challenge rejected e namjari online bd",
+    "land appeal board revision dhaka",
+    "land mutation lawyer supreme court bangladesh",
+    "dakhila khajna payment after mutation"
+  ],
+  "publishedDate": "2026-11-02",
+  "lastModified": "2026-11-02",
+  "heroIntro": "In Bangladesh's land administration system, purchasing real estate or inheriting ancestral property remains legally incomplete until the owner completes **Namjari (Mutation)**—the official process of recording the new owner's name in the government Record of Rights (Khatian) and opening a separate holding (Jamabandi) to pay land development tax (Khajna). However, hundreds of thousands of applicants, particularly Non-Resident Bangladeshis (NRBs) and urban property buyers in Dhaka, face unexpected administrative blockades when their online **e-Namjari** applications are summarily rejected by the Assistant Commissioner (Land) [AC Land]. Rejections often cite vague grounds such as 'chain deed mismatch', 'unverified CS/SA/RS khatian', or spurious third-party objection letters. Under the **State Acquisition and Tenancy Act 1950 (SAT Act)** and the **Land Management Manual**, an applicant is not helpless. This exhaustive guide explains how to file a **Review / Miss Case** before the AC (Land), institute a statutory **Mutation Appeal** before the Additional Deputy Commissioner (Revenue) under Section 150 of the SAT Act, and escalate to the Divisional Commissioner, Land Appeal Board, or the High Court Division.",
+  "quickAnswer": {
+    "title": "Quick Overview: What to Do When Your Land Mutation is Rejected",
+    "text": "If your online e-Namjari application is rejected by the AC (Land), you have two distinct statutory remedies: (1) Administrative Review / Miss Case: If the rejection resulted from a clerical omission, missing certified deed, or unverified challan, you can file a 'Mutation Review Miss Case' before the same AC (Land) within 30 days under Section 150(1) SAT Act; (2) Statutory Appeal to ADC (Revenue): If the rejection involves disputed title, conflicting co-sharer claims, or illegal refusal, you must file a formal 'Revenue Appeal' before the Additional Deputy Commissioner (Revenue) within thirty (30) days of the rejection order under Section 147/150 of the State Acquisition and Tenancy Act 1950. If ADC (Revenue) rejects the appeal, a Revision lies before the Divisional Commissioner, followed by the Land Appeal Board.",
+    "highlights": [
+      "Governing Law: The State Acquisition and Tenancy Act 1950 (Sections 143, 144, 147, 148, 149, 150) and Land Management Manual 1990.",
+      "Primary Forum of Appeal: Court of the Additional Deputy Commissioner (Revenue) [ADC Revenue] of the respective district.",
+      "Statutory Appeal Window: Exactly thirty (30) days from the date of the AC (Land) rejection order under Section 148 of the SAT Act.",
+      "Four-Tier Revenue Hierarchy: AC (Land) → ADC (Revenue) → Divisional Commissioner → Land Appeal Board (Dhaka).",
+      "Constitutional High Court Remedy: If revenue authorities arbitrarily refuse mutation despite clear registered title deeds and court decrees, a Writ Petition under Article 102 of the Constitution lies before the High Court Division.",
+      "Expat NRB Management: Overseas owners can challenge rejections remotely through an authenticated Special Power of Attorney without leaving USA, UK, Canada, or Australia.",
+      "Evidentiary Must-Haves: Certified Bia deeds (25-year chain), CS, SA, RS, and BS/City survey khatians, ground rent clearance (Dakhila), and non-encumbrance certificates."
+    ]
+  },
+  "toc": [
+    {
+      "id": "reasons-for-namjari-rejection",
+      "title": "1. Common Grounds for e-Namjari Rejection by AC (Land)"
+    },
+    {
+      "id": "statutory-appeal-hierarchy",
+      "title": "2. The Statutory Hierarchy: Section 147 to 150 of the SAT Act 1950"
+    },
+    {
+      "id": "miss-case-before-ac-land",
+      "title": "3. Filing a Review / Miss Case Before the Assistant Commissioner (Land)"
+    },
+    {
+      "id": "appeal-before-adc-revenue",
+      "title": "4. Step-by-Step Appeal Before the Additional Deputy Commissioner (Revenue)"
+    },
+    {
+      "id": "divisional-commissioner-and-land-board",
+      "title": "5. Escalation: Revision Before Divisional Commissioner & Land Appeal Board"
+    },
+    {
+      "id": "comparative-revenue-table",
+      "title": "6. Comparative Matrix: Revenue Forums, Deadlines, Powers & Reliefs"
+    },
+    {
+      "id": "writ-petition-high-court",
+      "title": "7. High Court Division Remedy: Article 102 Writ of Mandamus"
+    },
+    {
+      "id": "chain-of-title-documents",
+      "title": "8. Curing Chain of Title Defects: Bia Deeds, Porcha & Warishan Certificates"
+    },
+    {
+      "id": "nrb-remote-mutation-management",
+      "title": "9. How NRBs Can Pursue Mutation Appeals Remotely via Power of Attorney"
+    },
+    {
+      "id": "practical-case-study",
+      "title": "10. Real-Life Case Study: Overturning a Fraudulent Mutation Rejection in Savar"
+    },
+    {
+      "id": "faqs",
+      "title": "11. Frequently Asked Questions (FAQs)"
+    }
+  ],
+  "sections": [
+    {
+      "id": "reasons-for-namjari-rejection",
+      "title": "1. Common Grounds for e-Namjari Rejection by AC (Land)",
+      "content": "<p>When submitting an online e-Namjari application through the Ministry of Land portal (mutation.land.gov.bd), rejections typically arise from four recurring administrative triggers:</p><ul><li><strong>Chain Deed (Bia Dalil) Incompleteness:</strong> Failure to submit certified copies establishing an unbroken 25-year title chain connecting the original survey record owner (CS/SA/RS) to the present seller.</li><li><strong>Fictitious Third-Party Objections:</strong> Corrupt local land grabbers or estranged distant relatives file frivolous written objection petitions alleging joint tenancy or forged signatures, causing timid AC (Land) officers to reject applications with the stock phrase <em>'Dispute of title; refer to Civil Court'</em>.</li><li><strong>Khatian Area Discrepancy:</strong> The physical land measured on the ground or in the registered deed slightly exceeds the share recorded in the latest BS/City survey khatian.</li><li><strong>Vested / Khas Property Allegations:</strong> Erroneous classification by the Union Land Assistant Officer (Tahsilder) asserting that the property falls under Government Khas land or Vested (Enemy) Property lists.</li></ul>"
+    },
+    {
+      "id": "statutory-appeal-hierarchy",
+      "title": "2. The Statutory Hierarchy: Section 147 to 150 of the SAT Act 1950",
+      "content": "<p>The <strong>State Acquisition and Tenancy Act 1950 (SAT Act)</strong> provides an autonomous, self-contained judicial hierarchy for challenging revenue orders without immediately entering the lengthy civil court pipeline:</p><ul><li><strong>Section 147 (Appeals):</strong> Confers the statutory right of appeal against any original order passed by a Revenue Officer under Chapter XVII of the Act.</li><li><strong>Section 148 (Limitation Period):</strong> Mandates that an appeal to the Collector or Additional Deputy Commissioner (Revenue) must be filed within <strong>thirty (30) days</strong> from the date of the order appealed against.</li><li><strong>Section 149 (Revision):</strong> Grants revisional jurisdiction to the Divisional Commissioner to call for the records and revise orders passed by the ADC (Revenue).</li><li><strong>Section 150 (Review):</strong> Permits the AC (Land) or Revenue Officer to review their own decision within 30 days if new, vital documentary evidence is brought to light that could not be produced earlier.</li></ul>"
+    },
+    {
+      "id": "miss-case-before-ac-land",
+      "title": "3. Filing a Review / Miss Case Before the Assistant Commissioner (Land)",
+      "content": "<p>Where an application was rejected purely due to a procedural irregularity—such as non-appearance at a hearing due to illness, server glitch, or a missing land development tax receipt—filing a <strong>Mutation Review Miss Case</strong> directly before the same AC (Land) is the quickest remedy:</p><ul><li><strong>Application Grounds:</strong> The petition must specify that the rejection occurred without examining essential title records or that new certified documents (e.g., rectified deed, updated Dakhila, or civil court decree) are now available.</li><li><strong>Notice to Opposite Parties:</strong> The AC (Land) registers the matter as a Mutation Miss Case, issues notices to all interested co-sharers, calls for a fresh field report from the Tahsilder, and conducts a formal hearing.</li><li><strong>Timeline:</strong> An uncontested review miss case is usually resolved within 30 to 60 days.</li></ul>"
+    },
+    {
+      "id": "appeal-before-adc-revenue",
+      "title": "4. Step-by-Step Appeal Before the Additional Deputy Commissioner (Revenue)",
+      "content": "<p>If the AC (Land) issued a biased, erroneous, or contentious rejection order, the applicant should immediately file a formal <strong>Revenue Appeal</strong> before the <strong>Court of the Additional Deputy Commissioner (Revenue)</strong>:</p><ol><li><strong>Procure Certified Copy of the Rejection Order:</strong> Obtain certified copies of the AC (Land)'s final rejection order and the Tahsilder's field inquiry report from the Land Office record room.</li><li><strong>Drafting the Memorandum of Appeal:</strong> Prepared by an enrolled advocate setting forth precise legal grounds demonstrating why the AC (Land)'s order is arbitrary, legally unsustainable, and contrary to the registered deeds.</li><li><strong>Court Fee Stamping:</strong> Affix non-judicial stamps as prescribed under the Court-Fees Act 1870.</li><li><strong>Admit Hearing & Record Call:</strong> The ADC (Revenue) hears the advocate, admits the appeal (registered as a Mutation Appeal Case), calls for the lower court records (LCR) from the AC (Land) office, and issues stay orders preventing third-party mutations over the plot.</li><li><strong>Final Hearing & Remand/Direct Order:</strong> The ADC (Revenue) delivers a judgment either setting aside the rejection and directly ordering the AC (Land) to open a mutation khatian, or remanding the case for fresh field verification.</li></ol>"
+    },
+    {
+      "id": "divisional-commissioner-and-land-board",
+      "title": "5. Escalation: Revision Before Divisional Commissioner & Land Appeal Board",
+      "content": "<p>If an aggrieved party suffers an adverse order from the ADC (Revenue), the statutory escalation ladder continues:</p><ul><li><strong>Revision Before the Divisional Commissioner:</strong> Under Section 149 of the SAT Act, an application for Revision must be instituted before the Divisional Commissioner (e.g., Dhaka Divisional Commissioner Office in Segunbagicha) within <strong>sixty (60) days</strong>. The Commissioner examines whether lower revenue courts committed jurisdictional errors or misapplied the law.</li><li><strong>Final Revision Before the Land Appeal Board (Bhumi Appeal Board):</strong> Established under the Land Appeal Board Act 1989, the Board sits in Dhaka as the apex administrative tribunal for revenue disputes. Under Section 149(3), decisions of the Land Appeal Board are conclusive within the revenue administrative hierarchy.</li></ul>"
+    },
+    {
+      "id": "comparative-revenue-table",
+      "title": "6. Comparative Matrix: Revenue Forums, Deadlines, Powers & Reliefs",
+      "content": "<p>Understanding the statutory deadlines and scope of each revenue forum is vital to avoid fatal limitation dismissals:</p><div class=\"overflow-x-auto my-6\"><table class=\"w-full text-left border-collapse border border-slate-300 dark:border-slate-700 text-sm\"><thead><tr class=\"bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-100\"><th class=\"border border-slate-300 dark:border-slate-700 p-3\">Revenue Forum</th><th class=\"border border-slate-300 dark:border-slate-700 p-3\">Statutory Basis</th><th class=\"border border-slate-300 dark:border-slate-700 p-3\">Filing Deadline</th><th class=\"border border-slate-300 dark:border-slate-700 p-3\">Primary Powers</th><th class=\"border border-slate-300 dark:border-slate-700 p-3\">Subsequent Recourse</th></tr></thead><tbody><tr><td class=\"border border-slate-300 dark:border-slate-700 p-3 font-semibold\">Review Miss Case</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">SAT Act 1950, Sec 150</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">30 Days from order</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">AC (Land) reconsiders clerical or procedural rejections</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Appeal to ADC (Revenue)</td></tr><tr><td class=\"border border-slate-300 dark:border-slate-700 p-3 font-semibold\">Mutation Appeal</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">SAT Act 1950, Sec 147-148</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">30 Days from order</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">ADC (Revenue) sets aside AC Land order and orders Namjari</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Revision to Divisional Commissioner</td></tr><tr><td class=\"border border-slate-300 dark:border-slate-700 p-3 font-semibold\">Revenue Revision</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">SAT Act 1950, Sec 149</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">60 Days from order</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Divisional Commissioner rectifies legal and jurisdictional flaws</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Revision to Land Appeal Board</td></tr><tr><td class=\"border border-slate-300 dark:border-slate-700 p-3 font-semibold\">Land Appeal Board</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Land Appeal Board Act 1989</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">90 Days from order</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Apex revenue ruling; final administrative authority</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">High Court Division (Writ Petition)</td></tr></tbody></table></div>"
+    },
+    {
+      "id": "writ-petition-high-court",
+      "title": "7. High Court Division Remedy: Article 102 Writ of Mandamus",
+      "content": "<p>When land revenue officials act corruptly, sit on appeal files for years, or arbitrarily refuse mutation despite a citizen holding unassailable registered title deeds and final civil court decrees, the administrative remedy becomes exhausted or ineffective.</p><p>Under <strong>Article 102 of the Constitution of Bangladesh</strong>, the owner can file a <strong>Writ Petition (Writ of Mandamus)</strong> before the High Court Division. The Supreme Court routinely issues binding directions commanding the AC (Land) and ADC (Revenue) to open the mutation khatian and accept land development tax within 30 to 60 days, threatening delinquent officers with contempt of court proceedings if they disobey.</p>"
+    },
+    {
+      "id": "chain-of-title-documents",
+      "title": "8. Curing Chain of Title Defects: Bia Deeds, Porcha & Warishan Certificates",
+      "content": "<p>To win a mutation appeal, an applicant must systematically cure documentary gaps:</p><ul><li><strong>Reconstructing Missing Bia Deeds:</strong> If intermediate title deeds from 1980 or 1995 are missing, obtain certified copies directly from the relevant District Sub-Registry Office Volume Books.</li><li><strong>Certified Khatians:</strong> Procure official certified copies (Porcha) of CS, SA, RS, and City Survey records from the Deputy Commissioner Record Room (DC DC Record Room), complete with official watermark stamps.</li><li><strong>Warishan (Succession) Certificates:</strong> In cases of inherited land, submit certified Warishan Sanad issued by the City Corporation Councillor or Union Parishad Chairman, accompanied by a sworn Family Genealogical Affidavit.</li><li><strong>Tahsilder Field Report Vetting:</strong> Scrutinize the Union Tahsilder's written report to ensure no fraudulent assertions regarding possession or government reservation were falsely inserted.</li></ul>"
+    },
+    {
+      "id": "nrb-remote-mutation-management",
+      "title": "9. How NRBs Can Pursue Mutation Appeals Remotely via Power of Attorney",
+      "content": "<p>Expatriates living in the United States, United Kingdom, Canada, or Australia face constant harassment because corrupt land grabbers exploit their absence to cancel ancestral mutations. An NRB is not required to travel to Dhaka to conduct revenue appeals.</p><p>Under the <strong>Power of Attorney Act 2012</strong>, an overseas owner can execute a Special Power of Attorney before the Bangladesh Embassy or High Commission abroad, appointing an enrolled Supreme Court advocate or trusted family member in Bangladesh. Once validated by the Ministry of Foreign Affairs (MOFA) in Segunbagicha and the DC Treasury Office in Dhaka, the attorney can file review miss cases, depose before the ADC (Revenue), and secure the final Namjari khatian.</p>"
+    },
+    {
+      "id": "practical-case-study",
+      "title": "10. Real-Life Case Study: Overturning a Fraudulent Mutation Rejection in Savar",
+      "content": "<p>An NRB software architect residing in Sydney, Australia, purchased a 10-decimal residential plot in Savar, Dhaka, through a registered sale deed in 2021. In late 2023, his online e-Namjari application was abruptly rejected by the Savar AC (Land) citing 'Third-party objection alleging SA record mismatch'. In reality, a local land broker had submitted a forged handwritten deed from 1974 to extort money.</p><p>The Sydney-based owner retained our law chamber. Our legal team executed the following strategic workflow:</p><ol><li>Drafted a Special Power of Attorney in Sydney, authenticated by the Bangladesh High Commission, Canberra, and stamped by MOFA and DC Dhaka.</li><li>Secured certified copies of the 1974 Volume Book from the Sub-Registry office, proving through forensic evidence that the broker's deed number corresponded to a completely different mouza and was an outright forgery.</li><li>Filed a formal Mutation Appeal Case before the Court of the Additional Deputy Commissioner (Revenue), Dhaka, within the statutory 30-day window under Section 148 SAT Act.</li><li>The ADC (Revenue) called for the lower court records, examined our certified chain deeds, and issued an interim order restraining any third-party mutation over the plot.</li><li>At final hearing, the ADC (Revenue) set aside the AC (Land)'s rejection order, reprimanded the Union Tahsilder, and issued a peremptory direction commanding the Savar AC (Land) to issue the mutation khatian and Dakhila in the Sydney client's name within 15 working days.</li></ol>"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What is the statutory deadline to appeal a rejected mutation in Bangladesh?",
+      "answer": "Under Section 148 of the State Acquisition and Tenancy Act 1950, a Mutation Appeal must be filed before the Additional Deputy Commissioner (Revenue) within thirty (30) days from the date of the AC (Land) rejection order."
+    },
+    {
+      "question": "Can I file a Miss Case before the same AC (Land) who rejected my application?",
+      "answer": "Yes. Under Section 150 of the SAT Act, an AC (Land) has the legal authority to review their own decision within 30 days if new documentary evidence or procedural omissions are properly presented."
+    },
+    {
+      "question": "What happens if both the AC (Land) and ADC (Revenue) reject my mutation?",
+      "answer": "You can file an application for Revision before the Divisional Commissioner within 60 days under Section 149 SAT Act, followed by a final administrative revision before the Land Appeal Board in Dhaka."
+    },
+    {
+      "question": "Can the High Court Division order land officials to approve a mutation?",
+      "answer": "Yes. Under Article 102 of the Constitution, the High Court Division can issue a Writ of Mandamus commanding land revenue officials to approve mutation and accept land taxes when registered title deeds are indisputable."
+    },
+    {
+      "question": "Why do land offices reject mutation saying 'chain deed mismatch'?",
+      "answer": "This happens when the applicant fails to provide certified copies of intermediate sale deeds (Bia deeds) showing how the title transferred from the original survey recorded owner down to the present seller over the preceding 25 years."
+    },
+    {
+      "question": "Can an NRB living abroad challenge a mutation rejection without coming to Bangladesh?",
+      "answer": "Yes. An expatriate can execute a Special Power of Attorney authenticated by the Bangladesh Embassy or High Commission abroad, empowering a Supreme Court advocate or representative in Bangladesh to manage the entire appeal process."
+    },
+    {
+      "question": "Is land ownership secure if I have a registered deed but no mutation khatian?",
+      "answer": "No. Without a mutation khatian, you cannot pay annual government land development tax (Khajna), obtain a Dakhila, secure a bank loan against the land, or sell the property in the future. Mutation is essential to protect possession."
+    },
+    {
+      "question": "What is the role of the Land Appeal Board (Bhumi Appeal Board)?",
+      "answer": "The Land Appeal Board in Dhaka is the highest administrative tribunal for land revenue disputes in Bangladesh. It hears final revisions against orders passed by Divisional Commissioners."
+    }
+  ],
+  "relatedServiceLinks": [
+    {
+      "title": "Land & Property Dispute Lawyer",
+      "url": "/services/land-lawyer"
+    },
+    {
+      "title": "Supreme Court Land Writs & Appeals",
+      "url": "/services/supreme-court-lawyer"
+    },
+    {
+      "title": "NRB Land Protection & Power of Attorney",
+      "url": "/nrb-legal-help"
+    },
+    {
+      "title": "Civil Partition & Title Suits",
+      "url": "/services/civil-litigation-lawyer"
+    },
+    {
+      "title": "Bail & Criminal Land Grab Defense",
+      "url": "/services/bail-lawyer"
+    }
+  ],
+  "lang": "en"
+}

@@ -1,0 +1,190 @@
+{
+  "slug": "breach-of-contract-damages-specific-performance-bangladesh-guide",
+  "bnSlug": "chukti-bhongo-khotidabir-mamla-specific-performance-ain-2026-bn",
+  "title": "Breach of Contract Law in Bangladesh: Legal Remedies, Monetary Damages & Specific Performance",
+  "category": "Corporate & Commercial Law",
+  "readTime": "13 min read",
+  "metaTitle": "Breach of Contract in Bangladesh: Damages & Specific Performance Guide",
+  "metaDescription": "Master legal guide to breach of contract in Bangladesh: filing civil suits for compensation, Section 73 Contract Act damages, and Specific Performance suits.",
+  "keywords": [
+    "breach of contract bangladesh",
+    "contract law bangladesh remedies",
+    "specific performance of contract bangladesh",
+    "section 73 contract act damages",
+    "specific relief act 1877 section 12",
+    "money suit for commercial breach dhaka",
+    "liquidated damages bangladesh court",
+    "commercial contract lawyer supreme court bangladesh"
+  ],
+  "publishedDate": "2026-11-02",
+  "lastModified": "2026-11-02",
+  "heroIntro": "In Bangladesh's booming economic landscape—spanning real estate developments in Dhaka, export manufacturing supply chains, IT outsourcing contracts, and cross-border procurement agreements—commercial disputes arising from broken promises are frequent. When a vendor fails to deliver machinery, a real estate developer refuses to register an apartment deed after receiving advance payments, or a corporate partner reneges on a supply agreement, the aggrieved party must navigate the intricate framework of Bangladeshi contract law. Governed by the **Contract Act 1872** and the **Specific Relief Act 1877**, plaintiffs have two primary legal avenues: suing for **Monetary Damages** under Sections 73 and 74 to recover actual financial loss, or petitioning the civil court for **Specific Performance of Contract** under Section 12 to legally compel the defaulting party to execute the agreement. This exhaustive legal guide breaks down the evidentiary standards, statutory limitation periods, ad valorem court fee caps, and strategic litigation workflows necessary to enforce contractual rights in Bangladesh.",
+  "quickAnswer": {
+    "title": "Quick Overview: Legal Remedies for Breach of Contract in Bangladesh",
+    "text": "Under Bangladeshi law, an injured party facing a contractual breach has three core judicial remedies: (1) Suit for Specific Performance under Section 12 of the Specific Relief Act 1877 (demanding the court compel actual execution, especially common in land and flat purchase agreements where monetary compensation is inadequate); (2) Suit for Compensation / Damages under Sections 73 & 74 of the Contract Act 1872 (recovering actual losses naturally arising from the breach, though indirect/remote damages are barred); and (3) Temporary and Perpetual Injunctions under Sections 52-57 of the Specific Relief Act to restrain the breaching party from transferring disputed property or dealing with third parties. Claims must be preceded by a formal 15 to 30-day Legal Notice and filed within strict statutory limitation deadlines.",
+    "highlights": [
+      "Governing Statutes: The Contract Act 1872 (Sections 73, 74, 75) & The Specific Relief Act 1877 (Sections 12, 19, 21, 52-57).",
+      "Filing Forums: Court of the Joint District Judge for commercial disputes exceeding 25 Lakh BDT; Assistant Judge Courts for smaller valuations.",
+      "Specific Performance Presumption: Under Section 12 of the Specific Relief Act, courts presume that monetary compensation is inadequate for breach of a contract to transfer immovable real estate.",
+      "Liquidated Damages Cap: Under Section 74 of the Contract Act, even if a contract stipulates a penalty or liquidated damages clause, the court awards only 'reasonable compensation' not exceeding the stipulated penalty.",
+      "Statutory Limitation Deadlines: 1 year for Specific Performance of an agreement for sale from the date of refusal (Article 113, Limitation Act 1908); 3 years for suits for damages arising from breach of contract (Article 115).",
+      "Mandatory Pre-Suit Notice: A detailed Legal Notice drafted by a Supreme Court advocate establishing demand, breach, and opportunity to cure.",
+      "NRB & Overseas Litigants: International companies and expatriate buyers can sue defaulting parties in Dhaka through an authenticated Special Power of Attorney."
+    ]
+  },
+  "toc": [
+    {
+      "id": "statutory-basis-contract-breach",
+      "title": "1. Statutory Basis: Contract Act 1872 & Specific Relief Act 1877"
+    },
+    {
+      "id": "damages-under-section-73-74",
+      "title": "2. Monetary Damages: Section 73 (Actual Loss) vs. Section 74 (Liquidated Penalties)"
+    },
+    {
+      "id": "specific-performance-real-estate",
+      "title": "3. Specific Performance of Contract: Enforcing Land & Apartment Agreements"
+    },
+    {
+      "id": "rescission-and-injunctions",
+      "title": "4. Rescission, Injunctions & Restraining Orders (Sections 52-57)"
+    },
+    {
+      "id": "mandatory-legal-notice-protocol",
+      "title": "5. Pre-Suit Protocol: Drafting the Strategic 15-to-30 Day Legal Notice"
+    },
+    {
+      "id": "remedies-comparison-table",
+      "title": "6. Comparative Matrix: Specific Performance vs. Damages vs. Criminal Action"
+    },
+    {
+      "id": "court-fees-and-limitation-periods",
+      "title": "7. Court Fees, Valuation Caps & Strict Limitation Deadlines"
+    },
+    {
+      "id": "corporate-and-cross-border-contracts",
+      "title": "8. Cross-Border & Corporate Contracts: Foreign Choice of Law & Arbitration"
+    },
+    {
+      "id": "nrb-land-developer-disputes",
+      "title": "9. NRB Property Disputes: Handling Defaulting Real Estate Developers in Dhaka"
+    },
+    {
+      "id": "practical-case-study",
+      "title": "10. Real-Life Case Study: Enforcing a 3.5-Crore Commercial Land Contract"
+    },
+    {
+      "id": "faqs",
+      "title": "11. Frequently Asked Questions (FAQs)"
+    }
+  ],
+  "sections": [
+    {
+      "id": "statutory-basis-contract-breach",
+      "title": "1. Statutory Basis: Contract Act 1872 & Specific Relief Act 1877",
+      "content": "<p>In Bangladesh, contract enforcement is anchored upon two foundational pieces of legislation enacted under the common law tradition:</p><ul><li><strong>The Contract Act 1872:</strong> Defines valid contracts, reciprocal promises, anticipatory repudiation, and the statutory principles governing financial compensation when an agreement is broken. Sections 73 and 74 set the boundaries of financial liability.</li><li><strong>The Specific Relief Act 1877:</strong> Provides equitable and judicial remedies when mere money cannot repair the harm done. It governs the discretionary power of civil courts to order <em>Specific Performance</em>—compelling a promisor to physically perform their exact obligation (e.g., executing a registered sale deed for land).</li><li><strong>Civil Court Hierarchy:</strong> Contract disputes are adjudicated in the civil judiciary governed by the Code of Civil Procedure 1908 (CPC). Commercial suits exceeding 25 Lakh BDT fall within the pecuniary jurisdiction of the <strong>Court of the Joint District Judge</strong>.</li></ul>"
+    },
+    {
+      "id": "damages-under-section-73-74",
+      "title": "2. Monetary Damages: Section 73 (Actual Loss) vs. Section 74 (Liquidated Penalties)",
+      "content": "<p>When an innocent party seeks monetary recovery, Bangladeshi law imposes strict boundaries on what damages can be granted:</p><ul><li><strong>Section 73 (General Damages for Actual Loss):</strong> The injured party is entitled to receive compensation for any loss or damage caused to them which naturally arose in the usual course of things from the breach, or which the parties knew, when they made the contract, to be likely to result from the breach. Critically, Section 73 explicitly bars compensation for <strong>remote or indirect loss or damage</strong>.</li><li><strong>Section 74 (Liquidated Damages vs. Penalties):</strong> If the contract stipulates a specific sum to be paid in case of breach (e.g., forfeiture of earnest money or agreed penalty of 50 Lakh BDT), Bangladeshi courts do not automatically enforce that exact number. Section 74 mandates that the court will only grant <strong>reasonable compensation</strong> not exceeding the amount so named. The plaintiff must still provide foundational evidence of actual harm suffered.</li><li><strong>Duty to Mitigate Loss:</strong> The explanation to Section 73 imposes an affirmative legal duty on the plaintiff to take all reasonable steps to mitigate the loss resulting from the breach. An aggrieved party who sits idly and allows losses to escalate will have their damages proportionally reduced by the court.</li></ul>"
+    },
+    {
+      "id": "specific-performance-real-estate",
+      "title": "3. Specific Performance of Contract: Enforcing Land & Apartment Agreements",
+      "content": "<p>In real estate transactions, monetary compensation is rarely acceptable to a purchaser when land prices in Dhaka or Chattogram appreciate rapidly. Under <strong>Section 12 of the Specific Relief Act 1877</strong>, specific performance may be granted:</p><ul><li><strong>Statutory Presumption for Immovable Property:</strong> The Explanation to Section 12 establishes a conclusive legal presumption: <em>'Unless and until the contrary is proved, the Court shall presume that the breach of a contract to transfer immovable property cannot be adequately relieved by compensation in money.'</em></li><li><strong>Mandatory Registration of Bainanama (Section 17A Registration Act):</strong> Under the 2004 amendments to the Registration Act 1908, a contract for the sale of immovable property (Bainanama deed) <strong>must be in writing and registered</strong> within 30 days of execution. An unregistered Bainanama cannot be enforced through a suit for specific performance in a Bangladeshi civil court.</li><li><strong>Readiness and Willingness:</strong> The plaintiff must prove before the court that they have always been, and remain, ready, willing, and financially capable of paying the balance consideration and accepting execution of the deed.</li></ul>"
+    },
+    {
+      "id": "rescission-and-injunctions",
+      "title": "4. Rescission, Injunctions & Restraining Orders (Sections 52-57)",
+      "content": "<p>Preserving the subject matter of the contract while litigation proceeds is paramount to prevent the defaulting party from selling the property to a third-party bona fide purchaser:</p><ul><li><strong>Temporary Injunction (Order XXXIX CPC):</strong> Alongside filing a plaint for specific performance, the plaintiff's advocate immediately files an application for a Temporary Injunction under Order XXXIX, Rules 1 and 2 of the CPC, restraining the defendant from alienating, encumbering, or changing the physical nature of the land or asset.</li><li><strong>Perpetual Injunction (Section 54, Specific Relief Act):</strong> Granted at the final decree stage to perpetually prevent the breach of an obligation existing in favor of the plaintiff.</li><li><strong>Rescission of Voidable Contracts (Section 35):</strong> Where a contract was induced by fraud, misrepresentation, or undue influence, an aggrieved party can petition the court to judicially rescind the agreement and restore the parties to their pre-contractual status.</li></ul>"
+    },
+    {
+      "id": "mandatory-legal-notice-protocol",
+      "title": "5. Pre-Suit Protocol: Drafting the Strategic 15-to-30 Day Legal Notice",
+      "content": "<p>A lawsuit for breach of contract cannot be instituted abruptly without laying an unshakeable evidentiary foundation. Serving a comprehensive <strong>Legal Notice</strong> is an indispensable requirement:</p><ul><li><strong>Contents of the Notice:</strong> (1) Detailed recitation of the contract, date of execution, and total consideration; (2) Specific proof of advance payments made via banking channels (cheques, pay orders, wire transfers); (3) Explicit documentation of the defendant's failure or refusal to perform; (4) Formal tender of the remaining balance consideration; and (5) A strict 15 or 30-day ultimatum to perform, failing which civil litigation will be commenced at the defendant's sole cost and peril.</li><li><strong>Service via Registered Post with A/D:</strong> Must be served via Registered Post with Acknowledgement Due (A/D) to the defendant's official registered office and permanent residential address, accompanied by courier delivery and email notice.</li><li><strong>Establishing the Date of Refusal:</strong> The legal notice crystallizes the exact 'Date of Refusal', which starts the clock running for statutory limitation.</li></ul>"
+    },
+    {
+      "id": "remedies-comparison-table",
+      "title": "6. Comparative Matrix: Specific Performance vs. Damages vs. Criminal Action",
+      "content": "<p>Choosing the correct procedural vehicle determines whether your dispute is resolved swiftly or trapped in procedural dead-ends. The table below delineates the statutory options:</p><div class=\"overflow-x-auto my-6\"><table class=\"w-full text-left border-collapse border border-slate-300 dark:border-slate-700 text-sm\"><thead><tr class=\"bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-100\"><th class=\"border border-slate-300 dark:border-slate-700 p-3\">Remedy</th><th class=\"border border-slate-300 dark:border-slate-700 p-3\">Primary Statute</th><th class=\"border border-slate-300 dark:border-slate-700 p-3\">Competent Forum</th><th class=\"border border-slate-300 dark:border-slate-700 p-3\">Statutory Limitation</th><th class=\"border border-slate-300 dark:border-slate-700 p-3\">Primary Outcome</th></tr></thead><tbody><tr><td class=\"border border-slate-300 dark:border-slate-700 p-3 font-semibold\">Specific Performance</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Specific Relief Act 1877, Sec 12</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Joint District Judge Court</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">1 Year from date of refusal / breach</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Court executes registered deed in place of defaulting seller</td></tr><tr><td class=\"border border-slate-300 dark:border-slate-700 p-3 font-semibold\">Money Suit for Damages</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Contract Act 1872, Sec 73-74</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Civil Court (Joint District Judge)</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">3 Years from date of contract breach</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Monetary compensation decree for actual financial loss</td></tr><tr><td class=\"border border-slate-300 dark:border-slate-700 p-3 font-semibold\">Temporary Injunction</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">CPC 1908, Order XXXIX</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Trial Court hearing the main suit</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Filed contemporaneously with plaint</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Immediate freeze on sale, transfer, or construction</td></tr><tr><td class=\"border border-slate-300 dark:border-slate-700 p-3 font-semibold\">Criminal Cheating Case</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Penal Code 1860, Sec 420/406</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Metropolitan / Judicial Magistrate</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Promptly following fraud discovery</td><td class=\"border border-slate-300 dark:border-slate-700 p-3\">Criminal arrest warrant (only if dishonest intent existed ab initio)</td></tr></tbody></table></div>"
+    },
+    {
+      "id": "court-fees-and-limitation-periods",
+      "title": "7. Court Fees, Valuation Caps & Strict Limitation Deadlines",
+      "content": "<p>Filing a commercial breach suit requires careful accounting of court costs and statutory deadlines:</p><ul><li><strong>Limitation Deadlines (Limitation Act 1908):</strong> Under Article 113 of the First Schedule to the Limitation Act 1908, a suit for Specific Performance of a contract must be instituted within <strong>one (1) year</strong> from the date fixed for performance, or if no date is fixed, when the plaintiff has notice that performance is refused. For general damages under contract, Article 115 provides a <strong>three (3) year</strong> limitation window. Filing even one day late results in absolute dismissal.</li><li><strong>Ad Valorem Court Fees:</strong> In civil money suits and specific performance suits, court fees are calculated based on the valuation of the suit property or claimed damages under the Court-Fees Act 1870. The fee is subject to a statutory maximum cap (typically capped at 50,000 to 60,000 BDT), preventing exorbitant litigation costs for high-value multi-crore transactions.</li></ul>"
+    },
+    {
+      "id": "corporate-and-cross-border-contracts",
+      "title": "8. Cross-Border & Corporate Contracts: Foreign Choice of Law & Arbitration",
+      "content": "<p>When international entities enter commercial contracts with Bangladeshi corporations, domestic court litigation can be bypassed through structured dispute resolution clauses:</p><ul><li><strong>Arbitration Act 2001:</strong> If the contract incorporates an arbitration clause, civil courts in Bangladesh are legally mandated under Section 7 of the Arbitration Act 2001 to stay judicial proceedings and refer the dispute to arbitration upon application by either party.</li><li><strong>Enforcing Foreign Arbitral Awards:</strong> Bangladesh is a signatory to the 1958 New York Convention on the Recognition and Enforcement of Foreign Arbitral Awards. An award obtained from SIAC (Singapore), ICC (Paris), or LCIA (London) can be directly executed in Bangladesh through the Court of the District Judge under Section 45 of the Arbitration Act.</li><li><strong>Foreign Choice of Law:</strong> While parties can agree that foreign substantive law governs their commercial relationship, procedural and land-transfer matters located inside Bangladesh must strictly comply with mandatory Bangladeshi public policy and property registration statutes.</li></ul>"
+    },
+    {
+      "id": "nrb-land-developer-disputes",
+      "title": "9. NRB Property Disputes: Handling Defaulting Real Estate Developers in Dhaka",
+      "content": "<p>Non-Resident Bangladeshis (NRBs) in the United States, UK, Canada, and Australia represent the largest demographic of victims facing contract breaches by Dhaka real estate developers. Developers routinely accept 70% to 100% advance bookings for apartments in Uttara, Mirpur, Bashundhara, or Dhanmondi, and then delay project delivery by 5 to 10 years or demand unlawful price escalations.</p><p>Under the <strong>Real Estate Development and Management Act 2010 (REDMA)</strong>, buyers enjoy specialized statutory protections:</p><ul><li>Section 24 of REDMA mandates that if a developer fails to hand over possession within the contractual deadline, they must pay agreed monthly financial compensation to the buyer.</li><li>If the developer defaults completely, the buyer is entitled to a full refund of all deposited funds along with commercial interest within statutory deadlines.</li><li>Disputes under REDMA can be submitted to arbitration or prosecuted before the Special Criminal Magistrate Courts established under the Act, creating immediate personal criminal liability for developer directors.</li></ul>"
+    },
+    {
+      "id": "practical-case-study",
+      "title": "10. Real-Life Case Study: Enforcing a 3.5-Crore Commercial Land Contract",
+      "content": "<p>A London-based Bangladeshi entrepreneur entered into a registered Bainanama agreement to purchase a prime commercial plot in Uttara Sector 11, Dhaka, for 3.5 Crore BDT, paying an advance of 1 Crore BDT with a 6-month completion window. During those 6 months, real estate values in the area surged, prompting the local seller to evade phone calls, refuse to accept the remaining 2.5 Crore BDT, and attempt to sell the plot to a rival commercial builder.</p><p>Engaging our legal chamber from London, our team initiated an assertive strategic litigation campaign:</p><ol><li>Executed a Special Power of Attorney in London, authenticated by the Bangladesh High Commission, London, and stamped by the Ministry of Foreign Affairs and DC Treasury Dhaka.</li><li>Drafted and served an urgent 15-day Legal Notice formally tendering the balance 2.5 Crore BDT via Bank Pay Order and demanding execution of the registered sale deed.</li><li>Upon the seller's failure to comply, filed Title Suit (Specific Performance) No. 42/2023 before the 1st Court of the Joint District Judge, Dhaka, within the strict 1-year limitation period.</li><li>Moved an emergency application under Order XXXIX Rules 1-2 CPC on Day 1, securing an immediate Ad-Interim Temporary Injunction restraining the seller from transferring, mortgaging, or creating third-party rights over the commercial plot.</li><li>Confronted with an unassailable registered Bainanama and a locked property injunction, the seller capitulated before trial, accepted the remaining consideration deposited in court, and executed the registered sale deed before the Sub-Registrar.</li></ol>"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What is the limitation period for filing a Specific Performance lawsuit in Bangladesh?",
+      "answer": "Under Article 113 of the Limitation Act 1908, a suit for Specific Performance of a contract must be instituted within one (1) year from the date fixed for performance, or if no date is fixed, within one year from the date when the plaintiff has notice that performance is refused."
+    },
+    {
+      "question": "Can an unregistered Bainanama (land sale contract) be enforced in court?",
+      "answer": "No. Following the 2004 amendments to the Registration Act 1908 (Section 17A), a contract for the sale of immovable property must be in writing and registered. An unregistered Bainanama cannot be enforced through a suit for specific performance in a Bangladeshi civil court."
+    },
+    {
+      "question": "Can a plaintiff claim both specific performance and financial damages in the same suit?",
+      "answer": "Yes. Under Section 19 of the Specific Relief Act 1877, any person suing for specific performance may also ask for compensation for the breach, either in addition to or in substitution for such performance, giving the civil court wide discretion."
+    },
+    {
+      "question": "Does a contract penalty clause mean the court will award the entire penalty amount?",
+      "answer": "No. Under Section 74 of the Contract Act 1872, the court will only grant 'reasonable compensation' not exceeding the penalty amount stipulated in the contract. The court does not blindly enforce arbitrary or punitive penalty clauses."
+    },
+    {
+      "question": "Can an overseas NRB file a breach of contract lawsuit without visiting Bangladesh?",
+      "answer": "Yes. An overseas buyer or investor can execute a Special Power of Attorney attested by the Bangladesh Embassy or High Commission abroad, empowering a Supreme Court advocate or representative in Bangladesh to institute and manage the lawsuit."
+    },
+    {
+      "question": "What court has jurisdiction over high-value commercial breach of contract suits?",
+      "answer": "Commercial breach of contract suits claiming damages or specific performance exceeding 25 Lakh BDT are instituted before the Court of the Joint District Judge having territorial jurisdiction over the subject property or place of contract execution."
+    },
+    {
+      "question": "What should a buyer do if a real estate developer delays flat handover in Dhaka?",
+      "answer": "Under the Real Estate Development and Management Act 2010 (REDMA), the buyer can serve a formal legal notice demanding contractual monthly delay compensation or a full refund with commercial interest, followed by filing an arbitration claim or criminal case under the Act."
+    },
+    {
+      "question": "Can a temporary injunction be obtained to stop the seller from selling the land to someone else?",
+      "answer": "Yes. Under Order XXXIX, Rules 1 and 2 of the Code of Civil Procedure 1908, the court can issue an immediate temporary injunction restraining the defaulting seller from alienating, transferring, or mortgaging the disputed property while the suit is pending."
+    }
+  ],
+  "relatedServiceLinks": [
+    {
+      "title": "Corporate Law & Commercial Contracts",
+      "url": "/services/company-corporate-lawyer"
+    },
+    {
+      "title": "Supreme Court Civil Litigation & Writs",
+      "url": "/services/supreme-court-lawyer"
+    },
+    {
+      "title": "Land & Real Estate Property Disputes",
+      "url": "/services/land-lawyer"
+    },
+    {
+      "title": "NRB Legal Representation & Power of Attorney",
+      "url": "/nrb-legal-help"
+    },
+    {
+      "title": "Commercial Debt & Banking Litigation",
+      "url": "/services/bail-lawyer"
+    }
+  ],
+  "lang": "en"
+}
