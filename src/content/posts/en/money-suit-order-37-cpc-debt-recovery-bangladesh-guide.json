@@ -1,0 +1,191 @@
+{
+  "slug": "money-suit-order-37-cpc-debt-recovery-bangladesh-guide",
+  "title": "Money Suit & Order 37 CPC in Bangladesh: Debt Recovery, Cheques & Summary Suits",
+  "category": "Civil Law",
+  "readTime": "19 minutes",
+  "metaTitle": "Money Suit & Order 37 CPC in Bangladesh: Debt Recovery Guide",
+  "metaDescription": "Recover commercial debts and unpaid loans in Bangladesh: Summary suits under Order 37 CPC, Joint District Judge money suits, and limitation rules.",
+  "keywords": [
+    "money suit bangladesh",
+    "order 37 cpc summary suit bangladesh",
+    "debt recovery lawyer dhaka",
+    "commercial invoice recovery bangladesh",
+    "promissory note lawsuit bangladesh",
+    "court fee money suit bangladesh",
+    "joint district judge money suit",
+    "section 138 ni act vs money suit"
+  ],
+  "publishedDate": "2026-11-08",
+  "lastModified": "2026-11-08",
+  "heroIntro": "In Bangladesh's dynamic commercial landscape, unpaid business invoices, defaulted commercial loans, dishonored bank cheques, and unfulfilled contractual advances represent serious operational hazards. When a trading partner, corporate debtor, or individual borrower refuses to satisfy their financial liabilities, relying purely on criminal cheque bounce proceedings under Section 138 of the Negotiable Instruments Act 1881 is often insufficient to secure full financial recovery. To legally compel the physical attachment and recovery of funds, creditors must institute civil recovery proceedings. Governed by the **Code of Civil Procedure 1908 (CPC)**, plaintiffs have two potent judicial mechanisms: an **Ordinary Money Suit** before the Joint District Judge Court, or a fast-track **Summary Suit under Order 37 CPC** based on written contracts, bills of exchange, or promissory notes. This comprehensive legal guide by Advocate Md. Shah Alam, Supreme Court Advocate and civil litigation specialist in Dhaka, explains the statutory procedures, limitation deadlines, court fee caps, and execution tactics to recover debts in Bangladesh.",
+  "quickAnswer": {
+    "title": "Quick Overview: How to Recover Debts via Money Suits and Order 37 CPC",
+    "heading": "Quick Overview: How to Recover Debts via Money Suits and Order 37 CPC",
+    "text": "Under Bangladeshi civil law, debt recovery is pursued through two primary avenues under the Code of Civil Procedure 1908: (1) Summary Suits under Order 37 CPC, applicable exclusively to claims founded on bills of exchange, promissory notes, or dishonored cheques. In an Order 37 suit, the defendant possesses no automatic right to defend; they must file an application for 'Leave to Defend' within ten (10) days of receiving summons, demonstrating a genuine, triable defense, often accompanied by security deposits. (2) Ordinary Money Suits filed before the Court of the Joint District Judge (for claims exceeding 25 Lakh BDT) or Senior Assistant Judge. Statutory limitation under the Limitation Act 1908 is strictly three (3) years from the date of default. Maximum ad valorem court fees under the Court-Fees Act 1870 are statutorily capped at approximately 50,000 BDT, making high-value corporate recovery cost-effective. Judgments are executed under Order 21 via bank account garnishment, real estate attachment, and civil arrest.",
+    "highlights": [
+      "Governing Statutes: Code of Civil Procedure 1908 (Order 37, Order 21, and Section 26), Court-Fees Act 1870, and Limitation Act 1908.",
+      "Order 37 Fast-Track: Defendant has no inherent right to defend; must obtain leave to defend within 10 days of summons.",
+      "Dual Remedy with Section 138 NI Act: Creditors can pursue criminal prosecution for cheque dishonor alongside a civil Money Suit concurrently.",
+      "Strict 3-Year Limitation: Under Articles 52, 64, and 115 of the Limitation Act, suits must be filed within 3 years of the debt due date.",
+      "Statutory Court Fee Cap: Maximum ad valorem court fee is capped at roughly 50,000 BDT under the Court-Fees Act 1870, capping front-end legal costs.",
+      "Jurisdictional Competence: Claims exceeding 25 Lakh BDT are heard by the Court of the Joint District Judge; lower claims by Assistant Judges.",
+      "Execution Power: Judgments are enforced through bank garnishment, corporate asset seizure, property auction, and civil detention."
+    ],
+    "points": [
+      "Governing Statutes: Code of Civil Procedure 1908 (Order 37, Order 21, and Section 26), Court-Fees Act 1870, and Limitation Act 1908.",
+      "Order 37 Fast-Track: Defendant has no inherent right to defend; must obtain leave to defend within 10 days of summons.",
+      "Dual Remedy with Section 138 NI Act: Creditors can pursue criminal prosecution for cheque dishonor alongside a civil Money Suit concurrently.",
+      "Strict 3-Year Limitation: Under Articles 52, 64, and 115 of the Limitation Act, suits must be filed within 3 years of the debt due date.",
+      "Statutory Court Fee Cap: Maximum ad valorem court fee is capped at roughly 50,000 BDT under the Court-Fees Act 1870, capping front-end legal costs.",
+      "Jurisdictional Competence: Claims exceeding 25 Lakh BDT are heard by the Court of the Joint District Judge; lower claims by Assistant Judges.",
+      "Execution Power: Judgments are enforced through bank garnishment, corporate asset seizure, property auction, and civil detention."
+    ]
+  },
+  "toc": [
+    {
+      "id": "civil-debt-recovery-statutory-framework",
+      "title": "1. Statutory Framework: Civil Debt Recovery Under CPC"
+    },
+    {
+      "id": "order-37-cpc-summary-suit-mechanisms",
+      "title": "2. Order 37 CPC: Fast-Track Summary Suits for Cheques & Notes"
+    },
+    {
+      "id": "leave-to-defend-and-triable-issues",
+      "title": "3. The Leave to Defend Standard & Security Deposit Rules"
+    },
+    {
+      "id": "ordinary-money-suit-procedure",
+      "title": "4. Ordinary Money Suits Before the Joint District Judge Court"
+    },
+    {
+      "id": "debt-recovery-avenues-comparison-matrix",
+      "title": "5. Legal Matrix: Order 37 CPC vs. Ordinary Money Suit vs. Section 138 NI Act"
+    },
+    {
+      "id": "ad-valorem-court-fees-and-statutory-caps",
+      "title": "6. Court Fee Calculation & Statutory Maximum Caps (Court-Fees Act 1870)"
+    },
+    {
+      "id": "limitation-act-deadlines-debt-recovery",
+      "title": "7. Limitation Deadlines Under the Limitation Act 1908"
+    },
+    {
+      "id": "execution-of-money-decrees-order-21",
+      "title": "8. Executing Money Decrees: Bank Garnishment & Asset Auctions"
+    },
+    {
+      "id": "illustrative-scenario-commercial-debt-recovery",
+      "title": "9. Illustrative Scenario: Recovering BDT 45 Lakhs via Order 37 CPC"
+    },
+    {
+      "id": "talk-to-an-advocate",
+      "title": "10. Talk to an Advocate: Commercial Debt Recovery Litigation"
+    }
+  ],
+  "sections": [
+    {
+      "id": "civil-debt-recovery-statutory-framework",
+      "title": "1. Statutory Framework: Civil Debt Recovery Under CPC",
+      "content": "<p>In Bangladesh, recovering monetary dues arising from commercial transactions, goods supplied, unpaid loan facilities, or broken business agreements is fundamentally governed by the <strong>Code of Civil Procedure 1908 (Act No. V of 1908)</strong>, the <strong>Contract Act 1872</strong>, and the <strong>Negotiable Instruments Act 1881</strong>.</p><p>Creditors frequently confuse criminal prosecutions with civil asset recovery. While filing a criminal complaint under Section 138 of the Negotiable Instruments Act or Sections 406/420 of the Penal Code can lead to the arrest of the debtor, a criminal court's primary mandate is punitive punishment rather than executing asset attachments. To secure a binding judicial decree that directly attaches the debtor's commercial bank accounts, factories, and immovable properties, a creditor must institute a formal civil proceeding.</p><p>The CPC provides two distinct structural avenues: the conventional <strong>Ordinary Money Suit</strong> governed by Section 26 and Order 7, and the accelerated <strong>Summary Procedure under Order 37</strong>. Choosing the correct forum depends on the nature of the underlying documentation, whether negotiable instruments exist, and the urgency of preventing asset dissipation. Review our analysis on <a href=\"/blog/breach-of-contract-damages-specific-performance-bangladesh-guide\">breach of contract damages and specific performance in Bangladesh</a> for related contractual claims.</p>"
+    },
+    {
+      "id": "order-37-cpc-summary-suit-mechanisms",
+      "title": "2. Order 37 CPC: Fast-Track Summary Suits for Cheques & Notes",
+      "content": "<p><strong>Order 37 of the Code of Civil Procedure 1908</strong> is a specialized procedural fast-track designed to prevent dishonest debtors from dragging out commercial claims through frivolous defenses and endless adjournments.</p><p>Under Order 37 Rule 1, summary suits are strictly restricted to claims founded upon:</p><ul><li>Bills of Exchange (Hundis).</li><li>Promissory Notes (Demand Promissory Notes / DP Notes).</li><li>Cheques dishonored upon presentation to commercial banks.</li><li>Written contracts where the debt sought to be recovered is a fixed liquidated sum of money or a liquidated demand arising under an express covenant.</li></ul><p>The defining procedural characteristic of an Order 37 suit is that upon being served with court summons, <strong>the defendant has no automatic right to file a written statement</strong>. Unlike ordinary suits where a defendant can file routine denials, in an Order 37 suit the allegations in the plaint are legally deemed to be admitted unless the defendant formally petitions the court and is granted special judicial leave to defend.</p>"
+    },
+    {
+      "id": "leave-to-defend-and-triable-issues",
+      "title": "3. The Leave to Defend Standard & Security Deposit Rules",
+      "content": "<p>Under Order 37 Rule 2 and Rule 3 of the CPC, when the defendant is served with summons in Form No. 4 of Appendix B, a strict procedural timeline is triggered:</p><ol><li><strong>The 10-Day Appearance Mandate:</strong> The defendant must enter an appearance within <strong>ten (10) days</strong> of receiving summons and file an application supported by a sworn affidavit for <strong>Leave to Defend</strong> the suit.</li><li><strong>Substantiating Triable Issues:</strong> The defendant's affidavit must disclose specific factual and legal grounds establishing a bona fide, plausible defense. Vague or general denials will be summarily rejected by the court.</li><li><strong>Conditional vs. Unconditional Leave:</strong> If the defense appears genuine and substantial, the court may grant unconditional leave to defend. However, if the defense appears questionable, illusory, or intended merely to delay, the court routinely grants <strong>Conditional Leave</strong>, directing the defendant to deposit the entire claimed debt amount (or a substantial percentage thereof) in cash or bank guarantee into the court registry within a stipulated timeframe.</li><li><strong>Immediate Decree on Default:</strong> If the defendant fails to apply for leave to defend within 10 days, or if leave is refused, or if the defendant fails to satisfy the court's deposit condition, the court immediately pronounces final judgment and passes a decree in favor of the plaintiff for the full claimed amount plus contractual interest.</li></ol>"
+    },
+    {
+      "id": "ordinary-money-suit-procedure",
+      "title": "4. Ordinary Money Suits Before the Joint District Judge Court",
+      "content": "<div style=\"border:1px solid var(--accent);border-radius:var(--radius-lg);padding:1rem 1.25rem;margin:1.5rem 0\"><p><strong>Need an advocate for commercial debt recovery or an Order 37 suit in Bangladesh?</strong> Contact our civil litigation chamber on WhatsApp at <a href=\"https://wa.me/8801955802007?text=Hello%20Advocate%2C%20I%20need%20legal%20assistance%20to%20recover%20a%20commercial%20debt.\" target=\"_blank\" rel=\"noopener noreferrer\">+880 1955-802007</a>, or call <a href=\"tel:+8801712655546\">+880 1712-655546</a>. Overseas businesses can arrange remote document vetting.</p></div><p>Where a debt is not anchored in a formal negotiable instrument or signed promissory note—such as claims arising from running account ledgers, oral agreements with delivery receipts, disputed invoice valuations, or complex construction claims—the appropriate legal avenue is an <strong>Ordinary Money Suit</strong>.</p><p>Key procedural dimensions of an Ordinary Money Suit include:</p><ul><li><strong>Pecuniary Jurisdiction:</strong> Under the Civil Courts Act 1887 (as amended), jurisdiction is determined strictly by claim valuation. Claims exceeding <strong>25 Lakh BDT</strong> fall within the exclusive original jurisdiction of the <strong>Court of the Joint District Judge</strong>. Claims between 15 Lakh and 25 Lakh BDT are heard by Senior Assistant Judges, while claims up to 15 Lakh BDT are tried by Assistant Judges.</li><li><strong>Pre-Suit Legal Demand Notice:</strong> A formal Legal Notice drafted by a Supreme Court advocate must be served via registered post demanding payment within 15 to 30 days. This notice establishes demand, default, and statutory interest accrual.</li><li><strong>Full Trial Stages:</strong> An ordinary money suit proceeds through standard civil trial stages: Plaint submission, Written Statement, Alternative Dispute Resolution (ADR mediation under Section 89A CPC), Framing of Issues, Peremptory Hearing (witness examination and cross-examination), and Final Arguments.</li></ul>"
+    },
+    {
+      "id": "debt-recovery-avenues-comparison-matrix",
+      "title": "5. Legal Matrix: Order 37 CPC vs. Ordinary Money Suit vs. Section 138 NI Act",
+      "content": "<p>A comparative analysis of legal recovery avenues available to creditors in Bangladesh:</p><div style=\"overflow-x:auto;margin:1.5rem 0;\"><table style=\"width:100%;border-collapse:collapse;text-align:left;border:1px solid var(--card-border);\"><thead><tr style=\"background:var(--surface);\"><th style=\"padding:12px;border:1px solid var(--card-border);color:var(--gold);\">Feature</th><th style=\"padding:12px;border:1px solid var(--card-border);\">Order 37 CPC Summary Suit</th><th style=\"padding:12px;border:1px solid var(--card-border);\">Ordinary Money Suit</th><th style=\"padding:12px;border:1px solid var(--card-border);\">Section 138 NI Act (Criminal)</th></tr></thead><tbody><tr><td style=\"padding:12px;border:1px solid var(--card-border);font-weight:600;\">Applicability</td><td style=\"padding:12px;border:1px solid var(--card-border);\">Cheques, promissory notes, bills of exchange, liquidated debts</td><td style=\"padding:12px;border:1px solid var(--card-border);\">Any debt, invoices, damages, loans, or contractual balances</td><td style=\"padding:12px;border:1px solid var(--card-border);\">Dishonored bank cheques exclusively</td></tr><tr><td style=\"padding:12px;border:1px solid var(--card-border);font-weight:600;\">Trial Forum</td><td style=\"padding:12px;border:1px solid var(--card-border);\">Civil Court (Joint District / Assistant Judge)</td><td style=\"padding:12px;border:1px solid var(--card-border);\">Civil Court (Joint District / Assistant Judge)</td><td style=\"padding:12px;border:1px solid var(--card-border);\">Criminal Magistrate / Sessions Court</td></tr><tr><td style=\"padding:12px;border:1px solid var(--card-border);font-weight:600;\">Right to Defend</td><td style=\"padding:12px;border:1px solid var(--card-border);\">No automatic right; must obtain Leave to Defend in 10 days</td><td style=\"padding:12px;border:1px solid var(--card-border);\">Automatic right to file Written Statement</td><td style=\"padding:12px;border:1px solid var(--card-border);\">Automatic right to plead not guilty</td></tr><tr><td style=\"padding:12px;border:1px solid var(--card-border);font-weight:600;\">Primary Relief</td><td style=\"padding:12px;border:1px solid var(--card-border);\">Enforceable civil decree for debt plus interest</td><td style=\"padding:12px;border:1px solid var(--card-border);\">Enforceable civil decree for debt plus interest</td><td style=\"padding:12px;border:1px solid var(--card-border);\">Imprisonment up to 1 year and fine up to double cheque value</td></tr><tr><td style=\"padding:12px;border:1px solid var(--card-border);font-weight:600;\">Asset Attachment</td><td style=\"padding:12px;border:1px solid var(--card-border);\">Direct execution via Order 21 CPC</td><td style=\"padding:12px;border:1px solid var(--card-border);\">Direct execution via Order 21 CPC</td><td style=\"padding:12px;border:1px solid var(--card-border);\">Fine realized via Section 386 CrPC (Indirect)</td></tr><tr><td style=\"padding:12px;border:1px solid var(--card-border);font-weight:600;\">Average Duration</td><td style=\"padding:12px;border:1px solid var(--card-border);\">6 to 12 Months</td><td style=\"padding:12px;border:1px solid var(--card-border);\">18 to 36 Months</td><td style=\"padding:12px;border:1px solid var(--card-border);\">12 to 24 Months</td></tr></tbody></table></div>"
+    },
+    {
+      "id": "ad-valorem-court-fees-and-statutory-caps",
+      "title": "6. Court Fee Calculation & Statutory Maximum Caps (Court-Fees Act 1870)",
+      "content": "<p>A critical consideration for corporate creditors filing recovery suits is calculating the mandatory judicial court fee. In Bangladesh, court fees for money suits are governed by the <strong>Court-Fees Act 1870 (Act No. VII of 1870)</strong>.</p><p>Key statutory fee rules include:</p><ul><li><strong>Ad Valorem Scale:</strong> For suits seeking money recovery, court fees are calculated on an <em>ad valorem</em> (proportional) basis according to the total claimed debt valuation.</li><li><strong>Statutory Maximum Ceiling:</strong> To facilitate commercial access to justice and prevent exorbitant barriers, the Legislature introduced a statutory maximum cap on ad valorem court fees. For any civil suit—regardless of whether the claim is 5 Crore BDT or 50 Crore BDT—the maximum court fee payable in Bangladesh is statutorily capped at <strong>50,000 BDT</strong> (plus nominal welfare stamps and process fees).</li><li><strong>Fee Recovery from Debtor:</strong> Under Section 35 of the CPC, the court routinely awards full costs of the suit against the defaulting debtor, enabling the successful plaintiff to recover all paid court fees and reasonable legal expenses upon final decree.</li></ul>"
+    },
+    {
+      "id": "limitation-act-deadlines-debt-recovery",
+      "title": "7. Limitation Deadlines Under the Limitation Act 1908",
+      "content": "<p>In debt recovery litigation, time is of the essence. The <strong>Limitation Act 1908 (Act No. IX of 1908)</strong> establishes strict statutory limitation windows that extinguish the right to file suit if neglected.</p><p>Critical limitation schedules in Bangladesh include:</p><ol><li><strong>Debts on Promissory Notes or Bills:</strong> Under Articles 64, 73, and 80 of the First Schedule to the Limitation Act 1908, a suit on a promissory note or bill of exchange must be filed within <strong>three (3) years</strong> from the date when the instrument becomes payable or is dishonored.</li><li><strong>Price of Goods Sold and Delivered:</strong> Under Article 52, a suit for the price of goods sold where no specific credit period was agreed must be filed within <strong>three (3) years</strong> from the date of delivery of the goods.</li><li><strong>Breach of Written Contracts:</strong> Under Article 115, a suit for compensation or debt arising from the breach of any contract must be instituted within <strong>three (3) years</strong> from when the breach occurred.</li><li><strong>Extension via Written Acknowledgment:</strong> Under <strong>Section 19 of the Limitation Act 1908</strong>, if the debtor signs a written acknowledgment of liability or makes a partial payment on account of principal or interest (Section 20) before the expiration of the 3-year period, a fresh 3-year limitation window commences from the date of that acknowledgment.</li></ol>"
+    },
+    {
+      "id": "execution-of-money-decrees-order-21",
+      "title": "8. Executing Money Decrees: Bank Garnishment & Asset Auctions",
+      "content": "<p>Securing a judgment is meaningless unless converted into physical cash. Execution of money decrees is governed by <strong>Order 21 of the Code of Civil Procedure 1908</strong> (<em>Jari Mamla</em>).</p><p>The execution court provides robust statutory enforcement mechanisms:</p><ul><li><strong>Attachment of Bank Accounts (Order 21 Rule 46):</strong> The court serves prohibitory orders on scheduled banks freezing the judgment debtor's current, savings, and fixed-deposit accounts, directing bank managers to transfer funds into court.</li><li><strong>Attachment and Sale of Movable Property (Order 21 Rule 43):</strong> Commercial vehicles, factory machinery, inventory stocks, and corporate assets are seized and sold at public auction.</li><li><strong>Attachment of Immovable Property (Order 21 Rule 54):</strong> Lands, commercial buildings, and corporate real estate are formally attached, precluding any sale or mortgage, and subsequently auctioned under court supervision.</li><li><strong>Civil Imprisonment (Section 51 & Order 21 Rule 37):</strong> If a debtor who possesses financial capacity deliberately avoids satisfying the decree, the court can issue a warrant of civil arrest and commit the debtor to civil prison for up to six months. Civil detention does not extinguish the underlying debt.</li></ul>"
+    },
+    {
+      "id": "illustrative-scenario-commercial-debt-recovery",
+      "title": "9. Illustrative Scenario: Recovering BDT 45 Lakhs via Order 37 CPC",
+      "content": "<p><em>Illustrative scenario (composite; names and details changed):</em> A Dhaka-based textile chemical importer supplied industrial auxiliaries valued at 45 Lakh BDT to a garment washing factory in Gazipur. The buyer issued three post-dated cheques backed by a signed corporate memorandum. Upon presentation, all three cheques were dishonored due to 'insufficient funds'. The buyer offered vague verbal assurances but refused payment for seven months.</p><p>Facing cash flow strain, the supplier engaged Advocate Md. Shah Alam's chamber. Our litigation team executed a coordinated civil recovery strategy:</p><ol><li>Dispatched a formal statutory Legal Notice demanding 45 Lakh BDT plus commercial interest within 15 days. Concurrently, filed a criminal complaint under Section 138 of the Negotiable Instruments Act 1881 to initiate criminal pressure.</li><li>Simultaneously instituted a Summary Suit under Order 37 CPC before the Court of the Joint District Judge, Dhaka, depositing the capped statutory court fee of 50,000 BDT.</li><li>The Joint District Judge issued summons in Form No. 4. The defaulting buyer appeared on the ninth day and filed an application for Leave to Defend, falsely claiming the chemical supplies were substandard.</li><li>Our advocates argued before the court that the buyer had signed receipt vouchers without raising any contemporaneous quality disputes and had utilized the goods in export production.</li><li>The court granted Conditional Leave to Defend on the strict condition that the defendant deposit 50% of the claimed debt (22.5 Lakh BDT) into the court registry within 30 days. When the debtor failed to deposit the security, the court struck off the defense and passed a summary decree for the full 45 Lakh BDT plus interest, subsequently executing the decree by attaching the debtor's commercial bank balances in Motijheel.</li></ol>"
+    },
+    {
+      "id": "talk-to-an-advocate",
+      "title": "10. Talk to an Advocate: Commercial Debt Recovery Litigation",
+      "content": "<p>Recovering commercial debts, unpaid corporate invoices, and defaulted business loans in Bangladesh requires assertive civil litigation and rigorous procedural execution. Advocate Md. Shah Alam and his experienced civil litigation team represent corporate creditors, suppliers, and overseas trading entities before Joint District Judge Courts and the Supreme Court of Bangladesh.</p><div style=\"border:1px solid var(--accent);border-radius:var(--radius-lg);padding:1rem 1.25rem;margin:1.5rem 0\"><p><strong>Need an advocate for this matter in Bangladesh?</strong> Send your documents on WhatsApp to <a href=\"https://wa.me/8801955802007?text=Hello%20Advocate%2C%20I%20read%20your%20article%20and%20need%20advice.\" target=\"_blank\" rel=\"noopener noreferrer\">+880 1955-802007</a>, or call <a href=\"tel:+8801712655546\">+880 1712-655546</a>. Overseas clients: a first document review can be done remotely.</p></div><p>Our principal chamber is located in Uttara, Dhaka, minutes from Hazrat Shahjalal International Airport, alongside our daily litigation chamber at the Dhaka Judge Court.</p>"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What is the difference between an Ordinary Money Suit and an Order 37 Summary Suit?",
+      "answer": "In an Ordinary Money Suit, the defendant has an automatic right to file a written statement and undergo full trial. In an Order 37 Summary Suit (based on cheques or bills), the defendant must apply for and obtain Leave to Defend within 10 days, or a summary decree is passed immediately."
+    },
+    {
+      "question": "Can I file both a criminal cheque bounce case and a civil Money Suit at the same time?",
+      "answer": "Yes. The Supreme Court of Bangladesh has established that a Section 138 NI Act criminal prosecution and a civil Money Suit under Order 37 CPC are parallel, concurrent remedies that can be pursued simultaneously."
+    },
+    {
+      "question": "What is the time limit for filing a Money Suit in Bangladesh?",
+      "answer": "Under the Limitation Act 1908, a Money Suit must be instituted within three (3) years from the date of debt default, cheque dishonor, or written acknowledgment of liability."
+    },
+    {
+      "question": "What is the maximum court fee for filing a Money Suit?",
+      "answer": "Under the Court-Fees Act 1870, ad valorem court fees for money suits in Bangladesh are statutorily capped at a maximum of approximately 50,000 BDT, regardless of multi-crore claim valuations."
+    },
+    {
+      "question": "What is 'Leave to Defend' in an Order 37 case?",
+      "answer": "Leave to Defend is formal permission granted by the civil court allowing the defendant to contest the suit. It is granted only if the defendant demonstrates genuine, triable factual or legal issues through a sworn affidavit."
+    },
+    {
+      "question": "Which court hears commercial money suits in Dhaka?",
+      "answer": "Claims exceeding 25 Lakh BDT are heard by the Court of the Joint District Judge. Claims between 15 Lakh and 25 Lakh BDT are tried by Senior Assistant Judges, and claims under 15 Lakh BDT by Assistant Judges."
+    },
+    {
+      "question": "Can a civil court send a debtor to prison for failing to pay a money decree?",
+      "answer": "Yes. Under Section 51 and Order 21 Rule 37 CPC, if the judgment debtor possesses financial means but deliberately refuses to pay, the execution court can order civil imprisonment for up to six months."
+    },
+    {
+      "question": "Can foreign companies or overseas creditors file a Money Suit in Bangladesh?",
+      "answer": "Yes. International companies and non-resident creditors can institute money suits in Bangladesh through a duly authorized advocate via an embassy-authenticated Special Power of Attorney."
+    }
+  ],
+  "relatedServiceLinks": [
+    {
+      "title": "Civil Litigation & Commercial Suits",
+      "url": "/services/civil-litigation-lawyer"
+    },
+    {
+      "title": "Company & Corporate Legal Services",
+      "url": "/services/company-corporate-lawyer"
+    },
+    {
+      "title": "Supreme Court Lawyer & Commercial Revisions",
+      "url": "/services/supreme-court-lawyer"
+    },
+    {
+      "title": "Bail & Criminal Defense Services",
+      "url": "/services/bail-lawyer"
+    }
+  ],
+  "lang": "en"
+}

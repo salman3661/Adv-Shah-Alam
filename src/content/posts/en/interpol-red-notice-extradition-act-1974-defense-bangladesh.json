@@ -1,0 +1,191 @@
+{
+  "slug": "interpol-red-notice-extradition-act-1974-defense-bangladesh",
+  "title": "INTERPOL Red Notice in Bangladesh: Extradition Act 1974 & Cross-Border Defense Guide",
+  "category": "Criminal Law",
+  "readTime": "19 minutes",
+  "metaTitle": "INTERPOL Red Notice in Bangladesh: Extradition Defense Guide",
+  "metaDescription": "Facing an INTERPOL Red Notice or extradition request in Bangladesh? Understand Extradition Act 1974 defenses, CCF challenges, and High Court writs.",
+  "keywords": [
+    "interpol red notice bangladesh",
+    "extradition act 1974 bangladesh",
+    "interpol notice removal dhaka lawyer",
+    "cross border extradition defense bangladesh",
+    "extradition treaty bangladesh",
+    "provisional arrest warrant extradition bangladesh",
+    "high court writ extradition defense",
+    "commission for control of interpol files ccf"
+  ],
+  "publishedDate": "2026-11-08",
+  "lastModified": "2026-11-08",
+  "heroIntro": "In an interconnected global financial and political environment, cross-border criminal proceedings, mutual legal assistance requests, and INTERPOL Red Notices have become potent instruments. For dual citizens, Non-Resident Bangladeshis (NRBs), and foreign nationals residing in or visiting Bangladesh, discovering an active INTERPOL Red Notice or facing an extradition request is an acute legal emergency. An INTERPOL Red Notice is not an international arrest warrant; it is an electronic request to law enforcement worldwide to locate and provisionally arrest a person pending extradition. In Bangladesh, formal surrender to foreign nations is strictly governed by the Extradition Act 1974 (Act No. LVIII of 1974) and constitutional safeguards under Articles 31 and 32. This definitive legal guide by Advocate Md. Shah Alam, Supreme Court Advocate and criminal defense practitioner in Uttara and Dhaka, details the statutory extradition framework, substantive legal defenses, INTERPOL CCF deletion petitions, and emergency High Court writ remedies.",
+  "quickAnswer": {
+    "title": "Quick Overview: How Extradition and INTERPOL Red Notices Operate in Bangladesh",
+    "heading": "Quick Overview: How Extradition and INTERPOL Red Notices Operate in Bangladesh",
+    "text": "An INTERPOL Red Notice does not give foreign police the authority to make arrests in Bangladesh. All cross-border extraditions are governed exclusively by the Extradition Act 1974 (Act No. LVIII of 1974). A foreign state must transmit a diplomatic requisition through the Ministry of Foreign Affairs (MoFA) to the Ministry of Home Affairs. The Government may then direct a 1st Class Judicial Magistrate or Metropolitan Magistrate to conduct a formal judicial inquiry. Extradition is barred if: (1) The alleged offence is of a political character (Section 5(1)(a)); (2) The offence does not satisfy the 'dual criminality' test; (3) The prosecution is barred by limitation; or (4) There is insufficient prima facie evidence. To challenge an INTERPOL Red Notice directly, an advocate submits a formal Request for Deletion before the Commission for the Control of INTERPOL's Files (CCF) in Lyon, France, while concurrently seeking bail or Habeas Corpus protection before the High Court Division in Dhaka.",
+    "highlights": [
+      "Statutory Authority: The Extradition Act 1974 (Act No. LVIII of 1974) and the Constitution of Bangladesh (Articles 31, 32, and 102).",
+      "Dual Criminality Mandatory: The alleged conduct must constitute a criminal offence carrying at least 12 months imprisonment under both foreign law and Bangladeshi law.",
+      "Political Offence Exception: Under Section 5(1)(a), extradition is legally prohibited if the requisition is made for political offences or political persecution.",
+      "Judicial Inquiry Required: Executive authorities cannot surrender any individual without a formal magisterial inquiry evaluating prima facie evidence.",
+      "INTERPOL CCF Deletion: Red Notices violating Article 2 or Article 3 of INTERPOL's Constitution (political/religious/military neutrality) can be deleted via CCF petitions.",
+      "High Court Writ Jurisdiction: Article 102 writ petitions protect against arbitrary detention, airport offload, or unlawful extradition attempts.",
+      "No Automatic Extradition: Bangladesh evaluates all requests on statutory merits, reciprocity, and human rights safeguards."
+    ],
+    "points": [
+      "Statutory Authority: The Extradition Act 1974 (Act No. LVIII of 1974) and the Constitution of Bangladesh (Articles 31, 32, and 102).",
+      "Dual Criminality Mandatory: The alleged conduct must constitute a criminal offence carrying at least 12 months imprisonment under both foreign law and Bangladeshi law.",
+      "Political Offence Exception: Under Section 5(1)(a), extradition is legally prohibited if the requisition is made for political offences or political persecution.",
+      "Judicial Inquiry Required: Executive authorities cannot surrender any individual without a formal magisterial inquiry evaluating prima facie evidence.",
+      "INTERPOL CCF Deletion: Red Notices violating Article 2 or Article 3 of INTERPOL's Constitution (political/religious/military neutrality) can be deleted via CCF petitions.",
+      "High Court Writ Jurisdiction: Article 102 writ petitions protect against arbitrary detention, airport offload, or unlawful extradition attempts.",
+      "No Automatic Extradition: Bangladesh evaluates all requests on statutory merits, reciprocity, and human rights safeguards."
+    ]
+  },
+  "toc": [
+    {
+      "id": "statutory-framework-extradition-act-1974",
+      "title": "1. Statutory Framework: The Extradition Act 1974"
+    },
+    {
+      "id": "interpol-red-notice-legal-status",
+      "title": "2. Legal Nature of an INTERPOL Red Notice in Bangladesh"
+    },
+    {
+      "id": "statutory-defenses-against-extradition",
+      "title": "3. Core Statutory Defenses Under Section 5 of the Act"
+    },
+    {
+      "id": "the-dual-criminality-doctrine",
+      "title": "4. The Dual Criminality Requirement & Extradition Offences"
+    },
+    {
+      "id": "extradition-process-flow-matrix",
+      "title": "5. Procedural Matrix: Diplomatic Requisition to Magisterial Inquiry"
+    },
+    {
+      "id": "magisterial-inquiry-evidentiary-standards",
+      "title": "6. Judicial Inquiry Before the Magistrate & Evidence Rules"
+    },
+    {
+      "id": "ccf-deletion-requests-interpol-lyon",
+      "title": "7. Challenging Red Notices Before the CCF in Lyon, France"
+    },
+    {
+      "id": "high-court-writ-habeas-corpus-remedies",
+      "title": "8. High Court Division Remedies: Habeas Corpus & Bail"
+    },
+    {
+      "id": "illustrative-scenario-red-notice-defense",
+      "title": "9. Illustrative Scenario: Defending Against a Malicious Red Notice"
+    },
+    {
+      "id": "talk-to-an-advocate",
+      "title": "10. Talk to an Advocate: Cross-Border Criminal Defense"
+    }
+  ],
+  "sections": [
+    {
+      "id": "statutory-framework-extradition-act-1974",
+      "title": "1. Statutory Framework: The Extradition Act 1974",
+      "content": "<p>In Bangladesh, the surrender of fugitive criminals to foreign states is strictly governed by the <strong>Extradition Act 1974 (Act No. LVIII of 1974)</strong>. No foreign law enforcement agency, including INTERPOL or foreign police detectives, possesses operational police powers on Bangladeshi territory. Any arrest, detention, or extradition process must be executed exclusively by domestic authorities acting under statutory judicial mandates.</p><p>The Extradition Act 1974 distinguishes between two broad international categories:</p><ul><li><strong>Treaty States:</strong> Countries with which Bangladesh has executed bilateral extradition treaties (such as India, the United Arab Emirates, and Thailand) or multilateral conventions notified under Section 3.</li><li><strong>Non-Treaty States:</strong> Countries without formal bilateral treaties. Under Section 4, the Government may, by notified order in the official Gazette, direct that the provisions of the Act apply to a non-treaty state on a reciprocal basis, subject to case-by-case scrutiny.</li></ul><p>Under <strong>Article 31 of the Constitution</strong>, every citizen and person residing in Bangladesh has the inalienable right to be treated solely in accordance with law. Executive authorities cannot surrender an individual through clandestine deportations or informal transfers; doing so constitutes an actionable constitutional violation remediable before the High Court Division.</p>"
+    },
+    {
+      "id": "interpol-red-notice-legal-status",
+      "title": "2. Legal Nature of an INTERPOL Red Notice in Bangladesh",
+      "content": "<p>A critical legal distinction exists between an international arrest warrant and an <strong>INTERPOL Red Notice</strong>. The International Criminal Police Organization (INTERPOL) is an intergovernmental facilitation network, not an international court. A Red Notice is an electronic publication alerting National Central Bureaus (NCBs) worldwide that an individual is wanted by a requesting member state based on a domestic arrest warrant or court sentence.</p><p>Under Bangladeshi jurisprudence:</p><ol><li><strong>Not Self-Executing:</strong> A Red Notice does not confer automatic legal power upon Bangladeshi police to arrest an individual without a domestic judicial warrant issued under local criminal law.</li><li><strong>Administrative Lookout Status:</strong> The NCB Dhaka (operating within the Police Headquarters) receives the alert and may transmit a lookout circular to airport immigration at Hazrat Shahjalal International Airport (HSIA).</li><li><strong>Requirement of Formal Diplomatic Requisition:</strong> For actual extradition, the foreign requesting state must follow the formal diplomatic track established under the Extradition Act 1974, transmitting verified court records through embassy channels.</li></ol><p>If immigration police detain a traveler at Dhaka airport solely on the basis of a Red Notice printout without a domestic warrant, the detention can be challenged immediately through an emergency writ. Review our analysis on <a href=\"/blog/travel-ban-immigration-blacklist-airport-offload-high-court-writ-bangladesh\">airport offloading and travel ban defense in Bangladesh</a>.</p>"
+    },
+    {
+      "id": "statutory-defenses-against-extradition",
+      "title": "3. Core Statutory Defenses Under Section 5 of the Act",
+      "content": "<p>The Extradition Act 1974 incorporates robust statutory defenses that prohibit surrender. Under <strong>Section 5</strong>, an individual cannot be surrendered if any of the following statutory bars apply:</p><ul><li><strong>Political Offence Bar (Section 5(1)(a)):</strong> Surrender is strictly barred if the offence for which extradition is sought is of a political character, or if the requisition is in fact made with a view to try or punish the person for a political offence.</li><li><strong>Prosecution Barred by Limitation (Section 5(1)(b)):</strong> If criminal prosecution in the requesting foreign state has become barred by lapse of time under the law of that state, extradition is prohibited.</li><li><strong>Double Jeopardy (Section 5(1)(c)):</strong> No individual can be surrendered if they have already been tried, convicted, or acquitted by a competent court in Bangladesh or elsewhere for the same offence.</li><li><strong>Pending Domestic Criminal Trial (Section 5(1)(d)):</strong> If the fugitive is undergoing trial or serving a sentence in Bangladesh for a domestic offence, extradition cannot occur until after discharge, acquittal, or completion of the domestic sentence.</li><li><strong>Military Offences:</strong> Offences under purely military law that do not constitute crimes under ordinary criminal law are non-extraditable.</li></ul>"
+    },
+    {
+      "id": "the-dual-criminality-doctrine",
+      "title": "4. The Dual Criminality Requirement & Extradition Offences",
+      "content": "<div style=\"border:1px solid var(--accent);border-radius:var(--radius-lg);padding:1rem 1.25rem;margin:1.5rem 0\"><p><strong>Facing an INTERPOL Red Notice or extradition inquiry in Bangladesh?</strong> Contact our Supreme Court criminal litigation chamber on WhatsApp at <a href=\"https://wa.me/8801955802007?text=Hello%20Advocate%2C%20I%20am%20facing%20an%20INTERPOL%20or%20extradition%20matter%20in%20Bangladesh.\" target=\"_blank\" rel=\"noopener noreferrer\">+880 1955-802007</a>. We provide confidential cross-border defense.</p></div><p>A fundamental principle of international extradition law codified in the Extradition Act 1974 is the <strong>Doctrine of Dual Criminality</strong>. Under Section 2(a) and the First Schedule to the Act, an act constitutes an 'extradition offence' only if the conduct alleged would constitute a criminal crime punishable with imprisonment for at least <strong>one (1) year</strong> under the laws of Bangladesh as well as under the laws of the requesting foreign state.</p><p>This doctrine protects individuals from being extradited for acts that are not criminalized in Bangladesh:</p><ul><li><strong>Civil Debt and Contractual Breaches:</strong> Defaulting on commercial loans or broken business agreements that foreign jurisdictions might classify as criminal fraud cannot justify extradition if the conduct represents a purely civil debt under Bangladeshi law.</li><li><strong>Religious or Social Laws:</strong> Conduct criminalized in foreign jurisdictions under specialized religious, political, or speech-restriction laws that has no parallel in the Penal Code 1860 is legally non-extraditable.</li><li><strong>Strict Scrutiny of Charges:</strong> The inquiring magistrate in Bangladesh must dissect the foreign indictment and compare every statutory element against domestic statutes such as the Penal Code 1860 or the Cyber Security Act.</li></ul>"
+    },
+    {
+      "id": "extradition-process-flow-matrix",
+      "title": "5. Procedural Matrix: Diplomatic Requisition to Magisterial Inquiry",
+      "content": "<p>The statutory sequence of international extradition proceedings in Bangladesh:</p><div style=\"overflow-x:auto;margin:1.5rem 0;\"><table style=\"width:100%;border-collapse:collapse;text-align:left;border:1px solid var(--card-border);\"><thead><tr style=\"background:var(--surface);\"><th style=\"padding:12px;border:1px solid var(--card-border);color:var(--gold);\">Procedural Stage</th><th style=\"padding:12px;border:1px solid var(--card-border);\">Statutory Authority</th><th style=\"padding:12px;border:1px solid var(--card-border);\">Key Legal Standards & Actions</th></tr></thead><tbody><tr><td style=\"padding:12px;border:1px solid var(--card-border);font-weight:600;\">1. Diplomatic Requisition</td><td style=\"padding:12px;border:1px solid var(--card-border);\">Section 6, Extradition Act</td><td style=\"padding:12px;border:1px solid var(--card-border);\">Foreign government submits request via MoFA to Ministry of Home Affairs</td></tr><tr><td style=\"padding:12px;border:1px solid var(--card-border);font-weight:600;\">2. Order for Judicial Inquiry</td><td style=\"padding:12px;border:1px solid var(--card-border);\">Section 7, Extradition Act</td><td style=\"padding:12px;border:1px solid var(--card-border);\">Home Ministry directs a 1st Class Judicial Magistrate to conduct inquiry</td></tr><tr><td style=\"padding:12px;border:1px solid var(--card-border);font-weight:600;\">3. Issuance of Summons / Warrant</td><td style=\"padding:12px;border:1px solid var(--card-border);\">Section 8, Extradition Act</td><td style=\"padding:12px;border:1px solid var(--card-border);\">Magistrate issues warrant to secure attendance of the fugitive</td></tr><tr><td style=\"padding:12px;border:1px solid var(--card-border);font-weight:600;\">4. Judicial Magisterial Inquiry</td><td style=\"padding:12px;border:1px solid var(--card-border);\">Section 9, Extradition Act</td><td style=\"padding:12px;border:1px solid var(--card-border);\">Magistrate evaluates prima facie evidence and hears statutory defenses</td></tr><tr><td style=\"padding:12px;border:1px solid var(--card-border);font-weight:600;\">5. Magisterial Report to Government</td><td style=\"padding:12px;border:1px solid var(--card-border);\">Section 10, Extradition Act</td><td style=\"padding:12px;border:1px solid var(--card-border);\">Magistrate reports whether sufficient prima facie case exists</td></tr><tr><td style=\"padding:12px;border:1px solid var(--card-border);font-weight:600;\">6. High Court Writ / Habeas Corpus</td><td style=\"padding:12px;border:1px solid var(--card-border);\">Article 102, Constitution</td><td style=\"padding:12px;border:1px solid var(--card-border);\">Aggrieved person challenges magisterial findings or detention</td></tr></tbody></table></div>"
+    },
+    {
+      "id": "magisterial-inquiry-evidentiary-standards",
+      "title": "6. Judicial Inquiry Before the Magistrate & Evidence Rules",
+      "content": "<p>When the Ministry of Home Affairs directs a Magistrate to inquire into an extradition request under <strong>Section 7</strong>, the proceedings function as a judicial tribunal governed by the <strong>Code of Criminal Procedure 1898 (CrPC)</strong> and the <strong>Evidence Act 1872</strong>.</p><p>The inquiring Magistrate does not conduct a full trial to determine ultimate guilt or innocence; rather, the standard is whether the foreign evidence would justify committing the accused for trial if the offence had been committed in Bangladesh (the <em>prima facie evidence</em> standard):</p><ul><li><strong>Authentication of Foreign Records:</strong> Under Section 19 of the Act, depositions, statements on oath, and warrants issued abroad are admissible only if they are officially authenticated by the signature and seal of a minister, judge, or diplomatic officer of the requesting state.</li><li><strong>Right to Present Rebuttal Evidence:</strong> Under Section 9(2), the fugitive is entitled to produce evidence establishing that the offence is of a political character or otherwise non-extraditable under Section 5.</li><li><strong>Bail Powers During Inquiry:</strong> The Magistrate possesses statutory discretion to release the fugitive on bail under Section 497 of the CrPC pending the conclusion of the inquiry, taking into account community ties, passport surrender, and local sureties.</li></ul>"
+    },
+    {
+      "id": "ccf-deletion-requests-interpol-lyon",
+      "title": "7. Challenging Red Notices Before the CCF in Lyon, France",
+      "content": "<p>Concurrently with domestic litigation in Dhaka, an effective cross-border strategy requires attacking the validity of the Red Notice at its source. The appropriate international forum is the <strong>Commission for the Control of INTERPOL's Files (CCF)</strong>, an independent oversight body headquartered in Lyon, France.</p><p>Under INTERPOL's Rules on the Processing of Data (RPD), a Red Notice can be deleted if it violates INTERPOL's Constitution:</p><ol><li><strong>Article 3 Violation (Political/Religious Neutrality):</strong> Article 3 of the INTERPOL Constitution strictly forbids the Organization from undertaking any intervention or activities of a political, military, religious, or racial character. If the foreign prosecution is motivated by political dissent, regime change, or business retaliation, the CCF will order full deletion.</li><li><strong>Article 2 Violation (Universal Declaration of Human Rights):</strong> Red Notices based on proceedings where the accused was denied due process, subjected to coerced confessions, or sentenced in absentia without representation violate Article 2.</li><li><strong>Commercial Dispute Abuse:</strong> Foreign business rivals often mischaracterize broken contracts as criminal fraud to leverage INTERPOL for debt recovery. The CCF consistently cancels notices arising from private commercial disputes.</li></ol><p>Our chamber collaborates with international counsel to draft comprehensive CCF deletion requests, submit evidentiary dossiers, and secure provisional blocking while CCF review is pending.</p>"
+    },
+    {
+      "id": "high-court-writ-habeas-corpus-remedies",
+      "title": "8. High Court Division Remedies: Habeas Corpus & Bail",
+      "content": "<p>If an individual is arrested by local police pursuant to an extradition request or provisional arrest warrant, the primary constitutional safeguard is the <strong>High Court Division of the Supreme Court of Bangladesh</strong>.</p><p>Legal remedies before the High Court include:</p><ul><li><strong>Writ of Habeas Corpus (Article 102(2)(b)(i)):</strong> If police detain an individual without immediately producing them before a Magistrate within 24 hours under Section 61 CrPC, or if detention occurs without an order under the Extradition Act, an emergency Habeas Corpus petition compels the state to produce the detainee before the High Court Division.</li><li><strong>Writ of Certiorari / Mandamus (Article 102(1)):</strong> If the Government or inquiring Magistrate unlawfully rejects a statutory defense under Section 5 (such as the political offence bar or dual criminality absence), the High Court Division can quash the inquiry report and prohibit physical surrender.</li><li><strong>Anticipatory Bail & Section 498 Bail:</strong> If an individual learns that an extradition warrant has been forwarded to the Special Branch, an advocate can move an application for Anticipatory Bail before the High Court Division to protect against sudden arrest. Read our guide on <a href=\"/blog/anticipatory-bail-high-court-bangladesh-section-498-crpc-airport-arrest-guide\">anticipatory bail under Section 498 CrPC</a>.</li></ul>"
+    },
+    {
+      "id": "illustrative-scenario-red-notice-defense",
+      "title": "9. Illustrative Scenario: Defending Against a Malicious Red Notice",
+      "content": "<p><em>Illustrative scenario (composite; names and details changed):</em> A dual Bangladeshi-Canadian telecommunications executive residing in Dhaka was formerly a minority shareholder in a Middle Eastern enterprise. Following an internal boardroom dispute, the majority shareholder—closely tied to local ruling authorities in the foreign country—filed a criminal breach of trust complaint. The foreign court issued an ex-parte conviction, and the country's NCB procured an INTERPOL Red Notice.</p><p>While attempting to clear transit at Dhaka airport, immigration officers flagged the executive on the NCB Dhaka lookout system. The executive retained Advocate Md. Shah Alam's chamber, which launched a coordinated defense:</p><ol><li>Moved an emergency Writ Petition under Article 102 before the High Court Division, demonstrating that the dispute was a commercial partnership conflict and that no formal extradition requisition had been submitted through diplomatic channels under Section 6 of the Extradition Act 1974.</li><li>Secured an Ad-Interim Order from the High Court restraining immigration and police authorities from arresting or offloading the petitioner pending examination of the matter.</li><li>Concurrently prepared and filed a formal Request for Deletion before the Commission for the Control of INTERPOL's Files (CCF) in Lyon, France, demonstrating that the foreign prosecution violated Article 3 of INTERPOL's Constitution by weaponizing criminal processes for private debt collection.</li><li>Presented certified corporate contracts and audited financial statements to the CCF, proving the dispute was strictly commercial and that the foreign conviction was obtained in absentia without legal representation.</li><li>The CCF granted the application, ordering the permanent cancellation and deletion of the Red Notice from all INTERPOL databases worldwide, resolving the client's international mobility permanently.</li></ol>"
+    },
+    {
+      "id": "talk-to-an-advocate",
+      "title": "10. Talk to an Advocate: Cross-Border Criminal Defense",
+      "content": "<p>Facing an INTERPOL Red Notice, provisional arrest warrant, or formal extradition requisition in Bangladesh requires sophisticated criminal defense and international legal strategy. Advocate Md. Shah Alam and his Supreme Court litigation team provide expert representation before Magisterial Inquiry Courts, the High Court Division, and international oversight tribunals.</p><div style=\"border:1px solid var(--accent);border-radius:var(--radius-lg);padding:1rem 1.25rem;margin:1.5rem 0\"><p><strong>Need an advocate for this matter in Bangladesh?</strong> Send your documents on WhatsApp to <a href=\"https://wa.me/8801955802007?text=Hello%20Advocate%2C%20I%20read%20your%20article%20and%20need%20advice.\" target=\"_blank\" rel=\"noopener noreferrer\">+880 1955-802007</a>, or call <a href=\"tel:+8801712655546\">+880 1712-655546</a>. Overseas clients: a first document review can be done remotely.</p></div><p>Our principal chamber is located in Uttara, Dhaka, minutes from Hazrat Shahjalal International Airport, alongside our daily litigation chamber at the Supreme Court Bar Association and Dhaka Judge Court.</p>"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is an INTERPOL Red Notice an international arrest warrant?",
+      "answer": "No. An INTERPOL Red Notice is an international alert requesting law enforcement to locate and provisionally arrest a person pending extradition. It does not possess the force of a domestic judicial arrest warrant in Bangladesh."
+    },
+    {
+      "question": "Can Bangladeshi police arrest someone solely based on a Red Notice?",
+      "answer": "Domestic police require an order or warrant issued under the Extradition Act 1974 or the Code of Criminal Procedure. Arresting an individual without a domestic legal warrant can be challenged via Habeas Corpus before the High Court Division."
+    },
+    {
+      "question": "What is the 'political offence' bar in Bangladeshi extradition law?",
+      "answer": "Under Section 5(1)(a) of the Extradition Act 1974, Bangladesh cannot extradite any individual if the offence is of a political character or if the requisition is motivated by political persecution."
+    },
+    {
+      "question": "What does 'dual criminality' mean in an extradition proceeding?",
+      "answer": "Dual criminality means the alleged conduct must constitute a crime punishable with at least 12 months imprisonment under both the foreign country's law and the laws of Bangladesh. If the act is legal in Bangladesh, extradition is barred."
+    },
+    {
+      "question": "How can an INTERPOL Red Notice be permanently removed?",
+      "answer": "A formal Request for Deletion must be submitted to the Commission for the Control of INTERPOL's Files (CCF) in Lyon, France, demonstrating that the notice violates INTERPOL's Constitution regarding political neutrality or human rights."
+    },
+    {
+      "question": "Can an individual get bail during an extradition inquiry in Bangladesh?",
+      "answer": "Yes. Under Section 9 and Section 497 of the CrPC, the inquiring Magistrate possesses discretionary power to grant bail to the fugitive upon furnishing local sureties and surrendering passports."
+    },
+    {
+      "question": "Can Bangladesh extradite its own citizens to a foreign country?",
+      "answer": "Under the Extradition Act 1974 and bilateral treaties, Bangladesh generally retains discretion not to extradite its own citizens, reserving the option to prosecute them domestically under domestic laws instead."
+    },
+    {
+      "question": "What role does the High Court Division play in extradition matters?",
+      "answer": "The High Court Division exercises constitutional oversight under Article 102 via Writs of Habeas Corpus, Certiorari, and Mandamus to review the legality of detention, magisterial inquiry findings, and government surrender orders."
+    }
+  ],
+  "relatedServiceLinks": [
+    {
+      "title": "Supreme Court Lawyer & Writ Petition Services",
+      "url": "/services/supreme-court-lawyer"
+    },
+    {
+      "title": "Criminal Defense & Trial Representation",
+      "url": "/services/criminal-lawyer"
+    },
+    {
+      "title": "Bail & Anticipatory Bail Legal Services",
+      "url": "/services/bail-lawyer"
+    },
+    {
+      "title": "NRB Legal Services & Expatriate Protection",
+      "url": "/nrb-legal-help"
+    }
+  ],
+  "lang": "en"
+}

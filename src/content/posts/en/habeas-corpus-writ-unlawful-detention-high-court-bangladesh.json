@@ -1,0 +1,191 @@
+{
+  "slug": "habeas-corpus-writ-unlawful-detention-high-court-bangladesh",
+  "title": "Habeas Corpus Writ in Bangladesh: Illegal Detention, Article 102 & Police Custody Guide",
+  "category": "Criminal Law",
+  "readTime": "19 minutes",
+  "metaTitle": "Habeas Corpus in Bangladesh: High Court Custody Writ Guide",
+  "metaDescription": "Relative unlawfully detained or held without warrant in Bangladesh? How to file an emergency Habeas Corpus writ under Article 102 of the Constitution.",
+  "keywords": [
+    "habeas corpus writ bangladesh",
+    "unlawful detention high court bangladesh",
+    "article 102 habeas corpus bangladesh",
+    "illegal police custody relief bangladesh",
+    "section 491 crpc directions nature of habeas corpus",
+    "24 hour magistrate production rule bangladesh",
+    "plainclothes arrest illegal detention dhaka",
+    "missing person police custody writ bangladesh"
+  ],
+  "publishedDate": "2026-11-08",
+  "lastModified": "2026-11-08",
+  "heroIntro": "Personal liberty is the bedrock of constitutional democracy. In Bangladesh, when an individual is unlawfully picked up by law enforcement personnel, detained in plainclothes, held incommunicado past the statutory 24-hour limit, or subjected to unauthorized detention by private parties, the legal system provides an immediate constitutional remedy: the **Writ of Habeas Corpus**. Literally translating to 'produce the body', a Habeas Corpus petition under **Article 102(2)(b)(i) of the Constitution of Bangladesh** empowers the High Court Division to direct the state, police departments, and intelligence agencies to produce the detained person before the court and show lawful authority for their confinement. This essential legal guide by Advocate Md. Shah Alam, Supreme Court Advocate and constitutional defense practitioner in Uttara and Dhaka, explains your fundamental protections under Articles 31, 32, and 33, the procedural steps to move the High Court Division, and emergency countermeasures against unlawful custody.",
+  "quickAnswer": {
+    "title": "Quick Overview: How Habeas Corpus Protects Against Unlawful Detention",
+    "heading": "Quick Overview: How Habeas Corpus Protects Against Unlawful Detention",
+    "text": "Under Article 102(2)(b)(i) of the Constitution of Bangladesh, any citizen, relative, or advocate can move the High Court Division on behalf of a detained person to petition for a Writ in the nature of Habeas Corpus. The High Court has constitutional authority to issue an immediate direction commanding the Inspector General of Police (IGP), Rapid Action Battalion (RAB), Special Branch, or local police station to produce the detainee before the court within 24 to 48 hours. If the state cannot establish that the individual is held under a valid judicial warrant or lawful statutory remand, the High Court Division declares the confinement without lawful authority and orders immediate release. Concurrently, Section 491 of the Code of Criminal Procedure 1898 empowers the High Court to issue directions regarding illegal or improper custody.",
+    "highlights": [
+      "Constitutional Anchor: Article 102(2)(b)(i) and Article 33 of the Constitution of the People's Republic of Bangladesh.",
+      "The 24-Hour Production Mandate: Under Article 33(2) and Section 61 CrPC, an arrested person must be produced before a Magistrate within 24 hours.",
+      "Who Can File: Any close relative, spouse, legal representative, or even a concerned citizen as next friend (locus standi is relaxed).",
+      "Immediate High Court Relief: Division Bench can issue an emergency rule nisi and direct the state to produce the detainee before the court.",
+      "Protection from Plainclothes Arrests: Supreme Court directives in 55 DLR (AD) 67 (Blast Case) mandate disclosure of identity and formal GD entry.",
+      "Private Custody Relief: Habeas Corpus is equally available against unlawful confinement of adult individuals or spouses by private actors.",
+      "No Lawful Authority: If arrest lacks a formal warrant or registered FIR, detention is void ab initio under Article 31."
+    ],
+    "points": [
+      "Constitutional Anchor: Article 102(2)(b)(i) and Article 33 of the Constitution of the People's Republic of Bangladesh.",
+      "The 24-Hour Production Mandate: Under Article 33(2) and Section 61 CrPC, an arrested person must be produced before a Magistrate within 24 hours.",
+      "Who Can File: Any close relative, spouse, legal representative, or even a concerned citizen as next friend (locus standi is relaxed).",
+      "Immediate High Court Relief: Division Bench can issue an emergency rule nisi and direct the state to produce the detainee before the court.",
+      "Protection from Plainclothes Arrests: Supreme Court directives in 55 DLR (AD) 67 (Blast Case) mandate disclosure of identity and formal GD entry.",
+      "Private Custody Relief: Habeas Corpus is equally available against unlawful confinement of adult individuals or spouses by private actors.",
+      "No Lawful Authority: If arrest lacks a formal warrant or registered FIR, detention is void ab initio under Article 31."
+    ]
+  },
+  "toc": [
+    {
+      "id": "constitutional-safeguards-articles-31-32-33",
+      "title": "1. Constitutional Safeguards: Articles 31, 32 & 33"
+    },
+    {
+      "id": "article-102-habeas-corpus-jurisdiction",
+      "title": "2. High Court Habeas Corpus Jurisdiction Under Article 102(2)(b)(i)"
+    },
+    {
+      "id": "statutory-24-hour-magistrate-rule",
+      "title": "3. The 24-Hour Production Mandate Under Section 61 CrPC"
+    },
+    {
+      "id": "plainclothes-arrests-and-blast-guidelines",
+      "title": "4. Guidelines on Plainclothes Arrests: The Landmark Blast Case"
+    },
+    {
+      "id": "habeas-corpus-vs-section-491-crpc-matrix",
+      "title": "5. Legal Matrix: Article 102 Habeas Corpus vs. Section 491 CrPC"
+    },
+    {
+      "id": "step-by-step-emergency-filing-protocol",
+      "title": "6. Step-by-Step Emergency Filing Protocol in the High Court"
+    },
+    {
+      "id": "evidentiary-burden-and-state-production",
+      "title": "7. Evidentiary Standards & Court Directives to Produce the Body"
+    },
+    {
+      "id": "habeas-corpus-in-private-custody-cases",
+      "title": "8. Habeas Corpus for Private Confinement & Matrimonial Custody"
+    },
+    {
+      "id": "illustrative-scenario-habeas-corpus-release",
+      "title": "9. Illustrative Scenario: Securing the Release of an Incommunicado Executive"
+    },
+    {
+      "id": "talk-to-an-advocate",
+      "title": "10. Talk to an Advocate: Emergency Constitutional & Habeas Corpus Defense"
+    }
+  ],
+  "sections": [
+    {
+      "id": "constitutional-safeguards-articles-31-32-33",
+      "title": "1. Constitutional Safeguards: Articles 31, 32 & 33",
+      "content": "<p>In Bangladesh, no person can be deprived of life or personal liberty save in accordance with law. This sacrosanct constitutional principle is enshrined in <strong>Article 32</strong> and fortified by <strong>Article 31</strong>, which guarantees that every citizen and resident enjoys the protection of the law and shall be treated only in accordance with law.</p><p>When an individual is arrested, <strong>Article 33 of the Constitution</strong> establishes mandatory safeguards that law enforcement agencies cannot waive or suspend:</p><ul><li><strong>Right to be Informed of Grounds:</strong> Under Article 33(1), no person who is arrested shall be detained in custody without being informed, as soon as may be, of the grounds for such arrest.</li><li><strong>Right to Legal Counsel:</strong> The arrested person has the inviolable constitutional right to consult and be defended by a legal practitioner of their choice from the moment of apprehension.</li><li><strong>The Strict 24-Hour Production Rule:</strong> Under Article 33(2), every person who is arrested and detained in custody must be produced before the nearest Magistrate within a period of <strong>twenty-four (24) hours of such arrest</strong> (excluding the time necessary for the journey from the place of arrest to the court). No detention beyond 24 hours is lawful without the express authority of a Magistrate.</li></ul><p>When state actors detain individuals in secret locations, refuse to acknowledge custody, or hold suspects past 24 hours, the detention is unconstitutional and actionable.</p>"
+    },
+    {
+      "id": "article-102-habeas-corpus-jurisdiction",
+      "title": "2. High Court Habeas Corpus Jurisdiction Under Article 102(2)(b)(i)",
+      "content": "<p>The great constitutional writ that enforces these fundamental safeguards is codified in <strong>Article 102(2)(b)(i) of the Constitution of Bangladesh</strong>. This provision establishes that the High Court Division may, on the application of any person, make an order directing that a person in custody within the local limits of the court's jurisdiction be brought before it so that it may satisfy itself that they are not being held in custody without lawful authority or in an unlawful manner.</p><p>The legal characteristics of a Habeas Corpus petition under Article 102 include:</p><ol><li><strong>Relaxed Rules of Locus Standi:</strong> The petition does not need to be filed by the victim personally. Any spouse, parent, child, sibling, or advocate acting as 'next friend' can sign the affidavit and move the petition before the High Court.</li><li><strong>Priority Cause List Listing:</strong> Because life and liberty are at stake, Division Benches of the High Court Division accord the highest priority to Habeas Corpus petitions, often hearing them on the day of filing.</li><li><strong>Immediate Judicial Inquiry:</strong> If the court finds prima facie merit, it issues a <em>Rule Nisi</em> and directs the Inspector General of Police (IGP) and relevant law enforcement chiefs to produce the person in court on a specific date (often within 24 to 72 hours).</li></ol>"
+    },
+    {
+      "id": "statutory-24-hour-magistrate-rule",
+      "title": "3. The 24-Hour Production Mandate Under Section 61 CrPC",
+      "content": "<p>The constitutional protection under Article 33 is directly mirrored in the statutory framework of the <strong>Code of Criminal Procedure 1898 (CrPC)</strong>. Under <strong>Section 61 of the CrPC</strong>, no police officer shall detain in custody a person arrested without a warrant for a longer period than under all the circumstances of the case is reasonable, and such period shall not, in the absence of a special order of a Magistrate under Section 167, exceed <strong>twenty-four (24) hours</strong>.</p><p>Section 167 of the CrPC governs what must happen when an investigation cannot be completed within 24 hours:</p><ul><li><strong>Mandatory Production Before Magistrate:</strong> The police must physically produce the arrested person before the nearest Judicial Magistrate or Metropolitan Magistrate, accompanied by copies of the case diary (CD).</li><li><strong>Magistrate's Independent Judicial Discretion:</strong> The Magistrate examines whether the arrest was lawful, whether an FIR was recorded, and whether grounds exist for custodial interrogation (remand) or judicial custody.</li><li><strong>Remand Restrictions:</strong> Magistrates cannot grant police remand routinely. If there are allegations of torture or physical coercion, the Magistrate is legally bound to order a medical examination under the Torture and Custodial Death (Prevention) Act 2013.</li></ul><p>Detaining an individual in a police station, intelligence cell, or detective branch office for even 25 hours without presenting them to a Magistrate makes the confinement false imprisonment and unconstitutional detention.</p>"
+    },
+    {
+      "id": "plainclothes-arrests-and-blast-guidelines",
+      "title": "4. Guidelines on Plainclothes Arrests: The Landmark Blast Case",
+      "content": "<div style=\"border:1px solid var(--accent);border-radius:var(--radius-lg);padding:1rem 1.25rem;margin:1.5rem 0\"><p><strong>Has a family member been detained without warrant or held past 24 hours?</strong> Contact our Supreme Court constitutional defense team immediately on WhatsApp at <a href=\"https://wa.me/8801955802007?text=Hello%20Advocate%2C%20a%20family%20member%20has%20been%20unlawfully%20detained%20in%20Bangladesh.\" target=\"_blank\" rel=\"noopener noreferrer\">+880 1955-802007</a>. We file emergency Habeas Corpus petitions before the High Court.</p></div><p>Unlawful detention frequently begins with plainclothes personnel picking up citizens in unmarked microbuses. This abusive practice was addressed by the Appellate Division of the Supreme Court of Bangladesh in the landmark judgment of <strong>Bangladesh v. BLAST & Others</strong>, reported in <strong>55 DLR (AD) 67 (2003)</strong> (commonly known as the <em>Blast Case Guidelines</em>).</p><p>The Supreme Court laid down mandatory operational guidelines that all law enforcement agencies (Police, DB, CID, RAB) must follow when making arrests under Section 54 CrPC:</p><ul><li><strong>Identity Disclosure:</strong> Arresting officers must disclose their identity, show official ID cards, and explain the legal grounds of arrest to the detainee and family members present.</li><li><strong>Immediate Family Notification:</strong> The arresting agency must notify a relative of the arrested person within three (3) hours of apprehension, specifying the location where the person is being held.</li><li><strong>Mandatory General Diary (GD) Entry:</strong> The officer must record a formal GD entry at the local police station immediately upon returning with the arrested person.</li><li><strong>Presence of Legal Counsel:</strong> If interrogation is granted by a Magistrate, it must take place in an interrogation room with glass walls visible to defense advocates, and the detainee must be medically examined before and after interrogation.</li></ul><p>Citing the Blast Case Guidelines in a Habeas Corpus petition provides powerful judicial leverage before the High Court Division.</p>"
+    },
+    {
+      "id": "habeas-corpus-vs-section-491-crpc-matrix",
+      "title": "5. Legal Matrix: Article 102 Habeas Corpus vs. Section 491 CrPC",
+      "content": "<p>A comparative analysis of judicial avenues against unlawful detention in Bangladesh:</p><div style=\"overflow-x:auto;margin:1.5rem 0;\"><table style=\"width:100%;border-collapse:collapse;text-align:left;border:1px solid var(--card-border);\"><thead><tr style=\"background:var(--surface);\"><th style=\"padding:12px;border:1px solid var(--card-border);color:var(--gold);\">Parameter</th><th style=\"padding:12px;border:1px solid var(--card-border);\">Writ of Habeas Corpus (Article 102)</th><th style=\"padding:12px;border:1px solid var(--card-border);\">Directions in Nature of Habeas Corpus (Section 491 CrPC)</th></tr></thead><tbody><tr><td style=\"padding:12px;border:1px solid var(--card-border);font-weight:600;\">Constitutional Authority</td><td style=\"padding:12px;border:1px solid var(--card-border);\">Article 102(2)(b)(i) of the Constitution</td><td style=\"padding:12px;border:1px solid var(--card-border);\">Section 491 of the Code of Criminal Procedure 1898</td></tr><tr><td style=\"padding:12px;border:1px solid var(--card-border);font-weight:600;\">Competent Forum</td><td style=\"padding:12px;border:1px solid var(--card-border);\">Division Bench of High Court Division</td><td style=\"padding:12px;border:1px solid var(--card-border);\">High Court Division (Criminal Miscellaneous Bench)</td></tr><tr><td style=\"padding:12px;border:1px solid var(--card-border);font-weight:600;\">Scope of Relief</td><td style=\"padding:12px;border:1px solid var(--card-border);\">Enforces fundamental constitutional rights; quashes detention orders</td><td style=\"padding:12px;border:1px solid var(--card-border);\">Directs production of illegal custody; sets detainee at liberty</td></tr><tr><td style=\"padding:12px;border:1px solid var(--card-border);font-weight:600;\">Applicability to Private Actors</td><td style=\"padding:12px;border:1px solid var(--card-border);\">Yes, directly applicable to state and private custody</td><td style=\"padding:12px;border:1px solid var(--card-border);\">Yes, frequently used for private confinement and child custody</td></tr><tr><td style=\"padding:12px;border:1px solid var(--card-border);font-weight:600;\">Speed of Interlocutory Relief</td><td style=\"padding:12px;border:1px solid var(--card-border);\">Immediate ex-parte orders to produce within 24–48 hours</td><td style=\"padding:12px;border:1px solid var(--card-border);\">Summary orders to police to rescue and produce</td></tr></tbody></table></div>"
+    },
+    {
+      "id": "step-by-step-emergency-filing-protocol",
+      "title": "6. Step-by-Step Emergency Filing Protocol in the High Court",
+      "content": "<p>When a relative is picked up and police deny holding them, executing a structured legal protocol is vital:</p><ol><li><strong>Lodge an Immediate General Diary (GD):</strong> Visit the local police station having territorial jurisdiction over the place where the abduction or pickup occurred. Demand the recording of a formal General Diary (GD) detailing the time, vehicle license numbers, description of plainclothes personnel, and witnesses. If the OC refuses, dispatch the GD via registered post or email to the Police Commissioner and Superintendent of Police.</li><li><strong>Collect Physical Evidence:</strong> Secure CCTV footage from nearby buildings, toll gates, or commercial shops capturing the pickup. Collect mobile phone call records and eyewitness statements.</li><li><strong>Engage a Supreme Court Advocate:</strong> Transmit the GD copy, CCTV stills, and victim details to your advocate in Dhaka. Our chamber drafts the emergency Habeas Corpus petition within hours.</li><li><strong>Move the High Court Writ Bench:</strong> The advocate files the petition before the designated Division Bench of the High Court Division, seeking an urgent motion hearing.</li><li><strong>Securing the Production Order:</strong> The High Court issues an ad-interim direction to the state respondents (Home Secretary, IGP, Detective Branch, local police) to produce the person in court on a fixed date.</li></ol>"
+    },
+    {
+      "id": "evidentiary-burden-and-state-production",
+      "title": "7. Evidentiary Standards & Court Directives to Produce the Body",
+      "content": "<p>When a Habeas Corpus petition is moved, the evidentiary dynamic shifts dramatically. Once the petitioner demonstrates prima facie that the individual was picked up by state agents or was last seen in their custody, the <strong>burden of proof shifts to the state</strong> to demonstrate:</p><ul><li>The legal statutory authority under which the person was arrested.</li><li>The specific FIR or case number registered against the individual.</li><li>Proof that the individual was physically produced before a Magistrate within 24 hours in compliance with Article 33.</li></ul><p>If state law enforcement agencies submit a false affidavit claiming they do not hold the person, while the petitioner produces CCTV footage or eye-witness affidavits proving otherwise, the High Court Division can initiate criminal perjury proceedings and direct the Judicial Magistrate to conduct a formal judicial inquiry. In numerous cases, the mere filing and listing of a Habeas Corpus petition forces agencies to officially 'show' the arrest and produce the detainee before a magistrate rather than maintaining secret detention.</p>"
+    },
+    {
+      "id": "habeas-corpus-in-private-custody-cases",
+      "title": "8. Habeas Corpus for Private Confinement & Matrimonial Custody",
+      "content": "<p>While Habeas Corpus is predominantly utilized against state detention, it is equally available under Bangladeshi jurisprudence against <strong>private unlawful confinement</strong>.</p><p>Frequent private custody applications include:</p><ul><li><strong>Forcible Confinement of Adult Spouses:</strong> When an adult woman or man is forcibly confined by in-laws, estranged parents, or relatives to prevent them from exercising their personal liberty or marital choice, a Habeas Corpus petition or Section 491 CrPC application directs local police to enter the private premises, rescue the individual, and produce them before the High Court.</li><li><strong>Cross-Border Child Abduction:</strong> When an estranged parent forcibly removes or secretes a minor child away from the lawful custodial parent in violation of court orders or natural custody rights. The High Court exercises <em>parens patriae</em> jurisdiction to ensure the child is produced and their welfare evaluated.</li><li><strong>Forced Labor or Unlawful Confinement:</strong> Individuals held in private detention cells, brick kilns, or unauthorized rehabilitation centers can be liberated through emergency High Court directions.</li></ul>"
+    },
+    {
+      "id": "illustrative-scenario-habeas-corpus-release",
+      "title": "9. Illustrative Scenario: Securing the Release of an Incommunicado Executive",
+      "content": "<p><em>Illustrative scenario (composite; names and details changed):</em> A senior corporate executive at a multinational logistics firm in Uttara, Dhaka, was intercepted by six armed men in plainclothes driving an unmarked microbus while leaving his corporate office. For forty-eight hours, his family received no telephone calls, and local police stations in Uttara claimed they had no record of his arrest or custody.</p><p>Facing acute panic and fearing extra-judicial harm, the executive's spouse retained Advocate Md. Shah Alam's chamber. Our legal team took immediate constitutional action:</p><ol><li>Dispatched an emergency formal complaint to the Inspector General of Police (IGP) and Deputy Commissioner of Police (Uttara Division) demanding immediate tracing of the missing executive.</li><li>Drafted and filed an emergency Writ of Habeas Corpus under Article 102(2)(b)(i) before a Division Bench of the High Court Division, producing CCTV footage from the office building capturing the plainclothes pickup and vehicle details.</li><li>Moved the petition during morning cause list mentions, demonstrating that the detention exceeded 48 hours without production before any magistrate, violating Article 33 and the landmark Blast Case Guidelines (55 DLR (AD) 67).</li><li>The High Court Division passed an emergency order directing the Secretary of Home Affairs, the Chief of the Detective Branch (DB), and the local police OC to produce the executive before the High Court by 10:30 AM the following morning.</li><li>Faced with the binding High Court order, the law enforcement agency immediately produced the executive before a Metropolitan Magistrate, abandoning secret detention, and allowing our chamber to successfully secure his regular bail.</li></ol>"
+    },
+    {
+      "id": "talk-to-an-advocate",
+      "title": "10. Talk to an Advocate: Emergency Constitutional & Habeas Corpus Defense",
+      "content": "<p>When a family member, business executive, or colleague is unlawfully detained, held in secret custody, or denied production before a magistrate in Bangladesh, immediate constitutional litigation before the High Court Division is essential. Advocate Md. Shah Alam and his dedicated team of Supreme Court advocates provide rapid, 24/7 emergency representation before writ benches and magistrate courts.</p><div style=\"border:1px solid var(--accent);border-radius:var(--radius-lg);padding:1rem 1.25rem;margin:1.5rem 0\"><p><strong>Need an advocate for this matter in Bangladesh?</strong> Send your documents on WhatsApp to <a href=\"https://wa.me/8801955802007?text=Hello%20Advocate%2C%20I%20read%20your%20article%20and%20need%20advice.\" target=\"_blank\" rel=\"noopener noreferrer\">+880 1955-802007</a>, or call <a href=\"tel:+8801712655546\">+880 1712-655546</a>. Overseas clients: a first document review can be done remotely.</p></div><p>Our principal chamber is located in Uttara, Dhaka, minutes from Hazrat Shahjalal International Airport, alongside our daily litigation chamber at the Supreme Court Bar Association and Dhaka Judge Court.</p>"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What is a Writ of Habeas Corpus in Bangladesh?",
+      "answer": "A Writ of Habeas Corpus is a constitutional order issued by the High Court Division under Article 102(2)(b)(i) directing authorities to produce a detained person before the court to determine whether their confinement is lawful."
+    },
+    {
+      "question": "How long can police legally hold a person before taking them to court?",
+      "answer": "Under Article 33(2) of the Constitution and Section 61 of the CrPC, police cannot detain an arrested person for more than twenty-four (24) hours without producing them before a competent Judicial Magistrate."
+    },
+    {
+      "question": "Who can file a Habeas Corpus petition in the High Court?",
+      "answer": "Because personal liberty is at stake, the rules of standing are relaxed. Any spouse, parent, child, sibling, advocate, or friend can file a Habeas Corpus petition on behalf of the detained person."
+    },
+    {
+      "question": "Can Habeas Corpus be filed against private individuals who unlawfully confine someone?",
+      "answer": "Yes. Habeas Corpus under Article 102 and Section 491 CrPC is directly enforceable against private parties who unlawfully confine adult individuals, spouses, or minor children against their will."
+    },
+    {
+      "question": "What are the Blast Case Guidelines regarding plainclothes arrests?",
+      "answer": "In 55 DLR (AD) 67, the Supreme Court mandated that arresting officers must display official identity, notify family members within 3 hours, record an immediate GD, and ensure access to legal counsel."
+    },
+    {
+      "question": "How quickly can the High Court hear a Habeas Corpus petition?",
+      "answer": "In genuine emergency cases involving missing persons or secret custody, an advocate can mention the matter and obtain a hearing before a High Court Division Bench on the very same day the petition is prepared."
+    },
+    {
+      "question": "What happens if law enforcement denies having the person in custody?",
+      "answer": "If authorities deny custody, the High Court can examine CCTV evidence, telephone tracking, and witness affidavits, and order an independent judicial inquiry by a District Judge or Chief Judicial Magistrate."
+    },
+    {
+      "question": "Can an overseas family member file a Habeas Corpus petition from abroad?",
+      "answer": "Yes. Overseas relatives in the USA, UK, Canada, or Australia can retain a Supreme Court advocate remotely to draft, swear, and move a Habeas Corpus petition before the High Court Division in Dhaka."
+    }
+  ],
+  "relatedServiceLinks": [
+    {
+      "title": "Supreme Court Lawyer & Writ Petition Services",
+      "url": "/services/supreme-court-lawyer"
+    },
+    {
+      "title": "Criminal Defense & Trial Representation",
+      "url": "/services/criminal-lawyer"
+    },
+    {
+      "title": "Bail & Anticipatory Bail Legal Services",
+      "url": "/services/bail-lawyer"
+    },
+    {
+      "title": "NRB Legal Services & Expatriate Protection",
+      "url": "/nrb-legal-help"
+    }
+  ],
+  "lang": "en"
+}

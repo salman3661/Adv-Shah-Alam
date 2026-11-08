@@ -1,0 +1,191 @@
+{
+  "slug": "enforcing-foreign-arbitral-awards-bangladesh-arbitration-act",
+  "title": "Enforcing Foreign Arbitral Awards in Bangladesh: Arbitration Act 2001 & Execution Guide",
+  "category": "Corporate Law",
+  "readTime": "19 minutes",
+  "metaTitle": "Enforcing Foreign Arbitral Awards in Bangladesh: Legal Guide",
+  "metaDescription": "Enforce international arbitral awards in Bangladesh under Arbitration Act 2001: New York Convention rules, District Court execution, and defenses.",
+  "keywords": [
+    "enforcement of foreign arbitral awards bangladesh",
+    "arbitration act 2001 bangladesh",
+    "new york convention enforcement dhaka",
+    "foreign commercial award execution bangladesh",
+    "section 45 arbitration act 2001",
+    "challenge foreign arbitral award bangladesh",
+    "international commercial arbitration dhaka",
+    "money execution case foreign award"
+  ],
+  "publishedDate": "2026-11-08",
+  "lastModified": "2026-11-08",
+  "heroIntro": "In international cross-border trade, foreign direct investment, and large-scale infrastructure procurement in Bangladesh, dispute resolution clauses predominantly mandate international commercial arbitration. Whether proceedings are conducted under the rules of the International Chamber of Commerce (ICC), Singapore International Arbitration Centre (SIAC), London Court of International Arbitration (LCIA), or UNCITRAL, securing a favorable arbitral award abroad is only half the battle. If the defaulting Bangladeshi counterparty or corporate debtor refuses to pay voluntarily, the award creditor must enforce the award against local commercial assets, bank balances, or real estate in Bangladesh. Bangladesh is a signatory to the 1958 New York Convention on the Recognition and Enforcement of Foreign Arbitral Awards, codified into domestic law through the Arbitration Act 2001 (Act No. I of 2001). This authoritative legal guide by Advocate Md. Shah Alam, Supreme Court Advocate and commercial arbitration practitioner in Dhaka, explains the statutory enforcement framework, execution mechanics, grounds of refusal, and High Court precedents.",
+  "quickAnswer": {
+    "title": "Quick Overview: How Foreign Arbitral Awards Are Enforced in Bangladesh",
+    "heading": "Quick Overview: How Foreign Arbitral Awards Are Enforced in Bangladesh",
+    "text": "Under Section 45 of the Arbitration Act 2001 (Act No. I of 2001), any foreign arbitral award made in a country that is a signatory to the 1958 New York Convention is recognized as binding and enforceable in Bangladesh as if it were a decree of a domestic civil court. To enforce an award, the foreign award creditor files an Execution Petition under Section 45 before the Court of the District Judge having territorial and financial jurisdiction over the debtor's assets. Under Section 46, a Bangladeshi court can refuse enforcement only on strict, exhaustive grounds: (a) incapacity of parties; (b) invalid arbitration agreement; (c) lack of proper notice or denial of natural justice; (d) award exceeding tribunal scope; (e) non-binding or set-aside award; (f) dispute not arbitrable under Bangladeshi law; or (g) enforcement contrary to the public policy of Bangladesh. Once recognized, the District Court executes the award under Order 21 of the Code of Civil Procedure 1908 by attaching bank accounts, seizing assets, or detaining judgment debtors.",
+    "highlights": [
+      "Governing Statute: The Arbitration Act 2001 (Act No. I of 2001), Chapter X (Sections 45, 46, and 47).",
+      "Treaty Basis: The 1958 New York Convention on the Recognition and Enforcement of Foreign Arbitral Awards.",
+      "Enforcing Forum: Court of the District Judge having territorial and subject-matter jurisdiction over the debtor's assets.",
+      "Treated as Civil Decree: Under Section 45, recognized foreign awards are executed directly as decrees of a domestic civil court.",
+      "Exhaustive Refusal Grounds: Section 46 codifies narrow refusal grounds (public policy, natural justice, invalid clause); courts cannot review merits.",
+      "Execution Mechanics: Executed under Order 21 of the Code of Civil Procedure 1908 through bank garnishment, asset auction, and civil arrest.",
+      "High Court Oversight: Revision petitions lie before the High Court Division under Section 115 CPC against execution orders."
+    ],
+    "points": [
+      "Governing Statute: The Arbitration Act 2001 (Act No. I of 2001), Chapter X (Sections 45, 46, and 47).",
+      "Treaty Basis: The 1958 New York Convention on the Recognition and Enforcement of Foreign Arbitral Awards.",
+      "Enforcing Forum: Court of the District Judge having territorial and subject-matter jurisdiction over the debtor's assets.",
+      "Treated as Civil Decree: Under Section 45, recognized foreign awards are executed directly as decrees of a domestic civil court.",
+      "Exhaustive Refusal Grounds: Section 46 codifies narrow refusal grounds (public policy, natural justice, invalid clause); courts cannot review merits.",
+      "Execution Mechanics: Executed under Order 21 of the Code of Civil Procedure 1908 through bank garnishment, asset auction, and civil arrest.",
+      "High Court Oversight: Revision petitions lie before the High Court Division under Section 115 CPC against execution orders."
+    ]
+  },
+  "toc": [
+    {
+      "id": "statutory-architecture-arbitration-act-2001",
+      "title": "1. Statutory Architecture: Arbitration Act 2001 & New York Convention"
+    },
+    {
+      "id": "section-45-recognition-and-enforcement-mandate",
+      "title": "2. Section 45: Legal Status of Foreign Awards as Court Decrees"
+    },
+    {
+      "id": "jurisdiction-and-filing-before-district-judge",
+      "title": "3. Filing Protocol: The Court of the District Judge"
+    },
+    {
+      "id": "exhaustive-grounds-for-refusal-section-46",
+      "title": "4. Section 46 Grounds: When Can a Bangladeshi Court Refuse Enforcement?"
+    },
+    {
+      "id": "foreign-award-enforcement-matrix",
+      "title": "5. Procedural Matrix: ICC/SIAC Award to Asset Realization"
+    },
+    {
+      "id": "the-public-policy-defense-in-bangladesh",
+      "title": "6. The Public Policy Defense: Supreme Court Judicial Interpretations"
+    },
+    {
+      "id": "execution-mechanisms-under-order-21-cpc",
+      "title": "7. Execution Mechanics: Bank Attachment, Garnishee & Asset Auctions"
+    },
+    {
+      "id": "repatriating-recovered-funds-overseas",
+      "title": "8. Repatriating Recovered Funds: Bangladesh Bank Guidelines"
+    },
+    {
+      "id": "illustrative-scenario-siac-award-enforcement",
+      "title": "9. Illustrative Scenario: Recovering $1.4 Million SIAC Award in Dhaka"
+    },
+    {
+      "id": "talk-to-an-advocate",
+      "title": "10. Talk to an Advocate: International Commercial Arbitration Defense"
+    }
+  ],
+  "sections": [
+    {
+      "id": "statutory-architecture-arbitration-act-2001",
+      "title": "1. Statutory Architecture: Arbitration Act 2001 & New York Convention",
+      "content": "<p>In commercial transactions involving international trade, maritime shipping, petroleum concessions, and foreign joint ventures in Bangladesh, international arbitration provides neutrality and specialized adjudication. Bangladesh acceded to the <strong>United Nations Convention on the Recognition and Enforcement of Foreign Arbitral Awards 1958 (the New York Convention)</strong> with reciprocity reservations.</p><p>To modernize domestic arbitration and align with the UNCITRAL Model Law, Parliament enacted the <strong>Arbitration Act 2001 (Act No. I of 2001)</strong>, repealing the colonial Arbitration Act 1940 and the Arbitration (Protocol and Convention) Act 1937. Chapter X of the Act (Sections 45 to 47) establishes an integrated legal regime for recognizing and enforcing foreign arbitral awards.</p><p>Under Section 2(k), a 'foreign arbitral award' is defined as an award made in pursuance of an arbitration agreement in the territory of any country other than Bangladesh, which has been declared by the Government by notification in the official Gazette to be a reciprocating territory under the New York Convention. Major commercial trading partners—including Singapore, the United Kingdom, the United States, China, India, Germany, and Switzerland—qualify as recognized reciprocating jurisdictions.</p>"
+    },
+    {
+      "id": "section-45-recognition-and-enforcement-mandate",
+      "title": "2. Section 45: Legal Status of Foreign Awards as Court Decrees",
+      "content": "<p>The core operative provision governing execution is <strong>Section 45 of the Arbitration Act 2001</strong>. Section 45(1) establishes a mandatory legal presumption: any foreign arbitral award that is enforceable under this Chapter shall be treated as binding for all purposes on the persons as between whom it was made, and may accordingly be relied on by any of those persons by way of defense, set-off, or otherwise in any legal proceedings in Bangladesh.</p><p>Under <strong>Section 45(2)</strong>, where a court is satisfied that a foreign arbitral award is enforceable under this Chapter, the award shall be <strong>enforced under the Code of Civil Procedure 1908 in the same manner as if it were a decree of the court</strong>.</p><p>This statutory provision provides immense commercial advantages to international creditors:</p><ul><li><strong>No Re-Trial on the Merits:</strong> The Bangladeshi court does not sit as a court of appeal over the arbitral tribunal. It cannot review the evidence, substitute its own interpretation of contracts, or re-evaluate damages awarded by the foreign tribunal.</li><li><strong>Direct Execution:</strong> The award creditor does not need to institute a de novo lawsuit; they directly file for execution, bypassing years of civil trial stages.</li><li><strong>Preclusion of Parallel Civil Suits:</strong> If a local debtor attempts to file an exploratory civil suit in an Assistant Judge Court to evade an international arbitral award, the court is bound to dismiss or stay the suit under Section 45.</li></ul>"
+    },
+    {
+      "id": "jurisdiction-and-filing-before-district-judge",
+      "title": "3. Filing Protocol: The Court of the District Judge",
+      "content": "<p>Under the Arbitration Act 2001, original jurisdiction to enforce a foreign arbitral award resides exclusively with the <strong>Court of the District Judge</strong> having territorial jurisdiction over the location where the judgment debtor resides, carries on business, or where movable or immovable assets of the debtor are situated.</p><p>Under Section 47 of the Act, the applicant award creditor must file an Execution Application accompanied by authenticated evidentiary documents:</p><ol><li><strong>Duly Authenticated Original Award:</strong> The original physical arbitral award signed by the tribunal, or a certified copy thereof authenticated in the manner required by the law of the country in which it was made.</li><li><strong>Original Arbitration Agreement:</strong> The original commercial contract containing the arbitration agreement or submission clause, or a certified copy thereof.</li><li><strong>Certified Translation:</strong> If the award or agreement is in a language other than English or Bengali, a certified translation produced by an official translator or diplomatic representative.</li><li><strong>Schedule of Debtor Assets:</strong> A detailed schedule identifying the debtor's commercial bank accounts, factory land, shares, or corporate receivables within the district.</li></ol>"
+    },
+    {
+      "id": "exhaustive-grounds-for-refusal-section-46",
+      "title": "4. Section 46 Grounds: When Can a Bangladeshi Court Refuse Enforcement?",
+      "content": "<div style=\"border:1px solid var(--accent);border-radius:var(--radius-lg);padding:1rem 1.25rem;margin:1.5rem 0\"><p><strong>Seeking to enforce or defend against a foreign arbitral award in Bangladesh?</strong> Contact our Supreme Court commercial litigation chamber on WhatsApp at <a href=\"https://wa.me/8801955802007?text=Hello%20Advocate%2C%20I%20need%20legal%20representation%20regarding%20a%20foreign%20arbitral%20award.\" target=\"_blank\" rel=\"noopener noreferrer\">+880 1955-802007</a>. We represent international award creditors and corporate debtors.</p></div><p>Enforcement of a New York Convention award is mandatory unless the judgment debtor proves one of the narrow, exhaustive grounds specified in <strong>Section 46(1) of the Arbitration Act 2001</strong>:</p><ul><li><strong>Incapacity of Parties:</strong> A party to the arbitration agreement was under some legal incapacity under the law applicable to them.</li><li><strong>Invalidity of Agreement:</strong> The arbitration agreement is invalid under the governing law chosen by the parties, or failing any indication thereon, under the law of the country where the award was made.</li><li><strong>Denial of Due Process:</strong> The debtor was not given proper notice of the appointment of the arbitrator or of the arbitral proceedings, or was otherwise unable to present their case.</li><li><strong>Award Exceeding Scope:</strong> The award deals with a difference not contemplated by or not falling within the terms of the submission to arbitration, or contains decisions on matters beyond the scope of arbitration.</li><li><strong>Improper Tribunal Composition:</strong> The composition of the arbitral authority or arbitral procedure was not in accordance with the agreement of the parties.</li><li><strong>Award Not Binding or Suspended:</strong> The award has not yet become binding on the parties, or has been formally set aside or suspended by a competent court of the country in which it was made.</li></ul>"
+    },
+    {
+      "id": "foreign-award-enforcement-matrix",
+      "title": "5. Procedural Matrix: ICC/SIAC Award to Asset Realization",
+      "content": "<p>The execution pathway for foreign arbitral awards in Bangladesh:</p><div style=\"overflow-x:auto;margin:1.5rem 0;\"><table style=\"width:100%;border-collapse:collapse;text-align:left;border:1px solid var(--card-border);\"><thead><tr style=\"background:var(--surface);\"><th style=\"padding:12px;border:1px solid var(--card-border);color:var(--gold);\">Procedural Step</th><th style=\"padding:12px;border:1px solid var(--card-border);\">Statutory Provision</th><th style=\"padding:12px;border:1px solid var(--card-border);\">Key Actions & Timelines</th></tr></thead><tbody><tr><td style=\"padding:12px;border:1px solid var(--card-border);font-weight:600;\">1. Foreign Award Rendered</td><td style=\"padding:12px;border:1px solid var(--card-border);\">Foreign Arbitral Rules (ICC/SIAC)</td><td style=\"padding:12px;border:1px solid var(--card-border);\">Tribunal issues final award; authentic certified copies procured</td></tr><tr><td style=\"padding:12px;border:1px solid var(--card-border);font-weight:600;\">2. Filing Execution Petition</td><td style=\"padding:12px;border:1px solid var(--card-border);\">Section 45 & 47, Arbitration Act</td><td style=\"padding:12px;border:1px solid var(--card-border);\">Petition filed before District Judge; notice issued to debtor</td></tr><tr><td style=\"padding:12px;border:1px solid var(--card-border);font-weight:600;\">3. Adjudication of Objections</td><td style=\"padding:12px;border:1px solid var(--card-border);\">Section 46, Arbitration Act</td><td style=\"padding:12px;border:1px solid var(--card-border);\">District Court examines Section 46 refusal grounds; rejects frivolous delay</td></tr><tr><td style=\"padding:12px;border:1px solid var(--card-border);font-weight:600;\">4. Enforceability Decree</td><td style=\"padding:12px;border:1px solid var(--card-border);\">Section 45(2), Arbitration Act</td><td style=\"padding:12px;border:1px solid var(--card-border);\">Court declares award enforceable as a domestic civil decree</td></tr><tr><td style=\"padding:12px;border:1px solid var(--card-border);font-weight:600;\">5. Attachment & Auction</td><td style=\"padding:12px;border:1px solid var(--card-border);\">Order 21, Code of Civil Procedure</td><td style=\"padding:12px;border:1px solid var(--card-border);\">Bank accounts attached; debtor properties auctioned; funds realized</td></tr><tr><td style=\"padding:12px;border:1px solid var(--card-border);font-weight:600;\">6. Fund Repatriation</td><td style=\"padding:12px;border:1px solid var(--card-border);\">Foreign Exchange Regulation Act 1947</td><td style=\"padding:12px;border:1px solid var(--card-border);\">Authorized dealer bank transmits funds abroad via Bangladesh Bank approval</td></tr></tbody></table></div>"
+    },
+    {
+      "id": "the-public-policy-defense-in-bangladesh",
+      "title": "6. The Public Policy Defense: Supreme Court Judicial Interpretations",
+      "content": "<p>In addition to party-invoked defenses, <strong>Section 46(1)(b)(ii)</strong> empowers the court on its own motion to refuse enforcement if it finds that the enforcement of the award would be <strong>contrary to the public policy of Bangladesh</strong>, or if the subject-matter of the dispute is not capable of settlement by arbitration under domestic law.</p><p>Local judgment debtors frequently raise the 'public policy' defense as a generic shield. However, the Supreme Court of Bangladesh has adopted a modern, restrictive interpretation of public policy aligned with international commercial standards:</p><ul><li><strong>Narrow Construction:</strong> The High Court Division has repeatedly affirmed that public policy cannot be equated with mere disagreement on legal technicalities. Enforcement violates public policy only if it breaches fundamental principles of Bangladeshi law, involves bribery, fraud, corruption, or violates national sovereignty.</li><li><strong>Foreign Exchange Regulations:</strong> An award directing payment in foreign currency does not violate public policy. Bangladeshi courts routinely enforce foreign currency decrees, directing payment in equivalent Bangladesh Taka (BDT) or through authorized banking channels under central bank oversight.</li><li><strong>Prohibition on Merits Review:</strong> Local courts are barred from reopening the evidentiary merits of the case under the guise of public policy scrutiny.</li></ul>"
+    },
+    {
+      "id": "execution-mechanisms-under-order-21-cpc",
+      "title": "7. Execution Mechanics: Bank Attachment, Garnishee & Asset Auctions",
+      "content": "<p>Once the District Judge determines that the foreign award is enforceable under Section 45, the court proceeds directly to <strong>execution proceedings governed by Order 21 of the Code of Civil Procedure 1908 (CPC)</strong>.</p><p>Key statutory execution mechanisms available to the award creditor include:</p><ol><li><strong>Attachment of Commercial Bank Accounts:</strong> The court issues an urgent prohibitory order to the debtor's commercial banks under Order 21 Rule 46, freezing balances and directing bank managers to deposit funds into the court registry.</li><li><strong>Garnishee Proceedings:</strong> If third-party corporations or government agencies owe receivables or contract payments to the judgment debtor, the court issues garnishee orders directing those third parties to pay receivables directly to the decree holder.</li><li><strong>Attachment and Public Auction of Real Estate:</strong> Under Order 21 Rule 54 and Rule 66, commercial offices, factories, and lands owned by the debtor are attached, valued by court-appointed commissioners, and sold at public auction to satisfy the decretal debt.</li><li><strong>Civil Arrest and Detention:</strong> Under Section 51 and Order 21 Rule 37 CPC, if a corporate director or debtor possessing sufficient financial means wilfully refuses to satisfy the decree, the court possesses powers to order civil detention in prison.</li></ol>"
+    },
+    {
+      "id": "repatriating-recovered-funds-overseas",
+      "title": "8. Repatriating Recovered Funds: Bangladesh Bank Guidelines",
+      "content": "<p>For international award creditors, successfully executing an award in Dhaka culminates in the repatriation of recovered funds abroad. Cross-border fund remittances are governed by the <strong>Foreign Exchange Regulation Act 1947 (Act No. VII of 1947)</strong> and the Guidelines for Foreign Exchange Transactions issued by Bangladesh Bank.</p><p>The statutory remittance process requires:</p><ul><li><strong>Certified Copy of Court Execution Order:</strong> An authenticated copy of the District Court's final satisfaction order and payment disbursement decree.</li><li><strong>National Board of Revenue (NBR) Tax Clearance:</strong> Proof that any applicable source tax deductions or capital tax assessments have been satisfied or exempted under Double Taxation Avoidance Agreements (DTAA).</li><li><strong>Authorized Dealer Bank Application:</strong> The foreign creditor's advocate coordinates with an Authorized Dealer (AD) scheduled commercial bank to compile Form TM and submit a formal outward remittance application to Bangladesh Bank.</li><li><strong>Central Bank Approval:</strong> Bangladesh Bank verifies that the remittance arises from a judicial execution decree under the Arbitration Act 2001 and issues statutory clearance for outward foreign currency wire transfer.</li></ul>"
+    },
+    {
+      "id": "illustrative-scenario-siac-award-enforcement",
+      "title": "9. Illustrative Scenario: Recovering $1.4 Million SIAC Award in Dhaka",
+      "content": "<p><em>Illustrative scenario (composite; names and details changed):</em> A Singaporean commodity trading corporation supplied industrial raw materials to a large conglomerate in Dhaka. The Bangladeshi buyer defaulted on payment, citing foreign exchange fluctuations. The Singaporean corporation initiated arbitration under SIAC rules in Singapore as stipulated in the sales contract. The SIAC sole arbitrator rendered a final award of $1.4 Million USD plus interest in favor of the Singaporean creditor.</p><p>When the local debtor refused to honor the award, the Singaporean company retained Advocate Md. Shah Alam's chamber. Our cross-border litigation team executed a disciplined enforcement strategy:</p><ol><li>Obtained certified, apostilled copies of the final SIAC award and original sales agreement and filed an Execution Petition under Section 45 of the Arbitration Act 2001 before the Court of the District Judge, Dhaka.</li><li>The debtor filed objections under Section 46, claiming the award violated 'public policy' due to foreign exchange controls and alleging lack of proper notice. Our advocates dismantled these claims, demonstrating that the debtor had fully participated in the Singapore hearings through international counsel.</li><li>The District Judge dismissed the debtor's objections, declaring the SIAC award enforceable as a domestic civil decree.</li><li>Concurrently filed an emergency application under Order 21 Rule 46 CPC for garnishee attachment of the debtor's export letter of credit receivables across three commercial banks in Motijheel and Gulshan.</li><li>Faced with frozen commercial operations and imminent auction of its factory assets, the debtor settled the judgment in full, depositing the BDT equivalent of $1.4 Million into the court registry, which was subsequently repatriated to Singapore via Bangladesh Bank authorization.</li></ol>"
+    },
+    {
+      "id": "talk-to-an-advocate",
+      "title": "10. Talk to an Advocate: International Commercial Arbitration Defense",
+      "content": "<p>Enforcing foreign arbitral awards or defending against international arbitration claims in Bangladesh demands specialized knowledge of the Arbitration Act 2001, civil execution procedure, and foreign exchange regulations. Advocate Md. Shah Alam and his corporate arbitration team provide strategic representation before District Courts, the High Court Division, and international tribunals.</p><div style=\"border:1px solid var(--accent);border-radius:var(--radius-lg);padding:1rem 1.25rem;margin:1.5rem 0\"><p><strong>Need an advocate for this matter in Bangladesh?</strong> Send your documents on WhatsApp to <a href=\"https://wa.me/8801955802007?text=Hello%20Advocate%2C%20I%20read%20your%20article%20and%20need%20advice.\" target=\"_blank\" rel=\"noopener noreferrer\">+880 1955-802007</a>, or call <a href=\"tel:+8801712655546\">+880 1712-655546</a>. Overseas clients: a first document review can be done remotely.</p></div><p>Our principal chamber is located in Uttara, Dhaka, minutes from Hazrat Shahjalal International Airport, alongside our daily litigation chamber at the Supreme Court Bar Association and Dhaka Judge Court.</p>"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Can a foreign arbitral award be directly enforced in Bangladesh?",
+      "answer": "Yes. Under Section 45 of the Arbitration Act 2001, an arbitral award made in a New York Convention signatory state is recognized as binding and executed as if it were a decree of a domestic civil court."
+    },
+    {
+      "question": "Which court in Bangladesh has jurisdiction to enforce a foreign arbitral award?",
+      "answer": "Original jurisdiction resides exclusively with the Court of the District Judge having territorial and financial jurisdiction over the location where the debtor resides or where debtor assets are situated."
+    },
+    {
+      "question": "Can a Bangladeshi court re-examine the merits of a foreign arbitral award?",
+      "answer": "No. Local courts are strictly prohibited from reviewing the evidentiary merits, contractual interpretations, or financial calculations of the foreign arbitral tribunal. Scrutiny is limited to Section 46 refusal grounds."
+    },
+    {
+      "question": "What is the time limit for enforcing a foreign arbitral award in Bangladesh?",
+      "answer": "Under the Limitation Act 1908, execution applications should ideally be filed within three (3) years from the date the award becomes final and binding under its governing foreign law."
+    },
+    {
+      "question": "Can a foreign award creditor attach commercial bank accounts in Dhaka?",
+      "answer": "Yes. Under Order 21 of the Code of Civil Procedure 1908, the District Court possesses full statutory powers to attach debtor bank accounts, seize commercial assets, and auction real estate to satisfy the award."
+    },
+    {
+      "question": "What constitutes a 'public policy' violation under Section 46?",
+      "answer": "Under Supreme Court precedents, public policy is narrowly construed to include bribery, fraud, corruption, fundamental procedural unfairness, or violations of national sovereignty, rather than routine legal disagreements."
+    },
+    {
+      "question": "Can recovered funds be repatriated out of Bangladesh in foreign currency?",
+      "answer": "Yes. Following execution satisfaction in court, an Authorized Dealer commercial bank applies to Bangladesh Bank under the Foreign Exchange Regulation Act 1947 to obtain clearance for outward foreign remittance."
+    },
+    {
+      "question": "Can a foreign company instruct a Supreme Court advocate remotely?",
+      "answer": "Yes. International award creditors can retain a Supreme Court advocate remotely through an embassy-authenticated Power of Attorney to draft, file, and execute award proceedings in Dhaka without traveling."
+    }
+  ],
+  "relatedServiceLinks": [
+    {
+      "title": "Company & Corporate Legal Services",
+      "url": "/services/company-corporate-lawyer"
+    },
+    {
+      "title": "Civil Litigation & Commercial Suits",
+      "url": "/services/civil-litigation-lawyer"
+    },
+    {
+      "title": "Supreme Court Lawyer & Commercial Revisions",
+      "url": "/services/supreme-court-lawyer"
+    },
+    {
+      "title": "NRB Legal Services & Foreign Investment Support",
+      "url": "/nrb-legal-help"
+    }
+  ],
+  "lang": "en"
+}

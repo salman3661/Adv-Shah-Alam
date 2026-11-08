@@ -1,0 +1,192 @@
+{
+  "slug": "money-laundering-act-2012-bank-account-freeze-defense-bangladesh",
+  "bnSlug": "money-laundering-ain-2012-bank-account-freeze-protikar-2026",
+  "title": "Bank Account Freeze in Bangladesh: BFIU Rules, Money Laundering Act & Court Remedies",
+  "category": "Criminal Law",
+  "readTime": "19 minutes",
+  "metaTitle": "Bank Account Freeze in Bangladesh: BFIU Rules & Court Relief",
+  "metaDescription": "Bank account frozen by BFIU or ACC in Bangladesh? Learn your legal rights under Money Laundering Prevention Act 2012 and High Court writ remedies.",
+  "keywords": [
+    "bank account freeze bangladesh",
+    "bfiu account freeze rules",
+    "money laundering act 2012 bangladesh",
+    "how to unfreeze bank account in bangladesh",
+    "section 23 money laundering prevention act",
+    "high court writ bank freeze bangladesh",
+    "anti corruption commission account freeze",
+    "suspicious transaction report nrb bank freeze"
+  ],
+  "publishedDate": "2026-11-08",
+  "lastModified": "2026-11-08",
+  "heroIntro": "Discovering that your commercial or personal bank account has been suddenly frozen in Bangladesh without advance warning is a critical operational crisis for businesses, overseas investors, and Non-Resident Bangladeshis (NRBs). Cheques bounce, payrolls halt, and inward trade remittances are blocked. In most cases, these freezes are initiated by the Bangladesh Financial Intelligence Unit (BFIU) or the Anti-Corruption Commission (ACC) under the Money Laundering Prevention Act 2012 (Act No. V of 2012). However, statutory agencies must strictly adhere to statutory time limits and due process. Indefinite administrative freezes without court confirmation violate constitutional protections under Articles 31 and 42. This exhaustive legal guide by Advocate Md. Shah Alam, Supreme Court Advocate and criminal litigation practitioner in Uttara and Dhaka Court, explains the legal mechanisms of account freezes, statutory limitation windows, and actionable procedures to unfreeze funds through the Special Judge Court and High Court Division.",
+  "quickAnswer": {
+    "title": "Quick Overview: How to Unfreeze a Bank Account in Bangladesh",
+    "heading": "Quick Overview: How to Unfreeze a Bank Account in Bangladesh",
+    "text": "Under Section 23(1)(c) of the Money Laundering Prevention Act 2012, the Bangladesh Financial Intelligence Unit (BFIU) can issue an initial emergency freezing order for up to 30 days based on a Suspicious Transaction Report (STR). The BFIU may extend this order in increments up to a strict maximum of six (6) months. To freeze an account beyond six months, the state or investigatory agency (such as the ACC or CID) must obtain a formal judicial attachment order from the Senior Special Judge Court under Section 14 of the Act. If your account remains frozen past statutory limits without a court order, or if legitimate business remittances have been arbitrarily immobilized, you can file a formal De-Freezing Petition before the Special Judge or institute a Writ Petition under Article 102 of the Constitution before the High Court Division to quash the unlawful embargo.",
+    "highlights": [
+      "Statutory Authority: Money Laundering Prevention Act 2012 (Act No. V of 2012), Sections 14, 23, and 26.",
+      "BFIU 30-Day Limit: Initial administrative freeze by BFIU is valid for 30 days, extendable up to an absolute cap of 6 months.",
+      "Judicial Order Requirement: Freezing beyond 6 months requires a formal court order from the Senior Special Judge under Section 14.",
+      "Common Triggers: Inward foreign remittances lacking invoice documentation, third-party mobile banking transfers, or sudden high-volume cash deposits.",
+      "Constitutional Challenge: High Court Division routinely issues ad-interim directions unfreezing accounts when agencies fail to file formal FIRs or charges.",
+      "NRB Protection: Legitimate overseas remittance certificates from authorized dealer banks serve as primary defense against money laundering allegations.",
+      "No Guaranteed Outcome: Judicial relief depends on case records, audit trails, and court discretion."
+    ],
+    "points": [
+      "Statutory Authority: Money Laundering Prevention Act 2012 (Act No. V of 2012), Sections 14, 23, and 26.",
+      "BFIU 30-Day Limit: Initial administrative freeze by BFIU is valid for 30 days, extendable up to an absolute cap of 6 months.",
+      "Judicial Order Requirement: Freezing beyond 6 months requires a formal court order from the Senior Special Judge under Section 14.",
+      "Common Triggers: Inward foreign remittances lacking invoice documentation, third-party mobile banking transfers, or sudden high-volume cash deposits.",
+      "Constitutional Challenge: High Court Division routinely issues ad-interim directions unfreezing accounts when agencies fail to file formal FIRs or charges.",
+      "NRB Protection: Legitimate overseas remittance certificates from authorized dealer banks serve as primary defense against money laundering allegations.",
+      "No Guaranteed Outcome: Judicial relief depends on case records, audit trails, and court discretion."
+    ]
+  },
+  "toc": [
+    {
+      "id": "legal-statutory-framework-mlpa-2012",
+      "title": "1. Statutory Framework: Money Laundering Prevention Act 2012"
+    },
+    {
+      "id": "bfiu-freezing-powers-and-statutory-limits",
+      "title": "2. BFIU Powers Under Section 23: The 30-Day & 6-Month Limits"
+    },
+    {
+      "id": "court-ordered-freezes-section-14",
+      "title": "3. Judicial Attachment Under Section 14: Special Judge Court Orders"
+    },
+    {
+      "id": "common-reasons-for-account-freezing",
+      "title": "4. Common Triggers for Bank Account Freezes in Bangladesh"
+    },
+    {
+      "id": "freezing-orders-statutory-matrix",
+      "title": "5. Legal Comparison: BFIU Administrative Freeze vs. Judicial Attachment"
+    },
+    {
+      "id": "step-by-step-unfreezing-protocol",
+      "title": "6. Step-by-Step Legal Protocol to Unfreeze a Bank Account"
+    },
+    {
+      "id": "high-court-writ-petition-remedies",
+      "title": "7. High Court Writ Remedies Under Article 102 for Indefinite Freezes"
+    },
+    {
+      "id": "nrb-and-corporate-compliance-safeguards",
+      "title": "8. Safeguards for Expatriates, NRBs and Corporate Entities"
+    },
+    {
+      "id": "illustrative-scenario-bfiu-resolution",
+      "title": "9. Illustrative Scenario: Lifting an Arbitrary Commercial Account Freeze"
+    },
+    {
+      "id": "talk-to-an-advocate",
+      "title": "10. Talk to an Advocate: Bank Account Freeze Defense"
+    }
+  ],
+  "sections": [
+    {
+      "id": "legal-statutory-framework-mlpa-2012",
+      "title": "1. Statutory Framework: Money Laundering Prevention Act 2012",
+      "content": "<p>In Bangladesh, financial asset freezing is governed by the <strong>Money Laundering Prevention Act 2012 (Act No. V of 2012)</strong> along with the Anti-Terrorism Act 2009. The statutory architecture aims to curb illicit financial flows, bribery, extortion, trade-based money laundering, and tax evasion. However, aggressive application often ensnares legitimate commercial enterprises, export-import firms, and non-resident investors.</p><p>The law creates a strict division between administrative inquiry powers and judicial authority. Under <strong>Section 23</strong>, the Bangladesh Financial Intelligence Unit (BFIU), housed within Bangladesh Bank, serves as the central national agency responsible for analyzing Suspicious Transaction Reports (STRs) and Cash Transaction Reports (CTRs) submitted by commercial scheduled banks. While the BFIU has executive authority to freeze transactions provisionally, it cannot confiscate property or freeze funds indefinitely without judicial scrutiny. The ultimate authority to try offences and order substantive property attachments resides with the designated <strong>Senior Special Judge Courts</strong> established under the Criminal Law Amendment Act 1958.</p><p>Understanding this distinction is vital. When an account holder receives a generic freeze notice from their branch manager, identifying whether the action stems from an administrative BFIU directive, a police investigatory desk, or a formal court order determines the appropriate judicial countermeasure. Consult our guide on <a href=\"/blog/quashing-false-fir-criminal-case-section-561a-crpc-high-court-bangladesh\">quashing false criminal cases in Bangladesh</a> for related trial procedures.</p>"
+    },
+    {
+      "id": "bfiu-freezing-powers-and-statutory-limits",
+      "title": "2. BFIU Powers Under Section 23: The 30-Day & 6-Month Limits",
+      "content": "<p>The power of the BFIU to restrict banking operations is strictly defined by <strong>Section 23(1)(c) of Act No. V of 2012</strong>. Under this provision, if the BFIU has reasonable grounds to suspect that an account is linked to money laundering or predicate offences, it may issue an executive order directing the scheduled bank to suspend transactions in that account.</p><p>The statute imposes rigorous temporal constraints on this emergency power:</p><ul><li><strong>Initial 30-Day Validity:</strong> The initial administrative freezing order issued by the BFIU is legally effective for a period not exceeding <strong>thirty (30) days</strong> from the date of issuance.</li><li><strong>Incremental Extension Up to 6 Months:</strong> If the inquiry requires further analysis, the BFIU may extend the suspension period. However, Section 23(1)(c) establishes that the total cumulative period of such administrative extensions cannot exceed <strong>six (6) months</strong> (180 days).</li><li><strong>Mandatory Referral to Law Enforcement:</strong> During the six-month window, the BFIU must transmit its investigative report to an authorized investigatory agency—such as the Anti-Corruption Commission (ACC), the Criminal Investigation Department (CID) of Police, or the National Board of Revenue (NBR)—to institute a formal criminal case.</li></ul><p>If the six-month period expires without the investigating agency obtaining a formal judicial attachment order from a court, the legal basis of the BFIU freeze lapses automatically. Continuing the freeze thereafter constitutes an unlawful administrative act.</p>"
+    },
+    {
+      "id": "court-ordered-freezes-section-14",
+      "title": "3. Judicial Attachment Under Section 14: Special Judge Court Orders",
+      "content": "<p>To freeze or attach a bank account beyond the six-month administrative threshold, the investigating agency must transition the matter to a judicial forum. Under <strong>Section 14 of the Money Laundering Prevention Act 2012</strong>, the investigating officer must submit a formal written application before the competent <strong>Senior Special Judge Court</strong> having territorial and subject-matter jurisdiction.</p><p>Section 14 mandates that the court must be satisfied on judicial grounds that:</p><ol><li>A formal FIR or criminal proceeding has been instituted regarding a scheduled money laundering predicate offence.</li><li>There is tangible, prima facie evidence indicating that the funds deposited in the targeted bank account represent proceeds of crime or properties derived from illegal activities.</li><li>There is a genuine, imminent danger that the account holder will withdraw, transfer, or dissipate the funds before the conclusion of trial.</li></ol><p>The Special Judge Court issues an order of attachment (freezing) and serves it officially upon the Head Office and branch of the scheduled bank. Crucially, an order passed under Section 14 is a judicial proceeding. The affected account holder is entitled to retain an advocate, inspect the case docket, file an application for recall or modification, and present legitimate financial evidence demonstrating lawful origins of the funds.</p>"
+    },
+    {
+      "id": "common-reasons-for-account-freezing",
+      "title": "4. Common Triggers for Bank Account Freezes in Bangladesh",
+      "content": "<div style=\"border:1px solid var(--accent);border-radius:var(--radius-lg);padding:1rem 1.25rem;margin:1.5rem 0\"><p><strong>Facing a frozen bank account or BFIU notice in Bangladesh?</strong> Contact our Supreme Court chamber immediately on WhatsApp at <a href=\"https://wa.me/8801955802007?text=Hello%20Advocate%2C%20my%20bank%20account%20has%20been%20frozen%20in%20Bangladesh.\" target=\"_blank\" rel=\"noopener noreferrer\">+880 1955-802007</a>. Overseas clients and business directors can arrange rapid emergency document review.</p></div><p>In practice, commercial scheduled banks trigger algorithmic compliance flags that generate STRs resulting in BFIU intervention. The most frequent triggers include:</p><ul><li><strong>Unmatched Foreign Inward Remittances:</strong> Rapid inward transfers from foreign jurisdictions into personal or commercial accounts where the beneficiary cannot produce a matching export form, commercial invoice, or approved service agreement. Expatriates sending family funds without clear remittance memos frequently encounter this barrier.</li><li><strong>High-Frequency Digital Wallet Transfers:</strong> Accounts receiving numerous daily transfers from mobile financial services (MFS) platforms such as bKash, Nagad, or Rocket, which compliance algorithms flag for suspected informal currency remittance (Hundi) or unauthorized currency exchange.</li><li><strong>Discrepancies with NBR Tax Returns:</strong> Sudden massive deposits that vastly exceed the annual income or gross assets declared in the account holder's latest income tax acknowledgment receipt under the Income Tax Act 2023.</li><li><strong>Inclusion in Political or Commercial Inquiries:</strong> Account holders named in generalized FIRs, corporate shareholder disputes, or ACC preliminary fact-finding inquiries.</li></ul>"
+    },
+    {
+      "id": "freezing-orders-statutory-matrix",
+      "title": "5. Legal Comparison: BFIU Administrative Freeze vs. Judicial Attachment",
+      "content": "<p>Distinguishing between administrative directives and judicial freezing orders is essential for structuring an effective legal challenge:</p><div style=\"overflow-x:auto;margin:1.5rem 0;\"><table style=\"width:100%;border-collapse:collapse;text-align:left;border:1px solid var(--card-border);\"><thead><tr style=\"background:var(--surface);\"><th style=\"padding:12px;border:1px solid var(--card-border);color:var(--gold);\">Legal Parameter</th><th style=\"padding:12px;border:1px solid var(--card-border);\">BFIU Administrative Freeze</th><th style=\"padding:12px;border:1px solid var(--card-border);\">Judicial Attachment Order</th></tr></thead><tbody><tr><td style=\"padding:12px;border:1px solid var(--card-border);font-weight:600;\">Governing Section</td><td style=\"padding:12px;border:1px solid var(--card-border);\">Section 23(1)(c), Act No. V of 2012</td><td style=\"padding:12px;border:1px solid var(--card-border);\">Section 14, Act No. V of 2012</td></tr><tr><td style=\"padding:12px;border:1px solid var(--card-border);font-weight:600;\">Issuing Entity</td><td style=\"padding:12px;border:1px solid var(--card-border);\">Bangladesh Financial Intelligence Unit (BFIU)</td><td style=\"padding:12px;border:1px solid var(--card-border);\">Senior Special Judge Court</td></tr><tr><td style=\"padding:12px;border:1px solid var(--card-border);font-weight:600;\">Maximum Statutory Duration</td><td style=\"padding:12px;border:1px solid var(--card-border);\">Initial 30 days; maximum 6 months cumulative</td><td style=\"padding:12px;border:1px solid var(--card-border);\">Duration of trial or until modified by court</td></tr><tr><td style=\"padding:12px;border:1px solid var(--card-border);font-weight:600;\">Requirement of Formal FIR</td><td style=\"padding:12px;border:1px solid var(--card-border);\">Not required; operates at inquiry/STR stage</td><td style=\"padding:12px;border:1px solid var(--card-border);\">Mandatory formal FIR or pending criminal case</td></tr><tr><td style=\"padding:12px;border:1px solid var(--card-border);font-weight:600;\">Primary Judicial Forum for Relief</td><td style=\"padding:12px;border:1px solid var(--card-border);\">High Court Division (Writ under Article 102)</td><td style=\"padding:12px;border:1px solid var(--card-border);\">Special Judge Court / High Court Criminal Revision</td></tr><tr><td style=\"padding:12px;border:1px solid var(--card-border);font-weight:600;\">Burden of Proof</td><td style=\"padding:12px;border:1px solid var(--card-border);\">Departmental suspicion based on financial metrics</td><td style=\"padding:12px;border:1px solid var(--card-border);\">Judicial assessment of prima facie evidence</td></tr></tbody></table></div>"
+    },
+    {
+      "id": "step-by-step-unfreezing-protocol",
+      "title": "6. Step-by-Step Legal Protocol to Unfreeze a Bank Account",
+      "content": "<p>When your account is restricted, implementing a disciplined legal protocol prevents unnecessary delays:</p><ol><li><strong>Obtain Written Confirmation from the Bank:</strong> Visit your branch and submit a formal written demand letter requesting the branch manager to specify the exact legal basis of the freeze, including the issuing authority's reference memo number, date of directive, and specific statutory section.</li><li><strong>Assemble Financial Evidence:</strong> Compile full bank statements, audited company accounts, proof of legitimate business transactions, commercial contracts, tax returns (IT-10B), and foreign remittance encashment certificates.</li><li><strong>Submit a Representation to BFIU:</strong> If the freeze is an administrative action under Section 23 and within the initial 30 days, your advocate can submit a comprehensive written representation to the Director General of the BFIU demonstrating the legitimate origin of the funds and requesting immediate release.</li><li><strong>File a Petition Before the Special Judge:</strong> If an attachment order was issued under Section 14, file an application for recall or de-freezing before the Senior Special Judge, establishing that the seized funds bear no connection to the alleged predicate offence.</li><li><strong>Move the High Court Division:</strong> If administrative agencies maintain the freeze beyond statutory deadlines without judicial confirmation, file an emergency Writ Petition before the High Court Division.</li></ol>"
+    },
+    {
+      "id": "high-court-writ-petition-remedies",
+      "title": "7. High Court Writ Remedies Under Article 102 for Indefinite Freezes",
+      "content": "<p>In numerous instances, banks keep accounts frozen for a year or longer simply because an agency sent an exploratory letter and never sent a follow-up cancellation notice. In these scenarios, the High Court Division provides effective constitutional relief under <strong>Article 102 of the Constitution</strong>.</p><p>A Writ of Mandamus or Certiorari is instituted on the grounds that:</p><ul><li><strong>Violation of Fundamental Rights:</strong> Freezing an account without statutory authority violates Article 31 (right to be treated in accordance with law) and Article 42 (right to acquire, hold, and dispose of property).</li><li><strong>Breach of Statutory Deadlines:</strong> The BFIU has exceeded the six-month statutory ceiling mandated by Section 23(1)(c) of Act No. V of 2012 without obtaining a Section 14 judicial attachment order.</li><li><strong>Deprivation of Livelihood:</strong> Freezing entire commercial operating accounts containing legitimate business funds to investigate an isolated transaction is disproportionate and punitive.</li></ul><p>The High Court Division routinely issues a <em>Rule Nisi</em> calling upon Bangladesh Bank, the BFIU, and the inquiring agency to explain the illegality of the freeze, while concurrently granting an <strong>Ad-Interim Order</strong> directing the commercial bank to immediately restore operational access to the account.</p>"
+    },
+    {
+      "id": "nrb-and-corporate-compliance-safeguards",
+      "title": "8. Safeguards for Expatriates, NRBs and Corporate Entities",
+      "content": "<p>Non-Resident Bangladeshis (NRBs) and international business entities can adopt proactive compliance safeguards to mitigate the risk of account freezes:</p><ul><li><strong>Execute Formal Remittance Contracts:</strong> Whenever remitting substantial foreign exchange into Bangladesh for real estate, business equity, or family support, retain certified Inward Remittance Encashment Certificates from authorized dealer banks. See our guide on <a href=\"/blog/remittance-tax-nbr-scrutiny-property-purchase-bangladesh-nrb\">remittance and tax scrutiny for NRB property purchases</a>.</li><li><strong>Maintain Segregated Commercial and Personal Accounts:</strong> Never mix business turnover funds with personal savings accounts. Commercial transactions should always flow through corporate accounts registered with an updated trade license and e-TIN.</li><li><strong>Respond Promptly to Bank KYC Audits:</strong> When your bank requests updated Know Your Customer (KYC) documentation, Transaction Profiles (TP), or sources of funds, reply promptly through official written channels to prevent automatic compliance suspension.</li><li><strong>Appoint an Advocate via Special Power of Attorney:</strong> Overseas clients who discover an account freeze while abroad can empower a Supreme Court advocate to access bank records, communicate with the BFIU, and represent them in court proceedings.</li></ul>"
+    },
+    {
+      "id": "illustrative-scenario-bfiu-resolution",
+      "title": "9. Illustrative Scenario: Lifting an Arbitrary Commercial Account Freeze",
+      "content": "<p><em>Illustrative scenario (composite; names and details changed):</em> An NRB entrepreneur operating an export-import consultancy in Birmingham, UK, maintained an operational current account in Gulshan, Dhaka, to fund local software development teams. In early 2025, following a series of foreign inward remittances totaling 1.8 Crore BDT, the bank suddenly dishonored payroll cheques and informed the client that the account was 'frozen under central bank regulatory instructions.'</p><p>Unable to pay salaries and facing commercial catastrophe, the entrepreneur instructed Advocate Md. Shah Alam's chamber. Our legal team took swift action:</p><ol><li>Issued an immediate advocate's legal demand letter to the branch manager, forcing the bank to disclose that the freeze originated from a provisional BFIU memo issued five months earlier, which had never been confirmed by any court.</li><li>Ascertained that no FIR or formal money laundering proceedings had been instituted before any Senior Special Judge Court.</li><li>Drafted and moved an emergency Writ Petition under Article 102 before a Division Bench of the High Court Division, demonstrating that the BFIU suspension had surpassed the statutory limits of Section 23(1)(c) of Act No. V of 2012 and infringed Articles 31 and 42 of the Constitution.</li><li>The High Court Division issued a Rule Nisi and passed an immediate Ad-Interim Order directing the commercial bank to unfreeze the current account within 48 hours.</li><li>Served the certified court order on the bank's head office and legal department, successfully restoring full transactional access and enabling the client to resume operations without disruption.</li></ol>"
+    },
+    {
+      "id": "talk-to-an-advocate",
+      "title": "10. Talk to an Advocate: Bank Account Freeze Defense",
+      "content": "<p>If your personal or commercial bank account has been frozen by the BFIU, ACC, or CID in Bangladesh, securing experienced legal counsel is essential to protect your assets and restore commercial liquidity. Advocate Md. Shah Alam and his dedicated team of Supreme Court and Dhaka Court advocates provide rapid intervention before banking compliance desks, Special Judge Courts, and the High Court Division.</p><div style=\"border:1px solid var(--accent);border-radius:var(--radius-lg);padding:1rem 1.25rem;margin:1.5rem 0\"><p><strong>Need an advocate for this matter in Bangladesh?</strong> Send your documents on WhatsApp to <a href=\"https://wa.me/8801955802007?text=Hello%20Advocate%2C%20I%20read%20your%20article%20and%20need%20advice.\" target=\"_blank\" rel=\"noopener noreferrer\">+880 1955-802007</a>, or call <a href=\"tel:+8801712655546\">+880 1712-655546</a>. Overseas clients: a first document review can be done remotely.</p></div><p>Our principal chamber is situated in Uttara, Dhaka, minutes from Hazrat Shahjalal International Airport, alongside our daily litigation chamber at the Supreme Court Bar Association and Dhaka Judge Court.</p>"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Can the BFIU freeze a bank account permanently without a court order?",
+      "answer": "No. Under Section 23(1)(c) of the Money Laundering Prevention Act 2012, BFIU administrative freezes are valid for an initial 30 days and can be extended up to a maximum cumulative limit of six months. Freezing beyond six months requires a formal judicial attachment order from a Senior Special Judge Court."
+    },
+    {
+      "question": "What is the difference between an account freeze and an account debit block?",
+      "answer": "A debit block permits deposits but restricts outward payments and cash withdrawals. A total account freeze immobilizes both inward credits and outward debits. Both measures represent statutory restrictions that must comply with procedural due process under banking and criminal laws."
+    },
+    {
+      "question": "Can I withdraw living expenses or salary payments from a frozen account?",
+      "answer": "If an account is frozen under a judicial order, the account holder can submit an application before the Senior Special Judge Court requesting permission to withdraw specific, documented living expenses, medical treatment costs, or staff salary disbursements from legitimate balances."
+    },
+    {
+      "question": "How long does it take to unfreeze an account through a High Court Writ Petition?",
+      "answer": "In urgent matters where an administrative freeze has exceeded statutory time limits without a formal criminal charge, the High Court Division can hear the petition and grant an ad-interim de-freezing direction within 3 to 7 working days."
+    },
+    {
+      "question": "Does having a frozen account mean I will be arrested?",
+      "answer": "Not necessarily. Many freezes occur purely on automated algorithmic flags or preliminary suspicious transaction reports (STRs) where no criminal case exists. However, it indicates an active inquiry, making immediate legal consultation vital to prevent formal criminal charges."
+    },
+    {
+      "question": "Can overseas Bangladeshis (NRBs) challenge an account freeze from abroad?",
+      "answer": "Yes. An overseas account holder can instruct a Supreme Court advocate remotely through an embassy-authenticated Special Power of Attorney or authorized local representative to access bank records, make representations, and file petitions in court."
+    },
+    {
+      "question": "What documents are required to prove funds are legitimate to the BFIU?",
+      "answer": "Essential documents include foreign remittance encashment certificates, tax acknowledgment receipts (IT-10B), commercial contracts, audited financial statements, invoices, and bank statements establishing a verifiable, lawful chain of funds."
+    },
+    {
+      "question": "Can the police freeze a bank account directly without BFIU or court permission?",
+      "answer": "Under the Code of Criminal Procedure (Section 102/103) and Money Laundering Prevention Act, police officers cannot independently freeze accounts without written authorization from a magistrate or the competent Senior Special Judge Court."
+    }
+  ],
+  "relatedServiceLinks": [
+    {
+      "title": "Supreme Court Lawyer & Writ Petition Services",
+      "url": "/services/supreme-court-lawyer"
+    },
+    {
+      "title": "Criminal Defense & Special Judge Representation",
+      "url": "/services/criminal-lawyer"
+    },
+    {
+      "title": "Company & Corporate Legal Services",
+      "url": "/services/company-corporate-lawyer"
+    },
+    {
+      "title": "NRB Legal Services & Asset Protection",
+      "url": "/nrb-legal-help"
+    }
+  ],
+  "lang": "en"
+}
