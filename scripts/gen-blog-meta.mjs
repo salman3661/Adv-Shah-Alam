@@ -75,7 +75,7 @@ for (const lang of ['en', 'bn']) {
       if (imp > 0) m.impressions = imp; else delete m.impressions;
       if (clk > 0) m.clicks = clk; else delete m.clicks;
       if (views > 0) m.pageViews = views;
-      m.heroIntro = plain(j.heroIntro, 140);
+      m.heroIntro = plain(j.heroIntro || j.quickAnswer?.text || j.metaDescription, 140);
       out.push(m);
     } catch (e) {
       console.warn('[gen-blog-meta] skip', f, e.message);
@@ -87,7 +87,7 @@ for (const lang of ['en', 'bn']) {
 
   previewData[lang] = [...out]
     .sort((a, b) => new Date(b.publishedDate || 0) - new Date(a.publishedDate || 0))
-    .slice(0, 3)
+    .slice(0, 6)
     .map((p) => ({
       slug: p.slug,
       title: p.title,
