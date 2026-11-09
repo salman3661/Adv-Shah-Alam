@@ -86,3 +86,50 @@ Autonomous SEO + Content Agent Run Log for Advocate Md. Shah Alam.
 - Total BN Posts: 391
 - Total Prerendered Pages: 660
 - Total Sitemap URLs: 669
+
+
+---
+
+## Run: 2026-11-08 (Top 5 Frequently Asked Questions Guides Published)
+
+- **Date:** 2026-11-08
+- **Mode:** `faq-pillar-expansion` (5 New Highly Searched Legal Question Posts)
+- **Selection Basis:** High-intent legal questions identified from live GSC query datasets (`excel_data.json` 7-day query analysis and client inquiry volume):
+  - Q1 (Inheritance/Family): Can a father disinherit a child in Bangladesh? (Inheritance queries: 283 imp, pos 2.35).
+  - Q2 (Criminal/Commercial): Are Sections 406, 420, 467, 468, 471 bailable in Bangladesh? (Penal code queries: 14 imp, pos 7.86).
+  - Q3 (Land/Registry): Lost land deed, how to get a certified copy (Nokol)? (Deed retrieval queries: 15 imp, pos 7.07; 11 imp, pos 1.0).
+  - Q4 (Matrimonial/Criminal): Can you marry again without divorce in Bangladesh? (Section 494 queries: 19 imp, pos 7.05).
+  - Q5 (Banking/Corporate): Can a bank loan guarantor be sued or CIB blacklisted? (Artha Rin guarantor defense).
+
+### Published Articles (5 New FAQ Guides)
+
+1. **`can-father-disinherit-child-property-bangladesh-inheritance-law`**
+   - **Target Keyword:** `can a father disinherit a child in bangladesh` / `muslim inheritance law bangladesh`
+   - **Metrics:** 2,793 words | 10 sections | 8 FAQs | 1 HTML comparison table | Quick Answer box | Illustrative scenario
+   - **Strategic Focus:** Muslim Personal Law (Shariat) Application Act 1937, Hanafi Quranic sharers and residuaries, invalidity of newspaper 'disowning' notices and notary affidavits, 1/3 Wasiyat limit, and Section 39 Specific Relief Act deed cancellation.
+
+2. **`sections-420-406-467-468-471-penal-code-bail-defense-bangladesh`**
+   - **Target Keyword:** `sections 420 406 467 468 471 penal code bangladesh` / `is section 420 bailable in bangladesh`
+   - **Metrics:** 2,730 words | 10 sections | 8 FAQs | 1 HTML comparison table | Quick Answer box | Illustrative scenario | `bnSlug: "protarona-420-bishwasbhanga-406-dandobidhi-mamla-defense-2026-bn"`
+   - **Strategic Focus:** Schedule II CrPC bailable/non-bailable classifications, Section 467 potential life imprisonment exposure, Section 497 regular bail, High Court Section 498 anticipatory bail, and Section 561A CrPC quashing for disguised civil disputes.
+
+3. **`lost-land-deed-certified-copy-nokol-sub-registry-bangladesh-guide`**
+   - **Target Keyword:** `lost land deed bangladesh` / `how to get certified copy of deed bangladesh`
+   - **Metrics:** 2,699 words | 10 sections | 8 FAQs | 1 HTML comparison table | Quick Answer box | Illustrative scenario | `bnSlug: "jomi-dalil-hariye-gele-koronio-bangladesh"`
+   - **Strategic Focus:** Police GD protocols, Sub-Registry Book No. 1 Balam Boi records, Index I and II archival searches under Section 57 Registration Act 1908, statutory fee schedule, and secondary evidentiary value under Section 65 Evidence Act.
+
+4. **`section-494-penal-code-bigamy-punishment-second-marriage-without-divorce-bangladesh`**
+   - **Target Keyword:** `second marriage without divorce bangladesh` / `section 494 penal code bangladesh`
+   - **Metrics:** 2,731 words | 10 sections | 8 FAQs | 1 HTML comparison table | Quick Answer box | Illustrative scenario | `bnSlug: "494-dhara-talak-chara-dwitio-biye-shasti-2026"`
+   - **Strategic Focus:** Section 494 bigamy 7-year imprisonment, Section 6 MFLO 1961 Arbitration Council permission requirement, invalidity of verbal talaq during 90-day reconciliation period, CR cases under Section 198 CrPC, and immediate dower acceleration.
+
+5. **`bank-loan-guarantor-cib-blacklist-artha-rin-adalat-bangladesh`**
+   - **Target Keyword:** `bank loan guarantor rights bangladesh` / `cib blacklist loan guarantor bangladesh`
+   - **Metrics:** 2,735 words | 10 sections | 8 FAQs | 1 HTML comparison table | Quick Answer box | Illustrative scenario | `bnSlug: "bank-rin-jamindar-cib-blacklist-artharin-remedy-2026-bn"`
+   - **Strategic Focus:** Section 6(1) and Section 12 Artha Rin Adalat Ain mandatory auction sequence, Section 34 civil detention 6-month hard cap, Bangladesh Bank CIB blacklisting challenges, Contract Act surety discharge, and Article 102 High Court writs.
+
+### Updated Site Totals
+- Total EN Posts: 258
+- Total BN Posts: 406
+- Total Prerendered Pages: 680
+- Total Sitemap URLs: 689
