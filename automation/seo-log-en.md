@@ -90,9 +90,9 @@ Autonomous SEO + Content Agent Run Log for Advocate Md. Shah Alam.
 
 ---
 
-## Run: 2026-11-08 (Top 5 Frequently Asked Questions Guides Published)
+## Run: 2026-11-09 (Top 5 Frequently Asked Questions Guides Published)
 
-- **Date:** 2026-11-08
+- **Date:** 2026-11-09
 - **Mode:** `faq-pillar-expansion` (5 New Highly Searched Legal Question Posts)
 - **Selection Basis:** High-intent legal questions identified from live GSC query datasets (`excel_data.json` 7-day query analysis and client inquiry volume):
   - Q1 (Inheritance/Family): Can a father disinherit a child in Bangladesh? (Inheritance queries: 283 imp, pos 2.35).
@@ -133,3 +133,50 @@ Autonomous SEO + Content Agent Run Log for Advocate Md. Shah Alam.
 - Total BN Posts: 406
 - Total Prerendered Pages: 680
 - Total Sitemap URLs: 689
+
+
+---
+
+## Run: 2026-11-10 (5 High-CPC Commercial, Family & Revenue Pillar Guides)
+
+- **Date:** 2026-11-10
+- **Mode:** `daily-high-cpc-expansion` (5 New Authoritative Legal Guides)
+- **Selection Basis:** High-CPC, high-intent legal disputes cross-referenced with recent litigation volumes and diaspora searches:
+  - Topic 1 (Family/Custody): Divorced mother obtaining minor child's passport without father's consent.
+  - Topic 2 (Criminal/Matrimonial): Section 5 Dowry Prohibition Act 2018 defense and counter-punishment.
+  - Topic 3 (Property/Survey): Land Survey Tribunal (LST) BS/City Khatian error correction.
+  - Topic 4 (Tax/VAT): VAT audit show-cause notice and Appellate Tribunal defense under VAT Act 2012.
+  - Topic 5 (Trade/Customs): Customs Act 2023 goods seizure, port container release, and tribunal appeal.
+
+### Published Articles (5 New Authoritative Guides)
+
+1. **`child-passport-after-divorce-guardianship-law-bangladesh-guide`**
+   - **Target Keyword:** `child passport after divorce bangladesh` / `can mother make child passport without father bangladesh`
+   - **Metrics:** 2,571 words | 10 sections | 8 FAQs | 1 HTML comparison table | Quick Answer box | Illustrative scenario | `bnSlug: "divorce-er-por-shishur-passport-obhibhaboktwa-ain-2026-bn"`
+   - **Strategic Focus:** Guardians and Wards Act 1890, maternal custody (Hizanat) vs legal guardianship (Wilayat), passport office father NOC hurdles, Family Court guardianship decrees, and High Court Article 102 writ mandates.
+
+2. **`false-dowry-case-defense-section-5-prohibition-act-bangladesh`**
+   - **Target Keyword:** `false dowry case defense bangladesh` / `section 5 dowry prohibition act 2018 bangladesh`
+   - **Metrics:** 2,601 words | 10 sections | 8 FAQs | 1 HTML comparison table | Quick Answer box | Illustrative scenario | `bnSlug: "mithya-yautuk-mamla-badir-shasti-5-dhara-2026-bn"`
+   - **Strategic Focus:** Section 5 counter-prosecution of malicious complainants (up to 5 years imprisonment), bail protocols in Magistrate Courts, cross-examination evidentiary tactics, High Court Section 561A quashing for in-laws, and civil damages.
+
+3. **`land-survey-tribunal-bs-city-khatian-correction-bangladesh-guide`**
+   - **Target Keyword:** `land survey tribunal bangladesh` / `bs khatian mistake correction lawsuit bangladesh`
+   - **Metrics:** 2,539 words | 10 sections | 8 FAQs | 1 HTML comparison table | Quick Answer box | Illustrative scenario | `bnSlug: "land-survey-tribunal-bs-khatian-bhul-shongshodhon-mamla-2026-bn"`
+   - **Strategic Focus:** Section 145A State Acquisition and Tenancy Act 1950, 1-year statutory limitation, AC Land jurisdictional incapacity on final BS records, Section 145B DC execution, and High Court writs for vacant tribunals.
+
+4. **`vat-audit-demand-notice-appellate-tribunal-defense-bangladesh`**
+   - **Target Keyword:** `vat audit demand notice defense bangladesh` / `vat act 2012 appellate tribunal appeal bangladesh`
+   - **Metrics:** 2,353 words | 10 sections | 8 FAQs | 1 HTML comparison table | Quick Answer box | Illustrative scenario | `bnSlug: "vat-audit-demand-notice-appellate-tribunal-appeal-2026-bn"`
+   - **Strategic Focus:** Value Added Tax and Supplementary Duty Act 2012 Section 73 show-cause notices, input tax rebate (Mushak 6.3) defenses, Section 121 Commissioner (Appeals) 10% pre-deposit, Section 122 Appellate Tribunal appeals, and Section 83 bank freeze stays.
+
+5. **`customs-act-2023-goods-seizure-show-cause-tribunal-appeal-bangladesh`**
+   - **Target Keyword:** `customs act 2023 bangladesh goods seizure` / `customs show cause notice appellate tribunal bangladesh`
+   - **Metrics:** 2,407 words | 10 sections | 8 FAQs | 1 HTML comparison table | Quick Answer box | Illustrative scenario | `bnSlug: "customs-ain-2023-goods-seizure-showcase-tribunal-appeal-2026-bn"`
+   - **Strategic Focus:** Customs Act 2023 enactment, Section 168 seizure, Section 183 provisional release against bank guarantees, Section 180 show-cause defense, Customs Appellate Tribunal appeals, and High Court Article 102 port release writs.
+
+### Cumulative Site Totals (as of 2026-11-10)
+- Total EN Posts: 263 (258 baseline + 5 new)
+- Total BN Posts: 406
+- Total Prerendered Pages: 685
+- Total Sitemap URLs: 694
