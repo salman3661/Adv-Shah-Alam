@@ -180,3 +180,49 @@ Autonomous SEO + Content Agent Run Log for Advocate Md. Shah Alam.
 - Total BN Posts: 406
 - Total Prerendered Pages: 685
 - Total Sitemap URLs: 694
+
+---
+
+## Run: 2026-11-10 (5 Trending High-Impact Legal Guides - Bayna Specific Performance, CIB Removal, Flat Handover Delay, Dower Asset Transfer, Forged Cheque Defense)
+
+- **Date:** 2026-11-10
+- **Mode:** `daily-trending-expansion` (5 New Authoritative Legal Guides)
+- **Selection Basis:** High-intent trending queries analyzed across land conveyancing disputes, banking credit records, real estate developer delays, matrimonial asset preservation, and white-collar cheque forgery defenses:
+  - Topic 1 (Land/Conveyancing): Seller refusing land registration after taking Bayna advance.
+  - Topic 2 (Banking/Credit): How to remove name from Bangladesh Bank CIB blacklist.
+  - Topic 3 (Real Estate/Consumer): Developer delayed flat handover and statutory compensation under Real Estate Act 2010.
+  - Topic 4 (Family/Property): Husband fraudulently transferring property to evade dower (denmohar) execution.
+  - Topic 5 (Criminal/Commercial): Forged cheque signature defense under Sections 467/468 Penal Code vs Section 138 NI Act.
+
+### Published Articles (5 New Authoritative Guides)
+
+1. **`seller-refusing-land-registration-bayna-deed-specific-performance-bangladesh`**
+   - **Target Keyword:** `seller refusing land registration bangladesh` / `bayna deed specific performance lawsuit bangladesh`
+   - **Metrics:** 2,541 words | 10 sections | 8 FAQs | 1 HTML comparison table | Quick Answer box | Illustrative scenario | `bnSlug: "bayna-taka-jomi-registry-na-dile-specific-performance-2026-bn"`
+   - **Strategic Focus:** Specific Relief Act 1877 (Section 21A, Section 12), Registration Act 1908 Section 17A mandatory registration, remaining consideration court deposit, Order 39 temporary injunction against third-party sale, and Sub-Registrar execution via court seal.
+
+2. **`how-to-remove-name-from-cib-blacklist-bangladesh-bank-guide`**
+   - **Target Keyword:** `how to remove name from cib blacklist bangladesh` / `cib clearance bangladesh bank procedure`
+   - **Metrics:** 2,455 words | 10 sections | 8 FAQs | 1 HTML comparison table | Quick Answer box | Illustrative scenario | `bnSlug: "cib-blacklist-theke-nam-katano-bank-rin-remedy-2026-bn"`
+   - **Strategic Focus:** Bangladesh Bank CIB database classifications (STD, SMA, SS, DF, BL), Credit Information Bureau Master Circulars, Bank Company Act 1991 willful defaulter reporting, Artha Rin Adalat settlement protocol, and High Court Article 102 writs for arbitrary CIB inclusion.
+
+3. **`developer-delayed-flat-handover-compensation-real-estate-act-bangladesh`**
+   - **Target Keyword:** `developer delayed flat handover compensation bangladesh` / `real estate development act 2010 delay penalty bangladesh`
+   - **Metrics:** 2,435 words | 10 sections | 8 FAQs | 1 HTML compensation rate table | Quick Answer box | Illustrative scenario | `bnSlug: "developer-flat-handover-na-dile-real-estate-ain-2026-bn"`
+   - **Strategic Focus:** Real Estate Development and Management Act 2010 (Section 15, Section 24, Section 31), statutory rental compensation interest, REHAB arbitration mechanisms, non-bailable criminal prosecution in Magistrate Courts, and Joint District Judge execution suits.
+
+4. **`husband-transferring-property-evade-dower-denmohar-bangladesh-remedy`**
+   - **Target Keyword:** `husband transferring property to avoid dower bangladesh` / `fraudulent property transfer evade denmohar bangladesh`
+   - **Metrics:** 2,529 words | 10 sections | 8 FAQs | 1 HTML comparison table | Quick Answer box | Illustrative scenario | `bnSlug: "denmohor-faki-dite-sompotti-transfer-protikar-2026-bn"`
+   - **Strategic Focus:** Muslim Family Laws Ordinance 1961, Transfer of Property Act 1882 Section 53 (fraudulent transfers), Family Courts Act 2023 Section 17 interim attachment before judgment, Heba deed cancellation, and Family Court money execution warrants (Arrest & Section 16 auction).
+
+5. **`forged-cheque-signature-defense-sections-467-468-penal-code-bangladesh`**
+   - **Target Keyword:** `forged cheque signature defense bangladesh` / `fake signature section 138 ni act penal code bangladesh`
+   - **Metrics:** 2,524 words | 10 sections | 8 FAQs | 1 HTML comparison table | Quick Answer box | Illustrative scenario | `bnSlug: "chek-jaliyati-signature-omil-dandobidhi-467-468-ain-2026-bn"`
+   - **Strategic Focus:** Section 138 NI Act presumption rebuttal, Sections 467 & 468 Penal Code 1860 forgery prosecution, Evidence Act 1872 Section 73 & Section 45 CID forensic signature verification, specimen bank account opening card comparison, and High Court Section 561A stay petitions.
+
+### Cumulative Site Totals (as of 2026-11-10 Run 2)
+- Total EN Posts: 268 (263 baseline + 5 new)
+- Total BN Posts: 406
+- Total Prerendered Pages: 690
+- Total Sitemap URLs: 699
