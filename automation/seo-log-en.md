@@ -226,3 +226,26 @@ Autonomous SEO + Content Agent Run Log for Advocate Md. Shah Alam.
 - Total BN Posts: 406
 - Total Prerendered Pages: 690
 - Total Sitemap URLs: 699
+
+---
+
+## Run: 2026-11-10 (Cyber Evidence & Number-to-NID Requisition Guide)
+
+- **Date:** 2026-11-10
+- **Mode:** `daily-specialized-cyber-expansion` (1 New High-Intent Educational Guide)
+- **Selection Basis:** Critical cyber fraud and evidentiary tracing queries addressing the lawful mechanisms for unmasking scam phone numbers, CrPC §94 court orders, and BTRC telecommunication requisitions:
+  - Topic: How to trace a scammer's phone number to NID legally in Bangladesh via Cyber Police (CID/PBI) and court orders.
+
+### Published Article
+
+1. **`how-to-trace-scammer-phone-number-legally-bangladesh`**
+   - **Target Keyword:** `number to nid bangladesh` / `trace scammer phone number bangladesh` / `legal number tracing bangladesh`
+   - **Metrics:** 2,810 words | 11 sections | 8 FAQs | 1 HTML comparison table | Quick Answer box | Illustrative scenario | No `bnSlug` (distinct EN guide)
+   - **Strategic Focus:** Bangladesh Telecommunication Regulation Act 2001 Section 97A, Code of Criminal Procedure Section 94 judicial requisitions, BTRC Central Biometric Verification System (CBVS), illegal black-market database risks, MFS wallet tracing, and Cyber Tribunal CR case procedures.
+   - **CTA Rotation:** Day 314 (Even) -> WhatsApp: `01955802007`, Call: `01712655546`.
+
+### Cumulative Site Totals (as of 2026-11-10 Run 3)
+- Total EN Posts: 269 (268 baseline + 1 new)
+- Total BN Posts: 411
+- Total Prerendered Pages: 696
+- Total Sitemap URLs: 705
