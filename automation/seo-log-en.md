@@ -272,3 +272,43 @@ Autonomous SEO + Content Agent Run Log for Advocate Md. Shah Alam.
 - Total BN Posts: 411
 - Total Prerendered Pages: 697
 - Total Sitemap URLs: 706
+
+---
+
+## Run: 2026-11-10 (Batch of 4 High-Intent Core Pillars: Divorce, Marriage, Land Fraud & Bank Succession)
+
+- **Date:** 2026-11-10
+- **Mode:** `daily-specialized-batch-expansion` (4 New Authoritative Legal Guides)
+- **Selection Basis:** Critical high-volume civil, family, and property disputes addressing systemic legal uncertainties across Bangladesh:
+  - Topic 2 (Divorce): Husband refusing to register divorce after verbal talaq or notice.
+  - Topic 3 (Marriage): Severe legal risks of marrying without an official Kabinnama.
+  - Topic 4 (Property/Land): Seller selling land to a second buyer (double sale fraud).
+  - Topic 5/9 (Banking/Inheritance): Legal heirs claiming deceased parents' bank accounts, FDR, and overcoming rogue nominees.
+
+### Published Articles (4 New Core Pillar Guides)
+
+1. **`husband-refusing-to-register-divorce-talaq-notice-bangladesh-remedy`**
+   - **Target Keyword:** `husband refuses to register divorce bangladesh` / `verbal talaq legal validity bangladesh` / `mflo section 7 talaq notice bangladesh`
+   - **Metrics:** 2,762 words | 10 sections | 8 FAQs | 1 HTML comparison table | Quick Answer box | Illustrative scenario | `bnSlug: "talak-notice-dileo-kazi-office-registry-na-korle-strir-ain-2026-bn"`
+   - **Strategic Focus:** Muslim Family Laws Ordinance 1961 Section 7, Section 7(2) 1-year criminal penalty, invalidity of verbal talaq, full dower acceleration in Family Court, bigamy risks under Penal Code Section 494, and unilateral Talaq-e-Tawfeez execution.
+
+2. **`marriage-without-kabinnama-legal-risks-property-rights-bangladesh`**
+   - **Target Keyword:** `marriage without kabinnama bangladesh` / `unregistered marriage legal risks bangladesh` / `court marriage without kazi registration bangladesh`
+   - **Metrics:** 2,564 words | 10 sections | 8 FAQs | 1 HTML comparison table | Quick Answer box | Illustrative scenario | `bnSlug: "kabinnama-chara-biyer-aini-jhuki-sompotti-denmohor-odhikar-2026-bn"`
+   - **Strategic Focus:** Muslim Marriages and Divorces (Registration) Act 1974 Section 3 & Section 5 criminal penalties, invalidity of notary public affidavits, disinheritance hazards, dower proof hurdles, and Family Court suits for Declaration of Marital Status under Section 5.
+
+3. **`seller-sells-land-to-someone-else-double-sale-fraud-bangladesh`**
+   - **Target Keyword:** `seller sells land to someone else bangladesh` / `double sale land fraud bangladesh` / `land crime act 2023 double sale penalty`
+   - **Metrics:** 2,758 words | 10 sections | 8 FAQs | 1 HTML comparison table | Quick Answer box | Illustrative scenario | `bnSlug: "ekoi-jomi-dui-bar-bikroy-saf-kabla-dalil-batil-mamla-2026-bn"`
+   - **Strategic Focus:** Registration Act 1908 Section 48 prior registration doctrine, Land Crime Prevention and Redress Act 2023 Section 5 (up to 7 years non-bailable imprisonment), Specific Relief Act 1877 Section 39 deed cancellation suits, and Order 39 CPC temporary injunctions.
+
+4. **`how-heirs-claim-deceased-parent-bank-fdr-savings-succession-bangladesh`**
+   - **Target Keyword:** `claim deceased parent bank fdr bangladesh` / `succession certificate bank account bangladesh` / `nominee vs legal heirs supreme court bangladesh`
+   - **Metrics:** 2,655 words | 10 sections | 8 FAQs | 1 HTML comparison table | Quick Answer box | Illustrative scenario | No `bnSlug` (distinct EN guide)
+   - **Strategic Focus:** Succession Act 1925 Sections 370–380 Succession Certificates, Bank Company Act 1991 Section 103, Supreme Court rulings establishing nominee as mere trustee/custodian, emergency debit freezes, and Faraiz distribution mandates.
+
+### Cumulative Site Totals (as of 2026-11-10 Run 5)
+- Total EN Posts: 274 (270 baseline + 4 new)
+- Total BN Posts: 416
+- Total Prerendered Pages: 706
+- Total Sitemap URLs: 715
