@@ -249,3 +249,26 @@ Autonomous SEO + Content Agent Run Log for Advocate Md. Shah Alam.
 - Total BN Posts: 411
 - Total Prerendered Pages: 696
 - Total Sitemap URLs: 705
+
+---
+
+## Run: 2026-11-10 (High-Intent Family Law & Marital Crisis Guide)
+
+- **Date:** 2026-11-10
+- **Mode:** `daily-specialized-family-expansion` (1 New High-Intent Educational Guide)
+- **Selection Basis:** High-traffic marital discord and in-law estrangement queries addressing husband and family legal protections, protective GDs, and Restitution of Conjugal Rights:
+  - Topic: Wife forced out of the in-law's house or leaving home—husband's legal remedies and protective steps in Bangladesh.
+
+### Published Article
+
+1. **`wife-leaves-or-forced-out-husband-legal-remedies-bangladesh`**
+   - **Target Keyword:** `wife forced out of in laws house bangladesh` / `wife leaves husband house legal action bangladesh` / `restitution of conjugal rights bangladesh`
+   - **Metrics:** 3,018 words | 10 sections | 8 FAQs | 1 HTML comparison table | Quick Answer box | Illustrative scenario | `bnSlug: "stree-babar-bari-chole-gele-shamir-koroniyo-dampotto-adhikar-2026"`
+   - **Strategic Focus:** Family Courts Act 2023 Section 5(a) & Section 11 conciliation, protective General Diary (GD) timelines, formal Advocate Legal Notice, Domestic Violence (Prevention and Protection) Act 2010 residence orders, Section 5 Dowry Prohibition Act counter-remedies, and spousal/child maintenance rules under MFLO 1961 Section 9.
+   - **CTA Rotation:** Day 314 (Even) -> WhatsApp: `01955802007`, Call: `01712655546`.
+
+### Cumulative Site Totals (as of 2026-11-10 Run 4)
+- Total EN Posts: 270 (269 baseline + 1 new)
+- Total BN Posts: 411
+- Total Prerendered Pages: 697
+- Total Sitemap URLs: 706
