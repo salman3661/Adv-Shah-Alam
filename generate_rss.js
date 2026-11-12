@@ -6,7 +6,7 @@ const fs = require('fs');
 const path = require('path');
 
 const BASE_URL = 'https://www.advmdshahalam.me';
-const TODAY = new Date().toISOString().split('T')[0];
+const TODAY = process.env.TODAY || new Date(Date.now() + 6 * 3600 * 1000).toISOString().split('T')[0];
 const DEFAULT_IMAGE = `${BASE_URL}/adv-md-shah-alam.png`;
 
 const vercelConfig = JSON.parse(fs.readFileSync('vercel.json', 'utf8'));

@@ -8,7 +8,7 @@ const fs = require('fs');
 const path = require('path');
 
 const BASE_URL = 'https://www.advmdshahalam.me';
-const TODAY = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
+const TODAY = process.env.TODAY || new Date(Date.now() + 6 * 3600 * 1000).toISOString().split('T')[0]; // YYYY-MM-DD in Asia/Dhaka
 
 // ── Load redirect sources from vercel.json to exclude them ──────────────────
 const vercelConfig = JSON.parse(fs.readFileSync('vercel.json', 'utf8'));

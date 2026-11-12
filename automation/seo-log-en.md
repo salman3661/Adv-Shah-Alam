@@ -358,3 +358,50 @@ Autonomous SEO + Content Agent Run Log for Advocate Md. Shah Alam.
 - Total BN Posts: 416
 - Total Prerendered Pages: 711
 - Total Sitemap URLs: 720
+
+---
+
+## Run: 2026-11-13 (5 High-Searchable Trending Guides: Pre-Emption, Bank Auction Stay, Overseas Job Fraud, Section 107 Peace Bond & Tax Audit Defense)
+
+- **Date:** 2026-11-13
+- **Mode:** `daily-high-cpc-expansion` (5 New Authoritative Legal Guides)
+- **Selection Basis:** High-intent, high-searchable disputes analyzed across agricultural/non-agricultural land pre-emption, mortgage bank auctions, overseas manpower migration fraud, preventive peace bonds, and the new Income Tax Act 2023 audit notices:
+  - Topic 1 (Land/Civil): Pre-Emption Lawsuits under Section 96 SAT Act & Section 24 NAT Act to repurchase co-sharer land sold to strangers.
+  - Topic 2 (Banking/Civil): Challenging Bank Mortgaged Property Auctions under Artha Rin Adalat Ain Section 12 & 33 and High Court Article 102 Writs.
+  - Topic 3 (Criminal/Manpower): Overseas Job Visa Fraud and Manpower Broker (Dalal) Prosecutions under Prevention and Suppression of Human Trafficking Act 2012.
+  - Topic 4 (Criminal/Preventive): Defending Against Life Threats and Breach of Peace via Section 107 CrPC Peace Bonds in Executive Magistrate Courts.
+  - Topic 5 (Tax/Corporate): Defending Against Income Tax Audit Notices and Demand Letters under the New Income Tax Act 2023 (Sections 182 & 183).
+
+### Published Articles (5 New Authoritative Guides)
+
+1. **`pre-emption-lawsuit-buy-back-sold-land-section-96-sat-act-bangladesh`**
+   - **Target Keyword:** `pre-emption lawsuit bangladesh` / `section 96 sat act bangladesh` / `ogrokroy jomi ferot mamla bangladesh`
+   - **Metrics:** 2,131 words | 10 sections | 8 FAQs | 1 HTML comparison table | Quick Answer box | Illustrative scenario | `bnSlug: "ogrokroyadhikar-pre-emption-jomi-ferot-mamla-2026-bn"`
+   - **Strategic Focus:** State Acquisition and Tenancy Act 1950 Section 96 statutory pre-emption, 2006/2013 amendment restricting rights to co-sharers by inheritance, Non-Agricultural Tenancy Act 1949 Section 24, mandatory 25% compensation court deposit, strict 2-month limitation, and Joint District Judge reconveyance decrees.
+
+2. **`bank-auction-mortgaged-property-stay-artha-rin-adalat-bangladesh`**
+   - **Target Keyword:** `bank auction mortgaged property stay bangladesh` / `artha rin adalat section 12 auction notice` / `how to stop bank auction high court bangladesh`
+   - **Metrics:** 2,064 words | 10 sections | 8 FAQs | 1 HTML comparison table | Quick Answer box | Illustrative scenario | `bnSlug: "ortho-rin-adalat-mamla-bank-loan-auction-writ-2026-bn"`
+   - **Strategic Focus:** Artha Rin Adalat Ain 2003 Section 12 private auctions without court intervention, Section 33 execution auctions, Section 57 ADR settlement, challenging reserve price undervaluation, and High Court Division Article 102 writ petitions with conditional deposits (10–25%).
+
+3. **`overseas-job-visa-fraud-human-trafficking-lawsuit-bangladesh`**
+   - **Target Keyword:** `overseas job visa fraud lawsuit bangladesh` / `human trafficking act dalal fraud bangladesh` / `fake visa cheating case bangladesh`
+   - **Metrics:** 1,979 words | 10 sections | 8 FAQs | 1 HTML comparison table | Quick Answer box | Illustrative scenario | `bnSlug: "bideshe-pathanor-name-dalal-protarona-manob-pachar-mamla-2026-bn"`
+   - **Strategic Focus:** Prevention and Suppression of Human Trafficking Act 2012 Sections 6–8, Overseas Employment and Migrants Act 2013 Sections 31–33, Anti-Human Trafficking Offence Tribunals, BMET recruitment licenses, BMET Wage Earners Welfare Board compensation, and simultaneous Penal Code 420/406 actions.
+
+4. **`life-threat-peace-bond-section-107-crpc-executive-magistrate-bangladesh`**
+   - **Target Keyword:** `section 107 crpc peace bond bangladesh` / `life threat executive magistrate court bangladesh` / `how to file 107 case bangladesh`
+   - **Metrics:** 2,027 words | 10 sections | 8 FAQs | 1 HTML comparison table | Quick Answer box | Illustrative scenario | `bnSlug: "pran-nasher-humki-107-dhara-executive-magistrate-2026-bn"`
+   - **Strategic Focus:** Code of Criminal Procedure Section 107 preventive peace bonds, Executive Magistrate Court jurisdiction, interim bail bonds under Section 117(3) CrPC, Section 118 final show-cause orders, Thana non-FIR police inquiry reports, and High Court Section 561A quashment of malicious proceedings.
+
+5. **`income-tax-audit-notice-hearing-defense-act-2023-bangladesh`**
+   - **Target Keyword:** `income tax audit notice defense bangladesh` / `income tax act 2023 audit section 182 bangladesh` / `tax assessment notice challenge bangladesh`
+   - **Metrics:** 2,032 words | 10 sections | 8 FAQs | 1 HTML comparison table | Quick Answer box | Illustrative scenario | `bnSlug: "aykor-audit-notice-shunani-protikar-2026-bn"`
+   - **Strategic Focus:** Income Tax Act 2023 (Aykor Ain 2023) Section 182/183 audit selection, Deputy Commissioner of Taxes (DCT) show-cause hearings, statutory reconciliation of bank deposits and asset statements, Section 285 Commissioner (Appeals) with 10% pre-deposit, Taxes Appellate Tribunal, and High Court Section 312 reference applications.
+
+### Cumulative Site Totals (as of 2026-11-13)
+- Total EN Posts: 284 (279 baseline + 5 new)
+- Total BN Posts: 421 (416 baseline + 5 new from git pull)
+- Total Prerendered Pages: 721
+- Total Sitemap URLs: 730
+
