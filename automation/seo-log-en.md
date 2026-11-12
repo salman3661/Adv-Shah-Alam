@@ -312,3 +312,49 @@ Autonomous SEO + Content Agent Run Log for Advocate Md. Shah Alam.
 - Total BN Posts: 416
 - Total Prerendered Pages: 706
 - Total Sitemap URLs: 715
+
+---
+
+## Run: 2026-11-12 (5 High-Searchable Trending Guides: Oral Debts, Ancestral Property, Corporate Oppression, Employee Fraud & RAJUK Demolition)
+
+- **Date:** 2026-11-12
+- **Mode:** `daily-high-cpc-expansion` (5 New Authoritative Legal Guides)
+- **Selection Basis:** High-intent, high-searchable disputes analyzed across commercial debts, family property partitions, corporate shareholder oppression, white-collar workplace crime, and constitutional property protection:
+  - Topic 1 (Civil/Commercial): Can you sue for unpaid money on an oral contract in Bangladesh?
+  - Topic 2 (Land/Ancestral): Selling ancestral property without all heirs' consent and co-sharer rights.
+  - Topic 3 (Corporate/Litigation): Minority shareholder oppression under Section 233 of the Companies Act 1994.
+  - Topic 4 (Criminal/Commercial): Employee embezzlement and company fund theft under Penal Code Section 408.
+  - Topic 5 (Constitutional/Property): Challenging RAJUK and municipal illegal demolition via High Court Article 102 Writs.
+
+### Published Articles (5 New Authoritative Guides)
+
+1. **`can-you-sue-for-unpaid-money-oral-agreement-bangladesh`**
+   - **Target Keyword:** `sue for unpaid money oral agreement bangladesh` / `money suit oral contract bangladesh` / `how to recover debt without written contract bangladesh`
+   - **Metrics:** 2,659 words | 10 sections | 8 FAQs | 1 HTML comparison table | Quick Answer box | Illustrative scenario | `bnSlug: "moukhik-chukti-bokeya-taka-aday-money-suit-deyani-ain-2026-bn"`
+   - **Strategic Focus:** Contract Act 1872 Section 10 validity, Evidence Act 1872 Sections 59–60 direct oral proof, electronic corroboration (WhatsApp, MFS, bank transfers), Limitation Act 1908 Article 115 3-year deadline, Money Suit procedure in Joint District Judge Court, and Order 38 Rule 5 CPC attachment before judgment.
+
+2. **`selling-ancestral-property-without-all-heirs-consent-bangladesh`**
+   - **Target Keyword:** `selling ancestral property without heirs consent bangladesh` / `co-sharer selling land without permission bangladesh` / `section 44 transfer of property act bangladesh`
+   - **Metrics:** 2,608 words | 10 sections | 8 FAQs | 1 HTML comparison table | Quick Answer box | Illustrative scenario | `bnSlug: "warish-jomi-bikroy-rokhe-nishedhagga-2026-bn"`
+   - **Strategic Focus:** Undivided fractional shares vs specific demarcations, Transfer of Property Act 1882 Section 44 dwelling house exclusion of strangers, Partition Act 1893 Section 4 buyout rights, State Acquisition and Tenancy Act 1950 Section 96 statutory pre-emption (Ogrokroy), Partition Suits (Batwara Mamla), and Order 39 CPC injunctions.
+
+3. **`minority-shareholder-oppression-section-233-companies-act-bangladesh`**
+   - **Target Keyword:** `minority shareholder oppression bangladesh` / `section 233 companies act 1994 bangladesh` / `illegal removal of director bangladesh`
+   - **Metrics:** 2,482 words | 10 sections | 8 FAQs | 1 HTML comparison table | Quick Answer box | Illustrative scenario | No `bnSlug` (distinct EN guide)
+   - **Strategic Focus:** Section 233 Companies Act 1994 alternative remedy to winding up, 10% statutory shareholding threshold, Company Bench of High Court Division jurisdiction, freezing corporate bank accounts, independent forensic audit appointments, Section 106 illegal director removal, and court-decreed share buyouts.
+
+4. **`employee-embezzlement-theft-company-funds-penal-code-bangladesh`**
+   - **Target Keyword:** `employee embezzlement company funds bangladesh` / `section 408 penal code bangladesh` / `criminal breach of trust by clerk or servant bangladesh`
+   - **Metrics:** 2,465 words | 10 sections | 8 FAQs | 1 HTML comparison table | Quick Answer box | Illustrative scenario | No `bnSlug` (distinct EN guide)
+   - **Strategic Focus:** Penal Code 1860 Section 408 (up to 7 years non-bailable imprisonment), Section 477A falsification of accounts, immediate 24-hour evidence lockdown, Thana FIR vs CR case, police bank freezes under Section 94 CrPC, and civil recovery via Money Suits with Order 38 CPC asset attachment.
+
+5. **`rajuk-eviction-illegal-demolition-writ-petition-high-court-bangladesh`**
+   - **Target Keyword:** `rajuk eviction illegal demolition bangladesh` / `article 102 writ petition high court bangladesh` / `stop rajuk demolition stay order high court`
+   - **Metrics:** 2,397 words | 10 sections | 8 FAQs | 1 HTML comparison table | Quick Answer box | Illustrative scenario | No `bnSlug` (distinct EN guide)
+   - **Strategic Focus:** Constitution of Bangladesh Article 102 Writ jurisdiction, Building Construction Act 1952 Section 3B mandatory show-cause notice and Section 3C appeal, natural justice violations (Audi alteram partem), emergency High Court ad-interim Stay Orders, plan deviation compounding, and Acquisition and Requisition of Immovable Property Act 2017 compensation.
+
+### Cumulative Site Totals (as of 2026-11-12)
+- Total EN Posts: 279 (274 baseline + 5 new)
+- Total BN Posts: 416
+- Total Prerendered Pages: 711
+- Total Sitemap URLs: 720
