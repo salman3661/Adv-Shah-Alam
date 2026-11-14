@@ -266,6 +266,36 @@
    - *বিষয়:* কপিরাইট আইন ২০২৩: ইউটিউব, বই ও ডিজিটাল কনটেন্ট চুরিতে কোটি টাকার ক্ষতিপূরণ ও মামলা ২০২৬
    - *আইনি ভিত্তি:* বাংলাদেশ কপিরাইট আইন ২০২৩-এর ধারা ৮৪-৮৮, অ্যান্টোন পিলার অর্ডার (Anton Piller Order) ও দেওয়ানি ক্ষতিপূরণ মোকদ্দমা। শব্দ: ১,৮৩৬।
 
+---
+
+## রান তারিখ: ২০২৬-১১-১৫ (দৈনিক কনটেন্ট ব্যাচ: ৫টি বাংলা + ৫টি ইংরেজি)
+- **রানের তারিখ:** 2026-11-15 (`TODAY=2026-11-15`)
+- **MODE:** `daily-content-batch` (`daily-content-prompt.md` §১–§৮ অনুসরণে ১০টি ডুপ্লিকেটমুক্ত ও স্বয়ং-যাচাইকৃত আর্টিকেল)
+- **সর্বমোট পোস্ট সংখ্যা:** বাংলা ৪৩৬ + ইংরেজি ২৯৪ = ৭৩০ (প্রিরেন্ডার ৭৪৬টি পেজ, সাইটম্যাপ ৭৫৫টি URL)
+- **মানদণ্ড যাচাই:** প্রতিটি বাংলা পোস্টে ৭০০–১,১০০ শব্দসীমা (৮৭০–৮৮২ শব্দ মূল প্রবন্ধ, ১,০৭৯–১,০৯২ শব্দ FAQ সহ), ৫টি H2 সেকশন (১৫১–১৬৩ শব্দ), ৫টি FAQ (৪০–৪৫ শব্দ), ১০–১২টি অভ্যন্তরীণ লিংক, ১টি `<ol>` অথবা `<table>`, ডকুমেন্ট চেকলিস্ট `<ul>`, এবং `dupcheck.py VERDICT: PUBLISH`।
+
+### প্রকাশিত ৫টি নতুন বাংলা পোস্ট ও ইনবাউন্ড-লিংক ম্যানিফেস্ট:
+1. **`zero-return-aykor-niyom-bangladesh`** — `জিরো রিটার্ন দাখিলের নিয়ম ও আইনি শর্ত` (৩৯ অক্ষর)
+   - *আইন ও ধারা:* আয়কর আইন ২০২৩ (ধারা ১৬৬, ১৭৪, ১৮০, ২৬৪, ২৬৬)। শব্দ: ৮৭০ / ১,০৯২ (FAQ সহ) | `dupcheck: PUBLISH`
+   - *Inbound-Link Targets (ব্যাক-লিংক করার বিদ্যমান পোস্ট):* `/bn/blog/aaykar-return-notice-prokriya-bangladesh`, `/bn/blog/aykor-return-somoy-briddhi-abedon-2026-bn`, `/bn/blog/company-tin-nibondhon-bangladesh`
+2. **`tin-batil-korar-niyom-bangladesh`** — `TIN বাতিল করার নিয়ম, আবেদন ও কাগজপত্র` (৩৮ অক্ষর)
+   - *আইন ও ধারা:* আয়কর আইন ২০২৩ (ধারা ১৯৪, ২৬১, ২৬২, ২৬৩, ২৬৬)। শব্দ: ৮৭১ / ১,০৭৯ (FAQ সহ) | `dupcheck: PUBLISH`
+   - *Inbound-Link Targets:* `/bn/blog/aaykar-return-notice-prokriya-bangladesh`, `/bn/blog/aykor-audit-notice-shunani-protikar-2026-bn`, `/bn/blog/company-tin-nibondhon-bangladesh`
+3. **`hindu-biye-nibandhon-ain-bangladesh`** — `হিন্দু বিবাহ নিবন্ধন আইন ও সনদ পাওয়ার নিয়ম` (৪৪ অক্ষর)
+   - *আইন ও ধারা:* হিন্দু বিবাহ নিবন্ধন আইন ২০১২ (ধারা ৩–৬) ও বিধিমালা ২০১৩, বাল্যবিবাহ নিরোধ আইন ২০১৭। শব্দ: ৮৭৬ / ১,০৮৫ (FAQ সহ) | `dupcheck: PUBLISH`
+   - *Inbound-Link Targets:* `/bn/blog/special-marriage-act-1872-court-marriage-niyom-2026-bn`, `/bn/blog/court-marriage-kagojpatra-complete-guide-2026`, `/bn/blog/educational-certificate-attestation-mofa-apostille-notary-bangladesh-2026`
+4. **`matrittokalin-chuti-shrom-ain-bangladesh`** — `মাতৃত্বকালীন ছুটি ও প্রসূতি কল্যাণ শ্রম আইন` (৪৩ অক্ষর)
+   - *আইন ও ধারা:* বাংলাদেশ শ্রম আইন ২০০৬ (ধারা ৩৩, ৪৫–৫০, ১৩২)। শব্দ: ৮৮২ / ১,০৯২ (FAQ সহ) | `dupcheck: PUBLISH`
+   - *Inbound-Link Targets:* `/bn/blog/bina-notishe-chakrichyuti-gratuity-provident-fund-adaya-shrom-ain-2026-bn`, `/bn/blog/shram-ain-job-termination-gratuity-aday-bangladesh`, `/bn/blog/shramik-odhikar-labour-ain-bn`
+5. **`jaminjoggo-ojaminjoggo-dhara-ain-bangladesh`** — `জামিনযোগ্য ও অজামিনযোগ্য ধারার আইনি বিধান` (৪১ অক্ষর)
+   - *আইন ও ধারা:* ফৌজদারি কার্যবিধি ১৮৯৮ (ধারা ৪(১)(খ), ৪৯৬, ৪৯৭, ৪৯৮ ও দ্বিতীয় তফসিল), দণ্ডবিধি ১৮৬০। শব্দ: ৮৭৯ / ১,০৮৫ (FAQ সহ) | `dupcheck: PUBLISH`
+   - *Inbound-Link Targets:* `/bn/blog/faujdari-mamlay-jaminer-niyom-khoroch-2026-bn`, `/bn/blog/niamito-jamin-adalote-attoshomorpon-497-crpc-niyom-2026-bn`, `/bn/blog/54-dhara-grepthar-remand-rights-bangladesh`
+
+### গেট-পর্যায়ে বাতিলকৃত প্রার্থী (Rejected at gates)
+- `তালাক প্রত্যাহার / তালাক নোটিশ` → `dupcheck` (০.৮০ কভারেজ); প্রতিস্থাপন: `jaminjoggo-ojaminjoggo-dhara-ain-bangladesh`।
+- `সুনির্দিষ্ট প্রতিকার আইন ৪২ ধারা` → `dupcheck VERDICT: REJECT` (০.৭৩ কভারেজ); প্রতিস্থাপন: `matrittokalin-chuti-shrom-ain-bangladesh`।
+
+
 
 
 
