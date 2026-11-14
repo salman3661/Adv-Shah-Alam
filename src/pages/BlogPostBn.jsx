@@ -557,24 +557,32 @@ const BlogPostBnInner = () => {
         datePublished: post.publishedDate, dateModified: post.lastModified || post.publishedDate,
         inLanguage: 'bn',
         author: {
-            '@type': 'LegalService',
-            '@id': 'https://www.advmdshahalam.me/#legalservice',
+            '@type': 'Person',
+            '@id': 'https://www.advmdshahalam.me/#attorney',
             name: 'Advocate Md. Shah Alam',
             alternateName: 'এডভোকেট মোঃ শাহ আলম',
-            url: 'https://www.advmdshahalam.me',
+            url: 'https://www.advmdshahalam.me/advocate-md-shah-alam',
         },
         publisher: {
-            '@type': 'LegalService',
-            '@id': 'https://www.advmdshahalam.me/#legalservice',
+            '@type': 'Organization',
             name: 'Advocate Md. Shah Alam Law Chambers',
             url: 'https://www.advmdshahalam.me',
-            logo: { '@type': 'ImageObject', url: 'https://www.advmdshahalam.me/favicon.ico' }
+            logo: { '@type': 'ImageObject', url: 'https://www.advmdshahalam.me/adv-md-shah-alam.png' }
         },
         url: canonicalHref,
         mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalHref },
         image: 'https://www.advmdshahalam.me/images/advocate-shah-alam.jpg',
         keywords: (Array.isArray(post.keywords) ? post.keywords : []).join(', '),
     };
+    const faqSchema = Array.isArray(post.faqs) && post.faqs.length > 0 ? {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: post.faqs.map((f) => ({
+            '@type': 'Question',
+            name: f.question || f.q,
+            acceptedAnswer: { '@type': 'Answer', text: f.answer || f.a },
+        })).filter((x) => x.name && x.acceptedAnswer.text),
+    } : null;
     const breadcrumbSchema = {
         '@context': 'https://schema.org', '@type': 'BreadcrumbList',
         itemListElement: [
@@ -678,7 +686,7 @@ const BlogPostBnInner = () => {
                 <meta property="article:tag" content={(Array.isArray(post.keywords) ? post.keywords.slice(0, 5) : []).join(', ')} />
                 <script type="application/ld+json">{JSON.stringify(blogPostingSchema)}</script>
                 <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
-                <script type="application/ld+json">{jsonLd(entityGraph)}</script>
+                {faqSchema && <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>}
                 {howToSchema && <script type="application/ld+json">{JSON.stringify(howToSchema)}</script>}
             </Helmet>
 

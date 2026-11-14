@@ -101,30 +101,6 @@ const testimonialsBn = [
     },
 ];
 
-const reviewSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'LegalService',
-    name: 'Advocate Md. Shah Alam – Law Chamber',
-    url: 'https://www.advmdshahalam.me',
-    aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: '5',
-        reviewCount: testimonialsEn.length.toString(),
-        bestRating: '5',
-        worstRating: '1',
-    },
-    review: testimonialsEn.map(t => ({
-        '@type': 'Review',
-        author: { '@type': 'Person', name: t.name },
-        reviewBody: t.review,
-        reviewRating: {
-            '@type': 'Rating',
-            ratingValue: t.rating.toString(),
-            bestRating: '5',
-        },
-    })),
-};
-
 const StarRating = ({ rating }) => (
     // role="img" required: aria-label on a plain div is a prohibited ARIA attribute.
     // role="img" makes the aria-label valid and meaningful to screen readers.
@@ -152,11 +128,6 @@ const Testimonials = ({ lang = 'en' }) => {
 
     return (
         <>
-            <Helmet>
-                <script type="application/ld+json">
-                    {JSON.stringify(reviewSchema)}
-                </script>
-            </Helmet>
 
             <section
                 id="testimonials"

@@ -869,13 +869,150 @@ async function main() {
   const base = readBase();
   const TODAY = new Date().toISOString().split('T')[0];
 
+  function buildInstitutionalSchema(pageUrl, lang, breadcrumbItems) {
+    const graph = [
+      {
+        '@type': 'WebSite',
+        '@id': `${BASE}/#website`,
+        name: lang === 'bn' ? 'এডভোকেট মোঃ শাহ আলম' : 'Advocate Md. Shah Alam',
+        url: `${BASE}/`,
+        inLanguage: lang,
+        potentialAction: {
+          '@type': 'SearchAction',
+          target: `${BASE}/blog?q={search_term_string}`,
+          'query-input': 'required name=search_term_string',
+        },
+      },
+      {
+        '@type': 'Person',
+        '@id': `${BASE}/#attorney`,
+        name: 'Advocate Md. Shah Alam',
+        alternateName: 'এডভোকেট মোঃ শাহ আলম',
+        jobTitle: 'Advocate, Supreme Court of Bangladesh',
+        url: `${BASE}/advocate-md-shah-alam`,
+        image: `${BASE}/images/hero/hero-md-shah-alam.png`,
+        telephone: '+8801712655546',
+        email: 'contact@advmdshahalam.me',
+        worksFor: { '@id': `${BASE}/#legalservice` },
+        memberOf: [
+          { '@type': 'Organization', name: 'Bangladesh Bar Council' },
+          { '@type': 'Organization', name: 'Supreme Court Bar Association' },
+          { '@type': 'Organization', name: 'Dhaka Bar Association' },
+        ],
+        sameAs: [
+          'https://www.facebook.com/advmd.shahalamfb',
+          'https://www.linkedin.com/in/advmdshahalam/',
+          'https://maps.app.goo.gl/M3NXMwW3xkp2TE3h8',
+        ],
+      },
+      {
+        '@type': 'LegalService',
+        '@id': `${BASE}/#legalservice`,
+        name: 'Advocate Md. Shah Alam Law Chamber',
+        alternateName: 'এডভোকেট মোঃ শাহ আলম ল চেম্বার',
+        url: BASE,
+        logo: `${BASE}/adv-md-shah-alam.png`,
+        image: `${BASE}/images/advocate-shah-alam.jpg`,
+        telephone: '+8801712655546',
+        email: 'contact@advmdshahalam.me',
+        priceRange: '৳৳',
+        address: [
+          {
+            '@type': 'PostalAddress',
+            streetAddress: 'House 46, Road 6/B, Sector 12, Uttara',
+            addressLocality: 'Uttara, Dhaka',
+            addressRegion: 'Dhaka',
+            postalCode: '1230',
+            addressCountry: 'BD',
+          },
+          {
+            '@type': 'PostalAddress',
+            streetAddress: 'Lawyers Association Building, 4th Floor, 6/7 Court House Street, Kotwali',
+            addressLocality: 'Judge Court, Dhaka',
+            addressRegion: 'Dhaka',
+            postalCode: '1100',
+            addressCountry: 'BD',
+          },
+        ],
+        geo: {
+          '@type': 'GeoCoordinates',
+          latitude: 23.8745,
+          longitude: 90.3987,
+        },
+        openingHoursSpecification: [
+          {
+            '@type': 'OpeningHoursSpecification',
+            dayOfWeek: ['Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday'],
+            opens: '09:00',
+            closes: '21:00',
+          },
+        ],
+        hasOfferCatalog: {
+          '@type': 'OfferCatalog',
+          name: 'Legal Practice Areas',
+          itemListElement: [
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Criminal Defense', url: `${BASE}/services/criminal-lawyer` } },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Bail & Anticipatory Bail', url: `${BASE}/services/bail-lawyer` } },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Divorce & Family Law', url: `${BASE}/services/divorce-lawyer` } },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Land & Property Law', url: `${BASE}/services/land-lawyer` } },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Supreme Court Writ & Appeals', url: `${BASE}/services/supreme-court-lawyer` } },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Company & Corporate Law', url: `${BASE}/services/company-corporate-lawyer` } },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Income Tax & VAT Law', url: `${BASE}/services/tax-lawyer` } },
+          ],
+        },
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: breadcrumbItems.map((b, idx) => ({
+          '@type': 'ListItem',
+          position: idx + 1,
+          name: b.name,
+          item: b.item,
+        })),
+      },
+    ];
+    return `<script type="application/ld+json">${jsonLd({ '@context': 'https://schema.org', '@graph': graph })}</script>`;
+  }
+
+  function buildServiceSchema(pageUrl, name, description, lang) {
+    const homeName = lang === 'bn' ? 'হোম' : 'Home';
+    const homeUrl = lang === 'bn' ? `${BASE}/` : `${BASE}/en`;
+    const graph = [
+      {
+        '@type': 'Service',
+        '@id': `${pageUrl}#service`,
+        name,
+        description,
+        url: pageUrl,
+        inLanguage: lang,
+        provider: {
+          '@type': 'LegalService',
+          '@id': `${BASE}/#legalservice`,
+          name: 'Advocate Md. Shah Alam Law Chamber',
+          url: BASE,
+          priceRange: '৳৳',
+        },
+        areaServed: { '@type': 'Country', name: 'Bangladesh' },
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: homeName, item: homeUrl },
+          { '@type': 'ListItem', position: 2, name, item: pageUrl },
+        ],
+      },
+    ];
+    return `<script type="application/ld+json">${jsonLd({ '@context': 'https://schema.org', '@graph': graph })}</script>`;
+  }
+
   console.log('\n🏠 Pre-rendering core pages...');
 
   // ── Home page (/index.html — Bengali-first) ────────────────────────────────
   {
     const extraHead = `<link rel="alternate" hreflang="bn" href="${BASE}/" />
 <link rel="alternate" hreflang="en" href="${BASE}/en" />
-<link rel="alternate" hreflang="x-default" href="${BASE}/en" />`;
+<link rel="alternate" hreflang="x-default" href="${BASE}/en" />
+${buildInstitutionalSchema(`${BASE}/`, 'bn', [{ name: 'হোম', item: `${BASE}/` }])}`;
     const html = buildPage(base, {
       title: 'সুপ্রিম কোর্ট আইনজীবী ঢাকা | এডভোকেট মোঃ শাহ আলম',
       description: 'বাংলাদেশ সুপ্রিম কোর্টের অভিজ্ঞ আইনজীবী এডভোকেট মোঃ শাহ আলম। ফৌজদারি, জামিন, তালাক, জমি ও কর্পোরেট মামলায় উত্তরা চেম্বারে সরাসরি আইনি পরামর্শ নিন।',
@@ -892,7 +1029,8 @@ async function main() {
   {
     const extraHead = `<link rel="alternate" hreflang="en" href="${BASE}/en" />
 <link rel="alternate" hreflang="bn" href="${BASE}/" />
-<link rel="alternate" hreflang="x-default" href="${BASE}/en" />`;
+<link rel="alternate" hreflang="x-default" href="${BASE}/en" />
+${buildInstitutionalSchema(`${BASE}/en`, 'en', [{ name: 'Home', item: `${BASE}/en` }])}`;
     const html = buildPage(base, {
       title: 'Supreme Court Lawyer Dhaka | Advocate Md. Shah Alam',
       description: 'Advocate Md. Shah Alam is a Supreme Court lawyer in Uttara, Dhaka handling criminal defense, bail, divorce, land disputes, and corporate legal matters.',
@@ -908,7 +1046,8 @@ async function main() {
   // ── Advocate/About page ────────────────────────────────────────────────────
   {
     const extraHead = `<link rel="alternate" hreflang="en" href="${BASE}/advocate-md-shah-alam" />
-<link rel="alternate" hreflang="x-default" href="${BASE}/advocate-md-shah-alam" />`;
+<link rel="alternate" hreflang="x-default" href="${BASE}/advocate-md-shah-alam" />
+${buildInstitutionalSchema(`${BASE}/advocate-md-shah-alam`, 'en', [{ name: 'Home', item: `${BASE}/en` }, { name: 'Advocate Md. Shah Alam', item: `${BASE}/advocate-md-shah-alam` }])}`;
     const html = buildPage(base, {
       title: 'About Advocate Md. Shah Alam | Supreme Court BD',
       description: 'Learn about Advocate Md. Shah Alam, LL.M Supreme Court lawyer in Uttara, Dhaka with 10+ years experience in criminal, bail, family, and property law.',
@@ -924,7 +1063,8 @@ async function main() {
   // ── Education page ─────────────────────────────────────────────────────────
   {
     const extraHead = `<link rel="alternate" hreflang="en" href="${BASE}/education" />
-<link rel="alternate" hreflang="x-default" href="${BASE}/education" />`;
+<link rel="alternate" hreflang="x-default" href="${BASE}/education" />
+${buildInstitutionalSchema(`${BASE}/education`, 'en', [{ name: 'Home', item: `${BASE}/en` }, { name: 'Education & Bar Enrollment', item: `${BASE}/education` }])}`;
     const html = buildPage(base, {
       title: 'Education & Bar Enrollment | Advocate Md. Shah Alam',
       description: 'Explore the education and career timeline of Advocate Shah Alam — LL.M lawyer with 10+ years of legal excellence at the Supreme Court of Bangladesh.',
@@ -941,7 +1081,8 @@ async function main() {
   {
     const extraHead = `<link rel="alternate" hreflang="en" href="${BASE}/contact" />
 <link rel="alternate" hreflang="bn" href="${BASE}/bn/contact" />
-<link rel="alternate" hreflang="x-default" href="${BASE}/contact" />`;
+<link rel="alternate" hreflang="x-default" href="${BASE}/contact" />
+${buildInstitutionalSchema(`${BASE}/contact`, 'en', [{ name: 'Home', item: `${BASE}/en` }, { name: 'Contact', item: `${BASE}/contact` }])}`;
     const html = buildPage(base, {
       title: 'Contact Advocate Md. Shah Alam | Dhaka Chamber',
       description: 'Contact Advocate Md. Shah Alam for legal consultation in Dhaka & Uttara. Call +880 1712-655546 or WhatsApp for criminal, divorce, bail & property cases.',
@@ -958,7 +1099,8 @@ async function main() {
   {
     const extraHead = `<link rel="alternate" hreflang="bn" href="${BASE}/bn/contact" />
 <link rel="alternate" hreflang="en" href="${BASE}/contact" />
-<link rel="alternate" hreflang="x-default" href="${BASE}/contact" />`;
+<link rel="alternate" hreflang="x-default" href="${BASE}/contact" />
+${buildInstitutionalSchema(`${BASE}/bn/contact`, 'bn', [{ name: 'হোম', item: `${BASE}/` }, { name: 'যোগাযোগ', item: `${BASE}/bn/contact` }])}`;
     const html = buildPage(base, {
       title: 'যোগাযোগ ও চেম্বার | এডভোকেট মোঃ শাহ আলম ঢাকা',
       description: 'এডভোকেট মোঃ শাহ আলমের উত্তরা ও ঢাকা জজ কোর্ট চেম্বারে সরাসরি আইনি পরামর্শ ও মামলা মূল্যায়নের জন্য যোগাযোগ করুন। ফোন: +8801712655546।',
@@ -1084,7 +1226,8 @@ ${CTA}`,
     if (meta) {
       const extraHead = `<link rel="alternate" hreflang="en" href="${BASE}/services/${slug}" />
 <link rel="alternate" hreflang="bn" href="${BASE}/bn/services/${slug}" />
-<link rel="alternate" hreflang="x-default" href="${BASE}/services/${slug}" />`;
+<link rel="alternate" hreflang="x-default" href="${BASE}/services/${slug}" />
+${buildServiceSchema(`${BASE}/services/${slug}`, meta.h1, meta.desc, 'en')}`;
       const html = buildPage(base, {
         title: meta.title,
         description: meta.desc,
@@ -1102,7 +1245,8 @@ ${DISCLAIMER}${meta.body}${CTA}`,
     if (bnMeta) {
       const extraHead = `<link rel="alternate" hreflang="bn" href="${BASE}/bn/services/${slug}" />
 <link rel="alternate" hreflang="en" href="${BASE}/services/${slug}" />
-<link rel="alternate" hreflang="x-default" href="${BASE}/services/${slug}" />`;
+<link rel="alternate" hreflang="x-default" href="${BASE}/services/${slug}" />
+${buildServiceSchema(`${BASE}/bn/services/${slug}`, bnMeta.h1, bnMeta.desc, 'bn')}`;
       const bnHtml = buildPage(base, {
         title: bnMeta.title,
         description: bnMeta.desc,
@@ -1173,7 +1317,7 @@ ${BN_DISCLAIMER}${bnMeta.body}${BN_CTA}`,
 
     const articleSchema = {
       '@context': 'https://schema.org',
-      '@type': ['Article', 'BlogPosting'],
+      '@type': 'BlogPosting',
       headline: post.title,
       description: enMetaDesc,
       datePublished: post.publishedDate || TODAY,
@@ -1181,14 +1325,13 @@ ${BN_DISCLAIMER}${bnMeta.body}${BN_CTA}`,
       inLanguage: 'en',
       mainEntityOfPage: { '@type': 'WebPage', '@id': postCanonical },
       author: {
-        '@type': 'LegalService',
-        '@id': `${BASE}/#legalservice`,
+        '@type': 'Person',
+        '@id': `${BASE}/#attorney`,
         name: 'Advocate Md. Shah Alam',
-        url: BASE,
+        url: `${BASE}/advocate-md-shah-alam`,
       },
       publisher: {
-        '@type': 'LegalService',
-        '@id': `${BASE}/#legalservice`,
+        '@type': 'Organization',
         name: 'Advocate Md. Shah Alam Law Chambers',
         url: BASE,
         logo: { '@type': 'ImageObject', url: `${BASE}/adv-md-shah-alam.png` },
@@ -1200,18 +1343,28 @@ ${BN_DISCLAIMER}${bnMeta.body}${BN_CTA}`,
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: `${BASE}/` },
+        { '@type': 'ListItem', position: 1, name: 'Home', item: `${BASE}/en` },
         { '@type': 'ListItem', position: 2, name: 'Blog', item: `${BASE}/blog` },
         { '@type': 'ListItem', position: 3, name: post.title, item: postCanonical },
       ],
     };
 
-    const entityGraph = buildEntityGraph({ url: postCanonical, lang: 'en', faqs: post.faqs });
+    const faqItemsEn = (Array.isArray(post.faqs) ? post.faqs : [])
+      .map(f => ({ q: f.question || f.q, a: f.answer || f.a }))
+      .filter(f => f.q && f.a);
+    const faqSchemaEn = faqItemsEn.length > 0 ? {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faqItemsEn.map(f => ({
+        '@type': 'Question',
+        name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: f.a },
+      })),
+    } : null;
 
     const extraHead = `${hreflangTags}
 <script type="application/ld+json">${jsonLd(articleSchema)}</script>
-<script type="application/ld+json">${jsonLd(breadcrumbSchema)}</script>
-<script type="application/ld+json">${jsonLd(entityGraph)}</script>`;
+<script type="application/ld+json">${jsonLd(breadcrumbSchema)}</script>${faqSchemaEn ? `\n<script type="application/ld+json">${jsonLd(faqSchemaEn)}</script>` : ''}`;
 
     const html = buildPage(base, {
       title: evergreenYear(post.metaTitle || post.title),
@@ -1239,7 +1392,7 @@ ${BN_DISCLAIMER}${bnMeta.body}${BN_CTA}`,
 
     const articleSchema = {
       '@context': 'https://schema.org',
-      '@type': ['Article', 'BlogPosting'],
+      '@type': 'BlogPosting',
       headline: post.title,
       description: bnMetaDesc,
       datePublished: post.publishedDate || TODAY,
@@ -1247,15 +1400,14 @@ ${BN_DISCLAIMER}${bnMeta.body}${BN_CTA}`,
       inLanguage: 'bn',
       mainEntityOfPage: { '@type': 'WebPage', '@id': postCanonical },
       author: {
-        '@type': 'LegalService',
-        '@id': `${BASE}/#legalservice`,
+        '@type': 'Person',
+        '@id': `${BASE}/#attorney`,
         name: 'Advocate Md. Shah Alam',
         alternateName: 'এডভোকেট মোঃ শাহ আলম',
-        url: BASE,
+        url: `${BASE}/advocate-md-shah-alam`,
       },
       publisher: {
-        '@type': 'LegalService',
-        '@id': `${BASE}/#legalservice`,
+        '@type': 'Organization',
         name: 'Advocate Md. Shah Alam Law Chambers',
         url: BASE,
         logo: { '@type': 'ImageObject', url: `${BASE}/adv-md-shah-alam.png` },
@@ -1273,12 +1425,22 @@ ${BN_DISCLAIMER}${bnMeta.body}${BN_CTA}`,
       ],
     };
 
-    const entityGraph = buildEntityGraph({ url: postCanonical, lang: 'bn', faqs: post.faqs });
+    const faqItemsBn = (Array.isArray(post.faqs) ? post.faqs : [])
+      .map(f => ({ q: f.question || f.q, a: f.answer || f.a }))
+      .filter(f => f.q && f.a);
+    const faqSchemaBn = faqItemsBn.length > 0 ? {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faqItemsBn.map(f => ({
+        '@type': 'Question',
+        name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: f.a },
+      })),
+    } : null;
 
     const extraHead = `${hreflangTags}
 <script type="application/ld+json">${jsonLd(articleSchema)}</script>
-<script type="application/ld+json">${jsonLd(breadcrumbSchema)}</script>
-<script type="application/ld+json">${jsonLd(entityGraph)}</script>`;
+<script type="application/ld+json">${jsonLd(breadcrumbSchema)}</script>${faqSchemaBn ? `\n<script type="application/ld+json">${jsonLd(faqSchemaBn)}</script>` : ''}`;
 
     const html = buildPage(base, {
       title: evergreenYear(post.metaTitle || post.title || 'বাংলাদেশ আইনি গাইড'),
