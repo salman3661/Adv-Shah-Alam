@@ -141,18 +141,22 @@ html[lang="bn"] td {
    ADSENSE STYLING, CLS PREVENTION & ZERO ADS ABOVE THE FOLD
    ══════════════════════════════════════════════════════════ */
 .adsense-wrapper {
-  min-height: 250px;
+  min-height: 100px;
   overflow: hidden;
   transition: opacity 0.25s ease;
 }
 
-ins.adsbygoogle[data-ad-status="unfilled"],
-.adsense-wrapper:has(ins.adsbygoogle[data-ad-status="unfilled"]) {
-  display: none !important;
-  height: 0 !important;
-  min-height: 0 !important;
-  margin: 0 !important;
-  padding: 0 !important;
+@media (min-width: 768px) {
+  .adsense-wrapper {
+    min-height: 250px;
+  }
+}
+
+/* Preserve reserved container space on unfilled ads to prevent CLS; only hide inner <ins> */
+ins.adsbygoogle[data-ad-status="unfilled"] {
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
 }
 
 /* Phase 2.1: Strict Zero Ads Above the Fold & Auto-Ads / Intent Chip Blocker */

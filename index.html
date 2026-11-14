@@ -188,6 +188,10 @@
       }
 
       function loadAds() {
+        var host = window.location && window.location.hostname;
+        if (host !== 'www.advmdshahalam.me' && host !== 'advmdshahalam.me') {
+          return;
+        }
         if (adsLoaded || document.querySelector('script[src*="adsbygoogle.js"]')) {
           adsLoaded = true;
           return;

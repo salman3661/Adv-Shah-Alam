@@ -52,7 +52,7 @@
     },
     {
       "h2": "VAT (BIN) Annual Compliance",
-      "content": "<p>Companies registered for VAT (with a BIN — Business Identification Number) under the VAT and Supplementary Duty Act 2012 must comply with monthly VAT return filing requirements (Mushak 9.1 for general VAT) as well as annual requirements:</p>\n<ul>\n<li><strong>Monthly VAT returns:</strong> Due by the 15th of the following month</li>\n<li><strong>Annual VAT audit:</strong> NBR may conduct VAT audits of registered businesses</li>\n<li><strong>VAT registration renewal:</strong> The BIN does not expire but companies must update their registration details annually if there are changes</li>\n<li><strong>Input tax credit reconciliation:</strong> Annual reconciliation of input VAT claims with actual purchases</li>\n</ul>\n<p>VAT default attracts significant penalties including fines, interest, and in serious cases, prosecution.</p>"
+      "content": "<p>Companies registered for VAT (with a BIN — Business Identification Number) under the VAT and Supplementary Duty Act 2012 must comply with monthly VAT return filing requirements (Mushak 9.1 for general VAT) as well as annual requirements:</p>\n<ul>\n<li><strong>Monthly VAT returns:</strong> Due by the 15th of the following month</li>\n<li><strong>Annual VAT audit:</strong> NBR may conduct VAT audits of registered businesses</li>\n<li><strong>VAT registration renewal:</strong> The BIN does not expire but companies must update their registration details annually if there are changes</li>\n<li><strong>Input tax credit reconciliation:</strong> Annual reconciliation of input VAT claims with actual purchases</li>\n</ul>\n<p>VAT default attracts significant penalties including fines, interest, and in serious cases, prosecution.</p>\n<p>Alongside RJSC annual returns and tax filings, businesses must keep municipal permits current—check fees, source tax, and online deadlines in our <a href=\"/blog/trade-license-renewal-bangladesh\">trade license renewal online fee guide for Bangladesh</a>.</p>"
     },
     {
       "h2": "Trade Licence Renewal",
@@ -107,5 +107,6 @@
       "to": "/services/supreme-court-lawyer"
     }
   ],
-  "lang": "en"
+  "lang": "en",
+  "lastModified": "2026-11-15"
 }

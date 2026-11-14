@@ -68,6 +68,10 @@ const AdSenseAd = ({
     }
 
     useEffect(() => {
+        const host = typeof window !== 'undefined' ? window.location.hostname : '';
+        if (host && host !== 'www.advmdshahalam.me' && host !== 'advmdshahalam.me') {
+            return;
+        }
         const el = adRef.current;
         const wrap = wrapRef.current;
         if (!slot || !el || !wrap) return;
@@ -98,7 +102,7 @@ const AdSenseAd = ({
             }
         };
 
-        // Collapse the reserved space if AdSense reports "unfilled" (usually resolves off-screen thanks to the lookahead)
+        // Keep reserved space if AdSense reports "unfilled" so layout never shifts (Zero-CLS)
         const mo = typeof MutationObserver !== 'undefined'
             ? new MutationObserver(() => {
                 if (el.getAttribute('data-ad-status') === 'unfilled') setState('unfilled');

@@ -47,7 +47,7 @@
     },
     {
       "h2": "How Courts Decide Remand Applications",
-      "content": "<p>When police apply for remand, the Magistrate must assess whether:</p>\n<ul>\n<li>There is a reasonable connection between the accused and the alleged offence.</li>\n<li>Police custody is genuinely necessary for the investigation (e.g., recovery of weapons, discovery of evidence).</li>\n<li>Judicial custody (jail) cannot serve the investigative purpose equally well.</li>\n<li>The accused has already provided a statement voluntarily.</li>\n</ul>\n<p>A skilled defence lawyer can appear before the Magistrate and argue against granting remand or for reducing the remand period. Courts are empowered to deny remand applications — they are not automatic approvals.</p>"
+      "content": "<p>When police apply for remand, the Magistrate must assess whether:</p>\n<ul>\n<li>There is a reasonable connection between the accused and the alleged offence.</li>\n<li>Police custody is genuinely necessary for the investigation (e.g., recovery of weapons, discovery of evidence).</li>\n<li>Judicial custody (jail) cannot serve the investigative purpose equally well.</li>\n<li>The accused has already provided a statement voluntarily.</li>\n</ul>\n<p>A skilled defence lawyer can appear before the Magistrate and argue against granting remand or for reducing the remand period. Courts are empowered to deny remand applications — they are not automatic approvals.</p>\n<p>Coerced admissions during police custody are legally inadmissible; learn how a Magistrate records and an accused can retract a <a href=\"/blog/section-164-crpc-statement-bangladesh\">Section 164 CrPC confessional statement in Bangladesh</a>.</p>"
     },
     {
       "h2": "How to Challenge an Unlawful Remand",
@@ -110,5 +110,6 @@
       "to": "/services/supreme-court-lawyer"
     }
   ],
-  "lang": "en"
+  "lang": "en",
+  "lastModified": "2026-11-15"
 }

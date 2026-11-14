@@ -47,7 +47,7 @@
     },
     {
       "h2": "Rights During Police Custody",
-      "content": "<p>Once in custody, your rights continue:</p>\n<ul>\n<li><strong>Right to see a lawyer privately</strong> — police cannot deny this right, though in practice pressure may be applied. Insist firmly.</li>\n<li><strong>Right to medical examination</strong> — if you allege you have been tortured or are unwell. Demand this before being lodged in a cell.</li>\n<li><strong>Right to inform relatives</strong> — police are required to inform a family member or nominated person of your arrest and place of custody.</li>\n<li><strong>Remand (Section 167 CrPC):</strong> If the investigation cannot be completed within 24 hours, police must produce you before a Magistrate who may remand you to custody for further investigation. Remand orders can be challenged — a lawyer can file an application opposing remand.</li>\n</ul>"
+      "content": "<p>Once in custody, your rights continue:</p>\n<ul>\n<li><strong>Right to see a lawyer privately</strong> — police cannot deny this right, though in practice pressure may be applied. Insist firmly.</li>\n<li><strong>Right to medical examination</strong> — if you allege you have been tortured or are unwell. Demand this before being lodged in a cell.</li>\n<li><strong>Right to inform relatives</strong> — police are required to inform a family member or nominated person of your arrest and place of custody.</li>\n<li><strong>Remand (Section 167 CrPC):</strong> If the investigation cannot be completed within 24 hours, police must produce you before a Magistrate who may remand you to custody for further investigation. Remand orders can be challenged — a lawyer can file an application opposing remand.</li>\n</ul>\n<p>If police seek to produce an accused before a Judicial Magistrate to record a judicial confession after arrest or remand, understand the safeguards in our guide to <a href=\"/blog/section-164-crpc-statement-bangladesh\">Section 164 CrPC statement and retraction law in Bangladesh</a>.</p>"
     },
     {
       "h2": "How to Challenge an Unlawful Arrest",
@@ -98,5 +98,6 @@
       "to": "/services/supreme-court-lawyer"
     }
   ],
-  "lang": "en"
+  "lang": "en",
+  "lastModified": "2026-11-15"
 }
