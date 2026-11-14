@@ -62,7 +62,7 @@ const Home = ({ lang = 'en' }) => {
                 {/* hreflang alternates */}
                 <link rel="alternate" hreflang="en" href="https://www.advmdshahalam.me/en" />
                 <link rel="alternate" hreflang="bn" href="https://www.advmdshahalam.me/" />
-                <link rel="alternate" hreflang="x-default" href="https://www.advmdshahalam.me/" />
+                <link rel="alternate" hreflang="x-default" href="https://www.advmdshahalam.me/en" />
                 {/* OpenGraph */}
                 <meta property="og:type" content="website" />
                 <meta property="og:locale" content={isBn ? 'bn_BD' : 'en_US'} />

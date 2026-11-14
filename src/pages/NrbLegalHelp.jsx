@@ -58,7 +58,7 @@ const GROUPS = [
 ];
 
 const NrbLegalHelp = () => {
-    const title = 'NRB Legal Help Bangladesh: Property, Family & Documents for Expats | Adv. Shah Alam';
+    const title = 'NRB Legal Help Bangladesh | Property & Family Law';
     const description = 'Legal guides and help for Non-Resident Bangladeshis in the UK, USA, UAE and Canada: land purchase, Power of Attorney, divorce, inheritance, document attestation and court cases. Supreme Court advocate.';
     const canonical = 'https://www.advmdshahalam.me/nrb-legal-help';
 

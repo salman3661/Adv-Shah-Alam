@@ -3,8 +3,14 @@
   "metaTitle": "Child Custody Under Muslim Law Bangladesh – Full Guide",
   "category": "Family Law",
   "title": "Child Custody Under Muslim Law in Bangladesh: Mother's Rights, Father's Rights, and Court Process",
-  "metaDescription": "Detailed guide to child custody under Muslim law in Bangladesh — hizanat rules, mother's rights, father's guardianship, court process, and recent Supreme Court decisions.",
-  "keywords": ["child custody Muslim law Bangladesh", "hizanat Bangladesh", "mother custody rights Bangladesh", "father guardianship Bangladesh", "child custody Muslim family law"],
+  "metaDescription": "Detailed guide to child custody under Muslim law in Bangladesh — hizanat rules, mother's rights, father's guardianship, court process, and recent Supreme.",
+  "keywords": [
+    "child custody Muslim law Bangladesh",
+    "hizanat Bangladesh",
+    "mother custody rights Bangladesh",
+    "father guardianship Bangladesh",
+    "child custody Muslim family law"
+  ],
   "publishedDate": "2026-07-12",
   "lastModified": "2026-07-12",
   "readTime": "11 min read",
@@ -86,12 +92,24 @@
     }
   ],
   "relatedServiceLinks": [
-    {"text": "Divorce Lawyer in Bangladesh", "to": "/services/divorce-lawyer"},
-    {"text": "Supreme Court Lawyer Bangladesh", "to": "/services/supreme-court-lawyer"}
+    {
+      "text": "Divorce Lawyer in Bangladesh",
+      "to": "/services/divorce-lawyer"
+    },
+    {
+      "text": "Supreme Court Lawyer Bangladesh",
+      "to": "/services/supreme-court-lawyer"
+    }
   ],
   "relatedPosts": [
-    {"text": "Child Custody Law Bangladesh 2026", "to": "/blog/child-custody-law-bangladesh"},
-    {"text": "Divorce from Court Under Muslim Law Bangladesh", "to": "/blog/how-to-file-divorce-court-bangladesh-2026"}
+    {
+      "text": "Child Custody Law Bangladesh 2026",
+      "to": "/blog/child-custody-law-bangladesh"
+    },
+    {
+      "text": "Divorce from Court Under Muslim Law Bangladesh",
+      "to": "/blog/how-to-file-divorce-court-bangladesh-2026"
+    }
   ],
   "isDraft": false,
   "lang": "en"

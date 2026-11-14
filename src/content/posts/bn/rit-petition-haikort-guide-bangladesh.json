@@ -46,5 +46,7 @@
   "impressions": 5,
   "clicks": 0,
   "featured": false,
-  "lastModified": "2026-09-22"
+  "lastModified": "2026-09-22",
+  "isDraft": true,
+  "mergedInto": "/bn/blog/yautuk-dowry-ain-bangladesh-bn"
 }

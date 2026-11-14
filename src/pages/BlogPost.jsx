@@ -515,27 +515,35 @@ const BlogPostInner = () => {
         datePublished: post.publishedDate, dateModified: post.lastModified || post.publishedDate,
         inLanguage: 'en',
         author: {
-            '@type': 'LegalService',
-            '@id': 'https://www.advmdshahalam.me/#legalservice',
+            '@type': 'Person',
+            '@id': 'https://www.advmdshahalam.me/#attorney',
             name: 'Advocate Md. Shah Alam',
-            url: 'https://www.advmdshahalam.me',
+            url: 'https://www.advmdshahalam.me/advocate-md-shah-alam',
         },
         publisher: {
-            '@type': 'LegalService',
-            '@id': 'https://www.advmdshahalam.me/#legalservice',
+            '@type': 'Organization',
             name: 'Advocate Md. Shah Alam Law Chambers',
             url: 'https://www.advmdshahalam.me',
-            logo: { '@type': 'ImageObject', url: 'https://www.advmdshahalam.me/favicon.ico' }
+            logo: { '@type': 'ImageObject', url: 'https://www.advmdshahalam.me/adv-md-shah-alam.png' }
         },
         url: canonicalHref,
         mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalHref },
         image: 'https://www.advmdshahalam.me/images/advocate-shah-alam.jpg',
         keywords: keywordsList.join(', '),
     };
+    const faqSchema = Array.isArray(post.faqs) && post.faqs.length > 0 ? {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: post.faqs.map((f) => ({
+            '@type': 'Question',
+            name: f.question || f.q,
+            acceptedAnswer: { '@type': 'Answer', text: f.answer || f.a },
+        })).filter((x) => x.name && x.acceptedAnswer.text),
+    } : null;
     const breadcrumbSchema = {
         '@context': 'https://schema.org', '@type': 'BreadcrumbList',
         itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.advmdshahalam.me/' },
+            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.advmdshahalam.me/en' },
             { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.advmdshahalam.me/blog' },
             { '@type': 'ListItem', position: 3, name: post.title, item: canonicalHref },
         ],
@@ -612,7 +620,7 @@ const BlogPostInner = () => {
                 {hreflangTags.map((h) => <link key={h.hrefLang} rel="alternate" hrefLang={h.hrefLang} href={h.href} />)}
                 <script type="application/ld+json">{JSON.stringify(blogPostingSchema)}</script>
                 <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
-                <script type="application/ld+json">{jsonLd(entityGraph)}</script>
+                {faqSchema && <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>}
             </Helmet>
 
             {/* ════════════════ HERO (Phase 2.2: Protected Floating Navbar & Immediate H1 Visibility) ════════════════ */}

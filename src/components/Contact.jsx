@@ -265,20 +265,20 @@ const Contact = ({ lang = 'en' }) => {
                                                 </button>
                                             </motion.div>
                                         ) : (
-                                            <form onSubmit={handleSubmit} className="space-y-4">
+                                            <form action="/api/contact" method="POST" onSubmit={handleSubmit} className="space-y-4">
                                                 {/* Honeypot anti-bot field */}
                                                 <div aria-hidden="true" style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, overflow: 'hidden', opacity: 0, pointerEvents: 'none' }}>
-                                                    <input name="website" type="text" tabIndex={-1} autoComplete="off" value={formData.website} onChange={handleChange} />
+                                                    <input name="website" type="text" tabIndex={-1} autoComplete="off" aria-label="Leave blank" value={formData.website} onChange={handleChange} />
                                                 </div>
                                                 {[
                                                     { name: 'name', label: isBn ? 'আপনার নাম' : 'Your Name', type: 'text', placeholder: isBn ? 'পূর্ণ নাম লিখুন' : 'Full Name' },
                                                     { name: 'phone', label: isBn ? 'ফোন নম্বর' : 'Phone Number', type: 'tel', placeholder: '+880 XXXX-XXXXXX' },
                                                 ].map((field) => (
                                                     <div key={field.name}>
-                                                        <label className="text-xs font-bold uppercase tracking-wider block mb-1.5" style={{ color: 'var(--text-muted)' }}>
+                                                        <label htmlFor={`contact-${field.name}`} className="text-xs font-bold uppercase tracking-wider block mb-1.5" style={{ color: 'var(--text-muted)' }}>
                                                             {field.label}
                                                         </label>
-                                                        <input name={field.name} type={field.type} required placeholder={field.placeholder}
+                                                        <input id={`contact-${field.name}`} name={field.name} type={field.type} required placeholder={field.placeholder}
                                                             onChange={handleChange}
                                                             className={inputClass}
                                                             style={{ background: 'var(--input-bg)', border: '1.5px solid var(--input-border)', color: 'var(--text)' }}
@@ -288,10 +288,10 @@ const Contact = ({ lang = 'en' }) => {
                                                     </div>
                                                 ))}
                                                 <div>
-                                                    <label className="text-xs font-bold uppercase tracking-wider block mb-1.5" style={{ color: 'var(--text-muted)' }}>
+                                                    <label htmlFor="contact-message" className="text-xs font-bold uppercase tracking-wider block mb-1.5" style={{ color: 'var(--text-muted)' }}>
                                                         {isBn ? 'আপনার সমস্যার সংক্ষিপ্ত বিবরণ' : 'Case Type & Details'}
                                                     </label>
-                                                    <textarea name="message" rows="4" required
+                                                    <textarea id="contact-message" name="message" rows="4" required
                                                         placeholder={isBn ? 'আপনার সমস্যাটি সংক্ষেপে বলুন — ফৌজদারি মামলা, বিবাহবিচ্ছেদ, জমির বিরোধ, জামিন...' : 'Briefly describe your legal matter (criminal, divorce, land dispute, bail...)'}
                                                         onChange={handleChange}
                                                         className={`${inputClass} resize-none`}

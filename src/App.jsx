@@ -104,8 +104,8 @@ function App() {
                       <Route path="/bn/blog" element={<BlogBn />} />
                       <Route path="/bn/blog/:slug" element={<BlogPostBn />} />
 
-                      {/* Contact page — default Bengali */}
-                      <Route path="/contact" element={<ContactPage lang="bn" />} />
+                      {/* Contact page — English on /contact, Bengali on /bn/contact */}
+                      <Route path="/contact" element={<ContactPage lang="en" />} />
                       <Route path="/bn/contact" element={<ContactPage lang="bn" />} />
                       <Route path="/en/contact" element={<ContactPage lang="en" />} />
 
@@ -119,7 +119,9 @@ function App() {
                       <Route path="/terms" element={<TermsConditions />} />
                       <Route path="/terms-of-service" element={<TermsConditions />} />
 
-                      {/* 404 — must be last */}
+                      {/* 404 — localized explicit & fallback routes */}
+                      <Route path="/404" element={<NotFound />} />
+                      <Route path="/bn/404" element={<NotFound />} />
                       <Route path="*" element={<NotFound />} />
                     </Routes>
                   </Suspense>

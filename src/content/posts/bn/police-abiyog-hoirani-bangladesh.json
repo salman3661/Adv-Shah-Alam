@@ -22,7 +22,7 @@
   "sections": [
     {
       "h2": "জিডি (GD) বনাম এফআইআর (FIR)",
-      "content": "<p>সাধারণ ঘটনা বা হুমকির রেকর্ডের জন্য জিডি (General Diary) করা হয়। আর আমলযোগ্য অপরাধ যেমন মারধর বা বড় ধরনের হয়রানির ক্ষেত্রে এফআইআর দায়ের করতে হয়। এর পাশাপাশি <a href=\"/bn/blog/madak-mamlar-jamin-prokriya-bangladesh-2026\" style=\"color:var(--accent); font-weight:500;\">গ্রেফতারের পর দ্রুত জামিনের ব্যবস্থা</a> করাও আইনজীবীর দায়িত্ব। যদি ঘটনা ইন্টারনেটে হয়, তবে <a href=\"/bn/blog/cyber-crime-lawyer-neben-bangladesh\" style=\"color:var(--accent); font-weight:500;\">ফেসবুক হ্যাকিং বা ব্ল্যাকমেইলের বিরুদ্ধে জিডি</a> করা অত্যাবশ্যক। এছাড়া <a href=\"/bn/blog/bhara-tikki-bibad-bangladesh\" style=\"color:var(--accent); font-weight:500;\">বেআইনি উচ্ছেদের হুমকির বিরুদ্ধে জিডি</a> করতেও একই নিয়ম প্রযোজ্য।</p>"
+      "content": "<p>সাধারণ ঘটনা বা হুমকির রেকর্ডের জন্য জিডি (General Diary) করা হয়। আর আমলযোগ্য অপরাধ যেমন মারধর বা বড় ধরনের হয়রানির ক্ষেত্রে এফআইআর দায়ের করতে হয়। এর পাশাপাশি <a href=\"/bn/blog/madak-mamlar-jamin-prokriya-bangladesh-2026\" style=\"color:var(--accent); font-weight:500;\">গ্রেফতারের পর দ্রুত জামিনের ব্যবস্থা</a> করাও আইনজীবীর দায়িত্ব। যদি ঘটনা ইন্টারনেটে হয়, তবে <a href=\"/bn/blog/cyber-crime-helpline-online-complaint-bangladesh\" style=\"color:var(--accent); font-weight:500;\">ফেসবুক হ্যাকিং বা ব্ল্যাকমেইলের বিরুদ্ধে জিডি</a> করা অত্যাবশ্যক। এছাড়া <a href=\"/bn/blog/cyber-crime-helpline-online-complaint-bangladesh\" style=\"color:var(--accent); font-weight:500;\">বেআইনি উচ্ছেদের হুমকির বিরুদ্ধে জিডি</a> করতেও একই নিয়ম প্রযোজ্য।</p>"
     },
     {
       "h2": "পুলিশ অভিযোগ না নিলে করণীয়",
@@ -45,5 +45,7 @@
   "impressions": 2,
   "clicks": 0,
   "featured": false,
-  "lastModified": "2026-09-22"
+  "lastModified": "2026-09-22",
+  "isDraft": true,
+  "mergedInto": "/bn/blog/agam-jamin-haikort-khoroch-2026"
 }

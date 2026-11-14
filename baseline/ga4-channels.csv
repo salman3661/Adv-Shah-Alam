@@ -1,0 +1,21 @@
+channel,sourceMedium,activeUsers,sessions,pageViews,engagementRate
+Organic Search,google / organic,2478,2687,3369,63.7%
+Direct,(direct) / (none),374,386,496,40.2%
+Organic Search,bing / organic,42,56,53,50.0%
+AI Assistant,gemini.google.com / ai-assistant,18,20,34,60.0%
+Organic Social,m.facebook.com / referral,12,12,20,25.0%
+Unassigned,(not set),8,8,4,0.0%
+AI Assistant,chatgpt.com / ai-assistant,5,5,11,60.0%
+Organic Search,duckduckgo / organic,5,5,8,60.0%
+Organic Social,facebook.com / referral,5,5,5,0.0%
+Organic Search,yahoo / organic,3,3,4,66.7%
+Referral,notebook.google.com / referral,2,2,3,100.0%
+Referral,www-advmdshahalam-me.translate.goog / referral,2,2,3,100.0%
+Organic Search,au.search.yahoo.com / referral,1,2,2,50.0%
+Organic Search,search.google.com / referral,1,2,10,100.0%
+Organic Social,l.facebook.com / referral,1,1,1,100.0%
+Referral,duck.ai / referral,1,1,1,100.0%
+Referral,l.wl.co / referral,1,1,2,100.0%
+Referral,nextgeeker.com / referral,1,1,1,0.0%
+Organic Search,uk.search.yahoo.com / referral,0,4,3,0.0%
+Referral,mail.google.com / referral,0,1,1,0.0%

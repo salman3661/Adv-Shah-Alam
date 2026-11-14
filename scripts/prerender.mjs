@@ -51,7 +51,13 @@ const redirectSources = new Set(
 
 // ── helpers ─────────────────────────────────────────────────────────────────
 function readBase() {
-  let html = fs.readFileSync(path.join(DIST, 'index.html'), 'utf8');
+  const baseCache = path.join(DIST, '.base.html');
+  let html = fs.existsSync(baseCache)
+    ? fs.readFileSync(baseCache, 'utf8')
+    : fs.readFileSync(path.join(DIST, 'index.html'), 'utf8');
+  if (!fs.existsSync(baseCache)) {
+    fs.writeFileSync(baseCache, html, 'utf8');
+  }
   html = html.replace(/<link rel="stylesheet"[^>]*href="(\/assets\/[^"]+\.css)"[^>]*>/g, (match, href) => {
     try {
       const cssPath = path.join(DIST, href.replace(/^\//, ''));
@@ -126,15 +132,16 @@ function buildHeroShell(lang = 'bn') {
 </section>`;
 }
 
-function buildPage(base, { title, description, canonical, body, lang='en', extraHead='', ogImage='' }) {
+function buildPage(base, { title, description, canonical, body, lang='en', extraHead='', ogImage='', robots='index, follow' }) {
   let h = base;
   h = h.replace(/<html lang="[^"]*"/, `<html lang="${lang}"`);
   if (lang !== 'bn') h = h.replace(/\s*<link rel="preload" href="\/fonts\/NotoSerifBengali[^>]*>/g, '');
   h = h.replace(/<title>[^<]*<\/title>/, `<title>${escHtml(title)}</title>`);
   h = h.replace(/<meta name="description"[^>]*>/, `<meta name="description" content="${escHtml(description)}">`);
+  h = h.replace(/<meta name="robots"[^>]*>/, `<meta name="robots" content="${escHtml(robots)}">`);
   
   // Clean canonical: strip any tracking params or trailing slashes
-  const cleanCanonical = canonical.replace(/\/+$/, '') === BASE ? `${BASE}/` : canonical.replace(/\/+$/, '');
+  const cleanCanonical = canonical ? (canonical.replace(/\/+$/, '') === BASE ? `${BASE}/` : canonical.replace(/\/+$/, '')) : '';
   const isHomePage = cleanCanonical === `${BASE}/` || cleanCanonical === `${BASE}/en`;
   if (!isHomePage) {
     h = h.replace(/\s*<!--\s*Preload LCP hero image[\s\S]*?fetchpriority="high"\s*\/>/g, '');
@@ -143,20 +150,25 @@ function buildPage(base, { title, description, canonical, body, lang='en', extra
 
   h = h.replace(/<meta property="og:title"[^>]*>/, `<meta property="og:title" content="${escHtml(title)}">`);
   h = h.replace(/<meta property="og:description"[^>]*>/, `<meta property="og:description" content="${escHtml(description)}">`);
-  h = h.replace(/<meta property="og:url"[^>]*>/, `<meta property="og:url" content="${cleanCanonical}">`);
+  h = h.replace(/<meta property="og:locale"[^>]*>/, `<meta property="og:locale" content="${lang === 'bn' ? 'bn_BD' : 'en_US'}">`);
+  if (cleanCanonical) {
+    h = h.replace(/<meta property="og:url"[^>]*>/, `<meta property="og:url" content="${cleanCanonical}">`);
+    h = h.replace(/<meta name="twitter:url"[^>]*>/, `<meta name="twitter:url" content="${cleanCanonical}">`);
+  }
   h = h.replace(/<meta name="twitter:title"[^>]*>/, `<meta name="twitter:title" content="${escHtml(title)}">`);
   h = h.replace(/<meta name="twitter:description"[^>]*>/, `<meta name="twitter:description" content="${escHtml(description)}">`);
-  h = h.replace(/<meta name="twitter:url"[^>]*>/, `<meta name="twitter:url" content="${cleanCanonical}">`);
   if (ogImage) {
     h = h.replace(/<meta property="og:image"[^>]*>/, `<meta property="og:image" content="${ogImage}">`);
     h = h.replace(/<meta name="twitter:image"[^>]*>/, `<meta name="twitter:image" content="${ogImage}">`);
   }
 
-  let headInjections = `<link rel="canonical" href="${cleanCanonical}">\n`;
+  let headInjections = cleanCanonical ? `<link rel="canonical" href="${cleanCanonical}">\n` : '';
   if (extraHead) {
     headInjections += `${extraHead}\n`;
   }
-  h = h.replace('</head>', `${headInjections}</head>`);
+  if (headInjections) {
+    h = h.replace('</head>', `${headInjections}</head>`);
+  }
 
   // Hidden from users, visible to crawlers — no flash, no layout shift
   const visibleShell = isHomePage ? `\n${buildHeroShell(lang)}` : '';
@@ -262,11 +274,25 @@ function buildPostBody(post) {
       <p style="margin:6px 0 0;color:#444;font-size:14px">${escHtml(f.answer || f.a || '')}</p></div>`).join('')}
     </section>` : '';
 
-  return `<h1 style="font-size:30px;font-weight:700;margin-bottom:8px;color:#0a0a0a">${escHtml(post.title)}</h1>
-<p style="color:#555;font-size:14px;margin-bottom:20px">By <strong>Advocate Md. Shah Alam</strong> &middot; ${escHtml(post.publishedDate||'')} &middot; ${escHtml(post.readTime||'')}</p>
+  const directAnswerText = (post.directAnswer || (post.heroIntro || '').replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim()).split(/\s+/).slice(0, 58).join(' ');
+  const directAnswer = directAnswerText ? `<p class="direct-answer"><strong>Quick Legal Answer:</strong> ${escHtml(directAnswerText)}${directAnswerText.endsWith('.') ? '' : '...'}</p>` : '';
+
+  const breadcrumbNav = `<nav aria-label="Breadcrumb" style="font-size:13px;color:#475569;margin-bottom:14px">
+    <a href="/en" style="color:#132A4A">Home</a> &rsaquo; <a href="/blog" style="color:#132A4A">Blog</a> &rsaquo; <span>${escHtml(post.title)}</span>
+  </nav>`;
+
+  return `${breadcrumbNav}
+<h1 style="font-size:30px;font-weight:700;margin-bottom:8px;color:#0B1220">${escHtml(post.title)}</h1>
+<p style="color:#475569;font-size:14px;margin-bottom:20px">By <a href="/advocate-md-shah-alam" style="color:#132A4A;font-weight:700">Advocate Md. Shah Alam</a> &middot; ${escHtml(post.publishedDate||'')} &middot; ${escHtml(post.readTime||'')}</p>
+${directAnswer}
 ${DISCLAIMER}
 <p style="font-size:16px;color:#333;margin-bottom:24px">${escHtml(post.heroIntro||'')}</p>
-${buildPillarAndTableHtml(post, 'en')}${toc}${sections}${faqs}${CONCLUSION_DISCLAIMER_EN}${CTA}`;
+${buildPillarAndTableHtml(post, 'en')}${toc}${sections}${faqs}
+<section style="margin-top:32px;padding:18px;background:#F7F8FA;border-radius:8px;border:1px solid #E2E8F0">
+  <h2 style="font-size:18px;font-weight:700;margin-bottom:10px;color:#0B1220">Related Legal Resources &amp; Services</h2>
+  <p style="font-size:14px;line-height:1.8"><a href="/services/criminal-lawyer">Criminal Defense</a> &middot; <a href="/services/bail-lawyer">Bail &amp; Anticipatory Bail</a> &middot; <a href="/services/divorce-lawyer">Divorce &amp; Family Law</a> &middot; <a href="/services/land-lawyer">Land &amp; Property Law</a> &middot; <a href="/nrb-legal-help">NRB Legal Help</a> &middot; <a href="/contact">Book Consultation</a></p>
+</section>
+${CONCLUSION_DISCLAIMER_EN}${CTA}`;
 }
 
 function buildBnPostBody(post) {
@@ -303,11 +329,25 @@ function buildBnPostBody(post) {
       <p style="margin:6px 0 0;color:#444;font-size:14px;line-height:1.7">${escHtml(f.answer || f.a || '')}</p></div>`).join('')}
     </section>` : '';
 
-  return `<h1 style="font-size:30px;font-weight:700;margin-bottom:8px;color:#0a0a0a">${escHtml(post.title || '')}</h1>
-<p style="color:#555;font-size:14px;margin-bottom:20px">লেখক: <strong>অ্যাডভোকেট মো. শাহ আলম</strong> &middot; ${escHtml(post.publishedDate || '')} &middot; ${escHtml(post.readTime || '')}</p>
+  const directAnswerBnText = (post.directAnswer || (post.heroIntro || '').replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim()).split(/\s+/).slice(0, 58).join(' ');
+  const directAnswerBn = directAnswerBnText ? `<p class="direct-answer"><strong>সংক্ষিপ্ত আইনি উত্তর:</strong> ${escHtml(directAnswerBnText)}${directAnswerBnText.endsWith('।') ? '' : '...'}</p>` : '';
+
+  const breadcrumbNavBn = `<nav aria-label="Breadcrumb" style="font-size:13px;color:#475569;margin-bottom:14px">
+    <a href="/" style="color:#132A4A">হোম</a> &rsaquo; <a href="/bn/blog" style="color:#132A4A">বাংলা ব্লগ</a> &rsaquo; <span>${escHtml(post.title || '')}</span>
+  </nav>`;
+
+  return `${breadcrumbNavBn}
+<h1 style="font-size:30px;font-weight:700;margin-bottom:8px;color:#0B1220">${escHtml(post.title || '')}</h1>
+<p style="color:#475569;font-size:14px;margin-bottom:20px">লেখক: <a href="/advocate-md-shah-alam" style="color:#132A4A;font-weight:700">অ্যাডভোকেট মো. শাহ আলম</a> &middot; ${escHtml(post.publishedDate || '')} &middot; ${escHtml(post.readTime || '')}</p>
+${directAnswerBn}
 ${BN_DISCLAIMER}
 <p style="font-size:16px;color:#333;margin-bottom:24px;line-height:1.8">${escHtml(post.heroIntro || '')}</p>
-${buildPillarAndTableHtml(post, 'bn')}${quickAns}${toc}${sections}${faqs}${CONCLUSION_DISCLAIMER_BN}${BN_CTA}`;
+${buildPillarAndTableHtml(post, 'bn')}${quickAns}${toc}${sections}${faqs}
+<section style="margin-top:32px;padding:18px;background:#F7F8FA;border-radius:8px;border:1px solid #E2E8F0">
+  <h2 style="font-size:18px;font-weight:700;margin-bottom:10px;color:#0B1220">সংশ্লিষ্ট আইনি সেবা ও পরামর্শ</h2>
+  <p style="font-size:14px;line-height:1.8"><a href="/bn/services/criminal-lawyer">ফৌজদারি আইনজীবী</a> &middot; <a href="/bn/services/bail-lawyer">জামিন আইনজীবী</a> &middot; <a href="/bn/services/divorce-lawyer">তালাক ও পারিবারিক আইন</a> &middot; <a href="/bn/services/land-lawyer">জমি ও সম্পত্তি আইন</a> &middot; <a href="/nrb-legal-help">প্রবাসী (NRB) আইনি সহায়তা</a> &middot; <a href="/bn/contact">চেম্বারে যোগাযোগ</a></p>
+</section>
+${CONCLUSION_DISCLAIMER_BN}${BN_CTA}`;
 }
 
 // ── service page lookup ──────────────────────────────────────────────────────
@@ -315,8 +355,8 @@ ${buildPillarAndTableHtml(post, 'bn')}${quickAns}${toc}${sections}${faqs}${CONCL
 function getServiceMeta(slug) {
   const map = {
     'criminal-lawyer': {
-      title: 'Criminal Lawyer in Bangladesh | Advocate Md. Shah Alam – Dhaka',
-      desc: 'Expert criminal defense lawyer in Bangladesh. FIR cases, bail, trial representation at Sessions & High Court. Chamber in Uttara, Dhaka. Call +880 1712-655546.',
+      title: 'Criminal Defense Lawyer in Bangladesh | Dhaka',
+      desc: 'Experienced criminal defense lawyer in Dhaka, Bangladesh for FIR cases, bail, Sessions Court trials, and High Court appeals. Call +8801712655546.',
       h1: 'Criminal Lawyer in Bangladesh',
       body: `<p>Advocate Md. Shah Alam is an experienced criminal lawyer practising at all levels of courts in Bangladesh including the Supreme Court. He handles FIR-related cases, bail applications, criminal trials, and appeals.</p>
 <h2 style="font-size:20px;font-weight:700;margin:20px 0 10px">Services Offered</h2>
@@ -333,7 +373,7 @@ function getServiceMeta(slug) {
 <p>With 10+ years of experience (Supreme Court enrolled advocate since 2015), Advocate Shah Alam has successfully handled hundreds of criminal cases across Bangladesh. He is known for strategic defence preparation and effective court representation.</p>`,
     },
     'bail-lawyer': {
-      title: 'Bail Lawyer in Bangladesh | Fast Bail Application – Advocate Shah Alam',
+      title: 'Bail Lawyer in Bangladesh | High Court Anticipatory',
       desc: 'Urgent bail lawyer in Bangladesh. Regular bail, anticipatory bail, and High Court bail applications. Available in Uttara Dhaka. Call +880 1712-655546.',
       h1: 'Bail Lawyer in Bangladesh',
       body: `<p>Getting bail in Bangladesh requires expert legal representation. Advocate Md. Shah Alam specialises in bail applications at all court levels — from Magistrate Court to the Supreme Court of Bangladesh.</p>
@@ -348,8 +388,8 @@ function getServiceMeta(slug) {
 <p>A bail application is filed with supporting documents (FIR copy, charge sheet if available, personal particulars). The lawyer presents grounds such as clean record, family ties, and no flight risk. For serious offences, the application goes to High Court.</p>`,
     },
     'divorce-lawyer': {
-      title: 'Divorce Lawyer in Bangladesh | Family Court Expert – Advocate Shah Alam',
-      desc: 'Expert divorce and family lawyer in Bangladesh. Talaq, khula, child custody, maintenance. Chamber in Uttara Dhaka. Call +880 1712-655546.',
+      title: 'Divorce & Family Lawyer in Bangladesh | Dhaka',
+      desc: 'Trusted divorce and family lawyer in Dhaka, Bangladesh for talaq notice, khula, child custody, dower, and NRB divorce proceedings. Call +8801712655546.',
       h1: 'Divorce & Family Lawyer in Bangladesh',
       body: `<p>Advocate Md. Shah Alam is a leading family law practitioner in Bangladesh with 10+ years of experience (Supreme Court enrolled advocate since 2015) in divorce cases, child custody, maintenance, and family court matters.</p>
 <h2 style="font-size:20px;font-weight:700;margin:20px 0 10px">Family Law Services</h2>
@@ -366,7 +406,7 @@ function getServiceMeta(slug) {
 <p>For Muslims, divorce is governed by the Muslim Family Laws Ordinance 1961. The minimum timeframe for a mutual divorce is 90 days from notice to the Union Parishad Chairman. Contested cases go through Family Court and may take 6 months to 2 years.</p>`,
     },
     'land-lawyer': {
-      title: 'Land & Property Lawyer in Bangladesh | Advocate Md. Shah Alam',
+      title: 'Land & Property Lawyer in Bangladesh | Dhaka',
       desc: 'Expert land and property lawyer in Bangladesh. Land disputes, mutation, registration, title suits. Chamber in Uttara Dhaka. Call +880 1712-655546.',
       h1: 'Land & Property Lawyer in Bangladesh',
       body: `<p>Land disputes are among the most common legal issues in Bangladesh. Advocate Md. Shah Alam provides expert legal services for all land and property matters, from title verification to full court litigation.</p>
@@ -384,8 +424,8 @@ function getServiceMeta(slug) {
 <p>Land law in Bangladesh involves multiple agencies — Sub-Registrar offices, DC offices, Revenue offices, and Civil Courts. An experienced land lawyer ensures your documents are correct, your rights are protected, and your case is filed in the right forum.</p>`,
     },
     'supreme-court-lawyer': {
-      title: 'Supreme Court Lawyer Bangladesh | High Court Writ Petition – Advocate Shah Alam',
-      desc: 'Experienced Supreme Court lawyer in Bangladesh. Writ petitions, High Court appeals, appellate division cases. Call +880 1712-655546.',
+      title: 'Supreme Court Lawyer Bangladesh | High Court Writs',
+      desc: 'Supreme Court lawyer in Bangladesh for High Court writ petitions, anticipatory bail, criminal revisions, and Appellate Division appeals. Call +8801712655546.',
       h1: 'Supreme Court Lawyer in Bangladesh',
       body: `<p>Advocate Md. Shah Alam is enrolled with the Bangladesh Bar Council and is authorised to practise at the Supreme Court of Bangladesh, including both the High Court Division and the Appellate Division.</p>
 <h2 style="font-size:20px;font-weight:700;margin:20px 0 10px">Supreme Court Services</h2>
@@ -401,8 +441,8 @@ function getServiceMeta(slug) {
 <p>A writ petition is a powerful legal tool to enforce fundamental rights or challenge illegal government actions. Advocate Shah Alam has filed multiple writ petitions securing relief for clients from arbitrary arrest, wrongful dismissal, and unlawful government orders.</p>`,
     },
     'company-corporate-lawyer': {
-      title: 'Company & Corporate Lawyer in Bangladesh | Advocate Md. Shah Alam',
-      desc: 'Expert company and corporate lawyer in Bangladesh. Company registration, director disputes, corporate compliance. Chamber in Uttara Dhaka. Call +880 1712-655546.',
+      title: 'Company & Corporate Lawyer in Bangladesh | RJSC',
+      desc: 'Corporate and company lawyer in Dhaka, Bangladesh for RJSC company registration, shareholder disputes, contracts, and compliance. Call +8801712655546.',
       h1: 'Company & Corporate Lawyer in Bangladesh',
       body: `<p>Advocate Md. Shah Alam provides comprehensive company and corporate legal services for businesses of all sizes in Bangladesh — from startups to established corporations.</p>
 <h2 style="font-size:20px;font-weight:700;margin:20px 0 10px">Corporate Law Services</h2>
@@ -417,7 +457,7 @@ function getServiceMeta(slug) {
 </ul>`,
     },
     'tax-lawyer': {
-      title: 'Tax Lawyer in Bangladesh | Income Tax & VAT Legal Services – Advocate Shah Alam',
+      title: 'Income Tax & VAT Lawyer in Bangladesh | Tribunal',
       desc: 'Expert tax lawyer in Bangladesh. Income tax disputes, VAT matters, TIN registration, tax appeals. Chamber in Uttara Dhaka. Call +880 1712-655546.',
       h1: 'Tax Lawyer in Bangladesh',
       body: `<p>Advocate Md. Shah Alam provides legal services for tax-related matters in Bangladesh, including income tax disputes, VAT cases, and appeals before tax tribunals.</p>
@@ -438,8 +478,8 @@ function getServiceMeta(slug) {
 function getBnServiceMeta(slug) {
   const map = {
     'criminal-lawyer': {
-      title: 'ফৌজদারি আইনজীবী উত্তরা ঢাকা — এজাহার, জামিন ও মামলা প্রতিরক্ষা (২০২৬)',
-      desc: 'উত্তরা ঢাকায় অভিজ্ঞ ফৌজদারি আইনজীবী। এজাহার প্রতিরক্ষা, জামিন আবেদন, সাইবার অপরাধ মামলা, মিথ্যা মামলা খারিজ ও বিচার প্রতিনিধিত্ব। ১০+ বছরের অভিজ্ঞতা (২০১৫ সাল থেকে)।',
+      title: 'ফৌজদারি আইনজীবী ঢাকা | এজাহার ও জামিন মামলা',
+      desc: 'উত্তরা ঢাকায় অভিজ্ঞ ফৌজদারি আইনজীবী। এজাহার প্রতিরক্ষা, জামিন আবেদন, সাইবার অপরাধ মামলা ও মিথ্যা মামলা খারিজের আইনি পরামর্শ নিন।',
       h1: 'ফৌজদারি আইনজীবী বাংলাদেশ | এডভোকেট মোঃ শাহ আলম',
       body: `<p>এডভোকেট মোঃ শাহ আলম বাংলাদেশের একজন অত্যন্ত অভিজ্ঞ ফৌজদারি আইনজীবী, যিনি ১০+ বছরেরও বেশি সময় ধরে (২০১৫ সাল থেকে বাংলাদেশ সুপ্রিম কোর্ট ও বার কাউন্সিল তালিকাভুক্ত আইনজীবী) ফৌজদারি প্রতিরক্ষা, এজাহার বিষয়, জামিন আবেদন এবং ম্যাজিস্ট্রেট কোর্ট, দায়রা আদালত ও বাংলাদেশ সুপ্রিম কোর্টে বিচার প্রতিনিধিত্বে দক্ষতা অর্জন করেছেন।</p>
 <h2 style="font-size:20px;font-weight:700;margin:20px 0 10px">আইনি সেবাসমূহ</h2>
@@ -453,8 +493,8 @@ function getBnServiceMeta(slug) {
 </ul>`,
     },
     'bail-lawyer': {
-      title: 'জামিন আইনজীবী ঢাকা — দ্রুত জামিন আবেদন ও হাইকোর্ট বেল (২০২৬)',
-      desc: 'জরুরি জামিন আইনজীবী ঢাকা। নিয়মিত জামিন, আগাম জামিন (Anticipatory Bail) ও হাইকোর্টে জামিন আবেদন। উত্তরা চেম্বার। কল: ০১৭১২-৬৫৫৫৪৬।',
+      title: 'জামিন আইনজীবী ঢাকা | আগাম ও নিয়মিত জামিন',
+      desc: 'ঢাকায় জরুরি জামিন আইনজীবী। ম্যাজিস্ট্রেট কোর্টে নিয়মিত জামিন এবং হাইকোর্ট বিভাগে আগাম জামিন আবেদনের জন্য উত্তরা চেম্বারে যোগাযোগ করুন।',
       h1: 'জামিন আইনজীবী বাংলাদেশ | এডভোকেট মোঃ শাহ আলম',
       body: `<p>বাংলাদেশে জামিন আবেদন একটি জটিল আইনি প্রক্রিয়া। এডভোকেট মোঃ শাহ আলম নিম্ন আদালত থেকে শুরু করে বাংলাদেশ সুপ্রিম কোর্টের হাইকোর্ট বিভাগ পর্যন্ত নিয়মিত ও আগাম জামিন পরিচালনা করেন।</p>
 <h2 style="font-size:20px;font-weight:700;margin:20px 0 10px">আমরা যেসকল জামিন পরিচালনা করি</h2>
@@ -466,8 +506,8 @@ function getBnServiceMeta(slug) {
 </ul>`,
     },
     'divorce-lawyer': {
-      title: 'তালাক ও বিবাহবিচ্ছেদ আইনজীবী ঢাকা — পারিবারিক আদালত ও পরামর্শ (২০২৬)',
-      desc: 'অভিজ্ঞ তালাক ও পারিবারিক আইনজীবী ঢাকা। মুসলিম তালাক নোটিশ, দেনমোহর, খোরপোষ, সন্তানের হেফাজত। উত্তরা চেম্বার। কল: ০১৭১২-৬৫৫৫৪৬।',
+      title: 'তালাক ও পারিবারিক আইনজীবী ঢাকা | দেনমোহর ও খোরপোষ',
+      desc: 'ঢাকায় অভিজ্ঞ তালাক ও পারিবারিক আইনজীবী। মুসলিম তালাক নোটিশ, দেনমোহর, খোরপোষ ও সন্তানের অভিভাবকত্ব মামলায় উত্তরা চেম্বারে পরামর্শ নিন।',
       h1: 'তালাক ও পারিবারিক আইনজীবী বাংলাদেশ | এডভোকেট মোঃ শাহ আলম',
       body: `<p>মুসলিম পারিবারিক আইন অধ্যাদেশ ১৯৬১ এবং পারিবারিক আদালত আইন ২০২৩ অনুযায়ী বিবাহবিচ্ছেদ, তালাক নোটিশ, দেনমোহর ও খোরপোষ আদায়ের মামলায় এডভোকেট শাহ আলম ১০+ বছরের অভিজ্ঞ (২০১৫ সাল থেকে বাংলাদেশ সুপ্রিম কোর্ট ও বার কাউন্সিল তালিকাভুক্ত আইনজীবী)।</p>
 <h2 style="font-size:20px;font-weight:700;margin:20px 0 10px">পারিবারিক আইনি সেবাসমূহ</h2>
@@ -479,8 +519,8 @@ function getBnServiceMeta(slug) {
 </ul>`,
     },
     'land-lawyer': {
-      title: 'ভূমি ও সম্পত্তি আইনজীবী ঢাকা — জমি রেজিস্ট্রি, নামজারি ও বাটোয়ারা মামলা (২০২৬)',
-      desc: 'অভিজ্ঞ ভূমি ও সম্পত্তি আইনজীবী ঢাকা। জমি বিরোধ, নামজারি, খতিয়ান যাচাই, দলিল বাতিল ও বাটোয়ারা মামলা। উত্তরা চেম্বার। কল: ০১৭১২-৬৫৫৫৪৬।',
+      title: 'ভূমি ও সম্পত্তি আইনজীবী ঢাকা | নামজারি ও বাটোয়ারা',
+      desc: 'ঢাকায় অভিজ্ঞ ভূমি ও সম্পত্তি আইনজীবী। জমি রেজিস্ট্রি, নামজারি, খতিয়ান যাচাই, দলিল বাতিল ও বাটোয়ারা মামলায় আইনি সহায়তা নিন।',
       h1: 'ভূমি ও সম্পত্তি আইনজীবী বাংলাদেশ | এডভোকেট মোঃ শাহ আলম',
       body: `<p>জমির বিরোধ বাংলাদেশের সবচেয়ে সাধারণ আইনি সমস্যা। সাব-রেজিস্ট্রার অফিস, ভূমি রাজস্ব অফিস এবং দেওয়ানি আদালতে জমি সংক্রান্ত যাবতীয় আইনি সুরক্ষায় এডভোকেট মোঃ শাহ আলম বিশ্বস্ত সেবা প্রদান করেন।</p>
 <h2 style="font-size:20px;font-weight:700;margin:20px 0 10px">ভূমি আইনের সেবাসমূহ</h2>
@@ -493,8 +533,8 @@ function getBnServiceMeta(slug) {
 </ul>`,
     },
     'supreme-court-lawyer': {
-      title: 'সুপ্রিম কোর্টের আইনজীবী বাংলাদেশ — হাইকোর্ট রিট ও ফৌজদারি আপিল (২০২৬)',
-      desc: 'অভিজ্ঞ সুপ্রিম কোর্ট আইনজীবী বাংলাদেশ। রিট পিটিশন, হাইকোর্ট আপিল, ফৌজদারি রিভিশন ও অন্তর্বর্তীকালীন আদেশ। কল: ০১৭১২-৬৫৫৫৪৬।',
+      title: 'সুপ্রিম কোর্ট আইনজীবী বাংলাদেশ | হাইকোর্ট রিট',
+      desc: 'বাংলাদেশ সুপ্রিম কোর্টের অভিজ্ঞ আইনজীবী। সংবিধানের ১০২ অনুচ্ছেদে রিট পিটিশন, হাইকোর্ট আপিল ও ফৌজদারি রিভিশনের জন্য যোগাযোগ করুন।',
       h1: 'সুপ্রিম কোর্ট আইনজীবী বাংলাদেশ | এডভোকেট মোঃ শাহ আলম',
       body: `<p>এডভোকেট মোঃ শাহ আলম বাংলাদেশ বার কাউন্সিলের তালিকাভুক্ত এবং বাংলাদেশ সুপ্রিম কোর্টের হাইকোর্ট বিভাগ ও আপিল বিভাগে প্র্যাকটিস করার পূর্ণ অনুমতিপ্রাপ্ত অভিজ্ঞ আইনজীবী।</p>
 <h2 style="font-size:20px;font-weight:700;margin:20px 0 10px">সুপ্রিম কোর্ট সেবা</h2>
@@ -506,8 +546,8 @@ function getBnServiceMeta(slug) {
 </ul>`,
     },
     'company-corporate-lawyer': {
-      title: 'কোম্পানি ও কর্পোরেট আইনজীবী ঢাকা — কোম্পানি গঠন ও বাণিজ্যিক চুক্তি (২০২৬)',
-      desc: 'অভিজ্ঞ কোম্পানি ও কর্পোরেট আইনজীবী ঢাকা। RJSC কোম্পানি নিবন্ধন, শেয়ারহোল্ডার বিরোধ, বাণিজ্যিক চুক্তি ও আইনি কমপ্লায়েন্স। উত্তরা চেম্বার। কল: ০১৭১২-৬৫৫৫৪৬।',
+      title: 'কোম্পানি ও কর্পোরেট আইনজীবী ঢাকা | আরজেএসসি',
+      desc: 'ঢাকায় অভিজ্ঞ কোম্পানি ও কর্পোরেট আইনজীবী। RJSC কোম্পানি নিবন্ধন, শেয়ারহোল্ডার বিরোধ ও বাণিজ্যিক চুক্তির জন্য উত্তরা চেম্বারে যোগাযোগ করুন।',
       h1: 'কোম্পানি ও কর্পোরেট আইনজীবী বাংলাদেশ | এডভোকেট মোঃ শাহ আলম',
       body: `<p>নতুন কোম্পানি গঠন থেকে শুরু করে জটিল বাণিজ্যিক বিরোধ সমাধান — কোম্পানি আইন ১৯৯৪ অনুযায়ী কর্পোরেট প্রতিষ্ঠান ও ব্যবসায়ীদের সার্বিক আইনি সেবা প্রদান করেন এডভোকেট মোঃ শাহ আলম।</p>
 <h2 style="font-size:20px;font-weight:700;margin:20px 0 10px">কর্পোরেট আইনি সেবা</h2>
@@ -519,7 +559,7 @@ function getBnServiceMeta(slug) {
 </ul>`,
     },
     'tax-lawyer': {
-      title: 'আয়কর ও ভ্যাট আইনজীবী ঢাকা — কর বিরোধ ও ট্রাইব্যুনাল আপিল (২০২৬)',
+      title: 'আয়কর ও ভ্যাট আইনজীবী ঢাকা | ট্রাইব্যুনাল আপিল',
       desc: 'অভিজ্ঞ আয়কর ও ভ্যাট আইনজীবী ঢাকা। আয়কর রিটার্ন বিরোধ, কর নির্ধারণ চ্যালেঞ্জ, ট্যাক্সেস আপিলেট ট্রাইব্যুনাল ও ভ্যাট পরামর্শ। কল: ০১৭১২-৬৫৫৫৪৬।',
       h1: 'আয়কর ও ভ্যাট আইনজীবী বাংলাদেশ | এডভোকেট মোঃ শাহ আলম',
       body: `<p>আয়কর আইন ২০২৩ ও মূল্য সংযোজন কর ও সম্পূরক শুল্ক আইন ২০১২ অনুযায়ী ব্যক্তি ও প্রতিষ্ঠানের কর বিরোধ এবং ট্যাক্সেস আপিলেট ট্রাইব্যুনালে দক্ষ প্রতিনিধিত্ব নিশ্চিত করেন এডভোকেট মোঃ শাহ আলম।</p>
@@ -550,7 +590,7 @@ function homeBodyBn() {
   ).join('');
 
   return `
-<h1 style="font-size:30px;font-weight:700;margin-bottom:8px;color:#0a0a0a">বিশ্বস্ত আইনজীবী বাংলাদেশ — এডভোকেট মোঃ শাহ আলম</h1>
+<h2 style="font-size:26px;font-weight:700;margin-bottom:8px;color:#0a0a0a">বিশ্বস্ত আইনজীবী বাংলাদেশ — এডভোকেট মোঃ শাহ আলম</h2>
 <p style="font-size:16px;color:#444;margin-bottom:24px">ফৌজদারি, পারিবারিক, জামিন ও জমি সংক্রান্ত মামলার অভিজ্ঞ আইনজীবী। চেম্বার: উত্তরা, ঢাকা।</p>
 
 <section style="margin-bottom:32px">
@@ -583,7 +623,10 @@ function homeBodyBn() {
     <li><strong>জজ কোর্ট চেম্বার:</strong> আইনজীবী সমিতি ভবন, ১ম তলা (হল রুম), ৬/৭ কোর্ট হাউস স্ট্রিট, কোতোয়ালি, ঢাকা</li>
     <li><strong>অফিস সময়:</strong> শনিবার – বৃহস্পতিবার, সকাল ৯:০০ – রাত ৯:০০</li>
   </ul>
-</section>`;
+</section>
+<nav aria-label="Site Directory" style="margin-top:24px;padding:16px;background:#F7F8FA;border-radius:8px">
+  <a href="/en">English Home</a> &middot; <a href="/advocate-md-shah-alam">Advocate Md. Shah Alam</a> &middot; <a href="/education">Education</a> &middot; <a href="/blog">English Blog</a> &middot; <a href="/bn/blog">বাংলা ব্লগ</a> &middot; <a href="/nrb-legal-help">NRB Legal Help</a> &middot; <a href="/contact">Contact</a> &middot; <a href="/bn/contact">যোগাযোগ</a> &middot; <a href="/review">Client Reviews</a> &middot; <a href="/privacy-policy">Privacy Policy</a> &middot; <a href="/terms-of-service">Terms of Service</a> &middot; <a href="/services/criminal-lawyer">Criminal</a> &middot; <a href="/services/bail-lawyer">Bail</a> &middot; <a href="/services/divorce-lawyer">Divorce</a> &middot; <a href="/services/land-lawyer">Land</a> &middot; <a href="/services/supreme-court-lawyer">Supreme Court</a> &middot; <a href="/services/company-corporate-lawyer">Corporate</a> &middot; <a href="/services/tax-lawyer">Tax</a> &middot; <a href="/bn/services/criminal-lawyer">ফৌজদারি</a> &middot; <a href="/bn/services/bail-lawyer">জামিন</a> &middot; <a href="/bn/services/divorce-lawyer">তালাক</a> &middot; <a href="/bn/services/land-lawyer">জমি</a> &middot; <a href="/bn/services/supreme-court-lawyer">সুপ্রিম কোর্ট</a> &middot; <a href="/bn/services/company-corporate-lawyer">কর্পোরেট</a> &middot; <a href="/bn/services/tax-lawyer">আয়কর ও ভ্যাট</a>
+</nav>`;
 }
 
 function homeBody() {
@@ -599,7 +642,7 @@ function homeBody() {
   ).join('');
 
   return `
-<h1 style="font-size:30px;font-weight:700;margin-bottom:8px;color:#0a0a0a">Trusted Lawyer in Bangladesh – Advocate Md. Shah Alam</h1>
+<h2 style="font-size:26px;font-weight:700;margin-bottom:8px;color:#0a0a0a">Trusted Lawyer in Bangladesh – Advocate Md. Shah Alam</h2>
 <p style="font-size:16px;color:#444;margin-bottom:24px">Experienced Criminal, Divorce &amp; Bail Lawyer with Chamber in Uttara, Dhaka — Serving Clients Across Bangladesh.</p>
 
 <section style="margin-bottom:32px">
@@ -685,30 +728,48 @@ ${CTA}`;
 }
 
 function blogIndexBody(posts, lang='en') {
-  const sorted = [...posts].sort((a, b) => {
-    const timeA = new Date(a.publishedAt || a.publishedDate || 0).getTime();
-    const timeB = new Date(b.publishedAt || b.publishedDate || 0).getTime();
-    return timeB - timeA;
-  });
-  const recentPosts = sorted.slice(0, 50);
+  const prefix = lang === 'bn' ? '/bn/blog' : '/blog';
+  const totalPages = Math.max(1, Math.ceil(posts.length / 24));
+  const recentPosts = posts.slice(0, 24);
   const listItems = recentPosts.map(p => {
-    const path = lang === 'bn' ? `/bn/blog/${p.slug}` : `/blog/${p.slug}`;
+    const path = `${prefix}/${p.slug}`;
     return `<li style="margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid #eee">
-      <a href="${path}" style="color:#1a56db;font-weight:600;font-size:15px">${escHtml(p.title||p.metaTitle||p.slug)}</a>
-      ${p.publishedDate ? `<span style="color:#888;font-size:13px;margin-left:8px">${p.publishedDate}</span>` : ''}
-      ${p.heroIntro ? `<p style="color:#555;font-size:14px;margin:4px 0 0">${escHtml(p.heroIntro.slice(0,120))}…</p>` : ''}
+      <a href="${path}" style="color:#132A4A;font-weight:600;font-size:15px">${escHtml(p.title||p.metaTitle||p.slug)}</a>
+      ${p.publishedDate ? `<span style="color:#64748b;font-size:13px;margin-left:8px">${p.publishedDate}</span>` : ''}
+      ${p.heroIntro ? `<p style="color:#475569;font-size:14px;margin:4px 0 0">${escHtml(p.heroIntro.slice(0,120))}…</p>` : ''}
     </li>`;
   }).join('');
 
+  const pageNav = Array.from({ length: totalPages }, (_, i) => {
+    const n = i + 1;
+    const href = n === 1 ? prefix : `${prefix}/page/${n}`;
+    return `<a href="${href}" style="padding:6px 12px;border:1px solid #CBD5E1;border-radius:6px;margin:2px;display:inline-block;${n === 1 ? 'background:#132A4A;color:#fff;font-weight:700' : 'color:#132A4A'}">${n}</a>`;
+  }).join(' ');
+
+  const topicSlugs = [
+    ['criminal-law', lang === 'bn' ? 'ফৌজদারি আইন' : 'Criminal Law'],
+    ['bail-law', lang === 'bn' ? 'জামিন ও আগাম জামিন' : 'Bail & Anticipatory Bail'],
+    ['divorce-family-law', lang === 'bn' ? 'তালাক ও পারিবারিক আইন' : 'Divorce & Family Law'],
+    ['land-property-law', lang === 'bn' ? 'জমি ও সম্পত্তি আইন' : 'Land & Property Law'],
+    ['supreme-court-writ', lang === 'bn' ? 'সুপ্রিম কোর্ট রিট' : 'Supreme Court Writ'],
+    ['corporate-tax-law', lang === 'bn' ? 'কোম্পানি ও কর্পোরেট কর' : 'Corporate & Tax Law'],
+    ['nrb-immigration-law', lang === 'bn' ? 'প্রবাসী (NRB) আইন' : 'NRB Legal Guides'],
+  ];
+  const topicNav = topicSlugs.map(([s, lbl]) => `<a href="${prefix}/topic/${s}" style="padding:6px 12px;background:#F7F8FA;border:1px solid #CBD5E1;border-radius:6px;margin:3px;display:inline-block;color:#132A4A;font-size:13px;font-weight:600">${lbl}</a>`).join(' ');
+
   if (lang === 'bn') return `
-<h1 style="font-size:28px;font-weight:700;margin-bottom:8px;color:#0a0a0a">বাংলাদেশের আইনি গাইড — অ্যাডভোকেট মো. শাহ আলম</h1>
-<p style="color:#555;margin-bottom:20px">বাংলাদেশের আইন বিষয়ক বিস্তারিত নিবন্ধ। ফৌজদারি, তালাক, জামিন, জমি-জমা, কোম্পানি ও সুপ্রিম কোর্ট আইন।</p>
-<ul style="padding-left:0;list-style:none">${listItems}</ul>`;
+<h1 style="font-size:28px;font-weight:700;margin-bottom:8px;color:#0B1220">বাংলাদেশের আইনি গাইড — অ্যাডভোকেট মো. শাহ আলম</h1>
+<p style="color:#475569;margin-bottom:16px">বাংলাদেশের আইন বিষয়ক বিস্তারিত নিবন্ধ। ফৌজদারি, তালাক, জামিন, জমি-জমা, কোম্পানি ও সুপ্রিম কোর্ট আইন।</p>
+<nav aria-label="Topics" style="margin-bottom:20px">${topicNav}</nav>
+<ul style="padding-left:0;list-style:none">${listItems}</ul>
+<nav aria-label="Pagination" style="margin-top:24px">${pageNav}</nav>`;
 
   return `
-<h1 style="font-size:28px;font-weight:700;margin-bottom:8px;color:#0a0a0a">Bangladesh Legal Guide — By Advocate Md. Shah Alam</h1>
-<p style="color:#555;margin-bottom:20px">Detailed legal articles on Bangladesh criminal law, divorce, bail, property, company law, and Supreme Court procedures — written by an experienced Dhaka lawyer.</p>
-<ul style="padding-left:0;list-style:none">${listItems}</ul>`;
+<h1 style="font-size:28px;font-weight:700;margin-bottom:8px;color:#0B1220">Bangladesh Legal Guide — By Advocate Md. Shah Alam</h1>
+<p style="color:#475569;margin-bottom:16px">Detailed legal articles on Bangladesh criminal law, divorce, bail, property, company law, and Supreme Court procedures — written by an experienced Dhaka lawyer.</p>
+<nav aria-label="Topics" style="margin-bottom:20px">${topicNav}</nav>
+<ul style="padding-left:0;list-style:none">${listItems}</ul>
+<nav aria-label="Pagination" style="margin-top:24px">${pageNav}</nav>`;
 }
 
 function educationBody() {
@@ -857,16 +918,153 @@ async function main() {
   const base = readBase();
   const TODAY = new Date().toISOString().split('T')[0];
 
+  function buildInstitutionalSchema(pageUrl, lang, breadcrumbItems) {
+    const graph = [
+      {
+        '@type': 'WebSite',
+        '@id': `${BASE}/#website`,
+        name: lang === 'bn' ? 'এডভোকেট মোঃ শাহ আলম' : 'Advocate Md. Shah Alam',
+        url: `${BASE}/`,
+        inLanguage: lang,
+        potentialAction: {
+          '@type': 'SearchAction',
+          target: `${BASE}/blog?q={search_term_string}`,
+          'query-input': 'required name=search_term_string',
+        },
+      },
+      {
+        '@type': 'Person',
+        '@id': `${BASE}/#attorney`,
+        name: 'Advocate Md. Shah Alam',
+        alternateName: 'এডভোকেট মোঃ শাহ আলম',
+        jobTitle: 'Advocate, Supreme Court of Bangladesh',
+        url: `${BASE}/advocate-md-shah-alam`,
+        image: `${BASE}/images/hero/hero-md-shah-alam.png`,
+        telephone: '+8801712655546',
+        email: 'contact@advmdshahalam.me',
+        worksFor: { '@id': `${BASE}/#legalservice` },
+        memberOf: [
+          { '@type': 'Organization', name: 'Bangladesh Bar Council' },
+          { '@type': 'Organization', name: 'Supreme Court Bar Association' },
+          { '@type': 'Organization', name: 'Dhaka Bar Association' },
+        ],
+        sameAs: [
+          'https://www.facebook.com/advmd.shahalamfb',
+          'https://www.linkedin.com/in/advmdshahalam/',
+          'https://maps.app.goo.gl/M3NXMwW3xkp2TE3h8',
+        ],
+      },
+      {
+        '@type': 'LegalService',
+        '@id': `${BASE}/#legalservice`,
+        name: 'Advocate Md. Shah Alam Law Chamber',
+        alternateName: 'এডভোকেট মোঃ শাহ আলম ল চেম্বার',
+        url: BASE,
+        logo: `${BASE}/adv-md-shah-alam.png`,
+        image: `${BASE}/images/advocate-shah-alam.jpg`,
+        telephone: '+8801712655546',
+        email: 'contact@advmdshahalam.me',
+        priceRange: '৳৳',
+        address: [
+          {
+            '@type': 'PostalAddress',
+            streetAddress: 'House 46, Road 6/B, Sector 12, Uttara',
+            addressLocality: 'Uttara, Dhaka',
+            addressRegion: 'Dhaka',
+            postalCode: '1230',
+            addressCountry: 'BD',
+          },
+          {
+            '@type': 'PostalAddress',
+            streetAddress: 'Lawyers Association Building, 4th Floor, 6/7 Court House Street, Kotwali',
+            addressLocality: 'Judge Court, Dhaka',
+            addressRegion: 'Dhaka',
+            postalCode: '1100',
+            addressCountry: 'BD',
+          },
+        ],
+        geo: {
+          '@type': 'GeoCoordinates',
+          latitude: 23.8745,
+          longitude: 90.3987,
+        },
+        openingHoursSpecification: [
+          {
+            '@type': 'OpeningHoursSpecification',
+            dayOfWeek: ['Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday'],
+            opens: '09:00',
+            closes: '21:00',
+          },
+        ],
+        hasOfferCatalog: {
+          '@type': 'OfferCatalog',
+          name: 'Legal Practice Areas',
+          itemListElement: [
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Criminal Defense', url: `${BASE}/services/criminal-lawyer` } },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Bail & Anticipatory Bail', url: `${BASE}/services/bail-lawyer` } },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Divorce & Family Law', url: `${BASE}/services/divorce-lawyer` } },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Land & Property Law', url: `${BASE}/services/land-lawyer` } },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Supreme Court Writ & Appeals', url: `${BASE}/services/supreme-court-lawyer` } },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Company & Corporate Law', url: `${BASE}/services/company-corporate-lawyer` } },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Income Tax & VAT Law', url: `${BASE}/services/tax-lawyer` } },
+          ],
+        },
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: breadcrumbItems.map((b, idx) => ({
+          '@type': 'ListItem',
+          position: idx + 1,
+          name: b.name,
+          item: b.item,
+        })),
+      },
+    ];
+    return `<script type="application/ld+json">${jsonLd({ '@context': 'https://schema.org', '@graph': graph })}</script>`;
+  }
+
+  function buildServiceSchema(pageUrl, name, description, lang) {
+    const homeName = lang === 'bn' ? 'হোম' : 'Home';
+    const homeUrl = lang === 'bn' ? `${BASE}/` : `${BASE}/en`;
+    const graph = [
+      {
+        '@type': 'Service',
+        '@id': `${pageUrl}#service`,
+        name,
+        description,
+        url: pageUrl,
+        inLanguage: lang,
+        provider: {
+          '@type': 'LegalService',
+          '@id': `${BASE}/#legalservice`,
+          name: 'Advocate Md. Shah Alam Law Chamber',
+          url: BASE,
+          priceRange: '৳৳',
+        },
+        areaServed: { '@type': 'Country', name: 'Bangladesh' },
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: homeName, item: homeUrl },
+          { '@type': 'ListItem', position: 2, name, item: pageUrl },
+        ],
+      },
+    ];
+    return `<script type="application/ld+json">${jsonLd({ '@context': 'https://schema.org', '@graph': graph })}</script>`;
+  }
+
   console.log('\n🏠 Pre-rendering core pages...');
 
   // ── Home page (/index.html — Bengali-first) ────────────────────────────────
   {
     const extraHead = `<link rel="alternate" hreflang="bn" href="${BASE}/" />
 <link rel="alternate" hreflang="en" href="${BASE}/en" />
-<link rel="alternate" hreflang="x-default" href="${BASE}/" />`;
+<link rel="alternate" hreflang="x-default" href="${BASE}/en" />
+${buildInstitutionalSchema(`${BASE}/`, 'bn', [{ name: 'হোম', item: `${BASE}/` }])}`;
     const html = buildPage(base, {
-      title: 'বিশ্বস্ত আইনজীবী বাংলাদেশ | এডভোকেট মোঃ শাহ আলম — উত্তরা, ঢাকা',
-      description: 'এডভোকেট মোঃ শাহ আলম — বাংলাদেশ সুপ্রীম কোর্টের অভিজ্ঞ আইনজীবী। ফৌজদারি মামলা, বিবাহবিচ্ছেদ, জামিন, ভূমি বিরোধ ও করপোরেট আইনে বিশেষজ্ঞ। উত্তরা, ঢাকায় আমাদের চেম্বারে আসুন অথবা সরাসরি WhatsApp করুন।',
+      title: 'সুপ্রিম কোর্ট আইনজীবী ঢাকা | এডভোকেট মোঃ শাহ আলম',
+      description: 'বাংলাদেশ সুপ্রিম কোর্টের অভিজ্ঞ আইনজীবী এডভোকেট মোঃ শাহ আলম। ফৌজদারি, জামিন, তালাক, জমি ও কর্পোরেট মামলায় উত্তরা চেম্বারে সরাসরি আইনি পরামর্শ নিন।',
       canonical: `${BASE}/`,
       body: homeBodyBn(),
       lang: 'bn',
@@ -880,10 +1078,11 @@ async function main() {
   {
     const extraHead = `<link rel="alternate" hreflang="en" href="${BASE}/en" />
 <link rel="alternate" hreflang="bn" href="${BASE}/" />
-<link rel="alternate" hreflang="x-default" href="${BASE}/" />`;
+<link rel="alternate" hreflang="x-default" href="${BASE}/en" />
+${buildInstitutionalSchema(`${BASE}/en`, 'en', [{ name: 'Home', item: `${BASE}/en` }])}`;
     const html = buildPage(base, {
-      title: 'Trusted Lawyer in Bangladesh | Advocate Md. Shah Alam — Uttara, Dhaka',
-      description: 'Official website of Advocate Md. Shah Alam, experienced lawyer in Uttara, Dhaka, practising at the Supreme Court of Bangladesh. Criminal, divorce, bail & property law.',
+      title: 'Supreme Court Lawyer Dhaka | Advocate Md. Shah Alam',
+      description: 'Advocate Md. Shah Alam is a Supreme Court lawyer in Uttara, Dhaka handling criminal defense, bail, divorce, land disputes, and corporate legal matters.',
       canonical: `${BASE}/en`,
       body: homeBody(),
       lang: 'en',
@@ -895,11 +1094,16 @@ async function main() {
 
   // ── Advocate/About page ────────────────────────────────────────────────────
   {
+    const extraHead = `<link rel="alternate" hreflang="en" href="${BASE}/advocate-md-shah-alam" />
+<link rel="alternate" hreflang="x-default" href="${BASE}/advocate-md-shah-alam" />
+${buildInstitutionalSchema(`${BASE}/advocate-md-shah-alam`, 'en', [{ name: 'Home', item: `${BASE}/en` }, { name: 'Advocate Md. Shah Alam', item: `${BASE}/advocate-md-shah-alam` }])}`;
     const html = buildPage(base, {
-      title: 'About Advocate Md. Shah Alam | Supreme Court Lawyer — Bangladesh',
-      description: 'Learn about Advocate Md. Shah Alam — LL.M lawyer with 10+ years of experience practising at the Supreme Court of Bangladesh. Chamber in Uttara, Dhaka.',
+      title: 'About Advocate Md. Shah Alam | Supreme Court BD',
+      description: 'Learn about Advocate Md. Shah Alam, LL.M Supreme Court lawyer in Uttara, Dhaka with 10+ years experience in criminal, bail, family, and property law.',
       canonical: `${BASE}/advocate-md-shah-alam`,
       body: advocateBody(),
+      lang: 'en',
+      extraHead,
     });
     write(path.join(DIST, 'advocate-md-shah-alam', 'index.html'), html);
     console.log('  ✓ /advocate-md-shah-alam');
@@ -907,11 +1111,16 @@ async function main() {
 
   // ── Education page ─────────────────────────────────────────────────────────
   {
+    const extraHead = `<link rel="alternate" hreflang="en" href="${BASE}/education" />
+<link rel="alternate" hreflang="x-default" href="${BASE}/education" />
+${buildInstitutionalSchema(`${BASE}/education`, 'en', [{ name: 'Home', item: `${BASE}/en` }, { name: 'Education & Bar Enrollment', item: `${BASE}/education` }])}`;
     const html = buildPage(base, {
-      title: 'Career & Education | Advocate Md. Shah Alam — Bangladesh',
+      title: 'Education & Bar Enrollment | Advocate Md. Shah Alam',
       description: 'Explore the education and career timeline of Advocate Shah Alam — LL.M lawyer with 10+ years of legal excellence at the Supreme Court of Bangladesh.',
       canonical: `${BASE}/education`,
       body: educationBody(),
+      lang: 'en',
+      extraHead,
     });
     write(path.join(DIST, 'education', 'index.html'), html);
     console.log('  ✓ /education');
@@ -921,9 +1130,10 @@ async function main() {
   {
     const extraHead = `<link rel="alternate" hreflang="en" href="${BASE}/contact" />
 <link rel="alternate" hreflang="bn" href="${BASE}/bn/contact" />
-<link rel="alternate" hreflang="x-default" href="${BASE}/contact" />`;
+<link rel="alternate" hreflang="x-default" href="${BASE}/contact" />
+${buildInstitutionalSchema(`${BASE}/contact`, 'en', [{ name: 'Home', item: `${BASE}/en` }, { name: 'Contact', item: `${BASE}/contact` }])}`;
     const html = buildPage(base, {
-      title: 'Contact Advocate Md. Shah Alam | Criminal, Divorce & Bail Lawyer — Dhaka',
+      title: 'Contact Advocate Md. Shah Alam | Dhaka Chamber',
       description: 'Contact Advocate Md. Shah Alam for legal consultation in Dhaka & Uttara. Call +880 1712-655546 or WhatsApp for criminal, divorce, bail & property cases.',
       canonical: `${BASE}/contact`,
       body: contactBody(),
@@ -938,10 +1148,11 @@ async function main() {
   {
     const extraHead = `<link rel="alternate" hreflang="bn" href="${BASE}/bn/contact" />
 <link rel="alternate" hreflang="en" href="${BASE}/contact" />
-<link rel="alternate" hreflang="x-default" href="${BASE}/contact" />`;
+<link rel="alternate" hreflang="x-default" href="${BASE}/contact" />
+${buildInstitutionalSchema(`${BASE}/bn/contact`, 'bn', [{ name: 'হোম', item: `${BASE}/` }, { name: 'যোগাযোগ', item: `${BASE}/bn/contact` }])}`;
     const html = buildPage(base, {
-      title: 'যোগাযোগ ও আইনি চেম্বার | অ্যাডভোকেট মো. শাহ আলম – উত্তরা ও ঢাকা কোর্ট',
-      description: 'অ্যাডভোকেট মো. শাহ আলম স্যারের সুপ্রিম কোর্ট ও উত্তরা চেম্বারে সরাসরি আইনি পরামর্শ ও মামলা মূল্যায়নের জন্য যোগাযোগ করুন। ফোন: ০১৭১২-৬৫৫৫৪৬।',
+      title: 'যোগাযোগ ও চেম্বার | এডভোকেট মোঃ শাহ আলম ঢাকা',
+      description: 'এডভোকেট মোঃ শাহ আলমের উত্তরা ও ঢাকা জজ কোর্ট চেম্বারে সরাসরি আইনি পরামর্শ ও মামলা মূল্যায়নের জন্য যোগাযোগ করুন। ফোন: +8801712655546।',
       canonical: `${BASE}/bn/contact`,
       body: contactBodyBn(),
       lang: 'bn',
@@ -953,11 +1164,15 @@ async function main() {
 
   // ── Privacy Policy ─────────────────────────────────────────────────────────
   {
+    const extraHead = `<link rel="alternate" hreflang="en" href="${BASE}/privacy-policy" />
+<link rel="alternate" hreflang="x-default" href="${BASE}/privacy-policy" />`;
     const html = buildPage(base, {
-      title: 'Privacy Policy | advmdshahalam.me',
-      description: 'Privacy Policy for advmdshahalam.me — legal website of Advocate Md. Shah Alam.',
+      title: 'Privacy Policy | Advocate Md. Shah Alam Chambers',
+      description: 'Read the official Privacy Policy for advmdshahalam.me detailing client confidentiality, consultation data handling, Google Analytics, and AdSense cookies.',
       canonical: `${BASE}/privacy-policy`,
       body: privacyBody(),
+      lang: 'en',
+      extraHead,
     });
     write(path.join(DIST, 'privacy-policy', 'index.html'), html);
     console.log('  ✓ /privacy-policy');
@@ -965,11 +1180,15 @@ async function main() {
 
   // ── Terms of Service ───────────────────────────────────────────────────────
   {
+    const extraHead = `<link rel="alternate" hreflang="en" href="${BASE}/terms-of-service" />
+<link rel="alternate" hreflang="x-default" href="${BASE}/terms-of-service" />`;
     const html = buildPage(base, {
-      title: 'Terms of Service (ব্যবহারের শর্তাবলী) | Advocate Md. Shah Alam',
+      title: 'Terms of Service | Advocate Md. Shah Alam Dhaka',
       description: 'Terms of Service & Engagement for advmdshahalam.me — consultation boundaries, retainer conditions, payment policies, and Dhaka court jurisdiction.',
       canonical: `${BASE}/terms-of-service`,
       body: termsBody(),
+      lang: 'en',
+      extraHead,
     });
     write(path.join(DIST, 'terms-of-service', 'index.html'), html);
     console.log('  ✓ /terms-of-service');
@@ -977,10 +1196,14 @@ async function main() {
 
   // ── Review page ────────────────────────────────────────────────────────────
   {
+    const extraHead = `<link rel="alternate" hreflang="bn" href="${BASE}/review" />
+<link rel="alternate" hreflang="x-default" href="${BASE}/review" />`;
     const html = buildPage(base, {
-      title: 'গুগলে ৫-স্টার রিভিউ দিন | এডভোকেট মোঃ শাহ আলম — বাংলাদেশ সুপ্রিম কোর্ট',
-      description: 'অ্যাডভোকেট মো. শাহ আলম স্যারের আইনি পরামর্শ ও সেবার অভিজ্ঞতা গুগলে শেয়ার করুন। আপনার মতামত অন্যদের সঠিক আইনি সাহায্য পেতে সহায়তা করবে।',
+      title: 'ক্লায়েন্ট রিভিউ ও মতামত | এডভোকেট মোঃ শাহ আলম',
+      description: 'এডভোকেট মোঃ শাহ আলমের আইনি পরামর্শ ও মামলার অভিজ্ঞতা সম্পর্কে ক্লায়েন্টদের রিভিউ দেখুন এবং গুগলে আপনার মূল্যবান মতামত শেয়ার করুন।',
       canonical: `${BASE}/review`,
+      lang: 'bn',
+      extraHead,
       body: `<div style="max-width:500px;margin:40px auto;text-align:center;padding:30px;background:#fff;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.08)">
         <h1 style="font-size:24px;font-weight:700;margin-bottom:12px">আইনি সেবায় আপনি কি সন্তুষ্ট?</h1>
         <p style="color:#555;margin-bottom:20px">অ্যাডভোকেট মো. শাহ আলম স্যারের আইনি পরামর্শ ও সহায়তায় আপনার অভিজ্ঞতা কেমন ছিল? গুগলে আপনার মূল্যবান ২ মিনিটের মতামত শেয়ার করুন।</p>
@@ -992,6 +1215,80 @@ async function main() {
     console.log('  ✓ /review');
   }
 
+  // ── NRB Legal Help page ────────────────────────────────────────────────────
+  {
+    const extraHead = `<link rel="alternate" hreflang="en" href="${BASE}/nrb-legal-help" />
+<link rel="alternate" hreflang="x-default" href="${BASE}/nrb-legal-help" />`;
+    const html = buildPage(base, {
+      title: 'NRB Legal Help Bangladesh | Property & Family Law',
+      description: 'Legal help for Non-Resident Bangladeshis in UK, USA, UAE & Canada: land purchase, Power of Attorney, divorce, inheritance & court cases.',
+      canonical: `${BASE}/nrb-legal-help`,
+      lang: 'en',
+      extraHead,
+      body: `<nav aria-label="Breadcrumb" style="font-size:13px;color:#475569;margin-bottom:14px"><a href="/en" style="color:#132A4A">Home</a> &rsaquo; <span>NRB Legal Help</span></nav>
+<h1 style="font-size:30px;font-weight:700;margin-bottom:8px;color:#0B1220">NRB Legal Services Hub &amp; Remote Representation in Bangladesh</h1>
+<p class="direct-answer"><strong>Quick Summary:</strong> Non-Resident Bangladeshis (NRBs) in the UK, USA, Canada, UAE, and Europe can resolve land disputes, execute Embassy-attested Power of Attorney (PoA), verify khatian/deeds, file divorce/custody suits, and defend criminal/cheque cases in Bangladesh remotely through Advocate Md. Shah Alam without flying to Dhaka.</p>
+<section style="margin:24px 0">
+  <h2 style="font-size:22px;font-weight:700;color:#0B1220;margin-bottom:12px">Core NRB Legal Services</h2>
+  <ul style="padding-left:20px;line-height:1.9;color:#1E293B">
+    <li><strong>Land Title Vetting &amp; Mutation:</strong> CS/SA/RS/BS Khatian verification, Sub-Registry search, and e-Mutation (Namjari) without in-person travel.</li>
+    <li><strong>Power of Attorney (PoA) Drafting:</strong> Drafting &amp; Bangladesh High Commission/Embassy attestation guidance under the Power of Attorney Act 2012.</li>
+    <li><strong>NRB Divorce &amp; Family Matters:</strong> Overseas Talaq notice registration, Section 13 CPC foreign decree recognition, Dower (Denmohar), and child custody.</li>
+    <li><strong>Partition &amp; Inheritance Suits:</strong> Batwara Mamla, Succession Certificate (Succession Act 1925), and stopping illegal land grabbing.</li>
+  </ul>
+</section>
+<section style="margin:28px 0;padding:20px;background:#F7F8FA;border:1px solid #CBD5E1;border-radius:10px">
+  <h2 style="font-size:22px;font-weight:700;color:#0B1220;margin-bottom:12px">Paid Case Review &amp; Document Vetting Packages</h2>
+  <table style="width:100%;border-collapse:collapse;font-size:14px;background:#fff">
+    <thead><tr style="background:#132A4A;color:#fff"><th style="padding:10px;text-align:left">Service Package</th><th style="padding:10px;text-align:left">Deliverables</th><th style="padding:10px;text-align:left">Fee (BDT / USD)</th></tr></thead>
+    <tbody>
+      <tr style="border-bottom:1px solid #E2E8F0"><td style="padding:10px"><strong>45-Min Video Case Review</strong></td><td style="padding:10px">Full legal strategy + statute roadmap with Adv. Md. Shah Alam</td><td style="padding:10px">৳3,000 / \$30</td></tr>
+      <tr style="border-bottom:1px solid #E2E8F0"><td style="padding:10px"><strong>Land Deed &amp; Khatian Vetting</strong></td><td style="padding:10px">Written legal opinion on chain of title, Bia deeds &amp; mutation status</td><td style="padding:10px">৳8,000 / \$75</td></tr>
+      <tr><td style="padding:10px"><strong>PoA / Legal Notice / Agreement Drafting</strong></td><td style="padding:10px">Court-ready bilingual or English legal draft ready for Embassy attestation</td><td style="padding:10px">৳5,000 / \$50</td></tr>
+    </tbody>
+  </table>
+  <p style="margin-top:14px;font-size:14px"><a href="/contact?service=case-review" data-cta="consult" style="display:inline-block;padding:12px 22px;background:#132A4A;color:#fff;border-radius:8px;text-decoration:none;font-weight:700">Book Paid Case Review</a></p>
+</section>
+${CTA}`,
+    });
+    write(path.join(DIST, 'nrb-legal-help', 'index.html'), html);
+    console.log('  ✓ /nrb-legal-help');
+  }
+
+  // ── Localized 404 pages (dist/404.html, /404, /bn/404) ──────────────────────
+  {
+    const notFoundBodyEn = `<h1 style="font-size:30px;font-weight:700;margin-bottom:8px;color:#0a0a0a">Page Not Found (404)</h1>
+<p style="font-size:16px;color:#444;margin-bottom:20px">The page you are looking for does not exist or has been moved.</p>
+<p><a href="/en" style="color:#1a56db;font-weight:600">Return to English Home</a> &middot; <a href="/blog" style="color:#1a56db;font-weight:600">Browse Legal Guides</a> &middot; <a href="/contact" style="color:#1a56db;font-weight:600">Contact Chamber</a></p>`;
+
+    const notFoundBodyBn = `<h1 style="font-size:30px;font-weight:700;margin-bottom:8px;color:#0a0a0a">পেজ পাওয়া যায়নি (৪০৪)</h1>
+<p style="font-size:16px;color:#444;margin-bottom:20px">আপনি যে পেজটি খুঁজছেন সেটি নেই বা সরানো হয়েছে।</p>
+<p><a href="/" style="color:#1a56db;font-weight:600">হোমপেজে ফিরে যান</a> &middot; <a href="/bn/blog" style="color:#1a56db;font-weight:600">আইনি নিবন্ধ পড়ুন</a> &middot; <a href="/bn/contact" style="color:#1a56db;font-weight:600">যোগাযোগ করুন</a></p>`;
+
+    const html404En = buildPage(base, {
+      title: 'Page Not Found – 404 | Advocate Md. Shah Alam',
+      description: 'The page you are looking for does not exist. Return to the homepage of Advocate Md. Shah Alam – Supreme Court Lawyer in Dhaka.',
+      canonical: null,
+      robots: 'noindex, follow',
+      lang: 'en',
+      body: notFoundBodyEn,
+    });
+    write(path.join(DIST, '404.html'), html404En);
+    write(path.join(DIST, '404', 'index.html'), html404En);
+    console.log('  ✓ /404 & 404.html (en, noindex)');
+
+    const html404Bn = buildPage(base, {
+      title: 'পেজ পাওয়া যায়নি – ৪০৪ | এডভোকেট মোঃ শাহ আলম',
+      description: 'আপনি যে পেজটি খুঁজছেন তা পাওয়া যায়নি। এডভোকেট মোঃ শাহ আলম-এর হোমপেজে ফিরে যান।',
+      canonical: null,
+      robots: 'noindex, follow',
+      lang: 'bn',
+      body: notFoundBodyBn,
+    });
+    write(path.join(DIST, 'bn', '404', 'index.html'), html404Bn);
+    console.log('  ✓ /bn/404 (bn, noindex)');
+  }
+
   // ── Service pages ──────────────────────────────────────────────────────────
   console.log('\n⚖️  Pre-rendering service pages (EN & BN)...');
   const serviceSlugs = ['criminal-lawyer','bail-lawyer','divorce-lawyer','land-lawyer','supreme-court-lawyer','company-corporate-lawyer','tax-lawyer'];
@@ -1000,7 +1297,8 @@ async function main() {
     if (meta) {
       const extraHead = `<link rel="alternate" hreflang="en" href="${BASE}/services/${slug}" />
 <link rel="alternate" hreflang="bn" href="${BASE}/bn/services/${slug}" />
-<link rel="alternate" hreflang="x-default" href="${BASE}/services/${slug}" />`;
+<link rel="alternate" hreflang="x-default" href="${BASE}/services/${slug}" />
+${buildServiceSchema(`${BASE}/services/${slug}`, meta.h1, meta.desc, 'en')}`;
       const html = buildPage(base, {
         title: meta.title,
         description: meta.desc,
@@ -1018,7 +1316,8 @@ ${DISCLAIMER}${meta.body}${CTA}`,
     if (bnMeta) {
       const extraHead = `<link rel="alternate" hreflang="bn" href="${BASE}/bn/services/${slug}" />
 <link rel="alternate" hreflang="en" href="${BASE}/services/${slug}" />
-<link rel="alternate" hreflang="x-default" href="${BASE}/services/${slug}" />`;
+<link rel="alternate" hreflang="x-default" href="${BASE}/services/${slug}" />
+${buildServiceSchema(`${BASE}/bn/services/${slug}`, bnMeta.h1, bnMeta.desc, 'bn')}`;
       const bnHtml = buildPage(base, {
         title: bnMeta.title,
         description: bnMeta.desc,
@@ -1050,8 +1349,8 @@ ${BN_DISCLAIMER}${bnMeta.body}${BN_CTA}`,
 <link rel="alternate" hreflang="bn" href="${BASE}/bn/blog" />
 <link rel="alternate" hreflang="x-default" href="${BASE}/blog" />`;
     const html = buildPage(base, {
-      title: 'Bangladesh Legal Blog | Criminal, Divorce & Property Law — Advocate Shah Alam',
-      description: 'Expert legal articles on Bangladesh criminal law, divorce procedure, bail process, land disputes, Supreme Court matters and more. Written by Advocate Md. Shah Alam.',
+      title: 'Bangladesh Legal Guides & Law Blog | Adv. Shah Alam',
+      description: 'Read expert legal guides on Bangladesh criminal law, High Court bail, divorce, land registration, mutation, and corporate law by Advocate Md. Shah Alam.',
       canonical: `${BASE}/blog`,
       body: blogIndexBody(enPosts, 'en'),
       lang: 'en',
@@ -1065,8 +1364,8 @@ ${BN_DISCLAIMER}${bnMeta.body}${BN_CTA}`,
 <link rel="alternate" hreflang="en" href="${BASE}/blog" />
 <link rel="alternate" hreflang="x-default" href="${BASE}/blog" />`;
     const html = buildPage(base, {
-      title: 'বাংলাদেশ আইনি ব্লগ | অ্যাডভোকেট মো. শাহ Alam',
-      description: 'বাংলাদেশের আইন বিষয়ক বিস্তারিত নিবন্ধ। ফৌজদারি, তালাক, জামিন, জমি-জমা ও সুপ্রিম কোর্ট আইন।',
+      title: 'বাংলাদেশ আইনি গাইড ও ব্লগ | এডভোকেট মোঃ শাহ আলম',
+      description: 'বাংলাদেশের ফৌজদারি, জামিন, তালাক, জমি রেজিস্ট্রি, নামজারি, বাটোয়ারা ও সুপ্রিম কোর্ট আইন বিষয়ক বিস্তারিত বাংলা আইনি গাইড পড়ুন।',
       canonical: `${BASE}/bn/blog`,
       body: blogIndexBody(bnPosts, 'bn'),
       lang: 'bn',
@@ -1075,6 +1374,72 @@ ${BN_DISCLAIMER}${bnMeta.body}${BN_CTA}`,
     write(path.join(DIST, 'bn', 'blog', 'index.html'), html);
     console.log('  ✓ /bn/blog');
   }
+
+  // ── Crawlable Blog Pagination (/blog/page/2..N & /bn/blog/page/2..N) ───────
+  const PER_PAGE = 24;
+  for (const [langKey, list, prefix, label] of [
+    ['en', enPosts, '/blog', 'Bangladesh Legal Guides'],
+    ['bn', bnPosts, '/bn/blog', 'বাংলাদেশ আইনি গাইড'],
+  ]) {
+    const totalPages = Math.max(1, Math.ceil(list.length / PER_PAGE));
+    for (let p = 2; p <= totalPages; p++) {
+      const slice = list.slice((p - 1) * PER_PAGE, p * PER_PAGE);
+      const prevHref = p === 2 ? `${BASE}${prefix}` : `${BASE}${prefix}/page/${p - 1}`;
+      const nextHref = p < totalPages ? `${BASE}${prefix}/page/${p + 1}` : null;
+      const relLinks = `<link rel="prev" href="${prevHref}" />` + (nextHref ? `\n<link rel="next" href="${nextHref}" />` : '');
+      const navLinks = Array.from({ length: totalPages }, (_, i) => {
+        const n = i + 1;
+        const href = n === 1 ? prefix : `${prefix}/page/${n}`;
+        return `<a href="${href}" style="padding:6px 12px;border:1px solid #CBD5E1;border-radius:6px;margin:2px;display:inline-block;${n === p ? 'background:#132A4A;color:#fff;font-weight:700' : 'color:#132A4A'}">${n}</a>`;
+      }).join(' ');
+      const itemsHtml = slice.map(post => `<li style="margin:10px 0"><a href="${prefix}/${post.slug}" style="font-weight:600;color:#132A4A">${escHtml(post.title)}</a></li>`).join('');
+      const pageHtml = buildPage(base, {
+        title: `${label} — Page ${p} | Adv. Shah Alam`,
+        description: `${label} archive page ${p} of ${totalPages} by Advocate Md. Shah Alam, Supreme Court of Bangladesh.`,
+        canonical: `${BASE}${prefix}/page/${p}`,
+        lang: langKey,
+        extraHead: relLinks,
+        body: `<h1 style="font-size:28px;font-weight:700;color:#0B1220">${escHtml(label)} (Page ${p})</h1><ul>${itemsHtml}</ul><nav aria-label="Pagination" style="margin-top:24px">${navLinks}</nav>`,
+      });
+      write(path.join(DIST, prefix.replace(/^\/+/, ''), 'page', String(p), 'index.html'), pageHtml);
+    }
+    console.log(`  ✓ ${prefix}/page/2..${totalPages} (${langKey})`);
+  }
+
+  // ── Topic Cluster Hub Pages (/blog/topic/* & /bn/blog/topic/*) ─────────────
+  const TOPIC_HUBS = [
+    { slug: 'criminal-law', en: 'Criminal Defense Law Guides', bn: 'ফৌজদারি মামলা ও আইন গাইড', service: 'criminal-lawyer', rx: /criminal|fir|gd|penal|section|arrest|warrant|420|406|302|murder|cyber|cheating|fraud/i },
+    { slug: 'bail-law', en: 'Bail & Anticipatory Bail Guides', bn: 'জামিন ও আগাম জামিন গাইড', service: 'bail-lawyer', rx: /bail|anticipatory|497|498|surrender|জামিন/i },
+    { slug: 'divorce-family-law', en: 'Divorce, Dower & Family Law Guides', bn: 'তালাক, দেনমোহর ও পারিবারিক আইন', service: 'divorce-lawyer', rx: /divorce|talaq|khula|dower|denmohar|custody|marriage|maintenance|তালাক|বিবাহ|দেনমোহর|পারিবারিক/i },
+    { slug: 'land-property-law', en: 'Land, Khatian & Property Law Guides', bn: 'জমি, খতিয়ান, নামজারি ও সম্পত্তি আইন', service: 'land-lawyer', rx: /land|property|khatian|mutation|namjari|deed|dalil|partition|batwara|inheritance|pre-emption|জমি|খতিয়ান|নামজারি|দলিল|বাটোয়ারা/i },
+    { slug: 'supreme-court-writ', en: 'Supreme Court Writ & Appeals', bn: 'সুপ্রিম কোর্ট রিট ও আপিল গাইড', service: 'supreme-court-lawyer', rx: /writ|supreme-court|high-court|appeal|561a|quashing|contempt|রিট|হাইকোর্ট|সুপ্রিম/i },
+    { slug: 'corporate-tax-law', en: 'Company, Corporate & Tax Law Guides', bn: 'কোম্পানি, কর্পোরেট ও আয়কর-ভ্যাট গাইড', service: 'company-corporate-lawyer', rx: /company|corporate|rjsc|tax|vat|nbr|trademark|cheque|138|ni-act|bank|artha-rin|কোম্পানি|আয়কর|ভ্যাট|চেক/i },
+    { slug: 'nrb-immigration-law', en: 'NRB Legal & Embassy Attestation Guides', bn: 'প্রবাসী (NRB) ও দূতাবাস আইনি গাইড', service: 'land-lawyer', rx: /nrb|abroad|overseas|embassy|passport|power-of-attorney|প্রবাসী|বিদেশ|দূতাবাস|পাওয়ার/i },
+  ];
+  for (const hub of TOPIC_HUBS) {
+    for (const [langKey, list, prefix, svcPrefix] of [
+      ['en', enPosts, '/blog', '/services'],
+      ['bn', bnPosts, '/bn/blog', '/bn/services'],
+    ]) {
+      const matched = list.filter(p => hub.rx.test(`${p.slug} ${p.title} ${p.category || ''}`));
+      const title = langKey === 'en' ? `${hub.en} | Adv. Shah Alam` : `${hub.bn} | এডভোকেট মোঃ শাহ আলম`;
+      const h1 = langKey === 'en' ? hub.en : hub.bn;
+      const itemsHtml = matched.map(p => `<li style="margin:8px 0"><a href="${prefix}/${p.slug}" style="color:#132A4A;font-weight:600">${escHtml(p.title)}</a></li>`).join('');
+      const hubHtml = buildPage(base, {
+        title: title.slice(0, 58),
+        description: `${h1} — ${matched.length} expert legal articles and statute guides by Advocate Md. Shah Alam.`,
+        canonical: `${BASE}${prefix}/topic/${hub.slug}`,
+        lang: langKey,
+        extraHead: `<link rel="alternate" hreflang="${langKey}" href="${BASE}${prefix}/topic/${hub.slug}" />`,
+        body: `<nav aria-label="Breadcrumb" style="font-size:13px;color:#475569;margin-bottom:14px"><a href="${langKey === 'en' ? '/en' : '/'}">${langKey === 'en' ? 'Home' : 'হোম'}</a> &rsaquo; <a href="${prefix}">${langKey === 'en' ? 'Blog' : 'ব্লগ'}</a> &rsaquo; <span>${escHtml(h1)}</span></nav>
+<h1 style="font-size:28px;font-weight:700;color:#0B1220">${escHtml(h1)}</h1>
+<p style="margin:12px 0 20px"><a href="${svcPrefix}/${hub.service}" style="color:#132A4A;font-weight:700">${langKey === 'en' ? 'View Practice Area & Consult Advocate →' : 'মূল আইনি সেবা ও পরামর্শ দেখুন →'}</a></p>
+<ul>${itemsHtml}</ul>`,
+      });
+      write(path.join(DIST, prefix.replace(/^\/+/, ''), 'topic', hub.slug, 'index.html'), hubHtml);
+    }
+  }
+  console.log(`  ✓ 14 topic cluster hub pages (/blog/topic/* & /bn/blog/topic/*)`);
 
   // ── EN blog posts ──────────────────────────────────────────────────────────
   console.log('\n📚 Pre-rendering EN blog posts...');
@@ -1089,7 +1454,7 @@ ${BN_DISCLAIMER}${bnMeta.body}${BN_CTA}`,
 
     const articleSchema = {
       '@context': 'https://schema.org',
-      '@type': ['Article', 'BlogPosting'],
+      '@type': 'BlogPosting',
       headline: post.title,
       description: enMetaDesc,
       datePublished: post.publishedDate || TODAY,
@@ -1097,14 +1462,13 @@ ${BN_DISCLAIMER}${bnMeta.body}${BN_CTA}`,
       inLanguage: 'en',
       mainEntityOfPage: { '@type': 'WebPage', '@id': postCanonical },
       author: {
-        '@type': 'LegalService',
-        '@id': `${BASE}/#legalservice`,
+        '@type': 'Person',
+        '@id': `${BASE}/#attorney`,
         name: 'Advocate Md. Shah Alam',
-        url: BASE,
+        url: `${BASE}/advocate-md-shah-alam`,
       },
       publisher: {
-        '@type': 'LegalService',
-        '@id': `${BASE}/#legalservice`,
+        '@type': 'Organization',
         name: 'Advocate Md. Shah Alam Law Chambers',
         url: BASE,
         logo: { '@type': 'ImageObject', url: `${BASE}/adv-md-shah-alam.png` },
@@ -1116,18 +1480,28 @@ ${BN_DISCLAIMER}${bnMeta.body}${BN_CTA}`,
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: `${BASE}/` },
+        { '@type': 'ListItem', position: 1, name: 'Home', item: `${BASE}/en` },
         { '@type': 'ListItem', position: 2, name: 'Blog', item: `${BASE}/blog` },
         { '@type': 'ListItem', position: 3, name: post.title, item: postCanonical },
       ],
     };
 
-    const entityGraph = buildEntityGraph({ url: postCanonical, lang: 'en', faqs: post.faqs });
+    const faqItemsEn = (Array.isArray(post.faqs) ? post.faqs : [])
+      .map(f => ({ q: f.question || f.q, a: f.answer || f.a }))
+      .filter(f => f.q && f.a);
+    const faqSchemaEn = faqItemsEn.length > 0 ? {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faqItemsEn.map(f => ({
+        '@type': 'Question',
+        name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: f.a },
+      })),
+    } : null;
 
     const extraHead = `${hreflangTags}
 <script type="application/ld+json">${jsonLd(articleSchema)}</script>
-<script type="application/ld+json">${jsonLd(breadcrumbSchema)}</script>
-<script type="application/ld+json">${jsonLd(entityGraph)}</script>`;
+<script type="application/ld+json">${jsonLd(breadcrumbSchema)}</script>${faqSchemaEn ? `\n<script type="application/ld+json">${jsonLd(faqSchemaEn)}</script>` : ''}`;
 
     const html = buildPage(base, {
       title: evergreenYear(post.metaTitle || post.title),
@@ -1155,7 +1529,7 @@ ${BN_DISCLAIMER}${bnMeta.body}${BN_CTA}`,
 
     const articleSchema = {
       '@context': 'https://schema.org',
-      '@type': ['Article', 'BlogPosting'],
+      '@type': 'BlogPosting',
       headline: post.title,
       description: bnMetaDesc,
       datePublished: post.publishedDate || TODAY,
@@ -1163,15 +1537,14 @@ ${BN_DISCLAIMER}${bnMeta.body}${BN_CTA}`,
       inLanguage: 'bn',
       mainEntityOfPage: { '@type': 'WebPage', '@id': postCanonical },
       author: {
-        '@type': 'LegalService',
-        '@id': `${BASE}/#legalservice`,
+        '@type': 'Person',
+        '@id': `${BASE}/#attorney`,
         name: 'Advocate Md. Shah Alam',
         alternateName: 'এডভোকেট মোঃ শাহ আলম',
-        url: BASE,
+        url: `${BASE}/advocate-md-shah-alam`,
       },
       publisher: {
-        '@type': 'LegalService',
-        '@id': `${BASE}/#legalservice`,
+        '@type': 'Organization',
         name: 'Advocate Md. Shah Alam Law Chambers',
         url: BASE,
         logo: { '@type': 'ImageObject', url: `${BASE}/adv-md-shah-alam.png` },
@@ -1189,12 +1562,22 @@ ${BN_DISCLAIMER}${bnMeta.body}${BN_CTA}`,
       ],
     };
 
-    const entityGraph = buildEntityGraph({ url: postCanonical, lang: 'bn', faqs: post.faqs });
+    const faqItemsBn = (Array.isArray(post.faqs) ? post.faqs : [])
+      .map(f => ({ q: f.question || f.q, a: f.answer || f.a }))
+      .filter(f => f.q && f.a);
+    const faqSchemaBn = faqItemsBn.length > 0 ? {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faqItemsBn.map(f => ({
+        '@type': 'Question',
+        name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: f.a },
+      })),
+    } : null;
 
     const extraHead = `${hreflangTags}
 <script type="application/ld+json">${jsonLd(articleSchema)}</script>
-<script type="application/ld+json">${jsonLd(breadcrumbSchema)}</script>
-<script type="application/ld+json">${jsonLd(entityGraph)}</script>`;
+<script type="application/ld+json">${jsonLd(breadcrumbSchema)}</script>${faqSchemaBn ? `\n<script type="application/ld+json">${jsonLd(faqSchemaBn)}</script>` : ''}`;
 
     const html = buildPage(base, {
       title: evergreenYear(post.metaTitle || post.title || 'বাংলাদেশ আইনি গাইড'),

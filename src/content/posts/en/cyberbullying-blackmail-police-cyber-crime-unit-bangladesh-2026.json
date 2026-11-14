@@ -1,9 +1,9 @@
 {
   "slug": "cyberbullying-blackmail-police-cyber-crime-unit-bangladesh-2026",
-  "metaTitle": "Report Cyber Blackmail Fake ID Police Cyber Unit Bangladesh 2026",
+  "metaTitle": "Report Cyber Blackmail Fake ID Police Cyber Unit",
   "category": "Cyber Law",
   "title": "Cyber Blackmail, Fake ID & Online Harassment Remedy in Bangladesh 2026: CID & Police Helpline Guide",
-  "metaDescription": "Step-by-step emergency guide to reporting online blackmail, sextortion, fake Facebook profiles, and cyberstalking in Bangladesh — CID Cyber Crime Unit, 999 hotline, and Cyber Tribunal legal actions.",
+  "metaDescription": "Step-by-step emergency guide to reporting online blackmail, sextortion, fake Facebook profiles, and cyberstalking in Bangladesh — CID Cyber Crime Unit, 999.",
   "keywords": [
     "report cyber blackmail Bangladesh 2026",
     "CID cyber crime unit complaint online",
@@ -90,12 +90,24 @@
     }
   ],
   "relatedServiceLinks": [
-    {"text": "Criminal & Cyber Defense Lawyer Dhaka", "to": "/services/criminal-lawyer"},
-    {"text": "Supreme Court Lawyer Bangladesh", "to": "/services/supreme-court-lawyer"}
+    {
+      "text": "Criminal & Cyber Defense Lawyer Dhaka",
+      "to": "/services/criminal-lawyer"
+    },
+    {
+      "text": "Supreme Court Lawyer Bangladesh",
+      "to": "/services/supreme-court-lawyer"
+    }
   ],
   "relatedPosts": [
-    {"text": "Cyber Crime Laws & Penalties Bangladesh 2026", "to": "/blog/cyber-crime-laws-penalties-bangladesh-2026-guide"},
-    {"text": "How to File FIR & GD at Bangladesh Police Station", "to": "/blog/how-to-file-gd-bangladesh-police-station"}
+    {
+      "text": "Cyber Crime Laws & Penalties Bangladesh 2026",
+      "to": "/blog/cyber-crime-laws-penalties-bangladesh-2026-guide"
+    },
+    {
+      "text": "How to File FIR & GD at Bangladesh Police Station",
+      "to": "/blog/how-to-file-gd-bangladesh-police-station"
+    }
   ],
   "isDraft": false,
   "lang": "en"

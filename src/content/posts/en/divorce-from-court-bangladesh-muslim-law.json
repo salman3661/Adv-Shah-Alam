@@ -3,8 +3,14 @@
   "metaTitle": "Court Divorce Under Muslim Law Bangladesh 2026 Guide",
   "category": "Family Law",
   "title": "Divorce from Court Under Muslim Law in Bangladesh: Judicial Khul, Dissolution, and Decree",
-  "metaDescription": "Complete guide to court divorce under Muslim law in Bangladesh — judicial khul, dissolution of marriage, court procedure, maintenance, and child custody after divorce.",
-  "keywords": ["court divorce Bangladesh Muslim law", "judicial khul Bangladesh", "dissolution of marriage Bangladesh", "divorce decree Bangladesh", "divorce lawyer Bangladesh"],
+  "metaDescription": "Complete guide to court divorce under Muslim law in Bangladesh — judicial khul, dissolution of marriage, court procedure, maintenance, and child custody after.",
+  "keywords": [
+    "court divorce Bangladesh Muslim law",
+    "judicial khul Bangladesh",
+    "dissolution of marriage Bangladesh",
+    "divorce decree Bangladesh",
+    "divorce lawyer Bangladesh"
+  ],
   "publishedDate": "2026-07-12",
   "lastModified": "2026-07-12",
   "readTime": "12 min read",
@@ -91,13 +97,28 @@
     }
   ],
   "relatedServiceLinks": [
-    {"text": "Divorce Lawyer in Bangladesh", "to": "/services/divorce-lawyer"},
-    {"text": "Supreme Court Lawyer Bangladesh", "to": "/services/supreme-court-lawyer"},
-    {"text": "Criminal Lawyer in Bangladesh", "to": "/services/criminal-lawyer"}
+    {
+      "text": "Divorce Lawyer in Bangladesh",
+      "to": "/services/divorce-lawyer"
+    },
+    {
+      "text": "Supreme Court Lawyer Bangladesh",
+      "to": "/services/supreme-court-lawyer"
+    },
+    {
+      "text": "Criminal Lawyer in Bangladesh",
+      "to": "/services/criminal-lawyer"
+    }
   ],
   "relatedPosts": [
-    {"text": "Child Custody Law Bangladesh 2026", "to": "/blog/child-custody-law-bangladesh"},
-    {"text": "Child Custody Under Muslim Law Bangladesh", "to": "/blog/child-custody-law-bangladesh"}
+    {
+      "text": "Child Custody Law Bangladesh 2026",
+      "to": "/blog/child-custody-law-bangladesh"
+    },
+    {
+      "text": "Child Custody Under Muslim Law Bangladesh",
+      "to": "/blog/child-custody-law-bangladesh"
+    }
   ],
   "isDraft": false,
   "lang": "en"

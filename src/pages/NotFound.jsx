@@ -18,6 +18,7 @@ const NotFound = () => {
     return (
         <>
             <Helmet>
+                <html lang={isBn ? 'bn' : 'en'} />
                 <title>{isBn ? 'পেজ পাওয়া যায়নি – ৪০৪ | এডভোকেট মোঃ শাহ আলম' : 'Page Not Found – 404 | Advocate Md. Shah Alam'}</title>
                 <meta name="description" content={isBn
                     ? 'আপনি যে পেজটি খুঁজছেন তা পাওয়া যায়নি। এডভোকেট মোঃ শাহ আলম-এর হোমপেজে ফিরে যান।'

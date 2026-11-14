@@ -227,13 +227,6 @@ const legalServiceSchema = {
             name: 'Dhaka Bar Association',
         },
     ],
-    aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: '4.9',
-        reviewCount: '47',
-        bestRating: '5',
-        worstRating: '1',
-    },
     openingHoursSpecification: [
         {
             '@type': 'OpeningHoursSpecification',
@@ -254,19 +247,6 @@ const legalServiceSchema = {
 };
 
 
-/* ── BreadcrumbList for homepage ── */
-const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: BASE },
-        { '@type': 'ListItem', position: 2, name: 'Criminal Lawyer', item: `${BASE}/services/criminal-lawyer` },
-        { '@type': 'ListItem', position: 3, name: 'Blog', item: `${BASE}/blog` },
-        { '@type': 'ListItem', position: 4, name: 'Contact', item: `${BASE}/contact` },
-    ],
-};
-
-
 const Layout = ({ children }) => {
     const location = useLocation();
     // Blog post pages have their own sticky bar — hide the global one to avoid duplication
@@ -275,16 +255,10 @@ const Layout = ({ children }) => {
     return (
         <div className="min-h-screen font-sans flex flex-col transition-colors duration-300"
             style={{ background: 'var(--bg)', color: 'var(--text)' }}>
+            <a href="#main-content" className="skip-link">Skip to main content</a>
             <ReadingProgress />
-            <Helmet>
-                <script type="application/ld+json">{JSON.stringify(personSchema)}</script>
-                <script type="application/ld+json">{JSON.stringify(legalServiceSchema)}</script>
-                <script type="application/ld+json">{JSON.stringify(attorneySchema)}</script>
-                <script type="application/ld+json">{JSON.stringify(websiteSchema)}</script>
-                <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
-            </Helmet>
             <Header />
-            <main className="flex-grow">
+            <main id="main-content" className="flex-grow">
                 {children}
             </main>
             <Footer />

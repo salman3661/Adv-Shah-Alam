@@ -22,7 +22,7 @@
   "sections": [
     {
       "h2": "ভাড়াটিয়ার অধিকার",
-      "content": "<p>বিনা নোটিশে উচ্ছেদ না হওয়া এবং অগ্রিম বা সিকিউরিটি মানি ফেরত পাওয়ার অধিকার। ভাড়া নিয়ন্ত্রকের কাছে বাড়াবাড়ি ভাড়ার বিষয়ে অভিযোগও করা যায়। অনেক সময় নতুন <a href=\"/bn/blog/jomi-nibondhon-fees-prokriya-bangladesh\" style=\"color:var(--accent); font-weight:500;\">সম্পত্তি কিনে বাড়িভাড়া চুক্তির নিয়ম</a> সম্পর্কে જાણা অপরিহার্য হয়ে পড়ে।</p>"
+      "content": "<p>বিনা নোটিশে উচ্ছেদ না হওয়া এবং অগ্রিম বা সিকিউরিটি মানি ফেরত পাওয়ার অধিকার। ভাড়া নিয়ন্ত্রকের কাছে বাড়াবাড়ি ভাড়ার বিষয়ে অভিযোগও করা যায়। অনেক সময় নতুন <a href=\"/bn/blog/jomi-registry-khoroch-sarkaree-fee-bd\" style=\"color:var(--accent); font-weight:500;\">সম্পত্তি কিনে বাড়িভাড়া চুক্তির নিয়ম</a> সম্পর্কে જાણা অপরিহার্য হয়ে পড়ে।</p>"
     },
     {
       "h2": "বাড়িওয়ালার অধিকার ও উচ্ছেদ",
@@ -47,5 +47,7 @@
   ],
   "lang": "bn",
   "featured": false,
-  "lastModified": "2026-09-22"
+  "lastModified": "2026-09-22",
+  "isDraft": true,
+  "mergedInto": "/bn/blog/cyber-crime-helpline-online-complaint-bangladesh"
 }

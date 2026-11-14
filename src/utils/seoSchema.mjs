@@ -87,37 +87,26 @@ export function buildEntityGraph({ url, lang = 'en', faqs = [] }) {
 }
 
 /**
- * Reciprocal hreflang set for a blog article (Phase 4.1).
- * Includes regional (bn-BD / en-BD), language (bn / en), and x-default tags.
+ * Reciprocal hreflang set for a blog article (Phase 3 i18n).
+ * Bilingual pairs emit exact 3 tags: en, bn, x-default (pointing to English URL).
+ * Unpaired posts emit self-referencing language tag only.
  * @returns {Array<{hrefLang:string, href:string}>}
  */
 export function buildHreflang({ lang, slug, pairedSlug }) {
   const enUrl = (s) => `${SITE}/blog/${s}`;
   const bnUrl = (s) => `${SITE}/bn/blog/${s}`;
-  if (lang === 'en') {
-    const tags = [
-      { hrefLang: 'en-BD', href: enUrl(slug) },
-      { hrefLang: 'en', href: enUrl(slug) },
-      { hrefLang: 'x-default', href: enUrl(slug) },
-    ];
-    if (pairedSlug) {
-      tags.push({ hrefLang: 'bn-BD', href: bnUrl(pairedSlug) });
-      tags.push({ hrefLang: 'bn', href: bnUrl(pairedSlug) });
-    }
-    return tags;
-  }
-  const tags = [
-    { hrefLang: 'bn-BD', href: bnUrl(slug) },
-    { hrefLang: 'bn', href: bnUrl(slug) },
-  ];
   if (pairedSlug) {
-    tags.push({ hrefLang: 'en-BD', href: enUrl(pairedSlug) });
-    tags.push({ hrefLang: 'en', href: enUrl(pairedSlug) });
-    tags.push({ hrefLang: 'x-default', href: enUrl(pairedSlug) });
-  } else {
-    tags.push({ hrefLang: 'x-default', href: bnUrl(slug) });
+    const enHref = lang === 'en' ? enUrl(slug) : enUrl(pairedSlug);
+    const bnHref = lang === 'bn' ? bnUrl(slug) : bnUrl(pairedSlug);
+    return [
+      { hrefLang: 'en', href: enHref },
+      { hrefLang: 'bn', href: bnHref },
+      { hrefLang: 'x-default', href: enHref },
+    ];
   }
-  return tags;
+  return [
+    { hrefLang: lang, href: lang === 'en' ? enUrl(slug) : bnUrl(slug) },
+  ];
 }
 
 /**
