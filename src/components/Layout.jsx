@@ -255,9 +255,10 @@ const Layout = ({ children }) => {
     return (
         <div className="min-h-screen font-sans flex flex-col transition-colors duration-300"
             style={{ background: 'var(--bg)', color: 'var(--text)' }}>
+            <a href="#main-content" className="skip-link">Skip to main content</a>
             <ReadingProgress />
             <Header />
-            <main className="flex-grow">
+            <main id="main-content" className="flex-grow">
                 {children}
             </main>
             <Footer />

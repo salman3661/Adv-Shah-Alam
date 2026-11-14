@@ -274,11 +274,25 @@ function buildPostBody(post) {
       <p style="margin:6px 0 0;color:#444;font-size:14px">${escHtml(f.answer || f.a || '')}</p></div>`).join('')}
     </section>` : '';
 
-  return `<h1 style="font-size:30px;font-weight:700;margin-bottom:8px;color:#0a0a0a">${escHtml(post.title)}</h1>
-<p style="color:#555;font-size:14px;margin-bottom:20px">By <strong>Advocate Md. Shah Alam</strong> &middot; ${escHtml(post.publishedDate||'')} &middot; ${escHtml(post.readTime||'')}</p>
+  const directAnswerText = (post.directAnswer || (post.heroIntro || '').replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim()).split(/\s+/).slice(0, 58).join(' ');
+  const directAnswer = directAnswerText ? `<p class="direct-answer"><strong>Quick Legal Answer:</strong> ${escHtml(directAnswerText)}${directAnswerText.endsWith('.') ? '' : '...'}</p>` : '';
+
+  const breadcrumbNav = `<nav aria-label="Breadcrumb" style="font-size:13px;color:#475569;margin-bottom:14px">
+    <a href="/en" style="color:#132A4A">Home</a> &rsaquo; <a href="/blog" style="color:#132A4A">Blog</a> &rsaquo; <span>${escHtml(post.title)}</span>
+  </nav>`;
+
+  return `${breadcrumbNav}
+<h1 style="font-size:30px;font-weight:700;margin-bottom:8px;color:#0B1220">${escHtml(post.title)}</h1>
+<p style="color:#475569;font-size:14px;margin-bottom:20px">By <a href="/advocate-md-shah-alam" style="color:#132A4A;font-weight:700">Advocate Md. Shah Alam</a> &middot; ${escHtml(post.publishedDate||'')} &middot; ${escHtml(post.readTime||'')}</p>
+${directAnswer}
 ${DISCLAIMER}
 <p style="font-size:16px;color:#333;margin-bottom:24px">${escHtml(post.heroIntro||'')}</p>
-${buildPillarAndTableHtml(post, 'en')}${toc}${sections}${faqs}${CONCLUSION_DISCLAIMER_EN}${CTA}`;
+${buildPillarAndTableHtml(post, 'en')}${toc}${sections}${faqs}
+<section style="margin-top:32px;padding:18px;background:#F7F8FA;border-radius:8px;border:1px solid #E2E8F0">
+  <h2 style="font-size:18px;font-weight:700;margin-bottom:10px;color:#0B1220">Related Legal Resources &amp; Services</h2>
+  <p style="font-size:14px;line-height:1.8"><a href="/services/criminal-lawyer">Criminal Defense</a> &middot; <a href="/services/bail-lawyer">Bail &amp; Anticipatory Bail</a> &middot; <a href="/services/divorce-lawyer">Divorce &amp; Family Law</a> &middot; <a href="/services/land-lawyer">Land &amp; Property Law</a> &middot; <a href="/nrb-legal-help">NRB Legal Help</a> &middot; <a href="/contact">Book Consultation</a></p>
+</section>
+${CONCLUSION_DISCLAIMER_EN}${CTA}`;
 }
 
 function buildBnPostBody(post) {
@@ -315,11 +329,25 @@ function buildBnPostBody(post) {
       <p style="margin:6px 0 0;color:#444;font-size:14px;line-height:1.7">${escHtml(f.answer || f.a || '')}</p></div>`).join('')}
     </section>` : '';
 
-  return `<h1 style="font-size:30px;font-weight:700;margin-bottom:8px;color:#0a0a0a">${escHtml(post.title || '')}</h1>
-<p style="color:#555;font-size:14px;margin-bottom:20px">লেখক: <strong>অ্যাডভোকেট মো. শাহ আলম</strong> &middot; ${escHtml(post.publishedDate || '')} &middot; ${escHtml(post.readTime || '')}</p>
+  const directAnswerBnText = (post.directAnswer || (post.heroIntro || '').replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim()).split(/\s+/).slice(0, 58).join(' ');
+  const directAnswerBn = directAnswerBnText ? `<p class="direct-answer"><strong>সংক্ষিপ্ত আইনি উত্তর:</strong> ${escHtml(directAnswerBnText)}${directAnswerBnText.endsWith('।') ? '' : '...'}</p>` : '';
+
+  const breadcrumbNavBn = `<nav aria-label="Breadcrumb" style="font-size:13px;color:#475569;margin-bottom:14px">
+    <a href="/" style="color:#132A4A">হোম</a> &rsaquo; <a href="/bn/blog" style="color:#132A4A">বাংলা ব্লগ</a> &rsaquo; <span>${escHtml(post.title || '')}</span>
+  </nav>`;
+
+  return `${breadcrumbNavBn}
+<h1 style="font-size:30px;font-weight:700;margin-bottom:8px;color:#0B1220">${escHtml(post.title || '')}</h1>
+<p style="color:#475569;font-size:14px;margin-bottom:20px">লেখক: <a href="/advocate-md-shah-alam" style="color:#132A4A;font-weight:700">অ্যাডভোকেট মো. শাহ আলম</a> &middot; ${escHtml(post.publishedDate || '')} &middot; ${escHtml(post.readTime || '')}</p>
+${directAnswerBn}
 ${BN_DISCLAIMER}
 <p style="font-size:16px;color:#333;margin-bottom:24px;line-height:1.8">${escHtml(post.heroIntro || '')}</p>
-${buildPillarAndTableHtml(post, 'bn')}${quickAns}${toc}${sections}${faqs}${CONCLUSION_DISCLAIMER_BN}${BN_CTA}`;
+${buildPillarAndTableHtml(post, 'bn')}${quickAns}${toc}${sections}${faqs}
+<section style="margin-top:32px;padding:18px;background:#F7F8FA;border-radius:8px;border:1px solid #E2E8F0">
+  <h2 style="font-size:18px;font-weight:700;margin-bottom:10px;color:#0B1220">সংশ্লিষ্ট আইনি সেবা ও পরামর্শ</h2>
+  <p style="font-size:14px;line-height:1.8"><a href="/bn/services/criminal-lawyer">ফৌজদারি আইনজীবী</a> &middot; <a href="/bn/services/bail-lawyer">জামিন আইনজীবী</a> &middot; <a href="/bn/services/divorce-lawyer">তালাক ও পারিবারিক আইন</a> &middot; <a href="/bn/services/land-lawyer">জমি ও সম্পত্তি আইন</a> &middot; <a href="/nrb-legal-help">প্রবাসী (NRB) আইনি সহায়তা</a> &middot; <a href="/bn/contact">চেম্বারে যোগাযোগ</a></p>
+</section>
+${CONCLUSION_DISCLAIMER_BN}${BN_CTA}`;
 }
 
 // ── service page lookup ──────────────────────────────────────────────────────
@@ -595,7 +623,10 @@ function homeBodyBn() {
     <li><strong>জজ কোর্ট চেম্বার:</strong> আইনজীবী সমিতি ভবন, ১ম তলা (হল রুম), ৬/৭ কোর্ট হাউস স্ট্রিট, কোতোয়ালি, ঢাকা</li>
     <li><strong>অফিস সময়:</strong> শনিবার – বৃহস্পতিবার, সকাল ৯:০০ – রাত ৯:০০</li>
   </ul>
-</section>`;
+</section>
+<nav aria-label="Site Directory" style="margin-top:24px;padding:16px;background:#F7F8FA;border-radius:8px">
+  <a href="/en">English Home</a> &middot; <a href="/advocate-md-shah-alam">Advocate Md. Shah Alam</a> &middot; <a href="/education">Education</a> &middot; <a href="/blog">English Blog</a> &middot; <a href="/bn/blog">বাংলা ব্লগ</a> &middot; <a href="/nrb-legal-help">NRB Legal Help</a> &middot; <a href="/contact">Contact</a> &middot; <a href="/bn/contact">যোগাযোগ</a> &middot; <a href="/review">Client Reviews</a> &middot; <a href="/privacy-policy">Privacy Policy</a> &middot; <a href="/terms-of-service">Terms of Service</a> &middot; <a href="/services/criminal-lawyer">Criminal</a> &middot; <a href="/services/bail-lawyer">Bail</a> &middot; <a href="/services/divorce-lawyer">Divorce</a> &middot; <a href="/services/land-lawyer">Land</a> &middot; <a href="/services/supreme-court-lawyer">Supreme Court</a> &middot; <a href="/services/company-corporate-lawyer">Corporate</a> &middot; <a href="/services/tax-lawyer">Tax</a> &middot; <a href="/bn/services/criminal-lawyer">ফৌজদারি</a> &middot; <a href="/bn/services/bail-lawyer">জামিন</a> &middot; <a href="/bn/services/divorce-lawyer">তালাক</a> &middot; <a href="/bn/services/land-lawyer">জমি</a> &middot; <a href="/bn/services/supreme-court-lawyer">সুপ্রিম কোর্ট</a> &middot; <a href="/bn/services/company-corporate-lawyer">কর্পোরেট</a> &middot; <a href="/bn/services/tax-lawyer">আয়কর ও ভ্যাট</a>
+</nav>`;
 }
 
 function homeBody() {
@@ -697,30 +728,48 @@ ${CTA}`;
 }
 
 function blogIndexBody(posts, lang='en') {
-  const sorted = [...posts].sort((a, b) => {
-    const timeA = new Date(a.publishedAt || a.publishedDate || 0).getTime();
-    const timeB = new Date(b.publishedAt || b.publishedDate || 0).getTime();
-    return timeB - timeA;
-  });
-  const recentPosts = sorted.slice(0, 50);
+  const prefix = lang === 'bn' ? '/bn/blog' : '/blog';
+  const totalPages = Math.max(1, Math.ceil(posts.length / 24));
+  const recentPosts = posts.slice(0, 24);
   const listItems = recentPosts.map(p => {
-    const path = lang === 'bn' ? `/bn/blog/${p.slug}` : `/blog/${p.slug}`;
+    const path = `${prefix}/${p.slug}`;
     return `<li style="margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid #eee">
-      <a href="${path}" style="color:#1a56db;font-weight:600;font-size:15px">${escHtml(p.title||p.metaTitle||p.slug)}</a>
-      ${p.publishedDate ? `<span style="color:#888;font-size:13px;margin-left:8px">${p.publishedDate}</span>` : ''}
-      ${p.heroIntro ? `<p style="color:#555;font-size:14px;margin:4px 0 0">${escHtml(p.heroIntro.slice(0,120))}…</p>` : ''}
+      <a href="${path}" style="color:#132A4A;font-weight:600;font-size:15px">${escHtml(p.title||p.metaTitle||p.slug)}</a>
+      ${p.publishedDate ? `<span style="color:#64748b;font-size:13px;margin-left:8px">${p.publishedDate}</span>` : ''}
+      ${p.heroIntro ? `<p style="color:#475569;font-size:14px;margin:4px 0 0">${escHtml(p.heroIntro.slice(0,120))}…</p>` : ''}
     </li>`;
   }).join('');
 
+  const pageNav = Array.from({ length: totalPages }, (_, i) => {
+    const n = i + 1;
+    const href = n === 1 ? prefix : `${prefix}/page/${n}`;
+    return `<a href="${href}" style="padding:6px 12px;border:1px solid #CBD5E1;border-radius:6px;margin:2px;display:inline-block;${n === 1 ? 'background:#132A4A;color:#fff;font-weight:700' : 'color:#132A4A'}">${n}</a>`;
+  }).join(' ');
+
+  const topicSlugs = [
+    ['criminal-law', lang === 'bn' ? 'ফৌজদারি আইন' : 'Criminal Law'],
+    ['bail-law', lang === 'bn' ? 'জামিন ও আগাম জামিন' : 'Bail & Anticipatory Bail'],
+    ['divorce-family-law', lang === 'bn' ? 'তালাক ও পারিবারিক আইন' : 'Divorce & Family Law'],
+    ['land-property-law', lang === 'bn' ? 'জমি ও সম্পত্তি আইন' : 'Land & Property Law'],
+    ['supreme-court-writ', lang === 'bn' ? 'সুপ্রিম কোর্ট রিট' : 'Supreme Court Writ'],
+    ['corporate-tax-law', lang === 'bn' ? 'কোম্পানি ও কর্পোরেট কর' : 'Corporate & Tax Law'],
+    ['nrb-immigration-law', lang === 'bn' ? 'প্রবাসী (NRB) আইন' : 'NRB Legal Guides'],
+  ];
+  const topicNav = topicSlugs.map(([s, lbl]) => `<a href="${prefix}/topic/${s}" style="padding:6px 12px;background:#F7F8FA;border:1px solid #CBD5E1;border-radius:6px;margin:3px;display:inline-block;color:#132A4A;font-size:13px;font-weight:600">${lbl}</a>`).join(' ');
+
   if (lang === 'bn') return `
-<h1 style="font-size:28px;font-weight:700;margin-bottom:8px;color:#0a0a0a">বাংলাদেশের আইনি গাইড — অ্যাডভোকেট মো. শাহ আলম</h1>
-<p style="color:#555;margin-bottom:20px">বাংলাদেশের আইন বিষয়ক বিস্তারিত নিবন্ধ। ফৌজদারি, তালাক, জামিন, জমি-জমা, কোম্পানি ও সুপ্রিম কোর্ট আইন।</p>
-<ul style="padding-left:0;list-style:none">${listItems}</ul>`;
+<h1 style="font-size:28px;font-weight:700;margin-bottom:8px;color:#0B1220">বাংলাদেশের আইনি গাইড — অ্যাডভোকেট মো. শাহ আলম</h1>
+<p style="color:#475569;margin-bottom:16px">বাংলাদেশের আইন বিষয়ক বিস্তারিত নিবন্ধ। ফৌজদারি, তালাক, জামিন, জমি-জমা, কোম্পানি ও সুপ্রিম কোর্ট আইন।</p>
+<nav aria-label="Topics" style="margin-bottom:20px">${topicNav}</nav>
+<ul style="padding-left:0;list-style:none">${listItems}</ul>
+<nav aria-label="Pagination" style="margin-top:24px">${pageNav}</nav>`;
 
   return `
-<h1 style="font-size:28px;font-weight:700;margin-bottom:8px;color:#0a0a0a">Bangladesh Legal Guide — By Advocate Md. Shah Alam</h1>
-<p style="color:#555;margin-bottom:20px">Detailed legal articles on Bangladesh criminal law, divorce, bail, property, company law, and Supreme Court procedures — written by an experienced Dhaka lawyer.</p>
-<ul style="padding-left:0;list-style:none">${listItems}</ul>`;
+<h1 style="font-size:28px;font-weight:700;margin-bottom:8px;color:#0B1220">Bangladesh Legal Guide — By Advocate Md. Shah Alam</h1>
+<p style="color:#475569;margin-bottom:16px">Detailed legal articles on Bangladesh criminal law, divorce, bail, property, company law, and Supreme Court procedures — written by an experienced Dhaka lawyer.</p>
+<nav aria-label="Topics" style="margin-bottom:20px">${topicNav}</nav>
+<ul style="padding-left:0;list-style:none">${listItems}</ul>
+<nav aria-label="Pagination" style="margin-top:24px">${pageNav}</nav>`;
 }
 
 function educationBody() {
@@ -1176,8 +1225,30 @@ ${buildInstitutionalSchema(`${BASE}/bn/contact`, 'bn', [{ name: 'হোম', ite
       canonical: `${BASE}/nrb-legal-help`,
       lang: 'en',
       extraHead,
-      body: `<h1 style="font-size:30px;font-weight:700;margin-bottom:8px;color:#0a0a0a">Legal Help for NRBs in Bangladesh</h1>
-<p style="font-size:16px;color:#333;margin-bottom:24px">Remote legal representation and consultation for Non-Resident Bangladeshis in the UK, USA, UAE, Canada, and Singapore by Advocate Md. Shah Alam of the Supreme Court of Bangladesh.</p>
+      body: `<nav aria-label="Breadcrumb" style="font-size:13px;color:#475569;margin-bottom:14px"><a href="/en" style="color:#132A4A">Home</a> &rsaquo; <span>NRB Legal Help</span></nav>
+<h1 style="font-size:30px;font-weight:700;margin-bottom:8px;color:#0B1220">NRB Legal Services Hub &amp; Remote Representation in Bangladesh</h1>
+<p class="direct-answer"><strong>Quick Summary:</strong> Non-Resident Bangladeshis (NRBs) in the UK, USA, Canada, UAE, and Europe can resolve land disputes, execute Embassy-attested Power of Attorney (PoA), verify khatian/deeds, file divorce/custody suits, and defend criminal/cheque cases in Bangladesh remotely through Advocate Md. Shah Alam without flying to Dhaka.</p>
+<section style="margin:24px 0">
+  <h2 style="font-size:22px;font-weight:700;color:#0B1220;margin-bottom:12px">Core NRB Legal Services</h2>
+  <ul style="padding-left:20px;line-height:1.9;color:#1E293B">
+    <li><strong>Land Title Vetting &amp; Mutation:</strong> CS/SA/RS/BS Khatian verification, Sub-Registry search, and e-Mutation (Namjari) without in-person travel.</li>
+    <li><strong>Power of Attorney (PoA) Drafting:</strong> Drafting &amp; Bangladesh High Commission/Embassy attestation guidance under the Power of Attorney Act 2012.</li>
+    <li><strong>NRB Divorce &amp; Family Matters:</strong> Overseas Talaq notice registration, Section 13 CPC foreign decree recognition, Dower (Denmohar), and child custody.</li>
+    <li><strong>Partition &amp; Inheritance Suits:</strong> Batwara Mamla, Succession Certificate (Succession Act 1925), and stopping illegal land grabbing.</li>
+  </ul>
+</section>
+<section style="margin:28px 0;padding:20px;background:#F7F8FA;border:1px solid #CBD5E1;border-radius:10px">
+  <h2 style="font-size:22px;font-weight:700;color:#0B1220;margin-bottom:12px">Paid Case Review &amp; Document Vetting Packages</h2>
+  <table style="width:100%;border-collapse:collapse;font-size:14px;background:#fff">
+    <thead><tr style="background:#132A4A;color:#fff"><th style="padding:10px;text-align:left">Service Package</th><th style="padding:10px;text-align:left">Deliverables</th><th style="padding:10px;text-align:left">Fee (BDT / USD)</th></tr></thead>
+    <tbody>
+      <tr style="border-bottom:1px solid #E2E8F0"><td style="padding:10px"><strong>45-Min Video Case Review</strong></td><td style="padding:10px">Full legal strategy + statute roadmap with Adv. Md. Shah Alam</td><td style="padding:10px">৳3,000 / \$30</td></tr>
+      <tr style="border-bottom:1px solid #E2E8F0"><td style="padding:10px"><strong>Land Deed &amp; Khatian Vetting</strong></td><td style="padding:10px">Written legal opinion on chain of title, Bia deeds &amp; mutation status</td><td style="padding:10px">৳8,000 / \$75</td></tr>
+      <tr><td style="padding:10px"><strong>PoA / Legal Notice / Agreement Drafting</strong></td><td style="padding:10px">Court-ready bilingual or English legal draft ready for Embassy attestation</td><td style="padding:10px">৳5,000 / \$50</td></tr>
+    </tbody>
+  </table>
+  <p style="margin-top:14px;font-size:14px"><a href="/contact?service=case-review" data-cta="consult" style="display:inline-block;padding:12px 22px;background:#132A4A;color:#fff;border-radius:8px;text-decoration:none;font-weight:700">Book Paid Case Review</a></p>
+</section>
 ${CTA}`,
     });
     write(path.join(DIST, 'nrb-legal-help', 'index.html'), html);
@@ -1303,6 +1374,72 @@ ${BN_DISCLAIMER}${bnMeta.body}${BN_CTA}`,
     write(path.join(DIST, 'bn', 'blog', 'index.html'), html);
     console.log('  ✓ /bn/blog');
   }
+
+  // ── Crawlable Blog Pagination (/blog/page/2..N & /bn/blog/page/2..N) ───────
+  const PER_PAGE = 24;
+  for (const [langKey, list, prefix, label] of [
+    ['en', enPosts, '/blog', 'Bangladesh Legal Guides'],
+    ['bn', bnPosts, '/bn/blog', 'বাংলাদেশ আইনি গাইড'],
+  ]) {
+    const totalPages = Math.max(1, Math.ceil(list.length / PER_PAGE));
+    for (let p = 2; p <= totalPages; p++) {
+      const slice = list.slice((p - 1) * PER_PAGE, p * PER_PAGE);
+      const prevHref = p === 2 ? `${BASE}${prefix}` : `${BASE}${prefix}/page/${p - 1}`;
+      const nextHref = p < totalPages ? `${BASE}${prefix}/page/${p + 1}` : null;
+      const relLinks = `<link rel="prev" href="${prevHref}" />` + (nextHref ? `\n<link rel="next" href="${nextHref}" />` : '');
+      const navLinks = Array.from({ length: totalPages }, (_, i) => {
+        const n = i + 1;
+        const href = n === 1 ? prefix : `${prefix}/page/${n}`;
+        return `<a href="${href}" style="padding:6px 12px;border:1px solid #CBD5E1;border-radius:6px;margin:2px;display:inline-block;${n === p ? 'background:#132A4A;color:#fff;font-weight:700' : 'color:#132A4A'}">${n}</a>`;
+      }).join(' ');
+      const itemsHtml = slice.map(post => `<li style="margin:10px 0"><a href="${prefix}/${post.slug}" style="font-weight:600;color:#132A4A">${escHtml(post.title)}</a></li>`).join('');
+      const pageHtml = buildPage(base, {
+        title: `${label} — Page ${p} | Adv. Shah Alam`,
+        description: `${label} archive page ${p} of ${totalPages} by Advocate Md. Shah Alam, Supreme Court of Bangladesh.`,
+        canonical: `${BASE}${prefix}/page/${p}`,
+        lang: langKey,
+        extraHead: relLinks,
+        body: `<h1 style="font-size:28px;font-weight:700;color:#0B1220">${escHtml(label)} (Page ${p})</h1><ul>${itemsHtml}</ul><nav aria-label="Pagination" style="margin-top:24px">${navLinks}</nav>`,
+      });
+      write(path.join(DIST, prefix.replace(/^\/+/, ''), 'page', String(p), 'index.html'), pageHtml);
+    }
+    console.log(`  ✓ ${prefix}/page/2..${totalPages} (${langKey})`);
+  }
+
+  // ── Topic Cluster Hub Pages (/blog/topic/* & /bn/blog/topic/*) ─────────────
+  const TOPIC_HUBS = [
+    { slug: 'criminal-law', en: 'Criminal Defense Law Guides', bn: 'ফৌজদারি মামলা ও আইন গাইড', service: 'criminal-lawyer', rx: /criminal|fir|gd|penal|section|arrest|warrant|420|406|302|murder|cyber|cheating|fraud/i },
+    { slug: 'bail-law', en: 'Bail & Anticipatory Bail Guides', bn: 'জামিন ও আগাম জামিন গাইড', service: 'bail-lawyer', rx: /bail|anticipatory|497|498|surrender|জামিন/i },
+    { slug: 'divorce-family-law', en: 'Divorce, Dower & Family Law Guides', bn: 'তালাক, দেনমোহর ও পারিবারিক আইন', service: 'divorce-lawyer', rx: /divorce|talaq|khula|dower|denmohar|custody|marriage|maintenance|তালাক|বিবাহ|দেনমোহর|পারিবারিক/i },
+    { slug: 'land-property-law', en: 'Land, Khatian & Property Law Guides', bn: 'জমি, খতিয়ান, নামজারি ও সম্পত্তি আইন', service: 'land-lawyer', rx: /land|property|khatian|mutation|namjari|deed|dalil|partition|batwara|inheritance|pre-emption|জমি|খতিয়ান|নামজারি|দলিল|বাটোয়ারা/i },
+    { slug: 'supreme-court-writ', en: 'Supreme Court Writ & Appeals', bn: 'সুপ্রিম কোর্ট রিট ও আপিল গাইড', service: 'supreme-court-lawyer', rx: /writ|supreme-court|high-court|appeal|561a|quashing|contempt|রিট|হাইকোর্ট|সুপ্রিম/i },
+    { slug: 'corporate-tax-law', en: 'Company, Corporate & Tax Law Guides', bn: 'কোম্পানি, কর্পোরেট ও আয়কর-ভ্যাট গাইড', service: 'company-corporate-lawyer', rx: /company|corporate|rjsc|tax|vat|nbr|trademark|cheque|138|ni-act|bank|artha-rin|কোম্পানি|আয়কর|ভ্যাট|চেক/i },
+    { slug: 'nrb-immigration-law', en: 'NRB Legal & Embassy Attestation Guides', bn: 'প্রবাসী (NRB) ও দূতাবাস আইনি গাইড', service: 'land-lawyer', rx: /nrb|abroad|overseas|embassy|passport|power-of-attorney|প্রবাসী|বিদেশ|দূতাবাস|পাওয়ার/i },
+  ];
+  for (const hub of TOPIC_HUBS) {
+    for (const [langKey, list, prefix, svcPrefix] of [
+      ['en', enPosts, '/blog', '/services'],
+      ['bn', bnPosts, '/bn/blog', '/bn/services'],
+    ]) {
+      const matched = list.filter(p => hub.rx.test(`${p.slug} ${p.title} ${p.category || ''}`));
+      const title = langKey === 'en' ? `${hub.en} | Adv. Shah Alam` : `${hub.bn} | এডভোকেট মোঃ শাহ আলম`;
+      const h1 = langKey === 'en' ? hub.en : hub.bn;
+      const itemsHtml = matched.map(p => `<li style="margin:8px 0"><a href="${prefix}/${p.slug}" style="color:#132A4A;font-weight:600">${escHtml(p.title)}</a></li>`).join('');
+      const hubHtml = buildPage(base, {
+        title: title.slice(0, 58),
+        description: `${h1} — ${matched.length} expert legal articles and statute guides by Advocate Md. Shah Alam.`,
+        canonical: `${BASE}${prefix}/topic/${hub.slug}`,
+        lang: langKey,
+        extraHead: `<link rel="alternate" hreflang="${langKey}" href="${BASE}${prefix}/topic/${hub.slug}" />`,
+        body: `<nav aria-label="Breadcrumb" style="font-size:13px;color:#475569;margin-bottom:14px"><a href="${langKey === 'en' ? '/en' : '/'}">${langKey === 'en' ? 'Home' : 'হোম'}</a> &rsaquo; <a href="${prefix}">${langKey === 'en' ? 'Blog' : 'ব্লগ'}</a> &rsaquo; <span>${escHtml(h1)}</span></nav>
+<h1 style="font-size:28px;font-weight:700;color:#0B1220">${escHtml(h1)}</h1>
+<p style="margin:12px 0 20px"><a href="${svcPrefix}/${hub.service}" style="color:#132A4A;font-weight:700">${langKey === 'en' ? 'View Practice Area & Consult Advocate →' : 'মূল আইনি সেবা ও পরামর্শ দেখুন →'}</a></p>
+<ul>${itemsHtml}</ul>`,
+      });
+      write(path.join(DIST, prefix.replace(/^\/+/, ''), 'topic', hub.slug, 'index.html'), hubHtml);
+    }
+  }
+  console.log(`  ✓ 14 topic cluster hub pages (/blog/topic/* & /bn/blog/topic/*)`);
 
   // ── EN blog posts ──────────────────────────────────────────────────────────
   console.log('\n📚 Pre-rendering EN blog posts...');

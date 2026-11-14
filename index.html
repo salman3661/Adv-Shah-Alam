@@ -81,12 +81,12 @@
   <meta property="og:title" content="Trusted Lawyer in Bangladesh | Advocate Md. Shah Alam — Uttara, Dhaka" />
   <meta property="og:description"
     content="Official website of Advocate Md. Shah Alam, an experienced lawyer based in Uttara, Dhaka, practising at the Supreme Court of Bangladesh. Criminal, divorce, bail &amp; property law." />
-  <meta property="og:image" content="https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.png" />
-  <meta property="og:image:width" content="1024" />
-  <meta property="og:image:height" content="1038" />
+  <meta property="og:image" content="https://www.advmdshahalam.me/images/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="Advocate Md. Shah Alam — Supreme Court Lawyer Bangladesh" />
   <meta property="og:site_name" content="Advocate Md. Shah Alam" />
-  <meta property="og:locale" content="en_BD" />
+  <meta property="og:locale" content="bn_BD" />
   <meta property="article:author" content="https://www.facebook.com/advmd.shahalamfb" />
 
   <!-- Twitter Card -->
@@ -95,7 +95,7 @@
   <meta name="twitter:title" content="Trusted Lawyer in Bangladesh | Advocate Md. Shah Alam — Uttara, Dhaka" />
   <meta name="twitter:description"
     content="Official website of Advocate Md. Shah Alam, experienced lawyer in Uttara, Dhaka. Criminal, divorce, bail &amp; property law. Supreme Court of Bangladesh." />
-  <meta name="twitter:image" content="https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.png" />
+  <meta name="twitter:image" content="https://www.advmdshahalam.me/images/og-image.jpg" />
   <meta name="twitter:creator" content="@advmd.shahalamfb" />
 </head>
 
@@ -147,6 +147,44 @@
         window.gtag = gtag;
         gtag('js', new Date());
         gtag('config', 'G-PJ4Z9WLRBS', { send_page_view: true });
+
+        // Phase 9 GA4 Event Taxonomy
+        function track(name, params) {
+          try { if (typeof window.gtag === 'function') window.gtag('event', name, params || {}); } catch (e) {}
+        }
+        document.addEventListener('click', function (ev) {
+          var a = ev.target && ev.target.closest ? ev.target.closest('a,button') : null;
+          if (!a) return;
+          var href = a.getAttribute('href') || '';
+          if (href.indexOf('wa.me') !== -1 || href.indexOf('whatsapp.com') !== -1) {
+            track('whatsapp_click', { link_url: href, page_path: location.pathname });
+          } else if (href.indexOf('tel:') === 0) {
+            track('call_click', { link_url: href, page_path: location.pathname });
+          } else if (href.indexOf('/contact') !== -1 || a.dataset.cta === 'consult') {
+            track('consult_cta_click', { link_url: href || 'button', page_path: location.pathname });
+          } else if (a.closest && a.closest('.adsbygoogle, .ad-slot-reserved')) {
+            track('ad_click', { page_path: location.pathname });
+          }
+        }, { passive: true });
+        var formStarted = false;
+        document.addEventListener('focusin', function (ev) {
+          if (!formStarted && ev.target && ev.target.closest && ev.target.closest('form')) {
+            formStarted = true;
+            track('form_start', { page_path: location.pathname });
+          }
+        }, { passive: true });
+        document.addEventListener('submit', function (ev) {
+          if (ev.target && ev.target.tagName === 'FORM') {
+            track('form_submit', { page_path: location.pathname });
+          }
+        }, { passive: true });
+        var d50 = false, d90 = false;
+        window.addEventListener('scroll', function () {
+          var doc = document.documentElement;
+          var pct = (window.scrollY + window.innerHeight) / Math.max(doc.scrollHeight, 1);
+          if (!d50 && pct >= 0.5) { d50 = true; track('scroll_depth_50', { page_path: location.pathname }); }
+          if (!d90 && pct >= 0.9) { d90 = true; track('scroll_depth_90', { page_path: location.pathname }); }
+        }, { passive: true });
       }
 
       function loadAds() {
