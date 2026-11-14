@@ -366,7 +366,7 @@
     },
     {
       "source": "/bn",
-      "destination": "/bn/blog",
+      "destination": "/",
       "statusCode": 301
     },
     {
@@ -1093,6 +1093,26 @@
       "source": "/bn/blog/heba-bil-ewaz-dalil-batil-korar-niyom",
       "destination": "/bn/blog/heba-bil-ewaz-dalil-batil-korar-niyom-2026",
       "statusCode": 301
+    },
+    {
+      "source": "/en/blog",
+      "destination": "/blog",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/blog/:slug*",
+      "destination": "/blog/:slug*",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/services/:slug*",
+      "destination": "/services/:slug*",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/contact",
+      "destination": "/contact",
+      "statusCode": 301
     }
   ],
   "headers": [
@@ -1125,7 +1145,7 @@
         },
         {
           "key": "Content-Security-Policy",
-          "value": "frame-ancestors 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests"
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://pagead2.googlesyndication.com https://www.googletagmanager.com https://googleads.g.doubleclick.net https://ep2.adtrafficquality.google; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob: https://*.googleapis.com https://*.gstatic.com https://www.googletagmanager.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net; frame-src https://googleads.g.doubleclick.net https://www.google.com https://www.googletagmanager.com https://ep2.adtrafficquality.google https://tpc.googlesyndication.com; connect-src 'self' https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://www.google-analytics.com https://*.googleapis.com https://ep2.adtrafficquality.google https://vitals.vercel-insights.com; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; upgrade-insecure-requests; form-action 'self'"
         },
         {
           "key": "Cross-Origin-Opener-Policy",
@@ -1140,8 +1160,8 @@
           "value": "on"
         },
         {
-          "key": "X-XSS-Protection",
-          "value": "1; mode=block"
+          "key": "Cross-Origin-Resource-Policy",
+          "value": "same-origin"
         }
       ]
     },
@@ -1260,6 +1280,15 @@
           "value": "*"
         }
       ]
+    },
+    {
+      "source": "/(404|404\\.html|bn/404)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, follow"
+        }
+      ]
     }
   ],
   "rewrites": [
@@ -1306,10 +1335,7 @@
     {
       "source": "/feed",
       "destination": "/rss-bn.xml"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
     }
-  ]
+  ],
+  "cleanUrls": true
 }

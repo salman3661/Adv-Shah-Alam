@@ -126,15 +126,16 @@ function buildHeroShell(lang = 'bn') {
 </section>`;
 }
 
-function buildPage(base, { title, description, canonical, body, lang='en', extraHead='', ogImage='' }) {
+function buildPage(base, { title, description, canonical, body, lang='en', extraHead='', ogImage='', robots='index, follow' }) {
   let h = base;
   h = h.replace(/<html lang="[^"]*"/, `<html lang="${lang}"`);
   if (lang !== 'bn') h = h.replace(/\s*<link rel="preload" href="\/fonts\/NotoSerifBengali[^>]*>/g, '');
   h = h.replace(/<title>[^<]*<\/title>/, `<title>${escHtml(title)}</title>`);
   h = h.replace(/<meta name="description"[^>]*>/, `<meta name="description" content="${escHtml(description)}">`);
+  h = h.replace(/<meta name="robots"[^>]*>/, `<meta name="robots" content="${escHtml(robots)}">`);
   
   // Clean canonical: strip any tracking params or trailing slashes
-  const cleanCanonical = canonical.replace(/\/+$/, '') === BASE ? `${BASE}/` : canonical.replace(/\/+$/, '');
+  const cleanCanonical = canonical ? (canonical.replace(/\/+$/, '') === BASE ? `${BASE}/` : canonical.replace(/\/+$/, '')) : '';
   const isHomePage = cleanCanonical === `${BASE}/` || cleanCanonical === `${BASE}/en`;
   if (!isHomePage) {
     h = h.replace(/\s*<!--\s*Preload LCP hero image[\s\S]*?fetchpriority="high"\s*\/>/g, '');
@@ -143,20 +144,24 @@ function buildPage(base, { title, description, canonical, body, lang='en', extra
 
   h = h.replace(/<meta property="og:title"[^>]*>/, `<meta property="og:title" content="${escHtml(title)}">`);
   h = h.replace(/<meta property="og:description"[^>]*>/, `<meta property="og:description" content="${escHtml(description)}">`);
-  h = h.replace(/<meta property="og:url"[^>]*>/, `<meta property="og:url" content="${cleanCanonical}">`);
+  if (cleanCanonical) {
+    h = h.replace(/<meta property="og:url"[^>]*>/, `<meta property="og:url" content="${cleanCanonical}">`);
+    h = h.replace(/<meta name="twitter:url"[^>]*>/, `<meta name="twitter:url" content="${cleanCanonical}">`);
+  }
   h = h.replace(/<meta name="twitter:title"[^>]*>/, `<meta name="twitter:title" content="${escHtml(title)}">`);
   h = h.replace(/<meta name="twitter:description"[^>]*>/, `<meta name="twitter:description" content="${escHtml(description)}">`);
-  h = h.replace(/<meta name="twitter:url"[^>]*>/, `<meta name="twitter:url" content="${cleanCanonical}">`);
   if (ogImage) {
     h = h.replace(/<meta property="og:image"[^>]*>/, `<meta property="og:image" content="${ogImage}">`);
     h = h.replace(/<meta name="twitter:image"[^>]*>/, `<meta name="twitter:image" content="${ogImage}">`);
   }
 
-  let headInjections = `<link rel="canonical" href="${cleanCanonical}">\n`;
+  let headInjections = cleanCanonical ? `<link rel="canonical" href="${cleanCanonical}">\n` : '';
   if (extraHead) {
     headInjections += `${extraHead}\n`;
   }
-  h = h.replace('</head>', `${headInjections}</head>`);
+  if (headInjections) {
+    h = h.replace('</head>', `${headInjections}</head>`);
+  }
 
   // Hidden from users, visible to crawlers — no flash, no layout shift
   const visibleShell = isHomePage ? `\n${buildHeroShell(lang)}` : '';
@@ -990,6 +995,55 @@ async function main() {
     });
     write(path.join(DIST, 'review', 'index.html'), html);
     console.log('  ✓ /review');
+  }
+
+  // ── NRB Legal Help page ────────────────────────────────────────────────────
+  {
+    const html = buildPage(base, {
+      title: 'NRB Legal Help Bangladesh | Property & Family Law for Expats',
+      description: 'Legal help for Non-Resident Bangladeshis in UK, USA, UAE & Canada: land purchase, Power of Attorney, divorce, inheritance & court cases.',
+      canonical: `${BASE}/nrb-legal-help`,
+      lang: 'en',
+      body: `<h1 style="font-size:30px;font-weight:700;margin-bottom:8px;color:#0a0a0a">Legal Help for NRBs in Bangladesh</h1>
+<p style="font-size:16px;color:#333;margin-bottom:24px">Remote legal representation and consultation for Non-Resident Bangladeshis in the UK, USA, UAE, Canada, and Singapore by Advocate Md. Shah Alam of the Supreme Court of Bangladesh.</p>
+${CTA}`,
+    });
+    write(path.join(DIST, 'nrb-legal-help', 'index.html'), html);
+    console.log('  ✓ /nrb-legal-help');
+  }
+
+  // ── Localized 404 pages (dist/404.html, /404, /bn/404) ──────────────────────
+  {
+    const notFoundBodyEn = `<h1 style="font-size:30px;font-weight:700;margin-bottom:8px;color:#0a0a0a">Page Not Found (404)</h1>
+<p style="font-size:16px;color:#444;margin-bottom:20px">The page you are looking for does not exist or has been moved.</p>
+<p><a href="/en" style="color:#1a56db;font-weight:600">Return to English Home</a> &middot; <a href="/blog" style="color:#1a56db;font-weight:600">Browse Legal Guides</a> &middot; <a href="/contact" style="color:#1a56db;font-weight:600">Contact Chamber</a></p>`;
+
+    const notFoundBodyBn = `<h1 style="font-size:30px;font-weight:700;margin-bottom:8px;color:#0a0a0a">পেজ পাওয়া যায়নি (৪০৪)</h1>
+<p style="font-size:16px;color:#444;margin-bottom:20px">আপনি যে পেজটি খুঁজছেন সেটি নেই বা সরানো হয়েছে।</p>
+<p><a href="/" style="color:#1a56db;font-weight:600">হোমপেজে ফিরে যান</a> &middot; <a href="/bn/blog" style="color:#1a56db;font-weight:600">আইনি নিবন্ধ পড়ুন</a> &middot; <a href="/bn/contact" style="color:#1a56db;font-weight:600">যোগাযোগ করুন</a></p>`;
+
+    const html404En = buildPage(base, {
+      title: 'Page Not Found – 404 | Advocate Md. Shah Alam',
+      description: 'The page you are looking for does not exist. Return to the homepage of Advocate Md. Shah Alam – Supreme Court Lawyer in Dhaka.',
+      canonical: null,
+      robots: 'noindex, follow',
+      lang: 'en',
+      body: notFoundBodyEn,
+    });
+    write(path.join(DIST, '404.html'), html404En);
+    write(path.join(DIST, '404', 'index.html'), html404En);
+    console.log('  ✓ /404 & 404.html (en, noindex)');
+
+    const html404Bn = buildPage(base, {
+      title: 'পেজ পাওয়া যায়নি – ৪০৪ | এডভোকেট মোঃ শাহ আলম',
+      description: 'আপনি যে পেজটি খুঁজছেন তা পাওয়া যায়নি। এডভোকেট মোঃ শাহ আলম-এর হোমপেজে ফিরে যান।',
+      canonical: null,
+      robots: 'noindex, follow',
+      lang: 'bn',
+      body: notFoundBodyBn,
+    });
+    write(path.join(DIST, 'bn', '404', 'index.html'), html404Bn);
+    console.log('  ✓ /bn/404 (bn, noindex)');
   }
 
   // ── Service pages ──────────────────────────────────────────────────────────
