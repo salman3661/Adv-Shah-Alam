@@ -295,15 +295,15 @@ export default function FeeCalculator({ type = 'land', lang = 'bn' }) {
 
     const adBlock = useMemo(() => (
         <AdSenseAd
+            key={`calc-ad-${type}-${lang}`}
             slot={AD_SLOTS.calculator}
             format="fluid"
             layout="in-article"
             labelText={t.ad}
             minHeight={250}
-            densityGroup="content"
-            style={{ margin: '3rem auto' }}
+            style={{ margin: '2rem auto' }}
         />
-    ), [t.ad]);
+    ), [t.ad, type, lang]);
 
     return (
         <section aria-label={title} style={card} data-fee-calculator={type}>

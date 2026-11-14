@@ -1,5 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { createPortal } from 'react-dom';
+import React, { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import {
@@ -13,7 +12,7 @@ import AdSenseAd from '../components/AdSenseAd';
 import { coverFor, coverAbsolute } from '../utils/coverImage';
 import { evergreenYear } from '../utils/evergreenYear.mjs';
 import FeeCalculator from '../components/FeeCalculator';
-import { AD_SLOTS, DESKTOP_QUERY, useMediaQuery, useParagraphAnchors } from '../components/ads/adLayout';
+import { AD_SLOTS, DESKTOP_QUERY, useMediaQuery } from '../components/ads/adLayout';
 import { FEE_CALCULATORS, calculatorSectionIndex } from '../data/feeCalculators';
 import { SITE, buildEntityGraph, buildHreflang, resolveMasterPillar, resolveQuickAnswerTable, jsonLd } from '../utils/seoSchema.mjs';
 import ArticleSkeleton from '../components/ArticleSkeleton';
@@ -460,17 +459,7 @@ const BlogPostInner = () => {
     };
 
     /* ── Error / Coming Soon states ── */
-    /* NOTE: the former empty adsbygoogle.push({}) on every route change was removed on purpose - it re-armed
-       Auto-Ads overlays (mobile vignettes) on internal navigation, which drives bounce. */
-    const articleRef = useRef(null);
     const isDesktop = useMediaQuery(DESKTOP_QUERY);
-    /* High Viewability: Unit 1 placed after paragraph 2 (right under intro) | Unit 2: after paragraph 5 */
-    const adAnchors = useParagraphAnchors(articleRef, [
-        { id: 'top', n: 2, fallbackToLast: false },
-        { id: 'mid', n: 5 },
-        { id: 'mid2', n: 9 },
-        { id: 'end', n: 13, fallbackToLast: true },
-    ], `${slug}|${isDesktop}|${post ? post.slug : 'loading'}`);
 
     const metaFallback = allPosts.find(p => p.slug === slug);
 
@@ -869,7 +858,7 @@ const BlogPostInner = () => {
                                 </div>
                             </div>
 
-                            <article ref={articleRef}>
+                            <article>
 
                                 {/* Phase 5.2: Featured Snippet & AI Overview (GEO) Quick Answer Table */}
                                 {quickTable && (
@@ -926,59 +915,114 @@ const BlogPostInner = () => {
                                 {/* Phase 5.1: Interactive Legal Calculator right after the introduction on pillar pages */}
                                 {calcIdx === -2 && calcCfg && <FeeCalculator type={calcCfg.type} lang="en" />}
 
+                                {/* Ad Unit 1 (EN): High-viewability top display above article sections */}
+                                <AdSenseAd
+                                    key={`ad-top-${post.slug}`}
+                                    slot={AD_SLOTS.topDisplay}
+                                    format="auto"
+                                    responsive={true}
+                                    labelText="Advertisement"
+                                    minHeight={250}
+                                    style={{ margin: '1.5rem auto 2.25rem' }}
+                                />
+
                                 {/* Article Sections — High-End Editorial Design */}
-                                {post.sections.map((sec, i) => {
-                                    return (
-                                        <React.Fragment key={i}>
-                                            <section id={`section-${i}`} style={{ marginBottom: '3.5rem', scrollMarginTop: '5rem' }}>
-                                                {/* Editorial Section Header */}
-                                                <div style={{
-                                                    position: 'relative',
-                                                    marginBottom: '1.75rem',
-                                                    padding: '1rem 1.25rem',
-                                                    borderRadius: '1rem',
-                                                    background: 'linear-gradient(90deg, rgba(37, 99, 235, 0.06) 0%, rgba(13, 148, 136, 0.07) 100%)',
-                                                    border: '1px solid rgba(37, 99, 235, 0.16)',
-                                                    borderBottom: '1px solid var(--card-border)',
-                                                    boxShadow: '0 6px 20px -12px rgba(15, 23, 42, 0.12)',
-                                                    display: 'flex',
-                                                    flexDirection: 'column',
-                                                    gap: '0.625rem'
-                                                }}>
-                                                    {/* Numbered editorial header: gold number tile + headline */}
-                                                    <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                                                        <span aria-hidden="true" style={{
-                                                            flexShrink: 0, width: '3.15rem', height: '3.15rem', borderRadius: '0.9rem',
-                                                            display: 'flex', alignItems: 'center', justifyContent: 'center',
-                                                            fontWeight: 800, fontSize: '1.15rem', color: '#FFFFFF', fontFamily: "'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
-                                                            background: 'linear-gradient(135deg, #1D4ED8 0%, #0F766E 100%)',
-                                                            border: '1px solid rgba(255, 255, 255, 0.28)',
-                                                            boxShadow: '0 6px 16px -4px rgba(37, 99, 235, 0.34)',
-                                                        }}>{String(i + 1).padStart(2, '0')}</span>
-                                                        <h2 style={{
-                                                            fontFamily: "'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
-                                                            fontSize: 'clamp(1.3rem, 2.5vw, 1.7rem)', fontWeight: 800, lineHeight: 1.35,
-                                                            color: 'var(--text)', margin: 0, letterSpacing: '-0.01em', flex: 1,
-                                                        }}>{cleanHeadingText(sec.heading || sec.h2 || sec.title || '')}</h2>
+                                {(() => {
+                                    const secs = post.sections || [];
+                                    const secLen = secs.length;
+                                    const midSec = Math.max(1, Math.floor((secLen - 1) * 0.45));
+                                    const lateSec = secLen >= 4 ? Math.max(midSec + 1, Math.floor((secLen - 1) * 0.78)) : -1;
+                                    return secs.map((sec, i) => {
+                                        return (
+                                            <React.Fragment key={i}>
+                                                <section id={`section-${i}`} style={{ marginBottom: '3.5rem', scrollMarginTop: '5rem' }}>
+                                                    {/* Editorial Section Header */}
+                                                    <div style={{
+                                                        position: 'relative',
+                                                        marginBottom: '1.75rem',
+                                                        padding: '1rem 1.25rem',
+                                                        borderRadius: '1rem',
+                                                        background: 'linear-gradient(90deg, rgba(37, 99, 235, 0.06) 0%, rgba(13, 148, 136, 0.07) 100%)',
+                                                        border: '1px solid rgba(37, 99, 235, 0.16)',
+                                                        borderBottom: '1px solid var(--card-border)',
+                                                        boxShadow: '0 6px 20px -12px rgba(15, 23, 42, 0.12)',
+                                                        display: 'flex',
+                                                        flexDirection: 'column',
+                                                        gap: '0.625rem'
+                                                    }}>
+                                                        {/* Numbered editorial header: gold number tile + headline */}
+                                                        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                                                            <span aria-hidden="true" style={{
+                                                                flexShrink: 0, width: '3.15rem', height: '3.15rem', borderRadius: '0.9rem',
+                                                                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                                                                fontWeight: 800, fontSize: '1.15rem', color: '#FFFFFF', fontFamily: "'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+                                                                background: 'linear-gradient(135deg, #1D4ED8 0%, #0F766E 100%)',
+                                                                border: '1px solid rgba(255, 255, 255, 0.28)',
+                                                                boxShadow: '0 6px 16px -4px rgba(37, 99, 235, 0.34)',
+                                                            }}>{String(i + 1).padStart(2, '0')}</span>
+                                                            <h2 style={{
+                                                                fontFamily: "'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+                                                                fontSize: 'clamp(1.3rem, 2.5vw, 1.7rem)', fontWeight: 800, lineHeight: 1.35,
+                                                                color: 'var(--text)', margin: 0, letterSpacing: '-0.01em', flex: 1,
+                                                            }}>{cleanHeadingText(sec.heading || sec.h2 || sec.title || '')}</h2>
+                                                        </div>
                                                     </div>
-                                                </div>
 
-                                                <div className="prose-content"
-                                                    style={{ color: 'var(--text-secondary)', fontSize: '1.0625rem', lineHeight: '1.9', letterSpacing: '0.005em', wordBreak: 'break-word', overflowWrap: 'anywhere' }}
-                                                    dangerouslySetInnerHTML={{ __html: sanitizeHtml(formatArticleContent(sec.content)) }}
-                                                />
-                                            </section>
+                                                    <div className="prose-content"
+                                                        style={{ color: 'var(--text-secondary)', fontSize: '1.0625rem', lineHeight: '1.9', letterSpacing: '0.005em', wordBreak: 'break-word', overflowWrap: 'anywhere' }}
+                                                        dangerouslySetInnerHTML={{ __html: sanitizeHtml(formatArticleContent(sec.content)) }}
+                                                    />
+                                                </section>
 
-                                            {/* Mid-article lead capture at exact center section */}
-                                            {i === Math.floor(((post.sections || []).length - 1) / 2) && (
-                                                <MidArticleLeadCapture lang="en" />
-                                            )}
+                                                {/* Mid-article lead capture at exact center section */}
+                                                {i === Math.floor((secLen - 1) / 2) && (
+                                                    <MidArticleLeadCapture lang="en" />
+                                                )}
 
-                                            {/* Unit 3: interactive fee calculator (when matched to a specific section) */}
-                                            {i === calcIdx && calcCfg && <FeeCalculator type={calcCfg.type} lang="en" />}
-                                        </React.Fragment>
-                                    );
-                                })}
+                                                {/* Unit 3: interactive fee calculator (when matched to a specific section) */}
+                                                {i === calcIdx && calcCfg && <FeeCalculator type={calcCfg.type} lang="en" />}
+
+                                                {/* Deterministic In-Article Ad Units spaced cleanly by editorial sections */}
+                                                {i === 0 && secLen >= 2 && (
+                                                    <AdSenseAd
+                                                        key={`ad-body1-${post.slug}`}
+                                                        slot={AD_SLOTS.body1}
+                                                        format="fluid"
+                                                        layout="in-article"
+                                                        responsive={true}
+                                                        labelText="Advertisement"
+                                                        minHeight={250}
+                                                        style={{ margin: '1.5rem auto 2.5rem' }}
+                                                    />
+                                                )}
+                                                {i === midSec && i !== 0 && (
+                                                    <AdSenseAd
+                                                        key={`ad-body2-${post.slug}`}
+                                                        slot={AD_SLOTS.body2}
+                                                        format="fluid"
+                                                        layout="in-article"
+                                                        responsive={true}
+                                                        labelText="Advertisement"
+                                                        minHeight={250}
+                                                        style={{ margin: '1.5rem auto 2.5rem' }}
+                                                    />
+                                                )}
+                                                {i === lateSec && i !== midSec && i !== 0 && (
+                                                    <AdSenseAd
+                                                        key={`ad-body3-${post.slug}`}
+                                                        slot={AD_SLOTS.body3}
+                                                        format="fluid"
+                                                        layout="in-article"
+                                                        responsive={true}
+                                                        labelText="Advertisement"
+                                                        minHeight={250}
+                                                        style={{ margin: '1.5rem auto 2.5rem' }}
+                                                    />
+                                                )}
+                                            </React.Fragment>
+                                        );
+                                    });
+                                })()}
 
                                 {/* Related Services */}
                                 {post.relatedServiceLinks?.length > 0 && (
@@ -1015,14 +1059,13 @@ const BlogPostInner = () => {
                                 {post.faqs?.length > 0 && (
                                     <AdSenseAd
                                         key={`ad-postfaq-${post.slug}`}
-                                        slot={AD_SLOTS.midNative}
+                                        slot={AD_SLOTS.body4}
                                         format="fluid"
                                         layout="in-article"
                                         responsive={true}
                                         labelText="Advertisement"
                                         minHeight={250}
-                                        densityGroup="content"
-                                        style={{ borderRadius: '0.75rem', overflow: 'hidden', margin: '2rem auto' }}
+                                        style={{ margin: '2rem auto' }}
                                     />
                                 )}
 
@@ -1108,22 +1151,6 @@ const BlogPostInner = () => {
                                 <div className="legal-disclaimer-box p-4 bg-gray-50 dark:bg-gray-800/40 border border-[var(--card-border)] rounded-lg my-6 text-sm text-gray-700 dark:text-gray-300 rounded-r-lg">
                                     <strong>Legal Disclaimer:</strong> The information provided in this article is for general legal awareness and educational purposes only. It does not constitute formal legal advice and does not establish an attorney-client relationship. For specific legal remedies tailored to your case, please consult directly with an enrolled advocate of the Supreme Court of Bangladesh or the Judges Court.
                                 </div>
-                                {adAnchors.top && createPortal(
-                                    <AdSenseAd key={`ad-top-${post.slug}`} slot={AD_SLOTS.topInArticle} format="auto" responsive={true} labelText="Advertisement" minHeight={280} densityGroup="content" style={{ borderRadius: '0.75rem', overflow: 'hidden', margin: '2.5rem auto' }} />,
-                                    adAnchors.top
-                                )}
-                                {adAnchors.mid && createPortal(
-                                    <AdSenseAd key={`ad-mid-${post.slug}`} slot={AD_SLOTS.midNative} format="fluid" layout="in-article" responsive={true} labelText="Advertisement" minHeight={250} densityGroup="content" style={{ borderRadius: '0.75rem', overflow: 'hidden', margin: '2.5rem auto' }} />,
-                                    adAnchors.mid
-                                )}
-                                {adAnchors.mid2 && createPortal(
-                                    <AdSenseAd key={`ad-mid2-${post.slug}`} slot={AD_SLOTS.sidebar} format="auto" responsive={true} labelText="Advertisement" minHeight={250} densityGroup="content" style={{ borderRadius: '0.75rem', overflow: 'hidden', margin: '2.5rem auto' }} />,
-                                    adAnchors.mid2
-                                )}
-                                {adAnchors.end && createPortal(
-                                    <AdSenseAd key={`ad-end-${post.slug}`} slot={AD_SLOTS.midNative} format="fluid" layout="in-article" responsive={true} labelText="Advertisement" minHeight={250} densityGroup="content" style={{ borderRadius: '0.75rem', overflow: 'hidden', margin: '2.5rem auto' }} />,
-                                    adAnchors.end
-                                )}
                             </article>
                         </div>
 
@@ -1138,17 +1165,17 @@ const BlogPostInner = () => {
 
                                 <RecentPosts currentSlug={post.slug} />
 
-                                {/* ── Sticky Bottom Follower: Single high-viewability desktop unit (total EN desktop = 4 units max) ── */}
+                                {/* ── Sticky Bottom Follower: High-viewability desktop sidebar unit ── */}
                                 <div style={{ position: 'sticky', top: '5.25rem' }}>
                                     <ChamberPromoCard />
                                     {isDesktop && (
                                         <AdSenseAd
+                                            key={`ad-rail-${post.slug}`}
                                             slot={AD_SLOTS.sidebar}
                                             format="auto"
                                             responsive={true}
                                             labelText="Advertisement"
                                             minHeight={250}
-                                            densityGroup="rail"
                                         />
                                     )}
                                 </div>
@@ -1335,6 +1362,16 @@ const BlogPostInner = () => {
                                     );
                                 })}
                             </div>
+                        </div>
+                        <div style={{ marginTop: '2.25rem' }}>
+                            <AdSenseAd
+                                key={`ad-grid-${post.slug}`}
+                                slot={AD_SLOTS.bottomGrid}
+                                format="autorelaxed"
+                                responsive={true}
+                                labelText="Sponsored Content"
+                                minHeight={280}
+                            />
                         </div>
                     </div>
                 </div>

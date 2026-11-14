@@ -91,11 +91,12 @@ const Home = ({ lang = 'en' }) => {
                     {/* ── Homepage Ad 1: After Services (high CTR position) ── */}
                     <div style={{ maxWidth: '900px', margin: '0 auto', padding: '0 1rem 2rem' }}>
                         <AdSenseAd
+                            key={`home-ad1-${lang}`}
                             slot="8630877987"
                             format="auto"
                             responsive={true}
                             labelText={isBn ? 'বিজ্ঞাপন' : 'Advertisement'}
-                            style={{ borderRadius: '0.75rem', overflow: 'hidden' }}
+                            minHeight={250}
                         />
                     </div>
 
@@ -106,11 +107,13 @@ const Home = ({ lang = 'en' }) => {
                     {/* ── Homepage Ad 2: Before Blog Preview (reader engagement peak) ── */}
                     <div style={{ maxWidth: '900px', margin: '0 auto', padding: '0 1rem 2rem' }}>
                         <AdSenseAd
-                            slot="8630877987"
-                            format="auto"
+                            key={`home-ad2-${lang}`}
+                            slot="6519719969"
+                            format="fluid"
+                            layout="in-article"
                             responsive={true}
                             labelText={isBn ? 'বিজ্ঞাপন' : 'Advertisement'}
-                            style={{ borderRadius: '0.75rem', overflow: 'hidden' }}
+                            minHeight={250}
                         />
                     </div>
 
@@ -138,6 +141,19 @@ const Home = ({ lang = 'en' }) => {
                     </div>
 
                     <BlogPreview lang={lang} />
+
+                    {/* ── Homepage Ad 3: Multiplex grid after Blog Preview ── */}
+                    <div style={{ maxWidth: '900px', margin: '0 auto', padding: '0 1rem 2rem' }}>
+                        <AdSenseAd
+                            key={`home-ad3-${lang}`}
+                            slot="3667074343"
+                            format="autorelaxed"
+                            responsive={true}
+                            labelText={isBn ? 'আরও দেখুন' : 'Sponsored Content'}
+                            minHeight={280}
+                        />
+                    </div>
+
                     <Timeline isHome={true} lang={lang} />
                     <Chambers lang={lang} />
                     <Contact lang={lang} />

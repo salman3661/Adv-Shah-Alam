@@ -12,7 +12,7 @@ const SERVICE_AD_SLOTS = {
     top: '8630877987',
     mid1: '9118178745',
     mid2: '5230990345',
-    bottom: '5064091502',
+    bottomGrid: '3667074343',
 };
 
 /**
@@ -354,20 +354,18 @@ const ServicePage = ({ metaTitle, metaDesc, canonicalUrl, h1, intro, coverage, f
                 </section>
             )}
 
-            {/* Ad Unit 3 (EN service page): post-FAQ slot */}
-            {!isBn && (
-                <div className="container mx-auto px-6 max-w-5xl py-6">
-                    <AdSenseAd
-                        slot={SERVICE_AD_SLOTS.mid2}
-                        format="fluid"
-                        layout="in-article"
-                        responsive={true}
-                        labelText="Advertisement"
-                        minHeight={250}
-                        densityGroup="service"
-                    />
-                </div>
-            )}
+            {/* Ad Unit 3: post-FAQ slot */}
+            <div className="container mx-auto px-6 max-w-5xl py-6">
+                <AdSenseAd
+                    key={`svc-mid2-${wwwCanonical || 'en'}`}
+                    slot={SERVICE_AD_SLOTS.mid2}
+                    format="fluid"
+                    layout="in-article"
+                    responsive={true}
+                    labelText={isBn ? 'বিজ্ঞাপন' : 'Advertisement'}
+                    minHeight={250}
+                />
+            </div>
 
             {/* Further Reading — service → blog internal linking */}
             {relatedBlogLinks?.length > 0 && (
@@ -428,19 +426,17 @@ const ServicePage = ({ metaTitle, metaDesc, canonicalUrl, h1, intro, coverage, f
                 </section>
             )}
 
-            {/* Ad Unit 4 (EN service page): bottom before consultation CTA */}
-            {!isBn && (
-                <div className="container mx-auto px-6 max-w-5xl py-6">
-                    <AdSenseAd
-                        slot={SERVICE_AD_SLOTS.bottom}
-                        format="auto"
-                        responsive={true}
-                        labelText="Advertisement"
-                        minHeight={250}
-                        densityGroup="service"
-                    />
-                </div>
-            )}
+            {/* Ad Unit 4: bottom Multiplex grid before consultation CTA */}
+            <div className="container mx-auto px-6 max-w-5xl py-6">
+                <AdSenseAd
+                    key={`svc-grid-${wwwCanonical || 'en'}`}
+                    slot={SERVICE_AD_SLOTS.bottomGrid}
+                    format="autorelaxed"
+                    responsive={true}
+                    labelText={isBn ? 'আরও দেখুন' : 'Sponsored Content'}
+                    minHeight={280}
+                />
+            </div>
 
             <section className="py-16" style={{ background: 'var(--bg)' }}>
                 <div className="container mx-auto px-6 max-w-5xl">

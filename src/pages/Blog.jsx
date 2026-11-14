@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { Search, Clock, ChevronRight, BookOpen, Flame, Award, ShieldCheck, UserCheck, Scale, ArrowUpRight, X, Calendar, Sparkles } from 'lucide-react';
 import seo from '../content/seo.js';
+import AdSenseAd from '../components/AdSenseAd';
 
 // Load all EN blog posts from JSON files (bundled at build time by Vite)
 import postsMeta_en from '../content/posts-meta-en.json';
@@ -483,6 +484,18 @@ const Blog = () => {
                 </section>
             )}
 
+            {/* ════ HUB AD 1: BELOW SPOTLIGHT FEATURED POST ════ */}
+            <div className="container mx-auto px-6 max-w-6xl py-4">
+                <AdSenseAd
+                    key="blog-en-hub-top"
+                    slot="8630877987"
+                    format="auto"
+                    responsive={true}
+                    labelText="Advertisement"
+                    minHeight={250}
+                />
+            </div>
+
             {/* ════ MAIN ARTICLES GRID ════ */}
             <section className="py-10 pb-24" style={{ background: 'var(--bg)' }}>
                 <div className="container mx-auto px-6 max-w-6xl">
@@ -562,8 +575,20 @@ const Blog = () => {
                         </>
                     )}
 
+                    {/* ════ HUB AD 2: MULTIPLEX BOTTOM GRID ════ */}
+                    <div className="mt-12">
+                        <AdSenseAd
+                            key="blog-en-hub-grid"
+                            slot="3667074343"
+                            format="autorelaxed"
+                            responsive={true}
+                            labelText="Sponsored Content"
+                            minHeight={280}
+                        />
+                    </div>
+
                     {/* Language Switch Footer */}
-                    <div className="mt-16 text-center">
+                    <div className="mt-10 text-center">
                         <Link
                             to="/bn/blog"
                             className="inline-flex items-center gap-2 text-sm font-bold px-6 py-3 rounded-2xl border transition-[color,background-color,border-color,box-shadow,opacity,transform] hover:bg-[var(--accent-subtle)] shadow-sm"

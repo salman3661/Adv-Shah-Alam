@@ -8,6 +8,7 @@ import {
 } from 'lucide-react';
 import { telLink, waLink } from '../data/contactInfo';
 import blogPosts from '../data/blogPostsMeta.json';
+import AdSenseAd from '../components/AdSenseAd';
 
 /* ─── FAQ Accordion ──────────────────────────────────── */
 const FAQItem = ({ question, answer }) => {
@@ -792,6 +793,19 @@ const AdvocatePage = () => {
                 </div>
             </section>
 
+            {/* ── Ad Unit 1: Before Latest Articles ── */}
+            <div className="container mx-auto px-6 max-w-5xl py-6">
+                <AdSenseAd
+                    key="advocate-page-mid"
+                    slot="6519719969"
+                    format="fluid"
+                    layout="in-article"
+                    responsive={true}
+                    labelText="Advertisement"
+                    minHeight={250}
+                />
+            </div>
+
             {/* ── Latest Articles ── */}
             {latestArticles.length > 0 && (
                 <section className="py-16" style={{ background: 'var(--surface)' }}>
@@ -860,6 +874,18 @@ const AdvocatePage = () => {
                     </div>
                 </div>
             </section>
+
+            {/* ── Ad Unit 2: Multiplex Grid before Final CTA ── */}
+            <div className="container mx-auto px-6 max-w-5xl py-6">
+                <AdSenseAd
+                    key="advocate-page-grid"
+                    slot="3667074343"
+                    format="autorelaxed"
+                    responsive={true}
+                    labelText="Sponsored Content"
+                    minHeight={280}
+                />
+            </div>
 
             {/* ── CTA ── */}
             <section className="py-16" style={{ background: 'var(--bg)' }}>

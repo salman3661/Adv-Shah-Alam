@@ -145,14 +145,40 @@ const NrbLegalHelp = () => {
                                         </Link>
                                     ))}
                                 </div>
-                                {gi === 1 && (
+                                {gi === 0 && (
                                     <div style={{ margin: '2rem auto', maxWidth: '850px' }}>
                                         <AdSenseAd
+                                            key="nrb-ad-top"
                                             slot="8630877987"
                                             format="auto"
                                             responsive={true}
                                             labelText="Advertisement"
-                                            style={{ borderRadius: '0.75rem', overflow: 'hidden' }}
+                                            minHeight={250}
+                                        />
+                                    </div>
+                                )}
+                                {gi === 1 && (
+                                    <div style={{ margin: '2rem auto', maxWidth: '850px' }}>
+                                        <AdSenseAd
+                                            key="nrb-ad-mid"
+                                            slot="9118178745"
+                                            format="fluid"
+                                            layout="in-article"
+                                            responsive={true}
+                                            labelText="Advertisement"
+                                            minHeight={250}
+                                        />
+                                    </div>
+                                )}
+                                {gi === 3 && (
+                                    <div style={{ margin: '2rem auto', maxWidth: '850px' }}>
+                                        <AdSenseAd
+                                            key="nrb-ad-grid"
+                                            slot="3667074343"
+                                            format="autorelaxed"
+                                            responsive={true}
+                                            labelText="Sponsored Content"
+                                            minHeight={280}
                                         />
                                     </div>
                                 )}

@@ -1,5 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { createPortal } from 'react-dom';
+import React, { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import {
@@ -13,7 +12,7 @@ import AdSenseAd from '../components/AdSenseAd';
 import { coverFor, coverAbsolute } from '../utils/coverImage';
 import { evergreenYear } from '../utils/evergreenYear.mjs';
 import FeeCalculator from '../components/FeeCalculator';
-import { AD_SLOTS, DESKTOP_QUERY, useMediaQuery, useParagraphAnchors } from '../components/ads/adLayout';
+import { AD_SLOTS, DESKTOP_QUERY, useMediaQuery } from '../components/ads/adLayout';
 import { FEE_CALCULATORS, calculatorSectionIndex } from '../data/feeCalculators';
 import { SITE, buildEntityGraph, buildHreflang, resolveMasterPillar, resolveQuickAnswerTable, jsonLd } from '../utils/seoSchema.mjs';
 import ArticleSkeleton from '../components/ArticleSkeleton';
@@ -501,17 +500,7 @@ const BlogPostBnInner = () => {
         setTimeout(() => { setCSubmitted(false); setCName(''); setCPhone(''); setCMessage(''); }, 5000);
     };
 
-    /* NOTE: the former empty adsbygoogle.push({}) on every route change was removed on purpose - it re-armed
-       Auto-Ads overlays (mobile vignettes) on internal navigation, which drives bounce. */
-    const articleRef = useRef(null);
     const isDesktop = useMediaQuery(DESKTOP_QUERY);
-    /* High Viewability: Unit 1 placed after paragraph 2 (right under intro) | Unit 2: after paragraph 5 */
-    const adAnchors = useParagraphAnchors(articleRef, [
-        { id: 'top', n: 2, fallbackToLast: false },
-        { id: 'mid', n: 5 },
-        { id: 'mid2', n: 9 },
-        { id: 'end', n: 13, fallbackToLast: true },
-    ], `${slug}|${isDesktop}|${post ? post.slug : 'loading'}`);
 
     const metaFallback = allBnPosts.find(p => p.slug === slug);
 
@@ -912,7 +901,7 @@ const BlogPostBnInner = () => {
                                 </div>
                             </div>
 
-                            <article ref={articleRef}>
+                            <article>
 
                                 {/* Phase 5.2: Featured Snippet & AI Overview (GEO) Quick Answer Table */}
                                 {quickTable && (
@@ -970,58 +959,88 @@ const BlogPostBnInner = () => {
                                 {calcIdx === -2 && calcCfg && <FeeCalculator type={calcCfg.type} lang="bn" />}
 
                                 {/* Sections — High-End Editorial Design */}
-                                {post.sections?.map((sec, i) => {
-                                    return (
-                                        <React.Fragment key={i}>
-                                            <section id={`bnsec-${i}`} style={{ marginBottom: '3.5rem', scrollMarginTop: '5rem' }}>
-                                                {/* Editorial Section Header */}
-                                                <div style={{
-                                                    position: 'relative',
-                                                    marginBottom: '1.75rem',
-                                                    padding: '1rem 1.25rem',
-                                                    borderRadius: '1rem',
-                                                    background: 'linear-gradient(90deg, rgba(37, 99, 235, 0.06) 0%, rgba(13, 148, 136, 0.07) 100%)',
-                                                    border: '1px solid rgba(37, 99, 235, 0.16)',
-                                                    borderBottom: '1px solid var(--card-border)',
-                                                    boxShadow: '0 6px 20px -12px rgba(15, 23, 42, 0.12)',
-                                                    display: 'flex',
-                                                    flexDirection: 'column',
-                                                    gap: '0.625rem'
-                                                }}>
-                                                    {/* Numbered editorial header: gold number tile + headline */}
-                                                    <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                                                        <span aria-hidden="true" style={{
-                                                            flexShrink: 0, width: '3.15rem', height: '3.15rem', borderRadius: '0.9rem',
-                                                            display: 'flex', alignItems: 'center', justifyContent: 'center',
-                                                            fontWeight: 800, fontSize: '1.2rem', color: '#FFFFFF', fontFamily: "'Noto Serif Bengali', sans-serif",
-                                                            background: 'linear-gradient(135deg, #1E3A8A 0%, #0F766E 100%)',
-                                                            border: '1px solid rgba(255, 255, 255, 0.28)',
-                                                            boxShadow: '0 6px 16px -4px rgba(37, 99, 235, 0.34)',
-                                                        }}>{toBnDigits(i + 1)}</span>
-                                                        <h2 style={{
-                                                            fontFamily: "'Noto Serif Bengali', sans-serif",
-                                                            fontSize: 'clamp(1.3rem, 2.5vw, 1.7rem)', fontWeight: 800, lineHeight: 1.35,
-                                                            color: 'var(--text)', margin: 0, letterSpacing: '-0.01em', flex: 1,
-                                                        }}>{cleanHeadingText(sec.heading || sec.h2 || sec.title || '')}</h2>
+                                {(() => {
+                                    const secs = post.sections || [];
+                                    const secLen = secs.length;
+                                    const midSecBn = Math.max(1, Math.floor((secLen - 1) * 0.5));
+                                    return secs.map((sec, i) => {
+                                        return (
+                                            <React.Fragment key={i}>
+                                                <section id={`bnsec-${i}`} style={{ marginBottom: '3.5rem', scrollMarginTop: '5rem' }}>
+                                                    {/* Editorial Section Header */}
+                                                    <div style={{
+                                                        position: 'relative',
+                                                        marginBottom: '1.75rem',
+                                                        padding: '1rem 1.25rem',
+                                                        borderRadius: '1rem',
+                                                        background: 'linear-gradient(90deg, rgba(37, 99, 235, 0.06) 0%, rgba(13, 148, 136, 0.07) 100%)',
+                                                        border: '1px solid rgba(37, 99, 235, 0.16)',
+                                                        borderBottom: '1px solid var(--card-border)',
+                                                        boxShadow: '0 6px 20px -12px rgba(15, 23, 42, 0.12)',
+                                                        display: 'flex',
+                                                        flexDirection: 'column',
+                                                        gap: '0.625rem'
+                                                    }}>
+                                                        {/* Numbered editorial header: gold number tile + headline */}
+                                                        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                                                            <span aria-hidden="true" style={{
+                                                                flexShrink: 0, width: '3.15rem', height: '3.15rem', borderRadius: '0.9rem',
+                                                                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                                                                fontWeight: 800, fontSize: '1.2rem', color: '#FFFFFF', fontFamily: "'Noto Serif Bengali', sans-serif",
+                                                                background: 'linear-gradient(135deg, #1E3A8A 0%, #0F766E 100%)',
+                                                                border: '1px solid rgba(255, 255, 255, 0.28)',
+                                                                boxShadow: '0 6px 16px -4px rgba(37, 99, 235, 0.34)',
+                                                            }}>{toBnDigits(i + 1)}</span>
+                                                            <h2 style={{
+                                                                fontFamily: "'Noto Serif Bengali', sans-serif",
+                                                                fontSize: 'clamp(1.3rem, 2.5vw, 1.7rem)', fontWeight: 800, lineHeight: 1.35,
+                                                                color: 'var(--text)', margin: 0, letterSpacing: '-0.01em', flex: 1,
+                                                            }}>{cleanHeadingText(sec.heading || sec.h2 || sec.title || '')}</h2>
+                                                        </div>
                                                     </div>
-                                                </div>
 
-                                                <div className="prose-bn-content"
-                                                    style={{ color: 'var(--text)', fontSize: '1.1875rem', lineHeight: '2.05', letterSpacing: '0.005em', wordBreak: 'break-word', overflowWrap: 'anywhere', fontFamily: "'Noto Serif Bengali', sans-serif" }}
-                                                    dangerouslySetInnerHTML={{ __html: sanitizeHtml(formatArticleContent(sec.content)) }}
-                                                />
-                                            </section>
+                                                    <div className="prose-bn-content"
+                                                        style={{ color: 'var(--text)', fontSize: '1.1875rem', lineHeight: '2.05', letterSpacing: '0.005em', wordBreak: 'break-word', overflowWrap: 'anywhere', fontFamily: "'Noto Serif Bengali', sans-serif" }}
+                                                        dangerouslySetInnerHTML={{ __html: sanitizeHtml(formatArticleContent(sec.content)) }}
+                                                    />
+                                                </section>
 
-                                            {/* Mid-article lead capture at center */}
-                                            {i === Math.floor(((post.sections || []).length - 1) / 2) && (
-                                                <MidArticleLeadCapture lang="bn" />
-                                            )}
+                                                {/* Mid-article lead capture at center */}
+                                                {i === Math.floor((secLen - 1) / 2) && (
+                                                    <MidArticleLeadCapture lang="bn" />
+                                                )}
 
-                                            {/* Unit 3: interactive fee calculator (when matched to a specific section) */}
-                                            {i === calcIdx && calcCfg && <FeeCalculator type={calcCfg.type} lang="bn" />}
-                                        </React.Fragment>
-                                    );
-                                })}
+                                                {/* Unit 3: interactive fee calculator (when matched to a specific section) */}
+                                                {i === calcIdx && calcCfg && <FeeCalculator type={calcCfg.type} lang="bn" />}
+
+                                                {/* Deterministic Section-Based In-Article Ads (BN) */}
+                                                {i === 0 && secLen >= 2 && (
+                                                    <AdSenseAd
+                                                        key={`ad-bn-top-${post.slug}`}
+                                                        slot={AD_SLOTS.topDisplay}
+                                                        format="auto"
+                                                        responsive={true}
+                                                        labelText="বিজ্ঞাপন"
+                                                        minHeight={250}
+                                                        style={{ margin: '1.5rem auto 2.5rem' }}
+                                                    />
+                                                )}
+                                                {i === midSecBn && i !== 0 && (
+                                                    <AdSenseAd
+                                                        key={`ad-bn-mid-${post.slug}`}
+                                                        slot={AD_SLOTS.native}
+                                                        format="fluid"
+                                                        layout="in-article"
+                                                        responsive={true}
+                                                        labelText="বিজ্ঞাপন"
+                                                        minHeight={250}
+                                                        style={{ margin: '1.5rem auto 2.5rem' }}
+                                                    />
+                                                )}
+                                            </React.Fragment>
+                                        );
+                                    });
+                                })()}
 
                                 {/* ══ Mid-Article WhatsApp CTA (Modern Minimal Legal Card) ══ */}
                                 <div style={{
@@ -1122,17 +1141,17 @@ const BlogPostBnInner = () => {
                                     </div>
                                 )}
 
-                                {/* Ad Unit 2 (BN): after FAQ, before CTA form */}
+                                {/* Ad Unit 4 (BN): after FAQ, before CTA form */}
                                 {post.faqs?.length > 0 && (
                                     <AdSenseAd
                                         key={`ad-postfaq-${post.slug}`}
-                                        slot={AD_SLOTS.topInArticle}
-                                        format="auto"
+                                        slot={AD_SLOTS.body5}
+                                        format="fluid"
+                                        layout="in-article"
                                         responsive={true}
                                         labelText="বিজ্ঞাপন"
                                         minHeight={250}
-                                        densityGroup="content"
-                                        style={{ borderRadius: '0.75rem', overflow: 'hidden', margin: '2rem auto' }}
+                                        style={{ margin: '2rem auto' }}
                                     />
                                 )}
 
@@ -1218,18 +1237,10 @@ const BlogPostBnInner = () => {
                                 <div className="legal-disclaimer-box p-4 bg-gray-50 dark:bg-gray-800/40 border border-[var(--card-border)] rounded-lg my-6 text-sm text-gray-700 dark:text-gray-300 rounded-r-lg">
                                     <strong>দায়বর্জন (Disclaimer):</strong> এই আর্টিকেলে পরিবেশিত তথ্যসমূহ কেবল আইনি সচেতনতা ও সাধারণ শিক্ষার উদ্দেশ্যে প্রকাশিত। এটি কোনো প্রত্যক্ষ আইনি পরামর্শ (Legal Advice) নয় এবং এর মাধ্যমে কোনো আইনজীবী-মক্কেল সম্পর্ক (Attorney-Client Relationship) তৈরি হয় না। আপনার সুনির্দিষ্ট মামলার আইনি প্রতিকারের জন্য সরাসরি বাংলাদেশ সুপ্রিম কোর্ট বা জজ কোর্টের তালিকাভুক্ত বিজ্ঞ আইনজীবীর সাথে পরামর্শ করুন।
                                 </div>
-                                {adAnchors.mid && createPortal(
-                                    <AdSenseAd key={`ad-mid-${post.slug}`} slot={AD_SLOTS.midNative} format="fluid" layout="in-article" responsive={true} labelText="বিজ্ঞাপন" minHeight={250} densityGroup="content" style={{ borderRadius: '0.75rem', overflow: 'hidden', margin: '2.5rem auto' }} />,
-                                    adAnchors.mid
-                                )}
-                                {adAnchors.end && createPortal(
-                                    <AdSenseAd key={`ad-end-${post.slug}`} slot={AD_SLOTS.topInArticle} format="auto" responsive={true} labelText="বিজ্ঞাপন" minHeight={250} densityGroup="content" style={{ borderRadius: '0.75rem', overflow: 'hidden', margin: '2.5rem auto' }} />,
-                                    adAnchors.end
-                                )}
                             </article>
                         </div>
 
-                        {/* ── RIGHT SIDEBAR (Editorial & Consultation Rail — BN kept ad-light to protect UX & session depth) ── */}
+                        {/* ── RIGHT SIDEBAR (Editorial & Consultation Rail + High-Viewability Sticky Sidebar Unit) ── */}
                         <aside className="bpbn-sidebar google-anno-skip">
                             <div className="bpbn-sidebar-rail">
                                 <ConsultBnWidget postTitle={post.title} />
@@ -1243,6 +1254,16 @@ const BlogPostBnInner = () => {
                                 {/* ── Sticky Bottom Follower: Stays visible all the way to the end of the article ── */}
                                 <div style={{ position: 'sticky', top: '5.25rem' }}>
                                     <ChamberBnPromoCard />
+                                    {isDesktop && (
+                                        <AdSenseAd
+                                            key={`ad-bn-rail-${post.slug}`}
+                                            slot={AD_SLOTS.sidebar}
+                                            format="auto"
+                                            responsive={true}
+                                            labelText="বিজ্ঞাপন"
+                                            minHeight={250}
+                                        />
+                                    )}
                                 </div>
                             </div>
                         </aside>
@@ -1405,6 +1426,16 @@ const BlogPostBnInner = () => {
                                     );
                                 })}
                             </div>
+                        </div>
+                        <div style={{ marginTop: '2.25rem' }}>
+                            <AdSenseAd
+                                key={`ad-bn-grid-${post.slug}`}
+                                slot={AD_SLOTS.bottomGrid}
+                                format="autorelaxed"
+                                responsive={true}
+                                labelText="আরও দেখুন"
+                                minHeight={280}
+                            />
                         </div>
                     </div>
                 </div>

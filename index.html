@@ -205,9 +205,7 @@
       }
 
       window.__ensureAdSenseLoaded = function () {
-        if (interacted) {
-          loadAds();
-        }
+        loadAds();
       };
 
       var interactEvents = ['scroll', 'wheel', 'touchstart', 'pointerdown', 'mousemove', 'keydown'];
@@ -224,6 +222,14 @@
       for (var i = 0; i < interactEvents.length; i++) {
         window.addEventListener(interactEvents[i], onFirstInteract, { passive: true, once: true });
       }
+      // Guarantee ads & analytics still initialize after LCP for passive readers and ad crawlers
+      window.addEventListener('load', function () {
+        setTimeout(function () {
+          loadFont();
+          loadAds();
+          loadGA();
+        }, 1600);
+      }, { once: true });
     })();
   </script>
 </body>
