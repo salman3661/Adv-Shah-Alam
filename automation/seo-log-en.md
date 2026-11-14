@@ -405,3 +405,51 @@ Autonomous SEO + Content Agent Run Log for Advocate Md. Shah Alam.
 - Total Prerendered Pages: 721
 - Total Sitemap URLs: 730
 
+---
+
+## Run: 2026-11-14 (5 High-Searchable Trending Guides: Ex-Parte Decrees, Medical Negligence, Government Pension Withholding, Partnership Fund Theft & Road Accident Compensation)
+
+- **Date:** 2026-11-14
+- **Mode:** `daily-high-cpc-expansion` (5 New Authoritative Legal Guides)
+- **Selection Basis:** High-intent, high-searchable disputes analyzed across civil ex-parte decree fraud, medical negligence & wrongful patient death, government pension/gratuity withholding, partnership fund misappropriation, and fatal road traffic accident compensation claims:
+  - Topic 1 (Civil/NRB): Setting aside fraudulent ex-parte decrees under Order IX Rule 13 CPC & Section 12(2) CPC.
+  - Topic 2 (Medical Law/Tort): Medical negligence, doctor malpractice, and wrongful patient death lawsuits under BMDC Act 2010 & Penal Code 304A.
+  - Topic 3 (Service Law/Constitutional): Unblocking withheld government pensions, gratuity, and GPF via Administrative Tribunals & High Court Article 102 Writs.
+  - Topic 4 (Corporate/Commercial): Partnership firm disputes, partner fund siphoning, court receivers, and suits for accounts under Partnership Act 1932.
+  - Topic 5 (Tort/Accident): Road traffic accident death and injury compensation claims under the Road Transport Act 2018 Financial Assistance Fund and civil damage suits.
+
+### Published Articles (5 New Authoritative Guides)
+
+1. **`ex-parte-decree-setting-aside-cpc-order-9-rule-13-bangladesh`**
+   - **Target Keyword:** `ex parte decree setting aside bangladesh` / `order 9 rule 13 cpc bangladesh` / `cancel ex parte civil decree bangladesh`
+   - **Metrics:** 2,824 words | 10 sections | 8 FAQs | 1 HTML comparison table | Quick Answer box | Illustrative scenario | `bnSlug: "probasi-ek-torfa-decree-batil-cpc-order-9-rule-13-ain-2026-bn"`
+   - **Strategic Focus:** Code of Civil Procedure 1908 Order IX Rule 13 setting aside ex-parte decrees, Section 12(2) CPC challenge on grounds of fraud, Order V summons non-service proof, cross-examination of process servers, Article 164 Limitation Act 30-day rule from knowledge, and Order XXI Rule 26 stay of execution.
+
+2. **`medical-negligence-wrongful-death-lawsuit-bmdc-bangladesh`**
+   - **Target Keyword:** `medical negligence lawsuit bangladesh` / `bmdc medical negligence complaint bangladesh` / `wrongful patient death compensation bangladesh`
+   - **Metrics:** 2,488 words | 10 sections | 8 FAQs | 1 HTML comparison table | Quick Answer box | Illustrative scenario | `bnSlug: "vool-chikitsa-medical-obhela-rogi-mrityu-mamla-2026-bn"`
+   - **Strategic Focus:** Bangladesh Medical and Dental Council (BMDC) Act 2010 Sections 23 & 28 disciplinary complaints, Penal Code 1860 Section 304A criminal prosecution, Fatal Accidents Act 1855 civil tort damage suits, hospital vicarious liability, impounding bed-head tickets and OT notes, and Consumer Rights Protection Act 2009.
+
+3. **`government-pension-gratuity-withholding-administrative-tribunal-bangladesh`**
+   - **Target Keyword:** `government pension withholding bangladesh` / `administrative tribunal pension case bangladesh` / `gratuity release writ high court bangladesh`
+   - **Metrics:** 2,470 words | 10 sections | 8 FAQs | 1 HTML comparison table | Quick Answer box | Illustrative scenario | `bnSlug: "shorkari-chakri-pension-gratuity-atke-rakhle-tribunal-writ-2026-bn"`
+   - **Strategic Focus:** Public Servants (Retirement) Act 1974, Constitution Article 42 pension property rights, bar on withholding pension for historical audit objections, Government Servants (Discipline and Appeal) Rules 2018 limits post-retirement, Administrative Tribunals Act 1980 Section 4 petitions, and High Court Article 102 Writs of Mandamus with statutory interest.
+
+4. **`partnership-firm-dispute-fund-misappropriation-accounts-lawsuit-bangladesh`**
+   - **Target Keyword:** `partnership dispute lawsuit bangladesh` / `partner fund misappropriation bangladesh` / `suit for accounts partnership act 1932 bangladesh`
+   - **Metrics:** 2,521 words | 10 sections | 8 FAQs | 1 HTML comparison table | Quick Answer box | Illustrative scenario | `bnSlug: "partnership-firm-tohobil-tochorup-hisab-mamla-ain-1932-2026-bn"`
+   - **Strategic Focus:** Partnership Act 1932 Section 44 court-decreed dissolution, Section 16 secret profits and competing business accountability, Joint District Judge Suits for Rendition of Accounts, Order XL Rule 1 CPC Court Receiver appointments, Order XXXIX bank account freezing injunctions, and Penal Code Sections 406/420 criminal breach of trust.
+
+5. **`road-accident-death-injury-compensation-claim-trust-fund-bangladesh`**
+   - **Target Keyword:** `road accident compensation claim bangladesh` / `road transport act 2018 accident compensation` / `fatal road accident lawsuit bangladesh`
+   - **Metrics:** 2,479 words | 10 sections | 8 FAQs | 1 HTML comparison table | Quick Answer box | Illustrative scenario | `bnSlug: "shorok-durghotona-khotipuran-claim-trust-fund-2026-bn"`
+   - **Strategic Focus:** Road Transport Act 2018 Section 53 Financial Assistance Fund (Trustee Board), Road Transport Rules 2022 30-day statutory application window (BDT 5 Lakh death, BDT 3 Lakh disability), Fatal Accidents Act 1855 civil tort damage suits (Catherine Masud precedent), transport company vicarious liability, and Section 105 non-bailable criminal prosecution.
+
+### Cumulative Site Totals (as of 2026-11-14)
+- Total EN Posts: 289 (284 baseline + 5 new)
+- Total BN Posts: 431 (421 baseline + 10 new from git pull)
+- Total Prerendered Pages: 736
+- Total Sitemap URLs: 745
+
+
+
