@@ -451,5 +451,78 @@ Autonomous SEO + Content Agent Run Log for Advocate Md. Shah Alam.
 - Total Prerendered Pages: 736
 - Total Sitemap URLs: 745
 
+---
+
+## Run: 2026-11-15 (Daily Content Batch — 5 EN + 5 BN Verified Distinct Guides)
+
+- **Date:** 2026-11-15 (`TODAY=2026-11-15`)
+- **Mode:** `daily-content-batch` (Strictly adheres to `daily-content-prompt.md` §1–§8; every article passed 100% content/metadata/dupcheck validation)
+- **Data Snapshot (Repository Datasets; Live APIs Unavailable in VM):**
+  - **Live GSC / GA4 / AdSense APIs:** `UNAVAILABLE` (OAuth/service-account credentials not configured in VM; used repository snapshots `excel_data.json`, `scripts/gsc_live_queries.json`, `src/content/ga4_summary.json`).
+  - **7-Day GSC Page Split (`excel_data.json` FILE2_7days):** EN: 20,872 impressions / 569 clicks (44.7% impressions) | BN: 25,812 impressions / 611 clicks (55.3% impressions).
+
+### Published Articles (5 New Verified EN Guides)
+
+1. **`easement-right-bangladesh-law`**
+   - **Title:** `Easement Right and Right of Way Law in Bangladesh` (48 chars)
+   - **Target Keyword:** `easement right bangladesh law` / `right of way dispute bangladesh`
+   - **Metrics:** 987 words (excl. FAQs) / 1,227 words (incl. FAQs) | 5 sections (160–183w) | 5 FAQs (46–51w) | 12 internal links | 1 table | 1 `<ol>` + 1 `<ul>` | `dupcheck: VERDICT: PUBLISH`
+   - **Statutes:** Easements Act 1882 (Sections 4, 13, 15, 22, 33, 35, 38), Specific Relief Act 1877 (Sections 54–55), Code of Civil Procedure 1908 (Order XXXIX Rules 1–2), Limitation Act 1908.
+   - **Inbound-Link Targets (Manifest — to link back):**
+     - `/blog/land-dispute-possession-bangladesh`
+     - `/blog/section-133-crpc-public-nuisance-boundary-wall-drainage-dispute-bangladesh`
+     - `/blog/partition-suit-joint-family-property-bangladesh-guide`
+
+2. **`zero-income-tax-return-bangladesh`**
+   - **Title:** `Zero Income Tax Return Filing Law Bangladesh` (42 chars)
+   - **Target Keyword:** `zero income tax return bangladesh` / `zero return online bangladesh`
+   - **Metrics:** 957 words (excl. FAQs) / 1,190 words (incl. FAQs) | 5 sections (151–182w) | 5 FAQs (44–49w) | 12 internal links | 1 table | 1 `<ol>` + 1 `<ul>` | `dupcheck: VERDICT: PUBLISH`
+   - **Statutes:** Income Tax Act 2023 (Sections 166, 171, 174, 180, 264, 266), Finance Act thresholds.
+   - **Inbound-Link Targets (Manifest — to link back):**
+     - `/blog/income-tax-audit-notice-hearing-defense-act-2023-bangladesh`
+     - `/blog/nrb-tax-return-tin-certificate-psr-requirement-bangladesh-guide`
+     - `/blog/vat-registration-return-bangladesh`
+
+3. **`cancel-tin-certificate-bangladesh`**
+   - **Title:** `How to Cancel TIN Certificate in Bangladesh` (43 chars)
+   - **Target Keyword:** `cancel tin certificate bangladesh` / `deactivate e tin bangladesh`
+   - **Metrics:** 950 words (excl. FAQs) / 1,177 words (incl. FAQs) | 5 sections (154–182w) | 5 FAQs (43–47w) | 12 internal links | 1 table | 1 `<ol>` + 1 `<ul>` | `dupcheck: VERDICT: PUBLISH`
+   - **Statutes:** Income Tax Act 2023 (Sections 166, 174, 194, 261, 262, 263, 266).
+   - **Inbound-Link Targets (Manifest — to link back):**
+     - `/blog/income-tax-audit-notice-hearing-defense-act-2023-bangladesh`
+     - `/blog/company-winding-up-dissolution-bangladesh`
+     - `/blog/nrb-tax-return-tin-certificate-psr-requirement-bangladesh-guide`
+
+4. **`section-164-crpc-statement-bangladesh`**
+   - **Title:** `Section 164 CrPC Statement and Confession Law` (45 chars)
+   - **Target Keyword:** `section 164 crpc bangladesh` / `confessional statement magistrate bangladesh`
+   - **Metrics:** 971 words (excl. FAQs) / 1,202 words (incl. FAQs) | 5 sections (153–184w) | 5 FAQs (42–51w) | 10 internal links | 1 table | 1 `<ol>` + 1 `<ul>` | `dupcheck: VERDICT: PUBLISH`
+   - **Statutes:** Code of Criminal Procedure 1898 (Sections 61, 164, 167, 364, 533), Evidence Act 1872 (Sections 24–27, 30, 80), Constitution Article 35(4).
+   - **Inbound-Link Targets (Manifest — to link back):**
+     - `/blog/police-custody-remand-rights-bangladesh-law`
+     - `/blog/bail-process-bangladesh-law`
+     - `/blog/section-54-crpc-arrest-without-warrant-rights-bangladesh`
+
+5. **`trade-license-renewal-bangladesh`**
+   - **Title:** `Trade License Renewal Online Fee in Bangladesh` (46 chars)
+   - **Target Keyword:** `trade license renewal bangladesh` / `dncc dscc trade license renewal fee`
+   - **Metrics:** 927 words (excl. FAQs) / 1,152 words (incl. FAQs) | 5 sections (152–175w) | 5 FAQs (42–51w) | 11 internal links | 1 table | 1 `<ol>` + 1 `<ul>` | `dupcheck: VERDICT: PUBLISH`
+   - **Statutes:** Local Government (City Corporation) Act 2009 (Section 82 & Model Tax Schedules), Income Tax Act 2023 (Section 125), VAT & Supplementary Duty Act 2012, Companies Act 1994.
+   - **Inbound-Link Targets (Manifest — to link back):**
+     - `/blog/company-annual-compliance-bangladesh`
+     - `/blog/company-registration-cost-bangladesh`
+     - `/blog/vat-registration-return-bangladesh`
+
+### Rejected at Pre-Flight Gates
+- `Maternity Leave in Bangladesh Labour Law` → Rejected at Gate G2 / `dupcheck` (`0.66` coverage vs `/blog/labour-law-worker-rights-bangladesh`); replaced with `section-164-crpc-statement-bangladesh` & `trade-license-renewal-bangladesh`.
+- `Divorce Process in Bangladesh` → Rejected at Gate G2 / `dupcheck` (`0.80` coverage); replaced with `easement-right-bangladesh-law`.
+
+### Cumulative Site Totals (as of 2026-11-15)
+- Total EN Posts: 294 (289 baseline + 5 new)
+- Total BN Posts: 436 (431 baseline + 5 new)
+- Total Prerendered Pages: 746
+- Total Sitemap URLs: 755
+
+
 
 
