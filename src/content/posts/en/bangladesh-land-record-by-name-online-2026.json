@@ -78,5 +78,28 @@
       "h2": "How a Land Lawyer Can Help Verify Ownership",
       "content": "<p>While online land record searches by name are a powerful tool for initial due diligence, the full process of verifying land ownership before a major purchase in Bangladesh involves legal expertise, access to court records, and professional judgment that goes beyond what any online portal can provide.</p><p>At <a href='/' style='color:var(--accent)'>Advocate Md. Shah Alam’s law chamber in Uttara, Dhaka</a>, we provide comprehensive land ownership verification services for both buyers and sellers. Our service includes:</p><ul><li><strong>Complete Title Search:</strong> We trace the chain of ownership from CS Khatian to present day, examining every registered deed, mutation record, and court order affecting the property.</li><li><strong>Sub-Registrar Office Search:</strong> We conduct searches at the relevant Sub-Registrar office to detect any encumbrances, mortgage deeds, or cancellations not visible in the Khatian system.</li><li><strong>Court Search:</strong> We check the District Judge court records for any pending title suits, injunctions, or attachment orders against the property or seller.</li><li><strong>Name Reconciliation:</strong> We resolve name discrepancies across multiple documents through affidavits, court declarations, or petitions to the AC Land office.</li><li><strong>Legal Opinion Letter:</strong> We provide a formal written legal opinion on the title, clearly stating whether the title is marketable and identifying any risks the buyer should be aware of before signing any agreement.</li><li><strong>Safe Deed Drafting:</strong> If the title is clear, we draft a legally sound sale deed that protects your rights and minimizes future dispute risk.</li></ul><p>Our chamber offers a <strong>free initial consultation</strong> for property purchase matters. Before you spend your life savings on land in Bangladesh, let our property law team verify the title professionally.</p><p><strong>Office Location:</strong> Uttara, Dhaka, Bangladesh<br/><strong>Consultation:</strong> Free first consultation available<br/><strong>Service Area:</strong> All districts in Bangladesh</p><p><a href='/contact' style='color:var(--accent)'>Contact us today</a> to schedule a property title verification consultation before your next land purchase.</p>"
     }
+  ],
+  "lastModified": "2026-11-16",
+  "faqs": [
+    {
+      "question": "Can I search Bangladesh land records (Khatian) online by owner name for free?",
+      "answer": "Yes. You can look up basic RS, BS, SA, and CS Khatian details free of charge on eporcha.gov.bd and dlrms.land.gov.bd by selecting Division, District, Upazila, Mouza, and filtering by Owner Name (মালিকের নাম) or Khatian/Dag number."
+    },
+    {
+      "question": "What if the owner name on eporcha.gov.bd has a spelling mistake or NID mismatch?",
+      "answer": "A minor clerical error in a mutated (Namjari) khatian can be corrected via a Misc Case before the Upazila AC Land office. Errors in the published BS or RS record-of-rights require filing a correction suit before the Land Survey Tribunal within the statutory limitation window."
+    },
+    {
+      "question": "Does finding a name in online e-Porcha guarantee clear property ownership?",
+      "answer": "No. Online e-Porcha only displays digitized khatian metadata. Before buying land, always verify the complete chain of registered title deeds (Baynamama/Heba/Saf Kabala) at the Sub-Registry office, up-to-date Mutation DCR, LD Tax receipts, and non-encumbrance (NEC) records."
+    },
+    {
+      "question": "How much does a certified copy (অবিকল নকল) of an online Khatian cost?",
+      "answer": "An online informational copy can be viewed without fee, while a government-certified Porcha ordered via eporcha.gov.bd typically costs 100 BDT (plus 40 BDT postal courier fee inside Bangladesh) payable via bKash, Nagad, or Sonali Seba."
+    },
+    {
+      "question": "Can Non-Resident Bangladeshis (NRBs) check family land records by name from abroad?",
+      "answer": "Yes, the eporcha.gov.bd and land.gov.bd search portals work globally. NRBs facing occupied land, forged khatians, or missing records can authorize a Supreme Court Advocate in Dhaka via embassy-attested Power of Attorney to conduct physical Mouza and Sub-Registry vetting."
+    }
   ]
 }

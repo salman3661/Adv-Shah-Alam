@@ -3,8 +3,8 @@
   "title": "Namjari Tracking – How to Check Mutation Application Status Online Bangladesh",
   "category": "Property Law",
   "readTime": "10 min read",
-  "metaTitle": "Namjari Tracking Bangladesh | Mutation Status Check",
-  "metaDescription": "Namjari check online & mutation application tracking Bangladesh (নামজারি আবেদনের অবস্থা ও খতিয়ান চেক). Track e-porcha status by application number, NID.",
+  "metaTitle": "Namjari Tracking Online BD: Check Mutation Status",
+  "metaDescription": "Check Bangladesh e-Namjari application status online at mutation.land.gov.bd using Application ID & mobile number. Understand hearing, DCR fee & approval steps.",
   "keywords": [
     "namjari check",
     "namjari tracking",
@@ -77,5 +77,27 @@
       "content": "<p>Namjari (mutation) may seem straightforward, but complications — from missing documents and third-party objections to fraudulent mutations and rejection orders — can quickly turn a routine process into a legal battle. The <strong>Law Chamber of Adv. Md. Shah Alam</strong> in Uttara, Dhaka provides comprehensive namjari assistance:</p><ul><li><strong>Namjari application preparation:</strong> We collect and verify all required documents and prepare a complete, error-free application to minimize delays</li><li><strong>Status tracking and follow-up:</strong> We monitor your case at the AC Land office and online portals, and proactively follow up with the responsible officers</li><li><strong>Hearing representation:</strong> We represent you at the AC Land hearing stage, especially important when there are third-party objections</li><li><strong>Objection handling:</strong> If someone has filed an objection to your mutation, we prepare and present your legal response with supporting evidence</li><li><strong>Appeal against rejection:</strong> If your namjari application is rejected, we file an appeal to the District Commissioner or a civil suit challenging the rejection order</li><li><strong>Fraudulent namjari cancellation:</strong> If someone has illegally obtained mutation of your land, we take immediate legal action to cancel it and restore your rights</li><li><strong>Post-namjari assistance:</strong> We help you collect your DCR, update your khatian, and begin paying land tax in your own name — completing the full cycle of your land ownership documentation</li></ul><p>Our chamber is conveniently located in <strong>Uttara, Dhaka</strong> and we offer a <strong>free initial consultation</strong>. We handle namjari cases across all districts of Bangladesh.</p><p>📞 <strong>Call us today</strong> for expert namjari assistance. <a href='/contact' style='color:var(--accent)'>Book your free consultation now</a> and let us handle the complexity.</p><p><em>Also read: <a href='/blog/rs-khatian-online-check-bangladesh-2026' style='color:var(--accent)'>How to Check Your Khatian Online (CS/RS/BS)</a> | <a href='/blog/land-registration-cost-fees-calculator-bangladesh-2026' style='color:var(--accent)'>Land Registration Fees in Bangladesh 2026</a></em></p>"
     }
   ],
-  "lastModified": "2026-11-15"
+  "lastModified": "2026-11-16",
+  "faqs": [
+    {
+      "question": "How do I track my Namjari (e-Mutation) application status online in Bangladesh?",
+      "answer": "Visit mutation.land.gov.bd, open 'আবেদন ট্র্যাকিং / Application Tracking', select your Division, enter your Application ID and registered mobile number, and solve the captcha to view live approval stage (Union Land Office, Kanungo, or AC Land)."
+    },
+    {
+      "question": "How long does e-Namjari approval take in 2026 under Ministry of Land rules?",
+      "answer": "Under the Bangladesh Ministry of Land citizen charter, standard e-Namjari disposal takes up to 28 working days (45 days for complex inheritance or multi-co-sharer cases), provided all deeds and warish certificates are properly scanned."
+    },
+    {
+      "question": "What should I do after my Namjari status shows 'Notice/Hearing' or 'DCR Fee Payment Pending'?",
+      "answer": "Appear before the AC Land office with original deeds on the scheduled hearing date (which you can verify via SMS alert). Once approved for DCR, pay the 1,150 BDT government DCR fee online within 7 days to generate your QR-coded digital Namjari Khatian."
+    },
+    {
+      "question": "Why does Namjari tracking show 'Na-Manjur' (Rejected) and how can I appeal?",
+      "answer": "Applications are usually rejected due to missing chain deeds (Baya Dalil), overlapping Dag land claims, or incomplete inheritance shares. You can file an appeal before the Additional Deputy Commissioner (Revenue) within 30 days under Section 147 of the SAT Act 1950."
+    },
+    {
+      "question": "How can NRBs living abroad track or complete land mutation in Bangladesh?",
+      "answer": "NRBs can track any mutation online using the applicant mobile number and Application ID, and pay the DCR fee digitally. If an AC Land hearing requires representation or contesting a fraudulent objection, an advocate can appear on your behalf."
+    }
+  ]
 }

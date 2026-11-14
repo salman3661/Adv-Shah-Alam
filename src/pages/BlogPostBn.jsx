@@ -1141,19 +1141,17 @@ const BlogPostBnInner = () => {
                                     </div>
                                 )}
 
-                                {/* Ad Unit 4 (BN): after FAQ, before CTA form */}
-                                {post.faqs?.length > 0 && (
-                                    <AdSenseAd
-                                        key={`ad-postfaq-${post.slug}`}
-                                        slot={AD_SLOTS.body5}
-                                        format="fluid"
-                                        layout="in-article"
-                                        responsive={true}
-                                        labelText="বিজ্ঞাপন"
-                                        minHeight={250}
-                                        style={{ margin: '2rem auto' }}
-                                    />
-                                )}
+                                {/* Ad Unit 4 (BN): before CTA form on all BN articles */}
+                                <AdSenseAd
+                                    key={`ad-postfaq-${post.slug}`}
+                                    slot={AD_SLOTS.body5}
+                                    format="fluid"
+                                    layout="in-article"
+                                    responsive={true}
+                                    labelText="বিজ্ঞাপন"
+                                    minHeight={250}
+                                    style={{ margin: '2rem auto' }}
+                                />
 
                                 {/* CTA Form */}
                                 <div style={{ borderRadius: '1.375rem', overflow: 'hidden', background: 'linear-gradient(135deg, var(--hero-bg) 0%, var(--hero-surface, #1c1c35) 100%)', border: '1px solid rgba(148, 163, 184, 0.22)', marginBottom: '3rem' }}>
@@ -1361,6 +1359,28 @@ const BlogPostBnInner = () => {
                                 >
                                     <MapPin size={16} />
                                     <span>চেম্বার / অনলাইন বুকিং</span>
+                                </Link>
+                                <Link
+                                    to="/nrb-legal-help"
+                                    data-cta="post-bottom-nrb"
+                                    style={{
+                                        display: 'inline-flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        gap: '0.45rem',
+                                        minHeight: '44px',
+                                        padding: '0.7rem 1.2rem',
+                                        borderRadius: '0.65rem',
+                                        background: 'rgba(201, 162, 39, 0.14)',
+                                        border: '1px solid rgba(201, 162, 39, 0.45)',
+                                        color: '#FDE68A',
+                                        fontWeight: 700,
+                                        fontSize: '0.9rem',
+                                        textDecoration: 'none',
+                                    }}
+                                >
+                                    <Scale size={16} />
+                                    <span>প্রবাসী আইনি সেবা (NRB)</span>
                                 </Link>
                             </div>
                         </div>

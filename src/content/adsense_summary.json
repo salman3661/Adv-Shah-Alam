@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-14T15:45:18.229Z",
+  "updatedAt": "2026-11-14T15:52:51.611Z",
   "account": "accounts/pub-1781126556775676",
   "currency": "USD",
   "last30Days": {
@@ -45,7 +45,7 @@
     },
     "totals": {
       "ESTIMATED_EARNINGS": 8.84,
-      "PAGE_VIEWS": 6141,
+      "PAGE_VIEWS": 6151,
       "PAGE_VIEWS_RPM": 1.44,
       "IMPRESSIONS": 12368,
       "CLICKS": 237,
@@ -346,7 +346,7 @@
     {
       "MONTH": "2026-11",
       "ESTIMATED_EARNINGS": 8.84,
-      "PAGE_VIEWS": 6141,
+      "PAGE_VIEWS": 6150,
       "PAGE_VIEWS_RPM": 1.44,
       "IMPRESSIONS": 12368,
       "CLICKS": 237,

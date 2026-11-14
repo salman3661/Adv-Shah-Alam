@@ -127,7 +127,8 @@
       "content": "<p>জমিজমা সংক্রান্ত ডাবল সেল প্রতারণা অত্যন্ত মারাত্মক সমস্যা। এখানে সামান্য দেরি করলে দ্বিতীয় ক্রেতা জমিতে পাকা স্থাপনা নির্মাণ করে দখল নিয়ে ফেলতে পারে, যা পরবর্তীতে উচ্ছেদ করা সময়সাপেক্ষ হয়ে দাঁড়ায়।</p><p>দলিল বাতিল মোকদ্দমা, দেওয়ানি নিষেধাজ্ঞা, প্রতারকের বিরুদ্ধে ফৌজদারি মামলা ও জমি উদ্ধারের জন্য সুপ্রিম কোর্ট ও জেলা জজ কোর্টের অভিজ্ঞ আইনজীবীর প্রত্যক্ষ পরামর্শ নিন।</p><div style=\"border:1px solid var(--accent);border-radius:var(--radius-lg);padding:1.5rem;margin:1.5rem 0;background:rgba(217,119,6,0.03)\"><h3 style=\"margin-top:0;font-size:1.15rem;color:var(--text-primary)\">Facing a similar legal issue? Don't fight it alone.</h3><p style=\"margin-bottom:1rem;color:var(--text-secondary)\">Contact <strong>Advocate MD Shah Alam</strong> for expert legal consultation and court representation.</p><p style=\"margin:0.5rem 0\"><strong>📞 Call line:</strong> <a href=\"tel:+8801712655546\" style=\"color:var(--accent);font-weight:600\">+880 1712-655546</a></p><p style=\"margin:0.5rem 0\"><strong>💬 WhatsApp:</strong> <a href=\"https://wa.me/8801955802007?text=Assalamu%20Alaikum%20Advocate%20Md.%20Shah%20Alam%2C%20I%20need%20urgent%20legal%20consultation%20regarding%20Double%20Sale%20Deed%20Cancellation.\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color:var(--accent);font-weight:600\">+880 1955-802007</a></p><p style=\"margin:0.5rem 0;font-size:0.9rem;color:var(--text-muted)\">Chamber: Supreme Court Bar Association Building, Dhaka & House 01, Road 02, Sector 03, Uttara, Dhaka-1230.</p></div>"
     }
   ],
-  "faq": [
+  "featured": false,
+  "faqs": [
     {
       "question": "একই জমি দুইবার বিক্রি হলে কার দলিল টিকবে?",
       "answer": "রেজিস্ট্রেশন আইনের ৪৭ ধারা এবং সম্পত্তি হস্তান্তর আইনের ৪৮ ধারা মোতাবেক যে দলিলটি সময়ানুসারে পূর্বে সম্পাদিত হয়েছে, সেই প্রথম দলিলটিই আইনত টিকবে এবং পরবর্তী দলিলটি বাতিল হবে।"
@@ -160,6 +161,5 @@
       "question": "জমি কেনার আগে কীভাবে জানব জমিটি আগে বিক্রি হয়েছে কিনা?",
       "answer": "সাব-রেজিস্ট্রি অফিসে নির্দিষ্ট ফি দিয়ে বিগত ১২ থেকে ২৫ বছরের ইনডেক্স ও বালাম তল্লাশি (Search) দিলে জমির পূর্ববর্তী সমস্ত হস্তান্তরের সঠিক তথ্য পাওয়া যায়।"
     }
-  ],
-  "featured": false
+  ]
 }

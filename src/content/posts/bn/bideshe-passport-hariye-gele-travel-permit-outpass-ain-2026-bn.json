@@ -126,7 +126,8 @@
       "content": "<p>বিদেশে পাসপোর্ট জটিলতা বা দেশে ফেরার আইনি প্রক্রিয়া অত্যন্ত সংবেদনশীল। সঠিক সময়ে সঠিক পদক্ষেপ গ্রহণ না করলে বিদেশের মাটিতে কারাদণ্ড বা ব্ল্যাকলিস্টেড হওয়ার মারাত্মক ঝুঁকি থাকে।</p><p>প্রবাসী নাগরিকত্ব প্রমাণ, ট্রাভেল পারমিট সংগ্রহে দূতাবাস সহায়তা, এবং দেশে ফিরে পাসপোর্ট রি-ইস্যু সংক্রান্ত যেকোনো আইনি সংকটে সুপ্রিম কোর্ট ও আন্তর্জাতিক আইন অভিজ্ঞ আইনজীবীর প্রত্যক্ষ পরামর্শ নিন।</p><div style=\"border:1px solid var(--accent);border-radius:var(--radius-lg);padding:1.5rem;margin:1.5rem 0;background:rgba(217,119,6,0.03)\"><h3 style=\"margin-top:0;font-size:1.15rem;color:var(--text-primary)\">Facing a similar legal issue? Don't fight it alone.</h3><p style=\"margin-bottom:1rem;color:var(--text-secondary)\">Contact <strong>Advocate MD Shah Alam</strong> for expert legal consultation and court representation.</p><p style=\"margin:0.5rem 0\"><strong>📞 Call line:</strong> <a href=\"tel:+8801712655546\" style=\"color:var(--accent);font-weight:600\">+880 1712-655546</a></p><p style=\"margin:0.5rem 0\"><strong>💬 WhatsApp:</strong> <a href=\"https://wa.me/8801955802007?text=Assalamu%20Alaikum%20Advocate%20Md.%20Shah%20Alam%2C%20I%20need%20urgent%20legal%20consultation%20regarding%20Travel%20Permit%20and%20Passport%20Loss.\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color:var(--accent);font-weight:600\">+880 1955-802007</a></p><p style=\"margin:0.5rem 0;font-size:0.9rem;color:var(--text-muted)\">Chamber: Supreme Court Bar Association Building, Dhaka & House 01, Road 02, Sector 03, Uttara, Dhaka-1230.</p></div>"
     }
   ],
-  "faq": [
+  "featured": false,
+  "faqs": [
     {
       "question": "ট্রাভেল পারমিট কি সাধারণ পাসপোর্টের মতো কাজ করে?",
       "answer": "না, ট্রাভেল পারমিট কেবল সংশ্লিষ্ট দেশ থেকে বাংলাদেশে একমুখী (One-way) ফেরত আসার জন্য কার্যকর। এটি দিয়ে অন্য কোনো দেশে ভ্রমণ করা যায় না।"
@@ -159,6 +160,5 @@
       "question": "ট্রাভেল পারমিটের মেয়াদ কত দিন থাকে?",
       "answer": "ইস্যুর তারিখ থেকে সাধারণত ৯০ দিন (৩ মাস) ট্রাভেল পারমিটের মেয়াদ বলবৎ থাকে। এই সময়ের মধ্যেই বিমান ভ্রমণ সম্পন্ন করতে হয়।"
     }
-  ],
-  "featured": false
+  ]
 }

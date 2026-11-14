@@ -1055,19 +1055,17 @@ const BlogPostInner = () => {
                                     </div>
                                 )}
 
-                                {/* Ad Unit 4 (EN): after FAQ, before CTA form */}
-                                {post.faqs?.length > 0 && (
-                                    <AdSenseAd
-                                        key={`ad-postfaq-${post.slug}`}
-                                        slot={AD_SLOTS.body4}
-                                        format="fluid"
-                                        layout="in-article"
-                                        responsive={true}
-                                        labelText="Advertisement"
-                                        minHeight={250}
-                                        style={{ margin: '2rem auto' }}
-                                    />
-                                )}
+                                {/* Ad Unit 4 (EN): before CTA form on all EN articles */}
+                                <AdSenseAd
+                                    key={`ad-postfaq-${post.slug}`}
+                                    slot={AD_SLOTS.body4}
+                                    format="fluid"
+                                    layout="in-article"
+                                    responsive={true}
+                                    labelText="Advertisement"
+                                    minHeight={250}
+                                    style={{ margin: '2rem auto' }}
+                                />
 
                                 {/* CTA Form */}
                                 <div style={{ borderRadius: '1.375rem', overflow: 'hidden', background: 'linear-gradient(135deg, var(--hero-bg) 0%, var(--hero-surface, #1c1c35) 100%)', border: '1px solid rgba(148, 163, 184, 0.22)', marginBottom: '3rem' }}>
