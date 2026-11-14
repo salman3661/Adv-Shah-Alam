@@ -624,24 +624,8 @@ const BlogPostInner = () => {
                 {faqSchema && <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>}
             </Helmet>
 
-            {/* ════════════════ AD #1: TOP RESPONSIVE LEADERBOARD DIRECTLY ABOVE H1 ════════════════ */}
-            <div style={{ background: 'var(--bg)', borderBottom: '1px solid var(--card-border)', paddingTop: '72px', paddingBottom: '0.5rem' }}>
-                <div className="bp-hero-container">
-                    <AdSenseAd
-                        key={`ad-header-${post.slug}`}
-                        slot={AD_SLOTS.topDisplay}
-                        format="auto"
-                        responsive={true}
-                        labelText="Advertisement"
-                        minHeight={90}
-                        mobileMinHeight={65}
-                        style={{ margin: '0 auto' }}
-                    />
-                </div>
-            </div>
-
-            {/* ════════════════ HERO (Immediate H1 & Cover Image directly beneath top banner) ════════════════ */}
-            <section className="hero-section google-anno-skip" style={{ background: 'linear-gradient(135deg, #0B1938 0%, #1E3A8A 52%, #0F766E 100%)', paddingTop: '1.5rem', paddingBottom: '2rem', position: 'relative', overflow: 'hidden', borderBottom: '1px solid rgba(148, 163, 184, 0.25)' }}>
+            {/* ════════════════ HERO (Clean first-impression H1 & Cover Image directly under navbar) ════════════════ */}
+            <section className="hero-section google-anno-skip" style={{ background: 'linear-gradient(135deg, #0B1938 0%, #1E3A8A 52%, #0F766E 100%)', paddingTop: '6.5rem', paddingBottom: '2.5rem', position: 'relative', overflow: 'hidden', borderBottom: '1px solid rgba(148, 163, 184, 0.25)' }}>
                 {/* Top accent bar */}
                 <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '4px', background: 'linear-gradient(90deg, #1D4ED8, #0F766E, #38BDF8, #1D4ED8)' }} />
                 <div className="hero-cover-bg" aria-hidden="true" style={{ backgroundImage: `url(${coverFor(post.category)})` }} />
@@ -776,14 +760,13 @@ const BlogPostInner = () => {
                 </div>
             </section>
 
-            {/* ════════════════ AD #2: IMMEDIATELY BELOW FEATURED COVER PICTURE (HIGH-FILL DISPLAY ON MOBILE) ════════════════ */}
+            {/* ════════════════ AD #1: IMMEDIATELY BELOW FEATURED COVER PICTURE (HIGH-FILL DISPLAY) ════════════════ */}
             <div style={{ background: 'var(--bg)', paddingTop: '1rem' }}>
                 <div className="bp-hero-container">
                     <AdSenseAd
-                        key={!isDesktop ? `ad-belowpic-mob-${post.slug}` : `ad-belowpic-desk-${post.slug}`}
-                        slot={!isDesktop ? AD_SLOTS.sidebar : AD_SLOTS.body2}
-                        format={!isDesktop ? 'auto' : 'fluid'}
-                        layout={!isDesktop ? '' : 'in-article'}
+                        key={`ad-belowpic-${post.slug}`}
+                        slot={AD_SLOTS.topDisplay}
+                        format="auto"
                         responsive={true}
                         labelText="Advertisement"
                         minHeight={100}
@@ -1037,8 +1020,8 @@ const BlogPostInner = () => {
                                                         style={{ margin: '1.5rem auto 2.5rem' }}
                                                     />
                                                 )}
-                                                {/* Ad #5 (EN): Mid-section on mobile (desktop uses body2 below pic + sticky sidebar) */}
-                                                {i === midSec && i !== 0 && !isDesktop && (
+                                                {/* Ad #5 (EN): Mid-section */}
+                                                {i === midSec && i !== 0 && (
                                                     <AdSenseAd
                                                         key={`ad-mid-${post.slug}`}
                                                         slot={AD_SLOTS.body2}

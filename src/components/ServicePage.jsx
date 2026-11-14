@@ -9,8 +9,7 @@ import AdSenseAd from './AdSenseAd';
 
 const BASE = 'https://www.advmdshahalam.me';
 const SERVICE_AD_SLOTS = {
-    header: '8630877987',
-    top: '5064091502',
+    top: '8630877987',
     mid1: '9118178745',
     mid2: '6519719969',
     bottomGrid: '3667074343',
@@ -125,24 +124,8 @@ const ServicePage = ({ metaTitle, metaDesc, canonicalUrl, h1, intro, coverage, f
                 {faqSchema && <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>}
             </Helmet>
 
-            {/* Ad Unit 0: Top Responsive Leaderboard directly above Hero H1 */}
-            <div style={{ background: 'var(--bg)', borderBottom: '1px solid var(--card-border)', paddingTop: '72px', paddingBottom: '0.5rem' }}>
-                <div className="container mx-auto px-6 max-w-5xl">
-                    <AdSenseAd
-                        key={`svc-header-${wwwCanonical || 'en'}`}
-                        slot={SERVICE_AD_SLOTS.header}
-                        format="auto"
-                        responsive={true}
-                        labelText={isBn ? 'বিজ্ঞাপন' : 'Advertisement'}
-                        minHeight={90}
-                        mobileMinHeight={65}
-                        style={{ margin: '0 auto' }}
-                    />
-                </div>
-            </div>
-
             {/* Hero — always dark, theme-independent */}
-            <section className="pt-8 pb-14 relative overflow-hidden"
+            <section className="pt-28 pb-16 relative overflow-hidden"
                 style={{ background: '#0A1424' }}>
                 <div className="absolute inset-0 pointer-events-none"
                     style={{ background: 'radial-gradient(ellipse at 70% 50%, rgba(22,58,112,0.18) 0%, transparent 70%)' }}></div>

@@ -75,20 +75,8 @@ const NrbLegalHelp = () => {
                 <meta property="og:type" content="website" />
             </Helmet>
 
-            <section className="pt-20 pb-16" style={{ background: 'var(--bg)' }}>
+            <section className="pt-28 pb-16" style={{ background: 'var(--bg)' }}>
                 <div className="container mx-auto px-6 max-w-5xl">
-                    <div style={{ marginBottom: '1rem' }}>
-                        <AdSenseAd
-                            key="nrb-ad-header"
-                            slot="5064091502"
-                            format="auto"
-                            responsive={true}
-                            labelText="Advertisement"
-                            minHeight={90}
-                            mobileMinHeight={65}
-                            style={{ margin: '0 auto' }}
-                        />
-                    </div>
                     <span className="label-accent inline-flex items-center gap-2 mb-3">
                         <Globe2 size={14} /> For Bangladeshis Abroad
                     </span>

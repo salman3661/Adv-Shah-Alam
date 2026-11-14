@@ -271,24 +271,8 @@ const Blog = () => {
                 <link rel="alternate" hrefLang="bn" href="https://www.advmdshahalam.me/bn/blog" />
             </Helmet>
 
-            {/* ════ TOP LEADERBOARD DIRECTLY ABOVE H1 ════ */}
-            <div style={{ background: 'var(--bg)', paddingTop: '72px', paddingBottom: '0.5rem' }}>
-                <div className="container mx-auto px-6 max-w-6xl">
-                    <AdSenseAd
-                        key="blog-en-hub-header"
-                        slot="5064091502"
-                        format="auto"
-                        responsive={true}
-                        labelText="Advertisement"
-                        minHeight={90}
-                        mobileMinHeight={65}
-                        style={{ margin: '0 auto' }}
-                    />
-                </div>
-            </div>
-
             {/* ════ HERO HEADER ════ */}
-            <section className="pt-6 md:pt-8 pb-12 relative overflow-hidden" style={{ background: 'var(--bg)' }}>
+            <section className="pt-28 md:pt-32 pb-12 relative overflow-hidden" style={{ background: 'var(--bg)' }}>
                 <div
                     className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full pointer-events-none blur-3xl opacity-20"
                     style={{ background: 'radial-gradient(circle, var(--accent) 0%, transparent 70%)' }}
