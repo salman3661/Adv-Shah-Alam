@@ -8,6 +8,7 @@ import AdSenseAd from '../components/AdSenseAd';
 // Load all EN blog posts from JSON files (bundled at build time by Vite)
 import postsMeta_en from '../content/posts-meta-en.json';
 import { coverFor } from '../utils/coverImage';
+import { parseBdDate, formatBdDate } from '../utils/bdDate.mjs';
 const _postModules = postsMeta_en;
 const blogPosts = Object.values(_postModules)
     .map((m) => m.default ?? m)
@@ -17,10 +18,9 @@ function isPublished(post) {
   return Boolean(post && !post.isDraft && !post._draft);
 }
 
-// "Recent" ordering uses the later of publish date and last-updated date, so freshly published or
-// substantially updated guides surface at the top of the blog section instead of sitting at their old publish date.
+// "Recent" ordering uses the later of publish date and last-updated date, anchored to Asia/Dhaka.
 function freshness(post) {
-  const t = (d) => (d ? new Date(d).getTime() || 0 : 0);
+  const t = (d) => parseBdDate(d)?.getTime() || 0;
   return Math.max(t(post.publishedDate), t(post.lastModified));
 }
 
@@ -45,10 +45,10 @@ const getCatColor = (cat) => categoryColors[cat] || 'var(--accent)';
 /* ─── Premium Glassmorphic Blog Card ─── */
 const BlogCardEn = ({ post, isRecent = false, isPopular = false }) => {
     const catColor = getCatColor(post.category);
-    const displayDate = post.lastModified && new Date(post.lastModified) > new Date(post.publishedDate || 0)
-        ? post.lastModified
-        : post.publishedDate;
-    const pubDateFormatted = displayDate ? new Date(displayDate).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }) : null;
+    const modTime = parseBdDate(post.lastModified)?.getTime() || 0;
+    const pubTime = parseBdDate(post.publishedDate)?.getTime() || 0;
+    const displayDate = modTime > pubTime ? post.lastModified : post.publishedDate;
+    const pubDateFormatted = formatBdDate(displayDate, 'en-GB', { day: 'numeric', month: 'short', year: 'numeric' }) || null;
 
     return (
         <article
@@ -479,9 +479,15 @@ const Blog = () => {
                                         />
                                         <div>
                                             <p className="text-xs font-bold" style={{ color: 'var(--text)' }}>Adv. Md. Shah Alam</p>
-                                            {featuredPost.publishedDate && (
+                                            {(featuredPost.lastModified || featuredPost.publishedDate) && (
                                                 <p className="text-xs" style={{ color: 'var(--text-muted)' }}>
-                                                    {new Date(featuredPost.publishedDate).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}
+                                                    {formatBdDate(
+                                                        (parseBdDate(featuredPost.lastModified)?.getTime() || 0) > (parseBdDate(featuredPost.publishedDate)?.getTime() || 0)
+                                                            ? featuredPost.lastModified
+                                                            : featuredPost.publishedDate,
+                                                        'en-GB',
+                                                        { day: 'numeric', month: 'short', year: 'numeric' }
+                                                    )}
                                                 </p>
                                             )}
                                         </div>

@@ -85,15 +85,16 @@ for (const lang of ['en', 'bn']) {
   fs.writeFileSync(target, JSON.stringify(out));
   console.log(`[gen-blog-meta] ${lang}: ${out.length} posts, ${(fs.statSync(target).size / 1024).toFixed(0)} KB`);
 
+  const ts = (d) => (d ? new Date(/^\d{4}-\d{2}-\d{2}$/.test(d) ? `${d}T00:00:00+06:00` : d).getTime() || 0 : 0);
   previewData[lang] = [...out]
-    .sort((a, b) => new Date(b.publishedDate || 0) - new Date(a.publishedDate || 0))
+    .sort((a, b) => Math.max(ts(b.lastModified), ts(b.publishedDate)) - Math.max(ts(a.lastModified), ts(a.publishedDate)))
     .slice(0, 6)
     .map((p) => ({
       slug: p.slug,
       title: p.title,
       category: p.category,
       readTime: p.readTime,
-      publishedDate: p.publishedDate,
+      publishedDate: Math.max(ts(p.lastModified), ts(p.publishedDate)) > ts(p.publishedDate) ? p.lastModified : p.publishedDate,
       heroIntro: plain(p.heroIntro, 125),
     }));
 }

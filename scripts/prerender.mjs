@@ -922,7 +922,7 @@ async function main() {
   }
 
   const base = readBase();
-  const TODAY = new Date().toISOString().split('T')[0];
+  const TODAY = process.env.TODAY || new Date(Date.now() + 6 * 3600 * 1000).toISOString().split('T')[0]; // YYYY-MM-DD in Asia/Dhaka
 
   function buildInstitutionalSchema(pageUrl, lang, breadcrumbItems) {
     const graph = [

@@ -19,6 +19,7 @@ import ArticleSkeleton from '../components/ArticleSkeleton';
 import popularBnSlugs from '../content/popular_bn.json';
 import NotFound from './NotFound';
 import { sanitizeHtml, formatHeroIntro } from '../utils/sanitizeHtml';
+import { parseBdDate, formatBdDate } from '../utils/bdDate.mjs';
 
 /* ── Load all BN posts ── */
 import postsMeta_bn from '../content/posts-meta-bn.json';
@@ -236,8 +237,8 @@ const PopularBnPosts = ({ currentSlug }) => {
 /* ─── Sidebar: Recent BN Posts (Fresh & Dynamic) ─── */
 const RecentBnPosts = ({ currentSlug }) => {
     const recent = [...allBnPosts]
-        .filter(p => p.slug !== currentSlug && p.publishedDate)
-        .sort((a, b) => new Date(b.publishedDate) - new Date(a.publishedDate))
+        .filter(p => p.slug !== currentSlug && (p.lastModified || p.publishedDate))
+        .sort((a, b) => Math.max(parseBdDate(b.lastModified)?.getTime() || 0, parseBdDate(b.publishedDate)?.getTime() || 0) - Math.max(parseBdDate(a.lastModified)?.getTime() || 0, parseBdDate(a.publishedDate)?.getTime() || 0))
         .slice(0, 8);
     if (recent.length === 0) return null;
     return (
@@ -246,6 +247,9 @@ const RecentBnPosts = ({ currentSlug }) => {
             <div style={{ padding: '0.625rem 0.875rem 0.875rem' }}>
                 {recent.map((rp, idx) => {
                     const cc = catColor(rp.category);
+                    const rpDate = (parseBdDate(rp.lastModified)?.getTime() || 0) > (parseBdDate(rp.publishedDate)?.getTime() || 0)
+                        ? rp.lastModified
+                        : rp.publishedDate;
                     return (
                         <Link key={rp.slug} to={`/bn/blog/${rp.slug}`}
                             style={{
@@ -295,7 +299,7 @@ const RecentBnPosts = ({ currentSlug }) => {
                                     </span>
                                     <span style={{ fontSize: '0.68rem', color: 'var(--text-muted)', display: 'flex', alignItems: 'center', gap: '0.2rem' }}>
                                         <Calendar size={9} />
-                                        {rp.publishedDate ? new Date(rp.publishedDate).toLocaleDateString('bn-BD', { day: 'numeric', month: 'short' }) : ''}
+                                        {formatBdDate(rpDate, 'bn-BD', { day: 'numeric', month: 'short' })}
                                     </span>
                                 </div>
                                 <p style={{
@@ -535,7 +539,11 @@ const BlogPostBnInner = () => {
         </>
     );
 
-    const pubDate = post.publishedDate ? new Date(post.publishedDate).toLocaleDateString('bn-BD', { day: 'numeric', month: 'long', year: 'numeric' }) : '';
+    const pubDate = formatBdDate(post.publishedDate, 'bn-BD', { day: 'numeric', month: 'long', year: 'numeric' });
+    const modTime = parseBdDate(post.lastModified)?.getTime() || 0;
+    const pubTime = parseBdDate(post.publishedDate)?.getTime() || 0;
+    const modDate = modTime > pubTime ? formatBdDate(post.lastModified, 'bn-BD', { day: 'numeric', month: 'long', year: 'numeric' }) : '';
+    const heroDateLabel = modDate && modDate !== pubDate ? `আপডেট: ${modDate}` : pubDate;
     const cc = catColor(post.category);
 
     const pageUrl = `${SITE}/bn/blog/${post.slug}`;
@@ -761,9 +769,9 @@ const BlogPostBnInner = () => {
                                     <p style={{ fontSize: '0.9rem', fontWeight: 800, color: '#FFFFFF', margin: 0 }}>অ্যাডভোকেট মো. শাহ আলম</p>
                                     <p style={{ fontSize: '0.74rem', color: '#5EEAD4', fontWeight: 600, margin: 0 }}>বাংলাদেশ সুপ্রিম কোর্ট • চেম্বার: উত্তরা ও ঢাকা জজ কোর্ট</p>
                                 </div>
-                                {pubDate && (
+                                {heroDateLabel && (
                                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.35rem', fontSize: '0.78rem', fontWeight: 600, color: '#E2E8F0', marginLeft: 'auto', background: 'rgba(255,255,255,0.1)', padding: '0.3rem 0.75rem', borderRadius: '9999px', border: '1px solid rgba(255,255,255,0.18)' }}>
-                                        <Calendar size={12} /> {pubDate}
+                                        <Calendar size={12} /> {heroDateLabel}
                                     </div>
                                 )}
                             </div>

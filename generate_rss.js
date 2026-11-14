@@ -51,13 +51,21 @@ function sortPosts(posts) {
     });
 }
 
+function toBdRfc822(ms) {
+    const bd = new Date(ms + 6 * 3600 * 1000);
+    const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    const pad = (n) => String(n).padStart(2, '0');
+    return `${days[bd.getUTCDay()]}, ${pad(bd.getUTCDate())} ${months[bd.getUTCMonth()]} ${bd.getUTCFullYear()} ${pad(bd.getUTCHours())}:${pad(bd.getUTCMinutes())}:${pad(bd.getUTCSeconds())} +0600`;
+}
+
 function buildRssXml(items, title, description, feedUrl, lang = 'bn') {
     const nowMs = Date.now();
     const channelItems = items.map((post, idx) => {
         const postUrl = `${BASE_URL}${post._prefix || (lang === 'bn' ? '/bn/blog' : '/blog')}/${post.slug}`;
-        // Stagger publication dates so every item has a unique, fresh, strictly descending timestamp for RSS triggers (Make.com, Buffer, Zapier)
+        // Stagger publication dates in Bangladesh Standard Time (+0600)
         const itemTime = nowMs - (idx * 60 * 1000);
-        const pubDate = new Date(itemTime).toUTCString();
+        const pubDate = toBdRfc822(itemTime);
         const rawDesc = post.metaDescription || (post.heroIntro ? post.heroIntro.replace(/<[^>]+>/g, '').slice(0, 300) : '');
         const desc = rawDesc.replace(/]]>/g, '').trim();
         const author = 'Advocate Md. Shah Alam';
@@ -90,7 +98,7 @@ function buildRssXml(items, title, description, feedUrl, lang = 'bn') {
     <link>${BASE_URL}</link>
     <description>${description}</description>
     <language>${lang === 'bn' ? 'bn-BD' : 'en-US'}</language>
-    <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
+    <lastBuildDate>${toBdRfc822(nowMs)}</lastBuildDate>
     <atom:link href="${feedUrl}" rel="self" type="application/rss+xml" />
     <image>
       <url>${DEFAULT_IMAGE}</url>

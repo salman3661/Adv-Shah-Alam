@@ -8,6 +8,7 @@ import AdSenseAd from '../components/AdSenseAd';
 import postsMeta_bn from '../content/posts-meta-bn.json';
 import popularBnSlugs from '../content/popular_bn.json';
 import { coverFor } from '../utils/coverImage';
+import { parseBdDate, formatBdDate } from '../utils/bdDate.mjs';
 const _bnModules = postsMeta_bn;
 const postsBn = Object.values(_bnModules).map((m) => m.default ?? m);
 const popularRankMap = new Map((Array.isArray(popularBnSlugs) ? popularBnSlugs : []).map((s, idx) => [s, (popularBnSlugs.length - idx) * 500]));
@@ -16,10 +17,9 @@ function isPublishedBn(post) {
   return Boolean(post && !post.isDraft && !post._draft);
 }
 
-// "Recent" ordering uses the later of publish date and last-updated date, so freshly published or
-// substantially updated guides surface at the top of the blog section instead of sitting at their old publish date.
+// "Recent" ordering uses the later of publish date and last-updated date, anchored to Asia/Dhaka.
 function freshnessBn(post) {
-  const t = (d) => (d ? new Date(d).getTime() || 0 : 0);
+  const t = (d) => parseBdDate(d)?.getTime() || 0;
   return Math.max(t(post.publishedAt), t(post.publishedDate), t(post.lastModified));
 }
 
@@ -83,10 +83,10 @@ const getCatColor = (cat) => categoryColors[cat] || 'var(--accent)';
 /* ─── Premium Glassmorphic Blog Card ─── */
 const BlogCardBn = ({ post, isRecent = false, isPopular = false }) => {
     const catColor = getCatColor(post.category);
-    const displayDate = post.lastModified && new Date(post.lastModified) > new Date(post.publishedDate || 0)
-        ? post.lastModified
-        : post.publishedDate;
-    const pubDateFormatted = displayDate ? new Date(displayDate).toLocaleDateString('bn-BD', { day: 'numeric', month: 'short', year: 'numeric' }) : null;
+    const modTime = parseBdDate(post.lastModified)?.getTime() || 0;
+    const pubTime = parseBdDate(post.publishedDate)?.getTime() || 0;
+    const displayDate = modTime > pubTime ? post.lastModified : post.publishedDate;
+    const pubDateFormatted = formatBdDate(displayDate, 'bn-BD', { day: 'numeric', month: 'short', year: 'numeric' }) || null;
 
     return (
         <article
@@ -578,9 +578,15 @@ const BlogBn = () => {
                                         />
                                         <div>
                                             <p className="text-xs font-bold" style={{ color: 'var(--text)', fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif" }}>অ্যাডভোকেট মো. শাহ আলম</p>
-                                            {featuredPost.publishedDate && (
+                                            {(featuredPost.lastModified || featuredPost.publishedDate) && (
                                                 <p className="text-xs" style={{ color: 'var(--text-muted)', fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif" }}>
-                                                    {new Date(featuredPost.publishedDate).toLocaleDateString('bn-BD', { day: 'numeric', month: 'short', year: 'numeric' })}
+                                                    {formatBdDate(
+                                                        (parseBdDate(featuredPost.lastModified)?.getTime() || 0) > (parseBdDate(featuredPost.publishedDate)?.getTime() || 0)
+                                                            ? featuredPost.lastModified
+                                                            : featuredPost.publishedDate,
+                                                        'bn-BD',
+                                                        { day: 'numeric', month: 'short', year: 'numeric' }
+                                                    )}
                                                 </p>
                                             )}
                                         </div>
