@@ -38,6 +38,7 @@ en_path,bn_path,confidence,evidence
 /blog/bangladesh-cyber-crime-complaint-portal-guide-2026,,unpaired,en_only
 /blog/bangladesh-land-record-by-name-online-2026,,unpaired,en_only
 /blog/bank-auction-mortgaged-property-stay-artha-rin-adalat-bangladesh,/bn/blog/ortho-rin-adalat-mamla-bank-loan-auction-writ-2026-bn,1.0,json_reciprocal_slug_pair
+/blog/bank-guarantee-lc-injunction-bangladesh,,unpaired,en_only
 /blog/bank-loan-default-legal-action-bangladesh,,unpaired,en_only
 /blog/bank-loan-guarantor-cib-blacklist-artha-rin-adalat-bangladesh,/bn/blog/bank-rin-jamindar-cib-blacklist-artharin-remedy-2026-bn,1.0,json_reciprocal_slug_pair
 /blog/bida-work-permit-foreign-nationals-visa-bangladesh-legal-guide,,unpaired,en_only
@@ -121,6 +122,7 @@ en_path,bn_path,confidence,evidence
 /blog/education-board-certificate-roll-registration-passing-year-correction-2026,,unpaired,en_only
 /blog/employee-embezzlement-theft-company-funds-penal-code-bangladesh,,unpaired,en_only
 /blog/enforcing-foreign-arbitral-awards-bangladesh-arbitration-act,,unpaired,en_only
+/blog/environment-clearance-certificate-bangladesh,,unpaired,en_only
 /blog/ex-parte-decree-setting-aside-cpc-order-9-rule-13-bangladesh,/bn/blog/probasi-ek-torfa-decree-batil-cpc-order-9-rule-13-ain-2026-bn,1.0,json_reciprocal_slug_pair
 /blog/facebook-defamation-case-bangladesh,/bn/blog/facebook-manhani-mamla-bangladesh,1.0,json_reciprocal_slug_pair
 /blog/false-dowry-case-defense-section-5-prohibition-act-bangladesh,/bn/blog/mithya-yautuk-mamla-badir-shasti-5-dhara-2026-bn,1.0,json_reciprocal_slug_pair
@@ -173,6 +175,7 @@ en_path,bn_path,confidence,evidence
 /blog/khas-land-claim-bangladesh,,unpaired,en_only
 /blog/khul-divorce-wife-rights-bangladesh,,unpaired,en_only
 /blog/labour-law-worker-rights-bangladesh,,unpaired,en_only
+/blog/land-acquisition-compensation-bangladesh,,unpaired,en_only
 /blog/land-dispute-case-bangladesh,,unpaired,en_only
 /blog/land-dispute-legal-remedies-bangladesh,,unpaired,en_only
 /blog/land-fraud-fake-document-case-bangladesh-2026,,unpaired,en_only
@@ -208,6 +211,7 @@ en_path,bn_path,confidence,evidence
 /blog/namjari-tracking-status-check-bangladesh-2026,,unpaired,en_only
 /blog/narcotics-case-law-bangladesh,/bn/blog/narcotics-case-law-bangladesh-bn,1.0,json_reciprocal_slug_pair
 /blog/nid-correction-legal-process-bangladesh,,unpaired,en_only
+/blog/non-compete-nda-law-bangladesh,,unpaired,en_only
 /blog/nrb-dual-citizenship-overseas-nid-succession-certificate-bangladesh,,unpaired,en_only
 /blog/nrb-inherited-property-recover-grabbed-land-dhaka,/bn/blog/probasi-uttaradhikar-dakhol-hoy-jomi-uddhar-dhaka-2026-bn,1.0,json_reciprocal_slug_pair
 /blog/nrb-overseas-divorce-bangladesh,,unpaired,en_only
@@ -269,6 +273,7 @@ en_path,bn_path,confidence,evidence
 /blog/special-marriage-act-1872-bangladesh-foreign-national-interfaith-guide,,unpaired,en_only
 /blog/ssc-hsc-alim-certificate-name-age-correction-bangladesh-affidavit-2026,/bn/blog/ssc-hsc-alim-certificate-name-age-correction-board-court-affidavit-2026,1.0,json_reciprocal_slug_pair
 /blog/ssc-hsc-certificate-father-mother-name-correction-affidavit-bangladesh-2026,,unpaired,en_only
+/blog/stamp-act-unstamped-agreement-bangladesh,,unpaired,en_only
 /blog/start-company-in-bangladesh-non-resident-registration-guide,,unpaired,en_only
 /blog/stay-order-bangladesh-court,/bn/blog/sthagitadesh-bangladesh-adalat,1.0,json_reciprocal_slug_pair
 /blog/stop-land-grabbing-bangladesh-nrb-legal-remedies,,unpaired,en_only
@@ -337,6 +342,7 @@ en_path,bn_path,confidence,evidence
 ,/bn/blog/business-contract-violation-mamla-bangladesh,unpaired,bn_only
 ,/bn/blog/business-partner-pratarana-mamla-partnership-bilupti-2026,unpaired,bn_only
 ,/bn/blog/chakri-theke-ber-kore-dile-shrom-adalat-paoana-2026-bn,unpaired,bn_only
+,/bn/blog/check-harano-gd-stop-payment,unpaired,bn_only
 ,/bn/blog/chek-dishonour-138-ni-act-asami-khalash-defense-2026-bn,unpaired,bn_only
 ,/bn/blog/chek-dishonour-mamla-bangladesh,unpaired,bn_only
 ,/bn/blog/chek-dishonour-mamlar-notun-niyom-2026,unpaired,bn_only
@@ -522,6 +528,7 @@ en_path,bn_path,confidence,evidence
 ,/bn/blog/passport-nid-nam-boyos-shongshodhon-court-affidavit-2026-bn,unpaired,bn_only
 ,/bn/blog/passport-nid-nam-boyos-vool-court-affidavit-2026-bn,unpaired,bn_only
 ,/bn/blog/passport-visa-jaliyati-manobpachar-mamla-bail-2026-bn,unpaired,bn_only
+,/bn/blog/patent-design-nibondhon-ain-bangladesh,unpaired,bn_only
 ,/bn/blog/pending-case-passport-police-verification-clearance-2026,unpaired,bn_only
 ,/bn/blog/pita-jibito-thakle-sontan-sampatti-dabi-ain-bangladesh,unpaired,bn_only
 ,/bn/blog/pita-mata-bhoronposhon-ain-sontan-ucched-heba-batil-2026-bn,unpaired,bn_only
@@ -557,9 +564,11 @@ en_path,bn_path,confidence,evidence
 ,/bn/blog/rs-bs-khatian-shongshodhon-deyani-mamla-2026,unpaired,bn_only
 ,/bn/blog/rs-khatian-check-vua-porcha-chenar-upay-2026-bn,unpaired,bn_only
 ,/bn/blog/rs-survey-bangladesh-bn,unpaired,bn_only
+,/bn/blog/samoyik-borokhasto-bibhagio-mamla-bangladesh,unpaired,bn_only
 ,/bn/blog/sampatti-uphar-danapatra-dalil-niyom-2026,unpaired,bn_only
 ,/bn/blog/sampatti-uttoradhikar-ain-2026-bn,unpaired,bn_only
 ,/bn/blog/sarkari-khas-jomi-chenar-upay-bondobosto-niyom,unpaired,bn_only
+,/bn/blog/share-hostantor-form-117-bangladesh,unpaired,bn_only
 ,/bn/blog/shishu-hifazat-bangladesh-bn,unpaired,bn_only
 ,/bn/blog/shishu-hifsajot-parents-odhikar-bangladesh,unpaired,bn_only
 ,/bn/blog/shishu-santoner-custody-lalor-palon-family-court-2026-bn,unpaired,bn_only
@@ -593,6 +602,7 @@ en_path,bn_path,confidence,evidence
 ,/bn/blog/thana-mamla-na-nile-cr-case-nalishi-mamla-prokriya-2026-bn,unpaired,bn_only
 ,/bn/blog/thanay-ovijog-dakhil-online-gd-korar-niyom-2026,unpaired,bn_only
 ,/bn/blog/tin-batil-korar-niyom-bangladesh,unpaired,bn_only
+,/bn/blog/tottho-odhikar-ain-abedon-bangladesh,unpaired,bn_only
 ,/bn/blog/trademark-brand-logo-registration-bangladesh,unpaired,bn_only
 ,/bn/blog/trademark-churi-nakol-brand-pratikar-ain-2026-bn,unpaired,bn_only
 ,/bn/blog/udgam-kar-tds-bivaad-bangladesh,unpaired,bn_only

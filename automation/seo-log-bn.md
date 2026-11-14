@@ -295,8 +295,31 @@
 - `তালাক প্রত্যাহার / তালাক নোটিশ` → `dupcheck` (০.৮০ কভারেজ); প্রতিস্থাপন: `jaminjoggo-ojaminjoggo-dhara-ain-bangladesh`।
 - `সুনির্দিষ্ট প্রতিকার আইন ৪২ ধারা` → `dupcheck VERDICT: REJECT` (০.৭৩ কভারেজ); প্রতিস্থাপন: `matrittokalin-chuti-shrom-ain-bangladesh`।
 
+---
 
+## রান তারিখ: ২০২৬-১১-১৬ (দৈনিক কনটেন্ট ব্যাচ: ৫টি বাংলা + ৫টি ইংরেজি ও মনিটাইজেশন/সিটিআর সংস্কার)
+- **রানের তারিখ:** 2026-11-16 (`TODAY=2026-11-16`)
+- **MODE:** `daily-content-batch` + Track 1 (সার্ভিস পেজ AdSense + NRB ফানেল) + Track 2 (Title/Meta মেরামত) + সাইটম্যাপ তারিখ ত্রুটি সংশোধন
+- **সর্বমোট পোস্ট সংখ্যা:** বাংলা ৪৪১ + ইংরেজি ২৯৯ = ৭৪০টি সক্রিয় আর্টিকেল
+- **মানদণ্ড যাচাই:** প্রতিটি বাংলা পোস্টে ৭০০–১,১০০ শব্দসীমা (৯৯৪–১,০৪০ শব্দ FAQ সহ; ৬৬৬–৬৯৩ শব্দ মূল অংশ), ৫টি H2 সেকশন (১২০–১৫৪ শব্দ), ৫টি FAQ (৩৫–৪০ শব্দ), ৮–১২টি অভ্যন্তরীণ লিংক, ১টি `<table>` ও ১টি `<ol>`/`<ul>`, এবং `dupcheck.py VERDICT: PUBLISH`।
 
+### প্রকাশিত ৫টি নতুন বাংলা পোস্ট ও লাইভ ইনবাউন্ড-লিংক ম্যানিফেস্ট:
+1. **`samoyik-borokhasto-bibhagio-mamla-bangladesh`** — `সাময়িক বরখাস্ত ও বিভাগীয় মামলার আইনি প্রতিকার` (৪৭ অক্ষর)
+   - *আইন ও ধারা:* সরকারি কর্মচারী (শৃঙ্খলা ও আপিল) বিধিমালা ২০১৮ (বিধি ৪, ৭, ১২, ১৬), BSR Part-I বিধি ৭১, Administrative Tribunals Act 1980 ধারা ৪। শব্দ: ৯৯৪ (FAQ সহ) | `dupcheck: PUBLISH` (সর্বোচ্চ সিমিলারিটি ০.৩৭৬)
+   - *Live Inbound Links Wired:* `/bn/blog/administrative-tribunal-shorkari-chakri-bodli-shasti-mamla-2026-bn`, `/bn/blog/shorkari-chakri-pension-gratuity-atke-rakhle-tribunal-writ-2026-bn`
+2. **`tottho-odhikar-ain-abedon-bangladesh`** — `তথ্য অধিকার আইনে তথ্য চাওয়ার আবেদন ও আপিল` (৪২ অক্ষর)
+   - *আইন ও ধারা:* তথ্য অধিকার আইন ২০০৯ (ধারা ৪, ৭, ৮, ৯, ১০, ২৪, ২৫, ২৭), সংবিধান অনুচ্ছেদ ৩৯। শব্দ: ১,০৪০ (FAQ সহ) | `dupcheck: PUBLISH` (সর্বোচ্চ সিমিলারিটি ০.৩৩১)
+   - *Live Inbound Links Wired:* `/bn/blog/rit-petition-ki-haikort-prokriya-khoroch-bangladesh`, `/bn/blog/jomi-kharij-e-namjari-niyom-khoroch-2026`
+3. **`patent-design-nibondhon-ain-bangladesh`** — `পেটেন্ট ও শিল্প-নকশা নিবন্ধন আইন ও প্রক্রিয়া` (৪৫ অক্ষর)
+   - *আইন ও ধারা:* বাংলাদেশ পেটেন্ট আইন ২০২৩ (ধারা ৫, ১১–২২, ৩৩), বাংলাদেশ শিল্প-নকশা আইন ২০২৩ (ধারা ৪, ১৫, ২১)। শব্দ: ৯৯৬ (FAQ সহ) | `dupcheck: PUBLISH` (সর্বোচ্চ সিমিলারিটি ০.৩০০)
+   - *Live Inbound Links Wired:* `/bn/blog/trademark-brand-logo-registration-bangladesh`, `/bn/blog/copyright-ain-2023-digital-content-churi-khotipuron-mamla-2026-bn`
+4. **`share-hostantor-form-117-bangladesh`** — `কোম্পানির শেয়ার হস্তান্তর ও ফর্ম ১১৭ নিয়ম` (৪৩ অক্ষর)
+   - *আইন ও ধারা:* কোম্পানি আইন ১৯৯৪ (ধারা ৩৮, ৪৩, ১১৫), স্ট্যাম্প আইন ১৮৯৯ তফসিল-১ অনুচ্ছেদ ৬২(ক) (১.৫% স্ট্যাম্প ডিউটি)। শব্দ: ৯৯৪ (FAQ সহ) | `dupcheck: PUBLISH` (সর্বোচ্চ সিমিলারিটি ০.৩১০)
+   - *Live Inbound Links Wired:* `/bn/blog/company-garar-khoroch-prokriya-bangladesh`, `/bn/blog/director-opasharon-share-transfer-bibad-rjsc-2026-bn`
+5. **`check-harano-gd-stop-payment`** — `ব্যাংকের চেক হারালে জিডি ও পেমেন্ট স্টপ নিয়ম` (৪৫ অক্ষর)
+   - *আইন ও ধারা:* Negotiable Instruments Act 1881 ধারা ১৩৮ ও ১১৮(ক), CrPC ১৮৯৮ ধারা ১৫৪/১৫৫, দণ্ডবিধি ৪৬৭/৪৭১। শব্দ: ১,০২৬ (FAQ সহ) | `dupcheck: PUBLISH` (সর্বোচ্চ সিমিলারিটি ০.৩৭৩)
+   - *Live Inbound Links Wired:* `/bn/blog/chek-dishonour-mamla-bangladesh`, `/bn/blog/online-gd-korar-niyom-police-thana-bangladesh-2026`
 
-
-
+### গেট-পর্যায়ে বাতিলকৃত ও সংশোধিত প্রার্থী:
+- `সড়ক পরিবহন আইন ২০১৮ ক্ষতিপূরণ` → পূর্বের `shorok-durghotona-khotipuran-claim-trust-fund-2026-bn` (০.৪২০ সিমিলারিটি) থাকায় বাতিল; প্রতিস্থাপন: `tottho-odhikar-ain-abedon-bangladesh`।
+- ৫ শব্দের বেশি স্লাগ (`company-share-hostantor-form-117-bangladesh`, `bank-check-harano-gd-stop-payment-bangladesh`) সংক্ষিপ্ত করে যথাক্রমে ৫-শব্দের স্লাগে রূপান্তরিত।

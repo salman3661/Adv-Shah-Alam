@@ -5,8 +5,15 @@ import { telLink, waLink } from '../data/contactInfo';
 import { MessageCircle, Phone, CheckCircle, ArrowLeft, ArrowRight, ChevronDown, AlertTriangle, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { sanitizeHtml } from '../utils/sanitizeHtml';
+import AdSenseAd from './AdSenseAd';
 
 const BASE = 'https://www.advmdshahalam.me';
+const SERVICE_AD_SLOTS = {
+    top: '8630877987',
+    mid1: '9118178745',
+    mid2: '5230990345',
+    bottom: '5064091502',
+};
 
 /**
  * Reusable service page layout.
@@ -16,10 +23,11 @@ const BASE = 'https://www.advmdshahalam.me';
 const ServicePage = ({ metaTitle, metaDesc, canonicalUrl, h1, intro, coverage, faqItems, ctaText, contextNote, relatedBlogLinks, relatedServices, howWeHelp }) => {
     const [openFaq, setOpenFaq] = useState(null);
 
-    // Normalise canonical to use the non-www BASE domain
+    // Normalise canonical to use the www BASE domain
     const wwwCanonical = canonicalUrl
         ? canonicalUrl.replace('https://www.advmdshahalam.me', BASE)
         : null;
+    const isBn = Boolean(wwwCanonical?.includes('/bn/'));
 
     const breadcrumbSchema = wwwCanonical ? {
         '@context': 'https://schema.org',
@@ -162,6 +170,18 @@ const ServicePage = ({ metaTitle, metaDesc, canonicalUrl, h1, intro, coverage, f
                 </div>
             </section>
 
+            {/* Ad Unit 1: High-intent service page top slot (below hero CTA) */}
+            <div className="container mx-auto px-6 max-w-5xl py-6">
+                <AdSenseAd
+                    slot={SERVICE_AD_SLOTS.top}
+                    format="auto"
+                    responsive={true}
+                    labelText={isBn ? 'বিজ্ঞাপন' : 'Advertisement'}
+                    minHeight={250}
+                    densityGroup="service"
+                />
+            </div>
+
             {/* Coverage — theme-aware */}
             <section className="py-16" style={{ background: 'var(--bg)' }}>
                 <div className="container mx-auto px-6 max-w-5xl">
@@ -185,6 +205,19 @@ const ServicePage = ({ metaTitle, metaDesc, canonicalUrl, h1, intro, coverage, f
                     )}
                 </div>
             </section>
+
+            {/* Ad Unit 2: Service page mid-content unit */}
+            <div className="container mx-auto px-6 max-w-5xl py-6">
+                <AdSenseAd
+                    slot={SERVICE_AD_SLOTS.mid1}
+                    format="fluid"
+                    layout="in-article"
+                    responsive={true}
+                    labelText={isBn ? 'বিজ্ঞাপন' : 'Advertisement'}
+                    minHeight={250}
+                    densityGroup="service"
+                />
+            </div>
 
             {/* How We Help You — high-conversion content block */}
             {howWeHelp && (
@@ -321,6 +354,21 @@ const ServicePage = ({ metaTitle, metaDesc, canonicalUrl, h1, intro, coverage, f
                 </section>
             )}
 
+            {/* Ad Unit 3 (EN service page): post-FAQ slot */}
+            {!isBn && (
+                <div className="container mx-auto px-6 max-w-5xl py-6">
+                    <AdSenseAd
+                        slot={SERVICE_AD_SLOTS.mid2}
+                        format="fluid"
+                        layout="in-article"
+                        responsive={true}
+                        labelText="Advertisement"
+                        minHeight={250}
+                        densityGroup="service"
+                    />
+                </div>
+            )}
+
             {/* Further Reading — service → blog internal linking */}
             {relatedBlogLinks?.length > 0 && (
                 <section className="py-14" style={{ background: 'var(--bg)' }}>
@@ -380,6 +428,20 @@ const ServicePage = ({ metaTitle, metaDesc, canonicalUrl, h1, intro, coverage, f
                 </section>
             )}
 
+            {/* Ad Unit 4 (EN service page): bottom before consultation CTA */}
+            {!isBn && (
+                <div className="container mx-auto px-6 max-w-5xl py-6">
+                    <AdSenseAd
+                        slot={SERVICE_AD_SLOTS.bottom}
+                        format="auto"
+                        responsive={true}
+                        labelText="Advertisement"
+                        minHeight={250}
+                        densityGroup="service"
+                    />
+                </div>
+            )}
+
             <section className="py-16" style={{ background: 'var(--bg)' }}>
                 <div className="container mx-auto px-6 max-w-5xl">
                     <motion.div initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
@@ -396,7 +458,7 @@ const ServicePage = ({ metaTitle, metaDesc, canonicalUrl, h1, intro, coverage, f
                             Consultation available via WhatsApp, phone, or in-chamber visit. Fees vary by case type.
                             Payment accepted via <strong>bKash:</strong> 01712655546
                         </p>
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                        <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center">
                             <a href={waLink(`Hello, I need legal consultation regarding your "${h1}" service.`)} target="_blank" rel="noopener noreferrer"
                                 className="btn-whatsapp text-sm">
                                 <MessageCircle size={17} /> WhatsApp Now
@@ -404,6 +466,11 @@ const ServicePage = ({ metaTitle, metaDesc, canonicalUrl, h1, intro, coverage, f
                             <Link to="/#contact" className="btn-secondary text-sm">
                                 Send Message
                             </Link>
+                            {!isBn && (
+                                <Link to="/nrb-legal-help" className="btn-secondary text-sm" style={{ borderColor: 'var(--accent)', color: 'var(--accent)' }}>
+                                    NRB Remote Review ($30–$75)
+                                </Link>
+                            )}
                         </div>
                     </motion.div>
                 </div>

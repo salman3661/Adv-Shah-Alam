@@ -1,0 +1,118 @@
+{
+  "slug": "non-compete-nda-law-bangladesh",
+  "title": "Non-Compete and NDA Enforceability in Bangladesh",
+  "metaTitle": "Non-Compete and NDA Enforceability in Bangladesh",
+  "metaDescription": "When are non-compete clauses and NDAs enforceable in Bangladesh? Contract Act 1872 Section 27, trade secret injunctions, goodwill exception, and remedies.",
+  "category": "Corporate Law",
+  "readTime": "7 min read",
+  "publishedDate": "2026-11-16",
+  "lastModified": "2026-11-16",
+  "keywords": [
+    "non compete clause bangladesh law",
+    "nda enforceability bangladesh",
+    "contract act 1872 section 27 restraint of trade",
+    "confidentiality agreement breach remedies bd",
+    "employee poaching trade secret injunction bangladesh"
+  ],
+  "heroIntro": "Under Section 27 of the Contract Act 1872, post-termination non-compete clauses restraining employees from joining competitors or practicing a profession are generally void in Bangladesh, except upon sale of business goodwill. Conversely, Non-Disclosure Agreements (NDAs) and during-employment confidentiality covenants protecting genuine trade secrets remain enforceable through injunctions and damages.",
+  "quickAnswer": {
+    "heading": "At a Glance: Non-Compete & NDA Law in Bangladesh",
+    "text": "Post-employment non-competes are void under Section 27; NDAs remain enforceable.",
+    "points": [
+      "Statute: Contract Act 1872 (Secs. 27, 73, 74) & Specific Relief Act 1877 (Secs. 54, 57)",
+      "Goodwill Carve-Out: Local non-compete valid solely upon goodwill sale (Sec. 27 Exc. 1)",
+      "Valid Protections: NDAs, IP assignment, during-employment exclusivity, trade secrets",
+      "Forums: Civil Judge Court (Injunction & Damages) or Labour Court disputes"
+    ]
+  },
+  "toc": [
+    {
+      "id": "section-0",
+      "title": "Section 27 Rule Against Post-Employment Non-Competes"
+    },
+    {
+      "id": "section-1",
+      "title": "Legal Distinction: Non-Compete vs. NDA vs. Non-Solicit"
+    },
+    {
+      "id": "section-2",
+      "title": "How to Enforce NDA & Trade Secret Breaches in Court"
+    },
+    {
+      "id": "section-3",
+      "title": "Drafting Checklist for Enforceable Commercial Clauses"
+    },
+    {
+      "id": "section-4",
+      "title": "Strategic Remedies for Companies, Startups, and Employees"
+    }
+  ],
+  "sections": [
+    {
+      "id": "section-0",
+      "title": "Section 27 Rule Against Post-Employment Non-Competes",
+      "content": "<p><strong>Section 27 of the Contract Act 1872 declares every agreement by which anyone is restrained from exercising a lawful profession, trade, or business of any kind void to that extent.</strong> Unlike foreign courts applying flexible \"reasonable duration\" tests, Bangladeshi civil jurisprudence applies Section 27 strictly to uphold occupational freedom guaranteed by Article 40 of the Constitution.</p>\n<p>Consequently, an employment contract barring an engineer, software developer, or sales manager from working at any competing business for two years after resignation cannot be enforced post-termination. The sole statutory exception under Section 27 Exception 1 permits reasonable local non-compete restrictions only when a business owner sells company goodwill while the buyer conducts similar operations.</p>\n<p>By contrast, covenants active <em>during</em> ongoing employment—forbidding side-moonlighting while collecting monthly salary—remain fully valid. Employers pursuing <a href=\"/blog/contract-breach-legal-action-bangladesh\">contractual breach claims</a> must simultaneously observe <a href=\"/blog/workplace-harassment-wrongful-termination-labour-law-bangladesh-2026\">Bangladesh Labour Act protections</a> and <a href=\"/blog/copyright-act-2023-digital-infringement-bangladesh\">Copyright Act 2023 IP ownership</a>.</p>\n<figure><img src=\"/images/covers/business.webp\" alt=\"Non-Compete and NDA Enforceability in Bangladesh — Contract Act Section 27\" width=\"1200\" height=\"630\" loading=\"eager\" fetchpriority=\"high\" style=\"border-radius:12px;max-width:100%;height:auto;\" /></figure>"
+    },
+    {
+      "id": "section-1",
+      "title": "Legal Distinction: Non-Compete vs. NDA vs. Non-Solicit",
+      "content": "<p><strong>Bangladeshi courts clearly separate void employment bans under Section 27 from valid Non-Disclosure Agreements (NDAs) that prevent misappropriation of proprietary source code, pricing formulas, and confidential customer records.</strong> Protecting trade secrets stops unfair data theft without barring former staff from earning a lawful livelihood elsewhere.</p>\n<p>Similarly, paid garden-leave notice periods—keeping senior executives on notice payroll away from office operations—stay outside Section 27 invalidity because the employment relationship has not yet ended:</p>\n<table>\n<thead><tr><th>Clause Category</th><th>Legal Status in BD</th><th>Permitted Remedy</th></tr></thead>\n<tbody>\n<tr><td>Post-Exit Employee Non-Compete</td><td>Void (Sec. 27)</td><td>Unenforceable after resignation</td></tr>\n<tr><td>Business Goodwill Sale Restraint</td><td>Valid (Sec. 27 Exc. 1)</td><td>Negative injunction (Sec. 57 SRA)</td></tr>\n<tr><td>Confidentiality NDA</td><td>Valid &amp; Binding</td><td>Injunction + Sec. 73 damages</td></tr>\n<tr><td>During-Employment Exclusivity</td><td>Valid while employed</td><td>Disciplinary termination &amp; damages</td></tr>\n<tr><td>IP &amp; Trade Secret Assignment</td><td>Valid (Copyright/Contract)</td><td>Civil seizure, injunction &amp; damages</td></tr>\n</tbody>\n</table>\n<p>While updating <a href=\"/blog/company-annual-compliance-bangladesh\">corporate governance policies</a>, frame commercial protections around <a href=\"/blog/breach-of-contract-damages-specific-performance-bangladesh-guide\">Sections 73–74 breach damages</a> rather than career bans.</p>"
+    },
+    {
+      "id": "section-2",
+      "title": "How to Enforce NDA & Trade Secret Breaches in Court",
+      "content": "<p><strong>When a departing director, partner, or employee copies proprietary files, supplier bids, or source code, the injured business can immediately seek a civil injunction under Order XXXIX Rules 1–2 of the Code of Civil Procedure 1908.</strong> Swift digital preservation drives urgent court hearings:</p>\n<ol>\n<li><strong>Preserve Digital Access Logs:</strong> Secure corporate Workspace audit trails, Git commit records, USB downloads, and email forwarding logs proving exact confidential files transferred prior to exit.</li>\n<li><strong>Issue a Formal Cease-and-Desist Legal Notice:</strong> Serve an advocate notice demanding verified return and deletion of proprietary files citing the NDA and Contract Act Section 73.</li>\n<li><strong>File Civil Injunction Suit Under SRA Section 54:</strong> Seek perpetual and ad-interim restraint orders under Specific Relief Act Sections 54/57 and CPC Order XXXIX Rules 1–2 to freeze disclosure.</li>\n<li><strong>Claim Quantified Damages &amp; Parallel Action:</strong> Establish measurable loss under Section 73 or pre-agreed liquidated sums under Section 74 alongside criminal breach remedies where corporate property was converted.</li>\n</ol>\n<p>Examine how <a href=\"/blog/injunction-procedure-bangladesh\">civil injunction criteria</a> apply alongside serving a compliant <a href=\"/blog/how-to-file-legal-notice-bangladesh\">cease-and-desist notice</a>.</p>"
+    },
+    {
+      "id": "section-3",
+      "title": "Drafting Checklist for Enforceable Commercial Clauses",
+      "content": "<p><strong>Careful legal drafting converts unenforceable foreign non-compete templates into durable confidentiality, intellectual property assignment, and severance frameworks built for Section 27 compliance.</strong> Incorporate these six elements before onboarding senior engineers, executives, or outsourcing vendors:</p>\n<ul>\n<li>Specific definition of non-public \"Confidential Information\" covering algorithms, supplier margins, bid pricing, and customer contracts—separate from ordinary job skills.</li>\n<li>Express intellectual property assignment vesting inventions, software code, designs, and brand assets created during engagement squarely in the company.</li>\n<li>Severability clause guaranteeing that if any non-compete sentence is struck under Section 27, confidentiality, audit, and indemnity duties remain binding.</li>\n<li>Structured exit clearance requiring laptop sanitization, credential revocation, and signed asset return receipts prior to final <a href=\"/blog/company-registration-cost-bangladesh\">equity or severance</a> release.</li>\n<li>Paid garden-leave notice clauses (60–90 days) for senior officers instead of invalid post-employment occupational prohibitions.</li>\n<li>Clear governing law and jurisdiction clauses specifying Dhaka civil courts or <a href=\"/blog/register-foreign-owned-company-fdi-branch-office-bangladesh-guide\">commercial arbitration</a> venues.</li>\n</ul>\n<p>Always execute commercial NDAs on proper non-judicial stamp paper to ensure trouble-free admissibility under the Stamp Act 1899.</p>"
+    },
+    {
+      "id": "section-4",
+      "title": "Strategic Remedies for Companies, Startups, and Employees",
+      "content": "<p><strong>Aligning executive and vendor agreements with Contract Act Section 27 prevents empty legal threats and reinforces legitimate trade-secret protection before Dhaka civil courts.</strong> Employers routinely weaken valid confidentiality claims by leading with unenforceable non-compete warnings, whereas departing professionals sometimes forfeit earned salary or bonuses out of unnecessary fear of void exit bans.</p>\n<p>Experienced corporate counsel isolates void restraints from valid <a href=\"/blog/can-you-sue-for-unpaid-money-oral-agreement-bangladesh\">contractual recovery claims</a> and obtains urgent <a href=\"/blog/stay-order-bangladesh-court\">court stay orders</a> whenever proprietary code or databases leak. Consult our <a href=\"/services/company-corporate-lawyer\">Company &amp; Corporate Lawyer in Bangladesh</a> team for tailored NDA audits and injunction filings.</p>\n<p>International founders and NRBs can book document vetting directly through <a href=\"/nrb-legal-help\">NRB Legal Help</a> or review <a href=\"/advocate-md-shah-alam\">Advocate Md. Shah Alam</a> credentials. Reach us on <a href=\"https://wa.me/8801955802007\">WhatsApp (+8801955802007)</a>, <a href=\"tel:+8801712655546\">call +8801712655546</a>, or visit House 46, Road 6/B, Sector 12, Uttara West, Dhaka 1230.</p>"
+    }
+  ],
+  "relatedServiceLinks": [
+    {
+      "to": "/services/company-corporate-lawyer",
+      "text": "Company & Corporate Lawyer Bangladesh"
+    },
+    {
+      "to": "/blog/breach-of-contract-damages-specific-performance-bangladesh-guide",
+      "text": "Breach of Contract Damages & Suits"
+    },
+    {
+      "to": "/blog/injunction-procedure-bangladesh",
+      "text": "Civil Injunction Procedure in BD"
+    },
+    {
+      "to": "/nrb-legal-help",
+      "text": "NRB & Foreign Investor Legal Help"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Are non-compete agreements enforceable against employees in Bangladesh?",
+      "answer": "No. Under Section 27 of the Contract Act 1872, post-termination non-compete clauses barring employees from joining competitors or practicing a trade are void in Bangladesh. The sole exception applies to reasonable local restraints agreed when selling business goodwill while the buyer continues similar business."
+    },
+    {
+      "question": "Is a Non-Disclosure Agreement (NDA) legally binding in Bangladesh?",
+      "answer": "Yes. Unlike post-employment career bans, Non-Disclosure Agreements (NDAs) protecting trade secrets, source code, pricing models, and client lists are legally binding in Bangladesh and enforceable through injunctions under Specific Relief Act Section 54 and damages under Contract Act Section 73."
+    },
+    {
+      "question": "Can an employer withhold salary or gratuity if staff join a rival?",
+      "answer": "No. Earned wages or accrued statutory gratuity cannot be forfeited simply because an employee joins a competitor. Employers cannot bypass Section 27 of the Contract Act 1872 indirectly by withholding earned compensation unless authorized deductions apply for proved damage."
+    },
+    {
+      "question": "How quickly can a company get an injunction for an NDA breach?",
+      "answer": "After filing a civil suit paired with a documented temporary injunction petition under CPC Order XXXIX Rules 1 and 2, Dhaka civil courts can issue urgent show-cause or ad-interim restraining orders within days when clear digital proof demonstrates imminent trade-secret leakage."
+    },
+    {
+      "question": "Does choosing foreign governing law make an employee non-compete valid in BD?",
+      "answer": "No. Even when a contract selects foreign governing law, Bangladeshi courts refuse to enforce clauses violating mandatory domestic public policy statutes like Section 27 of the Contract Act 1872 against professionals residing and performing work inside Bangladesh."
+    }
+  ],
+  "lang": "en"
+}

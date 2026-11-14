@@ -523,6 +523,60 @@ Autonomous SEO + Content Agent Run Log for Advocate Md. Shah Alam.
 - Total Prerendered Pages: 746
 - Total Sitemap URLs: 755
 
+---
 
+## Run: 2026-11-16 (Daily Batch: 5 EN + 5 BN, Track 1 Monetization/NRB Funnel, Track 2 Title/Meta Rescue & Sitemap Clock Fix)
 
+- **Date:** 2026-11-16 (`TODAY=2026-11-16`)
+- **Mode:** `daily-content-batch` + Monetization/CRO + Title/Meta CTR Rescue + Sitemap Fix
+- **Engineering & Monetization Fixes Deployed:**
+  - **Track 1 (AdSense + NRB Funnel):** Added zero-CLS reserved-height AdSense units to [`ServicePage.jsx`](file:///home/antigravity/salman3661/Adv-Shah-Alam/src/components/ServicePage.jsx) (4 EN + 2 BN) and wired `/nrb-legal-help` (`\$30 / \$50 / \$75`) consultation CTAs across [`ServicePage.jsx`](file:///home/antigravity/salman3661/Adv-Shah-Alam/src/components/ServicePage.jsx) and [`BlogPost.jsx`](file:///home/antigravity/salman3661/Adv-Shah-Alam/src/pages/BlogPost.jsx).
+  - **Track 2 (Title/Meta CTR Rescue):** Fixed 17 zero-CTR Page-1 queries (`title-test-plan.csv` Batch 2) and repaired 70 chopped trailing-connector `metaTitle` + 124 truncated `metaDescription` strings across EN & BN JSONs.
+  - **Vercel Sitemap Clock Fix:** Removed stale `post.publishedDate > TODAY` gate from `generate_sitemap.js` and `generate_rss.js` so Vercel container builds (UTC clock lagging behind batch dates) include all 2026-11-15 and 2026-11-16 posts immediately in live `/sitemap.xml` and `/rss*.xml`.
 
+### Published EN Articles (5 New Statute-Grounded Guides)
+
+1. **`land-acquisition-compensation-bangladesh`**
+   - **Title:** `Land Acquisition Compensation Law in Bangladesh` (47 chars)
+   - **Metrics:** 871 words (excl. FAQs) / 1,224 words (incl. FAQs) | 5 sections (148–174w) | 5 FAQs (39–44w) | 13 internal links | `dupcheck: VERDICT: PUBLISH` (top sim `0.313`)
+   - **Statutes:** Acquisition and Requisition of Immovable Property Act 2017 (Sections 4–12, 27, 29, 34; 200%–300% solatium), Constitution Article 42.
+   - **Inbound Links Wired (Live):**
+     - `/blog/partition-suit-batwara-mamla-advocate-commissioner-decree-bangladesh-guide`
+     - `/blog/rajuk-eviction-illegal-demolition-writ-petition-high-court-bangladesh`
+
+2. **`non-compete-nda-law-bangladesh`**
+   - **Title:** `Non-Compete and NDA Enforceability in Bangladesh` (48 chars)
+   - **Metrics:** 800 words (excl. FAQs) / 1,149 words (incl. FAQs) | 5 sections (132–165w) | 5 FAQs (37–44w) | 14 internal links | `dupcheck: VERDICT: PUBLISH` (top sim `0.270`)
+   - **Statutes:** Contract Act 1872 (Sections 27, 73–74), Specific Relief Act 1877 (Sections 54, 57), Copyright Act 2023.
+   - **Inbound Links Wired (Live):**
+     - `/blog/workplace-harassment-wrongful-termination-labour-law-bangladesh-2026`
+     - `/blog/breach-of-contract-damages-specific-performance-bangladesh-guide`
+
+3. **`environment-clearance-certificate-bangladesh`**
+   - **Title:** `Environment Clearance Certificate Rules Bangladesh` (50 chars)
+   - **Metrics:** 789 words (excl. FAQs) / 1,133 words (incl. FAQs) | 5 sections (138–164w) | 5 FAQs (36–42w) | 12 internal links | `dupcheck: VERDICT: PUBLISH` (top sim `0.326`)
+   - **Statutes:** Bangladesh Environment Conservation Act 1995 (Section 12), Environment Conservation Rules 2023 (Green, Yellow, Orange, Red).
+   - **Inbound Links Wired (Live):**
+     - `/blog/trade-license-renewal-bangladesh`
+     - `/blog/company-annual-compliance-bangladesh`
+
+4. **`bank-guarantee-lc-injunction-bangladesh`**
+   - **Title:** `Bank Guarantee and LC Injunction Law Bangladesh` (47 chars)
+   - **Metrics:** 944 words (excl. FAQs) / 1,330 words (incl. FAQs) | 5 sections (163–217w) | 5 FAQs (44–47w) | 13 internal links | `dupcheck: VERDICT: PUBLISH` (top sim `0.317`)
+   - **Statutes:** Contract Act 1872 (Section 126), Specific Relief Act 1877 (Sections 42, 54), Code of Civil Procedure 1908 (Order XXXIX Rules 1–2), ICC UCP 600 / URDG 758.
+   - **Inbound Links Wired (Live):**
+     - `/blog/stay-order-bangladesh-court`
+     - `/blog/injunction-procedure-bangladesh`
+
+5. **`stamp-act-unstamped-agreement-bangladesh`**
+   - **Title:** `Unstamped Agreement Admissibility Stamp Act Rules` (49 chars)
+   - **Metrics:** 776 words (excl. FAQs) / 1,144 words (incl. FAQs) | 5 sections (135–160w) | 5 FAQs (40–45w) | 12 internal links | `dupcheck: VERDICT: PUBLISH` (top sim `0.309`)
+   - **Statutes:** Stamp Act 1899 (Sections 18, 33, 35, 36, 38, 40, 42 & Schedule I), Registration Act 1908 (Sections 17, 49).
+   - **Inbound Links Wired (Live):**
+     - `/blog/can-you-sue-for-unpaid-money-oral-agreement-bangladesh`
+     - `/blog/seller-refusing-land-registration-bayna-deed-specific-performance-bangladesh`
+
+### Cumulative Site Totals (as of 2026-11-16)
+- Total EN Posts: 299 (294 + 5 new)
+- Total BN Posts: 441 (436 + 5 new)
+- Total Active Blog Posts: 740 (+20 host posts refreshed `lastModified: 2026-11-16`)

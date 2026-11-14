@@ -352,6 +352,10 @@ const ChamberPromoCard = () => (
             </div>
         </div>
         <div style={{ height: '1px', background: 'linear-gradient(90deg, transparent, rgba(148, 163, 184, 0.2), transparent)' }} />
+        <Link to="/nrb-legal-help" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.375rem', padding: '0.625rem 0.75rem', fontSize: '0.72rem', fontWeight: 700, color: '#E2C15A', textDecoration: 'none', background: 'rgba(201, 162, 39, 0.08)', transition: 'background 0.15s' }}>
+            <Scale size={12} /> NRB Video Review ($30) &amp; Deed Vetting →
+        </Link>
+        <div style={{ height: '1px', background: 'linear-gradient(90deg, transparent, rgba(148, 163, 184, 0.2), transparent)' }} />
         <Link to="/contact" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.375rem', padding: '0.6rem', fontSize: '0.7rem', fontWeight: 600, color: 'rgba(147, 197, 253, 0.85)', textDecoration: 'none', transition: 'color 0.15s' }}
             onMouseEnter={e => e.currentTarget.style.color = '#93C5FD'}
             onMouseLeave={e => e.currentTarget.style.color = 'rgba(147, 197, 253, 0.85)'}>
@@ -1244,6 +1248,28 @@ const BlogPostInner = () => {
                                 >
                                     <MapPin size={16} />
                                     <span>Book Chamber / Online</span>
+                                </Link>
+                                <Link
+                                    to="/nrb-legal-help"
+                                    data-cta="post-bottom-nrb"
+                                    style={{
+                                        display: 'inline-flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        gap: '0.45rem',
+                                        minHeight: '44px',
+                                        padding: '0.7rem 1.2rem',
+                                        borderRadius: '0.65rem',
+                                        background: 'rgba(201, 162, 39, 0.14)',
+                                        border: '1px solid rgba(201, 162, 39, 0.45)',
+                                        color: '#FDE68A',
+                                        fontWeight: 700,
+                                        fontSize: '0.9rem',
+                                        textDecoration: 'none',
+                                    }}
+                                >
+                                    <Scale size={16} />
+                                    <span>NRB Services ($30–$75)</span>
                                 </Link>
                             </div>
                         </div>

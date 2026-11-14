@@ -1,12 +1,18 @@
 {
   "slug": "divorce-process-bangladesh-complete-guide",
-  "metaTitle": "Divorce Process in Bangladesh 2026 | Complete Legal Guide",
+  "metaTitle": "Divorce Process in Bangladesh | Legal Steps & Time",
   "category": "Family Law",
   "title": "Divorce Process in Bangladesh 2026: Complete Guide for Muslim, Hindu & Court Divorce",
-  "metaDescription": "A complete guide to the divorce process in Bangladesh in 2026 — covering Muslim talaq/khula, Hindu dissolution, court procedures, alimony, and custody.",
-  "keywords": ["divorce process Bangladesh", "Muslim divorce Bangladesh", "khula divorce Bangladesh", "how to get divorced in Bangladesh", "family court Bangladesh divorce"],
+  "metaDescription": "Understand the legal divorce process in Bangladesh under MFLO 1961: Muslim talaq notice, judicial khul, 90-day iddat, dower, and Family Court procedures.",
+  "keywords": [
+    "divorce process Bangladesh",
+    "Muslim divorce Bangladesh",
+    "khula divorce Bangladesh",
+    "how to get divorced in Bangladesh",
+    "family court Bangladesh divorce"
+  ],
   "publishedDate": "2026-07-12",
-  "lastModified": "2026-07-12",
+  "lastModified": "2026-11-15",
   "readTime": "12 min read",
   "heroIntro": "Divorce in Bangladesh is governed by distinct personal laws depending on religious community — Muslim, Hindu, or Christian. Understanding the correct legal process is essential to protecting your rights regarding dower, child custody, alimony, and property. This complete 2026 guide walks you through every step of the Bangladesh divorce process.",
   "quickAnswer": {
@@ -86,13 +92,28 @@
     }
   ],
   "relatedServiceLinks": [
-    {"text": "Divorce Lawyer", "to": "/services/divorce-lawyer"},
-    {"text": "Supreme Court Lawyer", "to": "/services/supreme-court-lawyer"}
+    {
+      "text": "Divorce Lawyer",
+      "to": "/services/divorce-lawyer"
+    },
+    {
+      "text": "Supreme Court Lawyer",
+      "to": "/services/supreme-court-lawyer"
+    }
   ],
   "relatedPosts": [
-    {"text": "How to Choose a Divorce Lawyer in Dhaka", "to": "/blog/divorce-lawyer-dhaka-how-to-choose"},
-    {"text": "How to File for Divorce in Bangladesh", "to": "/blog/how-to-file-divorce-court-bangladesh-2026"},
-    {"text": "Domestic Violence Protection Order Bangladesh", "to": "/blog/domestic-violence-law-bangladesh"}
+    {
+      "text": "How to Choose a Divorce Lawyer in Dhaka",
+      "to": "/blog/divorce-lawyer-dhaka-how-to-choose"
+    },
+    {
+      "text": "How to File for Divorce in Bangladesh",
+      "to": "/blog/how-to-file-divorce-court-bangladesh-2026"
+    },
+    {
+      "text": "Domestic Violence Protection Order Bangladesh",
+      "to": "/blog/domestic-violence-law-bangladesh"
+    }
   ],
   "isDraft": false,
   "lang": "en"

@@ -33,9 +33,8 @@ function getPosts(dir, prefix) {
             }
         })
         .filter(post => {
-            if (!post || post.isDraft || !post.slug) return false;
+            if (!post || post.isDraft || post._draft || !post.slug) return false;
             if (redirectSources.has(`${prefix}/${post.slug}`)) return false;
-            if (post.publishedDate && post.publishedDate > TODAY) return false;
             return true;
         });
 }
