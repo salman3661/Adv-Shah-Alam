@@ -1,10 +1,16 @@
 {
   "slug": "land-dispute-case-bangladesh",
-  "metaTitle": "How to File & Win a Land Dispute Case in Bangladesh | 2026 Guide",
+  "metaTitle": "How to File & Win a Land Dispute Case in Bangladesh",
   "category": "Property Law",
   "title": "How to File and Win a Land Dispute Case in Bangladesh Courts: 2026 Guide",
-  "metaDescription": "Learn how to file and win a land dispute case in Bangladesh. Complete guide covering title suits, partition, declaration, injunction, and property court procedures.",
-  "keywords": ["land dispute Bangladesh", "property dispute Bangladesh", "land case Bangladesh court", "land lawyer Bangladesh", "title suit Bangladesh"],
+  "metaDescription": "Learn how to file and win a land dispute case in Bangladesh. Complete guide covering title suits, partition, declaration, injunction, and property court.",
+  "keywords": [
+    "land dispute Bangladesh",
+    "property dispute Bangladesh",
+    "land case Bangladesh court",
+    "land lawyer Bangladesh",
+    "title suit Bangladesh"
+  ],
   "publishedDate": "2026-07-12",
   "lastModified": "2026-07-12",
   "readTime": "11 min read",
@@ -59,21 +65,54 @@
     }
   ],
   "faqs": [
-    {"question": "How long does a land dispute case take in Bangladesh?", "answer": "A land case at the trial court (Assistant Judge Court) typically takes 3–7 years to reach a final decision. With appeals to the District Court and High Court Division, a land dispute can take 10–15 years in complex cases. Early injunction orders can protect your rights during this period."},
-    {"question": "What is the most important document in a land dispute case in Bangladesh?", "answer": "The CS (Colonial Survey) Khatian is generally considered the most authoritative land record. A registered deed (dastabon) traceable back to the CS khatian, combined with mutation records and tax payment receipts, forms the strongest evidentiary foundation for a land case."},
-    {"question": "Can I file a criminal case along with a civil land case in Bangladesh?", "answer": "Yes. If the opponent has committed forgery, fraud, or criminal trespass, you can simultaneously file criminal complaints under the Penal Code 1860 (Sections 420, 467, 468 for forgery/fraud; Section 447 for criminal trespass) while pursuing your civil title or declaration suit."},
-    {"question": "What is a pre-emption case in Bangladesh?", "answer": "A pre-emption case allows a co-sharer (joint owner) or adjacent holder to purchase land sold to an outsider by exercising their legal priority right. Under the State Acquisition and Tenancy Act 1950, co-sharers in a mouza can apply for pre-emption within a specific time period after the sale."},
-    {"question": "How much does it cost to file a land dispute case in Bangladesh?", "answer": "Court fees are calculated on an ad valorem (percentage of property value) basis. For a property worth BDT 50 lakhs, court fees may range from BDT 50,000–2,00,000. Lawyer fees vary significantly by case complexity and seniority. Overall litigation costs for a contested land case can range from BDT 2,00,000 to several lakhs."}
+    {
+      "question": "How long does a land dispute case take in Bangladesh?",
+      "answer": "A land case at the trial court (Assistant Judge Court) typically takes 3–7 years to reach a final decision. With appeals to the District Court and High Court Division, a land dispute can take 10–15 years in complex cases. Early injunction orders can protect your rights during this period."
+    },
+    {
+      "question": "What is the most important document in a land dispute case in Bangladesh?",
+      "answer": "The CS (Colonial Survey) Khatian is generally considered the most authoritative land record. A registered deed (dastabon) traceable back to the CS khatian, combined with mutation records and tax payment receipts, forms the strongest evidentiary foundation for a land case."
+    },
+    {
+      "question": "Can I file a criminal case along with a civil land case in Bangladesh?",
+      "answer": "Yes. If the opponent has committed forgery, fraud, or criminal trespass, you can simultaneously file criminal complaints under the Penal Code 1860 (Sections 420, 467, 468 for forgery/fraud; Section 447 for criminal trespass) while pursuing your civil title or declaration suit."
+    },
+    {
+      "question": "What is a pre-emption case in Bangladesh?",
+      "answer": "A pre-emption case allows a co-sharer (joint owner) or adjacent holder to purchase land sold to an outsider by exercising their legal priority right. Under the State Acquisition and Tenancy Act 1950, co-sharers in a mouza can apply for pre-emption within a specific time period after the sale."
+    },
+    {
+      "question": "How much does it cost to file a land dispute case in Bangladesh?",
+      "answer": "Court fees are calculated on an ad valorem (percentage of property value) basis. For a property worth BDT 50 lakhs, court fees may range from BDT 50,000–2,00,000. Lawyer fees vary significantly by case complexity and seniority. Overall litigation costs for a contested land case can range from BDT 2,00,000 to several lakhs."
+    }
   ],
   "relatedServiceLinks": [
-    {"text": "Land Lawyer", "to": "/services/land-lawyer"},
-    {"text": "Supreme Court Lawyer", "to": "/services/supreme-court-lawyer"},
-    {"text": "Criminal Lawyer", "to": "/services/criminal-lawyer"}
+    {
+      "text": "Land Lawyer",
+      "to": "/services/land-lawyer"
+    },
+    {
+      "text": "Supreme Court Lawyer",
+      "to": "/services/supreme-court-lawyer"
+    },
+    {
+      "text": "Criminal Lawyer",
+      "to": "/services/criminal-lawyer"
+    }
   ],
   "relatedPosts": [
-    {"text": "Property Registration Process Bangladesh", "to": "/blog/how-to-register-land-bangladesh"},
-    {"text": "How to Challenge a False Criminal Case Bangladesh", "to": "/blog/how-to-stop-false-criminal-case-bangladesh"},
-    {"text": "Family Law Bangladesh Complete Guide", "to": "/blog/family-law-bangladesh-complete-guide"}
+    {
+      "text": "Property Registration Process Bangladesh",
+      "to": "/blog/how-to-register-land-bangladesh"
+    },
+    {
+      "text": "How to Challenge a False Criminal Case Bangladesh",
+      "to": "/blog/how-to-stop-false-criminal-case-bangladesh"
+    },
+    {
+      "text": "Family Law Bangladesh Complete Guide",
+      "to": "/blog/family-law-bangladesh-complete-guide"
+    }
   ],
   "isDraft": false,
   "lang": "en"

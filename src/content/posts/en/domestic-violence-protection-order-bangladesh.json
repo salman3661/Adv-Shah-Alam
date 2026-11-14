@@ -1,10 +1,16 @@
 {
   "slug": "domestic-violence-protection-order-bangladesh",
-  "metaTitle": "Domestic Violence Protection Order Bangladesh | How to Apply",
+  "metaTitle": "Domestic Violence Protection Order Bangladesh | How to",
   "category": "Family Law",
   "title": "Domestic Violence Protection Order in Bangladesh: How to Apply & Know Your Rights",
   "metaDescription": "Learn how to apply for a domestic violence protection order in Bangladesh under the 2010 Act. Understand your rights, emergency relief, and legal process.",
-  "keywords": ["domestic violence Bangladesh", "protection order Bangladesh", "domestic violence law Bangladesh", "family violence legal help Bangladesh", "DVPP Act 2010 Bangladesh"],
+  "keywords": [
+    "domestic violence Bangladesh",
+    "protection order Bangladesh",
+    "domestic violence law Bangladesh",
+    "family violence legal help Bangladesh",
+    "DVPP Act 2010 Bangladesh"
+  ],
   "publishedDate": "2026-07-12",
   "lastModified": "2026-07-12",
   "readTime": "10 min read",
@@ -59,20 +65,50 @@
     }
   ],
   "faqs": [
-    {"question": "Can a man apply for a domestic violence protection order in Bangladesh?", "answer": "The Domestic Violence (Prevention and Protection) Act 2010 primarily protects women and children. Men who are victims of abuse may file complaints under general criminal law provisions of the Penal Code 1860, including sections on assault and criminal intimidation, or seek injunctions through civil courts."},
-    {"question": "How long does a protection order last in Bangladesh?", "answer": "Interim protection orders remain in effect until the final hearing, which typically takes 1 to 3 months. Final protection orders are issued for a specific duration determined by the court and can be renewed or extended if the threat continues."},
-    {"question": "Can I get a protection order without a lawyer?", "answer": "Yes, you can apply yourself. The Domestic Violence Act allows victims to approach the Magistrate directly. However, having a lawyer significantly increases the quality of your application, the likelihood of obtaining a strong order, and your ability to enforce it."},
-    {"question": "Will my abuser be arrested when I apply for a protection order?", "answer": "A protection order itself is a civil remedy and does not automatically result in arrest. However, if the abuse constitutes a criminal offense such as assault or rape, a parallel criminal FIR can be filed, potentially leading to arrest. Breach of a protection order is a criminal offense that can lead to arrest."},
-    {"question": "Can I get a protection order against my in-laws, not just my husband?", "answer": "Yes. The 2010 Act covers all members of the shared household, including in-laws who live with you. If your mother-in-law, father-in-law, or other household members are abusing you, they can also be named in the protection order application."}
+    {
+      "question": "Can a man apply for a domestic violence protection order in Bangladesh?",
+      "answer": "The Domestic Violence (Prevention and Protection) Act 2010 primarily protects women and children. Men who are victims of abuse may file complaints under general criminal law provisions of the Penal Code 1860, including sections on assault and criminal intimidation, or seek injunctions through civil courts."
+    },
+    {
+      "question": "How long does a protection order last in Bangladesh?",
+      "answer": "Interim protection orders remain in effect until the final hearing, which typically takes 1 to 3 months. Final protection orders are issued for a specific duration determined by the court and can be renewed or extended if the threat continues."
+    },
+    {
+      "question": "Can I get a protection order without a lawyer?",
+      "answer": "Yes, you can apply yourself. The Domestic Violence Act allows victims to approach the Magistrate directly. However, having a lawyer significantly increases the quality of your application, the likelihood of obtaining a strong order, and your ability to enforce it."
+    },
+    {
+      "question": "Will my abuser be arrested when I apply for a protection order?",
+      "answer": "A protection order itself is a civil remedy and does not automatically result in arrest. However, if the abuse constitutes a criminal offense such as assault or rape, a parallel criminal FIR can be filed, potentially leading to arrest. Breach of a protection order is a criminal offense that can lead to arrest."
+    },
+    {
+      "question": "Can I get a protection order against my in-laws, not just my husband?",
+      "answer": "Yes. The 2010 Act covers all members of the shared household, including in-laws who live with you. If your mother-in-law, father-in-law, or other household members are abusing you, they can also be named in the protection order application."
+    }
   ],
   "relatedServiceLinks": [
-    {"text": "Divorce Lawyer", "to": "/services/divorce-lawyer"},
-    {"text": "Criminal Lawyer", "to": "/services/criminal-lawyer"}
+    {
+      "text": "Divorce Lawyer",
+      "to": "/services/divorce-lawyer"
+    },
+    {
+      "text": "Criminal Lawyer",
+      "to": "/services/criminal-lawyer"
+    }
   ],
   "relatedPosts": [
-    {"text": "Complete Divorce Process in Bangladesh 2026", "to": "/blog/how-to-file-divorce-court-bangladesh-2026"},
-    {"text": "Family Law Bangladesh Complete Guide", "to": "/blog/family-law-bangladesh-complete-guide"},
-    {"text": "How to File for Divorce in Bangladesh", "to": "/blog/how-to-file-divorce-court-bangladesh-2026"}
+    {
+      "text": "Complete Divorce Process in Bangladesh 2026",
+      "to": "/blog/how-to-file-divorce-court-bangladesh-2026"
+    },
+    {
+      "text": "Family Law Bangladesh Complete Guide",
+      "to": "/blog/family-law-bangladesh-complete-guide"
+    },
+    {
+      "text": "How to File for Divorce in Bangladesh",
+      "to": "/blog/how-to-file-divorce-court-bangladesh-2026"
+    }
   ],
   "isDraft": false,
   "lang": "en"

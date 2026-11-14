@@ -46,5 +46,7 @@
     }
   ],
   "lang": "bn",
-  "featured": false
+  "featured": false,
+  "isDraft": true,
+  "mergedInto": "/bn/blog/yautuk-dowry-ain-bangladesh-bn"
 }

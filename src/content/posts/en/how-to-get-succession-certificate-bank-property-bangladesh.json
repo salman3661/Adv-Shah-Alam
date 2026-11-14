@@ -1,9 +1,9 @@
 {
   "slug": "how-to-get-succession-certificate-bank-property-bangladesh",
-  "metaTitle": "Succession Certificate Bangladesh 2026: Bank Money Transfer Guide",
+  "metaTitle": "Succession Certificate Bangladesh 2026: Bank Money",
   "category": "Inheritance Law",
   "title": "How to Obtain a Succession Certificate in Bangladesh 2026: Bank Account & Share Transfer Guide",
-  "metaDescription": "Complete legal procedure to obtain a Succession Certificate from District Court in Bangladesh to claim deceased relative's bank money, shares, bond & savings certificates.",
+  "metaDescription": "Complete legal procedure to obtain a Succession Certificate from District Court in Bangladesh to claim deceased relative's bank money, shares, bond & savings.",
   "keywords": [
     "Succession Certificate Bangladesh 2026",
     "how to get succession certificate District Court Dhaka",
@@ -89,12 +89,24 @@
     }
   ],
   "relatedServiceLinks": [
-    {"text": "Supreme Court Lawyer Dhaka", "to": "/services/supreme-court-lawyer"},
-    {"text": "Land & Property Lawyer Dhaka", "to": "/services/land-lawyer"}
+    {
+      "text": "Supreme Court Lawyer Dhaka",
+      "to": "/services/supreme-court-lawyer"
+    },
+    {
+      "text": "Land & Property Lawyer Dhaka",
+      "to": "/services/land-lawyer"
+    }
   ],
   "relatedPosts": [
-    {"text": "Property Inheritance Distribution Law Bangladesh 2026", "to": "/blog/property-inheritance-distribution-bangladesh-2026"},
-    {"text": "Family Property Partition Suit Procedure", "to": "/blog/partition-suit-property-bangladesh"}
+    {
+      "text": "Property Inheritance Distribution Law Bangladesh 2026",
+      "to": "/blog/property-inheritance-distribution-bangladesh-2026"
+    },
+    {
+      "text": "Family Property Partition Suit Procedure",
+      "to": "/blog/partition-suit-property-bangladesh"
+    }
   ],
   "isDraft": false,
   "lang": "en"

@@ -3,8 +3,14 @@
   "metaTitle": "Section 138 NI Act Cheque Case Bangladesh 2026 Guide",
   "category": "Criminal Law",
   "title": "Section 138 NI Act Bangladesh: Complete Guide to Cheque Dishonour Cases",
-  "metaDescription": "Everything you need to know about Section 138 Negotiable Instruments Act cheque dishonour cases in Bangladesh — process, penalties, defence, and court tips for 2026.",
-  "keywords": ["Section 138 NI Act Bangladesh", "cheque dishonour case Bangladesh", "dishonoured cheque lawyer Dhaka", "negotiable instruments act Bangladesh", "cheque bounce case Bangladesh 2026"],
+  "metaDescription": "Everything you need to know about Section 138 Negotiable Instruments Act cheque dishonour cases in Bangladesh — process, penalties, defence, and court tips.",
+  "keywords": [
+    "Section 138 NI Act Bangladesh",
+    "cheque dishonour case Bangladesh",
+    "dishonoured cheque lawyer Dhaka",
+    "negotiable instruments act Bangladesh",
+    "cheque bounce case Bangladesh 2026"
+  ],
   "publishedDate": "2026-07-12",
   "lastModified": "2026-07-12",
   "readTime": "11 min read",
@@ -81,14 +87,32 @@
     }
   ],
   "relatedServiceLinks": [
-    {"text": "Criminal Lawyer in Bangladesh", "to": "/services/criminal-lawyer"},
-    {"text": "Bail Lawyer Bangladesh", "to": "/services/bail-lawyer"},
-    {"text": "Company & Corporate Lawyer", "to": "/services/company-corporate-lawyer"}
+    {
+      "text": "Criminal Lawyer in Bangladesh",
+      "to": "/services/criminal-lawyer"
+    },
+    {
+      "text": "Bail Lawyer Bangladesh",
+      "to": "/services/bail-lawyer"
+    },
+    {
+      "text": "Company & Corporate Lawyer",
+      "to": "/services/company-corporate-lawyer"
+    }
   ],
   "relatedPosts": [
-    {"text": "Anticipatory Bail from High Court Bangladesh", "to": "/blog/anticipatory-bail-bangladesh"},
-    {"text": "Contract Breach and Specific Performance Bangladesh", "to": "/blog/contract-breach-legal-action-bangladesh"},
-    {"text": "How to Get Anticipatory Bail in Bangladesh", "to": "/blog/anticipatory-bail-bangladesh"}
+    {
+      "text": "Anticipatory Bail from High Court Bangladesh",
+      "to": "/blog/anticipatory-bail-bangladesh"
+    },
+    {
+      "text": "Contract Breach and Specific Performance Bangladesh",
+      "to": "/blog/contract-breach-legal-action-bangladesh"
+    },
+    {
+      "text": "How to Get Anticipatory Bail in Bangladesh",
+      "to": "/blog/anticipatory-bail-bangladesh"
+    }
   ],
   "isDraft": false,
   "lang": "en"

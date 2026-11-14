@@ -51,7 +51,13 @@ const redirectSources = new Set(
 
 // ── helpers ─────────────────────────────────────────────────────────────────
 function readBase() {
-  let html = fs.readFileSync(path.join(DIST, 'index.html'), 'utf8');
+  const baseCache = path.join(DIST, '.base.html');
+  let html = fs.existsSync(baseCache)
+    ? fs.readFileSync(baseCache, 'utf8')
+    : fs.readFileSync(path.join(DIST, 'index.html'), 'utf8');
+  if (!fs.existsSync(baseCache)) {
+    fs.writeFileSync(baseCache, html, 'utf8');
+  }
   html = html.replace(/<link rel="stylesheet"[^>]*href="(\/assets\/[^"]+\.css)"[^>]*>/g, (match, href) => {
     try {
       const cssPath = path.join(DIST, href.replace(/^\//, ''));
@@ -320,8 +326,8 @@ ${buildPillarAndTableHtml(post, 'bn')}${quickAns}${toc}${sections}${faqs}${CONCL
 function getServiceMeta(slug) {
   const map = {
     'criminal-lawyer': {
-      title: 'Criminal Lawyer in Bangladesh | Advocate Md. Shah Alam – Dhaka',
-      desc: 'Expert criminal defense lawyer in Bangladesh. FIR cases, bail, trial representation at Sessions & High Court. Chamber in Uttara, Dhaka. Call +880 1712-655546.',
+      title: 'Criminal Defense Lawyer in Bangladesh | Dhaka',
+      desc: 'Experienced criminal defense lawyer in Dhaka, Bangladesh for FIR cases, bail, Sessions Court trials, and High Court appeals. Call +8801712655546.',
       h1: 'Criminal Lawyer in Bangladesh',
       body: `<p>Advocate Md. Shah Alam is an experienced criminal lawyer practising at all levels of courts in Bangladesh including the Supreme Court. He handles FIR-related cases, bail applications, criminal trials, and appeals.</p>
 <h2 style="font-size:20px;font-weight:700;margin:20px 0 10px">Services Offered</h2>
@@ -338,7 +344,7 @@ function getServiceMeta(slug) {
 <p>With 10+ years of experience (Supreme Court enrolled advocate since 2015), Advocate Shah Alam has successfully handled hundreds of criminal cases across Bangladesh. He is known for strategic defence preparation and effective court representation.</p>`,
     },
     'bail-lawyer': {
-      title: 'Bail Lawyer in Bangladesh | Fast Bail Application – Advocate Shah Alam',
+      title: 'Bail Lawyer in Bangladesh | High Court Anticipatory',
       desc: 'Urgent bail lawyer in Bangladesh. Regular bail, anticipatory bail, and High Court bail applications. Available in Uttara Dhaka. Call +880 1712-655546.',
       h1: 'Bail Lawyer in Bangladesh',
       body: `<p>Getting bail in Bangladesh requires expert legal representation. Advocate Md. Shah Alam specialises in bail applications at all court levels — from Magistrate Court to the Supreme Court of Bangladesh.</p>
@@ -353,8 +359,8 @@ function getServiceMeta(slug) {
 <p>A bail application is filed with supporting documents (FIR copy, charge sheet if available, personal particulars). The lawyer presents grounds such as clean record, family ties, and no flight risk. For serious offences, the application goes to High Court.</p>`,
     },
     'divorce-lawyer': {
-      title: 'Divorce Lawyer in Bangladesh | Family Court Expert – Advocate Shah Alam',
-      desc: 'Expert divorce and family lawyer in Bangladesh. Talaq, khula, child custody, maintenance. Chamber in Uttara Dhaka. Call +880 1712-655546.',
+      title: 'Divorce & Family Lawyer in Bangladesh | Dhaka',
+      desc: 'Trusted divorce and family lawyer in Dhaka, Bangladesh for talaq notice, khula, child custody, dower, and NRB divorce proceedings. Call +8801712655546.',
       h1: 'Divorce & Family Lawyer in Bangladesh',
       body: `<p>Advocate Md. Shah Alam is a leading family law practitioner in Bangladesh with 10+ years of experience (Supreme Court enrolled advocate since 2015) in divorce cases, child custody, maintenance, and family court matters.</p>
 <h2 style="font-size:20px;font-weight:700;margin:20px 0 10px">Family Law Services</h2>
@@ -371,7 +377,7 @@ function getServiceMeta(slug) {
 <p>For Muslims, divorce is governed by the Muslim Family Laws Ordinance 1961. The minimum timeframe for a mutual divorce is 90 days from notice to the Union Parishad Chairman. Contested cases go through Family Court and may take 6 months to 2 years.</p>`,
     },
     'land-lawyer': {
-      title: 'Land & Property Lawyer in Bangladesh | Advocate Md. Shah Alam',
+      title: 'Land & Property Lawyer in Bangladesh | Dhaka',
       desc: 'Expert land and property lawyer in Bangladesh. Land disputes, mutation, registration, title suits. Chamber in Uttara Dhaka. Call +880 1712-655546.',
       h1: 'Land & Property Lawyer in Bangladesh',
       body: `<p>Land disputes are among the most common legal issues in Bangladesh. Advocate Md. Shah Alam provides expert legal services for all land and property matters, from title verification to full court litigation.</p>
@@ -389,8 +395,8 @@ function getServiceMeta(slug) {
 <p>Land law in Bangladesh involves multiple agencies — Sub-Registrar offices, DC offices, Revenue offices, and Civil Courts. An experienced land lawyer ensures your documents are correct, your rights are protected, and your case is filed in the right forum.</p>`,
     },
     'supreme-court-lawyer': {
-      title: 'Supreme Court Lawyer Bangladesh | High Court Writ Petition – Advocate Shah Alam',
-      desc: 'Experienced Supreme Court lawyer in Bangladesh. Writ petitions, High Court appeals, appellate division cases. Call +880 1712-655546.',
+      title: 'Supreme Court Lawyer Bangladesh | High Court Writs',
+      desc: 'Supreme Court lawyer in Bangladesh for High Court writ petitions, anticipatory bail, criminal revisions, and Appellate Division appeals. Call +8801712655546.',
       h1: 'Supreme Court Lawyer in Bangladesh',
       body: `<p>Advocate Md. Shah Alam is enrolled with the Bangladesh Bar Council and is authorised to practise at the Supreme Court of Bangladesh, including both the High Court Division and the Appellate Division.</p>
 <h2 style="font-size:20px;font-weight:700;margin:20px 0 10px">Supreme Court Services</h2>
@@ -406,8 +412,8 @@ function getServiceMeta(slug) {
 <p>A writ petition is a powerful legal tool to enforce fundamental rights or challenge illegal government actions. Advocate Shah Alam has filed multiple writ petitions securing relief for clients from arbitrary arrest, wrongful dismissal, and unlawful government orders.</p>`,
     },
     'company-corporate-lawyer': {
-      title: 'Company & Corporate Lawyer in Bangladesh | Advocate Md. Shah Alam',
-      desc: 'Expert company and corporate lawyer in Bangladesh. Company registration, director disputes, corporate compliance. Chamber in Uttara Dhaka. Call +880 1712-655546.',
+      title: 'Company & Corporate Lawyer in Bangladesh | RJSC',
+      desc: 'Corporate and company lawyer in Dhaka, Bangladesh for RJSC company registration, shareholder disputes, contracts, and compliance. Call +8801712655546.',
       h1: 'Company & Corporate Lawyer in Bangladesh',
       body: `<p>Advocate Md. Shah Alam provides comprehensive company and corporate legal services for businesses of all sizes in Bangladesh — from startups to established corporations.</p>
 <h2 style="font-size:20px;font-weight:700;margin:20px 0 10px">Corporate Law Services</h2>
@@ -422,7 +428,7 @@ function getServiceMeta(slug) {
 </ul>`,
     },
     'tax-lawyer': {
-      title: 'Tax Lawyer in Bangladesh | Income Tax & VAT Legal Services – Advocate Shah Alam',
+      title: 'Income Tax & VAT Lawyer in Bangladesh | Tribunal',
       desc: 'Expert tax lawyer in Bangladesh. Income tax disputes, VAT matters, TIN registration, tax appeals. Chamber in Uttara Dhaka. Call +880 1712-655546.',
       h1: 'Tax Lawyer in Bangladesh',
       body: `<p>Advocate Md. Shah Alam provides legal services for tax-related matters in Bangladesh, including income tax disputes, VAT cases, and appeals before tax tribunals.</p>
@@ -443,8 +449,8 @@ function getServiceMeta(slug) {
 function getBnServiceMeta(slug) {
   const map = {
     'criminal-lawyer': {
-      title: 'ফৌজদারি আইনজীবী উত্তরা ঢাকা — এজাহার, জামিন ও মামলা প্রতিরক্ষা (২০২৬)',
-      desc: 'উত্তরা ঢাকায় অভিজ্ঞ ফৌজদারি আইনজীবী। এজাহার প্রতিরক্ষা, জামিন আবেদন, সাইবার অপরাধ মামলা, মিথ্যা মামলা খারিজ ও বিচার প্রতিনিধিত্ব। ১০+ বছরের অভিজ্ঞতা (২০১৫ সাল থেকে)।',
+      title: 'ফৌজদারি আইনজীবী ঢাকা | এজাহার ও জামিন মামলা',
+      desc: 'উত্তরা ঢাকায় অভিজ্ঞ ফৌজদারি আইনজীবী। এজাহার প্রতিরক্ষা, জামিন আবেদন, সাইবার অপরাধ মামলা ও মিথ্যা মামলা খারিজের আইনি পরামর্শ নিন।',
       h1: 'ফৌজদারি আইনজীবী বাংলাদেশ | এডভোকেট মোঃ শাহ আলম',
       body: `<p>এডভোকেট মোঃ শাহ আলম বাংলাদেশের একজন অত্যন্ত অভিজ্ঞ ফৌজদারি আইনজীবী, যিনি ১০+ বছরেরও বেশি সময় ধরে (২০১৫ সাল থেকে বাংলাদেশ সুপ্রিম কোর্ট ও বার কাউন্সিল তালিকাভুক্ত আইনজীবী) ফৌজদারি প্রতিরক্ষা, এজাহার বিষয়, জামিন আবেদন এবং ম্যাজিস্ট্রেট কোর্ট, দায়রা আদালত ও বাংলাদেশ সুপ্রিম কোর্টে বিচার প্রতিনিধিত্বে দক্ষতা অর্জন করেছেন।</p>
 <h2 style="font-size:20px;font-weight:700;margin:20px 0 10px">আইনি সেবাসমূহ</h2>
@@ -458,8 +464,8 @@ function getBnServiceMeta(slug) {
 </ul>`,
     },
     'bail-lawyer': {
-      title: 'জামিন আইনজীবী ঢাকা — দ্রুত জামিন আবেদন ও হাইকোর্ট বেল (২০২৬)',
-      desc: 'জরুরি জামিন আইনজীবী ঢাকা। নিয়মিত জামিন, আগাম জামিন (Anticipatory Bail) ও হাইকোর্টে জামিন আবেদন। উত্তরা চেম্বার। কল: ০১৭১২-৬৫৫৫৪৬।',
+      title: 'জামিন আইনজীবী ঢাকা | আগাম ও নিয়মিত জামিন',
+      desc: 'ঢাকায় জরুরি জামিন আইনজীবী। ম্যাজিস্ট্রেট কোর্টে নিয়মিত জামিন এবং হাইকোর্ট বিভাগে আগাম জামিন আবেদনের জন্য উত্তরা চেম্বারে যোগাযোগ করুন।',
       h1: 'জামিন আইনজীবী বাংলাদেশ | এডভোকেট মোঃ শাহ আলম',
       body: `<p>বাংলাদেশে জামিন আবেদন একটি জটিল আইনি প্রক্রিয়া। এডভোকেট মোঃ শাহ আলম নিম্ন আদালত থেকে শুরু করে বাংলাদেশ সুপ্রিম কোর্টের হাইকোর্ট বিভাগ পর্যন্ত নিয়মিত ও আগাম জামিন পরিচালনা করেন।</p>
 <h2 style="font-size:20px;font-weight:700;margin:20px 0 10px">আমরা যেসকল জামিন পরিচালনা করি</h2>
@@ -471,8 +477,8 @@ function getBnServiceMeta(slug) {
 </ul>`,
     },
     'divorce-lawyer': {
-      title: 'তালাক ও বিবাহবিচ্ছেদ আইনজীবী ঢাকা — পারিবারিক আদালত ও পরামর্শ (২০২৬)',
-      desc: 'অভিজ্ঞ তালাক ও পারিবারিক আইনজীবী ঢাকা। মুসলিম তালাক নোটিশ, দেনমোহর, খোরপোষ, সন্তানের হেফাজত। উত্তরা চেম্বার। কল: ০১৭১২-৬৫৫৫৪৬।',
+      title: 'তালাক ও পারিবারিক আইনজীবী ঢাকা | দেনমোহর ও খোরপোষ',
+      desc: 'ঢাকায় অভিজ্ঞ তালাক ও পারিবারিক আইনজীবী। মুসলিম তালাক নোটিশ, দেনমোহর, খোরপোষ ও সন্তানের অভিভাবকত্ব মামলায় উত্তরা চেম্বারে পরামর্শ নিন।',
       h1: 'তালাক ও পারিবারিক আইনজীবী বাংলাদেশ | এডভোকেট মোঃ শাহ আলম',
       body: `<p>মুসলিম পারিবারিক আইন অধ্যাদেশ ১৯৬১ এবং পারিবারিক আদালত আইন ২০২৩ অনুযায়ী বিবাহবিচ্ছেদ, তালাক নোটিশ, দেনমোহর ও খোরপোষ আদায়ের মামলায় এডভোকেট শাহ আলম ১০+ বছরের অভিজ্ঞ (২০১৫ সাল থেকে বাংলাদেশ সুপ্রিম কোর্ট ও বার কাউন্সিল তালিকাভুক্ত আইনজীবী)।</p>
 <h2 style="font-size:20px;font-weight:700;margin:20px 0 10px">পারিবারিক আইনি সেবাসমূহ</h2>
@@ -484,8 +490,8 @@ function getBnServiceMeta(slug) {
 </ul>`,
     },
     'land-lawyer': {
-      title: 'ভূমি ও সম্পত্তি আইনজীবী ঢাকা — জমি রেজিস্ট্রি, নামজারি ও বাটোয়ারা মামলা (২০২৬)',
-      desc: 'অভিজ্ঞ ভূমি ও সম্পত্তি আইনজীবী ঢাকা। জমি বিরোধ, নামজারি, খতিয়ান যাচাই, দলিল বাতিল ও বাটোয়ারা মামলা। উত্তরা চেম্বার। কল: ০১৭১২-৬৫৫৫৪৬।',
+      title: 'ভূমি ও সম্পত্তি আইনজীবী ঢাকা | নামজারি ও বাটোয়ারা',
+      desc: 'ঢাকায় অভিজ্ঞ ভূমি ও সম্পত্তি আইনজীবী। জমি রেজিস্ট্রি, নামজারি, খতিয়ান যাচাই, দলিল বাতিল ও বাটোয়ারা মামলায় আইনি সহায়তা নিন।',
       h1: 'ভূমি ও সম্পত্তি আইনজীবী বাংলাদেশ | এডভোকেট মোঃ শাহ আলম',
       body: `<p>জমির বিরোধ বাংলাদেশের সবচেয়ে সাধারণ আইনি সমস্যা। সাব-রেজিস্ট্রার অফিস, ভূমি রাজস্ব অফিস এবং দেওয়ানি আদালতে জমি সংক্রান্ত যাবতীয় আইনি সুরক্ষায় এডভোকেট মোঃ শাহ আলম বিশ্বস্ত সেবা প্রদান করেন।</p>
 <h2 style="font-size:20px;font-weight:700;margin:20px 0 10px">ভূমি আইনের সেবাসমূহ</h2>
@@ -498,8 +504,8 @@ function getBnServiceMeta(slug) {
 </ul>`,
     },
     'supreme-court-lawyer': {
-      title: 'সুপ্রিম কোর্টের আইনজীবী বাংলাদেশ — হাইকোর্ট রিট ও ফৌজদারি আপিল (২০২৬)',
-      desc: 'অভিজ্ঞ সুপ্রিম কোর্ট আইনজীবী বাংলাদেশ। রিট পিটিশন, হাইকোর্ট আপিল, ফৌজদারি রিভিশন ও অন্তর্বর্তীকালীন আদেশ। কল: ০১৭১২-৬৫৫৫৪৬।',
+      title: 'সুপ্রিম কোর্ট আইনজীবী বাংলাদেশ | হাইকোর্ট রিট',
+      desc: 'বাংলাদেশ সুপ্রিম কোর্টের অভিজ্ঞ আইনজীবী। সংবিধানের ১০২ অনুচ্ছেদে রিট পিটিশন, হাইকোর্ট আপিল ও ফৌজদারি রিভিশনের জন্য যোগাযোগ করুন।',
       h1: 'সুপ্রিম কোর্ট আইনজীবী বাংলাদেশ | এডভোকেট মোঃ শাহ আলম',
       body: `<p>এডভোকেট মোঃ শাহ আলম বাংলাদেশ বার কাউন্সিলের তালিকাভুক্ত এবং বাংলাদেশ সুপ্রিম কোর্টের হাইকোর্ট বিভাগ ও আপিল বিভাগে প্র্যাকটিস করার পূর্ণ অনুমতিপ্রাপ্ত অভিজ্ঞ আইনজীবী।</p>
 <h2 style="font-size:20px;font-weight:700;margin:20px 0 10px">সুপ্রিম কোর্ট সেবা</h2>
@@ -511,8 +517,8 @@ function getBnServiceMeta(slug) {
 </ul>`,
     },
     'company-corporate-lawyer': {
-      title: 'কোম্পানি ও কর্পোরেট আইনজীবী ঢাকা — কোম্পানি গঠন ও বাণিজ্যিক চুক্তি (২০২৬)',
-      desc: 'অভিজ্ঞ কোম্পানি ও কর্পোরেট আইনজীবী ঢাকা। RJSC কোম্পানি নিবন্ধন, শেয়ারহোল্ডার বিরোধ, বাণিজ্যিক চুক্তি ও আইনি কমপ্লায়েন্স। উত্তরা চেম্বার। কল: ০১৭১২-৬৫৫৫৪৬।',
+      title: 'কোম্পানি ও কর্পোরেট আইনজীবী ঢাকা | আরজেএসসি',
+      desc: 'ঢাকায় অভিজ্ঞ কোম্পানি ও কর্পোরেট আইনজীবী। RJSC কোম্পানি নিবন্ধন, শেয়ারহোল্ডার বিরোধ ও বাণিজ্যিক চুক্তির জন্য উত্তরা চেম্বারে যোগাযোগ করুন।',
       h1: 'কোম্পানি ও কর্পোরেট আইনজীবী বাংলাদেশ | এডভোকেট মোঃ শাহ আলম',
       body: `<p>নতুন কোম্পানি গঠন থেকে শুরু করে জটিল বাণিজ্যিক বিরোধ সমাধান — কোম্পানি আইন ১৯৯৪ অনুযায়ী কর্পোরেট প্রতিষ্ঠান ও ব্যবসায়ীদের সার্বিক আইনি সেবা প্রদান করেন এডভোকেট মোঃ শাহ আলম।</p>
 <h2 style="font-size:20px;font-weight:700;margin:20px 0 10px">কর্পোরেট আইনি সেবা</h2>
@@ -524,7 +530,7 @@ function getBnServiceMeta(slug) {
 </ul>`,
     },
     'tax-lawyer': {
-      title: 'আয়কর ও ভ্যাট আইনজীবী ঢাকা — কর বিরোধ ও ট্রাইব্যুনাল আপিল (২০২৬)',
+      title: 'আয়কর ও ভ্যাট আইনজীবী ঢাকা | ট্রাইব্যুনাল আপিল',
       desc: 'অভিজ্ঞ আয়কর ও ভ্যাট আইনজীবী ঢাকা। আয়কর রিটার্ন বিরোধ, কর নির্ধারণ চ্যালেঞ্জ, ট্যাক্সেস আপিলেট ট্রাইব্যুনাল ও ভ্যাট পরামর্শ। কল: ০১৭১২-৬৫৫৫৪৬।',
       h1: 'আয়কর ও ভ্যাট আইনজীবী বাংলাদেশ | এডভোকেট মোঃ শাহ আলম',
       body: `<p>আয়কর আইন ২০২৩ ও মূল্য সংযোজন কর ও সম্পূরক শুল্ক আইন ২০১২ অনুযায়ী ব্যক্তি ও প্রতিষ্ঠানের কর বিরোধ এবং ট্যাক্সেস আপিলেট ট্রাইব্যুনালে দক্ষ প্রতিনিধিত্ব নিশ্চিত করেন এডভোকেট মোঃ শাহ আলম।</p>
@@ -555,7 +561,7 @@ function homeBodyBn() {
   ).join('');
 
   return `
-<h1 style="font-size:30px;font-weight:700;margin-bottom:8px;color:#0a0a0a">বিশ্বস্ত আইনজীবী বাংলাদেশ — এডভোকেট মোঃ শাহ আলম</h1>
+<h2 style="font-size:26px;font-weight:700;margin-bottom:8px;color:#0a0a0a">বিশ্বস্ত আইনজীবী বাংলাদেশ — এডভোকেট মোঃ শাহ আলম</h2>
 <p style="font-size:16px;color:#444;margin-bottom:24px">ফৌজদারি, পারিবারিক, জামিন ও জমি সংক্রান্ত মামলার অভিজ্ঞ আইনজীবী। চেম্বার: উত্তরা, ঢাকা।</p>
 
 <section style="margin-bottom:32px">
@@ -604,7 +610,7 @@ function homeBody() {
   ).join('');
 
   return `
-<h1 style="font-size:30px;font-weight:700;margin-bottom:8px;color:#0a0a0a">Trusted Lawyer in Bangladesh – Advocate Md. Shah Alam</h1>
+<h2 style="font-size:26px;font-weight:700;margin-bottom:8px;color:#0a0a0a">Trusted Lawyer in Bangladesh – Advocate Md. Shah Alam</h2>
 <p style="font-size:16px;color:#444;margin-bottom:24px">Experienced Criminal, Divorce &amp; Bail Lawyer with Chamber in Uttara, Dhaka — Serving Clients Across Bangladesh.</p>
 
 <section style="margin-bottom:32px">
@@ -870,8 +876,8 @@ async function main() {
 <link rel="alternate" hreflang="en" href="${BASE}/en" />
 <link rel="alternate" hreflang="x-default" href="${BASE}/" />`;
     const html = buildPage(base, {
-      title: 'বিশ্বস্ত আইনজীবী বাংলাদেশ | এডভোকেট মোঃ শাহ আলম — উত্তরা, ঢাকা',
-      description: 'এডভোকেট মোঃ শাহ আলম — বাংলাদেশ সুপ্রীম কোর্টের অভিজ্ঞ আইনজীবী। ফৌজদারি মামলা, বিবাহবিচ্ছেদ, জামিন, ভূমি বিরোধ ও করপোরেট আইনে বিশেষজ্ঞ। উত্তরা, ঢাকায় আমাদের চেম্বারে আসুন অথবা সরাসরি WhatsApp করুন।',
+      title: 'সুপ্রিম কোর্ট আইনজীবী ঢাকা | এডভোকেট মোঃ শাহ আলম',
+      description: 'বাংলাদেশ সুপ্রিম কোর্টের অভিজ্ঞ আইনজীবী এডভোকেট মোঃ শাহ আলম। ফৌজদারি, জামিন, তালাক, জমি ও কর্পোরেট মামলায় উত্তরা চেম্বারে সরাসরি আইনি পরামর্শ নিন।',
       canonical: `${BASE}/`,
       body: homeBodyBn(),
       lang: 'bn',
@@ -887,8 +893,8 @@ async function main() {
 <link rel="alternate" hreflang="bn" href="${BASE}/" />
 <link rel="alternate" hreflang="x-default" href="${BASE}/" />`;
     const html = buildPage(base, {
-      title: 'Trusted Lawyer in Bangladesh | Advocate Md. Shah Alam — Uttara, Dhaka',
-      description: 'Official website of Advocate Md. Shah Alam, experienced lawyer in Uttara, Dhaka, practising at the Supreme Court of Bangladesh. Criminal, divorce, bail & property law.',
+      title: 'Supreme Court Lawyer Dhaka | Advocate Md. Shah Alam',
+      description: 'Advocate Md. Shah Alam is a Supreme Court lawyer in Uttara, Dhaka handling criminal defense, bail, divorce, land disputes, and corporate legal matters.',
       canonical: `${BASE}/en`,
       body: homeBody(),
       lang: 'en',
@@ -901,8 +907,8 @@ async function main() {
   // ── Advocate/About page ────────────────────────────────────────────────────
   {
     const html = buildPage(base, {
-      title: 'About Advocate Md. Shah Alam | Supreme Court Lawyer — Bangladesh',
-      description: 'Learn about Advocate Md. Shah Alam — LL.M lawyer with 10+ years of experience practising at the Supreme Court of Bangladesh. Chamber in Uttara, Dhaka.',
+      title: 'About Advocate Md. Shah Alam | Supreme Court BD',
+      description: 'Learn about Advocate Md. Shah Alam, LL.M Supreme Court lawyer in Uttara, Dhaka with 10+ years experience in criminal, bail, family, and property law.',
       canonical: `${BASE}/advocate-md-shah-alam`,
       body: advocateBody(),
     });
@@ -913,7 +919,7 @@ async function main() {
   // ── Education page ─────────────────────────────────────────────────────────
   {
     const html = buildPage(base, {
-      title: 'Career & Education | Advocate Md. Shah Alam — Bangladesh',
+      title: 'Education & Bar Enrollment | Advocate Md. Shah Alam',
       description: 'Explore the education and career timeline of Advocate Shah Alam — LL.M lawyer with 10+ years of legal excellence at the Supreme Court of Bangladesh.',
       canonical: `${BASE}/education`,
       body: educationBody(),
@@ -928,7 +934,7 @@ async function main() {
 <link rel="alternate" hreflang="bn" href="${BASE}/bn/contact" />
 <link rel="alternate" hreflang="x-default" href="${BASE}/contact" />`;
     const html = buildPage(base, {
-      title: 'Contact Advocate Md. Shah Alam | Criminal, Divorce & Bail Lawyer — Dhaka',
+      title: 'Contact Advocate Md. Shah Alam | Dhaka Chamber',
       description: 'Contact Advocate Md. Shah Alam for legal consultation in Dhaka & Uttara. Call +880 1712-655546 or WhatsApp for criminal, divorce, bail & property cases.',
       canonical: `${BASE}/contact`,
       body: contactBody(),
@@ -945,8 +951,8 @@ async function main() {
 <link rel="alternate" hreflang="en" href="${BASE}/contact" />
 <link rel="alternate" hreflang="x-default" href="${BASE}/contact" />`;
     const html = buildPage(base, {
-      title: 'যোগাযোগ ও আইনি চেম্বার | অ্যাডভোকেট মো. শাহ আলম – উত্তরা ও ঢাকা কোর্ট',
-      description: 'অ্যাডভোকেট মো. শাহ আলম স্যারের সুপ্রিম কোর্ট ও উত্তরা চেম্বারে সরাসরি আইনি পরামর্শ ও মামলা মূল্যায়নের জন্য যোগাযোগ করুন। ফোন: ০১৭১২-৬৫৫৫৪৬।',
+      title: 'যোগাযোগ ও চেম্বার | এডভোকেট মোঃ শাহ আলম ঢাকা',
+      description: 'এডভোকেট মোঃ শাহ আলমের উত্তরা ও ঢাকা জজ কোর্ট চেম্বারে সরাসরি আইনি পরামর্শ ও মামলা মূল্যায়নের জন্য যোগাযোগ করুন। ফোন: +8801712655546।',
       canonical: `${BASE}/bn/contact`,
       body: contactBodyBn(),
       lang: 'bn',
@@ -959,8 +965,8 @@ async function main() {
   // ── Privacy Policy ─────────────────────────────────────────────────────────
   {
     const html = buildPage(base, {
-      title: 'Privacy Policy | advmdshahalam.me',
-      description: 'Privacy Policy for advmdshahalam.me — legal website of Advocate Md. Shah Alam.',
+      title: 'Privacy Policy | Advocate Md. Shah Alam Chambers',
+      description: 'Read the official Privacy Policy for advmdshahalam.me detailing client confidentiality, consultation data handling, Google Analytics, and AdSense cookies.',
       canonical: `${BASE}/privacy-policy`,
       body: privacyBody(),
     });
@@ -971,7 +977,7 @@ async function main() {
   // ── Terms of Service ───────────────────────────────────────────────────────
   {
     const html = buildPage(base, {
-      title: 'Terms of Service (ব্যবহারের শর্তাবলী) | Advocate Md. Shah Alam',
+      title: 'Terms of Service | Advocate Md. Shah Alam Dhaka',
       description: 'Terms of Service & Engagement for advmdshahalam.me — consultation boundaries, retainer conditions, payment policies, and Dhaka court jurisdiction.',
       canonical: `${BASE}/terms-of-service`,
       body: termsBody(),
@@ -983,8 +989,8 @@ async function main() {
   // ── Review page ────────────────────────────────────────────────────────────
   {
     const html = buildPage(base, {
-      title: 'গুগলে ৫-স্টার রিভিউ দিন | এডভোকেট মোঃ শাহ আলম — বাংলাদেশ সুপ্রিম কোর্ট',
-      description: 'অ্যাডভোকেট মো. শাহ আলম স্যারের আইনি পরামর্শ ও সেবার অভিজ্ঞতা গুগলে শেয়ার করুন। আপনার মতামত অন্যদের সঠিক আইনি সাহায্য পেতে সহায়তা করবে।',
+      title: 'ক্লায়েন্ট রিভিউ ও মতামত | এডভোকেট মোঃ শাহ আলম',
+      description: 'এডভোকেট মোঃ শাহ আলমের আইনি পরামর্শ ও মামলার অভিজ্ঞতা সম্পর্কে ক্লায়েন্টদের রিভিউ দেখুন এবং গুগলে আপনার মূল্যবান মতামত শেয়ার করুন।',
       canonical: `${BASE}/review`,
       body: `<div style="max-width:500px;margin:40px auto;text-align:center;padding:30px;background:#fff;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.08)">
         <h1 style="font-size:24px;font-weight:700;margin-bottom:12px">আইনি সেবায় আপনি কি সন্তুষ্ট?</h1>
@@ -1000,7 +1006,7 @@ async function main() {
   // ── NRB Legal Help page ────────────────────────────────────────────────────
   {
     const html = buildPage(base, {
-      title: 'NRB Legal Help Bangladesh | Property & Family Law for Expats',
+      title: 'NRB Legal Help Bangladesh | Property & Family Law',
       description: 'Legal help for Non-Resident Bangladeshis in UK, USA, UAE & Canada: land purchase, Power of Attorney, divorce, inheritance & court cases.',
       canonical: `${BASE}/nrb-legal-help`,
       lang: 'en',
@@ -1104,8 +1110,8 @@ ${BN_DISCLAIMER}${bnMeta.body}${BN_CTA}`,
 <link rel="alternate" hreflang="bn" href="${BASE}/bn/blog" />
 <link rel="alternate" hreflang="x-default" href="${BASE}/blog" />`;
     const html = buildPage(base, {
-      title: 'Bangladesh Legal Blog | Criminal, Divorce & Property Law — Advocate Shah Alam',
-      description: 'Expert legal articles on Bangladesh criminal law, divorce procedure, bail process, land disputes, Supreme Court matters and more. Written by Advocate Md. Shah Alam.',
+      title: 'Bangladesh Legal Guides & Law Blog | Adv. Shah Alam',
+      description: 'Read expert legal guides on Bangladesh criminal law, High Court bail, divorce, land registration, mutation, and corporate law by Advocate Md. Shah Alam.',
       canonical: `${BASE}/blog`,
       body: blogIndexBody(enPosts, 'en'),
       lang: 'en',
@@ -1119,8 +1125,8 @@ ${BN_DISCLAIMER}${bnMeta.body}${BN_CTA}`,
 <link rel="alternate" hreflang="en" href="${BASE}/blog" />
 <link rel="alternate" hreflang="x-default" href="${BASE}/blog" />`;
     const html = buildPage(base, {
-      title: 'বাংলাদেশ আইনি ব্লগ | অ্যাডভোকেট মো. শাহ Alam',
-      description: 'বাংলাদেশের আইন বিষয়ক বিস্তারিত নিবন্ধ। ফৌজদারি, তালাক, জামিন, জমি-জমা ও সুপ্রিম কোর্ট আইন।',
+      title: 'বাংলাদেশ আইনি গাইড ও ব্লগ | এডভোকেট মোঃ শাহ আলম',
+      description: 'বাংলাদেশের ফৌজদারি, জামিন, তালাক, জমি রেজিস্ট্রি, নামজারি, বাটোয়ারা ও সুপ্রিম কোর্ট আইন বিষয়ক বিস্তারিত বাংলা আইনি গাইড পড়ুন।',
       canonical: `${BASE}/bn/blog`,
       body: blogIndexBody(bnPosts, 'bn'),
       lang: 'bn',

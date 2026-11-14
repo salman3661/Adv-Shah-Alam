@@ -1,9 +1,9 @@
 {
   "slug": "how-to-start-foreign-company-100-percent-fdi-bangladesh-2026",
-  "metaTitle": "Form 100% Foreign Company in Bangladesh 2026: BIDA & Tax Guide",
+  "metaTitle": "Form 100% Foreign Company in Bangladesh 2026: BIDA & Tax",
   "category": "Corporate Law",
   "title": "How to Form a 100% Foreign-Owned Company in Bangladesh 2026: BIDA Registration & Tax Guide",
-  "metaDescription": "Step-by-step guide for foreign investors & expats setting up a 100% foreign-owned private limited company in Bangladesh — RJSC name clearance, BIDA approval, encashment certificate, TIN, and profit repatriation.",
+  "metaDescription": "Step-by-step guide for foreign investors & expats setting up a 100% foreign-owned private limited company in Bangladesh — RJSC name clearance, BIDA approval.",
   "keywords": [
     "100 percent foreign company registration Bangladesh 2026",
     "BIDA registration foreign investor Bangladesh",
@@ -90,12 +90,24 @@
     }
   ],
   "relatedServiceLinks": [
-    {"text": "Corporate & Business Lawyer Dhaka", "to": "/services/company-corporate-lawyer"},
-    {"text": "Supreme Court Lawyer Bangladesh", "to": "/services/supreme-court-lawyer"}
+    {
+      "text": "Corporate & Business Lawyer Dhaka",
+      "to": "/services/company-corporate-lawyer"
+    },
+    {
+      "text": "Supreme Court Lawyer Bangladesh",
+      "to": "/services/supreme-court-lawyer"
+    }
   ],
   "relatedPosts": [
-    {"text": "Tax & VAT Law Compliance Guide Bangladesh", "to": "/blog/vat-law-compliance-bangladesh"},
-    {"text": "Trademark & Brand Registration Guide Bangladesh", "to": "/blog/trademark-registration-bangladesh"}
+    {
+      "text": "Tax & VAT Law Compliance Guide Bangladesh",
+      "to": "/blog/vat-law-compliance-bangladesh"
+    },
+    {
+      "text": "Trademark & Brand Registration Guide Bangladesh",
+      "to": "/blog/trademark-registration-bangladesh"
+    }
   ],
   "isDraft": false,
   "lang": "en"

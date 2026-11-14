@@ -1,10 +1,16 @@
 {
   "slug": "family-law-bangladesh-complete-guide",
-  "metaTitle": "Family Law Bangladesh 2026 | Complete Guide to Marriage & Divorce",
+  "metaTitle": "Family Law Bangladesh 2026 | Complete Guide to Marriage &",
   "category": "Family Law",
   "title": "Family Law in Bangladesh: Complete 2026 Guide to Marriage, Divorce, Custody & Inheritance",
   "metaDescription": "The complete guide to family law in Bangladesh 2026 covering marriage registration, divorce, child custody, maintenance, inheritance, and property rights.",
-  "keywords": ["family law Bangladesh", "Bangladesh marriage law", "child custody Bangladesh", "inheritance law Bangladesh", "family court Bangladesh"],
+  "keywords": [
+    "family law Bangladesh",
+    "Bangladesh marriage law",
+    "child custody Bangladesh",
+    "inheritance law Bangladesh",
+    "family court Bangladesh"
+  ],
   "publishedDate": "2026-07-12",
   "lastModified": "2026-07-12",
   "readTime": "14 min read",
@@ -64,21 +70,54 @@
     }
   ],
   "faqs": [
-    {"question": "What is the minimum age for marriage in Bangladesh?", "answer": "The Child Marriage Restraint Act 2017 sets the minimum marriage age at 18 for women and 21 for men. However, the Act contains a provision allowing marriage below these ages in special circumstances with court and parental approval, which human rights groups have criticized."},
-    {"question": "Can a woman claim maintenance from her husband before divorce in Bangladesh?", "answer": "Yes. Under Muslim personal law, a wife has the right to maintenance (nafaqa) throughout the marriage. She can file a petition in Family Court or use Section 488 CrPC to claim maintenance if her husband fails to provide adequate support, even without filing for divorce."},
-    {"question": "How is property divided after divorce in Bangladesh?", "answer": "Bangladesh does not have a community property system. Upon divorce, each party retains ownership of assets in their individual name. Courts can award the wife her unpaid dower (mahr) and order maintenance. Disputes over jointly-held property are resolved in civil courts."},
-    {"question": "Can a non-Muslim file a case in the Family Court of Bangladesh?", "answer": "Yes. The Family Courts Ordinance 1985 applies to all citizens regardless of religion. Non-Muslims file divorce, maintenance, and custody cases in the Family Court, with the applicable personal law governing the substantive rights."},
-    {"question": "How long does a family court case take in Bangladesh?", "answer": "Uncontested cases such as mutual divorce or uncontested maintenance may be resolved in 6 to 12 months. Contested family court cases involving custody, property, and divorce simultaneously can take 2 to 5 years in the trial court, with appeals adding additional years."}
+    {
+      "question": "What is the minimum age for marriage in Bangladesh?",
+      "answer": "The Child Marriage Restraint Act 2017 sets the minimum marriage age at 18 for women and 21 for men. However, the Act contains a provision allowing marriage below these ages in special circumstances with court and parental approval, which human rights groups have criticized."
+    },
+    {
+      "question": "Can a woman claim maintenance from her husband before divorce in Bangladesh?",
+      "answer": "Yes. Under Muslim personal law, a wife has the right to maintenance (nafaqa) throughout the marriage. She can file a petition in Family Court or use Section 488 CrPC to claim maintenance if her husband fails to provide adequate support, even without filing for divorce."
+    },
+    {
+      "question": "How is property divided after divorce in Bangladesh?",
+      "answer": "Bangladesh does not have a community property system. Upon divorce, each party retains ownership of assets in their individual name. Courts can award the wife her unpaid dower (mahr) and order maintenance. Disputes over jointly-held property are resolved in civil courts."
+    },
+    {
+      "question": "Can a non-Muslim file a case in the Family Court of Bangladesh?",
+      "answer": "Yes. The Family Courts Ordinance 1985 applies to all citizens regardless of religion. Non-Muslims file divorce, maintenance, and custody cases in the Family Court, with the applicable personal law governing the substantive rights."
+    },
+    {
+      "question": "How long does a family court case take in Bangladesh?",
+      "answer": "Uncontested cases such as mutual divorce or uncontested maintenance may be resolved in 6 to 12 months. Contested family court cases involving custody, property, and divorce simultaneously can take 2 to 5 years in the trial court, with appeals adding additional years."
+    }
   ],
   "relatedServiceLinks": [
-    {"text": "Divorce Lawyer", "to": "/services/divorce-lawyer"},
-    {"text": "Land Lawyer", "to": "/services/land-lawyer"},
-    {"text": "Supreme Court Lawyer", "to": "/services/supreme-court-lawyer"}
+    {
+      "text": "Divorce Lawyer",
+      "to": "/services/divorce-lawyer"
+    },
+    {
+      "text": "Land Lawyer",
+      "to": "/services/land-lawyer"
+    },
+    {
+      "text": "Supreme Court Lawyer",
+      "to": "/services/supreme-court-lawyer"
+    }
   ],
   "relatedPosts": [
-    {"text": "Complete Divorce Process in Bangladesh 2026", "to": "/blog/how-to-file-divorce-court-bangladesh-2026"},
-    {"text": "Domestic Violence Protection Order Bangladesh", "to": "/blog/domestic-violence-law-bangladesh"},
-    {"text": "How to File for Divorce in Bangladesh", "to": "/blog/how-to-file-divorce-court-bangladesh-2026"}
+    {
+      "text": "Complete Divorce Process in Bangladesh 2026",
+      "to": "/blog/how-to-file-divorce-court-bangladesh-2026"
+    },
+    {
+      "text": "Domestic Violence Protection Order Bangladesh",
+      "to": "/blog/domestic-violence-law-bangladesh"
+    },
+    {
+      "text": "How to File for Divorce in Bangladesh",
+      "to": "/blog/how-to-file-divorce-court-bangladesh-2026"
+    }
   ],
   "isDraft": false,
   "lang": "en"

@@ -1,9 +1,9 @@
 {
   "slug": "court-marriage-interfaith-special-marriage-act-bangladesh-2026",
-  "metaTitle": "Special Interfaith Court Marriage Bangladesh 2026 Process Guide",
+  "metaTitle": "Special Interfaith Court Marriage Bangladesh 2026 Process",
   "category": "Family Law",
   "title": "Special Marriage & Interfaith Marriage in Bangladesh 2026: Legal Process & Registrar Guide",
-  "metaDescription": "Complete guide to interfaith marriage & court marriage in Bangladesh under Special Marriage Act 1872 — 14-day notice, registrar fees, affidavit, legal validity abroad, and protection of rights.",
+  "metaDescription": "Complete guide to interfaith marriage & court marriage in Bangladesh under Special Marriage Act 1872 — 14-day notice, registrar fees, affidavit, legal.",
   "keywords": [
     "special marriage act 1872 Bangladesh 2026",
     "interfaith court marriage in Bangladesh",
@@ -89,12 +89,24 @@
     }
   ],
   "relatedServiceLinks": [
-    {"text": "Court Marriage & Family Lawyer Dhaka", "to": "/services/divorce-lawyer"},
-    {"text": "Supreme Court Lawyer Bangladesh", "to": "/services/supreme-court-lawyer"}
+    {
+      "text": "Court Marriage & Family Lawyer Dhaka",
+      "to": "/services/divorce-lawyer"
+    },
+    {
+      "text": "Supreme Court Lawyer Bangladesh",
+      "to": "/services/supreme-court-lawyer"
+    }
   ],
   "relatedPosts": [
-    {"text": "Court Marriage Bangladesh Complete Guide 2026", "to": "/blog/court-marriage-bangladesh-complete-guide-2026"},
-    {"text": "Muslim Marriage & Kabinnama Law Guide", "to": "/blog/wife-rights-after-divorce-bangladesh"}
+    {
+      "text": "Court Marriage Bangladesh Complete Guide 2026",
+      "to": "/blog/court-marriage-bangladesh-complete-guide-2026"
+    },
+    {
+      "text": "Muslim Marriage & Kabinnama Law Guide",
+      "to": "/blog/wife-rights-after-divorce-bangladesh"
+    }
   ],
   "isDraft": false,
   "lang": "en"

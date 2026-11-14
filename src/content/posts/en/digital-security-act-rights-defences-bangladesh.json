@@ -3,8 +3,14 @@
   "metaTitle": "DSA Rights & Defences in Bangladesh Courts 2026 Guide",
   "category": "Cyber Law",
   "title": "DSA Rights and Defences in Bangladesh Courts: A Practical Legal Guide",
-  "metaDescription": "Practical guide to asserting your rights and mounting defences against Digital Security Act and Cyber Security Act cases in Bangladesh courts — for accused, journalists, and activists.",
-  "keywords": ["DSA defences Bangladesh", "Digital Security Act rights Bangladesh courts", "CSA case defence Bangladesh", "cyber security act bail Bangladesh", "DSA quashing petition Bangladesh"],
+  "metaDescription": "Practical guide to asserting your rights and mounting defences against Digital Security Act and Cyber Security Act cases in Bangladesh courts — for accused.",
+  "keywords": [
+    "DSA defences Bangladesh",
+    "Digital Security Act rights Bangladesh courts",
+    "CSA case defence Bangladesh",
+    "cyber security act bail Bangladesh",
+    "DSA quashing petition Bangladesh"
+  ],
   "publishedDate": "2026-07-12",
   "lastModified": "2026-07-12",
   "readTime": "10 min read",
@@ -86,14 +92,32 @@
     }
   ],
   "relatedServiceLinks": [
-    {"text": "Criminal Lawyer in Bangladesh", "to": "/services/criminal-lawyer"},
-    {"text": "Bail Lawyer Bangladesh", "to": "/services/bail-lawyer"},
-    {"text": "Supreme Court Lawyer Bangladesh", "to": "/services/supreme-court-lawyer"}
+    {
+      "text": "Criminal Lawyer in Bangladesh",
+      "to": "/services/criminal-lawyer"
+    },
+    {
+      "text": "Bail Lawyer Bangladesh",
+      "to": "/services/bail-lawyer"
+    },
+    {
+      "text": "Supreme Court Lawyer Bangladesh",
+      "to": "/services/supreme-court-lawyer"
+    }
   ],
   "relatedPosts": [
-    {"text": "Cybercrime Laws Bangladesh 2026", "to": "/blog/cyber-crime-digital-security-act-bangladesh"},
-    {"text": "Digital Security Act Bangladesh – Legal Rights", "to": "/blog/cyber-crime-digital-security-act-bangladesh"},
-    {"text": "Anticipatory Bail from High Court Bangladesh", "to": "/blog/anticipatory-bail-bangladesh"}
+    {
+      "text": "Cybercrime Laws Bangladesh 2026",
+      "to": "/blog/cyber-crime-digital-security-act-bangladesh"
+    },
+    {
+      "text": "Digital Security Act Bangladesh – Legal Rights",
+      "to": "/blog/cyber-crime-digital-security-act-bangladesh"
+    },
+    {
+      "text": "Anticipatory Bail from High Court Bangladesh",
+      "to": "/blog/anticipatory-bail-bangladesh"
+    }
   ],
   "isDraft": false,
   "lang": "en"

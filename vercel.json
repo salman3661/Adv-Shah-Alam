@@ -1113,6 +1113,171 @@
       "source": "/en/contact",
       "destination": "/contact",
       "statusCode": 301
+    },
+    {
+      "source": "/blog/anticipatory-bail-high-court-bangladesh-cost-process-2026",
+      "destination": "/blog/anticipatory-bail-high-court-bangladesh-cost-process",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/court-marriage-bangladesh-process-cost-documents-2026",
+      "destination": "/blog/court-marriage-bangladesh-process-cost-documents",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/wife-divorce-rights-talaq-e-tawfeez-bangladesh",
+      "destination": "/blog/divorce-cost-bangladesh-2026-complete-guide",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/blog/batoara-mamla-kotodin-chole-khoroch-partition-suit-2026",
+      "destination": "/bn/blog/batwara-mamla-din-khoroch-prokriya-2026",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/blog/rit-petition-ki-kivabe-korte-hoy-high-court-2026",
+      "destination": "/bn/blog/rit-petition-ki-kivabe-korte-hoy-high-court",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/blog/cyber-harassment-emergency-helpline-online-complaint-2026",
+      "destination": "/bn/blog/cyber-crime-complaint-online-police-helpline",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/technical-education-board-bteb-diploma-certificate-correction-affidavit-2026",
+      "destination": "/blog/ssc-hsc-certificate-father-mother-name-correction-affidavit-bangladesh-2026",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/madrasah-education-board-dakhil-alim-certificate-correction-affidavit-2026",
+      "destination": "/blog/ssc-hsc-certificate-father-mother-name-correction-affidavit-bangladesh-2026",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/blog/madrasah-education-board-dakhil-alim-certificate-correction-affidavit-2026",
+      "destination": "/bn/blog/technical-education-board-bteb-diploma-certificate-correction-affidavit-2026",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/blog/ssc-hsc-certificate-father-mother-name-correction-affidavit-bangladesh-2026",
+      "destination": "/bn/blog/technical-education-board-bteb-diploma-certificate-correction-affidavit-2026",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/university-admission-certificate-error-court-affidavit-undertaking-2026",
+      "destination": "/blog/ssc-hsc-certificate-father-mother-name-correction-affidavit-bangladesh-2026",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/educational-certificate-attestation-mofa-apostille-notary-bangladesh-2026",
+      "destination": "/blog/ssc-hsc-certificate-father-mother-name-correction-affidavit-bangladesh-2026",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/blog/aaykar-return-notice-prokriya-bangladesh",
+      "destination": "/bn/blog/krishi-jomi-conversion-niyom-bangladesh",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/ssc-hsc-alim-certificate-lost-duplicate-gd-court-affidavit-2026",
+      "destination": "/blog/ssc-hsc-certificate-father-mother-name-correction-affidavit-bangladesh-2026",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/academic-certificate-nid-passport-name-mismatch-solution-affidavit-2026",
+      "destination": "/blog/ssc-hsc-certificate-father-mother-name-correction-affidavit-bangladesh-2026",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/blog/educational-certificate-attestation-mofa-apostille-notary-bangladesh-2026",
+      "destination": "/bn/blog/technical-education-board-bteb-diploma-certificate-correction-affidavit-2026",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/blog/education-board-certificate-roll-registration-passing-year-correction-2026",
+      "destination": "/bn/blog/technical-education-board-bteb-diploma-certificate-correction-affidavit-2026",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/blog/foreign-degree-certificate-equivalence-attestation-ugc-board-bangladesh-2026",
+      "destination": "/bn/blog/technical-education-board-bteb-diploma-certificate-correction-affidavit-2026",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/blog/bangladeshe-company-registration-niyom-prokriya",
+      "destination": "/bn/blog/krishi-jomi-conversion-niyom-bangladesh",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/blog/university-admission-certificate-error-court-affidavit-undertaking-2026",
+      "destination": "/bn/blog/academic-certificate-nid-passport-name-mismatch-solution-affidavit-2026",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/cyber-harassment-facebook-gd-procedure-bangladesh",
+      "destination": "/blog/bangladesh-cyber-crime-complaint-portal-guide-2026",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/labour-law-bangladesh-gratuity-provident-fund-claims",
+      "destination": "/blog/wrongful-termination-labour-law-bangladesh",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/blog/bhara-tikki-bibad-bangladesh",
+      "destination": "/bn/blog/cyber-crime-helpline-online-complaint-bangladesh",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/blog/chukti-bhanga-aini-poqdokkep-bangladesh",
+      "destination": "/bn/blog/cyber-crime-helpline-online-complaint-bangladesh",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/blog/cyber-crime-lawyer-neben-bangladesh",
+      "destination": "/bn/blog/cyber-crime-helpline-online-complaint-bangladesh",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/blog/gharelu-nirjaton-aini-suraksha-bangladesh",
+      "destination": "/bn/blog/yautuk-dowry-ain-bangladesh-bn",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/blog/jamin-khoroch-bangladesh",
+      "destination": "/bn/blog/yautuk-dowry-ain-bangladesh-bn",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/blog/jomi-nibondhon-fees-prokriya-bangladesh",
+      "destination": "/bn/blog/jomi-registry-khoroch-sarkaree-fee-bd",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/blog/mahr-den-mohor-odhikar-bangladesh",
+      "destination": "/bn/blog/yautuk-dowry-ain-bangladesh-bn",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/blog/mittha-mamla-kharej-bangladesh",
+      "destination": "/bn/blog/yautuk-dowry-ain-bangladesh-bn",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/blog/police-abiyog-hoirani-bangladesh",
+      "destination": "/bn/blog/agam-jamin-haikort-khoroch-2026",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/blog/rit-petition-haikort-guide-bangladesh",
+      "destination": "/bn/blog/yautuk-dowry-ain-bangladesh-bn",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/blog/uttaradhikar-certificate-bangladesh",
+      "destination": "/bn/blog/jomi-registry-khoroch-sarkaree-fee-bd",
+      "statusCode": 301
     }
   ],
   "headers": [

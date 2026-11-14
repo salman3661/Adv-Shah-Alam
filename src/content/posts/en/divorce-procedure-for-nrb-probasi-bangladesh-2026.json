@@ -1,9 +1,9 @@
 {
   "slug": "divorce-procedure-for-nrb-probasi-bangladesh-2026",
-  "metaTitle": "Divorce Procedure for NRBs Expatriates Bangladesh 2026 Guide",
+  "metaTitle": "Divorce Procedure for NRBs Expatriates Bangladesh 2026",
   "category": "Family & Overseas Law",
   "title": "Divorce Procedure for NRBs & Expatriates in Bangladesh 2026: Power of Attorney & Legal Steps",
-  "metaDescription": "Complete guide for Non-Resident Bangladeshis (NRBs) in USA, UK, Canada, UAE seeking divorce in Bangladesh — Embassy authentication, Power of Attorney, notice service, dower, and child custody.",
+  "metaDescription": "Complete guide for Non-Resident Bangladeshis (NRBs) in USA, UK, Canada, UAE seeking divorce in Bangladesh — Embassy authentication, Power of Attorney, notice.",
   "keywords": [
     "NRB divorce procedure Bangladesh 2026",
     "expatriate divorce in Bangladesh",
@@ -90,12 +90,24 @@
     }
   ],
   "relatedServiceLinks": [
-    {"text": "Divorce & Family Lawyer Dhaka", "to": "/services/divorce-lawyer"},
-    {"text": "Supreme Court Lawyer Bangladesh", "to": "/services/supreme-court-lawyer"}
+    {
+      "text": "Divorce & Family Lawyer Dhaka",
+      "to": "/services/divorce-lawyer"
+    },
+    {
+      "text": "Supreme Court Lawyer Bangladesh",
+      "to": "/services/supreme-court-lawyer"
+    }
   ],
   "relatedPosts": [
-    {"text": "Court Marriage & Special Marriage Act Guide Bangladesh", "to": "/blog/court-marriage-interfaith-special-marriage-act-bangladesh-2026"},
-    {"text": "Child Custody & Guardianship Law Bangladesh", "to": "/blog/child-custody-law-bangladesh"}
+    {
+      "text": "Court Marriage & Special Marriage Act Guide Bangladesh",
+      "to": "/blog/court-marriage-interfaith-special-marriage-act-bangladesh-2026"
+    },
+    {
+      "text": "Child Custody & Guardianship Law Bangladesh",
+      "to": "/blog/child-custody-law-bangladesh"
+    }
   ],
   "isDraft": false,
   "lang": "en"

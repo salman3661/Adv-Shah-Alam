@@ -1,9 +1,9 @@
 {
   "slug": "workplace-harassment-wrongful-termination-labour-law-bangladesh-2026",
-  "metaTitle": "Wrongful Termination Labour Law Bangladesh 2026 Compensation",
+  "metaTitle": "Wrongful Termination Labour Law Bangladesh 2026",
   "category": "Labour Law",
   "title": "Wrongful Termination & Unfair Dismissal under Bangladesh Labour Act 2006: Compensation & Gratuity Rights",
-  "metaDescription": "Complete guide to employee rights under Bangladesh Labour Act 2006 — Section 26 notice pay, Section 27 resignation, illegal termination remedies, gratuity, and Labour Court complaint rules.",
+  "metaDescription": "Complete guide to employee rights under Bangladesh Labour Act 2006 — Section 26 notice pay, Section 27 resignation, illegal termination remedies, gratuity.",
   "keywords": [
     "wrongful termination Bangladesh Labour Act 2006",
     "Section 26 notice pay Bangladesh labour law",
@@ -90,12 +90,24 @@
     }
   ],
   "relatedServiceLinks": [
-    {"text": "Labour & Employment Lawyer Dhaka", "to": "/services/company-corporate-lawyer"},
-    {"text": "Supreme Court Lawyer Bangladesh", "to": "/services/supreme-court-lawyer"}
+    {
+      "text": "Labour & Employment Lawyer Dhaka",
+      "to": "/services/company-corporate-lawyer"
+    },
+    {
+      "text": "Supreme Court Lawyer Bangladesh",
+      "to": "/services/supreme-court-lawyer"
+    }
   ],
   "relatedPosts": [
-    {"text": "Wrongful Termination Labour Law Bangladesh Guide", "to": "/blog/wrongful-termination-labour-law-bangladesh"},
-    {"text": "Labour Law Worker Rights Bangladesh", "to": "/blog/labour-law-worker-rights-bangladesh"}
+    {
+      "text": "Wrongful Termination Labour Law Bangladesh Guide",
+      "to": "/blog/wrongful-termination-labour-law-bangladesh"
+    },
+    {
+      "text": "Labour Law Worker Rights Bangladesh",
+      "to": "/blog/labour-law-worker-rights-bangladesh"
+    }
   ],
   "isDraft": false,
   "lang": "en"

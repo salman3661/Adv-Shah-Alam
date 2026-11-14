@@ -1,10 +1,16 @@
 {
   "slug": "how-to-file-divorce-bangladesh",
-  "metaTitle": "How to File for Divorce in Bangladesh | Step-by-Step 2026 Guide",
+  "metaTitle": "How to File for Divorce in Bangladesh | Step-by-Step 2026",
   "category": "Family Law",
   "title": "How to File for Divorce in Bangladesh: Step-by-Step 2026 Guide",
   "metaDescription": "Step-by-step guide to filing for divorce in Bangladesh in 2026. Learn the documents needed, arbitration council process, family court filing, and timeline.",
-  "keywords": ["how to file divorce Bangladesh", "divorce filing process Bangladesh", "divorce documents Bangladesh", "family court divorce Bangladesh", "Muslim divorce procedure Bangladesh"],
+  "keywords": [
+    "how to file divorce Bangladesh",
+    "divorce filing process Bangladesh",
+    "divorce documents Bangladesh",
+    "family court divorce Bangladesh",
+    "Muslim divorce procedure Bangladesh"
+  ],
   "publishedDate": "2026-07-12",
   "lastModified": "2026-07-12",
   "readTime": "9 min read",
@@ -59,20 +65,50 @@
     }
   ],
   "faqs": [
-    {"question": "How long does a divorce take in Bangladesh?", "answer": "A mutual Muslim divorce through the Arbitration Council takes a minimum of 90 days. An uncontested Family Court divorce typically takes 6 to 12 months. A contested divorce involving custody, property, and dower disputes can take 2 to 4 years in the trial court, with potential appeals adding further time."},
-    {"question": "What happens to dower (mahr) when divorcing in Bangladesh?", "answer": "Upon divorce, the wife is entitled to receive any unpaid dower (mahr) as specified in the Kabinnama. If the husband refuses to pay, the wife can file a dower suit in the Family Court. Courts can enforce dower payment as a debt."},
-    {"question": "Can I divorce without going to court in Bangladesh?", "answer": "Yes, for Muslim divorce (talaq or mubaarat) where both parties cooperate, the entire process can be completed through the Arbitration Council without any court involvement. Court is only required for contested matters such as custody disputes, dower claims, or judicial khula."},
-    {"question": "Do I need to appear in person at the Arbitration Council?", "answer": "Personal attendance is strongly recommended. While not always mandatory in practice, appearing demonstrates good faith cooperation in the reconciliation process and avoids complications. Your lawyer can accompany you and handle the procedural aspects."},
-    {"question": "Can I remarry immediately after divorce in Bangladesh?", "answer": "For men, remarriage is permissible after the divorce becomes effective after the 90-day period. For Muslim women, the iddat period (approximately 3 months or 3 menstrual cycles after divorce) must pass before remarriage. If pregnant, iddat lasts until childbirth."}
+    {
+      "question": "How long does a divorce take in Bangladesh?",
+      "answer": "A mutual Muslim divorce through the Arbitration Council takes a minimum of 90 days. An uncontested Family Court divorce typically takes 6 to 12 months. A contested divorce involving custody, property, and dower disputes can take 2 to 4 years in the trial court, with potential appeals adding further time."
+    },
+    {
+      "question": "What happens to dower (mahr) when divorcing in Bangladesh?",
+      "answer": "Upon divorce, the wife is entitled to receive any unpaid dower (mahr) as specified in the Kabinnama. If the husband refuses to pay, the wife can file a dower suit in the Family Court. Courts can enforce dower payment as a debt."
+    },
+    {
+      "question": "Can I divorce without going to court in Bangladesh?",
+      "answer": "Yes, for Muslim divorce (talaq or mubaarat) where both parties cooperate, the entire process can be completed through the Arbitration Council without any court involvement. Court is only required for contested matters such as custody disputes, dower claims, or judicial khula."
+    },
+    {
+      "question": "Do I need to appear in person at the Arbitration Council?",
+      "answer": "Personal attendance is strongly recommended. While not always mandatory in practice, appearing demonstrates good faith cooperation in the reconciliation process and avoids complications. Your lawyer can accompany you and handle the procedural aspects."
+    },
+    {
+      "question": "Can I remarry immediately after divorce in Bangladesh?",
+      "answer": "For men, remarriage is permissible after the divorce becomes effective after the 90-day period. For Muslim women, the iddat period (approximately 3 months or 3 menstrual cycles after divorce) must pass before remarriage. If pregnant, iddat lasts until childbirth."
+    }
   ],
   "relatedServiceLinks": [
-    {"text": "Divorce Lawyer", "to": "/services/divorce-lawyer"},
-    {"text": "Supreme Court Lawyer", "to": "/services/supreme-court-lawyer"}
+    {
+      "text": "Divorce Lawyer",
+      "to": "/services/divorce-lawyer"
+    },
+    {
+      "text": "Supreme Court Lawyer",
+      "to": "/services/supreme-court-lawyer"
+    }
   ],
   "relatedPosts": [
-    {"text": "Complete Divorce Process in Bangladesh 2026", "to": "/blog/how-to-file-divorce-court-bangladesh-2026"},
-    {"text": "How to Choose a Divorce Lawyer in Dhaka", "to": "/blog/divorce-lawyer-dhaka-how-to-choose"},
-    {"text": "Domestic Violence Protection Order Bangladesh", "to": "/blog/domestic-violence-law-bangladesh"}
+    {
+      "text": "Complete Divorce Process in Bangladesh 2026",
+      "to": "/blog/how-to-file-divorce-court-bangladesh-2026"
+    },
+    {
+      "text": "How to Choose a Divorce Lawyer in Dhaka",
+      "to": "/blog/divorce-lawyer-dhaka-how-to-choose"
+    },
+    {
+      "text": "Domestic Violence Protection Order Bangladesh",
+      "to": "/blog/domestic-violence-law-bangladesh"
+    }
   ],
   "isDraft": false,
   "lang": "en"

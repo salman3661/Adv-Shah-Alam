@@ -3,8 +3,14 @@
   "metaTitle": "Contract Breach & Specific Performance Bangladesh Guide",
   "category": "Civil Law",
   "title": "Contract Breach and Specific Performance Suit in Bangladesh: A Complete Legal Guide",
-  "metaDescription": "Complete guide to contract breach and specific performance suits in Bangladesh — legal remedies, court procedure, the Specific Relief Act 1877, and how to win your case.",
-  "keywords": ["contract breach Bangladesh", "specific performance Bangladesh", "Specific Relief Act 1877 Bangladesh", "civil suit contract Bangladesh", "breach of contract lawyer Dhaka"],
+  "metaDescription": "Complete guide to contract breach and specific performance suits in Bangladesh — legal remedies, court procedure, the Specific Relief Act 1877, and how to win.",
+  "keywords": [
+    "contract breach Bangladesh",
+    "specific performance Bangladesh",
+    "Specific Relief Act 1877 Bangladesh",
+    "civil suit contract Bangladesh",
+    "breach of contract lawyer Dhaka"
+  ],
   "publishedDate": "2026-07-12",
   "lastModified": "2026-07-12",
   "readTime": "11 min read",
@@ -86,13 +92,28 @@
     }
   ],
   "relatedServiceLinks": [
-    {"text": "Land Lawyer in Bangladesh", "to": "/services/land-lawyer"},
-    {"text": "Company & Corporate Lawyer", "to": "/services/company-corporate-lawyer"},
-    {"text": "Supreme Court Lawyer Bangladesh", "to": "/services/supreme-court-lawyer"}
+    {
+      "text": "Land Lawyer in Bangladesh",
+      "to": "/services/land-lawyer"
+    },
+    {
+      "text": "Company & Corporate Lawyer",
+      "to": "/services/company-corporate-lawyer"
+    },
+    {
+      "text": "Supreme Court Lawyer Bangladesh",
+      "to": "/services/supreme-court-lawyer"
+    }
   ],
   "relatedPosts": [
-    {"text": "Section 138 NI Act Cheque Case Guide Bangladesh", "to": "/blog/138-ni-act-bangladesh-cheque-case-guide"},
-    {"text": "Cybercrime Laws Bangladesh 2026", "to": "/blog/cyber-crime-digital-security-act-bangladesh"}
+    {
+      "text": "Section 138 NI Act Cheque Case Guide Bangladesh",
+      "to": "/blog/138-ni-act-bangladesh-cheque-case-guide"
+    },
+    {
+      "text": "Cybercrime Laws Bangladesh 2026",
+      "to": "/blog/cyber-crime-digital-security-act-bangladesh"
+    }
   ],
   "isDraft": false,
   "lang": "en"

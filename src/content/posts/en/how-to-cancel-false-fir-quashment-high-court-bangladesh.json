@@ -1,9 +1,9 @@
 {
   "slug": "how-to-cancel-false-fir-quashment-high-court-bangladesh",
-  "metaTitle": "Quash False FIR Criminal Case High Court Bangladesh 561A Guide",
+  "metaTitle": "Quash False FIR Criminal Case High Court Bangladesh 561A",
   "category": "Criminal Law",
   "title": "How to Quash a False FIR or Criminal Case in High Court Bangladesh (Section 561A CrPC Guide)",
-  "metaDescription": "Step-by-step legal guide to quashing false FIRs, police chargesheets, and bogus criminal proceedings under Section 561A CrPC in the High Court Division of Bangladesh.",
+  "metaDescription": "Step-by-step legal guide to quashing false FIRs, police chargesheets, and bogus criminal proceedings under Section 561A CrPC in the High Court Division of.",
   "keywords": [
     "quash false FIR Bangladesh",
     "Section 561A CrPC High Court Bangladesh",
@@ -89,12 +89,24 @@
     }
   ],
   "relatedServiceLinks": [
-    {"text": "Criminal Defense Lawyer Dhaka", "to": "/services/criminal-lawyer"},
-    {"text": "Supreme Court Lawyer Bangladesh", "to": "/services/supreme-court-lawyer"}
+    {
+      "text": "Criminal Defense Lawyer Dhaka",
+      "to": "/services/criminal-lawyer"
+    },
+    {
+      "text": "Supreme Court Lawyer Bangladesh",
+      "to": "/services/supreme-court-lawyer"
+    }
   ],
   "relatedPosts": [
-    {"text": "High Court Anticipatory Bail Procedure Guide", "to": "/blog/anticipatory-bail-bangladesh"},
-    {"text": "Police Remand & Arrest Rights in Bangladesh", "to": "/blog/police-remand-rights-bangladesh"}
+    {
+      "text": "High Court Anticipatory Bail Procedure Guide",
+      "to": "/blog/anticipatory-bail-bangladesh"
+    },
+    {
+      "text": "Police Remand & Arrest Rights in Bangladesh",
+      "to": "/blog/police-remand-rights-bangladesh"
+    }
   ],
   "isDraft": false,
   "lang": "en"

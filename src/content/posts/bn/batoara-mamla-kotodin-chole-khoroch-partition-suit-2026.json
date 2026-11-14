@@ -90,8 +90,9 @@
     }
   ],
   "featured": false,
-  "isDraft": false,
+  "isDraft": true,
   "publishedAt": "2026-09-22T18:11:00.000Z",
   "impressions": 267,
-  "clicks": 13
+  "clicks": 13,
+  "mergedInto": "/bn/blog/batwara-mamla-din-khoroch-prokriya-2026"
 }

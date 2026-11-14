@@ -1,10 +1,16 @@
 {
   "slug": "how-to-challenge-false-criminal-case-bangladesh",
-  "metaTitle": "How to Quash a False Criminal Case in Bangladesh | Legal Guide",
+  "metaTitle": "How to Quash a False Criminal Case in Bangladesh | Legal",
   "category": "Criminal Law",
   "title": "How to Challenge and Quash a False Criminal Case in Bangladesh: Complete Legal Guide",
   "metaDescription": "Falsely accused in Bangladesh? Learn how to challenge, quash, and defend against a false criminal case from bail to High Court writ and quashing petitions.",
-  "keywords": ["false criminal case Bangladesh", "quash FIR Bangladesh", "how to fight false case Bangladesh", "criminal lawyer Bangladesh", "bail false case Bangladesh"],
+  "keywords": [
+    "false criminal case Bangladesh",
+    "quash FIR Bangladesh",
+    "how to fight false case Bangladesh",
+    "criminal lawyer Bangladesh",
+    "bail false case Bangladesh"
+  ],
   "publishedDate": "2026-07-12",
   "lastModified": "2026-07-12",
   "readTime": "10 min read",
@@ -59,21 +65,54 @@
     }
   ],
   "faqs": [
-    {"question": "What should I do immediately after a false FIR is filed against me in Bangladesh?", "answer": "Immediately engage a criminal lawyer, apply for anticipatory bail before your arrest, and gather all evidence that contradicts the allegations. Do not speak to police without your lawyer present."},
-    {"question": "How long does it take to quash a case in the High Court Division of Bangladesh?", "answer": "Obtaining a Rule Nisi (stay of proceedings) from the High Court Division can take days to weeks. A final quashing order, after full hearing, typically takes 6 months to 2 years depending on case complexity and court scheduling."},
-    {"question": "Can I get anticipatory bail for a murder charge in Bangladesh?", "answer": "Anticipatory bail for non-bailable offenses including murder is available under Section 498 CrPC from the High Court Division. However, courts are very cautious with serious offenses. The merits of the bail application depend heavily on the specific facts and the strength of falsity claims."},
-    {"question": "What is the punishment for filing a false case in Bangladesh?", "answer": "Filing a false criminal case to injure another person is an offense under Section 211 of the Penal Code 1860, punishable with imprisonment up to 7 years and a fine. Additional charges for fabricating evidence under Sections 191 to 196 may also apply."},
-    {"question": "Can I travel abroad if I have a pending false criminal case against me in Bangladesh?", "answer": "If you are on bail, you generally need court permission to travel abroad. Courts may impose travel restrictions as a bail condition. Your lawyer should apply for permission to travel abroad if needed, providing assurances of your return."}
+    {
+      "question": "What should I do immediately after a false FIR is filed against me in Bangladesh?",
+      "answer": "Immediately engage a criminal lawyer, apply for anticipatory bail before your arrest, and gather all evidence that contradicts the allegations. Do not speak to police without your lawyer present."
+    },
+    {
+      "question": "How long does it take to quash a case in the High Court Division of Bangladesh?",
+      "answer": "Obtaining a Rule Nisi (stay of proceedings) from the High Court Division can take days to weeks. A final quashing order, after full hearing, typically takes 6 months to 2 years depending on case complexity and court scheduling."
+    },
+    {
+      "question": "Can I get anticipatory bail for a murder charge in Bangladesh?",
+      "answer": "Anticipatory bail for non-bailable offenses including murder is available under Section 498 CrPC from the High Court Division. However, courts are very cautious with serious offenses. The merits of the bail application depend heavily on the specific facts and the strength of falsity claims."
+    },
+    {
+      "question": "What is the punishment for filing a false case in Bangladesh?",
+      "answer": "Filing a false criminal case to injure another person is an offense under Section 211 of the Penal Code 1860, punishable with imprisonment up to 7 years and a fine. Additional charges for fabricating evidence under Sections 191 to 196 may also apply."
+    },
+    {
+      "question": "Can I travel abroad if I have a pending false criminal case against me in Bangladesh?",
+      "answer": "If you are on bail, you generally need court permission to travel abroad. Courts may impose travel restrictions as a bail condition. Your lawyer should apply for permission to travel abroad if needed, providing assurances of your return."
+    }
   ],
   "relatedServiceLinks": [
-    {"text": "Criminal Lawyer", "to": "/services/criminal-lawyer"},
-    {"text": "Bail Lawyer", "to": "/services/bail-lawyer"},
-    {"text": "Supreme Court Lawyer", "to": "/services/supreme-court-lawyer"}
+    {
+      "text": "Criminal Lawyer",
+      "to": "/services/criminal-lawyer"
+    },
+    {
+      "text": "Bail Lawyer",
+      "to": "/services/bail-lawyer"
+    },
+    {
+      "text": "Supreme Court Lawyer",
+      "to": "/services/supreme-court-lawyer"
+    }
   ],
   "relatedPosts": [
-    {"text": "Family Law Bangladesh Complete Guide", "to": "/blog/family-law-bangladesh-complete-guide"},
-    {"text": "Land Dispute Case Bangladesh", "to": "/blog/land-dispute-legal-remedies-bangladesh"},
-    {"text": "Property Registration Process Bangladesh", "to": "/blog/how-to-register-land-bangladesh"}
+    {
+      "text": "Family Law Bangladesh Complete Guide",
+      "to": "/blog/family-law-bangladesh-complete-guide"
+    },
+    {
+      "text": "Land Dispute Case Bangladesh",
+      "to": "/blog/land-dispute-legal-remedies-bangladesh"
+    },
+    {
+      "text": "Property Registration Process Bangladesh",
+      "to": "/blog/how-to-register-land-bangladesh"
+    }
   ],
   "isDraft": false,
   "lang": "en"
