@@ -1,0 +1,882 @@
+{
+  "updatedAt": "2026-11-14T13:59:59.312Z",
+  "account": "accounts/pub-1781126556775676",
+  "currency": "USD",
+  "last30Days": {
+    "startDate": {
+      "year": 2026,
+      "month": 10,
+      "day": 15
+    },
+    "endDate": {
+      "year": 2026,
+      "month": 11,
+      "day": 13
+    },
+    "totals": {
+      "DATE": null,
+      "ESTIMATED_EARNINGS": 15.64,
+      "PAGE_VIEWS": 13531,
+      "PAGE_VIEWS_RPM": 1.16,
+      "IMPRESSIONS": 21085,
+      "CLICKS": 466,
+      "IMPRESSIONS_CTR": 0.0221
+    },
+    "averages": {
+      "DATE": null,
+      "ESTIMATED_EARNINGS": 0.52,
+      "PAGE_VIEWS": 451,
+      "PAGE_VIEWS_RPM": 0,
+      "IMPRESSIONS": 702,
+      "CLICKS": 15,
+      "IMPRESSIONS_CTR": 0
+    }
+  },
+  "monthToDate": {
+    "startDate": {
+      "year": 2026,
+      "month": 11,
+      "day": 1
+    },
+    "endDate": {
+      "year": 2026,
+      "month": 11,
+      "day": 14
+    },
+    "totals": {
+      "ESTIMATED_EARNINGS": 8.83,
+      "PAGE_VIEWS": 6114,
+      "PAGE_VIEWS_RPM": 1.44,
+      "IMPRESSIONS": 12356,
+      "CLICKS": 237,
+      "IMPRESSIONS_CTR": 0.0192
+    }
+  },
+  "daily": [
+    {
+      "DATE": "2026-10-15",
+      "ESTIMATED_EARNINGS": 0.24,
+      "PAGE_VIEWS": 359,
+      "PAGE_VIEWS_RPM": 0.67,
+      "IMPRESSIONS": 281,
+      "CLICKS": 8,
+      "IMPRESSIONS_CTR": 0.0285
+    },
+    {
+      "DATE": "2026-10-16",
+      "ESTIMATED_EARNINGS": 0.24,
+      "PAGE_VIEWS": 321,
+      "PAGE_VIEWS_RPM": 0.74,
+      "IMPRESSIONS": 275,
+      "CLICKS": 6,
+      "IMPRESSIONS_CTR": 0.0218
+    },
+    {
+      "DATE": "2026-10-17",
+      "ESTIMATED_EARNINGS": 0.23,
+      "PAGE_VIEWS": 364,
+      "PAGE_VIEWS_RPM": 0.63,
+      "IMPRESSIONS": 290,
+      "CLICKS": 7,
+      "IMPRESSIONS_CTR": 0.0241
+    },
+    {
+      "DATE": "2026-10-18",
+      "ESTIMATED_EARNINGS": 0.29,
+      "PAGE_VIEWS": 408,
+      "PAGE_VIEWS_RPM": 0.71,
+      "IMPRESSIONS": 265,
+      "CLICKS": 13,
+      "IMPRESSIONS_CTR": 0.0491
+    },
+    {
+      "DATE": "2026-10-19",
+      "ESTIMATED_EARNINGS": 0.24,
+      "PAGE_VIEWS": 419,
+      "PAGE_VIEWS_RPM": 0.57,
+      "IMPRESSIONS": 291,
+      "CLICKS": 5,
+      "IMPRESSIONS_CTR": 0.0172
+    },
+    {
+      "DATE": "2026-10-20",
+      "ESTIMATED_EARNINGS": 0.22,
+      "PAGE_VIEWS": 397,
+      "PAGE_VIEWS_RPM": 0.55,
+      "IMPRESSIONS": 294,
+      "CLICKS": 12,
+      "IMPRESSIONS_CTR": 0.0408
+    },
+    {
+      "DATE": "2026-10-21",
+      "ESTIMATED_EARNINGS": 0.23,
+      "PAGE_VIEWS": 368,
+      "PAGE_VIEWS_RPM": 0.64,
+      "IMPRESSIONS": 311,
+      "CLICKS": 9,
+      "IMPRESSIONS_CTR": 0.0289
+    },
+    {
+      "DATE": "2026-10-22",
+      "ESTIMATED_EARNINGS": 0.34,
+      "PAGE_VIEWS": 437,
+      "PAGE_VIEWS_RPM": 0.77,
+      "IMPRESSIONS": 417,
+      "CLICKS": 9,
+      "IMPRESSIONS_CTR": 0.0216
+    },
+    {
+      "DATE": "2026-10-23",
+      "ESTIMATED_EARNINGS": 0.36,
+      "PAGE_VIEWS": 516,
+      "PAGE_VIEWS_RPM": 0.7,
+      "IMPRESSIONS": 474,
+      "CLICKS": 14,
+      "IMPRESSIONS_CTR": 0.0295
+    },
+    {
+      "DATE": "2026-10-24",
+      "ESTIMATED_EARNINGS": 0.38,
+      "PAGE_VIEWS": 551,
+      "PAGE_VIEWS_RPM": 0.68,
+      "IMPRESSIONS": 574,
+      "CLICKS": 16,
+      "IMPRESSIONS_CTR": 0.0279
+    },
+    {
+      "DATE": "2026-10-25",
+      "ESTIMATED_EARNINGS": 0.37,
+      "PAGE_VIEWS": 625,
+      "PAGE_VIEWS_RPM": 0.6,
+      "IMPRESSIONS": 534,
+      "CLICKS": 26,
+      "IMPRESSIONS_CTR": 0.0487
+    },
+    {
+      "DATE": "2026-10-26",
+      "ESTIMATED_EARNINGS": 0.53,
+      "PAGE_VIEWS": 594,
+      "PAGE_VIEWS_RPM": 0.89,
+      "IMPRESSIONS": 926,
+      "CLICKS": 25,
+      "IMPRESSIONS_CTR": 0.027
+    },
+    {
+      "DATE": "2026-10-27",
+      "ESTIMATED_EARNINGS": 0.69,
+      "PAGE_VIEWS": 485,
+      "PAGE_VIEWS_RPM": 1.43,
+      "IMPRESSIONS": 983,
+      "CLICKS": 20,
+      "IMPRESSIONS_CTR": 0.0203
+    },
+    {
+      "DATE": "2026-10-28",
+      "ESTIMATED_EARNINGS": 1.32,
+      "PAGE_VIEWS": 538,
+      "PAGE_VIEWS_RPM": 2.45,
+      "IMPRESSIONS": 1028,
+      "CLICKS": 17,
+      "IMPRESSIONS_CTR": 0.0165
+    },
+    {
+      "DATE": "2026-10-29",
+      "ESTIMATED_EARNINGS": 0.6,
+      "PAGE_VIEWS": 457,
+      "PAGE_VIEWS_RPM": 1.3,
+      "IMPRESSIONS": 850,
+      "CLICKS": 22,
+      "IMPRESSIONS_CTR": 0.0259
+    },
+    {
+      "DATE": "2026-10-30",
+      "ESTIMATED_EARNINGS": 0.5,
+      "PAGE_VIEWS": 393,
+      "PAGE_VIEWS_RPM": 1.27,
+      "IMPRESSIONS": 684,
+      "CLICKS": 17,
+      "IMPRESSIONS_CTR": 0.0249
+    },
+    {
+      "DATE": "2026-10-31",
+      "ESTIMATED_EARNINGS": 0.54,
+      "PAGE_VIEWS": 474,
+      "PAGE_VIEWS_RPM": 1.13,
+      "IMPRESSIONS": 965,
+      "CLICKS": 20,
+      "IMPRESSIONS_CTR": 0.0207
+    },
+    {
+      "DATE": "2026-11-01",
+      "ESTIMATED_EARNINGS": 0.62,
+      "PAGE_VIEWS": 492,
+      "PAGE_VIEWS_RPM": 1.26,
+      "IMPRESSIONS": 897,
+      "CLICKS": 13,
+      "IMPRESSIONS_CTR": 0.0145
+    },
+    {
+      "DATE": "2026-11-02",
+      "ESTIMATED_EARNINGS": 0.87,
+      "PAGE_VIEWS": 546,
+      "PAGE_VIEWS_RPM": 1.59,
+      "IMPRESSIONS": 978,
+      "CLICKS": 13,
+      "IMPRESSIONS_CTR": 0.0133
+    },
+    {
+      "DATE": "2026-11-03",
+      "ESTIMATED_EARNINGS": 0.6,
+      "PAGE_VIEWS": 462,
+      "PAGE_VIEWS_RPM": 1.3,
+      "IMPRESSIONS": 931,
+      "CLICKS": 22,
+      "IMPRESSIONS_CTR": 0.0236
+    },
+    {
+      "DATE": "2026-11-04",
+      "ESTIMATED_EARNINGS": 0.65,
+      "PAGE_VIEWS": 460,
+      "PAGE_VIEWS_RPM": 1.41,
+      "IMPRESSIONS": 912,
+      "CLICKS": 23,
+      "IMPRESSIONS_CTR": 0.0252
+    },
+    {
+      "DATE": "2026-11-05",
+      "ESTIMATED_EARNINGS": 0.47,
+      "PAGE_VIEWS": 380,
+      "PAGE_VIEWS_RPM": 1.23,
+      "IMPRESSIONS": 747,
+      "CLICKS": 15,
+      "IMPRESSIONS_CTR": 0.0201
+    },
+    {
+      "DATE": "2026-11-06",
+      "ESTIMATED_EARNINGS": 0.69,
+      "PAGE_VIEWS": 379,
+      "PAGE_VIEWS_RPM": 1.83,
+      "IMPRESSIONS": 786,
+      "CLICKS": 14,
+      "IMPRESSIONS_CTR": 0.0178
+    },
+    {
+      "DATE": "2026-11-07",
+      "ESTIMATED_EARNINGS": 0.65,
+      "PAGE_VIEWS": 472,
+      "PAGE_VIEWS_RPM": 1.38,
+      "IMPRESSIONS": 987,
+      "CLICKS": 17,
+      "IMPRESSIONS_CTR": 0.0172
+    },
+    {
+      "DATE": "2026-11-08",
+      "ESTIMATED_EARNINGS": 0.67,
+      "PAGE_VIEWS": 523,
+      "PAGE_VIEWS_RPM": 1.27,
+      "IMPRESSIONS": 1002,
+      "CLICKS": 21,
+      "IMPRESSIONS_CTR": 0.021
+    },
+    {
+      "DATE": "2026-11-09",
+      "ESTIMATED_EARNINGS": 0.69,
+      "PAGE_VIEWS": 477,
+      "PAGE_VIEWS_RPM": 1.44,
+      "IMPRESSIONS": 1008,
+      "CLICKS": 21,
+      "IMPRESSIONS_CTR": 0.0208
+    },
+    {
+      "DATE": "2026-11-10",
+      "ESTIMATED_EARNINGS": 0.96,
+      "PAGE_VIEWS": 526,
+      "PAGE_VIEWS_RPM": 1.82,
+      "IMPRESSIONS": 1108,
+      "CLICKS": 20,
+      "IMPRESSIONS_CTR": 0.0181
+    },
+    {
+      "DATE": "2026-11-11",
+      "ESTIMATED_EARNINGS": 0.51,
+      "PAGE_VIEWS": 368,
+      "PAGE_VIEWS_RPM": 1.38,
+      "IMPRESSIONS": 762,
+      "CLICKS": 20,
+      "IMPRESSIONS_CTR": 0.0262
+    },
+    {
+      "DATE": "2026-11-12",
+      "ESTIMATED_EARNINGS": 0.56,
+      "PAGE_VIEWS": 422,
+      "PAGE_VIEWS_RPM": 1.32,
+      "IMPRESSIONS": 824,
+      "CLICKS": 15,
+      "IMPRESSIONS_CTR": 0.0182
+    },
+    {
+      "DATE": "2026-11-13",
+      "ESTIMATED_EARNINGS": 0.41,
+      "PAGE_VIEWS": 318,
+      "PAGE_VIEWS_RPM": 1.3,
+      "IMPRESSIONS": 701,
+      "CLICKS": 6,
+      "IMPRESSIONS_CTR": 0.0086
+    }
+  ],
+  "monthly": [
+    {
+      "MONTH": "2026-09",
+      "ESTIMATED_EARNINGS": 0.62,
+      "PAGE_VIEWS": 790,
+      "PAGE_VIEWS_RPM": 0.78,
+      "IMPRESSIONS": 930,
+      "CLICKS": 48,
+      "IMPRESSIONS_CTR": 0.0516
+    },
+    {
+      "MONTH": "2026-10",
+      "ESTIMATED_EARNINGS": 16.16,
+      "PAGE_VIEWS": 13416,
+      "PAGE_VIEWS_RPM": 1.2,
+      "IMPRESSIONS": 18200,
+      "CLICKS": 551,
+      "IMPRESSIONS_CTR": 0.0303
+    },
+    {
+      "MONTH": "2026-11",
+      "ESTIMATED_EARNINGS": 8.83,
+      "PAGE_VIEWS": 6114,
+      "PAGE_VIEWS_RPM": 1.44,
+      "IMPRESSIONS": 12356,
+      "CLICKS": 237,
+      "IMPRESSIONS_CTR": 0.0192
+    }
+  ],
+  "countries": [
+    {
+      "COUNTRY_CODE": "BD",
+      "COUNTRY_NAME": "Bangladesh",
+      "ESTIMATED_EARNINGS": 5.89,
+      "PAGE_VIEWS": 10944,
+      "PAGE_VIEWS_RPM": 0.54,
+      "IMPRESSIONS": 15080,
+      "CLICKS": 366,
+      "IMPRESSIONS_CTR": 0.0243
+    },
+    {
+      "COUNTRY_CODE": "US",
+      "COUNTRY_NAME": "United States",
+      "ESTIMATED_EARNINGS": 2.61,
+      "PAGE_VIEWS": 322,
+      "PAGE_VIEWS_RPM": 8.12,
+      "IMPRESSIONS": 815,
+      "CLICKS": 15,
+      "IMPRESSIONS_CTR": 0.0184
+    },
+    {
+      "COUNTRY_CODE": "GB",
+      "COUNTRY_NAME": "United Kingdom",
+      "ESTIMATED_EARNINGS": 1.71,
+      "PAGE_VIEWS": 225,
+      "PAGE_VIEWS_RPM": 7.61,
+      "IMPRESSIONS": 682,
+      "CLICKS": 14,
+      "IMPRESSIONS_CTR": 0.0205
+    },
+    {
+      "COUNTRY_CODE": "SA",
+      "COUNTRY_NAME": "Saudi Arabia",
+      "ESTIMATED_EARNINGS": 0.9,
+      "PAGE_VIEWS": 288,
+      "PAGE_VIEWS_RPM": 3.13,
+      "IMPRESSIONS": 986,
+      "CLICKS": 17,
+      "IMPRESSIONS_CTR": 0.0172
+    },
+    {
+      "COUNTRY_CODE": "AU",
+      "COUNTRY_NAME": "Australia",
+      "ESTIMATED_EARNINGS": 0.76,
+      "PAGE_VIEWS": 85,
+      "PAGE_VIEWS_RPM": 8.95,
+      "IMPRESSIONS": 322,
+      "CLICKS": 4,
+      "IMPRESSIONS_CTR": 0.0124
+    },
+    {
+      "COUNTRY_CODE": "AE",
+      "COUNTRY_NAME": "United Arab Emirates",
+      "ESTIMATED_EARNINGS": 0.72,
+      "PAGE_VIEWS": 154,
+      "PAGE_VIEWS_RPM": 4.7,
+      "IMPRESSIONS": 544,
+      "CLICKS": 8,
+      "IMPRESSIONS_CTR": 0.0147
+    },
+    {
+      "COUNTRY_CODE": "DE",
+      "COUNTRY_NAME": "Germany",
+      "ESTIMATED_EARNINGS": 0.65,
+      "PAGE_VIEWS": 42,
+      "PAGE_VIEWS_RPM": 15.36,
+      "IMPRESSIONS": 102,
+      "CLICKS": 0,
+      "IMPRESSIONS_CTR": 0
+    },
+    {
+      "COUNTRY_CODE": "CA",
+      "COUNTRY_NAME": "Canada",
+      "ESTIMATED_EARNINGS": 0.36,
+      "PAGE_VIEWS": 51,
+      "PAGE_VIEWS_RPM": 7,
+      "IMPRESSIONS": 152,
+      "CLICKS": 4,
+      "IMPRESSIONS_CTR": 0.0263
+    },
+    {
+      "COUNTRY_CODE": "MY",
+      "COUNTRY_NAME": "Malaysia",
+      "ESTIMATED_EARNINGS": 0.26,
+      "PAGE_VIEWS": 88,
+      "PAGE_VIEWS_RPM": 3,
+      "IMPRESSIONS": 292,
+      "CLICKS": 3,
+      "IMPRESSIONS_CTR": 0.0103
+    },
+    {
+      "COUNTRY_CODE": "SG",
+      "COUNTRY_NAME": "Singapore",
+      "ESTIMATED_EARNINGS": 0.2,
+      "PAGE_VIEWS": 282,
+      "PAGE_VIEWS_RPM": 0.73,
+      "IMPRESSIONS": 161,
+      "CLICKS": 2,
+      "IMPRESSIONS_CTR": 0.0124
+    },
+    {
+      "COUNTRY_CODE": "IT",
+      "COUNTRY_NAME": "Italy",
+      "ESTIMATED_EARNINGS": 0.18,
+      "PAGE_VIEWS": 47,
+      "PAGE_VIEWS_RPM": 3.93,
+      "IMPRESSIONS": 190,
+      "CLICKS": 1,
+      "IMPRESSIONS_CTR": 0.0053
+    },
+    {
+      "COUNTRY_CODE": "KW",
+      "COUNTRY_NAME": "Kuwait",
+      "ESTIMATED_EARNINGS": 0.18,
+      "PAGE_VIEWS": 43,
+      "PAGE_VIEWS_RPM": 4.14,
+      "IMPRESSIONS": 151,
+      "CLICKS": 6,
+      "IMPRESSIONS_CTR": 0.0397
+    },
+    {
+      "COUNTRY_CODE": "QA",
+      "COUNTRY_NAME": "Qatar",
+      "ESTIMATED_EARNINGS": 0.13,
+      "PAGE_VIEWS": 48,
+      "PAGE_VIEWS_RPM": 2.67,
+      "IMPRESSIONS": 156,
+      "CLICKS": 5,
+      "IMPRESSIONS_CTR": 0.0321
+    },
+    {
+      "COUNTRY_CODE": "FR",
+      "COUNTRY_NAME": "France",
+      "ESTIMATED_EARNINGS": 0.13,
+      "PAGE_VIEWS": 33,
+      "PAGE_VIEWS_RPM": 3.82,
+      "IMPRESSIONS": 93,
+      "CLICKS": 0,
+      "IMPRESSIONS_CTR": 0
+    },
+    {
+      "COUNTRY_CODE": "IN",
+      "COUNTRY_NAME": "India",
+      "ESTIMATED_EARNINGS": 0.1,
+      "PAGE_VIEWS": 309,
+      "PAGE_VIEWS_RPM": 0.32,
+      "IMPRESSIONS": 452,
+      "CLICKS": 8,
+      "IMPRESSIONS_CTR": 0.0177
+    },
+    {
+      "COUNTRY_CODE": "JP",
+      "COUNTRY_NAME": "Japan",
+      "ESTIMATED_EARNINGS": 0.1,
+      "PAGE_VIEWS": 24,
+      "PAGE_VIEWS_RPM": 3.97,
+      "IMPRESSIONS": 86,
+      "CLICKS": 0,
+      "IMPRESSIONS_CTR": 0
+    },
+    {
+      "COUNTRY_CODE": "OM",
+      "COUNTRY_NAME": "Oman",
+      "ESTIMATED_EARNINGS": 0.09,
+      "PAGE_VIEWS": 35,
+      "PAGE_VIEWS_RPM": 2.51,
+      "IMPRESSIONS": 118,
+      "CLICKS": 2,
+      "IMPRESSIONS_CTR": 0.0169
+    },
+    {
+      "COUNTRY_CODE": "PT",
+      "COUNTRY_NAME": "Portugal",
+      "ESTIMATED_EARNINGS": 0.07,
+      "PAGE_VIEWS": 15,
+      "PAGE_VIEWS_RPM": 4.88,
+      "IMPRESSIONS": 54,
+      "CLICKS": 1,
+      "IMPRESSIONS_CTR": 0.0185
+    },
+    {
+      "COUNTRY_CODE": "NZ",
+      "COUNTRY_NAME": "New Zealand",
+      "ESTIMATED_EARNINGS": 0.07,
+      "PAGE_VIEWS": 12,
+      "PAGE_VIEWS_RPM": 6.09,
+      "IMPRESSIONS": 78,
+      "CLICKS": 0,
+      "IMPRESSIONS_CTR": 0
+    },
+    {
+      "COUNTRY_CODE": "GR",
+      "COUNTRY_NAME": "Greece",
+      "ESTIMATED_EARNINGS": 0.06,
+      "PAGE_VIEWS": 5,
+      "PAGE_VIEWS_RPM": 11.79,
+      "IMPRESSIONS": 29,
+      "CLICKS": 1,
+      "IMPRESSIONS_CTR": 0.0345
+    },
+    {
+      "COUNTRY_CODE": "CH",
+      "COUNTRY_NAME": "Switzerland",
+      "ESTIMATED_EARNINGS": 0.05,
+      "PAGE_VIEWS": 3,
+      "PAGE_VIEWS_RPM": 16.99,
+      "IMPRESSIONS": 17,
+      "CLICKS": 0,
+      "IMPRESSIONS_CTR": 0
+    },
+    {
+      "COUNTRY_CODE": "ES",
+      "COUNTRY_NAME": "Spain",
+      "ESTIMATED_EARNINGS": 0.05,
+      "PAGE_VIEWS": 11,
+      "PAGE_VIEWS_RPM": 4.41,
+      "IMPRESSIONS": 50,
+      "CLICKS": 0,
+      "IMPRESSIONS_CTR": 0
+    },
+    {
+      "COUNTRY_CODE": "IE",
+      "COUNTRY_NAME": "Ireland",
+      "ESTIMATED_EARNINGS": 0.04,
+      "PAGE_VIEWS": 12,
+      "PAGE_VIEWS_RPM": 3.51,
+      "IMPRESSIONS": 39,
+      "CLICKS": 1,
+      "IMPRESSIONS_CTR": 0.0256
+    },
+    {
+      "COUNTRY_CODE": "MZ",
+      "COUNTRY_NAME": "Mozambique",
+      "ESTIMATED_EARNINGS": 0.03,
+      "PAGE_VIEWS": 2,
+      "PAGE_VIEWS_RPM": 15.5,
+      "IMPRESSIONS": 7,
+      "CLICKS": 0,
+      "IMPRESSIONS_CTR": 0
+    },
+    {
+      "COUNTRY_CODE": "BE",
+      "COUNTRY_NAME": "Belgium",
+      "ESTIMATED_EARNINGS": 0.03,
+      "PAGE_VIEWS": 6,
+      "PAGE_VIEWS_RPM": 4.22,
+      "IMPRESSIONS": 17,
+      "CLICKS": 1,
+      "IMPRESSIONS_CTR": 0.0588
+    },
+    {
+      "COUNTRY_CODE": "SE",
+      "COUNTRY_NAME": "Sweden",
+      "ESTIMATED_EARNINGS": 0.02,
+      "PAGE_VIEWS": 10,
+      "PAGE_VIEWS_RPM": 2.23,
+      "IMPRESSIONS": 37,
+      "CLICKS": 1,
+      "IMPRESSIONS_CTR": 0.027
+    },
+    {
+      "COUNTRY_CODE": "PL",
+      "COUNTRY_NAME": "Poland",
+      "ESTIMATED_EARNINGS": 0.02,
+      "PAGE_VIEWS": 6,
+      "PAGE_VIEWS_RPM": 3.61,
+      "IMPRESSIONS": 19,
+      "CLICKS": 0,
+      "IMPRESSIONS_CTR": 0
+    },
+    {
+      "COUNTRY_CODE": "KR",
+      "COUNTRY_NAME": "South Korea",
+      "ESTIMATED_EARNINGS": 0.02,
+      "PAGE_VIEWS": 7,
+      "PAGE_VIEWS_RPM": 2.66,
+      "IMPRESSIONS": 18,
+      "CLICKS": 0,
+      "IMPRESSIONS_CTR": 0
+    },
+    {
+      "COUNTRY_CODE": "NO",
+      "COUNTRY_NAME": "Norway",
+      "ESTIMATED_EARNINGS": 0.02,
+      "PAGE_VIEWS": 3,
+      "PAGE_VIEWS_RPM": 5.74,
+      "IMPRESSIONS": 4,
+      "CLICKS": 1,
+      "IMPRESSIONS_CTR": 0.25
+    },
+    {
+      "COUNTRY_CODE": "MU",
+      "COUNTRY_NAME": "Mauritius",
+      "ESTIMATED_EARNINGS": 0.02,
+      "PAGE_VIEWS": 1,
+      "PAGE_VIEWS_RPM": 16.51,
+      "IMPRESSIONS": 9,
+      "CLICKS": 0,
+      "IMPRESSIONS_CTR": 0
+    }
+  ],
+  "adUnits": [
+    {
+      "AD_UNIT_ID": "ca-pub-1781126556775676:8630877987",
+      "AD_UNIT_NAME": "In-Article Responsive",
+      "ESTIMATED_EARNINGS": 1.76,
+      "PAGE_VIEWS": 5,
+      "PAGE_VIEWS_RPM": 352.67,
+      "IMPRESSIONS": 3035,
+      "CLICKS": 18,
+      "IMPRESSIONS_CTR": 0.0059
+    },
+    {
+      "AD_UNIT_ID": "ca-pub-1781126556775676:9118178745",
+      "AD_UNIT_NAME": "Article Body 1",
+      "ESTIMATED_EARNINGS": 1,
+      "PAGE_VIEWS": 1,
+      "PAGE_VIEWS_RPM": 1003.15,
+      "IMPRESSIONS": 1717,
+      "CLICKS": 8,
+      "IMPRESSIONS_CTR": 0.0047
+    },
+    {
+      "AD_UNIT_ID": "ca-pub-1781126556775676:5064091502",
+      "AD_UNIT_NAME": "Sidebar Sticky Display",
+      "ESTIMATED_EARNINGS": 0.35,
+      "PAGE_VIEWS": 1,
+      "PAGE_VIEWS_RPM": 354.61,
+      "IMPRESSIONS": 693,
+      "CLICKS": 1,
+      "IMPRESSIONS_CTR": 0.0014
+    },
+    {
+      "AD_UNIT_ID": "ca-pub-1781126556775676:5230990345",
+      "AD_UNIT_NAME": "Article Body 2",
+      "ESTIMATED_EARNINGS": 0.1,
+      "PAGE_VIEWS": 0,
+      "PAGE_VIEWS_RPM": 0,
+      "IMPRESSIONS": 395,
+      "CLICKS": 3,
+      "IMPRESSIONS_CTR": 0.0076
+    }
+  ],
+  "domains": [
+    {
+      "DOMAIN_NAME": "www.advmdshahalam.me",
+      "ESTIMATED_EARNINGS": 15.64,
+      "PAGE_VIEWS": 13442,
+      "PAGE_VIEWS_RPM": 1.16,
+      "IMPRESSIONS": 21085,
+      "CLICKS": 466,
+      "IMPRESSIONS_CTR": 0.0221
+    },
+    {
+      "DOMAIN_NAME": "adv-shah-alam-portfolio-6su6cpmfb-salman3661s-projects.vercel.app",
+      "ESTIMATED_EARNINGS": 0,
+      "PAGE_VIEWS": 2,
+      "PAGE_VIEWS_RPM": 0,
+      "IMPRESSIONS": 0,
+      "CLICKS": 0,
+      "IMPRESSIONS_CTR": 0
+    },
+    {
+      "DOMAIN_NAME": "adv-shah-alam-portfolio-a74jbzhk8-salman3661s-projects.vercel.app",
+      "ESTIMATED_EARNINGS": 0,
+      "PAGE_VIEWS": 2,
+      "PAGE_VIEWS_RPM": 0,
+      "IMPRESSIONS": 0,
+      "CLICKS": 0,
+      "IMPRESSIONS_CTR": 0
+    },
+    {
+      "DOMAIN_NAME": "adv-shah-alam-portfolio-aa9m58vn0-salman3661s-projects.vercel.app",
+      "ESTIMATED_EARNINGS": 0,
+      "PAGE_VIEWS": 2,
+      "PAGE_VIEWS_RPM": 0,
+      "IMPRESSIONS": 0,
+      "CLICKS": 0,
+      "IMPRESSIONS_CTR": 0
+    },
+    {
+      "DOMAIN_NAME": "adv-shah-alam-portfolio-9nnep6imt-salman3661s-projects.vercel.app",
+      "ESTIMATED_EARNINGS": 0,
+      "PAGE_VIEWS": 2,
+      "PAGE_VIEWS_RPM": 0,
+      "IMPRESSIONS": 0,
+      "CLICKS": 0,
+      "IMPRESSIONS_CTR": 0
+    },
+    {
+      "DOMAIN_NAME": "adv-shah-alam-portfolio-crol73ltp-salman3661s-projects.vercel.app",
+      "ESTIMATED_EARNINGS": 0,
+      "PAGE_VIEWS": 2,
+      "PAGE_VIEWS_RPM": 0,
+      "IMPRESSIONS": 0,
+      "CLICKS": 0,
+      "IMPRESSIONS_CTR": 0
+    },
+    {
+      "DOMAIN_NAME": "adv-shah-alam-portfolio-e0tcralk5-salman3661s-projects.vercel.app",
+      "ESTIMATED_EARNINGS": 0,
+      "PAGE_VIEWS": 2,
+      "PAGE_VIEWS_RPM": 0,
+      "IMPRESSIONS": 0,
+      "CLICKS": 0,
+      "IMPRESSIONS_CTR": 0
+    },
+    {
+      "DOMAIN_NAME": "adv-shah-alam-portfolio-eiohk6yg2-salman3661s-projects.vercel.app",
+      "ESTIMATED_EARNINGS": 0,
+      "PAGE_VIEWS": 1,
+      "PAGE_VIEWS_RPM": 0,
+      "IMPRESSIONS": 0,
+      "CLICKS": 0,
+      "IMPRESSIONS_CTR": 0
+    },
+    {
+      "DOMAIN_NAME": "adv-shah-alam-portfolio-f4bnxodw8-salman3661s-projects.vercel.app",
+      "ESTIMATED_EARNINGS": 0,
+      "PAGE_VIEWS": 2,
+      "PAGE_VIEWS_RPM": 0,
+      "IMPRESSIONS": 0,
+      "CLICKS": 0,
+      "IMPRESSIONS_CTR": 0
+    },
+    {
+      "DOMAIN_NAME": "adv-shah-alam-portfolio-gkg43pbio-salman3661s-projects.vercel.app",
+      "ESTIMATED_EARNINGS": 0,
+      "PAGE_VIEWS": 2,
+      "PAGE_VIEWS_RPM": 0,
+      "IMPRESSIONS": 0,
+      "CLICKS": 0,
+      "IMPRESSIONS_CTR": 0
+    },
+    {
+      "DOMAIN_NAME": "adv-shah-alam-portfolio-hkiy7h256-salman3661s-projects.vercel.app",
+      "ESTIMATED_EARNINGS": 0,
+      "PAGE_VIEWS": 2,
+      "PAGE_VIEWS_RPM": 0,
+      "IMPRESSIONS": 0,
+      "CLICKS": 0,
+      "IMPRESSIONS_CTR": 0
+    },
+    {
+      "DOMAIN_NAME": "adv-shah-alam-portfolio-cnby00i3p-salman3661s-projects.vercel.app",
+      "ESTIMATED_EARNINGS": 0,
+      "PAGE_VIEWS": 2,
+      "PAGE_VIEWS_RPM": 0,
+      "IMPRESSIONS": 0,
+      "CLICKS": 0,
+      "IMPRESSIONS_CTR": 0
+    },
+    {
+      "DOMAIN_NAME": "adv-shah-alam-portfolio-ifjlqu7ur-salman3661s-projects.vercel.app",
+      "ESTIMATED_EARNINGS": 0,
+      "PAGE_VIEWS": 2,
+      "PAGE_VIEWS_RPM": 0,
+      "IMPRESSIONS": 0,
+      "CLICKS": 0,
+      "IMPRESSIONS_CTR": 0
+    },
+    {
+      "DOMAIN_NAME": "adv-shah-alam-portfolio-isa7n8kew-salman3661s-projects.vercel.app",
+      "ESTIMATED_EARNINGS": 0,
+      "PAGE_VIEWS": 2,
+      "PAGE_VIEWS_RPM": 0,
+      "IMPRESSIONS": 0,
+      "CLICKS": 0,
+      "IMPRESSIONS_CTR": 0
+    },
+    {
+      "DOMAIN_NAME": "adv-shah-alam-portfolio-ix8iwpb7p-salman3661s-projects.vercel.app",
+      "ESTIMATED_EARNINGS": 0,
+      "PAGE_VIEWS": 2,
+      "PAGE_VIEWS_RPM": 0,
+      "IMPRESSIONS": 0,
+      "CLICKS": 0,
+      "IMPRESSIONS_CTR": 0
+    },
+    {
+      "DOMAIN_NAME": "adv-shah-alam-portfolio-jjlnb6ff1-salman3661s-projects.vercel.app",
+      "ESTIMATED_EARNINGS": 0,
+      "PAGE_VIEWS": 2,
+      "PAGE_VIEWS_RPM": 0,
+      "IMPRESSIONS": 0,
+      "CLICKS": 0,
+      "IMPRESSIONS_CTR": 0
+    },
+    {
+      "DOMAIN_NAME": "adv-shah-alam-portfolio-k76kqb8nn-salman3661s-projects.vercel.app",
+      "ESTIMATED_EARNINGS": 0,
+      "PAGE_VIEWS": 2,
+      "PAGE_VIEWS_RPM": 0,
+      "IMPRESSIONS": 0,
+      "CLICKS": 0,
+      "IMPRESSIONS_CTR": 0
+    },
+    {
+      "DOMAIN_NAME": "adv-shah-alam-portfolio-ka63tk8gd-salman3661s-projects.vercel.app",
+      "ESTIMATED_EARNINGS": 0,
+      "PAGE_VIEWS": 1,
+      "PAGE_VIEWS_RPM": 0,
+      "IMPRESSIONS": 0,
+      "CLICKS": 0,
+      "IMPRESSIONS_CTR": 0
+    },
+    {
+      "DOMAIN_NAME": "adv-shah-alam-portfolio-kc0ff19go-salman3661s-projects.vercel.app",
+      "ESTIMATED_EARNINGS": 0,
+      "PAGE_VIEWS": 2,
+      "PAGE_VIEWS_RPM": 0,
+      "IMPRESSIONS": 0,
+      "CLICKS": 0,
+      "IMPRESSIONS_CTR": 0
+    },
+    {
+      "DOMAIN_NAME": "adv-shah-alam-portfolio-kh3ixz6a7-salman3661s-projects.vercel.app",
+      "ESTIMATED_EARNINGS": 0,
+      "PAGE_VIEWS": 2,
+      "PAGE_VIEWS_RPM": 0,
+      "IMPRESSIONS": 0,
+      "CLICKS": 0,
+      "IMPRESSIONS_CTR": 0
+    }
+  ]
+}
