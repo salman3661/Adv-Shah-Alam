@@ -1122,6 +1122,20 @@ const BlogPostBnInner = () => {
                                     </div>
                                 )}
 
+                                {/* Ad Unit 2 (BN): after FAQ, before CTA form */}
+                                {post.faqs?.length > 0 && (
+                                    <AdSenseAd
+                                        key={`ad-postfaq-${post.slug}`}
+                                        slot={AD_SLOTS.topInArticle}
+                                        format="auto"
+                                        responsive={true}
+                                        labelText="বিজ্ঞাপন"
+                                        minHeight={250}
+                                        densityGroup="content"
+                                        style={{ borderRadius: '0.75rem', overflow: 'hidden', margin: '2rem auto' }}
+                                    />
+                                )}
+
                                 {/* CTA Form */}
                                 <div style={{ borderRadius: '1.375rem', overflow: 'hidden', background: 'linear-gradient(135deg, var(--hero-bg) 0%, var(--hero-surface, #1c1c35) 100%)', border: '1px solid rgba(148, 163, 184, 0.22)', marginBottom: '3rem' }}>
                                     <div style={{ background: 'linear-gradient(90deg, #0F172A, #1E3A8A)', padding: '0.625rem 1.5rem', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
@@ -1204,104 +1218,31 @@ const BlogPostBnInner = () => {
                                 <div className="legal-disclaimer-box p-4 bg-gray-50 dark:bg-gray-800/40 border border-[var(--card-border)] rounded-lg my-6 text-sm text-gray-700 dark:text-gray-300 rounded-r-lg">
                                     <strong>দায়বর্জন (Disclaimer):</strong> এই আর্টিকেলে পরিবেশিত তথ্যসমূহ কেবল আইনি সচেতনতা ও সাধারণ শিক্ষার উদ্দেশ্যে প্রকাশিত। এটি কোনো প্রত্যক্ষ আইনি পরামর্শ (Legal Advice) নয় এবং এর মাধ্যমে কোনো আইনজীবী-মক্কেল সম্পর্ক (Attorney-Client Relationship) তৈরি হয় না। আপনার সুনির্দিষ্ট মামলার আইনি প্রতিকারের জন্য সরাসরি বাংলাদেশ সুপ্রিম কোর্ট বা জজ কোর্টের তালিকাভুক্ত বিজ্ঞ আইনজীবীর সাথে পরামর্শ করুন।
                                 </div>
-                                {adAnchors.top && createPortal(
-                                    <AdSenseAd key={`ad-top-${post.slug}`} slot={AD_SLOTS.topInArticle} format="auto" responsive={true} labelText="বিজ্ঞাপন" minHeight={280} densityGroup="content" style={{ borderRadius: '0.75rem', overflow: 'hidden', margin: '2.5rem auto' }} />,
-                                    adAnchors.top
-                                )}
                                 {adAnchors.mid && createPortal(
                                     <AdSenseAd key={`ad-mid-${post.slug}`} slot={AD_SLOTS.midNative} format="fluid" layout="in-article" responsive={true} labelText="বিজ্ঞাপন" minHeight={250} densityGroup="content" style={{ borderRadius: '0.75rem', overflow: 'hidden', margin: '2.5rem auto' }} />,
                                     adAnchors.mid
                                 )}
-                                {adAnchors.mid2 && createPortal(
-                                    <AdSenseAd key={`ad-mid2-${post.slug}`} slot={AD_SLOTS.sidebar} format="auto" responsive={true} labelText="বিজ্ঞাপন" minHeight={250} densityGroup="content" style={{ borderRadius: '0.75rem', overflow: 'hidden', margin: '2.5rem auto' }} />,
-                                    adAnchors.mid2
-                                )}
                                 {adAnchors.end && createPortal(
-                                    <AdSenseAd key={`ad-end-${post.slug}`} slot={AD_SLOTS.midNative} format="fluid" layout="in-article" responsive={true} labelText="বিজ্ঞাপন" minHeight={250} densityGroup="content" style={{ borderRadius: '0.75rem', overflow: 'hidden', margin: '2.5rem auto' }} />,
+                                    <AdSenseAd key={`ad-end-${post.slug}`} slot={AD_SLOTS.topInArticle} format="auto" responsive={true} labelText="বিজ্ঞাপন" minHeight={250} densityGroup="content" style={{ borderRadius: '0.75rem', overflow: 'hidden', margin: '2.5rem auto' }} />,
                                     adAnchors.end
                                 )}
                             </article>
                         </div>
 
-                        {/* ── RIGHT SIDEBAR (Full-Height Interleaved Editorial & Diverse Ad Rail) ── */}
+                        {/* ── RIGHT SIDEBAR (Editorial & Consultation Rail — BN kept ad-light to protect UX & session depth) ── */}
                         <aside className="bpbn-sidebar google-anno-skip">
                             <div className="bpbn-sidebar-rail">
                                 <ConsultBnWidget postTitle={post.title} />
 
-                                {/* ── Sidebar Ad 1: Display Auto (High-Visibility Rectangle) ── */}
-                                {isDesktop && (
-                                    <AdSenseAd
-                                        slot={AD_SLOTS.sidebar}
-                                        format="auto"
-                                        responsive={true}
-                                        labelText="বিজ্ঞাপন"
-                                        minHeight={260}
-                                        densityGroup="rail"
-                                        style={{ marginBottom: '1.25rem', borderRadius: '0.875rem', overflow: 'hidden' }}
-                                    />
-                                )}
-
                                 <PopularBnPosts currentSlug={post.slug} />
-
-                                {/* ── Sidebar Ad 2: Native Fluid In-Article Card (Different Format = Diverse Auction) ── */}
-                                {isDesktop && (
-                                    <AdSenseAd
-                                        slot={AD_SLOTS.midNative}
-                                        format="fluid"
-                                        layout="in-article"
-                                        responsive={true}
-                                        labelText="বিজ্ঞাপন"
-                                        minHeight={250}
-                                        densityGroup="rail"
-                                        style={{ marginBottom: '1.25rem', borderRadius: '0.875rem', overflow: 'hidden' }}
-                                    />
-                                )}
 
                                 <RelatedBnByCategory category={post.category} currentSlug={post.slug} />
 
-                                {/* ── Sidebar Ad 3: Display Banner Unit ── */}
-                                {isDesktop && (
-                                    <AdSenseAd
-                                        slot={AD_SLOTS.topInArticle}
-                                        format="auto"
-                                        responsive={true}
-                                        labelText="বিজ্ঞাপন"
-                                        minHeight={260}
-                                        densityGroup="rail"
-                                        style={{ marginBottom: '1.25rem', borderRadius: '0.875rem', overflow: 'hidden' }}
-                                    />
-                                )}
-
                                 <RecentBnPosts currentSlug={post.slug} />
-
-                                {/* ── Sidebar Ad 4: Native Fluid Card ── */}
-                                {isDesktop && (
-                                    <AdSenseAd
-                                        slot={AD_SLOTS.midNative}
-                                        format="fluid"
-                                        layout="in-article"
-                                        responsive={true}
-                                        labelText="বিজ্ঞাপন"
-                                        minHeight={250}
-                                        densityGroup="rail"
-                                        style={{ marginBottom: '1.25rem', borderRadius: '0.875rem', overflow: 'hidden' }}
-                                    />
-                                )}
 
                                 {/* ── Sticky Bottom Follower: Stays visible all the way to the end of the article ── */}
                                 <div style={{ position: 'sticky', top: '5.25rem' }}>
                                     <ChamberBnPromoCard />
-                                    {isDesktop && (
-                                        <AdSenseAd
-                                            slot={AD_SLOTS.sidebar}
-                                            format="auto"
-                                            responsive={true}
-                                            labelText="বিজ্ঞাপন"
-                                            minHeight={260}
-                                            densityGroup="rail"
-                                            style={{ marginBottom: '1.25rem', borderRadius: '0.875rem', overflow: 'hidden' }}
-                                        />
-                                    )}
                                 </div>
                             </div>
                         </aside>

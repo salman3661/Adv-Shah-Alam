@@ -1459,9 +1459,15 @@ input, select, textarea {
 }
 
 .ad-slot-reserved {
-  min-height: 280px;
+  min-height: var(--ad-min-h-mobile, 100px);
   display: block;
   overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .ad-slot-reserved {
+    min-height: var(--ad-min-h-desktop, 250px);
+  }
 }
 
 .map-embed-wrap {

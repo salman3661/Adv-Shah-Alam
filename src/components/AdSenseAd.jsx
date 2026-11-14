@@ -50,8 +50,8 @@ const AdSenseAd = ({
     responsive = true,
     className = '',
     style = {},
-    label = false,
-    labelText = 'বিজ্ঞাপন',
+    label: _label = false,
+    labelText: _labelText = 'বিজ্ঞাপন',
     layoutKey = '',
     minHeight = 0,
     densityGroup = null,
@@ -126,9 +126,11 @@ const AdSenseAd = ({
         };
     }, [slot, densityGroup]);
 
-    if (state === 'suppressed' || state === 'unfilled') return null;
+    if (state === 'suppressed') return null;
 
-    const isFluidOrRelaxed = format === 'fluid' || format === 'autorelaxed' || layout === 'in-article';
+    const isUnfilled = state === 'unfilled';
+    const resolvedDesktopMin = minHeight > 0 ? minHeight : 250;
+    const resolvedMobileMin = minHeight > 0 ? Math.min(minHeight, 100) : 100;
 
     // Strip any legacy large margins or card borders passed via inline style so ads sit directly between paragraphs like BD Pratidin
     const {
@@ -145,7 +147,8 @@ const AdSenseAd = ({
     return (
         <div
             ref={wrapRef}
-            className={`adsense-wrapper ${className}`}
+            className={`adsense-wrapper ad-slot-reserved ${className}`}
+            aria-hidden={isUnfilled ? 'true' : undefined}
             {...(densityGroup ? { 'data-ad-group': densityGroup } : {})}
             style={{
                 display: 'block',
@@ -160,15 +163,21 @@ const AdSenseAd = ({
                 background: 'transparent',
                 border: 'none',
                 boxShadow: 'none',
-                minHeight: 0,
+                '--ad-min-h-mobile': `${resolvedMobileMin}px`,
+                '--ad-min-h-desktop': `${resolvedDesktopMin}px`,
                 ...cleanStyle,
             }}
         >
+            {_label && !isUnfilled && (
+                <div style={{ fontSize: '0.65rem', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--text-muted, #64748b)', marginBottom: '0.25rem' }}>
+                    {_labelText}
+                </div>
+            )}
             <ins
                 ref={adRef}
                 className="adsbygoogle"
                 style={{
-                    display: 'block',
+                    display: isUnfilled ? 'none' : 'block',
                     textAlign: 'center',
                     width: '100%',
                     maxWidth: '100%',

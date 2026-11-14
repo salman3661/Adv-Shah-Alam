@@ -1007,6 +1007,21 @@ const BlogPostInner = () => {
                                     </div>
                                 )}
 
+                                {/* Ad Unit 4 (EN): after FAQ, before CTA form */}
+                                {post.faqs?.length > 0 && (
+                                    <AdSenseAd
+                                        key={`ad-postfaq-${post.slug}`}
+                                        slot={AD_SLOTS.midNative}
+                                        format="fluid"
+                                        layout="in-article"
+                                        responsive={true}
+                                        labelText="Advertisement"
+                                        minHeight={250}
+                                        densityGroup="content"
+                                        style={{ borderRadius: '0.75rem', overflow: 'hidden', margin: '2rem auto' }}
+                                    />
+                                )}
+
                                 {/* CTA Form */}
                                 <div style={{ borderRadius: '1.375rem', overflow: 'hidden', background: 'linear-gradient(135deg, var(--hero-bg) 0%, var(--hero-surface, #1c1c35) 100%)', border: '1px solid rgba(148, 163, 184, 0.22)', marginBottom: '3rem' }}>
                                     <div style={{ background: 'linear-gradient(90deg, #0F172A, #1E3A8A)', padding: '0.625rem 1.5rem', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
@@ -1108,60 +1123,18 @@ const BlogPostInner = () => {
                             </article>
                         </div>
 
-                        {/* ══ RIGHT SIDEBAR (Full-Height Interleaved Editorial & Diverse Ad Rail) ══ */}
+                        {/* ══ RIGHT SIDEBAR (Editorial Rail + 1 High-Viewability Sticky Sidebar Unit) ══ */}
                         <aside className="bp-sidebar google-anno-skip">
                             <div className="bp-sidebar-rail">
                                 <ConsultWidget postTitle={post.title} />
 
-                                {/* ── Sidebar Ad 1: Display Auto ── */}
-                                {isDesktop && (
-                                    <AdSenseAd
-                                        slot={AD_SLOTS.sidebar}
-                                        format="auto"
-                                        responsive={true}
-                                        densityGroup="rail"
-                                    />
-                                )}
-
                                 <PopularPosts currentSlug={post.slug} />
-
-                                {/* ── Sidebar Ad 2: Native Fluid In-Article ── */}
-                                {isDesktop && (
-                                    <AdSenseAd
-                                        slot={AD_SLOTS.midNative}
-                                        format="fluid"
-                                        layout="in-article"
-                                        responsive={true}
-                                        densityGroup="rail"
-                                    />
-                                )}
 
                                 <RelatedByCategory category={post.category} currentSlug={post.slug} />
 
-                                {/* ── Sidebar Ad 3: Display Banner Unit ── */}
-                                {isDesktop && (
-                                    <AdSenseAd
-                                        slot={AD_SLOTS.topInArticle}
-                                        format="auto"
-                                        responsive={true}
-                                        densityGroup="rail"
-                                    />
-                                )}
-
                                 <RecentPosts currentSlug={post.slug} />
 
-                                {/* ── Sidebar Ad 4: Native Fluid Card ── */}
-                                {isDesktop && (
-                                    <AdSenseAd
-                                        slot={AD_SLOTS.midNative}
-                                        format="fluid"
-                                        layout="in-article"
-                                        responsive={true}
-                                        densityGroup="rail"
-                                    />
-                                )}
-
-                                {/* ── Sticky Bottom Follower ── */}
+                                {/* ── Sticky Bottom Follower: Single high-viewability desktop unit (total EN desktop = 4 units max) ── */}
                                 <div style={{ position: 'sticky', top: '5.25rem' }}>
                                     <ChamberPromoCard />
                                     {isDesktop && (
@@ -1169,6 +1142,8 @@ const BlogPostInner = () => {
                                             slot={AD_SLOTS.sidebar}
                                             format="auto"
                                             responsive={true}
+                                            labelText="Advertisement"
+                                            minHeight={250}
                                             densityGroup="rail"
                                         />
                                     )}

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-14T13:59:59.312Z",
+  "updatedAt": "2026-11-14T14:16:48.593Z",
   "account": "accounts/pub-1781126556775676",
   "currency": "USD",
   "last30Days": {
@@ -44,10 +44,10 @@
       "day": 14
     },
     "totals": {
-      "ESTIMATED_EARNINGS": 8.83,
-      "PAGE_VIEWS": 6114,
-      "PAGE_VIEWS_RPM": 1.44,
-      "IMPRESSIONS": 12356,
+      "ESTIMATED_EARNINGS": 8.84,
+      "PAGE_VIEWS": 6116,
+      "PAGE_VIEWS_RPM": 1.45,
+      "IMPRESSIONS": 12361,
       "CLICKS": 237,
       "IMPRESSIONS_CTR": 0.0192
     }
@@ -345,10 +345,10 @@
     },
     {
       "MONTH": "2026-11",
-      "ESTIMATED_EARNINGS": 8.83,
-      "PAGE_VIEWS": 6114,
-      "PAGE_VIEWS_RPM": 1.44,
-      "IMPRESSIONS": 12356,
+      "ESTIMATED_EARNINGS": 8.84,
+      "PAGE_VIEWS": 6116,
+      "PAGE_VIEWS_RPM": 1.45,
+      "IMPRESSIONS": 12361,
       "CLICKS": 237,
       "IMPRESSIONS_CTR": 0.0192
     }
