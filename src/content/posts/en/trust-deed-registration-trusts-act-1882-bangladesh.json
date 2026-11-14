@@ -1,0 +1,73 @@
+{
+  "slug": "trust-deed-registration-trusts-act-1882-bangladesh",
+  "bnSlug": "trust-gothon-nibondhon-ain-1882-bangladesh",
+  "title": "Trust Deed Registration Under the Trusts Act 1882 in Bangladesh",
+  "metaTitle": "Trust Deed Registration: Trusts Act 1882 in BD",
+  "metaDescription": "Complete legal guide to forming and registering a private, family, or charitable trust in Bangladesh under the Trusts Act 1882 and Registration Act 1908.",
+  "category": "Corporate Law",
+  "readTime": "7 min read",
+  "publishedDate": "2026-11-14",
+  "lastModified": "2026-11-14",
+  "isDraft": false,
+  "keywords": [
+    "trusts act 1882 bangladesh",
+    "trust deed registration bangladesh",
+    "charitable trust formation bangladesh",
+    "family trust bangladesh law",
+    "sub registry trust registration"
+  ],
+  "heroIntro": "Under the Trusts Act 1882 (Act II of 1882) and Section 17 of the Registration Act 1908, a valid trust in Bangladesh is created when an author transfers property to trustees for the benefit of designated beneficiaries or charitable objectives. Immovable property trusts require compulsory registration before the Sub-Registrar, while public charitable trusts may also seek NGOAB or tax-exemption approval.",
+  "quickAnswer": {
+    "heading": "At a Glance: Forming a Trust in Bangladesh",
+    "text": "Private trusts follow the Trusts Act 1882; immovable property trusts must be registered at the Sub-Registry.",
+    "points": [
+      "Governing Statute: The Trusts Act 1882 (Sections 4–10) & Registration Act 1908 (Section 17)",
+      "Three Certainties (Section 6): Certainty of intention, subject matter (property), and beneficiaries",
+      "Registration Authority: Office of the Sub-Registrar (District/Sadar Sub-Registry)",
+      "Tax & Regulatory: Separate e-TIN from NBR; NGO Affairs Bureau approval if receiving foreign grants"
+    ]
+  },
+  "toc": [
+    "Private Trust vs. Public Charitable Trust in Bangladesh",
+    "Mandatory Legal Elements Under Section 6 of the Trusts Act 1882",
+    "Step-by-Step Trust Deed Registration Process",
+    "Duties, Liabilities & Removal of Trustees (Sections 11–74)",
+    "Documents Checklist for Trust Registration & Bank Account Opening"
+  ],
+  "sections": [
+    {
+      "h2": "Private Trust vs. Public Charitable Trust in Bangladesh",
+      "content": "<p>Bangladesh law distinguishes between two main categories of trusts:</p><ul><li><strong>Private / Family Trust:</strong> Governed directly by the <strong>Trusts Act 1882</strong> for the benefit of specific family members, minor children, or employees (such as a Provident Fund or Gratuity Trust).</li><li><strong>Public / Charitable Trust:</strong> Established for education, healthcare, poverty relief, or religious charity. While the Trusts Act 1882 principles apply by analogy, public trusts are also subject to <strong>Section 92 of the Code of Civil Procedure 1908</strong> for breach-of-trust suits in the District Judge Court.</li></ul>"
+    },
+    {
+      "h2": "Mandatory Legal Elements Under Section 6 of the Trusts Act 1882",
+      "content": "<p>Under <strong>Section 6 of the Trusts Act 1882</strong>, a trust is legally valid only when the author (settlor) indicates with reasonable certainty:</p><ul><li><strong>Intention to create a trust</strong> for a lawful purpose (Section 4);</li><li><strong>Purpose of the trust</strong> and clear <strong>beneficiaries</strong>;</li><li><strong>Trust property</strong> (corpus or initial seed fund/land); and</li><li><strong>Transfer of the trust property</strong> to the trustee(s) unless the settlor declares themselves sole trustee.</li></ul>"
+    },
+    {
+      "h2": "Step-by-Step Trust Deed Registration Process",
+      "content": "<ol><li><strong>Drafting the Trust Deed:</strong> Prepare a comprehensive Trust Deed specifying the settlor, Board of Trustees, objectives, quorum, audit rules, and dissolution clause (for charitable trusts, assets must pass to a similar charitable trust upon dissolution).</li><li><strong>Stamp Duty & Non-Judicial Stamp:</strong> Print the deed on non-judicial stamp paper as prescribed under the Stamp Act 1899 (verified at the District Sub-Registry).</li><li><strong>Sub-Registry Execution & Registration:</strong> The settlor and trustees appear before the concerned <strong>Sub-Registrar</strong> with two witnesses and NIDs for biometric verification and registration under the Registration Act 1908.</li><li><strong>Post-Registration Compliance:</strong> Obtain an organization <strong>e-TIN</strong> from the National Board of Revenue (NBR), open a Trust Bank Account, and—if receiving foreign donations—apply for <strong>NGO Affairs Bureau (NGOAB)</strong> registration under the Foreign Donations (Voluntary Activities) Regulation Act 2016.</li></ol>"
+    },
+    {
+      "h2": "Duties, Liabilities & Removal of Trustees (Sections 11–74)",
+      "content": "<p>Under <strong>Sections 11 to 30 of the Trusts Act 1882</strong>, trustees must execute the trust strictly according to its deed, maintain accurate accounts, invest trust funds prudently (Section 20), and never profit personally from trust property. If a trustee commits a breach of trust or becomes unfit, beneficiaries or co-trustees may petition the District Court for removal and appointment of a new trustee under <strong>Sections 73–74</strong> (or Section 92 CPC for public trusts).</p>"
+    },
+    {
+      "h2": "Documents Checklist for Trust Registration & Bank Account Opening",
+      "content": "<ul><li>Drafted <strong>Trust Deed</strong> vetted by an advocate on appropriate stamp paper.</li><li>Copies of <strong>NID / Passport</strong> and passport-size photographs of the Settlor and all Trustees.</li><li>Proof of registered office address (ownership deed or tenancy agreement + utility bill).</li><li>Initial seed fund receipt or certified land title documents (if immovable property is settled).</li></ul>"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How many trustees are required to register a trust in Bangladesh?",
+      "a": "While the Trusts Act 1882 does not fix a rigid statutory minimum for private trusts, in practice Sub-Registrars and banks require at least 3 to 5 trustees (with a Chairman, Secretary, and Treasurer) for charitable or institutional trusts."
+    },
+    {
+      "q": "Can a trust own immovable property in Bangladesh?",
+      "a": "Yes. Once the Trust Deed is registered under Section 17 of the Registration Act 1908, the trust (acting through its authorized trustees) can hold, lease, and manage immovable property strictly for trust purposes."
+    },
+    {
+      "q": "What is the difference between a Trust and an NGO/Society under the 1860 Act?",
+      "a": "A Society is registered with the RJSC under the Societies Registration Act 1860 and requires at least 7 founding members with an elected executive committee, whereas a Trust is registered at the Sub-Registry under a Trust Deed with a Settlor and Board of Trustees."
+    }
+  ]
+}

@@ -73,10 +73,11 @@ en_path,bn_path,confidence,evidence
 /blog/company-director-liability-bangladesh,,unpaired,en_only
 /blog/company-registration-cost-bangladesh,/bn/blog/company-garar-khoroch-prokriya-bangladesh,1.0,json_reciprocal_slug_pair
 /blog/company-winding-up-dissolution-bangladesh,/bn/blog/company-bandho-ainogobal-prokriya-bangladesh,1.0,json_reciprocal_slug_pair
-/blog/consumer-rights-law-bangladesh,,unpaired,en_only
+/blog/consumer-rights-law-bangladesh,/bn/blog/vokta-odhikar-songrokkhon-ain-2009-ovijog-bangladesh,1.0,json_reciprocal_slug_pair
 /blog/contempt-of-court-act-2013-high-court-bangladesh-guide,/bn/blog/adolat-obomannona-mamla-contempt-of-court-dhara-2026,1.0,json_reciprocal_slug_pair
 /blog/contract-breach-legal-action-bangladesh,,unpaired,en_only
 /blog/contract-breach-specific-performance-bangladesh,,unpaired,en_only
+/blog/copyright-act-2023-digital-infringement-bangladesh,/bn/blog/copyright-ain-2023-digital-content-churi-khotipuron-mamla-2026-bn,1.0,json_reciprocal_slug_pair
 /blog/court-marriage-bangladesh-2026,,unpaired,en_only
 /blog/court-marriage-bangladesh-complete-guide-2026,,unpaired,en_only
 /blog/court-marriage-bangladesh-process-cost-documents,,unpaired,en_only
@@ -281,11 +282,13 @@ en_path,bn_path,confidence,evidence
 /blog/trademark-copyright-registration-bangladesh,,unpaired,en_only
 /blog/trademark-registration-bangladesh,,unpaired,en_only
 /blog/travel-ban-immigration-blacklist-airport-offload-high-court-writ-bangladesh,,unpaired,en_only
+/blog/trust-deed-registration-trusts-act-1882-bangladesh,/bn/blog/trust-gothon-nibondhon-ain-1882-bangladesh,1.0,json_reciprocal_slug_pair
 /blog/uttara-dhaka-lawyer-legal-services-2026,,unpaired,en_only
 /blog/vat-audit-demand-notice-appellate-tribunal-defense-bangladesh,/bn/blog/vat-audit-demand-notice-appellate-tribunal-appeal-2026-bn,1.0,json_reciprocal_slug_pair
 /blog/vat-law-compliance-bangladesh,/bn/blog/vet-ain-compliance-bangladesh,1.0,json_reciprocal_slug_pair
 /blog/vat-registration-return-bangladesh,,unpaired,en_only
 /blog/vested-property-enemy-land-release-act-bangladesh-nrb-guide,,unpaired,en_only
+/blog/waqf-property-dispute-mutawalli-removal-bangladesh-guide,/bn/blog/waqf-sompotti-dakhol-motawalli-oposhadhon-tribunal-ain-2026-bn,1.0,json_reciprocal_slug_pair
 /blog/warrant-vs-summons-bangladesh,/bn/blog/warant-samons-bivaad-bangladesh,1.0,json_reciprocal_slug_pair
 /blog/wife-leaves-or-forced-out-husband-legal-remedies-bangladesh,/bn/blog/stree-babar-bari-chole-gele-shamir-koroniyo-dampotto-adhikar-2026,1.0,json_reciprocal_slug_pair
 /blog/wife-rights-after-divorce-bangladesh,,unpaired,en_only
@@ -346,7 +349,6 @@ en_path,bn_path,confidence,evidence
 ,/bn/blog/company-minority-shareholder-oppression-section-233-high-court-2026-bn,unpaired,bn_only
 ,/bn/blog/company-oboshayon-winding-up-high-court-ain-2026-bn,unpaired,bn_only
 ,/bn/blog/company-tin-nibondhon-bangladesh,unpaired,bn_only
-,/bn/blog/copyright-ain-2023-digital-content-churi-khotipuron-mamla-2026-bn,unpaired,bn_only
 ,/bn/blog/court-marriage-mithya-apohoron-mamla-22-dhara-jobanbondi-2026-bn,unpaired,bn_only
 ,/bn/blog/court-marriage-niyom-khoroch-bangladesh,unpaired,bn_only
 ,/bn/blog/criminal-defence-strategy-bangladesh-bn,unpaired,bn_only
@@ -603,7 +605,6 @@ en_path,bn_path,confidence,evidence
 ,/bn/blog/vuya-rs-khatian-chenar-upay-jomi-record-2026,unpaired,bn_only
 ,/bn/blog/vuya-warish-sanad-batil-mamla-ain-2026,unpaired,bn_only
 ,/bn/blog/vuya-warishan-sanad-jomi-bikroy-batil-mokoddama-2026-bn,unpaired,bn_only
-,/bn/blog/waqf-sompotti-dakhol-motawalli-oposhadhon-tribunal-ain-2026-bn,unpaired,bn_only
 ,/bn/blog/warish-sanad-kibhabe-paben-2026-complete,unpaired,bn_only
 ,/bn/blog/warish-sanad-orashinamah-sangraha-niyom-2026-bn,unpaired,bn_only
 ,/bn/blog/warishan-sanad-jaliyati-jomi-bikroy-protikar-mamla-2026,unpaired,bn_only

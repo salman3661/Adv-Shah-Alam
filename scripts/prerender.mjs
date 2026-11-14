@@ -212,19 +212,25 @@ const MID_ARTICLE_LEAD_EN = `<div style="margin:2.5rem 0;padding:1.5rem;backgrou
   </div>
 </div>`;
 
-const CTA = `<div style="margin-top:40px;padding:20px;background:#e8f0fe;border-radius:8px;text-align:center">
-  <strong>Need Legal Help in Bangladesh?</strong><br>
-  Contact <strong>Advocate Md. Shah Alam</strong>: <a href="tel:+8801712655546" style="color:#1a56db">+880 1712-655546</a> &nbsp;|&nbsp;
-  <a href="https://wa.me/8801712655546" style="color:#25D366">WhatsApp</a><br>
-  <small style="color:#555">Uttara Chamber: House 46, Road 6/B, Sector 12, Uttara, Dhaka-1230<br>
+const CTA = `<div style="margin-top:40px;padding:24px;background:linear-gradient(135deg,#0B1220 0%,#132A4A 100%);border:1px solid rgba(201,162,39,0.45);border-radius:12px;color:#F8FAFC;text-align:left">
+  <strong style="font-size:1.15rem;color:#FFFFFF;display:block;margin-bottom:8px">Need Legal Help From Advocate Md. Shah Alam?</strong>
+  <p style="margin:0 0 16px;color:#CBD5E1;font-size:0.95rem;line-height:1.6">Consult directly on property disputes, bail, family law, cheque dishonor, or NRB legal matters.</p>
+  <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:14px">
+    <a href="https://wa.me/8801955802007?text=Hello%20Advocate%20Md.%20Shah%20Alam%2C%20I%20need%20legal%20consultation." data-cta="post-bottom-whatsapp" style="display:inline-flex;align-items:center;min-height:44px;background:#16A34A;color:#FFFFFF;padding:10px 18px;border-radius:8px;text-decoration:none;font-weight:700;font-size:14px">WhatsApp: +880 1955-802007</a>
+    <a href="tel:+8801712655546" data-cta="post-bottom-call" style="display:inline-flex;align-items:center;min-height:44px;background:#C9A227;color:#0B1220;padding:10px 18px;border-radius:8px;text-decoration:none;font-weight:800;font-size:14px">Call Now: +880 1712-655546</a>
+  </div>
+  <small style="color:#CBD5E1;display:block;line-height:1.5">Uttara Chamber: House 46, Road 6/B, Sector 12, Uttara, Dhaka-1230<br>
   Court Chamber: Ainjeebi Samity Bhaban, 4th Floor, 6/7 Court House Street, Kotwali, Dhaka-1100</small>
 </div>`;
 
-const BN_CTA = `<div style="margin-top:40px;padding:20px;background:#e8f0fe;border-radius:8px;text-align:center">
-  <strong>আইনি সহায়তা বা জরুরি পরামর্শের প্রয়োজন?</strong><br>
-  যোগাযোগ করুন <strong>এডভোকেট মোঃ শাহ আলম</strong>: <a href="tel:+8801712655546" style="color:#1a56db">+880 1712-655546</a> &nbsp;|&nbsp;
-  <a href="https://wa.me/8801712655546" style="color:#25D366">WhatsApp</a><br>
-  <small style="color:#555">উত্তরা চেম্বার: বাড়ি ৪৬, রোড ৬/বি, সেক্টর ১২, উত্তরা, ঢাকা-১২৩০<br>
+const BN_CTA = `<div style="margin-top:40px;padding:24px;background:linear-gradient(135deg,#0B1220 0%,#132A4A 100%);border:1px solid rgba(201,162,39,0.45);border-radius:12px;color:#F8FAFC;text-align:left">
+  <strong style="font-size:1.15rem;color:#FFFFFF;display:block;margin-bottom:8px">আইনি সহায়তা বা জরুরি পরামর্শের প্রয়োজন?</strong>
+  <p style="margin:0 0 16px;color:#CBD5E1;font-size:0.95rem;line-height:1.7">জমি-জমা, জামিন, পারিবারিক, চেক ডিজঅনার বা প্রবাসী (NRB) আইনি বিষয়ে এডভোকেট মোঃ শাহ আলমের সরাসরি পরামর্শ নিন।</p>
+  <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:14px">
+    <a href="https://wa.me/8801955802007?text=%E0%A6%86%E0%A6%B8%E0%A6%B8%E0%A6%BE%E0%A6%B2%E0%A6%BE%E0%A6%AE%E0%A7%81%20%E0%A6%86%E0%A6%B2%E0%A6%BE%E0%A6%87%E0%A6%95%E0%A7%81%E0%A6%AE%2C%20%E0%A6%86%E0%A6%AE%E0%A6%BF%20%E0%A6%86%E0%A6%87%E0%A6%A8%E0%A6%BF%20%E0%A6%AA%E0%A6%B0%E0%A6%BE%E0%A6%AE%E0%A6%B0%E0%A7%8D%E0%A6%B6%20%E0%A6%A8%E0%A6%BF%E0%A6%A4%E0%A7%87%20%E0%A6%9A%E0%A6%BE%E0%A6%87%E0%A5%A4" data-cta="post-bottom-whatsapp" style="display:inline-flex;align-items:center;min-height:44px;background:#16A34A;color:#FFFFFF;padding:10px 18px;border-radius:8px;text-decoration:none;font-weight:700;font-size:14px">WhatsApp: ০১৯৫৫-৮০২০০৭</a>
+    <a href="tel:+8801712655546" data-cta="post-bottom-call" style="display:inline-flex;align-items:center;min-height:44px;background:#C9A227;color:#0B1220;padding:10px 18px;border-radius:8px;text-decoration:none;font-weight:800;font-size:14px">সরাসরি কল: ০১৭১২-৬৫৫৫৪৬</a>
+  </div>
+  <small style="color:#CBD5E1;display:block;line-height:1.5">উত্তরা চেম্বার: বাড়ি ৪৬, রোড ৬/বি, সেক্টর ১২, উত্তরা, ঢাকা-১২৩০<br>
   কোর্ট চেম্বার: আইনজীবী সমিতি ভবন, ৪র্থ তলা, ৬/৭ কোর্ট হাউস স্ট্রিট, কোতোয়ালি, ঢাকা-১১০০</small>
 </div>`;
 

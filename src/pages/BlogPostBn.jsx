@@ -1249,6 +1249,102 @@ const BlogPostBnInner = () => {
                     </div>
 
 
+                    {/* Bottom-of-Post Direct Call & WhatsApp Consultation CTA */}
+                    <section
+                        aria-label="সরাসরি আইনি পরামর্শ ও যোগাযোগ"
+                        style={{
+                            marginTop: '2.5rem',
+                            padding: '1.75rem',
+                            borderRadius: '1rem',
+                            background: 'linear-gradient(135deg, #0B1220 0%, #132A4A 100%)',
+                            border: '1px solid rgba(201, 162, 39, 0.45)',
+                            color: '#F8FAFC',
+                            boxShadow: '0 14px 30px -10px rgba(11, 18, 32, 0.45)',
+                        }}
+                    >
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', color: '#E2C15A', fontSize: '0.84rem', fontWeight: 700 }}>
+                                <Scale size={16} />
+                                <span>সরাসরি চেম্বার ও অনলাইন আইনি পরামর্শ</span>
+                            </div>
+                            <h2 style={{ margin: 0, fontSize: '1.35rem', fontWeight: 800, color: '#FFFFFF', lineHeight: 1.4 }}>
+                                আপনার মামলার বিষয়ে এডভোকেট মোঃ শাহ আলমের সাথে কথা বলতে চান?
+                            </h2>
+                            <p style={{ margin: 0, fontSize: '0.96rem', color: '#CBD5E1', lineHeight: 1.75 }}>
+                                জমি-জমা, বাটোয়ারা, ফৌজদারি জামিন, পারিবারিক, চেক ডিজঅনার বা প্রবাসী (NRB) আইনি জটিলতায় বাংলাদেশ সুপ্রিম কোর্ট ও ঢাকা জজ কোর্টের আইনজীবীর সরাসরি পরামর্শ নিন। উত্তরা ও কোর্ট চেম্বারে সাক্ষাৎ অথবা বিশ্বের যেকোনো প্রান্ত থেকে WhatsApp-এ পরামর্শ নিতে পারবেন।
+                            </p>
+                            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.85rem', marginTop: '0.25rem' }}>
+                                <a
+                                    href={waLink(`আসসালামু আলাইকুম, আমি "${post.title}" নিবন্ধটি পড়েছি এবং আইনি পরামর্শ নিতে চাই।`)}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    data-cta="post-bottom-whatsapp"
+                                    style={{
+                                        display: 'inline-flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        gap: '0.5rem',
+                                        minHeight: '44px',
+                                        padding: '0.7rem 1.35rem',
+                                        borderRadius: '0.65rem',
+                                        background: '#16A34A',
+                                        color: '#FFFFFF',
+                                        fontWeight: 700,
+                                        fontSize: '0.95rem',
+                                        textDecoration: 'none',
+                                        boxShadow: '0 6px 16px -4px rgba(22, 163, 74, 0.5)',
+                                    }}
+                                >
+                                    <MessageCircle size={18} />
+                                    <span>WhatsApp: ০১৯৫৫-৮০২০০৭</span>
+                                </a>
+                                <a
+                                    href={telLink()}
+                                    data-cta="post-bottom-call"
+                                    style={{
+                                        display: 'inline-flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        gap: '0.5rem',
+                                        minHeight: '44px',
+                                        padding: '0.7rem 1.35rem',
+                                        borderRadius: '0.65rem',
+                                        background: '#C9A227',
+                                        color: '#0B1220',
+                                        fontWeight: 800,
+                                        fontSize: '0.95rem',
+                                        textDecoration: 'none',
+                                    }}
+                                >
+                                    <Phone size={18} />
+                                    <span>সরাসরি কল: ০১৭১২-৬৫৫৫৪৬</span>
+                                </a>
+                                <Link
+                                    to="/bn/contact"
+                                    data-cta="post-bottom-chamber"
+                                    style={{
+                                        display: 'inline-flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        gap: '0.45rem',
+                                        minHeight: '44px',
+                                        padding: '0.7rem 1.2rem',
+                                        borderRadius: '0.65rem',
+                                        background: 'rgba(255, 255, 255, 0.08)',
+                                        border: '1px solid rgba(255, 255, 255, 0.25)',
+                                        color: '#F8FAFC',
+                                        fontWeight: 600,
+                                        fontSize: '0.92rem',
+                                        textDecoration: 'none',
+                                    }}
+                                >
+                                    <MapPin size={16} />
+                                    <span>চেম্বার / অনলাইন বুকিং</span>
+                                </Link>
+                            </div>
+                        </div>
+                    </section>
+
                     {/* Bottom Related Articles Showcase (Visible on Desktop & Mobile) */}
                     <div className="bpbn-mobile-bottom">
                         <div style={{
