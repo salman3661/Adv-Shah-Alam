@@ -150,6 +150,7 @@ function buildPage(base, { title, description, canonical, body, lang='en', extra
 
   h = h.replace(/<meta property="og:title"[^>]*>/, `<meta property="og:title" content="${escHtml(title)}">`);
   h = h.replace(/<meta property="og:description"[^>]*>/, `<meta property="og:description" content="${escHtml(description)}">`);
+  h = h.replace(/<meta property="og:locale"[^>]*>/, `<meta property="og:locale" content="${lang === 'bn' ? 'bn_BD' : 'en_US'}">`);
   if (cleanCanonical) {
     h = h.replace(/<meta property="og:url"[^>]*>/, `<meta property="og:url" content="${cleanCanonical}">`);
     h = h.replace(/<meta name="twitter:url"[^>]*>/, `<meta name="twitter:url" content="${cleanCanonical}">`);
@@ -874,7 +875,7 @@ async function main() {
   {
     const extraHead = `<link rel="alternate" hreflang="bn" href="${BASE}/" />
 <link rel="alternate" hreflang="en" href="${BASE}/en" />
-<link rel="alternate" hreflang="x-default" href="${BASE}/" />`;
+<link rel="alternate" hreflang="x-default" href="${BASE}/en" />`;
     const html = buildPage(base, {
       title: 'সুপ্রিম কোর্ট আইনজীবী ঢাকা | এডভোকেট মোঃ শাহ আলম',
       description: 'বাংলাদেশ সুপ্রিম কোর্টের অভিজ্ঞ আইনজীবী এডভোকেট মোঃ শাহ আলম। ফৌজদারি, জামিন, তালাক, জমি ও কর্পোরেট মামলায় উত্তরা চেম্বারে সরাসরি আইনি পরামর্শ নিন।',
@@ -891,7 +892,7 @@ async function main() {
   {
     const extraHead = `<link rel="alternate" hreflang="en" href="${BASE}/en" />
 <link rel="alternate" hreflang="bn" href="${BASE}/" />
-<link rel="alternate" hreflang="x-default" href="${BASE}/" />`;
+<link rel="alternate" hreflang="x-default" href="${BASE}/en" />`;
     const html = buildPage(base, {
       title: 'Supreme Court Lawyer Dhaka | Advocate Md. Shah Alam',
       description: 'Advocate Md. Shah Alam is a Supreme Court lawyer in Uttara, Dhaka handling criminal defense, bail, divorce, land disputes, and corporate legal matters.',
@@ -906,11 +907,15 @@ async function main() {
 
   // ── Advocate/About page ────────────────────────────────────────────────────
   {
+    const extraHead = `<link rel="alternate" hreflang="en" href="${BASE}/advocate-md-shah-alam" />
+<link rel="alternate" hreflang="x-default" href="${BASE}/advocate-md-shah-alam" />`;
     const html = buildPage(base, {
       title: 'About Advocate Md. Shah Alam | Supreme Court BD',
       description: 'Learn about Advocate Md. Shah Alam, LL.M Supreme Court lawyer in Uttara, Dhaka with 10+ years experience in criminal, bail, family, and property law.',
       canonical: `${BASE}/advocate-md-shah-alam`,
       body: advocateBody(),
+      lang: 'en',
+      extraHead,
     });
     write(path.join(DIST, 'advocate-md-shah-alam', 'index.html'), html);
     console.log('  ✓ /advocate-md-shah-alam');
@@ -918,11 +923,15 @@ async function main() {
 
   // ── Education page ─────────────────────────────────────────────────────────
   {
+    const extraHead = `<link rel="alternate" hreflang="en" href="${BASE}/education" />
+<link rel="alternate" hreflang="x-default" href="${BASE}/education" />`;
     const html = buildPage(base, {
       title: 'Education & Bar Enrollment | Advocate Md. Shah Alam',
       description: 'Explore the education and career timeline of Advocate Shah Alam — LL.M lawyer with 10+ years of legal excellence at the Supreme Court of Bangladesh.',
       canonical: `${BASE}/education`,
       body: educationBody(),
+      lang: 'en',
+      extraHead,
     });
     write(path.join(DIST, 'education', 'index.html'), html);
     console.log('  ✓ /education');
@@ -964,11 +973,15 @@ async function main() {
 
   // ── Privacy Policy ─────────────────────────────────────────────────────────
   {
+    const extraHead = `<link rel="alternate" hreflang="en" href="${BASE}/privacy-policy" />
+<link rel="alternate" hreflang="x-default" href="${BASE}/privacy-policy" />`;
     const html = buildPage(base, {
       title: 'Privacy Policy | Advocate Md. Shah Alam Chambers',
       description: 'Read the official Privacy Policy for advmdshahalam.me detailing client confidentiality, consultation data handling, Google Analytics, and AdSense cookies.',
       canonical: `${BASE}/privacy-policy`,
       body: privacyBody(),
+      lang: 'en',
+      extraHead,
     });
     write(path.join(DIST, 'privacy-policy', 'index.html'), html);
     console.log('  ✓ /privacy-policy');
@@ -976,11 +989,15 @@ async function main() {
 
   // ── Terms of Service ───────────────────────────────────────────────────────
   {
+    const extraHead = `<link rel="alternate" hreflang="en" href="${BASE}/terms-of-service" />
+<link rel="alternate" hreflang="x-default" href="${BASE}/terms-of-service" />`;
     const html = buildPage(base, {
       title: 'Terms of Service | Advocate Md. Shah Alam Dhaka',
       description: 'Terms of Service & Engagement for advmdshahalam.me — consultation boundaries, retainer conditions, payment policies, and Dhaka court jurisdiction.',
       canonical: `${BASE}/terms-of-service`,
       body: termsBody(),
+      lang: 'en',
+      extraHead,
     });
     write(path.join(DIST, 'terms-of-service', 'index.html'), html);
     console.log('  ✓ /terms-of-service');
@@ -988,10 +1005,14 @@ async function main() {
 
   // ── Review page ────────────────────────────────────────────────────────────
   {
+    const extraHead = `<link rel="alternate" hreflang="bn" href="${BASE}/review" />
+<link rel="alternate" hreflang="x-default" href="${BASE}/review" />`;
     const html = buildPage(base, {
       title: 'ক্লায়েন্ট রিভিউ ও মতামত | এডভোকেট মোঃ শাহ আলম',
       description: 'এডভোকেট মোঃ শাহ আলমের আইনি পরামর্শ ও মামলার অভিজ্ঞতা সম্পর্কে ক্লায়েন্টদের রিভিউ দেখুন এবং গুগলে আপনার মূল্যবান মতামত শেয়ার করুন।',
       canonical: `${BASE}/review`,
+      lang: 'bn',
+      extraHead,
       body: `<div style="max-width:500px;margin:40px auto;text-align:center;padding:30px;background:#fff;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.08)">
         <h1 style="font-size:24px;font-weight:700;margin-bottom:12px">আইনি সেবায় আপনি কি সন্তুষ্ট?</h1>
         <p style="color:#555;margin-bottom:20px">অ্যাডভোকেট মো. শাহ আলম স্যারের আইনি পরামর্শ ও সহায়তায় আপনার অভিজ্ঞতা কেমন ছিল? গুগলে আপনার মূল্যবান ২ মিনিটের মতামত শেয়ার করুন।</p>
@@ -1005,11 +1026,14 @@ async function main() {
 
   // ── NRB Legal Help page ────────────────────────────────────────────────────
   {
+    const extraHead = `<link rel="alternate" hreflang="en" href="${BASE}/nrb-legal-help" />
+<link rel="alternate" hreflang="x-default" href="${BASE}/nrb-legal-help" />`;
     const html = buildPage(base, {
       title: 'NRB Legal Help Bangladesh | Property & Family Law',
       description: 'Legal help for Non-Resident Bangladeshis in UK, USA, UAE & Canada: land purchase, Power of Attorney, divorce, inheritance & court cases.',
       canonical: `${BASE}/nrb-legal-help`,
       lang: 'en',
+      extraHead,
       body: `<h1 style="font-size:30px;font-weight:700;margin-bottom:8px;color:#0a0a0a">Legal Help for NRBs in Bangladesh</h1>
 <p style="font-size:16px;color:#333;margin-bottom:24px">Remote legal representation and consultation for Non-Resident Bangladeshis in the UK, USA, UAE, Canada, and Singapore by Advocate Md. Shah Alam of the Supreme Court of Bangladesh.</p>
 ${CTA}`,
