@@ -142,7 +142,8 @@ html[lang="bn"] td {
    ══════════════════════════════════════════════════════════ */
 .adsense-wrapper {
   min-height: 100px;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: visible;
   transition: opacity 0.25s ease;
 }
 
@@ -1454,7 +1455,8 @@ input, select, textarea {
 .ad-slot-reserved {
   min-height: var(--ad-min-h-mobile, 100px);
   display: block;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: visible;
 }
 
 @media (min-width: 768px) {

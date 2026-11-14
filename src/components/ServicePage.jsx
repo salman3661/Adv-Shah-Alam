@@ -11,7 +11,7 @@ const BASE = 'https://www.advmdshahalam.me';
 const SERVICE_AD_SLOTS = {
     top: '8630877987',
     mid1: '9118178745',
-    mid2: '5230990345',
+    mid2: '5064091502',
     bottomGrid: '3667074343',
 };
 
@@ -354,13 +354,12 @@ const ServicePage = ({ metaTitle, metaDesc, canonicalUrl, h1, intro, coverage, f
                 </section>
             )}
 
-            {/* Ad Unit 3: post-FAQ slot */}
+            {/* Ad Unit 3: post-FAQ Display slot */}
             <div className="container mx-auto px-6 max-w-5xl py-6">
                 <AdSenseAd
                     key={`svc-mid2-${wwwCanonical || 'en'}`}
                     slot={SERVICE_AD_SLOTS.mid2}
-                    format="fluid"
-                    layout="in-article"
+                    format="auto"
                     responsive={true}
                     labelText={isBn ? 'বিজ্ঞাপন' : 'Advertisement'}
                     minHeight={250}

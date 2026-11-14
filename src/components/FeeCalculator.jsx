@@ -131,7 +131,7 @@ const input = {
     background: 'var(--surface, transparent)', color: 'var(--text, inherit)', border: '1px solid var(--card-border, #cbd5e1)',
 };
 
-export default function FeeCalculator({ type = 'land', lang = 'bn' }) {
+export default function FeeCalculator({ type = 'land', lang = 'bn', hideAd = false }) {
     const t = T[lang] || T.en;
     const fmt = (n) => `${t.currency}${Math.round(n).toLocaleString(t.locale)}`;
     const fmtNum = (n) => Number(n.toFixed(2)).toLocaleString(t.locale);
@@ -402,7 +402,7 @@ export default function FeeCalculator({ type = 'land', lang = 'bn' }) {
             )}
 
             {/* Unit 3 - 3rem of clear space above and below; never move this adjacent to the button */}
-            {adBlock}
+            {!hideAd && adBlock}
 
             <button type="button" onClick={calculate}
                 style={{ width: '100%', padding: '0.95rem 1rem', borderRadius: '0.7rem', border: 'none', cursor: 'pointer', fontWeight: 800, fontSize: '1rem', background: 'linear-gradient(135deg, #1E3A8A 0%, #1D4ED8 50%, #0F766E 100%)', color: '#FFFFFF', boxShadow: '0 6px 20px -4px rgba(30, 58, 138, 0.38)', transition: 'background-color 0.15s ease' }}>

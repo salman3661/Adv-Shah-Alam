@@ -58,13 +58,17 @@ const AdSenseAd = ({
 
         let cancelled = false;
 
+        let widthRetries = 0;
         const push = () => {
             if (cancelled || pushed.current || el.getAttribute('data-adsbygoogle-status')) return;
             // Ensure container has computed a non-zero responsive screen width before requesting ad size
             if (wrap.offsetWidth === 0) {
-                requestAnimationFrame(() => {
-                    if (!cancelled && !pushed.current && wrap.offsetWidth > 0) push();
-                });
+                if (widthRetries < 12) {
+                    widthRetries += 1;
+                    requestAnimationFrame(() => {
+                        if (!cancelled && !pushed.current) push();
+                    });
+                }
                 return;
             }
             pushed.current = true;
@@ -170,7 +174,7 @@ const AdSenseAd = ({
                 data-ad-client={PUB_ID}
                 data-ad-slot={slot}
                 data-ad-format={format}
-                data-full-width-responsive={responsive ? 'true' : undefined}
+                data-full-width-responsive={format === 'auto' && responsive ? 'true' : undefined}
                 {...(layout ? { 'data-ad-layout': layout } : {})}
                 {...(layoutKey ? { 'data-ad-layout-key': layoutKey } : {})}
             />

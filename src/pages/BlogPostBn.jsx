@@ -956,13 +956,25 @@ const BlogPostBnInner = () => {
                                 )}
 
                                 {/* Phase 5.1: Interactive Legal Calculator right after the introduction on pillar pages */}
-                                {calcIdx === -2 && calcCfg && <FeeCalculator type={calcCfg.type} lang="bn" />}
+                                {calcIdx === -2 && calcCfg && <FeeCalculator type={calcCfg.type} lang="bn" hideAd={true} />}
+
+                                {/* Ad Unit 1 (BN): High-viewability top display above article sections */}
+                                <AdSenseAd
+                                    key={`ad-bn-top-${post.slug}`}
+                                    slot={AD_SLOTS.topDisplay}
+                                    format="auto"
+                                    responsive={true}
+                                    labelText="বিজ্ঞাপন"
+                                    minHeight={250}
+                                    style={{ margin: '1.5rem auto 2.25rem' }}
+                                />
 
                                 {/* Sections — High-End Editorial Design */}
                                 {(() => {
                                     const secs = post.sections || [];
                                     const secLen = secs.length;
                                     const midSecBn = Math.max(1, Math.floor((secLen - 1) * 0.5));
+                                    const lateSecBn = secLen >= 4 ? Math.max(midSecBn + 1, Math.floor((secLen - 1) * 0.78)) : -1;
                                     return secs.map((sec, i) => {
                                         return (
                                             <React.Fragment key={i}>
@@ -1013,17 +1025,29 @@ const BlogPostBnInner = () => {
                                                 {/* Unit 3: interactive fee calculator (when matched to a specific section) */}
                                                 {i === calcIdx && calcCfg && <FeeCalculator type={calcCfg.type} lang="bn" />}
 
-                                                {/* Deterministic Section-Based In-Article Ads (BN) */}
+                                                {/* Deterministic Section-Based In-Article Ads (BN) — Mobile gets 2nd high-fill Display slot (sidebar unit) */}
                                                 {i === 0 && secLen >= 2 && (
-                                                    <AdSenseAd
-                                                        key={`ad-bn-top-${post.slug}`}
-                                                        slot={AD_SLOTS.topDisplay}
-                                                        format="auto"
-                                                        responsive={true}
-                                                        labelText="বিজ্ঞাপন"
-                                                        minHeight={250}
-                                                        style={{ margin: '1.5rem auto 2.5rem' }}
-                                                    />
+                                                    !isDesktop ? (
+                                                        <AdSenseAd
+                                                            key={`ad-bn-mob-display-${post.slug}`}
+                                                            slot={AD_SLOTS.sidebar}
+                                                            format="auto"
+                                                            responsive={true}
+                                                            labelText="বিজ্ঞাপন"
+                                                            minHeight={250}
+                                                            style={{ margin: '1.5rem auto 2.5rem' }}
+                                                        />
+                                                    ) : (
+                                                        <AdSenseAd
+                                                            key={`ad-bn-body1-${post.slug}`}
+                                                            slot={AD_SLOTS.body1}
+                                                            format="fluid"
+                                                            layout="in-article"
+                                                            labelText="বিজ্ঞাপন"
+                                                            minHeight={250}
+                                                            style={{ margin: '1.5rem auto 2.5rem' }}
+                                                        />
+                                                    )
                                                 )}
                                                 {i === midSecBn && i !== 0 && (
                                                     <AdSenseAd
@@ -1031,7 +1055,17 @@ const BlogPostBnInner = () => {
                                                         slot={AD_SLOTS.native}
                                                         format="fluid"
                                                         layout="in-article"
-                                                        responsive={true}
+                                                        labelText="বিজ্ঞাপন"
+                                                        minHeight={250}
+                                                        style={{ margin: '1.5rem auto 2.5rem' }}
+                                                    />
+                                                )}
+                                                {i === lateSecBn && i !== midSecBn && i !== 0 && (
+                                                    <AdSenseAd
+                                                        key={`ad-bn-late-${post.slug}`}
+                                                        slot={AD_SLOTS.body3}
+                                                        format="fluid"
+                                                        layout="in-article"
                                                         labelText="বিজ্ঞাপন"
                                                         minHeight={250}
                                                         style={{ margin: '1.5rem auto 2.5rem' }}
@@ -1144,10 +1178,9 @@ const BlogPostBnInner = () => {
                                 {/* Ad Unit 4 (BN): before CTA form on all BN articles */}
                                 <AdSenseAd
                                     key={`ad-postfaq-${post.slug}`}
-                                    slot={AD_SLOTS.body5}
+                                    slot={AD_SLOTS.body4}
                                     format="fluid"
                                     layout="in-article"
-                                    responsive={true}
                                     labelText="বিজ্ঞাপন"
                                     minHeight={250}
                                     style={{ margin: '2rem auto' }}

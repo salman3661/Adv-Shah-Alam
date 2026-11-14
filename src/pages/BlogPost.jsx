@@ -913,7 +913,7 @@ const BlogPostInner = () => {
                                 )}
 
                                 {/* Phase 5.1: Interactive Legal Calculator right after the introduction on pillar pages */}
-                                {calcIdx === -2 && calcCfg && <FeeCalculator type={calcCfg.type} lang="en" />}
+                                {calcIdx === -2 && calcCfg && <FeeCalculator type={calcCfg.type} lang="en" hideAd={true} />}
 
                                 {/* Ad Unit 1 (EN): High-viewability top display above article sections */}
                                 <AdSenseAd
@@ -984,12 +984,34 @@ const BlogPostInner = () => {
 
                                                 {/* Deterministic In-Article Ad Units spaced cleanly by editorial sections */}
                                                 {i === 0 && secLen >= 2 && (
+                                                    !isDesktop ? (
+                                                        <AdSenseAd
+                                                            key={`ad-mob-display-${post.slug}`}
+                                                            slot={AD_SLOTS.sidebar}
+                                                            format="auto"
+                                                            responsive={true}
+                                                            labelText="Advertisement"
+                                                            minHeight={250}
+                                                            style={{ margin: '1.5rem auto 2.5rem' }}
+                                                        />
+                                                    ) : (
+                                                        <AdSenseAd
+                                                            key={`ad-body1-${post.slug}`}
+                                                            slot={AD_SLOTS.body1}
+                                                            format="fluid"
+                                                            layout="in-article"
+                                                            labelText="Advertisement"
+                                                            minHeight={250}
+                                                            style={{ margin: '1.5rem auto 2.5rem' }}
+                                                        />
+                                                    )
+                                                )}
+                                                {i === 1 && !isDesktop && secLen >= 3 && midSec > 1 && (
                                                     <AdSenseAd
-                                                        key={`ad-body1-${post.slug}`}
+                                                        key={`ad-mob-body1-${post.slug}`}
                                                         slot={AD_SLOTS.body1}
                                                         format="fluid"
                                                         layout="in-article"
-                                                        responsive={true}
                                                         labelText="Advertisement"
                                                         minHeight={250}
                                                         style={{ margin: '1.5rem auto 2.5rem' }}
@@ -1001,7 +1023,6 @@ const BlogPostInner = () => {
                                                         slot={AD_SLOTS.body2}
                                                         format="fluid"
                                                         layout="in-article"
-                                                        responsive={true}
                                                         labelText="Advertisement"
                                                         minHeight={250}
                                                         style={{ margin: '1.5rem auto 2.5rem' }}
@@ -1013,7 +1034,6 @@ const BlogPostInner = () => {
                                                         slot={AD_SLOTS.body3}
                                                         format="fluid"
                                                         layout="in-article"
-                                                        responsive={true}
                                                         labelText="Advertisement"
                                                         minHeight={250}
                                                         style={{ margin: '1.5rem auto 2.5rem' }}

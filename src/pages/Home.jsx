@@ -34,10 +34,13 @@ const Home = ({ lang = 'en' }) => {
             cleanup();
         };
         const events = ['scroll', 'wheel', 'touchstart', 'pointerdown', 'mousemove', 'keydown', 'hashchange'];
+        let fallbackTimer = null;
         const cleanup = () => {
             events.forEach((ev) => window.removeEventListener(ev, trigger));
+            if (fallbackTimer) clearTimeout(fallbackTimer);
         };
         events.forEach((ev) => window.addEventListener(ev, trigger, { passive: true, once: true }));
+        fallbackTimer = setTimeout(trigger, 1800);
         return cleanup;
     }, [loadBelowFold]);
 
@@ -111,7 +114,6 @@ const Home = ({ lang = 'en' }) => {
                             slot="6519719969"
                             format="fluid"
                             layout="in-article"
-                            responsive={true}
                             labelText={isBn ? 'বিজ্ঞাপন' : 'Advertisement'}
                             minHeight={250}
                         />
@@ -148,13 +150,25 @@ const Home = ({ lang = 'en' }) => {
                             key={`home-ad3-${lang}`}
                             slot="3667074343"
                             format="autorelaxed"
-                            responsive={true}
                             labelText={isBn ? 'আরও দেখুন' : 'Sponsored Content'}
                             minHeight={280}
                         />
                     </div>
 
                     <Timeline isHome={true} lang={lang} />
+
+                    {/* ── Homepage Ad 4: Second Display Banner before Chambers ── */}
+                    <div style={{ maxWidth: '900px', margin: '0 auto', padding: '0 1rem 2rem' }}>
+                        <AdSenseAd
+                            key={`home-ad4-${lang}`}
+                            slot="5064091502"
+                            format="auto"
+                            responsive={true}
+                            labelText={isBn ? 'বিজ্ঞাপন' : 'Advertisement'}
+                            minHeight={250}
+                        />
+                    </div>
+
                     <Chambers lang={lang} />
                     <Contact lang={lang} />
                 </Suspense>
