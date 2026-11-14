@@ -1,0 +1,73 @@
+{
+  "slug": "waqf-property-dispute-mutawalli-removal-bangladesh-guide",
+  "bnSlug": "waqf-sompotti-dakhol-motawalli-oposhadhon-tribunal-ain-2026-bn",
+  "title": "Waqf Property Dispute & Mutawalli Removal Law in Bangladesh",
+  "metaTitle": "Waqf Property Dispute & Mutawalli Removal Law BD",
+  "metaDescription": "Learn Waqf property dispute remedies, Mutawalli removal under Section 32 of the Waqfs Ordinance 1962, Waqf Tribunal jurisdiction, and High Court writ options.",
+  "category": "Property Law",
+  "readTime": "7 min read",
+  "publishedDate": "2026-11-14",
+  "lastModified": "2026-11-14",
+  "isDraft": false,
+  "keywords": [
+    "waqf property dispute bangladesh",
+    "mutawalli removal waqfs ordinance 1962",
+    "waqf tribunal bangladesh",
+    "waqf alal aulad bangladesh law",
+    "illegal sale of waqf property bangladesh"
+  ],
+  "heroIntro": "Under the Waqfs Ordinance 1962 (and the Waqf Properties Management Rules), Waqf property in Bangladesh is dedicated permanently for religious, pious, or charitable purposes and cannot be sold, mortgaged, or transferred without prior written sanction of the Waqf Administrator under Section 56. Mismanagement or illegal transfer by a Mutawalli can be challenged before the Office of the Waqf Administrator, the Waqf Tribunal, or the High Court Division.",
+  "quickAnswer": {
+    "heading": "At a Glance: Waqf Property Remedies",
+    "text": "Waqf land is inalienable without Administrator approval; corrupt Mutawallis face removal and criminal liability.",
+    "points": [
+      "Governing Law: The Waqfs Ordinance 1962 (East Pakistan Ordinance I of 1962) & Section 56 alienation bar",
+      "Mutawalli Removal: Section 32 empowers the Waqf Administrator to remove a Mutawalli for breach of trust or misappropriation",
+      "Illegal Transfer Recovery: Section 64 enables eviction of unauthorized occupants and cancellation of void deeds",
+      "Judicial Review: Appeals lie to the District Judge / Waqf Tribunal under Section 32(4) or High Court writ under Article 102"
+    ]
+  },
+  "toc": [
+    "Legal Status of Waqf-Al-Lillah and Waqf-Alal-Aulad in Bangladesh",
+    "Grounds & Procedure for Removing a Mutawalli (Section 32)",
+    "Recovering Illegally Sold or Encroached Waqf Land (Sections 56 & 64)",
+    "Documents Required to File a Waqf Complaint or Tribunal Appeal",
+    "High Court Writ Jurisdiction vs. Civil Court Bar (Section 102)"
+  ],
+  "sections": [
+    {
+      "h2": "Legal Status of Waqf-Al-Lillah and Waqf-Alal-Aulad in Bangladesh",
+      "content": "<p>Under Islamic law as codified in the <strong>Waqfs Ordinance 1962</strong> (read with the Mussalman Wakf Validating Act 1913), once a valid <em>Waqfnama</em> (deed of Waqf) is executed and registered under the Registration Act 1908, ownership vests permanently in Almighty Allah. Neither the <em>Waqif</em> (dedicator) nor the <em>Mutawalli</em> (manager) retains personal title to sell or gift the corpus.</p><ul><li><strong>Waqf-al-Lillah (Public Waqf):</strong> Dedicated directly for mosques, madrasas, graveyards, or public charity.</li><li><strong>Waqf-alal-Aulad (Family Waqf):</strong> Income is reserved primarily for the dedicator's family and descendants, with ultimate remainder to charity upon extinction of the line.</li></ul><p>Every Waqf estate must be enrolled with the <strong>Office of the Administrator of Waqfs, Bangladesh</strong> (Section 47) and submit annual budgets and audit accounts under Section 52.</p>"
+    },
+    {
+      "h2": "Grounds & Procedure for Removing a Mutawalli (Section 32)",
+      "content": "<p>A Mutawalli is a fiduciary trustee, not an owner. Under <strong>Section 32 of the Waqfs Ordinance 1962</strong>, the Waqf Administrator may remove a Mutawalli after inquiry if the Mutawalli:</p><ul><li>Fails to maintain or submit audited accounts or pay the statutory Waqf contribution;</li><li>Misappropriates Waqf income, leases property below market value for personal gain, or damages the estate;</li><li>Becomes insolvent, mentally incapacitated, or is convicted of an offense involving moral turpitude; or</li><li>Attempts to transfer, mortgage, or encumber Waqf property in violation of <strong>Section 56</strong>.</li></ul><p>Before passing a removal order, the Administrator must issue a show-cause notice and grant an opportunity of hearing. Any person aggrieved by an order under Section 32(1) may prefer an appeal to the District Judge within <strong>30 days</strong> under Section 32(4).</p>"
+    },
+    {
+      "h2": "Recovering Illegally Sold or Encroached Waqf Land (Sections 56 & 64)",
+      "content": "<p>Under <strong>Section 56</strong> of the Waqfs Ordinance 1962, any sale, gift, mortgage, exchange, or lease exceeding <strong>five years</strong> (for agricultural land) or <strong>three years</strong> (for non-agricultural land) without prior sanction of the Administrator is <strong>void ab initio</strong>.</p><p>When third parties occupy Waqf land through forged deeds or collusive Sub-Registry transfers, the Administrator can invoke <strong>Section 64</strong> to issue a requisition to the Deputy Commissioner (DC) to recover possession summarily as public property. Additionally, beneficiaries or the Mutawalli can file a civil declaration suit if title as Waqf itself is disputed in an enrolled register.</p>"
+    },
+    {
+      "h2": "Documents Required to File a Waqf Complaint or Tribunal Appeal",
+      "content": "<ul><li>Certified copy of the registered <strong>Waqfnama</strong> and <strong>EC (Enrolment Certificate)</strong> from the Waqf Office.</li><li>Updated <strong>CS, SA, RS, and BS/City Jarip Khatian</strong> showing the Waqf estate or Mutawalli record.</li><li>Bank statements, rent receipts, or audit discrepancies proving misappropriation by the Mutawalli.</li><li>Copy of any illegal sale deed (<em>Saf Kabala</em>) or unauthorized lease agreement executed without Section 56 permission.</li></ul>"
+    },
+    {
+      "h2": "High Court Writ Jurisdiction vs. Civil Court Bar (Section 102)",
+      "content": "<p>Under <strong>Section 102 of the Waqfs Ordinance 1962</strong>, ordinary civil courts are barred from questioning orders passed by the Waqf Administrator where an express statutory remedy exists. However, when the Waqf Administrator acts without jurisdiction, violates natural justice, or fails to enforce an eviction order under Section 64, an aggrieved party can file a <strong>Writ Petition under Article 102 of the Constitution of Bangladesh</strong> before the High Court Division of the Supreme Court.</p>"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Can a Mutawalli sell Waqf property to pay personal or family debts?",
+      "a": "No. Under Section 56 of the Waqfs Ordinance 1962, any sale, gift, or mortgage of Waqf property without prior written sanction of the Waqf Administrator is void. Personal debts of a Mutawalli cannot be satisfied from Waqf property."
+    },
+    {
+      "q": "How long do I have to appeal against a Mutawalli removal order?",
+      "a": "Under Section 32(4) of the Waqfs Ordinance 1962, an aggrieved Mutawalli or applicant must file an appeal before the District Judge within 30 days from the date of communication of the Administrator's order."
+    },
+    {
+      "q": "Can Non-Resident Bangladeshis (NRBs) file a complaint against a corrupt Mutawalli?",
+      "a": "Yes. Any beneficiary or person interested in the Waqf estate—including NRB heirs in a Waqf-alal-Aulad—can submit a verified complaint to the Waqf Administrator or authorize an advocate via Power of Attorney to pursue proceedings."
+    }
+  ]
+}

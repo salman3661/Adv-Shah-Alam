@@ -1,0 +1,73 @@
+{
+  "slug": "copyright-act-2023-digital-infringement-bangladesh",
+  "bnSlug": "copyright-ain-2023-digital-content-churi-khotipuron-mamla-2026-bn",
+  "title": "Copyright Act 2023: Digital Piracy & Remedies in Bangladesh",
+  "metaTitle": "Copyright Act 2023: Digital Piracy Remedies in BD",
+  "metaDescription": "Protect software, YouTube videos, books, and digital content under the Copyright Act 2023 in Bangladesh. Learn registration, civil injunctions, and penalties.",
+  "category": "Cyber Law",
+  "readTime": "7 min read",
+  "publishedDate": "2026-11-14",
+  "lastModified": "2026-11-14",
+  "isDraft": false,
+  "keywords": [
+    "copyright act 2023 bangladesh",
+    "digital copyright infringement bangladesh",
+    "copyright registration bangladesh",
+    "software piracy law bangladesh",
+    "copyright office bangladesh"
+  ],
+  "heroIntro": "Bangladesh's Copyright Act 2023 (কপিরাইট আইন, ২০২৩) replaced the 2000 Act to modernize protection for software, digital content, YouTube/streaming media, AI-assisted databases, literary works, and cinematograph films. Creators and businesses can enforce rights through Copyright Office registration, District Judge civil injunctions, and criminal prosecution carrying up to 4 years' imprisonment.",
+  "quickAnswer": {
+    "heading": "At a Glance: Copyright Act 2023 Protection",
+    "text": "Copyright exists automatically upon creation, while registration provides prima facie proof in court.",
+    "points": [
+      "Governing Statute: The Copyright Act 2023 (Act No. 34 of 2023) & Copyright Rules",
+      "Protection Term: Author's lifetime + 60 years for literary/artistic/musical works; 60 years for films/software",
+      "Civil Remedies: Injunction, damages, and delivery-up of infringing copies before the District Judge",
+      "Criminal Penalties: Up to 4 years imprisonment and BDT 200,000–500,000 fine (enhanced for software piracy)"
+    ]
+  },
+  "toc": [
+    "Key Reforms Introduced by the Copyright Act 2023",
+    "What Works Are Protected & How to Register at the Copyright Office",
+    "Civil Remedies: Injunction, Damages & Anton Piller Orders",
+    "Criminal Prosecution & Digital Takedown Options",
+    "Checklist Before Filing a Copyright Infringement Suit"
+  ],
+  "sections": [
+    {
+      "h2": "Key Reforms Introduced by the Copyright Act 2023",
+      "content": "<p>Enacted in September 2023, the <strong>Copyright Act 2023</strong> expands statutory protection beyond print and broadcast to cover <strong>digital platforms, cloud software, OTT streaming, databases, and folkloric/cultural expressions</strong>. It also introduces stronger anti-circumvention rules against bypassing Digital Rights Management (DRM) locks and clarifies intermediary safe-harbor and notice-and-takedown duties.</p>"
+    },
+    {
+      "h2": "What Works Are Protected & How to Register at the Copyright Office",
+      "content": "<p>Under the Copyright Act 2023, protection covers original literary works (including <strong>computer programs and source code</strong>), dramatic, musical, and artistic works, cinematograph films, sound recordings, and broadcasts. While copyright arises automatically upon fixation, registering with the <strong>Bangladesh Copyright Office</strong> (Agargaon, Dhaka) creates a statutory certificate that serves as <em>prima facie</em> evidence of ownership in court.</p><ul><li>Submit Form-IV/application via the Copyright Office e-portal with two copies of the work.</li><li>Publish statutory notice/wait period for objections (typically 30 days for artistic/literary works).</li><li>Obtain the official Registration Certificate for enforcement and licensing.</li></ul>"
+    },
+    {
+      "h2": "Civil Remedies: Injunction, Damages & Anton Piller Orders",
+      "content": "<p>When a competitor copies your software, course material, e-commerce product photography, or digital video, the copyright owner may file a civil suit in the <strong>Court of the District Judge</strong> having jurisdiction where the owner resides or carries on business. Available reliefs include:</p><ul><li><strong>Temporary &amp; Permanent Injunction</strong> under Order 39 Rules 1–2 CPC to halt ongoing distribution;</li><li><strong>Account of Profits or Compensatory Damages</strong> for lost licensing revenue; and</li><li><strong>Inspection &amp; Seizure Orders</strong> to preserve digital servers, hard drives, and pirated stock before destruction.</li></ul>"
+    },
+    {
+      "h2": "Criminal Prosecution & Digital Takedown Options",
+      "content": "<p>Knowingly infringing copyright for commercial gain is a cognizable offense under the Copyright Act 2023. Penalties range up to <strong>4 years imprisonment and BDT 200,000 fine</strong> for general works, and up to <strong>4 years imprisonment and BDT 500,000 fine</strong> for commercial software piracy. For online content theft on YouTube, Facebook, or websites, a lawyer-issued <strong>DMCA / Copyright Takedown Notice</strong> backed by a Bangladesh Copyright Registration Certificate accelerates platform removal.</p>"
+    },
+    {
+      "h2": "Checklist Before Filing a Copyright Infringement Suit",
+      "content": "<ul><li>Bangladesh Copyright Registration Certificate or dated source-code/manuscript creation logs.</li><li>Timestamped screenshots, URLs, SHA-256 hashes, or notarized captures of the infringing content.</li><li>Formal <strong>Cease and Desist Legal Notice</strong> served on the infringer (and hosting/platform intermediary).</li><li>Evidence of commercial loss, licensing rate, or reputational harm.</li></ul>"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is copyright registration mandatory to sue for infringement in Bangladesh?",
+      "a": "No, copyright subsists automatically upon creation. However, a Certificate of Registration from the Bangladesh Copyright Office acts as prima facie proof of ownership and makes injunctions and criminal complaints significantly faster."
+    },
+    {
+      "q": "Does the Copyright Act 2023 protect mobile apps and SaaS source code?",
+      "a": "Yes. Computer programs, source code, UI compilations, and databases are explicitly protected as literary works under the Copyright Act 2023, with enhanced criminal fines for commercial software piracy."
+    },
+    {
+      "q": "Can a foreign company enforce copyright in Bangladesh?",
+      "a": "Yes. Under the Berne Convention and international copyright reciprocity rules incorporated into Bangladesh law, works created in Berne/WTO member countries enjoy reciprocal protection in Bangladesh."
+    }
+  ]
+}
