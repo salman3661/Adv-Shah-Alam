@@ -679,8 +679,24 @@ const BlogPostBnInner = () => {
                 {howToSchema && <script type="application/ld+json">{JSON.stringify(howToSchema)}</script>}
             </Helmet>
 
-            {/* ════ HERO (Phase 2.2: Protected Floating Navbar & Immediate H1 Visibility) ════ */}
-            <section className="hero-section google-anno-skip pt-24" style={{ background: 'linear-gradient(135deg, #0B1938 0%, #1E3A8A 52%, #0F766E 100%)', paddingTop: '88px', paddingBottom: '2.75rem', position: 'relative', overflow: 'hidden', borderBottom: '1px solid rgba(148, 163, 184, 0.25)' }}>
+            {/* ════ AD #1: TOP RESPONSIVE LEADERBOARD DIRECTLY ABOVE H1 (PROTHOM ALO / DAILY CAMPUS STYLE) ════ */}
+            <div style={{ background: 'var(--bg)', borderBottom: '1px solid var(--card-border)', paddingTop: '72px', paddingBottom: '0.5rem' }}>
+                <div className="bpbn-hero-container">
+                    <AdSenseAd
+                        key={`ad-bn-header-${post.slug}`}
+                        slot={AD_SLOTS.topDisplay}
+                        format="auto"
+                        responsive={true}
+                        labelText="বিজ্ঞাপন"
+                        minHeight={90}
+                        mobileMinHeight={65}
+                        style={{ margin: '0 auto' }}
+                    />
+                </div>
+            </div>
+
+            {/* ════ HERO (Immediate H1 & Cover Image directly beneath top banner) ════ */}
+            <section className="hero-section google-anno-skip" style={{ background: 'linear-gradient(135deg, #0B1938 0%, #1E3A8A 52%, #0F766E 100%)', paddingTop: '1.5rem', paddingBottom: '2rem', position: 'relative', overflow: 'hidden', borderBottom: '1px solid rgba(148, 163, 184, 0.25)' }}>
                 <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '4px', background: 'linear-gradient(90deg, #1D4ED8, #0F766E, #38BDF8, #1D4ED8)' }} />
                 <div className="hero-cover-bg" aria-hidden="true" style={{ backgroundImage: `url(${coverFor(post.category)})` }} />
                 <div className="hero-cover-fade" aria-hidden="true" />
@@ -798,44 +814,25 @@ const BlogPostBnInner = () => {
                             </div>
                         </div>
                     </div>
-
-                    {/* Tier 2: Full-Width Luxury White Executive Summary Box */}
-                    {post.heroIntro && (
-                        <div className="bpbn-hero-intro-card">
-                            <div className="bpbn-intro-header">
-                                <div className="bpbn-intro-badge">
-                                    <span className="bpbn-intro-dot" />
-                                    <span>বিজ্ঞ আইনজীবীর আইনি পর্যবেক্ষণ ও সারসংক্ষেপ</span>
-                                </div>
-                                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
-                                    <a href="tel:01712655546" className="bpbn-intro-call-chip">
-                                        <Phone size={13} />
-                                        <span>জরুরি পরামর্শ: 01712655546</span>
-                                    </a>
-                                    <a
-                                        href={waLink(`আসসালামু আলাইকুম, "${post.title}" বিষয়ে আপনার আইনি পরামর্শ চাই।`, true)}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="bpbn-intro-wa-chip"
-                                    >
-                                        <MessageCircle size={13} />
-                                        <span>WhatsApp পরামর্শ</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div
-                                className="bpbn-intro-content"
-                                dangerouslySetInnerHTML={{ __html: formatHeroIntro(post.heroIntro) }}
-                            />
-                            <div className="bpbn-intro-footer">
-                                <span>✓ বাংলাদেশ সুপ্রিম কোর্ট আইন নির্দেশিকা (২০২৬)</span>
-                                <span>⚖️ উত্তরা ও ঢাকা জজ কোর্ট চেম্বার</span>
-                                <span>⚡ সরাসরি দলিল ও কেস মূল্যায়ন</span>
-                            </div>
-                        </div>
-                    )}
                 </div>
             </section>
+
+            {/* ════ AD #2: IMMEDIATELY BELOW FEATURED COVER PICTURE (HIGH-FILL DISPLAY ON MOBILE) ════ */}
+            <div style={{ background: 'var(--bg)', paddingTop: '1rem' }}>
+                <div className="bpbn-hero-container">
+                    <AdSenseAd
+                        key={!isDesktop ? `ad-bn-belowpic-mob-${post.slug}` : `ad-bn-belowpic-desk-${post.slug}`}
+                        slot={!isDesktop ? AD_SLOTS.sidebar : AD_SLOTS.body2}
+                        format={!isDesktop ? 'auto' : 'fluid'}
+                        layout={!isDesktop ? '' : 'in-article'}
+                        responsive={true}
+                        labelText="বিজ্ঞাপন"
+                        minHeight={100}
+                        mobileMinHeight={100}
+                        style={{ margin: '0 auto' }}
+                    />
+                </div>
+            </div>
 
             {/* ════ BODY ════ */}
             <div style={{ background: 'var(--bg)' }}>
@@ -903,6 +900,42 @@ const BlogPostBnInner = () => {
 
                             <article>
 
+                                {/* Executive Summary Box right below Cover Picture + Below-Pic Ad */}
+                                {post.heroIntro && (
+                                    <div className="bpbn-hero-intro-card">
+                                        <div className="bpbn-intro-header">
+                                            <div className="bpbn-intro-badge">
+                                                <span className="bpbn-intro-dot" />
+                                                <span>বিজ্ঞ আইনজীবীর আইনি পর্যবেক্ষণ ও সারসংক্ষেপ</span>
+                                            </div>
+                                            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                                                <a href="tel:01712655546" className="bpbn-intro-call-chip">
+                                                    <Phone size={13} />
+                                                    <span>জরুরি পরামর্শ: 01712655546</span>
+                                                </a>
+                                                <a
+                                                    href={waLink(`আসসালামু আলাইকুম, "${post.title}" বিষয়ে আপনার আইনি পরামর্শ চাই।`, true)}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="bpbn-intro-wa-chip"
+                                                >
+                                                    <MessageCircle size={13} />
+                                                    <span>WhatsApp পরামর্শ</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div
+                                            className="bpbn-intro-content"
+                                            dangerouslySetInnerHTML={{ __html: formatHeroIntro(post.heroIntro) }}
+                                        />
+                                        <div className="bpbn-intro-footer">
+                                            <span>✓ বাংলাদেশ সুপ্রিম কোর্ট আইন নির্দেশিকা (২০২৬)</span>
+                                            <span>⚖️ উত্তরা ও ঢাকা জজ কোর্ট চেম্বার</span>
+                                            <span>⚡ সরাসরি দলিল ও কেস মূল্যায়ন</span>
+                                        </div>
+                                    </div>
+                                )}
+
                                 {/* Phase 5.2: Featured Snippet & AI Overview (GEO) Quick Answer Table */}
                                 {quickTable && (
                                     <div className="quick-answer-table-box" style={{ marginBottom: '2rem', borderRadius: '1rem', overflow: 'hidden', border: '1.5px solid rgba(29, 78, 216, 0.22)', background: 'var(--surface)', boxShadow: '0 12px 28px -12px rgba(15, 23, 42, 0.12)' }}>
@@ -955,19 +988,21 @@ const BlogPostBnInner = () => {
                                     </div>
                                 )}
 
-                                {/* Phase 5.1: Interactive Legal Calculator right after the introduction on pillar pages */}
-                                {calcIdx === -2 && calcCfg && <FeeCalculator type={calcCfg.type} lang="bn" hideAd={true} />}
+                                {/* Ad #3 (BN): After Executive Summary / Quick Answer (only when intro/quick block is present so it never stacks onto Ad #2) */}
+                                {(post.heroIntro || quickTable || post.quickAnswer) && (
+                                    <AdSenseAd
+                                        key={`ad-bn-postintro-${post.slug}`}
+                                        slot={AD_SLOTS.body1}
+                                        format="fluid"
+                                        layout="in-article"
+                                        labelText="বিজ্ঞাপন"
+                                        minHeight={250}
+                                        style={{ margin: '1.25rem auto 2rem' }}
+                                    />
+                                )}
 
-                                {/* Ad Unit 1 (BN): High-viewability top display above article sections */}
-                                <AdSenseAd
-                                    key={`ad-bn-top-${post.slug}`}
-                                    slot={AD_SLOTS.topDisplay}
-                                    format="auto"
-                                    responsive={true}
-                                    labelText="বিজ্ঞাপন"
-                                    minHeight={250}
-                                    style={{ margin: '1.5rem auto 2.25rem' }}
-                                />
+                                {/* Phase 5.1: Interactive Legal Calculator right after intro ad on pillar pages */}
+                                {calcIdx === -2 && calcCfg && <FeeCalculator type={calcCfg.type} lang="bn" hideAd={true} />}
 
                                 {/* Sections — High-End Editorial Design */}
                                 {(() => {
@@ -1025,33 +1060,10 @@ const BlogPostBnInner = () => {
                                                 {/* Unit 3: interactive fee calculator (when matched to a specific section) */}
                                                 {i === calcIdx && calcCfg && <FeeCalculator type={calcCfg.type} lang="bn" />}
 
-                                                {/* Deterministic Section-Based In-Article Ads (BN) — Mobile gets 2nd high-fill Display slot (sidebar unit) */}
+                                                {/* Ad #4 (BN): After Section 0 */}
                                                 {i === 0 && secLen >= 2 && (
-                                                    !isDesktop ? (
-                                                        <AdSenseAd
-                                                            key={`ad-bn-mob-display-${post.slug}`}
-                                                            slot={AD_SLOTS.sidebar}
-                                                            format="auto"
-                                                            responsive={true}
-                                                            labelText="বিজ্ঞাপন"
-                                                            minHeight={250}
-                                                            style={{ margin: '1.5rem auto 2.5rem' }}
-                                                        />
-                                                    ) : (
-                                                        <AdSenseAd
-                                                            key={`ad-bn-body1-${post.slug}`}
-                                                            slot={AD_SLOTS.body1}
-                                                            format="fluid"
-                                                            layout="in-article"
-                                                            labelText="বিজ্ঞাপন"
-                                                            minHeight={250}
-                                                            style={{ margin: '1.5rem auto 2.5rem' }}
-                                                        />
-                                                    )
-                                                )}
-                                                {i === midSecBn && i !== 0 && (
                                                     <AdSenseAd
-                                                        key={`ad-bn-mid-${post.slug}`}
+                                                        key={`ad-bn-sec0-${post.slug}`}
                                                         slot={AD_SLOTS.native}
                                                         format="fluid"
                                                         layout="in-article"
@@ -1060,6 +1072,19 @@ const BlogPostBnInner = () => {
                                                         style={{ margin: '1.5rem auto 2.5rem' }}
                                                     />
                                                 )}
+                                                {/* Ad #5 (BN): Mid-section on mobile (desktop uses body2 below pic + sticky sidebar) */}
+                                                {i === midSecBn && i !== 0 && !isDesktop && (
+                                                    <AdSenseAd
+                                                        key={`ad-bn-mid-${post.slug}`}
+                                                        slot={AD_SLOTS.body2}
+                                                        format="fluid"
+                                                        layout="in-article"
+                                                        labelText="বিজ্ঞাপন"
+                                                        minHeight={250}
+                                                        style={{ margin: '1.5rem auto 2.5rem' }}
+                                                    />
+                                                )}
+                                                {/* Ad #6 (BN): Late-section */}
                                                 {i === lateSecBn && i !== midSecBn && i !== 0 && (
                                                     <AdSenseAd
                                                         key={`ad-bn-late-${post.slug}`}
@@ -1552,13 +1577,13 @@ const BlogPostBnInner = () => {
 
                 /* ─── Luminous Full-Width Executive Hero Intro Box ─── */
                 .bpbn-hero-intro-card {
-                    margin: 1.75rem 0 0.25rem;
+                    margin: 0 0 2rem;
                     max-width: 100%;
                     padding: 0;
                     background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFF 100%);
                     border: 1px solid rgba(148, 163, 184, 0.35);
                     border-radius: 1.15rem;
-                    box-shadow: 0 24px 52px -14px rgba(6, 15, 36, 0.58), 0 0 0 1px rgba(255, 255, 255, 0.75) inset;
+                    box-shadow: 0 12px 30px -12px rgba(15, 23, 42, 0.16);
                     position: relative;
                     overflow: hidden;
                 }
@@ -1714,7 +1739,7 @@ const BlogPostBnInner = () => {
                     .bpbn-toc-inline { display: none; }
                     .bpbn-mobile-toc { display: block; }
                     .bpbn-body-container, .bpbn-hero-container { padding-left: 0.9rem; padding-right: 0.9rem; }
-                    .bpbn-hero-intro-card { margin-top: 1.25rem; border-radius: 1rem; }
+                    .bpbn-hero-intro-card { margin-top: 0; border-radius: 1rem; }
                     .bpbn-intro-header { padding: 0.8rem 1rem; gap: 0.5rem; }
                     .bpbn-intro-badge { font-size: 0.82rem; }
                     .bpbn-intro-call-chip, .bpbn-intro-wa-chip { font-size: 0.74rem; padding: 0.32rem 0.75rem; }

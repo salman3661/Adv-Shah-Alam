@@ -40,7 +40,7 @@ const Home = ({ lang = 'en' }) => {
             if (fallbackTimer) clearTimeout(fallbackTimer);
         };
         events.forEach((ev) => window.addEventListener(ev, trigger, { passive: true, once: true }));
-        fallbackTimer = setTimeout(trigger, 1800);
+        fallbackTimer = setTimeout(trigger, 600);
         return cleanup;
     }, [loadBelowFold]);
 
@@ -85,6 +85,19 @@ const Home = ({ lang = 'en' }) => {
             </Helmet>
             <Hero lang={lang} />
             <TrustBar lang={lang} />
+
+            {/* ── Homepage Ad 0: Immediately below Hero & TrustBar ── */}
+            <div style={{ maxWidth: '900px', margin: '1rem auto 0', padding: '0 1rem' }}>
+                <AdSenseAd
+                    key={`home-ad0-${lang}`}
+                    slot="9118178745"
+                    format="fluid"
+                    layout="in-article"
+                    labelText={isBn ? 'বিজ্ঞাপন' : 'Advertisement'}
+                    minHeight={100}
+                    mobileMinHeight={100}
+                />
+            </div>
 
             {loadBelowFold ? (
                 <Suspense fallback={<SectionFallback />}>

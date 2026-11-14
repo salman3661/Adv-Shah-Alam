@@ -34,6 +34,7 @@ const AdSenseAd = ({
     labelText = 'Advertisement',
     layoutKey = '',
     minHeight = 0,
+    mobileMinHeight = 0,
     densityGroup = null,
 }) => {
     const wrapRef = useRef(null);
@@ -119,7 +120,9 @@ const AdSenseAd = ({
 
     const isUnfilled = state === 'unfilled';
     const resolvedDesktopMin = minHeight > 0 ? minHeight : 250;
-    const resolvedMobileMin = minHeight > 0 ? Math.min(minHeight, 100) : 100;
+    const resolvedMobileMin = mobileMinHeight > 0
+        ? mobileMinHeight
+        : (minHeight > 0 ? Math.min(minHeight, 100) : 100);
 
     const {
         margin: _ignoredMargin,

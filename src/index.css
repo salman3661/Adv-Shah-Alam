@@ -141,16 +141,9 @@ html[lang="bn"] td {
    ADSENSE STYLING, CLS PREVENTION & ZERO ADS ABOVE THE FOLD
    ══════════════════════════════════════════════════════════ */
 .adsense-wrapper {
-  min-height: 100px;
   overflow-x: hidden;
   overflow-y: visible;
   transition: opacity 0.25s ease;
-}
-
-@media (min-width: 768px) {
-  .adsense-wrapper {
-    min-height: 250px;
-  }
 }
 
 /* Preserve reserved container space on unfilled ads to prevent CLS; only hide inner <ins> */
