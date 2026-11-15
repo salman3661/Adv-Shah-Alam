@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import seo from '../content/seo.js';
 import postsPreview from '../content/posts-preview.json';
 import { coverFor } from '../utils/coverImage';
+import { formatBdDate } from '../utils/bdDate.mjs';
 
 const stripHtml = (s) => (s ? String(s).replace(/<[^>]*>?/gm, '').replace(/\*\*([^*]+)\*\*/g, '$1').trim() : '');
 
@@ -121,7 +122,8 @@ const BlogPreview = ({ lang: initialLang = 'en' }) => {
                                 <div className="p-6 flex flex-col flex-1">
                                     {article.publishedDate && (
                                         <div className="text-xs mb-2 font-medium" style={{ color: 'var(--text-muted)' }}>
-                                            {new Date(article.publishedDate).toLocaleDateString(
+                                            {formatBdDate(
+                                                article.publishedDate,
                                                 activeLang === 'bn' ? 'bn-BD' : 'en-GB',
                                                 { day: 'numeric', month: 'short', year: 'numeric' }
                                             )}

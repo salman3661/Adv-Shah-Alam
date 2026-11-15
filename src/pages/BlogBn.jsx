@@ -5,11 +5,13 @@ import { Search, Clock, ChevronRight, BookOpen, Flame, Award, ShieldCheck, UserC
 import topicsData from '../content/topics.json';
 import pageHeadings from '../content/pageHeadings.json';
 import NotFound from './NotFound';
+import AdSenseAd from '../components/AdSenseAd';
 
 // Load all BN blog posts from JSON files (bundled at build time by Vite)
 import postsMeta_bn from '../content/posts-meta-bn.json';
 import popularBnSlugs from '../content/popular_bn.json';
 import { coverFor } from '../utils/coverImage';
+import { parseBdDate, formatBdDate } from '../utils/bdDate.mjs';
 const _bnModules = postsMeta_bn;
 const postsBn = Object.values(_bnModules).map((m) => m.default ?? m);
 const popularRankMap = new Map((Array.isArray(popularBnSlugs) ? popularBnSlugs : []).map((s, idx) => [s, (popularBnSlugs.length - idx) * 500]));
@@ -18,10 +20,9 @@ function isPublishedBn(post) {
   return Boolean(post && !post.isDraft && !post._draft);
 }
 
-// "Recent" ordering uses the later of publish date and last-updated date, so freshly published or
-// substantially updated guides surface at the top of the blog section instead of sitting at their old publish date.
+// "Recent" ordering uses the later of publish date and last-updated date, anchored to Asia/Dhaka.
 function freshnessBn(post) {
-  const t = (d) => (d ? new Date(d).getTime() || 0 : 0);
+  const t = (d) => parseBdDate(d)?.getTime() || 0;
   return Math.max(t(post.publishedAt), t(post.publishedDate), t(post.lastModified));
 }
 
@@ -85,10 +86,10 @@ const getCatColor = (cat) => categoryColors[cat] || 'var(--accent)';
 /* ─── Premium Glassmorphic Blog Card ─── */
 const BlogCardBn = ({ post, isRecent = false, isPopular = false }) => {
     const catColor = getCatColor(post.category);
-    const displayDate = post.lastModified && new Date(post.lastModified) > new Date(post.publishedDate || 0)
-        ? post.lastModified
-        : post.publishedDate;
-    const pubDateFormatted = displayDate ? new Date(displayDate).toLocaleDateString('bn-BD', { day: 'numeric', month: 'short', year: 'numeric' }) : null;
+    const modTime = parseBdDate(post.lastModified)?.getTime() || 0;
+    const pubTime = parseBdDate(post.publishedDate)?.getTime() || 0;
+    const displayDate = modTime > pubTime ? post.lastModified : post.publishedDate;
+    const pubDateFormatted = formatBdDate(displayDate, 'bn-BD', { day: 'numeric', month: 'short', year: 'numeric' }) || null;
 
     return (
         <article
@@ -672,9 +673,15 @@ const BlogBn = () => {
                                         />
                                         <div>
                                             <p className="text-xs font-bold" style={{ color: 'var(--text)', fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif" }}>অ্যাডভোকেট মো. শাহ আলম</p>
-                                            {featuredPost.publishedDate && (
+                                            {(featuredPost.lastModified || featuredPost.publishedDate) && (
                                                 <p className="text-xs" style={{ color: 'var(--text-muted)', fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif" }}>
-                                                    {new Date(featuredPost.publishedDate).toLocaleDateString('bn-BD', { day: 'numeric', month: 'short', year: 'numeric' })}
+                                                    {formatBdDate(
+                                                        (parseBdDate(featuredPost.lastModified)?.getTime() || 0) > (parseBdDate(featuredPost.publishedDate)?.getTime() || 0)
+                                                            ? featuredPost.lastModified
+                                                            : featuredPost.publishedDate,
+                                                        'bn-BD',
+                                                        { day: 'numeric', month: 'short', year: 'numeric' }
+                                                    )}
                                                 </p>
                                             )}
                                         </div>
@@ -692,6 +699,18 @@ const BlogBn = () => {
                     </div>
                 </section>
             )}
+
+            {/* ════ HUB AD 1: BELOW SPOTLIGHT FEATURED POST ════ */}
+            <div className="container mx-auto px-6 max-w-6xl py-4">
+                <AdSenseAd
+                    key="blog-bn-hub-top"
+                    slot="8630877987"
+                    format="auto"
+                    responsive={true}
+                    labelText="বিজ্ঞাপন"
+                    minHeight={250}
+                />
+            </div>
 
             {/* ════ MAIN ARTICLES GRID ════ */}
             <section className="py-10 pb-24" style={{ background: 'var(--bg)' }}>
@@ -747,7 +766,7 @@ const BlogBn = () => {
                     ) : (
                         <>
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                                {displayedPosts.map((post, idx) => (
+                                {displayedPosts.slice(0, 6).map((post, idx) => (
                                     <BlogCardBn
                                         key={post.slug}
                                         post={post}
@@ -756,6 +775,31 @@ const BlogBn = () => {
                                     />
                                 ))}
                             </div>
+
+                            {displayedPosts.length > 6 && (
+                                <>
+                                    <div className="my-8">
+                                        <AdSenseAd
+                                            key="blog-bn-mid-grid"
+                                            slot="9118178745"
+                                            format="fluid"
+                                            layout="in-article"
+                                            labelText="বিজ্ঞাপন"
+                                            minHeight={250}
+                                        />
+                                    </div>
+                                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                        {displayedPosts.slice(6).map((post, idx) => (
+                                            <BlogCardBn
+                                                key={post.slug}
+                                                post={post}
+                                                isRecent={!isPageRoute && !isTopicRoute && sortBy === 'recent' ? (idx + 6) < POSTS_PER_PAGE : false}
+                                                isPopular={!isPageRoute && !isTopicRoute && sortBy === 'popular' ? (idx + 6) < POSTS_PER_PAGE : false}
+                                            />
+                                        ))}
+                                    </div>
+                                </>
+                            )}
 
                             {/* ── আরও লোড করুন বাটন ── */}
                             {!isPageRoute && !isTopicRoute && visibleCount < filtered.length && (
@@ -805,8 +849,20 @@ const BlogBn = () => {
                         </>
                     )}
 
+                    {/* ════ HUB AD 2: MULTIPLEX BOTTOM GRID ════ */}
+                    <div className="mt-12">
+                        <AdSenseAd
+                            key="blog-bn-hub-grid"
+                            slot="3667074343"
+                            format="autorelaxed"
+                            responsive={true}
+                            labelText="আরও দেখুন"
+                            minHeight={280}
+                        />
+                    </div>
+
                     {/* Language Switch Footer */}
-                    <div className="mt-16 text-center">
+                    <div className="mt-10 text-center">
                         <Link
                             to="/blog"
                             className="inline-flex items-center gap-2 text-sm font-bold px-6 py-3 rounded-2xl border transition-[color,background-color,border-color,box-shadow,opacity,transform] hover:bg-[var(--accent-subtle)] shadow-sm"

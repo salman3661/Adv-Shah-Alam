@@ -1,5 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { createPortal } from 'react-dom';
+import React, { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import {
@@ -13,12 +12,13 @@ import AdSenseAd from '../components/AdSenseAd';
 import { coverFor, coverAbsolute } from '../utils/coverImage';
 import { evergreenYear } from '../utils/evergreenYear.mjs';
 import FeeCalculator from '../components/FeeCalculator';
-import { AD_SLOTS, DESKTOP_QUERY, useMediaQuery, useParagraphAnchors } from '../components/ads/adLayout';
+import { AD_SLOTS, DESKTOP_QUERY, useMediaQuery } from '../components/ads/adLayout';
 import { FEE_CALCULATORS, calculatorSectionIndex } from '../data/feeCalculators';
 import { SITE, buildEntityGraph, buildHreflang, resolveMasterPillar, resolveQuickAnswerTable, jsonLd } from '../utils/seoSchema.mjs';
 import ArticleSkeleton from '../components/ArticleSkeleton';
 import NotFound from './NotFound';
 import { sanitizeHtml, formatHeroIntro } from '../utils/sanitizeHtml';
+import { parseBdDate, formatBdDate } from '../utils/bdDate.mjs';
 
 /* ── Load all EN posts ── */
 import postsMeta_en from '../content/posts-meta-en.json';
@@ -187,8 +187,8 @@ const PopularPosts = ({ currentSlug }) => {
 /* ─── Sidebar: Recent Posts (Fresh & Dynamic) ─── */
 const RecentPosts = ({ currentSlug }) => {
     const recent = [...allPosts]
-        .filter(p => p.slug !== currentSlug && p.publishedDate)
-        .sort((a, b) => new Date(b.publishedDate) - new Date(a.publishedDate))
+        .filter(p => p.slug !== currentSlug && (p.lastModified || p.publishedDate))
+        .sort((a, b) => Math.max(parseBdDate(b.lastModified)?.getTime() || 0, parseBdDate(b.publishedDate)?.getTime() || 0) - Math.max(parseBdDate(a.lastModified)?.getTime() || 0, parseBdDate(a.publishedDate)?.getTime() || 0))
         .slice(0, 8);
     if (recent.length === 0) return null;
     return (
@@ -197,6 +197,9 @@ const RecentPosts = ({ currentSlug }) => {
             <div style={{ padding: '0.625rem 0.875rem 0.875rem' }}>
                 {recent.map((rp, idx) => {
                     const cc = catColor(rp.category);
+                    const rpDate = (parseBdDate(rp.lastModified)?.getTime() || 0) > (parseBdDate(rp.publishedDate)?.getTime() || 0)
+                        ? rp.lastModified
+                        : rp.publishedDate;
                     return (
                         <Link key={rp.slug} to={`/blog/${rp.slug}`}
                             style={{
@@ -246,7 +249,7 @@ const RecentPosts = ({ currentSlug }) => {
                                     </span>
                                     <span style={{ fontSize: '0.68rem', color: 'var(--text-muted)', display: 'flex', alignItems: 'center', gap: '0.2rem' }}>
                                         <Calendar size={9} />
-                                        {rp.publishedDate ? new Date(rp.publishedDate).toLocaleDateString('en-GB', { day: 'numeric', month: 'short' }) : ''}
+                                        {formatBdDate(rpDate, 'en-GB', { day: 'numeric', month: 'short' })}
                                     </span>
                                 </div>
                                 <p style={{
@@ -354,6 +357,10 @@ const ChamberPromoCard = () => (
             </div>
         </div>
         <div style={{ height: '1px', background: 'linear-gradient(90deg, transparent, rgba(148, 163, 184, 0.2), transparent)' }} />
+        <Link to="/nrb-legal-help" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.375rem', padding: '0.625rem 0.75rem', fontSize: '0.72rem', fontWeight: 700, color: '#E2C15A', textDecoration: 'none', background: 'rgba(201, 162, 39, 0.08)', transition: 'background 0.15s' }}>
+            <Scale size={12} /> NRB Video Review ($30) &amp; Deed Vetting →
+        </Link>
+        <div style={{ height: '1px', background: 'linear-gradient(90deg, transparent, rgba(148, 163, 184, 0.2), transparent)' }} />
         <Link to="/contact" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.375rem', padding: '0.6rem', fontSize: '0.7rem', fontWeight: 600, color: 'rgba(147, 197, 253, 0.85)', textDecoration: 'none', transition: 'color 0.15s' }}
             onMouseEnter={e => e.currentTarget.style.color = '#93C5FD'}
             onMouseLeave={e => e.currentTarget.style.color = 'rgba(147, 197, 253, 0.85)'}>
@@ -458,17 +465,7 @@ const BlogPostInner = () => {
     };
 
     /* ── Error / Coming Soon states ── */
-    /* NOTE: the former empty adsbygoogle.push({}) on every route change was removed on purpose - it re-armed
-       Auto-Ads overlays (mobile vignettes) on internal navigation, which drives bounce. */
-    const articleRef = useRef(null);
     const isDesktop = useMediaQuery(DESKTOP_QUERY);
-    /* High Viewability: Unit 1 placed after paragraph 2 (right under intro) | Unit 2: after paragraph 5 */
-    const adAnchors = useParagraphAnchors(articleRef, [
-        { id: 'top', n: 2, fallbackToLast: false },
-        { id: 'mid', n: 5 },
-        { id: 'mid2', n: 9 },
-        { id: 'end', n: 13, fallbackToLast: true },
-    ], `${slug}|${isDesktop}|${post ? post.slug : 'loading'}`);
 
     const metaFallback = allPosts.find(p => p.slug === slug);
 
@@ -503,7 +500,11 @@ const BlogPostInner = () => {
         </>
     );
 
-    const pubDate = post.publishedDate ? new Date(post.publishedDate).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }) : '';
+    const pubDate = formatBdDate(post.publishedDate, 'en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+    const modTime = parseBdDate(post.lastModified)?.getTime() || 0;
+    const pubTime = parseBdDate(post.publishedDate)?.getTime() || 0;
+    const modDate = modTime > pubTime ? formatBdDate(post.lastModified, 'en-GB', { day: 'numeric', month: 'long', year: 'numeric' }) : '';
+    const heroDateLabel = modDate && modDate !== pubDate ? `Updated: ${modDate}` : pubDate;
     const cc = catColor(post.category);
 
     /* ── Schema ── */
@@ -632,8 +633,8 @@ const BlogPostInner = () => {
                 {faqSchema && <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>}
             </Helmet>
 
-            {/* ════════════════ HERO (Phase 2.2: Protected Floating Navbar & Immediate H1 Visibility) ════════════════ */}
-            <section className="hero-section google-anno-skip pt-24" style={{ background: 'linear-gradient(135deg, #0B1938 0%, #1E3A8A 52%, #0F766E 100%)', paddingTop: '88px', paddingBottom: '2.75rem', position: 'relative', overflow: 'hidden', borderBottom: '1px solid rgba(148, 163, 184, 0.25)' }}>
+            {/* ════════════════ HERO (Clean first-impression H1 & Cover Image directly under navbar) ════════════════ */}
+            <section className="hero-section google-anno-skip" style={{ background: 'linear-gradient(135deg, #0B1938 0%, #1E3A8A 52%, #0F766E 100%)', paddingTop: '6.5rem', paddingBottom: '2.5rem', position: 'relative', overflow: 'hidden', borderBottom: '1px solid rgba(148, 163, 184, 0.25)' }}>
                 {/* Top accent bar */}
                 <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '4px', background: 'linear-gradient(90deg, #1D4ED8, #0F766E, #38BDF8, #1D4ED8)' }} />
                 <div className="hero-cover-bg" aria-hidden="true" style={{ backgroundImage: `url(${coverFor(post.category)})` }} />
@@ -716,9 +717,9 @@ const BlogPostInner = () => {
                                     <p style={{ fontSize: '0.9rem', fontWeight: 800, color: '#FFFFFF', margin: 0 }}>Advocate Md. Shah Alam</p>
                                     <p style={{ fontSize: '0.74rem', color: '#5EEAD4', fontWeight: 600, margin: 0 }}>Supreme Court of Bangladesh • Uttara & Dhaka Judge Court</p>
                                 </div>
-                                {pubDate && (
+                                {heroDateLabel && (
                                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.35rem', fontSize: '0.78rem', fontWeight: 600, color: '#E2E8F0', marginLeft: 'auto', background: 'rgba(255,255,255,0.1)', padding: '0.3rem 0.75rem', borderRadius: '9999px', border: '1px solid rgba(255,255,255,0.18)' }}>
-                                        <Calendar size={12} /> {pubDate}
+                                        <Calendar size={12} /> {heroDateLabel}
                                     </div>
                                 )}
                             </div>
@@ -770,44 +771,24 @@ const BlogPostInner = () => {
                             </div>
                         </div>
                     </div>
-
-                    {/* Tier 2: Full-Width Luxury White Executive Summary Box */}
-                    {post.heroIntro && (
-                        <div className="bpbn-hero-intro-card">
-                            <div className="bpbn-intro-header">
-                                <div className="bpbn-intro-badge">
-                                    <span className="bpbn-intro-dot" />
-                                    <span>Legal Insights & Executive Brief</span>
-                                </div>
-                                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
-                                    <a href="tel:01712655546" className="bpbn-intro-call-chip">
-                                        <Phone size={13} />
-                                        <span>Direct Call: 01712655546</span>
-                                    </a>
-                                    <a
-                                        href={waLink(`Assalamu Alaikum, I would like legal consultation regarding "${post.title}".`, false)}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="bpbn-intro-wa-chip"
-                                    >
-                                        <MessageCircle size={13} />
-                                        <span>WhatsApp Consultation</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div
-                                className="bpbn-intro-content"
-                                dangerouslySetInnerHTML={{ __html: formatHeroIntro(post.heroIntro) }}
-                            />
-                            <div className="bpbn-intro-footer">
-                                <span>✓ Supreme Court of Bangladesh Legal Guide (2026)</span>
-                                <span>⚖️ Uttara & Dhaka Judge Court Chambers</span>
-                                <span>⚡ Direct Case & Document Assessment</span>
-                            </div>
-                        </div>
-                    )}
                 </div>
             </section>
+
+            {/* ════════════════ AD #1: IMMEDIATELY BELOW FEATURED COVER PICTURE (HIGH-FILL DISPLAY) ════════════════ */}
+            <div style={{ background: 'var(--bg)', paddingTop: '1rem' }}>
+                <div className="bp-hero-container">
+                    <AdSenseAd
+                        key={`ad-belowpic-${post.slug}`}
+                        slot={AD_SLOTS.topDisplay}
+                        format="auto"
+                        responsive={true}
+                        labelText="Advertisement"
+                        minHeight={100}
+                        mobileMinHeight={100}
+                        style={{ margin: '0 auto' }}
+                    />
+                </div>
+            </div>
 
             {/* ════════════════ BODY ════════════════ */}
             <div style={{ background: 'var(--bg)' }}>
@@ -879,7 +860,43 @@ const BlogPostInner = () => {
                                 </div>
                             </div>
 
-                            <article ref={articleRef}>
+                            <article>
+
+                                {/* Executive Summary Box right below Cover Picture + Below-Pic Ad */}
+                                {post.heroIntro && (
+                                    <div className="bpbn-hero-intro-card">
+                                        <div className="bpbn-intro-header">
+                                            <div className="bpbn-intro-badge">
+                                                <span className="bpbn-intro-dot" />
+                                                <span>Legal Insights & Executive Brief</span>
+                                            </div>
+                                            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                                                <a href="tel:01712655546" className="bpbn-intro-call-chip">
+                                                    <Phone size={13} />
+                                                    <span>Direct Call: 01712655546</span>
+                                                </a>
+                                                <a
+                                                    href={waLink(`Assalamu Alaikum, I would like legal consultation regarding "${post.title}".`, false)}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="bpbn-intro-wa-chip"
+                                                >
+                                                    <MessageCircle size={13} />
+                                                    <span>WhatsApp Consultation</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div
+                                            className="bpbn-intro-content"
+                                            dangerouslySetInnerHTML={{ __html: formatHeroIntro(post.heroIntro) }}
+                                        />
+                                        <div className="bpbn-intro-footer">
+                                            <span>✓ Supreme Court of Bangladesh Legal Guide (2026)</span>
+                                            <span>⚖️ Uttara & Dhaka Judge Court Chambers</span>
+                                            <span>⚡ Direct Case & Document Assessment</span>
+                                        </div>
+                                    </div>
+                                )}
 
                                 {/* Phase 5.2: Featured Snippet & AI Overview (GEO) Quick Answer Table */}
                                 {quickTable && (
@@ -933,80 +950,136 @@ const BlogPostInner = () => {
                                     </div>
                                 )}
 
-                                {/* Phase 5.1: Interactive Legal Calculator right after the introduction on pillar pages */}
-                                {calcIdx === -2 && calcCfg && <FeeCalculator type={calcCfg.type} lang="en" />}
+                                {/* Ad #3 (EN): After Executive Summary / Quick Answer (only when intro/quick block is present so it never stacks onto Ad #2) */}
+                                {(post.heroIntro || quickTable || post.quickAnswer) && (
+                                    <AdSenseAd
+                                        key={`ad-postintro-${post.slug}`}
+                                        slot={AD_SLOTS.body1}
+                                        format="fluid"
+                                        layout="in-article"
+                                        labelText="Advertisement"
+                                        minHeight={250}
+                                        style={{ margin: '1.25rem auto 2rem' }}
+                                    />
+                                )}
+
+                                {/* Phase 5.1: Interactive Legal Calculator right after intro ad on pillar pages */}
+                                {calcIdx === -2 && calcCfg && <FeeCalculator type={calcCfg.type} lang="en" hideAd={true} />}
 
                                 {/* Article Sections — High-End Editorial Design */}
-                                {post.sections.map((sec, i) => {
-                                    return (
-                                        <React.Fragment key={i}>
-                                            <section id={`section-${i}`} style={{ marginBottom: '3.5rem', scrollMarginTop: '5rem' }}>
-                                                {/* Editorial Section Header */}
-                                                <div style={{
-                                                    position: 'relative',
-                                                    marginBottom: '1.75rem',
-                                                    padding: '1rem 1.25rem',
-                                                    borderRadius: '1rem',
-                                                    background: 'linear-gradient(90deg, rgba(37, 99, 235, 0.06) 0%, rgba(13, 148, 136, 0.07) 100%)',
-                                                    border: '1px solid rgba(37, 99, 235, 0.16)',
-                                                    borderBottom: '1px solid var(--card-border)',
-                                                    boxShadow: '0 6px 20px -12px rgba(15, 23, 42, 0.12)',
-                                                    display: 'flex',
-                                                    flexDirection: 'column',
-                                                    gap: '0.625rem'
-                                                }}>
-                                                    {/* Numbered editorial header: gold number tile + headline */}
-                                                    <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                                                        <span aria-hidden="true" style={{
-                                                            flexShrink: 0, width: '3.15rem', height: '3.15rem', borderRadius: '0.9rem',
-                                                            display: 'flex', alignItems: 'center', justifyContent: 'center',
-                                                            fontWeight: 800, fontSize: '1.15rem', color: '#FFFFFF', fontFamily: "'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
-                                                            background: 'linear-gradient(135deg, #1D4ED8 0%, #0F766E 100%)',
-                                                            border: '1px solid rgba(255, 255, 255, 0.28)',
-                                                            boxShadow: '0 6px 16px -4px rgba(37, 99, 235, 0.34)',
-                                                        }}>{String(i + 1).padStart(2, '0')}</span>
-                                                        <h2 style={{
-                                                            fontFamily: "'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
-                                                            fontSize: 'clamp(1.3rem, 2.5vw, 1.7rem)', fontWeight: 800, lineHeight: 1.35,
-                                                            color: 'var(--text)', margin: 0, letterSpacing: '-0.01em', flex: 1,
-                                                        }}>{cleanHeadingText(sec.heading || sec.h2 || sec.title || '')}</h2>
+                                {(() => {
+                                    const secs = post.sections || [];
+                                    const secLen = secs.length;
+                                    const midSec = Math.max(1, Math.floor((secLen - 1) * 0.45));
+                                    const lateSec = secLen >= 4 ? Math.max(midSec + 1, Math.floor((secLen - 1) * 0.78)) : -1;
+                                    return secs.map((sec, i) => {
+                                        return (
+                                            <React.Fragment key={i}>
+                                                <section id={`section-${i}`} style={{ marginBottom: '3.5rem', scrollMarginTop: '5rem' }}>
+                                                    {/* Editorial Section Header */}
+                                                    <div style={{
+                                                        position: 'relative',
+                                                        marginBottom: '1.75rem',
+                                                        padding: '1rem 1.25rem',
+                                                        borderRadius: '1rem',
+                                                        background: 'linear-gradient(90deg, rgba(37, 99, 235, 0.06) 0%, rgba(13, 148, 136, 0.07) 100%)',
+                                                        border: '1px solid rgba(37, 99, 235, 0.16)',
+                                                        borderBottom: '1px solid var(--card-border)',
+                                                        boxShadow: '0 6px 20px -12px rgba(15, 23, 42, 0.12)',
+                                                        display: 'flex',
+                                                        flexDirection: 'column',
+                                                        gap: '0.625rem'
+                                                    }}>
+                                                        {/* Numbered editorial header: gold number tile + headline */}
+                                                        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                                                            <span aria-hidden="true" style={{
+                                                                flexShrink: 0, width: '3.15rem', height: '3.15rem', borderRadius: '0.9rem',
+                                                                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                                                                fontWeight: 800, fontSize: '1.15rem', color: '#FFFFFF', fontFamily: "'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+                                                                background: 'linear-gradient(135deg, #1D4ED8 0%, #0F766E 100%)',
+                                                                border: '1px solid rgba(255, 255, 255, 0.28)',
+                                                                boxShadow: '0 6px 16px -4px rgba(37, 99, 235, 0.34)',
+                                                            }}>{String(i + 1).padStart(2, '0')}</span>
+                                                            <h2 style={{
+                                                                fontFamily: "'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+                                                                fontSize: 'clamp(1.3rem, 2.5vw, 1.7rem)', fontWeight: 800, lineHeight: 1.35,
+                                                                color: 'var(--text)', margin: 0, letterSpacing: '-0.01em', flex: 1,
+                                                            }}>{cleanHeadingText(sec.heading || sec.h2 || sec.title || '')}</h2>
+                                                        </div>
                                                     </div>
-                                                </div>
 
-                                                <div className="prose-content"
-                                                    style={{ color: 'var(--text-secondary)', fontSize: '1.0625rem', lineHeight: '1.9', letterSpacing: '0.005em', wordBreak: 'break-word', overflowWrap: 'anywhere' }}
-                                                    dangerouslySetInnerHTML={{ __html: sanitizeHtml(formatArticleContent(sec.content)) }}
-                                                />
-                                            </section>
+                                                    <div className="prose-content"
+                                                        style={{ color: 'var(--text-secondary)', fontSize: '1.0625rem', lineHeight: '1.9', letterSpacing: '0.005em', wordBreak: 'break-word', overflowWrap: 'anywhere' }}
+                                                        dangerouslySetInnerHTML={{ __html: sanitizeHtml(formatArticleContent(sec.content)) }}
+                                                    />
+                                                </section>
 
-                                            {/* Cross-cluster contextual reference links after opening section */}
-                                            {i === 0 && inlineCrossPosts.length > 0 && (
-                                                <aside aria-label="Related Bangladesh Legal Guides" style={{ margin: '1.75rem 0 2.5rem', padding: '1.15rem 1.35rem', borderRadius: '0.95rem', background: 'var(--surface)', border: '1px solid var(--card-border)', borderLeft: '4px solid var(--accent)' }}>
-                                                    <div style={{ fontSize: '0.82rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.06em', color: 'var(--accent)', marginBottom: '0.65rem' }}>
-                                                        Related Statutory Procedures &amp; Guides
-                                                    </div>
-                                                    <ul style={{ margin: 0, paddingLeft: '1.15rem', display: 'flex', flexDirection: 'column', gap: '0.45rem', fontSize: '0.94rem', lineHeight: 1.6 }}>
-                                                        {inlineCrossPosts.map(rp => (
-                                                            <li key={rp.slug}>
-                                                                <Link to={`/blog/${rp.slug}`} style={{ color: 'var(--accent)', fontWeight: 600, textDecoration: 'underline', textUnderlineOffset: '3px' }}>
-                                                                    {rp.title}
-                                                                </Link>
-                                                            </li>
-                                                        ))}
-                                                    </ul>
-                                                </aside>
-                                            )}
+                                                {/* Cross-cluster contextual reference links after opening section */}
+                                                {i === 0 && inlineCrossPosts.length > 0 && (
+                                                    <aside aria-label="Related Bangladesh Legal Guides" style={{ margin: '1.75rem 0 2.5rem', padding: '1.15rem 1.35rem', borderRadius: '0.95rem', background: 'var(--surface)', border: '1px solid var(--card-border)', borderLeft: '4px solid var(--accent)' }}>
+                                                        <div style={{ fontSize: '0.82rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.06em', color: 'var(--accent)', marginBottom: '0.65rem' }}>
+                                                            Related Statutory Procedures &amp; Guides
+                                                        </div>
+                                                        <ul style={{ margin: 0, paddingLeft: '1.15rem', display: 'flex', flexDirection: 'column', gap: '0.45rem', fontSize: '0.94rem', lineHeight: 1.6 }}>
+                                                            {inlineCrossPosts.map(rp => (
+                                                                <li key={rp.slug}>
+                                                                    <Link to={`/blog/${rp.slug}`} style={{ color: 'var(--accent)', fontWeight: 600, textDecoration: 'underline', textUnderlineOffset: '3px' }}>
+                                                                        {rp.title}
+                                                                    </Link>
+                                                                </li>
+                                                            ))}
+                                                        </ul>
+                                                    </aside>
+                                                )}
 
-                                            {/* Mid-article lead capture at exact center section */}
-                                            {i === Math.floor(((post.sections || []).length - 1) / 2) && (
-                                                <MidArticleLeadCapture lang="en" />
-                                            )}
+                                                {/* Mid-article lead capture at exact center section */}
+                                                {i === Math.floor((secLen - 1) / 2) && (
+                                                    <MidArticleLeadCapture lang="en" />
+                                                )}
 
-                                            {/* Unit 3: interactive fee calculator (when matched to a specific section) */}
-                                            {i === calcIdx && calcCfg && <FeeCalculator type={calcCfg.type} lang="en" />}
-                                        </React.Fragment>
-                                    );
-                                })}
+                                                {/* Unit 3: interactive fee calculator (when matched to a specific section) */}
+                                                {i === calcIdx && calcCfg && <FeeCalculator type={calcCfg.type} lang="en" />}
+
+                                                {/* Ad #4 (EN): After Section 0 */}
+                                                {i === 0 && secLen >= 2 && (
+                                                    <AdSenseAd
+                                                        key={`ad-sec0-${post.slug}`}
+                                                        slot={AD_SLOTS.native}
+                                                        format="fluid"
+                                                        layout="in-article"
+                                                        labelText="Advertisement"
+                                                        minHeight={250}
+                                                        style={{ margin: '1.5rem auto 2.5rem' }}
+                                                    />
+                                                )}
+                                                {/* Ad #5 (EN): Mid-section */}
+                                                {i === midSec && i !== 0 && (
+                                                    <AdSenseAd
+                                                        key={`ad-mid-${post.slug}`}
+                                                        slot={AD_SLOTS.body2}
+                                                        format="fluid"
+                                                        layout="in-article"
+                                                        labelText="Advertisement"
+                                                        minHeight={250}
+                                                        style={{ margin: '1.5rem auto 2.5rem' }}
+                                                    />
+                                                )}
+                                                {/* Ad #6 (EN): Late-section */}
+                                                {i === lateSec && i !== midSec && i !== 0 && (
+                                                    <AdSenseAd
+                                                        key={`ad-late-${post.slug}`}
+                                                        slot={AD_SLOTS.body3}
+                                                        format="fluid"
+                                                        layout="in-article"
+                                                        labelText="Advertisement"
+                                                        minHeight={250}
+                                                        style={{ margin: '1.5rem auto 2.5rem' }}
+                                                    />
+                                                )}
+                                            </React.Fragment>
+                                        );
+                                    });
+                                })()}
 
                                 {/* Related Services */}
                                 {post.relatedServiceLinks?.length > 0 && (
@@ -1070,6 +1143,18 @@ const BlogPostInner = () => {
                                         </ul>
                                     </section>
                                 )}
+
+                                {/* Ad Unit 4 (EN): before CTA form on all EN articles */}
+                                <AdSenseAd
+                                    key={`ad-postfaq-${post.slug}`}
+                                    slot={AD_SLOTS.body4}
+                                    format="fluid"
+                                    layout="in-article"
+                                    responsive={true}
+                                    labelText="Advertisement"
+                                    minHeight={250}
+                                    style={{ margin: '2rem auto' }}
+                                />
 
                                 {/* CTA Form */}
                                 <div style={{ borderRadius: '1.375rem', overflow: 'hidden', background: 'linear-gradient(135deg, var(--hero-bg) 0%, var(--hero-surface, #1c1c35) 100%)', border: '1px solid rgba(148, 163, 184, 0.22)', marginBottom: '3rem' }}>
@@ -1153,87 +1238,31 @@ const BlogPostInner = () => {
                                 <div className="legal-disclaimer-box p-4 bg-gray-50 dark:bg-gray-800/40 border border-[var(--card-border)] rounded-lg my-6 text-sm text-gray-700 dark:text-gray-300 rounded-r-lg">
                                     <strong>Legal Disclaimer:</strong> The information provided in this article is for general legal awareness and educational purposes only. It does not constitute formal legal advice and does not establish an attorney-client relationship. For specific legal remedies tailored to your case, please consult directly with an enrolled advocate of the Supreme Court of Bangladesh or the Judges Court.
                                 </div>
-                                {adAnchors.top && createPortal(
-                                    <AdSenseAd key={`ad-top-${post.slug}`} slot={AD_SLOTS.topInArticle} format="auto" responsive={true} labelText="Advertisement" minHeight={280} densityGroup="content" style={{ borderRadius: '0.75rem', overflow: 'hidden', margin: '2.5rem auto' }} />,
-                                    adAnchors.top
-                                )}
-                                {adAnchors.mid && createPortal(
-                                    <AdSenseAd key={`ad-mid-${post.slug}`} slot={AD_SLOTS.midNative} format="fluid" layout="in-article" responsive={true} labelText="Advertisement" minHeight={250} densityGroup="content" style={{ borderRadius: '0.75rem', overflow: 'hidden', margin: '2.5rem auto' }} />,
-                                    adAnchors.mid
-                                )}
-                                {adAnchors.mid2 && createPortal(
-                                    <AdSenseAd key={`ad-mid2-${post.slug}`} slot={AD_SLOTS.sidebar} format="auto" responsive={true} labelText="Advertisement" minHeight={250} densityGroup="content" style={{ borderRadius: '0.75rem', overflow: 'hidden', margin: '2.5rem auto' }} />,
-                                    adAnchors.mid2
-                                )}
-                                {adAnchors.end && createPortal(
-                                    <AdSenseAd key={`ad-end-${post.slug}`} slot={AD_SLOTS.midNative} format="fluid" layout="in-article" responsive={true} labelText="Advertisement" minHeight={250} densityGroup="content" style={{ borderRadius: '0.75rem', overflow: 'hidden', margin: '2.5rem auto' }} />,
-                                    adAnchors.end
-                                )}
                             </article>
                         </div>
 
-                        {/* ══ RIGHT SIDEBAR (Full-Height Interleaved Editorial & Diverse Ad Rail) ══ */}
+                        {/* ══ RIGHT SIDEBAR (Editorial Rail + 1 High-Viewability Sticky Sidebar Unit) ══ */}
                         <aside className="bp-sidebar google-anno-skip">
                             <div className="bp-sidebar-rail">
                                 <ConsultWidget postTitle={post.title} />
 
-                                {/* ── Sidebar Ad 1: Display Auto ── */}
-                                {isDesktop && (
-                                    <AdSenseAd
-                                        slot={AD_SLOTS.sidebar}
-                                        format="auto"
-                                        responsive={true}
-                                        densityGroup="rail"
-                                    />
-                                )}
-
                                 <PopularPosts currentSlug={post.slug} />
-
-                                {/* ── Sidebar Ad 2: Native Fluid In-Article ── */}
-                                {isDesktop && (
-                                    <AdSenseAd
-                                        slot={AD_SLOTS.midNative}
-                                        format="fluid"
-                                        layout="in-article"
-                                        responsive={true}
-                                        densityGroup="rail"
-                                    />
-                                )}
 
                                 <RelatedByCategory category={post.category} currentSlug={post.slug} />
 
-                                {/* ── Sidebar Ad 3: Display Banner Unit ── */}
-                                {isDesktop && (
-                                    <AdSenseAd
-                                        slot={AD_SLOTS.topInArticle}
-                                        format="auto"
-                                        responsive={true}
-                                        densityGroup="rail"
-                                    />
-                                )}
-
                                 <RecentPosts currentSlug={post.slug} />
 
-                                {/* ── Sidebar Ad 4: Native Fluid Card ── */}
-                                {isDesktop && (
-                                    <AdSenseAd
-                                        slot={AD_SLOTS.midNative}
-                                        format="fluid"
-                                        layout="in-article"
-                                        responsive={true}
-                                        densityGroup="rail"
-                                    />
-                                )}
-
-                                {/* ── Sticky Bottom Follower ── */}
+                                {/* ── Sticky Bottom Follower: High-viewability desktop sidebar unit ── */}
                                 <div style={{ position: 'sticky', top: '5.25rem' }}>
                                     <ChamberPromoCard />
                                     {isDesktop && (
                                         <AdSenseAd
+                                            key={`ad-rail-${post.slug}`}
                                             slot={AD_SLOTS.sidebar}
                                             format="auto"
                                             responsive={true}
-                                            densityGroup="rail"
+                                            labelText="Advertisement"
+                                            minHeight={250}
                                         />
                                     )}
                                 </div>
@@ -1334,6 +1363,28 @@ const BlogPostInner = () => {
                                     <MapPin size={16} />
                                     <span>Book Chamber / Online</span>
                                 </Link>
+                                <Link
+                                    to="/nrb-legal-help"
+                                    data-cta="post-bottom-nrb"
+                                    style={{
+                                        display: 'inline-flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        gap: '0.45rem',
+                                        minHeight: '44px',
+                                        padding: '0.7rem 1.2rem',
+                                        borderRadius: '0.65rem',
+                                        background: 'rgba(201, 162, 39, 0.14)',
+                                        border: '1px solid rgba(201, 162, 39, 0.45)',
+                                        color: '#FDE68A',
+                                        fontWeight: 700,
+                                        fontSize: '0.9rem',
+                                        textDecoration: 'none',
+                                    }}
+                                >
+                                    <Scale size={16} />
+                                    <span>NRB Services ($30–$75)</span>
+                                </Link>
                             </div>
                         </div>
                     </section>
@@ -1398,6 +1449,16 @@ const BlogPostInner = () => {
                                     );
                                 })}
                             </div>
+                        </div>
+                        <div style={{ marginTop: '2.25rem' }}>
+                            <AdSenseAd
+                                key={`ad-grid-${post.slug}`}
+                                slot={AD_SLOTS.bottomGrid}
+                                format="autorelaxed"
+                                responsive={true}
+                                labelText="Sponsored Content"
+                                minHeight={280}
+                            />
                         </div>
                     </div>
                 </div>
@@ -1466,13 +1527,13 @@ const BlogPostInner = () => {
 
                 /* ─── Luminous Full-Width Executive Hero Intro Box ─── */
                 .bpbn-hero-intro-card {
-                    margin: 1.75rem 0 0.25rem;
+                    margin: 0 0 2rem;
                     max-width: 100%;
                     padding: 0;
                     background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFF 100%);
                     border: 1px solid rgba(148, 163, 184, 0.35);
                     border-radius: 1.15rem;
-                    box-shadow: 0 24px 52px -14px rgba(6, 15, 36, 0.58), 0 0 0 1px rgba(255, 255, 255, 0.75) inset;
+                    box-shadow: 0 12px 30px -12px rgba(15, 23, 42, 0.16);
                     position: relative;
                     overflow: hidden;
                 }
@@ -1622,7 +1683,7 @@ const BlogPostInner = () => {
                     .bp-toc-inline { display: none; }
                     .bp-mobile-toc { display: block; }
                     .bp-body-container, .bp-hero-container { padding-left: 0.9rem; padding-right: 0.9rem; }
-                    .bpbn-hero-intro-card { margin-top: 1.25rem; border-radius: 1rem; }
+                    .bpbn-hero-intro-card { margin-top: 0; border-radius: 1rem; }
                     .bpbn-intro-header { padding: 0.8rem 1rem; gap: 0.5rem; }
                     .bpbn-intro-badge { font-size: 0.82rem; }
                     .bpbn-intro-call-chip, .bpbn-intro-wa-chip { font-size: 0.74rem; padding: 0.32rem 0.75rem; }

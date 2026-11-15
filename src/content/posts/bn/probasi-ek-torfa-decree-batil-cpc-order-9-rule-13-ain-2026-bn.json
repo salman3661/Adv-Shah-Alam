@@ -127,7 +127,8 @@
       "content": "<p>প্রবাসীদের জমি নিয়ে একতরফা ডিক্রির প্রতারণা একটি মারাত্মক সংকট। তবে আইন জানা থাকলে এবং সময়মতো বিজ্ঞ দেওয়ানি আইনজীবীর শরণাপন্ন হলে কোনো প্রতারকই অন্যের জমি আত্মসাৎ করতে পারে না।</p><p>একতরফা ডিক্রি বাতিল, মিস মোকাদ্দমা পরিচালনা ও প্রবাসীদের সম্পত্তি সুরক্ষার জন্য সুপ্রিম কোর্ট ও জেলা জজ কোর্টের অভিজ্ঞ দেওয়ানি আইনজীবীর প্রত্যক্ষ আইনি পরামর্শ গ্রহণ করুন।</p><div style=\"border:1px solid var(--accent);border-radius:var(--radius-lg);padding:1.5rem;margin:1.5rem 0;background:rgba(217,119,6,0.03)\"><h3 style=\"margin-top:0;font-size:1.15rem;color:var(--text-primary)\">Facing a similar legal issue? Don't fight it alone.</h3><p style=\"margin-bottom:1rem;color:var(--text-secondary)\">Contact <strong>Advocate MD Shah Alam</strong> for expert legal consultation and court representation.</p><p style=\"margin:0.5rem 0\"><strong>📞 Call line:</strong> <a href=\"tel:+8801712655546\" style=\"color:var(--accent);font-weight:600\">+880 1712-655546</a></p><p style=\"margin:0.5rem 0\"><strong>💬 WhatsApp:</strong> <a href=\"https://wa.me/8801955802007?text=Assalamu%20Alaikum%20Advocate%20Md.%20Shah%20Alam%2C%20I%20need%20urgent%20legal%20consultation%20regarding%20Ex-Parte%20Decree%20Cancellation.\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color:var(--accent);font-weight:600\">+880 1955-802007</a></p><p style=\"margin:0.5rem 0;font-size:0.9rem;color:var(--text-muted)\">Chamber: Supreme Court Bar Association Building, Dhaka & House 01, Road 02, Sector 03, Uttara, Dhaka-1230.</p></div>"
     }
   ],
-  "faq": [
+  "featured": false,
+  "faqs": [
     {
       "question": "একতরফা ডিক্রি কি বাতিল করা যায়?",
       "answer": "হ্যাঁ, দেওয়ানি কার্যবিধির ৯ আদেশের ১৩ নিয়ম অনুযায়ী সমন জারি না হওয়ার বা অনুপস্থিতির যথেষ্ট কারণ প্রমাণ করে একতরফা ডিক্রি বাতিল করা যায়।"
@@ -160,6 +161,5 @@
       "question": "প্রতিপক্ষ যদি জমি ইতোমধ্যে বিক্রি করে দেয় তবে কী হবে?",
       "answer": "একতরফা ডিক্রি বাতিল হলে সেই ডিক্রির ভিত্তিতে সম্পাদিত পরবর্তী বিক্রয় দলিলও আইনত সম্পূর্ণ বাতিল বলে গণ্য হয়।"
     }
-  ],
-  "featured": false
+  ]
 }

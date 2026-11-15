@@ -23,26 +23,6 @@ import React, { useEffect, useRef, useState } from 'react';
 
 const PUB_ID = 'ca-pub-1781126556775676';
 
-/** Minimum clear vertical space between two ads of one group. */
-const MIN_GAP_VH = 0.55;
-
-/** True when another already-requested ad of the same group sits closer than the minimum gap. */
-function tooCloseToAnotherAd(wrapper, group) {
-    if (!wrapper || typeof window === 'undefined') return false;
-    const gap = group === 'rail'
-        ? Math.min(240, 0.28 * window.innerHeight)
-        : MIN_GAP_VH * window.innerHeight;
-    const me = wrapper.getBoundingClientRect();
-    const others = document.querySelectorAll(`.adsense-wrapper[data-ad-group="${group}"][data-ad-requested="1"]`);
-    for (const o of others) {
-        if (o === wrapper) continue;
-        const r = o.getBoundingClientRect();
-        const clear = Math.max(me.top - r.bottom, r.top - me.bottom, 0);
-        if (clear < gap) return true;
-    }
-    return false;
-}
-
 const AdSenseAd = ({
     slot,
     format = 'auto',
@@ -50,40 +30,46 @@ const AdSenseAd = ({
     responsive = true,
     className = '',
     style = {},
-    label = false,
-    labelText = 'বিজ্ঞাপন',
+    label = true,
+    labelText = 'Advertisement',
     layoutKey = '',
     minHeight = 0,
+    mobileMinHeight = 0,
     densityGroup = null,
 }) => {
     const wrapRef = useRef(null);
     const adRef = useRef(null);
     const pushed = useRef(false);
-    // 'suppressed' = density guard refused the request; 'unfilled' = AdSense returned no ad
     const [state, setState] = useState('idle');
     const [prevSlot, setPrevSlot] = useState(slot);
     if (prevSlot !== slot) {
         setPrevSlot(slot);
         setState('idle');
+        pushed.current = false;
     }
 
     useEffect(() => {
+        const host = typeof window !== 'undefined' ? window.location.hostname : '';
+        if (host && host !== 'www.advmdshahalam.me' && host !== 'advmdshahalam.me') {
+            return;
+        }
         const el = adRef.current;
         const wrap = wrapRef.current;
         if (!slot || !el || !wrap) return;
 
+        let cancelled = false;
+
+        let widthRetries = 0;
         const push = () => {
-            if (pushed.current || el.getAttribute('data-adsbygoogle-status')) return;
+            if (cancelled || pushed.current || el.getAttribute('data-adsbygoogle-status')) return;
             // Ensure container has computed a non-zero responsive screen width before requesting ad size
             if (wrap.offsetWidth === 0) {
-                requestAnimationFrame(() => {
-                    if (!pushed.current && wrap.offsetWidth > 0) push();
-                });
-                return;
-            }
-            if (densityGroup && tooCloseToAnotherAd(wrap, densityGroup)) {
-                pushed.current = true;
-                setState('suppressed');
+                if (widthRetries < 12) {
+                    widthRetries += 1;
+                    requestAnimationFrame(() => {
+                        if (!cancelled && !pushed.current) push();
+                    });
+                }
                 return;
             }
             pushed.current = true;
@@ -94,43 +80,50 @@ const AdSenseAd = ({
                 }
                 (window.adsbygoogle = window.adsbygoogle || []).push({});
             } catch {
-                // Silently ignore if AdSense script is still loading
+                // Ignore if script hasn't attached handler yet; adsbygoogle.js drains queued pushes on load
             }
         };
 
-        // Collapse the reserved space if AdSense reports "unfilled" (usually resolves off-screen thanks to the lookahead)
+        // Track fill status accurately for accessibility while keeping reserved height (Zero-CLS)
         const mo = typeof MutationObserver !== 'undefined'
             ? new MutationObserver(() => {
-                if (el.getAttribute('data-ad-status') === 'unfilled') setState('unfilled');
+                const st = el.getAttribute('data-ad-status');
+                if (st === 'unfilled') setState('unfilled');
+                else if (st === 'filled') setState('filled');
             })
             : null;
         if (mo) mo.observe(el, { attributes: true, attributeFilter: ['data-ad-status'] });
 
-        // Request ads well before they scroll into view (1500px lookahead) so they are ready when the reader arrives
+        // Request ads well before they scroll into view (1800px lookahead)
         if (typeof IntersectionObserver === 'undefined') {
             push();
-            return () => mo && mo.disconnect();
+            return () => {
+                cancelled = true;
+                if (mo) mo.disconnect();
+            };
         }
         const io = new IntersectionObserver((entries) => {
             if (entries.some((e) => e.isIntersecting)) {
                 push();
                 io.disconnect();
             }
-        }, { rootMargin: '1500px 0px' });
+        }, { rootMargin: '1800px 0px' });
         io.observe(wrap);
         return () => {
+            cancelled = true;
             io.disconnect();
             if (mo) mo.disconnect();
             wrap.removeAttribute('data-ad-requested');
             pushed.current = false;
         };
-    }, [slot, densityGroup]);
+    }, [slot]);
 
-    if (state === 'suppressed' || state === 'unfilled') return null;
+    const isUnfilled = state === 'unfilled';
+    const resolvedDesktopMin = minHeight > 0 ? minHeight : 250;
+    const resolvedMobileMin = mobileMinHeight > 0
+        ? mobileMinHeight
+        : (minHeight > 0 ? Math.min(minHeight, 100) : 100);
 
-    const isFluidOrRelaxed = format === 'fluid' || format === 'autorelaxed' || layout === 'in-article';
-
-    // Strip any legacy large margins or card borders passed via inline style so ads sit directly between paragraphs like BD Pratidin
     const {
         margin: _ignoredMargin,
         marginBottom: _ignoredMarginBottom,
@@ -145,30 +138,38 @@ const AdSenseAd = ({
     return (
         <div
             ref={wrapRef}
-            className={`adsense-wrapper ${className}`}
+            className={`adsense-wrapper ad-slot-reserved ${className}`}
+            aria-hidden={isUnfilled ? 'true' : undefined}
             {...(densityGroup ? { 'data-ad-group': densityGroup } : {})}
             style={{
                 display: 'block',
                 textAlign: 'center',
-                margin: '0.5rem auto 0.85rem',
+                margin: '1rem auto 1.25rem',
                 padding: 0,
                 width: '100%',
                 maxWidth: '100%',
                 clear: 'both',
-                overflow: 'hidden',
+                overflowX: 'hidden',
+                overflowY: 'visible',
                 boxSizing: 'border-box',
                 background: 'transparent',
                 border: 'none',
                 boxShadow: 'none',
-                minHeight: 0,
+                '--ad-min-h-mobile': `${resolvedMobileMin}px`,
+                '--ad-min-h-desktop': `${resolvedDesktopMin}px`,
                 ...cleanStyle,
             }}
         >
+            {label && !isUnfilled && (
+                <div style={{ fontSize: '0.625rem', letterSpacing: '0.07em', textTransform: 'uppercase', color: 'var(--text-muted, #64748b)', marginBottom: '0.25rem', opacity: 0.75 }}>
+                    {labelText}
+                </div>
+            )}
             <ins
                 ref={adRef}
                 className="adsbygoogle"
                 style={{
-                    display: 'block',
+                    display: isUnfilled ? 'none' : 'block',
                     textAlign: 'center',
                     width: '100%',
                     maxWidth: '100%',
@@ -176,7 +177,7 @@ const AdSenseAd = ({
                 data-ad-client={PUB_ID}
                 data-ad-slot={slot}
                 data-ad-format={format}
-                data-full-width-responsive={responsive ? 'true' : undefined}
+                data-full-width-responsive={format === 'auto' && responsive ? 'true' : undefined}
                 {...(layout ? { 'data-ad-layout': layout } : {})}
                 {...(layoutKey ? { 'data-ad-layout-key': layoutKey } : {})}
             />

@@ -51,12 +51,12 @@
       "content": "<p>If unredressed, file a complaint before the Labour Court within 30 days. Contact <strong>Advocate Md. Shah Alam</strong> at <strong>01712655546</strong>.</p>"
     }
   ],
-  "faq": [
+  "isDraft": true,
+  "mergedInto": "/blog/wrongful-termination-labour-law-bangladesh",
+  "faqs": [
     {
       "question": "Are management employees covered under the Labour Act?",
       "answer": "Workers and operational staff are covered under BLA; managerial staff enforce contractual rights under general civil law."
     }
-  ],
-  "isDraft": true,
-  "mergedInto": "/blog/wrongful-termination-labour-law-bangladesh"
+  ]
 }

@@ -4,6 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { MapPin, Phone, MessageCircle, Mail, Clock, Send, ExternalLink, Scale, ShieldCheck, CheckCircle2, CreditCard, ChevronRight, HelpCircle, FileText } from 'lucide-react';
 import { CALL_NUMBER, CALL_DISPLAY, waLink } from '../data/contactInfo';
 import siteInfo from '../content/siteInfo.json';
+import AdSenseAd from '../components/AdSenseAd';
 
 /* ─── 100/100 SEO JSON-LD Schemas ────────────────────────────── */
 const contactPageSchemaBn = {
@@ -565,6 +566,18 @@ const ContactPage = ({ lang }) => {
                         </div>
                     </div>
 
+                    {/* ════ AD UNIT 1: BETWEEN CHAMBERS/FORM AND PRACTICE SERVICES ════ */}
+                    <div className="my-10">
+                        <AdSenseAd
+                            key={`contact-mid-${isBn ? 'bn' : 'en'}`}
+                            slot="8630877987"
+                            format="auto"
+                            responsive={true}
+                            labelText={isBn ? 'বিজ্ঞাপন' : 'Advertisement'}
+                            minHeight={250}
+                        />
+                    </div>
+
                     {/* ════ EXPANDED LEGAL SERVICES CARDS SECTION ════ */}
                     <div className="pt-12 border-t" style={{ borderColor: 'var(--card-border)' }}>
                         <div className="text-center max-w-2xl mx-auto mb-10">
@@ -615,6 +628,18 @@ const ContactPage = ({ lang }) => {
                                 </div>
                             ))}
                         </div>
+                    </div>
+
+                    {/* ════ AD UNIT 2: BETWEEN PRACTICE SERVICES AND FAQ ════ */}
+                    <div className="mt-10">
+                        <AdSenseAd
+                            key={`contact-grid-${isBn ? 'bn' : 'en'}`}
+                            slot="3667074343"
+                            format="autorelaxed"
+                            responsive={true}
+                            labelText={isBn ? 'আরও দেখুন' : 'Sponsored Content'}
+                            minHeight={280}
+                        />
                     </div>
 
                     {/* ════ FREQUENTLY ASKED QUESTIONS (FAQ) SECTION ════ */}

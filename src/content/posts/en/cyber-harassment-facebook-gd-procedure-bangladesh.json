@@ -51,12 +51,12 @@
       "content": "<p>For cyber defamation and extortion litigation, contact Supreme Court Advocate <strong>Md. Shah Alam</strong> at <strong>01712655546</strong>.</p>"
     }
   ],
-  "faq": [
+  "isDraft": true,
+  "mergedInto": "/blog/bangladesh-cyber-crime-complaint-portal-guide-2026",
+  "faqs": [
     {
       "question": "What is the punishment for fake ID blackmail in Bangladesh?",
       "answer": "Imprisonment up to 5 years and substantial fines under the Cyber Security Act."
     }
-  ],
-  "isDraft": true,
-  "mergedInto": "/blog/bangladesh-cyber-crime-complaint-portal-guide-2026"
+  ]
 }

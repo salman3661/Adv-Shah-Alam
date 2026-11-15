@@ -34,10 +34,13 @@ const Home = ({ lang = 'en' }) => {
             cleanup();
         };
         const events = ['scroll', 'wheel', 'touchstart', 'pointerdown', 'mousemove', 'keydown', 'hashchange'];
+        let fallbackTimer = null;
         const cleanup = () => {
             events.forEach((ev) => window.removeEventListener(ev, trigger));
+            if (fallbackTimer) clearTimeout(fallbackTimer);
         };
         events.forEach((ev) => window.addEventListener(ev, trigger, { passive: true, once: true }));
+        fallbackTimer = setTimeout(trigger, 600);
         return cleanup;
     }, [loadBelowFold]);
 
@@ -83,6 +86,19 @@ const Home = ({ lang = 'en' }) => {
             <Hero lang={lang} />
             <TrustBar lang={lang} />
 
+            {/* ── Homepage Ad 0: Immediately below Hero & TrustBar ── */}
+            <div style={{ maxWidth: '900px', margin: '1rem auto 0', padding: '0 1rem' }}>
+                <AdSenseAd
+                    key={`home-ad0-${lang}`}
+                    slot="9118178745"
+                    format="fluid"
+                    layout="in-article"
+                    labelText={isBn ? 'বিজ্ঞাপন' : 'Advertisement'}
+                    minHeight={100}
+                    mobileMinHeight={100}
+                />
+            </div>
+
             {loadBelowFold ? (
                 <Suspense fallback={<SectionFallback />}>
                     <About lang={lang} />
@@ -91,11 +107,12 @@ const Home = ({ lang = 'en' }) => {
                     {/* ── Homepage Ad 1: After Services (high CTR position) ── */}
                     <div style={{ maxWidth: '900px', margin: '0 auto', padding: '0 1rem 2rem' }}>
                         <AdSenseAd
+                            key={`home-ad1-${lang}`}
                             slot="8630877987"
                             format="auto"
                             responsive={true}
                             labelText={isBn ? 'বিজ্ঞাপন' : 'Advertisement'}
-                            style={{ borderRadius: '0.75rem', overflow: 'hidden' }}
+                            minHeight={250}
                         />
                     </div>
 
@@ -106,11 +123,12 @@ const Home = ({ lang = 'en' }) => {
                     {/* ── Homepage Ad 2: Before Blog Preview (reader engagement peak) ── */}
                     <div style={{ maxWidth: '900px', margin: '0 auto', padding: '0 1rem 2rem' }}>
                         <AdSenseAd
-                            slot="8630877987"
-                            format="auto"
-                            responsive={true}
+                            key={`home-ad2-${lang}`}
+                            slot="6519719969"
+                            format="fluid"
+                            layout="in-article"
                             labelText={isBn ? 'বিজ্ঞাপন' : 'Advertisement'}
-                            style={{ borderRadius: '0.75rem', overflow: 'hidden' }}
+                            minHeight={250}
                         />
                     </div>
 
@@ -138,7 +156,32 @@ const Home = ({ lang = 'en' }) => {
                     </div>
 
                     <BlogPreview lang={lang} />
+
+                    {/* ── Homepage Ad 3: Multiplex grid after Blog Preview ── */}
+                    <div style={{ maxWidth: '900px', margin: '0 auto', padding: '0 1rem 2rem' }}>
+                        <AdSenseAd
+                            key={`home-ad3-${lang}`}
+                            slot="3667074343"
+                            format="autorelaxed"
+                            labelText={isBn ? 'আরও দেখুন' : 'Sponsored Content'}
+                            minHeight={280}
+                        />
+                    </div>
+
                     <Timeline isHome={true} lang={lang} />
+
+                    {/* ── Homepage Ad 4: Second Display Banner before Chambers ── */}
+                    <div style={{ maxWidth: '900px', margin: '0 auto', padding: '0 1rem 2rem' }}>
+                        <AdSenseAd
+                            key={`home-ad4-${lang}`}
+                            slot="5064091502"
+                            format="auto"
+                            responsive={true}
+                            labelText={isBn ? 'বিজ্ঞাপন' : 'Advertisement'}
+                            minHeight={250}
+                        />
+                    </div>
+
                     <Chambers lang={lang} />
                     <Contact lang={lang} />
                 </Suspense>

@@ -127,7 +127,8 @@
       "content": "<p>লিখিত দলিল না থাকায় টাকা ফেরত পাওয়ার আশা কখনোই ছেড়ে দেবেন না। সাক্ষ্য আইনের ডিজিটাল বিধান এবং দেওয়ানি মানি সুটের শক্ত প্রয়োগের মাধ্যমে যে কোনো পাওনা টাকা আইনসঙ্গতভাবে উদ্ধার করা সম্ভব।</p><p>বকেয়া টাকা আদায়ের নোটিশ, দেওয়ানি মানি সুট পরিচালনা ও দেনাদারের সম্পত্তি ক্রোকের জন্য সুপ্রিম কোর্ট ও জেলা জজ কোর্টের অভিজ্ঞ দেওয়ানি আইনজীবীর প্রত্যক্ষ আইনি পরামর্শ গ্রহণ করুন।</p><div style=\"border:1px solid var(--accent);border-radius:var(--radius-lg);padding:1.5rem;margin:1.5rem 0;background:rgba(217,119,6,0.03)\"><h3 style=\"margin-top:0;font-size:1.15rem;color:var(--text-primary)\">Facing a similar legal issue? Don't fight it alone.</h3><p style=\"margin-bottom:1rem;color:var(--text-secondary)\">Contact <strong>Advocate MD Shah Alam</strong> for expert legal consultation and court representation.</p><p style=\"margin:0.5rem 0\"><strong>📞 Call line:</strong> <a href=\"tel:+8801712655546\" style=\"color:var(--accent);font-weight:600\">+880 1712-655546</a></p><p style=\"margin:0.5rem 0\"><strong>💬 WhatsApp:</strong> <a href=\"https://wa.me/8801955802007?text=Assalamu%20Alaikum%20Advocate%20Md.%20Shah%20Alam%2C%20I%20need%20urgent%20legal%20consultation%20regarding%20Money%20Suit%20and%20Debt%20Recovery.\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color:var(--accent);font-weight:600\">+880 1955-802007</a></p><p style=\"margin:0.5rem 0;font-size:0.9rem;color:var(--text-muted)\">Chamber: Supreme Court Bar Association Building, Dhaka & House 01, Road 02, Sector 03, Uttara, Dhaka-1230.</p></div>"
     }
   ],
-  "faq": [
+  "featured": false,
+  "faqs": [
     {
       "question": "লিখিত চুক্তি ছাড়া কি টাকা আদায়ের মামলা করা যায়?",
       "answer": "হ্যাঁ, চুক্তি আইনের ১০ ধারা অনুযায়ী মৌখিক চুক্তিও বৈধ। ব্যাংক স্টেটমেন্ট, ডিজিটাল চ্যাট ও সাক্ষীদের মাধ্যমে প্রমাণ করে দেওয়ানি আদালতে মানি সুট মামলা করা যায়।"
@@ -160,6 +161,5 @@
       "question": "নগদ টাকা দিলে তা আদালতে কীভাবে প্রমাণ করবেন?",
       "answer": "টাকা লেনদেনের সময় উপস্থিত নিরপেক্ষ সাক্ষীদের জবানবন্দি, আপনার ব্যাংক থেকে টাকা উত্তোলনের বিবরণী এবং দেনাদারের সাথে চ্যাট বা স্বীকারোক্তি উপস্থাপন করে প্রমাণ করা যায়।"
     }
-  ],
-  "featured": false
+  ]
 }

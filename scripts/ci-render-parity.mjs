@@ -180,7 +180,7 @@ function staticInfo(html) {
 async function getStatic(path) {
   const res = await fetch(BASE + path, { redirect: "follow" });
   const html = await res.text();
-  return { status: res.status, html, ...staticInfo(html) };
+  return { status: res.status, finalUrl: res.url, html, ...staticInfo(html) };
 }
 
 /* ------------------------------------------------------- rendered fetch */
@@ -234,7 +234,7 @@ async function getRendered(path, browser) {
       await page.waitForLoadState("networkidle", { timeout: 10000 }).catch(() => {});
       dom = await read();
     }
-    return { status: resp?.status() ?? 0, ...dom };
+    return { status: resp?.status() ?? 0, finalUrl: page.url(), ...dom };
   } finally {
     await ctx.close().catch(() => {});
   }
@@ -299,6 +299,7 @@ async function main() {
   let done = 0;
   const CONC = 6;
 
+  const baseHost = new URL(BASE).hostname;
   const worker = async (path) => {
     try {
       const s = await getStatic(path);
@@ -307,6 +308,14 @@ async function main() {
 
       if (s.status !== 200) issues.push({ lvl: "FAIL", msg: `static HTTP ${s.status}` });
       if (r.status !== 200) issues.push({ lvl: "FAIL", msg: `rendered HTTP ${r.status}` });
+      try {
+        if (s.finalUrl && new URL(s.finalUrl).hostname !== baseHost) {
+          issues.push({ lvl: "FAIL", msg: `static redirected off-host to ${new URL(s.finalUrl).hostname}` });
+        }
+        if (r.finalUrl && new URL(r.finalUrl).hostname !== baseHost) {
+          issues.push({ lvl: "FAIL", msg: `rendered redirected off-host to ${new URL(r.finalUrl).hostname}` });
+        }
+      } catch { /* ignore invalid finalUrl */ }
 
       const rH1 = (r.h1 || "").toLowerCase();
       const is404 = NOT_FOUND_HINTS.some((h) => rH1.includes(h));

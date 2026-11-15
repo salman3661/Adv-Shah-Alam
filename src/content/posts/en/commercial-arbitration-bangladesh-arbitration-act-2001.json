@@ -1,0 +1,77 @@
+{
+  "slug": "commercial-arbitration-bangladesh-arbitration-act-2001",
+  "bnSlug": "commercial-arbitration-madhyasthata-ain-2001-bangladesh",
+  "title": "Commercial Arbitration in Bangladesh: Arbitration Act 2001 & Enforcement Guide",
+  "metaTitle": "Commercial Arbitration BD: Arbitration Act 2001",
+  "metaDescription": "Complete guide to domestic & international commercial arbitration in Bangladesh under the Arbitration Act 2001: Section 7A interim relief, awards & court review.",
+  "category": "Corporate Law",
+  "readTime": "8 min read",
+  "publishedDate": "2026-11-15",
+  "lastModified": "2026-11-15",
+  "isDraft": false,
+  "keywords": [
+    "arbitration act 2001 bangladesh",
+    "commercial arbitration dhaka bangladesh",
+    "section 7a interim relief arbitration act",
+    "setting aside arbitral award bangladesh",
+    "biac arbitration rules bangladesh"
+  ],
+  "heroIntro": "Under the Arbitration Act 2001 (Act I of 2001), commercial, construction, joint venture, and supply-chain contracts in Bangladesh containing a valid arbitration clause must be resolved outside protracted civil litigation. Modeled largely on the UNCITRAL Model Law, the Act empowers tribunals and the District Judge Court or High Court Division (for international commercial arbitrations) to grant urgent interim injunctions under Section 7A, stay parallel civil suits under Section 10, and enforce arbitral awards as civil court decrees under Section 44.",
+  "quickAnswer": {
+    "heading": "At a Glance: Arbitration Act 2001 in Bangladesh",
+    "text": "Binding commercial arbitration follows the Arbitration Act 2001, with High Court jurisdiction over international commercial disputes.",
+    "points": [
+      "Governing Statute: The Arbitration Act 2001 (Act I of 2001), replacing the Arbitration Act 1940",
+      "Urgent Interim Relief (Section 7A): District Judge Court (domestic) or High Court Division (international commercial arbitration) can freeze assets or issue status quo orders",
+      "Mandatory Stay of Civil Suits (Section 10): Civil courts must refer parties to arbitration if a valid arbitration agreement is pleaded before filing written statement",
+      "Challenging an Award (Sections 42–43): Application to set aside must be filed strictly within 60 days from receipt of the award"
+    ]
+  },
+  "toc": [
+    "Domestic vs. International Commercial Arbitration Under Section 2(c)",
+    "Arbitration Agreement Requirements & Section 10 Stay of Suits",
+    "Obtaining Urgent Interim Orders Under Section 7A & Section 21",
+    "Appointment of Arbitrators & BIAC Institutional Proceedings",
+    "Enforcing or Setting Aside an Arbitral Award (Sections 42–45)"
+  ],
+  "sections": [
+    {
+      "h2": "Domestic vs. International Commercial Arbitration Under Section 2(c)",
+      "content": "<p>The <strong>Arbitration Act 2001</strong> draws a sharp jurisdictional line between domestic and international commercial arbitrations seated in Bangladesh:</p><ul><li><strong>Domestic Arbitration:</strong> Both parties are Bangladeshi entities or residents. Supervisory jurisdiction—including appointment failure petitions under Section 12 and setting-aside applications under Section 42—lies before the <strong>District Judge Court</strong>.</li><li><strong>International Commercial Arbitration (Section 2(c)):</strong> At least one party is a foreign national, foreign body corporate, or company whose central management and control is exercised outside Bangladesh. Here, statutory petitions under Sections 7A and 12 and setting-aside challenges go directly to the <strong>High Court Division</strong> of the Supreme Court of Bangladesh.</li></ul>"
+    },
+    {
+      "h2": "Arbitration Agreement Requirements & Section 10 Stay of Suits",
+      "content": "<p>Under <strong>Section 9 of the Arbitration Act 2001</strong>, an arbitration agreement must be in writing—whether as a clause inside a main commercial contract, a separate submission deed, or an exchange of signed letters, emails, or pleadings. If one party ignores the clause and files a civil suit in a Sub-Judge or Assistant Judge Court, the defendant must file an application under <strong>Section 10</strong> <em>before</em> submitting its written statement. Once verified, the civil court has no discretion to hear the merits and must stay the suit and refer the dispute to arbitration.</p>"
+    },
+    {
+      "h2": "Obtaining Urgent Interim Orders Under Section 7A & Section 21",
+      "content": "<p>Contracting parties often need immediate protection—such as stopping bank guarantee encashment, preserving perishable cargo, or restraining transfer of disputed shares—before an arbitral tribunal is even constituted.</p><ul><li><strong>Court Interim Measures (Section 7A):</strong> Inserted by the 2004 Amendment, Section 7A empowers the High Court Division (in international commercial arbitration) or District Judge (in domestic arbitration) to issue interim injunctions, attach disputed funds, or appoint receivers before or during arbitration proceedings—provided the party demonstrates an arbitration notice has been or is being served.</li><li><strong>Tribunal Interim Orders (Section 21):</strong> Once formed, the arbitral tribunal itself may order interim preservation of goods or security deposits, enforceable through court order upon leave.</li></ul>"
+    },
+    {
+      "h2": "Appointment of Arbitrators & BIAC Institutional Proceedings",
+      "content": "<p>Parties are free to agree on an odd number of arbitrators (typically a sole arbitrator or a three-member panel) under <strong>Sections 11 and 12</strong>. If the opposing side refuses to nominate its arbitrator within <strong>30 days</strong> of receiving a written arbitration notice under Section 27, the aggrieved party may petition the Chief Justice (or designated High Court Judge) in an international arbitration, or the District Judge in a domestic arbitration, to appoint the defaulting arbitrator.</p><p>Businesses may either conduct <em>ad hoc</em> arbitration or administer proceedings through the <strong>Bangladesh International Arbitration Centre (BIAC)</strong> in Dhaka under structured procedural timetables, fee schedules, and hearing rooms.</p>"
+    },
+    {
+      "h2": "Enforcing or Setting Aside an Arbitral Award (Sections 42–45)",
+      "content": "<p>A final arbitral award is binding and enforceable under <strong>Section 44</strong> in the exact same manner as a decree of a civil court, provided no setting-aside petition is pending or allowed:</p><ol><li><strong>60-Day Limitation Window:</strong> Under Section 42, any application to set aside an award must be filed within <strong>60 days</strong> from receipt of the signed award. Courts strictly enforce this statutory limit.</li><li><strong>Narrow Grounds for Challenge (Section 43):</strong> Courts do not re-hear factual merits like an appellate court. An award may only be vacated for incapacity, invalid arbitration clause, denial of natural justice (lack of proper notice), excess of tribunal jurisdiction, fraud/corruption, or violation of Bangladesh public policy.</li><li><strong>Execution (Money Decree):</strong> Once the 60-day window expires without stay, the award-holder files an Execution Case in the District Court to attach bank accounts or auction movable/immovable assets of the debtor.</li></ol>"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Does Section 7A apply if the arbitration seat is outside Bangladesh (such as SIAC or ICC)?",
+      "a": "In a landmark Appellate Division / High Court jurisprudence shift (including recent High Court benches clarifying Section 3), courts examine whether the seat is within Bangladesh; parties using foreign seats like SIAC or ICC must verify current Supreme Court precedent on Section 3(1) applicability before seeking Section 7A interim relief in Dhaka."
+    },
+    {
+      "q": "How long does domestic commercial arbitration take in Bangladesh?",
+      "a": "Ad hoc or BIAC-administered arbitrations typically conclude within 6 to 14 months—substantially faster than 5 to 10 years of contested civil litigation across trial and appellate courts."
+    },
+    {
+      "q": "Can an arbitrator award interest and legal costs?",
+      "a": "Yes. Under Section 38(6), unless the arbitration agreement provides otherwise, the tribunal can award commercial interest from the date of cause of action until payment along with arbitration fees and advocate costs."
+    },
+    {
+      "q": "What happens if the defendant ignores the arbitration notice?",
+      "a": "Under Section 12, you can petition the District Judge or Chief Justice to appoint the arbitrator on the defaulting party’s behalf, after which the tribunal may proceed ex parte under Section 35 and pass a binding award."
+    }
+  ]
+}

@@ -23,7 +23,9 @@ const toBengali = (s) => s.replace(/[0-9]/g, (d) => BN_DIGITS[Number(d)]);
 
 export function evergreenYear(text, now = new Date()) {
   if (typeof text !== 'string' || !text) return text;
-  const current = now.getFullYear();
+  const current = Number(
+    new Intl.DateTimeFormat('en-US', { timeZone: 'Asia/Dhaka', year: 'numeric' }).format(now)
+  ) || now.getFullYear();
 
   let out = text.replace(/\{\{\s*year\s*\}\}/gi, String(current));
 

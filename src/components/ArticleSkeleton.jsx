@@ -1,13 +1,14 @@
 import React from 'react';
 import { ArrowLeft, Clock, Calendar } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { formatBdDate } from '../utils/bdDate.mjs';
 
 const ArticleSkeleton = ({ meta, lang = 'en' }) => {
     const isBn = lang === 'bn';
     const title = meta?.title;
     const category = meta?.category || (isBn ? 'আইন পরামর্শ' : 'Legal Guide');
     const readTime = meta?.readTime || (isBn ? '৫ মিনিট পাঠ' : '5 min read');
-    const pubDate = meta?.publishedDate ? new Date(meta.publishedDate).toLocaleDateString(isBn ? 'bn-BD' : 'en-GB', { day: 'numeric', month: 'long', year: 'numeric' }) : '';
+    const pubDate = formatBdDate(meta?.publishedDate, isBn ? 'bn-BD' : 'en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
 
     return (
         <div style={{ minHeight: '85vh', background: 'var(--bg)' }}>

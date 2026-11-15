@@ -9,17 +9,19 @@ import { useLayoutEffect, useEffect, useState } from 'react';
  *   Unit 3  calculator    sits inside the Fee Calculator widget (pages that have one)
  */
 export const AD_SLOTS = {
-    topInArticle: '8630877987',
-    sidebar: '5064091502',
-    midNative: '9118178745',
-    calculator: '5230990345',
+    topInArticle: '8630877987', // In-Article Responsive (DISPLAY)
+    topDisplay: '8630877987',   // In-Article Responsive (DISPLAY)
+    sidebar: '5064091502',      // Sidebar Sticky Display (DISPLAY)
+    midNative: '9118178745',    // Article Body 1 (ARTICLE)
+    body1: '9118178745',        // Article Body 1 (ARTICLE)
+    body2: '5230990345',        // Article Body 2 (ARTICLE)
+    body3: '3423084657',        // Article Body 3 (ARTICLE)
+    body4: '1128008083',        // Article Body 4 (ARTICLE)
+    body5: '4824719678',        // Article Body 5 (ARTICLE)
+    native: '6519719969',       // Article Body Native (ARTICLE)
+    calculator: '4824719678',   // Article Body 5 (ARTICLE)
+    bottomGrid: '3667074343',   // Article Bottom Grid (MATCHED_CONTENT / Multiplex)
 };
-
-/**
- * DECOMMISSIONED units (telemetry: non-performing). Kept here only as a tombstone so nobody re-adds them.
- *   3423084657 Article Body 3 | 1128008083 Article Body 4 | 3667074343 Article Bottom Grid (multiplex)
- */
-export const PURGED_SLOTS = ['3423084657', '1128008083', '3667074343'];
 
 /** Breakpoint shared with the .bp-sidebar / .bpbn-sidebar CSS (sidebar is hidden at <= 900px). */
 export const DESKTOP_QUERY = '(min-width: 901px)';
