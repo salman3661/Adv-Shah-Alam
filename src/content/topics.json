@@ -1,0 +1,79 @@
+[
+  {
+    "slug": "bail-law",
+    "en": "Bail & Anticipatory Bail Guides",
+    "shortEn": "Bail & Anticipatory Bail",
+    "bn": "জামিন ও আগাম জামিন গাইড",
+    "shortBn": "জামিন ও আগাম জামিন",
+    "service": "bail-lawyer",
+    "serviceEn": "Bail & Anticipatory Bail Lawyer",
+    "serviceBn": "জামিন আইনজীবী",
+    "regex": "bail|anticipatory|497|498|surrender|জামিন|আগাম"
+  },
+  {
+    "slug": "divorce-family-law",
+    "en": "Divorce, Dower & Family Law Guides",
+    "shortEn": "Divorce & Family Law",
+    "bn": "তালাক, দেনমোহর ও পারিবারিক আইন",
+    "shortBn": "তালাক ও পারিবারিক আইন",
+    "service": "divorce-lawyer",
+    "serviceEn": "Divorce & Family Lawyer",
+    "serviceBn": "তালাক ও পারিবারিক আইনজীবী",
+    "regex": "divorce|talaq|talak|khula|dower|denmohar|denmohor|custody|marriage|maintenance|khorposh|kabin|family law|তালাক|ডিভোর্স|বিবাহ|দেনমোহর|পারিবারিক|খোরপোষ|কাবিন"
+  },
+  {
+    "slug": "land-property-law",
+    "en": "Land, Khatian & Property Law Guides",
+    "shortEn": "Land & Property Law",
+    "bn": "জমি, খতিয়ান, নামজারি ও সম্পত্তি আইন",
+    "shortBn": "জমি ও সম্পত্তি আইন",
+    "service": "land-lawyer",
+    "serviceEn": "Land & Property Lawyer",
+    "serviceBn": "ভূমি ও সম্পত্তি আইনজীবী",
+    "regex": "land|property|khatian|mutation|namjari|deed|dalil|partition|batwara|inheritance|pre-emption|waqf|flat|tenant|jomi|জমি|খতিয়ান|নামজারি|দলিল|বাটোয়ারা|উত্তরাধিকার|ভাড়া"
+  },
+  {
+    "slug": "supreme-court-writ",
+    "en": "Supreme Court Writ & Appeals",
+    "shortEn": "Supreme Court Writ",
+    "bn": "সুপ্রিম কোর্ট রিট ও আপিল গাইড",
+    "shortBn": "সুপ্রিম কোর্ট রিট",
+    "service": "supreme-court-lawyer",
+    "serviceEn": "Supreme Court Lawyer",
+    "serviceBn": "সুপ্রিম কোর্ট আইনজীবী",
+    "regex": "writ|supreme-court|high-court|appeal|561a|quashing|contempt|habeas|রিট|হাইকোর্ট|সুপ্রিম"
+  },
+  {
+    "slug": "corporate-tax-law",
+    "en": "Company, Corporate & Tax Law Guides",
+    "shortEn": "Corporate & Tax Law",
+    "bn": "কোম্পানি, কর্পোরেট ও আয়কর-ভ্যাট গাইড",
+    "shortBn": "কোম্পানি ও কর্পোরেট কর",
+    "service": "company-corporate-lawyer",
+    "serviceEn": "Company & Corporate Lawyer",
+    "serviceBn": "কোম্পানি ও কর্পোরেট আইনজীবী",
+    "regex": "company|corporate|rjsc|tax|vat|nbr|trademark|copyright|trust|cheque|138|ni-act|bank|artha-rin|consumer|contract|business|কোম্পানি|আয়কর|ভ্যাট|চেক|ট্রাস্ট|ভোক্তা|চুক্তি|ব্যাংক"
+  },
+  {
+    "slug": "nrb-immigration-law",
+    "en": "NRB Legal & Embassy Attestation Guides",
+    "shortEn": "NRB Legal Guides",
+    "bn": "প্রবাসী (NRB) ও দূতাবাস আইনি গাইড",
+    "shortBn": "প্রবাসী (NRB) আইন",
+    "service": "land-lawyer",
+    "serviceEn": "NRB & Property Representation",
+    "serviceBn": "প্রবাসী (NRB) আইনি সহায়তা",
+    "regex": "nrb|abroad|overseas|embassy|passport|power-of-attorney|apostille|dual-citizen|nvr|প্রবাসী|বিদেশ|দূতাবাস|পাওয়ার|পাসপোর্ট"
+  },
+  {
+    "slug": "criminal-law",
+    "en": "Criminal Defense Law Guides",
+    "shortEn": "Criminal Law",
+    "bn": "ফৌজদারি মামলা ও আইন গাইড",
+    "shortBn": "ফৌজদারি আইন",
+    "service": "criminal-lawyer",
+    "serviceEn": "Criminal Defense Lawyer",
+    "serviceBn": "ফৌজদারি আইনজীবী",
+    "regex": "criminal|fir|penal|arrest|warrant|420|406|302|murder|cyber|cheating|fraud|remand|narcotics|police|ফৌজদারি|থানা|জিডি|সাইবার|প্রতারণা|রিমান্ড|গ্রেপ্তার|মামলা"
+  }
+]

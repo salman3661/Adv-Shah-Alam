@@ -1,7 +1,10 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { Search, Clock, ChevronRight, BookOpen, Flame, Award, ShieldCheck, UserCheck, Scale, ArrowUpRight, X, TrendingUp, Calendar, Sparkles } from 'lucide-react';
+import topicsData from '../content/topics.json';
+import pageHeadings from '../content/pageHeadings.json';
+import NotFound from './NotFound';
 
 // Load all BN blog posts from JSON files (bundled at build time by Vite)
 import postsMeta_bn from '../content/posts-meta-bn.json';
@@ -215,8 +218,21 @@ const BlogCardBn = ({ post, isRecent = false, isPopular = false }) => {
     );
 };
 
+const ARCHIVE_PER_PAGE = 24;
+
 const BlogBn = () => {
     const location = useLocation();
+    const { page, topic } = useParams();
+    const isPageRoute = page !== undefined;
+    const isTopicRoute = topic !== undefined;
+    const parsedPage = isPageRoute ? Number(page) : 1;
+    const pageNum = Number.isInteger(parsedPage) && parsedPage >= 1 ? parsedPage : 0;
+
+    const topicObj = useMemo(() => {
+        if (!isTopicRoute) return null;
+        return topicsData.find((t) => t.slug === topic) || null;
+    }, [isTopicRoute, topic]);
+
     const [activeCategory, setActiveCategory] = useState(() => {
         const params = new URLSearchParams(location.search);
         return params.get('cat') || 'সব';
@@ -234,6 +250,10 @@ const BlogBn = () => {
     });
     const isFirstRender = React.useRef(true);
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pageNum, topic]);
+
     // Sync activeCategory when URL ?cat= param changes (from CategoryStrip clicks)
     useEffect(() => {
         const params = new URLSearchParams(location.search);
@@ -241,26 +261,20 @@ const BlogBn = () => {
         setActiveCategory(catParam);
     }, [location.search]);
 
-    // Sort all published posts by publishedAt or publishedDate descending
+    // Deterministic sort matching scripts/prerender.mjs exactly
     const allPublished = useMemo(() => {
         return [...postsBn]
-            .filter(isPublishedBn)
-            .sort((a, b) => freshnessBn(b) - freshnessBn(a));
+            .filter(p => isPublishedBn(p) && p.slug && p.title)
+            .sort((a, b) => freshnessBn(b) - freshnessBn(a) || a.slug.localeCompare(b.slug));
     }, []);
 
-    // Get 4 most recent posts for top showcase
-    const latestShowcase = useMemo(() => {
-        return allPublished.slice(0, 4);
-    }, [allPublished]);
+    const totalArchivePages = Math.max(1, Math.ceil(allPublished.length / ARCHIVE_PER_PAGE));
 
     // Search Console Analytics Dynamic Spotlight Selection
     const featuredPost = useMemo(() => {
         if (!allPublished.length) return null;
-        // Priority 1: Post explicitly flagged featured
         const explicitFeatured = allPublished.find(p => p.featured === true);
         if (explicitFeatured) return explicitFeatured;
-
-        // Priority 2: Post with highest Search Console impressions
         const sortedBySearch = [...allPublished].sort((a, b) => (b.impressions || 0) - (a.impressions || 0));
         return sortedBySearch[0];
     }, [allPublished]);
@@ -275,6 +289,14 @@ const BlogBn = () => {
 
     // Intelligent Deep Search Filtering & Sorting Algorithm
     const filtered = useMemo(() => {
+        if (isTopicRoute && topicObj) {
+            const rx = new RegExp(topicObj.regex, 'i');
+            return allPublished.filter(p => rx.test(`${p.slug} ${p.title} ${p.category || ''}`));
+        }
+        if (isPageRoute && pageNum >= 2) {
+            return allPublished.slice((pageNum - 1) * ARCHIVE_PER_PAGE, pageNum * ARCHIVE_PER_PAGE);
+        }
+
         let posts = [...allPublished];
 
         if (activeCategory !== 'সব') {
@@ -320,17 +342,15 @@ const BlogBn = () => {
             });
         }
 
-        // Apply sorting
         if (sortBy === 'recent') {
-            posts.sort((a, b) => freshnessBn(b) - freshnessBn(a));
+            posts.sort((a, b) => freshnessBn(b) - freshnessBn(a) || a.slug.localeCompare(b.slug));
         } else if (sortBy === 'popular') {
-            posts.sort((a, b) => popularityBn(b) - popularityBn(a) || freshnessBn(b) - freshnessBn(a));
+            posts.sort((a, b) => popularityBn(b) - popularityBn(a) || freshnessBn(b) - freshnessBn(a) || a.slug.localeCompare(b.slug));
         }
 
         return posts;
-    }, [allPublished, activeCategory, searchQuery, sortBy]);
+    }, [allPublished, activeCategory, searchQuery, sortBy, isTopicRoute, topicObj, isPageRoute, pageNum]);
 
-    // Reset pagination only when user actually changes filters after mount
     useEffect(() => {
         if (isFirstRender.current) {
             isFirstRender.current = false;
@@ -348,16 +368,68 @@ const BlogBn = () => {
         } catch {}
     }, [visibleCount]);
 
+    if ((isPageRoute && (pageNum < 1 || pageNum > totalArchivePages)) || (isTopicRoute && !topicObj)) {
+        return <NotFound />;
+    }
+
+    const pageH1 = isTopicRoute && topicObj
+        ? topicObj.bn
+        : (isPageRoute && pageNum >= 2 ? `${pageHeadings.blogPagePrefixBn} (Page ${pageNum})` : pageHeadings.blogBn);
+
+    const pageTitle = isTopicRoute && topicObj
+        ? `${topicObj.bn} | এডভোকেট শাহ আলম`
+        : (isPageRoute && pageNum >= 2
+            ? `${pageHeadings.blogPagePrefixBn} — Page ${pageNum} | Adv. Shah Alam`
+            : 'বাংলা আইনি ব্লগ ও সমাধান নির্দেশিকা | অ্যাডভোকেট মো. শাহ আলম');
+
+    const canonicalHref = isTopicRoute && topicObj
+        ? `https://www.advmdshahalam.me/bn/blog/topic/${topicObj.slug}`
+        : (isPageRoute && pageNum >= 2
+            ? `https://www.advmdshahalam.me/bn/blog/page/${pageNum}`
+            : 'https://www.advmdshahalam.me/bn/blog');
+
+    const prevHref = !isTopicRoute && isPageRoute && pageNum >= 2
+        ? (pageNum === 2 ? 'https://www.advmdshahalam.me/bn/blog' : `https://www.advmdshahalam.me/bn/blog/page/${pageNum - 1}`)
+        : null;
+    const nextHref = !isTopicRoute && pageNum < totalArchivePages
+        ? `https://www.advmdshahalam.me/bn/blog/page/${pageNum + 1}`
+        : null;
+
+    const displayedPosts = (isTopicRoute || (isPageRoute && pageNum >= 2))
+        ? filtered
+        : filtered.slice(0, visibleCount);
+
     return (
         <>
             <Helmet>
                 <html lang="bn" />
-                <title>বাংলা আইনি ব্লগ ও সমাধান নির্দেশিকা | অ্যাডভোকেট মো. শাহ আলম</title>
-                <meta name="description" content="বাংলাদেশের সর্বোচ্চ আদালতের আইনজীবীর দ্বারা লিখিত নির্ভরযোগ্য বাংলা আইনি ব্লগ — জমি রেজিস্ট্রি, জামিন, তালাক, উত্তরাধিকার, শ্রম আইন ও সাইবার আইনের পূর্ণাঙ্গ সমাধান।" />
-                <link rel="canonical" href="https://www.advmdshahalam.me/bn/blog" />
+                <title>{pageTitle}</title>
+                <meta
+                    name="description"
+                    content={isTopicRoute && topicObj
+                        ? `${topicObj.bn} — ${filtered.length}টি নির্ভরযোগ্য বাংলা আইনি নির্দেশিকা ও সমাধান গাইড।`
+                        : (isPageRoute && pageNum >= 2
+                            ? `${pageHeadings.blogPagePrefixBn} আর্কাইভ পৃষ্ঠা ${pageNum} / ${totalArchivePages} — অ্যাডভোকেট মো. শাহ আলম।`
+                            : 'বাংলাদেশের সর্বোচ্চ আদালতের আইনজীবীর দ্বারা লিখিত নির্ভরযোগ্য বাংলা আইনি ব্লগ — জমি রেজিস্ট্রি, জামিন, তালাক, উত্তরাধিকার, শ্রম আইন ও সাইবার আইনের পূর্ণাঙ্গ সমাধান।')}
+                />
+                <link rel="canonical" href={canonicalHref} />
+                {prevHref && <link rel="prev" href={prevHref} />}
+                {nextHref && <link rel="next" href={nextHref} />}
                 <meta name="robots" content="index, follow" />
-                <link rel="alternate" hrefLang="en" href="https://www.advmdshahalam.me/blog" />
-                <link rel="alternate" hrefLang="bn" href="https://www.advmdshahalam.me/bn/blog" />
+                {!isPageRoute && !isTopicRoute && (
+                    <>
+                        <link rel="alternate" hrefLang="en" href="https://www.advmdshahalam.me/blog" />
+                        <link rel="alternate" hrefLang="bn" href="https://www.advmdshahalam.me/bn/blog" />
+                        <link rel="alternate" hrefLang="x-default" href="https://www.advmdshahalam.me/blog" />
+                    </>
+                )}
+                {isTopicRoute && topicObj && (
+                    <>
+                        <link rel="alternate" hrefLang="en" href={`https://www.advmdshahalam.me/blog/topic/${topicObj.slug}`} />
+                        <link rel="alternate" hrefLang="bn" href={`https://www.advmdshahalam.me/bn/blog/topic/${topicObj.slug}`} />
+                        <link rel="alternate" hrefLang="x-default" href={`https://www.advmdshahalam.me/blog/topic/${topicObj.slug}`} />
+                    </>
+                )}
             </Helmet>
 
             {/* ════ HERO HEADER ════ */}
@@ -368,6 +440,16 @@ const BlogBn = () => {
                 />
 
                 <div className="container mx-auto px-6 max-w-5xl relative z-10 text-center">
+                    {isTopicRoute && topicObj && (
+                        <nav aria-label="Breadcrumb" className="text-xs font-semibold mb-4 flex justify-center gap-1.5" style={{ color: 'var(--text-muted)', fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif" }}>
+                            <Link to="/" className="hover:underline">হোম</Link>
+                            <span>&rsaquo;</span>
+                            <Link to="/bn/blog" className="hover:underline">বাংলা ব্লগ</Link>
+                            <span>&rsaquo;</span>
+                            <span style={{ color: 'var(--text)' }}>{topicObj.shortBn}</span>
+                        </nav>
+                    )}
+
                     <div
                         className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold mb-6 shadow-sm border"
                         style={{
@@ -389,7 +471,7 @@ const BlogBn = () => {
                             letterSpacing: '-0.02em'
                         }}
                     >
-                        বাংলা আইনি জ্ঞান কেন্দ্র
+                        {pageH1}
                     </h1>
 
                     <p
@@ -399,11 +481,18 @@ const BlogBn = () => {
                             fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif"
                         }}
                     >
-                        জমি জমা, জামিন, পারিবারিক বিবাদ ও ফৌজদারি মামলার নির্ভরযোগ্য ও সহজ বাংলা আইনি নির্দেশিকা।
+                        {isTopicRoute && topicObj ? (
+                            <>এই বিষয়ের {filtered.length}টি আইনি গাইড পড়ুন অথবা আমাদের{' '}
+                                <Link to={`/bn/services/${topicObj.service}`} style={{ color: 'var(--accent)', fontWeight: 700, textDecoration: 'underline' }}>
+                                    {topicObj.serviceBn}
+                                </Link> পেজে পরামর্শ নিন।</>
+                        ) : (
+                            'জমি জমা, জামিন, পারিবারিক বিবাদ ও ফৌজদারি মামলার নির্ভরযোগ্য ও সহজ বাংলা আইনি নির্দেশিকা।'
+                        )}
                     </p>
 
                     {/* Trust Badges */}
-                    <div className="flex flex-wrap justify-center items-center gap-6 mb-10 text-xs font-semibold" style={{ color: 'var(--text-muted)', fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif" }}>
+                    <div className="flex flex-wrap justify-center items-center gap-6 mb-8 text-xs font-semibold" style={{ color: 'var(--text-muted)', fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif" }}>
                         <span className="flex items-center gap-1.5">
                             <ShieldCheck size={16} className="text-emerald-500" /> ১০০% আইনি ও নজিরনির্ভর
                         </span>
@@ -415,105 +504,127 @@ const BlogBn = () => {
                         </span>
                     </div>
 
-                    {/* Interactive Search Bar */}
-                    <div className="relative max-w-2xl mx-auto mb-8 shadow-lg rounded-2xl overflow-hidden border" style={{ borderColor: 'var(--card-border)', background: 'var(--surface)' }}>
-                        <Search size={20} className="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none" style={{ color: 'var(--accent)' }} />
-                        <input
-                            type="search"
-                            placeholder="আইনি বিষয় বা মামলা খুঁজুন (যেমন: জামিন, বাটোয়ারা, দেনমোহর, divorce, land)..."
-                            value={searchQuery}
-                            onChange={e => setSearchQuery(e.target.value)}
-                            className="w-full pl-12 pr-28 py-4 text-sm md:text-base outline-none transition-[color,background-color,border-color,box-shadow,opacity,transform]"
-                            style={{
-                                background: 'transparent',
-                                color: 'var(--text)',
-                                fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif"
-                            }}
-                        />
-
-                        {/* Search Action / Result Pill */}
-                        <div className="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-1.5">
-                            {searchQuery.trim() ? (
-                                <>
-                                    <span
-                                        className="text-xs px-3 py-1.5 rounded-lg font-bold"
-                                        style={{
-                                            background: 'var(--accent-subtle)',
-                                            color: 'var(--accent)',
-                                            fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif"
-                                        }}
-                                    >
-                                        {filtered.length} টি ফলাফল
-                                    </span>
-                                    <button
-                                        onClick={() => setSearchQuery('')}
-                                        className="p-1.5 rounded-lg hover:bg-black/10 text-gray-400 hover:text-gray-600 transition-[color,background-color,border-color,box-shadow,opacity,transform]"
-                                        title="অনুসন্ধান ক্লিয়ার করুন"
-                                    >
-                                        <X size={16} />
-                                    </button>
-                                </>
-                            ) : (
-                                <button
-                                    className="text-xs px-4 py-2 rounded-lg font-bold text-white shadow-md transition-[color,background-color,border-color,box-shadow,opacity,transform] hover:scale-105"
-                                    style={{
-                                        background: 'var(--accent)',
-                                        fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif"
-                                    }}
-                                >
-                                    খুঁজুন
-                                </button>
-                            )}
-                        </div>
-                    </div>
-
-                    {/* Category Filter Pills */}
-                    <div className="flex flex-wrap justify-center gap-2.5">
-                        {CATEGORIES.map(cat => {
-                            const count = categoryCounts[cat] || 0;
-                            const isActive = activeCategory === cat;
-                            const color = getCatColor(cat);
+                    {/* Topic Hub Links */}
+                    <nav aria-label="Topics" className="flex flex-wrap justify-center gap-2 mb-6" style={{ fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif" }}>
+                        {topicsData.map(t => {
+                            const active = isTopicRoute && t.slug === topic;
                             return (
-                                <button
-                                    key={cat}
-                                    onClick={() => setActiveCategory(cat)}
-                                    className="px-4 py-2 rounded-xl text-xs md:text-sm font-semibold border transition-[color,background-color,border-color,box-shadow,opacity,transform] flex items-center gap-1.5"
-                                    style={
-                                        isActive
-                                            ? {
-                                                background: '#1A3FBF',
-                                                color: '#fff',
-                                                borderColor: 'var(--accent)',
-                                                boxShadow: '0 4px 14px rgba(26,63,191,0.3)',
-                                                fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif"
-                                            }
-                                            : {
-                                                background: 'var(--surface)',
-                                                color: 'var(--text-secondary)',
-                                                borderColor: 'var(--card-border)',
-                                                fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif"
-                                            }
-                                    }
+                                <Link
+                                    key={t.slug}
+                                    to={`/bn/blog/topic/${t.slug}`}
+                                    className="px-3.5 py-1.5 rounded-full text-xs font-bold border transition-colors"
+                                    style={active
+                                        ? { background: '#1A3FBF', color: '#FFFFFF', borderColor: '#1A3FBF' }
+                                        : { background: 'var(--surface)', color: 'var(--accent)', borderColor: 'var(--card-border)' }}
                                 >
-                                    <span>{cat}</span>
-                                    <span
-                                        className="px-1.5 py-0.5 rounded-full text-[10px] font-bold"
-                                        style={{
-                                            background: isActive ? 'rgba(255,255,255,0.2)' : 'var(--accent-subtle)',
-                                            color: isActive ? '#fff' : color
-                                        }}
-                                    >
-                                        {count}
-                                    </span>
-                                </button>
+                                    {t.shortBn}
+                                </Link>
                             );
                         })}
-                    </div>
+                    </nav>
+
+                    {/* Interactive Search & Category Pills (Index only) */}
+                    {!isPageRoute && !isTopicRoute && (
+                        <>
+                            <div className="relative max-w-2xl mx-auto mb-8 shadow-lg rounded-2xl overflow-hidden border" style={{ borderColor: 'var(--card-border)', background: 'var(--surface)' }}>
+                                <Search size={20} className="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none" style={{ color: 'var(--accent)' }} />
+                                <input
+                                    type="search"
+                                    placeholder="আইনি বিষয় বা মামলা খুঁজুন (যেমন: জামিন, বাটোয়ারা, দেনমোহর, divorce, land)..."
+                                    value={searchQuery}
+                                    onChange={e => setSearchQuery(e.target.value)}
+                                    className="w-full pl-12 pr-28 py-4 text-sm md:text-base outline-none transition-[color,background-color,border-color,box-shadow,opacity,transform]"
+                                    style={{
+                                        background: 'transparent',
+                                        color: 'var(--text)',
+                                        fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif"
+                                    }}
+                                />
+
+                                <div className="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-1.5">
+                                    {searchQuery.trim() ? (
+                                        <>
+                                            <span
+                                                className="text-xs px-3 py-1.5 rounded-lg font-bold"
+                                                style={{
+                                                    background: 'var(--accent-subtle)',
+                                                    color: 'var(--accent)',
+                                                    fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif"
+                                                }}
+                                            >
+                                                {filtered.length} টি ফলাফল
+                                            </span>
+                                            <button
+                                                onClick={() => setSearchQuery('')}
+                                                className="p-1.5 rounded-lg hover:bg-black/10 text-gray-400 hover:text-gray-600 transition-[color,background-color,border-color,box-shadow,opacity,transform]"
+                                                title="অনুসন্ধান ক্লিয়ার করুন"
+                                            >
+                                                <X size={16} />
+                                            </button>
+                                        </>
+                                    ) : (
+                                        <button
+                                            className="text-xs px-4 py-2 rounded-lg font-bold text-white shadow-md transition-[color,background-color,border-color,box-shadow,opacity,transform] hover:scale-105"
+                                            style={{
+                                                background: 'var(--accent)',
+                                                fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif"
+                                            }}
+                                        >
+                                            খুঁজুন
+                                        </button>
+                                    )}
+                                </div>
+                            </div>
+
+                            {/* Category Filter Pills */}
+                            <div className="flex flex-wrap justify-center gap-2.5">
+                                {CATEGORIES.map(cat => {
+                                    const count = categoryCounts[cat] || 0;
+                                    const isActive = activeCategory === cat;
+                                    const color = getCatColor(cat);
+                                    return (
+                                        <button
+                                            key={cat}
+                                            onClick={() => setActiveCategory(cat)}
+                                            className="px-4 py-2 rounded-xl text-xs md:text-sm font-semibold border transition-[color,background-color,border-color,box-shadow,opacity,transform] flex items-center gap-1.5"
+                                            style={
+                                                isActive
+                                                    ? {
+                                                        background: '#1A3FBF',
+                                                        color: '#fff',
+                                                        borderColor: 'var(--accent)',
+                                                        boxShadow: '0 4px 14px rgba(26,63,191,0.3)',
+                                                        fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif"
+                                                    }
+                                                    : {
+                                                        background: 'var(--surface)',
+                                                        color: 'var(--text-secondary)',
+                                                        borderColor: 'var(--card-border)',
+                                                        fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif"
+                                                    }
+                                            }
+                                        >
+                                            <span>{cat}</span>
+                                            <span
+                                                className="px-1.5 py-0.5 rounded-full text-[10px] font-bold"
+                                                style={{
+                                                    background: isActive ? 'rgba(255,255,255,0.2)' : 'var(--accent-subtle)',
+                                                    color: isActive ? '#fff' : color
+                                                }}
+                                            >
+                                                {count}
+                                            </span>
+                                        </button>
+                                    );
+                                })}
+                            </div>
+                        </>
+                    )}
                 </div>
             </section>
 
             {/* ════ SEARCH CONSOLE ANALYTICS DYNAMIC FEATURED ARTICLE ════ */}
-            {activeCategory === 'সব' && !searchQuery.trim() && featuredPost && (
+            {!isPageRoute && !isTopicRoute && activeCategory === 'সব' && !searchQuery.trim() && featuredPost && (
                 <section className="py-6" style={{ background: 'var(--bg)' }}>
                     <div className="container mx-auto px-6 max-w-6xl">
                         <div
@@ -589,33 +700,38 @@ const BlogBn = () => {
                     <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-8 pb-4 border-b" style={{ borderColor: 'var(--card-border)' }}>
                         <div className="flex items-center gap-2">
                             <span className="text-sm md:text-base font-bold" style={{ color: 'var(--text)', fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif" }}>
-                                {activeCategory === 'সব' ? 'সকল আইনি নির্দেশিকা' : activeCategory}
+                                {isTopicRoute && topicObj
+                                    ? topicObj.bn
+                                    : (isPageRoute && pageNum >= 2
+                                        ? `আর্কাইভ পৃষ্ঠা ${pageNum} / ${totalArchivePages}`
+                                        : (activeCategory === 'সব' ? 'সকল আইনি নির্দেশিকা' : activeCategory))}
                             </span>
                             <span className="text-xs px-2.5 py-0.5 rounded-full font-bold" style={{ background: 'var(--accent-subtle)', color: 'var(--accent)', fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif" }}>
                                 {filtered.length} টি আর্টিকেল
                             </span>
                         </div>
 
-                        {/* Sort Switcher */}
-                        <div className="flex items-center gap-1.5 p-1 rounded-xl border" style={{ background: 'var(--surface)', borderColor: 'var(--card-border)' }}>
-                            <button
-                                onClick={() => setSortBy('recent')}
-                                className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-bold transition-[color,background-color,border-color,box-shadow,opacity,transform] ${sortBy === 'recent' ? 'bg-[var(--btn-primary-bg)] text-white shadow-sm' : 'text-[var(--text-secondary)] hover:text-[var(--text)]'}`}
-                                style={{ fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif" }}
-                            >
-                                <Sparkles size={13} /> সর্বশেষ প্রকাশিত (Newest)
-                            </button>
-                            <button
-                                onClick={() => setSortBy('popular')}
-                                className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-bold transition-[color,background-color,border-color,box-shadow,opacity,transform] ${sortBy === 'popular' ? 'bg-[var(--btn-primary-bg)] text-white shadow-sm' : 'text-[var(--text-secondary)] hover:text-[var(--text)]'}`}
-                                style={{ fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif" }}
-                            >
-                                <Flame size={13} /> সর্বাধিক পঠিত (Popular)
-                            </button>
-                        </div>
+                        {!isPageRoute && !isTopicRoute && (
+                            <div className="flex items-center gap-1.5 p-1 rounded-xl border" style={{ background: 'var(--surface)', borderColor: 'var(--card-border)' }}>
+                                <button
+                                    onClick={() => setSortBy('recent')}
+                                    className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-bold transition-[color,background-color,border-color,box-shadow,opacity,transform] ${sortBy === 'recent' ? 'bg-[var(--btn-primary-bg)] text-white shadow-sm' : 'text-[var(--text-secondary)] hover:text-[var(--text)]'}`}
+                                    style={{ fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif" }}
+                                >
+                                    <Sparkles size={13} /> সর্বশেষ প্রকাশিত (Newest)
+                                </button>
+                                <button
+                                    onClick={() => setSortBy('popular')}
+                                    className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-bold transition-[color,background-color,border-color,box-shadow,opacity,transform] ${sortBy === 'popular' ? 'bg-[var(--btn-primary-bg)] text-white shadow-sm' : 'text-[var(--text-secondary)] hover:text-[var(--text)]'}`}
+                                    style={{ fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif" }}
+                                >
+                                    <Flame size={13} /> সর্বাধিক পঠিত (Popular)
+                                </button>
+                            </div>
+                        )}
                     </div>
 
-                    {filtered.length === 0 ? (
+                    {displayedPosts.length === 0 ? (
                         <div className="text-center py-20 rounded-2xl border" style={{ background: 'var(--surface)', borderColor: 'var(--card-border)', color: 'var(--text-muted)' }}>
                             <BookOpen size={48} className="mx-auto mb-4 text-[var(--accent)] opacity-50" />
                             <h3 className="text-lg font-bold mb-2" style={{ fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif" }}>কোনো আইনি নিবন্ধ পাওয়া যায়নি</h3>
@@ -631,18 +747,18 @@ const BlogBn = () => {
                     ) : (
                         <>
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                                {filtered.slice(0, visibleCount).map((post, idx) => (
+                                {displayedPosts.map((post, idx) => (
                                     <BlogCardBn
                                         key={post.slug}
                                         post={post}
-                                        isRecent={sortBy === 'recent' ? idx < POSTS_PER_PAGE : false}
-                                        isPopular={sortBy === 'popular' ? idx < POSTS_PER_PAGE : false}
+                                        isRecent={!isPageRoute && !isTopicRoute && sortBy === 'recent' ? idx < POSTS_PER_PAGE : false}
+                                        isPopular={!isPageRoute && !isTopicRoute && sortBy === 'popular' ? idx < POSTS_PER_PAGE : false}
                                     />
                                 ))}
                             </div>
 
                             {/* ── আরও লোড করুন বাটন ── */}
-                            {visibleCount < filtered.length && (
+                            {!isPageRoute && !isTopicRoute && visibleCount < filtered.length && (
                                 <div className="mt-10 text-center">
                                     <button
                                         onClick={() => setVisibleCount(v => v + POSTS_PER_PAGE)}
@@ -661,6 +777,30 @@ const BlogBn = () => {
                                         {filtered.length} টির মধ্যে {Math.min(visibleCount, filtered.length)} টি দেখানো হচ্ছে
                                     </p>
                                 </div>
+                            )}
+
+                            {/* ── Real Crawlable Archive Pagination Links ── */}
+                            {!isTopicRoute && totalArchivePages > 1 && (
+                                <nav aria-label="Pagination" className="mt-10 flex flex-wrap justify-center items-center gap-2">
+                                    {Array.from({ length: totalArchivePages }, (_, i) => {
+                                        const n = i + 1;
+                                        const href = n === 1 ? '/bn/blog' : `/bn/blog/page/${n}`;
+                                        const current = isPageRoute ? pageNum === n : n === 1;
+                                        return (
+                                            <Link
+                                                key={n}
+                                                to={href}
+                                                aria-current={current ? 'page' : undefined}
+                                                className="px-3.5 py-2 rounded-lg text-xs font-bold border transition-colors"
+                                                style={current
+                                                    ? { background: '#132A4A', color: '#FFFFFF', borderColor: '#132A4A' }
+                                                    : { background: 'var(--surface)', color: 'var(--accent)', borderColor: 'var(--card-border)' }}
+                                            >
+                                                {n}
+                                            </Link>
+                                        );
+                                    })}
+                                </nav>
                             )}
                         </>
                     )}

@@ -7,11 +7,7 @@ const GOOGLE_REVIEW_URL = 'https://maps.app.goo.gl/M3NXMwW3xkp2TE3h8';
 
 const ReviewPage = () => {
     useEffect(() => {
-        // Auto-redirect after 1.8 seconds to give user time to read, while ensuring seamless flow
-        const timer = setTimeout(() => {
-            window.location.href = GOOGLE_REVIEW_URL;
-        }, 1800);
-        return () => clearTimeout(timer);
+        window.scrollTo(0, 0);
     }, []);
 
     return (

@@ -14,6 +14,7 @@
     "ga4-sync": "node scripts/ga4-fetch.mjs",
     "adsense-sync": "node scripts/adsense-fetch.mjs",
     "prebuild": "node scripts/gsc-fetch.mjs && node scripts/ga4-fetch.mjs && node scripts/adsense-fetch.mjs && node scripts/gen-blog-meta.mjs && node generate_sitemap.js && node generate_rss.js",
+    "ci": "node scripts/run-ci.mjs",
     "indexnow": "node scripts/indexnow-submit.mjs",
     "sync:social": "node scripts/sync-social.mjs"
   },
@@ -44,6 +45,7 @@
     "eslint-plugin-react-refresh": "^0.4.24",
     "globals": "^16.5.0",
     "mammoth": "^1.12.3",
+    "playwright-core": "^1.65.1",
     "postcss": "^8.5.6",
     "prettier": "^3.8.1",
     "sharp": "^0.35.3",

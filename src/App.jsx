@@ -98,10 +98,14 @@ function App() {
 
                       {/* Blog */}
                       <Route path="/blog" element={<Blog />} />
+                      <Route path="/blog/page/:page" element={<Blog />} />
+                      <Route path="/blog/topic/:topic" element={<Blog />} />
                       <Route path="/blog/:slug" element={<BlogPost />} />
                       <Route path="/nrb-legal-help" element={<NrbLegalHelp />} />
 
                       <Route path="/bn/blog" element={<BlogBn />} />
+                      <Route path="/bn/blog/page/:page" element={<BlogBn />} />
+                      <Route path="/bn/blog/topic/:topic" element={<BlogBn />} />
                       <Route path="/bn/blog/:slug" element={<BlogPostBn />} />
 
                       {/* Contact page — English on /contact, Bengali on /bn/contact */}

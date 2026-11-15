@@ -23,6 +23,8 @@ import { sanitizeHtml, formatHeroIntro } from '../utils/sanitizeHtml';
 
 /* ── Load all BN posts ── */
 import postsMeta_bn from '../content/posts-meta-bn.json';
+import relatedLinksBn from '../content/related-links-bn.json';
+import topicsData from '../content/topics.json';
 const _bnModules = postsMeta_bn;
 // Full article text is loaded on demand (one small chunk per post) instead of bundling all posts.
 const _postLoaders = import.meta.glob('../content/posts/bn/*.json', { import: 'default' });
@@ -597,6 +599,13 @@ const BlogPostBnInner = () => {
     const calcIdx = calcCfg ? calculatorSectionIndex(post.slug, post.sections) : -1;
     const pillarInfo = resolveMasterPillar(post, 'bn');
     const quickTable = resolveQuickAnswerTable(post, 'bn');
+    const relEntry = relatedLinksBn[post.slug];
+    const hubTopic = topicsData.find(t => t.slug === relEntry?.h) || topicsData[0];
+    const relatedCrossPosts = (relEntry?.r || [])
+        .map(s => allBnPosts.find(p => p.slug === s))
+        .filter(Boolean);
+    const inlineCrossPosts = relatedCrossPosts.slice(0, 3);
+    const footerCrossPosts = relatedCrossPosts.slice(3, 6);
 
 
     // HowTo schema — generated from sections if they contain numbered steps
@@ -723,8 +732,12 @@ const BlogPostBnInner = () => {
                             <li><Link to="/" style={{ color: '#E2E8F0', textDecoration: 'none', fontWeight: 500 }}>হোম</Link></li>
                             <li style={{ opacity: 0.6, color: '#94A3B8' }}>&gt;</li>
                             <li><Link to="/bn/blog" style={{ color: '#E2E8F0', textDecoration: 'none', fontWeight: 500 }}>ব্লগ</Link></li>
-                            <li style={{ opacity: 0.6, color: '#94A3B8' }}>&gt;</li>
-                            <li style={{ color: '#5EEAD4', fontWeight: 700 }}>{post.category}</li>
+                            {hubTopic && (
+                                <>
+                                    <li style={{ opacity: 0.6, color: '#94A3B8' }}>&gt;</li>
+                                    <li><Link to={`/bn/blog/topic/${hubTopic.slug}`} style={{ color: '#5EEAD4', textDecoration: 'none', fontWeight: 700 }}>{hubTopic.shortBn || hubTopic.bn}</Link></li>
+                                </>
+                            )}
                         </ol>
                     </nav>
 
@@ -780,6 +793,7 @@ const BlogPostBnInner = () => {
                                     alt={`${post.title} — ${post.category}`}
                                     style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block' }}
                                     loading="eager"
+                                    fetchPriority="high"
                                     width="600"
                                     height="315"
                                 />
@@ -1012,6 +1026,24 @@ const BlogPostBnInner = () => {
                                                 />
                                             </section>
 
+                                            {/* Cross-cluster contextual reference links after opening section */}
+                                            {i === 0 && inlineCrossPosts.length > 0 && (
+                                                <aside aria-label="সংশ্লিষ্ট আইনি গাইড" style={{ margin: '1.75rem 0 2.5rem', padding: '1.15rem 1.35rem', borderRadius: '0.95rem', background: 'var(--surface)', border: '1px solid var(--card-border)', borderLeft: '4px solid var(--accent)' }}>
+                                                    <div style={{ fontSize: '0.85rem', fontWeight: 800, color: 'var(--accent)', marginBottom: '0.65rem', fontFamily: "'Noto Serif Bengali', 'Noto Sans Bengali', sans-serif" }}>
+                                                        সংশ্লিষ্ট আইনি প্রক্রিয়া ও নির্দেশিকা
+                                                    </div>
+                                                    <ul style={{ margin: 0, paddingLeft: '1.15rem', display: 'flex', flexDirection: 'column', gap: '0.45rem', fontSize: '0.95rem', lineHeight: 1.65, fontFamily: "'Noto Serif Bengali', 'Noto Sans Bengali', sans-serif" }}>
+                                                        {inlineCrossPosts.map(rp => (
+                                                            <li key={rp.slug}>
+                                                                <Link to={`/bn/blog/${rp.slug}`} style={{ color: 'var(--accent)', fontWeight: 600, textDecoration: 'underline', textUnderlineOffset: '3px' }}>
+                                                                    {rp.title}
+                                                                </Link>
+                                                            </li>
+                                                        ))}
+                                                    </ul>
+                                                </aside>
+                                            )}
+
                                             {/* Mid-article lead capture at center */}
                                             {i === Math.floor(((post.sections || []).length - 1) / 2) && (
                                                 <MidArticleLeadCapture lang="bn" />
@@ -1120,6 +1152,38 @@ const BlogPostBnInner = () => {
                                             ))}
                                         </div>
                                     </div>
+                                )}
+
+                                {/* Post-FAQ Related Articles + Cluster Hub Block */}
+                                {(footerCrossPosts.length > 0 || hubTopic) && (
+                                    <section aria-label="সংশ্লিষ্ট নিবন্ধ" style={{ margin: '2rem 0 2.5rem', padding: '1.35rem 1.5rem', borderRadius: '1rem', background: 'var(--surface)', border: '1.5px solid var(--card-border)', fontFamily: "'Noto Serif Bengali', 'Noto Sans Bengali', sans-serif" }}>
+                                        <h2 style={{ fontSize: '1.05rem', fontWeight: 800, color: 'var(--text)', margin: '0 0 0.9rem' }}>
+                                            সংশ্লিষ্ট আইনি নিবন্ধ ও সেবা
+                                        </h2>
+                                        <ul style={{ margin: 0, paddingLeft: '1.15rem', display: 'flex', flexDirection: 'column', gap: '0.55rem', fontSize: '0.95rem', lineHeight: 1.65 }}>
+                                            {footerCrossPosts.map(rp => (
+                                                <li key={rp.slug}>
+                                                    <Link to={`/bn/blog/${rp.slug}`} style={{ color: 'var(--accent)', fontWeight: 600, textDecoration: 'underline', textUnderlineOffset: '3px' }}>
+                                                        {rp.title}
+                                                    </Link>
+                                                </li>
+                                            ))}
+                                            {hubTopic && (
+                                                <>
+                                                    <li>
+                                                        <Link to={`/bn/blog/topic/${hubTopic.slug}`} style={{ color: 'var(--text)', fontWeight: 700, textDecoration: 'underline', textUnderlineOffset: '3px' }}>
+                                                            সব {hubTopic.bn} দেখুন
+                                                        </Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link to={`/bn/services/${hubTopic.service}`} style={{ color: 'var(--accent)', fontWeight: 700, textDecoration: 'underline', textUnderlineOffset: '3px' }}>
+                                                            ঢাকায় {hubTopic.serviceBn}-এর পরামর্শ নিন
+                                                        </Link>
+                                                    </li>
+                                                </>
+                                            )}
+                                        </ul>
+                                    </section>
                                 )}
 
                                 {/* CTA Form */}

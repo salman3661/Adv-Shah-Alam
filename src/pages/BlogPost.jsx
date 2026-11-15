@@ -22,6 +22,8 @@ import { sanitizeHtml, formatHeroIntro } from '../utils/sanitizeHtml';
 
 /* ── Load all EN posts ── */
 import postsMeta_en from '../content/posts-meta-en.json';
+import relatedLinksEn from '../content/related-links-en.json';
+import topicsData from '../content/topics.json';
 const _postModules = postsMeta_en;
 // Full article text is loaded on demand (one small chunk per post) instead of bundling all posts.
 const _postLoaders = import.meta.glob('../content/posts/en/*.json', { import: 'default' });
@@ -554,6 +556,13 @@ const BlogPostInner = () => {
     const calcIdx = calcCfg ? calculatorSectionIndex(post.slug, post.sections) : -1;
     const pillarInfo = resolveMasterPillar(post, 'en');
     const quickTable = resolveQuickAnswerTable(post, 'en');
+    const relEntry = relatedLinksEn[post.slug];
+    const hubTopic = topicsData.find(t => t.slug === relEntry?.h) || topicsData[0];
+    const relatedCrossPosts = (relEntry?.r || [])
+        .map(s => allPosts.find(p => p.slug === s))
+        .filter(Boolean);
+    const inlineCrossPosts = relatedCrossPosts.slice(0, 3);
+    const footerCrossPosts = relatedCrossPosts.slice(3, 6);
 
     // Modernize in-article consultation CTA boxes: remove cheap emojis, apply executive legal styling
     const formatArticleContent = (html) => {
@@ -657,11 +666,15 @@ const BlogPostInner = () => {
                     {/* Breadcrumb */}
                     <nav aria-label="Breadcrumb" style={{ marginBottom: '0.75rem' }}>
                         <ol style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', listStyle: 'none', padding: 0, margin: 0, fontSize: '0.8rem', flexWrap: 'wrap' }}>
-                            <li><Link to="/" style={{ color: '#E2E8F0', textDecoration: 'none', fontWeight: 500 }}>Home</Link></li>
+                            <li><Link to="/en" style={{ color: '#E2E8F0', textDecoration: 'none', fontWeight: 500 }}>Home</Link></li>
                             <li style={{ opacity: 0.6, color: '#94A3B8' }}>&gt;</li>
                             <li><Link to="/blog" style={{ color: '#E2E8F0', textDecoration: 'none', fontWeight: 500 }}>Blog</Link></li>
-                            <li style={{ opacity: 0.6, color: '#94A3B8' }}>&gt;</li>
-                            <li style={{ color: '#5EEAD4', fontWeight: 700 }}>{post.category}</li>
+                            {hubTopic && (
+                                <>
+                                    <li style={{ opacity: 0.6, color: '#94A3B8' }}>&gt;</li>
+                                    <li><Link to={`/blog/topic/${hubTopic.slug}`} style={{ color: '#5EEAD4', textDecoration: 'none', fontWeight: 700 }}>{hubTopic.shortEn || hubTopic.en}</Link></li>
+                                </>
+                            )}
                         </ol>
                     </nav>
 
@@ -727,6 +740,7 @@ const BlogPostInner = () => {
                                     alt={`${post.title} — ${post.category}`}
                                     style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block' }}
                                     loading="eager"
+                                    fetchPriority="high"
                                     width="600"
                                     height="315"
                                 />
@@ -965,6 +979,24 @@ const BlogPostInner = () => {
                                                 />
                                             </section>
 
+                                            {/* Cross-cluster contextual reference links after opening section */}
+                                            {i === 0 && inlineCrossPosts.length > 0 && (
+                                                <aside aria-label="Related Bangladesh Legal Guides" style={{ margin: '1.75rem 0 2.5rem', padding: '1.15rem 1.35rem', borderRadius: '0.95rem', background: 'var(--surface)', border: '1px solid var(--card-border)', borderLeft: '4px solid var(--accent)' }}>
+                                                    <div style={{ fontSize: '0.82rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.06em', color: 'var(--accent)', marginBottom: '0.65rem' }}>
+                                                        Related Statutory Procedures &amp; Guides
+                                                    </div>
+                                                    <ul style={{ margin: 0, paddingLeft: '1.15rem', display: 'flex', flexDirection: 'column', gap: '0.45rem', fontSize: '0.94rem', lineHeight: 1.6 }}>
+                                                        {inlineCrossPosts.map(rp => (
+                                                            <li key={rp.slug}>
+                                                                <Link to={`/blog/${rp.slug}`} style={{ color: 'var(--accent)', fontWeight: 600, textDecoration: 'underline', textUnderlineOffset: '3px' }}>
+                                                                    {rp.title}
+                                                                </Link>
+                                                            </li>
+                                                        ))}
+                                                    </ul>
+                                                </aside>
+                                            )}
+
                                             {/* Mid-article lead capture at exact center section */}
                                             {i === Math.floor(((post.sections || []).length - 1) / 2) && (
                                                 <MidArticleLeadCapture lang="en" />
@@ -1005,6 +1037,38 @@ const BlogPostInner = () => {
                                             {post.faqs.map((faq, i) => <FAQItem key={i} index={i} question={faq.question || faq.q} answer={faq.answer || faq.a} />)}
                                         </div>
                                     </div>
+                                )}
+
+                                {/* Post-FAQ Related Articles + Cluster Hub Block */}
+                                {(footerCrossPosts.length > 0 || hubTopic) && (
+                                    <section aria-label="Related Articles" style={{ margin: '2rem 0 2.5rem', padding: '1.35rem 1.5rem', borderRadius: '1rem', background: 'var(--surface)', border: '1.5px solid var(--card-border)' }}>
+                                        <h2 style={{ fontSize: '1.05rem', fontWeight: 800, color: 'var(--text)', margin: '0 0 0.9rem' }}>
+                                            Related Legal Guides &amp; Practice Areas
+                                        </h2>
+                                        <ul style={{ margin: 0, paddingLeft: '1.15rem', display: 'flex', flexDirection: 'column', gap: '0.55rem', fontSize: '0.95rem', lineHeight: 1.6 }}>
+                                            {footerCrossPosts.map(rp => (
+                                                <li key={rp.slug}>
+                                                    <Link to={`/blog/${rp.slug}`} style={{ color: 'var(--accent)', fontWeight: 600, textDecoration: 'underline', textUnderlineOffset: '3px' }}>
+                                                        {rp.title}
+                                                    </Link>
+                                                </li>
+                                            ))}
+                                            {hubTopic && (
+                                                <>
+                                                    <li>
+                                                        <Link to={`/blog/topic/${hubTopic.slug}`} style={{ color: 'var(--text)', fontWeight: 700, textDecoration: 'underline', textUnderlineOffset: '3px' }}>
+                                                            Explore all {hubTopic.en}
+                                                        </Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link to={`/services/${hubTopic.service}`} style={{ color: 'var(--accent)', fontWeight: 700, textDecoration: 'underline', textUnderlineOffset: '3px' }}>
+                                                            Consult {hubTopic.serviceEn} in Dhaka
+                                                        </Link>
+                                                    </li>
+                                                </>
+                                            )}
+                                        </ul>
+                                    </section>
                                 )}
 
                                 {/* CTA Form */}

@@ -40,6 +40,30 @@ const about    = JSON.parse(fs.readFileSync(path.join(ROOT,'src','content','abou
 const hero     = JSON.parse(fs.readFileSync(path.join(ROOT,'src','content','hero.json'),'utf8'));
 const aboutBn  = JSON.parse(fs.readFileSync(path.join(ROOT,'src','content','about_bn.json'),'utf8'));
 const heroBn   = JSON.parse(fs.readFileSync(path.join(ROOT,'src','content','hero_bn.json'),'utf8'));
+const topics   = JSON.parse(fs.readFileSync(path.join(ROOT,'src','content','topics.json'),'utf8'));
+const pageHeadings = JSON.parse(fs.readFileSync(path.join(ROOT,'src','content','pageHeadings.json'),'utf8'));
+const relatedEn = JSON.parse(fs.readFileSync(path.join(ROOT,'src','content','related-links-en.json'),'utf8'));
+const relatedBn = JSON.parse(fs.readFileSync(path.join(ROOT,'src','content','related-links-bn.json'),'utf8'));
+
+function coverFor(category = '') {
+  const c = String(category);
+  const rules = [
+    ['cyber', /সাইবার|cyber/i],
+    ['criminal', /ফৌজদারি|criminal/i],
+    ['immigration', /অভিবাসন|প্রবাসী|immigration|citizenship|nrb|overseas/i],
+    ['family', /পারিবারিক|family/i],
+    ['land', /ভূমি|সম্পত্তি|জমি|land|property|real estate|inheritance/i],
+    ['business', /কর |কর$|corporate|business|company|banking|commercial|tax|finance/i],
+    ['civil', /দেওয়ানি|civil|litigation|procedure|supreme|constitutional|document/i],
+  ];
+  for (const [k, re] of rules) if (re.test(c)) return `/images/covers/${k}.webp`;
+  return '/images/covers/general.webp';
+}
+
+function freshnessTs(post) {
+  const t = (d) => (d ? new Date(d).getTime() || 0 : 0);
+  return Math.max(t(post.publishedAt), t(post.publishedDate), t(post.lastModified));
+}
 
 // ── Redirect Sources from vercel.json (Filter out redirected pages) ──────────
 const vercelConfig = jsonLoad(path.join(ROOT, 'vercel.json')) || {};
@@ -253,7 +277,18 @@ function buildPillarAndTableHtml(post, lang) {
 }
 
 // ── blog post body builder ───────────────────────────────────────────────────
-function buildPostBody(post) {
+function buildPostBody(post, postBySlug = new Map()) {
+  const rel = relatedEn[post.slug] || {};
+  const hubTopic = topics.find(t => t.slug === rel.h) || topics[0];
+  const crossPosts = (rel.r || []).map(s => postBySlug.get(s)).filter(Boolean);
+  const inlineCross = crossPosts.slice(0, 3);
+  const footerCross = crossPosts.slice(3, 6);
+
+  const inlineCrossHtml = inlineCross.length ? `<aside aria-label="Related Bangladesh Legal Guides" style="margin:20px 0 28px;padding:16px 20px;background:#F7F8FA;border-radius:10px;border:1px solid #E2E8F0;border-left:4px solid #132A4A">
+    <strong style="display:block;font-size:13px;text-transform:uppercase;letter-spacing:0.05em;color:#132A4A;margin-bottom:8px">Related Statutory Procedures &amp; Guides</strong>
+    <ul style="margin:0;padding-left:20px;line-height:1.8">${inlineCross.map(rp => `<li><a href="/blog/${rp.slug}" style="color:#1a56db;font-weight:600">${escHtml(rp.title)}</a></li>`).join('')}</ul>
+  </aside>` : '';
+
   const toc = (post.toc||[]).length ? `<nav style="background:#f4f6fb;padding:16px 20px;border-radius:8px;margin-bottom:28px">
     <strong>📋 In This Article</strong>
     <ol style="margin-top:8px;padding-left:20px">
@@ -265,12 +300,14 @@ function buildPostBody(post) {
 
   const midIndex = Math.floor(((post.sections || []).length - 1) / 2);
   const sections = (post.sections||[]).map((s,i)=>{
-    const secHtml = `
+    let secHtml = `
     <section id="s${i}" style="margin-bottom:32px">
       <h2 style="font-size:22px;font-weight:700;margin-bottom:12px;color:#111">${escHtml(s.h2 || s.heading || s.title || '')}</h2>
       <div style="font-size:15px;color:#333">${s.content||''}</div>
     </section>`;
-    return (i === midIndex && (post.sections || []).length >= 2) ? secHtml + MID_ARTICLE_LEAD_EN : secHtml;
+    if (i === 0 && inlineCrossHtml) secHtml += inlineCrossHtml;
+    if (i === midIndex && (post.sections || []).length >= 2) secHtml += MID_ARTICLE_LEAD_EN;
+    return secHtml;
   }).join('');
 
   const faqs = (post.faqs||[]).length ? `<section style="margin-top:32px">
@@ -280,11 +317,20 @@ function buildPostBody(post) {
       <p style="margin:6px 0 0;color:#444;font-size:14px">${escHtml(f.answer || f.a || '')}</p></div>`).join('')}
     </section>` : '';
 
+  const relatedArticlesHtml = (footerCross.length || hubTopic) ? `<section aria-label="Related Articles" style="margin-top:28px;padding:18px 20px;background:#F7F8FA;border-radius:10px;border:1px solid #CBD5E1">
+    <h2 style="font-size:18px;font-weight:700;margin-bottom:10px;color:#0B1220">Related Legal Guides &amp; Practice Areas</h2>
+    <ul style="margin:0;padding-left:20px;line-height:1.85">
+      ${footerCross.map(rp => `<li><a href="/blog/${rp.slug}" style="color:#1a56db;font-weight:600">${escHtml(rp.title)}</a></li>`).join('')}
+      ${hubTopic ? `<li><a href="/blog/topic/${hubTopic.slug}" style="color:#0B1220;font-weight:700">Explore all ${escHtml(hubTopic.en)}</a></li>
+      <li><a href="/services/${hubTopic.service}" style="color:#1a56db;font-weight:700">Consult ${escHtml(hubTopic.serviceEn)} in Dhaka</a></li>` : ''}
+    </ul>
+  </section>` : '';
+
   const directAnswerText = (post.directAnswer || (post.heroIntro || '').replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim()).split(/\s+/).slice(0, 58).join(' ');
   const directAnswer = directAnswerText ? `<p class="direct-answer"><strong>Quick Legal Answer:</strong> ${escHtml(directAnswerText)}${directAnswerText.endsWith('.') ? '' : '...'}</p>` : '';
 
   const breadcrumbNav = `<nav aria-label="Breadcrumb" style="font-size:13px;color:#475569;margin-bottom:14px">
-    <a href="/en" style="color:#132A4A">Home</a> &rsaquo; <a href="/blog" style="color:#132A4A">Blog</a> &rsaquo; <span>${escHtml(post.title)}</span>
+    <a href="/en" style="color:#132A4A">Home</a> &rsaquo; <a href="/blog" style="color:#132A4A">Blog</a>${hubTopic ? ` &rsaquo; <a href="/blog/topic/${hubTopic.slug}" style="color:#132A4A;font-weight:700">${escHtml(hubTopic.shortEn || hubTopic.en)}</a>` : ''}
   </nav>`;
 
   return `${breadcrumbNav}
@@ -293,15 +339,28 @@ function buildPostBody(post) {
 ${directAnswer}
 ${DISCLAIMER}
 <p style="font-size:16px;color:#333;margin-bottom:24px">${escHtml(post.heroIntro||'')}</p>
-${buildPillarAndTableHtml(post, 'en')}${toc}${sections}${faqs}
+<article>
+${buildPillarAndTableHtml(post, 'en')}${toc}${sections}${faqs}${relatedArticlesHtml}${CONCLUSION_DISCLAIMER_EN}
+</article>
 <section style="margin-top:32px;padding:18px;background:#F7F8FA;border-radius:8px;border:1px solid #E2E8F0">
   <h2 style="font-size:18px;font-weight:700;margin-bottom:10px;color:#0B1220">Related Legal Resources &amp; Services</h2>
   <p style="font-size:14px;line-height:1.8"><a href="/services/criminal-lawyer">Criminal Defense</a> &middot; <a href="/services/bail-lawyer">Bail &amp; Anticipatory Bail</a> &middot; <a href="/services/divorce-lawyer">Divorce &amp; Family Law</a> &middot; <a href="/services/land-lawyer">Land &amp; Property Law</a> &middot; <a href="/nrb-legal-help">NRB Legal Help</a> &middot; <a href="/contact">Book Consultation</a></p>
 </section>
-${CONCLUSION_DISCLAIMER_EN}${CTA}`;
+${CTA}`;
 }
 
-function buildBnPostBody(post) {
+function buildBnPostBody(post, postBySlug = new Map()) {
+  const rel = relatedBn[post.slug] || {};
+  const hubTopic = topics.find(t => t.slug === rel.h) || topics[0];
+  const crossPosts = (rel.r || []).map(s => postBySlug.get(s)).filter(Boolean);
+  const inlineCross = crossPosts.slice(0, 3);
+  const footerCross = crossPosts.slice(3, 6);
+
+  const inlineCrossHtml = inlineCross.length ? `<aside aria-label="সংশ্লিষ্ট আইনি গাইড" style="margin:20px 0 28px;padding:16px 20px;background:#F7F8FA;border-radius:10px;border:1px solid #E2E8F0;border-left:4px solid #132A4A">
+    <strong style="display:block;font-size:14px;color:#132A4A;margin-bottom:8px">সংশ্লিষ্ট আইনি প্রক্রিয়া ও নির্দেশিকা</strong>
+    <ul style="margin:0;padding-left:20px;line-height:1.8">${inlineCross.map(rp => `<li><a href="/bn/blog/${rp.slug}" style="color:#1a56db;font-weight:600">${escHtml(rp.title)}</a></li>`).join('')}</ul>
+  </aside>` : '';
+
   const quickAns = post.quickAnswer ? `<div style="background:#f0fdf4;border-left:4px solid #16a34a;padding:16px 20px;border-radius:8px;margin-bottom:28px">
     <strong style="color:#166534;font-size:16px">${escHtml(post.quickAnswer.heading || '⚡ এক নজরে')}</strong>
     <ul style="margin-top:8px;padding-left:20px;color:#14532d;line-height:1.8">
@@ -320,12 +379,14 @@ function buildBnPostBody(post) {
 
   const midIndex = Math.floor(((post.sections || []).length - 1) / 2);
   const sections = (post.sections || []).map((s, i) => {
-    const secHtml = `
+    let secHtml = `
     <section id="s${i}" style="margin-bottom:32px">
       <h2 style="font-size:22px;font-weight:700;margin-bottom:12px;color:#111">${escHtml(s.heading || s.h2 || s.title || '')}</h2>
       <div style="font-size:15px;color:#333;line-height:1.8">${s.content || ''}</div>
     </section>`;
-    return (i === midIndex && (post.sections || []).length >= 2) ? secHtml + MID_ARTICLE_LEAD_BN : secHtml;
+    if (i === 0 && inlineCrossHtml) secHtml += inlineCrossHtml;
+    if (i === midIndex && (post.sections || []).length >= 2) secHtml += MID_ARTICLE_LEAD_BN;
+    return secHtml;
   }).join('');
 
   const faqs = (post.faqs || []).length ? `<section style="margin-top:32px">
@@ -335,11 +396,20 @@ function buildBnPostBody(post) {
       <p style="margin:6px 0 0;color:#444;font-size:14px;line-height:1.7">${escHtml(f.answer || f.a || '')}</p></div>`).join('')}
     </section>` : '';
 
+  const relatedArticlesHtmlBn = (footerCross.length || hubTopic) ? `<section aria-label="সংশ্লিষ্ট নিবন্ধ" style="margin-top:28px;padding:18px 20px;background:#F7F8FA;border-radius:10px;border:1px solid #CBD5E1">
+    <h2 style="font-size:18px;font-weight:700;margin-bottom:10px;color:#0B1220">সংশ্লিষ্ট আইনি নিবন্ধ ও সেবা</h2>
+    <ul style="margin:0;padding-left:20px;line-height:1.9">
+      ${footerCross.map(rp => `<li><a href="/bn/blog/${rp.slug}" style="color:#1a56db;font-weight:600">${escHtml(rp.title)}</a></li>`).join('')}
+      ${hubTopic ? `<li><a href="/bn/blog/topic/${hubTopic.slug}" style="color:#0B1220;font-weight:700">সব ${escHtml(hubTopic.bn)} দেখুন</a></li>
+      <li><a href="/bn/services/${hubTopic.service}" style="color:#1a56db;font-weight:700">ঢাকায় ${escHtml(hubTopic.serviceBn)}-এর পরামর্শ নিন</a></li>` : ''}
+    </ul>
+  </section>` : '';
+
   const directAnswerBnText = (post.directAnswer || (post.heroIntro || '').replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim()).split(/\s+/).slice(0, 58).join(' ');
   const directAnswerBn = directAnswerBnText ? `<p class="direct-answer"><strong>সংক্ষিপ্ত আইনি উত্তর:</strong> ${escHtml(directAnswerBnText)}${directAnswerBnText.endsWith('।') ? '' : '...'}</p>` : '';
 
   const breadcrumbNavBn = `<nav aria-label="Breadcrumb" style="font-size:13px;color:#475569;margin-bottom:14px">
-    <a href="/" style="color:#132A4A">হোম</a> &rsaquo; <a href="/bn/blog" style="color:#132A4A">বাংলা ব্লগ</a> &rsaquo; <span>${escHtml(post.title || '')}</span>
+    <a href="/" style="color:#132A4A">হোম</a> &rsaquo; <a href="/bn/blog" style="color:#132A4A">বাংলা ব্লগ</a>${hubTopic ? ` &rsaquo; <a href="/bn/blog/topic/${hubTopic.slug}" style="color:#132A4A;font-weight:700">${escHtml(hubTopic.shortBn || hubTopic.bn)}</a>` : ''}
   </nav>`;
 
   return `${breadcrumbNavBn}
@@ -348,12 +418,14 @@ function buildBnPostBody(post) {
 ${directAnswerBn}
 ${BN_DISCLAIMER}
 <p style="font-size:16px;color:#333;margin-bottom:24px;line-height:1.8">${escHtml(post.heroIntro || '')}</p>
-${buildPillarAndTableHtml(post, 'bn')}${quickAns}${toc}${sections}${faqs}
+<article>
+${buildPillarAndTableHtml(post, 'bn')}${quickAns}${toc}${sections}${faqs}${relatedArticlesHtmlBn}${CONCLUSION_DISCLAIMER_BN}
+</article>
 <section style="margin-top:32px;padding:18px;background:#F7F8FA;border-radius:8px;border:1px solid #E2E8F0">
   <h2 style="font-size:18px;font-weight:700;margin-bottom:10px;color:#0B1220">সংশ্লিষ্ট আইনি সেবা ও পরামর্শ</h2>
   <p style="font-size:14px;line-height:1.8"><a href="/bn/services/criminal-lawyer">ফৌজদারি আইনজীবী</a> &middot; <a href="/bn/services/bail-lawyer">জামিন আইনজীবী</a> &middot; <a href="/bn/services/divorce-lawyer">তালাক ও পারিবারিক আইন</a> &middot; <a href="/bn/services/land-lawyer">জমি ও সম্পত্তি আইন</a> &middot; <a href="/nrb-legal-help">প্রবাসী (NRB) আইনি সহায়তা</a> &middot; <a href="/bn/contact">চেম্বারে যোগাযোগ</a></p>
 </section>
-${CONCLUSION_DISCLAIMER_BN}${BN_CTA}`;
+${BN_CTA}`;
 }
 
 // ── service page lookup ──────────────────────────────────────────────────────
@@ -478,7 +550,9 @@ function getServiceMeta(slug) {
 </ul>`,
     },
   };
-  return map[slug] || null;
+  const out = map[slug] || null;
+  if (out && pageHeadings.servicesEn[slug]) out.h1 = pageHeadings.servicesEn[slug];
+  return out;
 }
 
 function getBnServiceMeta(slug) {
@@ -578,7 +652,9 @@ function getBnServiceMeta(slug) {
 </ul>`,
     },
   };
-  return map[slug] || null;
+  const out = map[slug] || null;
+  if (out && pageHeadings.servicesBn[slug]) out.h1 = pageHeadings.servicesBn[slug];
+  return out;
 }
 
 // ── page-specific content builders ────────────────────────────────────────────
@@ -689,7 +765,7 @@ function advocateBody() {
 <div style="display:flex;flex-wrap:wrap;gap:24px;align-items:center;margin-bottom:28px">
   <img src="/images/hero/hero-md-shah-alam.png" alt="Advocate Md. Shah Alam — Supreme Court Lawyer Bangladesh" width="220" height="223" style="border-radius:16px;border:2px solid #c6a75e;object-fit:cover;box-shadow:0 8px 24px rgba(0,0,0,0.15);max-width:100%;height:auto" />
   <div>
-    <h1 style="font-size:30px;font-weight:700;margin-bottom:8px;color:#0a0a0a">About Advocate Md. Shah Alam — Lawyer in Bangladesh</h1>
+    <h1 style="font-size:30px;font-weight:700;margin-bottom:8px;color:#0a0a0a">${escHtml(pageHeadings.advocate)}</h1>
     <p style="font-size:16px;color:#555;margin-bottom:12px">LL.M (Dhaka International University) | Enrolled: Bangladesh Bar Council | Supreme Court of Bangladesh</p>
     <p style="font-size:14px;color:#777">Supreme Court &amp; Judge Court Advocate with 10+ years of legal practice in Uttara, Dhaka, Bangladesh.</p>
   </div>
@@ -752,26 +828,17 @@ function blogIndexBody(posts, lang='en') {
     return `<a href="${href}" style="padding:6px 12px;border:1px solid #CBD5E1;border-radius:6px;margin:2px;display:inline-block;${n === 1 ? 'background:#132A4A;color:#fff;font-weight:700' : 'color:#132A4A'}">${n}</a>`;
   }).join(' ');
 
-  const topicSlugs = [
-    ['criminal-law', lang === 'bn' ? 'ফৌজদারি আইন' : 'Criminal Law'],
-    ['bail-law', lang === 'bn' ? 'জামিন ও আগাম জামিন' : 'Bail & Anticipatory Bail'],
-    ['divorce-family-law', lang === 'bn' ? 'তালাক ও পারিবারিক আইন' : 'Divorce & Family Law'],
-    ['land-property-law', lang === 'bn' ? 'জমি ও সম্পত্তি আইন' : 'Land & Property Law'],
-    ['supreme-court-writ', lang === 'bn' ? 'সুপ্রিম কোর্ট রিট' : 'Supreme Court Writ'],
-    ['corporate-tax-law', lang === 'bn' ? 'কোম্পানি ও কর্পোরেট কর' : 'Corporate & Tax Law'],
-    ['nrb-immigration-law', lang === 'bn' ? 'প্রবাসী (NRB) আইন' : 'NRB Legal Guides'],
-  ];
-  const topicNav = topicSlugs.map(([s, lbl]) => `<a href="${prefix}/topic/${s}" style="padding:6px 12px;background:#F7F8FA;border:1px solid #CBD5E1;border-radius:6px;margin:3px;display:inline-block;color:#132A4A;font-size:13px;font-weight:600">${lbl}</a>`).join(' ');
+  const topicNav = topics.map(t => `<a href="${prefix}/topic/${t.slug}" style="padding:6px 12px;background:#F7F8FA;border:1px solid #CBD5E1;border-radius:6px;margin:3px;display:inline-block;color:#132A4A;font-size:13px;font-weight:600">${escHtml(lang === 'bn' ? t.shortBn : t.shortEn)}</a>`).join(' ');
 
   if (lang === 'bn') return `
-<h1 style="font-size:28px;font-weight:700;margin-bottom:8px;color:#0B1220">বাংলাদেশের আইনি গাইড — অ্যাডভোকেট মো. শাহ আলম</h1>
+<h1 style="font-size:28px;font-weight:700;margin-bottom:8px;color:#0B1220">${escHtml(pageHeadings.blogBn)}</h1>
 <p style="color:#475569;margin-bottom:16px">বাংলাদেশের আইন বিষয়ক বিস্তারিত নিবন্ধ। ফৌজদারি, তালাক, জামিন, জমি-জমা, কোম্পানি ও সুপ্রিম কোর্ট আইন।</p>
 <nav aria-label="Topics" style="margin-bottom:20px">${topicNav}</nav>
 <ul style="padding-left:0;list-style:none">${listItems}</ul>
 <nav aria-label="Pagination" style="margin-top:24px">${pageNav}</nav>`;
 
   return `
-<h1 style="font-size:28px;font-weight:700;margin-bottom:8px;color:#0B1220">Bangladesh Legal Guide — By Advocate Md. Shah Alam</h1>
+<h1 style="font-size:28px;font-weight:700;margin-bottom:8px;color:#0B1220">${escHtml(pageHeadings.blogEn)}</h1>
 <p style="color:#475569;margin-bottom:16px">Detailed legal articles on Bangladesh criminal law, divorce, bail, property, company law, and Supreme Court procedures — written by an experienced Dhaka lawyer.</p>
 <nav aria-label="Topics" style="margin-bottom:20px">${topicNav}</nav>
 <ul style="padding-left:0;list-style:none">${listItems}</ul>
@@ -780,7 +847,7 @@ function blogIndexBody(posts, lang='en') {
 
 function educationBody() {
   return `
-<h1 style="font-size:28px;font-weight:700;margin-bottom:8px;color:#0a0a0a">Career &amp; Education — Advocate Md. Shah Alam</h1>
+<h1 style="font-size:28px;font-weight:700;margin-bottom:8px;color:#0a0a0a">${escHtml(pageHeadings.education)}</h1>
 <p style="color:#555;margin-bottom:24px">A comprehensive timeline of academic achievements, professional milestones, and legal service to the nation.</p>
 <section style="margin-bottom:28px">
   <h2 style="font-size:22px;font-weight:700;margin-bottom:12px;color:#111">Academic Qualifications</h2>
@@ -814,7 +881,7 @@ ${CTA}`;
 
 function contactBody() {
   return `
-<h1 style="font-size:28px;font-weight:700;margin-bottom:8px;color:#0a0a0a">Contact Advocate Md. Shah Alam — Lawyer in Bangladesh</h1>
+<h1 style="font-size:28px;font-weight:700;margin-bottom:8px;color:#0a0a0a">${escHtml(pageHeadings.contactEn)}</h1>
 <p style="color:#555;margin-bottom:20px">Trusted lawyer in Uttara, Dhaka — available for criminal, divorce, bail, property &amp; corporate cases.</p>
 <h2 style="font-size:20px;font-weight:700;margin:20px 0 10px">Chamber Locations</h2>
 <ul style="padding-left:20px;color:#333;line-height:2.2">
@@ -837,7 +904,7 @@ function contactBody() {
 
 function contactBodyBn() {
   return `
-<h1 style="font-size:28px;font-weight:700;margin-bottom:8px;color:#0a0a0a">যোগাযোগ ও চেম্বার অ্যাপয়েন্টমেন্ট — অ্যাডভোকেট মো. শাহ আলম</h1>
+<h1 style="font-size:28px;font-weight:700;margin-bottom:8px;color:#0a0a0a">${escHtml(pageHeadings.contactBn)}</h1>
 <p style="color:#555;margin-bottom:20px">উত্তরা ও ঢাকা জজ কোর্টে সরাসরি আইনি পরামর্শ ও মামলা পরিচালনার জন্য অ্যাপয়েন্টমেন্ট বুকিং করুন।</p>
 <h2 style="font-size:20px;font-weight:700;margin:20px 0 10px">চেম্বার ঠিকানা</h2>
 <ul style="padding-left:20px;color:#333;line-height:2.2">
@@ -855,7 +922,7 @@ function contactBodyBn() {
 }
 
 function privacyBody() {
-  return `<h1 style="font-size:30px;font-weight:700;margin-bottom:12px;color:#0f172a">Privacy Policy | Advocate Md. Shah Alam</h1>
+  return `<h1 style="font-size:30px;font-weight:700;margin-bottom:12px;color:#0f172a">${escHtml(pageHeadings.privacy)}</h1>
 <p style="color:#64748b;font-size:14px;margin-bottom:24px">Last updated: May 18, 2026</p>
 <div style="font-size:15px;color:#334155;line-height:1.8">
   <h2 style="font-size:20px;font-weight:700;margin:24px 0 10px;color:#0f172a">1. Introduction</h2>
@@ -887,7 +954,7 @@ function privacyBody() {
 }
 
 function termsBody() {
-  return `<h1 style="font-size:30px;font-weight:700;margin-bottom:12px;color:#0f172a">Terms &amp; Conditions | Advocate Md. Shah Alam</h1>
+  return `<h1 style="font-size:30px;font-weight:700;margin-bottom:12px;color:#0f172a">${escHtml(pageHeadings.terms)}</h1>
 <p style="color:#64748b;font-size:14px;margin-bottom:24px">Last updated: May 12, 2026</p>
 <div style="font-size:15px;color:#334155;line-height:1.8">
   <h2 style="font-size:20px;font-weight:700;margin:24px 0 10px;color:#0f172a">1. Acceptance of Terms</h2>
@@ -1211,7 +1278,7 @@ ${buildInstitutionalSchema(`${BASE}/bn/contact`, 'bn', [{ name: 'হোম', ite
       lang: 'bn',
       extraHead,
       body: `<div style="max-width:500px;margin:40px auto;text-align:center;padding:30px;background:#fff;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.08)">
-        <h1 style="font-size:24px;font-weight:700;margin-bottom:12px">আইনি সেবায় আপনি কি সন্তুষ্ট?</h1>
+        <h1 style="font-size:24px;font-weight:700;margin-bottom:12px">${escHtml(pageHeadings.review)}</h1>
         <p style="color:#555;margin-bottom:20px">অ্যাডভোকেট মো. শাহ আলম স্যারের আইনি পরামর্শ ও সহায়তায় আপনার অভিজ্ঞতা কেমন ছিল? গুগলে আপনার মূল্যবান ২ মিনিটের মতামত শেয়ার করুন।</p>
         <div style="font-size:28px;color:#f59e0b;margin-bottom:20px">★★★★★</div>
         <a href="https://maps.app.goo.gl/M3NXMwW3xkp2TE3h8" style="display:inline-block;padding:12px 28px;background:#1a56db;color:#fff;text-decoration:none;border-radius:8px;font-weight:700">সরাসরি গুগলে ৫-স্টার রিভিউ দিন</a>
@@ -1232,7 +1299,7 @@ ${buildInstitutionalSchema(`${BASE}/bn/contact`, 'bn', [{ name: 'হোম', ite
       lang: 'en',
       extraHead,
       body: `<nav aria-label="Breadcrumb" style="font-size:13px;color:#475569;margin-bottom:14px"><a href="/en" style="color:#132A4A">Home</a> &rsaquo; <span>NRB Legal Help</span></nav>
-<h1 style="font-size:30px;font-weight:700;margin-bottom:8px;color:#0B1220">NRB Legal Services Hub &amp; Remote Representation in Bangladesh</h1>
+<h1 style="font-size:30px;font-weight:700;margin-bottom:8px;color:#0B1220">${escHtml(pageHeadings.nrb)}</h1>
 <p class="direct-answer"><strong>Quick Summary:</strong> Non-Resident Bangladeshis (NRBs) in the UK, USA, Canada, UAE, and Europe can resolve land disputes, execute Embassy-attested Power of Attorney (PoA), verify khatian/deeds, file divorce/custody suits, and defend criminal/cheque cases in Bangladesh remotely through Advocate Md. Shah Alam without flying to Dhaka.</p>
 <section style="margin:24px 0">
   <h2 style="font-size:22px;font-weight:700;color:#0B1220;margin-bottom:12px">Core NRB Legal Services</h2>
@@ -1309,7 +1376,7 @@ ${buildServiceSchema(`${BASE}/services/${slug}`, meta.h1, meta.desc, 'en')}`;
         title: meta.title,
         description: meta.desc,
         canonical: `${BASE}/services/${slug}`,
-        body: `<h1 style="font-size:28px;font-weight:700;margin-bottom:16px;color:#0a0a0a">${meta.h1}</h1>
+        body: `<h1 style="font-size:28px;font-weight:700;margin-bottom:16px;color:#0a0a0a">${escHtml(meta.h1)}</h1>
 ${DISCLAIMER}${meta.body}${CTA}`,
         lang: 'en',
         extraHead,
@@ -1328,7 +1395,7 @@ ${buildServiceSchema(`${BASE}/bn/services/${slug}`, bnMeta.h1, bnMeta.desc, 'bn'
         title: bnMeta.title,
         description: bnMeta.desc,
         canonical: `${BASE}/bn/services/${slug}`,
-        body: `<h1 style="font-size:28px;font-weight:700;margin-bottom:16px;color:#0a0a0a">${bnMeta.h1}</h1>
+        body: `<h1 style="font-size:28px;font-weight:700;margin-bottom:16px;color:#0a0a0a">${escHtml(bnMeta.h1)}</h1>
 ${BN_DISCLAIMER}${bnMeta.body}${BN_CTA}`,
         lang: 'bn',
         extraHead,
@@ -1338,22 +1405,35 @@ ${BN_DISCLAIMER}${bnMeta.body}${BN_CTA}`,
     }
   }
 
+  // ── Vite manifest (for per-post chunk modulepreload) ───────────────────────
+  const manifestPath = path.join(DIST, '.vite', 'manifest.json');
+  const viteManifest = fs.existsSync(manifestPath) ? (jsonLoad(manifestPath) || {}) : {};
+  function postChunkFor(langKey, slug) {
+    const key = `src/content/posts/${langKey}/${slug}.json`;
+    return viteManifest[key]?.file || null;
+  }
+
   // ── Blog indexes ───────────────────────────────────────────────────────────
   console.log('\n📋 Pre-rendering blog indexes...');
   const enFiles = fs.readdirSync(EN_DIR).filter(f => f.endsWith('.json'));
   const enPosts = enFiles
     .map(f => jsonLoad(path.join(EN_DIR, f)))
-    .filter(p => p && p.slug && !p.isDraft && !redirectSources.has('/blog/' + p.slug));
+    .filter(p => p && p.slug && !p.isDraft && !p._draft && !redirectSources.has('/blog/' + p.slug))
+    .sort((a, b) => freshnessTs(b) - freshnessTs(a) || a.slug.localeCompare(b.slug));
+  const enPostBySlug = new Map(enPosts.map(p => [p.slug, p]));
 
   const bnFiles = fs.readdirSync(BN_DIR).filter(f => f.endsWith('.json'));
   const bnPosts = bnFiles
     .map(f => jsonLoad(path.join(BN_DIR, f)))
-    .filter(p => p && p.slug && !p.isDraft && !redirectSources.has('/bn/blog/' + p.slug));
+    .filter(p => p && p.slug && !p.isDraft && !p._draft && !redirectSources.has('/bn/blog/' + p.slug))
+    .sort((a, b) => freshnessTs(b) - freshnessTs(a) || a.slug.localeCompare(b.slug));
+  const bnPostBySlug = new Map(bnPosts.map(p => [p.slug, p]));
 
   {
+    const hasPage2 = enPosts.length > 24;
     const extraHead = `<link rel="alternate" hreflang="en" href="${BASE}/blog" />
 <link rel="alternate" hreflang="bn" href="${BASE}/bn/blog" />
-<link rel="alternate" hreflang="x-default" href="${BASE}/blog" />`;
+<link rel="alternate" hreflang="x-default" href="${BASE}/blog" />` + (hasPage2 ? `\n<link rel="next" href="${BASE}/blog/page/2" />` : '');
     const html = buildPage(base, {
       title: 'Bangladesh Legal Guides & Law Blog | Adv. Shah Alam',
       description: 'Read expert legal guides on Bangladesh criminal law, High Court bail, divorce, land registration, mutation, and corporate law by Advocate Md. Shah Alam.',
@@ -1366,9 +1446,10 @@ ${BN_DISCLAIMER}${bnMeta.body}${BN_CTA}`,
     console.log('  ✓ /blog');
   }
   {
+    const hasPage2 = bnPosts.length > 24;
     const extraHead = `<link rel="alternate" hreflang="bn" href="${BASE}/bn/blog" />
 <link rel="alternate" hreflang="en" href="${BASE}/blog" />
-<link rel="alternate" hreflang="x-default" href="${BASE}/blog" />`;
+<link rel="alternate" hreflang="x-default" href="${BASE}/blog" />` + (hasPage2 ? `\n<link rel="next" href="${BASE}/bn/blog/page/2" />` : '');
     const html = buildPage(base, {
       title: 'বাংলাদেশ আইনি গাইড ও ব্লগ | এডভোকেট মোঃ শাহ আলম',
       description: 'বাংলাদেশের ফৌজদারি, জামিন, তালাক, জমি রেজিস্ট্রি, নামজারি, বাটোয়ারা ও সুপ্রিম কোর্ট আইন বিষয়ক বিস্তারিত বাংলা আইনি গাইড পড়ুন।',
@@ -1384,8 +1465,8 @@ ${BN_DISCLAIMER}${bnMeta.body}${BN_CTA}`,
   // ── Crawlable Blog Pagination (/blog/page/2..N & /bn/blog/page/2..N) ───────
   const PER_PAGE = 24;
   for (const [langKey, list, prefix, label] of [
-    ['en', enPosts, '/blog', 'Bangladesh Legal Guides'],
-    ['bn', bnPosts, '/bn/blog', 'বাংলাদেশ আইনি গাইড'],
+    ['en', enPosts, '/blog', pageHeadings.blogPagePrefixEn],
+    ['bn', bnPosts, '/bn/blog', pageHeadings.blogPagePrefixBn],
   ]) {
     const totalPages = Math.max(1, Math.ceil(list.length / PER_PAGE));
     for (let p = 2; p <= totalPages; p++) {
@@ -1413,30 +1494,43 @@ ${BN_DISCLAIMER}${bnMeta.body}${BN_CTA}`,
   }
 
   // ── Topic Cluster Hub Pages (/blog/topic/* & /bn/blog/topic/*) ─────────────
-  const TOPIC_HUBS = [
-    { slug: 'criminal-law', en: 'Criminal Defense Law Guides', bn: 'ফৌজদারি মামলা ও আইন গাইড', service: 'criminal-lawyer', rx: /criminal|fir|gd|penal|section|arrest|warrant|420|406|302|murder|cyber|cheating|fraud/i },
-    { slug: 'bail-law', en: 'Bail & Anticipatory Bail Guides', bn: 'জামিন ও আগাম জামিন গাইড', service: 'bail-lawyer', rx: /bail|anticipatory|497|498|surrender|জামিন/i },
-    { slug: 'divorce-family-law', en: 'Divorce, Dower & Family Law Guides', bn: 'তালাক, দেনমোহর ও পারিবারিক আইন', service: 'divorce-lawyer', rx: /divorce|talaq|khula|dower|denmohar|custody|marriage|maintenance|তালাক|বিবাহ|দেনমোহর|পারিবারিক/i },
-    { slug: 'land-property-law', en: 'Land, Khatian & Property Law Guides', bn: 'জমি, খতিয়ান, নামজারি ও সম্পত্তি আইন', service: 'land-lawyer', rx: /land|property|khatian|mutation|namjari|deed|dalil|partition|batwara|inheritance|pre-emption|জমি|খতিয়ান|নামজারি|দলিল|বাটোয়ারা/i },
-    { slug: 'supreme-court-writ', en: 'Supreme Court Writ & Appeals', bn: 'সুপ্রিম কোর্ট রিট ও আপিল গাইড', service: 'supreme-court-lawyer', rx: /writ|supreme-court|high-court|appeal|561a|quashing|contempt|রিট|হাইকোর্ট|সুপ্রিম/i },
-    { slug: 'corporate-tax-law', en: 'Company, Corporate & Tax Law Guides', bn: 'কোম্পানি, কর্পোরেট ও আয়কর-ভ্যাট গাইড', service: 'company-corporate-lawyer', rx: /company|corporate|rjsc|tax|vat|nbr|trademark|cheque|138|ni-act|bank|artha-rin|কোম্পানি|আয়কর|ভ্যাট|চেক/i },
-    { slug: 'nrb-immigration-law', en: 'NRB Legal & Embassy Attestation Guides', bn: 'প্রবাসী (NRB) ও দূতাবাস আইনি গাইড', service: 'land-lawyer', rx: /nrb|abroad|overseas|embassy|passport|power-of-attorney|প্রবাসী|বিদেশ|দূতাবাস|পাওয়ার/i },
-  ];
-  for (const hub of TOPIC_HUBS) {
+  for (const hub of topics) {
+    const rx = new RegExp(hub.regex, 'i');
+    const enUrl = `${BASE}/blog/topic/${hub.slug}`;
+    const bnUrl = `${BASE}/bn/blog/topic/${hub.slug}`;
+    const hubHreflang = `<link rel="alternate" hreflang="en" href="${enUrl}" />
+<link rel="alternate" hreflang="bn" href="${bnUrl}" />
+<link rel="alternate" hreflang="x-default" href="${enUrl}" />`;
     for (const [langKey, list, prefix, svcPrefix] of [
       ['en', enPosts, '/blog', '/services'],
       ['bn', bnPosts, '/bn/blog', '/bn/services'],
     ]) {
-      const matched = list.filter(p => hub.rx.test(`${p.slug} ${p.title} ${p.category || ''}`));
-      const title = langKey === 'en' ? `${hub.en} | Adv. Shah Alam` : `${hub.bn} | এডভোকেট মোঃ শাহ আলম`;
+      const matched = list.filter(p => rx.test(`${p.slug} ${p.title} ${p.category || ''}`));
+      const title = langKey === 'en' ? `${hub.en} | Adv. Shah Alam` : `${hub.bn} | এডভোকেট শাহ আলম`;
       const h1 = langKey === 'en' ? hub.en : hub.bn;
       const itemsHtml = matched.map(p => `<li style="margin:8px 0"><a href="${prefix}/${p.slug}" style="color:#132A4A;font-weight:600">${escHtml(p.title)}</a></li>`).join('');
+      const hubSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'CollectionPage',
+        name: h1,
+        url: `${BASE}${prefix}/topic/${hub.slug}`,
+        inLanguage: langKey,
+      };
+      const breadcrumbSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: langKey === 'en' ? 'Home' : 'হোম', item: langKey === 'en' ? `${BASE}/en` : `${BASE}/` },
+          { '@type': 'ListItem', position: 2, name: langKey === 'en' ? 'Blog' : 'ব্লগ', item: `${BASE}${prefix}` },
+          { '@type': 'ListItem', position: 3, name: h1, item: `${BASE}${prefix}/topic/${hub.slug}` },
+        ],
+      };
       const hubHtml = buildPage(base, {
         title: title.slice(0, 58),
         description: `${h1} — ${matched.length} expert legal articles and statute guides by Advocate Md. Shah Alam.`,
         canonical: `${BASE}${prefix}/topic/${hub.slug}`,
         lang: langKey,
-        extraHead: `<link rel="alternate" hreflang="${langKey}" href="${BASE}${prefix}/topic/${hub.slug}" />`,
+        extraHead: `${hubHreflang}\n<script type="application/ld+json">${jsonLd(hubSchema)}</script>\n<script type="application/ld+json">${jsonLd(breadcrumbSchema)}</script>`,
         body: `<nav aria-label="Breadcrumb" style="font-size:13px;color:#475569;margin-bottom:14px"><a href="${langKey === 'en' ? '/en' : '/'}">${langKey === 'en' ? 'Home' : 'হোম'}</a> &rsaquo; <a href="${prefix}">${langKey === 'en' ? 'Blog' : 'ব্লগ'}</a> &rsaquo; <span>${escHtml(h1)}</span></nav>
 <h1 style="font-size:28px;font-weight:700;color:#0B1220">${escHtml(h1)}</h1>
 <p style="margin:12px 0 20px"><a href="${svcPrefix}/${hub.service}" style="color:#132A4A;font-weight:700">${langKey === 'en' ? 'View Practice Area & Consult Advocate →' : 'মূল আইনি সেবা ও পরামর্শ দেখুন →'}</a></p>
@@ -1445,7 +1539,7 @@ ${BN_DISCLAIMER}${bnMeta.body}${BN_CTA}`,
       write(path.join(DIST, prefix.replace(/^\/+/, ''), 'topic', hub.slug, 'index.html'), hubHtml);
     }
   }
-  console.log(`  ✓ 14 topic cluster hub pages (/blog/topic/* & /bn/blog/topic/*)`);
+  console.log(`  ✓ ${topics.length * 2} topic cluster hub pages (/blog/topic/* & /bn/blog/topic/*)`);
 
   // ── EN blog posts ──────────────────────────────────────────────────────────
   console.log('\n📚 Pre-rendering EN blog posts...');
@@ -1453,6 +1547,9 @@ ${BN_DISCLAIMER}${bnMeta.body}${BN_CTA}`,
   for (const post of enPosts) {
     const postCanonical = post.canonicalUrl || `${BASE}/blog/${post.slug}`;
     const enMetaDesc = evergreenYear(post.metaDescription || (post.heroIntro || '').replace(/<[^>]*>/g, '').trim()).slice(0, 160);
+    const chunkFile = postChunkFor('en', post.slug);
+    const preloadTags = (chunkFile ? `<link rel="modulepreload" href="/${chunkFile}" as="script" crossorigin />\n` : '')
+      + `<link rel="preload" as="image" href="${coverFor(post.category)}" />`;
 
     // Explicit, reciprocal pairs only (scripts/audit-hreflang.mjs keeps the data clean) - same tags as the React page
     const hreflangTags = buildHreflang({ lang: 'en', slug: post.slug, pairedSlug: post.bnSlug })
@@ -1505,7 +1602,8 @@ ${BN_DISCLAIMER}${bnMeta.body}${BN_CTA}`,
       })),
     } : null;
 
-    const extraHead = `${hreflangTags}
+    const extraHead = `${preloadTags}
+${hreflangTags}
 <script type="application/ld+json">${jsonLd(articleSchema)}</script>
 <script type="application/ld+json">${jsonLd(breadcrumbSchema)}</script>${faqSchemaEn ? `\n<script type="application/ld+json">${jsonLd(faqSchemaEn)}</script>` : ''}`;
 
@@ -1513,7 +1611,7 @@ ${BN_DISCLAIMER}${bnMeta.body}${BN_CTA}`,
       title: evergreenYear(post.metaTitle || post.title),
       description: enMetaDesc,
       canonical: postCanonical,
-      body: buildPostBody(post),
+      body: buildPostBody(post, enPostBySlug),
       lang: 'en',
       extraHead,
       ogImage: post.featuredImage || `${BASE}/images/hero/hero-md-shah-alam.png`,
@@ -1529,6 +1627,9 @@ ${BN_DISCLAIMER}${bnMeta.body}${BN_CTA}`,
   for (const post of bnPosts) {
     const postCanonical = post.canonicalUrl || `${BASE}/bn/blog/${post.slug}`;
     const bnMetaDesc = evergreenYear(post.metaDescription || (post.heroIntro || '').replace(/<[^>]*>/g, '').trim()).slice(0, 160);
+    const chunkFile = postChunkFor('bn', post.slug);
+    const preloadTags = (chunkFile ? `<link rel="modulepreload" href="/${chunkFile}" as="script" crossorigin />\n` : '')
+      + `<link rel="preload" as="image" href="${coverFor(post.category)}" />`;
 
     const hreflangTags = buildHreflang({ lang: 'bn', slug: post.slug, pairedSlug: post.enSlug })
       .map((h) => `<link rel="alternate" hreflang="${h.hrefLang}" href="${h.href}" />`).join('\n');
@@ -1581,7 +1682,8 @@ ${BN_DISCLAIMER}${bnMeta.body}${BN_CTA}`,
       })),
     } : null;
 
-    const extraHead = `${hreflangTags}
+    const extraHead = `${preloadTags}
+${hreflangTags}
 <script type="application/ld+json">${jsonLd(articleSchema)}</script>
 <script type="application/ld+json">${jsonLd(breadcrumbSchema)}</script>${faqSchemaBn ? `\n<script type="application/ld+json">${jsonLd(faqSchemaBn)}</script>` : ''}`;
 
@@ -1589,7 +1691,7 @@ ${BN_DISCLAIMER}${bnMeta.body}${BN_CTA}`,
       title: evergreenYear(post.metaTitle || post.title || 'বাংলাদেশ আইনি গাইড'),
       description: bnMetaDesc,
       canonical: postCanonical,
-      body: buildBnPostBody(post),
+      body: buildBnPostBody(post, bnPostBySlug),
       lang: 'bn',
       extraHead,
       ogImage: post.featuredImage || `${BASE}/images/hero/hero-md-shah-alam.png`,

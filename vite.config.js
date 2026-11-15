@@ -10,6 +10,7 @@ export default defineConfig({
     tailwindcss()
   ],
   build: {
+    manifest: true,
     target: 'es2020',
     minify: 'esbuild',
     cssCodeSplit: true,

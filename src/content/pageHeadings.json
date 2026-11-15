@@ -1,0 +1,32 @@
+{
+  "blogEn": "Bangladesh Legal Knowledge Hub",
+  "blogBn": "বাংলা আইনি জ্ঞান কেন্দ্র",
+  "blogPagePrefixEn": "Bangladesh Legal Guides",
+  "blogPagePrefixBn": "বাংলাদেশ আইনি গাইড",
+  "advocate": "Advocate Md. Shah Alam – Trusted Lawyer in Bangladesh",
+  "education": "Advocate Md. Shah Alam – Career & Education Journey",
+  "privacy": "Privacy Policy",
+  "terms": "Terms of Service (ব্যবহারের শর্তাবলী)",
+  "contactEn": "Contact Advocate Md. Shah Alam",
+  "contactBn": "অ্যাডভোকেট মো. শাহ আলম – সরাসরি যোগাযোগ ও চেম্বার",
+  "review": "আইনি সেবায় আপনি কি সন্তুষ্ট?",
+  "nrb": "Legal Help for NRBs in Bangladesh",
+  "servicesEn": {
+    "criminal-lawyer": "Criminal Lawyer in Bangladesh | Advocate Md. Shah Alam",
+    "bail-lawyer": "Bail Lawyer in Dhaka — Fast Bail at Every Court Level",
+    "divorce-lawyer": "Divorce & Family Lawyer in Dhaka — Protecting Your Rights With Care",
+    "land-lawyer": "Land & Property Lawyer in Dhaka — Resolve Disputes, Protect Ownership",
+    "supreme-court-lawyer": "Supreme Court Lawyer in Bangladesh — High Court & Appellate Division",
+    "company-corporate-lawyer": "Company & Corporate Lawyer in Dhaka — From Formation to Litigation",
+    "tax-lawyer": "Income Tax & VAT Lawyer in Dhaka – Bangladesh Tax Law Expert"
+  },
+  "servicesBn": {
+    "criminal-lawyer": "ফৌজদারি আইনজীবী বাংলাদেশ | এডভোকেট মোঃ শাহ আলম",
+    "bail-lawyer": "জামিন আইনজীবী ঢাকা — প্রতিটি আদালতে দ্রুত জামিন",
+    "divorce-lawyer": "তালাক ও পারিবারিক আইনজীবী ঢাকা — আপনার অধিকার সুরক্ষায়",
+    "land-lawyer": "ভূমি ও সম্পত্তি আইনজীবী ঢাকা — বিরোধ মীমাংসা, মালিকানা সুরক্ষায়",
+    "supreme-court-lawyer": "সুপ্রিম কোর্ট আইনজীবী বাংলাদেশ — হাইকোর্ট ও আপিল বিভাগ",
+    "company-corporate-lawyer": "কোম্পানি ও কর্পোরেট আইনজীবী ঢাকা — গঠন থেকে মামলা পর্যন্ত",
+    "tax-lawyer": "আয়কর ও ভ্যাট আইনজীবী ঢাকা – বাংলাদেশ কর আইন বিশেষজ্ঞ"
+  }
+}

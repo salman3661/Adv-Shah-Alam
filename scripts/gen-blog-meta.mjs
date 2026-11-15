@@ -85,6 +85,72 @@ for (const lang of ['en', 'bn']) {
   fs.writeFileSync(target, JSON.stringify(out));
   console.log(`[gen-blog-meta] ${lang}: ${out.length} posts, ${(fs.statSync(target).size / 1024).toFixed(0)} KB`);
 
+  // Compute deterministic cross-cluster related links (6 post slugs from OTHER topic clusters + hub slug)
+  const topics = JSON.parse(fs.readFileSync(path.join(root, 'src', 'content', 'topics.json'), 'utf8'));
+  const topicRegexes = topics.map((t) => ({ ...t, re: new RegExp(t.regex, 'i'), reAll: new RegExp(t.regex, 'gi') }));
+  const tokenize = (p) => new Set(
+    `${p.slug} ${p.title || ''} ${(p.keywords || []).join(' ')} ${p.category || ''}`
+      .toLowerCase()
+      .replace(/[-_/,.:;()'"?!]/g, ' ')
+      .split(/\s+/)
+      .filter((w) => w.length >= 3)
+  );
+  const assignHub = (p) => {
+    const text = `${p.slug} ${p.title || ''} ${p.category || ''}`;
+    let best = topics[topics.length - 1];
+    let bestHits = 0;
+    for (const t of topicRegexes) {
+      const hits = (text.match(t.reAll) || []).length;
+      if (hits > bestHits) { bestHits = hits; best = t; }
+    }
+    return best;
+  };
+
+  const enriched = out.map((p) => ({
+    slug: p.slug,
+    hub: assignHub(p),
+    tokens: tokenize(p),
+    imp: Number(p.impressions) || 0,
+  }));
+
+  const relatedMap = {};
+  for (let i = 0; i < enriched.length; i++) {
+    const cur = enriched[i];
+    const scored = [];
+    for (let j = 0; j < enriched.length; j++) {
+      if (i === j) continue;
+      const cand = enriched[j];
+      const diffCluster = cand.hub.slug !== cur.hub.slug;
+      let inter = 0;
+      for (const tok of cur.tokens) {
+        if (cand.tokens.has(tok)) inter++;
+      }
+      const union = cur.tokens.size + cand.tokens.size - inter || 1;
+      const sim = inter / union;
+      // Strongly prefer cross-cluster links; use slight impression + similarity rank
+      const score = (diffCluster ? 10 : 0) + sim * 5 + Math.min(cand.imp, 1000) / 5000;
+      scored.push({ slug: cand.slug, hub: cand.hub.slug, score });
+    }
+    scored.sort((a, b) => b.score - a.score || a.slug.localeCompare(b.slug));
+    // Pick up to 6 posts spreading across different clusters
+    const picks = [];
+    const seenHubs = new Set();
+    for (const s of scored) {
+      if (picks.length >= 6) break;
+      if (picks.length < 4 && seenHubs.has(s.hub)) continue;
+      seenHubs.add(s.hub);
+      picks.push(s.slug);
+    }
+    for (const s of scored) {
+      if (picks.length >= 6) break;
+      if (!picks.includes(s.slug)) picks.push(s.slug);
+    }
+    relatedMap[cur.slug] = { h: cur.hub.slug, r: picks };
+  }
+  const relTarget = path.join(root, 'src', 'content', `related-links-${lang}.json`);
+  fs.writeFileSync(relTarget, JSON.stringify(relatedMap));
+  console.log(`[gen-blog-meta] related-links-${lang}: ${(fs.statSync(relTarget).size / 1024).toFixed(1)} KB`);
+
   previewData[lang] = [...out]
     .sort((a, b) => new Date(b.publishedDate || 0) - new Date(a.publishedDate || 0))
     .slice(0, 6)

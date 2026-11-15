@@ -1,8 +1,11 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { Search, Clock, ChevronRight, BookOpen, Flame, Award, ShieldCheck, UserCheck, Scale, ArrowUpRight, X, Calendar, Sparkles } from 'lucide-react';
 import seo from '../content/seo.js';
+import topicsData from '../content/topics.json';
+import pageHeadings from '../content/pageHeadings.json';
+import NotFound from './NotFound';
 
 // Load all EN blog posts from JSON files (bundled at build time by Vite)
 import postsMeta_en from '../content/posts-meta-en.json';
@@ -175,7 +178,20 @@ const BlogCardEn = ({ post, isRecent = false, isPopular = false }) => {
     );
 };
 
+const ARCHIVE_PER_PAGE = 24;
+
 const Blog = () => {
+    const { page, topic } = useParams();
+    const isPageRoute = page !== undefined;
+    const isTopicRoute = topic !== undefined;
+    const parsedPage = isPageRoute ? Number(page) : 1;
+    const pageNum = Number.isInteger(parsedPage) && parsedPage >= 1 ? parsedPage : 0;
+
+    const topicObj = useMemo(() => {
+        if (!isTopicRoute) return null;
+        return topicsData.find((t) => t.slug === topic) || null;
+    }, [isTopicRoute, topic]);
+
     const [activeCategory, setActiveCategory] = useState('All');
     const [searchQuery, setSearchQuery] = useState('');
     const [sortBy, setSortBy] = useState('recent'); // 'recent' | 'popular'
@@ -190,19 +206,25 @@ const Blog = () => {
     });
     const isFirstRender = React.useRef(true);
 
-    // Sort all published posts by publishedDate descending by default
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pageNum, topic]);
+
+    // Deterministic sort matching scripts/prerender.mjs exactly
     const publishedPosts = useMemo(() => {
         return [...blogPosts]
             .filter(isPublished)
-            .sort((a, b) => freshness(b) - freshness(a));
+            .sort((a, b) => freshness(b) - freshness(a) || a.slug.localeCompare(b.slug));
     }, []);
+
+    const totalArchivePages = Math.max(1, Math.ceil(publishedPosts.length / ARCHIVE_PER_PAGE));
 
     // Dynamic Spotlight Featured Post
     const featuredPost = useMemo(() => {
         if (!publishedPosts.length) return null;
         const explicitFeatured = publishedPosts.find(p => p.featured === true);
         if (explicitFeatured) return explicitFeatured;
-        return [...publishedPosts].sort((a, b) => freshness(b) - freshness(a))[0];
+        return publishedPosts[0];
     }, [publishedPosts]);
 
     const categoryCounts = useMemo(() => {
@@ -214,6 +236,14 @@ const Blog = () => {
     }, [publishedPosts]);
 
     const filtered = useMemo(() => {
+        if (isTopicRoute && topicObj) {
+            const rx = new RegExp(topicObj.regex, 'i');
+            return publishedPosts.filter(p => rx.test(`${p.slug} ${p.title} ${p.category || ''}`));
+        }
+        if (isPageRoute && pageNum >= 2) {
+            return publishedPosts.slice((pageNum - 1) * ARCHIVE_PER_PAGE, pageNum * ARCHIVE_PER_PAGE);
+        }
+
         let posts = [...publishedPosts];
         if (activeCategory !== 'All') {
             posts = posts.filter(p => p.category === activeCategory);
@@ -230,13 +260,13 @@ const Blog = () => {
 
         // Apply sorting
         if (sortBy === 'recent') {
-            posts.sort((a, b) => freshness(b) - freshness(a));
+            posts.sort((a, b) => freshness(b) - freshness(a) || a.slug.localeCompare(b.slug));
         } else if (sortBy === 'popular') {
-            posts.sort((a, b) => popularity(b) - popularity(a) || freshness(b) - freshness(a));
+            posts.sort((a, b) => popularity(b) - popularity(a) || freshness(b) - freshness(a) || a.slug.localeCompare(b.slug));
         }
 
         return posts;
-    }, [publishedPosts, activeCategory, searchQuery, sortBy]);
+    }, [publishedPosts, activeCategory, searchQuery, sortBy, isTopicRoute, topicObj, isPageRoute, pageNum]);
 
     // Reset pagination only when user actually changes filters after mount
     useEffect(() => {
@@ -256,18 +286,68 @@ const Blog = () => {
         } catch {}
     }, [visibleCount]);
 
+    // Handle invalid page / unknown topic cleanly with NotFound
+    if ((isPageRoute && (pageNum < 1 || pageNum > totalArchivePages)) || (isTopicRoute && !topicObj)) {
+        return <NotFound />;
+    }
+
+    const pageH1 = isTopicRoute && topicObj
+        ? topicObj.en
+        : (isPageRoute && pageNum >= 2 ? `${pageHeadings.blogPagePrefixEn} (Page ${pageNum})` : pageHeadings.blogEn);
+
+    const pageTitle = isTopicRoute && topicObj
+        ? `${topicObj.en} | Adv. Shah Alam`
+        : (isPageRoute && pageNum >= 2
+            ? `${pageHeadings.blogPagePrefixEn} — Page ${pageNum} | Adv. Shah Alam`
+            : 'Bangladesh Legal Guides & Law Blog | Adv. Shah Alam');
+
+    const canonicalHref = isTopicRoute && topicObj
+        ? `https://www.advmdshahalam.me/blog/topic/${topicObj.slug}`
+        : (isPageRoute && pageNum >= 2
+            ? `https://www.advmdshahalam.me/blog/page/${pageNum}`
+            : 'https://www.advmdshahalam.me/blog');
+
+    const prevHref = !isTopicRoute && isPageRoute && pageNum >= 2
+        ? (pageNum === 2 ? 'https://www.advmdshahalam.me/blog' : `https://www.advmdshahalam.me/blog/page/${pageNum - 1}`)
+        : null;
+    const nextHref = !isTopicRoute && pageNum < totalArchivePages
+        ? `https://www.advmdshahalam.me/blog/page/${pageNum + 1}`
+        : null;
+
+    const displayedPosts = (isTopicRoute || (isPageRoute && pageNum >= 2))
+        ? filtered
+        : filtered.slice(0, visibleCount);
+
     return (
         <>
             <Helmet>
-                <title>Legal Guides &amp; Articles | Advocate Md. Shah Alam – Supreme Court Lawyer</title>
+                <title>{pageTitle}</title>
                 <meta
                     name="description"
-                    content="Comprehensive, plain-language legal guides on Bangladesh law — criminal defence, bail, divorce, land disputes, tax & corporate law by Advocate Md. Shah Alam."
+                    content={isTopicRoute && topicObj
+                        ? `${topicObj.en} — ${filtered.length} expert legal articles and statute guides by Advocate Md. Shah Alam.`
+                        : (isPageRoute && pageNum >= 2
+                            ? `${pageHeadings.blogPagePrefixEn} archive page ${pageNum} of ${totalArchivePages} by Advocate Md. Shah Alam, Supreme Court of Bangladesh.`
+                            : 'Read expert legal guides on Bangladesh criminal law, High Court bail, divorce, land registration, mutation, and corporate law by Advocate Md. Shah Alam.')}
                 />
-                <link rel="canonical" href="https://www.advmdshahalam.me/blog" />
+                <link rel="canonical" href={canonicalHref} />
+                {prevHref && <link rel="prev" href={prevHref} />}
+                {nextHref && <link rel="next" href={nextHref} />}
                 <meta name="robots" content="index, follow" />
-                <link rel="alternate" hrefLang="en" href="https://www.advmdshahalam.me/blog" />
-                <link rel="alternate" hrefLang="bn" href="https://www.advmdshahalam.me/bn/blog" />
+                {!isPageRoute && !isTopicRoute && (
+                    <>
+                        <link rel="alternate" hrefLang="en" href="https://www.advmdshahalam.me/blog" />
+                        <link rel="alternate" hrefLang="bn" href="https://www.advmdshahalam.me/bn/blog" />
+                        <link rel="alternate" hrefLang="x-default" href="https://www.advmdshahalam.me/blog" />
+                    </>
+                )}
+                {isTopicRoute && topicObj && (
+                    <>
+                        <link rel="alternate" hrefLang="en" href={`https://www.advmdshahalam.me/blog/topic/${topicObj.slug}`} />
+                        <link rel="alternate" hrefLang="bn" href={`https://www.advmdshahalam.me/bn/blog/topic/${topicObj.slug}`} />
+                        <link rel="alternate" hrefLang="x-default" href={`https://www.advmdshahalam.me/blog/topic/${topicObj.slug}`} />
+                    </>
+                )}
             </Helmet>
 
             {/* ════ HERO HEADER ════ */}
@@ -278,6 +358,16 @@ const Blog = () => {
                 />
 
                 <div className="container mx-auto px-6 max-w-5xl relative z-10 text-center">
+                    {isTopicRoute && topicObj && (
+                        <nav aria-label="Breadcrumb" className="text-xs font-semibold mb-4 flex justify-center gap-1.5" style={{ color: 'var(--text-muted)' }}>
+                            <Link to="/en" className="hover:underline">Home</Link>
+                            <span>&rsaquo;</span>
+                            <Link to="/blog" className="hover:underline">Blog</Link>
+                            <span>&rsaquo;</span>
+                            <span style={{ color: 'var(--text)' }}>{topicObj.shortEn}</span>
+                        </nav>
+                    )}
+
                     <div
                         className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold mb-6 shadow-sm border"
                         style={{
@@ -298,14 +388,21 @@ const Blog = () => {
                             letterSpacing: '-0.02em'
                         }}
                     >
-                        Bangladesh Legal Knowledge Hub
+                        {pageH1}
                     </h1>
 
                     <p
                         className="text-base md:text-lg mb-8 max-w-2xl mx-auto leading-relaxed"
                         style={{ color: 'var(--text-secondary)' }}
                     >
-                        Practical, plain-language legal guides on criminal, divorce, land, tax &amp; corporate law in Bangladesh.
+                        {isTopicRoute && topicObj ? (
+                            <>Explore {filtered.length} statute-cited guides in this topic cluster or visit our{' '}
+                                <Link to={`/services/${topicObj.service}`} style={{ color: 'var(--accent)', fontWeight: 700, textDecoration: 'underline' }}>
+                                    {topicObj.serviceEn}
+                                </Link> practice page.</>
+                        ) : (
+                            'Practical, plain-language legal guides on criminal, divorce, land, tax & corporate law in Bangladesh.'
+                        )}
                     </p>
 
                     {/* Trust Badges */}
@@ -321,100 +418,123 @@ const Blog = () => {
                         </span>
                     </div>
 
-                    {/* Interactive Search Bar */}
-                    <div className="relative max-w-2xl mx-auto mb-8 shadow-lg rounded-2xl overflow-hidden border" style={{ borderColor: 'var(--card-border)', background: 'var(--surface)' }}>
-                        <Search size={20} className="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none" style={{ color: 'var(--accent)' }} />
-                        <input
-                            type="search"
-                            placeholder="Search legal topic (e.g. bail, divorce, land mutation, cheque)..."
-                            value={searchQuery}
-                            onChange={e => setSearchQuery(e.target.value)}
-                            className="w-full pl-12 pr-28 py-4 text-sm md:text-base outline-none transition-[color,background-color,border-color,box-shadow,opacity,transform]"
-                            style={{
-                                background: 'transparent',
-                                color: 'var(--text)',
-                            }}
-                        />
-
-                        {/* Search Action / Result Pill */}
-                        <div className="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-1.5">
-                            {searchQuery.trim() ? (
-                                <>
-                                    <span
-                                        className="text-xs px-3 py-1.5 rounded-lg font-bold"
-                                        style={{
-                                            background: 'var(--accent-subtle)',
-                                            color: 'var(--accent)',
-                                        }}
-                                    >
-                                        {filtered.length} results
-                                    </span>
-                                    <button
-                                        onClick={() => setSearchQuery('')}
-                                        className="p-1.5 rounded-lg hover:bg-black/10 text-gray-400 hover:text-gray-600 transition-[color,background-color,border-color,box-shadow,opacity,transform]"
-                                        title="Clear search"
-                                    >
-                                        <X size={16} />
-                                    </button>
-                                </>
-                            ) : (
-                                <button
-                                    className="text-xs px-4 py-2 rounded-lg font-bold text-white shadow-md transition-[color,background-color,border-color,box-shadow,opacity,transform] hover:scale-105"
-                                    style={{
-                                        background: 'var(--accent)',
-                                    }}
-                                >
-                                    Search
-                                </button>
-                            )}
-                        </div>
-                    </div>
-
-                    {/* Category Filter Pills */}
-                    <div className="flex flex-wrap justify-center gap-2.5">
-                        {CATEGORIES.map(cat => {
-                            const count = categoryCounts[cat] || 0;
-                            const isActive = activeCategory === cat;
-                            const color = getCatColor(cat);
+                    {/* Topic Hub Links (Crawlable Cluster Navigation) */}
+                    <nav aria-label="Topics" className="flex flex-wrap justify-center gap-2 mb-6">
+                        {topicsData.map(t => {
+                            const active = isTopicRoute && t.slug === topic;
                             return (
-                                <button
-                                    key={cat}
-                                    onClick={() => setActiveCategory(cat)}
-                                    className="px-4 py-2 rounded-xl text-xs md:text-sm font-semibold border transition-[color,background-color,border-color,box-shadow,opacity,transform] flex items-center gap-1.5"
-                                    style={
-                                        isActive
-                                            ? {
-                                                background: '#1A3FBF',
-                                                color: '#fff',
-                                                borderColor: 'var(--accent)',
-                                                boxShadow: '0 4px 14px rgba(26,63,191,0.3)',
-                                            }
-                                            : {
-                                                background: 'var(--surface)',
-                                                color: 'var(--text-secondary)',
-                                                borderColor: 'var(--card-border)',
-                                            }
-                                    }
+                                <Link
+                                    key={t.slug}
+                                    to={`/blog/topic/${t.slug}`}
+                                    className="px-3.5 py-1.5 rounded-full text-xs font-bold border transition-colors"
+                                    style={active
+                                        ? { background: '#1A3FBF', color: '#FFFFFF', borderColor: '#1A3FBF' }
+                                        : { background: 'var(--surface)', color: 'var(--accent)', borderColor: 'var(--card-border)' }}
                                 >
-                                    <span>{cat}</span>
-                                    <span
-                                        className="px-1.5 py-0.5 rounded-full text-[10px] font-bold"
-                                        style={{
-                                            background: isActive ? 'rgba(255,255,255,0.2)' : 'var(--accent-subtle)',
-                                            color: isActive ? '#fff' : color
-                                        }}
-                                    >
-                                        {count}
-                                    </span>
-                                </button>
+                                    {t.shortEn}
+                                </Link>
                             );
                         })}
-                    </div>
+                    </nav>
+
+                    {/* Interactive Search & Category Filter (Blog Index View) */}
+                    {!isPageRoute && !isTopicRoute && (
+                        <>
+                            <div className="relative max-w-2xl mx-auto mb-8 shadow-lg rounded-2xl overflow-hidden border" style={{ borderColor: 'var(--card-border)', background: 'var(--surface)' }}>
+                                <Search size={20} className="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none" style={{ color: 'var(--accent)' }} />
+                                <input
+                                    type="search"
+                                    placeholder="Search legal topic (e.g. bail, divorce, land mutation, cheque)..."
+                                    value={searchQuery}
+                                    onChange={e => setSearchQuery(e.target.value)}
+                                    className="w-full pl-12 pr-28 py-4 text-sm md:text-base outline-none transition-[color,background-color,border-color,box-shadow,opacity,transform]"
+                                    style={{
+                                        background: 'transparent',
+                                        color: 'var(--text)',
+                                    }}
+                                />
+
+                                {/* Search Action / Result Pill */}
+                                <div className="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-1.5">
+                                    {searchQuery.trim() ? (
+                                        <>
+                                            <span
+                                                className="text-xs px-3 py-1.5 rounded-lg font-bold"
+                                                style={{
+                                                    background: 'var(--accent-subtle)',
+                                                    color: 'var(--accent)',
+                                                }}
+                                            >
+                                                {filtered.length} results
+                                            </span>
+                                            <button
+                                                onClick={() => setSearchQuery('')}
+                                                className="p-1.5 rounded-lg hover:bg-black/10 text-gray-400 hover:text-gray-600 transition-[color,background-color,border-color,box-shadow,opacity,transform]"
+                                                title="Clear search"
+                                            >
+                                                <X size={16} />
+                                            </button>
+                                        </>
+                                    ) : (
+                                        <button
+                                            className="text-xs px-4 py-2 rounded-lg font-bold text-white shadow-md transition-[color,background-color,border-color,box-shadow,opacity,transform] hover:scale-105"
+                                            style={{
+                                                background: 'var(--accent)',
+                                            }}
+                                        >
+                                            Search
+                                        </button>
+                                    )}
+                                </div>
+                            </div>
+
+                            {/* Category Filter Pills */}
+                            <div className="flex flex-wrap justify-center gap-2.5">
+                                {CATEGORIES.map(cat => {
+                                    const count = categoryCounts[cat] || 0;
+                                    const isActive = activeCategory === cat;
+                                    const color = getCatColor(cat);
+                                    return (
+                                        <button
+                                            key={cat}
+                                            onClick={() => setActiveCategory(cat)}
+                                            className="px-4 py-2 rounded-xl text-xs md:text-sm font-semibold border transition-[color,background-color,border-color,box-shadow,opacity,transform] flex items-center gap-1.5"
+                                            style={
+                                                isActive
+                                                    ? {
+                                                        background: '#1A3FBF',
+                                                        color: '#fff',
+                                                        borderColor: 'var(--accent)',
+                                                        boxShadow: '0 4px 14px rgba(26,63,191,0.3)',
+                                                    }
+                                                    : {
+                                                        background: 'var(--surface)',
+                                                        color: 'var(--text-secondary)',
+                                                        borderColor: 'var(--card-border)',
+                                                    }
+                                            }
+                                        >
+                                            <span>{cat}</span>
+                                            <span
+                                                className="px-1.5 py-0.5 rounded-full text-[10px] font-bold"
+                                                style={{
+                                                    background: isActive ? 'rgba(255,255,255,0.2)' : 'var(--accent-subtle)',
+                                                    color: isActive ? '#fff' : color
+                                                }}
+                                            >
+                                                {count}
+                                            </span>
+                                        </button>
+                                    );
+                                })}
+                            </div>
+                        </>
+                    )}
                 </div>
             </section>
 
             {/* ════ SPOTLIGHT DYNAMIC FEATURED ARTICLE ════ */}
-            {activeCategory === 'All' && !searchQuery.trim() && featuredPost && (
+            {!isPageRoute && !isTopicRoute && activeCategory === 'All' && !searchQuery.trim() && featuredPost && (
                 <section className="py-6" style={{ background: 'var(--bg)' }}>
                     <div className="container mx-auto px-6 max-w-6xl">
                         <div
@@ -490,7 +610,11 @@ const Blog = () => {
                     <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-8 pb-4 border-b" style={{ borderColor: 'var(--card-border)' }}>
                         <div className="flex items-center gap-2">
                             <span className="text-sm md:text-base font-bold" style={{ color: 'var(--text)' }}>
-                                {activeCategory === 'All' ? 'All Legal Guides' : activeCategory}
+                                {isTopicRoute && topicObj
+                                    ? topicObj.en
+                                    : (isPageRoute && pageNum >= 2
+                                        ? `Archive Page ${pageNum} of ${totalArchivePages}`
+                                        : (activeCategory === 'All' ? 'All Legal Guides' : activeCategory))}
                             </span>
                             <span className="text-xs px-2.5 py-0.5 rounded-full font-bold" style={{ background: 'var(--accent-subtle)', color: 'var(--accent)' }}>
                                 {filtered.length} Articles
@@ -498,23 +622,25 @@ const Blog = () => {
                         </div>
 
                         {/* Sort Switcher */}
-                        <div className="flex items-center gap-1.5 p-1 rounded-xl border" style={{ background: 'var(--surface)', borderColor: 'var(--card-border)' }}>
-                            <button
-                                onClick={() => setSortBy('recent')}
-                                className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-bold transition-[color,background-color,border-color,box-shadow,opacity,transform] ${sortBy === 'recent' ? 'bg-[var(--btn-primary-bg)] text-white shadow-sm' : 'text-[var(--text-secondary)] hover:text-[var(--text)]'}`}
-                            >
-                                <Sparkles size={13} /> Newest First
-                            </button>
-                            <button
-                                onClick={() => setSortBy('popular')}
-                                className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-bold transition-[color,background-color,border-color,box-shadow,opacity,transform] ${sortBy === 'popular' ? 'bg-[var(--btn-primary-bg)] text-white shadow-sm' : 'text-[var(--text-secondary)] hover:text-[var(--text)]'}`}
-                            >
-                                <Flame size={13} /> Most Popular
-                            </button>
-                        </div>
+                        {!isPageRoute && !isTopicRoute && (
+                            <div className="flex items-center gap-1.5 p-1 rounded-xl border" style={{ background: 'var(--surface)', borderColor: 'var(--card-border)' }}>
+                                <button
+                                    onClick={() => setSortBy('recent')}
+                                    className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-bold transition-[color,background-color,border-color,box-shadow,opacity,transform] ${sortBy === 'recent' ? 'bg-[var(--btn-primary-bg)] text-white shadow-sm' : 'text-[var(--text-secondary)] hover:text-[var(--text)]'}`}
+                                >
+                                    <Sparkles size={13} /> Newest First
+                                </button>
+                                <button
+                                    onClick={() => setSortBy('popular')}
+                                    className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-bold transition-[color,background-color,border-color,box-shadow,opacity,transform] ${sortBy === 'popular' ? 'bg-[var(--btn-primary-bg)] text-white shadow-sm' : 'text-[var(--text-secondary)] hover:text-[var(--text)]'}`}
+                                >
+                                    <Flame size={13} /> Most Popular
+                                </button>
+                            </div>
+                        )}
                     </div>
 
-                    {filtered.length === 0 ? (
+                    {displayedPosts.length === 0 ? (
                         <div className="text-center py-20 rounded-2xl border" style={{ background: 'var(--surface)', borderColor: 'var(--card-border)', color: 'var(--text-muted)' }}>
                             <BookOpen size={48} className="mx-auto mb-4 text-[var(--accent)] opacity-50" />
                             <h3 className="text-lg font-bold mb-2">No Legal Guides Found</h3>
@@ -529,18 +655,18 @@ const Blog = () => {
                     ) : (
                         <>
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                                {filtered.slice(0, visibleCount).map((post, idx) => (
+                                {displayedPosts.map((post, idx) => (
                                     <BlogCardEn
                                         key={post.slug}
                                         post={post}
-                                        isRecent={sortBy === 'recent' ? idx < POSTS_PER_PAGE : false}
-                                        isPopular={sortBy === 'popular' ? idx < POSTS_PER_PAGE : false}
+                                        isRecent={!isPageRoute && !isTopicRoute && sortBy === 'recent' ? idx < POSTS_PER_PAGE : false}
+                                        isPopular={!isPageRoute && !isTopicRoute && sortBy === 'popular' ? idx < POSTS_PER_PAGE : false}
                                     />
                                 ))}
                             </div>
 
-                            {/* ── Load More Button ── */}
-                            {visibleCount < filtered.length && (
+                            {/* ── Load More Button (Index only) ── */}
+                            {!isPageRoute && !isTopicRoute && visibleCount < filtered.length && (
                                 <div className="mt-10 text-center">
                                     <button
                                         onClick={() => setVisibleCount(v => v + POSTS_PER_PAGE)}
@@ -558,6 +684,30 @@ const Blog = () => {
                                         Showing {Math.min(visibleCount, filtered.length)} of {filtered.length} legal guides
                                     </p>
                                 </div>
+                            )}
+
+                            {/* ── Real Crawlable Archive Pagination Links ── */}
+                            {!isTopicRoute && totalArchivePages > 1 && (
+                                <nav aria-label="Pagination" className="mt-10 flex flex-wrap justify-center items-center gap-2">
+                                    {Array.from({ length: totalArchivePages }, (_, i) => {
+                                        const n = i + 1;
+                                        const href = n === 1 ? '/blog' : `/blog/page/${n}`;
+                                        const current = isPageRoute ? pageNum === n : n === 1;
+                                        return (
+                                            <Link
+                                                key={n}
+                                                to={href}
+                                                aria-current={current ? 'page' : undefined}
+                                                className="px-3.5 py-2 rounded-lg text-xs font-bold border transition-colors"
+                                                style={current
+                                                    ? { background: '#132A4A', color: '#FFFFFF', borderColor: '#132A4A' }
+                                                    : { background: 'var(--surface)', color: 'var(--accent)', borderColor: 'var(--card-border)' }}
+                                            >
+                                                {n}
+                                            </Link>
+                                        );
+                                    })}
+                                </nav>
                             )}
                         </>
                     )}
