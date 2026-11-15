@@ -33,5 +33,16 @@ gsc-*.json
 Search Console CSV/
 G Adsense Report/
 scratch/
-baseline/pages/
+baseline/
+content-corpus.json
+scratch_dom*.html
+live_dom*.html
+live_check.html
+server_html.html
+chrome_dump.html
+curl_output.txt
+excel_output.txt
+py_err.txt
+build_log.txt
+myshot.png
 
