@@ -90,7 +90,15 @@ for (const url of sitemapUrls) {
     console.error(`MULTIPLE BreadcrumbList (${breadcrumbCount}) on ${rel}`);
   }
 
-  const isBlogPost = (rel.startsWith('/blog/') || rel.startsWith('/bn/blog/'));
+  const isTopicHub = rel.startsWith('/blog/topic/') || rel.startsWith('/bn/blog/topic/');
+  const isPagination = rel.startsWith('/blog/page/') || rel.startsWith('/bn/blog/page/');
+  if (isTopicHub) {
+    if (!pageTypes.has('CollectionPage') || !pageTypes.has('BreadcrumbList')) {
+      blogScopeErrors++;
+      console.error(`MISSING CollectionPage/BreadcrumbList on topic hub ${rel}`);
+    }
+  }
+  const isBlogPost = (rel.startsWith('/blog/') || rel.startsWith('/bn/blog/')) && !isTopicHub && !isPagination;
   if (isBlogPost) {
     for (const forbidden of ['LegalService', 'LocalBusiness', 'WebSite', 'Attorney']) {
       if (pageTypes.has(forbidden)) {

@@ -24,6 +24,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { buildEntityGraph, buildHreflang, jsonLd, resolveMasterPillar, resolveQuickAnswerTable } from '../src/utils/seoSchema.mjs';
 import { evergreenYear } from '../src/utils/evergreenYear.mjs';
+import { GOOGLE_REVIEW_URL, REVIEW_CONTENT } from '../src/content/reviewContent.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT   = path.resolve(__dirname, '..');
@@ -1269,20 +1270,59 @@ ${buildInstitutionalSchema(`${BASE}/bn/contact`, 'bn', [{ name: 'হোম', ite
 
   // ── Review page ────────────────────────────────────────────────────────────
   {
+    const reviewBreadcrumbSchema = {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'হোম', item: `${BASE}/` },
+        { '@type': 'ListItem', position: 2, name: 'ক্লায়েন্ট রিভিউ ও মতামত', item: `${BASE}/review` },
+      ],
+    };
+    const reviewFaqSchema = {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: REVIEW_CONTENT.faqs.map(f => ({
+        '@type': 'Question',
+        name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: f.a },
+      })),
+    };
+    const sectionsHtml = REVIEW_CONTENT.sections.map(sec => `
+      <article style="margin:24px 0;padding:24px;background:#fff;border:1px solid #E2E8F0;border-radius:14px">
+        <h2 style="font-size:20px;font-weight:700;margin-bottom:12px;color:#0B1220">${escHtml(sec.heading)}</h2>
+        ${(sec.paragraphs || []).map(p => `<p style="color:#334155;line-height:1.8;margin-bottom:10px">${escHtml(p)}</p>`).join('')}
+        ${sec.steps ? `<ol style="padding-left:22px;color:#334155;line-height:1.9">${sec.steps.map(st => `<li>${escHtml(st)}</li>`).join('')}</ol>` : ''}
+        ${sec.bullets ? `<ul style="padding-left:22px;color:#334155;line-height:1.9">${sec.bullets.map(b => `<li>${escHtml(b)}</li>`).join('')}</ul>` : ''}
+      </article>`).join('');
+    const servicesNavHtml = REVIEW_CONTENT.serviceLinks.map(l => `<a href="${l.to}" style="display:inline-block;margin:4px 8px 4px 0;padding:8px 14px;border:1px solid #CBD5E1;border-radius:8px;color:#132A4A;font-weight:600;text-decoration:none">${escHtml(l.label)}</a>`).join('');
+    const faqsHtml = REVIEW_CONTENT.faqs.map(f => `
+      <div style="margin:12px 0;padding:16px;background:#F7F8FA;border-radius:10px;border:1px solid #E2E8F0">
+        <h3 style="font-size:16px;font-weight:700;color:#0B1220;margin-bottom:6px">${escHtml(f.q)}</h3>
+        <p style="color:#334155;line-height:1.75;margin:0">${escHtml(f.a)}</p>
+      </div>`).join('');
+
     const extraHead = `<link rel="alternate" hreflang="bn" href="${BASE}/review" />
-<link rel="alternate" hreflang="x-default" href="${BASE}/review" />`;
+<link rel="alternate" hreflang="x-default" href="${BASE}/review" />
+<script type="application/ld+json">${jsonLd(reviewBreadcrumbSchema)}</script>
+<script type="application/ld+json">${jsonLd(reviewFaqSchema)}</script>`;
     const html = buildPage(base, {
-      title: 'ক্লায়েন্ট রিভিউ ও মতামত | এডভোকেট মোঃ শাহ আলম',
-      description: 'এডভোকেট মোঃ শাহ আলমের আইনি পরামর্শ ও মামলার অভিজ্ঞতা সম্পর্কে ক্লায়েন্টদের রিভিউ দেখুন এবং গুগলে আপনার মূল্যবান মতামত শেয়ার করুন।',
+      title: REVIEW_CONTENT.metaTitle,
+      description: REVIEW_CONTENT.metaDesc,
       canonical: `${BASE}/review`,
       lang: 'bn',
       extraHead,
-      body: `<div style="max-width:500px;margin:40px auto;text-align:center;padding:30px;background:#fff;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.08)">
-        <h1 style="font-size:24px;font-weight:700;margin-bottom:12px">${escHtml(pageHeadings.review)}</h1>
-        <p style="color:#555;margin-bottom:20px">অ্যাডভোকেট মো. শাহ আলম স্যারের আইনি পরামর্শ ও সহায়তায় আপনার অভিজ্ঞতা কেমন ছিল? গুগলে আপনার মূল্যবান ২ মিনিটের মতামত শেয়ার করুন।</p>
-        <div style="font-size:28px;color:#f59e0b;margin-bottom:20px">★★★★★</div>
-        <a href="https://maps.app.goo.gl/M3NXMwW3xkp2TE3h8" style="display:inline-block;padding:12px 28px;background:#1a56db;color:#fff;text-decoration:none;border-radius:8px;font-weight:700">সরাসরি গুগলে ৫-স্টার রিভিউ দিন</a>
-      </div>`,
+      body: `<nav aria-label="Breadcrumb" style="font-size:13px;color:#475569;margin-bottom:14px"><a href="/" style="color:#132A4A">হোম</a> &rsaquo; <span>ক্লায়েন্ট রিভিউ ও মতামত</span></nav>
+<div style="max-width:780px;margin:20px auto;text-align:center;padding:30px;background:#F7F8FA;border:1px solid #E2E8F0;border-radius:16px">
+  <h1 style="font-size:28px;font-weight:700;margin-bottom:12px;color:#0B1220">${escHtml(pageHeadings.review)}</h1>
+  <p style="color:#334155;line-height:1.8;margin-bottom:18px">${escHtml(REVIEW_CONTENT.intro)}</p>
+  <div style="font-size:28px;color:#C9A227;margin-bottom:18px">★★★★★</div>
+  <a href="${GOOGLE_REVIEW_URL}" data-cta="review-google" style="display:inline-block;padding:14px 28px;background:#132A4A;color:#fff;text-decoration:none;border-radius:12px;font-weight:700">${escHtml(REVIEW_CONTENT.ctaPrimary)}</a>
+  <p style="font-size:12px;color:#475569;margin-top:10px">${escHtml(REVIEW_CONTENT.ctaHelper)}</p>
+</div>
+${sectionsHtml}
+<section style="margin:28px 0"><h2 style="font-size:20px;font-weight:700;color:#0B1220;margin-bottom:10px">আমাদের প্রধান আইনি সেবাসমূহ</h2><div>${servicesNavHtml}</div></section>
+<section style="margin:28px 0"><h2 style="font-size:20px;font-weight:700;color:#0B1220;margin-bottom:12px">রিভিউ ও পরামর্শ সম্পর্কিত সাধারণ প্রশ্নোত্তর</h2>${faqsHtml}</section>
+${BN_CTA}`,
     });
     write(path.join(DIST, 'review', 'index.html'), html);
     console.log('  ✓ /review');

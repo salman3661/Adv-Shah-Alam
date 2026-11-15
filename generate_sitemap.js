@@ -68,6 +68,28 @@ function url(loc, lastmod, changefreq, priority, images = []) {
     return `  <url>\n    <loc>${BASE_URL}${loc}</loc>\n    <lastmod>${lastmod}</lastmod>\n    <changefreq>${changefreq}</changefreq>\n    <priority>${priority}</priority>${imgBlock}\n  </url>`;
 }
 
+const topics = JSON.parse(fs.readFileSync(path.join('src', 'content', 'topics.json'), 'utf8'));
+
+function topicHubLastmod(hub, posts) {
+    const rx = new RegExp(hub.regex, 'i');
+    let latest = '';
+    for (const post of posts) {
+        if (rx.test(`${post.slug} ${post.title || ''} ${post.category || ''}`)) {
+            const d = getDate(post);
+            if (d && d > latest) latest = d;
+        }
+    }
+    return latest || TODAY;
+}
+
+const enTopicHubUrls = topics
+    .filter(t => !redirectSources.has(`/blog/topic/${t.slug}`))
+    .map(t => url(`/blog/topic/${t.slug}`, topicHubLastmod(t, enPosts), 'weekly', '0.8'));
+
+const bnTopicHubUrls = topics
+    .filter(t => !redirectSources.has(`/bn/blog/topic/${t.slug}`))
+    .map(t => url(`/bn/blog/topic/${t.slug}`, topicHubLastmod(t, bnPosts), 'weekly', '0.7'));
+
 const urls = [
     // ── Core Pages ───────────────────────────────────────────────────────────
     url('/', TODAY, 'weekly', '1.0', HERO_IMAGE),
@@ -98,6 +120,10 @@ const urls = [
     url('/bn/services/supreme-court-lawyer', TODAY, 'monthly', '0.9'),
     url('/bn/services/company-corporate-lawyer', TODAY, 'monthly', '0.9'),
     url('/bn/services/tax-lawyer', TODAY, 'monthly', '0.9'),
+
+    // ── Topic Cluster Hubs (English & Bengali) ───────────────────────────────
+    ...enTopicHubUrls,
+    ...bnTopicHubUrls,
 
     // ── All EN Blog Posts (auto-detected, excluding redirected slugs) ────────
     ...enPosts.map(post => url('/blog/' + post.slug, getDate(post), 'monthly', '0.7')),
