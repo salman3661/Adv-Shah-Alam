@@ -12,10 +12,12 @@ import AdSenseAd from '../components/AdSenseAd';
 import postsMeta_en from '../content/posts-meta-en.json';
 import { coverFor } from '../utils/coverImage';
 import { parseBdDate, formatBdDate } from '../utils/bdDate.mjs';
+import { evergreenYear } from '../utils/evergreenYear.mjs';
 const _postModules = postsMeta_en;
 const blogPosts = Object.values(_postModules)
     .map((m) => m.default ?? m)
-    .filter((p) => p && p.slug && p.title);
+    .filter((p) => p && p.slug && p.title)
+    .map((p) => ({ ...p, title: evergreenYear(p.title) }));
 
 function isPublished(post) {
   return Boolean(post && !post.isDraft && !post._draft);

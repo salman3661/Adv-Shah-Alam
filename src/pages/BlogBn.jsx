@@ -12,8 +12,11 @@ import postsMeta_bn from '../content/posts-meta-bn.json';
 import popularBnSlugs from '../content/popular_bn.json';
 import { coverFor } from '../utils/coverImage';
 import { parseBdDate, formatBdDate } from '../utils/bdDate.mjs';
+import { evergreenYear } from '../utils/evergreenYear.mjs';
 const _bnModules = postsMeta_bn;
-const postsBn = Object.values(_bnModules).map((m) => m.default ?? m);
+const postsBn = Object.values(_bnModules)
+    .map((m) => m.default ?? m)
+    .map((p) => (p && p.title ? { ...p, title: evergreenYear(p.title) } : p));
 const popularRankMap = new Map((Array.isArray(popularBnSlugs) ? popularBnSlugs : []).map((s, idx) => [s, (popularBnSlugs.length - idx) * 500]));
 
 function isPublishedBn(post) {

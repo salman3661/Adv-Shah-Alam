@@ -550,7 +550,7 @@ const BlogPostBnInner = () => {
     const canonicalHref = post.canonicalUrl || pageUrl;
     const blogPostingSchema = {
         '@context': 'https://schema.org', '@type': ['Article', 'BlogPosting'],
-        headline: post.title, description: evergreenYear(post.metaDescription),
+        headline: evergreenYear(post.title), description: evergreenYear(post.metaDescription),
         datePublished: post.publishedDate, dateModified: post.lastModified || post.publishedDate,
         inLanguage: 'bn',
         author: {
@@ -748,7 +748,7 @@ const BlogPostBnInner = () => {
                             </div>
 
                             <h1 style={{ fontFamily: "'Noto Serif Bengali', 'Noto Sans Bengali', Georgia, serif", fontSize: 'clamp(1.65rem, 3.5vw, 2.55rem)', fontWeight: 800, lineHeight: 1.3, color: '#FFFFFF', marginBottom: '1.35rem', letterSpacing: '-0.01em' }}>
-                                {post.title}
+                                {evergreenYear(post.title)}
                             </h1>
 
                             <div style={{ display: 'flex', alignItems: 'center', gap: '0.875rem', flexWrap: 'wrap', paddingTop: '1.1rem', borderTop: '1px solid rgba(255,255,255,0.18)' }}>

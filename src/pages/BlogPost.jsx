@@ -512,7 +512,7 @@ const BlogPostInner = () => {
 
     const blogPostingSchema = {
         '@context': 'https://schema.org', '@type': ['Article', 'BlogPosting'],
-        headline: post.title, description: evergreenYear(post.metaDescription),
+        headline: evergreenYear(post.title), description: evergreenYear(post.metaDescription),
         datePublished: post.publishedDate, dateModified: post.lastModified || post.publishedDate,
         inLanguage: 'en',
         author: {
@@ -698,7 +698,7 @@ const BlogPostInner = () => {
                                 marginBottom: '1.35rem',
                                 letterSpacing: '-0.025em',
                             }}>
-                                {post.title}
+                                {evergreenYear(post.title)}
                             </h1>
 
                             {/* Author / date row */}

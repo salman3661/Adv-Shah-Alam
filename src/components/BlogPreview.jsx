@@ -5,6 +5,7 @@ import seo from '../content/seo.js';
 import postsPreview from '../content/posts-preview.json';
 import { coverFor } from '../utils/coverImage';
 import { formatBdDate } from '../utils/bdDate.mjs';
+import { evergreenYear } from '../utils/evergreenYear.mjs';
 
 const stripHtml = (s) => (s ? String(s).replace(/<[^>]*>?/gm, '').replace(/\*\*([^*]+)\*\*/g, '$1').trim() : '');
 
@@ -29,8 +30,8 @@ const BlogPreview = ({ lang: initialLang = 'en' }) => {
     const articles = activeLang === 'en' ? latestEn : latestBn;
     const linkBase = activeLang === 'en' ? '/blog/' : '/bn/blog/';
     const readLabel = activeLang === 'en'
-        ? (a) => `Read Full Guide: ${a.title}`
-        : (a) => `সম্পূর্ণ পড়ুন: ${a.title}`;
+        ? (a) => `Read Full Guide: ${evergreenYear(a.title)}`
+        : (a) => `সম্পূর্ণ পড়ুন: ${evergreenYear(a.title)}`;
     const readShort = activeLang === 'en' ? 'Read Full Guide' : 'সম্পূর্ণ পড়ুন';
 
     return (
@@ -132,7 +133,7 @@ const BlogPreview = ({ lang: initialLang = 'en' }) => {
 
                                     <h3 className="font-bold text-base md:text-lg leading-snug mb-3 flex-1 group-hover:text-[var(--accent)] transition-colors" style={{ color: 'var(--text)', fontFamily: activeLang === 'bn' ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>
                                         <Link to={`${linkBase}${article.slug}`} className="hover:underline">
-                                            {article.title}
+                                            {evergreenYear(article.title)}
                                         </Link>
                                     </h3>
 

@@ -330,7 +330,7 @@ function buildPostBody(post, postBySlug = new Map()) {
   </nav>`;
 
   return `${breadcrumbNav}
-<h1 style="font-size:30px;font-weight:700;margin-bottom:8px;color:#0B1220">${escHtml(post.title)}</h1>
+<h1 style="font-size:30px;font-weight:700;margin-bottom:8px;color:#0B1220">${escHtml(evergreenYear(post.title))}</h1>
 <p style="color:#475569;font-size:14px;margin-bottom:20px">By <a href="/advocate-md-shah-alam" style="color:#132A4A;font-weight:700">Advocate Md. Shah Alam</a> &middot; ${escHtml(post.publishedDate||'')} &middot; ${escHtml(post.readTime||'')}</p>
 ${directAnswer}
 ${DISCLAIMER}
@@ -409,7 +409,7 @@ function buildBnPostBody(post, postBySlug = new Map()) {
   </nav>`;
 
   return `${breadcrumbNavBn}
-<h1 style="font-size:30px;font-weight:700;margin-bottom:8px;color:#0B1220">${escHtml(post.title || '')}</h1>
+<h1 style="font-size:30px;font-weight:700;margin-bottom:8px;color:#0B1220">${escHtml(evergreenYear(post.title || ''))}</h1>
 <p style="color:#475569;font-size:14px;margin-bottom:20px">লেখক: <a href="/advocate-md-shah-alam" style="color:#132A4A;font-weight:700">অ্যাডভোকেট মো. শাহ আলম</a> &middot; ${escHtml(post.publishedDate || '')} &middot; ${escHtml(post.readTime || '')}</p>
 ${directAnswerBn}
 ${BN_DISCLAIMER}
@@ -1475,6 +1475,7 @@ ${buildServiceSchema(`${BASE}/bn/services/${slug}`, bnData, 'bn')}`;
   const enPosts = enFiles
     .map(f => jsonLoad(path.join(EN_DIR, f)))
     .filter(p => p && p.slug && !p.isDraft && !p._draft && !redirectSources.has('/blog/' + p.slug))
+    .map(p => ({ ...p, title: evergreenYear(p.title) }))
     .sort((a, b) => freshnessTs(b) - freshnessTs(a) || a.slug.localeCompare(b.slug));
   const enPostBySlug = new Map(enPosts.map(p => [p.slug, p]));
 
@@ -1482,6 +1483,7 @@ ${buildServiceSchema(`${BASE}/bn/services/${slug}`, bnData, 'bn')}`;
   const bnPosts = bnFiles
     .map(f => jsonLoad(path.join(BN_DIR, f)))
     .filter(p => p && p.slug && !p.isDraft && !p._draft && !redirectSources.has('/bn/blog/' + p.slug))
+    .map(p => ({ ...p, title: evergreenYear(p.title) }))
     .sort((a, b) => freshnessTs(b) - freshnessTs(a) || a.slug.localeCompare(b.slug));
   const bnPostBySlug = new Map(bnPosts.map(p => [p.slug, p]));
 
@@ -1535,7 +1537,7 @@ ${buildServiceSchema(`${BASE}/bn/services/${slug}`, bnData, 'bn')}`;
         const href = n === 1 ? prefix : `${prefix}/page/${n}`;
         return `<a href="${href}" style="padding:6px 12px;border:1px solid #CBD5E1;border-radius:6px;margin:2px;display:inline-block;${n === p ? 'background:#132A4A;color:#fff;font-weight:700' : 'color:#132A4A'}">${n}</a>`;
       }).join(' ');
-      const itemsHtml = slice.map(post => `<li style="margin:10px 0"><a href="${prefix}/${post.slug}" style="font-weight:600;color:#132A4A">${escHtml(post.title)}</a></li>`).join('');
+      const itemsHtml = slice.map(post => `<li style="margin:10px 0"><a href="${prefix}/${post.slug}" style="font-weight:600;color:#132A4A">${escHtml(evergreenYear(post.title))}</a></li>`).join('');
       const pageHtml = buildPage(base, {
         title: `${label} — Page ${p} | Adv. Shah Alam`,
         description: `${label} archive page ${p} of ${totalPages} by Advocate Md. Shah Alam, Supreme Court of Bangladesh.`,
@@ -1614,7 +1616,7 @@ ${buildServiceSchema(`${BASE}/bn/services/${slug}`, bnData, 'bn')}`;
     const articleSchema = {
       '@context': 'https://schema.org',
       '@type': 'BlogPosting',
-      headline: post.title,
+      headline: evergreenYear(post.title),
       description: enMetaDesc,
       datePublished: post.publishedDate || TODAY,
       dateModified: post.lastModified || post.publishedDate || TODAY,
@@ -1641,7 +1643,7 @@ ${buildServiceSchema(`${BASE}/bn/services/${slug}`, bnData, 'bn')}`;
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Home', item: `${BASE}/en` },
         { '@type': 'ListItem', position: 2, name: 'Blog', item: `${BASE}/blog` },
-        { '@type': 'ListItem', position: 3, name: post.title, item: postCanonical },
+        { '@type': 'ListItem', position: 3, name: evergreenYear(post.title), item: postCanonical },
       ],
     };
 
@@ -1693,7 +1695,7 @@ ${hreflangTags}
     const articleSchema = {
       '@context': 'https://schema.org',
       '@type': 'BlogPosting',
-      headline: post.title,
+      headline: evergreenYear(post.title),
       description: bnMetaDesc,
       datePublished: post.publishedDate || TODAY,
       dateModified: post.lastModified || post.publishedDate || TODAY,
@@ -1721,7 +1723,7 @@ ${hreflangTags}
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'হোম', item: `${BASE}/` },
         { '@type': 'ListItem', position: 2, name: 'বাংলা ব্লগ', item: `${BASE}/bn/blog` },
-        { '@type': 'ListItem', position: 3, name: post.title, item: postCanonical },
+        { '@type': 'ListItem', position: 3, name: evergreenYear(post.title), item: postCanonical },
       ],
     };
 
