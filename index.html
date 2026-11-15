@@ -21,6 +21,36 @@
   <meta name="theme-color" content="#0B1220" media="(prefers-color-scheme: dark)" />
   <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)" />
 
+  <link rel="preload" href="/fonts/NotoSerifBengali-var-bengali.woff2" as="font" type="font/woff2" crossorigin />
+  <style id="bn-font-faces">
+    @font-face {
+      font-family: 'Noto Serif Bengali';
+      font-style: normal;
+      font-weight: 400 800;
+      font-stretch: 100%;
+      font-display: swap;
+      src: url('/fonts/NotoSerifBengali-var-bengali.woff2') format('woff2');
+      unicode-range: U+0951-0952, U+0964-0965, U+0980-09FE, U+1CD0, U+1CD2, U+1CD5-1CD6, U+1CD8, U+1CE1, U+1CEA, U+1CED, U+1CF2, U+1CF5-1CF7, U+200C-200D, U+20B9, U+25CC, U+A8F1, U+11DF0-11DF1;
+    }
+    @font-face {
+      font-family: 'Noto Serif Bengali';
+      font-style: normal;
+      font-weight: 400 800;
+      font-stretch: 100%;
+      font-display: swap;
+      src: url('/fonts/NotoSerifBengali-var-latin.woff2') format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+    @font-face {
+      font-family: 'Noto Serif Bengali Fallback';
+      src: local('Noto Sans Bengali'), local('Nirmala UI'), local('Vrinda'), local('SolaimanLipi'), local('Kalpurush'), local('DejaVu Serif');
+      size-adjust: 92%;
+      ascent-override: 96%;
+      descent-override: 30%;
+      line-gap-override: 0%;
+    }
+  </style>
+
   <!-- Anti-FOUC: set theme BEFORE any paint — runs before fonts/styles load -->
   <script>
     (function () {
@@ -113,27 +143,7 @@
     (function () {
       var gaLoaded = false;
       var adsLoaded = false;
-      var fontLoaded = false;
       var interacted = false;
-
-      function loadFont() {
-        if (fontLoaded) return;
-        fontLoaded = true;
-        try {
-          var st = document.createElement('style');
-          st.textContent =
-            "@font-face{font-family:'Noto Serif Bengali';font-style:normal;font-weight:400 800;font-stretch:100%;font-display:swap;src:url('/fonts/NotoSerifBengali-var-bengali.woff2') format('woff2');unicode-range:U+0951-0952,U+0964-0965,U+0980-09FE,U+1CD0,U+1CD2,U+1CD5-1CD6,U+1CD8,U+1CE1,U+1CEA,U+1CED,U+1CF2,U+1CF5-1CF7,U+200C-200D,U+20B9,U+25CC,U+A8F1,U+11DF0-11DF1;}" +
-            "@font-face{font-family:'Noto Serif Bengali';font-style:normal;font-weight:400 800;font-stretch:100%;font-display:swap;src:url('/fonts/NotoSerifBengali-var-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}";
-          document.head.appendChild(st);
-          sessionStorage.setItem('bnFontLoaded', '1');
-        } catch (e) {}
-      }
-
-      try {
-        if (sessionStorage.getItem('bnFontLoaded') === '1') {
-          loadFont();
-        }
-      } catch (e) {}
 
       function loadGA() {
         if (gaLoaded) return;
@@ -212,7 +222,6 @@
       function onFirstInteract() {
         if (interacted) return;
         interacted = true;
-        loadFont();
         loadAds();
         loadGA();
         for (var i = 0; i < interactEvents.length; i++) {
@@ -225,7 +234,6 @@
       // Guarantee ads & analytics still initialize after LCP for passive readers and ad crawlers
       window.addEventListener('load', function () {
         setTimeout(function () {
-          loadFont();
           loadAds();
           loadGA();
         }, 250);

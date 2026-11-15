@@ -610,18 +610,6 @@ const Blog = () => {
                 </section>
             )}
 
-            {/* ════ HUB AD 1: BELOW SPOTLIGHT FEATURED POST ════ */}
-            <div className="container mx-auto px-6 max-w-6xl py-4">
-                <AdSenseAd
-                    key="blog-en-hub-top"
-                    slot="8630877987"
-                    format="auto"
-                    responsive={true}
-                    labelText="Advertisement"
-                    minHeight={250}
-                />
-            </div>
-
             {/* ════ MAIN ARTICLES GRID ════ */}
             <section className="py-10 pb-24" style={{ background: 'var(--bg)' }}>
                 <div className="container mx-auto px-6 max-w-6xl">

@@ -94,7 +94,7 @@ body {
   --shadow-lg: 0 12px 32px -4px rgba(11, 18, 32, 0.10), 0 4px 8px -4px rgba(11, 18, 32, 0.05);
 
   --font-en: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  --font-bn: 'Noto Serif Bengali', 'Noto Sans Bengali', 'Nirmala UI', 'Vrinda', serif;
+  --font-bn: 'Noto Serif Bengali', 'Noto Serif Bengali Fallback', 'Noto Sans Bengali', 'Nirmala UI', 'Vrinda', serif;
 
   font-family: var(--font-en);
   font-size: 16px;
@@ -1452,9 +1452,31 @@ input, select, textarea {
   overflow-y: visible;
 }
 
+.ad-slot-reserved ins.adsbygoogle,
+.ad-slot-reserved ins.adsbygoogle[data-ad-status="unfilled"],
+.ad-slot-reserved[data-ad-status-wrapper="unfilled"] ins.adsbygoogle {
+  display: block !important;
+  min-height: calc(var(--ad-min-h-mobile, 100px) - 20px) !important;
+}
+
 @media (min-width: 768px) {
   .ad-slot-reserved {
     min-height: var(--ad-min-h-desktop, 250px);
+  }
+  .ad-slot-reserved ins.adsbygoogle,
+  .ad-slot-reserved ins.adsbygoogle[data-ad-status="unfilled"],
+  .ad-slot-reserved[data-ad-status-wrapper="unfilled"] ins.adsbygoogle {
+    min-height: calc(var(--ad-min-h-desktop, 250px) - 20px) !important;
+  }
+}
+
+/* Mobile bottom bar (.gcta-bar) clearance from footer & bottom-anchored AdSense */
+@media (max-width: 768px) {
+  footer {
+    padding-bottom: calc(92px + env(safe-area-inset-bottom, 0px)) !important;
+  }
+  ins.adsbygoogle[data-anchor-status][style*="bottom: 0"] {
+    bottom: calc(74px + env(safe-area-inset-bottom, 0px)) !important;
   }
 }
 

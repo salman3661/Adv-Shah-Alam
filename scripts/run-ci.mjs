@@ -108,6 +108,9 @@ async function main() {
     await runStep('node', ['scripts/ci-schema-lint.mjs']);
     await runStep('node', ['scripts/phase3-hreflang-verify.mjs']);
     await runStep('node', ['scripts/phase1-verify.mjs']);
+    if (!chunkArg || chunkArg.startsWith('1/')) {
+      await runStep('node', ['scripts/ci-cwv-ads.mjs', '--base', baseUrl]);
+    }
     const parityArgs = ['scripts/ci-render-parity.mjs', '--base', baseUrl];
     if (chunkArg) parityArgs.push('--chunk', chunkArg);
     await runStep('node', parityArgs);

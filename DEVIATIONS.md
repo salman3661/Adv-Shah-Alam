@@ -18,3 +18,12 @@ This file records technical or environmental constraints encountered during auto
   1. Preserved all existing GSC lookup fallbacks and ensured `.github/workflows/weekly-scorecard.yml` passes `${{ secrets.GSC_SERVICE_ACCOUNT }}`, `${{ secrets.GA4_SERVICE_ACCOUNT }}`, and `${{ secrets.ADSENSE_REFRESH_TOKEN }}` when added in GitHub Repository Settings → Secrets and variables → Actions.
   2. Used the most recent verified Search Console export (`baseline/gsc-pages.csv`, `baseline/gsc-queries.csv`, `Search Console CSV/advmdshahalam.me-Performance-on-Search-2026-10-17.xlsx`) to rank top EN/NRB unpaired posts by impressions for Phase 2 hreflang twinning and striking-distance analysis.
 - **Residual Risk:** Medium until owner adds `GSC_SERVICE_ACCOUNT` JSON secret to GitHub Actions / Vercel Environment Variables; once added, scheduled weekly scorecards and `prebuild` sync automatically without code changes.
+
+## 3. Google AdSense Dashboard Account Settings (Auto Ads / Mobile Anchor Toggle)
+- **Constraint:** Account-level and site-level Google AdSense toggles (Auto Ads, Vignette ads, Mobile Bottom Anchor inclusion/exclusion per URL path such as `/bn/blog/*`) reside exclusively inside the owner's Google AdSense UI console and cannot be accessed or configured from source code or the CLI.
+- **Impact:** Repository code enforces exact manual unit caps (`<= 4` on EN/services, exact `2` on BN posts, `<= 2` on blog/hub pages, `3` on home), zero manual slots above `<h1>` or `.direct-answer`, non-collapsing reserved container heights (`250px` desktop / `100px` mobile) on `unfilled`, and CSS offset protection so bottom anchor units never overlap `.gcta-bar`; however, Google-injected Auto Ads / Vignettes cannot be suppressed purely via HTML if enabled in the AdSense dashboard.
+- **Mitigation Applied:**
+  1. Added strict manual slot caps across `Home.jsx`, `Blog.jsx`, `BlogBn.jsx`, `BlogPost.jsx`, `BlogPostBn.jsx`, `ServicePage.jsx`, and `ContactPage.jsx` verified automatically by `scripts/ci-cwv-ads.mjs`.
+  2. Documented `.google-auto-placed` hiding inside `header`, `nav`, `.hero-section`, `.gcta-bar`, `.msb-bar` in `src/index.css` and bottom anchor offset clearance.
+- **Residual Risk:** Low–Medium if Auto Ads or Anchor Ads on `/bn/blog/*` remain toggled ON inside the AdSense dashboard; owner should disable Auto Ads and exclude `/bn/blog/*` from Anchor ads in AdSense → Sites → `advmdshahalam.me` → Edit.
+

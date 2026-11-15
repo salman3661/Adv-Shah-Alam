@@ -12,3 +12,8 @@
 ## Decision 3 (Phase 2): Expand `/review` Substantively (Option B — 650+ Words, Zero Fabricated Ratings)
 - **Context:** `/review` previously had ~41 words and zero real reviews on disk. Fabricating `Review` or `aggregateRating` schema violates policy and remediation constraints.
 - **Decision:** Chose Option (b): turned `/review` into a substantial Bengali guide (650+ words shared identically between `src/pages/ReviewPage.jsx` and `scripts/prerender.mjs` via `src/content/reviewContent.mjs`) covering Google review submission steps, review verification policy, chamber details, practice areas, direct WhatsApp/Call CTAs, and 6 visible FAQs backed by matching `FAQPage` + `BreadcrumbList` JSON-LD (zero `aggregateRating`).
+
+## Decision 4 (Phase 4): AdSense Density Caps (<=4 EN / Exact 2 BN) & Static Bengali Font Metrics
+- **Context:** EN/BN posts previously rendered up to 11 `ins.adsbygoogle` DOM nodes across `BlogPost.jsx`/`BlogPostBn.jsx`/`FeeCalculator.jsx`, `AdSenseAd.jsx` collapsed `display: none` when unfilled, and deferred JS `loadFont()` (`index.html`) injected `@font-face` 250ms after `load`, causing 0.10–0.38 CLS across Bengali pages.
+- **Decision:** Capped manual units strictly per template (`3` Home, `2` Blog/Hub/BN Post, `4` EN Post & Service, `2` Contact), fixed `AdSenseAd.jsx` + `src/index.css` to keep `<ins>` mounted (`visibility: hidden`, reserved `minHeight >= 250px` desktop / `>= 100px` mobile) on `unfilled`, offset bottom anchor ads above `.gcta-bar`, moved `Noto Serif Bengali` `@font-face` statically into `<head>` with a calibrated `Noto Serif Bengali Fallback` descriptor + font preload on BN routes, and enforced all rules in `scripts/ci-cwv-ads.mjs` (wired into `scripts/run-ci.mjs`).
+

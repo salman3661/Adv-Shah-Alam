@@ -12,7 +12,7 @@ import AdSenseAd from '../components/AdSenseAd';
 import { coverFor, coverAbsolute } from '../utils/coverImage';
 import { evergreenYear } from '../utils/evergreenYear.mjs';
 import FeeCalculator from '../components/FeeCalculator';
-import { AD_SLOTS, DESKTOP_QUERY, useMediaQuery } from '../components/ads/adLayout';
+import { AD_SLOTS } from '../components/ads/adLayout';
 import { FEE_CALCULATORS, calculatorSectionIndex } from '../data/feeCalculators';
 import { SITE, buildEntityGraph, buildHreflang, resolveMasterPillar, resolveQuickAnswerTable, jsonLd } from '../utils/seoSchema.mjs';
 import ArticleSkeleton from '../components/ArticleSkeleton';
@@ -465,8 +465,6 @@ const BlogPostInner = () => {
     };
 
     /* ── Error / Coming Soon states ── */
-    const isDesktop = useMediaQuery(DESKTOP_QUERY);
-
     const metaFallback = allPosts.find(p => p.slug === slug);
 
     /* ── Error / Loading / Coming Soon states ── */
@@ -774,22 +772,6 @@ const BlogPostInner = () => {
                 </div>
             </section>
 
-            {/* ════════════════ AD #1: IMMEDIATELY BELOW FEATURED COVER PICTURE (HIGH-FILL DISPLAY) ════════════════ */}
-            <div style={{ background: 'var(--bg)', paddingTop: '1rem' }}>
-                <div className="bp-hero-container">
-                    <AdSenseAd
-                        key={`ad-belowpic-${post.slug}`}
-                        slot={AD_SLOTS.topDisplay}
-                        format="auto"
-                        responsive={true}
-                        labelText="Advertisement"
-                        minHeight={100}
-                        mobileMinHeight={100}
-                        style={{ margin: '0 auto' }}
-                    />
-                </div>
-            </div>
-
             {/* ════════════════ BODY ════════════════ */}
             <div style={{ background: 'var(--bg)' }}>
                 <div className="bp-body-container">
@@ -950,18 +932,16 @@ const BlogPostInner = () => {
                                     </div>
                                 )}
 
-                                {/* Ad #3 (EN): After Executive Summary / Quick Answer (only when intro/quick block is present so it never stacks onto Ad #2) */}
-                                {(post.heroIntro || quickTable || post.quickAnswer) && (
-                                    <AdSenseAd
-                                        key={`ad-postintro-${post.slug}`}
-                                        slot={AD_SLOTS.body1}
-                                        format="fluid"
-                                        layout="in-article"
-                                        labelText="Advertisement"
-                                        minHeight={250}
-                                        style={{ margin: '1.25rem auto 2rem' }}
-                                    />
-                                )}
+                                {/* Ad #1 (EN): After Executive Summary / Quick Answer */}
+                                <AdSenseAd
+                                    key={`ad-postintro-${post.slug}`}
+                                    slot={AD_SLOTS.body1}
+                                    format="fluid"
+                                    layout="in-article"
+                                    labelText="Advertisement"
+                                    minHeight={250}
+                                    style={{ margin: '1.25rem auto 2rem' }}
+                                />
 
                                 {/* Phase 5.1: Interactive Legal Calculator right after intro ad on pillar pages */}
                                 {calcIdx === -2 && calcCfg && <FeeCalculator type={calcCfg.type} lang="en" hideAd={true} />}
@@ -1037,23 +1017,11 @@ const BlogPostInner = () => {
                                                     <MidArticleLeadCapture lang="en" />
                                                 )}
 
-                                                {/* Unit 3: interactive fee calculator (when matched to a specific section) */}
-                                                {i === calcIdx && calcCfg && <FeeCalculator type={calcCfg.type} lang="en" />}
+                                                {/* Interactive fee calculator (internal ad suppressed to keep total <= 4 units) */}
+                                                {i === calcIdx && calcCfg && <FeeCalculator type={calcCfg.type} lang="en" hideAd={true} />}
 
-                                                {/* Ad #4 (EN): After Section 0 */}
-                                                {i === 0 && secLen >= 2 && (
-                                                    <AdSenseAd
-                                                        key={`ad-sec0-${post.slug}`}
-                                                        slot={AD_SLOTS.native}
-                                                        format="fluid"
-                                                        layout="in-article"
-                                                        labelText="Advertisement"
-                                                        minHeight={250}
-                                                        style={{ margin: '1.5rem auto 2.5rem' }}
-                                                    />
-                                                )}
-                                                {/* Ad #5 (EN): Mid-section */}
-                                                {i === midSec && i !== 0 && (
+                                                {/* Ad #2 (EN): Mid-section (~45%) */}
+                                                {i === midSec && (
                                                     <AdSenseAd
                                                         key={`ad-mid-${post.slug}`}
                                                         slot={AD_SLOTS.body2}
@@ -1064,8 +1032,8 @@ const BlogPostInner = () => {
                                                         style={{ margin: '1.5rem auto 2.5rem' }}
                                                     />
                                                 )}
-                                                {/* Ad #6 (EN): Late-section */}
-                                                {i === lateSec && i !== midSec && i !== 0 && (
+                                                {/* Ad #3 (EN): Late-section (~78%) */}
+                                                {i === lateSec && i !== midSec && (
                                                     <AdSenseAd
                                                         key={`ad-late-${post.slug}`}
                                                         slot={AD_SLOTS.body3}
@@ -1252,19 +1220,9 @@ const BlogPostInner = () => {
 
                                 <RecentPosts currentSlug={post.slug} />
 
-                                {/* ── Sticky Bottom Follower: High-viewability desktop sidebar unit ── */}
+                                {/* ── Sticky Bottom Follower: Chamber Promo Card ── */}
                                 <div style={{ position: 'sticky', top: '5.25rem' }}>
                                     <ChamberPromoCard />
-                                    {isDesktop && (
-                                        <AdSenseAd
-                                            key={`ad-rail-${post.slug}`}
-                                            slot={AD_SLOTS.sidebar}
-                                            format="auto"
-                                            responsive={true}
-                                            labelText="Advertisement"
-                                            minHeight={250}
-                                        />
-                                    )}
                                 </div>
                             </div>
                         </aside>
@@ -1449,16 +1407,6 @@ const BlogPostInner = () => {
                                     );
                                 })}
                             </div>
-                        </div>
-                        <div style={{ marginTop: '2.25rem' }}>
-                            <AdSenseAd
-                                key={`ad-grid-${post.slug}`}
-                                slot={AD_SLOTS.bottomGrid}
-                                format="autorelaxed"
-                                responsive={true}
-                                labelText="Sponsored Content"
-                                minHeight={280}
-                            />
                         </div>
                     </div>
                 </div>

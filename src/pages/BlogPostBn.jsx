@@ -12,7 +12,7 @@ import AdSenseAd from '../components/AdSenseAd';
 import { coverFor, coverAbsolute } from '../utils/coverImage';
 import { evergreenYear } from '../utils/evergreenYear.mjs';
 import FeeCalculator from '../components/FeeCalculator';
-import { AD_SLOTS, DESKTOP_QUERY, useMediaQuery } from '../components/ads/adLayout';
+import { AD_SLOTS } from '../components/ads/adLayout';
 import { FEE_CALCULATORS, calculatorSectionIndex } from '../data/feeCalculators';
 import { SITE, buildEntityGraph, buildHreflang, resolveMasterPillar, resolveQuickAnswerTable, jsonLd } from '../utils/seoSchema.mjs';
 import ArticleSkeleton from '../components/ArticleSkeleton';
@@ -506,8 +506,6 @@ const BlogPostBnInner = () => {
         setTimeout(() => { setCSubmitted(false); setCName(''); setCPhone(''); setCMessage(''); }, 5000);
     };
 
-    const isDesktop = useMediaQuery(DESKTOP_QUERY);
-
     const metaFallback = allBnPosts.find(p => p.slug === slug);
 
     /* ── Error / Loading / Coming Soon states ── */
@@ -823,22 +821,6 @@ const BlogPostBnInner = () => {
                 </div>
             </section>
 
-            {/* ════ AD #1: IMMEDIATELY BELOW FEATURED COVER PICTURE (HIGH-FILL DISPLAY) ════ */}
-            <div style={{ background: 'var(--bg)', paddingTop: '1rem' }}>
-                <div className="bpbn-hero-container">
-                    <AdSenseAd
-                        key={`ad-bn-belowpic-${post.slug}`}
-                        slot={AD_SLOTS.topDisplay}
-                        format="auto"
-                        responsive={true}
-                        labelText="বিজ্ঞাপন"
-                        minHeight={100}
-                        mobileMinHeight={100}
-                        style={{ margin: '0 auto' }}
-                    />
-                </div>
-            </div>
-
             {/* ════ BODY ════ */}
             <div style={{ background: 'var(--bg)' }}>
                 <div className="bpbn-body-container">
@@ -993,28 +975,14 @@ const BlogPostBnInner = () => {
                                     </div>
                                 )}
 
-                                {/* Ad #3 (BN): After Executive Summary / Quick Answer (only when intro/quick block is present so it never stacks onto Ad #2) */}
-                                {(post.heroIntro || quickTable || post.quickAnswer) && (
-                                    <AdSenseAd
-                                        key={`ad-bn-postintro-${post.slug}`}
-                                        slot={AD_SLOTS.body1}
-                                        format="fluid"
-                                        layout="in-article"
-                                        labelText="বিজ্ঞাপন"
-                                        minHeight={250}
-                                        style={{ margin: '1.25rem auto 2rem' }}
-                                    />
-                                )}
-
-                                {/* Phase 5.1: Interactive Legal Calculator right after intro ad on pillar pages */}
+                                {/* Phase 5.1: Interactive Legal Calculator right after intro on pillar pages */}
                                 {calcIdx === -2 && calcCfg && <FeeCalculator type={calcCfg.type} lang="bn" hideAd={true} />}
 
                                 {/* Sections — High-End Editorial Design */}
                                 {(() => {
                                     const secs = post.sections || [];
                                     const secLen = secs.length;
-                                    const midSecBn = Math.max(1, Math.floor((secLen - 1) * 0.5));
-                                    const lateSecBn = secLen >= 4 ? Math.max(midSecBn + 1, Math.floor((secLen - 1) * 0.78)) : -1;
+                                    const midSecBn = secLen >= 2 ? Math.max(0, Math.floor((secLen - 1) * 0.4)) : 0;
                                     return secs.map((sec, i) => {
                                         return (
                                             <React.Fragment key={i}>
@@ -1080,38 +1048,14 @@ const BlogPostBnInner = () => {
                                                     <MidArticleLeadCapture lang="bn" />
                                                 )}
 
-                                                {/* Unit 3: interactive fee calculator (when matched to a specific section) */}
-                                                {i === calcIdx && calcCfg && <FeeCalculator type={calcCfg.type} lang="bn" />}
+                                                {/* Interactive fee calculator (internal ad suppressed to keep BN total = 2 units) */}
+                                                {i === calcIdx && calcCfg && <FeeCalculator type={calcCfg.type} lang="bn" hideAd={true} />}
 
-                                                {/* Ad #4 (BN): After Section 0 */}
-                                                {i === 0 && secLen >= 2 && (
-                                                    <AdSenseAd
-                                                        key={`ad-bn-sec0-${post.slug}`}
-                                                        slot={AD_SLOTS.native}
-                                                        format="fluid"
-                                                        layout="in-article"
-                                                        labelText="বিজ্ঞাপন"
-                                                        minHeight={250}
-                                                        style={{ margin: '1.5rem auto 2.5rem' }}
-                                                    />
-                                                )}
-                                                {/* Ad #5 (BN): Mid-section */}
-                                                {i === midSecBn && i !== 0 && (
+                                                {/* Ad #1 (BN): Mid-section (~40%) — 1 of 2 total ads on Bengali articles */}
+                                                {i === midSecBn && (
                                                     <AdSenseAd
                                                         key={`ad-bn-mid-${post.slug}`}
                                                         slot={AD_SLOTS.body2}
-                                                        format="fluid"
-                                                        layout="in-article"
-                                                        labelText="বিজ্ঞাপন"
-                                                        minHeight={250}
-                                                        style={{ margin: '1.5rem auto 2.5rem' }}
-                                                    />
-                                                )}
-                                                {/* Ad #6 (BN): Late-section */}
-                                                {i === lateSecBn && i !== midSecBn && i !== 0 && (
-                                                    <AdSenseAd
-                                                        key={`ad-bn-late-${post.slug}`}
-                                                        slot={AD_SLOTS.body3}
                                                         format="fluid"
                                                         layout="in-article"
                                                         labelText="বিজ্ঞাপন"
@@ -1362,19 +1306,9 @@ const BlogPostBnInner = () => {
 
                                 <RecentBnPosts currentSlug={post.slug} />
 
-                                {/* ── Sticky Bottom Follower: Stays visible all the way to the end of the article ── */}
+                                {/* ── Sticky Bottom Follower: Chamber Promo Card ── */}
                                 <div style={{ position: 'sticky', top: '5.25rem' }}>
                                     <ChamberBnPromoCard />
-                                    {isDesktop && (
-                                        <AdSenseAd
-                                            key={`ad-bn-rail-${post.slug}`}
-                                            slot={AD_SLOTS.sidebar}
-                                            format="auto"
-                                            responsive={true}
-                                            labelText="বিজ্ঞাপন"
-                                            minHeight={250}
-                                        />
-                                    )}
                                 </div>
                             </div>
                         </aside>
@@ -1559,16 +1493,6 @@ const BlogPostBnInner = () => {
                                     );
                                 })}
                             </div>
-                        </div>
-                        <div style={{ marginTop: '2.25rem' }}>
-                            <AdSenseAd
-                                key={`ad-bn-grid-${post.slug}`}
-                                slot={AD_SLOTS.bottomGrid}
-                                format="autorelaxed"
-                                responsive={true}
-                                labelText="আরও দেখুন"
-                                minHeight={280}
-                            />
                         </div>
                     </div>
                 </div>

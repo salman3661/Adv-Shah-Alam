@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet-async';
 import { Link, useLocation } from 'react-router-dom';
 import { MapPin, Phone, MessageCircle, Mail, Clock, Send, ExternalLink, Scale, ShieldCheck, CheckCircle2, CreditCard, ChevronRight, HelpCircle, FileText } from 'lucide-react';
 import { CALL_NUMBER, CALL_DISPLAY, waLink } from '../data/contactInfo';
-import siteInfo from '../content/siteInfo.json';
 import AdSenseAd from '../components/AdSenseAd';
 
 const CONTACT_FAQS_BN = [
@@ -243,7 +242,14 @@ const practiceServicesEn = [
 
 /* ─── Contact Form Component ─────────────────────────────────── */
 const cleanField = (val, maxLen = 200) =>
-    String(val || '').replace(/[\u0000-\u001F\u007F]/g, ' ').trim().slice(0, maxLen);
+    Array.from(String(val || ''))
+        .map((c) => {
+            const code = c.charCodeAt(0);
+            return code < 32 || code === 127 ? ' ' : c;
+        })
+        .join('')
+        .trim()
+        .slice(0, maxLen);
 
 const ContactForm = ({ isBn, initialService }) => {
     const preselectedSubject = initialService === 'case-review'
@@ -251,8 +257,12 @@ const ContactForm = ({ isBn, initialService }) => {
         : '';
     const [formData, setFormData] = React.useState({ name: '', phone: '', subject: preselectedSubject, message: '', website: '' });
     const [submitted, setSubmitted] = React.useState(false);
-    const mountedAt = React.useRef(Date.now());
+    const mountedAt = React.useRef(0);
     const lastSubmitAt = React.useRef(0);
+
+    React.useEffect(() => {
+        mountedAt.current = Date.now();
+    }, []);
 
     React.useEffect(() => {
         if (initialService === 'case-review') {
@@ -513,27 +523,30 @@ const ContactPage = ({ lang }) => {
                 <div className="container mx-auto px-6 max-w-5xl">
                     <div className="grid sm:grid-cols-3 gap-4">
                         {[
-                            { icon: Phone, label: isBn ? 'সরাসরি হটলাইন কল' : 'Phone', value: CALL_DISPLAY, href: `tel:${CALL_NUMBER}`, color: 'var(--accent)', cta: 'contact-quick-call' },
-                            { icon: MessageCircle, label: isBn ? 'ইনস্ট্যান্ট হোয়াটসঅ্যাপ' : 'WhatsApp', value: '+880 1955-802007', href: waLink(), color: '#25D366', cta: 'contact-quick-whatsapp' },
-                            { icon: CreditCard, label: isBn ? 'পেইড কনসালটেশন (bKash)' : 'bKash Paid Review', value: '01712655546', href: `tel:${CALL_NUMBER}`, color: 'var(--gold)', cta: 'contact-bkash-call' },
-                        ].map(({ icon: Icon, label, value, href, color, cta }) => (
-                            <a key={label} href={href}
-                                data-cta={cta}
+                            { id: 'call', icon: Phone, label: isBn ? 'সরাসরি হটলাইন কল' : 'Phone', value: CALL_DISPLAY, href: `tel:${CALL_NUMBER}`, color: 'var(--accent)', cta: 'contact-quick-call' },
+                            { id: 'wa', icon: MessageCircle, label: isBn ? 'ইনস্ট্যান্ট হোয়াটসঅ্যাপ' : 'WhatsApp', value: '+880 1955-802007', href: waLink(), color: '#25D366', cta: 'contact-quick-whatsapp' },
+                            { id: 'bkash', icon: CreditCard, label: isBn ? 'পেইড কনসালটেশন (bKash)' : 'bKash Paid Review', value: '01712655546', href: `tel:${CALL_NUMBER}`, color: 'var(--gold)', cta: 'contact-bkash-call' },
+                        ].map((item) => {
+                            const IconComp = item.icon;
+                            return (
+                            <a key={item.id} href={item.href}
+                                data-cta={item.cta}
                                 data-placement="contact-quick"
-                                target={href.startsWith('http') ? '_blank' : undefined}
-                                rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                                target={item.href.startsWith('http') ? '_blank' : undefined}
+                                rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                                 className="glass-card flex items-center gap-4 p-4 group rounded-xl border transition-[color,background-color,border-color,box-shadow,opacity,transform] hover:scale-105"
                                 style={{ textDecoration: 'none', borderColor: 'var(--card-border)' }}>
                                 <div className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform"
-                                    style={{ background: `${color}18`, color }}>
-                                    <Icon size={20} />
+                                    style={{ background: `${item.color}18`, color: item.color }}>
+                                    <IconComp size={20} />
                                 </div>
                                 <div>
-                                    <p className="text-xs font-bold uppercase tracking-wider" style={{ color: 'var(--text-muted)', fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>{label}</p>
-                                    <p className="text-sm font-bold" style={{ color: 'var(--text)', fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>{value}</p>
+                                    <p className="text-xs font-bold uppercase tracking-wider" style={{ color: 'var(--text-muted)', fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>{item.label}</p>
+                                    <p className="text-sm font-bold" style={{ color: 'var(--text)', fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>{item.value}</p>
                                 </div>
                             </a>
-                        ))}
+                            );
+                        })}
                     </div>
                 </div>
             </section>

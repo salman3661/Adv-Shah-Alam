@@ -94,7 +94,7 @@ const Home = ({ lang = 'en' }) => {
                     format="fluid"
                     layout="in-article"
                     labelText={isBn ? 'বিজ্ঞাপন' : 'Advertisement'}
-                    minHeight={100}
+                    minHeight={250}
                     mobileMinHeight={100}
                 />
             </div>
@@ -120,18 +120,6 @@ const Home = ({ lang = 'en' }) => {
                     <Testimonials lang={lang} />
                     <HumanStory lang={lang} />
 
-                    {/* ── Homepage Ad 2: Before Blog Preview (reader engagement peak) ── */}
-                    <div style={{ maxWidth: '900px', margin: '0 auto', padding: '0 1rem 2rem' }}>
-                        <AdSenseAd
-                            key={`home-ad2-${lang}`}
-                            slot="6519719969"
-                            format="fluid"
-                            layout="in-article"
-                            labelText={isBn ? 'বিজ্ঞাপন' : 'Advertisement'}
-                            minHeight={250}
-                        />
-                    </div>
-
                     <div style={{ maxWidth: '900px', margin: '0 auto', padding: '0 1rem 2rem' }}>
                         <Link
                             to="/nrb-legal-help"
@@ -156,17 +144,6 @@ const Home = ({ lang = 'en' }) => {
                     </div>
 
                     <BlogPreview lang={lang} />
-
-                    {/* ── Homepage Ad 3: Multiplex grid after Blog Preview ── */}
-                    <div style={{ maxWidth: '900px', margin: '0 auto', padding: '0 1rem 2rem' }}>
-                        <AdSenseAd
-                            key={`home-ad3-${lang}`}
-                            slot="3667074343"
-                            format="autorelaxed"
-                            labelText={isBn ? 'আরও দেখুন' : 'Sponsored Content'}
-                            minHeight={280}
-                        />
-                    </div>
 
                     <Timeline isHome={true} lang={lang} />
 

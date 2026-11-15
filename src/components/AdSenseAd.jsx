@@ -40,15 +40,11 @@ const AdSenseAd = ({
     const wrapRef = useRef(null);
     const adRef = useRef(null);
     const pushed = useRef(false);
-    const [state, setState] = useState('idle');
-    const [prevSlot, setPrevSlot] = useState(slot);
-    if (prevSlot !== slot) {
-        setPrevSlot(slot);
-        setState('idle');
-        pushed.current = false;
-    }
+    const [stateObj, setStateObj] = useState({ slot, status: 'idle' });
+    const state = stateObj.slot === slot ? stateObj.status : 'idle';
 
     useEffect(() => {
+        pushed.current = false;
         const host = typeof window !== 'undefined' ? window.location.hostname : '';
         if (host && host !== 'www.advmdshahalam.me' && host !== 'advmdshahalam.me') {
             return;
@@ -88,8 +84,8 @@ const AdSenseAd = ({
         const mo = typeof MutationObserver !== 'undefined'
             ? new MutationObserver(() => {
                 const st = el.getAttribute('data-ad-status');
-                if (st === 'unfilled') setState('unfilled');
-                else if (st === 'filled') setState('filled');
+                if (st === 'unfilled') setStateObj({ slot, status: 'unfilled' });
+                else if (st === 'filled') setStateObj({ slot, status: 'filled' });
             })
             : null;
         if (mo) mo.observe(el, { attributes: true, attributeFilter: ['data-ad-status'] });
@@ -119,10 +115,8 @@ const AdSenseAd = ({
     }, [slot]);
 
     const isUnfilled = state === 'unfilled';
-    const resolvedDesktopMin = minHeight > 0 ? minHeight : 250;
-    const resolvedMobileMin = mobileMinHeight > 0
-        ? mobileMinHeight
-        : (minHeight > 0 ? Math.min(minHeight, 100) : 100);
+    const resolvedDesktopMin = minHeight > 0 ? Math.max(250, minHeight) : 250;
+    const resolvedMobileMin = mobileMinHeight > 0 ? Math.max(100, mobileMinHeight) : 100;
 
     const {
         margin: _ignoredMargin,
@@ -140,6 +134,7 @@ const AdSenseAd = ({
             ref={wrapRef}
             className={`adsense-wrapper ad-slot-reserved ${className}`}
             aria-hidden={isUnfilled ? 'true' : undefined}
+            data-ad-status-wrapper={state}
             {...(densityGroup ? { 'data-ad-group': densityGroup } : {})}
             style={{
                 display: 'block',
@@ -160,8 +155,21 @@ const AdSenseAd = ({
                 ...cleanStyle,
             }}
         >
-            {label && !isUnfilled && (
-                <div style={{ fontSize: '0.625rem', letterSpacing: '0.07em', textTransform: 'uppercase', color: 'var(--text-muted, #64748b)', marginBottom: '0.25rem', opacity: 0.75 }}>
+            {label && (
+                <div
+                    aria-hidden={isUnfilled ? 'true' : undefined}
+                    style={{
+                        fontSize: '0.625rem',
+                        letterSpacing: '0.07em',
+                        textTransform: 'uppercase',
+                        color: 'var(--text-muted, #64748b)',
+                        marginBottom: '0.25rem',
+                        opacity: isUnfilled ? 0 : 0.75,
+                        visibility: isUnfilled ? 'hidden' : 'visible',
+                        height: '14px',
+                        lineHeight: '14px',
+                    }}
+                >
                     {labelText}
                 </div>
             )}
@@ -169,10 +177,12 @@ const AdSenseAd = ({
                 ref={adRef}
                 className="adsbygoogle"
                 style={{
-                    display: isUnfilled ? 'none' : 'block',
+                    display: 'block',
                     textAlign: 'center',
                     width: '100%',
                     maxWidth: '100%',
+                    visibility: isUnfilled ? 'hidden' : 'visible',
+                    opacity: isUnfilled ? 0 : 1,
                 }}
                 data-ad-client={PUB_ID}
                 data-ad-slot={slot}
