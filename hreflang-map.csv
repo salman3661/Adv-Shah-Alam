@@ -17,6 +17,7 @@ en_path,bn_path,confidence,evidence
 /services/tax-lawyer,/bn/services/tax-lawyer,1.0,core_or_service_route_pair
 /blog/138-ni-act-bangladesh-cheque-case-guide,,unpaired,en_only
 /blog/administrative-tribunal-government-employee-service-case-bangladesh,/bn/blog/administrative-tribunal-shorkari-chakri-bodli-shasti-mamla-2026-bn,1.0,json_reciprocal_slug_pair
+/blog/admiralty-ship-arrest-maritime-claims-bangladesh-act-2000,/bn/blog/admiralty-jahaj-atke-mamla-high-court-ain-2000-bangladesh,1.0,json_reciprocal_slug_pair
 /blog/adopting-child-bangladesh-nrb-foreign-citizens-guardianship-guide,,unpaired,en_only
 /blog/affidavit-bangladesh-types-process,/bn/blog/holofnama-bangladesh-prokriya,1.0,json_reciprocal_slug_pair
 /blog/anticipatory-bail-bangladesh,,unpaired,en_only
@@ -69,6 +70,7 @@ en_path,bn_path,confidence,evidence
 /blog/child-custody-law-bangladesh,/bn/blog/child-custody-law-2026-bn,1.0,json_reciprocal_slug_pair
 /blog/child-marriage-law-bangladesh,,unpaired,en_only
 /blog/child-passport-after-divorce-guardianship-law-bangladesh-guide,/bn/blog/divorce-er-por-shishur-passport-obhibhaboktwa-ain-2026-bn,1.0,json_reciprocal_slug_pair
+/blog/commercial-arbitration-bangladesh-arbitration-act-2001,/bn/blog/commercial-arbitration-madhyasthata-ain-2001-bangladesh,1.0,json_reciprocal_slug_pair
 /blog/commercial-lease-agreement-tenant-eviction-bangladesh-premises-rent-act,,unpaired,en_only
 /blog/company-annual-compliance-bangladesh,,unpaired,en_only
 /blog/company-director-liability-bangladesh,,unpaired,en_only
@@ -123,6 +125,7 @@ en_path,bn_path,confidence,evidence
 /blog/employee-embezzlement-theft-company-funds-penal-code-bangladesh,,unpaired,en_only
 /blog/enforcing-foreign-arbitral-awards-bangladesh-arbitration-act,,unpaired,en_only
 /blog/environment-clearance-certificate-bangladesh,,unpaired,en_only
+/blog/equitable-mortgage-title-deed-redemption-bangladesh-guide,/bn/blog/jomi-bandhok-mortgage-mukti-ain-1882-bangladesh,1.0,json_reciprocal_slug_pair
 /blog/ex-parte-decree-setting-aside-cpc-order-9-rule-13-bangladesh,/bn/blog/probasi-ek-torfa-decree-batil-cpc-order-9-rule-13-ain-2026-bn,1.0,json_reciprocal_slug_pair
 /blog/facebook-defamation-case-bangladesh,/bn/blog/facebook-manhani-mamla-bangladesh,1.0,json_reciprocal_slug_pair
 /blog/false-dowry-case-defense-section-5-prohibition-act-bangladesh,/bn/blog/mithya-yautuk-mamla-badir-shasti-5-dhara-2026-bn,1.0,json_reciprocal_slug_pair
@@ -172,6 +175,7 @@ en_path,bn_path,confidence,evidence
 /blog/inheritance-law-bangladesh-legal-guide,,unpaired,en_only
 /blog/injunction-procedure-bangladesh,/bn/blog/nishedhagya-procedure-bangladesh,1.0,json_reciprocal_slug_pair
 /blog/interpol-red-notice-extradition-act-1974-defense-bangladesh,,unpaired,en_only
+/blog/joint-venture-franchise-agreement-law-bangladesh,/bn/blog/joint-venture-franchise-chukti-ain-bangladesh,1.0,json_reciprocal_slug_pair
 /blog/khas-land-claim-bangladesh,,unpaired,en_only
 /blog/khul-divorce-wife-rights-bangladesh,,unpaired,en_only
 /blog/labour-law-worker-rights-bangladesh,,unpaired,en_only
@@ -210,6 +214,7 @@ en_path,bn_path,confidence,evidence
 /blog/nabalok-sampatti-bikroy-court-order-bd,/bn/blog/nabalok-sampatti-bikroy-court-order-bd,1.0,json_reciprocal_slug_pair
 /blog/namjari-tracking-status-check-bangladesh-2026,,unpaired,en_only
 /blog/narcotics-case-law-bangladesh,/bn/blog/narcotics-case-law-bangladesh-bn,1.0,json_reciprocal_slug_pair
+/blog/ngo-society-registration-ngoab-societies-act-1860-bangladesh,/bn/blog/ngo-society-nibondhon-ngoab-societies-act-1860-bangladesh,1.0,json_reciprocal_slug_pair
 /blog/nid-correction-legal-process-bangladesh,,unpaired,en_only
 /blog/non-compete-nda-law-bangladesh,,unpaired,en_only
 /blog/nrb-dual-citizenship-overseas-nid-succession-certificate-bangladesh,,unpaired,en_only

@@ -1,0 +1,73 @@
+{
+  "slug": "joint-venture-franchise-agreement-law-bangladesh",
+  "bnSlug": "joint-venture-franchise-chukti-ain-bangladesh",
+  "title": "Joint Venture & Franchise Agreements in Bangladesh: Corporate Legal Guide",
+  "metaTitle": "Joint Venture & Franchise Law Bangladesh (2026 Guide)",
+  "metaDescription": "Structuring Joint Venture & Franchise agreements in Bangladesh: Contract Act 1872, Companies Act 1994, BIDA royalty remittance caps, IP licensing & exit terms.",
+  "category": "Corporate Law",
+  "readTime": "8 min read",
+  "publishedDate": "2026-11-15",
+  "lastModified": "2026-11-15",
+  "isDraft": false,
+  "keywords": [
+    "joint venture agreement bangladesh law",
+    "franchise agreement bangladesh bida royalty",
+    "shareholders agreement companies act 1994",
+    "bangladesh bank royalty remittance limit",
+    "commercial contract lawyer dhaka"
+  ],
+  "heroIntro": "Bangladesh currently has no single standalone Franchise Act; instead, international and local Joint Ventures (JVs) and Franchises operate under an interlocking framework of the Contract Act 1872, Companies Act 1994, Trademarks Act 2009, BIDA regulatory ceilings, and Bangladesh Bank Foreign Exchange Guidelines. Proper structuring protects minority/foreign equity, preserves brand IP, and ensures lawful cross-border remittance of royalties and technical fees.",
+  "quickAnswer": {
+    "heading": "At a Glance: JV & Franchise Law in Bangladesh",
+    "text": "Governed by the Contract Act 1872, Companies Act 1994, Trademarks Act 2009 & BIDA royalty guidelines.",
+    "points": [
+      "Corporate Structuring: Equity JV incorporates a Private Limited Company (RJSC) mirroring the Shareholders’ Agreement inside its Articles of Association (AoA)",
+      "BIDA & Bangladesh Bank Caps: Royalty, franchise, and technical know-how remittances typically require BIDA vetting/approval above prescribed turnover percentages (often 6% net sales benchmarks)",
+      "Post-Termination Non-Compete Warning: Section 27 of the Contract Act 1872 voids overly broad post-termination restraints of trade",
+      "Trademark Protection: Register brand marks at DPDT and record Franchisee as a Registered User under the Trademarks Act 2009"
+    ]
+  },
+  "toc": [
+    "Equity Joint Venture (SPV) vs. Contractual Joint Venture in Bangladesh",
+    "Incorporating JV Deadlock & Exit Clauses Into the Articles of Association",
+    "Franchise Royalty, Technical Fees & BIDA / Bangladesh Bank Approval",
+    "Enforceability of Non-Compete Clauses Under Section 27 of the Contract Act",
+    "Mandatory Intellectual Property & Dispute Resolution Checklist"
+  ],
+  "sections": [
+    {
+      "h2": "Equity Joint Venture (SPV) vs. Contractual Joint Venture in Bangladesh",
+      "content": "<p>Foreign investors and local conglomerates choose between two core JV structures:</p><ul><li><strong>Incorporated Equity JV (Private Limited Company):</strong> Registered at the Registrar of Joint Stock Companies and Firms (<strong>RJSC</strong>) under the <strong>Companies Act 1994</strong>. Ideal for long-term manufacturing, SaaS, healthcare, and hospitality ventures with limited liability, clean share splits, and bank financing access.</li><li><strong>Unincorporated / Consortium JV:</strong> Formed solely by a Joint Venture Agreement for fixed-duration infrastructure, EPC tenders, or consortium bidding. Each co-venturer bears joint and several project liability unless clearly ring-fenced against third parties, and obtains separate project TIN/BIN registrations as an Association of Persons (AOP).</li></ul>"
+    },
+    {
+      "h2": "Incorporating JV Deadlock & Exit Clauses Into the Articles of Association",
+      "content": "<p>A critical pitfall in Bangladesh corporate practice is leaving protective investor rights solely inside an external Shareholders’ Agreement (SHA). Under Bangladeshi company law precedents, if a provision in the SHA conflicts with the registered <strong>Articles of Association (AoA)</strong>, the AoA prevails on internal corporate governance.</p><ul><li><strong>Mirror Essential Protections in AoA:</strong> Reserved board veto matters, quorum requirements, pre-emption rights, Right of First Refusal (ROFR), and Drag-Along/Tag-Along exits should be transcribed directly into the AoA filed with RJSC.</li><li><strong>50/50 Deadlock Mechanics:</strong> Include a defined escalation timeline (CEO negotiation → mediation → Russian Roulette / Texas Shootout buy-sell or fair-market valuation buyout) to prevent operational paralysis or Section 241 winding-up petitions.</li></ul>"
+    },
+    {
+      "h2": "Franchise Royalty, Technical Fees & BIDA / Bangladesh Bank Approval",
+      "content": "<p>Foreign franchisors (F&B chains, retail brands, fitness studios, edtech) must comply with the <strong>Bangladesh Investment Development Authority (BIDA)</strong> and Bangladesh Bank foreign exchange rules to legally repatriate royalties abroad:</p><ul><li><strong>Standard Authorized Dealer Bank vs. BIDA Gate:</strong> Banks may remit initial technical know-how or ongoing royalties up to BIDA’s prescribed thresholds without prior case-by-case BIDA clearance if the agreement complies with <em>Guidelines for Foreign Exchange Transactions</em>. Agreements exceeding ceilings (commonly benchmarked against 6% of net ex-factory sales or project investment caps) require prior <strong>BIDA Inter-Ministerial Committee approval</strong>.</li><li><strong>Withholding Tax & VAT:</strong> Royalty and technical service fee remittances attract Bangladesh withholding income tax (TDS under the Income Tax Act 2023, subject to applicable Double Taxation Avoidance Treaties) plus 15% VAT on imported services.</li></ul>"
+    },
+    {
+      "h2": "Enforceability of Non-Compete Clauses Under Section 27 of the Contract Act",
+      "content": "<p>Foreign franchise templates often import 2-to-5-year post-termination non-compete bans wholesale from US or UK law—which fail inside Bangladeshi courts:</p><p>Under <strong>Section 27 of the Contract Act 1872</strong>, every agreement by which anyone is restrained from exercising a lawful profession, trade, or business is <strong>to that extent void</strong> (save only the narrow goodwill-sale exception). While non-compete restrictions are enforceable <em>during the active term</em> of a JV or franchise agreement, post-termination restraints must instead rely on <strong>confidentiality, trade secret protection, strict IP de-branding covenants, and territorial exclusivity forfeiture</strong> rather than blanket business bans.</p>"
+    },
+    {
+      "h2": "Mandatory Intellectual Property & Dispute Resolution Checklist",
+      "content": "<ol><li><strong>DPDT Trademark Registration:</strong> File marks across all relevant Nice Classes at the Department of Patents, Designs and Trademarks (DPDT) before signing local franchise disclosures.</li><li><strong>Quality Control & Termination Triggers:</strong> Maintain strict audit, supply-chain, and hygiene inspection rights so brand dilution entitles immediate termination and liquidated damages (Sections 73–74 Contract Act).</li><li><strong>Neutral Arbitration Clause:</strong> Specify arbitration seated in Dhaka (BIAC) or Singapore (SIAC) with express governing law clarity and court interim protection.</li></ol>"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Can a foreign franchisor own 100% of a franchise master entity in Bangladesh?",
+      "a": "Yes. Bangladesh permits 100% foreign equity ownership in most non-restricted commercial, IT, hospitality, and manufacturing sectors under the Foreign Private Investment (Promotion and Protection) Act 1980."
+    },
+    {
+      "q": "Are franchise agreements mandatory to register with any government ministry?",
+      "a": "There is no mandatory franchise registry; however, filing the agreement with your Authorized Dealer Bank and obtaining BIDA approval (when exceeding standard royalty caps) is essential for outward FX remittance."
+    },
+    {
+      "q": "How do I stop an ex-franchisee who refuses to remove my brand signage after termination?",
+      "a": "Immediately serve a cease-and-desist legal notice, then file a trademark infringement and passing-off suit for permanent & temporary injunction in the District Judge Court under the Trademarks Act 2009 (or invoke Section 7A under the Arbitration Act 2001)."
+    }
+  ]
+}
