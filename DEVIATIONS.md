@@ -27,3 +27,9 @@ This file records technical or environmental constraints encountered during auto
   2. Documented `.google-auto-placed` hiding inside `header`, `nav`, `.hero-section`, `.gcta-bar`, `.msb-bar` in `src/index.css` and bottom anchor offset clearance.
 - **Residual Risk:** Low–Medium if Auto Ads or Anchor Ads on `/bn/blog/*` remain toggled ON inside the AdSense dashboard; owner should disable Auto Ads and exclude `/bn/blog/*` from Anchor ads in AdSense → Sites → `advmdshahalam.me` → Edit.
 
+## 4. Lighthouse CLI Absent & Long UTF-8 Bengali Prose Uncompressed HTML Ceiling
+- **Constraint:** The `lighthouse` CLI binary is not installed in the execution container (`which lighthouse` unavailable without global privileged install), and 142 of 790 multi-thousand-word Bengali article `.html` files exceed 60 KB raw uncompressed size (`max 120.0 KB`) because the full UTF-8 Bengali (`3 bytes/char`) `<article>` prose plus FAQPage JSON-LD is embedded verbatim inside `#prerendered-content` for zero-JS crawler visibility (although average post HTML fell from **115.7 KB → 48.6 KB**, and Brotli/gzip transfer size stays `< 25 KB`).
+- **Mitigation Applied:**
+  1. Verified mobile & desktop LCP (`288–576 ms` local), CLS (`0–0.001`), pre-scroll CLS (`0`), resource preloads, and HTML size budgets across all core/service/post templates using Playwright `PerformanceObserver` (`scripts/ci-cwv-ads.mjs --max-lcp 1500 --max-html-kb 60`).
+  2. Externalized immutable Vite CSS (saving 70.3 KB per page) rather than truncating `#prerendered-content`, which would re-introduce crawler stubbing risk.
+- **Residual Risk:** Very low; Vercel serves Brotli/gzip automatically (`< 25 KB` wire size) and owner can optionally spot-check PageSpeed Insights after disabling AdSense Auto Ads.

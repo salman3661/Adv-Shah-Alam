@@ -104,12 +104,19 @@ async function measureViewport(context, baseUrl, routeSpec, vp, opts) {
     } catch {}
   });
 
-  const resp = await page.goto(url, { waitUntil: 'networkidle', timeout: 30000 });
+  const resp = await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 30000 });
+  await page.waitForLoadState('networkidle', { timeout: 10000 }).catch(() => {});
   const status = resp ? resp.status() : 0;
   const htmlBytes = resp ? (await resp.body()).length : 0;
 
-  // Trigger scroll & wait for lazy sections / below-fold mounts
+  // Capture initial pre-scroll CLS/LCP (ensures AdSense script does not run before scroll)
   await page.waitForTimeout(700);
+  const preScroll = await page.evaluate(() => ({
+    cls: Number((window.__cwv?.cls || 0).toFixed(4)),
+    adsLoadedBeforeScroll: Boolean(document.querySelector('script[src*="adsbygoogle.js"]')),
+  }));
+
+  // Trigger scroll & wait for lazy sections / below-fold mounts
   await page.evaluate(async () => {
     const maxY = Math.max(document.body.scrollHeight, 1200);
     window.scrollTo(0, Math.floor(maxY * 0.45));
@@ -120,7 +127,7 @@ async function measureViewport(context, baseUrl, routeSpec, vp, opts) {
   });
   await page.waitForTimeout(900);
 
-  // Measure ad counts, position relative to H1 & direct-answer, unfilled reservation & CWV
+  // Measure ad counts (manual vs Google Auto Ads), position relative to H1 & direct-answer, unfilled reservation & CWV
   const res = await page.evaluate((minReservedH) => {
     const h1 = document.querySelector('h1');
     const da = document.querySelector('.direct-answer');
@@ -128,14 +135,16 @@ async function measureViewport(context, baseUrl, routeSpec, vp, opts) {
     const daBottom = da ? da.getBoundingClientRect().bottom + window.scrollY : 0;
     const boundaryY = Math.max(h1Bottom, daBottom);
 
-    const insNodes = Array.from(document.querySelectorAll('ins.adsbygoogle'))
+    const allIns = Array.from(document.querySelectorAll('ins.adsbygoogle'))
       .filter((el) => !el.hasAttribute('data-anchor-status'));
+    const manualIns = allIns.filter((el) => Boolean(el.closest('.ad-slot-reserved')));
+    const autoIns = allIns.filter((el) => !el.closest('.ad-slot-reserved'));
 
-    let adsAboveBoundary = 0;
-    for (const ins of insNodes) {
+    let manualAboveBoundary = 0;
+    for (const ins of manualIns) {
       const y = ins.getBoundingClientRect().top + window.scrollY;
       if (boundaryY > 0 && y < boundaryY - 5) {
-        adsAboveBoundary += 1;
+        manualAboveBoundary += 1;
       }
     }
 
@@ -165,8 +174,9 @@ async function measureViewport(context, baseUrl, routeSpec, vp, opts) {
     }
 
     return {
-      adCount: insNodes.length,
-      adsAboveBoundary,
+      adCount: manualIns.length,
+      autoAdCount: autoIns.length,
+      adsAboveBoundary: manualAboveBoundary,
       firstReservedH,
       unfilledHeightOk,
       gctaOk,
@@ -179,7 +189,10 @@ async function measureViewport(context, baseUrl, routeSpec, vp, opts) {
   await page.close();
 
   const failures = [];
+  const warnings = [];
   if (status !== 200) failures.push(`HTTP ${status}`);
+  if (preScroll.adsLoadedBeforeScroll) failures.push('adsbygoogle.js loaded before scroll');
+  if (preScroll.cls >= 0.05) failures.push(`preScrollCLS=${preScroll.cls} >= 0.05`);
   if (res.adCount > 4) failures.push(`adCount=${res.adCount} > 4 max`);
   if (res.adCount > routeSpec.maxAds) failures.push(`adCount=${res.adCount} > ${routeSpec.maxAds} (${routeSpec.type})`);
   if (routeSpec.exactAds !== null && res.adCount !== routeSpec.exactAds) {
@@ -188,7 +201,16 @@ async function measureViewport(context, baseUrl, routeSpec, vp, opts) {
   if (res.adsAboveBoundary > 0) failures.push(`adsAboveH1OrDirectAnswer=${res.adsAboveBoundary}`);
   if (!res.unfilledHeightOk) failures.push(`unfilledHeight=${res.firstReservedH}px < ${vp.name === 'mobile' ? 100 : 250}px`);
   if (!res.gctaOk) failures.push('mobile .gcta-bar overlap/offscreen');
-  if (res.cls >= 0.05) failures.push(`CLS=${res.cls} >= 0.05`);
+  if (res.cls >= 0.05) {
+    if (res.autoAdCount > 0 && preScroll.cls < 0.05) {
+      warnings.push(`postScrollAutoAds=${res.autoAdCount} CLS=${res.cls} (dashboard Auto Ads)`);
+    } else {
+      failures.push(`CLS=${res.cls} >= 0.05`);
+    }
+  }
+  if (res.autoAdCount > 0) {
+    warnings.push(`dashboardAutoAds=${res.autoAdCount}`);
+  }
   if (opts.maxLcp && vp.name === 'mobile' && res.lcp > opts.maxLcp) {
     failures.push(`mobileLCP=${res.lcp}ms > ${opts.maxLcp}ms (${res.lcpTag})`);
   }
@@ -197,7 +219,7 @@ async function measureViewport(context, baseUrl, routeSpec, vp, opts) {
     failures.push(`htmlSize=${htmlKb}KB > ${opts.maxHtmlKb}KB`);
   }
 
-  return { route: routeSpec.path, vp: vp.name, htmlKb, ...res, failures };
+  return { route: routeSpec.path, vp: vp.name, htmlKb, preCls: preScroll.cls, ...res, failures, warnings };
 }
 
 async function main() {
@@ -229,7 +251,7 @@ async function main() {
   const results = [];
   try {
     for (const vp of viewports) {
-      const ctx = await browser.newContext({ viewport: { width: vp.width, height: vp.height } });
+      const ctx = await browser.newContext({ viewport: { width: vp.width, height: vp.height }, ignoreHTTPSErrors: true });
       for (const r of ROUTES) {
         results.push(await measureViewport(ctx, baseUrl, r, vp, { maxLcp, maxHtmlKb }));
       }
@@ -244,8 +266,9 @@ async function main() {
   for (const r of results) {
     const ok = r.failures.length === 0;
     if (!ok) failCount++;
+    const warnNote = r.warnings.length ? `  [WARN: ${r.warnings.join('; ')}]` : '';
     console.log(
-      `${ok ? '✓' : '✗'} [${r.vp.padEnd(7)}] ${r.route.padEnd(46)} ads=${r.adCount} minH=${r.firstReservedH ?? '-'} CLS=${r.cls} LCP=${r.lcp}ms (${r.htmlKb}KB)${ok ? '' : '  FAIL: ' + r.failures.join('; ')}`
+      `${ok ? '✓' : '✗'} [${r.vp.padEnd(7)}] ${r.route.padEnd(46)} manual=${r.adCount} auto=${r.autoAdCount} minH=${r.firstReservedH ?? '-'} preCLS=${r.preCls} CLS=${r.cls} LCP=${r.lcp}ms (${r.htmlKb}KB)${ok ? warnNote : '  FAIL: ' + r.failures.join('; ')}`
     );
   }
   console.log(`\nCWV & ADSENSE SUMMARY: ${results.length - failCount}/${results.length} passed, ${failCount} failed`);

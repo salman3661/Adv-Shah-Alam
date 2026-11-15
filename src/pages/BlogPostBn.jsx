@@ -756,7 +756,7 @@ const BlogPostBnInner = () => {
                                     src="/images/hero/hero-md-shah-alam.webp"
                                     alt="অ্যাডভোকেট মো. শাহ আলম"
                                     style={{ width: '2.65rem', height: '2.65rem', borderRadius: '50%', objectFit: 'cover', border: '2px solid rgba(147, 197, 253, 0.6)', flexShrink: 0, boxShadow: '0 4px 12px rgba(0,0,0,0.35)' }}
-                                    loading="eager"
+                                    loading="lazy"
                                     width="42"
                                     height="42"
                                 />

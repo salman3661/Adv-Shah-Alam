@@ -85,13 +85,7 @@ function readBase() {
     fs.writeFileSync(baseCache, html, 'utf8');
   }
   html = html.replace(/<link rel="stylesheet"[^>]*href="(\/assets\/[^"]+\.css)"[^>]*>/g, (match, href) => {
-    try {
-      const cssPath = path.join(DIST, href.replace(/^\//, ''));
-      const css = fs.readFileSync(cssPath, 'utf8');
-      return `<style id="inline-app-css">${css}</style>`;
-    } catch {
-      return match;
-    }
+    return `<link rel="preload" href="${href}" as="style" />\n  ${match}`;
   });
   return html;
 }
@@ -1591,7 +1585,7 @@ ${buildServiceSchema(`${BASE}/bn/services/${slug}`, bnData, 'bn')}`;
     const enMetaDesc = evergreenYear(post.metaDescription || (post.heroIntro || '').replace(/<[^>]*>/g, '').trim()).slice(0, 160);
     const chunkFile = postChunkFor('en', post.slug);
     const preloadTags = (chunkFile ? `<link rel="modulepreload" href="/${chunkFile}" as="script" crossorigin />\n` : '')
-      + `<link rel="preload" as="image" href="${coverFor(post.category)}" />`;
+      + `<link rel="preload" as="image" href="${coverFor(post.category)}" fetchpriority="high" />`;
 
     // Explicit, reciprocal pairs only (scripts/audit-hreflang.mjs keeps the data clean) - same tags as the React page
     const hreflangTags = buildHreflang({ lang: 'en', slug: post.slug, pairedSlug: post.bnSlug })
@@ -1671,7 +1665,7 @@ ${hreflangTags}
     const bnMetaDesc = evergreenYear(post.metaDescription || (post.heroIntro || '').replace(/<[^>]*>/g, '').trim()).slice(0, 160);
     const chunkFile = postChunkFor('bn', post.slug);
     const preloadTags = (chunkFile ? `<link rel="modulepreload" href="/${chunkFile}" as="script" crossorigin />\n` : '')
-      + `<link rel="preload" as="image" href="${coverFor(post.category)}" />`;
+      + `<link rel="preload" as="image" href="${coverFor(post.category)}" fetchpriority="high" />`;
 
     const hreflangTags = buildHreflang({ lang: 'bn', slug: post.slug, pairedSlug: post.enSlug })
       .map((h) => `<link rel="alternate" hreflang="${h.hrefLang}" href="${h.href}" />`).join('\n');

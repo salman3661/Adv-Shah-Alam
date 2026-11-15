@@ -109,7 +109,7 @@ async function main() {
     await runStep('node', ['scripts/phase3-hreflang-verify.mjs']);
     await runStep('node', ['scripts/phase1-verify.mjs']);
     if (!chunkArg || chunkArg.startsWith('1/')) {
-      await runStep('node', ['scripts/ci-cwv-ads.mjs', '--base', baseUrl]);
+      await runStep('node', ['scripts/ci-cwv-ads.mjs', '--base', baseUrl, '--max-lcp', '1500', '--max-html-kb', '60']);
     }
     const parityArgs = ['scripts/ci-render-parity.mjs', '--base', baseUrl];
     if (chunkArg) parityArgs.push('--chunk', chunkArg);
