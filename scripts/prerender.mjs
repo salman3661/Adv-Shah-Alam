@@ -25,6 +25,7 @@ import { fileURLToPath } from 'url';
 import { buildEntityGraph, buildHreflang, jsonLd, resolveMasterPillar, resolveQuickAnswerTable } from '../src/utils/seoSchema.mjs';
 import { evergreenYear } from '../src/utils/evergreenYear.mjs';
 import { GOOGLE_REVIEW_URL, REVIEW_CONTENT } from '../src/content/reviewContent.mjs';
+import { SERVICE_PAGES_EN, SERVICE_PAGES_BN } from '../src/content/servicePagesData.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT   = path.resolve(__dirname, '..');
@@ -429,233 +430,112 @@ ${buildPillarAndTableHtml(post, 'bn')}${quickAns}${toc}${sections}${faqs}${relat
 ${BN_CTA}`;
 }
 
-// ── service page lookup ──────────────────────────────────────────────────────
-// Load all service page JSON/JS configs to get real content for pre-rendering
-function getServiceMeta(slug) {
-  const map = {
-    'criminal-lawyer': {
-      title: 'Criminal Defense Lawyer in Bangladesh | Dhaka',
-      desc: 'Experienced criminal defense lawyer in Dhaka, Bangladesh for FIR cases, bail, Sessions Court trials, and High Court appeals. Call +8801712655546.',
-      h1: 'Criminal Lawyer in Bangladesh',
-      body: `<p>Advocate Md. Shah Alam is an experienced criminal lawyer practising at all levels of courts in Bangladesh including the Supreme Court. He handles FIR-related cases, bail applications, criminal trials, and appeals.</p>
-<h2 style="font-size:20px;font-weight:700;margin:20px 0 10px">Services Offered</h2>
-<ul style="padding-left:20px;color:#333;line-height:2">
-  <li>FIR cases and police station matters</li>
-  <li>Bail applications (regular, anticipatory, High Court)</li>
-  <li>Sessions Court and Magistrate Court trials</li>
-  <li>Criminal appeals and revision petitions</li>
-  <li>Defence against false criminal cases</li>
-  <li>Cases under Digital Security Act and Cyber Crime laws</li>
-  <li>Narcotics, arms, and special tribunal matters</li>
-</ul>
-<h2 style="font-size:20px;font-weight:700;margin:20px 0 10px">Why Choose Advocate Shah Alam?</h2>
-<p>With 10+ years of experience (Supreme Court enrolled advocate since 2015), Advocate Shah Alam has successfully handled hundreds of criminal cases across Bangladesh. He is known for strategic defence preparation and effective court representation.</p>`,
-    },
-    'bail-lawyer': {
-      title: 'Bail Lawyer in Bangladesh | High Court Anticipatory',
-      desc: 'Urgent bail lawyer in Bangladesh. Regular bail, anticipatory bail, and High Court bail applications. Available in Uttara Dhaka. Call +880 1712-655546.',
-      h1: 'Bail Lawyer in Bangladesh',
-      body: `<p>Getting bail in Bangladesh requires expert legal representation. Advocate Md. Shah Alam specialises in bail applications at all court levels — from Magistrate Court to the Supreme Court of Bangladesh.</p>
-<h2 style="font-size:20px;font-weight:700;margin:20px 0 10px">Types of Bail We Handle</h2>
-<ul style="padding-left:20px;color:#333;line-height:2">
-  <li><strong>Regular Bail:</strong> Filed in Magistrate or Sessions Court for bailable and non-bailable offences</li>
-  <li><strong>Anticipatory Bail:</strong> Filed in High Court before arrest — protects you from being taken into custody</li>
-  <li><strong>High Court Bail:</strong> For cases rejected at lower courts or involving serious offences</li>
-  <li><strong>Temporary/Interim Bail:</strong> Emergency bail for urgent situations</li>
-</ul>
-<h2 style="font-size:20px;font-weight:700;margin:20px 0 10px">Bail Process in Bangladesh</h2>
-<p>A bail application is filed with supporting documents (FIR copy, charge sheet if available, personal particulars). The lawyer presents grounds such as clean record, family ties, and no flight risk. For serious offences, the application goes to High Court.</p>`,
-    },
-    'divorce-lawyer': {
-      title: 'Divorce & Family Lawyer in Bangladesh | Dhaka',
-      desc: 'Trusted divorce and family lawyer in Dhaka, Bangladesh for talaq notice, khula, child custody, dower, and NRB divorce proceedings. Call +8801712655546.',
-      h1: 'Divorce & Family Lawyer in Bangladesh',
-      body: `<p>Advocate Md. Shah Alam is a leading family law practitioner in Bangladesh with 10+ years of experience (Supreme Court enrolled advocate since 2015) in divorce cases, child custody, maintenance, and family court matters.</p>
-<h2 style="font-size:20px;font-weight:700;margin:20px 0 10px">Family Law Services</h2>
-<ul style="padding-left:20px;color:#333;line-height:2">
-  <li>Muslim divorce (talaq, khula, mubarat)</li>
-  <li>Family Court divorce petitions</li>
-  <li>Child custody cases (hizanat)</li>
-  <li>Maintenance and dower (mahr) claims</li>
-  <li>Hindu and Christian divorce matters</li>
-  <li>NRB/overseas divorce proceedings via Power of Attorney</li>
-  <li>Domestic violence protection orders</li>
-</ul>
-<h2 style="font-size:20px;font-weight:700;margin:20px 0 10px">The Divorce Process in Bangladesh</h2>
-<p>For Muslims, divorce is governed by the Muslim Family Laws Ordinance 1961. The minimum timeframe for a mutual divorce is 90 days from notice to the Union Parishad Chairman. Contested cases go through Family Court and may take 6 months to 2 years.</p>`,
-    },
-    'land-lawyer': {
-      title: 'Land & Property Lawyer in Bangladesh | Dhaka',
-      desc: 'Expert land and property lawyer in Bangladesh. Land disputes, mutation, registration, title suits. Chamber in Uttara Dhaka. Call +880 1712-655546.',
-      h1: 'Land & Property Lawyer in Bangladesh',
-      body: `<p>Land disputes are among the most common legal issues in Bangladesh. Advocate Md. Shah Alam provides expert legal services for all land and property matters, from title verification to full court litigation.</p>
-<h2 style="font-size:20px;font-weight:700;margin:20px 0 10px">Land Law Services</h2>
-<ul style="padding-left:20px;color:#333;line-height:2">
-  <li>Land dispute resolution — title suits, declaration suits, partition suits</li>
-  <li>Property registration and deed preparation</li>
-  <li>Land mutation (namjari) at local revenue office</li>
-  <li>Land fraud cases and recovery of possession</li>
-  <li>Khatian verification and boundary disputes</li>
-  <li>Injunctions to prevent illegal sale or transfer</li>
-  <li>Property inheritance and succession matters</li>
-</ul>
-<h2 style="font-size:20px;font-weight:700;margin:20px 0 10px">Why Land Cases Need Expert Lawyers</h2>
-<p>Land law in Bangladesh involves multiple agencies — Sub-Registrar offices, DC offices, Revenue offices, and Civil Courts. An experienced land lawyer ensures your documents are correct, your rights are protected, and your case is filed in the right forum.</p>`,
-    },
-    'supreme-court-lawyer': {
-      title: 'Supreme Court Lawyer Bangladesh | High Court Writs',
-      desc: 'Supreme Court lawyer in Bangladesh for High Court writ petitions, anticipatory bail, criminal revisions, and Appellate Division appeals. Call +8801712655546.',
-      h1: 'Supreme Court Lawyer in Bangladesh',
-      body: `<p>Advocate Md. Shah Alam is enrolled with the Bangladesh Bar Council and is authorised to practise at the Supreme Court of Bangladesh, including both the High Court Division and the Appellate Division.</p>
-<h2 style="font-size:20px;font-weight:700;margin:20px 0 10px">Supreme Court Services</h2>
-<ul style="padding-left:20px;color:#333;line-height:2">
-  <li>Writ petitions under Article 102 of the Bangladesh Constitution</li>
-  <li>Anticipatory bail in the High Court Division</li>
-  <li>Criminal revision and rule petitions</li>
-  <li>Civil appeals to the Appellate Division</li>
-  <li>Contempt of court proceedings</li>
-  <li>Constitutional litigation and public interest matters</li>
-</ul>
-<h2 style="font-size:20px;font-weight:700;margin:20px 0 10px">High Court Writ Petition</h2>
-<p>A writ petition is a powerful legal tool to enforce fundamental rights or challenge illegal government actions. Advocate Shah Alam has filed multiple writ petitions securing relief for clients from arbitrary arrest, wrongful dismissal, and unlawful government orders.</p>`,
-    },
-    'company-corporate-lawyer': {
-      title: 'Company & Corporate Lawyer in Bangladesh | RJSC',
-      desc: 'Corporate and company lawyer in Dhaka, Bangladesh for RJSC company registration, shareholder disputes, contracts, and compliance. Call +8801712655546.',
-      h1: 'Company & Corporate Lawyer in Bangladesh',
-      body: `<p>Advocate Md. Shah Alam provides comprehensive company and corporate legal services for businesses of all sizes in Bangladesh — from startups to established corporations.</p>
-<h2 style="font-size:20px;font-weight:700;margin:20px 0 10px">Corporate Law Services</h2>
-<ul style="padding-left:20px;color:#333;line-height:2">
-  <li>Company formation and registration under the Companies Act 1994</li>
-  <li>Partnership deed preparation and disputes</li>
-  <li>Shareholder and director disputes</li>
-  <li>Corporate compliance and annual filing</li>
-  <li>Commercial contract drafting and review</li>
-  <li>Business dissolution and winding up</li>
-  <li>Trade license and regulatory compliance</li>
-</ul>`,
-    },
-    'tax-lawyer': {
-      title: 'Income Tax & VAT Lawyer in Bangladesh | Tribunal',
-      desc: 'Expert tax lawyer in Bangladesh. Income tax disputes, VAT matters, TIN registration, tax appeals. Chamber in Uttara Dhaka. Call +880 1712-655546.',
-      h1: 'Tax Lawyer in Bangladesh',
-      body: `<p>Advocate Md. Shah Alam provides legal services for tax-related matters in Bangladesh, including income tax disputes, VAT cases, and appeals before tax tribunals.</p>
-<h2 style="font-size:20px;font-weight:700;margin:20px 0 10px">Tax Law Services</h2>
-<ul style="padding-left:20px;color:#333;line-height:2">
-  <li>Income tax dispute resolution and appeal</li>
-  <li>Tax Appellate Tribunal matters</li>
-  <li>TIN registration and related compliance</li>
-  <li>VAT registration and compliance</li>
-  <li>Tax assessment challenges</li>
-  <li>Corporate tax planning and legal advice</li>
-</ul>`,
-    },
-  };
-  const out = map[slug] || null;
-  if (out && pageHeadings.servicesEn[slug]) out.h1 = pageHeadings.servicesEn[slug];
-  return out;
-}
+// ── service page static HTML builder (shared single source of truth) ──────────
+function buildServiceStaticBody(d, isBn) {
+  const homeLabel = isBn ? 'হোম' : 'Home';
+  const homeHref = isBn ? '/' : '/en';
+  const servicesLabel = isBn ? 'আইনি সেবাসমূহ' : 'Legal Services';
+  const servicesHref = isBn ? '/#services' : '/en#services';
 
-function getBnServiceMeta(slug) {
-  const map = {
-    'criminal-lawyer': {
-      title: 'ফৌজদারি আইনজীবী ঢাকা | এজাহার ও জামিন মামলা',
-      desc: 'উত্তরা ঢাকায় অভিজ্ঞ ফৌজদারি আইনজীবী। এজাহার প্রতিরক্ষা, জামিন আবেদন, সাইবার অপরাধ মামলা ও মিথ্যা মামলা খারিজের আইনি পরামর্শ নিন।',
-      h1: 'ফৌজদারি আইনজীবী বাংলাদেশ | এডভোকেট মোঃ শাহ আলম',
-      body: `<p>এডভোকেট মোঃ শাহ আলম বাংলাদেশের একজন অত্যন্ত অভিজ্ঞ ফৌজদারি আইনজীবী, যিনি ১০+ বছরেরও বেশি সময় ধরে (২০১৫ সাল থেকে বাংলাদেশ সুপ্রিম কোর্ট ও বার কাউন্সিল তালিকাভুক্ত আইনজীবী) ফৌজদারি প্রতিরক্ষা, এজাহার বিষয়, জামিন আবেদন এবং ম্যাজিস্ট্রেট কোর্ট, দায়রা আদালত ও বাংলাদেশ সুপ্রিম কোর্টে বিচার প্রতিনিধিত্বে দক্ষতা অর্জন করেছেন।</p>
-<h2 style="font-size:20px;font-weight:700;margin:20px 0 10px">আইনি সেবাসমূহ</h2>
-<ul style="padding-left:20px;color:#333;line-height:2">
-  <li>এজাহার (FIR) — প্রতিরক্ষা, খারিজ ও পুলিশ বিষয়</li>
-  <li>ফৌজদারি বিচার প্রতিনিধিত্ব — ম্যাজিস্ট্রেট ও দায়রা আদালত</li>
-  <li>জামিন আবেদন — জামিনযোগ্য ও অ-জামিনযোগ্য অপরাধ, সকল আদালত</li>
-  <li>হাইকোর্ট বিভাগ ও আপিল বিভাগে ফৌজদারি আপিল</li>
-  <li>হত্যা, আক্রমণ, ডাকাতি, জালিয়াতি ও আর্থিক অপরাধ প্রতিরক্ষা</li>
-  <li>ডিজিটাল নিরাপত্তা আইন / সাইবার নিরাপত্তা আইন প্রতিরক্ষা</li>
-</ul>`,
-    },
-    'bail-lawyer': {
-      title: 'জামিন আইনজীবী ঢাকা | আগাম ও নিয়মিত জামিন',
-      desc: 'ঢাকায় জরুরি জামিন আইনজীবী। ম্যাজিস্ট্রেট কোর্টে নিয়মিত জামিন এবং হাইকোর্ট বিভাগে আগাম জামিন আবেদনের জন্য উত্তরা চেম্বারে যোগাযোগ করুন।',
-      h1: 'জামিন আইনজীবী বাংলাদেশ | এডভোকেট মোঃ শাহ আলম',
-      body: `<p>বাংলাদেশে জামিন আবেদন একটি জটিল আইনি প্রক্রিয়া। এডভোকেট মোঃ শাহ আলম নিম্ন আদালত থেকে শুরু করে বাংলাদেশ সুপ্রিম কোর্টের হাইকোর্ট বিভাগ পর্যন্ত নিয়মিত ও আগাম জামিন পরিচালনা করেন।</p>
-<h2 style="font-size:20px;font-weight:700;margin:20px 0 10px">আমরা যেসকল জামিন পরিচালনা করি</h2>
-<ul style="padding-left:20px;color:#333;line-height:2">
-  <li>নিয়মিত জামিন (Regular Bail) — ম্যাজিস্ট্রেট ও দায়রা আদালত</li>
-  <li>অগ্রিম জামিন (Anticipatory Bail) — হাইকোর্ট বিভাগ</li>
-  <li>অন্তর্বর্তীকালীন জামিন (Interim Bail)</li>
-  <li>হাইকোর্ট জামিন বাতিল বা আপিল</li>
-</ul>`,
-    },
-    'divorce-lawyer': {
-      title: 'তালাক ও পারিবারিক আইনজীবী ঢাকা | দেনমোহর ও খোরপোষ',
-      desc: 'ঢাকায় অভিজ্ঞ তালাক ও পারিবারিক আইনজীবী। মুসলিম তালাক নোটিশ, দেনমোহর, খোরপোষ ও সন্তানের অভিভাবকত্ব মামলায় উত্তরা চেম্বারে পরামর্শ নিন।',
-      h1: 'তালাক ও পারিবারিক আইনজীবী বাংলাদেশ | এডভোকেট মোঃ শাহ আলম',
-      body: `<p>মুসলিম পারিবারিক আইন অধ্যাদেশ ১৯৬১ এবং পারিবারিক আদালত আইন ২০২৩ অনুযায়ী বিবাহবিচ্ছেদ, তালাক নোটিশ, দেনমোহর ও খোরপোষ আদায়ের মামলায় এডভোকেট শাহ আলম ১০+ বছরের অভিজ্ঞ (২০১৫ সাল থেকে বাংলাদেশ সুপ্রিম কোর্ট ও বার কাউন্সিল তালিকাভুক্ত আইনজীবী)।</p>
-<h2 style="font-size:20px;font-weight:700;margin:20px 0 10px">পারিবারিক আইনি সেবাসমূহ</h2>
-<ul style="padding-left:20px;color:#333;line-height:2">
-  <li>মুসলিম তালাক নোটিশ (তালাক-এ-আহসান, খোলা তালাক)</li>
-  <li>পারিবারিক আদালতে দেনমোহর ও খোরপোষ মামলা</li>
-  <li>সন্তানের অভিভাবকত্ব ও জিম্মাদারি (হিযানাত)</li>
-  <li>প্রবাসীদের জন্য আমমোক্তারনামার মাধ্যমে তালাক প্রক্রিয়া</li>
-</ul>`,
-    },
-    'land-lawyer': {
-      title: 'ভূমি ও সম্পত্তি আইনজীবী ঢাকা | নামজারি ও বাটোয়ারা',
-      desc: 'ঢাকায় অভিজ্ঞ ভূমি ও সম্পত্তি আইনজীবী। জমি রেজিস্ট্রি, নামজারি, খতিয়ান যাচাই, দলিল বাতিল ও বাটোয়ারা মামলায় আইনি সহায়তা নিন।',
-      h1: 'ভূমি ও সম্পত্তি আইনজীবী বাংলাদেশ | এডভোকেট মোঃ শাহ আলম',
-      body: `<p>জমির বিরোধ বাংলাদেশের সবচেয়ে সাধারণ আইনি সমস্যা। সাব-রেজিস্ট্রার অফিস, ভূমি রাজস্ব অফিস এবং দেওয়ানি আদালতে জমি সংক্রান্ত যাবতীয় আইনি সুরক্ষায় এডভোকেট মোঃ শাহ আলম বিশ্বস্ত সেবা প্রদান করেন।</p>
-<h2 style="font-size:20px;font-weight:700;margin:20px 0 10px">ভূমি আইনের সেবাসমূহ</h2>
-<ul style="padding-left:20px;color:#333;line-height:2">
-  <li>জমির স্বত্ব ঘোষণা ও বাটোয়ারা মামলা (Partition Suit)</li>
-  <li>দলিল রেজিস্ট্রেশন ও খতিয়ান (CS, SA, RS, BS) যাচাই</li>
-  <li>ই-নামজারি (মিউটেশন) সংক্রান্ত জটিলতা নিরসন</li>
-  <li>জমি জবরদখল প্রতিরোধ ও নিষেধাজ্ঞা আবেদন (Injunction)</li>
-  <li>উত্তরাধিকার সম্পত্তি বণ্টন বিরোধ নিষ্পত্তি</li>
-</ul>`,
-    },
-    'supreme-court-lawyer': {
-      title: 'সুপ্রিম কোর্ট আইনজীবী বাংলাদেশ | হাইকোর্ট রিট',
-      desc: 'বাংলাদেশ সুপ্রিম কোর্টের অভিজ্ঞ আইনজীবী। সংবিধানের ১০২ অনুচ্ছেদে রিট পিটিশন, হাইকোর্ট আপিল ও ফৌজদারি রিভিশনের জন্য যোগাযোগ করুন।',
-      h1: 'সুপ্রিম কোর্ট আইনজীবী বাংলাদেশ | এডভোকেট মোঃ শাহ আলম',
-      body: `<p>এডভোকেট মোঃ শাহ আলম বাংলাদেশ বার কাউন্সিলের তালিকাভুক্ত এবং বাংলাদেশ সুপ্রিম কোর্টের হাইকোর্ট বিভাগ ও আপিল বিভাগে প্র্যাকটিস করার পূর্ণ অনুমতিপ্রাপ্ত অভিজ্ঞ আইনজীবী।</p>
-<h2 style="font-size:20px;font-weight:700;margin:20px 0 10px">সুপ্রিম কোর্ট সেবা</h2>
-<ul style="padding-left:20px;color:#333;line-height:2">
-  <li>সংবিধানের ১০২ অনুচ্ছেদে রিট পিটিশন (Writ Petition)</li>
-  <li>হাইকোর্ট বিভাগে আগাম জামিন ও ফৌজদারি আপিল</li>
-  <li>দায়রা আদালতের রায়ের বিরুদ্ধে রিভিশন আবেদন</li>
-  <li>আদালত অবমাননা (Contempt of Court) কার্যক্রম</li>
-</ul>`,
-    },
-    'company-corporate-lawyer': {
-      title: 'কোম্পানি ও কর্পোরেট আইনজীবী ঢাকা | আরজেএসসি',
-      desc: 'ঢাকায় অভিজ্ঞ কোম্পানি ও কর্পোরেট আইনজীবী। RJSC কোম্পানি নিবন্ধন, শেয়ারহোল্ডার বিরোধ ও বাণিজ্যিক চুক্তির জন্য উত্তরা চেম্বারে যোগাযোগ করুন।',
-      h1: 'কোম্পানি ও কর্পোরেট আইনজীবী বাংলাদেশ | এডভোকেট মোঃ শাহ আলম',
-      body: `<p>নতুন কোম্পানি গঠন থেকে শুরু করে জটিল বাণিজ্যিক বিরোধ সমাধান — কোম্পানি আইন ১৯৯৪ অনুযায়ী কর্পোরেট প্রতিষ্ঠান ও ব্যবসায়ীদের সার্বিক আইনি সেবা প্রদান করেন এডভোকেট মোঃ শাহ আলম।</p>
-<h2 style="font-size:20px;font-weight:700;margin:20px 0 10px">কর্পোরেট আইনি সেবা</h2>
-<ul style="padding-left:20px;color:#333;line-height:2">
-  <li>আরজেএসসি (RJSC) কোম্পানি ও পার্টনারশিপ ফার্ম নিবন্ধন</li>
-  <li>বাণিজ্যিক চুক্তি ও সমঝোতা স্মারক (MOU) ড্রাফটিং</li>
-  <li>পরিচালক ও শেয়ারহোল্ডারদের অভ্যন্তরীণ বিরোধ নিষ্পত্তি</li>
-  <li>অর্থঋণ আদালত আইন ও বাণিজ্যিক বিরোধ মামলা</li>
-</ul>`,
-    },
-    'tax-lawyer': {
-      title: 'আয়কর ও ভ্যাট আইনজীবী ঢাকা | ট্রাইব্যুনাল আপিল',
-      desc: 'অভিজ্ঞ আয়কর ও ভ্যাট আইনজীবী ঢাকা। আয়কর রিটার্ন বিরোধ, কর নির্ধারণ চ্যালেঞ্জ, ট্যাক্সেস আপিলেট ট্রাইব্যুনাল ও ভ্যাট পরামর্শ। কল: ০১৭১২-৬৫৫৫৪৬।',
-      h1: 'আয়কর ও ভ্যাট আইনজীবী বাংলাদেশ | এডভোকেট মোঃ শাহ আলম',
-      body: `<p>আয়কর আইন ২০২৩ ও মূল্য সংযোজন কর ও সম্পূরক শুল্ক আইন ২০১২ অনুযায়ী ব্যক্তি ও প্রতিষ্ঠানের কর বিরোধ এবং ট্যাক্সেস আপিলেট ট্রাইব্যুনালে দক্ষ প্রতিনিধিত্ব নিশ্চিত করেন এডভোকেট মোঃ শাহ আলম।</p>
-<h2 style="font-size:20px;font-weight:700;margin:20px 0 10px">কর আইনি সেবা</h2>
-<ul style="padding-left:20px;color:#333;line-height:2">
-  <li>আয়কর নির্ধারণ আদেশ চ্যালেঞ্জ ও আপিল</li>
-  <li>ট্যাক্সেস আপিলেট ট্রাইব্যুনালে মামলা পরিচালনা</li>
-  <li>উৎস কর (TDS) ও ভ্যাট বিরোধ নিষ্পত্তি</li>
-  <li>হাইকোর্ট বিভাগে রেফারেন্স ও রিট আবেদন</li>
-</ul>`,
-    },
-  };
-  const out = map[slug] || null;
-  if (out && pageHeadings.servicesBn[slug]) out.h1 = pageHeadings.servicesBn[slug];
-  return out;
+  const breadcrumbHtml = `<nav aria-label="Breadcrumb" style="font-size:13px;color:#475569;margin-bottom:14px"><a href="${homeHref}" style="color:#132A4A">${homeLabel}</a> &rsaquo; <a href="${servicesHref}" style="color:#132A4A">${servicesLabel}</a> &rsaquo; <span>${escHtml(d.h1)}</span></nav>`;
+
+  const directAnswerHtml = d.directAnswer
+    ? `<p class="direct-answer" style="padding:14px 18px;border-left:4px solid #C9A227;background:#F7F8FA;border-radius:8px;font-size:16px;line-height:1.7;margin:0 0 18px">${escHtml(d.directAnswer)}</p>`
+    : '';
+
+  const introHtml = d.intro ? `<p style="font-size:15px;line-height:1.8;color:#334155;margin-bottom:20px">${d.intro}</p>` : '';
+
+  const glanceHtml = d.atAGlance?.length
+    ? `<section style="margin:20px 0;padding:16px;background:#F8FAFC;border:1px solid #E2E8F0;border-radius:10px">
+  <h2 style="font-size:18px;font-weight:700;margin:0 0 12px;color:#0B1220">${isBn ? 'এক নজরে গুরুত্বপূর্ণ তথ্য' : 'Legal Service At a Glance'}</h2>
+  <ul style="padding-left:20px;margin:0;line-height:1.9;color:#1E293B">
+    ${d.atAGlance.map(g => `<li><strong>${escHtml(g.label)}:</strong> ${escHtml(g.value)}</li>`).join('\n    ')}
+  </ul>
+</section>`
+    : '';
+
+  const sectionsHtml = (d.sections || []).map(sec => `
+<section style="margin:22px 0">
+  <h2 style="font-size:21px;font-weight:700;margin:0 0 10px;color:#0B1220">${escHtml(sec.heading)}</h2>
+  <div style="font-size:15px;line-height:1.8;color:#334155">${sec.html}</div>
+</section>`).join('');
+
+  const feeTableHtml = d.feeTable
+    ? `<section style="margin:24px 0">
+  <h2 style="font-size:21px;font-weight:700;margin:0 0 8px;color:#0B1220">${escHtml(d.feeTable.heading)}</h2>
+  ${d.feeTable.note ? `<p style="font-size:13px;color:#475569;font-style:italic;margin:0 0 12px">${escHtml(d.feeTable.note)}</p>` : ''}
+  <table style="width:100%;border-collapse:collapse;font-size:14px;background:#fff;border:1px solid #CBD5E1">
+    <thead><tr style="background:#132A4A;color:#fff">${d.feeTable.columns.map(c => `<th style="padding:10px;text-align:left">${escHtml(c)}</th>`).join('')}</tr></thead>
+    <tbody>${d.feeTable.rows.map(r => `<tr style="border-top:1px solid #E2E8F0">${r.map(cell => `<td style="padding:10px">${escHtml(cell)}</td>`).join('')}</tr>`).join('')}</tbody>
+  </table>
+</section>`
+    : '';
+
+  const procedureHtml = d.procedure
+    ? `<section style="margin:22px 0">
+  <h2 style="font-size:20px;font-weight:700;margin:0 0 10px;color:#0B1220">${escHtml(d.procedure.heading)}</h2>
+  <ol style="padding-left:22px;line-height:1.9;color:#334155">${d.procedure.steps.map(st => `<li>${escHtml(st)}</li>`).join('')}</ol>
+</section>`
+    : '';
+
+  const docsHtml = d.documentsChecklist
+    ? `<section style="margin:22px 0">
+  <h2 style="font-size:20px;font-weight:700;margin:0 0 10px;color:#0B1220">${escHtml(d.documentsChecklist.heading)}</h2>
+  <ul style="padding-left:22px;line-height:1.9;color:#334155">${d.documentsChecklist.items.map(it => `<li>${escHtml(it)}</li>`).join('')}</ul>
+</section>`
+    : '';
+
+  const caseNoteHtml = d.caseNote
+    ? `<div style="margin:20px 0;padding:16px;border-left:4px solid #C9A227;background:#F8FAFC;border-radius:8px">
+  <strong style="display:block;color:#0B1220;margin-bottom:6px">${escHtml(d.caseNote.title)}</strong>
+  <p style="margin:0;color:#334155;font-size:14px;line-height:1.75">${escHtml(d.caseNote.body)}</p>
+</div>`
+    : '';
+
+  const coverageHtml = d.coverage?.length
+    ? `<section style="margin:22px 0">
+  <h2 style="font-size:20px;font-weight:700;margin:0 0 10px;color:#0B1220">${isBn ? 'মূল আইনি সেবা ক্ষেত্রসমূহ' : 'What We Cover'}</h2>
+  <ul style="padding-left:22px;line-height:1.9;color:#334155">${d.coverage.map(c => `<li>${escHtml(c)}</li>`).join('')}</ul>
+  ${d.contextNote ? `<p style="margin-top:10px;color:#334155;font-size:14px">${d.contextNote}</p>` : ''}
+</section>`
+    : '';
+
+  const faqHtml = d.faqItems?.length
+    ? `<section style="margin:24px 0">
+  <h2 style="font-size:21px;font-weight:700;margin:0 0 12px;color:#0B1220">${isBn ? 'সাধারণ জিজ্ঞাসা (FAQ)' : 'Frequently Asked Questions'}</h2>
+  ${d.faqItems.map(f => `<div style="margin:10px 0;padding:14px;background:#F7F8FA;border:1px solid #E2E8F0;border-radius:8px">
+    <h3 style="font-size:16px;font-weight:700;color:#0B1220;margin:0 0 6px">${escHtml(f.q)}</h3>
+    <p style="margin:0;color:#334155;font-size:14px;line-height:1.75">${escHtml(f.a)}</p>
+  </div>`).join('')}
+</section>`
+    : '';
+
+  const linksHtml = (d.relatedBlogLinks?.length || d.relatedServices?.length)
+    ? `<section style="margin:22px 0">
+  ${d.relatedBlogLinks?.length ? `<h2 style="font-size:19px;font-weight:700;margin:0 0 10px;color:#0B1220">${isBn ? 'সংশ্লিষ্ট আইনি গাইড ও প্রবন্ধ' : 'Further Reading'}</h2>
+  <ul style="padding-left:20px;line-height:1.9">${d.relatedBlogLinks.map(l => `<li><a href="${l.to}" style="color:#1a56db">${escHtml(l.title)}</a></li>`).join('')}</ul>` : ''}
+  ${d.relatedServices?.length ? `<h2 style="font-size:19px;font-weight:700;margin:18px 0 10px;color:#0B1220">${isBn ? 'অন্যান্য আইনি সেবাসমূহ' : 'Other Legal Services in Bangladesh'}</h2>
+  <ul style="padding-left:20px;line-height:1.9">${d.relatedServices.map(s => `<li><a href="${s.to}" style="color:#1a56db">${escHtml(s.label)}</a></li>`).join('')}</ul>` : ''}
+</section>`
+    : '';
+
+  return `<article>
+${breadcrumbHtml}
+<h1 style="font-size:28px;font-weight:700;margin-bottom:14px;color:#0a0a0a">${escHtml(d.h1)}</h1>
+${directAnswerHtml}
+${introHtml}
+${glanceHtml}
+${sectionsHtml}
+${feeTableHtml}
+${procedureHtml}
+${docsHtml}
+${caseNoteHtml}
+${coverageHtml}
+${faqHtml}
+${linksHtml}
+${isBn ? BN_CTA : CTA}
+${isBn ? CONCLUSION_DISCLAIMER_BN : CONCLUSION_DISCLAIMER_EN}
+</article>`;
 }
 
 // ── page-specific content builders ────────────────────────────────────────────
@@ -880,46 +760,134 @@ function educationBody() {
 ${CTA}`;
 }
 
+const CONTACT_FAQS_EN = [
+  {
+    q: 'How do I book a chamber consultation appointment?',
+    a: 'You can call +880 1712-655546 directly or send your case summary through our WhatsApp intake form to schedule an in-person session at our Uttara Sector 12 or Dhaka Judge Court chamber, or an online video review.',
+  },
+  {
+    q: 'What are the consultation fee payment methods?',
+    a: 'For telephone consultations or remote NRB document and case reviews, fees can be remitted via bKash (01712655546) after confirming your time slot with the chamber desk.',
+  },
+  {
+    q: 'Can I contact urgently for bail or arrest matters?',
+    a: 'Yes, urgent criminal defence inquiries involving FIR registration, police custody remand protection, Section 497 surrender petitions, or High Court anticipatory bail are prioritized by phone and WhatsApp.',
+  },
+];
+
+const CONTACT_FAQS_BN = [
+  {
+    q: 'আইনি পরামর্শের জন্য কীভাবে অ্যাপয়েন্টমেন্ট নেব?',
+    a: 'আপনি সরাসরি 01712655546 নম্বরে কল করে অথবা ওয়েবসাইটের হোয়াটসঅ্যাপ ফর্মে বার্তা পাঠিয়ে উত্তরা সন্ধ্যা চেম্বার বা ঢাকা জজ কোর্ট চেম্বারে অ্যাপয়েন্টমেন্ট অথবা অনলাইন আইনি পরামর্শ বুক করতে পারেন।',
+  },
+  {
+    q: 'পেইড কনসালটেশন ও কেস রিভিউ ফি কীভাবে পরিশোধ করতে হবে?',
+    a: 'অনলাইন ভিডিও পরামর্শ বা ফোনালাপের মাধ্যমে বিস্তারিত নথিপত্র পর্যালোচনার জন্য বিকাশ নম্বর 01712655546-এ কনসালটেশন ফি পরিশোধ করে ট্রানজেকশন আইডি হোয়াটসঅ্যাপে পাঠিয়ে স্লট কনফার্ম করা যায়।',
+  },
+  {
+    q: 'জরুরি গ্রেপ্তার, থানা জিডি বা জামিনের ক্ষেত্রে কি দ্রুত যোগাযোগ করা যাবে?',
+    a: 'হ্যাঁ, জরুরি ফৌজদারি মামলা, থানা জিডি, পুলিশ রিমান্ড প্রতিরোধ এবং হাইকোর্ট বিভাগে ৪৯৮ ধারায় আগাম জামিনের বিষয়ে হোয়াটসঅ্যাপে বার্তা দিলে বা সরাসরি ফোনে দ্রুত পরামর্শ প্রদান করা হয়।',
+  },
+];
+
 function contactBody() {
-  return `
+  return `<nav aria-label="Breadcrumb" style="font-size:13px;color:#475569;margin-bottom:14px"><a href="/en" style="color:#132A4A">Home</a> &rsaquo; <span>Contact</span></nav>
 <h1 style="font-size:28px;font-weight:700;margin-bottom:8px;color:#0a0a0a">${escHtml(pageHeadings.contactEn)}</h1>
-<p style="color:#555;margin-bottom:20px">Trusted lawyer in Uttara, Dhaka — available for criminal, divorce, bail, property &amp; corporate cases.</p>
-<h2 style="font-size:20px;font-weight:700;margin:20px 0 10px">Chamber Locations</h2>
-<ul style="padding-left:20px;color:#333;line-height:2.2">
-  <li><strong>Uttara Chamber:</strong> House 46, Road 6/B, Sector 12, Uttara West, Dhaka-1230</li>
-  <li><strong>Court Chamber:</strong> Ainjeebi Samity Bhaban, 4th Floor, 6/7 Court House Street, Kotwali, Dhaka-1100</li>
-</ul>
-<h2 style="font-size:20px;font-weight:700;margin:20px 0 10px">Contact Details</h2>
-<ul style="padding-left:20px;color:#333;line-height:2.2">
-  <li><strong>Phone:</strong> <a href="tel:+8801712655546" style="color:#1a56db">+880 1712-655546</a></li>
-  <li><strong>WhatsApp:</strong> <a href="https://wa.me/8801955802007" style="color:#25D366">+880 1955-802007</a></li>
-  <li><strong>Email:</strong> <a href="mailto:contact@advmdshahalam.me" style="color:#1a56db">contact@advmdshahalam.me</a></li>
-  <li><strong>Office Hours:</strong> Saturday – Thursday, 9:00 AM – 9:00 PM</li>
-</ul>
-<h2 style="font-size:20px;font-weight:700;margin:20px 0 10px">Practice Areas</h2>
-<ul style="padding-left:20px;color:#333;line-height:2">
-  ${services.items.map(s=>`<li><a href="${s.link}" style="color:#1a56db">${escHtml(s.title)}</a></li>`).join('')}
-</ul>
-<p style="margin-top:16px;color:#555;font-size:13px">Advocate Md. Shah Alam is enrolled with the Bangladesh Bar Council and authorised to practise at all courts in Bangladesh including the Supreme Court.</p>`;
+<p style="color:#555;margin-bottom:20px;line-height:1.7">Trusted criminal defence, divorce, High Court bail, land property, tax tribunal, and corporate lawyer in Uttara &amp; Dhaka Judge Court — available 6 days a week for confidential in-chamber and remote consultations.</p>
+
+<section style="margin:20px 0">
+  <h2 style="font-size:20px;font-weight:700;margin:20px 0 10px">Chamber Locations &amp; Direct Contact Details</h2>
+  <ul style="padding-left:20px;color:#333;line-height:2.1">
+    <li><strong>Uttara Chamber (Primary Evening Office):</strong> House 46, Road 6/B, Sector 12, Uttara West, Dhaka-1230 — private evening client consultations and case review meetings.</li>
+    <li><strong>Court Chamber (Dhaka Judge Court):</strong> Ainjeebi Samity Bhaban, 4th Floor, 6/7 Court House Street, Kotwali, Dhaka-1100 — adjacent to Chief Metropolitan Magistrate and Sessions Courts.</li>
+    <li><strong>Direct Phone Hotline:</strong> <a href="tel:+8801712655546" style="color:#1a56db">+880 1712-655546</a> (Saturday – Thursday, 9:00 AM – 9:00 PM)</li>
+    <li><strong>Emergency WhatsApp Desk:</strong> <a href="https://wa.me/8801955802007" style="color:#25D366">+880 1955-802007</a> (available 7 days for urgent inquiries)</li>
+    <li><strong>Email:</strong> <a href="mailto:contact@advmdshahalam.me" style="color:#1a56db">contact@advmdshahalam.me</a> · <strong>bKash Paid Review:</strong> 01712655546</li>
+  </ul>
+</section>
+
+<section style="margin:20px 0">
+  <h2 style="font-size:20px;font-weight:700;margin:20px 0 10px">Court Jurisdiction &amp; Remote NRB Representation</h2>
+  <p style="color:#334155;line-height:1.8;margin-bottom:10px">Enrolled with the Bangladesh Bar Council since 2015, <a href="/advocate-md-shah-alam" style="color:#1a56db;font-weight:600">Advocate Md. Shah Alam</a> represents clients before the Dhaka Chief Metropolitan &amp; Judicial Magistrate Courts, Metropolitan Sessions Judge Court, Family Courts, Administrative &amp; Cyber Tribunals, and the High Court Division of the Supreme Court of Bangladesh.</p>
+  <p style="color:#334155;line-height:1.8">Non-Resident Bangladeshis (NRBs) residing in the UK, USA, Canada, UAE, Saudi Arabia, and Europe can book remote video case evaluations, land deed &amp; khatian title vetting, Embassy-attested Power of Attorney drafts, and overseas divorce or litigation support without travelling to Dhaka through our dedicated <a href="/nrb-legal-help" style="color:#1a56db;font-weight:600">NRB Legal Help Desk</a>.</p>
+</section>
+
+<section style="margin:20px 0">
+  <h2 style="font-size:20px;font-weight:700;margin:20px 0 10px">Pre-Visit Document Checklist &amp; Indicative Consultation Fee</h2>
+  <ul style="padding-left:20px;color:#333;line-height:2">
+    <li><strong>Criminal &amp; Bail Matters:</strong> Copy of the FIR, General Diary (GD), charge sheet, arrest memo, or certified lower court rejection order.</li>
+    <li><strong>Land &amp; Property Disputes:</strong> Registered sale deeds (Saf Kabala), Bia deeds, CS/SA/RS/BS khatian records, and e-mutation (Namjari) receipts.</li>
+    <li><strong>Divorce &amp; Custody Matters:</strong> Registered Kabinnama, municipal talaq notice copies, or foreign court decree where applicable.</li>
+    <li><strong>Indicative Consultation &amp; Case Review Fee:</strong> BDT 3,000 (\$30) for structured 45-minute strategy review; BDT 5,000–8,000 (\$50–\$75) for written deed/khatian opinion (indicative only; chamber &amp; court schedules govern). bKash: 01712655546.</li>
+  </ul>
+</section>
+
+<section style="margin:20px 0">
+  <h2 style="font-size:20px;font-weight:700;margin:20px 0 10px">Expert Practice Areas &amp; Service Guides</h2>
+  <ul style="padding-left:20px;color:#333;line-height:2">
+    ${services.items.map(s=>`<li><a href="${s.link}" style="color:#1a56db">${escHtml(s.title)}</a> — ${escHtml(s.desc)}</li>`).join('')}
+  </ul>
+</section>
+
+<section style="margin:24px 0">
+  <h2 style="font-size:20px;font-weight:700;margin:20px 0 12px">Frequently Asked Questions</h2>
+  ${CONTACT_FAQS_EN.map(f => `<div style="margin:10px 0;padding:12px 16px;background:#F7F8FA;border-radius:8px">
+    <h3 style="font-size:16px;font-weight:700;margin:0 0 6px;color:#0B1220">${escHtml(f.q)}</h3>
+    <p style="margin:0;color:#334155;font-size:14px;line-height:1.7">${escHtml(f.a)}</p>
+  </div>`).join('')}
+</section>
+${CTA}
+<p style="margin-top:16px;color:#555;font-size:13px"><strong>Disclaimer:</strong> Contacting us does not create an attorney-client relationship. Information submitted is kept confidential. Advocate Md. Shah Alam is enrolled with the Bangladesh Bar Council.</p>`;
 }
 
 function contactBodyBn() {
-  return `
+  return `<nav aria-label="Breadcrumb" style="font-size:13px;color:#475569;margin-bottom:14px"><a href="/" style="color:#132A4A">হোম</a> &rsaquo; <span>যোগাযোগ</span></nav>
 <h1 style="font-size:28px;font-weight:700;margin-bottom:8px;color:#0a0a0a">${escHtml(pageHeadings.contactBn)}</h1>
-<p style="color:#555;margin-bottom:20px">উত্তরা ও ঢাকা জজ কোর্টে সরাসরি আইনি পরামর্শ ও মামলা পরিচালনার জন্য অ্যাপয়েন্টমেন্ট বুকিং করুন।</p>
-<h2 style="font-size:20px;font-weight:700;margin:20px 0 10px">চেম্বার ঠিকানা</h2>
-<ul style="padding-left:20px;color:#333;line-height:2.2">
-  <li><strong>উত্তরা চেম্বার:</strong> বাড়ি ৪৬, সড়ক ৬/বি, সেক্টর ১২, উত্তরা পশ্চিম, ঢাকা-১২৩০</li>
-  <li><strong>কোর্ট চেম্বার:</strong> আইনজীবী সমিতি ভবন, ৪র্থ তলা, ৬/৭ কোর্ট হাউস স্ট্রিট, কোতোয়ালি, ঢাকা-১১০০</li>
-</ul>
-<h2 style="font-size:20px;font-weight:700;margin:20px 0 10px">সরাসরি যোগাযোগের নম্বর</h2>
-<ul style="padding-left:20px;color:#333;line-height:2.2">
-  <li><strong>মোবাইল কল:</strong> <a href="tel:+8801712655546" style="color:#1a56db">+880 1712-655546</a></li>
-  <li><strong>জরুরি হোয়াটসঅ্যাপ:</strong> <a href="https://wa.me/8801955802007" style="color:#25D366">+880 1955-802007</a></li>
-  <li><strong>ইমেইল:</strong> <a href="mailto:contact@advmdshahalam.me" style="color:#1a56db">contact@advmdshahalam.me</a></li>
-  <li><strong>সময়সূচী:</strong> শনিবার – বৃহস্পতিবার, সকাল ৯:০০ – রাত ৯:০০</li>
-</ul>
-<p style="margin-top:16px;color:#555;font-size:13px">অ্যাডভোকেট মো. শাহ আলম বাংলাদেশ সুপ্রিম কোর্ট ও বার কাউন্সিল তালিকাভুক্ত আইনজীবী (২০১৫ সাল থেকে)।</p>`;
+<p style="color:#555;margin-bottom:20px;line-height:1.7">বাংলাদেশ সুপ্রিম কোর্ট ও ঢাকা জজ কোর্টের অভিজ্ঞ আইনজীবীর সাথে ফোন, হোয়াটসঅ্যাপ বা উত্তরা ও কোর্ট চেম্বারে সরাসরি সাক্ষাতের মাধ্যমে ফৌজদারি, জামিন, তালাক, জমি-জমা, কর ও কোম্পানি মামলার পূর্ণাঙ্গ আইনি সমাধান নিশ্চিত করুন।</p>
+
+<section style="margin:20px 0">
+  <h2 style="font-size:20px;font-weight:700;margin:20px 0 10px">চেম্বার ঠিকানা ও সরাসরি যোগাযোগের মাধ্যম</h2>
+  <ul style="padding-left:20px;color:#333;line-height:2.1">
+    <li><strong>উত্তরা চেম্বার (প্রধান কার্যালয়):</strong> বাড়ি ৪৬, সড়ক ৬/বি, সেক্টর ১২, উত্তরা পশ্চিম, ঢাকা-১২৩০ — সরাসরি আইনি পরামর্শ ও গোপনীয় ক্লায়েন্ট মিটিং চেম্বার।</li>
+    <li><strong>কোর্ট চেম্বার (ঢাকা বিচার আদালত):</strong> আইনজীবী সমিতি ভবন, ৪র্থ তলা, ৬/৭ কোর্ট হাউস স্ট্রিট, কোতোয়ালি, ঢাকা-১১০০ — ঢাকা জজ কোর্ট ও মহানগর দায়রা আদালত সংলগ্ন।</li>
+    <li><strong>সরাসরি হটলাইন কল:</strong> <a href="tel:+8801712655546" style="color:#1a56db">+880 1712-655546</a> (শনিবার – বৃহস্পতিবার, সকাল ৯:০০ – রাত ৯:০০)</li>
+    <li><strong>জরুরি হোয়াটসঅ্যাপ:</strong> <a href="https://wa.me/8801955802007" style="color:#25D366">+880 1955-802007</a> (সপ্তাহের ৭ দিন জরুরি সহায়তার জন্য সচল)</li>
+    <li><strong>ইমেইল:</strong> <a href="mailto:contact@advmdshahalam.me" style="color:#1a56db">contact@advmdshahalam.me</a> · <strong>বিকাশ পেইড কনসালটেশন:</strong> ০১৭১২৬৫৫৫৪৬</li>
+  </ul>
+</section>
+
+<section style="margin:20px 0">
+  <h2 style="font-size:20px;font-weight:700;margin:20px 0 10px">আদালত অধিক্ষেত্র ও প্রবাসী (NRB) দূরবর্তী সেবা</h2>
+  <p style="color:#334155;line-height:1.8;margin-bottom:10px">বাংলাদেশ বার কাউন্সিল ও সুপ্রিম কোর্টে ২০১৫ সাল থেকে তালিকাভুক্ত <a href="/advocate-md-shah-alam" style="color:#1a56db;font-weight:600">অ্যাডভোকেট মো. শাহ আলম</a> ঢাকা চিফ মেট্রোপলিটন ম্যাজিস্ট্রেট (CMM) কোর্ট, মহানগর দায়রা জজ আদালত, পারিবারিক আদালত, বিশেষ ট্রাইব্যুনাল এবং বাংলাদেশ সুপ্রিম কোর্টের হাইকোর্ট ও আপিল বিভাগে মামলা পরিচালনা করেন।</p>
+  <p style="color:#334155;line-height:1.8">যুক্তরাজ্য, যুক্তরাষ্ট্র, কানাডা, সংযুক্ত আরব আমিরাত, সৌদি আরব ও ইউরোপে বসবাসরত প্রবাসী বাংলাদেশিরা দেশে না এসেই ভিডিও কলের মাধ্যমে জমি ও খতিয়ান যাচাই, দূতাবাস-সত্যায়িত পাওয়ার অব অ্যাটর্নি, তালাক নোটিশ বা প্রতারণা মামলার আইনি সহায়তা নিতে পারেন আমাদের <a href="/nrb-legal-help" style="color:#1a56db;font-weight:600">প্রবাসী আইনি সহায়তা ডেস্ক</a>-এর মাধ্যমে।</p>
+</section>
+
+<section style="margin:20px 0">
+  <h2 style="font-size:20px;font-weight:700;margin:20px 0 10px">সাক্ষাতের পূর্বে প্রস্তুতি ও পরামর্শ ফি (আনুমানিক)</h2>
+  <ul style="padding-left:20px;color:#333;line-height:2">
+    <li><strong>ফৌজদারি ও জামিন মামলা:</strong> এজাহার (FIR), জিডি, চার্জশিট বা নিম্ন আদালতের জামিন নামঞ্জুর আদেশের কপি সঙ্গে রাখুন।</li>
+    <li><strong>জমি ও সম্পত্তি বিরোধ:</strong> সিএস/এসএ/আরএস/বিএস খতিয়ান, সর্বশেষ বায়া দলিল এবং ই-নামজারি ডিসিআর কপি।</li>
+    <li><strong>পারিবারিক ও তালাক মামলা:</strong> কাবিননামা, সন্তানের জন্ম সনদ ও প্রয়োজনে প্রেরিত তালাক নোটিশের কপি।</li>
+    <li><strong>পেইড কেস রিভিউ ও দলিল ভেটিং ফি:</strong> ৪৫ মিনিটের ভিডিও/চেম্বার পরামর্শ (৳৩,০০০ / \$৩০) থেকে বিস্তারিত দলিল যাচাই (৳৮,০০০ / \$৭৫) — আনুমানিক; মামলার জটিলতা অনুযায়ী নির্ধারিত। বিকাশ: ০১৭১২৬৫৫৫৪৬।</li>
+  </ul>
+</section>
+
+<section style="margin:20px 0">
+  <h2 style="font-size:20px;font-weight:700;margin:20px 0 10px">প্রধান আইনি সেবা ক্ষেত্রসমূহ</h2>
+  <ul style="padding-left:20px;color:#333;line-height:2">
+    ${services.items.map(s=>`<li><a href="/bn${s.link}" style="color:#1a56db">${escHtml(s.titleBn || s.title)}</a> — ${escHtml(s.descBn || s.desc)}</li>`).join('')}
+  </ul>
+</section>
+
+<section style="margin:24px 0">
+  <h2 style="font-size:20px;font-weight:700;margin:20px 0 12px">যোগাযোগ সংক্রান্ত সাধারণ প্রশ্নাবলী (FAQ)</h2>
+  ${CONTACT_FAQS_BN.map(f => `<div style="margin:10px 0;padding:12px 16px;background:#F7F8FA;border-radius:8px">
+    <h3 style="font-size:16px;font-weight:700;margin:0 0 6px;color:#0B1220">${escHtml(f.q)}</h3>
+    <p style="margin:0;color:#334155;font-size:14px;line-height:1.7">${escHtml(f.a)}</p>
+  </div>`).join('')}
+</section>
+${BN_CTA}
+<p style="margin-top:16px;color:#555;font-size:13px"><strong>আইনি সতর্কবার্তা:</strong> মেসেজ বা ফোন কল করার মাধ্যমে সরাসরি আইনজীবী-ক্লায়েন্ট চুক্তি গঠিত হয় না। প্রেরিত সকল তথ্য সম্পূর্ণ গোপন রাখা হয়। অ্যাডভোকেট মো. শাহ আলম বাংলাদেশ বার কাউন্সিলের তালিকাভুক্ত আইনজীবী।</p>`;
 }
 
 function privacyBody() {
@@ -1097,17 +1065,20 @@ async function main() {
     return `<script type="application/ld+json">${jsonLd({ '@context': 'https://schema.org', '@graph': graph })}</script>`;
   }
 
-  function buildServiceSchema(pageUrl, name, description, lang) {
-    const homeName = lang === 'bn' ? 'হোম' : 'Home';
-    const homeUrl = lang === 'bn' ? `${BASE}/` : `${BASE}/en`;
+  function buildServiceSchema(pageUrl, data, lang) {
+    const isBn = lang === 'bn';
+    const homeName = isBn ? 'হোম' : 'Home';
+    const homeUrl = isBn ? `${BASE}/` : `${BASE}/en`;
+    const servicesName = isBn ? 'আইনি সেবাসমূহ' : 'Legal Services';
+    const servicesUrl = isBn ? `${BASE}/#services` : `${BASE}/en#services`;
     const graph = [
       {
         '@type': 'Service',
         '@id': `${pageUrl}#service`,
-        name,
-        description,
+        name: data.h1,
+        description: data.metaDesc,
         url: pageUrl,
-        inLanguage: lang,
+        inLanguage: isBn ? 'bn-BD' : 'en',
         provider: {
           '@type': 'LegalService',
           '@id': `${BASE}/#legalservice`,
@@ -1121,9 +1092,22 @@ async function main() {
         '@type': 'BreadcrumbList',
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: homeName, item: homeUrl },
-          { '@type': 'ListItem', position: 2, name, item: pageUrl },
+          { '@type': 'ListItem', position: 2, name: servicesName, item: servicesUrl },
+          { '@type': 'ListItem', position: 3, name: data.h1, item: pageUrl },
         ],
       },
+      ...(data.faqItems?.length
+        ? [
+            {
+              '@type': 'FAQPage',
+              mainEntity: data.faqItems.map((f) => ({
+                '@type': 'Question',
+                name: f.q,
+                acceptedAnswer: { '@type': 'Answer', text: f.a },
+              })),
+            },
+          ]
+        : []),
     ];
     return `<script type="application/ld+json">${jsonLd({ '@context': 'https://schema.org', '@graph': graph })}</script>`;
   }
@@ -1202,10 +1186,20 @@ ${buildInstitutionalSchema(`${BASE}/education`, 'en', [{ name: 'Home', item: `${
 
   // ── Contact page (/contact) ────────────────────────────────────────────────
   {
+    const contactFaqSchemaEn = {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: CONTACT_FAQS_EN.map((f) => ({
+        '@type': 'Question',
+        name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: f.a },
+      })),
+    };
     const extraHead = `<link rel="alternate" hreflang="en" href="${BASE}/contact" />
 <link rel="alternate" hreflang="bn" href="${BASE}/bn/contact" />
 <link rel="alternate" hreflang="x-default" href="${BASE}/contact" />
-${buildInstitutionalSchema(`${BASE}/contact`, 'en', [{ name: 'Home', item: `${BASE}/en` }, { name: 'Contact', item: `${BASE}/contact` }])}`;
+${buildInstitutionalSchema(`${BASE}/contact`, 'en', [{ name: 'Home', item: `${BASE}/en` }, { name: 'Contact', item: `${BASE}/contact` }])}
+<script type="application/ld+json">${jsonLd(contactFaqSchemaEn)}</script>`;
     const html = buildPage(base, {
       title: 'Contact Advocate Md. Shah Alam | Dhaka Chamber',
       description: 'Contact Advocate Md. Shah Alam for legal consultation in Dhaka & Uttara. Call +880 1712-655546 or WhatsApp for criminal, divorce, bail & property cases.',
@@ -1220,10 +1214,20 @@ ${buildInstitutionalSchema(`${BASE}/contact`, 'en', [{ name: 'Home', item: `${BA
 
   // ── Bengali Contact page (/bn/contact) ─────────────────────────────────────
   {
+    const contactFaqSchemaBn = {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: CONTACT_FAQS_BN.map((f) => ({
+        '@type': 'Question',
+        name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: f.a },
+      })),
+    };
     const extraHead = `<link rel="alternate" hreflang="bn" href="${BASE}/bn/contact" />
 <link rel="alternate" hreflang="en" href="${BASE}/contact" />
 <link rel="alternate" hreflang="x-default" href="${BASE}/contact" />
-${buildInstitutionalSchema(`${BASE}/bn/contact`, 'bn', [{ name: 'হোম', item: `${BASE}/` }, { name: 'যোগাযোগ', item: `${BASE}/bn/contact` }])}`;
+${buildInstitutionalSchema(`${BASE}/bn/contact`, 'bn', [{ name: 'হোম', item: `${BASE}/` }, { name: 'যোগাযোগ', item: `${BASE}/bn/contact` }])}
+<script type="application/ld+json">${jsonLd(contactFaqSchemaBn)}</script>`;
     const html = buildPage(base, {
       title: 'যোগাযোগ ও চেম্বার | এডভোকেট মোঃ শাহ আলম ঢাকা',
       description: 'এডভোকেট মোঃ শাহ আলমের উত্তরা ও ঢাকা জজ কোর্ট চেম্বারে সরাসরি আইনি পরামর্শ ও মামলা মূল্যায়নের জন্য যোগাযোগ করুন। ফোন: +8801712655546।',
@@ -1406,18 +1410,17 @@ ${CTA}`,
   console.log('\n⚖️  Pre-rendering service pages (EN & BN)...');
   const serviceSlugs = ['criminal-lawyer','bail-lawyer','divorce-lawyer','land-lawyer','supreme-court-lawyer','company-corporate-lawyer','tax-lawyer'];
   for (const slug of serviceSlugs) {
-    const meta = getServiceMeta(slug);
-    if (meta) {
+    const enData = SERVICE_PAGES_EN[slug];
+    if (enData) {
       const extraHead = `<link rel="alternate" hreflang="en" href="${BASE}/services/${slug}" />
 <link rel="alternate" hreflang="bn" href="${BASE}/bn/services/${slug}" />
 <link rel="alternate" hreflang="x-default" href="${BASE}/services/${slug}" />
-${buildServiceSchema(`${BASE}/services/${slug}`, meta.h1, meta.desc, 'en')}`;
+${buildServiceSchema(`${BASE}/services/${slug}`, enData, 'en')}`;
       const html = buildPage(base, {
-        title: meta.title,
-        description: meta.desc,
+        title: enData.metaTitle,
+        description: enData.metaDesc,
         canonical: `${BASE}/services/${slug}`,
-        body: `<h1 style="font-size:28px;font-weight:700;margin-bottom:16px;color:#0a0a0a">${escHtml(meta.h1)}</h1>
-${DISCLAIMER}${meta.body}${CTA}`,
+        body: buildServiceStaticBody(enData, false),
         lang: 'en',
         extraHead,
       });
@@ -1425,18 +1428,17 @@ ${DISCLAIMER}${meta.body}${CTA}`,
       console.log(`  ✓ /services/${slug}`);
     }
 
-    const bnMeta = getBnServiceMeta(slug);
-    if (bnMeta) {
+    const bnData = SERVICE_PAGES_BN[slug];
+    if (bnData) {
       const extraHead = `<link rel="alternate" hreflang="bn" href="${BASE}/bn/services/${slug}" />
 <link rel="alternate" hreflang="en" href="${BASE}/services/${slug}" />
 <link rel="alternate" hreflang="x-default" href="${BASE}/services/${slug}" />
-${buildServiceSchema(`${BASE}/bn/services/${slug}`, bnMeta.h1, bnMeta.desc, 'bn')}`;
+${buildServiceSchema(`${BASE}/bn/services/${slug}`, bnData, 'bn')}`;
       const bnHtml = buildPage(base, {
-        title: bnMeta.title,
-        description: bnMeta.desc,
+        title: bnData.metaTitle,
+        description: bnData.metaDesc,
         canonical: `${BASE}/bn/services/${slug}`,
-        body: `<h1 style="font-size:28px;font-weight:700;margin-bottom:16px;color:#0a0a0a">${escHtml(bnMeta.h1)}</h1>
-${BN_DISCLAIMER}${bnMeta.body}${BN_CTA}`,
+        body: buildServiceStaticBody(bnData, true),
         lang: 'bn',
         extraHead,
       });

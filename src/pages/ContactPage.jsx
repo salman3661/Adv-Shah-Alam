@@ -6,82 +6,118 @@ import { CALL_NUMBER, CALL_DISPLAY, waLink } from '../data/contactInfo';
 import siteInfo from '../content/siteInfo.json';
 import AdSenseAd from '../components/AdSenseAd';
 
+const CONTACT_FAQS_BN = [
+    {
+        q: 'আইনি পরামর্শের জন্য কীভাবে অ্যাপয়েন্টমেন্ট নেব?',
+        a: 'আপনি সরাসরি 01712655546 নম্বরে কল করে অথবা ওয়েবসাইটের হোয়াটসঅ্যাপ ফর্মে বার্তা পাঠিয়ে উত্তরা সন্ধ্যা চেম্বার বা ঢাকা জজ কোর্ট চেম্বারে অ্যাপয়েন্টমেন্ট অথবা অনলাইন আইনি পরামর্শ বুক করতে পারেন।',
+    },
+    {
+        q: 'পেইড কনসালটেশন ও কেস রিভিউ ফি কীভাবে পরিশোধ করতে হবে?',
+        a: 'অনলাইন ভিডিও পরামর্শ বা ফোনালাপের মাধ্যমে বিস্তারিত নথিপত্র পর্যালোচনার জন্য বিকাশ নম্বর 01712655546-এ কনসালটেশন ফি পরিশোধ করে ট্রানজেকশন আইডি হোয়াটসঅ্যাপে পাঠিয়ে স্লট কনফার্ম করা যায়।',
+    },
+    {
+        q: 'জরুরি গ্রেপ্তার, থানা জিডি বা জামিনের ক্ষেত্রে কি দ্রুত যোগাযোগ করা যাবে?',
+        a: 'হ্যাঁ, জরুরি ফৌজদারি মামলা, থানা জিডি, পুলিশ রিমান্ড প্রতিরোধ এবং হাইকোর্ট বিভাগে ৪৯৮ ধারায় আগাম জামিনের বিষয়ে হোয়াটসঅ্যাপে বার্তা দিলে বা সরাসরি ফোনে দ্রুত পরামর্শ প্রদান করা হয়।',
+    },
+];
+
+const CONTACT_FAQS_EN = [
+    {
+        q: 'How do I book a chamber consultation appointment?',
+        a: 'You can call +880 1712-655546 directly or send your case summary through our WhatsApp intake form to schedule an in-person session at our Uttara Sector 12 or Dhaka Judge Court chamber, or an online video review.',
+    },
+    {
+        q: 'What are the consultation fee payment methods?',
+        a: 'For telephone consultations or remote NRB document and case reviews, fees can be remitted via bKash (01712655546) after confirming your time slot with the chamber desk.',
+    },
+    {
+        q: 'Can I contact urgently for bail or arrest matters?',
+        a: 'Yes, urgent criminal defence inquiries involving FIR registration, police custody remand protection, Section 497 surrender petitions, or High Court anticipatory bail are prioritized by phone and WhatsApp.',
+    },
+];
+
 /* ─── 100/100 SEO JSON-LD Schemas ────────────────────────────── */
-const contactPageSchemaBn = {
-    '@context': 'https://schema.org',
-    '@graph': [
-        {
-            '@type': 'ContactPage',
-            '@id': 'https://www.advmdshahalam.me/bn/contact#webpage',
-            url: 'https://www.advmdshahalam.me/bn/contact',
-            name: 'যোগাযোগ ও আইনি চেম্বার | অ্যাডভোকেট মো. শাহ আলম',
-            description: 'বাংলাদেশ সুপ্রিম কোর্টের বিজ্ঞ আইনজীবী অ্যাডভোকেট মো. শাহ আলমের সাথে সরাসরি কথা বলুন বা উত্তরা ও ঢাকা কোর্ট চেম্বারে পরামর্শ নিন।',
-            inLanguage: 'bn-BD',
-        },
-        {
-            '@type': 'LegalService',
-            '@id': 'https://www.advmdshahalam.me/#legalservice',
-            name: 'অ্যাডভোকেট মো. শাহ আলম ল চেম্বার',
-            telephone: '+8801712655546',
-            email: 'contact@advmdshahalam.me',
-            url: 'https://www.advmdshahalam.me',
-            image: 'https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.png',
-            priceRange: '৳৳',
-            address: [
-                {
-                    '@type': 'PostalAddress',
-                    streetAddress: 'হাউস ৪৬, রোড ৬/বি, সেক্টর ১২, উত্তরা পশ্চিম',
-                    addressLocality: 'ঢাকা',
-                    postalCode: '১২৩০',
-                    addressCountry: 'BD',
-                    name: 'উত্তরা চেম্বার',
-                },
-                {
-                    '@type': 'PostalAddress',
-                    streetAddress: 'আইনজীবী সমিতি ভবন, ৪র্থ তলা, ৬/৭ কোর্ট হাউজ স্ট্রিট, কোতোয়ালি',
-                    addressLocality: 'ঢাকা',
-                    postalCode: '১১০০',
-                    addressCountry: 'BD',
-                    name: 'ঢাকা কোর্ট চেম্বার',
-                },
-            ],
-            openingHoursSpecification: {
-                '@type': 'OpeningHoursSpecification',
-                dayOfWeek: ['Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday'],
-                opens: '09:00',
-                closes: '21:00',
+const buildContactSchema = (isBn) => {
+    const BASE = 'https://www.advmdshahalam.me';
+    const pageUrl = isBn ? `${BASE}/bn/contact` : `${BASE}/contact`;
+    const faqs = isBn ? CONTACT_FAQS_BN : CONTACT_FAQS_EN;
+
+    return {
+        '@context': 'https://schema.org',
+        '@graph': [
+            {
+                '@type': 'WebSite',
+                '@id': `${BASE}/#website`,
+                name: isBn ? 'এডভোকেট মোঃ শাহ আলম' : 'Advocate Md. Shah Alam',
+                url: `${BASE}/`,
+                inLanguage: isBn ? 'bn-BD' : 'en',
             },
-        },
-        {
-            '@type': 'FAQPage',
-            mainEntity: [
-                {
-                    '@type': 'Question',
-                    name: 'আইনি পরামর্শের জন্য কীভাবে অ্যাপয়েন্টমেন্ট নিব?',
-                    acceptedAnswer: {
-                        '@type': 'Answer',
-                        text: 'আপনি সরাসরি 01712655546 নম্বরে কল করে অথবা হোয়াটসঅ্যাপের মাধ্যমে বার্তা পাঠিয়ে চেম্বার অ্যাপয়েন্টমেন্ট বা অনলাইন আইনি কনসালটেশন বুক করতে পারেন।'
-                    }
+            {
+                '@type': 'Person',
+                '@id': `${BASE}/#attorney`,
+                name: 'Advocate Md. Shah Alam',
+                jobTitle: 'Advocate, Supreme Court of Bangladesh',
+                url: `${BASE}/advocate-md-shah-alam`,
+                telephone: '+8801712655546',
+                worksFor: { '@id': `${BASE}/#legalservice` },
+            },
+            {
+                '@type': 'ContactPage',
+                '@id': `${pageUrl}#webpage`,
+                url: pageUrl,
+                name: isBn ? 'যোগাযোগ ও আইনি চেম্বার | অ্যাডভোকেট মো. শাহ আলম' : 'Contact Advocate Md. Shah Alam | Uttara & Dhaka Court Chambers',
+                inLanguage: isBn ? 'bn-BD' : 'en',
+            },
+            {
+                '@type': 'LegalService',
+                '@id': `${BASE}/#legalservice`,
+                name: isBn ? 'অ্যাডভোকেট মো. শাহ আলম ল চেম্বার' : 'Advocate Md. Shah Alam Law Chamber',
+                telephone: '+8801712655546',
+                email: 'contact@advmdshahalam.me',
+                url: BASE,
+                image: `${BASE}/images/hero/hero-md-shah-alam.png`,
+                priceRange: '৳৳',
+                address: [
+                    {
+                        '@type': 'PostalAddress',
+                        streetAddress: 'House 46, Road 6/B, Sector 12, Uttara West',
+                        addressLocality: 'Uttara, Dhaka',
+                        postalCode: '1230',
+                        addressCountry: 'BD',
+                    },
+                    {
+                        '@type': 'PostalAddress',
+                        streetAddress: 'Ainjeebi Samity Bhaban, 4th Floor, 6/7 Court House Street, Kotwali',
+                        addressLocality: 'Dhaka',
+                        postalCode: '1100',
+                        addressCountry: 'BD',
+                    },
+                ],
+                geo: { '@type': 'GeoCoordinates', latitude: 23.8745, longitude: 90.3987 },
+                openingHoursSpecification: {
+                    '@type': 'OpeningHoursSpecification',
+                    dayOfWeek: ['Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday'],
+                    opens: '09:00',
+                    closes: '21:00',
                 },
-                {
+            },
+            {
+                '@type': 'BreadcrumbList',
+                itemListElement: [
+                    { '@type': 'ListItem', position: 1, name: isBn ? 'হোম' : 'Home', item: isBn ? `${BASE}/` : `${BASE}/en` },
+                    { '@type': 'ListItem', position: 2, name: isBn ? 'যোগাযোগ' : 'Contact', item: pageUrl },
+                ],
+            },
+            {
+                '@type': 'FAQPage',
+                mainEntity: faqs.map((f) => ({
                     '@type': 'Question',
-                    name: 'পেইড কনসালটেশন ফি কীভাবে প্রদান করব?',
-                    acceptedAnswer: {
-                        '@type': 'Answer',
-                        text: 'অনলাইন বা ফোনালাপ পরামর্শের জন্য বিকাশ নম্বর 01712655546-এ নির্দিষ্ট কনসালটেশন ফি পাঠিয়ে নিশ্চিত করতে পারেন।'
-                    }
-                },
-                {
-                    '@type': 'Question',
-                    name: 'জরুরি জামিন বা গ্রেপ্তারের ক্ষেত্রে সরাসরি যোগাযোগ করা যাবে?',
-                    acceptedAnswer: {
-                        '@type': 'Answer',
-                        text: 'হ্যাঁ, জরুরী ফৌজদারি মামলা, থানা জিডি, পুলিশ রিমান্ড বা হাইকোর্ট আগাম জামিনের জন্য সরাসরি ফোনে অবিলম্বে যোগাযোগ করা যাবে।'
-                    }
-                }
-            ]
-        }
-    ]
+                    name: f.q,
+                    acceptedAnswer: { '@type': 'Answer', text: f.a },
+                })),
+            },
+        ],
+    };
 };
 
 const chambersEn = [
@@ -119,42 +155,42 @@ const practiceServicesBn = [
     {
         title: 'ফৌজদারি মামলা ও হাইকোর্ট জামিন',
         desc: 'থানা জিডি, এফআইআর, পুলিশ রিমান্ড প্রতিরোধ, নিয়মিত ও হাইকোর্ট আগাম জামিনের সুনির্দিষ্ট পরামর্শ।',
-        link: '/services/criminal-lawyer',
+        link: '/bn/services/criminal-lawyer',
         badge: 'ফৌজদারি',
         color: '#EF4444'
     },
     {
         title: 'পারিবারিক আইন ও তালাক পরামর্শ',
         desc: 'মুসলিম পারিবারিক আইন, তালাক নোটিশ, দেনমোহর আদায়, সন্তানের অভিভাবকত্ব ও খোরপোষের মামলা।',
-        link: '/services/divorce-lawyer',
+        link: '/bn/services/divorce-lawyer',
         badge: 'পারিবারিক',
-        color: '#8B5CF6'
+        color: '#1D4ED8'
     },
     {
         title: 'সম্পত্তি বিবাদ ও বাটোয়ারা মামলা',
         desc: 'জমি কেনাবেচা চেকলিস্ট, খতিয়ান ভুল সংশোধন, বাটোয়ারা দলিল, নামজারি ও বেদখল জমি উদ্ধার মামলা।',
-        link: '/services/land-lawyer',
+        link: '/bn/services/land-lawyer',
         badge: 'সম্পত্তি',
         color: '#10B981'
     },
     {
         title: 'হাইকোর্ট রিট পিটিশন ও আপিল',
         desc: 'মৌলিক অধিকার সুরক্ষা, সরকারি আদেশ চ্যালেঞ্জ, রিট পিটিশন ও সুপ্রিম কোর্ট আপিল কন্ডাক্ট।',
-        link: '/services/supreme-court-lawyer',
+        link: '/bn/services/supreme-court-lawyer',
         badge: 'সুপ্রিম কোর্ট',
         color: '#3B82F6'
     },
     {
         title: 'ইনকাম ট্যাক্স ও এনবিআর নোটিশ',
         desc: 'আয়কর রিটার্ন, এনবিআর লিগ্যাল নোটিশ জবাব, আয়কর মামলা ও কর আপিল ট্রাইব্যুনাল শুনানি।',
-        link: '/services/tax-lawyer',
+        link: '/bn/services/tax-lawyer',
         badge: 'কর ও ভ্যাট',
         color: '#F59E0B'
     },
     {
         title: 'কোম্পানি ট্রেডমার্ক ও চুক্তি আইন',
         desc: 'ব্র্যান্ড ট্রেডমার্ক রেজিস্ট্রেশন, চুক্তিপত্র তৈরি, অংশীদারি ব্যবসা ও কর্পোরেট লিগ্যাল এডভাইস।',
-        link: '/services/company-corporate-lawyer',
+        link: '/bn/services/company-corporate-lawyer',
         badge: 'কোম্পানি',
         color: '#065F46'
     },
@@ -173,7 +209,7 @@ const practiceServicesEn = [
         desc: 'Legal guidance on divorce notice, Mahr recovery, child custody & family court maintenance.',
         link: '/services/divorce-lawyer',
         badge: 'Family',
-        color: '#8B5CF6'
+        color: '#1D4ED8'
     },
     {
         title: 'Property Disputes & Partition Suits',
@@ -209,11 +245,23 @@ const practiceServicesEn = [
 const cleanField = (val, maxLen = 200) =>
     String(val || '').replace(/[\u0000-\u001F\u007F]/g, ' ').trim().slice(0, maxLen);
 
-const ContactForm = ({ isBn }) => {
-    const [formData, setFormData] = React.useState({ name: '', phone: '', subject: '', message: '', website: '' });
+const ContactForm = ({ isBn, initialService }) => {
+    const preselectedSubject = initialService === 'case-review'
+        ? (isBn ? 'পেইড কেস রিভিউ ($30–$75)' : 'Paid Case Review ($30–$75)')
+        : '';
+    const [formData, setFormData] = React.useState({ name: '', phone: '', subject: preselectedSubject, message: '', website: '' });
     const [submitted, setSubmitted] = React.useState(false);
     const mountedAt = React.useRef(Date.now());
     const lastSubmitAt = React.useRef(0);
+
+    React.useEffect(() => {
+        if (initialService === 'case-review') {
+            setFormData((prev) => ({
+                ...prev,
+                subject: isBn ? 'পেইড কেস রিভিউ ($30–$75)' : 'Paid Case Review ($30–$75)',
+            }));
+        }
+    }, [initialService, isBn]);
 
     const handleChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
 
@@ -323,6 +371,7 @@ const ContactForm = ({ isBn }) => {
                         {isBn ? (
                             <>
                                 <option value="">আপনার আইনি বিষয়টি নির্বাচন করুন...</option>
+                                <option value="পেইড কেস রিভিউ ($30–$75)">পেইড কেস রিভিউ / ডকুমেন্ট ভেটিং ($30–$75)</option>
                                 <option value="ফৌজদারি মামলা / এফআইআর">ফৌজদারি মামলা / জিডি / এফআইআর</option>
                                 <option value="জামিন আবেদন (অগাম / হাইকোর্ট)">জামিন আবেদন (নিয়মিত / আগাম / হাইকোর্ট)</option>
                                 <option value="তালাক ও পারিবারিক আইন">তালাক / দেনমোহর / পারিবারিক বিবাদ</option>
@@ -336,6 +385,7 @@ const ContactForm = ({ isBn }) => {
                         ) : (
                             <>
                                 <option value="">Select your legal matter...</option>
+                                <option value="Paid Case Review ($30–$75)">Paid Case Review / Document Vetting ($30–$75)</option>
                                 <option value="Criminal Case / FIR">Criminal Case / FIR</option>
                                 <option value="Bail Application">Bail Application (Regular / Anticipatory)</option>
                                 <option value="Divorce / Family Law">Divorce / Family Law</option>
@@ -366,6 +416,8 @@ const ContactForm = ({ isBn }) => {
                 </div>
 
                 <button type="submit" id="contact-submit-btn"
+                    data-cta="consult"
+                    data-placement="contact-form"
                     className="btn-primary w-full flex items-center justify-center gap-2 py-4 font-bold text-sm shadow-md rounded-xl"
                     style={{ fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>
                     <Send size={17} /> {isBn ? 'হোয়াটসঅ্যাপে পাঠান' : 'Send via WhatsApp'}
@@ -383,6 +435,7 @@ const ContactForm = ({ isBn }) => {
 const ContactPage = ({ lang }) => {
     const location = useLocation();
     const isBn = lang === 'bn' || location.pathname.startsWith('/bn');
+    const initialService = new URLSearchParams(location.search).get('service') || '';
 
     const chambers = isBn ? chambersBn : chambersEn;
     const practiceServices = isBn ? practiceServicesBn : practiceServicesEn;
@@ -393,21 +446,24 @@ const ContactPage = ({ lang }) => {
                 <html lang={isBn ? 'bn' : 'en'} />
                 <title>
                     {isBn
-                        ? 'যোগাযোগ ও আইনি চেম্বার | অ্যাডভোকেট মো. শাহ আলম – উত্তরা ও ঢাকা কোর্ট'
-                        : 'Contact Advocate Md. Shah Alam | Criminal, Divorce & Bail Lawyer – Uttara, Dhaka'}
+                        ? 'যোগাযোগ ও চেম্বার | এডভোকেট মোঃ শাহ আলম ঢাকা'
+                        : 'Contact Advocate Md. Shah Alam | Dhaka Chamber'}
                 </title>
                 <meta name="description"
                     content={isBn
-                        ? 'অ্যাডভোকেট মো. শাহ আলমের সাথে সরাসরি কথা বলতে বা চেম্বারে পরামর্শের জন্য যোগাযোগ করুন। ফোন: ০১৭১২৬৫৫৫৪৬, বিকাশ ও হোয়াটসঅ্যাপ সেবা।'
-                        : 'Contact Advocate Md. Shah Alam for legal consultation in Dhaka & Uttara. Call +880 1712-655546 or WhatsApp.'} />
+                        ? 'এডভোকেট মোঃ শাহ আলমের উত্তরা ও ঢাকা জজ কোর্ট চেম্বারে সরাসরি আইনি পরামর্শ ও মামলা মূল্যায়নের জন্য যোগাযোগ করুন। ফোন: +8801712655546।'
+                        : 'Contact Advocate Md. Shah Alam for legal consultation in Dhaka & Uttara. Call +880 1712-655546 or WhatsApp for criminal, divorce, bail & property cases.'} />
                 <link rel="canonical" href={isBn ? 'https://www.advmdshahalam.me/bn/contact' : 'https://www.advmdshahalam.me/contact'} />
+                <link rel="alternate" hrefLang="en" href="https://www.advmdshahalam.me/contact" />
+                <link rel="alternate" hrefLang="bn" href="https://www.advmdshahalam.me/bn/contact" />
+                <link rel="alternate" hrefLang="x-default" href="https://www.advmdshahalam.me/contact" />
                 <meta name="robots" content="index, follow" />
 
-                <meta property="og:title" content={isBn ? 'যোগাযোগ ও চেম্বার | অ্যাডভোকেট মো. শাহ আলম' : 'Contact Advocate Md. Shah Alam | Lawyer in Dhaka'} />
+                <meta property="og:title" content={isBn ? 'যোগাযোগ ও চেম্বার | এডভোকেট মোঃ শাহ আলম ঢাকা' : 'Contact Advocate Md. Shah Alam | Dhaka Chamber'} />
                 <meta property="og:description" content={isBn ? 'সুপ্রিম কোর্ট ও ঢাকা জজ কোর্ট চেম্বার। সরাসরি ফোন: ০১৭১২৬৫৫৫৪৬' : 'Reach Advocate Md. Shah Alam by phone, WhatsApp or visit our Uttara chamber.'} />
                 <meta property="og:url" content={isBn ? 'https://www.advmdshahalam.me/bn/contact' : 'https://www.advmdshahalam.me/contact'} />
 
-                <script type="application/ld+json">{JSON.stringify(contactPageSchemaBn)}</script>
+                <script type="application/ld+json">{JSON.stringify(buildContactSchema(isBn))}</script>
             </Helmet>
 
             {/* ── Hero Header ── */}
@@ -417,7 +473,7 @@ const ContactPage = ({ lang }) => {
                 <div className="container mx-auto px-6 max-w-5xl relative z-10">
                     <nav className="mb-6 text-xs" aria-label="Breadcrumb">
                         <ol className="flex items-center gap-2" style={{ color: 'var(--hero-muted)', fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>
-                            <li><Link to={isBn ? '/bn/blog' : '/'} className="hover:underline" style={{ color: 'var(--hero-text-2)' }}>{isBn ? 'হোম' : 'Home'}</Link></li>
+                            <li><Link to={isBn ? '/' : '/en'} className="hover:underline" style={{ color: 'var(--hero-text-2)' }}>{isBn ? 'হোম' : 'Home'}</Link></li>
                             <li aria-hidden="true">/</li>
                             <li aria-current="page" style={{ color: 'var(--gold)' }}>{isBn ? 'যোগাযোগ' : 'Contact'}</li>
                         </ol>
@@ -440,10 +496,11 @@ const ContactPage = ({ lang }) => {
                     </p>
 
                     <div className="flex flex-wrap gap-4">
-                        <a href={`tel:${CALL_NUMBER}`} className="btn-primary flex items-center gap-2 text-sm px-6 py-3.5 shadow-lg" style={{ fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>
+                        <a href={`tel:${CALL_NUMBER}`} data-cta="contact-hero-call" data-placement="contact-hero" className="btn-primary flex items-center gap-2 text-sm px-6 py-3.5 shadow-lg" style={{ fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>
                             <Phone size={17} /> {isBn ? 'সরাসরি কল করুন' : 'Call Now'}
                         </a>
                         <a href={waLink(isBn ? 'আমি সরাসরি আইনি পরামর্শ নিতে চাই' : 'I need legal advice')} target="_blank" rel="noopener noreferrer"
+                            data-cta="contact-hero-whatsapp" data-placement="contact-hero"
                             className="btn-whatsapp flex items-center gap-2 text-sm px-6 py-3.5 shadow-lg">
                             <MessageCircle size={17} /> {isBn ? 'হোয়াটসঅ্যাপ আইনি পরামর্শ' : 'WhatsApp Consultation'}
                         </a>
@@ -456,11 +513,13 @@ const ContactPage = ({ lang }) => {
                 <div className="container mx-auto px-6 max-w-5xl">
                     <div className="grid sm:grid-cols-3 gap-4">
                         {[
-                            { icon: Phone, label: isBn ? 'সরাসরি হটলাইন কল' : 'Phone', value: CALL_DISPLAY, href: `tel:${CALL_NUMBER}`, color: 'var(--accent)' },
-                            { icon: MessageCircle, label: isBn ? 'ইনস্ট্যান্ট হোয়াটসঅ্যাপ' : 'WhatsApp', value: '+880 1955-802007', href: waLink(), color: '#25D366' },
-                            { icon: CreditCard, label: isBn ? 'পেইড কনসালটেশন (bKash)' : 'bKash Merchant', value: '01712655546', href: `tel:${CALL_NUMBER}`, color: 'var(--gold)' },
-                        ].map(({ icon: Icon, label, value, href, color }) => (
+                            { icon: Phone, label: isBn ? 'সরাসরি হটলাইন কল' : 'Phone', value: CALL_DISPLAY, href: `tel:${CALL_NUMBER}`, color: 'var(--accent)', cta: 'contact-quick-call' },
+                            { icon: MessageCircle, label: isBn ? 'ইনস্ট্যান্ট হোয়াটসঅ্যাপ' : 'WhatsApp', value: '+880 1955-802007', href: waLink(), color: '#25D366', cta: 'contact-quick-whatsapp' },
+                            { icon: CreditCard, label: isBn ? 'পেইড কনসালটেশন (bKash)' : 'bKash Paid Review', value: '01712655546', href: `tel:${CALL_NUMBER}`, color: 'var(--gold)', cta: 'contact-bkash-call' },
+                        ].map(({ icon: Icon, label, value, href, color, cta }) => (
                             <a key={label} href={href}
+                                data-cta={cta}
+                                data-placement="contact-quick"
                                 target={href.startsWith('http') ? '_blank' : undefined}
                                 rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
                                 className="glass-card flex items-center gap-4 p-4 group rounded-xl border transition-[color,background-color,border-color,box-shadow,opacity,transform] hover:scale-105"
@@ -548,13 +607,15 @@ const ContactPage = ({ lang }) => {
 
                         {/* Right: Contact Form */}
                         <div>
-                            <ContactForm isBn={isBn} />
+                            <ContactForm isBn={isBn} initialService={initialService} />
                             <div className="mt-6 p-6 rounded-2xl text-center shadow-md border"
                                 style={{ background: 'var(--surface)', borderColor: 'var(--card-border)' }}>
                                 <p className="text-xs font-bold mb-2" style={{ color: 'var(--text)', fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>
                                     {isBn ? 'জরুরি প্রয়োজনে সরাসরি কল করুন:' : 'Prefer to call directly?'}
                                 </p>
                                 <a href={`tel:${CALL_NUMBER}`}
+                                    data-cta="contact-direct-call"
+                                    data-placement="contact-sidebar"
                                     className="inline-flex items-center gap-2 text-xl font-bold hover:scale-105 transition-transform"
                                     style={{ color: 'var(--accent)', fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>
                                     <Phone size={22} /> {CALL_DISPLAY}
@@ -630,6 +691,63 @@ const ContactPage = ({ lang }) => {
                         </div>
                     </div>
 
+                    {/* ════ SUBSTANTIVE CHAMBER CONSULTATION & PRE-VISIT GUIDANCE (500+ words parity) ════ */}
+                    <div className="mt-12 grid md:grid-cols-2 gap-8 pt-10 border-t" style={{ borderColor: 'var(--card-border)' }}>
+                        <div className="glass-card p-6 rounded-2xl border" style={{ borderColor: 'var(--card-border)' }}>
+                            <h2 className="text-xl font-bold mb-3 flex items-center gap-2"
+                                style={{ color: 'var(--text)', fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : "Georgia, serif" }}>
+                                <ShieldCheck size={19} style={{ color: 'var(--accent)' }} />
+                                {isBn ? 'আদালত অধিক্ষেত্র ও প্রবাসী (NRB) দূরবর্তী সেবা' : 'Court Jurisdiction & Remote NRB Representation'}
+                            </h2>
+                            <p className="text-sm leading-relaxed mb-3" style={{ color: 'var(--text-secondary)', fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>
+                                {isBn
+                                    ? 'বাংলাদেশ বার কাউন্সিল ও সুপ্রিম কোর্টে ২০১৫ সাল থেকে তালিকাভুক্ত অ্যাডভোকেট মো. শাহ আলম ঢাকা চিফ মেট্রোপলিটন ম্যাজিস্ট্রেট (CMM) কোর্ট, মহানগর দায়রা জজ আদালত, পারিবারিক আদালত, বিশেষ ট্রাইব্যুনাল এবং বাংলাদেশ সুপ্রিম কোর্টের হাইকোর্ট ও আপিল বিভাগে মামলা পরিচালনা করেন।'
+                                    : 'Enrolled with the Bangladesh Bar Council since 2015, Advocate Md. Shah Alam represents clients before the Dhaka Chief Metropolitan & Judicial Magistrate Courts, Metropolitan Sessions Judge Court, Family Courts, Administrative & Cyber Tribunals, and the High Court Division of the Supreme Court of Bangladesh.'}
+                            </p>
+                            <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)', fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>
+                                {isBn
+                                    ? 'যুক্তরাজ্য, যুক্তরাষ্ট্র, কানাডা, সংযুক্ত আরব আমিরাত ও ইউরোপে বসবাসরত প্রবাসী বাংলাদেশিরা দেশে না এসেই ভিডিও কলের মাধ্যমে জমি যাচাই, দূতাবাস-সত্যায়িত পাওয়ার অব অ্যাটর্নি, তালাক নোটিশ বা প্রতারণা মামলার আইনি সহায়তা নিতে পারেন। বিস্তারিত জানতে দেখুন '
+                                    : 'Non-Resident Bangladeshis (NRBs) in the UK, USA, Canada, UAE, and Europe can arrange video case evaluations, deed & khatian vetting, Embassy-attested Power of Attorney drafts, and court filings remotely without flying to Dhaka via '}
+                                <Link to="/nrb-legal-help" className="font-semibold underline" style={{ color: 'var(--accent)' }}>
+                                    {isBn ? 'প্রবাসী আইনি সহায়তা ডেস্ক' : 'our NRB Legal Help Desk'}
+                                </Link>
+                                {' '}{isBn ? 'অথবা জানুন ' : 'and view '}
+                                <Link to="/advocate-md-shah-alam" className="font-semibold underline" style={{ color: 'var(--accent)' }}>
+                                    {isBn ? 'অ্যাডভোকেট পরিচিতি ও বার এনরোলমেন্ট।' : 'Advocate Md. Shah Alam profile & credentials.'}
+                                </Link>
+                            </p>
+                        </div>
+
+                        <div className="glass-card p-6 rounded-2xl border" style={{ borderColor: 'var(--card-border)' }}>
+                            <h2 className="text-xl font-bold mb-3 flex items-center gap-2"
+                                style={{ color: 'var(--text)', fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : "Georgia, serif" }}>
+                                <FileText size={19} style={{ color: 'var(--gold)' }} />
+                                {isBn ? 'সাক্ষাতের পূর্বে প্রস্তুতি ও পরামর্শ ফি' : 'Pre-Visit Document Checklist & Consultation Fee'}
+                            </h2>
+                            <ul className="space-y-2 text-sm mb-4" style={{ color: 'var(--text-secondary)', fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>
+                                {(isBn
+                                    ? [
+                                          'ফৌজদারি ও জামিন মামলা: এজাহার (FIR), জিডি, চার্জশিট বা নিম্ন আদালতের জামিন নামঞ্জুর আদেশের কপি।',
+                                          'জমি ও সম্পত্তি বিরোধ: সিএস/এসএ/আরএস/বিএস খতিয়ান, সর্বশেষ বায়া দলিল ও নামজারি ডিসিআর।',
+                                          'পারিবারিক ও তালাক মামলা: কাবিননামা, সন্তানের জন্ম সনদ ও প্রয়োজনে প্রেরিত তালাক নোটিশের কপি।',
+                                          'পেইড কেস রিভিউ ও দলিল ভেটিং ফি: ৪৫ মিনিটের ভিডিও/চেম্বার পরামর্শ (৳৩,০০০ / $৩০) থেকে বিস্তারিত দলিল যাচাই (৳৮,০০০ / $৭৫) — আনুমানিক; মামলার জটিলতা অনুযায়ী নির্ধারিত। বিকাশ: ০১৭১২৬৫৫৫৪৬।',
+                                      ]
+                                    : [
+                                          'Criminal & Bail Matters: Copy of the FIR, General Diary (GD), charge sheet, arrest memo, or certified lower court rejection order.',
+                                          'Land & Property Disputes: Registered sale deeds (Saf Kabala), Bia deeds, CS/SA/RS/BS khatian records, and e-mutation (Namjari) receipts.',
+                                          'Divorce & Custody Matters: Registered Kabinnama, municipal talaq notice copies, or foreign court decree where applicable.',
+                                          'Indicative Consultation & Case Review Fee: BDT 3,000 ($30) for structured 45-minute strategy review; BDT 5,000–8,000 ($50–$75) for written deed/khatian opinion (indicative only; chamber & court schedules govern). bKash: 01712655546.',
+                                      ]
+                                ).map((item, idx) => (
+                                    <li key={idx} className="flex items-start gap-2">
+                                        <CheckCircle2 size={15} className="mt-1 flex-shrink-0" style={{ color: 'var(--accent)' }} />
+                                        <span>{item}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
+
                     {/* ════ AD UNIT 2: BETWEEN PRACTICE SERVICES AND FAQ ════ */}
                     <div className="mt-10">
                         <AdSenseAd
@@ -655,33 +773,7 @@ const ContactPage = ({ lang }) => {
                         </div>
 
                         <div className="space-y-4 max-w-3xl mx-auto">
-                            {(isBn ? [
-                                {
-                                    q: 'আইনি পরামর্শের জন্য কীভাবে অ্যাপয়েন্টমেন্ট বুক করব?',
-                                    a: 'আপনি সরাসরি 01712655546 নম্বরে কল দিয়ে অথবা আমাদের ওয়েবসাইটের হোয়াটসঅ্যাপ ফর্মে বার্তা পাঠিয়ে সরাসরি চেম্বারে অ্যাপয়েন্টমেন্ট বা ফোনে কনসালটেশন বুক করতে পারেন।'
-                                },
-                                {
-                                    q: 'পেইড কনসালটেশন ফি কীভাবে পরিশোধ করতে হবে?',
-                                    a: 'ফোনালাপ বা অনলাইন আইনি এনালিটিক্সের জন্য বিকাশ পার্সোনাল 01712655546 নম্বরে কনসালটেশন ফি পাঠিয়ে কনফার্ম করা যায়।'
-                                },
-                                {
-                                    q: 'জরুরি গ্রেপ্তার বা জামিনের বিষয়ে রাতের বেলা ফোন করা যাবে?',
-                                    a: 'জরুরি ফৌজদারি মামলা, থানা জিডি ও জামিনের বিষয়ে হোয়াটসঅ্যাপে বার্তা দিলে বা সরাসরি ফোনে যেকোনো সময় যোগাযোগ করা সম্ভব।'
-                                }
-                            ] : [
-                                {
-                                    q: 'How do I book a chamber consultation appointment?',
-                                    a: 'You can call +880 1712-655546 directly or send a message via our WhatsApp form to schedule an appointment at our Uttara or Court chamber.'
-                                },
-                                {
-                                    q: 'What are the consultation fee payment methods?',
-                                    a: 'For phone or online legal case review, consultation fees can be remitted via bKash to 01712655546.'
-                                },
-                                {
-                                    q: 'Can I contact urgently for bail or arrest matters?',
-                                    a: 'Yes, urgent criminal defence, police remand protection & anticipatory High Court bail matters are handled promptly via telephone.'
-                                }
-                            ]).map((faq, i) => (
+                            {(isBn ? CONTACT_FAQS_BN : CONTACT_FAQS_EN).map((faq, i) => (
                                 <div key={i} className="glass-card p-5 rounded-2xl border" style={{ borderColor: 'var(--card-border)' }}>
                                     <h3 className="text-sm font-bold mb-2 flex items-center gap-2"
                                         style={{ color: 'var(--text)', fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>
