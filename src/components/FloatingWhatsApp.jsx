@@ -28,9 +28,10 @@ const FloatingWhatsApp = () => {
                 }
 
                 @media (max-width: 768px) {
-                    /* On mobile (< 768px), MobileCallButton bottom dock handles WhatsApp & Call — avoid collision */
+                    /* On mobile (< 768px), keep floating circle visible above bottom bar */
                     .wa-floating-container {
-                        display: none !important;
+                        right: 16px;
+                        bottom: 74px;
                     }
                 }
 
