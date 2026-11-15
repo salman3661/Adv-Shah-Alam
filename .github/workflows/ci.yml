@@ -33,7 +33,7 @@ jobs:
           python3 tools/validate.py --audit-corpus
           if [ "${{ github.event_name }}" = "pull_request" ]; then
             git fetch origin main --depth=1
-            CHANGED_POSTS=$(git diff --name-only --diff-filter=AM origin/main...HEAD -- 'src/content/posts/en/*.json' 'src/content/posts/bn/*.json' || true)
+            CHANGED_POSTS=$(git diff --name-only --diff-filter=AM origin/main...HEAD -- 'src/content/posts/*.json' 'src/content/posts/bn/*.json' || true)
             for f in $CHANGED_POSTS; do
               echo "Checking new/modified post: $f"
               python3 tools/dupcheck.py --file "$f"
