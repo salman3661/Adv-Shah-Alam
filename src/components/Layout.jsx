@@ -263,8 +263,7 @@ const Layout = ({ children }) => {
             </main>
             <Footer />
             <FloatingWhatsApp />
-            {/* Only show generic mobile CTA on non-blog-post pages */}
-            {!isBlogPost && <MobileCallButton />}
+            <MobileCallButton />
         </div>
     );
 };

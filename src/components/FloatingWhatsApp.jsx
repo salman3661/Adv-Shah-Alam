@@ -19,7 +19,7 @@ const FloatingWhatsApp = () => {
                     position: fixed;
                     right: 22px;
                     bottom: 26px;
-                    z-index: 1090;
+                    z-index: 2147483645;
                     display: flex;
                     align-items: center;
                     gap: 10px;
