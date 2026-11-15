@@ -1332,33 +1332,53 @@ ${BN_CTA}`,
 <link rel="alternate" hreflang="x-default" href="${BASE}/nrb-legal-help" />`;
     const html = buildPage(base, {
       title: 'NRB Legal Help Bangladesh | Property & Family Law',
-      description: 'Legal help for Non-Resident Bangladeshis in UK, USA, UAE & Canada: land purchase, Power of Attorney, divorce, inheritance & court cases.',
+      description: 'Legal guides and remote legal services for Non-Resident Bangladeshis in the UK, USA, UAE and Canada: paid case review, deed vetting, MOFA attestation, retainer, divorce and court cases.',
       canonical: `${BASE}/nrb-legal-help`,
       lang: 'en',
       extraHead,
       body: `<nav aria-label="Breadcrumb" style="font-size:13px;color:#475569;margin-bottom:14px"><a href="/en" style="color:#132A4A">Home</a> &rsaquo; <span>NRB Legal Help</span></nav>
 <h1 style="font-size:30px;font-weight:700;margin-bottom:8px;color:#0B1220">${escHtml(pageHeadings.nrb)}</h1>
-<p class="direct-answer"><strong>Quick Summary:</strong> Non-Resident Bangladeshis (NRBs) in the UK, USA, Canada, UAE, and Europe can resolve land disputes, execute Embassy-attested Power of Attorney (PoA), verify khatian/deeds, file divorce/custody suits, and defend criminal/cheque cases in Bangladesh remotely through Advocate Md. Shah Alam without flying to Dhaka.</p>
-<section style="margin:24px 0">
-  <h2 style="font-size:22px;font-weight:700;color:#0B1220;margin-bottom:12px">Core NRB Legal Services</h2>
-  <ul style="padding-left:20px;line-height:1.9;color:#1E293B">
-    <li><strong>Land Title Vetting &amp; Mutation:</strong> CS/SA/RS/BS Khatian verification, Sub-Registry search, and e-Mutation (Namjari) without in-person travel.</li>
-    <li><strong>Power of Attorney (PoA) Drafting:</strong> Drafting &amp; Bangladesh High Commission/Embassy attestation guidance under the Power of Attorney Act 2012.</li>
-    <li><strong>NRB Divorce &amp; Family Matters:</strong> Overseas Talaq notice registration, Section 13 CPC foreign decree recognition, Dower (Denmohar), and child custody.</li>
-    <li><strong>Partition &amp; Inheritance Suits:</strong> Batwara Mamla, Succession Certificate (Succession Act 1925), and stopping illegal land grabbing.</li>
-  </ul>
-</section>
-<section style="margin:28px 0;padding:20px;background:#F7F8FA;border:1px solid #CBD5E1;border-radius:10px">
-  <h2 style="font-size:22px;font-weight:700;color:#0B1220;margin-bottom:12px">Paid Case Review &amp; Document Vetting Packages</h2>
+<p class="direct-answer"><strong>Quick Summary:</strong> Non-Resident Bangladeshis (NRBs) in the UK, USA, Canada, UAE, and Europe can resolve land disputes, execute Embassy-attested Power of Attorney (PoA), vet khatian and Bia deeds, handle divorce/custody suits, and defend criminal/cheque matters in Bangladesh remotely through Advocate Md. Shah Alam without flying to Dhaka.</p>
+<section style="margin:24px 0;padding:20px;background:#F7F8FA;border:1px solid #CBD5E1;border-radius:10px">
+  <h2 style="font-size:22px;font-weight:700;color:#0B1220;margin-bottom:12px">Paid Case Review &amp; Written Opinion</h2>
+  <p style="font-size:14px;color:#334155;margin-bottom:12px">All listed fees are indicative estimates confirmed in writing once document scope is reviewed.</p>
   <table style="width:100%;border-collapse:collapse;font-size:14px;background:#fff">
-    <thead><tr style="background:#132A4A;color:#fff"><th style="padding:10px;text-align:left">Service Package</th><th style="padding:10px;text-align:left">Deliverables</th><th style="padding:10px;text-align:left">Fee (BDT / USD)</th></tr></thead>
+    <thead><tr style="background:#132A4A;color:#fff"><th style="padding:10px;text-align:left">Service Package</th><th style="padding:10px;text-align:left">Deliverables</th><th style="padding:10px;text-align:left">Indicative Fee (BDT / USD)</th></tr></thead>
     <tbody>
-      <tr style="border-bottom:1px solid #E2E8F0"><td style="padding:10px"><strong>45-Min Video Case Review</strong></td><td style="padding:10px">Full legal strategy + statute roadmap with Adv. Md. Shah Alam</td><td style="padding:10px">৳3,000 / \$30</td></tr>
-      <tr style="border-bottom:1px solid #E2E8F0"><td style="padding:10px"><strong>Land Deed &amp; Khatian Vetting</strong></td><td style="padding:10px">Written legal opinion on chain of title, Bia deeds &amp; mutation status</td><td style="padding:10px">৳8,000 / \$75</td></tr>
-      <tr><td style="padding:10px"><strong>PoA / Legal Notice / Agreement Drafting</strong></td><td style="padding:10px">Court-ready bilingual or English legal draft ready for Embassy attestation</td><td style="padding:10px">৳5,000 / \$50</td></tr>
+      <tr style="border-bottom:1px solid #E2E8F0"><td style="padding:10px"><strong>Preliminary Case Screening</strong></td><td style="padding:10px">24–48h legal triage, conflict check &amp; statutory filing eligibility assessment</td><td style="padding:10px">৳500–৳1,500 / \$5–\$15</td></tr>
+      <tr style="border-bottom:1px solid #E2E8F0"><td style="padding:10px"><strong>45-Min Video Case Review</strong></td><td style="padding:10px">Full legal strategy &amp; statute roadmap session with Adv. Md. Shah Alam</td><td style="padding:10px">৳3,000 / \$30</td></tr>
+      <tr style="border-bottom:1px solid #E2E8F0"><td style="padding:10px"><strong>Land Deed &amp; Khatian Chain Vetting</strong></td><td style="padding:10px">Written legal opinion on chain of title, Bia deeds, Sub-Registry records &amp; e-Mutation</td><td style="padding:10px">৳8,000 / \$75</td></tr>
+      <tr><td style="padding:10px"><strong>PoA / Legal Notice / Agreement Drafting</strong></td><td style="padding:10px">Court-ready bilingual or English legal draft formatted for Embassy attestation</td><td style="padding:10px">৳5,000 / \$50</td></tr>
     </tbody>
   </table>
-  <p style="margin-top:14px;font-size:14px"><a href="/contact?service=case-review" data-cta="consult" style="display:inline-block;padding:12px 22px;background:#132A4A;color:#fff;border-radius:8px;text-decoration:none;font-weight:700">Book Paid Case Review</a></p>
+  <p style="margin-top:14px;font-size:14px"><a href="/contact?service=case-review" data-cta="consult" data-placement="nrb-paid-review" style="display:inline-block;padding:12px 22px;background:#132A4A;color:#fff;border-radius:8px;text-decoration:none;font-weight:700">Book Paid Case Review</a></p>
+</section>
+<section style="margin:24px 0">
+  <h2 style="font-size:22px;font-weight:700;color:#0B1220;margin-bottom:10px">NRB Document &amp; Attestation Services</h2>
+  <ul style="padding-left:20px;line-height:1.9;color:#1E293B">
+    <li><strong>MOFA &amp; Bangladesh Embassy Attestation:</strong> Verification formatting for UK, USA, UAE, and Canada submissions.</li>
+    <li><strong>Hague Apostille Coordination:</strong> Apostille authentication guidance for foreign birth, marriage, and PoA records.</li>
+    <li><strong>NID, Birth &amp; Marriage Corrections:</strong> Affidavit drafting and magistrate/gazette correction steps.</li>
+    <li><strong>Certified Court Copies &amp; Talashi Search:</strong> Direct Dhaka Sub-Registry index searches and certified deed extraction (indicative fee starting ৳4,000 / \$40).</li>
+  </ul>
+  <p style="margin-top:10px;font-size:14px"><a href="/contact?service=documents" data-cta="nrb-documents" data-placement="nrb-documents" style="color:#132A4A;font-weight:700;text-decoration:underline">Request Document Service</a></p>
+</section>
+<section style="margin:24px 0">
+  <h2 style="font-size:22px;font-weight:700;color:#0B1220;margin-bottom:10px">NRB Monthly Legal Advisory Retainer</h2>
+  <ul style="padding-left:20px;line-height:1.9;color:#1E293B">
+    <li><strong>Family Property &amp; Land Monitoring:</strong> Periodic khatian, land tax (Khajna), and encroachment checks across Dhaka and districts.</li>
+    <li><strong>Tenant &amp; Mutation Compliance:</strong> Lease vetting, eviction notice compliance, and e-Mutation status tracking.</li>
+    <li><strong>Annual NBR Tax Return Coordination:</strong> Non-resident remittance exemption and annual tax return compliance (indicative monthly retainer ৳12,000–৳25,000 / \$110–\$225).</li>
+  </ul>
+  <p style="margin-top:10px;font-size:14px"><a href="/contact?service=retainer" data-cta="nrb-retainer" data-placement="nrb-retainer" style="color:#132A4A;font-weight:700;text-decoration:underline">Inquire About Retainer</a></p>
+</section>
+<section style="margin:24px 0">
+  <h2 style="font-size:22px;font-weight:700;color:#0B1220;margin-bottom:12px">Core NRB Legal Guides</h2>
+  <ul style="padding-left:20px;line-height:1.9;color:#1E293B">
+    <li><strong>Property &amp; Land:</strong> CS/SA/RS/BS Khatian verification, Sub-Registry search, and e-Mutation (Namjari) without in-person travel.</li>
+    <li><strong>Family Law &amp; Divorce:</strong> Overseas Talaq notice registration, Section 13 CPC foreign decree recognition, Dower (Denmohar), and child custody.</li>
+    <li><strong>Documents, Citizenship &amp; Money:</strong> Dual citizenship NVR, police clearance certificates, NBR remittance rules, and Section 138 cheque cases.</li>
+  </ul>
 </section>
 ${CTA}`,
     });

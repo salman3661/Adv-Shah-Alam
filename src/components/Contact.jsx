@@ -187,6 +187,7 @@ const Contact = ({ lang = 'en' }) => {
                         ))}
 
                         <a href={waLink()} target="_blank" rel="noopener noreferrer"
+                            data-cta="contact-section-whatsapp" data-placement="contact-section"
                             className="btn-whatsapp w-full justify-center text-sm">
                             <MessageCircle size={17} /> {isBn ? 'WhatsApp-এ সরাসরি মেসেজ করুন' : 'WhatsApp Direct Message'}
                         </a>
@@ -301,6 +302,7 @@ const Contact = ({ lang = 'en' }) => {
                                                     ></textarea>
                                                 </div>
                                                 <button type="submit" disabled={sending}
+                                                    data-cta="contact-section-whatsapp-submit" data-placement="contact-section-form"
                                                     className="btn-primary w-full flex items-center justify-center gap-2 py-4 rounded-xl font-bold text-sm shadow-md"
                                                     style={{ opacity: sending ? 0.75 : 1 }}>
                                                     {sending ? (
@@ -388,6 +390,7 @@ const Contact = ({ lang = 'en' }) => {
                                                     </select>
                                                 </div>
                                                 <button type="submit" disabled={sending}
+                                                    data-cta="contact-section-callback-submit" data-placement="contact-section-form"
                                                     className="btn-primary w-full flex items-center justify-center gap-2 py-4 rounded-xl font-bold text-sm shadow-md"
                                                     style={{ opacity: sending ? 0.75 : 1 }}>
                                                     {sending ? (

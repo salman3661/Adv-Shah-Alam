@@ -251,10 +251,21 @@ const cleanField = (val, maxLen = 200) =>
         .trim()
         .slice(0, maxLen);
 
+const mapServiceSubject = (serviceParam, isBn) => {
+    if (serviceParam === 'case-review') {
+        return isBn ? 'পেইড কেস রিভিউ ($30–$75)' : 'Paid Case Review ($30–$75)';
+    }
+    if (serviceParam === 'documents') {
+        return isBn ? 'নথিপত্র সত্যায়ন / এনআইডি / সই-মোহর নকল' : 'Document Attestation / NID / Certified Copy';
+    }
+    if (serviceParam === 'retainer') {
+        return isBn ? 'প্রবাসী মাসিক আইনি রিটেইনার (NRB Retainer)' : 'NRB Monthly Legal Retainer';
+    }
+    return '';
+};
+
 const ContactForm = ({ isBn, initialService }) => {
-    const preselectedSubject = initialService === 'case-review'
-        ? (isBn ? 'পেইড কেস রিভিউ ($30–$75)' : 'Paid Case Review ($30–$75)')
-        : '';
+    const preselectedSubject = mapServiceSubject(initialService, isBn);
     const [formData, setFormData] = React.useState({ name: '', phone: '', subject: preselectedSubject, message: '', website: '' });
     const [submitted, setSubmitted] = React.useState(false);
     const mountedAt = React.useRef(0);
@@ -265,10 +276,11 @@ const ContactForm = ({ isBn, initialService }) => {
     }, []);
 
     React.useEffect(() => {
-        if (initialService === 'case-review') {
+        const mapped = mapServiceSubject(initialService, isBn);
+        if (mapped) {
             setFormData((prev) => ({
                 ...prev,
-                subject: isBn ? 'পেইড কেস রিভিউ ($30–$75)' : 'Paid Case Review ($30–$75)',
+                subject: mapped,
             }));
         }
     }, [initialService, isBn]);
@@ -382,6 +394,8 @@ const ContactForm = ({ isBn, initialService }) => {
                             <>
                                 <option value="">আপনার আইনি বিষয়টি নির্বাচন করুন...</option>
                                 <option value="পেইড কেস রিভিউ ($30–$75)">পেইড কেস রিভিউ / ডকুমেন্ট ভেটিং ($30–$75)</option>
+                                <option value="নথিপত্র সত্যায়ন / এনআইডি / সই-মোহর নকল">নথিপত্র সত্যায়ন / MOFA / এনআইডি / সই-মোহর নকল</option>
+                                <option value="প্রবাসী মাসিক আইনি রিটেইনার (NRB Retainer)">প্রবাসী মাসিক আইনি রিটেইনার (NRB Monthly Retainer)</option>
                                 <option value="ফৌজদারি মামলা / এফআইআর">ফৌজদারি মামলা / জিডি / এফআইআর</option>
                                 <option value="জামিন আবেদন (অগাম / হাইকোর্ট)">জামিন আবেদন (নিয়মিত / আগাম / হাইকোর্ট)</option>
                                 <option value="তালাক ও পারিবারিক আইন">তালাক / দেনমোহর / পারিবারিক বিবাদ</option>
@@ -396,6 +410,8 @@ const ContactForm = ({ isBn, initialService }) => {
                             <>
                                 <option value="">Select your legal matter...</option>
                                 <option value="Paid Case Review ($30–$75)">Paid Case Review / Document Vetting ($30–$75)</option>
+                                <option value="Document Attestation / NID / Certified Copy">Document Attestation / MOFA / NID / Certified Copy</option>
+                                <option value="NRB Monthly Legal Retainer">NRB Monthly Legal Advisory Retainer</option>
                                 <option value="Criminal Case / FIR">Criminal Case / FIR</option>
                                 <option value="Bail Application">Bail Application (Regular / Anticipatory)</option>
                                 <option value="Divorce / Family Law">Divorce / Family Law</option>

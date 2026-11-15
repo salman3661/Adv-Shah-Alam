@@ -171,6 +171,8 @@ const MobileCallButton = () => {
                     href={waHref}
                     target="_blank"
                     rel="noopener noreferrer"
+                    data-cta="sticky-mobile-whatsapp"
+                    data-placement="mobile-sticky"
                     className="gcta-pill gcta-wa"
                     aria-label={isBn ? 'WhatsApp লাইভ আছেন' : 'WhatsApp Online Now'}
                 >
@@ -188,6 +190,8 @@ const MobileCallButton = () => {
                 {/* Call Button */}
                 <a
                     href="tel:+8801712655546"
+                    data-cta="sticky-mobile-call"
+                    data-placement="mobile-sticky"
                     className="gcta-pill gcta-call"
                     aria-label={isBn ? 'কল করুন 01712-655546' : 'Call Now 01712-655546'}
                 >

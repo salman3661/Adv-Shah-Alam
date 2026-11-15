@@ -133,15 +133,17 @@ const Footer = () => {
                             {isBn ? 'যোগাযোগ করুন' : 'Connect With Us'}
                         </h4>
                         <div className="space-y-2 mb-5">
-                            <a href={telLink()} className="flex items-center gap-2 text-sm hover:underline" style={{ color: 'var(--footer-text-2)' }}>
+                            <a href={telLink()} data-cta="footer-call" data-placement="footer" className="flex items-center gap-2 text-sm hover:underline" style={{ color: 'var(--footer-text-2)' }}>
                                 <Phone size={14} style={{ color: 'var(--footer-gold)' }} />{CALL_DISPLAY}
                             </a>
-                            <a href={`mailto:${siteInfo.email}`} className="flex items-center gap-2 text-sm hover:underline" style={{ color: 'var(--footer-text-2)' }}>
+                            <a href={`mailto:${siteInfo.email}`} data-cta="footer-email" data-placement="footer" className="flex items-center gap-2 text-sm hover:underline" style={{ color: 'var(--footer-text-2)' }}>
                                 <Mail size={14} style={{ color: 'var(--footer-gold)' }} />{siteInfo.email}
                             </a>
                         </div>
                         <div className="flex gap-2.5 mb-5">
                             <a href={waLink()} target="_blank" rel="noopener noreferrer"
+                                data-cta="footer-whatsapp"
+                                data-placement="footer"
                                 aria-label="Chat on WhatsApp"
                                 className="w-10 h-10 rounded-xl flex items-center justify-center transition-colors hover:border-[#93C5FD]"
                                 style={{ background: 'var(--footer-surface)', border: '1px solid var(--footer-divider)', color: 'var(--footer-text-2)' }}>

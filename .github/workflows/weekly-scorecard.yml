@@ -1,0 +1,45 @@
+name: Weekly SEO, CWV & Monetization Scorecard
+
+on:
+  schedule:
+    - cron: '0 3 * * 1' # Every Monday 09:00 Asia/Dhaka
+  workflow_dispatch:
+
+jobs:
+  weekly-scorecard:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 24
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Sync GSC, GA4, AdSense & Generate Weekly Scorecard
+        env:
+          GSC_SERVICE_ACCOUNT: ${{ secrets.GSC_SERVICE_ACCOUNT }}
+          GA4_SERVICE_ACCOUNT: ${{ secrets.GA4_SERVICE_ACCOUNT }}
+          ADSENSE_PUB_ID: ${{ secrets.ADSENSE_PUB_ID }}
+          ADSENSE_CLIENT_ID: ${{ secrets.ADSENSE_CLIENT_ID }}
+          ADSENSE_CLIENT_SECRET: ${{ secrets.ADSENSE_CLIENT_SECRET }}
+          ADSENSE_REFRESH_TOKEN: ${{ secrets.ADSENSE_REFRESH_TOKEN }}
+        run: |
+          node scripts/gsc-fetch.mjs || true
+          node scripts/ga4-fetch.mjs || true
+          node scripts/adsense-fetch.mjs || true
+          mkdir -p baseline
+          node scripts/weekly-scorecard.mjs > baseline/weekly-scorecard-latest.txt
+          cat baseline/weekly-scorecard-latest.txt
+
+      - name: Upload Weekly Scorecard Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: weekly-scorecard
+          path: baseline/weekly-scorecard-latest.txt
+          retention-days: 90

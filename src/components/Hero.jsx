@@ -236,6 +236,8 @@ const Hero = ({ lang = 'en' }) => {
             {/* CTAs */}
             <div style={{ display: 'flex', gap: '0.7rem', flexWrap: 'wrap' }}>
               <a href={waLink()} target="_blank" rel="noopener noreferrer"
+                data-cta="whatsapp-hero"
+                data-placement="hero-primary"
                 style={{
                   display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
                   padding: '0.75rem 1.45rem', borderRadius: '0.65rem',
@@ -253,6 +255,8 @@ const Hero = ({ lang = 'en' }) => {
                 {heroContent.cta1Label}
               </a>
               <a href="#contact"
+                data-cta="consult"
+                data-placement="hero-secondary"
                 style={{
                   display: 'inline-flex', alignItems: 'center', gap: '0.45rem',
                   padding: '0.75rem 1.45rem', borderRadius: '0.65rem',

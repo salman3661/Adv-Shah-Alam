@@ -57,6 +57,8 @@ const MidArticleLeadCapture = ({ lang = 'bn' }) => {
                         href={waLink(waMsg)}
                         target="_blank"
                         rel="noopener noreferrer"
+                        data-cta="mid-article-whatsapp"
+                        data-placement="mid-article"
                         className="flex-1 md:flex-initial inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl font-extrabold text-sm text-white transition-transform hover:-translate-y-0.5 active:scale-95 text-center shadow-md"
                         style={{ background: '#116B3A' }}
                     >
@@ -65,6 +67,8 @@ const MidArticleLeadCapture = ({ lang = 'bn' }) => {
                     </a>
                     <a
                         href={telLink()}
+                        data-cta="mid-article-call"
+                        data-placement="mid-article"
                         className="flex-1 md:flex-initial inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl font-extrabold text-sm transition-transform hover:-translate-y-0.5 active:scale-95 text-center shadow-md"
                         style={{ background: '#FFFFFF', color: '#0A1424' }}
                     >

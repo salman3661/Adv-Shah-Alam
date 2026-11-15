@@ -1,0 +1,57 @@
+name: CI Gates & Content Integrity
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main, feat/autonomous-remediation]
+
+jobs:
+  build-and-verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 24
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright Chromium & lint
+        run: |
+          npx playwright install chromium
+          npx eslint src/pages/NrbLegalHelp.jsx src/pages/ContactPage.jsx src/components/Hero.jsx src/components/MidArticleLeadCapture.jsx src/components/FloatingWhatsApp.jsx src/components/MobileCallButton.jsx
+          npm run lint || true
+
+      - name: Validate content corpus & PR post gates
+        run: |
+          python3 tools/validate.py --audit-corpus
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            git fetch origin main --depth=1
+            CHANGED_POSTS=$(git diff --name-only --diff-filter=AM origin/main...HEAD -- 'src/content/posts/en/*.json' 'src/content/posts/bn/*.json' || true)
+            for f in $CHANGED_POSTS; do
+              echo "Checking new/modified post: $f"
+              python3 tools/dupcheck.py --file "$f"
+              python3 tools/validate.py --file "$f"
+            done
+          fi
+
+      - name: Build & Prerender
+        run: npm run build
+
+      - name: Run full SEO, Schema, Hreflang, CWV/AdSense & Parity CI
+        run: |
+          node scripts/ci-seo-lint.mjs
+          node scripts/ci-schema-lint.mjs
+          node scripts/phase3-hreflang-verify.mjs
+          node scripts/phase1-verify.mjs
+          node scripts/ci-cwv-ads.mjs --max-lcp 1500 --max-html-kb 60
+          node scripts/run-ci.mjs --chunk 1/4
+          node scripts/run-ci.mjs --chunk 2/4
+          node scripts/run-ci.mjs --chunk 3/4
+          node scripts/run-ci.mjs --chunk 4/4

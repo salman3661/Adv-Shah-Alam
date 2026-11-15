@@ -853,7 +853,7 @@ const BlogPostInner = () => {
                                                 <span>Legal Insights & Executive Brief</span>
                                             </div>
                                             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
-                                                <a href="tel:01712655546" className="bpbn-intro-call-chip">
+                                                <a href="tel:01712655546" data-cta="post-intro-call" data-placement="post-intro" className="bpbn-intro-call-chip">
                                                     <Phone size={13} />
                                                     <span>Direct Call: 01712655546</span>
                                                 </a>
@@ -861,6 +861,8 @@ const BlogPostInner = () => {
                                                     href={waLink(`Assalamu Alaikum, I would like legal consultation regarding "${post.title}".`, false)}
                                                     target="_blank"
                                                     rel="noopener noreferrer"
+                                                    data-cta="post-intro-whatsapp"
+                                                    data-placement="post-intro"
                                                     className="bpbn-intro-wa-chip"
                                                 >
                                                     <MessageCircle size={13} />
@@ -1162,11 +1164,11 @@ const BlogPostInner = () => {
                                                         onFocus={e => e.target.style.borderColor = 'var(--accent)'} onBlur={e => e.target.style.borderColor = 'var(--input-border)'} />
                                                 </div>
                                                 <div style={{ display: 'flex', gap: '0.625rem', flexWrap: 'wrap' }}>
-                                                    <button type="submit" className="btn-whatsapp"
+                                                    <button type="submit" data-cta="post-form-whatsapp" data-placement="post-bottom-form" className="btn-whatsapp"
                                                         style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', padding: '0.875rem', borderRadius: '0.75rem', fontWeight: 700, fontSize: '0.875rem' }}>
                                                         <MessageCircle size={15} /> WhatsApp Consult
                                                     </button>
-                                                    <a href={telLink()} className="btn-secondary"
+                                                    <a href={telLink()} data-cta="post-form-call" data-placement="post-bottom-form" className="btn-secondary"
                                                         style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.375rem', padding: '0.875rem 1.25rem', borderRadius: '0.75rem', fontWeight: 700, fontSize: '0.875rem', textDecoration: 'none', color: 'var(--hero-text-2)' }}>
                                                         <Phone size={14} /> Call
                                                     </a>
@@ -1259,6 +1261,7 @@ const BlogPostInner = () => {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     data-cta="post-bottom-whatsapp"
+                                    data-placement="post-bottom"
                                     style={{
                                         display: 'inline-flex',
                                         alignItems: 'center',
@@ -1281,6 +1284,7 @@ const BlogPostInner = () => {
                                 <a
                                     href={telLink()}
                                     data-cta="post-bottom-call"
+                                    data-placement="post-bottom"
                                     style={{
                                         display: 'inline-flex',
                                         alignItems: 'center',
@@ -1302,6 +1306,7 @@ const BlogPostInner = () => {
                                 <Link
                                     to="/contact"
                                     data-cta="post-bottom-chamber"
+                                    data-placement="post-bottom"
                                     style={{
                                         display: 'inline-flex',
                                         alignItems: 'center',
@@ -1324,6 +1329,7 @@ const BlogPostInner = () => {
                                 <Link
                                     to="/nrb-legal-help"
                                     data-cta="post-bottom-nrb"
+                                    data-placement="post-bottom"
                                     style={{
                                         display: 'inline-flex',
                                         alignItems: 'center',

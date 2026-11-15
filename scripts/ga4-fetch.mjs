@@ -77,12 +77,17 @@ async function runReport(token, requestBody) {
 }
 
 export async function fetchGA4Analytics() {
-  if (!fs.existsSync(KEY_PATH)) {
-    console.warn('[GA4] Service account key not found at', KEY_PATH);
+  let credentials = null;
+  if (fs.existsSync(KEY_PATH)) {
+    credentials = JSON.parse(fs.readFileSync(KEY_PATH, 'utf8'));
+  } else if (process.env.GA4_SERVICE_ACCOUNT || process.env.GSC_SERVICE_ACCOUNT) {
+    credentials = JSON.parse(process.env.GA4_SERVICE_ACCOUNT || process.env.GSC_SERVICE_ACCOUNT);
+  }
+  if (!credentials) {
+    console.warn('[GA4] Service account credentials not found at', KEY_PATH, 'or env');
     return null;
   }
 
-  const credentials = JSON.parse(fs.readFileSync(KEY_PATH, 'utf8'));
   console.log('[GA4] Authenticating with Google Analytics Data API...');
   const token = await getAccessToken(credentials);
   console.log('[GA4] Access token obtained. Fetching reports for Property:', PROPERTY_ID);

@@ -100,6 +100,8 @@ const FloatingWhatsApp = () => {
                 href={waLink('', isBn)}
                 target="_blank"
                 rel="noopener noreferrer"
+                data-cta="floating-whatsapp"
+                data-placement="floating"
                 className="wa-floating-container group"
                 aria-label={isBn ? 'বিজ্ঞ আইনজীবীর সাথে সরাসরি WhatsApp-এ কথা বলুন' : 'Chat directly with Lawyer on WhatsApp'}
             >
