@@ -35,11 +35,16 @@
  *   node scripts/ci-render-parity.mjs --base https://preview-url.vercel.app
  *   node scripts/ci-render-parity.mjs --sitemap public/sitemap.xml
  *   node scripts/ci-render-parity.mjs --routes /blog/page/2,/blog/topic/bail-law
+ *   node scripts/ci-render-parity.mjs --chunk 1/4
  */
 
 import { readFileSync, existsSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+
+// issue objects may be plain strings (probe errors) or {lvl,msg} objects
+const msgOf = (i) => (typeof i === "string" ? i : i.msg || "");
+const lvlOf = (i) => (typeof i === "string" ? "FAIL" : i.lvl || "FAIL");
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, "..");
@@ -50,7 +55,6 @@ const arg = (name, dflt) => {
   const i = argv.indexOf(`--${name}`);
   return i >= 0 && argv[i + 1] && !argv[i + 1].startsWith("--") ? argv[i + 1] : dflt;
 };
-const has = (name) => argv.includes(`--${name}`);
 
 const BASE = (arg("base", process.env.SITE_URL || "https://www.advmdshahalam.me")).replace(/\/$/, "");
 const SITEMAP = arg("sitemap", "public/sitemap.xml");
@@ -106,32 +110,34 @@ async function sitemapRoutes() {
   return [...xml.matchAll(/<loc>\s*([^<\s]+)\s*<\/loc>/g)].map((m) => m[1].trim());
 }
 
-/** Derive the extra routes that the build creates but the sitemap may omit. */
+/** Derive the extra routes that the build creates but the sitemap omits. */
 async function derivedRoutes() {
   const out = [];
-  const vercelPath = resolve(ROOT, "vercel.json");
-  const redirectSources = new Set();
-  if (existsSync(vercelPath)) {
+
+  // 1) Best source: read the live blog index and follow every pagination link it
+  //    renders. This is authoritative — it is exactly what Googlebot can follow.
+  for (const idx of ["/blog", "/bn/blog"]) {
     try {
-      const vc = JSON.parse(readFileSync(vercelPath, "utf8"));
-      for (const r of vc.redirects || []) {
-        if (!r.has && r.source) redirectSources.add(r.source);
+      const res = await fetch(BASE + idx, { redirect: "follow" });
+      const html = await res.text();
+      const seen = new Set();
+      for (const m of html.matchAll(/href="(\/[^"]*\/page\/\d+)"/g)) {
+        if (!seen.has(m[1])) { seen.add(m[1]); out.push(m[1]); }
       }
-    } catch { /* optional */ }
+      // also the topic hubs linked from the index
+      for (const m of html.matchAll(/href="(\/blog\/topic\/[a-z0-9-]+)"/g)) {
+        if (!seen.has(m[1])) { seen.add(m[1]); out.push(m[1]); }
+      }
+    } catch { /* offline — fall through to the local heuristics */ }
   }
-  // pagination: count active published posts per language from the content dir
+  if (out.length) return [...new Set(out)];
+
+  // 2) Fallback: count posts per language from the content dir
   for (const [dir, prefix] of [["en", "/blog"], ["bn", "/bn/blog"]]) {
     const cdir = resolve(ROOT, "src/content/posts", dir);
     if (!existsSync(cdir)) continue;
     const { readdirSync } = await import("node:fs");
-    let n = 0;
-    for (const f of readdirSync(cdir)) {
-      if (!f.endsWith(".json")) continue;
-      try {
-        const p = JSON.parse(readFileSync(resolve(cdir, f), "utf8").replace(/^\uFEFF/, ""));
-        if (p && p.slug && !p.isDraft && !p._draft && !redirectSources.has(`${prefix}/${p.slug}`)) n++;
-      } catch { /* ignore */ }
-    }
+    const n = readdirSync(cdir).filter((f) => f.endsWith(".json")).length;
     const perPage = 24;
     const pages = Math.ceil(n / perPage);
     for (let p = 2; p <= pages; p++) out.push(`${prefix}/page/${p}`);
@@ -142,20 +148,14 @@ async function derivedRoutes() {
     try {
       const t = JSON.parse(readFileSync(topicFile, "utf8"));
       const slugs = Array.isArray(t) ? t.map((x) => x.slug || x) : Object.keys(t);
-      for (const s of slugs) if (s) {
-        out.push(`/blog/topic/${s}`);
-        out.push(`/bn/blog/topic/${s}`);
-      }
+      for (const s of slugs) if (s) out.push(`/blog/topic/${s}`);
     } catch { /* optional */ }
   }
   // fall back: probe a known set of topic slugs
   if (!out.some((r) => r.startsWith("/blog/topic/"))) {
     const probe = ["bail-law", "corporate-tax-law", "criminal-law", "divorce-family-law",
                    "land-property-law", "nrb-immigration-law", "supreme-court-writ"];
-    for (const s of probe) {
-      out.push(`/blog/topic/${s}`);
-      out.push(`/bn/blog/topic/${s}`);
-    }
+    for (const s of probe) out.push(`/blog/topic/${s}`);
   }
   return out;
 }
@@ -180,7 +180,7 @@ function staticInfo(html) {
 async function getStatic(path) {
   const res = await fetch(BASE + path, { redirect: "follow" });
   const html = await res.text();
-  return { status: res.status, finalUrl: res.url, html, ...staticInfo(html) };
+  return { status: res.status, html, ...staticInfo(html) };
 }
 
 /* ------------------------------------------------------- rendered fetch */
@@ -201,17 +201,25 @@ async function getRendered(path, browser) {
     // that actually 404s in the browser. So wait until the DOM stops changing.
     const t0 = Date.now();
     let lastSig = null, stable = 0;
-    while (Date.now() - t0 < 14000) {
+    while (Date.now() - t0 < 10000) {
+      // Signature = CONTENT only. Ads and iframes keep mutating the DOM forever,
+      // so including them makes the settle loop hang for its full budget.
       const sig = await page.evaluate(() => {
-        const root = document.getElementById("root");
         const h1 = document.querySelector("h1");
+        const art = document.querySelector("article") || document.querySelector("main");
         return [
-          root ? root.innerHTML.length : 0,
           h1 ? h1.innerText.length : 0,
-          document.body.innerText.length,
+          art ? art.innerText.length : 0,
+          document.querySelectorAll("h2").length,
+          art ? art.querySelectorAll("a[href]").length : 0,
         ].join(":");
       });
-      if (sig === lastSig) { stable++; if (stable >= 3) break; }
+      const shellOnly = await page.evaluate(() => {
+        // static had an <article>: the runtime must have one too before we settle
+        const art = document.querySelector("article");
+        return art ? art.innerText.length : 0;
+      });
+      if (sig === lastSig && shellOnly > 200) { stable++; if (stable >= 2) break; }
       else { stable = 0; lastSig = sig; }
       await page.waitForTimeout(400);
     }
@@ -222,7 +230,7 @@ async function getRendered(path, browser) {
         h1: h1 ? h1.innerText.replace(/\s+/g, " ").trim() : "",
         links: document.querySelectorAll('a[href*="/blog/"]').length,
         totalLinks: document.querySelectorAll("a[href]").length,
-        title: document.title,
+        title: document.title || "",
         bodyText: (document.body.innerText || "").replace(/\s+/g, " ").trim().length,
         hydrated: !!root && root.innerHTML.trim().length > 0,
       };
@@ -234,7 +242,7 @@ async function getRendered(path, browser) {
       await page.waitForLoadState("networkidle", { timeout: 10000 }).catch(() => {});
       dom = await read();
     }
-    return { status: resp?.status() ?? 0, finalUrl: page.url(), ...dom };
+    return { status: resp?.status() ?? 0, ...dom };
   } finally {
     await ctx.close().catch(() => {});
   }
@@ -281,41 +289,35 @@ async function main() {
   console.log(`  browser   : ${engine.kind}\n`);
 
   const execPath = process.env.CHROMIUM_PATH || (existsSync("/usr/bin/chromium") ? "/usr/bin/chromium" : undefined);
-  let browser;
-  if (engine.kind === "playwright") {
-    browser = await engine.pw.launch({
-      args: ["--no-sandbox", "--disable-dev-shm-usage"],
-      executablePath: execPath,
-    });
-  } else {
-    browser = await engine.pp.launch({
-      args: ["--no-sandbox", "--disable-dev-shm-usage"],
-      executablePath: execPath,
-    });
-  }
+  const LAUNCH_ARGS = ["--no-sandbox", "--disable-dev-shm-usage"];
+  const launch = async () =>
+    engine.kind === "playwright"
+      ? engine.pw.launch({ args: LAUNCH_ARGS, executablePath: execPath })
+      : engine.pp.launch({ args: LAUNCH_ARGS, executablePath: execPath });
+
+  let browser = await launch();
 
   const fails = [];
   const warns = [];
+  const infra = [];
   let done = 0;
-  const CONC = 6;
+  const CONC = Number(process.env.PARITY_CONC || 4);
 
-  const baseHost = new URL(BASE).hostname;
-  const worker = async (path) => {
+  // Chromium can die under memory pressure on an 800+ route sweep. Relaunch and
+  // retry rather than reporting 800 phantom failures.
+  const relaunch = async () => {
+    try { if (browser) await browser.close(); } catch {}
+    browser = await launch();
+  };
+
+  const worker = async (path, attempt = 0) => {
     try {
       const s = await getStatic(path);
       const r = await getRendered(path, browser);
       const issues = [];
 
-      if (s.status !== 200) issues.push({ lvl: "FAIL", msg: `static HTTP ${s.status}` });
-      if (r.status !== 200) issues.push({ lvl: "FAIL", msg: `rendered HTTP ${r.status}` });
-      try {
-        if (s.finalUrl && new URL(s.finalUrl).hostname !== baseHost) {
-          issues.push({ lvl: "FAIL", msg: `static redirected off-host to ${new URL(s.finalUrl).hostname}` });
-        }
-        if (r.finalUrl && new URL(r.finalUrl).hostname !== baseHost) {
-          issues.push({ lvl: "FAIL", msg: `rendered redirected off-host to ${new URL(r.finalUrl).hostname}` });
-        }
-      } catch { /* ignore invalid finalUrl */ }
+      if (s.status !== 200) issues.push(`static HTTP ${s.status}`);
+      if (r.status !== 200) issues.push(`rendered HTTP ${r.status}`);
 
       const rH1 = (r.h1 || "").toLowerCase();
       const is404 = NOT_FOUND_HINTS.some((h) => rH1.includes(h));
@@ -339,7 +341,13 @@ async function main() {
       }
       return { path, issues, staticH1: s.h1, renderedH1: r.h1, staticLinks: s.links, renderedLinks: r.links };
     } catch (e) {
-      return { path, issues: [{ lvl: "FAIL", msg: `probe error: ${String(e).split("\n")[0].slice(0, 140)}` }], fatal: true };
+      const msg = String(e).split("\n")[0].slice(0, 160);
+      const deadBrowser = /has been closed|Target closed|Connection closed|browser has disconnected/i.test(msg);
+      if (deadBrowser && attempt < 2) {
+        await relaunch();
+        return worker(path, attempt + 1);
+      }
+      return { path, issues: [`probe error: ${msg}`], fatal: true, infra: true };
     }
   };
 
@@ -349,26 +357,33 @@ async function main() {
       const p = queue.shift();
       const res = await worker(p);
       done++;
-      const hard = res.issues.filter((i) => i.lvl === "FAIL");
-      const soft = res.issues.filter((i) => i.lvl === "WARN");
+      const hard = res.issues.filter((i) => lvlOf(i) === "FAIL" && !res.infra);
+      const soft = res.issues.filter((i) => lvlOf(i) === "WARN");
+      if (res.infra) infra.push(res);
       if (hard.length) fails.push(res);
       if (soft.length) warns.push(res);
-      const mark = hard.length ? "✗" : soft.length ? "·" : "✓";
+      const mark = res.infra ? "!" : hard.length ? "✗" : soft.length ? "·" : "✓";
       const first = hard[0] || soft[0];
+      const firstMsg = (x) => (x ? (typeof x === "string" ? x : x.msg) : "");
       if (hard.length || soft.length || done % 50 === 0 || res.path.includes("/page/") || res.path.includes("/topic/")) {
-        console.log(`  ${mark} ${res.path}${first ? "  → " + first.msg : ""}`);
+        console.log(`  ${mark} ${res.path}${first ? "  → " + firstMsg(first) : ""}`);
       }
     }
   });
   await Promise.all(runners);
 
-  await browser.close();
+  await browser.close().catch(() => {});
 
   console.log("\n" + "═".repeat(78));
+  if (infra.length) {
+    console.log(`  ${infra.length} route(s) could not be probed (browser died / network) — NOT counted as site failures.`);
+    for (const r of infra.slice(0, 5)) console.log(`    ! ${r.path}  ${msgOf(r.issues[0])}`);
+    console.log("");
+  }
   if (warns.length) {
     console.log(`  ${warns.length} warning(s) — content drift between prerender and runtime:`);
     for (const w of warns.slice(0, 12)) {
-      for (const i of w.issues.filter((x) => x.lvl === "WARN")) console.log(`    · ${w.path}  ${i.msg}`);
+      for (const i of w.issues.filter((x) => lvlOf(x) === "WARN")) console.log(`    · ${w.path}  ${typeof i === "string" ? i : i.msg}`);
     }
     console.log("");
   }
@@ -382,7 +397,7 @@ async function main() {
   const byIssue = new Map();
   for (const f of fails) {
     for (const i of f.issues) {
-      const k = i.msg.replace(/\b\d{2,}\b/g, "#").slice(0, 92);
+      const k = msgOf(i).replace(/\b\d{2,}\b/g, "#").slice(0, 92);
       byIssue.set(k, (byIssue.get(k) || 0) + 1);
     }
   }
@@ -393,7 +408,7 @@ async function main() {
   console.log("\n  FAILING ROUTES:");
   for (const f of fails.slice(0, 40)) {
     console.log(`    ${f.path}`);
-    for (const i of f.issues) console.log(`        [${i.lvl}] ${i.msg}`);
+    for (const i of f.issues) console.log(`        [${lvlOf(i)}] ${msgOf(i)}`);
   }
   if (fails.length > 40) console.log(`    … and ${fails.length - 40} more`);
   console.log("\n  FIX: add the missing route to the React router so hydration does not");

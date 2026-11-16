@@ -1450,6 +1450,7 @@ input, select, textarea {
   display: block;
   overflow-x: hidden;
   overflow-y: visible;
+  contain: layout style;
 }
 
 .ad-slot-reserved ins.adsbygoogle,

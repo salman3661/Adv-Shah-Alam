@@ -1236,8 +1236,29 @@ ${buildInstitutionalSchema(`${BASE}/bn/contact`, 'bn', [{ name: 'হোম', ite
 
   // ── Privacy Policy ─────────────────────────────────────────────────────────
   {
+    const schema = {
+      '@context': 'https://schema.org',
+      '@graph': [
+        {
+          '@type': 'WebPage',
+          '@id': `${BASE}/privacy-policy#webpage`,
+          url: `${BASE}/privacy-policy`,
+          name: 'Privacy Policy | Advocate Md. Shah Alam Chambers',
+          inLanguage: 'en',
+          isPartOf: { '@id': `${BASE}/#website` },
+        },
+        {
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: `${BASE}/en` },
+            { '@type': 'ListItem', position: 2, name: 'Privacy Policy', item: `${BASE}/privacy-policy` },
+          ],
+        },
+      ],
+    };
     const extraHead = `<link rel="alternate" hreflang="en" href="${BASE}/privacy-policy" />
-<link rel="alternate" hreflang="x-default" href="${BASE}/privacy-policy" />`;
+<link rel="alternate" hreflang="x-default" href="${BASE}/privacy-policy" />
+<script type="application/ld+json">${jsonLd(schema)}</script>`;
     const html = buildPage(base, {
       title: 'Privacy Policy | Advocate Md. Shah Alam Chambers',
       description: 'Read the official Privacy Policy for advmdshahalam.me detailing client confidentiality, consultation data handling, Google Analytics, and AdSense cookies.',
@@ -1252,8 +1273,29 @@ ${buildInstitutionalSchema(`${BASE}/bn/contact`, 'bn', [{ name: 'হোম', ite
 
   // ── Terms of Service ───────────────────────────────────────────────────────
   {
+    const schema = {
+      '@context': 'https://schema.org',
+      '@graph': [
+        {
+          '@type': 'WebPage',
+          '@id': `${BASE}/terms-of-service#webpage`,
+          url: `${BASE}/terms-of-service`,
+          name: 'Terms of Service | Advocate Md. Shah Alam Dhaka',
+          inLanguage: 'en',
+          isPartOf: { '@id': `${BASE}/#website` },
+        },
+        {
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: `${BASE}/en` },
+            { '@type': 'ListItem', position: 2, name: 'Terms of Service', item: `${BASE}/terms-of-service` },
+          ],
+        },
+      ],
+    };
     const extraHead = `<link rel="alternate" hreflang="en" href="${BASE}/terms-of-service" />
-<link rel="alternate" hreflang="x-default" href="${BASE}/terms-of-service" />`;
+<link rel="alternate" hreflang="x-default" href="${BASE}/terms-of-service" />
+<script type="application/ld+json">${jsonLd(schema)}</script>`;
     const html = buildPage(base, {
       title: 'Terms of Service | Advocate Md. Shah Alam Dhaka',
       description: 'Terms of Service & Engagement for advmdshahalam.me — consultation boundaries, retainer conditions, payment policies, and Dhaka court jurisdiction.',
@@ -1328,8 +1370,29 @@ ${BN_CTA}`,
 
   // ── NRB Legal Help page ────────────────────────────────────────────────────
   {
+    const schema = {
+      '@context': 'https://schema.org',
+      '@graph': [
+        {
+          '@type': 'WebPage',
+          '@id': `${BASE}/nrb-legal-help#webpage`,
+          url: `${BASE}/nrb-legal-help`,
+          name: 'NRB Legal Help Bangladesh | Property & Family Law',
+          inLanguage: 'en',
+          isPartOf: { '@id': `${BASE}/#website` },
+        },
+        {
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: `${BASE}/en` },
+            { '@type': 'ListItem', position: 2, name: 'NRB Legal Help', item: `${BASE}/nrb-legal-help` },
+          ],
+        },
+      ],
+    };
     const extraHead = `<link rel="alternate" hreflang="en" href="${BASE}/nrb-legal-help" />
-<link rel="alternate" hreflang="x-default" href="${BASE}/nrb-legal-help" />`;
+<link rel="alternate" hreflang="x-default" href="${BASE}/nrb-legal-help" />
+<script type="application/ld+json">${jsonLd(schema)}</script>`;
     const html = buildPage(base, {
       title: 'NRB Legal Help Bangladesh | Property & Family Law',
       description: 'Legal guides and remote legal services for Non-Resident Bangladeshis in the UK, USA, UAE and Canada: paid case review, deed vetting, MOFA attestation, retainer, divorce and court cases.',
@@ -1489,9 +1552,30 @@ ${buildServiceSchema(`${BASE}/bn/services/${slug}`, bnData, 'bn')}`;
 
   {
     const hasPage2 = enPosts.length > 24;
+    const schema = {
+      '@context': 'https://schema.org',
+      '@graph': [
+        {
+          '@type': 'CollectionPage',
+          '@id': `${BASE}/blog#webpage`,
+          url: `${BASE}/blog`,
+          name: 'Bangladesh Legal Guides & Law Blog | Adv. Shah Alam',
+          inLanguage: 'en',
+          isPartOf: { '@id': `${BASE}/#website` },
+        },
+        {
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: `${BASE}/en` },
+            { '@type': 'ListItem', position: 2, name: 'Blog', item: `${BASE}/blog` },
+          ],
+        },
+      ],
+    };
     const extraHead = `<link rel="alternate" hreflang="en" href="${BASE}/blog" />
 <link rel="alternate" hreflang="bn" href="${BASE}/bn/blog" />
-<link rel="alternate" hreflang="x-default" href="${BASE}/blog" />` + (hasPage2 ? `\n<link rel="next" href="${BASE}/blog/page/2" />` : '');
+<link rel="alternate" hreflang="x-default" href="${BASE}/blog" />
+<script type="application/ld+json">${jsonLd(schema)}</script>` + (hasPage2 ? `\n<link rel="next" href="${BASE}/blog/page/2" />` : '');
     const html = buildPage(base, {
       title: 'Bangladesh Legal Guides & Law Blog | Adv. Shah Alam',
       description: 'Read expert legal guides on Bangladesh criminal law, High Court bail, divorce, land registration, mutation, and corporate law by Advocate Md. Shah Alam.',
@@ -1505,9 +1589,30 @@ ${buildServiceSchema(`${BASE}/bn/services/${slug}`, bnData, 'bn')}`;
   }
   {
     const hasPage2 = bnPosts.length > 24;
+    const schema = {
+      '@context': 'https://schema.org',
+      '@graph': [
+        {
+          '@type': 'CollectionPage',
+          '@id': `${BASE}/bn/blog#webpage`,
+          url: `${BASE}/bn/blog`,
+          name: 'বাংলাদেশ আইনি গাইড ও ব্লগ | এডভোকেট মোঃ শাহ আলম',
+          inLanguage: 'bn',
+          isPartOf: { '@id': `${BASE}/#website` },
+        },
+        {
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'হোম', item: `${BASE}/` },
+            { '@type': 'ListItem', position: 2, name: 'ব্লগ', item: `${BASE}/bn/blog` },
+          ],
+        },
+      ],
+    };
     const extraHead = `<link rel="alternate" hreflang="bn" href="${BASE}/bn/blog" />
 <link rel="alternate" hreflang="en" href="${BASE}/blog" />
-<link rel="alternate" hreflang="x-default" href="${BASE}/blog" />` + (hasPage2 ? `\n<link rel="next" href="${BASE}/bn/blog/page/2" />` : '');
+<link rel="alternate" hreflang="x-default" href="${BASE}/blog" />
+<script type="application/ld+json">${jsonLd(schema)}</script>` + (hasPage2 ? `\n<link rel="next" href="${BASE}/bn/blog/page/2" />` : '');
     const html = buildPage(base, {
       title: 'বাংলাদেশ আইনি গাইড ও ব্লগ | এডভোকেট মোঃ শাহ আলম',
       description: 'বাংলাদেশের ফৌজদারি, জামিন, তালাক, জমি রেজিস্ট্রি, নামজারি, বাটোয়ারা ও সুপ্রিম কোর্ট আইন বিষয়ক বিস্তারিত বাংলা আইনি গাইড পড়ুন।',

@@ -116,7 +116,8 @@ const AdSenseAd = ({
 
     const isUnfilled = state === 'unfilled';
     const resolvedDesktopMin = minHeight > 0 ? Math.max(250, minHeight) : 250;
-    const resolvedMobileMin = mobileMinHeight > 0 ? Math.max(100, mobileMinHeight) : 100;
+    const defaultMobileMin = (layout === 'in-article' || format === 'autorelaxed') ? 250 : 100;
+    const resolvedMobileMin = mobileMinHeight > 0 ? Math.max(100, mobileMinHeight) : defaultMobileMin;
 
     const {
         margin: _ignoredMargin,
@@ -146,6 +147,7 @@ const AdSenseAd = ({
                 clear: 'both',
                 overflowX: 'hidden',
                 overflowY: 'visible',
+                contain: 'layout style',
                 boxSizing: 'border-box',
                 background: 'transparent',
                 border: 'none',
