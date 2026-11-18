@@ -657,6 +657,13 @@ const ServicePage = ({ data, ...legacyProps }) => {
                                     ? 'উত্তরা চেম্বার (বাড়ি ৪৬, সড়ক ৬/বি, সেক্টর ১২, উত্তরা পশ্চিম, ঢাকা-১২৩০) অথবা ঢাকা জজ কোর্ট চেম্বারে সাক্ষাৎ বা হোয়াটসঅ্যাপে পরামর্শ নিন। পেইড কেস রিভিউ ফি বিকাশ: ০১৭১২৬৫৫৫৪৬।'
                                     : 'Consult at Uttara Chamber (House 46, Road 6/B, Sector 12, Uttara West, Dhaka-1230), Dhaka Judge Court, or online via WhatsApp. Paid case review bKash: 01712655546.'}
                             </p>
+                            <p className="text-sm mb-3 max-w-2xl mx-auto px-4 py-2.5 rounded-xl" style={{ background: 'rgba(201, 162, 39, 0.14)', border: '1px solid rgba(201, 162, 39, 0.4)', color: '#F8FAFC', ...bnFontStyle }}>
+                                {isBn ? (
+                                    <><strong>প্রথম পরামর্শ ফ্রি।</strong> WhatsApp বা ফোনে আপনার মামলার কথা বলুন — কোনো ফি ছাড়াই আমি প্রথম মতামত দেব। কাজ এগোলে তখন ফি নির্ধারিত হবে।</>
+                                ) : (
+                                    <><strong>First consultation is free.</strong> Share your case details on WhatsApp or phone — you will receive an initial legal opinion at no charge. Fees apply only when formal work proceeds.</>
+                                )}
+                            </p>
                             <div className="flex flex-col sm:flex-row flex-wrap gap-3 justify-center mt-5">
                                 <a
                                     href={waLink(isBn ? `আসসালামু আলাইকুম, আমি "${h1}" বিষয়ে পরামর্শ নিতে চাই।` : `Hello, I need legal consultation regarding "${h1}".`)}

@@ -761,7 +761,7 @@ const BlogPostBnInner = () => {
                                     height="42"
                                 />
                                 <div>
-                                    <p style={{ fontSize: '0.9rem', fontWeight: 800, color: '#FFFFFF', margin: 0 }}>অ্যাডভোকেট মো. শাহ আলম</p>
+                                    <p style={{ fontSize: '0.9rem', fontWeight: 800, color: '#FFFFFF', margin: 0 }}>পর্যালোচনা: অ্যাডভোকেট মো. শাহ আলম (এনরোল্ড ২০১৫)</p>
                                     <p style={{ fontSize: '0.74rem', color: '#5EEAD4', fontWeight: 600, margin: 0 }}>বাংলাদেশ সুপ্রিম কোর্ট • চেম্বার: উত্তরা ও ঢাকা জজ কোর্ট</p>
                                 </div>
                                 {heroDateLabel && (

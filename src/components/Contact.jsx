@@ -65,6 +65,7 @@ const Contact = ({ lang = 'en' }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        e.stopPropagation();
         const now = Date.now();
         // Anti-bot checks: honeypot filled, submitted < 800ms after load, or < 4s cooldown
         if (formData.website || now - mountedAt.current < 800 || now - lastSubmitAt.current < 4000) {
@@ -92,6 +93,7 @@ const Contact = ({ lang = 'en' }) => {
 
     const handleCallbackSubmit = (e) => {
         e.preventDefault();
+        e.stopPropagation();
         const now = Date.now();
         if (callbackData.website || now - mountedAt.current < 800 || now - lastSubmitAt.current < 4000) {
             return;

@@ -115,9 +115,8 @@ const AdSenseAd = ({
     }, [slot]);
 
     const isUnfilled = state === 'unfilled';
-    const resolvedDesktopMin = minHeight > 0 ? Math.max(250, minHeight) : 250;
-    const defaultMobileMin = (layout === 'in-article' || format === 'autorelaxed') ? 250 : 100;
-    const resolvedMobileMin = mobileMinHeight > 0 ? Math.max(100, mobileMinHeight) : defaultMobileMin;
+    const resolvedDesktopMin = minHeight > 0 ? Math.max(320, minHeight) : 320;
+    const resolvedMobileMin = mobileMinHeight > 0 ? Math.max(320, mobileMinHeight) : 320;
 
     const {
         margin: _ignoredMargin,
@@ -145,8 +144,7 @@ const AdSenseAd = ({
                 width: '100%',
                 maxWidth: '100%',
                 clear: 'both',
-                overflowX: 'hidden',
-                overflowY: 'visible',
+                overflow: 'hidden',
                 contain: 'layout style',
                 boxSizing: 'border-box',
                 background: 'transparent',
@@ -154,6 +152,7 @@ const AdSenseAd = ({
                 boxShadow: 'none',
                 '--ad-min-h-mobile': `${resolvedMobileMin}px`,
                 '--ad-min-h-desktop': `${resolvedDesktopMin}px`,
+                height: `var(--ad-min-h-mobile)`,
                 ...cleanStyle,
             }}
         >

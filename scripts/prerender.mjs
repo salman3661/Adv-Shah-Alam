@@ -527,6 +527,11 @@ ${caseNoteHtml}
 ${coverageHtml}
 ${faqHtml}
 ${linksHtml}
+<div style="margin:20px 0;padding:14px 18px;background:#F8FAFC;border-left:4px solid #C9A227;border-radius:8px;color:#0B1220;font-size:14px;line-height:1.7">
+  ${isBn
+    ? '<strong>প্রথম পরামর্শ ফ্রি।</strong> WhatsApp বা ফোনে আপনার মামলার কথা বলুন — কোনো ফি ছাড়াই আমি প্রথম মতামত দেব। কাজ এগোলে তখন ফি নির্ধারিত হবে।'
+    : '<strong>First consultation is free.</strong> Share your case details on WhatsApp or phone — you will receive an initial legal opinion at no charge. Fees apply only when formal work proceeds.'}
+</div>
 ${isBn ? BN_CTA : CTA}
 ${isBn ? CONCLUSION_DISCLAIMER_BN : CONCLUSION_DISCLAIMER_EN}
 </article>`;
@@ -837,7 +842,8 @@ ${CTA}
 function contactBodyBn() {
   return `<nav aria-label="Breadcrumb" style="font-size:13px;color:#475569;margin-bottom:14px"><a href="/" style="color:#132A4A">হোম</a> &rsaquo; <span>যোগাযোগ</span></nav>
 <h1 style="font-size:28px;font-weight:700;margin-bottom:8px;color:#0a0a0a">${escHtml(pageHeadings.contactBn)}</h1>
-<p style="color:#555;margin-bottom:20px;line-height:1.7">বাংলাদেশ সুপ্রিম কোর্ট ও ঢাকা জজ কোর্টের অভিজ্ঞ আইনজীবীর সাথে ফোন, হোয়াটসঅ্যাপ বা উত্তরা ও কোর্ট চেম্বারে সরাসরি সাক্ষাতের মাধ্যমে ফৌজদারি, জামিন, তালাক, জমি-জমা, কর ও কোম্পানি মামলার পূর্ণাঙ্গ আইনি সমাধান নিশ্চিত করুন।</p>
+<p style="color:#555;margin-bottom:16px;line-height:1.7">বাংলাদেশ সুপ্রিম কোর্ট ও ঢাকা জজ কোর্টের অভিজ্ঞ আইনজীবীর সাথে ফোন, হোয়াটসঅ্যাপ বা উত্তরা ও কোর্ট চেম্বারে সরাসরি সাক্ষাতের মাধ্যমে ফৌজদারি, জামিন, তালাক, জমি-জমা, কর ও কোম্পানি মামলার পূর্ণাঙ্গ আইনি সমাধান নিশ্চিত করুন।</p>
+<div style="margin:14px 0 20px;padding:14px 18px;background:#F8FAFC;border-left:4px solid #C9A227;border-radius:8px;color:#0B1220;font-size:14px;line-height:1.7"><strong>প্রথম পরামর্শ ফ্রি।</strong> WhatsApp বা ফোনে আপনার মামলার কথা বলুন — কোনো ফি ছাড়াই আমি প্রথম মতামত দেব। কাজ এগোলে তখন ফি নির্ধারিত হবে।</div>
 
 <section style="margin:20px 0">
   <h2 style="font-size:20px;font-weight:700;margin:20px 0 10px">চেম্বার ঠিকানা ও সরাসরি যোগাযোগের মাধ্যম</h2>
@@ -1370,6 +1376,28 @@ ${BN_CTA}`,
 
   // ── NRB Legal Help page ────────────────────────────────────────────────────
   {
+    const nrbFaqs = [
+      {
+        q: 'Is the first legal consultation really free for NRBs?',
+        a: 'Yes. Your initial WhatsApp or phone consultation with Advocate Md. Shah Alam is completely free. You can explain your property, family, or court matter and receive an initial legal opinion on eligibility and jurisdiction before any paid work begins.',
+      },
+      {
+        q: 'Can I sell, mutate, or protect my land in Bangladesh without flying to Dhaka?',
+        a: 'Yes. Under the Power of Attorneys Act 2012 and the Registration Act 1908, an NRB can execute a Special or General Power of Attorney abroad, have it attested by the Bangladesh Embassy or High Commission, and complete MOFA verification in Dhaka so an authorized representative can act before the Sub-Registry or AC (Land) office.',
+      },
+      {
+        q: 'How long does land deed and khatian vetting take for NRBs?',
+        a: 'Preliminary case screening takes 24 to 48 hours. A full written chain-of-title opinion (verifying CS, SA, RS, and BS khatians, Bia deeds, and Sub-Registry Talashi index records) typically takes 3 to 7 working days depending on the district registry office.',
+      },
+      {
+        q: 'How are fees paid if I live in the UK, USA, UAE, or Canada?',
+        a: 'There is no advance online checkout. After your free initial consultation, if you choose to proceed with formal drafting, deed vetting, or court representation, the indicative fee is confirmed in writing and can be settled via bKash (01712655546), bank transfer, or by a family member at the Dhaka chamber.',
+      },
+      {
+        q: 'Is a foreign divorce decree valid in Bangladesh for NRBs?',
+        a: 'A foreign divorce decree is evaluated under Section 13 of the Code of Civil Procedure 1908 (CPC) and the Muslim Family Laws Ordinance 1961 (where applicable). Proper notice to the Union Parishad or City Corporation Mayor and statutory 90-day waiting compliance should be verified to prevent future marriage or inheritance disputes in Bangladesh.',
+      },
+    ];
     const schema = {
       '@context': 'https://schema.org',
       '@graph': [
@@ -1388,6 +1416,14 @@ ${BN_CTA}`,
             { '@type': 'ListItem', position: 2, name: 'NRB Legal Help', item: `${BASE}/nrb-legal-help` },
           ],
         },
+        {
+          '@type': 'FAQPage',
+          mainEntity: nrbFaqs.map((f) => ({
+            '@type': 'Question',
+            name: f.q,
+            acceptedAnswer: { '@type': 'Answer', text: f.a },
+          })),
+        },
       ],
     };
     const extraHead = `<link rel="alternate" hreflang="en" href="${BASE}/nrb-legal-help" />
@@ -1395,13 +1431,24 @@ ${BN_CTA}`,
 <script type="application/ld+json">${jsonLd(schema)}</script>`;
     const html = buildPage(base, {
       title: 'NRB Legal Help Bangladesh | Property & Family Law',
-      description: 'Legal guides and remote legal services for Non-Resident Bangladeshis in the UK, USA, UAE and Canada: paid case review, deed vetting, MOFA attestation, retainer, divorce and court cases.',
+      description: 'Legal guides and remote legal services for Non-Resident Bangladeshis in the UK, USA, UAE and Canada: free initial consultation, deed vetting, MOFA attestation, retainer, divorce and court cases.',
       canonical: `${BASE}/nrb-legal-help`,
       lang: 'en',
       extraHead,
       body: `<nav aria-label="Breadcrumb" style="font-size:13px;color:#475569;margin-bottom:14px"><a href="/en" style="color:#132A4A">Home</a> &rsaquo; <span>NRB Legal Help</span></nav>
 <h1 style="font-size:30px;font-weight:700;margin-bottom:8px;color:#0B1220">${escHtml(pageHeadings.nrb)}</h1>
 <p class="direct-answer"><strong>Quick Summary:</strong> Non-Resident Bangladeshis (NRBs) in the UK, USA, Canada, UAE, and Europe can resolve land disputes, execute Embassy-attested Power of Attorney (PoA), vet khatian and Bia deeds, handle divorce/custody suits, and defend criminal/cheque matters in Bangladesh remotely through Advocate Md. Shah Alam without flying to Dhaka.</p>
+
+<section style="margin:24px 0;padding:20px;background:#F8FAFC;border:1px solid #C9A227;border-radius:10px">
+  <h2 style="font-size:22px;font-weight:700;color:#0B1220;margin-bottom:10px">First Consultation is Free — Clear 3-Step Process</h2>
+  <p style="font-size:14px;color:#334155;margin-bottom:14px;line-height:1.7"><strong>First consultation is free.</strong> Share your case details on WhatsApp or phone — you will receive an initial legal opinion at no charge. Fees apply only if you decide to proceed with formal drafting, vetting, or court representation.</p>
+  <ol style="padding-left:20px;line-height:1.85;color:#1E293B;font-size:14px">
+    <li><strong>Step 1 (Free): WhatsApp / Phone Case Brief</strong> — Message +880 1955-802007 or call +880 1712-655546 to explain your property, family, or court issue and get an initial opinion free of charge.</li>
+    <li><strong>Step 2 (Scope &amp; Documents): Written Scope &amp; Indicative Fee</strong> — If formal work is needed, you receive a written document checklist, expected court/registry timeline, and confirmed indicative fee before starting.</li>
+    <li><strong>Step 3 (Execution): Remote Filing &amp; Updates</strong> — Your chamber desk handles Sub-Registry searches, Embassy PoA drafts, or Dhaka court appearances with regular WhatsApp/video updates.</li>
+  </ol>
+</section>
+
 <section style="margin:24px 0;padding:20px;background:#F7F8FA;border:1px solid #CBD5E1;border-radius:10px">
   <h2 style="font-size:22px;font-weight:700;color:#0B1220;margin-bottom:12px">Paid Case Review &amp; Written Opinion</h2>
   <p style="font-size:14px;color:#334155;margin-bottom:12px">All listed fees are indicative estimates confirmed in writing once document scope is reviewed.</p>
@@ -1414,7 +1461,7 @@ ${BN_CTA}`,
       <tr><td style="padding:10px"><strong>PoA / Legal Notice / Agreement Drafting</strong></td><td style="padding:10px">Court-ready bilingual or English legal draft formatted for Embassy attestation</td><td style="padding:10px">৳5,000 / \$50</td></tr>
     </tbody>
   </table>
-  <p style="margin-top:14px;font-size:14px"><a href="/contact?service=case-review" data-cta="consult" data-placement="nrb-paid-review" style="display:inline-block;padding:12px 22px;background:#132A4A;color:#fff;border-radius:8px;text-decoration:none;font-weight:700">Book Paid Case Review</a></p>
+  <p style="margin-top:14px;font-size:14px"><a href="/contact?service=case-review" data-cta="consult" data-placement="nrb-paid-review" style="display:inline-block;padding:12px 22px;background:#132A4A;color:#fff;border-radius:8px;text-decoration:none;font-weight:700">Book Paid Case Review</a> &nbsp; <a href="/contact?service=case-review" data-cta="nrb-free-consult" data-placement="nrb-paid-review" style="color:#132A4A;font-weight:700;text-decoration:underline">Start with a free consultation &rarr;</a></p>
 </section>
 <section style="margin:24px 0">
   <h2 style="font-size:22px;font-weight:700;color:#0B1220;margin-bottom:10px">NRB Document &amp; Attestation Services</h2>
@@ -1424,7 +1471,7 @@ ${BN_CTA}`,
     <li><strong>NID, Birth &amp; Marriage Corrections:</strong> Affidavit drafting and magistrate/gazette correction steps.</li>
     <li><strong>Certified Court Copies &amp; Talashi Search:</strong> Direct Dhaka Sub-Registry index searches and certified deed extraction (indicative fee starting ৳4,000 / \$40).</li>
   </ul>
-  <p style="margin-top:10px;font-size:14px"><a href="/contact?service=documents" data-cta="nrb-documents" data-placement="nrb-documents" style="color:#132A4A;font-weight:700;text-decoration:underline">Request Document Service</a></p>
+  <p style="margin-top:10px;font-size:14px"><a href="/contact?service=documents" data-cta="nrb-documents" data-placement="nrb-documents" style="color:#132A4A;font-weight:700;text-decoration:underline">Request Document Service</a> &middot; <a href="/contact?service=documents" data-cta="nrb-free-consult" data-placement="nrb-documents" style="color:#132A4A;font-weight:700;text-decoration:underline">Start with a free consultation &rarr;</a></p>
 </section>
 <section style="margin:24px 0">
   <h2 style="font-size:22px;font-weight:700;color:#0B1220;margin-bottom:10px">NRB Monthly Legal Advisory Retainer</h2>
@@ -1433,7 +1480,25 @@ ${BN_CTA}`,
     <li><strong>Tenant &amp; Mutation Compliance:</strong> Lease vetting, eviction notice compliance, and e-Mutation status tracking.</li>
     <li><strong>Annual NBR Tax Return Coordination:</strong> Non-resident remittance exemption and annual tax return compliance (indicative monthly retainer ৳12,000–৳25,000 / \$110–\$225).</li>
   </ul>
-  <p style="margin-top:10px;font-size:14px"><a href="/contact?service=retainer" data-cta="nrb-retainer" data-placement="nrb-retainer" style="color:#132A4A;font-weight:700;text-decoration:underline">Inquire About Retainer</a></p>
+  <p style="margin-top:10px;font-size:14px"><a href="/contact?service=retainer" data-cta="nrb-retainer" data-placement="nrb-retainer" style="color:#132A4A;font-weight:700;text-decoration:underline">Inquire About Retainer</a> &middot; <a href="/contact?service=retainer" data-cta="nrb-free-consult" data-placement="nrb-retainer" style="color:#132A4A;font-weight:700;text-decoration:underline">Start with a free consultation &rarr;</a></p>
+</section>
+<section style="margin:24px 0">
+  <h2 style="font-size:22px;font-weight:700;color:#0B1220;margin-bottom:10px">Countries Served, Statutory Framework &amp; Document Checklist</h2>
+  <p style="font-size:14px;color:#334155;line-height:1.8;margin-bottom:12px">Advocate Md. Shah Alam (Enrolled with the Bangladesh Bar Council since 2015, practicing at the Supreme Court of Bangladesh and Dhaka Judge Court) coordinates remote legal representation for Non-Resident Bangladeshis residing in the <strong>United Kingdom (London, Birmingham, Manchester), United States (New York, New Jersey, Michigan, California, Texas), Canada (Toronto, Montreal, Ottawa), United Arab Emirates (Dubai, Abu Dhabi, Sharjah), Saudi Arabia, Qatar, Singapore, Australia, and EU countries</strong>. Consultations are scheduled across GMT, EST/PST, GST, and BST time zones so you never have to travel to Dhaka just for preliminary verification or document filing.</p>
+  <h3 style="font-size:17px;font-weight:700;color:#0B1220;margin:12px 0 8px">Essential Documents to Keep Ready</h3>
+  <ul style="padding-left:20px;line-height:1.9;color:#1E293B;font-size:14px">
+    <li><strong>Property &amp; Inheritance:</strong> Scanned copies of Saf Kabala (sale deed), Bia deeds, CS/SA/RS/BS Khatian (Porcha), mutation DCR, Khajna (land development tax) receipts, and NID/passport copy.</li>
+    <li><strong>Power of Attorney (PoA):</strong> Drafted under the Power of Attorneys Act 2012 and Registration Act 1908, signed before the Bangladesh Embassy/High Commission abroad and verified by MOFA in Dhaka.</li>
+    <li><strong>Family &amp; Foreign Divorce:</strong> Registered Kabinnama, foreign divorce decree (evaluated under Section 13 of the Code of Civil Procedure 1908), and union/city corporation notice copies under the Muslim Family Laws Ordinance 1961.</li>
+    <li><strong>Cheque Dishonour &amp; Criminal Matters:</strong> Dishonoured cheque copy, bank return memo, statutory 30-day legal notice under Section 138 of the Negotiable Instruments Act 1881, or FIR/GD copy.</li>
+  </ul>
+  <h3 style="font-size:17px;font-weight:700;color:#0B1220;margin:12px 0 8px">Typical Turnaround &amp; Fee Transparency</h3>
+  <ul style="padding-left:20px;line-height:1.9;color:#1E293B;font-size:14px">
+    <li><strong>Free Initial Consultation:</strong> Same-day or within 24 hours via WhatsApp or phone for initial legal triage.</li>
+    <li><strong>Deed &amp; Khatian Vetting:</strong> 3 to 7 working days for Sub-Registry Talashi search and written chain-of-title opinion.</li>
+    <li><strong>PoA &amp; Legal Notice Drafting:</strong> 24 to 72 hours for court-ready English or bilingual drafts formatted for Embassy attestation.</li>
+    <li><strong>Transparent Settlement:</strong> No advance online payment gateway is used. Fees are confirmed in writing after initial review and exclude government stamp duties, Sub-Registry fees, and Embassy consular charges.</li>
+  </ul>
 </section>
 <section style="margin:24px 0">
   <h2 style="font-size:22px;font-weight:700;color:#0B1220;margin-bottom:12px">Core NRB Legal Guides</h2>
@@ -1442,6 +1507,13 @@ ${BN_CTA}`,
     <li><strong>Family Law &amp; Divorce:</strong> Overseas Talaq notice registration, Section 13 CPC foreign decree recognition, Dower (Denmohar), and child custody.</li>
     <li><strong>Documents, Citizenship &amp; Money:</strong> Dual citizenship NVR, police clearance certificates, NBR remittance rules, and Section 138 cheque cases.</li>
   </ul>
+</section>
+<section style="margin:24px 0">
+  <h2 style="font-size:22px;font-weight:700;color:#0B1220;margin-bottom:12px">Frequently Asked Questions for NRBs</h2>
+  ${nrbFaqs.map((f) => `<div style="margin:10px 0;padding:12px 16px;background:#F7F8FA;border-radius:8px">
+    <h3 style="font-size:16px;font-weight:700;margin:0 0 6px;color:#0B1220">${escHtml(f.q)}</h3>
+    <p style="margin:0;color:#334155;font-size:14px;line-height:1.7">${escHtml(f.a)}</p>
+  </div>`).join('')}
 </section>
 ${CTA}`,
     });

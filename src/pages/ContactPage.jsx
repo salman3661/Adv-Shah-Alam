@@ -289,6 +289,7 @@ const ContactForm = ({ isBn, initialService }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        e.stopPropagation();
         const now = Date.now();
         if (formData.website || now - mountedAt.current < 800 || now - lastSubmitAt.current < 4000) {
             return;
@@ -341,9 +342,29 @@ const ContactForm = ({ isBn, initialService }) => {
                 style={{ color: 'var(--text)', fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : "Georgia, serif" }}>
                 {isBn ? 'আইনি পরামর্শের জন্য বার্তা পাঠান' : 'Send Your Case Details'}
             </h2>
-            <p className="text-sm mb-7" style={{ color: 'var(--text-muted)', fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>
+            <p className="text-sm mb-4" style={{ color: 'var(--text-muted)', fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>
                 {isBn ? 'নিচের ফর্মে আপনার আইনি তথ্য দিন, সরাসরি হোয়াটসঅ্যাপে পরামর্শ দেওয়া হবে।' : "Fill out the form below and we'll respond via WhatsApp within a few hours."}
             </p>
+            <div
+                className="text-sm mb-6 p-3.5 rounded-xl border"
+                style={{
+                    background: 'var(--bg)',
+                    borderColor: 'var(--accent)',
+                    color: 'var(--text)',
+                    fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit',
+                    lineHeight: 1.65,
+                }}
+            >
+                {isBn ? (
+                    <>
+                        <strong>প্রথম পরামর্শ ফ্রি।</strong> WhatsApp বা ফোনে আপনার মামলার কথা বলুন — কোনো ফি ছাড়াই আমি প্রথম মতামত দেব। কাজ এগোলে তখন ফি নির্ধারিত হবে।
+                    </>
+                ) : (
+                    <>
+                        <strong>First Consultation is Free.</strong> Share your case details on WhatsApp or phone — you will receive an initial legal opinion at no charge. Fees apply only if you proceed with formal representation or document drafting.
+                    </>
+                )}
+            </div>
 
             <form onSubmit={handleSubmit} className="space-y-5">
                 {/* Honeypot anti-bot field */}

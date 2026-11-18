@@ -712,7 +712,7 @@ const BlogPostInner = () => {
                                     height="42"
                                 />
                                 <div>
-                                    <p style={{ fontSize: '0.9rem', fontWeight: 800, color: '#FFFFFF', margin: 0 }}>Advocate Md. Shah Alam</p>
+                                    <p style={{ fontSize: '0.9rem', fontWeight: 800, color: '#FFFFFF', margin: 0 }}>Reviewed by Advocate Md. Shah Alam (Enrolled 2015)</p>
                                     <p style={{ fontSize: '0.74rem', color: '#5EEAD4', fontWeight: 600, margin: 0 }}>Supreme Court of Bangladesh • Uttara & Dhaka Judge Court</p>
                                 </div>
                                 {heroDateLabel && (

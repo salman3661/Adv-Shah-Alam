@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from 'react';
+import React, { lazy, Suspense, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { SpeedInsights } from '@vercel/speed-insights/react';
@@ -7,6 +7,7 @@ import { ThemeProvider } from './context/ThemeContext';
 import Layout from './components/Layout';
 import ScrollToTop from './components/ScrollToTop';
 import ChunkErrorBoundary from './components/ChunkErrorBoundary';
+import { initCtaTracking } from './lib/cta-tracking';
 
 // Home is eager — it IS the first paint
 import Home from './pages/Home';
@@ -60,6 +61,10 @@ const PageFallback = () => (
 );
 
 function App() {
+  useEffect(() => {
+    initCtaTracking();
+  }, []);
+
   return (
     <>
       <HelmetProvider>

@@ -80,10 +80,61 @@ const PAID_TIERS = [
     },
 ];
 
+const NRB_FAQS = [
+    {
+        q: 'Is the first legal consultation really free for NRBs?',
+        a: 'Yes. Your initial WhatsApp or phone consultation with Advocate Md. Shah Alam is completely free. You can explain your property, family, or court matter and receive an initial legal opinion on eligibility and jurisdiction before any paid work begins.',
+    },
+    {
+        q: 'Can I sell, mutate, or protect my land in Bangladesh without flying to Dhaka?',
+        a: 'Yes. Under the Power of Attorneys Act 2012 and the Registration Act 1908, an NRB can execute a Special or General Power of Attorney abroad, have it attested by the Bangladesh Embassy or High Commission, and complete MOFA verification in Dhaka so an authorized representative can act before the Sub-Registry or AC (Land) office.',
+    },
+    {
+        q: 'How long does land deed and khatian vetting take for NRBs?',
+        a: 'Preliminary case screening takes 24 to 48 hours. A full written chain-of-title opinion (verifying CS, SA, RS, and BS khatians, Bia deeds, and Sub-Registry Talashi index records) typically takes 3 to 7 working days depending on the district registry office.',
+    },
+    {
+        q: 'How are fees paid if I live in the UK, USA, UAE, or Canada?',
+        a: 'There is no advance online checkout. After your free initial consultation, if you choose to proceed with formal drafting, deed vetting, or court representation, the indicative fee is confirmed in writing and can be settled via bKash (01712655546), bank transfer, or by a family member at the Dhaka chamber.',
+    },
+    {
+        q: 'Is a foreign divorce decree valid in Bangladesh for NRBs?',
+        a: 'A foreign divorce decree is evaluated under Section 13 of the Code of Civil Procedure 1908 (CPC) and the Muslim Family Laws Ordinance 1961 (where applicable). Proper notice to the Union Parishad or City Corporation Mayor and statutory 90-day waiting compliance should be verified to prevent future marriage or inheritance disputes in Bangladesh.',
+    },
+];
+
 const NrbLegalHelp = () => {
     const title = 'NRB Legal Help Bangladesh | Property & Family Law';
-    const description = 'Legal guides and remote legal services for Non-Resident Bangladeshis in the UK, USA, UAE and Canada: paid case review, deed vetting, MOFA attestation, retainer, divorce and court cases.';
+    const description = 'Legal guides and remote legal services for Non-Resident Bangladeshis in the UK, USA, UAE and Canada: free initial consultation, deed vetting, MOFA attestation, retainer, divorce and court cases.';
     const canonical = 'https://www.advmdshahalam.me/nrb-legal-help';
+
+    const nrbSchema = {
+        '@context': 'https://schema.org',
+        '@graph': [
+            {
+                '@type': 'WebPage',
+                '@id': `${canonical}#webpage`,
+                url: canonical,
+                name: title,
+                inLanguage: 'en',
+            },
+            {
+                '@type': 'BreadcrumbList',
+                itemListElement: [
+                    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.advmdshahalam.me/en' },
+                    { '@type': 'ListItem', position: 2, name: 'NRB Legal Help', item: canonical },
+                ],
+            },
+            {
+                '@type': 'FAQPage',
+                mainEntity: NRB_FAQS.map((f) => ({
+                    '@type': 'Question',
+                    name: f.q,
+                    acceptedAnswer: { '@type': 'Answer', text: f.a },
+                })),
+            },
+        ],
+    };
 
     return (
         <>
@@ -96,6 +147,7 @@ const NrbLegalHelp = () => {
                 <meta property="og:description" content={description} />
                 <meta property="og:url" content={canonical} />
                 <meta property="og:type" content="website" />
+                <script type="application/ld+json">{JSON.stringify(nrbSchema)}</script>
             </Helmet>
 
             <section className="pt-28 pb-16" style={{ background: 'var(--bg)' }}>
@@ -163,6 +215,50 @@ const NrbLegalHelp = () => {
                             <FileCheck2 size={16} /> Book Paid Case Review
                         </Link>
                     </div>
+
+                    {/* 3-Step How It Works — First Consultation is Free */}
+                    <section
+                        aria-labelledby="nrb-how-it-works"
+                        className="mb-10 p-6 md:p-7 rounded-2xl"
+                        style={{ background: 'var(--surface)', border: '1px solid var(--accent)' }}
+                    >
+                        <div className="text-xs font-bold uppercase tracking-wider mb-2" style={{ color: 'var(--accent)' }}>
+                            How Remote NRB Legal Help Works
+                        </div>
+                        <h2
+                            id="nrb-how-it-works"
+                            className="text-xl md:text-2xl font-bold mb-3"
+                            style={{ color: 'var(--text)', fontFamily: "Georgia, serif" }}
+                        >
+                            First Consultation is Free — Clear 3-Step Process
+                        </h2>
+                        <p className="text-sm mb-5" style={{ color: 'var(--text-secondary)', lineHeight: 1.7 }}>
+                            <strong>First consultation is free.</strong> Share your case details on WhatsApp or phone — you will receive an initial legal opinion at no charge. Fees apply only if you decide to proceed with formal drafting, vetting, or court representation.
+                        </p>
+                        <div className="grid gap-4 md:grid-cols-3">
+                            <div className="p-4 rounded-xl" style={{ background: 'var(--bg)', border: '1px solid var(--card-border)' }}>
+                                <div className="text-xs font-bold uppercase mb-1" style={{ color: 'var(--accent)' }}>Step 1 · Free</div>
+                                <div className="font-bold text-sm mb-1" style={{ color: 'var(--text)' }}>WhatsApp / Phone Case Brief</div>
+                                <p className="text-xs" style={{ color: 'var(--text-secondary)', lineHeight: 1.6 }}>
+                                    Message +880 1955-802007 or call +880 1712-655546 to explain your property, family, or court issue and get an initial opinion free of charge.
+                                </p>
+                            </div>
+                            <div className="p-4 rounded-xl" style={{ background: 'var(--bg)', border: '1px solid var(--card-border)' }}>
+                                <div className="text-xs font-bold uppercase mb-1" style={{ color: 'var(--accent)' }}>Step 2 · Scope &amp; Documents</div>
+                                <div className="font-bold text-sm mb-1" style={{ color: 'var(--text)' }}>Written Scope &amp; Indicative Fee</div>
+                                <p className="text-xs" style={{ color: 'var(--text-secondary)', lineHeight: 1.6 }}>
+                                    If formal work is needed, you receive a written document checklist, expected court/registry timeline, and confirmed indicative fee before starting.
+                                </p>
+                            </div>
+                            <div className="p-4 rounded-xl" style={{ background: 'var(--bg)', border: '1px solid var(--card-border)' }}>
+                                <div className="text-xs font-bold uppercase mb-1" style={{ color: 'var(--accent)' }}>Step 3 · Execution</div>
+                                <div className="font-bold text-sm mb-1" style={{ color: 'var(--text)' }}>Remote Filing &amp; Updates</div>
+                                <p className="text-xs" style={{ color: 'var(--text-secondary)', lineHeight: 1.6 }}>
+                                    Your chamber desk handles Sub-Registry searches, Embassy PoA drafts, or Dhaka court appearances with regular WhatsApp/video updates.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
 
                     {/* Owned-Revenue Service Tier 1: Paid Case Review & Written Opinion */}
                     <section
@@ -250,15 +346,24 @@ const NrbLegalHelp = () => {
                                     <strong>Indicative service fee:</strong> Starting from ৳4,000 / $40 depending on registry office and notarization count (government stamp duties separate).
                                 </p>
                             </div>
-                            <div>
+                            <div className="flex flex-col gap-2">
                                 <Link
                                     to="/contact?service=documents"
                                     data-cta="nrb-documents"
                                     data-placement="nrb-documents"
-                                    className="inline-flex items-center gap-2 px-5 py-3 rounded-xl font-bold text-sm min-h-[44px]"
+                                    className="inline-flex items-center gap-2 px-5 py-3 rounded-xl font-bold text-sm min-h-[44px] w-fit"
                                     style={{ background: 'var(--btn-primary-bg)', color: '#fff' }}
                                 >
                                     Request Document Service <ArrowRight size={15} />
+                                </Link>
+                                <Link
+                                    to="/contact?service=documents"
+                                    data-cta="nrb-free-consult"
+                                    data-placement="nrb-documents"
+                                    className="text-xs font-bold underline w-fit"
+                                    style={{ color: 'var(--accent)' }}
+                                >
+                                    Start with a free consultation &rarr;
                                 </Link>
                             </div>
                         </section>
@@ -289,19 +394,58 @@ const NrbLegalHelp = () => {
                                     <strong>Indicative retainer fee:</strong> ৳12,000–৳25,000 / $110–$225 per month based on number of properties and active filings.
                                 </p>
                             </div>
-                            <div>
+                            <div className="flex flex-col gap-2">
                                 <Link
                                     to="/contact?service=retainer"
                                     data-cta="nrb-retainer"
                                     data-placement="nrb-retainer"
-                                    className="inline-flex items-center gap-2 px-5 py-3 rounded-xl font-bold text-sm min-h-[44px]"
+                                    className="inline-flex items-center gap-2 px-5 py-3 rounded-xl font-bold text-sm min-h-[44px] w-fit"
                                     style={{ background: 'var(--btn-primary-bg)', color: '#fff' }}
                                 >
                                     Inquire About Retainer <ArrowRight size={15} />
                                 </Link>
+                                <Link
+                                    to="/contact?service=retainer"
+                                    data-cta="nrb-free-consult"
+                                    data-placement="nrb-retainer"
+                                    className="text-xs font-bold underline w-fit"
+                                    style={{ color: 'var(--accent)' }}
+                                >
+                                    Start with a free consultation &rarr;
+                                </Link>
                             </div>
                         </section>
                     </div>
+
+                    {/* Countries, Statutory Scope & Document Checklist (900+ words E-E-A-T depth) */}
+                    <section className="mb-10 p-6 rounded-2xl" style={{ background: 'var(--surface)', border: '1px solid var(--card-border)' }}>
+                        <h2 className="text-xl md:text-2xl font-bold mb-3" style={{ color: 'var(--text)', fontFamily: "Georgia, serif" }}>
+                            Countries Served, Statutory Framework &amp; Document Checklist
+                        </h2>
+                        <p className="text-sm mb-4" style={{ color: 'var(--text-secondary)', lineHeight: 1.75 }}>
+                            Advocate Md. Shah Alam (Enrolled with the Bangladesh Bar Council since 2015, practicing at the Supreme Court of Bangladesh and Dhaka Judge Court) coordinates remote legal representation for Non-Resident Bangladeshis residing in the <strong>United Kingdom (London, Birmingham, Manchester), United States (New York, New Jersey, Michigan, California, Texas), Canada (Toronto, Montreal, Ottawa), United Arab Emirates (Dubai, Abu Dhabi, Sharjah), Saudi Arabia, Qatar, Singapore, Australia, and EU countries</strong>. Consultations are scheduled across GMT, EST/PST, GST, and BST time zones so you never have to travel to Dhaka just for preliminary verification or document filing.
+                        </p>
+                        <div className="grid gap-6 md:grid-cols-2">
+                            <div>
+                                <h3 className="font-bold text-base mb-2" style={{ color: 'var(--text)' }}>Essential Documents to Keep Ready</h3>
+                                <ul className="space-y-1.5 text-sm list-disc pl-5" style={{ color: 'var(--text-secondary)', lineHeight: 1.7 }}>
+                                    <li><strong>Property &amp; Inheritance:</strong> Scanned copies of Saf Kabala (sale deed), Bia deeds, CS/SA/RS/BS Khatian (Porcha), mutation DCR, Khajna (land development tax) receipts, and NID/passport copy.</li>
+                                    <li><strong>Power of Attorney (PoA):</strong> Drafted under the Power of Attorneys Act 2012 and Registration Act 1908, signed before the Bangladesh Embassy/High Commission abroad and verified by MOFA in Dhaka.</li>
+                                    <li><strong>Family &amp; Foreign Divorce:</strong> Registered Kabinnama, foreign divorce decree (evaluated under Section 13 of the Code of Civil Procedure 1908), and union/city corporation notice copies under the Muslim Family Laws Ordinance 1961.</li>
+                                    <li><strong>Cheque Dishonour &amp; Criminal Matters:</strong> Dishonoured cheque copy, bank return memo, statutory 30-day legal notice under Section 138 of the Negotiable Instruments Act 1881, or FIR/GD copy.</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 className="font-bold text-base mb-2" style={{ color: 'var(--text)' }}>Typical Turnaround &amp; Fee Transparency</h3>
+                                <ul className="space-y-1.5 text-sm list-disc pl-5" style={{ color: 'var(--text-secondary)', lineHeight: 1.7 }}>
+                                    <li><strong>Free Initial Consultation:</strong> Same-day or within 24 hours via WhatsApp or phone for initial legal triage.</li>
+                                    <li><strong>Deed &amp; Khatian Vetting:</strong> 3 to 7 working days for Sub-Registry Talashi search and written chain-of-title opinion.</li>
+                                    <li><strong>PoA &amp; Legal Notice Drafting:</strong> 24 to 72 hours for court-ready English or bilingual drafts formatted for Embassy attestation.</li>
+                                    <li><strong>Transparent Settlement:</strong> No advance online payment gateway is used. Fees are confirmed in writing after initial review and exclude government stamp duties, Sub-Registry fees, and Embassy consular charges.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
 
                     {GROUPS.map((group, gi) => {
                         const posts = group.slugs.map((s) => bySlug[s]).filter(Boolean);
@@ -374,6 +518,33 @@ const NrbLegalHelp = () => {
                             </React.Fragment>
                         );
                     })}
+
+                    {/* NRB Frequently Asked Questions */}
+                    <section className="mt-12 mb-8" aria-labelledby="nrb-faq-heading">
+                        <h2
+                            id="nrb-faq-heading"
+                            className="text-xl md:text-2xl font-bold mb-4"
+                            style={{ color: 'var(--text)', fontFamily: "Georgia, serif" }}
+                        >
+                            Frequently Asked Questions for NRBs
+                        </h2>
+                        <div className="space-y-3">
+                            {NRB_FAQS.map((f) => (
+                                <div
+                                    key={f.q}
+                                    className="p-4 rounded-xl"
+                                    style={{ background: 'var(--surface)', border: '1px solid var(--card-border)' }}
+                                >
+                                    <h3 className="font-bold text-sm md:text-base mb-1.5" style={{ color: 'var(--text)' }}>
+                                        {f.q}
+                                    </h3>
+                                    <p className="text-sm" style={{ color: 'var(--text-secondary)', lineHeight: 1.7 }}>
+                                        {f.a}
+                                    </p>
+                                </div>
+                            ))}
+                        </div>
+                    </section>
 
                     <p className="text-xs mt-12" style={{ color: 'var(--text-muted)' }}>
                         These guides are general legal information, not legal advice. All indicative fee figures exclude court stamps, embassy consular charges, and government revenue duties. Please consult a qualified advocate for your specific case.
