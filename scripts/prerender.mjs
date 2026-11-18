@@ -792,7 +792,8 @@ const CONTACT_FAQS_BN = [
 function contactBody() {
   return `<nav aria-label="Breadcrumb" style="font-size:13px;color:#475569;margin-bottom:14px"><a href="/en" style="color:#132A4A">Home</a> &rsaquo; <span>Contact</span></nav>
 <h1 style="font-size:28px;font-weight:700;margin-bottom:8px;color:#0a0a0a">${escHtml(pageHeadings.contactEn)}</h1>
-<p style="color:#555;margin-bottom:20px;line-height:1.7">Trusted criminal defence, divorce, High Court bail, land property, tax tribunal, and corporate lawyer in Uttara &amp; Dhaka Judge Court — available 6 days a week for confidential in-chamber and remote consultations.</p>
+<p style="color:#555;margin-bottom:16px;line-height:1.7">Trusted criminal defence, divorce, High Court bail, land property, tax tribunal, and corporate lawyer in Uttara &amp; Dhaka Judge Court — available 6 days a week for confidential in-chamber and remote consultations.</p>
+<div style="margin:14px 0 20px;padding:14px 18px;background:#F8FAFC;border-left:4px solid #C9A227;border-radius:8px;color:#0B1220;font-size:14px;line-height:1.7"><strong>First Consultation is Free.</strong> Share your case details on WhatsApp or phone — you will receive an initial legal opinion at no charge. Fees apply only if you proceed with formal representation or document drafting.</div>
 
 <section style="margin:20px 0">
   <h2 style="font-size:20px;font-weight:700;margin:20px 0 10px">Chamber Locations &amp; Direct Contact Details</h2>
