@@ -27,6 +27,7 @@ en_path,bn_path,confidence,evidence
 /blog/admiralty-ship-arrest-maritime-claims-bangladesh-act-2000,/bn/blog/admiralty-jahaj-atke-mamla-high-court-ain-2000-bangladesh,1.0,json_reciprocal_slug_pair
 /blog/adopting-child-bangladesh-nrb-foreign-citizens-guardianship-guide,,unpaired,en_only
 /blog/affidavit-bangladesh-types-process,/bn/blog/holofnama-bangladesh-prokriya,1.0,json_reciprocal_slug_pair
+/blog/agricultural-land-ceiling-nrb-bangladesh,,unpaired,en_only
 /blog/anticipatory-bail-bangladesh,,unpaired,en_only
 /blog/anticipatory-bail-high-court-bangladesh-cost-process,,unpaired,en_only
 /blog/anticipatory-bail-high-court-bangladesh-section-498-crpc-airport-arrest-guide,,unpaired,en_only
@@ -123,10 +124,12 @@ en_path,bn_path,confidence,evidence
 /blog/divorce-process-bangladesh-complete-guide,,unpaired,en_only
 /blog/domestic-violence-law-bangladesh,/bn/blog/domestic-violence-law-bangladesh-bn,1.0,json_reciprocal_slug_pair
 /blog/domestic-violence-protection-order-bangladesh,/bn/blog/ghoroa-nir-jatan-suraksha-adesh-bangladesh,1.0,json_reciprocal_slug_pair
+/blog/double-taxation-relief-nrb-bangladesh,,unpaired,en_only
 /blog/dower-denmohor-maintenance-claim-from-abroad-bangladesh,,unpaired,en_only
 /blog/dowry-law-bangladesh,/bn/blog/yautuk-dowry-ain-bangladesh-bn,1.0,json_reciprocal_slug_pair
 /blog/dual-citizenship-nvr-bangladesh-nrb-guide,,unpaired,en_only
 /blog/dual-citizenship-nvr-bangladeshi-americans-legal-guide,/bn/blog/bangladeshi-american-nvr-dual-citizenship-guide-2026-bn,1.0,json_reciprocal_slug_pair
+/blog/duplicate-share-certificate-rjsc-bangladesh,,unpaired,en_only
 /blog/e-namjari-online-check-bangladesh-2026,/bn/blog/jomi-kharij-namjari-khoroch-niyom-2026-bn,1.0,json_reciprocal_slug_pair
 /blog/easement-right-bangladesh-law,,unpaired,en_only
 /blog/ecommerce-escrow-refund-chargeback-law-bangladesh-guide,/bn/blog/ecommerce-escrow-refund-taka-ferot-chargeback-ain-bangladesh,1.0,json_reciprocal_slug_pair
@@ -186,6 +189,7 @@ en_path,bn_path,confidence,evidence
 /blog/injunction-procedure-bangladesh,/bn/blog/nishedhagya-procedure-bangladesh,1.0,json_reciprocal_slug_pair
 /blog/interpol-red-notice-extradition-act-1974-defense-bangladesh,,unpaired,en_only
 /blog/joint-venture-franchise-agreement-law-bangladesh,/bn/blog/joint-venture-franchise-chukti-ain-bangladesh,1.0,json_reciprocal_slug_pair
+/blog/kabinnama-conditions-nrb-marriage-bangladesh,,unpaired,en_only
 /blog/khas-land-claim-bangladesh,/bn/blog/khas-jomi-chenar-upay-bondobasto-niyom-bangladesh,1.0,json_reciprocal_slug_pair
 /blog/khul-divorce-wife-rights-bangladesh,/bn/blog/khula-talak-mubarat-denmohor-paribarik-ain-2026-bn,1.0,json_reciprocal_slug_pair
 /blog/labour-law-worker-rights-bangladesh,,unpaired,en_only
@@ -235,6 +239,7 @@ en_path,bn_path,confidence,evidence
 /blog/online-fraud-cheating-case-bangladesh,/bn/blog/online-pratarana-mamla-bangladesh,1.0,json_reciprocal_slug_pair
 /blog/online-harassment-cyberstalking-law-bangladesh,/bn/blog/online-horani-cyberstalking-ain-bangladesh,1.0,json_reciprocal_slug_pair
 /blog/overseas-job-visa-fraud-human-trafficking-lawsuit-bangladesh,/bn/blog/bideshe-pathanor-name-dalal-protarona-manob-pachar-mamla-2026-bn,1.0,json_reciprocal_slug_pair
+/blog/parents-maintenance-act-bangladesh-nrb,,unpaired,en_only
 /blog/partition-suit-batwara-mamla-advocate-commissioner-decree-bangladesh-guide,/bn/blog/batwara-mamla-prothom-shesh-decree-advocate-commissioner-niyom-2026-bn,1.0,json_reciprocal_slug_pair
 /blog/partition-suit-land-division-cost-bangladesh,,unpaired,en_only
 /blog/partition-suit-property-bangladesh,/bn/blog/sampatti-vibhajan-mamla-bangladesh,1.0,json_reciprocal_slug_pair
@@ -392,10 +397,12 @@ en_path,bn_path,confidence,evidence
 ,/bn/blog/dompotti-jomi-vai-bager-niyom,unpaired,bn_only
 ,/bn/blog/dsr-ain-bangladesh-odhikar,unpaired,bn_only
 ,/bn/blog/dv-act-mithya-nari-nirjaton-mamla-defense-2026-bn,unpaired,bn_only
+,/bn/blog/dvaito-voter-nid-lock-somadhan-ain,unpaired,bn_only
 ,/bn/blog/dwiteya-bibaha-ain-prothom-stree-odhikar-2026-bn,unpaired,bn_only
 ,/bn/blog/dwiteya-bibaho-ain-prothom-streer-onumoti-chara-shasti-2026,unpaired,bn_only
 ,/bn/blog/dwitio-biye-por-sontan-custody-hefazot-roy-2026-bn,unpaired,bn_only
 ,/bn/blog/e-namjari-tracking-vua-namjari-batil-2026-bn,unpaired,bn_only
+,/bn/blog/electricity-overbilling-meter-dispute-berc,unpaired,bn_only
 ,/bn/blog/facebook-apottikor-video-cyber-protikar-2026-bn,unpaired,bn_only
 ,/bn/blog/facebook-blackmail-fake-id-cyber-complaint-2026-bn,unpaired,bn_only
 ,/bn/blog/facebook-fake-id-report-bangladesh-2026,unpaired,bn_only
@@ -412,6 +419,7 @@ en_path,bn_path,confidence,evidence
 ,/bn/blog/flat-namjari-mutation-acland-niyom-2026-bn,unpaired,bn_only
 ,/bn/blog/foujdari-mamla-apos-protyahar-niyom-2026-bn,unpaired,bn_only
 ,/bn/blog/foujdari-mamlay-jamin-pawyer-upay-jamin-sharto-2026-bn,unpaired,bn_only
+,/bn/blog/gram-adalat-mamla-ektiyar-niyom,unpaired,bn_only
 ,/bn/blog/grepthar-remand-prothom-24-ghonta-bail-mistakes-2026-bn,unpaired,bn_only
 ,/bn/blog/haikorte-foujdari-revision-appeal-korar-niyom-2026-bn,unpaired,bn_only
 ,/bn/blog/heba-bil-ewaz-dalil-batil-korar-niyom-2026,unpaired,bn_only
@@ -480,6 +488,7 @@ en_path,bn_path,confidence,evidence
 ,/bn/blog/mithya-yautuk-mamla-theke-mukti-nari-shishu-2026,unpaired,bn_only
 ,/bn/blog/mithya-yautuk-nari-nirjaton-mamla-protikar-bangladesh,unpaired,bn_only
 ,/bn/blog/mobile-banking-bkash-nagad-pratarana-cyber-ain,unpaired,bn_only
+,/bn/blog/mobile-court-jorimana-appeal-niyom,unpaired,bn_only
 ,/bn/blog/mouza-map-noksha-online-abedon-dlrs-khoroch-2026,unpaired,bn_only
 ,/bn/blog/mrito-bektie-bank-locker-shorno-uddhar-succession-ain-2026-bn,unpaired,bn_only
 ,/bn/blog/nabalok-sampatti-bikroy-ain-2026,unpaired,bn_only
@@ -567,6 +576,7 @@ en_path,bn_path,confidence,evidence
 ,/bn/blog/stamp-angikarpatra-taka-dhar-money-suit-recovery-2026-bn,unpaired,bn_only
 ,/bn/blog/stamped-angikarpatra-taka-dhar-recovery-mamla-2026-bn,unpaired,bn_only
 ,/bn/blog/stree-kortrik-swamike-talak-deyar-sothik-niyom,unpaired,bn_only
+,/bn/blog/student-visa-agency-fraud-refund-ain,unpaired,bn_only
 ,/bn/blog/swami-khorposh-voronposhon-na-dile-ain-2026,unpaired,bn_only
 ,/bn/blog/swami-korthrik-streeke-talak-notis-prokriya-2026,unpaired,bn_only
 ,/bn/blog/swami-nikhoj-thakle-talak-re-marriage-ain-2026-bn,unpaired,bn_only
