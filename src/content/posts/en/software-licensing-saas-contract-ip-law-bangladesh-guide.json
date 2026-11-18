@@ -1,0 +1,91 @@
+{
+  "slug": "software-licensing-saas-contract-ip-law-bangladesh-guide",
+  "bnSlug": "software-saas-chukti-freelancer-ip-ain-2023-bangladesh",
+  "title": "Software Licensing, SaaS Contracts & Freelancer IP Ownership Under Copyright Act 2023 (BD)",
+  "metaTitle": "Software Licensing & SaaS IP Contracts Bangladesh",
+  "metaDescription": "Complete legal guide to software copyright ownership, SaaS agreements, source-code assignment, NDA, and IT export contracts under Bangladesh Copyright Act 2023.",
+  "category": "Corporate Law",
+  "readTime": "8 min read",
+  "publishedDate": "2026-11-18",
+  "lastModified": "2026-11-18",
+  "isDraft": false,
+  "keywords": [
+    "software licensing contract bangladesh",
+    "copyright act 2023 software bangladesh",
+    "saas agreement legal guide dhaka",
+    "freelancer source code ip assignment bangladesh",
+    "it export contract legal protection bangladesh"
+  ],
+  "heroIntro": "As Bangladeshi software agencies, remote engineers, and global SaaS founders build AI tools, fintech platforms, and enterprise apps for clients in the US, UK, EU, and Dhaka, poorly drafted contracts frequently trigger catastrophic disputes over source-code ownership, unpaid milestones, and unlicensed product cloning. Under the Copyright Act, 2023 and the Contract Act, 1872, understanding statutory authorship defaults and cross-border licensing terms is vital to protecting commercial IP.",
+  "quickAnswer": {
+    "heading": "At a Glance: Software & SaaS IP Law in Bangladesh",
+    "text": "Computer software and source code are protected as literary works under the Bangladesh Copyright Act, 2023. Hiring an external freelancer or agency does not transfer source-code ownership automatically; clients must execute a signed written Deed of Assignment alongside enforceable NDA, milestone-payment, and arbitration clauses.",
+    "points": [
+      "Governing Statutes: The Copyright Act, 2023 (replacing the 2000 Act) & The Contract Act, 1872",
+      "Independent Contractor Trap: Paying an outside freelancer or agency does NOT automatically transfer source-code ownership without a signed written Assignment",
+      "Employee Default: Software coded by an employee within formal employment belongs to the employer unless agreed otherwise",
+      "Cross-Border Enforcement: Combine clear Governing Law, IP Assignment-upon-Full-Payment, and Arbitration/NDA clauses"
+    ]
+  },
+  "toc": [
+    "Source Code Ownership Under the Copyright Act 2023: Employee vs. Freelancer",
+    "Essential Clauses in Enterprise Software & SaaS Agreements",
+    "Licensing vs. Full Assignment: Choosing the Right Commercial Model",
+    "Enforcing Software Piracy, Source-Code Theft & SLA Breaches in Bangladesh",
+    "Exporting IT Services & Protecting Foreign Tech Clients Hiring in Dhaka"
+  ],
+  "sections": [
+    {
+      "h2": "Source Code Ownership Under the Copyright Act 2023: Employee vs. Freelancer",
+      "content": "<p>Under the <strong>Copyright Act, 2023</strong>, computer software, source code, object code, APIs, and database structures qualify for statutory copyright protection for <strong>60 years</strong> (or life plus 60 years for individual authors). However, businesses regularly fall into a costly legal misconception regarding ownership:</p><ul><li><strong>Full-Time Employees:</strong> When software is written under a formal <em>contract of service</em> during employment hours and duties, the employer becomes the first owner of copyright by default unless the employment contract states otherwise. Clear <a href=\"/blog/workplace-harassment-wrongful-termination-labour-law-bangladesh-2026\">employment appointment documentation</a> helps avoid authorship ambiguity upon resignation.</li><li><strong>Freelancers & Software Agencies (Contract FOR Service):</strong> Paying a contractor’s invoice does <strong>not</strong> automatically transfer copyright ownership of the underlying code to the client. Without an explicit <strong>written and signed Deed of Assignment</strong> specifying territory and duration, the developer legally retains underlying IP ownership while the client merely acquires an implied license to use the software.</li></ul>"
+    },
+    {
+      "h2": "Essential Clauses in Enterprise Software & SaaS Agreements",
+      "content": "<p>Whether drafting a bespoke B2B development contract in Dhaka or a recurring SaaS Terms of Service for North American subscribers, a defensible agreement should incorporate five precision clauses:</p><ol><li><strong>Payment-Contingent IP Transfer:</strong> State clearly that background libraries remain developer IP while custom project deliverables transfer to the client <em>strictly upon receipt of 100% milestone payment</em>—protecting local agencies against client non-payment.</li><li><strong>Scope Freeze & Change-Order Control:</strong> Attach a granular Statement of Work (SOW) separating fixed deliverables from billed change requests so \"scope creep\" does not turn into a <a href=\"/blog/contract-breach-legal-action-bangladesh\">contract breach lawsuit</a>.</li><li><strong>SLA, Uptime & Liability Cap:</strong> Cap aggregate SaaS vendor damages at 3–12 months of paid subscription fees and exclude consequential lost-profit claims, avoiding unlimited exposure under Section 73 of the Contract Act.</li><li><strong>Open-Source (OSS) Warranty:</strong> Disclose GPL/MIT/Apache third-party packages so copyleft licenses do not accidentally contaminate proprietary enterprise builds.</li><li><strong>Confidentiality & Post-Termination Data Return:</strong> Establish binding <a href=\"/blog/non-compete-nda-law-bangladesh\">NDA and trade-secret protections</a> with clear 30-day data export and deletion obligations upon subscription exit.</li></ol>"
+    },
+    {
+      "h2": "Licensing vs. Full Assignment: Choosing the Right Commercial Model",
+      "content": "<p>Tech companies often confuse <strong>software licensing</strong> with <strong>IP assignment</strong>:</p><ul><li><strong>SaaS / Enterprise Licensing (Non-Exclusive / Term-Limited):</strong> Ideal when you build a multi-tenant ERP, POS, or AI workflow product sold to multiple clients. You grant a revocable, non-transferable license restricted by seat count or active subscription, retaining full rights to sell upgrades globally and brand them via <a href=\"/blog/trademark-registration-bangladesh\">Bangladesh trademark registration</a>.</li><li><strong>Exclusive Work-for-Hire Assignment:</strong> Used when a client funds custom proprietary R&amp;D and requires total exclusivity for investors or acquisition due diligence. Charge accordingly and transfer IP via a written assignment specifying worldwide, perpetual scope so Bangladesh statutory reversion rules do not surprise the buyer.</li></ul>"
+    },
+    {
+      "h2": "Enforcing Software Piracy, Source-Code Theft & SLA Breaches in Bangladesh",
+      "content": "<p>When a former developer leaks proprietary source code, launches a clone app, or a client refuses payment after deploying the build in production, right-holders have three immediate enforcement levers in Bangladesh:</p><ul><li><strong>Copyright Registration & High Court Injunction:</strong> While copyright exists upon creation, registering the software code deposit with the <strong>Bangladesh Copyright Office</strong> provides prima facie evidence for urgent civil injunctions, seizure of pirated copies, and statutory damages in the District Judge Court, complementing <a href=\"/blog/copyright-act-2023-digital-infringement-bangladesh\">digital copyright infringement claims</a>.</li><li><strong>Digital & Penal Remedies:</strong> Unauthorized access, server tampering, or exfiltration of protected source code from company repositories triggers offenses under the <a href=\"/blog/hacking-unauthorized-computer-access-bangladesh\">Cyber Security legal framework</a> and criminal breach of trust (Section 406 Penal Code).</li><li><strong>Commercial Arbitration:</strong> Including a <a href=\"/blog/commercial-arbitration-bangladesh-arbitration-act-2001\">Bangladesh Arbitration Act 2001 clause</a> allows confidential technical adjudication within months instead of public civil litigation.</li></ul>"
+    },
+    {
+      "h2": "Exporting IT Services & Protecting Foreign Tech Clients Hiring in Dhaka",
+      "content": "<p>Foreign startups in the US, UK, Canada, Australia, and Germany hiring Bangladeshi engineers or studios should align contracts with Bangladesh’s <strong>Foreign Exchange Regulation Act (FERA)</strong> invoicing norms and inward remittance banking requirements (so local exporters receive clean bank proceeds realization certificates / PRC for tax compliance), pair MSAs with clear Dhaka or international arbitration seats, and execute verified IP assignment schedules alongside <a href=\"/blog/joint-venture-franchise-agreement-law-bangladesh\">cross-border commercial partnership structuring</a>.</p>"
+    }
+  ],
+  "relatedServiceLinks": [
+    {
+      "to": "/services/company-corporate-lawyer",
+      "text": "Corporate & IT Contracts Lawyer"
+    },
+    {
+      "to": "/services/tax-lawyer",
+      "text": "IT Export & Tax Advisory"
+    },
+    {
+      "to": "/services/supreme-court-lawyer",
+      "text": "IP Injunction & Arbitration"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "If I paid a freelance developer in Dhaka via bank transfer, do I automatically own the source code?",
+      "a": "No. Under the Bangladesh Copyright Act 2023, an independent contractor or external software agency remains the first legal owner of copyright unless both sides execute a clear, signed written Deed of Assignment explicitly transferring worldwide source-code ownership to the client."
+    },
+    {
+      "q": "Should we register software at the Bangladesh Copyright Office?",
+      "a": "Yes. Although copyright protection attaches automatically when original code is written, registering your software deposit at the Bangladesh Copyright Office creates an official government title record that accelerates High Court or District Court injunctions and passes investor or acquisition IP due diligence."
+    },
+    {
+      "q": "Are non-compete clauses enforceable against software engineers in Bangladesh?",
+      "a": "Broad post-employment non-compete bans preventing engineers from working in the tech industry are generally void under Section 27 of the Contract Act 1872 as a restraint of trade, whereas tailored NDA confidentiality, client non-solicitation, and trade-secret clauses remain strictly enforceable."
+    },
+    {
+      "q": "Can an agency lock or suspend SaaS access if the client stops paying?",
+      "a": "Yes, provided the SaaS Subscription or Software License Agreement contains an explicit suspension-for-non-payment clause requiring reasonable prior written notice and cure period, and provided the vendor allows lawful export rather than maliciously destroying client-owned operational records."
+    }
+  ]
+}
