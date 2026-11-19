@@ -26,6 +26,7 @@ en_path,bn_path,confidence,evidence
 /blog/administrative-tribunal-government-employee-service-case-bangladesh,/bn/blog/administrative-tribunal-shorkari-chakri-bodli-shasti-mamla-2026-bn,1.0,json_reciprocal_slug_pair
 /blog/admiralty-ship-arrest-maritime-claims-bangladesh-act-2000,/bn/blog/admiralty-jahaj-atke-mamla-high-court-ain-2000-bangladesh,1.0,json_reciprocal_slug_pair
 /blog/adopting-child-bangladesh-nrb-foreign-citizens-guardianship-guide,,unpaired,en_only
+/blog/adverse-possession-12-year-rule-bangladesh,,unpaired,en_only
 /blog/affidavit-bangladesh-types-process,/bn/blog/holofnama-bangladesh-prokriya,1.0,json_reciprocal_slug_pair
 /blog/agricultural-land-ceiling-nrb-bangladesh,,unpaired,en_only
 /blog/anticipatory-bail-bangladesh,,unpaired,en_only
@@ -90,6 +91,7 @@ en_path,bn_path,confidence,evidence
 /blog/contract-breach-legal-action-bangladesh,/bn/blog/chukti-longhon-mamla-bangladesh,1.0,json_reciprocal_slug_pair
 /blog/contract-breach-specific-performance-bangladesh,,unpaired,en_only
 /blog/copyright-act-2023-digital-infringement-bangladesh,/bn/blog/copyright-ain-2023-digital-content-churi-khotipuron-mamla-2026-bn,1.0,json_reciprocal_slug_pair
+/blog/court-fee-stamp-refund-bangladesh,,unpaired,en_only
 /blog/court-marriage-bangladesh-2026,,unpaired,en_only
 /blog/court-marriage-bangladesh-complete-guide-2026,/bn/blog/court-marriage-niyom-khoroch-bangladesh,1.0,json_reciprocal_slug_pair
 /blog/court-marriage-bangladesh-process-cost-documents,,unpaired,en_only
@@ -107,6 +109,7 @@ en_path,bn_path,confidence,evidence
 /blog/cyber-crime-helpline-bangladesh-2026,/bn/blog/cyber-crime-helpline-online-complaint-bangladesh,1.0,json_reciprocal_slug_pair
 /blog/cyberbullying-blackmail-police-cyber-crime-unit-bangladesh-2026,/bn/blog/cyber-blackmail-fake-id-complaint-niyom-bangladesh,1.0,json_reciprocal_slug_pair
 /blog/data-privacy-personal-data-protection-bangladesh,/bn/blog/data-privacy-bangla-ain-bangladesh,1.0,json_reciprocal_slug_pair
+/blog/declaratory-suit-deed-cancellation-bangladesh,,unpaired,en_only
 /blog/deed-registration-process-cost-bangladesh,/bn/blog/jomi-dalil-registry-prokriya-khoroch-2026-bn,1.0,json_reciprocal_slug_pair
 /blog/defamation-law-bangladesh-slander-libel-compensation-suit-guide,,unpaired,en_only
 /blog/defamation-law-bangladesh,/bn/blog/manahanir-ain-bangladesh-bn,1.0,json_reciprocal_slug_pair
@@ -187,6 +190,7 @@ en_path,bn_path,confidence,evidence
 /blog/income-tax-case-procedure-bangladesh,/bn/blog/income-tax-case-procedure-bangladesh-bn,1.0,json_reciprocal_slug_pair
 /blog/inheritance-law-bangladesh-legal-guide,,unpaired,en_only
 /blog/injunction-procedure-bangladesh,/bn/blog/nishedhagya-procedure-bangladesh,1.0,json_reciprocal_slug_pair
+/blog/insolvency-bankruptcy-law-bangladesh,,unpaired,en_only
 /blog/interpol-red-notice-extradition-act-1974-defense-bangladesh,,unpaired,en_only
 /blog/joint-venture-franchise-agreement-law-bangladesh,/bn/blog/joint-venture-franchise-chukti-ain-bangladesh,1.0,json_reciprocal_slug_pair
 /blog/kabinnama-conditions-nrb-marriage-bangladesh,,unpaired,en_only
@@ -259,6 +263,7 @@ en_path,bn_path,confidence,evidence
 /blog/power-of-attorney-property-transfer-registration-bangladesh,/bn/blog/power-of-attorney-nibondhon-batil-niyom-bangladesh,1.0,json_reciprocal_slug_pair
 /blog/power-of-attorney-types-registration-bangladesh,/bn/blog/power-of-attorney-nibondhon-bangladesh,1.0,json_reciprocal_slug_pair
 /blog/pre-emption-lawsuit-buy-back-sold-land-section-96-sat-act-bangladesh,/bn/blog/ogrokroyadhikar-pre-emption-jomi-ferot-mamla-2026-bn,1.0,json_reciprocal_slug_pair
+/blog/pre-emption-suit-bangladesh-shufa-law,,unpaired,en_only
 /blog/probate-will-wasiyat-inheritance-bangladesh-succession-act-guide,,unpaired,en_only
 /blog/property-inheritance-bangladesh-nrb-muslim-hindu-christian-law,,unpaired,en_only
 /blog/property-inheritance-distribution-bangladesh-2026,/bn/blog/sampatti-uttoradhikar-ain-2026-bn,1.0,json_reciprocal_slug_pair
@@ -342,6 +347,7 @@ en_path,bn_path,confidence,evidence
 ,/bn/blog/bail-er-jonno-ki-ki-lagbe-bangladesh,unpaired,bn_only
 ,/bn/blog/bandhak-jomi-ain-bangladesh-bn,unpaired,bn_only
 ,/bn/blog/bangladesh-uttaradhikar-ain-dhorm-2026,unpaired,bn_only
+,/bn/blog/bank-nominee-bonam-uttoradhikari-ain,unpaired,bn_only
 ,/bn/blog/bari-vara-ain-varatia-ucched-jamanat-niyom-2026,unpaired,bn_only
 ,/bn/blog/basha-bhara-advance-jamanat-ferot-ain-2026-bn,unpaired,bn_only
 ,/bn/blog/batwara-mamla-din-khoroch-prokriya-2026,unpaired,bn_only
@@ -431,6 +437,7 @@ en_path,bn_path,confidence,evidence
 ,/bn/blog/heba-dalil-khoroch-o-heba-bil-ewaz-parthokko-2026,unpaired,bn_only
 ,/bn/blog/high-court-writ-petition-khoroch-prokriya,unpaired,bn_only
 ,/bn/blog/hindu-biye-nibandhon-ain-bangladesh,unpaired,bn_only
+,/bn/blog/holding-tax-appeal-city-corporation-niyom,unpaired,bn_only
 ,/bn/blog/how-to-get-bail-bangladesh-2026-bn,unpaired,bn_only
 ,/bn/blog/income-tax-notice-response-bangladesh-bn,unpaired,bn_only
 ,/bn/blog/irrevocable-power-of-attorney-batil-niyom-bangladesh,unpaired,bn_only
@@ -439,6 +446,7 @@ en_path,bn_path,confidence,evidence
 ,/bn/blog/jal-dalil-chenar-upay-o-balam-boi-tollashi-2026,unpaired,bn_only
 ,/bn/blog/jal-dolil-batil-mamla-specific-relief-act,unpaired,bn_only
 ,/bn/blog/jal-dolil-chenar-upay-and-balam-boi-tollashi-2026,unpaired,bn_only
+,/bn/blog/jal-taka-paowa-gele-koronio-ain,unpaired,bn_only
 ,/bn/blog/jamin-pawar-por-kakhon-nakoch-hote-pare-ain-2026,unpaired,bn_only
 ,/bn/blog/jaminjoggo-ojaminjoggo-dhara-ain-bangladesh,unpaired,bn_only
 ,/bn/blog/jomi-bedakhol-dokhol-punoruddhar-mamla-bangladesh,unpaired,bn_only
@@ -544,6 +552,7 @@ en_path,bn_path,confidence,evidence
 ,/bn/blog/probasi-nrb-jomi-rokha-byabasthapona-bangladesh,unpaired,bn_only
 ,/bn/blog/probasi-will-osiyotnama-probate-mamla-ain-2026-bn,unpaired,bn_only
 ,/bn/blog/rajuk-plan-setback-oboidho-nirman-nishedhagya-ain-2026-bn,unpaired,bn_only
+,/bn/blog/rasta-bondho-korle-aini-pratikar-easement,unpaired,bn_only
 ,/bn/blog/real-estate-ain-2010-developer-flat-delivery-mamla-2026,unpaired,bn_only
 ,/bn/blog/rit-petition-bangla-meaning-2026,unpaired,bn_only
 ,/bn/blog/rit-petition-bangladesh-bn,unpaired,bn_only
@@ -570,6 +579,7 @@ en_path,bn_path,confidence,evidence
 ,/bn/blog/sishu-dottok-abhibhaboktwa-grahan-ain-bangladesh-2026-bn,unpaired,bn_only
 ,/bn/blog/sole-nama-solenama-deyani-adalat-niyom-2026,unpaired,bn_only
 ,/bn/blog/solehnama-dolil-ki-mamla-nishpotti-niyom,unpaired,bn_only
+,/bn/blog/somobay-somiti-nibondhon-ovijog-ain,unpaired,bn_only
 ,/bn/blog/sonchoypotro-bank-shud-ait-tax-refund-prokriya-2026-bn,unpaired,bn_only
 ,/bn/blog/sontan-custody-abhibhaboktwa-mamla-family-court-2026-bn,unpaired,bn_only
 ,/bn/blog/ssc-hsc-alim-certificate-lost-duplicate-gd-court-affidavit-2026,unpaired,bn_only

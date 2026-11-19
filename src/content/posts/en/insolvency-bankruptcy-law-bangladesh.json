@@ -1,0 +1,79 @@
+{
+  "slug": "insolvency-bankruptcy-law-bangladesh",
+  "metaTitle": "Insolvency & Bankruptcy Law in Bangladesh",
+  "title": "Insolvency & Bankruptcy Law in Bangladesh",
+  "category": "Corporate & Commercial Law",
+  "metaDescription": "Understand creditor and debtor bankruptcy petitions under the Bankruptcy Act 1997 in Bangladesh. Learn threshold debt limits, court process & asset rules.",
+  "keywords": [
+    "Bankruptcy Act 1997 Bangladesh",
+    "insolvency law Bangladesh company",
+    "creditor bankruptcy petition Bangladesh",
+    "Bankruptcy Court Dhaka Bangladesh",
+    "company winding up vs bankruptcy Bangladesh"
+  ],
+  "publishedDate": "2026-11-19",
+  "lastModified": "2026-11-19",
+  "readTime": "9 min read",
+  "heroIntro": "Under the Bankruptcy Act, 1997 (Act No. X of 1997), a creditor owed at least BDT 5,00,000 or an insolvent debtor unable to pay debts can petition the Bankruptcy Court (District Judge) for an adjudication order. While individuals and partnerships fall under the Bankruptcy Act, 1997, limited companies are wound up before the High Court Division under the Companies Act, 1994.",
+  "quickAnswer": {
+    "heading": "At a Glance: Bankruptcy & Insolvency in Bangladesh",
+    "points": [
+      "Governing Laws: Bankruptcy Act, 1997 (Sections 9, 12, 19, 31) for individuals/firms; Companies Act, 1994 (Section 241) for limited companies.",
+      "Minimum Creditor Debt: BDT 5,00,000 liquidated sum payable immediately or at a fixed future time (Section 12).",
+      "Forum: Bankruptcy Court (Court of the District Judge or designated Additional District Judge).",
+      "Alternative Recovery: Banks usually proceed under the Artha Rin Adalat Act, 2003 before invoking bankruptcy."
+    ]
+  },
+  "toc": [
+    "Who Can Be Declared Bankrupt Under the Bankruptcy Act, 1997?",
+    "Acts of Bankruptcy and the BDT 5 Lakh Threshold",
+    "Bankruptcy Court vs Company Winding Up vs Artha Rin Adalat",
+    "Step-by-Step Procedure for a Bankruptcy Petition",
+    "Documents Checklist for Creditors and Debtors",
+    "Frequently Asked Questions"
+  ],
+  "sections": [
+    {
+      "h2": "Who Can Be Declared Bankrupt Under the Bankruptcy Act, 1997?",
+      "content": "<p><strong>Section 11 of the Bankruptcy Act, 1997</strong> applies to any individual, sole proprietorship, or partnership firm domiciled or carrying on business in Bangladesh, as well as foreign nationals with assets or business in the country. However, certain entities—including Parliament-created statutory bodies, charitable organisations, and limited companies—are excluded from individual bankruptcy and governed instead by separate winding-up laws.</p>\n<p>When the Bankruptcy Court passes an <strong>Order of Adjudication under Section 30</strong>, all non-exempt assets of the debtor vest immediately in the court-appointed <strong>Receiver under Section 31</strong>, halting individual creditor enforcement suits. Simultaneously, the debtor faces strict civil disqualifications under <strong>Section 94</strong>, including a bar from holding public office, serving as a company director, or obtaining new credit without disclosing undischarged bankrupt status.</p>\n<p>For corporate entities facing insolvency, creditors must instead seek liquidation before the High Court Company Bench; see our <a href=\"/services/company-corporate-lawyer\">company &amp; corporate lawyer services</a> and <a href=\"/blog/company-registration-cost-bangladesh\">RJSC corporate registration &amp; compliance guide</a>.</p>"
+    },
+    {
+      "h2": "Acts of Bankruptcy and the BDT 5 Lakh Threshold",
+      "content": "<p>Under <strong>Section 9 of the Bankruptcy Act, 1997</strong>, a creditor cannot file a bankruptcy petition merely because a payment is late; the debtor must have committed a statutory <strong>Act of Bankruptcy</strong> within the preceding 3 months. Qualifying acts include transferring property to defeat creditors, departing Bangladesh to evade creditors, failing to satisfy an execution decree for 21 days, or giving formal notice of suspension of payment.</p>\n<p>Additionally, <strong>Section 12</strong> requires that the debt owed to the petitioning creditor (or joint creditors) equals or exceeds <strong>BDT 5,00,000</strong> as a liquidated, enforceable sum. Under <strong>Section 13</strong>, a debtor may also file a voluntary debtor's petition if their total unpaid debts reach at least BDT 20,000 and they are genuinely unable to pay.</p>\n<p>Commercial creditors holding dishonoured cheques can often recover faster via <a href=\"/blog/138-ni-act-bangladesh-cheque-case-guide\">Section 138 NI Act cheque proceedings</a> or <a href=\"/blog/breach-of-contract-damages-specific-performance-bangladesh-guide\">contractual damages suits</a> before escalating to bankruptcy.</p>"
+    },
+    {
+      "h2": "Bankruptcy Court vs Company Winding Up vs Artha Rin Adalat",
+      "content": "<p>Selecting the right insolvency forum saves years of jurisdictional objection and maximises recovery for both local and foreign creditors.</p>\n<table><thead><tr><th>Forum &amp; Statute</th><th>Target Debtor</th><th>Primary Legal Outcome</th><th>Governing Court</th></tr></thead><tbody><tr><td>Bankruptcy Act, 1997</td><td>Individuals, sole proprietors, partnership firms</td><td>Adjudication, Receiver asset sale, pro-rata creditor dividend</td><td>District Judge (Bankruptcy Court)</td></tr><tr><td>Companies Act, 1994 (Sec. 241)</td><td>Private &amp; Public Limited Companies</td><td>Compulsory winding up &amp; Official Liquidator appointment</td><td>High Court Division (Company Bench)</td></tr><tr><td>Artha Rin Adalat Act, 2003</td><td>Scheduled bank &amp; NBFI loan defaulters</td><td>Decree &amp; auction of mortgaged collateral</td><td>Artha Rin Adalat (Joint District Judge)</td></tr></tbody></table>\n<p>Note that secured bank creditors typically enforce mortgages under the <a href=\"/blog/artha-rin-adalat-bank-loan-default-defense-bangladesh-2003-act\">Artha Rin Adalat Act, 2003</a> rather than waiving security to join unsecured bankruptcy pools. Borrowers facing guarantor liability should also review <a href=\"/blog/bank-loan-guarantor-cib-blacklist-artha-rin-adalat-bangladesh\">CIB blacklist and guarantor defences</a>.</p>"
+    },
+    {
+      "h2": "Step-by-Step Procedure for a Bankruptcy Petition",
+      "content": "<p>Whether initiated by a creditor or an insolvent debtor, bankruptcy proceedings follow a strict statutory sequence under Chapters III and IV of the 1997 Act:</p>\n<ol><li><strong>Serve Formal Statutory Demand / Verify Act of Bankruptcy:</strong> Establish a clear default exceeding BDT 5,00,000 and document an Act of Bankruptcy committed within 3 months under Section 9.</li><li><strong>File Verified Plaint in the Bankruptcy Court:</strong> Submit the petition under Section 14 (creditor) or Section 13 (debtor) before the District Judge where the debtor resides or carries on business.</li><li><strong>Apply for Interim Receiver (Section 23):</strong> If the debtor is dissipating assets, apply immediately for an interim receiver to freeze bank accounts and inventory pending hearing.</li><li><strong>Adjudication Order &amp; Gazette Notice:</strong> Upon hearing, the court passes an Order of Adjudication under Section 30, publishes notice in the Official Gazette, and vests all attachable property in the Receiver.</li><li><strong>Proof of Debts, Distribution &amp; Discharge:</strong> Creditors prove claims under Section 49; the Receiver liquidates assets, pays preferential debts (taxes and employee wages), distributes dividends, and the debtor may later apply for Discharge under Section 52.</li></ol>\n<p>If a foreign arbitral award underlies the debt, review our guide on <a href=\"/blog/enforcing-foreign-arbitral-awards-bangladesh-arbitration-act\">enforcing foreign arbitral awards in Bangladesh</a> and consult <a href=\"/advocate-md-shah-alam\">Advocate Md. Shah Alam</a>.</p>"
+    },
+    {
+      "h2": "Documents Checklist for Creditors and Debtors",
+      "content": "<p>Prepare these evidentiary records before filing or defending a petition under the Bankruptcy Act, 1997:</p>\n<ul><li>Written loan agreements, promissory notes, commercial invoices, or unpaid court decrees proving debt ≥ BDT 5,00,000.</li><li>Evidence of the Act of Bankruptcy within 3 months (e.g., returned execution warrant, asset transfer deed, or dishonoured cheque memos).</li><li>Schedule of all known assets, bank accounts, receivables, and secured vs. unsecured liabilities (mandatory for debtor petitions).</li><li>Trade licence, partnership deed, or RJSC search extract confirming the debtor's legal entity status.</li><li>Copies of all statutory demand notices and postal/courier delivery receipts.</li></ul>\n<p>For cross-border creditor claims or debtor restructuring advice, visit our <a href=\"/nrb-legal-help\">NRB Legal Help Desk</a> or <a href=\"/contact\">book a free initial consultation</a> with our Dhaka chamber.</p>"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Can a private limited company be declared bankrupt under the Bankruptcy Act, 1997?",
+      "answer": "No. Limited companies registered under the Companies Act, 1994 are excluded from the Bankruptcy Act, 1997. Insolvent companies are liquidated through winding-up proceedings before the High Court Division (Company Bench) under Section 241 of the Companies Act, 1994."
+    },
+    {
+      "question": "What personal assets are exempt from seizure in a Bangladesh bankruptcy?",
+      "answer": "Under Section 32 of the Bankruptcy Act, 1997, essential personal wearing apparel, household furniture, tools of trade or agricultural implements, and statutory provident fund/pension entitlements up to prescribed limits are exempt from vesting in the Receiver."
+    },
+    {
+      "question": "Does filing for bankruptcy erase all debts immediately?",
+      "answer": "No. An adjudication order halts separate creditor lawsuits and places assets under a Receiver. Debts are only extinguished after the court grants an Order of Discharge under Section 52, and certain liabilities—such as court fines, fraud debts, and family maintenance—survive discharge."
+    },
+    {
+      "question": "Can a bank file a bankruptcy case against a loan defaulter instead of Artha Rin Adalat?",
+      "answer": "A bank can invoke the Bankruptcy Act, 1997 if it surrenders or values its security under Section 12(2), but in practice banks prefer the Artha Rin Adalat Act, 2003 because it offers faster decree execution and direct auction of mortgaged property."
+    },
+    {
+      "question": "How long does a bankruptcy case take in Bangladesh?",
+      "answer": "Uncontested debtor petitions may reach adjudication within 6 to 12 months, whereas contested creditor petitions involving asset tracing, Receiver sales, and priority disputes often take 2 to 4 years."
+    }
+  ]
+}
