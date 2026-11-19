@@ -70,8 +70,12 @@ const ReviewPage = () => {
                             {REVIEW_CONTENT.h1}
                         </h1>
 
-                        <p className="text-sm sm:text-base leading-relaxed max-w-2xl mx-auto mb-6" style={{ color: 'var(--text-secondary)' }}>
+                        <p className="text-sm sm:text-base leading-relaxed max-w-2xl mx-auto mb-4" style={{ color: 'var(--text-secondary)' }}>
                             {REVIEW_CONTENT.intro}
+                        </p>
+
+                        <p className="text-xs sm:text-sm max-w-2xl mx-auto mb-6 px-4 py-2.5 rounded-xl text-left" style={{ background: 'rgba(201, 162, 39, 0.10)', borderLeft: '4px solid #C9A227', color: 'var(--text)' }}>
+                            <strong>প্রথম পরামর্শ ফ্রি।</strong> WhatsApp বা ফোনে আপনার মামলার কথা বলুন — কোনো অগ্রিম ফি ছাড়াই আমি প্রথম মতামত দেব। (<strong>First Consultation is Free.</strong>)
                         </p>
 
                         <div className="flex justify-center items-center gap-2 mb-7" aria-label="Google Rating">

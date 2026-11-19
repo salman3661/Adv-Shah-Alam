@@ -654,8 +654,8 @@ const ServicePage = ({ data, ...legacyProps }) => {
                             </h2>
                             <p className="text-sm mb-3 max-w-2xl mx-auto" style={{ color: '#CBD5E1', ...bnFontStyle }}>
                                 {isBn
-                                    ? 'উত্তরা চেম্বার (বাড়ি ৪৬, সড়ক ৬/বি, সেক্টর ১২, উত্তরা পশ্চিম, ঢাকা-১২৩০) অথবা ঢাকা জজ কোর্ট চেম্বারে সাক্ষাৎ বা হোয়াটসঅ্যাপে পরামর্শ নিন। পেইড কেস রিভিউ ফি বিকাশ: ০১৭১২৬৫৫৫৪৬।'
-                                    : 'Consult at Uttara Chamber (House 46, Road 6/B, Sector 12, Uttara West, Dhaka-1230), Dhaka Judge Court, or online via WhatsApp. Paid case review bKash: 01712655546.'}
+                                    ? 'উত্তরা চেম্বার (বাড়ি ৪৬, সড়ক ৬/বি, সেক্টর ১২, উত্তরা পশ্চিম, ঢাকা-১২৩০) অথবা ঢাকা জজ কোর্ট চেম্বারে সাক্ষাৎ বা হোয়াটসঅ্যাপে পরামর্শ নিন।'
+                                    : 'Consult at Uttara Chamber (House 46, Road 6/B, Sector 12, Uttara West, Dhaka-1230), Dhaka Judge Court, or online via WhatsApp.'}
                             </p>
                             <p className="text-sm mb-3 max-w-2xl mx-auto px-4 py-2.5 rounded-xl" style={{ background: 'rgba(201, 162, 39, 0.14)', border: '1px solid rgba(201, 162, 39, 0.4)', color: '#F8FAFC', ...bnFontStyle }}>
                                 {isBn ? (

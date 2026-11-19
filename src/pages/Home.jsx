@@ -159,6 +159,16 @@ const Home = ({ lang = 'en' }) => {
                         />
                     </div>
 
+                    <div style={{ maxWidth: '900px', margin: '0 auto 1.5rem', padding: '0 1rem' }}>
+                        <div style={{ padding: '14px 18px', borderRadius: '12px', background: 'rgba(201, 162, 39, 0.10)', borderLeft: '4px solid #C9A227', fontSize: '0.92rem', lineHeight: 1.7, color: 'var(--text)' }}>
+                            {isBn ? (
+                                <><strong>প্রথম পরামর্শ ফ্রি।</strong> WhatsApp বা ফোনে আপনার মামলার কথা বলুন — কোনো অগ্রিম ফি ছাড়াই আমি প্রথম আইনি মতামত দেব। কাজ এগোলে চেম্বারে এসে কাগজপত্র দেখানোর পর ফি নির্ধারিত হবে।</>
+                            ) : (
+                                <><strong>First Consultation is Free.</strong> Share your case details on WhatsApp or phone — you will receive an initial legal opinion at no charge. Fees apply only if you visit the chamber or proceed with formal representation.</>
+                            )}
+                        </div>
+                    </div>
+
                     <Chambers lang={lang} />
                     <Contact lang={lang} />
                 </Suspense>

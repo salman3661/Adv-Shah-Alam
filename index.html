@@ -218,27 +218,31 @@
         document.head.appendChild(a);
       }
 
-      function scheduleAdsAfterScroll() {
-        if (!adsScrollTriggered || adsScheduled || adsLoaded) return;
+      function scheduleAds() {
+        if (adsScheduled || adsLoaded) return;
         adsScheduled = true;
         if (typeof window.requestIdleCallback === 'function') {
-          window.requestIdleCallback(loadAds, { timeout: 1500 });
+          window.requestIdleCallback(loadAds, { timeout: 2000 });
         } else {
-          setTimeout(loadAds, 120);
+          setTimeout(loadAds, 800);
         }
       }
 
       window.__ensureAdSenseLoaded = function () {
-        if (adsScrollTriggered) {
-          scheduleAdsAfterScroll();
-        }
+        scheduleAds();
       };
 
       function onFirstScroll() {
         adsScrollTriggered = true;
-        scheduleAdsAfterScroll();
+        loadAds();
       }
       window.addEventListener('scroll', onFirstScroll, { passive: true, once: true });
+
+      if (document.readyState === 'complete') {
+        scheduleAds();
+      } else {
+        window.addEventListener('load', scheduleAds, { once: true });
+      }
 
       var interactEvents = ['scroll', 'wheel', 'touchstart', 'pointerdown', 'mousemove', 'keydown'];
       function onFirstInteract() {

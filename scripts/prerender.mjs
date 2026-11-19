@@ -553,7 +553,8 @@ function homeBodyBn() {
 
   return `
 <h2 style="font-size:26px;font-weight:700;margin-bottom:8px;color:#0a0a0a">বিশ্বস্ত আইনজীবী বাংলাদেশ — এডভোকেট মোঃ শাহ আলম</h2>
-<p style="font-size:16px;color:#444;margin-bottom:24px">ফৌজদারি, পারিবারিক, জামিন ও জমি সংক্রান্ত মামলার অভিজ্ঞ আইনজীবী। চেম্বার: উত্তরা, ঢাকা।</p>
+<p style="font-size:16px;color:#444;margin-bottom:16px">ফৌজদারি, পারিবারিক, জামিন ও জমি সংক্রান্ত মামলার অভিজ্ঞ আইনজীবী। চেম্বার: উত্তরা, ঢাকা।</p>
+<div style="margin:0 0 24px;padding:14px 18px;background:#F8FAFC;border-left:4px solid #C9A227;border-radius:8px;color:#0B1220;font-size:14px;line-height:1.7"><strong>প্রথম পরামর্শ ফ্রি।</strong> WhatsApp বা ফোনে আপনার মামলার কথা বলুন — কোনো অগ্রিম ফি ছাড়াই আমি প্রথম আইনি মতামত দেব। কাজ এগোলে চেম্বারে এসে কাগজপত্র দেখানোর পর ফি নির্ধারিত হবে।</div>
 
 <section style="margin-bottom:32px">
   <h2 style="font-size:22px;font-weight:700;margin-bottom:12px;color:#111">আমাদের সম্পর্কে</h2>
@@ -683,8 +684,14 @@ function advocateBody() {
 <section style="margin-bottom:28px">
   <h2 style="font-size:22px;font-weight:700;margin-bottom:12px;color:#111">Practice Areas</h2>
   <ul style="padding-left:20px;color:#333;line-height:2">
-    ${services.items.map(s=>`<li><a href="${s.link}" style="color:#1a56db">${escHtml(s.title)}</a></li>`).join('')}
+    ${services.items.map(s=>`<li><a href="${s.link}" style="color:#1a56db">${escHtml(s.title)}</a> — ${escHtml(s.desc)}</li>`).join('')}
   </ul>
+</section>
+
+<section style="margin-bottom:28px">
+  <h2 style="font-size:22px;font-weight:700;margin-bottom:12px;color:#111">Courts, Tribunals &amp; Consultation Process</h2>
+  <p style="color:#333;margin-bottom:12px;line-height:1.8">Advocate Md. Shah Alam regularly appears before the High Court Division of the Supreme Court of Bangladesh, the Dhaka Chief Metropolitan Magistrate (CMM) and Chief Judicial Magistrate (CJM) Courts, the Metropolitan Sessions Judge Court, Family Courts, Land Survey Tribunals, and Special Tribunals across Dhaka and Gazipur. Both resident clients and Non-Resident Bangladeshis (NRBs) living in the UK, USA, Canada, UAE, and Europe rely on the chamber for bail petitions, writ petitions, land title verification, Embassy-attested Power of Attorney execution, and family law settlements.</p>
+  <p style="color:#333;margin-bottom:12px;line-height:1.8"><strong>First Consultation is Free:</strong> Prospective clients can share an initial summary of their legal matter via WhatsApp (+880 1955-802007) or phone (+880 1712-655546) at zero advance cost. When in-person document review, drafting, or court appearance is required, clients visit the Uttara Sector 12 chamber or Dhaka Judge Court chamber with original papers, and transparent chamber fees are agreed upfront before formal representation begins.</p>
 </section>
 ${CTA}`;
 }
@@ -753,8 +760,13 @@ function educationBody() {
 <section style="margin-bottom:28px">
   <h2 style="font-size:22px;font-weight:700;margin-bottom:12px;color:#111">Areas of Legal Practice</h2>
   <ul style="padding-left:20px;color:#333;line-height:2">
-    ${services.items.map(s=>`<li>${escHtml(s.title)}</li>`).join('')}
+    ${services.items.map(s=>`<li><a href="${s.link}" style="color:#1a56db">${escHtml(s.title)}</a> — ${escHtml(s.desc)}</li>`).join('')}
   </ul>
+</section>
+<section style="margin-bottom:28px">
+  <h2 style="font-size:22px;font-weight:700;margin-bottom:12px;color:#111">Bar Enrollment, Advocacy Training &amp; Judicial Practice</h2>
+  <p style="color:#333;margin-bottom:12px;line-height:1.8">Following his LL.B and LL.M degrees, Advocate Md. Shah Alam completed formal pupillage and passed the Bangladesh Bar Council enrolment examinations in 2015, earning admission to practise before the District and Sessions Judge Courts, Metropolitan Magistrate Courts, Family Courts, and Special Tribunals across Bangladesh. He subsequently obtained permission to practise before the High Court Division of the Supreme Court of Bangladesh, handling constitutional writ petitions under Article 102, anticipatory bail applications under Section 498 CrPC, criminal appeals, and company matters.</p>
+  <p style="color:#333;margin-bottom:12px;line-height:1.8">Serving as Assistant Public Prosecutor (APP) at the Metro Sessions Court, Dhaka further deepened his command of criminal procedure, evidentiary cross-examination, bail jurisprudence, and trial advocacy. Clients can <a href="/advocate-md-shah-alam" style="color:#1a56db;font-weight:600">view his full legal profile</a> or <a href="/contact" style="color:#1a56db;font-weight:600">request a free initial consultation</a> via WhatsApp or phone.</p>
 </section>
 ${CTA}`;
 }
@@ -762,11 +774,11 @@ ${CTA}`;
 const CONTACT_FAQS_EN = [
   {
     q: 'How do I book a chamber consultation appointment?',
-    a: 'You can call +880 1712-655546 directly or send your case summary through our WhatsApp intake form to schedule an in-person session at our Uttara Sector 12 or Dhaka Judge Court chamber, or an online video review.',
+    a: 'You can call +880 1712-655546 directly or send your case summary through our WhatsApp intake form (+880 1955-802007) for a free initial online opinion, or schedule an in-person session at our Uttara Sector 12 or Dhaka Judge Court chamber.',
   },
   {
-    q: 'What are the consultation fee payment methods?',
-    a: 'For telephone consultations or remote NRB document and case reviews, fees can be remitted via bKash (01712655546) after confirming your time slot with the chamber desk.',
+    q: 'Is the initial online consultation free?',
+    a: 'Yes, the first online or WhatsApp consultation is free with no advance payment required. If you visit the chamber in person with case documents for detailed drafting, vetting, or court filing, standard chamber fees are discussed transparently at the chamber.',
   },
   {
     q: 'Can I contact urgently for bail or arrest matters?',
@@ -777,11 +789,11 @@ const CONTACT_FAQS_EN = [
 const CONTACT_FAQS_BN = [
   {
     q: 'আইনি পরামর্শের জন্য কীভাবে অ্যাপয়েন্টমেন্ট নেব?',
-    a: 'আপনি সরাসরি 01712655546 নম্বরে কল করে অথবা ওয়েবসাইটের হোয়াটসঅ্যাপ ফর্মে বার্তা পাঠিয়ে উত্তরা সন্ধ্যা চেম্বার বা ঢাকা জজ কোর্ট চেম্বারে অ্যাপয়েন্টমেন্ট অথবা অনলাইন আইনি পরামর্শ বুক করতে পারেন।',
+    a: 'আপনি সরাসরি 01712655546 নম্বরে কল করে অথবা ওয়েবসাইটের হোয়াটসঅ্যাপ ফর্মে (+880 1955-802007) বার্তা পাঠিয়ে ফ্রি প্রাথমিক পরামর্শ নিতে পারেন কিংবা উত্তরা চেম্বার ও ঢাকা জজ কোর্ট চেম্বারে সাক্ষাতের সময় নির্ধারণ করতে পারেন।',
   },
   {
-    q: 'পেইড কনসালটেশন ও কেস রিভিউ ফি কীভাবে পরিশোধ করতে হবে?',
-    a: 'অনলাইন ভিডিও পরামর্শ বা ফোনালাপের মাধ্যমে বিস্তারিত নথিপত্র পর্যালোচনার জন্য বিকাশ নম্বর 01712655546-এ কনসালটেশন ফি পরিশোধ করে ট্রানজেকশন আইডি হোয়াটসঅ্যাপে পাঠিয়ে স্লট কনফার্ম করা যায়।',
+    q: 'প্রাথমিক অনলাইন পরামর্শের জন্য কি কোনো অগ্রিম ফি দিতে হয়?',
+    a: 'না, প্রথম অনলাইন বা হোয়াটসঅ্যাপ পরামর্শ সম্পূর্ণ ফ্রি এবং কোনো অগ্রিম পেমেন্টের প্রয়োজন নেই। পরবর্তীতে জরুরি কাগজপত্র নিয়ে চেম্বারে সাক্ষাৎ করলে বা মামলা পরিচালনার দায়িত্ব দিলে চেম্বারে ফি নির্ধারিত হয়।',
   },
   {
     q: 'জরুরি গ্রেপ্তার, থানা জিডি বা জামিনের ক্ষেত্রে কি দ্রুত যোগাযোগ করা যাবে?',
@@ -912,11 +924,14 @@ function privacyBody() {
   <h2 style="font-size:20px;font-weight:700;margin:24px 0 10px;color:#0f172a">5. Google Analytics Disclosures</h2>
   <p>We implement Google Analytics to examine traffic patterns, audience demographics, and user behavior. Google Analytics relies on cookies to collect non-personally identifiable statistical metrics. For further information on Google data handling, visit <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer" style="color:#1a56db;text-decoration:underline">Google's Privacy &amp; Terms</a>.</p>
 
-  <h2 style="font-size:20px;font-weight:700;margin:24px 0 10px;color:#0f172a">6. Data Protection, Security &amp; User Rights</h2>
-  <p>We implement administrative and technical security measures to protect your personal data from unauthorized access or disclosure. Under applicable data privacy frameworks (including GDPR principles), you have the right to request access to, correction of, or deletion of your personal data submitted to us.</p>
+  <h2 style="font-size:20px;font-weight:700;margin:24px 0 10px;color:#0f172a">6. Data Retention, Confidentiality &amp; User Rights</h2>
+  <p>We implement administrative and technical security measures to protect your personal data from unauthorized access, alteration, or disclosure. Inquiry records submitted through WhatsApp or our contact form are retained only for as long as necessary to evaluate your preliminary consultation, comply with Bangladesh Bar Council record-keeping obligations, or resolve active legal proceedings. Under applicable data privacy principles, you have the right to request access to, correction of, or deletion of your personal contact details submitted to our chamber.</p>
 
-  <h2 style="font-size:20px;font-weight:700;margin:24px 0 10px;color:#0f172a">7. Contact Information</h2>
-  <p>For any privacy inquiries, requests, or questions regarding this Privacy Policy, please contact:<br>
+  <h2 style="font-size:20px;font-weight:700;margin:24px 0 10px;color:#0f172a">7. External Links &amp; Policy Updates</h2>
+  <p>This Website contains links to official government portals (such as Bangladesh Judiciary, Land Ministry, and RJSC resources) and partner services. We are not responsible for the privacy practices of external websites. We may update this Privacy Policy periodically to reflect changes in Bangladesh statutory regulations, Google AdSense requirements, or chamber procedures, with the revised effective date posted at the top of this page.</p>
+
+  <h2 style="font-size:20px;font-weight:700;margin:24px 0 10px;color:#0f172a">8. Contact Information</h2>
+  <p>For any privacy inquiries, data deletion requests, or questions regarding this Privacy Policy, please contact:<br>
   <strong>Advocate Md. Shah Alam</strong><br>
   Chamber: House 46, Road 6/B, Sector 12, Uttara West, Dhaka-1230, Bangladesh<br>
   Email: <a href="mailto:contact@advmdshahalam.me" style="color:#1a56db">contact@advmdshahalam.me</a> | Phone: <a href="tel:+8801712655546" style="color:#1a56db">+880 1712-655546</a></p>
@@ -928,23 +943,26 @@ function termsBody() {
 <p style="color:#64748b;font-size:14px;margin-bottom:24px">Last updated: May 12, 2026</p>
 <div style="font-size:15px;color:#334155;line-height:1.8">
   <h2 style="font-size:20px;font-weight:700;margin:24px 0 10px;color:#0f172a">1. Acceptance of Terms</h2>
-  <p>By browsing, accessing, or using <strong>advmdshahalam.me</strong> ("Website"), you agree to be bound by these Terms and Conditions. If you do not accept these terms, you must refrain from using the Website.</p>
+  <p>By browsing, accessing, or using <strong>advmdshahalam.me</strong> ("Website"), you agree to be bound by these Terms and Conditions. If you do not accept these terms, you must refrain from using the Website or relying on any published materials.</p>
 
   <h2 style="font-size:20px;font-weight:700;margin:24px 0 10px;color:#0f172a">2. Legal Disclaimer &amp; No Attorney-Client Relationship</h2>
-  <p>The information, articles, guides, and legal calculators published on this website are provided solely for <strong>general informational and educational purposes</strong>. Nothing on this website constitutes formal legal counsel or legal advice under the laws of Bangladesh.</p>
-  <p>Accessing this website, sending messages via contact forms, or initiating WhatsApp communications does not establish an attorney-client relationship. You must consult directly with a qualified advocate licensed by the Bangladesh Bar Council for advice specific to your case.</p>
+  <p>The information, articles, statutory summaries, and legal guides published on this website are provided solely for <strong>general informational and educational purposes</strong>. Nothing on this website constitutes formal legal counsel, a binding legal opinion, or solicitation under the Bangladesh Bar Council Canons of Professional Conduct and Etiquette.</p>
+  <p>Accessing this website, sending messages via contact forms, or initiating WhatsApp communications for a free preliminary consultation does not by itself establish an attorney-client relationship. Formal representation begins only upon execution of a signed Vakalatnama or written engagement agreement and acceptance of the brief at our Uttara or Judge Court chamber.</p>
 
-  <h2 style="font-size:20px;font-weight:700;margin:24px 0 10px;color:#0f172a">3. Intellectual Property Rights</h2>
-  <p>All original content, legal guides, articles, logos, graphics, and code on this Website are the exclusive intellectual property of Advocate Md. Shah Alam and are protected by applicable copyright and trademark laws of Bangladesh.</p>
+  <h2 style="font-size:20px;font-weight:700;margin:24px 0 10px;color:#0f172a">3. Scope of Free Initial Consultation &amp; Chamber Fees</h2>
+  <p>We offer a free initial online or telephone consultation so prospective clients can outline their legal issue and understand potential procedural pathways without any advance payment. Where a matter requires physical inspection of original deeds, FIRs, court records, legal drafting, or appearance before a court or tribunal, standard professional fees and official court costs are discussed transparently during the chamber appointment.</p>
 
-  <h2 style="font-size:20px;font-weight:700;margin:24px 0 10px;color:#0f172a">4. Third-Party Advertisements (Google AdSense)</h2>
+  <h2 style="font-size:20px;font-weight:700;margin:24px 0 10px;color:#0f172a">4. Intellectual Property Rights</h2>
+  <p>All original content, legal guides, articles, logos, graphics, and code on this Website are the exclusive intellectual property of Advocate Md. Shah Alam and are protected under the Copyright Act, 2023 and applicable laws of Bangladesh. Unauthorized reproduction, scraping, or commercial republication is strictly prohibited.</p>
+
+  <h2 style="font-size:20px;font-weight:700;margin:24px 0 10px;color:#0f172a">5. Third-Party Advertisements (Google AdSense)</h2>
   <p>This Website displays third-party advertisements served through Google AdSense. We do not endorse, guarantee, or assume liability for products, claims, or services advertised by third parties. Please refer to our <a href="/privacy-policy" style="color:#1a56db;text-decoration:underline">Privacy Policy</a> for details on advertising cookies.</p>
 
-  <h2 style="font-size:20px;font-weight:700;margin:24px 0 10px;color:#0f172a">5. Limitation of Liability &amp; Governing Law</h2>
-  <p>To the maximum extent permitted by law, Advocate Md. Shah Alam and associated chambers shall not be held liable for any loss or damages arising from reliance on general information provided on this Website.</p>
+  <h2 style="font-size:20px;font-weight:700;margin:24px 0 10px;color:#0f172a">6. Limitation of Liability &amp; Governing Law</h2>
+  <p>To the maximum extent permitted by law, Advocate Md. Shah Alam and associated chambers shall not be held liable for any loss, missed limitation period, or damages arising from reliance on general statutory summaries provided on this Website without formal legal advice.</p>
   <p>These terms are governed by and construed under the laws of the People's Republic of Bangladesh. Any dispute arising in connection with the Website shall fall under the exclusive jurisdiction of the competent courts in Dhaka, Bangladesh.</p>
 
-  <h2 style="font-size:20px;font-weight:700;margin:24px 0 10px;color:#0f172a">6. Contact Us</h2>
+  <h2 style="font-size:20px;font-weight:700;margin:24px 0 10px;color:#0f172a">7. Contact Us</h2>
   <p>Advocate Md. Shah Alam Law Chambers<br>
   House 46, Road 6/B, Sector 12, Uttara West, Dhaka-1230, Bangladesh<br>
   Phone: <a href="tel:+8801712655546" style="color:#1a56db">+880 1712-655546</a> | Email: <a href="mailto:contact@advmdshahalam.me" style="color:#1a56db">contact@advmdshahalam.me</a></p>
@@ -1769,8 +1787,20 @@ ${buildServiceSchema(`${BASE}/bn/services/${slug}`, bnData, 'bn')}`;
         extraHead: `${hubHreflang}\n<script type="application/ld+json">${jsonLd(hubSchema)}</script>\n<script type="application/ld+json">${jsonLd(breadcrumbSchema)}</script>`,
         body: `<nav aria-label="Breadcrumb" style="font-size:13px;color:#475569;margin-bottom:14px"><a href="${langKey === 'en' ? '/en' : '/'}">${langKey === 'en' ? 'Home' : 'হোম'}</a> &rsaquo; <a href="${prefix}">${langKey === 'en' ? 'Blog' : 'ব্লগ'}</a> &rsaquo; <span>${escHtml(h1)}</span></nav>
 <h1 style="font-size:28px;font-weight:700;color:#0B1220">${escHtml(h1)}</h1>
+<p style="margin:12px 0 16px;color:#334155;line-height:1.8">${langKey === 'en'
+  ? `This curated legal resource hub brings together ${matched.length} statute-grounded guides on ${escHtml(hub.en)} under the laws of Bangladesh, authored and reviewed by Advocate Md. Shah Alam (Supreme Court of Bangladesh &amp; Metro Sessions Judge Court, Dhaka). Whether you are seeking urgent High Court intervention, Magistrate Court procedural remedies, document verification, or Non-Resident Bangladeshi (NRB) representation, each guide below cites the governing statutory sections, filing deadlines, court forums, and required evidentiary documents.`
+  : `${escHtml(hub.bn)} বিষয়ে বাংলাদেশের প্রচলিত আইন, আদালতের এখতিয়ার এবং ধাপে ধাপে আইনি প্রতিকার নিয়ে অ্যাডভোকেট মো. শাহ আলম (সুপ্রিম কোর্ট অব বাংলাদেশ ও ঢাকা জজ কোর্ট)-এর তত্ত্বাবধানে রচিত ${matched.length}টি পূর্ণাঙ্গ আইনি গাইড এখানে সংকলিত হয়েছে। প্রতিটি নিবন্ধে সংশ্লিষ্ট আইনের ধারা, মামলা বা আবেদনের সময়সীমা, প্রয়োজনীয় কাগজপত্রের তালিকা এবং আদালতের প্রক্রিয়া স্পষ্টভাবে তুলে ধরা হয়েছে।`}</p>
+<div style="margin:0 0 20px;padding:14px 18px;background:#F8FAFC;border-left:4px solid #C9A227;border-radius:8px;color:#0B1220;font-size:14px;line-height:1.7">${langKey === 'en'
+  ? '<strong>First Consultation is Free.</strong> Share a brief summary of your case on WhatsApp (+880 1955-802007) or phone (+880 1712-655546) with zero advance payment. Formal chamber fees apply only if you visit the Uttara Sector 12 or Dhaka Judge Court chamber with documents for drafting or court representation.'
+  : '<strong>প্রথম পরামর্শ ফ্রি।</strong> কোনো অগ্রিম ফি ছাড়াই WhatsApp (+880 1955-802007) বা ফোনে (+880 1712-655546) আপনার মামলার প্রাথমিক তথ্য জানিয়ে মতামত নিন। কাগজপত্র নিয়ে উত্তরা বা ঢাকা জজ কোর্ট চেম্বারে সাক্ষাৎ করলে তখন চেম্বার ফি প্রযোজ্য হবে।'}</div>
 <p style="margin:12px 0 20px"><a href="${svcPrefix}/${hub.service}" style="color:#132A4A;font-weight:700">${langKey === 'en' ? 'View Practice Area & Consult Advocate →' : 'মূল আইনি সেবা ও পরামর্শ দেখুন →'}</a></p>
-<ul>${itemsHtml}</ul>`,
+<ul>${itemsHtml}</ul>
+<section style="margin-top:28px;padding-top:20px;border-top:1px solid #E2E8F0;color:#334155;font-size:14px;line-height:1.8">
+  <h2 style="font-size:19px;font-weight:700;color:#0B1220;margin-bottom:10px">${langKey === 'en' ? `How We Handle ${escHtml(hub.en)} Cases in Bangladesh` : `${escHtml(hub.bn)} সংক্রান্ত মামলায় আমাদের আইনি সহায়তা`}</h2>
+  <p style="margin-bottom:10px">${langKey === 'en'
+    ? `Every case in ${escHtml(hub.en)} turns on exact statutory compliance, verified documentary records, and timely filing before the competent forum—whether the High Court Division of the Supreme Court of Bangladesh, District &amp; Sessions Judge Courts, Metropolitan Magistrate Courts, Family Courts, or Special Tribunals. Our Dhaka chamber assists both resident citizens and NRBs abroad through Embassy-attested Power of Attorney coordination, certified court copy collection, and end-to-end courtroom representation.`
+    : `${escHtml(hub.bn)} সংক্রান্ত প্রতিটি মামলায় সঠিক আইনের ধারা নির্বাচন, নির্ভুল নথিপত্র যাচাই এবং নির্ধারিত সময়সীমার মধ্যে উপযুক্ত আদালতে (হাইকোর্ট বিভাগ, জেলা ও দায়রা জজ আদালত, চিফ মেট্রোপলিটন ম্যাজিস্ট্রেট আদালত বা বিশেষ ট্রাইব্যুনাল) আবেদন দাখিল অত্যন্ত গুরুত্বপূর্ণ। দেশীয় মক্কেল ও প্রবাসী বাংলাদেশিরা (NRB) প্রয়োজনে আমাদের <a href="/contact" style="color:#132A4A;font-weight:600">যোগাযোগ পেজ</a> বা <a href="/advocate-md-shah-alam" style="color:#132A4A;font-weight:600">আইনজীবী প্রোফাইল</a> দেখে সরাসরি পরামর্শ নিতে পারেন।`}</p>
+</section>`,
       });
       write(path.join(DIST, prefix.replace(/^\/+/, ''), 'topic', hub.slug, 'index.html'), hubHtml);
     }
