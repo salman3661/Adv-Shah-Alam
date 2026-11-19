@@ -1010,6 +1010,16 @@
       "statusCode": 301
     },
     {
+      "source": "/bn/posts/family-law",
+      "destination": "/bn/blog",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/blog/family-law",
+      "destination": "/bn/blog",
+      "statusCode": 301
+    },
+    {
       "source": "/bn/posts/:slug*",
       "destination": "/bn/blog/:slug*",
       "statusCode": 301

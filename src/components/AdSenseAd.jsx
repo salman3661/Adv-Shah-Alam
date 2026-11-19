@@ -115,8 +115,8 @@ const AdSenseAd = ({
     }, [slot]);
 
     const isUnfilled = state === 'unfilled';
-    const resolvedDesktopMin = minHeight > 0 ? Math.max(320, minHeight) : 320;
-    const resolvedMobileMin = mobileMinHeight > 0 ? Math.max(320, mobileMinHeight) : 320;
+    const resolvedDesktopMin = minHeight > 0 ? Math.max(250, minHeight) : 250;
+    const resolvedMobileMin = mobileMinHeight > 0 ? Math.max(100, mobileMinHeight) : 100;
 
     const {
         margin: _ignoredMargin,

@@ -1446,8 +1446,8 @@ input, select, textarea {
 }
 
 .ad-slot-reserved {
-  min-height: var(--ad-min-h-mobile, 320px) !important;
-  height: var(--ad-min-h-mobile, 320px) !important;
+  min-height: var(--ad-min-h-mobile, 100px) !important;
+  height: var(--ad-min-h-mobile, 100px) !important;
   display: block;
   overflow: hidden;
   contain: layout style;
@@ -1457,18 +1457,18 @@ input, select, textarea {
 .ad-slot-reserved ins.adsbygoogle[data-ad-status="unfilled"],
 .ad-slot-reserved[data-ad-status-wrapper="unfilled"] ins.adsbygoogle {
   display: block !important;
-  min-height: var(--ad-min-h-mobile, 320px) !important;
+  min-height: var(--ad-min-h-mobile, 100px) !important;
 }
 
 @media (min-width: 768px) {
   .ad-slot-reserved {
-    min-height: var(--ad-min-h-desktop, 320px) !important;
-    height: var(--ad-min-h-desktop, 320px) !important;
+    min-height: var(--ad-min-h-desktop, 250px) !important;
+    height: var(--ad-min-h-desktop, 250px) !important;
   }
   .ad-slot-reserved ins.adsbygoogle,
   .ad-slot-reserved ins.adsbygoogle[data-ad-status="unfilled"],
   .ad-slot-reserved[data-ad-status-wrapper="unfilled"] ins.adsbygoogle {
-    min-height: var(--ad-min-h-desktop, 320px) !important;
+    min-height: var(--ad-min-h-desktop, 250px) !important;
   }
 }
 
