@@ -1010,13 +1010,248 @@
       "statusCode": 301
     },
     {
-      "source": "/bn/posts/family-law",
+      "source": "/bn/blog/family-law",
       "destination": "/bn/blog",
       "statusCode": 301
     },
     {
-      "source": "/bn/blog/family-law",
-      "destination": "/bn/blog",
+      "source": "/posts/family-law",
+      "destination": "/blog/topic/divorce-family-law",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/posts/family-law",
+      "destination": "/blog/topic/divorce-family-law",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/posts/family-law",
+      "destination": "/bn/blog/topic/divorce-family-law",
+      "statusCode": 301
+    },
+    {
+      "source": "/posts/divorce-lawyer",
+      "destination": "/services/divorce-lawyer",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/posts/divorce-lawyer",
+      "destination": "/services/divorce-lawyer",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/posts/divorce-lawyer",
+      "destination": "/bn/services/divorce-lawyer",
+      "statusCode": 301
+    },
+    {
+      "source": "/posts/criminal-lawyer",
+      "destination": "/services/criminal-lawyer",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/posts/criminal-lawyer",
+      "destination": "/services/criminal-lawyer",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/posts/criminal-lawyer",
+      "destination": "/bn/services/criminal-lawyer",
+      "statusCode": 301
+    },
+    {
+      "source": "/posts/land-lawyer",
+      "destination": "/services/land-lawyer",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/posts/land-lawyer",
+      "destination": "/services/land-lawyer",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/posts/land-lawyer",
+      "destination": "/bn/services/land-lawyer",
+      "statusCode": 301
+    },
+    {
+      "source": "/posts/bail-lawyer",
+      "destination": "/services/bail-lawyer",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/posts/bail-lawyer",
+      "destination": "/services/bail-lawyer",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/posts/bail-lawyer",
+      "destination": "/bn/services/bail-lawyer",
+      "statusCode": 301
+    },
+    {
+      "source": "/posts/supreme-court-lawyer",
+      "destination": "/services/supreme-court-lawyer",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/posts/supreme-court-lawyer",
+      "destination": "/services/supreme-court-lawyer",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/posts/supreme-court-lawyer",
+      "destination": "/bn/services/supreme-court-lawyer",
+      "statusCode": 301
+    },
+    {
+      "source": "/posts/company-lawyer",
+      "destination": "/services/company-corporate-lawyer",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/posts/company-lawyer",
+      "destination": "/services/company-corporate-lawyer",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/posts/company-lawyer",
+      "destination": "/bn/services/company-corporate-lawyer",
+      "statusCode": 301
+    },
+    {
+      "source": "/posts/corporate-lawyer",
+      "destination": "/services/company-corporate-lawyer",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/posts/corporate-lawyer",
+      "destination": "/services/company-corporate-lawyer",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/posts/corporate-lawyer",
+      "destination": "/bn/services/company-corporate-lawyer",
+      "statusCode": 301
+    },
+    {
+      "source": "/posts/tax-lawyer",
+      "destination": "/services/tax-lawyer",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/posts/tax-lawyer",
+      "destination": "/services/tax-lawyer",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/posts/tax-lawyer",
+      "destination": "/bn/services/tax-lawyer",
+      "statusCode": 301
+    },
+    {
+      "source": "/posts/criminal-law",
+      "destination": "/blog/topic/criminal-law",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/posts/criminal-law",
+      "destination": "/blog/topic/criminal-law",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/posts/criminal-law",
+      "destination": "/bn/blog/topic/criminal-law",
+      "statusCode": 301
+    },
+    {
+      "source": "/posts/divorce-family-law",
+      "destination": "/blog/topic/divorce-family-law",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/posts/divorce-family-law",
+      "destination": "/blog/topic/divorce-family-law",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/posts/divorce-family-law",
+      "destination": "/bn/blog/topic/divorce-family-law",
+      "statusCode": 301
+    },
+    {
+      "source": "/posts/land-property-law",
+      "destination": "/blog/topic/land-property-law",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/posts/land-property-law",
+      "destination": "/blog/topic/land-property-law",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/posts/land-property-law",
+      "destination": "/bn/blog/topic/land-property-law",
+      "statusCode": 301
+    },
+    {
+      "source": "/posts/bail-law",
+      "destination": "/blog/topic/bail-law",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/posts/bail-law",
+      "destination": "/blog/topic/bail-law",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/posts/bail-law",
+      "destination": "/bn/blog/topic/bail-law",
+      "statusCode": 301
+    },
+    {
+      "source": "/posts/supreme-court-writ",
+      "destination": "/blog/topic/supreme-court-writ",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/posts/supreme-court-writ",
+      "destination": "/blog/topic/supreme-court-writ",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/posts/supreme-court-writ",
+      "destination": "/bn/blog/topic/supreme-court-writ",
+      "statusCode": 301
+    },
+    {
+      "source": "/posts/corporate-tax-law",
+      "destination": "/blog/topic/corporate-tax-law",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/posts/corporate-tax-law",
+      "destination": "/blog/topic/corporate-tax-law",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/posts/corporate-tax-law",
+      "destination": "/bn/blog/topic/corporate-tax-law",
+      "statusCode": 301
+    },
+    {
+      "source": "/posts/nrb-immigration-law",
+      "destination": "/blog/topic/nrb-immigration-law",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/posts/nrb-immigration-law",
+      "destination": "/blog/topic/nrb-immigration-law",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/posts/nrb-immigration-law",
+      "destination": "/bn/blog/topic/nrb-immigration-law",
       "statusCode": 301
     },
     {

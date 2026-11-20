@@ -152,6 +152,7 @@ const AdSenseAd = ({
                 boxShadow: 'none',
                 '--ad-min-h-mobile': `${resolvedMobileMin}px`,
                 '--ad-min-h-desktop': `${resolvedDesktopMin}px`,
+                minHeight: `var(--ad-min-h-mobile)`,
                 height: `var(--ad-min-h-mobile)`,
                 ...cleanStyle,
             }}

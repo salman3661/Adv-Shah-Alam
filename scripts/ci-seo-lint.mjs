@@ -147,6 +147,26 @@ function checkSimilarity(dir, lang) {
 
 const simErrors = checkSimilarity(EN_DIR, 'en') + checkSimilarity(BN_DIR, 'bn');
 
+// 5. Legacy redirect target audit: every exact (non-wildcard) vercel.json redirect destination must resolve to an existing dist/ page
+let redirectTargetErrors = 0;
+try {
+  const vercelCfg = JSON.parse(fs.readFileSync(path.join(ROOT, 'vercel.json'), 'utf8'));
+  for (const r of (vercelCfg.redirects || [])) {
+    if (!r.destination || r.destination.includes(':') || r.destination.includes('*') || /^https?:\/\//.test(r.destination)) continue;
+    const cleanDest = r.destination.split('#')[0].split('?')[0];
+    const rel = cleanDest.replace(/^\/+/, '');
+    const candidates = rel === ''
+      ? [path.join(DIST, 'index.html')]
+      : [path.join(DIST, rel), path.join(DIST, rel + '.html'), path.join(DIST, rel, 'index.html')];
+    if (!candidates.some(c => fs.existsSync(c))) {
+      redirectTargetErrors++;
+      console.error(`Broken redirect target: ${r.source} -> ${r.destination}`);
+    }
+  }
+} catch (e) {
+  console.error('Could not audit vercel.json redirects:', e.message);
+}
+
 console.log('\n=== CI SEO LINT SUMMARY ===');
 console.log({
   sitemapUrls: sitemapUrls.length,
@@ -157,9 +177,10 @@ console.log({
   noindexSitemapErrors,
   chainErrors,
   brokenTargetErrors,
-  simGe90Pairs: simErrors
+  simGe90Pairs: simErrors,
+  redirectTargetErrors
 });
 
-if (h1Errors + titleLenErrors + titleDupErrors + descDupErrors + noindexSitemapErrors + chainErrors + brokenTargetErrors + simErrors > 0) {
+if (h1Errors + titleLenErrors + titleDupErrors + descDupErrors + noindexSitemapErrors + chainErrors + brokenTargetErrors + simErrors + redirectTargetErrors > 0) {
   process.exit(1);
 }
