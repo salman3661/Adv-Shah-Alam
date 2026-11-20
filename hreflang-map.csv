@@ -212,7 +212,7 @@ en_path,bn_path,confidence,evidence
 /blog/land-survey-map-dag-mouza-bangladesh,/bn/blog/jomi-jorip-dag-nombor-check-online-2026,1.0,json_reciprocal_slug_pair
 /blog/land-survey-tribunal-bs-city-khatian-correction-bangladesh-guide,/bn/blog/land-survey-tribunal-bs-khatian-bhul-shongshodhon-mamla-2026-bn,1.0,json_reciprocal_slug_pair
 /blog/life-threat-peace-bond-section-107-crpc-executive-magistrate-bangladesh,/bn/blog/pran-nasher-humki-107-dhara-executive-magistrate-2026-bn,1.0,json_reciprocal_slug_pair
-/blog/lis-pendens-land-sale-suit-bangladesh,,unpaired,en_only
+/blog/lis-pendens-land-sale-suit-bangladesh,/bn/blog/mamla-chola-jomi-bikroy-lis-pendens-ain,1.0,json_reciprocal_slug_pair
 /blog/lost-land-deed-certified-copy-nokol-sub-registry-bangladesh-guide,/bn/blog/jomi-dalil-hariye-gele-koronio-bangladesh,1.0,json_reciprocal_slug_pair
 /blog/mahr-dower-rights-wife-bangladesh,,unpaired,en_only
 /blog/maintenance-after-divorce-bangladesh,,unpaired,en_only
@@ -489,7 +489,6 @@ en_path,bn_path,confidence,evidence
 ,/bn/blog/madak-mamlar-jamin-prokriya-bangladesh-2026,unpaired,bn_only
 ,/bn/blog/madok-diye-fashano-mamla-nirdosh-proman-bail-2026-bn,unpaired,bn_only
 ,/bn/blog/madok-mamla-jamin-niyom-madokdrobbo-ain-2026,unpaired,bn_only
-,/bn/blog/mamla-chola-jomi-bikroy-lis-pendens-ain,unpaired,bn_only
 ,/bn/blog/manhani-mamla-facebook-horani-protikar-bangladesh,unpaired,bn_only
 ,/bn/blog/maramari-323-326-dhara-foujdari-mamla-bail-2026-bn,unpaired,bn_only
 ,/bn/blog/matrittokalin-chuti-shrom-ain-bangladesh,unpaired,bn_only
