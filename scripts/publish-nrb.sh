@@ -37,6 +37,7 @@ fi
 echo "Gate 1-2: Validating EN & BN post structure and statute citations..."
 node scripts/qa/validate.mjs "$EN_FILE" en
 node scripts/qa/validate.mjs "$BN_FILE" bn
+node scripts/qa/hreflang-gaps.mjs
 
 echo "Gate 3-4: Intent-level duplicate check (body/title/H2/intent; blocks only on verdict=reject)..."
 for F in "$EN_FILE" "$BN_FILE"; do

@@ -100,7 +100,7 @@ en_path,bn_path,confidence,evidence
 /blog/court-marriage-procedure-bangladesh,/bn/blog/court-marriage-kagojpatra-complete-guide-2026,1.0,json_reciprocal_slug_pair
 /blog/court-marriage-procedure-cost-bangladesh-2026,,unpaired,en_only
 /blog/criminal-appeal-procedure-bangladesh,/bn/blog/criminal-appeal-procedure-bangladesh-bn,1.0,json_reciprocal_slug_pair
-/blog/criminal-lawyer-bangladesh-guide-2026,,unpaired,en_only
+/blog/criminal-lawyer-bangladesh-guide-2026,/bn/blog/criminal-lawyer-kivabe-neben-bangladesh,1.0,json_reciprocal_slug_pair
 /blog/cross-border-divorce-custody-bangladesh-muslim-family-law-usa-uk-canada,,unpaired,en_only
 /blog/customs-act-2023-goods-seizure-show-cause-tribunal-appeal-bangladesh,/bn/blog/customs-ain-2023-goods-seizure-showcase-tribunal-appeal-2026-bn,1.0,json_reciprocal_slug_pair
 /blog/cyber-blackmail-intimate-photo-leak-first-2-hours-emergency-guide,,unpaired,en_only
@@ -115,8 +115,8 @@ en_path,bn_path,confidence,evidence
 /blog/defamation-law-bangladesh-slander-libel-compensation-suit-guide,,unpaired,en_only
 /blog/defamation-law-bangladesh,/bn/blog/manahanir-ain-bangladesh-bn,1.0,json_reciprocal_slug_pair
 /blog/developer-delayed-flat-handover-compensation-real-estate-act-bangladesh,/bn/blog/developer-flat-handover-na-dile-real-estate-ain-2026-bn,1.0,json_reciprocal_slug_pair
-/blog/digital-security-act-bangladesh-legal-rights,,unpaired,en_only
-/blog/digital-security-act-rights-defences-bangladesh,,unpaired,en_only
+/blog/digital-security-act-bangladesh-legal-rights,/bn/blog/digital-security-act-bangladesh-bn,1.0,json_reciprocal_slug_pair
+/blog/digital-security-act-rights-defences-bangladesh,/bn/blog/digital-security-act-mamla-protikar-bangladesh,1.0,json_reciprocal_slug_pair
 /blog/divorce-alimony-maintenance-wife-bangladesh,/bn/blog/denmohor-khorposh-aday-family-court-bangladesh,1.0,json_reciprocal_slug_pair
 /blog/divorce-cost-bangladesh-2026-complete-guide,,unpaired,en_only
 /blog/divorce-cost-bangladesh,/bn/blog/divorce-talak-khoroch-bangladesh-2026-bn,1.0,json_reciprocal_slug_pair
@@ -285,7 +285,7 @@ en_path,bn_path,confidence,evidence
 /blog/remote-land-title-search-khatian-namjari-vetting-bangladesh-nrbs,,unpaired,en_only
 /blog/road-accident-death-injury-compensation-claim-trust-fund-bangladesh,/bn/blog/shorok-durghotona-khotipuran-claim-trust-fund-2026-bn,1.0,json_reciprocal_slug_pair
 /blog/rs-khatian-online-check-bangladesh-2026,/bn/blog/rs-khatian-check-vua-porcha-chenar-upay-2026-bn,1.0,json_reciprocal_slug_pair
-/blog/rs-survey-bangladesh-complete-guide,,unpaired,en_only
+/blog/rs-survey-bangladesh-complete-guide,/bn/blog/rs-survey-bangladesh-bn,1.0,json_reciprocal_slug_pair
 /blog/second-marriage-wife-rights-bangladesh,/bn/blog/dwiteya-bibaha-ain-stree-odhikar-bangladesh,1.0,json_reciprocal_slug_pair
 /blog/section-133-crpc-public-nuisance-boundary-wall-drainage-dispute-bangladesh,/bn/blog/protibeshi-oboidho-dhol-drain-shimanapracir-133-dhara-2026-bn,1.0,json_reciprocal_slug_pair
 /blog/section-138-ni-act-cheque-bounce-bail-punishment-bangladesh,,unpaired,en_only
@@ -333,11 +333,11 @@ en_path,bn_path,confidence,evidence
 /blog/workplace-harassment-law-bangladesh,/bn/blog/karmosthale-hoirani-ain-bangladesh,1.0,json_reciprocal_slug_pair
 /blog/workplace-harassment-wrongful-termination-labour-law-bangladesh-2026,/bn/blog/onnyay-chakri-chyuti-shrom-ain-2006-pratikar-bn,1.0,json_reciprocal_slug_pair
 /blog/writ-petition-high-court-bangladesh-grounds-procedure-2026,/bn/blog/high-court-writ-petition-khoroch-papers-2026,1.0,json_reciprocal_slug_pair
-/blog/writ-petition-high-court-bangladesh-grounds-procedure,,unpaired,en_only
+/blog/writ-petition-high-court-bangladesh-grounds-procedure,/bn/blog/high-court-writ-petition-khoroch-prokriya,1.0,json_reciprocal_slug_pair
 /blog/writ-petition-high-court-bangladesh,/bn/blog/writ-petition-high-court-bangladesh-bn,1.0,json_reciprocal_slug_pair
 /blog/wrongful-employee-termination-gratuity-provident-fund-labour-act-bangladesh-guide,/bn/blog/bina-notishe-chakrichyuti-gratuity-provident-fund-adaya-shrom-ain-2026-bn,1.0,json_reciprocal_slug_pair
 /blog/wrongful-termination-labour-law-bangladesh,/bn/blog/beaini-chaktir-labor-ain-bangladesh,1.0,json_reciprocal_slug_pair
-/blog/zero-income-tax-return-bangladesh,,unpaired,en_only
+/blog/zero-income-tax-return-bangladesh,/bn/blog/zero-return-aykor-niyom-bangladesh,1.0,json_reciprocal_slug_pair
 ,/bn/blog/54-dhara-grepthar-remand-rights-bangladesh,unpaired,bn_only
 ,/bn/blog/academic-certificate-nid-passport-name-mismatch-solution-affidavit-2026,unpaired,bn_only
 ,/bn/blog/adalate-jomi-krok-obomukto-korar-niyom-2026-bn,unpaired,bn_only
@@ -382,7 +382,6 @@ en_path,bn_path,confidence,evidence
 ,/bn/blog/company-tin-nibondhon-bangladesh,unpaired,bn_only
 ,/bn/blog/court-marriage-mithya-apohoron-mamla-22-dhara-jobanbondi-2026-bn,unpaired,bn_only
 ,/bn/blog/criminal-defence-strategy-bangladesh-bn,unpaired,bn_only
-,/bn/blog/criminal-lawyer-kivabe-neben-bangladesh,unpaired,bn_only
 ,/bn/blog/crpc-144-dhara-mamla-executive-magistrate-court-niyom-2026-bn,unpaired,bn_only
 ,/bn/blog/cyber-blackmail-fake-id-chobi-humki-protikar-2026-bn,unpaired,bn_only
 ,/bn/blog/cyber-crime-abiyog-bangladesh,unpaired,bn_only
@@ -400,8 +399,6 @@ en_path,bn_path,confidence,evidence
 ,/bn/blog/denmohor-rin-faki-kopot-hastantor-section-53-tpa-batil-2026-bn,unpaired,bn_only
 ,/bn/blog/dewani-mamla-osthayi-nishedhagya-order-39-cpc-2026-bn,unpaired,bn_only
 ,/bn/blog/digital-nirapatta-ain-odhikar-bangladesh,unpaired,bn_only
-,/bn/blog/digital-security-act-bangladesh-bn,unpaired,bn_only
-,/bn/blog/digital-security-act-mamla-protikar-bangladesh,unpaired,bn_only
 ,/bn/blog/director-opasharon-share-transfer-bibad-rjsc-2026-bn,unpaired,bn_only
 ,/bn/blog/dlrms-bhumi-tathya-bangladesh-2026,unpaired,bn_only
 ,/bn/blog/dna-test-ain-2014-pitritto-nirdhoron-adolat-adesh-2026,unpaired,bn_only
@@ -442,7 +439,6 @@ en_path,bn_path,confidence,evidence
 ,/bn/blog/heba-bil-ewaz-dalil-ki-batil-niyom-2026,unpaired,bn_only
 ,/bn/blog/heba-bil-ewaz-dalil-ki-shadharon-heba-parthokko-batil,unpaired,bn_only
 ,/bn/blog/heba-dalil-khoroch-o-heba-bil-ewaz-parthokko-2026,unpaired,bn_only
-,/bn/blog/high-court-writ-petition-khoroch-prokriya,unpaired,bn_only
 ,/bn/blog/hindu-biye-nibandhon-ain-bangladesh,unpaired,bn_only
 ,/bn/blog/how-to-get-bail-bangladesh-2026-bn,unpaired,bn_only
 ,/bn/blog/hulia-malamal-krok-crpc-87-88-jamin-niyom,unpaired,bn_only
@@ -570,7 +566,6 @@ en_path,bn_path,confidence,evidence
 ,/bn/blog/rit-petition-ki-haikort-prokriya-khoroch-bangladesh,unpaired,bn_only
 ,/bn/blog/rit-petition-ki-kivabe-korte-hoy-high-court,unpaired,bn_only
 ,/bn/blog/rs-bs-khatian-shongshodhon-deyani-mamla-2026,unpaired,bn_only
-,/bn/blog/rs-survey-bangladesh-bn,unpaired,bn_only
 ,/bn/blog/samoyik-borokhasto-bibhagio-mamla-bangladesh,unpaired,bn_only
 ,/bn/blog/sampatti-uphar-danapatra-dalil-niyom-2026,unpaired,bn_only
 ,/bn/blog/sarkari-khas-jomi-chenar-upay-bondobosto-niyom,unpaired,bn_only
@@ -625,4 +620,3 @@ en_path,bn_path,confidence,evidence
 ,/bn/blog/will-osiyotnama-lekhari-niyom-bangladesh,unpaired,bn_only
 ,/bn/blog/writ-petition-haikort-dhap-khoroch-2026,unpaired,bn_only
 ,/bn/blog/yautuk-mamla-theke-bachar-ain-prokriya-2026,unpaired,bn_only
-,/bn/blog/zero-return-aykor-niyom-bangladesh,unpaired,bn_only
