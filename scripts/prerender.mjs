@@ -420,7 +420,7 @@ ${buildPillarAndTableHtml(post, 'bn')}${quickAns}${toc}${sections}${faqs}${relat
 </article>
 <section style="margin-top:32px;padding:18px;background:#F7F8FA;border-radius:8px;border:1px solid #E2E8F0">
   <h2 style="font-size:18px;font-weight:700;margin-bottom:10px;color:#0B1220">সংশ্লিষ্ট আইনি সেবা ও পরামর্শ</h2>
-  <p style="font-size:14px;line-height:1.8"><a href="/bn/services/criminal-lawyer">ফৌজদারি আইনজীবী</a> &middot; <a href="/bn/services/bail-lawyer">জামিন আইনজীবী</a> &middot; <a href="/bn/services/divorce-lawyer">তালাক ও পারিবারিক আইন</a> &middot; <a href="/bn/services/land-lawyer">জমি ও সম্পত্তি আইন</a> &middot; <a href="/nrb-legal-help">প্রবাসী (NRB) আইনি সহায়তা</a> &middot; <a href="/bn/contact">চেম্বারে যোগাযোগ</a></p>
+  <p style="font-size:14px;line-height:1.8"><a href="/bn/services/criminal-lawyer">ফৌজদারি আইনজীবী</a> &middot; <a href="/bn/services/bail-lawyer">জামিন আইনজীবী</a> &middot; <a href="/bn/services/divorce-lawyer">তালাক ও পারিবারিক আইন</a> &middot; <a href="/bn/services/land-lawyer">জমি ও সম্পত্তি আইন</a> &middot; <a href="/bn/uttara-lawyer">উত্তরা আইনজীবী</a> &middot; <a href="/uttara-lawyer">Uttara Lawyer</a> &middot; <a href="/nrb-legal-help">প্রবাসী (NRB) আইনি সহায়তা</a> &middot; <a href="/bn/contact">চেম্বারে যোগাযোগ</a></p>
 </section>
 ${BN_CTA}`;
 }
@@ -521,6 +521,7 @@ ${directAnswerHtml}
 ${introHtml}
 ${glanceHtml}
 ${sectionsHtml}
+<p style="font-size:14px;color:#334155;margin:16px 0">${isBn ? 'উত্তরা, গুলশান, বনানী ও বসুন্ধরা চেম্বার সেবা: <a href="/bn/uttara-lawyer" style="color:#1a56db;font-weight:600">উত্তরা আইনজীবী (সেক্টর ১২)</a> &middot; <a href="/uttara-lawyer" style="color:#1a56db">English</a>' : 'Local chamber services for Uttara, Gulshan, Banani &amp; Bashundhara: <a href="/uttara-lawyer" style="color:#1a56db;font-weight:600">Uttara Lawyer (Sector 12)</a> &middot; <a href="/bn/uttara-lawyer" style="color:#1a56db">বাংলা</a>'}</p>
 ${feeTableHtml}
 ${procedureHtml}
 ${docsHtml}
@@ -1481,8 +1482,8 @@ ${CTA}`,
     const uPath = isBn ? '/bn/uttara-lawyer' : '/uttara-lawyer';
     const uUrl = `${BASE}${uPath}`;
     const uTitle = isBn
-      ? 'উত্তরা আইনজীবী ঢাকা — ফৌজদারি, জমি ও পারিবারিক মামলা'
-      : 'Uttara Lawyer in Dhaka — Criminal, Land & Family Law';
+      ? 'উত্তরা আইনজীবী ঢাকা — ফৌজদারি, জমি, জামিন ও পারিবারিক'
+      : 'Uttara Lawyer in Dhaka — Criminal, Land, Bail & Family Law';
     const uDesc = isBn
       ? 'উত্তরা সেক্টর ১২ চেম্বার থেকে উত্তরা, গুলশান, বনানী ও বসুন্ধরার জমি, জামিন, ফৌজদারি, পারিবারিক ও ভাড়াটিয়া উচ্ছেদ মামলার আইনি সহায়তা। প্রথম পরামর্শ ফ্রি।'
       : 'Experienced Uttara lawyer at Sector 12 chamber serving Uttara, Gulshan, Banani, Bashundhara, Turag & Dakshinkhan in criminal, bail, land & family law. First consultation free.';
@@ -1514,23 +1515,24 @@ ${CTA}`,
     const uHreflang = `<link rel="alternate" hreflang="en" href="${BASE}/uttara-lawyer" />
 <link rel="alternate" hreflang="bn" href="${BASE}/bn/uttara-lawyer" />
 <link rel="alternate" hreflang="x-default" href="${BASE}/uttara-lawyer" />`;
-    const uBody = isBn ? `
+    const uBody = isBn ? `<article>
 <h1>উত্তরা আইনজীবী ঢাকা — ফৌজদারি, জমি, জামিন ও পারিবারিক আইনি সেবা</h1>
-<p>অ্যাডভোকেট মো. শাহ আলম বাংলাদেশের সুপ্রিম কোর্ট ও ঢাকা জজ কোর্টের তালিকাভুক্ত আইনজীবী। উত্তরার সেক্টর ১২-তে (বাড়ি ৪৬, রোড ৬/বি, উত্তরা পশ্চিম, ঢাকা ১২৩০) অবস্থিত চেম্বার থেকে তিনি উত্তরা মডেল টাউনের ১ থেকে ১৭ নম্বর সেক্টর, উত্তরা পশ্চিম, উত্তরা পূর্ব, তুরাগ, দক্ষিণখান, বিমানবন্দর, গুলশান, বনানী ও বসুন্ধরা আবাসিক এলাকার ক্লায়েন্টদের আইনি সহায়তা দেন। প্রথম পরামর্শ ফ্রি — কোনো অগ্রিম ফি ছাড়াই আপনার সমস্যার আইনি অবস্থান জেনে নিন।</p>
+<p>অ্যাডভোকেট মো. শাহ আলম বাংলাদেশের সুপ্রিম কোর্ট ও ঢাকা জজ কোর্টের একজন তালিকাভুক্ত আইনজীবী। উত্তরার সেক্টর ১২-তে (বাড়ি ৪৬, রোড ৬/বি, উত্তরা পশ্চিম, ঢাকা ১২৩০) অবস্থিত চেম্বার থেকে তিনি উত্তরা মডেল টাউনের ১ থেকে ১৭ নম্বর সেক্টর, উত্তরা পশ্চিম, উত্তরা পূর্ব, তুরাগ, দক্ষিণখান, বিমানবন্দর, গুলশান, বনানী এবং বসুন্ধরা আবাসিক এলাকার ক্লায়েন্টদের নিয়মিত আইনি সহায়তা প্রদান করেন। প্রথম পরামর্শ ফ্রি — কাজের পরিধি বুঝিয়ে ও ঠিক করার পরেই কেবল ফি নির্ধারণ করা হয়, কোনো অগ্রিম ফি নেওয়া হয় না।</p>
 <h2>একনজরে উত্তরা চেম্বারের আইনি সহায়তা ও পরামর্শ তথ্য</h2>
 <table><thead><tr><th>বিষয়</th><th>বিস্তারিত তথ্য</th></tr></thead><tbody>
 <tr><td>উত্তরা চেম্বার ঠিকানা</td><td>বাড়ি ৪৬, রোড ৬/বি, সেক্টর ১২, উত্তরা পশ্চিম, ঢাকা ১২৩০ (রবি–বৃহস্পতি ৯টা–৫টা, শনি ১০টা–২টা)</td></tr>
 <tr><td>আওতাভুক্ত থানা</td><td>উত্তরা পশ্চিম থানা, উত্তরা পূর্ব থানা, তুরাগ থানা, দক্ষিণখান থানা, বিমানবন্দর থানা, গুলশান, বনানী ও ভাটারা থানা</td></tr>
-<tr><td>সংশ্লিষ্ট আদালত</td><td>ঢাকা সিএমএম আদালত, ঢাকা জেলা ও দায়রা জজ আদালত, পারিবারিক আদালত এবং বাংলাদেশ সুপ্রিম কোর্ট</td></tr>
-<tr><td>পরামর্শ নীতি</td><td>প্রথম পরামর্শ ফ্রি — কোনো অগ্রিম ফি নেই। কাজের পরিধি ঠিক করার পরেই কেবল ফি আলোচনা করা হয়।</td></tr>
+<tr><td>সংশ্লিষ্ট আদালত</td><td>ঢাকা মেট্রোপলিটন ম্যাজিস্ট্রেট (সিএমএম) আদালত, ঢাকা জেলা ও দায়রা জজ আদালত (কোর্ট হাউস স্ট্রিট, কোতোয়ালি), পারিবারিক আদালত এবং বাংলাদেশ সুপ্রিম কোর্ট (হাইকোর্ট বিভাগ)</td></tr>
+<tr><td>পরামর্শ নীতি</td><td>প্রথম পরামর্শ ফ্রি — কোনো অগ্রিম ফি ছাড়াই আইনি অবস্থান ও করণীয় জেনে নিন। কাজের পরিধি নির্ধারণের পরেই কেবল ফি আলোচনা করা হয়।</td></tr>
 </tbody></table>
 <h2>এলাকা অনুযায়ী আমরা কোথায় সাহায্য করি (উত্তরা, গুলশান, বনানী ও বসুন্ধরা)</h2>
+<p>উত্তরা ও উত্তর ঢাকার প্রতিটি এলাকা ও থানার অধিক্ষেত্র অনুযায়ী সঠিক আইনি পদক্ষেপ নেওয়া জরুরি। নিচের সারণিতে উত্তরা পশ্চিম, উত্তরা পূর্ব ও পার্শ্ববর্তী থানাগুলোর তথ্য (ঢাকা মেট্রোপলিটন পুলিশ ডিরেক্টরি অনুসারে) উল্লেখ করা হলো:</p>
 <table><thead><tr><th>এলাকা</th><th>সংশ্লিষ্ট থানা (DMP যাচাইকৃত)</th><th>ডিএনসিসি ওয়ার্ড</th><th>প্রধান আইনি বিষয়</th></tr></thead><tbody>
 <tr><td>উত্তরা সেক্টর ১১–১৪ (চেম্বার: সেক্টর ১২)</td><td>উত্তরা পশ্চিম থানা — বাড়ি ৪৮, রোড ১৮, সেক্টর ১১</td><td>DNCC Ward 51</td><td>জমি রেজিস্ট্রি, নামজারি, চেক মামলা, ভাড়াটিয়া উচ্ছেদ, পারিবারিক বিরোধ</td></tr>
-<tr><td>উত্তরা সেক্টর ৩, ৫, ৭, ৯, ১০</td><td>উত্তরা পশ্চিম থানা — বাড়ি ৪৮, রোড ১৮, সেক্টর ১১</td><td>DNCC Ward 1 / 51</td><td>জমি হস্তান্তর, জামিন ও জিডি/এফআইআর, উত্তরাধিকার</td></tr>
-<tr><td>উত্তরা সেক্টর ১, ২, ৪, ৬, ৮</td><td>উত্তরা পূর্ব থানা — রোড ১৪/ডি, সেক্টর ৪, বাড়ি ১২</td><td>DNCC Ward 1</td><td>১৩৮ ধারা চেক মামলা, জামিন, বাণিজ্যিক ও ভাড়া বিরোধ</td></tr>
+<tr><td>উত্তরা সেক্টর ৩, ৫, ৭, ৯, ১০</td><td>উত্তরা পশ্চিম থানা — বাড়ি ৪৮, রোড ১৮, সেক্টর ১১</td><td>DNCC Ward 1 / 51</td><td>জমি হস্তান্তর, জামিন ও জিডি/এফআইআর, উত্তরাধিকার সনদ</td></tr>
+<tr><td>উত্তরা সেক্টর ১, ২, ৪, ৬, ৮</td><td>উত্তরা পূর্ব থানা — রোড ১৪/ডি, সেক্টর ৪, বাড়ি ১২</td><td>DNCC Ward 1</td><td>১৩৮ ধারা চেক মামলা, জামিন, বাণিজ্যিক ও ভাড়া সংক্রান্ত বিরোধ</td></tr>
 <tr><td>বাউনিয়া, দলিপাড়া, দিয়াবাড়ি, কামারপাড়া, ভাটুলিয়া</td><td>উত্তরা পশ্চিম / তুরাগ / দক্ষিণখান থানা</td><td>DNCC Ward 52–54</td><td>খতিয়ান সংশোধন, সীমানা ও বাটোয়ারা মামলা, দেওয়ানি নিষেধাজ্ঞা</td></tr>
-<tr><td>তুরাগ</td><td>তুরাগ থানা (DMP ডিরেক্টরি)</td><td>DNCC Ward 1 / 52</td><td>জমি দখল ও মালিকানা বিরোধ, ভাড়াটিয়া বিরোধ, জামিন</td></tr>
+<tr><td>তুরাগ</td><td>তুরাগ থানা (ডিএমপি ডিরেক্টরি)</td><td>DNCC Ward 1 / 52</td><td>জমি দখল ও মালিকানা বিরোধ, ভাড়াটিয়া বিরোধ, ফৌজদারি জামিন</td></tr>
 <tr><td>দক্ষিণখান</td><td>দক্ষিণখান থানা — বিদুরবাড়ি রোড, থানা মোড়</td><td>DNCC Ward 48–50</td><td>পারিবারিক আদালত, দেনমোহর ও খোরপোশ, সন্তানের হেফাজত, নামজারি</td></tr>
 <tr><td>বিমানবন্দর (এয়ারপোর্ট)</td><td>বিমানবন্দর থানা — ১ম তলা র‍্যাব সদর দপ্তর, উত্তরা</td><td>—</td><td>জরুরি গ্রেফতার ও জামিন সহায়তা, প্রবাসীদের ভ্রমণ-নিষেধাজ্ঞা রিট</td></tr>
 <tr><td>গুলশান</td><td>গুলশান থানা — বাড়ি ৩২, ১১৫ গুলশান অ্যাভিনিউ, গুলশান-২</td><td>DNCC Ward 19 / 35–36</td><td>বাড়ি ভাড়া নিয়ন্ত্রণ আইন ১৯৯১-এ উচ্ছেদ, কর্পোরেট ও দূতাবাস সত্যায়ন</td></tr>
@@ -1538,36 +1540,45 @@ ${CTA}`,
 <tr><td>বসুন্ধরা আবাসিক এলাকা</td><td>ভাটারা থানা — প্রগতি সরণি, গুলশান নতুন বাজার</td><td>DNCC / প্রস্তাবিত থানা</td><td>প্লট ও ফ্ল্যাট দলিল যাচাই, হস্তান্তর অনুমোদন ও অ্যাপার্টমেন্ট বিরোধ</td></tr>
 </tbody></table>
 <h2>উত্তরা এলাকায় জমি, ফ্ল্যাট নিবন্ধন ও নামজারি সংক্রান্ত আইনি সহায়তা</h2>
-<p>উত্তরা মডেল টাউন, দিয়াবাড়ি, বাউনিয়া এবং পার্শ্ববর্তী বসুন্ধরা আবাসিক এলাকায় জমি বা ফ্ল্যাট ক্রয়-বিক্রয়ের আগে দলিল যাচাই অত্যন্ত গুরুত্বপূর্ণ। উত্তরার সেক্টর ১১, ১২, ১৩ ও ১৪-তে রাজউক প্লট হস্তান্তর, লিজে থাকা জমির অনুমোদন, বায়া দলিল, সিএস-এসএ-আরএস ও মহানগর জরিপের খতিয়ান যাচাই এবং ই-নামজারি সংক্রান্ত জটিলতা প্রায়ই দেখা যায়। আমাদের উত্তরা চেম্বার থেকে জমি ও ফ্ল্যাট রেজিস্ট্রির আগে লিগ্যাল ভেটিং, লিস পেন্ডেন্স যাচাই, বাটোয়ারা মামলা, হেবা দলিল এবং প্রবাসী বাংলাদেশিদের পাওয়ার অব অ্যাটর্নি যাচাই ও ব্যবহারের পূর্ণাঙ্গ আইনি সেবা দেওয়া হয়।</p>
+<p>উত্তরা মডেল টাউন, দিয়াবাড়ি, বাউনিয়া এবং পার্শ্ববর্তী বসুন্ধরা আবাসিক এলাকায় জমি বা ফ্ল্যাট ক্রয়-বিক্রয়ের আগে দলিল যাচাই অত্যন্ত গুরুত্বপূর্ণ। উত্তরার সেক্টর ১১, ১২, ১৩ ও ১৪-তে রাজউক প্লট হস্তান্তর, লিজে থাকা জমির অনুমোদন, বায়া দলিল (Chain of Deeds), সিএস-এসএ-আরএস ও মহানগর জরিপের খতিয়ান যাচাই এবং নামজারি (ই-নামজারি) সংক্রান্ত জটিলতা প্রায়ই দেখা যায়। উত্তরা সাব-রেজিস্ট্রি অফিস ও এসি (ল্যান্ড) অফিসের প্রক্রিয়া সম্পর্কে স্পষ্ট ধারণা না থাকলে ক্রেতা বড় ধরনের আর্থিক ঝুঁকিতে পড়তে পারেন।</p>
+<p>আমাদের উত্তরা চেম্বার থেকে জমি ও ফ্ল্যাট রেজিস্ট্রির আগে লিগ্যাল ভেটিং (Title Due Diligence), লিস পেন্ডেন্স (Lis Pendens) বা মামলা চলমান আছে কি না তা যাচাই, বাটোয়ারা মামলা, হেবা বা দানপত্র দলিল, এবং প্রবাসী বাংলাদেশিদের (NRB) পাঠানো পাওয়ার অব অ্যাটর্নি যাচাই ও ব্যবহারের পূর্ণাঙ্গ আইনি সেবা দেওয়া হয়। উত্তরা এবং ঢাকার দেওয়ানি আদালতে জমির স্বত্ব ঘোষণা, দখল পুনরুদ্ধার ও নিষেধাজ্ঞার মোকদ্দমায় আমরা নিয়মিত মামলা পরিচালনা করি।</p>
 <h2>উত্তরা পশ্চিম ও উত্তরা পূর্ব থানায় ফৌজদারি মামলা, জিডি ও জামিন সহায়তা</h2>
-<p>উত্তরা পশ্চিম থানা, উত্তরা পূর্ব থানা, তুরাগ, দক্ষিণখান বা বিমানবন্দর থানায় কোনো ফৌজদারি অভিযোগ বা এফআইআর দায়ের হলে প্রথম ২৪ ঘণ্টার সিদ্ধান্ত সবচেয়ে গুরুত্বপূর্ণ। গ্রেফতারের আশঙ্কা থাকলে ফৌজদারি কার্যবিধির ৪৯৮ ধারায় হাইকোর্ট বিভাগ থেকে আগাম জামিন নেওয়া কিংবা নিম্ন আদালতে জামিনের আবেদন করার সঠিক কৌশল নির্ধারণ করতে হয়। উত্তরার ব্যবসায়িক লেনদেনে এনআই অ্যাক্টের ১৩৮ ধারায় চেক ডিজঅনার মামলাও খুব সাধারণ বিষয়—লিগ্যাল নোটিশ থেকে শুরু করে সিএমএম আদালতে মামলা ও আপস-মীমাংসা পর্যন্ত উত্তরা চেম্বার থেকে দ্রুত সহায়তা পাওয়া যায়।</p>
-<h2>উত্তরা, গুলশান ও বনানীতে ভাড়াটিয়া উচ্ছেদ, পারিবারিক মামলা ও প্রবাসী সেবা</h2>
-<p>উত্তরা, গুলশান এবং বনানীতে ফ্ল্যাট ও বাণিজ্যিক স্পেস ভাড়া নিয়ে বিরোধ হলে বাড়ি ভাড়া নিয়ন্ত্রণ আইন, ১৯৯১ এবং সম্পত্তি হস্তান্তর আইন, ১৮৮২-এর ১০৬ ধারা অনুযায়ী আইনানুগ নোটিশ ও দেওয়ানি আদালতে উচ্ছেদ মোকদ্দমা দায়ের করতে হয়। পাশাপাশি উত্তরা ও উত্তর ঢাকায় বসবাসরত পরিবারগুলোর তালাক, দেনমোহর ও খোরপোশ, সন্তানের হেফাজত, কোর্ট ম্যারেজ এবং প্রবাসীদের বিদেশি তালাক স্বীকৃতির বিষয়ে পারিবারিক আদালতে মামলা পরিচালনা করা হয়। উত্তরা সেক্টর ১২ চেম্বারে প্রথম পরামর্শ সম্পূর্ণ ফ্রি।</p>
-
-<h2>উত্তরা ও উত্তর ঢাকায় চেম্বার সেবা, আদালত ও প্রবাসী সহায়তা (FAQ)</h2>
-<p><strong>১. উত্তরা সেক্টর ১২ চেম্বারে প্রথম পরামর্শের জন্য কি কোনো ফি লাগে?</strong> না, প্রথম পরামর্শ সম্পূর্ণ ফ্রি এবং কোনো অগ্রিম ফি নেই। আপনার নথিপত্র দেখে আইনি অবস্থান ও করণীয় ব্যাখ্যা করার পরেই কেবল পারস্পরিক সম্মতিতে ফি ঠিক করা হয়।</p>
-<p><strong>২. উত্তরা পশ্চিম, উত্তরা পূর্ব, তুরাগ ও দক্ষিণখান থানার মামলা কোন আদালতে যায়?</strong> ফৌজদারি ও ১৩৮ ধারার চেক মামলাগুলো ঢাকা সিএমএম আদালত ও ঢাকা জেলা ও দায়রা জজ আদালতে (কোর্ট হাউস স্ট্রিট, কোতোয়ালি) পরিচালিত হয়। জমি, বাটোয়ারা ও ভাড়াটিয়া উচ্ছেদ মোকদ্দমা সহকারী জজ ও দেওয়ানি আদালতে এবং আগাম জামিন ও রিট পিটিশন বাংলাদেশ সুপ্রিম কোর্টের হাইকোর্ট বিভাগে দায়ের করা হয়।</p>
-<p><strong>৩. উত্তরা, বসুন্ধরা আবাসিক এলাকা বা গুলশানে জমি-ফ্ল্যাট কেনার আগে কী যাচাই করবেন?</strong> বায়া দলিলের ধারাবাহিকতা, সিএস-এসএ-আরএস ও মহানগর জরিপের খতিয়ান, সর্বশেষ ই-নামজারি ও খাজনা রসিদ, রাজউক অনুমোদন এবং সাব-রেজিস্ট্রি অফিসে লিস পেন্ডেন্স বা মামলা চলমান আছে কি না তা যাচাই করা আবশ্যক।</p>
-<p><strong>৪. প্রবাসী বাংলাদেশিরা (NRB) কি দেশে না এসে উত্তরা বা ঢাকার জমি সংক্রান্ত আইনি কাজ করতে পারেন?</strong> হ্যাঁ, যুক্তরাজ্য, যুক্তরাষ্ট্র, কানাডা, ইউরোপ বা মধ্যপ্রাচ্য থেকে সংশ্লিষ্ট বাংলাদেশ দূতাবাসে পাওয়ার অব অ্যাটর্নি সম্পাদন ও পররাষ্ট্র মন্ত্রণালয়ে সত্যায়নের মাধ্যমে উত্তরা ও ঢাকার জমি বিক্রয়, নামজারি এবং পারিবারিক ও দেওয়ানি মামলা পরিচালনা করা যায়।</p>
-<h2>প্রথম পরামর্শ ফ্রি — কোনো অগ্রিম ফি নেই</h2>
-<p>The first consultation is free — you pay nothing in advance. Legal fees are discussed and agreed only after reviewing your documents and explaining the scope of your matter. প্রথম পরামর্শ ফ্রি — কোনো অগ্রিম ফি ছাড়াই আপনার সমস্যার আইনি অবস্থান ও করণীয় জেনে নিন।</p>
+<p>উত্তরা পশ্চিম থানা, উত্তরা পূর্ব থানা, তুরাগ, দক্ষিণখান বা বিমানবন্দর থানায় কোনো ফৌজদারি অভিযোগ বা এফআইআর (FIR) দায়ের হলে প্রথম ২৪ ঘণ্টার সিদ্ধান্ত সবচেয়ে গুরুত্বপূর্ণ। অনেক সময় পারিবারিক বিরোধ, ব্যবসায়িক পাওনা, বা জমি সংক্রান্ত দ্বন্দ্ব থেকে মিথ্যা মামলা বা হয়রানিমূলক অভিযোগ দায়ের করা হয়। গ্রেফতারের আশঙ্কা থাকলে ফৌজদারি কার্যবিধির ৪৯৮ ধারায় হাইকোর্ট বিভাগ থেকে আগাম জামিন (Anticipatory Bail) নেওয়া কিংবা নিম্ন আদালতে আত্মসমর্পণ করে জামিনের আবেদন করার সঠিক কৌশল নির্ধারণ করতে হয়।</p>
+<p>উত্তরার ব্যবসায়িক ও ব্যক্তিগত লেনদেনে এনআই অ্যাক্টের ১৩৮ ধারায় চেক ডিজঅনার মামলাও খুব সাধারণ বিষয়। লিগ্যাল নোটিশ পাঠানো থেকে শুরু করে সিএমএম আদালতে মামলা দায়ের, সমন ও ওয়ারেন্ট জারি এবং আসামি পক্ষের জামিন ও আপস-মীমাংসা—প্রতিটি ধাপে উত্তরা চেম্বার থেকে দ্রুত পরামর্শ পাওয়া যায়। চেম্বার উত্তরা সেক্টর ১২-তে হওয়ায় উত্তরার বাসিন্দা ও পরিবারের সদস্যদের জন্য জরুরি কাগজপত্র নিয়ে সরাসরি দেখা করা সহজ হয়।</p>
+<h2>উত্তরা, গুলশান ও বনানীতে ভাড়াটিয়া উচ্ছেদ ও পারিবারিক মামলা</h2>
+<p>উত্তরা, গুলশান এবং বনানীতে আবাসিক ফ্ল্যাট ও বাণিজ্যিক স্পেস ভাড়া নিয়ে বাড়িওয়ালা ও ভাড়াটিয়ার মধ্যে প্রায়ই বিরোধ তৈরি হয়। চুক্তির মেয়াদ শেষ হওয়ার পরও দোকান বা ফ্ল্যাট না ছাড়া, ভাড়া বকেয়া রাখা, কিংবা জামানত (Security Deposit) ফেরত না দেওয়া—এসব ক্ষেত্রে বাড়ি ভাড়া নিয়ন্ত্রণ আইন, ১৯৯১ এবং সম্পত্তি হস্তান্তর আইন, ১৮৮২-এর ১০৬ ধারা অনুযায়ী আইনানুগ নোটিশ ও দেওয়ানি আদালতে উচ্ছেদ মোকদ্দমা দায়ের করতে হয়। গায়ের জোরে তালা লাগানো বা বিদ্যুৎ-গ্যাস সংযোগ কাটা বেআইনি এবং তা বাড়ির মালিকের বিরুদ্ধেই ফৌজদারি মামলার ঝুঁকি তৈরি করে।</p>
+<p>এছাড়া উত্তরা ও উত্তর ঢাকায় বসবাসরত পরিবারগুলোর তালাক, দেনমোহর ও খোরপোশ, সন্তানের হেফাজত (Child Custody), কোর্ট ম্যারেজ এবং প্রবাসীদের বিদেশি তালাক স্বীকৃতির বিষয়েও পারিবারিক আদালতে মামলা পরিচালনা ও মধ্যস্থতা করা হয়। উত্তরার সেক্টর ১২ চেম্বারে প্রথম পরামর্শ সম্পূর্ণ ফ্রি, যাতে আপনি মামলা করার আগে নিজের আইনগত অবস্থান ও বিকল্পগুলো পরিষ্কারভাবে বুঝতে পারেন।</p>
+<h2>বসুন্ধরা আবাসিক এলাকা ও প্রবাসী বাংলাদেশিদের (NRB) জন্য বিশেষ আইনি সেবা</h2>
+<p>বসুন্ধরা আবাসিক এলাকার প্লট ও ফ্ল্যাট লেনদেনের আইনি কাঠামো সাধারণ এলাকার চেয়ে কিছুটা ভিন্ন—এখানে রাজউক অনুমোদন ও নামজারির পাশাপাশি হাউজিং কোম্পানির অভ্যন্তরীণ হস্তান্তর প্রক্রিয়া, অ্যাপার্টমেন্ট কমিটির নিয়ম এবং মালিকানা যাচাইয়ের প্রশ্ন জড়িত থাকে। উত্তরার কাছাকাছি অবস্থান হওয়ায় বসুন্ধরা আবাসিক এলাকা, গুলশান ও বনানীর ক্লায়েন্টরাও উত্তরার সেক্টর ১২ চেম্বারে এসে দলিল ও চুক্তিপত্র যাচাই করাতে পারেন। পাশাপাশি যুক্তরাজ্য, যুক্তরাষ্ট্র, কানাডা, অস্ট্রেলিয়া ও মধ্যপ্রাচ্যে থাকা প্রবাসী বাংলাদেশিরা উত্তরা এবং উত্তর ঢাকায় থাকা তাদের জমি, ফ্ল্যাট ও পারিবারিক মামলার জন্য পাওয়ার অব অ্যাটর্নি, দূতাবাস ও পররাষ্ট্র মন্ত্রণালয় (MOFA) সত্যায়ন এবং আদালতে প্রতিনিধিত্বের সুবিধা পান।</p>
+<h2>উত্তরা চেম্বার ও আইনি সেবা সম্পর্কে সাধারণ প্রশ্নোত্তর (FAQ)</h2>
+<h3>১. উত্তরা সেক্টর ১২ চেম্বারে প্রথম পরামর্শের জন্য কি কোনো ফি লাগে?</h3>
+<p>না। উত্তরা চেম্বারে প্রথম পরামর্শ সম্পূর্ণ ফ্রি — কোনো অগ্রিম ফি দিতে হয় না। আপনার কাগজপত্র ও মামলার ধরন পর্যালোচনা করে কাজের পরিধি বুঝিয়ে দেওয়ার পরেই কেবল পারস্পরিক সম্মতিতে ফি নির্ধারণ করা হয়।</p>
+<h3>২. উত্তরা পশ্চিম বা উত্তরা পূর্ব থানায় জিডি বা এফআইআর হলে কীভাবে দ্রুত জামিনের ব্যবস্থা করা যায়?</h3>
+<p>উত্তরা পশ্চিম বা উত্তরা পূর্ব থানায় মামলা দায়ের হলে দ্রুত এজাহারের কপি সংগ্রহ করে একজন ফৌজদারি আইনজীবীর পরামর্শ নেওয়া উচিত। গ্রেফতারের আশঙ্কা থাকলে হাইকোর্ট বিভাগে ফৌজদারি কার্যবিধির ৪৯৮ ধারায় আগাম জামিনের আবেদন করা যায় অথবা সিএমএম আদালতে নিয়মিত জামিন চাওয়া যায়। উত্তরা চেম্বার থেকে জরুরি ভিত্তিতে কাগজপত্র যাচাই ও পিটিশন প্রস্তুতের সহায়তা দেওয়া হয়।</p>
+<h3>৩. উত্তরা, বসুন্ধরা আবাসিক এলাকা বা গুলশানের জমি-ফ্ল্যাট কেনার আগে কী কী যাচাই করতে হয়?</h3>
+<p>উত্তরা বা বসুন্ধরা আবাসিক এলাকায় জমি ও ফ্ল্যাট কেনার আগে বায়া দলিলের ধারাবাহিকতা, সিএস-এসএ-আরএস ও মহানগর জরিপের খতিয়ান, সর্বশেষ নামজারি (ই-নামজারি) ও ভূমি উন্নয়ন করের রসিদ, রাজউক অনুমোদন এবং সাব-রেজিস্ট্রি অফিসে কোনো লিস পেন্ডেন্স বা মামলা চলমান আছে কি না তা যাচাই করা আবশ্যক।</p>
+<h3>৪. প্রবাসী বাংলাদেশিরা (NRB) কি দেশে না এসে উত্তরা বা ঢাকার জমি সংক্রান্ত আইনি কাজ করতে পারেন?</h3>
+<p>হ্যাঁ। যুক্তরাজ্য, যুক্তরাষ্ট্র, কানাডা, ইউরোপ বা মধ্যপ্রাচ্যে বসবাসরত প্রবাসীরা সংশ্লিষ্ট বাংলাদেশ দূতাবাসে পাওয়ার অব অ্যাটর্নি সম্পাদন এবং বাংলাদেশে পররাষ্ট্র মন্ত্রণালয়ে (MOFA) সত্যায়নের মাধ্যমে উত্তরা ও ঢাকার জমি বিক্রয়, নামজারি বা দেওয়ানি ও পারিবারিক মামলা পরিচালনা করতে পারেন।</p>
+<h2>উত্তরা চেম্বারের বিশেষায়িত আইনি সেবাসমূহ</h2>
+<p>The first consultation is free — you pay nothing in advance. প্রথম পরামর্শ ফ্রি — কোনো অগ্রিম ফি ছাড়াই আপনার সমস্যার আইনি অবস্থান ও করণীয় জেনে নিন।</p>
 <p><a href="/bn/services/criminal-lawyer">ফৌজদারি আইনজীবী</a> &middot; <a href="/bn/services/bail-lawyer">জামিন আইনজীবী</a> &middot; <a href="/bn/services/land-lawyer">জমি ও সম্পত্তি আইনজীবী</a> &middot; <a href="/bn/services/divorce-lawyer">তালাক ও পারিবারিক আইনজীবী</a> &middot; <a href="/bn/services/supreme-court-lawyer">সুপ্রিম কোর্ট আইনজীবী</a> &middot; <a href="/bn/services/company-corporate-lawyer">কোম্পানি আইনজীবী</a> &middot; <a href="/bn/services/tax-lawyer">আয়কর ও ভ্যাট</a> &middot; <a href="/advocate-md-shah-alam">অ্যাডভোকেট মো. শাহ আলম</a> &middot; <a href="/nrb-legal-help">প্রবাসী (NRB) আইনি সহায়তা</a> &middot; <a href="/bn/contact">চেম্বারে যোগাযোগ</a> &middot; <a href="/blog/uttara-dhaka-lawyer-legal-services-2026">Uttara Legal Services Guide</a> &middot; <a href="/uttara-lawyer">English Version</a></p>
-` : `
+</article>` : `<article>
 <h1>Uttara Lawyer in Dhaka — Criminal, Land, Bail &amp; Family Legal Services</h1>
-<p>Advocate Md. Shah Alam is a Bangladesh Bar Council enrolled advocate practising before the Supreme Court of Bangladesh and Dhaka Judge Court. From his chamber at House 46, Road 6/B, Sector 12, Uttara West, Dhaka 1230, he advises clients across Uttara Sectors 1–17, Turag, Dakshinkhan, Airport, Gulshan, Banani, and Bashundhara Residential Area. The first consultation is free with no advance fee — legal fees are agreed only after explaining the scope of your matter.</p>
+<p>Advocate Md. Shah Alam is a Bangladesh Bar Council enrolled advocate practising before the Supreme Court of Bangladesh and Dhaka Judge Court. From his chamber in Sector 12, Uttara West (House 46, Road 6/B, Sector 12, Uttara West, Dhaka 1230), he represents local residents, businesses, and Non-Resident Bangladeshis (NRBs) with property or family matters across Uttara Sectors 1–17, Turag, Dakshinkhan, Airport, Gulshan, Banani, and Bashundhara Residential Area. The first consultation is free with no advance fee — legal fees are agreed only after explaining the scope of your matter.</p>
 <h2>Quick Answer: Chamber Jurisdiction, Courts &amp; Free First Consultation</h2>
 <table><thead><tr><th>Item</th><th>Details</th></tr></thead><tbody>
 <tr><td>Uttara Chamber Address</td><td>House 46, Road 6/B, Sector 12, Uttara West, Dhaka 1230 (Sun–Thu 09:00–17:00, Sat 10:00–14:00)</td></tr>
 <tr><td>Primary Police Stations</td><td>Uttara West PS, Uttara East PS, Turag PS, Dakshinkhan PS, Bimanbandar (Airport) PS, Gulshan PS, Banani PS, Vatara PS</td></tr>
-<tr><td>Courts Covered</td><td>Dhaka CMM Court, Dhaka Judge &amp; Sessions Court (Kotwali), Family Court, and Supreme Court of Bangladesh (High Court Division)</td></tr>
-<tr><td>Consultation Policy</td><td>First consultation is free — no advance fee. Legal fees are discussed only after reviewing your documents and scope.</td></tr>
+<tr><td>Courts Covered</td><td>Dhaka Chief Metropolitan Magistrate (CMM) Court, Dhaka Judge &amp; Sessions Court (Kotwali), Family Court, and Supreme Court of Bangladesh (High Court Division)</td></tr>
+<tr><td>Consultation Policy</td><td>First consultation is free — no advance fee. Legal fees are discussed and agreed only after reviewing your documents and scope.</td></tr>
 </tbody></table>
 <h2>Areas We Serve Around Uttara, Gulshan, Banani &amp; Bashundhara</h2>
+<p>Knowing the exact police station (thana) and DNCC ward jurisdiction avoids delays in filing a General Diary (GD), FIR, mutation, or eviction notice. The station names and addresses below are verified against the Dhaka Metropolitan Police (DMP) directory:</p>
 <table><thead><tr><th>Area</th><th>Police Station (DMP Verified)</th><th>DNCC Ward</th><th>Common Legal Matters</th></tr></thead><tbody>
 <tr><td>Uttara Sectors 11–14 (Chamber: Sector 12)</td><td>Uttara West PS — H-48, Road 18, Sector 11</td><td>DNCC Ward 51</td><td>Land registration, mutation, cheque recovery, rent eviction, family disputes</td></tr>
-<tr><td>Uttara Sectors 3, 5, 7, 9, 10</td><td>Uttara West PS — H-48, Road 18, Sector 11</td><td>DNCC Ward 1 / 51</td><td>Property transfer, bail &amp; FIR matters, inheritance</td></tr>
+<tr><td>Uttara Sectors 3, 5, 7, 9, 10</td><td>Uttara West PS — H-48, Road 18, Sector 11</td><td>DNCC Ward 1 / 51</td><td>Property transfer, bail &amp; FIR matters, inheritance &amp; succession</td></tr>
 <tr><td>Uttara Sectors 1, 2, 4, 6, 8</td><td>Uttara East PS — R-14/D, Sector 4, H-12</td><td>DNCC Ward 1</td><td>Section 138 cheque dishonour, bail petitions, commercial &amp; tenancy matters</td></tr>
-<tr><td>Baunia, Dolipara, Diabari, Kamarpara, Bhatulia</td><td>Uttara West PS / Turag PS / Dakshinkhan PS</td><td>DNCC Ward 52–54</td><td>Khatian record correction, boundary &amp; partition suits, civil injunction</td></tr>
+<tr><td>Baunia, Dolipara, Diabari, Kamarpara, Bhatulia</td><td>Uttara West PS / Turag PS / Dakshinkhan PS</td><td>DNCC Ward 52–54</td><td>Khatian/CS-RS-BS record correction, boundary &amp; partition suits, civil injunction</td></tr>
 <tr><td>Turag</td><td>Turag PS (DMP Directory)</td><td>DNCC Ward 1 / 52</td><td>Land possession, tenancy disputes, criminal defence &amp; bail</td></tr>
 <tr><td>Dakshinkhan</td><td>Dakshinkhan PS — Bidurbari Road, Thana More</td><td>DNCC Ward 48–50</td><td>Family court cases, maintenance, custody, land mutation</td></tr>
 <tr><td>Airport (Bimanbandar)</td><td>Bimanbandar PS — 1st Floor RAB (HQ), Uttara</td><td>—</td><td>Urgent arrest/bail support, NRB arrival &amp; travel-ban writ matters</td></tr>
@@ -1576,21 +1587,27 @@ ${CTA}`,
 <tr><td>Bashundhara Residential Area</td><td>Vatara PS — Progoti Soroni, Gulshan Notun Bazar</td><td>DNCC / Proposed PS</td><td>Plot/flat title verification, transfer approval, apartment committee &amp; eviction</td></tr>
 </tbody></table>
 <h2>Land Registration, Mutation &amp; Property Litigation in Uttara and Bashundhara</h2>
-<p>Property transactions across Uttara Sectors 1–17, Diabari, Baunia, Turag, and nearby Bashundhara Residential Area carry significant title risks if deeds are not vetted before signing a Bayna. From our Uttara Sector 12 chamber, we conduct pre-purchase title due diligence, draft sale deeds, Heba declarations, and partition deeds, verify Non-Resident Bangladeshi (NRB) Powers of Attorney executed abroad, and represent clients in civil suits for declaration of title, permanent injunction, cancellation of forged deeds, and recovery of possession before Dhaka civil courts.</p>
+<p>Property transactions across Uttara Sectors 1–17, Diabari, Baunia, Turag, and nearby Bashundhara Residential Area carry significant title risks if deeds are not vetted before signing a Bayna (agreement for sale). Common issues include incomplete chain deeds (Baya Dalil), unverified RAJUK transfer permissions, mismatched CS/SA/RS/City Jarip Khatian records, pending civil suits (Lis Pendens), and delayed e-Namjari (mutation) before the local AC Land office.</p>
+<p>From our Uttara Sector 12 chamber, we conduct pre-purchase title due diligence, draft sale deeds, Heba declarations, and partition deeds, verify Non-Resident Bangladeshi (NRB) Powers of Attorney executed abroad, and represent clients in civil suits for declaration of title, permanent injunction, cancellation of forged deeds, and recovery of possession before Dhaka civil courts.</p>
 <h2>Criminal Defence, Bail &amp; Section 138 Cheque Cases in Uttara Police Stations</h2>
-<p>When a General Diary (GD), FIR, or warrant involves Uttara West Police Station, Uttara East Police Station, Turag PS, Dakshinkhan PS, or Bimanbandar (Airport) PS, early legal intervention protects your liberty. We assist with High Court anticipatory bail applications under Section 498 of the CrPC, regular bail hearings before Dhaka CMM and Sessions Courts, police remand protection, Section 561A quashment petitions, and Section 138 NI Act cheque dishonour notices and trials.</p>
+<p>When a General Diary (GD), FIR, or warrant involves Uttara West Police Station, Uttara East Police Station, Turag PS, Dakshinkhan PS, or Bimanbandar (Airport) PS, early legal intervention protects your liberty and record. We assist with High Court anticipatory bail applications under Section 498 of the CrPC, regular bail hearings before the Dhaka CMM and Sessions Courts, police remand protection, and Section 561A quashment petitions for fabricated complaints.</p>
+<p>For commercial and personal cheque dishonour disputes under Section 138 of the Negotiable Instruments Act, we handle statutory 30-day legal notices, filing complaints before the CMM Court, defending false cheque claims, and negotiating structured settlements. Having a local chamber inside Uttara Sector 12 allows families and business owners to bring certified copies and evidence without crossing the entire city during urgent deadlines.</p>
 <h2>Rent Control, Tenant Eviction &amp; Family Law Across Uttara, Gulshan &amp; Banani</h2>
-<p>Under the Premises Rent Control Act 1991 and Section 106 of the Transfer of Property Act 1882, landlords must serve a legally compliant notice to quit before filing an eviction suit in the Assistant Judge Court. Our family law practice covers divorce (Talaq, Khula, and Mubaraat), dower and maintenance, child custody, court marriage, and foreign divorce recognition for NRBs. The first consultation is free with no advance fee.</p>
-
-<h2>Frequently Asked Questions — Uttara Legal Chamber &amp; North Dhaka Practice</h2>
-<p><strong>1. Is the first consultation at the Uttara Sector 12 chamber free?</strong> Yes. The first consultation is free with no advance fee. We review your documents, explain the applicable legal procedure and court jurisdiction, and agree on legal fees only after the scope of work is clear.</p>
-<p><strong>2. Which courts handle cases from Uttara West PS, Uttara East PS, Turag, and Dakshinkhan?</strong> Criminal and Section 138 cheque matters from Uttara West, Uttara East, Turag, Dakshinkhan, and Bimanbandar police stations are heard at the Dhaka Chief Metropolitan Magistrate (CMM) Court and Dhaka Sessions Judge Court at Kotwali. Civil land, partition, and rent eviction suits are filed in the Dhaka Civil / Assistant Judge Courts, while anticipatory bail and Article 102 writ petitions are filed before the High Court Division of the Supreme Court of Bangladesh.</p>
-<p><strong>3. What should be verified before buying a plot or apartment in Uttara or Bashundhara R/A?</strong> Before signing a Bayna or paying an advance, verify the complete chain of title deeds (Baya Dalil), CS/SA/RS/City Jarip Khatian records, current e-Namjari mutation and land tax receipts, RAJUK plan and transfer clearance, housing society transfer requirements in Bashundhara Residential Area, and whether any civil suit (Lis Pendens) or mortgage encumbrance affects the property.</p>
-<p><strong>4. Can Non-Resident Bangladeshis (NRBs) handle Uttara or Dhaka property matters remotely?</strong> Yes. NRBs in the UK, USA, Canada, UAE, and Europe can execute a Power of Attorney at the nearest Bangladesh Embassy or Consulate, complete MOFA attestation in Dhaka, and authorise legal representation for property verification, mutation, sale, or family court proceedings without travelling immediately to Bangladesh.</p>
-<h2>First Consultation Is Free — No Advance Fee</h2>
-<p>The first consultation is free — you pay nothing in advance. Legal fees are discussed and agreed only after reviewing your documents and explaining the scope of your matter. Chamber Hours: Sunday–Thursday 09:00–17:00, Saturday 10:00–14:00 (Friday Closed). Address: House 46, Road 6/B, Sector 12, Uttara West, Dhaka 1230. Phone: +880 1712 655546 | WhatsApp: +880 1955 802007.</p>
+<p>Landlords and commercial tenants in Uttara, Gulshan, Banani, and Bashundhara frequently face disputes over unpaid rent, expired lease agreements, security deposit refunds, and refusal to vacate premises. Under the Premises Rent Control Act 1991 and Section 106 of the Transfer of Property Act 1882, landlords must serve a legally compliant notice to quit before filing an eviction suit in the Assistant Judge Court—cutting utility lines or locking premises forcefully exposes the landlord to criminal liability.</p>
+<p>Our family law practice covers divorce (Talaq, Khula, and Mubaraat), dower (Denmohor) and maintenance claims, child custody and guardianship petitions, court marriage under Muslim and Special Marriage Acts, and recognition of foreign divorce decrees for NRBs. Every matter begins with a free first consultation so you understand your legal position and options before committing to litigation.</p>
+<h2>Frequently Asked Questions — Uttara Legal Chamber</h2>
+<h3>1. Is the first consultation at the Uttara Sector 12 chamber really free?</h3>
+<p>Yes. The first consultation is free with no advance fee. We review your documents, explain the applicable legal procedure and court jurisdiction, and agree on legal fees only after the scope of work is clear.</p>
+<h3>2. Which courts handle cases from Uttara West PS, Uttara East PS, Turag, and Dakshinkhan?</h3>
+<p>Criminal and Section 138 cheque matters from Uttara West, Uttara East, Turag, Dakshinkhan, and Bimanbandar police stations are heard at the Dhaka Chief Metropolitan Magistrate (CMM) Court and Dhaka Sessions Judge Court at Kotwali. Civil land, partition, and rent eviction suits are filed in the Dhaka Civil / Assistant Judge Courts, while anticipatory bail and Article 102 writ petitions are filed before the High Court Division of the Supreme Court of Bangladesh.</p>
+<h3>3. What should be checked before buying a plot or apartment in Uttara or Bashundhara R/A?</h3>
+<p>Before signing a Bayna or paying an advance, verify the complete chain of title deeds (Baya Dalil), CS/SA/RS/City Jarip Khatian records, current e-Namjari mutation and land tax receipts, RAJUK plan/transfer clearance, housing society transfer requirements in Bashundhara Residential Area, and whether any civil suit (Lis Pendens) or mortgage encumbrance affects the property.</p>
+<h3>4. Can Non-Resident Bangladeshis (NRBs) handle Uttara or Dhaka property matters remotely?</h3>
+<p>Yes. NRBs in the UK, USA, Canada, UAE, and Europe can execute a Power of Attorney at the nearest Bangladesh Embassy or Consulate, complete MOFA attestation in Dhaka, and authorise legal representation for property verification, mutation, sale, or family court proceedings without travelling immediately to Bangladesh.</p>
+<h2>Practice Areas &amp; Legal Services</h2>
+<p>The first consultation is free — you pay nothing in advance. প্রথম পরামর্শ ফ্রি — কোনো অগ্রিম ফি ছাড়াই আপনার সমস্যার আইনি অবস্থান ও করণীয় জেনে নিন।</p>
 <p><a href="/services/criminal-lawyer">Criminal Lawyer</a> &middot; <a href="/services/bail-lawyer">Bail Lawyer</a> &middot; <a href="/services/land-lawyer">Land Lawyer</a> &middot; <a href="/services/divorce-lawyer">Divorce &amp; Family Lawyer</a> &middot; <a href="/services/supreme-court-lawyer">Supreme Court Lawyer</a> &middot; <a href="/services/company-corporate-lawyer">Corporate Lawyer</a> &middot; <a href="/services/tax-lawyer">Tax Advisory</a> &middot; <a href="/advocate-md-shah-alam">Advocate Md. Shah Alam</a> &middot; <a href="/nrb-legal-help">NRB Legal Help</a> &middot; <a href="/contact">Contact Chamber</a> &middot; <a href="/blog/uttara-dhaka-lawyer-legal-services-2026">Uttara Legal Services Guide</a> &middot; <a href="/bn/uttara-lawyer">বাংলা সংস্করণ</a></p>
-`;
+</article>`;
     const html = buildPage(base, {
       title: uTitle,
       description: uDesc,

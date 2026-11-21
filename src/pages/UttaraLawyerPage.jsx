@@ -122,8 +122,8 @@ export default function UttaraLawyerPage({ lang = 'en' }) {
   const isBn = lang === 'bn';
   const pageUrl = `${SITE_BASE}${isBn ? '/bn/uttara-lawyer' : '/uttara-lawyer'}`;
   const title = isBn
-    ? 'উত্তরা আইনজীবী ঢাকা — ফৌজদারি, জমি ও পারিবারিক মামলা'
-    : 'Uttara Lawyer in Dhaka — Criminal, Land & Family Law';
+    ? 'উত্তরা আইনজীবী ঢাকা — ফৌজদারি, জমি, জামিন ও পারিবারিক'
+    : 'Uttara Lawyer in Dhaka — Criminal, Land, Bail & Family Law';
   const description = isBn
     ? 'উত্তরা সেক্টর ১২ চেম্বার থেকে উত্তরা, গুলশান, বনানী ও বসুন্ধরার জমি, জামিন, ফৌজদারি, পারিবারিক ও ভাড়াটিয়া উচ্ছেদ মামলার আইনি সহায়তা। প্রথম পরামর্শ ফ্রি।'
     : 'Experienced Uttara lawyer at Sector 12 chamber serving Uttara, Gulshan, Banani, Bashundhara, Turag & Dakshinkhan in criminal, bail, land & family law. First consultation free.';
@@ -153,7 +153,7 @@ export default function UttaraLawyerPage({ lang = 'en' }) {
         <script type="application/ld+json">{JSON.stringify(schema)}</script>
       </Helmet>
 
-      <div className="max-w-5xl mx-auto space-y-10">
+      <article className="max-w-5xl mx-auto space-y-10">
         {/* Hero */}
         <header className="rounded-2xl p-6 sm:p-10 border" style={{ background: 'var(--card-bg)', borderColor: 'var(--card-border)' }}>
           <div className="flex flex-wrap items-center gap-2 text-xs font-semibold uppercase tracking-wider mb-3" style={{ color: 'var(--accent)' }}>
@@ -460,7 +460,7 @@ export default function UttaraLawyerPage({ lang = 'en' }) {
             </div>
           </div>
         </section>
-      </div>
+      </article>
     </div>
   );
 }

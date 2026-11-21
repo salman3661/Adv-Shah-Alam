@@ -130,7 +130,7 @@ async function derivedRoutes() {
       }
     } catch { /* offline — fall through to the local heuristics */ }
   }
-  if (out.length) return [...new Set(out)];
+  if (out.length) return [...new Set(["/uttara-lawyer", "/bn/uttara-lawyer", ...out])];
 
   // 2) Fallback: count posts per language from the content dir
   for (const [dir, prefix] of [["en", "/blog"], ["bn", "/bn/blog"]]) {

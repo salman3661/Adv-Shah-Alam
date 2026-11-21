@@ -1,5 +1,5 @@
 import React, { lazy, Suspense, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { SpeedInsights } from '@vercel/speed-insights/react';
 import { Analytics } from '@vercel/analytics/react';
@@ -61,6 +61,28 @@ const PageFallback = () => (
   </div>
 );
 
+
+function HreflangDedupe() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    const dedupe = () => {
+      const links = [...document.head.querySelectorAll('link[rel="alternate"][hreflang]')];
+      const seen = new Map();
+      for (const el of links) {
+        const key = (el.getAttribute('hreflang') || '').toLowerCase();
+        if (!key) continue;
+        if (seen.has(key)) seen.get(key).remove();
+        seen.set(key, el);
+      }
+    };
+    dedupe();
+    const obs = new MutationObserver(dedupe);
+    obs.observe(document.head, { childList: true });
+    return () => obs.disconnect();
+  }, [pathname]);
+  return null;
+}
+
 function App() {
   useEffect(() => {
     initCtaTracking();
@@ -72,6 +94,7 @@ function App() {
         <ThemeProvider>
           <Router>
             <ScrollToTop />
+            <HreflangDedupe />
             <Routes>
               {/* Public site — wrapped in Layout */}
               <Route path="/*" element={
