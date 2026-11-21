@@ -131,7 +131,7 @@
     },
     {
       "source": "/blog/cyber-crime-complaint-bangladesh",
-      "destination": "/blog/cyber-crime-helpline-bangladesh-2026",
+      "destination": "/blog/bangladesh-cyber-crime-complaint-portal-guide-2026",
       "statusCode": 301
     },
     {
@@ -146,7 +146,7 @@
     },
     {
       "source": "/blog/cyber-crime-helpline-bankladesh-2026",
-      "destination": "/blog/cyber-crime-helpline-bangladesh-2026",
+      "destination": "/blog/bangladesh-cyber-crime-complaint-portal-guide-2026",
       "statusCode": 301
     },
     {
@@ -1522,6 +1522,36 @@
     {
       "source": "/bn/blog/uttaradhikar-certificate-bangladesh",
       "destination": "/bn/blog/jomi-registry-khoroch-sarkaree-fee-bd",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/power-of-attorney-property-transfer-registration-bangladesh",
+      "destination": "/blog/power-of-attorney-land-transfer-bangladesh",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/blog/mithya-nari-nirjaton-mamla-theke-bachar-ain-2026",
+      "destination": "/bn/blog/mithya-nari-nirjaton-mamla-atmoraksha-bd",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/blog/dv-act-mithya-nari-nirjaton-mamla-defense-2026-bn",
+      "destination": "/bn/blog/mithya-nari-nirjaton-mamla-atmoraksha-bd",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/blog/mithya-nari-nirjaton-mamla-protirodh-defense-2026-bn",
+      "destination": "/bn/blog/mithya-nari-nirjaton-mamla-atmoraksha-bd",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/cyber-crime-helpline-bangladesh-2026",
+      "destination": "/blog/bangladesh-cyber-crime-complaint-portal-guide-2026",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/blog/varatia-ucched-dokan-basa-106-dhara-legal-notice-2026-bn",
+      "destination": "/bn/blog/varatia-ucched-ainee-notice-bari-bhara-ain",
       "statusCode": 301
     }
   ],

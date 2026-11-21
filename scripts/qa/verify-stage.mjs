@@ -15,6 +15,7 @@ import fs from 'node:fs';
 import http from 'node:http';
 import path from 'node:path';
 import { createRequire } from 'node:module';
+import { assertLiveUrl } from './url-truth.mjs';
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '../..');
 const DIST = path.join(ROOT, 'dist');
@@ -23,14 +24,8 @@ const has = (f) => args.includes(f);
 const arg = (f) => { const i = args.indexOf(f); return i >= 0 ? args[i + 1] : null; };
 const CHROMIUM = process.env.CHROMIUM_PATH || '/usr/bin/chromium';
 
-export const STAGE_B = [
-  ['/blog/power-of-attorney-property-transfer-registration-bangladesh', '/blog/power-of-attorney-land-transfer-bangladesh'],
-  ['/bn/blog/mithya-nari-nirjaton-mamla-theke-bachar-ain-2026', '/bn/blog/mithya-nari-nirjaton-mamla-atmoraksha-bd'],
-  ['/bn/blog/dv-act-mithya-nari-nirjaton-mamla-defense-2026-bn', '/bn/blog/mithya-nari-nirjaton-mamla-atmoraksha-bd'],
-  ['/bn/blog/mithya-nari-nirjaton-mamla-protirodh-defense-2026-bn', '/bn/blog/mithya-nari-nirjaton-mamla-atmoraksha-bd'],
-  ['/blog/cyber-crime-helpline-bangladesh-2026', '/blog/bangladesh-cyber-crime-complaint-portal-guide-2026'],
-  ['/bn/blog/varatia-ucched-dokan-basa-106-dhara-legal-notice-2026-bn', '/bn/blog/varatia-ucched-ainee-notice-bari-bhara-ain'],
-];
+const stageBCfg = JSON.parse(fs.readFileSync(path.join(ROOT, 'seo/stage-b-clusters.json'), 'utf8'));
+export const STAGE_B = stageBCfg.clusters.flatMap((c) => c.sources.map((src) => [src, c.master]));
 
 const MIME = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript', '.mjs': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.svg': 'image/svg+xml', '.png': 'image/png', '.jpg': 'image/jpeg', '.webp': 'image/webp', '.ico': 'image/x-icon', '.woff2': 'font/woff2', '.xml': 'application/xml', '.txt': 'text/plain' };
 
@@ -143,6 +138,15 @@ if (has('--search')) {
 
 if (has('--redirects')) {
   for (const [src, keep] of STAGE_B) {
+    assertLiveUrl(src);
+    assertLiveUrl(keep);
+    if (!has('--skip-live')) {
+      const liveRes = await fetch(`https://www.advmdshahalam.me${src}`, { redirect: 'manual' });
+      if (liveRes.status !== 200) {
+        console.log(`FAIL  ${src} is HTTP ${liveRes.status} on LIVE (must be 200 before redirecting)`);
+        failures++;
+      }
+    }
     const hop1 = await httpGet(base, src);
     const loc = hop1.location ? new URL(hop1.location, base).pathname : null;
     const hop2 = await httpGet(base, keep);
