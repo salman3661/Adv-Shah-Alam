@@ -4,6 +4,7 @@ en_path,bn_path,confidence,evidence
 /contact,/bn/contact,1.0,core_or_service_route_pair
 /blog,/bn/blog,1.0,core_or_service_route_pair
 /nrb-legal-help,,unpaired,en_only
+/uttara-lawyer,/bn/uttara-lawyer,1.0,core_or_service_route_pair
 ,/review,unpaired,bn_only
 /education,,unpaired,en_only
 /privacy-policy,,unpaired,en_only

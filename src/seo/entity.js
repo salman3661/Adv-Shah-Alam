@@ -1,5 +1,103 @@
 export const SITE_BASE = 'https://www.advmdshahalam.me';
 
+export const AREA_SERVED = [
+  { '@type': 'City', name: 'Dhaka' },
+  {
+    '@type': 'Place',
+    name: 'Uttara Model Town, Dhaka',
+    description: 'Sectors 1–17, Uttara West and Uttara East',
+  },
+  { '@type': 'Place', name: 'Uttara West, Dhaka' },
+  { '@type': 'Place', name: 'Uttara East, Dhaka' },
+  { '@type': 'Place', name: 'Gulshan, Dhaka' },
+  { '@type': 'Place', name: 'Banani, Dhaka' },
+  { '@type': 'Place', name: 'Bashundhara Residential Area, Dhaka' },
+  { '@type': 'Place', name: 'Turag, Dhaka' },
+  { '@type': 'Place', name: 'Dakshinkhan, Dhaka' },
+  { '@type': 'Place', name: 'Airport, Dhaka' },
+  { '@type': 'Country', name: 'Bangladesh' },
+];
+
+const placeList = (names) => names.map((name) => ({ '@type': 'Place', name }));
+
+export const SERVICE_AREAS = {
+  criminal: placeList([
+    'Uttara West Police Station Jurisdiction, Dhaka',
+    'Uttara East Police Station Jurisdiction, Dhaka',
+    'Airport (Bimanbandar) Police Station Jurisdiction, Dhaka',
+    'Turag Police Station Jurisdiction, Dhaka',
+    'Dakshinkhan Police Station Jurisdiction, Dhaka',
+  ]),
+  land: placeList([
+    'DNCC Ward 1 (Uttara Sectors 1–10), Dhaka',
+    'DNCC Ward 51–54 (Uttara Sectors 11–14, Baunia, Diabari, Kamarpara), Dhaka',
+    'Bashundhara Residential Area, Dhaka',
+    'Gulshan, Dhaka',
+    'Banani, Dhaka',
+  ]),
+  family: placeList([
+    'Uttara Sectors 1–17, Dhaka',
+    'Gulshan, Dhaka',
+    'Banani, Dhaka',
+    'Turag, Dhaka',
+    'Dakshinkhan, Dhaka',
+  ]),
+  rent: placeList([
+    'Uttara, Dhaka',
+    'Gulshan, Dhaka',
+    'Banani, Dhaka',
+    'Bashundhara Residential Area, Dhaka',
+    'Mirpur, Dhaka',
+  ]),
+  corporate: placeList([
+    'Banani, Dhaka',
+    'Gulshan, Dhaka',
+    'Bashundhara Residential Area, Dhaka',
+    'Uttara, Dhaka',
+  ]),
+};
+
+export function getServiceAreaServed(key = '') {
+  const k = String(key).toLowerCase();
+  if (/criminal|bail/.test(k)) return [...SERVICE_AREAS.criminal, { '@type': 'Country', name: 'Bangladesh' }];
+  if (/land|property/.test(k)) return [...SERVICE_AREAS.land, { '@type': 'Country', name: 'Bangladesh' }];
+  if (/divorce|family/.test(k)) return [...SERVICE_AREAS.family, { '@type': 'Country', name: 'Bangladesh' }];
+  if (/company|corporate|tax/.test(k)) return [...SERVICE_AREAS.corporate, { '@type': 'Country', name: 'Bangladesh' }];
+  return AREA_SERVED;
+}
+
+export const OFFER_CATALOG = {
+  '@type': 'OfferCatalog',
+  name: 'Legal services',
+  itemListElement: [
+    {
+      '@type': 'Offer',
+      itemOffered: { '@type': 'Service', name: 'Criminal defence and bail' },
+      areaServed: SERVICE_AREAS.criminal,
+    },
+    {
+      '@type': 'Offer',
+      itemOffered: { '@type': 'Service', name: 'Land registration, mutation and lis pendens' },
+      areaServed: SERVICE_AREAS.land,
+    },
+    {
+      '@type': 'Offer',
+      itemOffered: { '@type': 'Service', name: 'Family law, divorce, custody, court marriage' },
+      areaServed: SERVICE_AREAS.family,
+    },
+    {
+      '@type': 'Offer',
+      itemOffered: { '@type': 'Service', name: 'Rent dispute and eviction (Rent Control Act 1991)' },
+      areaServed: SERVICE_AREAS.rent,
+    },
+    {
+      '@type': 'Offer',
+      itemOffered: { '@type': 'Service', name: 'Corporate, company and tax advisory' },
+      areaServed: SERVICE_AREAS.corporate,
+    },
+  ],
+};
+
 export const ADVOCATE_NAP = {
   name: 'Advocate Md. Shah Alam',
   alternateName: [
@@ -73,6 +171,7 @@ export function buildPersonEntity() {
     telephone: ADVOCATE_NAP.telephone,
     email: ADVOCATE_NAP.email,
     address: ADVOCATE_NAP.address,
+    areaServed: AREA_SERVED,
     knowsLanguage: ADVOCATE_NAP.knowsLanguage,
     worksFor: { '@id': `${SITE_BASE}/#legalservice` },
     memberOf: [
@@ -98,7 +197,8 @@ export function buildLegalServiceEntity() {
     address: [ADVOCATE_NAP.address, ADVOCATE_NAP.judgeCourtAddress],
     geo: ADVOCATE_NAP.geo,
     openingHoursSpecification: ADVOCATE_NAP.openingHoursSpecification,
-    areaServed: { '@type': 'Country', name: 'Bangladesh' },
+    areaServed: AREA_SERVED,
+    hasOfferCatalog: OFFER_CATALOG,
     knowsLanguage: ADVOCATE_NAP.knowsLanguage,
     employee: { '@id': `${SITE_BASE}/#attorney` },
     sameAs: ADVOCATE_NAP.sameAs,
@@ -121,7 +221,7 @@ export function buildWebSiteEntity(lang = 'en') {
   };
 }
 
-export function buildServicePageSchema({ url, lang = 'en', serviceType, name, description }) {
+export function buildServicePageSchema({ url, lang = 'en', serviceType, name, description, slug = '' }) {
   return {
     '@context': 'https://schema.org',
     '@type': 'LegalService',
@@ -134,7 +234,7 @@ export function buildServicePageSchema({ url, lang = 'en', serviceType, name, de
     telephone: ADVOCATE_NAP.telephone,
     email: ADVOCATE_NAP.email,
     address: ADVOCATE_NAP.address,
-    areaServed: { '@type': 'Country', name: 'Bangladesh' },
+    areaServed: getServiceAreaServed(slug || serviceType),
     provider: { '@id': `${SITE_BASE}/#attorney` },
     parentOrganization: { '@id': `${SITE_BASE}/#legalservice` },
   };
