@@ -15,7 +15,7 @@
     "adsense-sync": "node scripts/adsense-fetch.mjs",
     "prebuild": "node scripts/gsc-fetch.mjs && node scripts/ga4-fetch.mjs && node scripts/adsense-fetch.mjs && node scripts/gen-blog-meta.mjs && node generate_sitemap.js && node generate_rss.js",
     "ci": "node scripts/run-ci.mjs",
-    "ci:qa": "node scripts/qa/dupcheck.mjs --regression && node scripts/qa/dupcheck.mjs && node scripts/ci-seo-lint.mjs && node scripts/ci-schema-lint.mjs && node scripts/phase3-hreflang-verify.mjs",
+    "ci:qa": "node scripts/qa/hreflang-gaps.mjs && node scripts/qa/dupcheck.mjs --regression && node scripts/qa/dupcheck.mjs && node scripts/ci-seo-lint.mjs && node scripts/ci-schema-lint.mjs && node scripts/phase3-hreflang-verify.mjs",
     "indexnow": "node scripts/indexnow-submit.mjs",
     "sync:social": "node scripts/sync-social.mjs"
   },

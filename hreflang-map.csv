@@ -333,11 +333,11 @@ en_path,bn_path,confidence,evidence
 /blog/workplace-harassment-law-bangladesh,/bn/blog/karmosthale-hoirani-ain-bangladesh,1.0,json_reciprocal_slug_pair
 /blog/workplace-harassment-wrongful-termination-labour-law-bangladesh-2026,/bn/blog/onnyay-chakri-chyuti-shrom-ain-2006-pratikar-bn,1.0,json_reciprocal_slug_pair
 /blog/writ-petition-high-court-bangladesh-grounds-procedure-2026,/bn/blog/high-court-writ-petition-khoroch-papers-2026,1.0,json_reciprocal_slug_pair
-/blog/writ-petition-high-court-bangladesh-grounds-procedure,,unpaired,en_only
+/blog/writ-petition-high-court-bangladesh-grounds-procedure,/bn/blog/high-court-writ-petition-khoroch-prokriya,1.0,json_reciprocal_slug_pair
 /blog/writ-petition-high-court-bangladesh,/bn/blog/writ-petition-high-court-bangladesh-bn,1.0,json_reciprocal_slug_pair
 /blog/wrongful-employee-termination-gratuity-provident-fund-labour-act-bangladesh-guide,/bn/blog/bina-notishe-chakrichyuti-gratuity-provident-fund-adaya-shrom-ain-2026-bn,1.0,json_reciprocal_slug_pair
 /blog/wrongful-termination-labour-law-bangladesh,/bn/blog/beaini-chaktir-labor-ain-bangladesh,1.0,json_reciprocal_slug_pair
-/blog/zero-income-tax-return-bangladesh,,unpaired,en_only
+/blog/zero-income-tax-return-bangladesh,/bn/blog/zero-return-aykor-niyom-bangladesh,1.0,json_reciprocal_slug_pair
 ,/bn/blog/54-dhara-grepthar-remand-rights-bangladesh,unpaired,bn_only
 ,/bn/blog/academic-certificate-nid-passport-name-mismatch-solution-affidavit-2026,unpaired,bn_only
 ,/bn/blog/adalate-jomi-krok-obomukto-korar-niyom-2026-bn,unpaired,bn_only
@@ -439,7 +439,6 @@ en_path,bn_path,confidence,evidence
 ,/bn/blog/heba-bil-ewaz-dalil-ki-batil-niyom-2026,unpaired,bn_only
 ,/bn/blog/heba-bil-ewaz-dalil-ki-shadharon-heba-parthokko-batil,unpaired,bn_only
 ,/bn/blog/heba-dalil-khoroch-o-heba-bil-ewaz-parthokko-2026,unpaired,bn_only
-,/bn/blog/high-court-writ-petition-khoroch-prokriya,unpaired,bn_only
 ,/bn/blog/hindu-biye-nibandhon-ain-bangladesh,unpaired,bn_only
 ,/bn/blog/how-to-get-bail-bangladesh-2026-bn,unpaired,bn_only
 ,/bn/blog/hulia-malamal-krok-crpc-87-88-jamin-niyom,unpaired,bn_only
@@ -621,4 +620,3 @@ en_path,bn_path,confidence,evidence
 ,/bn/blog/will-osiyotnama-lekhari-niyom-bangladesh,unpaired,bn_only
 ,/bn/blog/writ-petition-haikort-dhap-khoroch-2026,unpaired,bn_only
 ,/bn/blog/yautuk-mamla-theke-bachar-ain-prokriya-2026,unpaired,bn_only
-,/bn/blog/zero-return-aykor-niyom-bangladesh,unpaired,bn_only
