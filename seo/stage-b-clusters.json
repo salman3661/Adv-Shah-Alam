@@ -1,0 +1,9 @@
+{
+  "_comment": "Stage B (26 Dec 2026) — owner-verified intent-duplicate clusters. Each source is permanently 301-redirected to its master AFTER the master absorbed the source's unique sections (scripts/stage-b/apply-merges.mjs). Full paths, EN and BN.",
+  "clusters": [
+    { "name": "A  Power of Attorney, land transfer (EN)", "master": "/blog/power-of-attorney-land-transfer-bangladesh", "sources": ["/blog/power-of-attorney-property-transfer-registration-bangladesh"] },
+    { "name": "B  মিথ্যা নারী নির্যাতন মামলা থেকে বাঁচার উপায় (BN)", "master": "/bn/blog/mithya-nari-nirjaton-mamla-atmoraksha-bd", "sources": ["/bn/blog/mithya-nari-nirjaton-mamla-theke-bachar-ain-2026", "/bn/blog/dv-act-mithya-nari-nirjaton-mamla-defense-2026-bn", "/bn/blog/mithya-nari-nirjaton-mamla-protirodh-defense-2026-bn"] },
+    { "name": "C  Cyber crime helpline / complaint (EN)", "master": "/blog/bangladesh-cyber-crime-complaint-portal-guide-2026", "sources": ["/blog/cyber-crime-helpline-bangladesh-2026"] },
+    { "name": "D  ভাড়াটিয়া উচ্ছেদ, ১০৬ ধারা (BN)", "master": "/bn/blog/varatia-ucched-ainee-notice-bari-bhara-ain", "sources": ["/bn/blog/varatia-ucched-dokan-basa-106-dhara-legal-notice-2026-bn"] }
+  ]
+}
