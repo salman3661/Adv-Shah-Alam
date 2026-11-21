@@ -105,6 +105,15 @@ git checkout main && git merge --no-ff feature/stage-b-consolidation && npm run 
   [regression] cluster D (2 URLs): DETECTED
   [regression] PASS — 4/4 known clusters detected
   ```
+- **URL Truth Gate (`node scripts/qa/url-truth.mjs --regression`):**
+  - Generated `reports/live-urls.json` (`824` sorted live URLs from `https://www.advmdshahalam.me/sitemap.xml`).
+  - `assertLiveUrl` validates every Stage B redirect source & master at apply/check time and in `ci:qa` and `verify-stage.mjs --redirects`.
+  - Regression test confirms `6/6` Stage B sources pass AND the old typo'd slug (`/bn/blog/dv-act-mithya-nirjoton-mamla-defense-2026-bn`) throws/fails.
+- **Full 41-URL Cluster Audit & Batch Plan:**
+  - `reports/cluster-intent-map.md`: all 41 URLs classified (`14 KEEP`, `5 DIFFERENTIATE`, `20 MERGE → X`, `2 REDIRECT → X`).
+  - `reports/cluster-consolidation-plan.md`: 4-batch execution plan (`≤25%` per cluster per batch, 14 days apart).
+- **Cross-Language Hreflang (`reports/hreflang-opportunities.md`, separate branch `feature/hreflang-twins`):**
+  - Of 60 `xlang` flags: **4 GENUINE** (unpaired, exact match — applied on `feature/hreflang-twins` to ship with Stage A), **9 FALSE_POSITIVE**, and **47 NEEDS_HUMAN** (already paired to an alternate variant or slightly different scope — see `reports/hreflang-opportunities.md` for the full list requiring human judgement).
 
 ---
 

@@ -17,6 +17,7 @@
  */
 import fs from 'node:fs';
 import path from 'node:path';
+import { assertLiveUrl } from '../qa/url-truth.mjs';
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '../..');
 const CHECK = process.argv.includes('--check');
@@ -25,7 +26,14 @@ const vPath = path.join(ROOT, 'vercel.json');
 const vercel = JSON.parse(fs.readFileSync(vPath, 'utf8'));
 
 const wanted = new Map(); const masters = new Set(); const problems = [];
-for (const c of cfg.clusters) { masters.add(c.master); for (const s of c.sources) wanted.set(s, c.master); }
+for (const c of cfg.clusters) {
+  assertLiveUrl(c.master);
+  masters.add(c.master);
+  for (const s of c.sources) {
+    assertLiveUrl(s);
+    wanted.set(s, c.master);
+  }
+}
 for (const m of masters) {
   if (wanted.has(m)) problems.push(`master is also a source: ${m}`);
   const f = m.startsWith('/bn/') ? `src/content/posts/bn/${m.slice(9)}.json` : `src/content/posts/en/${m.slice(6)}.json`;
