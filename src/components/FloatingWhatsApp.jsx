@@ -28,10 +28,9 @@ const FloatingWhatsApp = () => {
                 }
 
                 @media (max-width: 768px) {
-                    /* On mobile (< 768px), keep floating circle visible above bottom bar */
                     .wa-floating-container {
                         right: 16px;
-                        bottom: 74px;
+                        bottom: 20px;
                     }
                 }
 

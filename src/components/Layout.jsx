@@ -4,7 +4,6 @@ import { useLocation } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
 import FloatingWhatsApp from './FloatingWhatsApp';
-import MobileCallButton from './MobileCallButton';
 import ReadingProgress from './ReadingProgress';
 
 const BASE = 'https://www.advmdshahalam.me';
@@ -263,7 +262,6 @@ const Layout = ({ children }) => {
             </main>
             <Footer />
             <FloatingWhatsApp />
-            <MobileCallButton />
         </div>
     );
 };
