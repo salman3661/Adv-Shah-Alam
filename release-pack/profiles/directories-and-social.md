@@ -4,7 +4,9 @@
 
 ## Canonical NAP (Identical Everywhere)
 - **Name:** Advocate Md. Shah Alam
-- **Address:** House 46, Road 6/B, Sector 12, Uttara West, Dhaka 1230
+- **Address (PRIMARY chamber — use identically in every directory):** House 46, Road 6/B, Sector 12, Uttara West, Dhaka 1230
+- **Secondary / registered address (do not list as the main address in directories; keep only in on-site schema):** Lawyers Association Building, 4th Floor, 6/7 Court House Street, Kotwali, Judge Court, Dhaka 1100
+> **OWNER QUESTION (blocking for directory submissions):** Confirm BOTH addresses are currently active and confirm the Uttara chamber is the single primary. NAP consistency requires one primary address used identically everywhere. The live `LegalService` schema lists both; do not submit directories/GBP until confirmed.
 - **Phone:** +880 1712 655546
 - **WhatsApp:** +880 1955 802007
 - **Website:** https://www.advmdshahalam.me
