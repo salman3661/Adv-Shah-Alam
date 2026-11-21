@@ -196,7 +196,13 @@ const Blog = () => {
     }, [isTopicRoute, topic]);
 
     const [activeCategory, setActiveCategory] = useState('All');
-    const [searchQuery, setSearchQuery] = useState('');
+    const [searchQuery, setSearchQuery] = useState(() => {
+        try {
+            return new URLSearchParams(typeof window !== 'undefined' ? window.location.search : '').get('q') || '';
+        } catch {
+            return '';
+        }
+    });
     const [sortBy, setSortBy] = useState('recent'); // 'recent' | 'popular'
     const POSTS_PER_PAGE = 12;
     const [visibleCount, setVisibleCount] = useState(() => {
@@ -208,6 +214,12 @@ const Blog = () => {
         }
     });
     const isFirstRender = React.useRef(true);
+
+    useEffect(() => {
+        if (typeof window === 'undefined') return;
+        const qParam = new URLSearchParams(window.location.search).get('q');
+        if (qParam !== null) setSearchQuery(qParam);
+    }, [pageNum, topic]);
 
     useEffect(() => {
         window.scrollTo(0, 0);
