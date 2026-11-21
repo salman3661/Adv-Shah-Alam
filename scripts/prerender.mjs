@@ -26,6 +26,7 @@ import { buildEntityGraph, buildHreflang, jsonLd, resolveMasterPillar, resolveQu
 import { evergreenYear } from '../src/utils/evergreenYear.mjs';
 import { GOOGLE_REVIEW_URL, REVIEW_CONTENT } from '../src/content/reviewContent.mjs';
 import { SERVICE_PAGES_EN, SERVICE_PAGES_BN } from '../src/content/servicePagesData.mjs';
+import { buildPersonEntity, buildLegalServiceEntity, buildWebSiteEntity } from '../src/seo/entity.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT   = path.resolve(__dirname, '..');
@@ -690,8 +691,30 @@ function advocateBody() {
 
 <section style="margin-bottom:28px">
   <h2 style="font-size:22px;font-weight:700;margin-bottom:12px;color:#111">Courts, Tribunals &amp; Consultation Process</h2>
-  <p style="color:#333;margin-bottom:12px;line-height:1.8">Advocate Md. Shah Alam regularly appears before the High Court Division of the Supreme Court of Bangladesh, the Dhaka Chief Metropolitan Magistrate (CMM) and Chief Judicial Magistrate (CJM) Courts, the Metropolitan Sessions Judge Court, Family Courts, Land Survey Tribunals, and Special Tribunals across Dhaka and Gazipur. Both resident clients and Non-Resident Bangladeshis (NRBs) living in the UK, USA, Canada, UAE, and Europe rely on the chamber for bail petitions, writ petitions, land title verification, Embassy-attested Power of Attorney execution, and family law settlements.</p>
-  <p style="color:#333;margin-bottom:12px;line-height:1.8"><strong>First Consultation is Free:</strong> Prospective clients can share an initial summary of their legal matter via WhatsApp (+880 1955-802007) or phone (+880 1712-655546) at zero advance cost. When in-person document review, drafting, or court appearance is required, clients visit the Uttara Sector 12 chamber or Dhaka Judge Court chamber with original papers, and transparent chamber fees are agreed upfront before formal representation begins.</p>
+  <p style="color:#333;margin-bottom:12px;line-height:1.8">Advocate Md. Shah Alam regularly appears before the High Court Division of the Supreme Court of Bangladesh, the Dhaka Chief Metropolitan Magistrate (CMM) and Chief Judicial Magistrate (CJM) Courts, the Metropolitan Sessions Judge Court, Family Courts, Land Survey Tribunals, and Special Tribunals across Dhaka and Gazipur. Whether representing resident clients in Dhaka or Non-Resident Bangladeshis (NRBs) living abroad, every matter is handled with direct statutory precision, verified documentary records, and timely court filings.</p>
+  <p style="color:#333;margin-bottom:12px;line-height:1.8"><strong>Legal Practice &amp; Statutory Scope:</strong> Criminal defence and urgent bail advocacy under the Code of Criminal Procedure, 1898 (including Sections 497 and 498 anticipatory bail, Section 54 remand protection, and Section 138 Negotiable Instruments Act cheque dishonour defence); land and property litigation under the Specific Relief Act, 1877, Transfer of Property Act, 1882, Registration Act, 1908, and State Acquisition and Tenancy Act, 1950 (title verification, mutation, partition suits, deed cancellation, and Lis Pendens protection); family and inheritance matters under the Muslim Family Laws Ordinance, 1961 and Family Courts Act, 2023 (talaq registration, Denmohor, maintenance, and child custody); corporate and commercial filings before RJSC under the Companies Act, 1994; and constitutional writ petitions under Article 102 of the Constitution of Bangladesh.</p>
+</section>
+
+<section style="margin-bottom:28px">
+  <h2 style="font-size:22px;font-weight:700;margin-bottom:12px;color:#111">NRB Legal Assistance &amp; Overseas Representation</h2>
+  <p style="color:#333;margin-bottom:12px;line-height:1.8">A substantial portion of the chamber's work supports Non-Resident Bangladeshis (NRBs) residing in the United Kingdom, United States, Canada, the UAE, Saudi Arabia, and Europe. Distance often complicates routine property verification, Sub-Registry deed retrieval, Embassy-attested Power of Attorney execution, inheritance partition, and overseas divorce recognition under Section 13 of the Code of Civil Procedure, 1908. Through structured remote coordination, NRB clients can review legal options before travelling to Dhaka. Visit our dedicated <a href="/nrb-legal-help" style="color:#1a56db;font-weight:600">NRB Legal Help Desk</a> for step-by-step guidance.</p>
+</section>
+
+<section style="margin-bottom:28px;padding:18px 20px;background:#F8FAFC;border-left:4px solid #C9A227;border-radius:8px">
+  <h2 style="font-size:20px;font-weight:700;margin-bottom:10px;color:#0B1220">Free Initial Consultation (EN &amp; BN)</h2>
+  <p style="color:#1E293B;margin-bottom:10px;line-height:1.75"><strong>First Consultation is Free.</strong> Share your case details on WhatsApp (+880 1955-802007) or phone (+880 1712-655546) — you will receive an initial legal opinion at no charge and with no advance payment. Chamber fees apply only when you visit the chamber with documents or proceed with formal legal representation.</p>
+  <p style="color:#1E293B;margin-bottom:0;line-height:1.75"><strong>প্রথম পরামর্শ ফ্রি।</strong> কোনো অগ্রিম ফি ছাড়াই WhatsApp বা ফোনে আপনার মামলার কথা বলুন — আমি প্রথম আইনি মতামত দেব। কাগজপত্র নিয়ে চেম্বারে এসে মামলা বা দলিলের কাজ শুরু করলে তখন চেম্বার ফি নির্ধারিত হবে।</p>
+</section>
+
+<section style="margin-bottom:28px">
+  <h2 style="font-size:22px;font-weight:700;margin-bottom:12px;color:#111">Chambers, Office Hours &amp; Get in Touch</h2>
+  <ul style="padding-left:20px;color:#333;line-height:2">
+    <li><strong>Uttara Chamber:</strong> House 46, Road 6/B, Sector 12, Uttara West, Dhaka 1230, Bangladesh</li>
+    <li><strong>Judge Court Chamber:</strong> Lawyers Association Building, 4th Floor, 6/7 Court House Street, Kotwali, Dhaka 1100</li>
+    <li><strong>Consultation Hours:</strong> Sunday–Thursday 09:00–17:00 | Saturday 10:00–14:00 | Friday Closed</li>
+    <li><strong>Phone:</strong> <a href="tel:+8801712655546" style="color:#1a56db">+880 1712-655546</a> · <strong>WhatsApp:</strong> <a href="https://wa.me/8801955802007" style="color:#1a56db">+880 1955-802007</a></li>
+    <li><strong>Direct Intake:</strong> <a href="/contact" style="color:#1a56db;font-weight:600">Contact Chamber &amp; Book Free Initial Consultation →</a></li>
+  </ul>
 </section>
 ${CTA}`;
 }
@@ -980,97 +1003,26 @@ async function main() {
   const TODAY = process.env.TODAY || new Date(Date.now() + 6 * 3600 * 1000).toISOString().split('T')[0]; // YYYY-MM-DD in Asia/Dhaka
 
   function buildInstitutionalSchema(pageUrl, lang, breadcrumbItems) {
+    const legalSvc = {
+      ...buildLegalServiceEntity(),
+      hasOfferCatalog: {
+        '@type': 'OfferCatalog',
+        name: 'Legal Practice Areas',
+        itemListElement: [
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Criminal Defense', url: `${BASE}/services/criminal-lawyer` } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Bail & Anticipatory Bail', url: `${BASE}/services/bail-lawyer` } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Divorce & Family Law', url: `${BASE}/services/divorce-lawyer` } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Land & Property Law', url: `${BASE}/services/land-lawyer` } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Supreme Court Writ & Appeals', url: `${BASE}/services/supreme-court-lawyer` } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Company & Corporate Law', url: `${BASE}/services/company-corporate-lawyer` } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Income Tax & VAT Law', url: `${BASE}/services/tax-lawyer` } },
+        ],
+      },
+    };
     const graph = [
-      {
-        '@type': 'WebSite',
-        '@id': `${BASE}/#website`,
-        name: lang === 'bn' ? 'এডভোকেট মোঃ শাহ আলম' : 'Advocate Md. Shah Alam',
-        url: `${BASE}/`,
-        inLanguage: lang,
-        potentialAction: {
-          '@type': 'SearchAction',
-          target: `${BASE}/blog?q={search_term_string}`,
-          'query-input': 'required name=search_term_string',
-        },
-      },
-      {
-        '@type': 'Person',
-        '@id': `${BASE}/#attorney`,
-        name: 'Advocate Md. Shah Alam',
-        alternateName: 'এডভোকেট মোঃ শাহ আলম',
-        jobTitle: 'Advocate, Supreme Court of Bangladesh',
-        url: `${BASE}/advocate-md-shah-alam`,
-        image: `${BASE}/images/hero/hero-md-shah-alam.png`,
-        telephone: '+8801712655546',
-        email: 'contact@advmdshahalam.me',
-        worksFor: { '@id': `${BASE}/#legalservice` },
-        memberOf: [
-          { '@type': 'Organization', name: 'Bangladesh Bar Council' },
-          { '@type': 'Organization', name: 'Supreme Court Bar Association' },
-          { '@type': 'Organization', name: 'Dhaka Bar Association' },
-        ],
-        sameAs: [
-          'https://www.facebook.com/advmd.shahalamfb',
-          'https://www.linkedin.com/in/advmdshahalam/',
-          'https://maps.app.goo.gl/M3NXMwW3xkp2TE3h8',
-        ],
-      },
-      {
-        '@type': 'LegalService',
-        '@id': `${BASE}/#legalservice`,
-        name: 'Advocate Md. Shah Alam Law Chamber',
-        alternateName: 'এডভোকেট মোঃ শাহ আলম ল চেম্বার',
-        url: BASE,
-        logo: `${BASE}/adv-md-shah-alam.png`,
-        image: `${BASE}/images/advocate-shah-alam.jpg`,
-        telephone: '+8801712655546',
-        email: 'contact@advmdshahalam.me',
-        priceRange: '৳৳',
-        address: [
-          {
-            '@type': 'PostalAddress',
-            streetAddress: 'House 46, Road 6/B, Sector 12, Uttara',
-            addressLocality: 'Uttara, Dhaka',
-            addressRegion: 'Dhaka',
-            postalCode: '1230',
-            addressCountry: 'BD',
-          },
-          {
-            '@type': 'PostalAddress',
-            streetAddress: 'Lawyers Association Building, 4th Floor, 6/7 Court House Street, Kotwali',
-            addressLocality: 'Judge Court, Dhaka',
-            addressRegion: 'Dhaka',
-            postalCode: '1100',
-            addressCountry: 'BD',
-          },
-        ],
-        geo: {
-          '@type': 'GeoCoordinates',
-          latitude: 23.8745,
-          longitude: 90.3987,
-        },
-        openingHoursSpecification: [
-          {
-            '@type': 'OpeningHoursSpecification',
-            dayOfWeek: ['Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday'],
-            opens: '09:00',
-            closes: '21:00',
-          },
-        ],
-        hasOfferCatalog: {
-          '@type': 'OfferCatalog',
-          name: 'Legal Practice Areas',
-          itemListElement: [
-            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Criminal Defense', url: `${BASE}/services/criminal-lawyer` } },
-            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Bail & Anticipatory Bail', url: `${BASE}/services/bail-lawyer` } },
-            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Divorce & Family Law', url: `${BASE}/services/divorce-lawyer` } },
-            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Land & Property Law', url: `${BASE}/services/land-lawyer` } },
-            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Supreme Court Writ & Appeals', url: `${BASE}/services/supreme-court-lawyer` } },
-            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Company & Corporate Law', url: `${BASE}/services/company-corporate-lawyer` } },
-            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Income Tax & VAT Law', url: `${BASE}/services/tax-lawyer` } },
-          ],
-        },
-      },
+      buildWebSiteEntity(lang),
+      buildPersonEntity(),
+      legalSvc,
       {
         '@type': 'BreadcrumbList',
         itemListElement: breadcrumbItems.map((b, idx) => ({
@@ -1092,19 +1044,17 @@ async function main() {
     const servicesUrl = isBn ? `${BASE}/#services` : `${BASE}/en#services`;
     const graph = [
       {
-        '@type': 'Service',
+        '@type': 'LegalService',
         '@id': `${pageUrl}#service`,
         name: data.h1,
+        serviceType: data.h1,
         description: data.metaDesc,
         url: pageUrl,
         inLanguage: isBn ? 'bn-BD' : 'en',
-        provider: {
-          '@type': 'LegalService',
-          '@id': `${BASE}/#legalservice`,
-          name: 'Advocate Md. Shah Alam Law Chamber',
-          url: BASE,
-          priceRange: '৳৳',
-        },
+        telephone: '+8801712655546',
+        email: 'contact@advmdshahalam.me',
+        employee: { '@id': `${BASE}/#attorney` },
+        parentOrganization: { '@id': `${BASE}/#legalservice` },
         areaServed: { '@type': 'Country', name: 'Bangladesh' },
       },
       {
