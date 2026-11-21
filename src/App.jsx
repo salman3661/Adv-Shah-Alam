@@ -20,6 +20,7 @@ const Education = lazy(() => import('./pages/Education'));
 const Blog = lazy(() => import('./pages/Blog'));
 const BlogPost = lazy(() => import('./pages/BlogPost'));
 const NrbLegalHelp = lazy(() => import('./pages/NrbLegalHelp'));
+const UttaraLawyerPage = lazy(() => import('./pages/UttaraLawyerPage'));
 const BlogBn = lazy(() => import('./pages/BlogBn'));
 const BlogPostBn = lazy(() => import('./pages/BlogPostBn'));
 const CriminalLawyer = lazy(() => import('./pages/services/CriminalLawyer'));
@@ -82,6 +83,8 @@ function App() {
                       <Route path="/en" element={<Home lang="en" />} />
                       <Route path="/education" element={<Education />} />
                       <Route path="/advocate-md-shah-alam" element={<AdvocatePage />} />
+                      <Route path="/uttara-lawyer" element={<UttaraLawyerPage lang="en" />} />
+                      <Route path="/bn/uttara-lawyer" element={<UttaraLawyerPage lang="bn" />} />
 
                       {/* Services (English) */}
                       <Route path="/services/criminal-lawyer" element={<CriminalLawyer />} />

@@ -907,7 +907,7 @@ const AdvocatePage = () => {
                             Speak with Advocate Shah Alam Today
                         </h2>
                         <p className="text-sm mb-4 max-w-2xl mx-auto" style={{ color: 'var(--hero-text-2)' }}>
-                            Serving clients in Uttara, across Dhaka, and Non-Resident Bangladeshis (NRBs) worldwide via our <Link to="/nrb-legal-help" className="underline" style={{ color: '#E2C15A' }}>NRB Legal Help Desk</Link>.
+                            Serving clients in Uttara, across Dhaka, and Non-Resident Bangladeshis (NRBs) worldwide via our <Link to="/uttara-lawyer" className="underline mr-4" style={{ color: "var(--accent)" }}>Uttara Chamber Legal Services</Link><Link to="/nrb-legal-help" className="underline" style={{ color: '#E2C15A' }}>NRB Legal Help Desk</Link>.
                         </p>
                         <div className="text-xs sm:text-sm max-w-2xl mx-auto mb-7 px-4 py-3 rounded-xl text-left" style={{ background: 'rgba(201, 162, 39, 0.14)', border: '1px solid rgba(201, 162, 39, 0.4)', color: '#F8FAFC' }}>
                             <p className="mb-1"><strong>First Consultation is Free.</strong> Share your case details on WhatsApp (+880 1955-802007) or phone (+880 1712-655546) — no advance fee is charged for an initial opinion.</p>
