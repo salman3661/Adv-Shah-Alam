@@ -693,6 +693,13 @@ const ServicePage = ({ data, ...legacyProps }) => {
                                 >
                                     {isBn ? 'কেস রিভিউ বুক করুন' : 'Book Paid Case Review ($30–$75)'}
                                 </Link>
+                                <Link
+                                    to={isBn ? '/bn/uttara-lawyer' : '/uttara-lawyer'}
+                                    className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-bold text-sm border"
+                                    style={{ borderColor: 'rgba(148, 163, 184, 0.35)', color: '#E2E8F0', textDecoration: 'none' }}
+                                >
+                                    {isBn ? 'উত্তরা আইনজীবী (সেক্টর ১২)' : 'Uttara Chamber Guide'}
+                                </Link>
                             </div>
                         </div>
                     </div>

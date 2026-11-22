@@ -75,26 +75,45 @@ export async function refreshLiveUrls() {
   return payload;
 }
 
+const EXPECTED_STAGE_B_REDIRECTS = 6;
+
 function checkStageBRedirects() {
   const cfgPath = path.join(ROOT, 'seo/stage-b-clusters.json');
   const cfg = JSON.parse(fs.readFileSync(cfgPath, 'utf8'));
   const sources = [];
+  const targets = new Set();
   for (const c of cfg.clusters) {
     assertLiveUrl(c.master);
+    targets.add(normalizePath(c.master));
     for (const s of c.sources) {
       assertLiveUrl(s);
-      sources.push(s);
+      sources.push(normalizePath(s));
     }
   }
-  // Also ensure every Stage B source is present in vercel.json as a 301
+  if (sources.length !== EXPECTED_STAGE_B_REDIRECTS) {
+    throw new Error(`[url-truth] Stage B redirect count mismatch: expected ${EXPECTED_STAGE_B_REDIRECTS}, got ${sources.length}`);
+  }
+  // Ensure every Stage B source AND target is valid in vercel.json (301, non-404 target)
   const vercel = JSON.parse(fs.readFileSync(path.join(ROOT, 'vercel.json'), 'utf8'));
-  const vSources = new Set((vercel.redirects || []).filter((r) => !r.has && r.statusCode === 301).map((r) => normalizePath(r.source)));
-  for (const s of sources) {
-    if (!vSources.has(normalizePath(s))) {
-      throw new Error(`[url-truth] Stage B source missing 301 rule in vercel.json: ${s}`);
+  const vRules = (vercel.redirects || []).filter((r) => !r.has && r.statusCode === 301);
+  const vMap = new Map(vRules.map((r) => [normalizePath(r.source), normalizePath(r.destination)]));
+  let matched = 0;
+  for (const c of cfg.clusters) {
+    const master = normalizePath(c.master);
+    assertLiveUrl(master);
+    for (const s of c.sources) {
+      const src = normalizePath(s);
+      const dest = vMap.get(src);
+      if (!dest) throw new Error(`[url-truth] Stage B source missing 301 rule in vercel.json: ${src}`);
+      if (dest !== master) throw new Error(`[url-truth] Stage B rule destination mismatch: ${src} -> ${dest} (expected ${master})`);
+      assertLiveUrl(dest);
+      matched++;
     }
   }
-  return { checked: sources.length, masters: cfg.clusters.length };
+  if (matched !== EXPECTED_STAGE_B_REDIRECTS) {
+    throw new Error(`[url-truth] vercel.json Stage B rule count mismatch: expected ${EXPECTED_STAGE_B_REDIRECTS}, got ${matched}`);
+  }
+  return { checked: sources.length, masters: targets.size };
 }
 
 const isMain = process.argv[1] && path.resolve(process.argv[1]) === path.resolve(new URL(import.meta.url).pathname);
@@ -117,7 +136,19 @@ if (isMain) {
       console.error(`[url-truth] FAIL — old typo slug ${BAD_TYPO_SLUG} was not rejected!`);
       process.exit(1);
     }
-    console.log(`[url-truth] REGRESSION PASS — ${r.checked} Stage B sources valid, typo slug rejected`);
+    const BAD_TARGET = '/blog/non-existent-broken-target-404';
+    let targetThrew = false;
+    try {
+      assertLiveUrl(BAD_TARGET);
+    } catch (e) {
+      targetThrew = true;
+      console.log(`[url-truth] regression confirmed broken target FAILS: ${e.message}`);
+    }
+    if (!targetThrew) {
+      console.error(`[url-truth] FAIL — broken target ${BAD_TARGET} was not rejected!`);
+      process.exit(1);
+    }
+    console.log(`[url-truth] REGRESSION PASS — ${r.checked} Stage B sources + ${r.masters} targets valid, typo slug & broken target rejected`);
   } else {
     const payload = await refreshLiveUrls();
     console.log(`[url-truth] wrote ${payload.count} sorted live URLs to reports/live-urls.json`);
