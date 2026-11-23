@@ -178,7 +178,7 @@ const PrivacyPolicy = () => {
                                 <li><strong>Name:</strong> Advocate Md. Shah Alam</li>
                                 <li><strong>Email:</strong> contact@advmdshahalam.me</li>
                                 <li><strong>Phone:</strong> +880 1712-655546</li>
-                                <li><strong>Address:</strong> Mantrust Nazma Monzil, Sector 12, Uttara West, Dhaka-1230</li>
+                                <li><strong>Address:</strong> House 46, Road 6/B, Sector 12, Uttara West, Dhaka-1230</li>
                             </ul>
                         </div>
                     </div>

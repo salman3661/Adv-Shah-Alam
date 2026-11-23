@@ -19,7 +19,7 @@ const STATIC_SETTINGS = {
     whatsappNumber:      WA_NUMBER,
     whatsappDisplay:     WA_DISPLAY,
     whatsappDefaultMsg:  'আমাকে আইনি সহায়তা প্রয়োজন',
-    chamberAddress:      'Mantrust Nazma Monzil, Sector 12, Uttara West, Dhaka-1230',
+    chamberAddress:      'House 46, Road 6/B, Sector 12, Uttara West, Dhaka-1230',
     googleMapsLink:      null,
     googleMapsEmbed:     null,
     lawyerName:          'Advocate Md. Shah Alam',

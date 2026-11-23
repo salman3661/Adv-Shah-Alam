@@ -93,12 +93,20 @@ const buildContactSchema = (isBn) => {
                     },
                 ],
                 geo: { '@type': 'GeoCoordinates', latitude: 23.8745, longitude: 90.3987 },
-                openingHoursSpecification: {
-                    '@type': 'OpeningHoursSpecification',
-                    dayOfWeek: ['Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday'],
-                    opens: '09:00',
-                    closes: '21:00',
-                },
+                openingHoursSpecification: [
+                    {
+                        '@type': 'OpeningHoursSpecification',
+                        dayOfWeek: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday'],
+                        opens: '09:00',
+                        closes: '17:00',
+                    },
+                    {
+                        '@type': 'OpeningHoursSpecification',
+                        dayOfWeek: ['Saturday'],
+                        opens: '10:00',
+                        closes: '14:00',
+                    },
+                ],
             },
             {
                 '@type': 'BreadcrumbList',
@@ -636,7 +644,7 @@ const ContactPage = ({ lang }) => {
                                     </p>
                                 </div>
                                 <p className="text-sm font-bold" style={{ color: 'var(--text)', fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>
-                                    {isBn ? 'শনিবার – বৃহস্পতিবার: সকাল ৯:০০ – রাত ৯:০০' : 'Saturday – Thursday: 9:00 AM – 9:00 PM'}
+                                    {isBn ? 'রবিবার – বৃহস্পতিবার: সকাল ৯:০০ – বিকেল ৫:০০; শনিবার: সকাল ১০:০০ – দুপুর ২:০০; শুক্রবার: বন্ধ' : 'Sunday – Thursday: 9:00 AM – 5:00 PM; Saturday: 10:00 AM – 2:00 PM; Friday: Closed'}
                                 </p>
                                 <p className="text-xs mt-1" style={{ color: 'var(--text-muted)', fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>
                                     {isBn ? 'শুক্রবার: চেম্বার বন্ধ | অনলাইন ও হোয়াটসঅ্যাপ ২৪/৭ সচল' : 'Friday: Closed | WhatsApp available 7 days'}
@@ -671,7 +679,7 @@ const ContactPage = ({ lang }) => {
                                     <Phone size={22} /> {CALL_DISPLAY}
                                 </a>
                                 <p className="text-xs mt-2" style={{ color: 'var(--text-muted)', fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>
-                                    {isBn ? 'শনিবার–বৃহস্পতিবার (সকাল ৯টা - রাত ৯টা)' : 'Calls answered Sat–Thu, 9 AM – 9 PM'}
+                                    {isBn ? 'রবিবার – বৃহস্পতিবার: সকাল ৯:০০ – বিকেল ৫:০০; শনিবার: সকাল ১০:০০ – দুপুর ২:০০; শুক্রবার: বন্ধ' : 'Sunday – Thursday: 9:00 AM – 5:00 PM; Saturday: 10:00 AM – 2:00 PM; Friday: Closed'}
                                 </p>
                             </div>
                         </div>

@@ -586,7 +586,7 @@ function homeBodyBn() {
     <li><strong>ইমেইল:</strong> <a href="mailto:contact@advmdshahalam.me" style="color:#1a56db">contact@advmdshahalam.me</a></li>
     <li><strong>উত্তরা সন্ধ্যা চেম্বার:</strong> বাড়ি ৪৬, রাস্তা ৬/বি, সেক্টর ১২, উত্তরা, ঢাকা-১২৩০</li>
     <li><strong>জজ কোর্ট চেম্বার:</strong> আইনজীবী সমিতি ভবন, ১ম তলা (হল রুম), ৬/৭ কোর্ট হাউস স্ট্রিট, কোতোয়ালি, ঢাকা</li>
-    <li><strong>অফিস সময়:</strong> শনিবার – বৃহস্পতিবার, সকাল ৯:০০ – রাত ৯:০০</li>
+    <li><strong>অফিস সময়:</strong> রবিবার – বৃহস্পতিবার: সকাল ৯:০০ – বিকেল ৫:০০; শনিবার: সকাল ১০:০০ – দুপুর ২:০০; শুক্রবার: বন্ধ</li>
   </ul>
 </section>
 <nav aria-label="Site Directory" style="margin-top:24px;padding:16px;background:#F7F8FA;border-radius:8px">
@@ -638,7 +638,7 @@ function homeBody() {
     <li><strong>Email:</strong> <a href="mailto:contact@advmdshahalam.me" style="color:#1a56db">contact@advmdshahalam.me</a></li>
     <li><strong>Uttara Chamber:</strong> House 46, Road 6/B, Sector 12, Uttara West, Dhaka-1230</li>
     <li><strong>Court Chamber:</strong> Ainjeebi Samity Bhaban, 4th Floor, 6/7 Court House Street, Kotwali, Dhaka-1100</li>
-    <li><strong>Office Hours:</strong> Saturday – Thursday, 9:00 AM – 9:00 PM</li>
+    <li><strong>Office Hours:</strong> Sunday – Thursday: 9:00 AM – 5:00 PM; Saturday: 10:00 AM – 2:00 PM; Friday: Closed</li>
   </ul>
 </section>`;
 }
@@ -712,7 +712,7 @@ function advocateBody() {
   <ul style="padding-left:20px;color:#333;line-height:2">
     <li><strong>Uttara Chamber:</strong> House 46, Road 6/B, Sector 12, Uttara West, Dhaka 1230, Bangladesh</li>
     <li><strong>Judge Court Chamber:</strong> Lawyers Association Building, 4th Floor, 6/7 Court House Street, Kotwali, Dhaka 1100</li>
-    <li><strong>Consultation Hours:</strong> Sunday–Thursday 09:00–17:00 | Saturday 10:00–14:00 | Friday Closed</li>
+    <li><strong>Consultation Hours:</strong> Sunday – Thursday: 9:00 AM – 5:00 PM; Saturday: 10:00 AM – 2:00 PM; Friday: Closed</li>
     <li><strong>Phone:</strong> <a href="tel:+8801712655546" style="color:#1a56db">+880 1712-655546</a> · <strong>WhatsApp:</strong> <a href="https://wa.me/8801955802007" style="color:#1a56db">+880 1955-802007</a></li>
     <li><strong>Direct Intake:</strong> <a href="/contact" style="color:#1a56db;font-weight:600">Contact Chamber &amp; Book Free Initial Consultation →</a></li>
   </ul>
@@ -836,7 +836,7 @@ function contactBody() {
   <ul style="padding-left:20px;color:#333;line-height:2.1">
     <li><strong>Uttara Chamber (Primary Evening Office):</strong> House 46, Road 6/B, Sector 12, Uttara West, Dhaka-1230 — private evening client consultations and case review meetings.</li>
     <li><strong>Court Chamber (Dhaka Judge Court):</strong> Ainjeebi Samity Bhaban, 4th Floor, 6/7 Court House Street, Kotwali, Dhaka-1100 — adjacent to Chief Metropolitan Magistrate and Sessions Courts.</li>
-    <li><strong>Direct Phone Hotline:</strong> <a href="tel:+8801712655546" style="color:#1a56db">+880 1712-655546</a> (Saturday – Thursday, 9:00 AM – 9:00 PM)</li>
+    <li><strong>Direct Phone Hotline:</strong> <a href="tel:+8801712655546" style="color:#1a56db">+880 1712-655546</a> (Sunday – Thursday: 9:00 AM – 5:00 PM; Saturday: 10:00 AM – 2:00 PM; Friday: Closed)</li>
     <li><strong>Emergency WhatsApp Desk:</strong> <a href="https://wa.me/8801955802007" style="color:#25D366">+880 1955-802007</a> (available 7 days for urgent inquiries)</li>
     <li><strong>Email:</strong> <a href="mailto:contact@advmdshahalam.me" style="color:#1a56db">contact@advmdshahalam.me</a> · <strong>bKash Paid Review:</strong> 01712655546</li>
   </ul>
@@ -887,7 +887,7 @@ function contactBodyBn() {
   <ul style="padding-left:20px;color:#333;line-height:2.1">
     <li><strong>উত্তরা চেম্বার (প্রধান কার্যালয়):</strong> বাড়ি ৪৬, সড়ক ৬/বি, সেক্টর ১২, উত্তরা পশ্চিম, ঢাকা-১২৩০ — সরাসরি আইনি পরামর্শ ও গোপনীয় ক্লায়েন্ট মিটিং চেম্বার।</li>
     <li><strong>কোর্ট চেম্বার (ঢাকা বিচার আদালত):</strong> আইনজীবী সমিতি ভবন, ৪র্থ তলা, ৬/৭ কোর্ট হাউস স্ট্রিট, কোতোয়ালি, ঢাকা-১১০০ — ঢাকা জজ কোর্ট ও মহানগর দায়রা আদালত সংলগ্ন।</li>
-    <li><strong>সরাসরি হটলাইন কল:</strong> <a href="tel:+8801712655546" style="color:#1a56db">+880 1712-655546</a> (শনিবার – বৃহস্পতিবার, সকাল ৯:০০ – রাত ৯:০০)</li>
+    <li><strong>সরাসরি হটলাইন কল:</strong> <a href="tel:+8801712655546" style="color:#1a56db">+880 1712-655546</a> (রবিবার – বৃহস্পতিবার: সকাল ৯:০০ – বিকেল ৫:০০; শনিবার: সকাল ১০:০০ – দুপুর ২:০০; শুক্রবার: বন্ধ)</li>
     <li><strong>জরুরি হোয়াটসঅ্যাপ:</strong> <a href="https://wa.me/8801955802007" style="color:#25D366">+880 1955-802007</a> (সপ্তাহের ৭ দিন জরুরি সহায়তার জন্য সচল)</li>
     <li><strong>ইমেইল:</strong> <a href="mailto:contact@advmdshahalam.me" style="color:#1a56db">contact@advmdshahalam.me</a> · <strong>বিকাশ পেইড কনসালটেশন:</strong> ০১৭১২৬৫৫৫৪৬</li>
   </ul>

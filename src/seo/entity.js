@@ -98,6 +98,27 @@ export const OFFER_CATALOG = {
   ],
 };
 
+export const OFFICE_HOURS = {
+  en: 'Sunday – Thursday: 9:00 AM – 5:00 PM; Saturday: 10:00 AM – 2:00 PM; Friday: Closed',
+  bn: 'রবিবার – বৃহস্পতিবার: সকাল ৯:০০ – বিকেল ৫:০০; শনিবার: সকাল ১০:০০ – দুপুর ২:০০; শুক্রবার: বন্ধ',
+  shortEn: 'Sun–Thu 09:00–17:00, Sat 10:00–14:00 (Fri Closed)',
+  shortBn: 'রবি–বৃহস্পতি ৯টা–৫টা, শনি ১০টা–২টা (শুক্রবার বন্ধ)',
+  schema: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday'],
+      opens: '09:00',
+      closes: '17:00',
+    },
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Saturday'],
+      opens: '10:00',
+      closes: '14:00',
+    },
+  ],
+};
+
 export const ADVOCATE_NAP = {
   name: 'Advocate Md. Shah Alam',
   alternateName: [
@@ -150,6 +171,8 @@ export const ADVOCATE_NAP = {
       closes: '14:00',
     },
   ],
+  experienceYears: '10+ years',
+  officeHours: OFFICE_HOURS,
   knowsLanguage: ['bn-BD', 'en'],
   // Only verified, owner-controlled profile URLs already present in the repository
   sameAs: [

@@ -37,7 +37,7 @@ const Chambers = ({ lang = 'en' }) => {
             name: isBn ? 'জজ কোর্ট চেম্বার (প্রধান)' : 'Judge Court Chamber (Primary)',
             address: isBn ? 'আইনজীবী সমিতি ভবন, ১ম তলা (হল রুম), ৬/৭ কোর্ট হাউস স্ট্রিট, কোতোয়ালি, ঢাকা' : 'Ainjeebi Samity Bhaban, 4th Floor (Hall Room), 6/7 Court House Street, Kotwali, Dhaka-1100',
             phone: CALL_NUMBER,
-            hours: isBn ? 'রবিবার–বৃহস্পতিবার: সকাল ৯টা – বিকেল ৫টা' : 'Sun–Thu: 9:00 AM – 5:00 PM',
+            hours: isBn ? 'রবিবার – বৃহস্পতিবার: সকাল ৯:০০ – বিকেল ৫:০০; শনিবার: সকাল ১০:০০ – দুপুর ২:০০; শুক্রবার: বন্ধ' : 'Sunday – Thursday: 9:00 AM – 5:00 PM; Saturday: 10:00 AM – 2:00 PM; Friday: Closed',
             mapUrl: 'https://maps.google.com/?q=6+Court+House+Street+Kotwali+Dhaka',
             isPrimary: true,
         },
@@ -45,7 +45,7 @@ const Chambers = ({ lang = 'en' }) => {
             name: isBn ? 'মেট্রোপলিটন পিপি অফিস — ঢাকা' : 'Metropolitan P.P Office — Dhaka (APP)',
             address: isBn ? '৪, কোর্ট হাউস স্ট্রিট, রব্বতি মানশন, কোতোয়ালি, ঢাকা' : '4, Court House Street, Robboti Mansion, Kotwali, Dhaka-1100',
             phone: CALL_NUMBER,
-            hours: isBn ? 'রবিবার–বৃহস্পতিবার: সকাল ৯টা – বিকেল ৫টা' : 'Sun–Thu: 9:00 AM – 5:00 PM',
+            hours: isBn ? 'রবিবার – বৃহস্পতিবার: সকাল ৯:০০ – বিকেল ৫:০০; শনিবার: সকাল ১০:০০ – দুপুর ২:০০; শুক্রবার: বন্ধ' : 'Sunday – Thursday: 9:00 AM – 5:00 PM; Saturday: 10:00 AM – 2:00 PM; Friday: Closed',
             mapUrl: 'https://maps.google.com/?q=4+Court+House+Street+Kotwali+Dhaka',
             isPrimary: false,
         },
@@ -53,7 +53,7 @@ const Chambers = ({ lang = 'en' }) => {
             name: isBn ? 'সুপ্রিম কোর্ট চেম্বার' : 'Supreme Court Chamber',
             address: isBn ? 'কক্ষ ০২, SCBA ভবন, শাহবাগ, ঢাকা-১০০০' : 'Room 02, SCBA Bhaban, Shahbag, Dhaka-1000',
             phone: '+' + WA_NUMBER,
-            hours: isBn ? 'রবিবার–বৃহস্পতিবার: সকাল ৯টা – বিকেল ৫টা' : 'Sun–Thu: 9:00 AM – 5:00 PM',
+            hours: isBn ? 'রবিবার – বৃহস্পতিবার: সকাল ৯:০০ – বিকেল ৫:০০; শনিবার: সকাল ১০:০০ – দুপুর ২:০০; শুক্রবার: বন্ধ' : 'Sunday – Thursday: 9:00 AM – 5:00 PM; Saturday: 10:00 AM – 2:00 PM; Friday: Closed',
             mapUrl: 'https://maps.google.com/?q=Supreme+Court+Bar+Association+Dhaka',
             isPrimary: false,
         },
@@ -61,7 +61,7 @@ const Chambers = ({ lang = 'en' }) => {
             name: isBn ? 'সন্ধ্যা চেম্বার — উত্তরা' : 'Evening Chamber — Uttara',
             address: isBn ? 'বাড়ি ৪৬, রাস্তা ৬/বি, সেক্টর ১২, উত্তরা, ঢাকা-১২৩০' : 'House 46, Road 6/B, Sector 12, Uttara, Dhaka-1230',
             phone: CALL_NUMBER,
-            hours: isBn ? 'রবি–শনি: সন্ধ্যা ৬টা – রাত ১১টা' : 'Sun–Sat: 6:00 PM – 11:00 PM',
+            hours: isBn ? 'রবিবার – বৃহস্পতিবার: সকাল ৯:০০ – বিকেল ৫:০০; শনিবার: সকাল ১০:০০ – দুপুর ২:০০; শুক্রবার: বন্ধ' : 'Sunday – Thursday: 9:00 AM – 5:00 PM; Saturday: 10:00 AM – 2:00 PM; Friday: Closed',
             mapUrl: 'https://maps.app.goo.gl/QebF9RVMYmzWGTrh7',
             isPrimary: false,
         },
@@ -121,7 +121,7 @@ const Chambers = ({ lang = 'en' }) => {
                     <div className="px-5 py-3 flex items-center gap-2" style={{ background: 'var(--card-bg)' }}>
                         <MapPin size={13} style={{ color: 'var(--accent)', flexShrink: 0 }} />
                         <p className="text-xs" style={{ color: 'var(--text-muted)' }}>
-                            {isBn ? 'সন্ধ্যা চেম্বার, সেক্টর ১২, উত্তরা, ঢাকা — সন্ধ্যা ৬টা থেকে রাত ১১টা পর্যন্ত খোলা থাকে।' : 'Evening Chamber, Sector 12, Uttara, Dhaka — Open 6:00 PM to 11:00 PM daily.'}
+                            {isBn ? 'উত্তরা চেম্বার: বাড়ি ৪৬, রোড ৬/বি, সেক্টর ১২, উত্তরা পশ্চিম, ঢাকা-১২৩০ — রবিবার – বৃহস্পতিবার: সকাল ৯:০০ – বিকেল ৫:০০; শনিবার: সকাল ১০:০০ – দুপুর ২:০০; শুক্রবার: বন্ধ।' : 'Uttara Chamber: House 46, Road 6/B, Sector 12, Uttara West, Dhaka-1230 — Sunday – Thursday: 9:00 AM – 5:00 PM; Saturday: 10:00 AM – 2:00 PM; Friday: Closed.'}
                         </p>
                     </div>
                 </motion.div>

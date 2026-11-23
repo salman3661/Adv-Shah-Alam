@@ -28,9 +28,15 @@ const LOCAL_BUSINESS_SCHEMA = {
     openingHoursSpecification: [
         {
             '@type': 'OpeningHoursSpecification',
-            dayOfWeek: ['Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday'],
+            dayOfWeek: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday'],
             opens: '09:00',
-            closes: '21:00',
+            closes: '17:00',
+        },
+        {
+            '@type': 'OpeningHoursSpecification',
+            dayOfWeek: ['Saturday'],
+            opens: '10:00',
+            closes: '14:00',
         },
     ],
     areaServed: [
@@ -168,7 +174,7 @@ const Contact = ({ lang = 'en' }) => {
                         <div className="flex items-center gap-2 text-xs font-semibold px-3.5 py-2 rounded-xl w-fit"
                             style={{ background: 'var(--gold-subtle)', color: 'var(--gold)', border: '1px solid var(--gold-border)' }}>
                             <Clock size={13} />
-                            {isBn ? 'শনি–বৃহস্পতিবার, সকাল ৯টা – রাত ৯টা' : 'Sat–Thu, 9:00 AM – 9:00 PM'}
+                            {isBn ? 'রবিবার – বৃহস্পতিবার: সকাল ৯:০০ – বিকেল ৫:০০; শনিবার: সকাল ১০:০০ – দুপুর ২:০০; শুক্রবার: বন্ধ' : 'Sunday – Thursday: 9:00 AM – 5:00 PM; Saturday: 10:00 AM – 2:00 PM; Friday: Closed'}
                         </div>
 
                         {contactInfo.map((info, i) => (

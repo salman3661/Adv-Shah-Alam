@@ -20,10 +20,10 @@ const siteInfo = {
     chamberAddress:     'Ainjeebi Samity Bhaban, 4th Floor, 6/7 Court House Street, Kotwali, Dhaka-1100',
 
     /** Used by clients coming to the office — Sector 12, Uttara */
-    practiceAddress:    'Mantrust Nazma Monzil, Sector 12, Uttara West, Dhaka-1230',
+    practiceAddress:    'House 46, Road 6/B, Sector 12, Uttara West, Dhaka-1230',
 
     /** Office hours (text, shown in contact section) */
-    officeHours:        'Sat – Thu: 9:00 AM – 9:00 PM',
+    officeHours:        'Sunday – Thursday: 9:00 AM – 5:00 PM; Saturday: 10:00 AM – 2:00 PM; Friday: Closed',
 
     // ─── Contact links ──────────────────────────────────────────────
     // Phone and WhatsApp → edit src/data/contactInfo.js (centralized)
