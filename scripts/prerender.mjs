@@ -586,7 +586,7 @@ function homeBodyBn() {
     <li><strong>ইমেইল:</strong> <a href="mailto:contact@advmdshahalam.me" style="color:#1a56db">contact@advmdshahalam.me</a></li>
     <li><strong>উত্তরা সন্ধ্যা চেম্বার:</strong> বাড়ি ৪৬, রাস্তা ৬/বি, সেক্টর ১২, উত্তরা, ঢাকা-১২৩০</li>
     <li><strong>জজ কোর্ট চেম্বার:</strong> আইনজীবী সমিতি ভবন, ১ম তলা (হল রুম), ৬/৭ কোর্ট হাউস স্ট্রিট, কোতোয়ালি, ঢাকা</li>
-    <li><strong>অফিস সময়:</strong> রবিবার – বৃহস্পতিবার: সকাল ৯:০০ – বিকেল ৫:০০; শনিবার: সকাল ১০:০০ – দুপুর ২:০০; শুক্রবার: বন্ধ</li>
+    <li><strong>অফিস সময়:</strong> রবিবার – বৃহস্পতিবার: সকাল ৮:০০ – রাত ১০:০০; শুক্র – শনিবার (উত্তরা চেম্বার): সকাল ১০:০০ – রাত ১০:০০</li>
   </ul>
 </section>
 <nav aria-label="Site Directory" style="margin-top:24px;padding:16px;background:#F7F8FA;border-radius:8px">
@@ -638,7 +638,7 @@ function homeBody() {
     <li><strong>Email:</strong> <a href="mailto:contact@advmdshahalam.me" style="color:#1a56db">contact@advmdshahalam.me</a></li>
     <li><strong>Uttara Chamber:</strong> House 46, Road 6/B, Sector 12, Uttara West, Dhaka-1230</li>
     <li><strong>Court Chamber:</strong> Ainjeebi Samity Bhaban, 4th Floor, 6/7 Court House Street, Kotwali, Dhaka-1100</li>
-    <li><strong>Office Hours:</strong> Sunday – Thursday: 9:00 AM – 5:00 PM; Saturday: 10:00 AM – 2:00 PM; Friday: Closed</li>
+    <li><strong>Office Hours:</strong> Sunday – Thursday: 8:00 AM – 10:00 PM; Friday – Saturday (Uttara Chamber): 10:00 AM – 10:00 PM</li>
   </ul>
 </section>`;
 }
@@ -712,7 +712,7 @@ function advocateBody() {
   <ul style="padding-left:20px;color:#333;line-height:2">
     <li><strong>Uttara Chamber:</strong> House 46, Road 6/B, Sector 12, Uttara West, Dhaka 1230, Bangladesh</li>
     <li><strong>Judge Court Chamber:</strong> Lawyers Association Building, 4th Floor, 6/7 Court House Street, Kotwali, Dhaka 1100</li>
-    <li><strong>Consultation Hours:</strong> Sunday – Thursday: 9:00 AM – 5:00 PM; Saturday: 10:00 AM – 2:00 PM; Friday: Closed</li>
+    <li><strong>Consultation Hours:</strong> Sunday – Thursday: 8:00 AM – 10:00 PM; Friday – Saturday (Uttara Chamber): 10:00 AM – 10:00 PM</li>
     <li><strong>Phone:</strong> <a href="tel:+8801712655546" style="color:#1a56db">+880 1712-655546</a> · <strong>WhatsApp:</strong> <a href="https://wa.me/8801955802007" style="color:#1a56db">+880 1955-802007</a></li>
     <li><strong>Direct Intake:</strong> <a href="/contact" style="color:#1a56db;font-weight:600">Contact Chamber &amp; Book Free Initial Consultation →</a></li>
   </ul>
@@ -836,7 +836,7 @@ function contactBody() {
   <ul style="padding-left:20px;color:#333;line-height:2.1">
     <li><strong>Uttara Chamber (Primary Evening Office):</strong> House 46, Road 6/B, Sector 12, Uttara West, Dhaka-1230 — private evening client consultations and case review meetings.</li>
     <li><strong>Court Chamber (Dhaka Judge Court):</strong> Ainjeebi Samity Bhaban, 4th Floor, 6/7 Court House Street, Kotwali, Dhaka-1100 — adjacent to Chief Metropolitan Magistrate and Sessions Courts.</li>
-    <li><strong>Direct Phone Hotline:</strong> <a href="tel:+8801712655546" style="color:#1a56db">+880 1712-655546</a> (Sunday – Thursday: 9:00 AM – 5:00 PM; Saturday: 10:00 AM – 2:00 PM; Friday: Closed)</li>
+    <li><strong>Direct Phone Hotline:</strong> <a href="tel:+8801712655546" style="color:#1a56db">+880 1712-655546</a> (Sunday – Thursday: 8:00 AM – 10:00 PM; Friday – Saturday (Uttara Chamber): 10:00 AM – 10:00 PM)</li>
     <li><strong>Emergency WhatsApp Desk:</strong> <a href="https://wa.me/8801955802007" style="color:#25D366">+880 1955-802007</a> (available 7 days for urgent inquiries)</li>
     <li><strong>Email:</strong> <a href="mailto:contact@advmdshahalam.me" style="color:#1a56db">contact@advmdshahalam.me</a> · <strong>bKash Paid Review:</strong> 01712655546</li>
   </ul>
@@ -887,7 +887,7 @@ function contactBodyBn() {
   <ul style="padding-left:20px;color:#333;line-height:2.1">
     <li><strong>উত্তরা চেম্বার (প্রধান কার্যালয়):</strong> বাড়ি ৪৬, সড়ক ৬/বি, সেক্টর ১২, উত্তরা পশ্চিম, ঢাকা-১২৩০ — সরাসরি আইনি পরামর্শ ও গোপনীয় ক্লায়েন্ট মিটিং চেম্বার।</li>
     <li><strong>কোর্ট চেম্বার (ঢাকা বিচার আদালত):</strong> আইনজীবী সমিতি ভবন, ৪র্থ তলা, ৬/৭ কোর্ট হাউস স্ট্রিট, কোতোয়ালি, ঢাকা-১১০০ — ঢাকা জজ কোর্ট ও মহানগর দায়রা আদালত সংলগ্ন।</li>
-    <li><strong>সরাসরি হটলাইন কল:</strong> <a href="tel:+8801712655546" style="color:#1a56db">+880 1712-655546</a> (রবিবার – বৃহস্পতিবার: সকাল ৯:০০ – বিকেল ৫:০০; শনিবার: সকাল ১০:০০ – দুপুর ২:০০; শুক্রবার: বন্ধ)</li>
+    <li><strong>সরাসরি হটলাইন কল:</strong> <a href="tel:+8801712655546" style="color:#1a56db">+880 1712-655546</a> (রবিবার – বৃহস্পতিবার: সকাল ৮:০০ – রাত ১০:০০; শুক্র – শনিবার (উত্তরা চেম্বার): সকাল ১০:০০ – রাত ১০:০০)</li>
     <li><strong>জরুরি হোয়াটসঅ্যাপ:</strong> <a href="https://wa.me/8801955802007" style="color:#25D366">+880 1955-802007</a> (সপ্তাহের ৭ দিন জরুরি সহায়তার জন্য সচল)</li>
     <li><strong>ইমেইল:</strong> <a href="mailto:contact@advmdshahalam.me" style="color:#1a56db">contact@advmdshahalam.me</a> · <strong>বিকাশ পেইড কনসালটেশন:</strong> ০১৭১২৬৫৫৫৪৬</li>
   </ul>
@@ -1520,7 +1520,7 @@ ${CTA}`,
 <p>অ্যাডভোকেট মো. শাহ আলম বাংলাদেশের সুপ্রিম কোর্ট ও ঢাকা জজ কোর্টের একজন তালিকাভুক্ত আইনজীবী। উত্তরার সেক্টর ১২-তে (বাড়ি ৪৬, রোড ৬/বি, উত্তরা পশ্চিম, ঢাকা ১২৩০) অবস্থিত চেম্বার থেকে তিনি উত্তরা মডেল টাউনের ১ থেকে ১৭ নম্বর সেক্টর, উত্তরা পশ্চিম, উত্তরা পূর্ব, তুরাগ, দক্ষিণখান, বিমানবন্দর, গুলশান, বনানী এবং বসুন্ধরা আবাসিক এলাকার ক্লায়েন্টদের নিয়মিত আইনি সহায়তা প্রদান করেন। প্রথম পরামর্শ ফ্রি — কাজের পরিধি বুঝিয়ে ও ঠিক করার পরেই কেবল ফি নির্ধারণ করা হয়, কোনো অগ্রিম ফি নেওয়া হয় না।</p>
 <h2>একনজরে উত্তরা চেম্বারের আইনি সহায়তা ও পরামর্শ তথ্য</h2>
 <table><thead><tr><th>বিষয়</th><th>বিস্তারিত তথ্য</th></tr></thead><tbody>
-<tr><td>উত্তরা চেম্বার ঠিকানা</td><td>বাড়ি ৪৬, রোড ৬/বি, সেক্টর ১২, উত্তরা পশ্চিম, ঢাকা ১২৩০ (রবি–বৃহস্পতি ৯টা–৫টা, শনি ১০টা–২টা)</td></tr>
+<tr><td>উত্তরা চেম্বার ঠিকানা</td><td>বাড়ি ৪৬, রোড ৬/বি, সেক্টর ১২, উত্তরা পশ্চিম, ঢাকা ১২৩০ (রবি–বৃহস্পতি সকাল ৮টা–রাত ১০টা, শুক্র–শনি সকাল ১০টা–রাত ১০টা (উত্তরা))</td></tr>
 <tr><td>আওতাভুক্ত থানা</td><td>উত্তরা পশ্চিম থানা, উত্তরা পূর্ব থানা, তুরাগ থানা, দক্ষিণখান থানা, বিমানবন্দর থানা, গুলশান, বনানী ও ভাটারা থানা</td></tr>
 <tr><td>সংশ্লিষ্ট আদালত</td><td>ঢাকা মেট্রোপলিটন ম্যাজিস্ট্রেট (সিএমএম) আদালত, ঢাকা জেলা ও দায়রা জজ আদালত (কোর্ট হাউস স্ট্রিট, কোতোয়ালি), পারিবারিক আদালত এবং বাংলাদেশ সুপ্রিম কোর্ট (হাইকোর্ট বিভাগ)</td></tr>
 <tr><td>পরামর্শ নীতি</td><td>প্রথম পরামর্শ ফ্রি — কোনো অগ্রিম ফি ছাড়াই আইনি অবস্থান ও করণীয় জেনে নিন। কাজের পরিধি নির্ধারণের পরেই কেবল ফি আলোচনা করা হয়।</td></tr>
@@ -1567,7 +1567,7 @@ ${CTA}`,
 <p>Advocate Md. Shah Alam is a Bangladesh Bar Council enrolled advocate practising before the Supreme Court of Bangladesh and Dhaka Judge Court. From his chamber in Sector 12, Uttara West (House 46, Road 6/B, Sector 12, Uttara West, Dhaka 1230), he represents local residents, businesses, and Non-Resident Bangladeshis (NRBs) with property or family matters across Uttara Sectors 1–17, Turag, Dakshinkhan, Airport, Gulshan, Banani, and Bashundhara Residential Area. The first consultation is free with no advance fee — legal fees are agreed only after explaining the scope of your matter.</p>
 <h2>Quick Answer: Chamber Jurisdiction, Courts &amp; Free First Consultation</h2>
 <table><thead><tr><th>Item</th><th>Details</th></tr></thead><tbody>
-<tr><td>Uttara Chamber Address</td><td>House 46, Road 6/B, Sector 12, Uttara West, Dhaka 1230 (Sun–Thu 09:00–17:00, Sat 10:00–14:00)</td></tr>
+<tr><td>Uttara Chamber Address</td><td>House 46, Road 6/B, Sector 12, Uttara West, Dhaka 1230 (Sun–Thu 08:00–22:00, Fri–Sat 10:00–22:00 (Uttara))</td></tr>
 <tr><td>Primary Police Stations</td><td>Uttara West PS, Uttara East PS, Turag PS, Dakshinkhan PS, Bimanbandar (Airport) PS, Gulshan PS, Banani PS, Vatara PS</td></tr>
 <tr><td>Courts Covered</td><td>Dhaka Chief Metropolitan Magistrate (CMM) Court, Dhaka Judge &amp; Sessions Court (Kotwali), Family Court, and Supreme Court of Bangladesh (High Court Division)</td></tr>
 <tr><td>Consultation Policy</td><td>First consultation is free — no advance fee. Legal fees are discussed and agreed only after reviewing your documents and scope.</td></tr>

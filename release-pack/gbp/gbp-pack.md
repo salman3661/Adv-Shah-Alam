@@ -11,9 +11,8 @@
 - **Phone:** +880 1712 655546
 - **Website:** https://www.advmdshahalam.me
 - **Hours:**
-  - Sunday–Thursday: 09:00–17:00
-  - Saturday: 10:00–14:00
-  - Friday: Closed
+  - Sunday–Thursday: 08:00–22:00 (8:00 AM – 10:00 PM)
+  - Friday–Saturday (Uttara Chamber): 10:00–22:00 (10:00 AM – 10:00 PM)
 
 ## Business Description (EN)
 Advocate Md. Shah Alam is a Bangladesh Bar Council enrolled advocate practising in Dhaka and before the Supreme Court of Bangladesh. Focus areas include criminal defence and bail, land registration, mutation, Lis Pendens and partition disputes, family law, Section 138 cheque recovery, and RJSC corporate matters. We also assist Non-Resident Bangladeshis (NRBs) in the UK, US, Canada, and UAE with Power of Attorney, Embassy/MOFA attestation, property purchase, and inheritance. First consultation is free with no advance fee.

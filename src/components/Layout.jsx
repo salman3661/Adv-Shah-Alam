@@ -44,8 +44,8 @@ const attorneySchema = {
         {
             '@type': 'OpeningHoursSpecification',
             dayOfWeek: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday'],
-            opens: '09:00',
-            closes: '17:00',
+            opens: '08:00',
+            closes: '22:00',
         },
     ],
     areaServed: [
@@ -230,8 +230,8 @@ const legalServiceSchema = {
         {
             '@type': 'OpeningHoursSpecification',
             dayOfWeek: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday'],
-            opens: '09:00',
-            closes: '17:00',
+            opens: '08:00',
+            closes: '22:00',
         },
     ],
     sameAs: [

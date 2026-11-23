@@ -23,7 +23,7 @@ const siteInfo = {
     practiceAddress:    'House 46, Road 6/B, Sector 12, Uttara West, Dhaka-1230',
 
     /** Office hours (text, shown in contact section) */
-    officeHours:        'Sunday – Thursday: 9:00 AM – 5:00 PM; Saturday: 10:00 AM – 2:00 PM; Friday: Closed',
+    officeHours:        'Sunday – Thursday: 8:00 AM – 10:00 PM; Friday – Saturday (Uttara Chamber): 10:00 AM – 10:00 PM',
 
     // ─── Contact links ──────────────────────────────────────────────
     // Phone and WhatsApp → edit src/data/contactInfo.js (centralized)

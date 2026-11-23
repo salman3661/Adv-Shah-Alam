@@ -147,12 +147,12 @@ for (const route of KEY_ROUTES) {
     }
   }
   if (route === '/contact' || route === '/en' || route === '/blog/uttara-dhaka-lawyer-legal-services-2026' || route === '/uttara-lawyer') {
-    if (!/Sunday\s*[–-]\s*Thursday:\s*9:00\s*AM\s*[–-]\s*5:00\s*PM/i.test(domText) && !/Sun[–-]Thu\s*09:00[–-]17:00/i.test(domText)) {
+    if (!/Sunday\s*[–-]\s*Thursday:\s*8:00\s*AM\s*[–-]\s*10:00\s*PM/i.test(domText) && !/Sun[–-]Thu\s*08:00[–-]22:00/i.test(domText)) {
       errors.push(`[DOM] ${route}: canonical EN office hours not found in rendered DOM`);
     }
   }
   if (route === '/bn/contact' || route === '/' || route === '/bn/uttara-lawyer') {
-    if (!/রবিবার\s*[–-]\s*বৃহস্পতিবার:\s*সকাল\s*৯:০০\s*[–-]\s*বিকেল\s*৫:০০/u.test(domText) && !/রবি[–-]বৃহস্পতি\s*৯টা[–-]৫টা/u.test(domText)) {
+    if (!/রবিবার\s*[–-]\s*বৃহস্পতিবার:\s*সকাল\s*৮:০০\s*[–-]\s*রাত\s*১০:০০/u.test(domText) && !/রবি[–-]বৃহস্পতি\s*সকাল\s*৮টা[–-]রাত\s*১০টা/u.test(domText)) {
       errors.push(`[DOM] ${route}: canonical BN office hours not found in rendered DOM`);
     }
   }

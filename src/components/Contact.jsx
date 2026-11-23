@@ -29,14 +29,14 @@ const LOCAL_BUSINESS_SCHEMA = {
         {
             '@type': 'OpeningHoursSpecification',
             dayOfWeek: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday'],
-            opens: '09:00',
-            closes: '17:00',
+            opens: '08:00',
+            closes: '22:00',
         },
         {
             '@type': 'OpeningHoursSpecification',
-            dayOfWeek: ['Saturday'],
+            dayOfWeek: ['Friday', 'Saturday'],
             opens: '10:00',
-            closes: '14:00',
+            closes: '22:00',
         },
     ],
     areaServed: [
@@ -174,7 +174,7 @@ const Contact = ({ lang = 'en' }) => {
                         <div className="flex items-center gap-2 text-xs font-semibold px-3.5 py-2 rounded-xl w-fit"
                             style={{ background: 'var(--gold-subtle)', color: 'var(--gold)', border: '1px solid var(--gold-border)' }}>
                             <Clock size={13} />
-                            {isBn ? 'রবিবার – বৃহস্পতিবার: সকাল ৯:০০ – বিকেল ৫:০০; শনিবার: সকাল ১০:০০ – দুপুর ২:০০; শুক্রবার: বন্ধ' : 'Sunday – Thursday: 9:00 AM – 5:00 PM; Saturday: 10:00 AM – 2:00 PM; Friday: Closed'}
+                            {isBn ? 'রবিবার – বৃহস্পতিবার: সকাল ৮:০০ – রাত ১০:০০; শুক্র – শনিবার (উত্তরা চেম্বার): সকাল ১০:০০ – রাত ১০:০০' : 'Sunday – Thursday: 8:00 AM – 10:00 PM; Friday – Saturday (Uttara Chamber): 10:00 AM – 10:00 PM'}
                         </div>
 
                         {contactInfo.map((info, i) => (

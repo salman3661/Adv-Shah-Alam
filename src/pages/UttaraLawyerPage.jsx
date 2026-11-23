@@ -231,7 +231,7 @@ export default function UttaraLawyerPage({ lang = 'en' }) {
               <tbody>
                 <tr>
                   <td className="p-3 border font-semibold" style={{ borderColor: 'var(--card-border)' }}>{isBn ? 'উত্তরা চেম্বার ঠিকানা' : 'Uttara Chamber Address'}</td>
-                  <td className="p-3 border" style={{ borderColor: 'var(--card-border)' }}>{isBn ? 'বাড়ি ৪৬, রোড ৬/বি, সেক্টর ১২, উত্তরা পশ্চিম, ঢাকা ১২৩০ (রবি–বৃহস্পতি ৯টা–৫টা, শনি ১০টা–২টা)' : 'House 46, Road 6/B, Sector 12, Uttara West, Dhaka 1230 (Sun–Thu 09:00–17:00, Sat 10:00–14:00)'}</td>
+                  <td className="p-3 border" style={{ borderColor: 'var(--card-border)' }}>{isBn ? 'বাড়ি ৪৬, রোড ৬/বি, সেক্টর ১২, উত্তরা পশ্চিম, ঢাকা ১২৩০ (রবি–বৃহস্পতি সকাল ৮টা–রাত ১০টা, শুক্র–শনি সকাল ১০টা–রাত ১০টা (উত্তরা))' : 'House 46, Road 6/B, Sector 12, Uttara West, Dhaka 1230 (Sun–Thu 08:00–22:00, Fri–Sat 10:00–22:00 (Uttara))'}</td>
                 </tr>
                 <tr>
                   <td className="p-3 border font-semibold" style={{ borderColor: 'var(--card-border)' }}>{isBn ? 'আওতাভুক্ত থানা' : 'Primary Police Stations'}</td>

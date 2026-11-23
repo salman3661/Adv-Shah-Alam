@@ -97,14 +97,14 @@ const buildContactSchema = (isBn) => {
                     {
                         '@type': 'OpeningHoursSpecification',
                         dayOfWeek: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday'],
-                        opens: '09:00',
-                        closes: '17:00',
+                        opens: '08:00',
+                        closes: '22:00',
                     },
                     {
                         '@type': 'OpeningHoursSpecification',
-                        dayOfWeek: ['Saturday'],
+                        dayOfWeek: ['Friday', 'Saturday'],
                         opens: '10:00',
-                        closes: '14:00',
+                        closes: '22:00',
                     },
                 ],
             },
@@ -644,10 +644,10 @@ const ContactPage = ({ lang }) => {
                                     </p>
                                 </div>
                                 <p className="text-sm font-bold" style={{ color: 'var(--text)', fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>
-                                    {isBn ? 'রবিবার – বৃহস্পতিবার: সকাল ৯:০০ – বিকেল ৫:০০; শনিবার: সকাল ১০:০০ – দুপুর ২:০০; শুক্রবার: বন্ধ' : 'Sunday – Thursday: 9:00 AM – 5:00 PM; Saturday: 10:00 AM – 2:00 PM; Friday: Closed'}
+                                    {isBn ? 'রবিবার – বৃহস্পতিবার: সকাল ৮:০০ – রাত ১০:০০; শুক্র – শনিবার (উত্তরা চেম্বার): সকাল ১০:০০ – রাত ১০:০০' : 'Sunday – Thursday: 8:00 AM – 10:00 PM; Friday – Saturday (Uttara Chamber): 10:00 AM – 10:00 PM'}
                                 </p>
                                 <p className="text-xs mt-1" style={{ color: 'var(--text-muted)', fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>
-                                    {isBn ? 'শুক্রবার: চেম্বার বন্ধ | অনলাইন ও হোয়াটসঅ্যাপ ২৪/৭ সচল' : 'Friday: Closed | WhatsApp available 7 days'}
+                                    {isBn ? 'সপ্তাহের ৭ দিনই খোলা (শুক্র–শনি উত্তরা চেম্বার সকাল ১০টা – রাত ১০টা) | হোয়াটসঅ্যাপ ২৪/৭' : 'Open 7 days (Uttara Chamber Fri–Sat 10 AM – 10 PM) | WhatsApp 24/7'}
                                 </p>
                             </div>
 
@@ -679,7 +679,7 @@ const ContactPage = ({ lang }) => {
                                     <Phone size={22} /> {CALL_DISPLAY}
                                 </a>
                                 <p className="text-xs mt-2" style={{ color: 'var(--text-muted)', fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>
-                                    {isBn ? 'রবিবার – বৃহস্পতিবার: সকাল ৯:০০ – বিকেল ৫:০০; শনিবার: সকাল ১০:০০ – দুপুর ২:০০; শুক্রবার: বন্ধ' : 'Sunday – Thursday: 9:00 AM – 5:00 PM; Saturday: 10:00 AM – 2:00 PM; Friday: Closed'}
+                                    {isBn ? 'রবিবার – বৃহস্পতিবার: সকাল ৮:০০ – রাত ১০:০০; শুক্র – শনিবার (উত্তরা চেম্বার): সকাল ১০:০০ – রাত ১০:০০' : 'Sunday – Thursday: 8:00 AM – 10:00 PM; Friday – Saturday (Uttara Chamber): 10:00 AM – 10:00 PM'}
                                 </p>
                             </div>
                         </div>

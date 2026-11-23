@@ -99,22 +99,22 @@ export const OFFER_CATALOG = {
 };
 
 export const OFFICE_HOURS = {
-  en: 'Sunday – Thursday: 9:00 AM – 5:00 PM; Saturday: 10:00 AM – 2:00 PM; Friday: Closed',
-  bn: 'রবিবার – বৃহস্পতিবার: সকাল ৯:০০ – বিকেল ৫:০০; শনিবার: সকাল ১০:০০ – দুপুর ২:০০; শুক্রবার: বন্ধ',
-  shortEn: 'Sun–Thu 09:00–17:00, Sat 10:00–14:00 (Fri Closed)',
-  shortBn: 'রবি–বৃহস্পতি ৯টা–৫টা, শনি ১০টা–২টা (শুক্রবার বন্ধ)',
+  en: 'Sunday – Thursday: 8:00 AM – 10:00 PM; Friday – Saturday (Uttara Chamber): 10:00 AM – 10:00 PM',
+  bn: 'রবিবার – বৃহস্পতিবার: সকাল ৮:০০ – রাত ১০:০০; শুক্র – শনিবার (উত্তরা চেম্বার): সকাল ১০:০০ – রাত ১০:০০',
+  shortEn: 'Sun–Thu 08:00–22:00, Fri–Sat 10:00–22:00 (Uttara) (Fri Closed)',
+  shortBn: 'রবি–বৃহস্পতি সকাল ৮টা–রাত ১০টা, শুক্র–শনি সকাল ১০টা–রাত ১০টা (উত্তরা) (শুক্রবার বন্ধ)',
   schema: [
     {
       '@type': 'OpeningHoursSpecification',
       dayOfWeek: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday'],
-      opens: '09:00',
-      closes: '17:00',
+      opens: '08:00',
+      closes: '22:00',
     },
     {
       '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Saturday'],
+      dayOfWeek: ['Friday', 'Saturday'],
       opens: '10:00',
-      closes: '14:00',
+      closes: '22:00',
     },
   ],
 };
@@ -161,14 +161,14 @@ export const ADVOCATE_NAP = {
     {
       '@type': 'OpeningHoursSpecification',
       dayOfWeek: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday'],
-      opens: '09:00',
-      closes: '17:00',
+      opens: '08:00',
+      closes: '22:00',
     },
     {
       '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Saturday'],
+      dayOfWeek: ['Friday', 'Saturday'],
       opens: '10:00',
-      closes: '14:00',
+      closes: '22:00',
     },
   ],
   experienceYears: '10+ years',
