@@ -547,7 +547,7 @@ const ContactPage = ({ lang }) => {
                     <p className="text-base md:text-lg leading-relaxed max-w-3xl mb-8" style={{ color: 'var(--hero-text-2)', fontFamily: isBn ? "var(--font-bn), 'Noto Serif Bengali', sans-serif" : 'inherit' }}>
                         {isBn
                             ? 'বাংলাদেশ সুপ্রিম কোর্ট ও ঢাকা জজ কোর্টের অভিজ্ঞ আইনজীবীর সাথে ফোন, হোয়াটসঅ্যাপ বা উত্তরা ও কোর্ট চেম্বারে সরাসরি সাক্ষাতের মাধ্যমে পূর্ণাঙ্গ আইনি সমাধান নিশ্চিত করুন।'
-                            : 'Trusted criminal, divorce, bail, and property lawyer in Uttara, Dhaka. Contact us for a confidential consultation — available 6 days a week.'}
+                            : 'Trusted criminal, divorce, bail, and property lawyer in Uttara, Dhaka. Contact us for a confidential consultation — available 7 days a week.'}
                     </p>
 
                     <div className="flex flex-wrap gap-4">

@@ -1,20 +1,23 @@
 #!/usr/bin/env node
 /**
- * scripts/qa/nap-consistency.mjs — Canonical NAP & Office Hours CI Gate (v8)
+ * scripts/qa/nap-consistency.mjs — Canonical NAP, Office Hours & Day-Count CI Gate (v8 + v9)
  *
- * 1. Scans all 820 sitemap URLs in dist/ and checks:
+ * 1. Computes distinct open days from OFFICE_HOURS.schema (must be 7: Sun-Thu + Fri-Sat).
+ * 2. Scans all 820 sitemap URLs in dist/ and checks:
  *    - Every JSON-LD `openingHoursSpecification` matches the canonical schedule:
- *      Sunday-Thursday 09:00-17:00, Saturday 10:00-14:00 (Friday Closed).
- *    - No stale chamber hours (`9:00 AM – 9:00 PM`, `10:00 AM – 6:00 PM`, `6:00 PM – 11:00 PM`,
- *      `7:00 PM and 10:00 PM`, `রাত ৯:০০`, `রাত ১০:০০টা`, `রাত ১১টা`, `closes: '21:00'`, `closes: '18:00'`)
+ *      Sunday-Thursday 08:00-22:00, Friday-Saturday 10:00-22:00.
+ *    - No stale chamber hours (`9:00 AM – 9:00 PM`, `9:00 AM – 5:00 PM`, `10:00 AM – 6:00 PM`,
+ *      `6:00 PM – 11:00 PM`, `7:00 PM and 10:00 PM`, `10:00 AM – 2:00 PM`, `Friday: Closed`, etc.)
  *      appear in any chamber/office hours block.
- *    - Third-party blocks (DIP Head Office, CCIC Malibagh, PCSW 01320000888, court/land offices)
+ *    - Day-count consistency gate (v9): every `"N days a week"` / `"N দিন সপ্তাহে"` / `"সপ্তাহের N দিন"`
+ *      claim for the chamber must have N == distinctDays (7), never 6.
+ *    - Third-party blocks (DIP Head Office, CCIC Malibagh, PCSW 01320000888, Labour Act weekly holiday)
  *      are whitelisted.
- *    - No conflicting legacy Blogspot NAP strings (`Mantrust Nazma Monzil`, `shahalam0332@gmail.com`,
+ *    - No conflicting legacy Blogspot/about.me NAP strings (`Mantrust Nazma Monzil`, `shahalam0332@gmail.com`,
  *      `15+ years`) appear on any page.
- * 2. When `--dom` is passed (or by default on the key hours routes `/`, `/en`, `/contact`, `/bn/contact`,
- *    `/uttara-lawyer`, `/bn/uttara-lawyer`, `/blog/uttara-dhaka-lawyer-legal-services-2026`),
- *    renders the pages in headless Chromium and verifies prerender <-> rendered DOM hours parity.
+ * 3. Renders key routes (`/`, `/en`, `/contact`, `/bn/contact`, `/uttara-lawyer`, `/bn/uttara-lawyer`,
+ *    `/blog/uttara-dhaka-lawyer-legal-services-2026`, `/blog/passport-lost-stolen-expired-bangladesh`)
+ *    in headless Chromium and verifies rendered DOM hours + day-count (`7 days a week` on `/contact`).
  */
 import fs from 'node:fs';
 import http from 'node:http';
@@ -27,11 +30,18 @@ const DIST = path.join(ROOT, 'dist');
 const SITEMAP = path.join(ROOT, 'public/sitemap.xml');
 
 const CANONICAL_SPEC_JSON = JSON.stringify(OFFICE_HOURS.schema);
+const DISTINCT_OPEN_DAYS = new Set(OFFICE_HOURS.schema.flatMap((s) => s.dayOfWeek)).size;
+
+const BN_DIGIT_MAP = { '০': '0', '১': '1', '২': '2', '৩': '3', '৪': '4', '৫': '5', '৬': '6', '৭': '7', '৮': '8', '৯': '9' };
+const toAsciiInt = (s) => Number(String(s).replace(/[\u09E6-\u09EF]/g, (c) => BN_DIGIT_MAP[c] || c));
 
 const FORBIDDEN_PATTERNS = [
   { re: /9:00\s*AM\s*[–-]\s*9:00\s*PM/i, label: 'Stale 9:00 AM – 9:00 PM chamber hours' },
   { re: /9\s*AM\s*[–-]\s*9\s*PM/i, label: 'Stale 9 AM – 9 PM chamber hours' },
   { re: /10:00\s*AM\s*[–-]\s*6:00\s*PM/i, label: 'Stale 10:00 AM – 6:00 PM chamber hours' },
+  { re: /10:00\s*AM\s*[–-]\s*2:00\s*PM/i, label: 'Stale Saturday 10:00 AM – 2:00 PM chamber hours' },
+  { re: /Friday:\s*Closed/i, label: 'Stale Friday: Closed chamber hours' },
+  { re: /শুক্রবার:\s*বন্ধ/u, label: 'Stale BN শুক্রবার: বন্ধ chamber hours' },
   { re: /6:00\s*PM\s*(?:[–-]|to)\s*11:00\s*PM/i, label: 'Stale 6:00 PM – 11:00 PM evening chamber hours' },
   { re: /between\s+7:00\s*PM\s+and\s+10:00\s*PM/i, label: 'Stale 7:00 PM – 10:00 PM chamber hours' },
   { re: /সকাল\s*৯:০০(?:টা)?\s*(?:[–-]|থেকে)\s*রাত\s*৯:০০/u, label: 'Stale BN সকাল ৯:০০ – রাত ৯:০০ chamber hours' },
@@ -43,10 +53,23 @@ const FORBIDDEN_PATTERNS = [
   { re: /\b15\+\s*years\s+of\s+experience/i, label: 'Conflicting 15+ years experience claim' },
 ];
 
-// Whitelisted third-party pages where a non-chamber schedule is mentioned (e.g. PCSW helpline 9am-9pm)
+// Whitelisted third-party pages where a non-chamber schedule or statutory day-count is mentioned
 const THIRD_PARTY_ALLOW = new Map([
   ['/bn/blog/cyber-crime-abiyog-korar-dhap-2026', [/সকাল\s*৯টা\s*[–-]\s*রাত\s*৯টা/u]],
+  ['/bn/blog/shramik-odhikar-labour-ain-bn', [/সপ্তাহে\s*১\s*দিন/u]],
 ]);
+
+function checkDayCountClaims(text, uPath, errors) {
+  const allowedList = THIRD_PARTY_ALLOW.get(uPath) || [];
+  const dayRe = /\b(\d+|[\u09E6-\u09EF]+)\s*(?:days\s+a\s+week|দিন\s+সপ্তাহে)|সপ্তাহে[র]?\s*(\d+|[\u09E6-\u09EF]+)\s*দিন/giu;
+  for (const m of text.matchAll(dayRe)) {
+    if (allowedList.some((a) => a.test(m[0]))) continue;
+    const n = toAsciiInt(m[1] || m[2]);
+    if (n !== DISTINCT_OPEN_DAYS) {
+      errors.push(`${uPath}: day-count mismatch "${m[0]}" (found ${n}, expected ${DISTINCT_OPEN_DAYS} from OFFICE_HOURS)`);
+    }
+  }
+}
 
 function resolveDistFile(uPath) {
   const clean = uPath === '/' ? 'index.html' : uPath.replace(/^\/+/, '');
@@ -77,6 +100,10 @@ const xml = fs.readFileSync(SITEMAP, 'utf8');
 const urls = [...xml.matchAll(/<loc>\s*([^<\s]+)\s*<\/loc>/g)].map((m) => new URL(m[1].trim()).pathname);
 
 const errors = [];
+if (DISTINCT_OPEN_DAYS !== 7) {
+  errors.push(`OFFICE_HOURS.schema distinct open days=${DISTINCT_OPEN_DAYS} (expected 7)`);
+}
+
 let schemaSpecsChecked = 0;
 
 for (const uPath of urls) {
@@ -98,7 +125,7 @@ for (const uPath of urls) {
     }
   }
 
-  // 2. Check visible text for forbidden chamber hours / conflicting NAP
+  // 2. Check visible text for forbidden chamber hours / conflicting NAP / day-count drift
   const textOnly = html.replace(/<script[\s\S]*?<\/script>/gi, ' ').replace(/<style[\s\S]*?<\/style>/gi, ' ');
   const allowedList = THIRD_PARTY_ALLOW.get(uPath) || [];
   for (const { re, label } of FORBIDDEN_PATTERNS) {
@@ -107,9 +134,10 @@ for (const uPath of urls) {
       errors.push(`${uPath}: ${label}`);
     }
   }
+  checkDayCountClaims(textOnly, uPath, errors);
 }
 
-// 3. Rendered DOM hours parity on key routes
+// 3. Rendered DOM hours & day-count parity on key routes
 const KEY_ROUTES = [
   '/',
   '/en',
@@ -146,6 +174,12 @@ for (const route of KEY_ROUTES) {
       errors.push(`[DOM] ${route}: ${label}`);
     }
   }
+  checkDayCountClaims(domText, `[DOM] ${route}`, errors);
+  if (route === '/contact') {
+    if (!/available\s+7\s+days\s+a\s+week/i.test(domText)) {
+      errors.push(`[DOM] /contact: missing "available 7 days a week" in rendered DOM`);
+    }
+  }
   if (route === '/contact' || route === '/en' || route === '/blog/uttara-dhaka-lawyer-legal-services-2026' || route === '/uttara-lawyer') {
     if (!/Sunday\s*[–-]\s*Thursday:\s*8:00\s*AM\s*[–-]\s*10:00\s*PM/i.test(domText) && !/Sun[–-]Thu\s*08:00[–-]22:00/i.test(domText)) {
       errors.push(`[DOM] ${route}: canonical EN office hours not found in rendered DOM`);
@@ -162,7 +196,7 @@ for (const route of KEY_ROUTES) {
 await browser.close();
 server.close();
 
-console.log(`[nap-consistency] checked=${urls.length}/${urls.length} sitemap URLs, schemaSpecsChecked=${schemaSpecsChecked}, domRoutesChecked=${KEY_ROUTES.length}, errors=${errors.length}`);
+console.log(`[nap-consistency] checked=${urls.length}/${urls.length} sitemap URLs, distinctOpenDays=${DISTINCT_OPEN_DAYS}, schemaSpecsChecked=${schemaSpecsChecked}, domRoutesChecked=${KEY_ROUTES.length}, errors=${errors.length}`);
 if (errors.length) {
   for (const e of errors) console.error('  FAIL:', e);
   process.exit(1);
