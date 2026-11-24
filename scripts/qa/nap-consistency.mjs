@@ -145,6 +145,12 @@ const KEY_ROUTES = [
   '/bn/contact',
   '/uttara-lawyer',
   '/bn/uttara-lawyer',
+  '/gulshan-lawyer',
+  '/bn/gulshan-lawyer',
+  '/banani-lawyer',
+  '/bn/banani-lawyer',
+  '/bashundhara-ra-lawyer',
+  '/bn/bashundhara-ra-lawyer',
   '/blog/uttara-dhaka-lawyer-legal-services-2026',
   '/blog/passport-lost-stolen-expired-bangladesh',
 ];
@@ -162,8 +168,30 @@ const base = `http://127.0.0.1:${server.address().port}`;
 
 const require = createRequire(import.meta.url);
 const { chromium } = require('playwright-core');
-const browser = await chromium.launch({ executablePath: process.env.CHROMIUM_PATH || '/usr/bin/chromium', args: ['--no-sandbox'] });
+const chromePath =
+  process.env.CHROMIUM_PATH ||
+  ['/usr/bin/chromium', '/usr/bin/google-chrome', '/usr/bin/chromium-browser'].find((p) => fs.existsSync(p)) ||
+  '/usr/bin/chromium';
+const browser = await chromium.launch({ executablePath: chromePath, args: ['--no-sandbox'] });
 const ctx = await browser.newContext();
+
+const EN_HOURS_ROUTES = new Set([
+  '/contact',
+  '/en',
+  '/blog/uttara-dhaka-lawyer-legal-services-2026',
+  '/uttara-lawyer',
+  '/gulshan-lawyer',
+  '/banani-lawyer',
+  '/bashundhara-ra-lawyer',
+]);
+const BN_HOURS_ROUTES = new Set([
+  '/bn/contact',
+  '/',
+  '/bn/uttara-lawyer',
+  '/bn/gulshan-lawyer',
+  '/bn/banani-lawyer',
+  '/bn/bashundhara-ra-lawyer',
+]);
 
 for (const route of KEY_ROUTES) {
   const page = await ctx.newPage();
@@ -180,12 +208,12 @@ for (const route of KEY_ROUTES) {
       errors.push(`[DOM] /contact: missing "available 7 days a week" in rendered DOM`);
     }
   }
-  if (route === '/contact' || route === '/en' || route === '/blog/uttara-dhaka-lawyer-legal-services-2026' || route === '/uttara-lawyer') {
+  if (EN_HOURS_ROUTES.has(route)) {
     if (!/Sunday\s*[–-]\s*Thursday:\s*8:00\s*AM\s*[–-]\s*10:00\s*PM/i.test(domText) && !/Sun[–-]Thu\s*08:00[–-]22:00/i.test(domText)) {
       errors.push(`[DOM] ${route}: canonical EN office hours not found in rendered DOM`);
     }
   }
-  if (route === '/bn/contact' || route === '/' || route === '/bn/uttara-lawyer') {
+  if (BN_HOURS_ROUTES.has(route)) {
     if (!/রবিবার\s*[–-]\s*বৃহস্পতিবার:\s*সকাল\s*৮:০০\s*[–-]\s*রাত\s*১০:০০/u.test(domText) && !/রবি[–-]বৃহস্পতি\s*সকাল\s*৮টা[–-]রাত\s*১০টা/u.test(domText)) {
       errors.push(`[DOM] ${route}: canonical BN office hours not found in rendered DOM`);
     }

@@ -74,7 +74,7 @@ const AREA_TABLE = [
     areaBn: 'গুলশান',
     psEn: 'Gulshan PS — H-32, 115 Gulshan Avenue, Gulshan-2',
     psBn: 'গুলশান থানা — বাড়ি ৩২, ১১৫ গুলশান অ্যাভিনিউ, গুলশান-২',
-    ward: 'DNCC Ward 19 / 35–36',
+    ward: 'DNCC Ward 19 & 20',
     focusEn: 'Rent Control Act 1991 eviction, corporate advisory, embassy/MOFA attestation',
     focusBn: 'বাড়ি ভাড়া নিয়ন্ত্রণ আইন ১৯৯১-এ উচ্ছেদ, কর্পোরেট ও দূতাবাস সত্যায়ন',
   },
@@ -90,9 +90,9 @@ const AREA_TABLE = [
   {
     areaEn: 'Bashundhara Residential Area',
     areaBn: 'বসুন্ধরা আবাসিক এলাকা',
-    psEn: 'Vatara PS — Progoti Soroni, Gulshan Notun Bazar',
-    psBn: 'ভাটারা থানা — প্রগতি সরণি, গুলশান নতুন বাজার',
-    ward: 'DNCC / Proposed PS',
+    psEn: 'Vatara PS — Progoti Soroni, Gulshan Notun Bazar (+ Badda / Khilkhet PS; proposed Bashundhara PS awaiting ministry approval)',
+    psBn: 'ভাটারা থানা — প্রগতি সরণি, গুলশান নতুন বাজার (+ বাড্ডা / খিলক্ষেত থানা; প্রস্তাবিত বসুন্ধরা থানা মন্ত্রণালয়ের অনুমোদনের অপেক্ষায়)',
+    ward: 'DNCC (Vatara / Khilkhet)',
     focusEn: 'Plot/flat title verification, transfer approval, apartment committee & eviction',
     focusBn: 'প্লট ও ফ্ল্যাট দলিল যাচাই, হস্তান্তর অনুমোদন ও অ্যাপার্টমেন্ট বিরোধ',
   },
@@ -428,6 +428,15 @@ export default function UttaraLawyerPage({ lang = 'en' }) {
           </div>
 
           <div className="flex flex-wrap gap-4 text-sm font-semibold pt-2 border-t" style={{ borderColor: 'var(--card-border)' }}>
+            <Link to={isBn ? '/bn/gulshan-lawyer' : '/gulshan-lawyer'} className="underline" style={{ color: 'var(--accent)' }}>
+              {isBn ? 'গুলশান আইনজীবী (ওয়ার্ড ১৯ ও ২০)' : 'Gulshan Lawyer (DNCC Ward 19 & 20)'}
+            </Link>
+            <Link to={isBn ? '/bn/banani-lawyer' : '/banani-lawyer'} className="underline" style={{ color: 'var(--accent)' }}>
+              {isBn ? 'বনানী আইনজীবী (ওয়ার্ড ১৯)' : 'Banani Lawyer (DNCC Ward 19)'}
+            </Link>
+            <Link to={isBn ? '/bn/bashundhara-ra-lawyer' : '/bashundhara-ra-lawyer'} className="underline" style={{ color: 'var(--accent)' }}>
+              {isBn ? 'বসুন্ধরা আবাসিক এলাকা আইনজীবী' : 'Bashundhara R/A Lawyer'}
+            </Link>
             <Link to="/advocate-md-shah-alam" className="underline" style={{ color: 'var(--accent)' }}>
               {isBn ? 'অ্যাডভোকেট মো. শাহ আলম — প্রোফাইল ও অভিজ্ঞতা' : 'Advocate Md. Shah Alam — Full Profile'}
             </Link>

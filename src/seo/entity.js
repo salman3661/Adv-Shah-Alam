@@ -101,8 +101,8 @@ export const OFFER_CATALOG = {
 export const OFFICE_HOURS = {
   en: 'Sunday – Thursday: 8:00 AM – 10:00 PM; Friday – Saturday (Uttara Chamber): 10:00 AM – 10:00 PM',
   bn: 'রবিবার – বৃহস্পতিবার: সকাল ৮:০০ – রাত ১০:০০; শুক্র – শনিবার (উত্তরা চেম্বার): সকাল ১০:০০ – রাত ১০:০০',
-  shortEn: 'Sun–Thu 08:00–22:00, Fri–Sat 10:00–22:00 (Uttara) (Fri Closed)',
-  shortBn: 'রবি–বৃহস্পতি সকাল ৮টা–রাত ১০টা, শুক্র–শনি সকাল ১০টা–রাত ১০টা (উত্তরা) (শুক্রবার বন্ধ)',
+  shortEn: 'Sun–Thu 08:00–22:00, Fri–Sat 10:00–22:00 (Uttara)',
+  shortBn: 'রবি–বৃহস্পতি সকাল ৮টা–রাত ১০টা, শুক্র–শনি সকাল ১০টা–রাত ১০টা (উত্তরা)',
   schema: [
     {
       '@type': 'OpeningHoursSpecification',
@@ -257,6 +257,8 @@ export function buildServicePageSchema({ url, lang = 'en', serviceType, name, de
     telephone: ADVOCATE_NAP.telephone,
     email: ADVOCATE_NAP.email,
     address: ADVOCATE_NAP.address,
+    geo: ADVOCATE_NAP.geo,
+    openingHoursSpecification: ADVOCATE_NAP.openingHoursSpecification,
     areaServed: getServiceAreaServed(slug || serviceType),
     provider: { '@id': `${SITE_BASE}/#attorney` },
     parentOrganization: { '@id': `${SITE_BASE}/#legalservice` },

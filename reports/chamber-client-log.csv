@@ -1,1 +1,2 @@
-date,area,service,source,fee_agreed,referred_by
+date,area,service,source,fee_agreed_bdt,fee_agreed_usd,paid,referred_by,notes
+2026-11-24,uttara_sector12,criminal_bail,whatsapp,25000,228,,,example row — replace with real client entries

@@ -5,6 +5,9 @@ en_path,bn_path,confidence,evidence
 /blog,/bn/blog,1.0,core_or_service_route_pair
 /nrb-legal-help,,unpaired,en_only
 /uttara-lawyer,/bn/uttara-lawyer,1.0,core_or_service_route_pair
+/gulshan-lawyer,/bn/gulshan-lawyer,1.0,core_or_service_route_pair
+/banani-lawyer,/bn/banani-lawyer,1.0,core_or_service_route_pair
+/bashundhara-ra-lawyer,/bn/bashundhara-ra-lawyer,1.0,core_or_service_route_pair
 ,/review,unpaired,bn_only
 /education,,unpaired,en_only
 /privacy-policy,,unpaired,en_only
@@ -165,7 +168,7 @@ en_path,bn_path,confidence,evidence
 /blog/guardianship-law-bangladesh,/bn/blog/obhivaboktwo-ain-bangladesh,1.0,json_reciprocal_slug_pair
 /blog/habeas-corpus-writ-unlawful-detention-high-court-bangladesh,,unpaired,en_only
 /blog/hacking-unauthorized-computer-access-bangladesh,/bn/blog/haking-computer-aboidho-probesh-bangladesh,1.0,json_reciprocal_slug_pair
-/blog/heba-bil-ewaz-vs-simple-gift-deed-cancellation-muslim-law-bangladesh,,unpaired,en_only
+/blog/heba-bil-ewaz-vs-simple-gift-deed-cancellation-muslim-law-bangladesh,/bn/blog/heba-bil-ewaz-dalil-khoroch-2026,1.0,json_reciprocal_slug_pair
 /blog/heba-gift-deed-law-bangladesh,/bn/blog/heba-danpatra-ain-bangladesh,1.0,json_reciprocal_slug_pair
 /blog/heba-gift-deed-transfer-bangladesh-property-from-abroad,,unpaired,en_only
 /blog/high-court-anticipatory-bail-cost-procedure-2026,/bn/blog/high-court-agam-jamin-khoroch-prokriya-2026-bn,1.0,json_reciprocal_slug_pair
@@ -434,7 +437,6 @@ en_path,bn_path,confidence,evidence
 ,/bn/blog/heba-bil-ewaz-dalil-batil-korar-niyom-2026,unpaired,bn_only
 ,/bn/blog/heba-bil-ewaz-dalil-batil-mamla-prokriya-2026-bn,unpaired,bn_only
 ,/bn/blog/heba-bil-ewaz-dalil-batil-niyom-bangladesh,unpaired,bn_only
-,/bn/blog/heba-bil-ewaz-dalil-khoroch-2026,unpaired,bn_only
 ,/bn/blog/heba-bil-ewaz-dalil-ki-batil-niyom-2026,unpaired,bn_only
 ,/bn/blog/heba-bil-ewaz-dalil-ki-shadharon-heba-parthokko-batil,unpaired,bn_only
 ,/bn/blog/heba-dalil-khoroch-o-heba-bil-ewaz-parthokko-2026,unpaired,bn_only

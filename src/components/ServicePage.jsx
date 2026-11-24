@@ -5,6 +5,7 @@ import { MessageCircle, Phone, CheckCircle, ArrowLeft, ArrowRight, ChevronDown, 
 import { Link } from 'react-router-dom';
 import { sanitizeHtml } from '../utils/sanitizeHtml';
 import AdSenseAd from './AdSenseAd';
+import { ADVOCATE_NAP, getServiceAreaServed } from '../seo/entity';
 
 const BASE = 'https://www.advmdshahalam.me';
 const SERVICE_AD_SLOTS = {
@@ -95,8 +96,10 @@ const ServicePage = ({ data, ...legacyProps }) => {
                         latitude: 23.8745,
                         longitude: 90.3987,
                     },
+                    openingHoursSpecification: ADVOCATE_NAP.openingHoursSpecification,
                 },
-                areaServed: { '@type': 'Country', name: 'Bangladesh' },
+                openingHoursSpecification: ADVOCATE_NAP.openingHoursSpecification,
+                areaServed: getServiceAreaServed(slug || wwwCanonical || h1),
             },
             {
                 '@type': 'BreadcrumbList',
@@ -701,6 +704,20 @@ const ServicePage = ({ data, ...legacyProps }) => {
                                     {isBn ? 'উত্তরা আইনজীবী (সেক্টর ১২)' : 'Uttara Chamber Guide'}
                                 </Link>
                             </div>
+                            <p className="mt-4 text-xs" style={{ color: '#94A3B8' }}>
+                                {isBn ? 'উত্তর ঢাকার অন্যান্য এলাকা: ' : 'Other North Dhaka areas served: '}
+                                <Link to={isBn ? '/bn/gulshan-lawyer' : '/gulshan-lawyer'} style={{ color: '#E2C15A', textDecoration: 'underline' }}>
+                                    {isBn ? 'গুলশান আইনজীবী' : 'Gulshan Lawyer'}
+                                </Link>
+                                {' · '}
+                                <Link to={isBn ? '/bn/banani-lawyer' : '/banani-lawyer'} style={{ color: '#E2C15A', textDecoration: 'underline' }}>
+                                    {isBn ? 'বনানী আইনজীবী' : 'Banani Lawyer'}
+                                </Link>
+                                {' · '}
+                                <Link to={isBn ? '/bn/bashundhara-ra-lawyer' : '/bashundhara-ra-lawyer'} style={{ color: '#E2C15A', textDecoration: 'underline' }}>
+                                    {isBn ? 'বসুন্ধরা আবাসিক এলাকা আইনজীবী' : 'Bashundhara R/A Lawyer'}
+                                </Link>
+                            </p>
                         </div>
                     </div>
                 </section>

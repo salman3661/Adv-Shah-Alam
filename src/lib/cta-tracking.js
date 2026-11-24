@@ -6,7 +6,7 @@ export function resolveArea(el, pathname = typeof window !== 'undefined' ? windo
   if (explicit) return explicit;
   const p = String(pathname || '/').toLowerCase();
   if (p.includes('uttara')) return 'uttara_sector12';
-  if (p.includes('bashundhara')) return 'bashundhara';
+  if (p.includes('bashundhara')) return 'bashundhara_ra';
   if (p.includes('gulshan')) return 'gulshan';
   if (p.includes('banani')) return 'banani';
   if (p.includes('turag')) return 'turag';
@@ -16,6 +16,25 @@ export function resolveArea(el, pathname = typeof window !== 'undefined' ? windo
     return 'uttara_sector12';
   }
   return 'other';
+}
+
+export function resolveService(el, pathname = typeof window !== 'undefined' ? window.location.pathname : '/') {
+  const explicit = el?.getAttribute?.('data-service');
+  if (explicit && explicit !== 'general') return explicit;
+  const p = String(pathname || '/').toLowerCase();
+  if (p.includes('/criminal-lawyer')) return 'criminal_defence';
+  if (p.includes('/bail-lawyer')) return 'criminal_bail';
+  if (p.includes('/divorce-lawyer')) return 'family_divorce';
+  if (p.includes('/land-lawyer')) return 'land_property';
+  if (p.includes('/supreme-court-lawyer')) return 'supreme_court_writ';
+  if (p.includes('/company-corporate-lawyer')) return 'corporate_company';
+  if (p.includes('/tax-lawyer')) return 'tax_advisory';
+  if (p.includes('/nrb-legal-help')) return 'nrb_property';
+  if (p.includes('/gulshan-lawyer')) return 'gulshan_chamber';
+  if (p.includes('/banani-lawyer')) return 'banani_chamber';
+  if (p.includes('/bashundhara-ra-lawyer')) return 'bashundhara_property';
+  if (p.includes('/uttara-lawyer')) return 'uttara_chamber';
+  return explicit || 'general';
 }
 
 export function initCtaTracking() {
@@ -37,6 +56,7 @@ export function initCtaTracking() {
             : 'page';
       const pagePath = window.location.pathname;
       const area = resolveArea(el, pagePath);
+      const service = resolveService(el, pagePath);
       window.gtag?.('event', 'cta_click', {
         cta_id: el.getAttribute('data-cta') || '',
         placement: el.getAttribute('data-placement') || '',
@@ -44,12 +64,13 @@ export function initCtaTracking() {
         page_path: pagePath,
         page_lang: document.documentElement.lang || '',
         area,
+        service,
       });
       if (!localConsultSent && area !== 'other' && (kind === 'whatsapp' || kind === 'call' || /consult|contact|chamber/i.test(el.getAttribute('data-cta') || ''))) {
         localConsultSent = true;
         window.gtag?.('event', 'local_consult_request', {
           area,
-          service: el.getAttribute('data-service') || 'general',
+          service,
           page_path: pagePath,
         });
       }
@@ -65,8 +86,9 @@ export function initCtaTracking() {
       const subject = f.querySelector('select[name=subject]')?.value || '';
       const pagePath = window.location.pathname;
       const area = resolveArea(f, pagePath);
+      const service = subject || resolveService(f, pagePath);
       window.gtag?.('event', 'consult_request', {
-        service: subject,
+        service,
         method: 'whatsapp',
         page_path: pagePath,
         area,
@@ -75,7 +97,7 @@ export function initCtaTracking() {
         localConsultSent = true;
         window.gtag?.('event', 'local_consult_request', {
           area,
-          service: subject || 'general',
+          service,
           page_path: pagePath,
         });
       }

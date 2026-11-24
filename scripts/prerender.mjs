@@ -26,7 +26,8 @@ import { buildEntityGraph, buildHreflang, jsonLd, resolveMasterPillar, resolveQu
 import { evergreenYear } from '../src/utils/evergreenYear.mjs';
 import { GOOGLE_REVIEW_URL, REVIEW_CONTENT } from '../src/content/reviewContent.mjs';
 import { SERVICE_PAGES_EN, SERVICE_PAGES_BN } from '../src/content/servicePagesData.mjs';
-import { buildPersonEntity, buildLegalServiceEntity, buildWebSiteEntity, AREA_SERVED, getServiceAreaServed, buildServicePageSchema } from '../src/seo/entity.js';
+import { ADVOCATE_NAP, buildPersonEntity, buildLegalServiceEntity, buildWebSiteEntity, AREA_SERVED, getServiceAreaServed, buildServicePageSchema } from '../src/seo/entity.js';
+import { LOCAL_AREA_LIST } from '../src/data/localAreas.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT   = path.resolve(__dirname, '..');
@@ -1039,6 +1040,9 @@ async function main() {
         inLanguage: isBn ? 'bn-BD' : 'en',
         telephone: '+8801712655546',
         email: 'contact@advmdshahalam.me',
+        address: ADVOCATE_NAP.address,
+        geo: ADVOCATE_NAP.geo,
+        openingHoursSpecification: ADVOCATE_NAP.openingHoursSpecification,
         employee: { '@id': `${BASE}/#attorney` },
         parentOrganization: { '@id': `${BASE}/#legalservice` },
         areaServed: getServiceAreaServed(pageUrl),
@@ -1535,9 +1539,9 @@ ${CTA}`,
 <tr><td>তুরাগ</td><td>তুরাগ থানা (ডিএমপি ডিরেক্টরি)</td><td>DNCC Ward 1 / 52</td><td>জমি দখল ও মালিকানা বিরোধ, ভাড়াটিয়া বিরোধ, ফৌজদারি জামিন</td></tr>
 <tr><td>দক্ষিণখান</td><td>দক্ষিণখান থানা — বিদুরবাড়ি রোড, থানা মোড়</td><td>DNCC Ward 48–50</td><td>পারিবারিক আদালত, দেনমোহর ও খোরপোশ, সন্তানের হেফাজত, নামজারি</td></tr>
 <tr><td>বিমানবন্দর (এয়ারপোর্ট)</td><td>বিমানবন্দর থানা — ১ম তলা র‍্যাব সদর দপ্তর, উত্তরা</td><td>—</td><td>জরুরি গ্রেফতার ও জামিন সহায়তা, প্রবাসীদের ভ্রমণ-নিষেধাজ্ঞা রিট</td></tr>
-<tr><td>গুলশান</td><td>গুলশান থানা — বাড়ি ৩২, ১১৫ গুলশান অ্যাভিনিউ, গুলশান-২</td><td>DNCC Ward 19 / 35–36</td><td>বাড়ি ভাড়া নিয়ন্ত্রণ আইন ১৯৯১-এ উচ্ছেদ, কর্পোরেট ও দূতাবাস সত্যায়ন</td></tr>
+<tr><td>গুলশান</td><td>গুলশান থানা — বাড়ি ৩২, ১১৫ গুলশান অ্যাভিনিউ, গুলশান-২</td><td>DNCC Ward 19 &amp; 20</td><td>বাড়ি ভাড়া নিয়ন্ত্রণ আইন ১৯৯১-এ উচ্ছেদ, কর্পোরেট ও দূতাবাস সত্যায়ন</td></tr>
 <tr><td>বনানী</td><td>বনানী থানা — রোড ৭, বাড়ি ৩৭, বনানী</td><td>DNCC Ward 19</td><td>আরজেএসসি কোম্পানি রেজিস্ট্রেশন, বাণিজ্যিক চুক্তি ও প্রবাসী পাওয়ার অব অ্যাটর্নি</td></tr>
-<tr><td>বসুন্ধরা আবাসিক এলাকা</td><td>ভাটারা থানা — প্রগতি সরণি, গুলশান নতুন বাজার</td><td>DNCC / প্রস্তাবিত থানা</td><td>প্লট ও ফ্ল্যাট দলিল যাচাই, হস্তান্তর অনুমোদন ও অ্যাপার্টমেন্ট বিরোধ</td></tr>
+<tr><td>বসুন্ধরা আবাসিক এলাকা</td><td>ভাটারা থানা — প্রগতি সরণি, গুলশান নতুন বাজার (+ বাড্ডা / খিলক্ষেত থানা; প্রস্তাবিত বসুন্ধরা থানা মন্ত্রণালয়ের অনুমোদনের অপেক্ষায়)</td><td>DNCC (Vatara / Khilkhet)</td><td>প্লট ও ফ্ল্যাট দলিল যাচাই, হস্তান্তর অনুমোদন ও অ্যাপার্টমেন্ট বিরোধ</td></tr>
 </tbody></table>
 <h2>উত্তরা এলাকায় জমি, ফ্ল্যাট নিবন্ধন ও নামজারি সংক্রান্ত আইনি সহায়তা</h2>
 <p>উত্তরা মডেল টাউন, দিয়াবাড়ি, বাউনিয়া এবং পার্শ্ববর্তী বসুন্ধরা আবাসিক এলাকায় জমি বা ফ্ল্যাট ক্রয়-বিক্রয়ের আগে দলিল যাচাই অত্যন্ত গুরুত্বপূর্ণ। উত্তরার সেক্টর ১১, ১২, ১৩ ও ১৪-তে রাজউক প্লট হস্তান্তর, লিজে থাকা জমির অনুমোদন, বায়া দলিল (Chain of Deeds), সিএস-এসএ-আরএস ও মহানগর জরিপের খতিয়ান যাচাই এবং নামজারি (ই-নামজারি) সংক্রান্ত জটিলতা প্রায়ই দেখা যায়। উত্তরা সাব-রেজিস্ট্রি অফিস ও এসি (ল্যান্ড) অফিসের প্রক্রিয়া সম্পর্কে স্পষ্ট ধারণা না থাকলে ক্রেতা বড় ধরনের আর্থিক ঝুঁকিতে পড়তে পারেন।</p>
@@ -1561,7 +1565,7 @@ ${CTA}`,
 <p>হ্যাঁ। যুক্তরাজ্য, যুক্তরাষ্ট্র, কানাডা, ইউরোপ বা মধ্যপ্রাচ্যে বসবাসরত প্রবাসীরা সংশ্লিষ্ট বাংলাদেশ দূতাবাসে পাওয়ার অব অ্যাটর্নি সম্পাদন এবং বাংলাদেশে পররাষ্ট্র মন্ত্রণালয়ে (MOFA) সত্যায়নের মাধ্যমে উত্তরা ও ঢাকার জমি বিক্রয়, নামজারি বা দেওয়ানি ও পারিবারিক মামলা পরিচালনা করতে পারেন।</p>
 <h2>উত্তরা চেম্বারের বিশেষায়িত আইনি সেবাসমূহ</h2>
 <p>The first consultation is free — you pay nothing in advance. প্রথম পরামর্শ ফ্রি — কোনো অগ্রিম ফি ছাড়াই আপনার সমস্যার আইনি অবস্থান ও করণীয় জেনে নিন।</p>
-<p><a href="/bn/services/criminal-lawyer">ফৌজদারি আইনজীবী</a> &middot; <a href="/bn/services/bail-lawyer">জামিন আইনজীবী</a> &middot; <a href="/bn/services/land-lawyer">জমি ও সম্পত্তি আইনজীবী</a> &middot; <a href="/bn/services/divorce-lawyer">তালাক ও পারিবারিক আইনজীবী</a> &middot; <a href="/bn/services/supreme-court-lawyer">সুপ্রিম কোর্ট আইনজীবী</a> &middot; <a href="/bn/services/company-corporate-lawyer">কোম্পানি আইনজীবী</a> &middot; <a href="/bn/services/tax-lawyer">আয়কর ও ভ্যাট</a> &middot; <a href="/advocate-md-shah-alam">অ্যাডভোকেট মো. শাহ আলম</a> &middot; <a href="/nrb-legal-help">প্রবাসী (NRB) আইনি সহায়তা</a> &middot; <a href="/bn/contact">চেম্বারে যোগাযোগ</a> &middot; <a href="/blog/uttara-dhaka-lawyer-legal-services-2026">Uttara Legal Services Guide</a> &middot; <a href="/uttara-lawyer">English Version</a></p>
+<p><a href="/bn/gulshan-lawyer">গুলশান আইনজীবী</a> &middot; <a href="/bn/banani-lawyer">বনানী আইনজীবী</a> &middot; <a href="/bn/bashundhara-ra-lawyer">বসুন্ধরা আবাসিক এলাকা আইনজীবী</a> &middot; <a href="/bn/services/criminal-lawyer">ফৌজদারি আইনজীবী</a> &middot; <a href="/bn/services/bail-lawyer">জামিন আইনজীবী</a> &middot; <a href="/bn/services/land-lawyer">জমি ও সম্পত্তি আইনজীবী</a> &middot; <a href="/bn/services/divorce-lawyer">তালাক ও পারিবারিক আইনজীবী</a> &middot; <a href="/bn/services/supreme-court-lawyer">সুপ্রিম কোর্ট আইনজীবী</a> &middot; <a href="/bn/services/company-corporate-lawyer">কোম্পানি আইনজীবী</a> &middot; <a href="/bn/services/tax-lawyer">আয়কর ও ভ্যাট</a> &middot; <a href="/advocate-md-shah-alam">অ্যাডভোকেট মো. শাহ আলম</a> &middot; <a href="/nrb-legal-help">প্রবাসী (NRB) আইনি সহায়তা</a> &middot; <a href="/bn/contact">চেম্বারে যোগাযোগ</a> &middot; <a href="/blog/uttara-dhaka-lawyer-legal-services-2026">Uttara Legal Services Guide</a> &middot; <a href="/uttara-lawyer">English Version</a></p>
 </article>` : `<article>
 <h1>Uttara Lawyer in Dhaka — Criminal, Land, Bail &amp; Family Legal Services</h1>
 <p>Advocate Md. Shah Alam is a Bangladesh Bar Council enrolled advocate practising before the Supreme Court of Bangladesh and Dhaka Judge Court. From his chamber in Sector 12, Uttara West (House 46, Road 6/B, Sector 12, Uttara West, Dhaka 1230), he represents local residents, businesses, and Non-Resident Bangladeshis (NRBs) with property or family matters across Uttara Sectors 1–17, Turag, Dakshinkhan, Airport, Gulshan, Banani, and Bashundhara Residential Area. The first consultation is free with no advance fee — legal fees are agreed only after explaining the scope of your matter.</p>
@@ -1582,9 +1586,9 @@ ${CTA}`,
 <tr><td>Turag</td><td>Turag PS (DMP Directory)</td><td>DNCC Ward 1 / 52</td><td>Land possession, tenancy disputes, criminal defence &amp; bail</td></tr>
 <tr><td>Dakshinkhan</td><td>Dakshinkhan PS — Bidurbari Road, Thana More</td><td>DNCC Ward 48–50</td><td>Family court cases, maintenance, custody, land mutation</td></tr>
 <tr><td>Airport (Bimanbandar)</td><td>Bimanbandar PS — 1st Floor RAB (HQ), Uttara</td><td>—</td><td>Urgent arrest/bail support, NRB arrival &amp; travel-ban writ matters</td></tr>
-<tr><td>Gulshan</td><td>Gulshan PS — H-32, 115 Gulshan Avenue, Gulshan-2</td><td>DNCC Ward 19 / 35–36</td><td>Rent Control Act 1991 eviction, corporate advisory, embassy/MOFA attestation</td></tr>
+<tr><td>Gulshan</td><td>Gulshan PS — H-32, 115 Gulshan Avenue, Gulshan-2</td><td>DNCC Ward 19 &amp; 20</td><td>Rent Control Act 1991 eviction, corporate advisory, embassy/MOFA attestation</td></tr>
 <tr><td>Banani</td><td>Banani PS — R-7, H-37, Banani</td><td>DNCC Ward 19</td><td>RJSC company filings, commercial lease disputes, NRB Power of Attorney</td></tr>
-<tr><td>Bashundhara Residential Area</td><td>Vatara PS — Progoti Soroni, Gulshan Notun Bazar</td><td>DNCC / Proposed PS</td><td>Plot/flat title verification, transfer approval, apartment committee &amp; eviction</td></tr>
+<tr><td>Bashundhara Residential Area</td><td>Vatara PS — Progoti Soroni, Gulshan Notun Bazar (+ Badda / Khilkhet PS; proposed Bashundhara PS awaiting ministry approval)</td><td>DNCC (Vatara / Khilkhet)</td><td>Plot/flat title verification, transfer approval, apartment committee &amp; eviction</td></tr>
 </tbody></table>
 <h2>Land Registration, Mutation &amp; Property Litigation in Uttara and Bashundhara</h2>
 <p>Property transactions across Uttara Sectors 1–17, Diabari, Baunia, Turag, and nearby Bashundhara Residential Area carry significant title risks if deeds are not vetted before signing a Bayna (agreement for sale). Common issues include incomplete chain deeds (Baya Dalil), unverified RAJUK transfer permissions, mismatched CS/SA/RS/City Jarip Khatian records, pending civil suits (Lis Pendens), and delayed e-Namjari (mutation) before the local AC Land office.</p>
@@ -1606,7 +1610,7 @@ ${CTA}`,
 <p>Yes. NRBs in the UK, USA, Canada, UAE, and Europe can execute a Power of Attorney at the nearest Bangladesh Embassy or Consulate, complete MOFA attestation in Dhaka, and authorise legal representation for property verification, mutation, sale, or family court proceedings without travelling immediately to Bangladesh.</p>
 <h2>Practice Areas &amp; Legal Services</h2>
 <p>The first consultation is free — you pay nothing in advance. প্রথম পরামর্শ ফ্রি — কোনো অগ্রিম ফি ছাড়াই আপনার সমস্যার আইনি অবস্থান ও করণীয় জেনে নিন।</p>
-<p><a href="/services/criminal-lawyer">Criminal Lawyer</a> &middot; <a href="/services/bail-lawyer">Bail Lawyer</a> &middot; <a href="/services/land-lawyer">Land Lawyer</a> &middot; <a href="/services/divorce-lawyer">Divorce &amp; Family Lawyer</a> &middot; <a href="/services/supreme-court-lawyer">Supreme Court Lawyer</a> &middot; <a href="/services/company-corporate-lawyer">Corporate Lawyer</a> &middot; <a href="/services/tax-lawyer">Tax Advisory</a> &middot; <a href="/advocate-md-shah-alam">Advocate Md. Shah Alam</a> &middot; <a href="/nrb-legal-help">NRB Legal Help</a> &middot; <a href="/contact">Contact Chamber</a> &middot; <a href="/blog/uttara-dhaka-lawyer-legal-services-2026">Uttara Legal Services Guide</a> &middot; <a href="/bn/uttara-lawyer">বাংলা সংস্করণ</a></p>
+<p><a href="/gulshan-lawyer">Gulshan Lawyer</a> &middot; <a href="/banani-lawyer">Banani Lawyer</a> &middot; <a href="/bashundhara-ra-lawyer">Bashundhara R/A Lawyer</a> &middot; <a href="/services/criminal-lawyer">Criminal Lawyer</a> &middot; <a href="/services/bail-lawyer">Bail Lawyer</a> &middot; <a href="/services/land-lawyer">Land Lawyer</a> &middot; <a href="/services/divorce-lawyer">Divorce &amp; Family Lawyer</a> &middot; <a href="/services/supreme-court-lawyer">Supreme Court Lawyer</a> &middot; <a href="/services/company-corporate-lawyer">Corporate Lawyer</a> &middot; <a href="/services/tax-lawyer">Tax Advisory</a> &middot; <a href="/advocate-md-shah-alam">Advocate Md. Shah Alam</a> &middot; <a href="/nrb-legal-help">NRB Legal Help</a> &middot; <a href="/contact">Contact Chamber</a> &middot; <a href="/blog/uttara-dhaka-lawyer-legal-services-2026">Uttara Legal Services Guide</a> &middot; <a href="/bn/uttara-lawyer">বাংলা সংস্করণ</a></p>
 </article>`;
     const html = buildPage(base, {
       title: uTitle,
@@ -1620,6 +1624,100 @@ ${CTA}`,
     const outDir = isBn ? path.join(DIST, 'bn', 'uttara-lawyer') : path.join(DIST, 'uttara-lawyer');
     write(path.join(outDir, 'index.html'), html);
     console.log(`  ✓ ${uPath}`);
+  }
+
+  // ── /gulshan-lawyer, /banani-lawyer, /bashundhara-ra-lawyer (EN + BN) ────
+  for (const area of LOCAL_AREA_LIST) {
+    for (const aLang of ['en', 'bn']) {
+      const isBn = aLang === 'bn';
+      const copy = isBn ? area.bn : area.en;
+      const aPath = isBn ? area.bnPath : area.enPath;
+      const aUrl = `${BASE}${aPath}`;
+      const aSchema = {
+        '@context': 'https://schema.org',
+        '@graph': [
+          buildWebSiteEntity(aLang),
+          buildPersonEntity(),
+          {
+            ...buildServicePageSchema({
+              url: aUrl,
+              lang: aLang,
+              serviceType: copy.serviceType,
+              name: copy.title,
+              description: copy.description,
+              slug: area.slug,
+            }),
+            areaServed: area.areaServed,
+          },
+          {
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: isBn ? 'হোম' : 'Home', item: isBn ? `${BASE}/` : `${BASE}/en` },
+              { '@type': 'ListItem', position: 2, name: copy.title, item: aUrl },
+            ],
+          },
+          {
+            '@type': 'FAQPage',
+            mainEntity: copy.faqs.map((f) => ({
+              '@type': 'Question',
+              name: f.q,
+              acceptedAnswer: { '@type': 'Answer', text: f.a },
+            })),
+          },
+        ],
+      };
+      const aHreflang = `<link rel="alternate" hreflang="en" href="${BASE}${area.enPath}" />
+<link rel="alternate" hreflang="bn" href="${BASE}${area.bnPath}" />
+<link rel="alternate" hreflang="x-default" href="${BASE}${area.enPath}" />`;
+      const quickRowsHtml = copy.quickTable.map(([k, v]) => `<tr><td>${escHtml(k)}</td><td>${escHtml(v)}</td></tr>`).join('\n');
+      const jurRowsHtml = copy.jurisdictionRows.map((r) => `<tr><td>${escHtml(r[0])}</td><td>${escHtml(r[1])}</td><td>${escHtml(r[2])}</td><td>${escHtml(r[3])}</td></tr>`).join('\n');
+      const sectionsHtml = copy.sections
+        .map((s) => `<h2>${escHtml(s.heading)}</h2>\n${s.paragraphs.map((p) => `<p>${escHtml(p)}</p>`).join('\n')}`)
+        .join('\n');
+      const faqsHtml = copy.faqs.map((f) => `<h3>${escHtml(f.q)}</h3>\n<p>${escHtml(f.a)}</p>`).join('\n');
+      const svcPrefix = isBn ? '/bn/services' : '/services';
+      const siblingLinksHtml = [
+        { k: 'uttara', p: isBn ? '/bn/uttara-lawyer' : '/uttara-lawyer', l: isBn ? 'উত্তরা আইনজীবী' : 'Uttara Lawyer' },
+        { k: 'gulshan', p: isBn ? '/bn/gulshan-lawyer' : '/gulshan-lawyer', l: isBn ? 'গুলশান আইনজীবী' : 'Gulshan Lawyer' },
+        { k: 'banani', p: isBn ? '/bn/banani-lawyer' : '/banani-lawyer', l: isBn ? 'বনানী আইনজীবী' : 'Banani Lawyer' },
+        { k: 'bashundhara', p: isBn ? '/bn/bashundhara-ra-lawyer' : '/bashundhara-ra-lawyer', l: isBn ? 'বসুন্ধরা আবাসিক এলাকা আইনজীবী' : 'Bashundhara R/A Lawyer' },
+      ]
+        .filter((s) => s.k !== area.key)
+        .map((s) => `<a href="${s.p}">${s.l}</a>`)
+        .join(' &middot; ');
+
+      const aBody = `<article>
+<h1>${escHtml(copy.h1)}</h1>
+<p>${escHtml(copy.intro)}</p>
+<h2>${isBn ? 'একনজরে থানা, ওয়ার্ড, চেম্বার ও পরামর্শ তথ্য' : 'Quick Answer: Verified Jurisdiction, Chamber Hours &amp; Free Consultation'}</h2>
+<table><thead><tr><th>${isBn ? 'বিষয়' : 'Item'}</th><th>${isBn ? 'বিস্তারিত তথ্য' : 'Details'}</th></tr></thead><tbody>
+${quickRowsHtml}
+</tbody></table>
+<h2>${isBn ? 'এলাকাভিত্তিক থানা ও ডিএনসিসি ওয়ার্ড (DMP ও DNCC যাচাইকৃত)' : 'Verified Police Station &amp; DNCC Ward Jurisdiction'}</h2>
+<table><thead><tr><th>${isBn ? 'এলাকা' : 'Zone / Block'}</th><th>${isBn ? 'থানা (DMP যাচাইকৃত)' : 'Police Station (DMP Verified)'}</th><th>${isBn ? 'ডিএনসিসি ওয়ার্ড' : 'DNCC Ward'}</th><th>${isBn ? 'প্রধান আইনি বিষয়' : 'Common Legal Matters'}</th></tr></thead><tbody>
+${jurRowsHtml}
+</tbody></table>
+${sectionsHtml}
+<h2>${isBn ? 'সাধারণ প্রশ্নোত্তর (FAQ)' : 'Frequently Asked Questions'}</h2>
+${faqsHtml}
+<h2>${isBn ? 'বিশেষায়িত আইনি সেবাসমূহ ও পার্শ্ববর্তী এলাকা' : 'Practice Areas &amp; North Dhaka Local Chambers'}</h2>
+<p>The first consultation is free — you pay nothing in advance. প্রথম পরামর্শ ফ্রি — কোনো অগ্রিম ফি ছাড়াই আপনার সমস্যার আইনি অবস্থান ও করণীয় জেনে নিন।</p>
+<p>${siblingLinksHtml} &middot; <a href="${svcPrefix}/land-lawyer">${isBn ? 'জমি আইনজীবী' : 'Land Lawyer'}</a> &middot; <a href="${svcPrefix}/criminal-lawyer">${isBn ? 'ফৌজদারি আইনজীবী' : 'Criminal Lawyer'}</a> &middot; <a href="${svcPrefix}/bail-lawyer">${isBn ? 'জামিন আইনজীবী' : 'Bail Lawyer'}</a> &middot; <a href="${svcPrefix}/divorce-lawyer">${isBn ? 'পারিবারিক আইনজীবী' : 'Divorce &amp; Family Lawyer'}</a> &middot; <a href="${svcPrefix}/company-corporate-lawyer">${isBn ? 'কোম্পানি আইনজীবী' : 'Corporate Lawyer'}</a> &middot; <a href="${svcPrefix}/supreme-court-lawyer">${isBn ? 'সুপ্রিম কোর্ট আইনজীবী' : 'Supreme Court Lawyer'}</a> &middot; <a href="${svcPrefix}/tax-lawyer">${isBn ? 'আয়কর ও ভ্যাট' : 'Tax Advisory'}</a> &middot; <a href="/advocate-md-shah-alam">${isBn ? 'অ্যাডভোকেট মো. শাহ আলম' : 'Advocate Md. Shah Alam'}</a> &middot; <a href="/nrb-legal-help">${isBn ? 'প্রবাসী (NRB) আইনি সহায়তা' : 'NRB Legal Help'}</a> &middot; <a href="${isBn ? '/bn/contact' : '/contact'}">${isBn ? 'চেম্বারে যোগাযোগ' : 'Contact Chamber'}</a> &middot; <a href="${isBn ? area.enPath : area.bnPath}">${isBn ? 'Read in English' : 'বাংলায় পড়ুন'}</a></p>
+</article>`;
+
+      const html = buildPage(base, {
+        title: copy.title,
+        description: copy.description,
+        canonical: aUrl,
+        lang: aLang,
+        extraHead: `${aHreflang}
+<script type="application/ld+json">${jsonLd(aSchema)}</script>`,
+        body: aBody,
+      });
+      const outDir = isBn ? path.join(DIST, 'bn', area.slug) : path.join(DIST, area.slug);
+      write(path.join(outDir, 'index.html'), html);
+      console.log(`  ✓ ${aPath}`);
+    }
   }
 
   // ── Localized 404 pages (dist/404.html, /404, /bn/404) ──────────────────────
