@@ -1686,11 +1686,29 @@ ${CTA}`,
         .map((s) => `<h2>${escHtml(s.heading)}</h2>\n${s.paragraphs.map((p) => `<p>${escHtml(p)}</p>`).join('\n')}`)
         .join('\n');
       const faqsHtml = copy.faqs.map((f) => `<h3>${escHtml(f.q)}</h3>\n<p>${escHtml(f.a)}</p>`).join('\n');
-      const svcPrefix = isBn ? '/bn/services' : '/services';
+      const svcLinksHtml = isBn
+        ? [
+            { to: '/bn/services/land-lawyer', label: 'জমি, নামজারি ও লিস পেন্ডেন্স আইনজীবী' },
+            { to: '/bn/services/criminal-lawyer', label: 'ফৌজদারি আইনজীবী (ঢাকা সিএমএম ও দায়রা আদালত)' },
+            { to: '/bn/services/bail-lawyer', label: 'জামিন ও আগাম জামিন আইনজীবী (হাইকোর্ট)' },
+            { to: '/bn/services/divorce-lawyer', label: 'পারিবারিক, তালাক ও সন্তান হেফাজত আইনজীবী' },
+            { to: '/bn/services/company-corporate-lawyer', label: 'কোম্পানি, আরজেএসসি ও কর্পোরেট আইনজীবী' },
+            { to: '/bn/services/supreme-court-lawyer', label: 'সুপ্রিম কোর্ট রিট ও আপিল আইনজীবী' },
+            { to: '/bn/services/tax-lawyer', label: 'আয়কর ও রেগুলেটরি পরামর্শ সেবা' },
+          ].map((s) => `<a href="${s.to}">${s.label}</a>`).join(' &middot; ')
+        : [
+            { to: '/services/land-lawyer', label: 'Land, Mutation &amp; Lis Pendens Lawyer' },
+            { to: '/services/criminal-lawyer', label: 'Criminal Defence Lawyer (Dhaka CMM &amp; Sessions)' },
+            { to: '/services/bail-lawyer', label: 'Bail &amp; Anticipatory Bail Lawyer (High Court)' },
+            { to: '/services/divorce-lawyer', label: 'Family, Divorce &amp; Child Custody Lawyer' },
+            { to: '/services/company-corporate-lawyer', label: 'Corporate, RJSC &amp; Commercial Lawyer' },
+            { to: '/services/supreme-court-lawyer', label: 'Supreme Court Writ &amp; Appeal Lawyer' },
+            { to: '/services/tax-lawyer', label: 'Tax &amp; Regulatory Compliance Advisory' },
+          ].map((s) => `<a href="${s.to}">${s.label}</a>`).join(' &middot; ');
       const siblingLinksHtml = [
-        { k: 'uttara', p: isBn ? '/bn/uttara-lawyer' : '/uttara-lawyer', l: isBn ? 'উত্তরা আইনজীবী' : 'Uttara Lawyer' },
-        { k: 'gulshan', p: isBn ? '/bn/gulshan-lawyer' : '/gulshan-lawyer', l: isBn ? 'গুলশান আইনজীবী' : 'Gulshan Lawyer' },
-        { k: 'banani', p: isBn ? '/bn/banani-lawyer' : '/banani-lawyer', l: isBn ? 'বনানী আইনজীবী' : 'Banani Lawyer' },
+        { k: 'uttara', p: isBn ? '/bn/uttara-lawyer' : '/uttara-lawyer', l: isBn ? 'উত্তরা আইনজীবী (সেক্টর ১২ চেম্বার)' : 'Uttara Lawyer (Sector 12 Chamber)' },
+        { k: 'gulshan', p: isBn ? '/bn/gulshan-lawyer' : '/gulshan-lawyer', l: isBn ? 'গুলশান আইনজীবী (ওয়ার্ড ১৯ ও ২০)' : 'Gulshan Lawyer (DNCC Ward 19 &amp; 20)' },
+        { k: 'banani', p: isBn ? '/bn/banani-lawyer' : '/banani-lawyer', l: isBn ? 'বনানী আইনজীবী (ওয়ার্ড ১৯)' : 'Banani Lawyer (DNCC Ward 19)' },
         { k: 'bashundhara', p: isBn ? '/bn/bashundhara-ra-lawyer' : '/bashundhara-ra-lawyer', l: isBn ? 'বসুন্ধরা আবাসিক এলাকা আইনজীবী' : 'Bashundhara R/A Lawyer' },
       ]
         .filter((s) => s.k !== area.key)
@@ -1698,13 +1716,16 @@ ${CTA}`,
         .join(' &middot; ');
 
       const aBody = `<article>
+<p>${escHtml(copy.badge)}</p>
 <h1>${escHtml(copy.h1)}</h1>
 <p>${escHtml(copy.intro)}</p>
+<p><a href="https://wa.me/8801955802007">${isBn ? 'হোয়াটসঅ্যাপে ফ্রি পরামর্শ (+৮৮০ ১৯৫৫-৮০২০০৭)' : 'Free WhatsApp Consultation (+880 1955-802007)'}</a> &middot; <a href="tel:+8801712655546">${isBn ? 'সরাসরি কল: ০১৭১২-৬৫৫৫৪৬' : 'Call Chamber: +880 1712-655546'}</a> &middot; <a href="${isBn ? '/bn/contact' : '/contact'}">${isBn ? 'চেম্বার অ্যাপয়েন্টমেন্ট' : 'Book Chamber Visit'}</a></p>
 <h2>${isBn ? 'একনজরে থানা, ওয়ার্ড, চেম্বার ও পরামর্শ তথ্য' : 'Quick Answer: Verified Jurisdiction, Chamber Hours &amp; Free Consultation'}</h2>
 <table><thead><tr><th>${isBn ? 'বিষয়' : 'Item'}</th><th>${isBn ? 'বিস্তারিত তথ্য' : 'Details'}</th></tr></thead><tbody>
 ${quickRowsHtml}
 </tbody></table>
 <h2>${isBn ? 'এলাকাভিত্তিক থানা ও ডিএনসিসি ওয়ার্ড (DMP ও DNCC যাচাইকৃত)' : 'Verified Police Station &amp; DNCC Ward Jurisdiction'}</h2>
+<p>${isBn ? 'সঠিক থানা ও ওয়ার্ড জানা থাকলে জিডি, এফআইআর, নামজারি বা উচ্ছেদ নোটিশে অপ্রয়োজনীয় বিলম্ব এড়ানো যায়।' : 'Confirming the exact DMP police station and DNCC ward avoids procedural delays when filing a GD, FIR, mutation, or eviction notice.'}</p>
 <table><thead><tr><th>${isBn ? 'এলাকা' : 'Zone / Block'}</th><th>${isBn ? 'থানা (DMP যাচাইকৃত)' : 'Police Station (DMP Verified)'}</th><th>${isBn ? 'ডিএনসিসি ওয়ার্ড' : 'DNCC Ward'}</th><th>${isBn ? 'প্রধান আইনি বিষয়' : 'Common Legal Matters'}</th></tr></thead><tbody>
 ${jurRowsHtml}
 </tbody></table>
@@ -1713,8 +1734,11 @@ ${sectionsHtml}
 <h2>${isBn ? 'সাধারণ প্রশ্নোত্তর (FAQ)' : 'Frequently Asked Questions'}</h2>
 ${faqsHtml}
 <h2>${isBn ? 'বিশেষায়িত আইনি সেবাসমূহ ও পার্শ্ববর্তী এলাকা' : 'Practice Areas &amp; North Dhaka Local Chambers'}</h2>
-<p>The first consultation is free — you pay nothing in advance. প্রথম পরামর্শ ফ্রি — কোনো অগ্রিম ফি ছাড়াই আপনার সমস্যার আইনি অবস্থান ও করণীয় জেনে নিন।</p>
-<p>${siblingLinksHtml} &middot; <a href="${svcPrefix}/land-lawyer">${isBn ? 'জমি আইনজীবী' : 'Land Lawyer'}</a> &middot; <a href="${svcPrefix}/criminal-lawyer">${isBn ? 'ফৌজদারি আইনজীবী' : 'Criminal Lawyer'}</a> &middot; <a href="${svcPrefix}/bail-lawyer">${isBn ? 'জামিন আইনজীবী' : 'Bail Lawyer'}</a> &middot; <a href="${svcPrefix}/divorce-lawyer">${isBn ? 'পারিবারিক আইনজীবী' : 'Divorce &amp; Family Lawyer'}</a> &middot; <a href="${svcPrefix}/company-corporate-lawyer">${isBn ? 'কোম্পানি আইনজীবী' : 'Corporate Lawyer'}</a> &middot; <a href="${svcPrefix}/supreme-court-lawyer">${isBn ? 'সুপ্রিম কোর্ট আইনজীবী' : 'Supreme Court Lawyer'}</a> &middot; <a href="${svcPrefix}/tax-lawyer">${isBn ? 'আয়কর ও ভ্যাট' : 'Tax Advisory'}</a> &middot; <a href="/advocate-md-shah-alam">${isBn ? 'অ্যাডভোকেট মো. শাহ আলম' : 'Advocate Md. Shah Alam'}</a> &middot; <a href="/nrb-legal-help">${isBn ? 'প্রবাসী (NRB) আইনি সহায়তা' : 'NRB Legal Help'}</a> &middot; <a href="${isBn ? '/bn/contact' : '/contact'}">${isBn ? 'চেম্বারে যোগাযোগ' : 'Contact Chamber'}</a> &middot; <a href="${isBn ? area.enPath : area.bnPath}">${isBn ? 'Read in English' : 'বাংলায় পড়ুন'}</a></p>
+<p>${svcLinksHtml}</p>
+<p>${siblingLinksHtml} &middot; <a href="/advocate-md-shah-alam">${isBn ? 'অ্যাডভোকেট মো. শাহ আলম — প্রোফাইল' : 'Advocate Md. Shah Alam — Profile'}</a> &middot; <a href="/nrb-legal-help">${isBn ? 'প্রবাসী (NRB) আইনি সহায়তা' : 'NRB Legal Help'}</a> &middot; <a href="${isBn ? area.enPath : area.bnPath}">${isBn ? 'Read in English' : 'বাংলায় পড়ুন'}</a></p>
+<p><strong>${isBn ? 'প্রথম পরামর্শ ফ্রি — কোনো অগ্রিম ফি নেই' : 'First Consultation Is Free — No Advance Fee'}</strong></p>
+<p>The first consultation is free — you pay nothing in advance. Legal fees are discussed and agreed only after reviewing your documents and explaining the scope of your matter.</p>
+<p>প্রথম পরামর্শ ফ্রি — কোনো অগ্রিম ফি ছাড়াই আপনার সমস্যার আইনি অবস্থান ও করণীয় জেনে নিন। কাজের পরিধি বুঝিয়ে ও ঠিক করার পরেই কেবল ফি নির্ধারণ করা হয়।</p>
 </article>`;
 
       const html = buildPage(base, {
