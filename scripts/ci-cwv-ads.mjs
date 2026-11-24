@@ -72,9 +72,23 @@ const ROUTES = [
   { path: '/blog/138-ni-act-bangladesh-cheque-case-guide', type: 'post-en', maxAds: 4, exactAds: null, isPost: true },
   { path: '/bn/blog/sampatti-uttoradhikar-ain-2026-bn', type: 'post-bn', maxAds: 2, exactAds: 2, isPost: true },
   { path: '/bn/blog/adalate-jomi-krok-obomukto-korar-niyom-2026-bn', type: 'post-bn', maxAds: 2, exactAds: 2, isPost: true },
+  // Local landing pages intentionally carry 0 manual AdSense slots:
+  // GBP/Maps visitors convert into $80-$400 chamber consultations vs ~$0.55 AdSense RPM,
+  // so keeping local landing pages free of manual display ads maximizes real chamber revenue.
+  { path: '/uttara-lawyer', type: 'local-landing', maxAds: 0, exactAds: 0, isPost: false },
+  { path: '/bn/uttara-lawyer', type: 'local-landing', maxAds: 0, exactAds: 0, isPost: false },
+  { path: '/gulshan-lawyer', type: 'local-landing', maxAds: 0, exactAds: 0, isPost: false },
+  { path: '/bn/gulshan-lawyer', type: 'local-landing', maxAds: 0, exactAds: 0, isPost: false },
+  { path: '/banani-lawyer', type: 'local-landing', maxAds: 0, exactAds: 0, isPost: false },
+  { path: '/bn/banani-lawyer', type: 'local-landing', maxAds: 0, exactAds: 0, isPost: false },
+  { path: '/bashundhara-ra-lawyer', type: 'local-landing', maxAds: 0, exactAds: 0, isPost: false },
+  { path: '/bn/bashundhara-ra-lawyer', type: 'local-landing', maxAds: 0, exactAds: 0, isPost: false },
 ];
 
-const CHROMIUM = process.env.CHROMIUM_PATH || '/usr/bin/chromium';
+const CHROMIUM =
+  process.env.CHROMIUM_PATH ||
+  ['/usr/bin/chromium', '/usr/bin/google-chrome', '/usr/bin/chromium-browser'].find((p) => fs.existsSync(p)) ||
+  '/usr/bin/chromium';
 
 function parseArg(flag) {
   const i = process.argv.indexOf(flag);

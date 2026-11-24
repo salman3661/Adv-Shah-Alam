@@ -7,6 +7,7 @@ import topicsData from '../content/topics.json';
 import pageHeadings from '../content/pageHeadings.json';
 import NotFound from './NotFound';
 import AdSenseAd from '../components/AdSenseAd';
+import LocalAreasStrip from '../components/LocalAreasStrip';
 
 // Load all EN blog posts from JSON files (bundled at build time by Vite)
 import postsMeta_en from '../content/posts-meta-en.json';
@@ -768,6 +769,10 @@ const Blog = () => {
                             labelText="Sponsored Content"
                             minHeight={280}
                         />
+                    </div>
+
+                    <div className="mt-8">
+                        <LocalAreasStrip lang="en" />
                     </div>
 
                     {/* Language Switch Footer */}

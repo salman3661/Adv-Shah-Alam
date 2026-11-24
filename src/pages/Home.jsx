@@ -5,6 +5,7 @@ import Hero from '../components/Hero';
 import TrustBar from '../components/TrustBar';
 import BackToTop from '../components/BackToTop';
 import AdSenseAd from '../components/AdSenseAd';
+import LocalAreasStrip from '../components/LocalAreasStrip';
 
 // Below-fold sections are lazy-loaded — reduces initial JS parse & network contention on mobile
 const About        = lazy(() => import('../components/About'));
@@ -167,6 +168,10 @@ const Home = ({ lang = 'en' }) => {
                                 <><strong>First Consultation is Free.</strong> Share your case details on WhatsApp or phone — you will receive an initial legal opinion at no charge. Fees apply only if you visit the chamber or proceed with formal representation.</>
                             )}
                         </div>
+                    </div>
+
+                    <div style={{ maxWidth: '900px', margin: '0 auto 1.5rem', padding: '0 1rem' }}>
+                        <LocalAreasStrip lang={lang} />
                     </div>
 
                     <Chambers lang={lang} />

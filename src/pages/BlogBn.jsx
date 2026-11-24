@@ -6,6 +6,7 @@ import topicsData from '../content/topics.json';
 import pageHeadings from '../content/pageHeadings.json';
 import NotFound from './NotFound';
 import AdSenseAd from '../components/AdSenseAd';
+import LocalAreasStrip from '../components/LocalAreasStrip';
 
 // Load all BN blog posts from JSON files (bundled at build time by Vite)
 import postsMeta_bn from '../content/posts-meta-bn.json';
@@ -850,6 +851,10 @@ const BlogBn = () => {
                             labelText="আরও দেখুন"
                             minHeight={280}
                         />
+                    </div>
+
+                    <div className="mt-8">
+                        <LocalAreasStrip lang="bn" />
                     </div>
 
                     {/* Language Switch Footer */}

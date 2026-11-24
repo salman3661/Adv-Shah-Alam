@@ -202,6 +202,39 @@ export default function LocalAreaLawyerPage({ areaKey = 'gulshan', lang = 'en' }
           </div>
         </section>
 
+        {/* Common Case Types & Procedural Stages Table */}
+        {copy.caseTimelineTable && (
+          <section className="rounded-xl p-6 sm:p-8 border" style={{ background: 'var(--card-bg)', borderColor: 'var(--card-border)' }}>
+            <h2 className="text-2xl font-bold mb-4">{copy.caseTimelineTable.heading}</h2>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm border-collapse">
+                <thead>
+                  <tr style={{ background: 'var(--surface)' }}>
+                    {copy.caseTimelineTable.columns.map((col, idx) => (
+                      <th key={idx} className="p-3 text-left border" style={{ borderColor: 'var(--card-border)' }}>{col}</th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {copy.caseTimelineTable.rows.map((row, idx) => (
+                    <tr key={idx}>
+                      {row.map((cell, cIdx) => (
+                        <td
+                          key={cIdx}
+                          className={cIdx === 0 ? 'p-3 border font-medium align-top' : 'p-3 border align-top'}
+                          style={{ borderColor: 'var(--card-border)' }}
+                        >
+                          {cell}
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </section>
+        )}
+
         {/* Detailed Local Legal Guidance */}
         <section className="rounded-xl p-6 sm:p-8 border space-y-6" style={{ background: 'var(--card-bg)', borderColor: 'var(--card-border)' }}>
           {copy.sections.map((sec, idx) => (

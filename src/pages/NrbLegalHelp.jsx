@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Phone, MessageCircle, Globe2, FileCheck2, ShieldCheck, CalendarClock } from 'lucide-react';
 import AdSenseAd from '../components/AdSenseAd';
+import LocalAreasStrip from '../components/LocalAreasStrip';
 
 import postsMeta_en from '../content/posts-meta-en.json';
 const _postModules = postsMeta_en;
@@ -545,6 +546,10 @@ const NrbLegalHelp = () => {
                             ))}
                         </div>
                     </section>
+
+                    <div className="mt-8">
+                        <LocalAreasStrip lang="en" />
+                    </div>
 
                     <p className="text-xs mt-12" style={{ color: 'var(--text-muted)' }}>
                         These guides are general legal information, not legal advice. All indicative fee figures exclude court stamps, embassy consular charges, and government revenue duties. Please consult a qualified advocate for your specific case.

@@ -192,9 +192,17 @@ function buildPage(base, { title, description, canonical, body, lang='en', extra
     h = h.replace('</head>', `${headInjections}</head>`);
   }
 
+  // Compact Local Areas nav on core pages that don't already emit the 4-area local strip (matches Footer.jsx)
+  const localAreasFooterNav =
+    !robots.includes('noindex') && !String(body).includes('/bashundhara-ra-lawyer')
+      ? lang === 'bn'
+        ? `\n<nav aria-label="স্থানীয় চেম্বার এলাকা" style="margin-top:20px;font-size:13px;line-height:1.8"><a href="/bn/uttara-lawyer">উত্তরা আইনজীবী</a> &middot; <a href="/bn/gulshan-lawyer">গুলশান আইনজীবী</a> &middot; <a href="/bn/banani-lawyer">বনানী আইনজীবী</a> &middot; <a href="/bn/bashundhara-ra-lawyer">বসুন্ধরা আবাসিক এলাকা আইনজীবী</a> &middot; <a href="/uttara-lawyer">Uttara Lawyer</a> &middot; <a href="/gulshan-lawyer">Gulshan Lawyer</a> &middot; <a href="/banani-lawyer">Banani Lawyer</a> &middot; <a href="/bashundhara-ra-lawyer">Bashundhara R/A Lawyer</a></nav>`
+        : `\n<nav aria-label="Local Areas" style="margin-top:20px;font-size:13px;line-height:1.8"><a href="/uttara-lawyer">Uttara Lawyer</a> &middot; <a href="/gulshan-lawyer">Gulshan Lawyer</a> &middot; <a href="/banani-lawyer">Banani Lawyer</a> &middot; <a href="/bashundhara-ra-lawyer">Bashundhara R/A Lawyer</a> &middot; <a href="/bn/uttara-lawyer">উত্তরা আইনজীবী</a> &middot; <a href="/bn/gulshan-lawyer">গুলশান আইনজীবী</a> &middot; <a href="/bn/banani-lawyer">বনানী আইনজীবী</a> &middot; <a href="/bn/bashundhara-ra-lawyer">বসুন্ধরা আবাসিক এলাকা আইনজীবী</a></nav>`
+      : '';
+
   // Hidden from users, visible to crawlers — no flash, no layout shift
   const visibleShell = isHomePage ? `\n${buildHeroShell(lang)}` : '';
-  const prerendered = `${visibleShell}\n<div id="prerendered-content" aria-hidden="true" style="display:none !important;visibility:hidden !important;opacity:0 !important;height:0 !important;width:0 !important;overflow:hidden !important;position:absolute !important;pointer-events:none !important">\n${body}\n</div>`;
+  const prerendered = `${visibleShell}\n<div id="prerendered-content" aria-hidden="true" style="display:none !important;visibility:hidden !important;opacity:0 !important;height:0 !important;width:0 !important;overflow:hidden !important;position:absolute !important;pointer-events:none !important">\n${body}${localAreasFooterNav}\n</div>`;
   h = h.replace(/<div id="root">[\s\S]*?<\/div>/, `<div id="root">${prerendered}</div>`);
   return h;
 }
@@ -342,7 +350,7 @@ ${buildPillarAndTableHtml(post, 'en')}${toc}${sections}${faqs}${relatedArticlesH
 </article>
 <section style="margin-top:32px;padding:18px;background:#F7F8FA;border-radius:8px;border:1px solid #E2E8F0">
   <h2 style="font-size:18px;font-weight:700;margin-bottom:10px;color:#0B1220">Related Legal Resources &amp; Services</h2>
-  <p style="font-size:14px;line-height:1.8"><a href="/services/criminal-lawyer">Criminal Defense</a> &middot; <a href="/services/bail-lawyer">Bail &amp; Anticipatory Bail</a> &middot; <a href="/services/divorce-lawyer">Divorce &amp; Family Law</a> &middot; <a href="/services/land-lawyer">Land &amp; Property Law</a> &middot; <a href="/uttara-lawyer">Uttara Lawyer</a> &middot; <a href="/bn/uttara-lawyer">উত্তরা আইনজীবী</a> &middot; <a href="/nrb-legal-help">NRB Legal Help</a> &middot; <a href="/contact">Book Consultation</a></p>
+  <p style="font-size:14px;line-height:1.8"><a href="/services/criminal-lawyer">Criminal Defense</a> &middot; <a href="/services/bail-lawyer">Bail &amp; Anticipatory Bail</a> &middot; <a href="/services/divorce-lawyer">Divorce &amp; Family Law</a> &middot; <a href="/services/land-lawyer">Land &amp; Property Law</a> &middot; <a href="/uttara-lawyer">Uttara Lawyer</a> &middot; <a href="/gulshan-lawyer">Gulshan Lawyer</a> &middot; <a href="/banani-lawyer">Banani Lawyer</a> &middot; <a href="/bashundhara-ra-lawyer">Bashundhara R/A Lawyer</a> &middot; <a href="/bn/uttara-lawyer">উত্তরা আইনজীবী</a> &middot; <a href="/bn/gulshan-lawyer">গুলশান আইনজীবী</a> &middot; <a href="/bn/banani-lawyer">বনানী আইনজীবী</a> &middot; <a href="/bn/bashundhara-ra-lawyer">বসুন্ধরা আবাসিক এলাকা আইনজীবী</a> &middot; <a href="/nrb-legal-help">NRB Legal Help</a> &middot; <a href="/contact">Book Consultation</a></p>
 </section>
 ${CTA}`;
 }
@@ -421,7 +429,7 @@ ${buildPillarAndTableHtml(post, 'bn')}${quickAns}${toc}${sections}${faqs}${relat
 </article>
 <section style="margin-top:32px;padding:18px;background:#F7F8FA;border-radius:8px;border:1px solid #E2E8F0">
   <h2 style="font-size:18px;font-weight:700;margin-bottom:10px;color:#0B1220">সংশ্লিষ্ট আইনি সেবা ও পরামর্শ</h2>
-  <p style="font-size:14px;line-height:1.8"><a href="/bn/services/criminal-lawyer">ফৌজদারি আইনজীবী</a> &middot; <a href="/bn/services/bail-lawyer">জামিন আইনজীবী</a> &middot; <a href="/bn/services/divorce-lawyer">তালাক ও পারিবারিক আইন</a> &middot; <a href="/bn/services/land-lawyer">জমি ও সম্পত্তি আইন</a> &middot; <a href="/bn/uttara-lawyer">উত্তরা আইনজীবী</a> &middot; <a href="/uttara-lawyer">Uttara Lawyer</a> &middot; <a href="/nrb-legal-help">প্রবাসী (NRB) আইনি সহায়তা</a> &middot; <a href="/bn/contact">চেম্বারে যোগাযোগ</a></p>
+  <p style="font-size:14px;line-height:1.8"><a href="/bn/services/criminal-lawyer">ফৌজদারি আইনজীবী</a> &middot; <a href="/bn/services/bail-lawyer">জামিন আইনজীবী</a> &middot; <a href="/bn/services/divorce-lawyer">তালাক ও পারিবারিক আইন</a> &middot; <a href="/bn/services/land-lawyer">জমি ও সম্পত্তি আইন</a> &middot; <a href="/bn/uttara-lawyer">উত্তরা আইনজীবী</a> &middot; <a href="/bn/gulshan-lawyer">গুলশান আইনজীবী</a> &middot; <a href="/bn/banani-lawyer">বনানী আইনজীবী</a> &middot; <a href="/bn/bashundhara-ra-lawyer">বসুন্ধরা আবাসিক এলাকা আইনজীবী</a> &middot; <a href="/uttara-lawyer">Uttara Lawyer</a> &middot; <a href="/gulshan-lawyer">Gulshan Lawyer</a> &middot; <a href="/banani-lawyer">Banani Lawyer</a> &middot; <a href="/bashundhara-ra-lawyer">Bashundhara R/A Lawyer</a> &middot; <a href="/nrb-legal-help">প্রবাসী (NRB) আইনি সহায়তা</a> &middot; <a href="/bn/contact">চেম্বারে যোগাযোগ</a></p>
 </section>
 ${BN_CTA}`;
 }
@@ -522,7 +530,7 @@ ${directAnswerHtml}
 ${introHtml}
 ${glanceHtml}
 ${sectionsHtml}
-<p style="font-size:14px;color:#334155;margin:16px 0">${isBn ? 'উত্তরা, গুলশান, বনানী ও বসুন্ধরা চেম্বার সেবা: <a href="/bn/uttara-lawyer" style="color:#1a56db;font-weight:600">উত্তরা আইনজীবী (সেক্টর ১২)</a> &middot; <a href="/uttara-lawyer" style="color:#1a56db">English</a>' : 'Local chamber services for Uttara, Gulshan, Banani &amp; Bashundhara: <a href="/uttara-lawyer" style="color:#1a56db;font-weight:600">Uttara Lawyer (Sector 12)</a> &middot; <a href="/bn/uttara-lawyer" style="color:#1a56db">বাংলা</a>'}</p>
+<p style="font-size:14px;color:#334155;margin:16px 0">${isBn ? 'উত্তরা, গুলশান, বনানী ও বসুন্ধরা চেম্বার সেবা: <a href="/bn/uttara-lawyer" style="color:#1a56db;font-weight:600">উত্তরা আইনজীবী (সেক্টর ১২)</a> &middot; <a href="/bn/gulshan-lawyer" style="color:#1a56db;font-weight:600">গুলশান আইনজীবী</a> &middot; <a href="/bn/banani-lawyer" style="color:#1a56db;font-weight:600">বনানী আইনজীবী</a> &middot; <a href="/bn/bashundhara-ra-lawyer" style="color:#1a56db;font-weight:600">বসুন্ধরা আবাসিক এলাকা আইনজীবী</a> &middot; <a href="/uttara-lawyer" style="color:#1a56db">Uttara</a> &middot; <a href="/gulshan-lawyer" style="color:#1a56db">Gulshan</a> &middot; <a href="/banani-lawyer" style="color:#1a56db">Banani</a> &middot; <a href="/bashundhara-ra-lawyer" style="color:#1a56db">Bashundhara R/A</a>' : 'Local chamber services for Uttara, Gulshan, Banani &amp; Bashundhara: <a href="/uttara-lawyer" style="color:#1a56db;font-weight:600">Uttara Lawyer (Sector 12)</a> &middot; <a href="/gulshan-lawyer" style="color:#1a56db;font-weight:600">Gulshan Lawyer</a> &middot; <a href="/banani-lawyer" style="color:#1a56db;font-weight:600">Banani Lawyer</a> &middot; <a href="/bashundhara-ra-lawyer" style="color:#1a56db;font-weight:600">Bashundhara R/A Lawyer</a> &middot; <a href="/bn/uttara-lawyer" style="color:#1a56db">উত্তরা</a> &middot; <a href="/bn/gulshan-lawyer" style="color:#1a56db">গুলশান</a> &middot; <a href="/bn/banani-lawyer" style="color:#1a56db">বনানী</a> &middot; <a href="/bn/bashundhara-ra-lawyer" style="color:#1a56db">বসুন্ধরা</a>'}</p>
 ${feeTableHtml}
 ${procedureHtml}
 ${docsHtml}
@@ -1671,6 +1679,9 @@ ${CTA}`,
 <link rel="alternate" hreflang="x-default" href="${BASE}${area.enPath}" />`;
       const quickRowsHtml = copy.quickTable.map(([k, v]) => `<tr><td>${escHtml(k)}</td><td>${escHtml(v)}</td></tr>`).join('\n');
       const jurRowsHtml = copy.jurisdictionRows.map((r) => `<tr><td>${escHtml(r[0])}</td><td>${escHtml(r[1])}</td><td>${escHtml(r[2])}</td><td>${escHtml(r[3])}</td></tr>`).join('\n');
+      const caseTimelineHtml = copy.caseTimelineTable
+        ? `<h2>${escHtml(copy.caseTimelineTable.heading)}</h2>\n<table><thead><tr>${copy.caseTimelineTable.columns.map((c) => `<th>${escHtml(c)}</th>`).join('')}</tr></thead><tbody>\n${copy.caseTimelineTable.rows.map((r) => `<tr>${r.map((cell) => `<td>${escHtml(cell)}</td>`).join('')}</tr>`).join('\n')}\n</tbody></table>`
+        : '';
       const sectionsHtml = copy.sections
         .map((s) => `<h2>${escHtml(s.heading)}</h2>\n${s.paragraphs.map((p) => `<p>${escHtml(p)}</p>`).join('\n')}`)
         .join('\n');
@@ -1697,6 +1708,7 @@ ${quickRowsHtml}
 <table><thead><tr><th>${isBn ? 'এলাকা' : 'Zone / Block'}</th><th>${isBn ? 'থানা (DMP যাচাইকৃত)' : 'Police Station (DMP Verified)'}</th><th>${isBn ? 'ডিএনসিসি ওয়ার্ড' : 'DNCC Ward'}</th><th>${isBn ? 'প্রধান আইনি বিষয়' : 'Common Legal Matters'}</th></tr></thead><tbody>
 ${jurRowsHtml}
 </tbody></table>
+${caseTimelineHtml}
 ${sectionsHtml}
 <h2>${isBn ? 'সাধারণ প্রশ্নোত্তর (FAQ)' : 'Frequently Asked Questions'}</h2>
 ${faqsHtml}
