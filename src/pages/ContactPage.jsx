@@ -36,7 +36,7 @@ const CONTACT_FAQS_EN = [
 ];
 
 /* ─── 100/100 SEO JSON-LD Schemas ────────────────────────────── */
-const buildContactSchema = (isBn) => {
+const _buildContactSchema = (isBn) => {
     const BASE = 'https://www.advmdshahalam.me';
     const pageUrl = isBn ? `${BASE}/bn/contact` : `${BASE}/contact`;
     const faqs = isBn ? CONTACT_FAQS_BN : CONTACT_FAQS_EN;

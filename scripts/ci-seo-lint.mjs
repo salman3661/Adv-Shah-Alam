@@ -88,9 +88,12 @@ for (const [src, dest] of redirMap.entries()) {
     chainErrors++;
     console.error(`Redirect chain: ${src} -> ${dest} -> ${redirMap.get(dest)}`);
   }
-  const cleanDest = dest.split('#')[0];
-  const destPath = cleanDest === '/' ? path.join(DIST, 'index.html') : path.join(DIST, cleanDest.replace(/^\/+/, ''), 'index.html');
-  if (!fs.existsSync(destPath)) {
+  const cleanDest = dest.split('#')[0].split('?')[0];
+  const relDest = cleanDest.replace(/^\/+/, '');
+  const exists = cleanDest === '/'
+    ? fs.existsSync(path.join(DIST, 'index.html'))
+    : (fs.existsSync(path.join(DIST, relDest)) || fs.existsSync(path.join(DIST, relDest, 'index.html')));
+  if (!exists) {
     brokenTargetErrors++;
     console.error(`Redirect target missing in dist/: ${src} -> ${dest}`);
   }

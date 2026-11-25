@@ -45,7 +45,31 @@ function resolveDistFile(uPath) {
 }
 
 const xml = fs.readFileSync(SITEMAP, 'utf8');
-const urls = [...xml.matchAll(/<loc>\s*([^<\s]+)\s*<\/loc>/g)].map((m) => new URL(m[1].trim()).pathname);
+const sitemapUrls = [...xml.matchAll(/<loc>\s*([^<\s]+)\s*<\/loc>/g)].map((m) => new URL(m[1].trim()).pathname);
+
+// Machine-discover all pagination routes by following <link rel="next"> chains from /blog and /bn/blog
+function discoverRelNextChain(startPath) {
+  const discovered = [];
+  const seen = new Set([startPath]);
+  let cur = startPath;
+  while (cur) {
+    const f = resolveDistFile(cur);
+    if (!f) break;
+    const html = fs.readFileSync(f, 'utf8');
+    const m = html.match(/<link[^>]+rel=["']next["'][^>]+href=["']([^"']+)["']/i);
+    if (!m) break;
+    const nextPath = m[1].startsWith('http') ? new URL(m[1]).pathname : m[1];
+    if (seen.has(nextPath)) break;
+    seen.add(nextPath);
+    discovered.push(nextPath);
+    cur = nextPath;
+  }
+  return discovered;
+}
+
+const paginationUrls = [...discoverRelNextChain('/blog'), ...discoverRelNextChain('/bn/blog')];
+const paginationSet = new Set(paginationUrls);
+const urls = [...sitemapUrls, ...paginationUrls];
 
 const server = http.createServer((req, res) => {
   const clean = decodeURIComponent((req.url || '/').split('?')[0]);
@@ -71,7 +95,7 @@ const chromePath =
 const browser = await chromium.launch({ executablePath: chromePath, args: ['--no-sandbox', '--disable-dev-shm-usage'] });
 const ctx = await browser.newContext();
 
-// Block external requests & heavy media/font assets so 826-URL rendered DOM check is fast & low-memory
+// Block external requests & heavy media/font assets so 858-URL rendered DOM check is fast & low-memory
 await ctx.route('**/*', (route) => {
   const req = route.request();
   const u = req.url();
@@ -83,6 +107,7 @@ await ctx.route('**/*', (route) => {
 
 const errors = [];
 const keyReports = new Map();
+const paginationReports = new Map();
 const KEY_ROUTES = new Set([
   '/',
   '/en',
@@ -98,6 +123,8 @@ const KEY_ROUTES = new Set([
   '/bn/bashundhara-ra-lawyer',
   '/services/land-lawyer',
   '/bn/services/land-lawyer',
+  '/blog',
+  '/bn/blog',
   '/review',
   '/nrb-legal-help',
 ]);
@@ -121,18 +148,23 @@ async function worker() {
     handled++;
     try {
       let data;
+      const needsBreadcrumbWait = uPath === '/blog' || uPath === '/bn/blog' || paginationSet.has(uPath);
       for (let attempt = 0; attempt < 2; attempt++) {
         try {
           await page.goto(`${base}${uPath}`, { waitUntil: 'load', timeout: 20000 });
           if (uPath === '/uttara-lawyer' || uPath === '/bn/uttara-lawyer') {
             await page.waitForSelector('article', { timeout: 5000 });
+          } else if (needsBreadcrumbWait) {
+            await page.waitForSelector('nav[aria-label="Breadcrumb"]', { timeout: 5000 });
           } else {
             await page.waitForTimeout(60);
           }
           data = await page.evaluate(() => {
             const scripts = Array.from(document.querySelectorAll('script[type="application/ld+json"]')).map((s) => s.textContent || '');
             const bodyText = (document.body?.innerText || '').replace(/\s+/g, ' ');
-            return { scripts, bodyText };
+            const bc = document.querySelector('nav[aria-label="Breadcrumb"]');
+            const breadcrumbText = bc ? (bc.innerText || '').replace(/\s+/g, ' ').trim() : '';
+            return { scripts, bodyText, breadcrumbText };
           });
           break;
         } catch (err) {
@@ -228,6 +260,26 @@ async function worker() {
         }
       }
 
+      // Blog index & pagination assertions (v11.1)
+      if (uPath === '/blog' || uPath === '/bn/blog' || paginationSet.has(uPath)) {
+        if ((typeCounts.CollectionPage || 0) !== 1) {
+          errors.push(`${uPath}: expected CollectionPage=1, got ${typeCounts.CollectionPage || 0}`);
+        }
+        if ((typeCounts.BreadcrumbList || 0) !== 1) {
+          errors.push(`${uPath}: expected BreadcrumbList=1, got ${typeCounts.BreadcrumbList || 0}`);
+        }
+        if (!data.breadcrumbText) {
+          errors.push(`${uPath}: missing visible <nav aria-label="Breadcrumb"> in rendered DOM`);
+        }
+        if (paginationSet.has(uPath)) {
+          paginationReports.set(uPath, {
+            blocks: blockCount,
+            types: Object.keys(typeCounts).join(','),
+            breadcrumbText: data.breadcrumbText,
+          });
+        }
+      }
+
       if (KEY_ROUTES.has(uPath)) {
         keyReports.set(uPath, {
           blocks: blockCount,
@@ -236,6 +288,7 @@ async function worker() {
           visibleFaqCount,
           legalServices: typeCounts.LegalService || 0,
           breadcrumbs: typeCounts.BreadcrumbList || 0,
+          breadcrumbText: data.breadcrumbText,
         });
       }
       checked++;
@@ -250,12 +303,20 @@ await Promise.all(Array.from({ length: CONCURRENCY }, () => worker()));
 await browser.close();
 server.close();
 
-console.log(`[schema-dedupe] rendered ${checked}/${urls.length} sitemap URLs in headless Chrome (FAQPage=${totalFaqPages}, LegalService=${totalLegalServices}, errors=${errors.length})`);
+console.log(`[schema-dedupe] rendered ${checked}/${urls.length} URLs (${sitemapUrls.length} sitemap + ${paginationUrls.length} rel=next pagination) in headless Chrome (FAQPage=${totalFaqPages}, LegalService=${totalLegalServices}, errors=${errors.length})`);
 for (const r of KEY_ROUTES) {
   const rep = keyReports.get(r);
   if (rep) {
     const vis = rep.visibleFaqCount !== null ? ` visibleInDOM=${rep.visibleFaqCount}/${rep.faqQ}` : '';
-    console.log(`  ${r.padEnd(28)} blocks=${rep.blocks} FAQPage=${rep.faqPages}(${rep.faqQ}q)${vis} LegalService=${rep.legalServices} BreadcrumbList=${rep.breadcrumbs}`);
+    const bc = (r === '/blog' || r === '/bn/blog') ? ` breadcrumb="${rep.breadcrumbText}"` : '';
+    console.log(`  ${r.padEnd(28)} blocks=${rep.blocks} FAQPage=${rep.faqPages}(${rep.faqQ}q)${vis} LegalService=${rep.legalServices} BreadcrumbList=${rep.breadcrumbs}${bc}`);
+  }
+}
+console.log(`[schema-dedupe] pagination routes (${paginationUrls.length}):`);
+for (const r of paginationUrls) {
+  const rep = paginationReports.get(r);
+  if (rep) {
+    console.log(`  ${r.padEnd(22)} blocks=${rep.blocks} types=[${rep.types}] breadcrumb="${rep.breadcrumbText}"`);
   }
 }
 
@@ -264,4 +325,4 @@ if (errors.length) {
   if (errors.length > 40) console.error(`  ... and ${errors.length - 40} more errors`);
   process.exit(1);
 }
-console.log(`[schema-dedupe] PASS — ${checked}/${urls.length} PASS, 0 errors`);
+console.log(`[schema-dedupe] PASS — ${sitemapUrls.length}/${sitemapUrls.length} sitemap + ${paginationUrls.length}/${paginationUrls.length} pagination PASS, 0 errors`);

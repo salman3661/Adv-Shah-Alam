@@ -445,15 +445,25 @@ const BlogBn = () => {
                 />
 
                 <div className="container mx-auto px-6 max-w-5xl relative z-10 text-center">
-                    {isTopicRoute && topicObj && (
-                        <nav aria-label="Breadcrumb" className="text-xs font-semibold mb-4 flex justify-center gap-1.5" style={{ color: 'var(--text-muted)', fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif" }}>
-                            <Link to="/" className="hover:underline">হোম</Link>
-                            <span>&rsaquo;</span>
-                            <Link to="/bn/blog" className="hover:underline">বাংলা ব্লগ</Link>
-                            <span>&rsaquo;</span>
-                            <span style={{ color: 'var(--text)' }}>{topicObj.shortBn}</span>
-                        </nav>
-                    )}
+                    <nav aria-label="Breadcrumb" className="text-xs font-semibold mb-4 flex justify-center gap-1.5" style={{ color: 'var(--text-muted)', fontFamily: "var(--font-bn), 'Noto Serif Bengali', sans-serif" }}>
+                        <Link to="/" className="hover:underline">হোম</Link>
+                        <span>&rsaquo;</span>
+                        {isTopicRoute && topicObj ? (
+                            <>
+                                <Link to="/bn/blog" className="hover:underline">বাংলা ব্লগ</Link>
+                                <span>&rsaquo;</span>
+                                <span style={{ color: 'var(--text)' }}>{topicObj.shortBn}</span>
+                            </>
+                        ) : pageNum > 1 ? (
+                            <>
+                                <Link to="/bn/blog" className="hover:underline">বাংলা ব্লগ</Link>
+                                <span>&rsaquo;</span>
+                                <span style={{ color: 'var(--text)' }}>{`${pageHeadings.blogPagePrefixBn} (Page ${pageNum})`}</span>
+                            </>
+                        ) : (
+                            <span style={{ color: 'var(--text)' }}>বাংলা ব্লগ</span>
+                        )}
+                    </nav>
 
                     <div
                         className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold mb-6 shadow-sm border"

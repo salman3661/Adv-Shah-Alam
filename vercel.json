@@ -30,6 +30,16 @@
       "statusCode": 301
     },
     {
+      "source": "/sitemap.html",
+      "destination": "/sitemap.xml",
+      "statusCode": 301
+    },
+    {
+      "source": "/sitemap",
+      "destination": "/sitemap.xml",
+      "statusCode": 301
+    },
+    {
       "source": "/advmdshahalam.me/:path*",
       "destination": "/",
       "statusCode": 301

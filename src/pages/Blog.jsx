@@ -374,15 +374,25 @@ const Blog = () => {
                 />
 
                 <div className="container mx-auto px-6 max-w-5xl relative z-10 text-center">
-                    {isTopicRoute && topicObj && (
-                        <nav aria-label="Breadcrumb" className="text-xs font-semibold mb-4 flex justify-center gap-1.5" style={{ color: 'var(--text-muted)' }}>
-                            <Link to="/en" className="hover:underline">Home</Link>
-                            <span>&rsaquo;</span>
-                            <Link to="/blog" className="hover:underline">Blog</Link>
-                            <span>&rsaquo;</span>
-                            <span style={{ color: 'var(--text)' }}>{topicObj.shortEn}</span>
-                        </nav>
-                    )}
+                    <nav aria-label="Breadcrumb" className="text-xs font-semibold mb-4 flex justify-center gap-1.5" style={{ color: 'var(--text-muted)' }}>
+                        <Link to="/en" className="hover:underline">Home</Link>
+                        <span>&rsaquo;</span>
+                        {isTopicRoute && topicObj ? (
+                            <>
+                                <Link to="/blog" className="hover:underline">Blog</Link>
+                                <span>&rsaquo;</span>
+                                <span style={{ color: 'var(--text)' }}>{topicObj.shortEn}</span>
+                            </>
+                        ) : pageNum > 1 ? (
+                            <>
+                                <Link to="/blog" className="hover:underline">Blog</Link>
+                                <span>&rsaquo;</span>
+                                <span style={{ color: 'var(--text)' }}>{`${pageHeadings.blogPagePrefixEn} (Page ${pageNum})`}</span>
+                            </>
+                        ) : (
+                            <span style={{ color: 'var(--text)' }}>Blog</span>
+                        )}
+                    </nav>
 
                     <div
                         className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold mb-6 shadow-sm border"

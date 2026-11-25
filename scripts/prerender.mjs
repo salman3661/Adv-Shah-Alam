@@ -1911,7 +1911,7 @@ ${buildServiceSchema(`${BASE}/bn/services/${slug}`, bnData, 'bn')}`;
           '@type': 'BreadcrumbList',
           itemListElement: [
             { '@type': 'ListItem', position: 1, name: 'হোম', item: `${BASE}/` },
-            { '@type': 'ListItem', position: 2, name: 'ব্লগ', item: `${BASE}/bn/blog` },
+            { '@type': 'ListItem', position: 2, name: 'বাংলা ব্লগ', item: `${BASE}/bn/blog` },
           ],
         },
       ],
@@ -1939,11 +1939,39 @@ ${buildServiceSchema(`${BASE}/bn/services/${slug}`, bnData, 'bn')}`;
     ['bn', bnPosts, '/bn/blog', pageHeadings.blogPagePrefixBn],
   ]) {
     const totalPages = Math.max(1, Math.ceil(list.length / PER_PAGE));
+    const isBn = langKey === 'bn';
+    const homeHref = isBn ? '/' : '/en';
+    const homeName = isBn ? 'হোম' : 'Home';
+    const blogName = isBn ? 'বাংলা ব্লগ' : 'Blog';
     for (let p = 2; p <= totalPages; p++) {
       const slice = list.slice((p - 1) * PER_PAGE, p * PER_PAGE);
+      const pageUrl = `${BASE}${prefix}/page/${p}`;
+      const pageHeading = `${label} (Page ${p})`;
       const prevHref = p === 2 ? `${BASE}${prefix}` : `${BASE}${prefix}/page/${p - 1}`;
       const nextHref = p < totalPages ? `${BASE}${prefix}/page/${p + 1}` : null;
       const relLinks = `<link rel="prev" href="${prevHref}" />` + (nextHref ? `\n<link rel="next" href="${nextHref}" />` : '');
+      const pageSchema = {
+        '@context': 'https://schema.org',
+        '@graph': [
+          {
+            '@type': 'CollectionPage',
+            '@id': `${pageUrl}#webpage`,
+            url: pageUrl,
+            name: pageHeading,
+            inLanguage: langKey,
+            isPartOf: { '@id': `${BASE}/#website` },
+          },
+          {
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: homeName, item: `${BASE}${homeHref}` },
+              { '@type': 'ListItem', position: 2, name: blogName, item: `${BASE}${prefix}` },
+              { '@type': 'ListItem', position: 3, name: pageHeading, item: pageUrl },
+            ],
+          },
+        ],
+      };
+      const breadcrumbNav = `<nav aria-label="Breadcrumb" class="text-xs font-semibold mb-4 flex justify-center gap-1.5" style="color:var(--text-muted)"><a class="hover:underline" href="${homeHref}">${homeName}</a><span>&rsaquo;</span><a class="hover:underline" href="${prefix}">${blogName}</a><span>&rsaquo;</span><span style="color:var(--text)">${escHtml(pageHeading)}</span></nav>`;
       const navLinks = Array.from({ length: totalPages }, (_, i) => {
         const n = i + 1;
         const href = n === 1 ? prefix : `${prefix}/page/${n}`;
@@ -1953,10 +1981,10 @@ ${buildServiceSchema(`${BASE}/bn/services/${slug}`, bnData, 'bn')}`;
       const pageHtml = buildPage(base, {
         title: `${label} — Page ${p} | Adv. Shah Alam`,
         description: `${label} archive page ${p} of ${totalPages} by Advocate Md. Shah Alam, Supreme Court of Bangladesh.`,
-        canonical: `${BASE}${prefix}/page/${p}`,
+        canonical: pageUrl,
         lang: langKey,
-        extraHead: relLinks,
-        body: `<h1 style="font-size:28px;font-weight:700;color:#0B1220">${escHtml(label)} (Page ${p})</h1><ul>${itemsHtml}</ul><nav aria-label="Pagination" style="margin-top:24px">${navLinks}</nav>`,
+        extraHead: `${relLinks}\n<script type="application/ld+json">${jsonLd(pageSchema)}</script>`,
+        body: `${breadcrumbNav}<h1 style="font-size:28px;font-weight:700;color:#0B1220">${escHtml(pageHeading)}</h1><ul>${itemsHtml}</ul><nav aria-label="Pagination" style="margin-top:24px">${navLinks}</nav>`,
       });
       write(path.join(DIST, prefix.replace(/^\/+/, ''), 'page', String(p), 'index.html'), pageHtml);
     }

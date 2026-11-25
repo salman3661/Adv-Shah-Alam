@@ -109,7 +109,7 @@ const NrbLegalHelp = () => {
     const description = 'Legal guides and remote legal services for Non-Resident Bangladeshis in the UK, USA, UAE and Canada: free initial consultation, deed vetting, MOFA attestation, retainer, divorce and court cases.';
     const canonical = 'https://www.advmdshahalam.me/nrb-legal-help';
 
-    const nrbSchema = {
+    const _nrbSchema = {
         '@context': 'https://schema.org',
         '@graph': [
             {
