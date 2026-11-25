@@ -85,7 +85,6 @@ export default function LocalAreaLawyerPage({ areaKey = 'gulshan', lang = 'en' }
         <link rel="alternate" hrefLang="en" href={`${SITE_BASE}${area.enPath}`} />
         <link rel="alternate" hrefLang="bn" href={`${SITE_BASE}${area.bnPath}`} />
         <link rel="alternate" hrefLang="x-default" href={`${SITE_BASE}${area.enPath}`} />
-        <script type="application/ld+json">{JSON.stringify(schema)}</script>
       </Helmet>
 
       <article className="max-w-5xl mx-auto space-y-10">

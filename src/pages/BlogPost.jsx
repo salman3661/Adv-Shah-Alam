@@ -626,9 +626,6 @@ const BlogPostInner = () => {
                 <meta name="twitter:image" content={coverAbsolute(post.category)} />
                 <meta name="author" content="Advocate Md. Shah Alam" />
                 {hreflangTags.map((h) => <link key={h.hrefLang} rel="alternate" hrefLang={h.hrefLang} href={h.href} />)}
-                <script type="application/ld+json">{JSON.stringify(blogPostingSchema)}</script>
-                <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
-                {faqSchema && <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>}
             </Helmet>
 
             {/* ════════════════ HERO (Clean first-impression H1 & Cover Image directly under navbar) ════════════════ */}

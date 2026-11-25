@@ -517,8 +517,6 @@ const ContactPage = ({ lang }) => {
                 <meta property="og:title" content={isBn ? 'যোগাযোগ ও চেম্বার | এডভোকেট মোঃ শাহ আলম ঢাকা' : 'Contact Advocate Md. Shah Alam | Dhaka Chamber'} />
                 <meta property="og:description" content={isBn ? 'সুপ্রিম কোর্ট ও ঢাকা জজ কোর্ট চেম্বার। সরাসরি ফোন: ০১৭১২৬৫৫৫৪৬' : 'Reach Advocate Md. Shah Alam by phone, WhatsApp or visit our Uttara chamber.'} />
                 <meta property="og:url" content={isBn ? 'https://www.advmdshahalam.me/bn/contact' : 'https://www.advmdshahalam.me/contact'} />
-
-                <script type="application/ld+json">{JSON.stringify(buildContactSchema(isBn))}</script>
             </Helmet>
 
             {/* ── Hero Header ── */}

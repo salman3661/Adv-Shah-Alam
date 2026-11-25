@@ -347,11 +347,6 @@ const AdvocatePage = () => {
                 <meta property="og:image:height" content="1038" />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:image" content="https://www.advmdshahalam.me/images/hero/hero-md-shah-alam.png" />
-                <script type="application/ld+json">{JSON.stringify(personSchema)}</script>
-                <script type="application/ld+json">{JSON.stringify(legalServiceSchema)}</script>
-                <script type="application/ld+json">{JSON.stringify(organizationSchema)}</script>
-                <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
-                <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
             </Helmet>
 
             {/* ── Hero / Header ── */}

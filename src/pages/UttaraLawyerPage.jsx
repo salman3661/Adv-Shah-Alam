@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { Phone, MessageCircle, MapPin, Scale, ShieldCheck, ArrowRight, Clock } from 'lucide-react';
 import { telLink, waLink } from '../data/contactInfo';
-import { SITE_BASE, buildServicePageSchema, AREA_SERVED } from '../seo/entity';
+import { SITE_BASE } from '../seo/entity';
+import { UTTARA_FAQS_EN, UTTARA_FAQS_BN } from '../data/uttaraFaqs';
 
 const AREA_TABLE = [
   {
@@ -138,18 +139,6 @@ export default function UttaraLawyerPage({ lang = 'en' }) {
     ? 'উত্তরা সেক্টর ১২ চেম্বার থেকে উত্তরা, গুলশান, বনানী ও বসুন্ধরার জমি, জামিন, ফৌজদারি, পারিবারিক ও ভাড়াটিয়া উচ্ছেদ মামলার আইনি সহায়তা। প্রথম পরামর্শ ফ্রি।'
     : 'Experienced Uttara lawyer at Sector 12 chamber serving Uttara, Gulshan, Banani, Bashundhara, Turag & Dakshinkhan in criminal, bail, land & family law. First consultation free.';
 
-  const schema = buildServicePageSchema({
-    url: pageUrl,
-    lang,
-    serviceType: isBn
-      ? 'উত্তরা আইনজীবী — ফৌজদারি, জমি, পারিবারিক ও কর্পোরেট আইনি সেবা'
-      : 'Uttara Legal Services — Criminal, Bail, Land, Family & Corporate Law',
-    name: title,
-    description,
-    slug: 'uttara-lawyer',
-  });
-  schema.areaServed = AREA_SERVED;
-
   return (
     <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8" style={{ color: 'var(--text)' }}>
       <Helmet>
@@ -160,7 +149,6 @@ export default function UttaraLawyerPage({ lang = 'en' }) {
         <link rel="alternate" hrefLang="en" href={`${SITE_BASE}/uttara-lawyer`} />
         <link rel="alternate" hrefLang="bn" href={`${SITE_BASE}/bn/uttara-lawyer`} />
         <link rel="alternate" hrefLang="x-default" href={`${SITE_BASE}/uttara-lawyer`} />
-        <script type="application/ld+json">{JSON.stringify(schema)}</script>
       </Helmet>
 
       <article className="max-w-5xl mx-auto space-y-10">
@@ -376,45 +364,14 @@ export default function UttaraLawyerPage({ lang = 'en' }) {
           <h2 className="text-2xl font-bold">
             {isBn ? 'উত্তরা চেম্বার ও আইনি সেবা সম্পর্কে সাধারণ প্রশ্নোত্তর (FAQ)' : 'Frequently Asked Questions — Uttara Legal Chamber'}
           </h2>
-          {isBn ? (
-            <div className="space-y-4 text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
-              <div>
-                <h3 className="font-semibold text-base" style={{ color: 'var(--text)' }}>১. উত্তরা সেক্টর ১২ চেম্বারে প্রথম পরামর্শের জন্য কি কোনো ফি লাগে?</h3>
-                <p>না। উত্তরা চেম্বারে প্রথম পরামর্শ সম্পূর্ণ ফ্রি — কোনো অগ্রিম ফি দিতে হয় না। আপনার কাগজপত্র ও মামলার ধরন পর্যালোচনা করে কাজের পরিধি বুঝিয়ে দেওয়ার পরেই কেবল পারস্পরিক সম্মতিতে ফি নির্ধারণ করা হয়।</p>
+          <div className="space-y-4 text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
+            {(isBn ? UTTARA_FAQS_BN : UTTARA_FAQS_EN).map((faq, idx) => (
+              <div key={idx}>
+                <h3 className="font-semibold text-base" style={{ color: 'var(--text)' }}>{faq.q}</h3>
+                <p>{faq.a}</p>
               </div>
-              <div>
-                <h3 className="font-semibold text-base" style={{ color: 'var(--text)' }}>২. উত্তরা পশ্চিম বা উত্তরা পূর্ব থানায় জিডি বা এফআইআর হলে কীভাবে দ্রুত জামিনের ব্যবস্থা করা যায়?</h3>
-                <p>উত্তরা পশ্চিম বা উত্তরা পূর্ব থানায় মামলা দায়ের হলে দ্রুত এজাহারের কপি সংগ্রহ করে একজন ফৌজদারি আইনজীবীর পরামর্শ নেওয়া উচিত। গ্রেফতারের আশঙ্কা থাকলে হাইকোর্ট বিভাগে ফৌজদারি কার্যবিধির ৪৯৮ ধারায় আগাম জামিনের আবেদন করা যায় অথবা সিএমএম আদালতে নিয়মিত জামিন চাওয়া যায়। উত্তরা চেম্বার থেকে জরুরি ভিত্তিতে কাগজপত্র যাচাই ও পিটিশন প্রস্তুতের সহায়তা দেওয়া হয়।</p>
-              </div>
-              <div>
-                <h3 className="font-semibold text-base" style={{ color: 'var(--text)' }}>৩. উত্তরা, বসুন্ধরা আবাসিক এলাকা বা গুলশানের জমি-ফ্ল্যাট কেনার আগে কী কী যাচাই করতে হয়?</h3>
-                <p>উত্তরা বা বসুন্ধরা আবাসিক এলাকায় জমি ও ফ্ল্যাট কেনার আগে বায়া দলিলের ধারাবাহিকতা, সিএস-এসএ-আরএস ও মহানগর জরিপের খতিয়ান, সর্বশেষ নামজারি (ই-নামজারি) ও ভূমি উন্নয়ন করের রসিদ, রাজউক অনুমোদন এবং সাব-রেজিস্ট্রি অফিসে কোনো লিস পেন্ডেন্স বা মামলা চলমান আছে কি না তা যাচাই করা আবশ্যক।</p>
-              </div>
-              <div>
-                <h3 className="font-semibold text-base" style={{ color: 'var(--text)' }}>৪. প্রবাসী বাংলাদেশিরা (NRB) কি দেশে না এসে উত্তরা বা ঢাকার জমি সংক্রান্ত আইনি কাজ করতে পারেন?</h3>
-                <p>হ্যাঁ। যুক্তরাজ্য, যুক্তরাষ্ট্র, কানাডা, ইউরোপ বা মধ্যপ্রাচ্যে বসবাসরত প্রবাসীরা সংশ্লিষ্ট বাংলাদেশ দূতাবাসে পাওয়ার অব অ্যাটর্নি সম্পাদন এবং বাংলাদেশে পররাষ্ট্র মন্ত্রণালয়ে (MOFA) সত্যায়নের মাধ্যমে উত্তরা ও ঢাকার জমি বিক্রয়, নামজারি বা দেওয়ানি ও পারিবারিক মামলা পরিচালনা করতে পারেন।</p>
-              </div>
-            </div>
-          ) : (
-            <div className="space-y-4 text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
-              <div>
-                <h3 className="font-semibold text-base" style={{ color: 'var(--text)' }}>1. Is the first consultation at the Uttara Sector 12 chamber really free?</h3>
-                <p>Yes. The first consultation is free with no advance fee. We review your documents, explain the applicable legal procedure and court jurisdiction, and agree on legal fees only after the scope of work is clear.</p>
-              </div>
-              <div>
-                <h3 className="font-semibold text-base" style={{ color: 'var(--text)' }}>2. Which courts handle cases from Uttara West PS, Uttara East PS, Turag, and Dakshinkhan?</h3>
-                <p>Criminal and Section 138 cheque matters from Uttara West, Uttara East, Turag, Dakshinkhan, and Bimanbandar police stations are heard at the Dhaka Chief Metropolitan Magistrate (CMM) Court and Dhaka Sessions Judge Court at Kotwali. Civil land, partition, and rent eviction suits are filed in the Dhaka Civil / Assistant Judge Courts, while anticipatory bail and Article 102 writ petitions are filed before the High Court Division of the Supreme Court of Bangladesh.</p>
-              </div>
-              <div>
-                <h3 className="font-semibold text-base" style={{ color: 'var(--text)' }}>3. What should be checked before buying a plot or apartment in Uttara or Bashundhara R/A?</h3>
-                <p>Before signing a Bayna or paying an advance, verify the complete chain of title deeds (Baya Dalil), CS/SA/RS/City Jarip Khatian records, current e-Namjari mutation and land tax receipts, RAJUK plan/transfer clearance, housing society transfer requirements in Bashundhara Residential Area, and whether any civil suit (Lis Pendens) or mortgage encumbrance affects the property.</p>
-              </div>
-              <div>
-                <h3 className="font-semibold text-base" style={{ color: 'var(--text)' }}>4. Can Non-Resident Bangladeshis (NRBs) handle Uttara or Dhaka property matters remotely?</h3>
-                <p>Yes. NRBs in the UK, USA, Canada, UAE, and Europe can execute a Power of Attorney at the nearest Bangladesh Embassy or Consulate, complete MOFA attestation in Dhaka, and authorise legal representation for property verification, mutation, sale, or family court proceedings without travelling immediately to Bangladesh.</p>
-              </div>
-            </div>
-          )}
+            ))}
+          </div>
         </section>
 
         {/* Internal Links Hub (Services + Advocate + NRB + Related Blog) */}

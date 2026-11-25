@@ -688,10 +688,6 @@ const BlogPostBnInner = () => {
                 <meta property="article:modified_time" content={post.lastModified || post.publishedDate} />
                 <meta property="article:section" content={post.category} />
                 <meta property="article:tag" content={(Array.isArray(post.keywords) ? post.keywords.slice(0, 5) : []).join(', ')} />
-                <script type="application/ld+json">{JSON.stringify(blogPostingSchema)}</script>
-                <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
-                {faqSchema && <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>}
-                {howToSchema && <script type="application/ld+json">{JSON.stringify(howToSchema)}</script>}
             </Helmet>
 
             {/* ════ HERO (Clean first-impression H1 & Cover Image directly under navbar) ════ */}

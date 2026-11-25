@@ -27,12 +27,6 @@ const FAQ = ({ lang = 'en' }) => {
 
     return (
         <>
-            <Helmet>
-                <script type="application/ld+json">
-                    {JSON.stringify(faqSchema)}
-                </script>
-            </Helmet>
-
             <section id="faq" className="py-24 relative overflow-hidden" style={{ background: 'var(--surface)' }}>
                 <div className="container mx-auto px-6 max-w-4xl">
                     <div className="text-center mb-16">

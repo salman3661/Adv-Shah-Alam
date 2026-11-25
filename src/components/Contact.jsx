@@ -134,9 +134,6 @@ const Contact = ({ lang = 'en' }) => {
 
     return (
         <>
-            <Helmet>
-                <script type="application/ld+json">{JSON.stringify(LOCAL_BUSINESS_SCHEMA)}</script>
-            </Helmet>
             <section id="contact" className="py-24 relative overflow-hidden" style={{ background: 'var(--surface)' }}>
             <div className="container mx-auto px-6 max-w-7xl">
                 <div className="text-center mb-14">

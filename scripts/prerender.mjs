@@ -28,6 +28,7 @@ import { GOOGLE_REVIEW_URL, REVIEW_CONTENT } from '../src/content/reviewContent.
 import { SERVICE_PAGES_EN, SERVICE_PAGES_BN } from '../src/content/servicePagesData.mjs';
 import { ADVOCATE_NAP, buildPersonEntity, buildLegalServiceEntity, buildWebSiteEntity, AREA_SERVED, getServiceAreaServed, buildServicePageSchema } from '../src/seo/entity.js';
 import { LOCAL_AREA_LIST } from '../src/data/localAreas.js';
+import { UTTARA_FAQS_EN, UTTARA_FAQS_BN } from '../src/data/uttaraFaqs.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT   = path.resolve(__dirname, '..');
@@ -1012,7 +1013,7 @@ async function main() {
   const base = readBase();
   const TODAY = process.env.TODAY || new Date(Date.now() + 6 * 3600 * 1000).toISOString().split('T')[0]; // YYYY-MM-DD in Asia/Dhaka
 
-  function buildInstitutionalSchema(pageUrl, lang, breadcrumbItems) {
+  function buildInstitutionalSchema(pageUrl, lang, breadcrumbItems, extraNodes = []) {
     const legalSvc = buildLegalServiceEntity();
     const graph = [
       buildWebSiteEntity(lang),
@@ -1027,6 +1028,7 @@ async function main() {
           item: b.item,
         })),
       },
+      ...extraNodes,
     ];
     return `<script type="application/ld+json">${jsonLd({ '@context': 'https://schema.org', '@graph': graph })}</script>`;
   }
@@ -1153,8 +1155,7 @@ ${buildInstitutionalSchema(`${BASE}/education`, 'en', [{ name: 'Home', item: `${
 
   // ── Contact page (/contact) ────────────────────────────────────────────────
   {
-    const contactFaqSchemaEn = {
-      '@context': 'https://schema.org',
+    const contactFaqNodeEn = {
       '@type': 'FAQPage',
       mainEntity: CONTACT_FAQS_EN.map((f) => ({
         '@type': 'Question',
@@ -1165,8 +1166,7 @@ ${buildInstitutionalSchema(`${BASE}/education`, 'en', [{ name: 'Home', item: `${
     const extraHead = `<link rel="alternate" hreflang="en" href="${BASE}/contact" />
 <link rel="alternate" hreflang="bn" href="${BASE}/bn/contact" />
 <link rel="alternate" hreflang="x-default" href="${BASE}/contact" />
-${buildInstitutionalSchema(`${BASE}/contact`, 'en', [{ name: 'Home', item: `${BASE}/en` }, { name: 'Contact', item: `${BASE}/contact` }])}
-<script type="application/ld+json">${jsonLd(contactFaqSchemaEn)}</script>`;
+${buildInstitutionalSchema(`${BASE}/contact`, 'en', [{ name: 'Home', item: `${BASE}/en` }, { name: 'Contact', item: `${BASE}/contact` }], [contactFaqNodeEn])}`;
     const html = buildPage(base, {
       title: 'Contact Advocate Md. Shah Alam | Dhaka Chamber',
       description: 'Contact Advocate Md. Shah Alam for legal consultation in Dhaka & Uttara. Call +880 1712-655546 or WhatsApp for criminal, divorce, bail & property cases.',
@@ -1181,8 +1181,7 @@ ${buildInstitutionalSchema(`${BASE}/contact`, 'en', [{ name: 'Home', item: `${BA
 
   // ── Bengali Contact page (/bn/contact) ─────────────────────────────────────
   {
-    const contactFaqSchemaBn = {
-      '@context': 'https://schema.org',
+    const contactFaqNodeBn = {
       '@type': 'FAQPage',
       mainEntity: CONTACT_FAQS_BN.map((f) => ({
         '@type': 'Question',
@@ -1193,8 +1192,7 @@ ${buildInstitutionalSchema(`${BASE}/contact`, 'en', [{ name: 'Home', item: `${BA
     const extraHead = `<link rel="alternate" hreflang="bn" href="${BASE}/bn/contact" />
 <link rel="alternate" hreflang="en" href="${BASE}/contact" />
 <link rel="alternate" hreflang="x-default" href="${BASE}/contact" />
-${buildInstitutionalSchema(`${BASE}/bn/contact`, 'bn', [{ name: 'হোম', item: `${BASE}/` }, { name: 'যোগাযোগ', item: `${BASE}/bn/contact` }])}
-<script type="application/ld+json">${jsonLd(contactFaqSchemaBn)}</script>`;
+${buildInstitutionalSchema(`${BASE}/bn/contact`, 'bn', [{ name: 'হোম', item: `${BASE}/` }, { name: 'যোগাযোগ', item: `${BASE}/bn/contact` }], [contactFaqNodeBn])}`;
     const html = buildPage(base, {
       title: 'যোগাযোগ ও চেম্বার | এডভোকেট মোঃ শাহ আলম ঢাকা',
       description: 'এডভোকেট মোঃ শাহ আলমের উত্তরা ও ঢাকা জজ কোর্ট চেম্বারে সরাসরি আইনি পরামর্শ ও মামলা মূল্যায়নের জন্য যোগাযোগ করুন। ফোন: +8801712655546।',
@@ -1314,10 +1312,16 @@ ${buildInstitutionalSchema(`${BASE}/bn/contact`, 'bn', [{ name: 'হোম', ite
         <p style="color:#334155;line-height:1.75;margin:0">${escHtml(f.a)}</p>
       </div>`).join('');
 
+    const reviewGraphSchema = {
+      '@context': 'https://schema.org',
+      '@graph': [
+        { ...reviewBreadcrumbSchema, '@context': undefined },
+        { ...reviewFaqSchema, '@context': undefined },
+      ],
+    };
     const extraHead = `<link rel="alternate" hreflang="bn" href="${BASE}/review" />
 <link rel="alternate" hreflang="x-default" href="${BASE}/review" />
-<script type="application/ld+json">${jsonLd(reviewBreadcrumbSchema)}</script>
-<script type="application/ld+json">${jsonLd(reviewFaqSchema)}</script>`;
+<script type="application/ld+json">${jsonLd(reviewGraphSchema)}</script>`;
     const html = buildPage(base, {
       title: REVIEW_CONTENT.metaTitle,
       description: REVIEW_CONTENT.metaDesc,
@@ -1499,6 +1503,8 @@ ${CTA}`,
     const uDesc = isBn
       ? 'উত্তরা সেক্টর ১২ চেম্বার থেকে উত্তরা, গুলশান, বনানী ও বসুন্ধরার জমি, জামিন, ফৌজদারি, পারিবারিক ও ভাড়াটিয়া উচ্ছেদ মামলার আইনি সহায়তা। প্রথম পরামর্শ ফ্রি।'
       : 'Experienced Uttara lawyer at Sector 12 chamber serving Uttara, Gulshan, Banani, Bashundhara, Turag & Dakshinkhan in criminal, bail, land & family law. First consultation free.';
+    const uFaqs = isBn ? UTTARA_FAQS_BN : UTTARA_FAQS_EN;
+    const uFaqsHtml = uFaqs.map((f) => `<h3>${escHtml(f.q)}</h3>\n<p>${escHtml(f.a)}</p>`).join('\n');
     const uSchema = {
       '@context': 'https://schema.org',
       '@graph': [
@@ -1521,6 +1527,14 @@ ${CTA}`,
             { '@type': 'ListItem', position: 1, name: isBn ? 'হোম' : 'Home', item: isBn ? `${BASE}/` : `${BASE}/en` },
             { '@type': 'ListItem', position: 2, name: uTitle, item: uUrl },
           ],
+        },
+        {
+          '@type': 'FAQPage',
+          mainEntity: uFaqs.map((f) => ({
+            '@type': 'Question',
+            name: f.q,
+            acceptedAnswer: { '@type': 'Answer', text: f.a },
+          })),
         },
       ],
     };
@@ -1563,14 +1577,7 @@ ${CTA}`,
 <h2>বসুন্ধরা আবাসিক এলাকা ও প্রবাসী বাংলাদেশিদের (NRB) জন্য বিশেষ আইনি সেবা</h2>
 <p>বসুন্ধরা আবাসিক এলাকার প্লট ও ফ্ল্যাট লেনদেনের আইনি কাঠামো সাধারণ এলাকার চেয়ে কিছুটা ভিন্ন—এখানে রাজউক অনুমোদন ও নামজারির পাশাপাশি হাউজিং কোম্পানির অভ্যন্তরীণ হস্তান্তর প্রক্রিয়া, অ্যাপার্টমেন্ট কমিটির নিয়ম এবং মালিকানা যাচাইয়ের প্রশ্ন জড়িত থাকে। উত্তরার কাছাকাছি অবস্থান হওয়ায় বসুন্ধরা আবাসিক এলাকা, গুলশান ও বনানীর ক্লায়েন্টরাও উত্তরার সেক্টর ১২ চেম্বারে এসে দলিল ও চুক্তিপত্র যাচাই করাতে পারেন। পাশাপাশি যুক্তরাজ্য, যুক্তরাষ্ট্র, কানাডা, অস্ট্রেলিয়া ও মধ্যপ্রাচ্যে থাকা প্রবাসী বাংলাদেশিরা উত্তরা এবং উত্তর ঢাকায় থাকা তাদের জমি, ফ্ল্যাট ও পারিবারিক মামলার জন্য পাওয়ার অব অ্যাটর্নি, দূতাবাস ও পররাষ্ট্র মন্ত্রণালয় (MOFA) সত্যায়ন এবং আদালতে প্রতিনিধিত্বের সুবিধা পান।</p>
 <h2>উত্তরা চেম্বার ও আইনি সেবা সম্পর্কে সাধারণ প্রশ্নোত্তর (FAQ)</h2>
-<h3>১. উত্তরা সেক্টর ১২ চেম্বারে প্রথম পরামর্শের জন্য কি কোনো ফি লাগে?</h3>
-<p>না। উত্তরা চেম্বারে প্রথম পরামর্শ সম্পূর্ণ ফ্রি — কোনো অগ্রিম ফি দিতে হয় না। আপনার কাগজপত্র ও মামলার ধরন পর্যালোচনা করে কাজের পরিধি বুঝিয়ে দেওয়ার পরেই কেবল পারস্পরিক সম্মতিতে ফি নির্ধারণ করা হয়।</p>
-<h3>২. উত্তরা পশ্চিম বা উত্তরা পূর্ব থানায় জিডি বা এফআইআর হলে কীভাবে দ্রুত জামিনের ব্যবস্থা করা যায়?</h3>
-<p>উত্তরা পশ্চিম বা উত্তরা পূর্ব থানায় মামলা দায়ের হলে দ্রুত এজাহারের কপি সংগ্রহ করে একজন ফৌজদারি আইনজীবীর পরামর্শ নেওয়া উচিত। গ্রেফতারের আশঙ্কা থাকলে হাইকোর্ট বিভাগে ফৌজদারি কার্যবিধির ৪৯৮ ধারায় আগাম জামিনের আবেদন করা যায় অথবা সিএমএম আদালতে নিয়মিত জামিন চাওয়া যায়। উত্তরা চেম্বার থেকে জরুরি ভিত্তিতে কাগজপত্র যাচাই ও পিটিশন প্রস্তুতের সহায়তা দেওয়া হয়।</p>
-<h3>৩. উত্তরা, বসুন্ধরা আবাসিক এলাকা বা গুলশানের জমি-ফ্ল্যাট কেনার আগে কী কী যাচাই করতে হয়?</h3>
-<p>উত্তরা বা বসুন্ধরা আবাসিক এলাকায় জমি ও ফ্ল্যাট কেনার আগে বায়া দলিলের ধারাবাহিকতা, সিএস-এসএ-আরএস ও মহানগর জরিপের খতিয়ান, সর্বশেষ নামজারি (ই-নামজারি) ও ভূমি উন্নয়ন করের রসিদ, রাজউক অনুমোদন এবং সাব-রেজিস্ট্রি অফিসে কোনো লিস পেন্ডেন্স বা মামলা চলমান আছে কি না তা যাচাই করা আবশ্যক।</p>
-<h3>৪. প্রবাসী বাংলাদেশিরা (NRB) কি দেশে না এসে উত্তরা বা ঢাকার জমি সংক্রান্ত আইনি কাজ করতে পারেন?</h3>
-<p>হ্যাঁ। যুক্তরাজ্য, যুক্তরাষ্ট্র, কানাডা, ইউরোপ বা মধ্যপ্রাচ্যে বসবাসরত প্রবাসীরা সংশ্লিষ্ট বাংলাদেশ দূতাবাসে পাওয়ার অব অ্যাটর্নি সম্পাদন এবং বাংলাদেশে পররাষ্ট্র মন্ত্রণালয়ে (MOFA) সত্যায়নের মাধ্যমে উত্তরা ও ঢাকার জমি বিক্রয়, নামজারি বা দেওয়ানি ও পারিবারিক মামলা পরিচালনা করতে পারেন।</p>
+${uFaqsHtml}
 <h2>উত্তরা চেম্বারের বিশেষায়িত আইনি সেবাসমূহ</h2>
 <p>The first consultation is free — you pay nothing in advance. প্রথম পরামর্শ ফ্রি — কোনো অগ্রিম ফি ছাড়াই আপনার সমস্যার আইনি অবস্থান ও করণীয় জেনে নিন।</p>
 <p><a href="/bn/gulshan-lawyer">গুলশান আইনজীবী</a> &middot; <a href="/bn/banani-lawyer">বনানী আইনজীবী</a> &middot; <a href="/bn/bashundhara-ra-lawyer">বসুন্ধরা আবাসিক এলাকা আইনজীবী</a> &middot; <a href="/bn/services/criminal-lawyer">ফৌজদারি আইনজীবী</a> &middot; <a href="/bn/services/bail-lawyer">জামিন আইনজীবী</a> &middot; <a href="/bn/services/land-lawyer">জমি ও সম্পত্তি আইনজীবী</a> &middot; <a href="/bn/services/divorce-lawyer">তালাক ও পারিবারিক আইনজীবী</a> &middot; <a href="/bn/services/supreme-court-lawyer">সুপ্রিম কোর্ট আইনজীবী</a> &middot; <a href="/bn/services/company-corporate-lawyer">কোম্পানি আইনজীবী</a> &middot; <a href="/bn/services/tax-lawyer">আয়কর ও ভ্যাট</a> &middot; <a href="/advocate-md-shah-alam">অ্যাডভোকেট মো. শাহ আলম</a> &middot; <a href="/nrb-legal-help">প্রবাসী (NRB) আইনি সহায়তা</a> &middot; <a href="/bn/contact">চেম্বারে যোগাযোগ</a> &middot; <a href="/blog/uttara-dhaka-lawyer-legal-services-2026">Uttara Legal Services Guide</a> &middot; <a href="/uttara-lawyer">English Version</a></p>
@@ -1608,14 +1615,7 @@ ${CTA}`,
 <p>Landlords and commercial tenants in Uttara, Gulshan, Banani, and Bashundhara frequently face disputes over unpaid rent, expired lease agreements, security deposit refunds, and refusal to vacate premises. Under the Premises Rent Control Act 1991 and Section 106 of the Transfer of Property Act 1882, landlords must serve a legally compliant notice to quit before filing an eviction suit in the Assistant Judge Court—cutting utility lines or locking premises forcefully exposes the landlord to criminal liability.</p>
 <p>Our family law practice covers divorce (Talaq, Khula, and Mubaraat), dower (Denmohor) and maintenance claims, child custody and guardianship petitions, court marriage under Muslim and Special Marriage Acts, and recognition of foreign divorce decrees for NRBs. Every matter begins with a free first consultation so you understand your legal position and options before committing to litigation.</p>
 <h2>Frequently Asked Questions — Uttara Legal Chamber</h2>
-<h3>1. Is the first consultation at the Uttara Sector 12 chamber really free?</h3>
-<p>Yes. The first consultation is free with no advance fee. We review your documents, explain the applicable legal procedure and court jurisdiction, and agree on legal fees only after the scope of work is clear.</p>
-<h3>2. Which courts handle cases from Uttara West PS, Uttara East PS, Turag, and Dakshinkhan?</h3>
-<p>Criminal and Section 138 cheque matters from Uttara West, Uttara East, Turag, Dakshinkhan, and Bimanbandar police stations are heard at the Dhaka Chief Metropolitan Magistrate (CMM) Court and Dhaka Sessions Judge Court at Kotwali. Civil land, partition, and rent eviction suits are filed in the Dhaka Civil / Assistant Judge Courts, while anticipatory bail and Article 102 writ petitions are filed before the High Court Division of the Supreme Court of Bangladesh.</p>
-<h3>3. What should be checked before buying a plot or apartment in Uttara or Bashundhara R/A?</h3>
-<p>Before signing a Bayna or paying an advance, verify the complete chain of title deeds (Baya Dalil), CS/SA/RS/City Jarip Khatian records, current e-Namjari mutation and land tax receipts, RAJUK plan/transfer clearance, housing society transfer requirements in Bashundhara Residential Area, and whether any civil suit (Lis Pendens) or mortgage encumbrance affects the property.</p>
-<h3>4. Can Non-Resident Bangladeshis (NRBs) handle Uttara or Dhaka property matters remotely?</h3>
-<p>Yes. NRBs in the UK, USA, Canada, UAE, and Europe can execute a Power of Attorney at the nearest Bangladesh Embassy or Consulate, complete MOFA attestation in Dhaka, and authorise legal representation for property verification, mutation, sale, or family court proceedings without travelling immediately to Bangladesh.</p>
+${uFaqsHtml}
 <h2>Practice Areas &amp; Legal Services</h2>
 <p>The first consultation is free — you pay nothing in advance. প্রথম পরামর্শ ফ্রি — কোনো অগ্রিম ফি ছাড়াই আপনার সমস্যার আইনি অবস্থান ও করণীয় জেনে নিন।</p>
 <p><a href="/gulshan-lawyer">Gulshan Lawyer</a> &middot; <a href="/banani-lawyer">Banani Lawyer</a> &middot; <a href="/bashundhara-ra-lawyer">Bashundhara R/A Lawyer</a> &middot; <a href="/services/criminal-lawyer">Criminal Lawyer</a> &middot; <a href="/services/bail-lawyer">Bail Lawyer</a> &middot; <a href="/services/land-lawyer">Land Lawyer</a> &middot; <a href="/services/divorce-lawyer">Divorce &amp; Family Lawyer</a> &middot; <a href="/services/supreme-court-lawyer">Supreme Court Lawyer</a> &middot; <a href="/services/company-corporate-lawyer">Corporate Lawyer</a> &middot; <a href="/services/tax-lawyer">Tax Advisory</a> &middot; <a href="/advocate-md-shah-alam">Advocate Md. Shah Alam</a> &middot; <a href="/nrb-legal-help">NRB Legal Help</a> &middot; <a href="/contact">Contact Chamber</a> &middot; <a href="/blog/uttara-dhaka-lawyer-legal-services-2026">Uttara Legal Services Guide</a> &middot; <a href="/bn/uttara-lawyer">বাংলা সংস্করণ</a></p>
@@ -1995,12 +1995,19 @@ ${buildServiceSchema(`${BASE}/bn/services/${slug}`, bnData, 'bn')}`;
           { '@type': 'ListItem', position: 3, name: h1, item: `${BASE}${prefix}/topic/${hub.slug}` },
         ],
       };
+      const hubGraphSchema = {
+        '@context': 'https://schema.org',
+        '@graph': [
+          { ...hubSchema, '@context': undefined },
+          { ...breadcrumbSchema, '@context': undefined },
+        ],
+      };
       const hubHtml = buildPage(base, {
         title: title.slice(0, 58),
         description: `${h1} — ${matched.length} expert legal articles and statute guides by Advocate Md. Shah Alam.`,
         canonical: `${BASE}${prefix}/topic/${hub.slug}`,
         lang: langKey,
-        extraHead: `${hubHreflang}\n<script type="application/ld+json">${jsonLd(hubSchema)}</script>\n<script type="application/ld+json">${jsonLd(breadcrumbSchema)}</script>`,
+        extraHead: `${hubHreflang}\n<script type="application/ld+json">${jsonLd(hubGraphSchema)}</script>`,
         body: `<nav aria-label="Breadcrumb" style="font-size:13px;color:#475569;margin-bottom:14px"><a href="${langKey === 'en' ? '/en' : '/'}">${langKey === 'en' ? 'Home' : 'হোম'}</a> &rsaquo; <a href="${prefix}">${langKey === 'en' ? 'Blog' : 'ব্লগ'}</a> &rsaquo; <span>${escHtml(h1)}</span></nav>
 <h1 style="font-size:28px;font-weight:700;color:#0B1220">${escHtml(h1)}</h1>
 <p style="margin:12px 0 16px;color:#334155;line-height:1.8">${langKey === 'en'
@@ -2084,10 +2091,17 @@ ${buildServiceSchema(`${BASE}/bn/services/${slug}`, bnData, 'bn')}`;
       })),
     } : null;
 
+    const postGraphEn = {
+      '@context': 'https://schema.org',
+      '@graph': [
+        { ...articleSchema, '@context': undefined },
+        { ...breadcrumbSchema, '@context': undefined },
+        ...(faqSchemaEn ? [{ ...faqSchemaEn, '@context': undefined }] : []),
+      ],
+    };
     const extraHead = `${preloadTags}
 ${hreflangTags}
-<script type="application/ld+json">${jsonLd(articleSchema)}</script>
-<script type="application/ld+json">${jsonLd(breadcrumbSchema)}</script>${faqSchemaEn ? `\n<script type="application/ld+json">${jsonLd(faqSchemaEn)}</script>` : ''}`;
+<script type="application/ld+json">${jsonLd(postGraphEn)}</script>`;
 
     const html = buildPage(base, {
       title: evergreenYear(post.metaTitle || post.title),
@@ -2164,10 +2178,17 @@ ${hreflangTags}
       })),
     } : null;
 
+    const postGraphBn = {
+      '@context': 'https://schema.org',
+      '@graph': [
+        { ...articleSchema, '@context': undefined },
+        { ...breadcrumbSchema, '@context': undefined },
+        ...(faqSchemaBn ? [{ ...faqSchemaBn, '@context': undefined }] : []),
+      ],
+    };
     const extraHead = `${preloadTags}
 ${hreflangTags}
-<script type="application/ld+json">${jsonLd(articleSchema)}</script>
-<script type="application/ld+json">${jsonLd(breadcrumbSchema)}</script>${faqSchemaBn ? `\n<script type="application/ld+json">${jsonLd(faqSchemaBn)}</script>` : ''}`;
+<script type="application/ld+json">${jsonLd(postGraphBn)}</script>`;
 
     const html = buildPage(base, {
       title: evergreenYear(post.metaTitle || post.title || 'বাংলাদেশ আইনি গাইড'),

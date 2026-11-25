@@ -148,7 +148,6 @@ const NrbLegalHelp = () => {
                 <meta property="og:description" content={description} />
                 <meta property="og:url" content={canonical} />
                 <meta property="og:type" content="website" />
-                <script type="application/ld+json">{JSON.stringify(nrbSchema)}</script>
             </Helmet>
 
             <section className="pt-28 pb-16" style={{ background: 'var(--bg)' }}>

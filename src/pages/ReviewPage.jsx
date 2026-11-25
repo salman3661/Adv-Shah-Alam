@@ -41,8 +41,6 @@ const ReviewPage = () => {
                 <meta name="robots" content="index, follow" />
                 <link rel="alternate" hrefLang="bn" href={`${BASE}/review`} />
                 <link rel="alternate" hrefLang="x-default" href={`${BASE}/review`} />
-                <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
-                <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
             </Helmet>
 
             <section className="pt-28 pb-16 px-4" style={{ background: 'var(--bg)' }}>

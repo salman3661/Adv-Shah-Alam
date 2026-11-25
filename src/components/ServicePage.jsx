@@ -146,7 +146,6 @@ const ServicePage = ({ data, ...legacyProps }) => {
                 <meta name="twitter:title" content={metaTitle} />
                 <meta name="twitter:description" content={metaDesc} />
                 <meta name="twitter:image" content={`${BASE}/images/hero/hero-md-shah-alam.png`} />
-                <script type="application/ld+json">{JSON.stringify(graphSchema)}</script>
             </Helmet>
 
             {/* ── Hero Header ── */}
