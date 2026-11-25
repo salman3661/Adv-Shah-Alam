@@ -12,6 +12,7 @@ const AREA_TABLE = [
     psEn: 'Uttara West PS — H-48, Road 18, Sector 11',
     psBn: 'উত্তরা পশ্চিম থানা — বাড়ি ৪৮, রোড ১৮, সেক্টর ১১',
     ward: 'DNCC Ward 51',
+    wardBn: 'ডিএনসিসি ওয়ার্ড ৫১',
     focusEn: 'Land registration, mutation, cheque recovery, rent eviction, family disputes',
     focusBn: 'জমি রেজিস্ট্রি, নামজারি, চেক মামলা, ভাড়াটিয়া উচ্ছেদ, পারিবারিক বিরোধ',
   },
@@ -21,6 +22,7 @@ const AREA_TABLE = [
     psEn: 'Uttara West PS — H-48, Road 18, Sector 11',
     psBn: 'উত্তরা পশ্চিম থানা — বাড়ি ৪৮, রোড ১৮, সেক্টর ১১',
     ward: 'DNCC Ward 1 / 51',
+    wardBn: 'ডিএনসিসি ওয়ার্ড ১ / ৫১',
     focusEn: 'Property transfer, bail & FIR matters, inheritance & succession',
     focusBn: 'জমি হস্তান্তর, জামিন ও জিডি/এফআইআর, উত্তরাধিকার সনদ',
   },
@@ -30,6 +32,7 @@ const AREA_TABLE = [
     psEn: 'Uttara East PS — R-14/D, Sector 4, H-12',
     psBn: 'উত্তরা পূর্ব থানা — রোড ১৪/ডি, সেক্টর ৪, বাড়ি ১২',
     ward: 'DNCC Ward 1',
+    wardBn: 'ডিএনসিসি ওয়ার্ড ১',
     focusEn: 'Section 138 cheque dishonour, bail petitions, commercial & tenancy matters',
     focusBn: '১৩৮ ধারা চেক মামলা, জামিন, বাণিজ্যিক ও ভাড়া সংক্রান্ত বিরোধ',
   },
@@ -39,6 +42,7 @@ const AREA_TABLE = [
     psEn: 'Uttara West PS / Turag PS / Dakshinkhan PS',
     psBn: 'উত্তরা পশ্চিম / তুরাগ / দক্ষিণখান থানা',
     ward: 'DNCC Ward 52–54',
+    wardBn: 'ডিএনসিসি ওয়ার্ড ৫২–৫৪',
     focusEn: 'Khatian/CS-RS-BS record correction, boundary & partition suits, civil injunction',
     focusBn: 'খতিয়ান সংশোধন, সীমানা ও বাটোয়ারা মামলা, দেওয়ানি নিষেধাজ্ঞা',
   },
@@ -48,6 +52,7 @@ const AREA_TABLE = [
     psEn: 'Turag PS (DMP Directory)',
     psBn: 'তুরাগ থানা (ডিএমপি ডিরেক্টরি)',
     ward: 'DNCC Ward 1 / 52',
+    wardBn: 'ডিএনসিসি ওয়ার্ড ১ / ৫২',
     focusEn: 'Land possession, tenancy disputes, criminal defence & bail',
     focusBn: 'জমি দখল ও মালিকানা বিরোধ, ভাড়াটিয়া বিরোধ, ফৌজদারি জামিন',
   },
@@ -57,6 +62,7 @@ const AREA_TABLE = [
     psEn: 'Dakshinkhan PS — Bidurbari Road, Thana More',
     psBn: 'দক্ষিণখান থানা — বিদুরবাড়ি রোড, থানা মোড়',
     ward: 'DNCC Ward 48–50',
+    wardBn: 'ডিএনসিসি ওয়ার্ড ৪৮–৫০',
     focusEn: 'Family court cases, maintenance, custody, land mutation',
     focusBn: 'পারিবারিক আদালত, দেনমোহর ও খোরপোশ, সন্তানের হেফাজত, নামজারি',
   },
@@ -66,6 +72,7 @@ const AREA_TABLE = [
     psEn: 'Bimanbandar PS — 1st Floor RAB (HQ), Uttara',
     psBn: 'বিমানবন্দর থানা — ১ম তলা র‍্যাব সদর দপ্তর, উত্তরা',
     ward: '—',
+    wardBn: '—',
     focusEn: 'Urgent arrest/bail support, NRB arrival & travel-ban writ matters',
     focusBn: 'জরুরি গ্রেফতার ও জামিন সহায়তা, প্রবাসীদের ভ্রমণ-নিষেধাজ্ঞা রিট',
   },
@@ -75,6 +82,7 @@ const AREA_TABLE = [
     psEn: 'Gulshan PS — H-32, 115 Gulshan Avenue, Gulshan-2',
     psBn: 'গুলশান থানা — বাড়ি ৩২, ১১৫ গুলশান অ্যাভিনিউ, গুলশান-২',
     ward: 'DNCC Ward 19 & 20',
+    wardBn: 'ডিএনসিসি ওয়ার্ড ১৯ ও ২০',
     focusEn: 'Rent Control Act 1991 eviction, corporate advisory, embassy/MOFA attestation',
     focusBn: 'বাড়ি ভাড়া নিয়ন্ত্রণ আইন ১৯৯১-এ উচ্ছেদ, কর্পোরেট ও দূতাবাস সত্যায়ন',
   },
@@ -84,6 +92,7 @@ const AREA_TABLE = [
     psEn: 'Banani PS — R-7, H-37, Banani',
     psBn: 'বনানী থানা — রোড ৭, বাড়ি ৩৭, বনানী',
     ward: 'DNCC Ward 19',
+    wardBn: 'ডিএনসিসি ওয়ার্ড ১৯',
     focusEn: 'RJSC company filings, commercial lease disputes, NRB Power of Attorney',
     focusBn: 'আরজেএসসি কোম্পানি রেজিস্ট্রেশন, বাণিজ্যিক চুক্তি ও প্রবাসী পাওয়ার অব অ্যাটর্নি',
   },
@@ -93,6 +102,7 @@ const AREA_TABLE = [
     psEn: 'Vatara PS — Progoti Soroni, Gulshan Notun Bazar (+ Badda / Khilkhet PS; proposed Bashundhara PS awaiting ministry approval)',
     psBn: 'ভাটারা থানা — প্রগতি সরণি, গুলশান নতুন বাজার (+ বাড্ডা / খিলক্ষেত থানা; প্রস্তাবিত বসুন্ধরা থানা মন্ত্রণালয়ের অনুমোদনের অপেক্ষায়)',
     ward: 'DNCC (Vatara / Khilkhet)',
+    wardBn: 'ডিএনসিসি (ভাটারা / খিলক্ষেত)',
     focusEn: 'Plot/flat title verification, transfer approval, apartment committee & eviction',
     focusBn: 'প্লট ও ফ্ল্যাট দলিল যাচাই, হস্তান্তর অনুমোদন ও অ্যাপার্টমেন্ট বিরোধ',
   },
@@ -275,7 +285,7 @@ export default function UttaraLawyerPage({ lang = 'en' }) {
                   <tr key={idx}>
                     <td className="p-3 border font-medium" style={{ borderColor: 'var(--card-border)' }}>{isBn ? row.areaBn : row.areaEn}</td>
                     <td className="p-3 border" style={{ borderColor: 'var(--card-border)' }}>{isBn ? row.psBn : row.psEn}</td>
-                    <td className="p-3 border whitespace-nowrap" style={{ borderColor: 'var(--card-border)' }}>{row.ward}</td>
+                    <td className="p-3 border whitespace-nowrap" style={{ borderColor: 'var(--card-border)' }}>{isBn ? row.wardBn : row.ward}</td>
                     <td className="p-3 border" style={{ borderColor: 'var(--card-border)' }}>{isBn ? row.focusBn : row.focusEn}</td>
                   </tr>
                 ))}
