@@ -229,19 +229,22 @@
       }
 
       window.__ensureAdSenseLoaded = function () {
-        scheduleAds();
+        if (adsScrollTriggered) {
+          loadAds();
+        }
       };
 
-      function onFirstScroll() {
+      var adTriggerEvents = ['scroll', 'wheel', 'touchstart', 'pointerdown', 'keydown'];
+      function onFirstAdTrigger() {
+        if (adsScrollTriggered) return;
         adsScrollTriggered = true;
         loadAds();
+        for (var j = 0; j < adTriggerEvents.length; j++) {
+          window.removeEventListener(adTriggerEvents[j], onFirstAdTrigger);
+        }
       }
-      window.addEventListener('scroll', onFirstScroll, { passive: true, once: true });
-
-      if (document.readyState === 'complete') {
-        scheduleAds();
-      } else {
-        window.addEventListener('load', scheduleAds, { once: true });
+      for (var j = 0; j < adTriggerEvents.length; j++) {
+        window.addEventListener(adTriggerEvents[j], onFirstAdTrigger, { passive: true, once: true });
       }
 
       var interactEvents = ['scroll', 'wheel', 'touchstart', 'pointerdown', 'mousemove', 'keydown'];

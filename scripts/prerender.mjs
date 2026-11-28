@@ -346,14 +346,21 @@ function buildPostBody(post, postBySlug = new Map()) {
     <a href="/en" style="color:#132A4A">Home</a> &rsaquo; <a href="/blog" style="color:#132A4A">Blog</a>${hubTopic ? ` &rsaquo; <a href="/blog/topic/${hubTopic.slug}" style="color:#132A4A;font-weight:700">${escHtml(hubTopic.shortEn || hubTopic.en)}</a>` : ''}
   </nav>`;
 
+  const execBriefEn = post.heroIntro ? `<div class="bpbn-hero-intro-card" style="margin:0 0 24px;padding:18px 20px;border-radius:12px;border:1px solid #CBD5E1;background:#F8FAFC">
+  <div class="bpbn-intro-header" style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:10px">
+    <div class="bpbn-intro-badge" style="font-size:13px;font-weight:800;color:#0B1220">Legal Insights &amp; Executive Brief</div>
+    <div style="font-size:13px;font-weight:700"><a href="tel:01712655546" style="color:#132A4A">Direct Call: 01712655546</a> &middot; <a href="https://wa.me/8801712655546" rel="noopener noreferrer" style="color:#15803D">WhatsApp Consultation</a></div>
+  </div>
+  <div class="bpbn-intro-content" style="font-size:16px;color:#333;line-height:1.75">${escHtml(post.heroIntro)}</div>
+</div>` : '';
+
   return `${breadcrumbNav}
 <h1 style="font-size:30px;font-weight:700;margin-bottom:8px;color:#0B1220">${escHtml(evergreenYear(post.title))}</h1>
 <p style="color:#475569;font-size:14px;margin-bottom:20px">By <a href="/advocate-md-shah-alam" style="color:#132A4A;font-weight:700">Advocate Md. Shah Alam</a> &middot; ${escHtml(post.publishedDate||'')} &middot; ${escHtml(post.readTime||'')}</p>
 ${directAnswer}
 ${DISCLAIMER}
-<p style="font-size:16px;color:#333;margin-bottom:24px">${escHtml(post.heroIntro||'')}</p>
 <article>
-${buildPillarAndTableHtml(post, 'en')}${toc}${sections}${faqs}${relatedArticlesHtml}${CONCLUSION_DISCLAIMER_EN}
+${execBriefEn}${buildPillarAndTableHtml(post, 'en')}${toc}${sections}${faqs}${relatedArticlesHtml}${CONCLUSION_DISCLAIMER_EN}
 </article>
 <section style="margin-top:32px;padding:18px;background:#F7F8FA;border-radius:8px;border:1px solid #E2E8F0">
   <h2 style="font-size:18px;font-weight:700;margin-bottom:10px;color:#0B1220">Related Legal Resources &amp; Services</h2>
@@ -425,14 +432,21 @@ function buildBnPostBody(post, postBySlug = new Map()) {
     <a href="/" style="color:#132A4A">হোম</a> &rsaquo; <a href="/bn/blog" style="color:#132A4A">বাংলা ব্লগ</a>${hubTopic ? ` &rsaquo; <a href="/bn/blog/topic/${hubTopic.slug}" style="color:#132A4A;font-weight:700">${escHtml(hubTopic.shortBn || hubTopic.bn)}</a>` : ''}
   </nav>`;
 
+  const execBriefBn = post.heroIntro ? `<div class="bpbn-hero-intro-card" style="margin:0 0 24px;padding:18px 20px;border-radius:12px;border:1px solid #CBD5E1;background:#F8FAFC">
+  <div class="bpbn-intro-header" style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:10px">
+    <div class="bpbn-intro-badge" style="font-size:13px;font-weight:800;color:#0B1220">বিজ্ঞ আইনজীবীর আইনি পর্যবেক্ষণ ও সারসংক্ষেপ</div>
+    <div style="font-size:13px;font-weight:700"><a href="tel:01712655546" style="color:#132A4A">জরুরি পরামর্শ: 01712655546</a> &middot; <a href="https://wa.me/8801712655546" rel="noopener noreferrer" style="color:#15803D">WhatsApp পরামর্শ</a></div>
+  </div>
+  <div class="bpbn-intro-content" style="font-size:16px;color:#333;line-height:1.8">${escHtml(post.heroIntro)}</div>
+</div>` : '';
+
   return `${breadcrumbNavBn}
 <h1 style="font-size:30px;font-weight:700;margin-bottom:8px;color:#0B1220">${escHtml(evergreenYear(post.title || ''))}</h1>
 <p style="color:#475569;font-size:14px;margin-bottom:20px">লেখক: <a href="/advocate-md-shah-alam" style="color:#132A4A;font-weight:700">অ্যাডভোকেট মো. শাহ আলম</a> &middot; ${escHtml(post.publishedDate || '')} &middot; ${escHtml(post.readTime || '')}</p>
 ${directAnswerBn}
 ${BN_DISCLAIMER}
-<p style="font-size:16px;color:#333;margin-bottom:24px;line-height:1.8">${escHtml(post.heroIntro || '')}</p>
 <article>
-${buildPillarAndTableHtml(post, 'bn')}${quickAns}${toc}${sections}${faqs}${relatedArticlesHtmlBn}${CONCLUSION_DISCLAIMER_BN}
+${execBriefBn}${buildPillarAndTableHtml(post, 'bn')}${quickAns}${toc}${sections}${faqs}${relatedArticlesHtmlBn}${CONCLUSION_DISCLAIMER_BN}
 </article>
 <section style="margin-top:32px;padding:18px;background:#F7F8FA;border-radius:8px;border:1px solid #E2E8F0">
   <h2 style="font-size:18px;font-weight:700;margin-bottom:10px;color:#0B1220">সংশ্লিষ্ট আইনি সেবা ও পরামর্শ</h2>
