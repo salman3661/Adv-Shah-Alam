@@ -29,6 +29,7 @@ import { SERVICE_PAGES_EN, SERVICE_PAGES_BN } from '../src/content/servicePagesD
 import { ADVOCATE_NAP, buildPersonEntity, buildLegalServiceEntity, buildWebSiteEntity, AREA_SERVED, getServiceAreaServed, buildServicePageSchema } from '../src/seo/entity.js';
 import { LOCAL_AREA_LIST } from '../src/data/localAreas.js';
 import { UTTARA_FAQS_EN, UTTARA_FAQS_BN } from '../src/data/uttaraFaqs.js';
+import { CONTACT_FAQS_EN, CONTACT_FAQS_BN } from '../src/data/contactFaqs.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT   = path.resolve(__dirname, '..');
@@ -193,17 +194,22 @@ function buildPage(base, { title, description, canonical, body, lang='en', extra
     h = h.replace('</head>', `${headInjections}</head>`);
   }
 
-  // Compact Local Areas nav on core pages that don't already emit the 4-area local strip (matches Footer.jsx)
-  const localAreasFooterNav =
-    !robots.includes('noindex') && !String(body).includes('/bashundhara-ra-lawyer')
-      ? lang === 'bn'
-        ? `\n<nav aria-label="স্থানীয় চেম্বার এলাকা" style="margin-top:20px;font-size:13px;line-height:1.8"><a href="/bn/uttara-lawyer">উত্তরা আইনজীবী</a> &middot; <a href="/bn/gulshan-lawyer">গুলশান আইনজীবী</a> &middot; <a href="/bn/banani-lawyer">বনানী আইনজীবী</a> &middot; <a href="/bn/bashundhara-ra-lawyer">বসুন্ধরা আবাসিক এলাকা আইনজীবী</a> &middot; <a href="/uttara-lawyer">Uttara Lawyer</a> &middot; <a href="/gulshan-lawyer">Gulshan Lawyer</a> &middot; <a href="/banani-lawyer">Banani Lawyer</a> &middot; <a href="/bashundhara-ra-lawyer">Bashundhara R/A Lawyer</a></nav>`
-        : `\n<nav aria-label="Local Areas" style="margin-top:20px;font-size:13px;line-height:1.8"><a href="/uttara-lawyer">Uttara Lawyer</a> &middot; <a href="/gulshan-lawyer">Gulshan Lawyer</a> &middot; <a href="/banani-lawyer">Banani Lawyer</a> &middot; <a href="/bashundhara-ra-lawyer">Bashundhara R/A Lawyer</a> &middot; <a href="/bn/uttara-lawyer">উত্তরা আইনজীবী</a> &middot; <a href="/bn/gulshan-lawyer">গুলশান আইনজীবী</a> &middot; <a href="/bn/banani-lawyer">বনানী আইনজীবী</a> &middot; <a href="/bn/bashundhara-ra-lawyer">বসুন্ধরা আবাসিক এলাকা আইনজীবী</a></nav>`
-      : '';
+  // Semantic <header> + <footer> matching Navbar.jsx & Footer.jsx (replaced cleanly on React mount -> 0 hydration duplication)
+  const isBnPage = lang === 'bn';
+  const staticHeader = !robots.includes('noindex')
+    ? isBnPage
+      ? `<header aria-label="প্রধান নেভিগেশন"><nav><a href="/">এডভোকেট মোঃ শাহ আলম</a> · <a href="/">হোম</a> · <a href="/advocate-md-shah-alam">আইনজীবী সম্পর্কে</a> · <a href="/bn/services/criminal-lawyer">ফৌজদারি</a> · <a href="/bn/services/bail-lawyer">জামিন</a> · <a href="/bn/services/divorce-lawyer">তালাক ও পারিবারিক</a> · <a href="/bn/services/land-lawyer">ভূমি ও জমি</a> · <a href="/bn/uttara-lawyer">উত্তরা চেম্বার</a> · <a href="/bn/blog">বাংলা ব্লগ</a> · <a href="/nrb-legal-help">NRB সহায়তা</a> · <a href="/bn/contact">যোগাযোগ</a></nav></header>\n`
+      : `<header aria-label="Main navigation"><nav><a href="/en">Advocate Md. Shah Alam</a> · <a href="/en">Home</a> · <a href="/advocate-md-shah-alam">About</a> · <a href="/services/criminal-lawyer">Criminal</a> · <a href="/services/bail-lawyer">Bail</a> · <a href="/services/divorce-lawyer">Divorce &amp; Family</a> · <a href="/services/land-lawyer">Land &amp; Property</a> · <a href="/uttara-lawyer">Uttara Chamber</a> · <a href="/blog">Blog</a> · <a href="/nrb-legal-help">NRB Legal Help</a> · <a href="/contact">Contact</a></nav></header>\n`
+    : '';
+  const staticFooter = !robots.includes('noindex')
+    ? isBnPage
+      ? `\n<footer aria-label="ফুটার"><p><strong>এডভোকেট মোঃ শাহ আলম</strong> — সুপ্রিম কোর্ট অব বাংলাদেশ ও ঢাকা জজ কোর্ট (১০+ বছরের অভিজ্ঞতা)।</p><p>উত্তরা চেম্বার: বাড়ি ৪৬, রোড ৬/বি, সেক্টর ১২, উত্তরা পশ্চিম, ঢাকা ১২৩০ · জজ কোর্ট চেম্বার: আইনজীবী সমিতি ভবন, ৪র্থ তলা, ৬/৭ কোর্ট হাউস স্ট্রিট, কোতোয়ালি, ঢাকা-১১০০ · ফোন: <a href="tel:+8801712655546">+880 1712-655546</a> · হোয়াটসঅ্যাপ: <a href="https://wa.me/8801955802007">+880 1955-802007</a> · ইমেইল: contact@advmdshahalam.me</p><p>অফিস সময়: রবিবার – বৃহস্পতিবার: সকাল ৮:০০ – রাত ১০:০০; শুক্র – শনিবার (উত্তরা চেম্বার): সকাল ১০:০০ – রাত ১০:০০</p><nav aria-label="স্থানীয় চেম্বার এলাকা"><a href="/bn/uttara-lawyer">উত্তরা আইনজীবী</a> &middot; <a href="/bn/gulshan-lawyer">গুলশান আইনজীবী</a> &middot; <a href="/bn/banani-lawyer">বনানী আইনজীবী</a> &middot; <a href="/bn/bashundhara-ra-lawyer">বসুন্ধরা আবাসিক এলাকা আইনজীবী</a> &middot; <a href="/uttara-lawyer">Uttara Lawyer</a> &middot; <a href="/gulshan-lawyer">Gulshan Lawyer</a> &middot; <a href="/banani-lawyer">Banani Lawyer</a> &middot; <a href="/bashundhara-ra-lawyer">Bashundhara R/A Lawyer</a> &middot; <a href="/privacy-policy">গোপনীয়তা নীতি</a> &middot; <a href="/terms-of-service">ব্যবহারের শর্তাবলী</a></nav></footer>`
+      : `\n<footer aria-label="Footer"><p><strong>Advocate Md. Shah Alam</strong> — Supreme Court of Bangladesh &amp; Dhaka Judge Court (10+ years of experience).</p><p>Uttara Chamber: House 46, Road 6/B, Sector 12, Uttara West, Dhaka 1230 · Judge Court Chamber: Ainjeebi Samity Bhaban, 4th Floor, 6/7 Court House Street, Kotwali, Dhaka-1100 · Phone: <a href="tel:+8801712655546">+880 1712-655546</a> · WhatsApp: <a href="https://wa.me/8801955802007">+880 1955-802007</a> · Email: contact@advmdshahalam.me</p><p>Office Hours: Sunday – Thursday: 8:00 AM – 10:00 PM; Friday – Saturday (Uttara Chamber): 10:00 AM – 10:00 PM</p><nav aria-label="Local Areas"><a href="/uttara-lawyer">Uttara Lawyer</a> &middot; <a href="/gulshan-lawyer">Gulshan Lawyer</a> &middot; <a href="/banani-lawyer">Banani Lawyer</a> &middot; <a href="/bashundhara-ra-lawyer">Bashundhara R/A Lawyer</a> &middot; <a href="/bn/uttara-lawyer">উত্তরা আইনজীবী</a> &middot; <a href="/bn/gulshan-lawyer">গুলশান আইনজীবী</a> &middot; <a href="/bn/banani-lawyer">বনানী আইনজীবী</a> &middot; <a href="/bn/bashundhara-ra-lawyer">বসুন্ধরা আবাসিক এলাকা আইনজীবী</a> &middot; <a href="/privacy-policy">Privacy Policy</a> &middot; <a href="/terms-of-service">Terms of Service</a></nav></footer>`
+    : '';
 
   // Hidden from users, visible to crawlers — no flash, no layout shift
   const visibleShell = isHomePage ? `\n${buildHeroShell(lang)}` : '';
-  const prerendered = `${visibleShell}\n<div id="prerendered-content" aria-hidden="true" style="display:none !important;visibility:hidden !important;opacity:0 !important;height:0 !important;width:0 !important;overflow:hidden !important;position:absolute !important;pointer-events:none !important">\n${body}${localAreasFooterNav}\n</div>`;
+  const prerendered = `${visibleShell}\n<div id="prerendered-content" aria-hidden="true" style="display:none !important;visibility:hidden !important;opacity:0 !important;height:0 !important;width:0 !important;overflow:hidden !important;position:absolute !important;pointer-events:none !important">\n${staticHeader}${body}${staticFooter}\n</div>`;
   h = h.replace(/<div id="root">[\s\S]*?<\/div>/, `<div id="root">${prerendered}</div>`);
   return h;
 }
@@ -805,35 +811,7 @@ function educationBody() {
 ${CTA}`;
 }
 
-const CONTACT_FAQS_EN = [
-  {
-    q: 'How do I book a chamber consultation appointment?',
-    a: 'You can call +880 1712-655546 directly or send your case summary through our WhatsApp intake form (+880 1955-802007) for a free initial online opinion, or schedule an in-person session at our Uttara Sector 12 or Dhaka Judge Court chamber.',
-  },
-  {
-    q: 'Is the initial online consultation free?',
-    a: 'Yes, the first online or WhatsApp consultation is free with no advance payment required. If you visit the chamber in person with case documents for detailed drafting, vetting, or court filing, standard chamber fees are discussed transparently at the chamber.',
-  },
-  {
-    q: 'Can I contact urgently for bail or arrest matters?',
-    a: 'Yes, urgent criminal defence inquiries involving FIR registration, police custody remand protection, Section 497 surrender petitions, or High Court anticipatory bail are prioritized by phone and WhatsApp.',
-  },
-];
-
-const CONTACT_FAQS_BN = [
-  {
-    q: 'আইনি পরামর্শের জন্য কীভাবে অ্যাপয়েন্টমেন্ট নেব?',
-    a: 'আপনি সরাসরি 01712655546 নম্বরে কল করে অথবা ওয়েবসাইটের হোয়াটসঅ্যাপ ফর্মে (+880 1955-802007) বার্তা পাঠিয়ে ফ্রি প্রাথমিক পরামর্শ নিতে পারেন কিংবা উত্তরা চেম্বার ও ঢাকা জজ কোর্ট চেম্বারে সাক্ষাতের সময় নির্ধারণ করতে পারেন।',
-  },
-  {
-    q: 'প্রাথমিক অনলাইন পরামর্শের জন্য কি কোনো অগ্রিম ফি দিতে হয়?',
-    a: 'না, প্রথম অনলাইন বা হোয়াটসঅ্যাপ পরামর্শ সম্পূর্ণ ফ্রি এবং কোনো অগ্রিম পেমেন্টের প্রয়োজন নেই। পরবর্তীতে জরুরি কাগজপত্র নিয়ে চেম্বারে সাক্ষাৎ করলে বা মামলা পরিচালনার দায়িত্ব দিলে চেম্বারে ফি নির্ধারিত হয়।',
-  },
-  {
-    q: 'জরুরি গ্রেপ্তার, থানা জিডি বা জামিনের ক্ষেত্রে কি দ্রুত যোগাযোগ করা যাবে?',
-    a: 'হ্যাঁ, জরুরি ফৌজদারি মামলা, থানা জিডি, পুলিশ রিমান্ড প্রতিরোধ এবং হাইকোর্ট বিভাগে ৪৯৮ ধারায় আগাম জামিনের বিষয়ে হোয়াটসঅ্যাপে বার্তা দিলে বা সরাসরি ফোনে দ্রুত পরামর্শ প্রদান করা হয়।',
-  },
-];
+// CONTACT_FAQS_EN and CONTACT_FAQS_BN imported from ../src/data/contactFaqs.js (single source of truth)
 
 function contactBody() {
   return `<nav aria-label="Breadcrumb" style="font-size:13px;color:#475569;margin-bottom:14px"><a href="/en" style="color:#132A4A">Home</a> &rsaquo; <span>Contact</span></nav>
@@ -1866,7 +1844,7 @@ ${buildServiceSchema(`${BASE}/bn/services/${slug}`, bnData, 'bn')}`;
           '@type': 'CollectionPage',
           '@id': `${BASE}/blog#webpage`,
           url: `${BASE}/blog`,
-          name: 'Bangladesh Legal Guides & Law Blog | Adv. Shah Alam',
+          name: pageHeadings.blogEn,
           inLanguage: 'en',
           isPartOf: { '@id': `${BASE}/#website` },
         },
@@ -1903,7 +1881,7 @@ ${buildServiceSchema(`${BASE}/bn/services/${slug}`, bnData, 'bn')}`;
           '@type': 'CollectionPage',
           '@id': `${BASE}/bn/blog#webpage`,
           url: `${BASE}/bn/blog`,
-          name: 'বাংলাদেশ আইনি গাইড ও ব্লগ | এডভোকেট মোঃ শাহ আলম',
+          name: pageHeadings.blogBn,
           inLanguage: 'bn',
           isPartOf: { '@id': `${BASE}/#website` },
         },

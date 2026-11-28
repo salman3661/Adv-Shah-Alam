@@ -10,7 +10,7 @@
         }
       ],
       "destination": "https://www.advmdshahalam.me/:path*",
-      "statusCode": 301
+      "statusCode": 308
     },
     {
       "source": "/blog",
@@ -37,6 +37,51 @@
     {
       "source": "/sitemap",
       "destination": "/sitemap.xml",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/high-court-anticipatory-bail-procedure-bangladesh",
+      "destination": "/blog/anticipatory-bail-high-court-bangladesh",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/cheque-dishonour-138-ni-act-guide-bangladesh",
+      "destination": "/blog/cheque-dishonour-penalty-bangladesh-138-ni-act",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/divorce-procedure-in-bangladesh",
+      "destination": "/blog/divorce-procedure-bangladesh",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/undefined",
+      "destination": "/blog",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/income-tax-notice-response-bangladesh",
+      "destination": "/blog/income-tax-audit-notice-hearing-defense-act-2023-bangladesh",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/land-crime-prevention-remedy-act-bangladesh",
+      "destination": "/blog/land-fraud-prevention-bangladesh",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/false-dowry-women-repression-case-defence-bangladesh",
+      "destination": "/blog/false-dowry-case-defense-section-5-prohibition-act-bangladesh",
+      "statusCode": 301
+    },
+    {
+      "source": "/bn/blog/company-annual-compliance-bangladesh",
+      "destination": "/bn/services/company-corporate-lawyer",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/withholding-tax-tds-dispute-bangladesh",
+      "destination": "/blog/income-tax-case-procedure-bangladesh",
       "statusCode": 301
     },
     {

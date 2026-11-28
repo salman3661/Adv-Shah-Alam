@@ -77,7 +77,7 @@ const serviceLinks = [
 ];
 
 /* ─── Schema Markup ──────────────────────────────────── */
-const personSchema = {
+const _personSchema = {
     '@context': 'https://schema.org',
     '@type': 'Person',
     name: 'Advocate Md. Shah Alam',
@@ -175,7 +175,7 @@ const personSchema = {
     ],
 };
 
-const legalServiceSchema = {
+const _legalServiceSchema = {
     '@context': 'https://schema.org',
     '@type': 'LegalService',
     name: 'Advocate Md. Shah Alam – Law Chambers',
@@ -215,7 +215,7 @@ const legalServiceSchema = {
     },
 };
 
-const breadcrumbSchema = {
+const _breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
@@ -234,7 +234,7 @@ const breadcrumbSchema = {
     ],
 };
 
-const organizationSchema = {
+const _organizationSchema = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Advocate Md. Shah Alam Law Chambers',
@@ -302,7 +302,7 @@ const faqPageFaqs = [
     },
 ];
 
-const faqSchema = {
+const _faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: faqPageFaqs.map(faq => ({
@@ -317,7 +317,6 @@ const faqSchema = {
 
 /* ─── Main Component ─────────────────────────────────── */
 const AdvocatePage = () => {
-    const [mediaImgError, setMediaImgError] = useState(false);
     // Latest 3 published articles for the knowledge hub section
     const today = new Date();
     const latestArticles = blogPosts
@@ -753,7 +752,7 @@ const AdvocatePage = () => {
                                 </div>
                             </div>
 
-                            {/* Media briefing image container with graceful fallback */}
+                            {/* Court briefing record card */}
                             <div
                                 className="relative rounded-xl overflow-hidden border p-4 text-center flex flex-col items-center justify-center min-h-[190px]"
                                 style={{
@@ -761,27 +760,18 @@ const AdvocatePage = () => {
                                     borderColor: 'var(--card-border)',
                                 }}
                             >
-                                {!mediaImgError ? (
-                                    <img
-                                        src="/images/notable/regent-case-briefing.jpg"
-                                        alt="Advocate Md. Shah Alam with senior defence counsel during Dhaka court briefing"
-                                        className="w-full h-auto rounded-lg object-cover mb-2"
-                                        onError={() => setMediaImgError(true)}
-                                    />
-                                ) : (
-                                    <div className="flex flex-col items-center justify-center py-4 text-center">
-                                        <div className="w-12 h-12 rounded-full flex items-center justify-center mb-3"
-                                            style={{ background: 'rgba(37, 99, 235,0.15)', color: 'var(--gold)' }}>
-                                            <Landmark size={22} />
-                                        </div>
-                                        <p className="text-xs font-bold mb-1" style={{ color: 'var(--text)' }}>
-                                            Court Briefing & Legal Defense Record
-                                        </p>
-                                        <p className="text-[11px] leading-relaxed" style={{ color: 'var(--text-muted)' }}>
-                                            CMM Court Media Briefing Archive
-                                        </p>
+                                <div className="flex flex-col items-center justify-center py-4 text-center">
+                                    <div className="w-12 h-12 rounded-full flex items-center justify-center mb-3"
+                                        style={{ background: 'rgba(37, 99, 235,0.15)', color: 'var(--gold)' }}>
+                                        <Landmark size={22} />
                                     </div>
-                                )}
+                                    <p className="text-xs font-bold mb-1" style={{ color: 'var(--text)' }}>
+                                        Court Briefing &amp; Legal Defense Record
+                                    </p>
+                                    <p className="text-[11px] leading-relaxed" style={{ color: 'var(--text-muted)' }}>
+                                        CMM Court Media Briefing Archive
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>

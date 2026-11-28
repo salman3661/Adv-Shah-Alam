@@ -4,36 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { MapPin, Phone, MessageCircle, Mail, Clock, Send, ExternalLink, Scale, ShieldCheck, CheckCircle2, CreditCard, ChevronRight, HelpCircle, FileText } from 'lucide-react';
 import { CALL_NUMBER, CALL_DISPLAY, waLink } from '../data/contactInfo';
 import AdSenseAd from '../components/AdSenseAd';
-
-const CONTACT_FAQS_BN = [
-    {
-        q: 'আইনি পরামর্শের জন্য কীভাবে অ্যাপয়েন্টমেন্ট নেব?',
-        a: 'আপনি সরাসরি 01712655546 নম্বরে কল করে অথবা ওয়েবসাইটের হোয়াটসঅ্যাপ ফর্মে বার্তা পাঠিয়ে উত্তরা সন্ধ্যা চেম্বার বা ঢাকা জজ কোর্ট চেম্বারে অ্যাপয়েন্টমেন্ট অথবা অনলাইন আইনি পরামর্শ বুক করতে পারেন।',
-    },
-    {
-        q: 'পেইড কনসালটেশন ও কেস রিভিউ ফি কীভাবে পরিশোধ করতে হবে?',
-        a: 'অনলাইন ভিডিও পরামর্শ বা ফোনালাপের মাধ্যমে বিস্তারিত নথিপত্র পর্যালোচনার জন্য বিকাশ নম্বর 01712655546-এ কনসালটেশন ফি পরিশোধ করে ট্রানজেকশন আইডি হোয়াটসঅ্যাপে পাঠিয়ে স্লট কনফার্ম করা যায়।',
-    },
-    {
-        q: 'জরুরি গ্রেপ্তার, থানা জিডি বা জামিনের ক্ষেত্রে কি দ্রুত যোগাযোগ করা যাবে?',
-        a: 'হ্যাঁ, জরুরি ফৌজদারি মামলা, থানা জিডি, পুলিশ রিমান্ড প্রতিরোধ এবং হাইকোর্ট বিভাগে ৪৯৮ ধারায় আগাম জামিনের বিষয়ে হোয়াটসঅ্যাপে বার্তা দিলে বা সরাসরি ফোনে দ্রুত পরামর্শ প্রদান করা হয়।',
-    },
-];
-
-const CONTACT_FAQS_EN = [
-    {
-        q: 'How do I book a chamber consultation appointment?',
-        a: 'You can call +880 1712-655546 directly or send your case summary through our WhatsApp intake form to schedule an in-person session at our Uttara Sector 12 or Dhaka Judge Court chamber, or an online video review.',
-    },
-    {
-        q: 'What are the consultation fee payment methods?',
-        a: 'For telephone consultations or remote NRB document and case reviews, fees can be remitted via bKash (01712655546) after confirming your time slot with the chamber desk.',
-    },
-    {
-        q: 'Can I contact urgently for bail or arrest matters?',
-        a: 'Yes, urgent criminal defence inquiries involving FIR registration, police custody remand protection, Section 497 surrender petitions, or High Court anticipatory bail are prioritized by phone and WhatsApp.',
-    },
-];
+import { CONTACT_FAQS_BN, CONTACT_FAQS_EN } from '../data/contactFaqs';
 
 /* ─── 100/100 SEO JSON-LD Schemas ────────────────────────────── */
 const _buildContactSchema = (isBn) => {

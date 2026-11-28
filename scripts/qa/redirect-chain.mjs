@@ -80,9 +80,32 @@ if (!existsInDist('/sitemap.xml')) {
   errors.push('Missing dist/sitemap.xml');
 }
 
-console.log(`[redirect-chain] checked=${checked} literal redirect rules in vercel.json, errors=${errors.length}`);
+// Machine-extract & verify all 9 GSC dead URLs from reports/gsc-dead-urls-2026-11-28.csv
+const gscDeadCsvPath = path.join(ROOT, 'reports/gsc-dead-urls-2026-11-28.csv');
+let gscDeadChecked = 0;
+if (fs.existsSync(gscDeadCsvPath)) {
+  const lines = fs.readFileSync(gscDeadCsvPath, 'utf8').split(/\r?\n/).slice(1).filter(Boolean);
+  for (const line of lines) {
+    const [src, target] = line.split(',').map((s) => s.trim());
+    if (!src || !target) continue;
+    gscDeadChecked++;
+    const r = ruleMap.get(src);
+    if (!r) {
+      errors.push(`Missing GSC dead-URL 301 redirect in vercel.json: ${src} -> ${target}`);
+    } else {
+      const t = normalizeTarget(r.destination);
+      if (r.statusCode !== 301 || t.path !== target) {
+        errors.push(`GSC dead-URL mismatch for ${src}: expected 301 -> ${target}, got ${r.statusCode} -> ${r.destination}`);
+      } else if (!existsInDist(t.path)) {
+        errors.push(`GSC dead-URL target missing in dist/: ${src} -> ${t.path}`);
+      }
+    }
+  }
+}
+
+console.log(`[redirect-chain] checked=${checked} literal redirect rules in vercel.json (gscDeadUrls=${gscDeadChecked}), errors=${errors.length}`);
 if (errors.length) {
   for (const e of errors.slice(0, 30)) console.error('  FAIL:', e);
   process.exit(1);
 }
-console.log(`[redirect-chain] PASS — ${checked}/${checked} redirect targets resolve to 200 in dist/, 0 chains, /sitemap.html & /sitemap -> 301 -> /sitemap.xml`);
+console.log(`[redirect-chain] PASS — ${checked}/${checked} redirect targets resolve to 200 in dist/, ${gscDeadChecked}/${gscDeadChecked} GSC dead URLs -> 301, 0 chains, /sitemap.html & /sitemap -> 301 -> /sitemap.xml`);

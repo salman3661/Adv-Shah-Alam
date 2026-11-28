@@ -152,19 +152,19 @@ async function worker() {
       for (let attempt = 0; attempt < 2; attempt++) {
         try {
           await page.goto(`${base}${uPath}`, { waitUntil: 'load', timeout: 20000 });
-          if (uPath === '/uttara-lawyer' || uPath === '/bn/uttara-lawyer') {
-            await page.waitForSelector('article', { timeout: 5000 });
-          } else if (needsBreadcrumbWait) {
-            await page.waitForSelector('nav[aria-label="Breadcrumb"]', { timeout: 5000 });
-          } else {
-            await page.waitForTimeout(60);
+          await page.waitForSelector('h1', { timeout: 6000 }).catch(() => {});
+          if (needsBreadcrumbWait) {
+            await page.waitForSelector('nav[aria-label="Breadcrumb"]', { timeout: 5000 }).catch(() => {});
           }
+          await page.waitForTimeout(50);
           data = await page.evaluate(() => {
             const scripts = Array.from(document.querySelectorAll('script[type="application/ld+json"]')).map((s) => s.textContent || '');
-            const bodyText = (document.body?.innerText || '').replace(/\s+/g, ' ');
+            const bodyText = (document.body?.innerText || '').replace(/\s+/g, ' ').normalize('NFC');
             const bc = document.querySelector('nav[aria-label="Breadcrumb"]');
             const breadcrumbText = bc ? (bc.innerText || '').replace(/\s+/g, ' ').trim() : '';
-            return { scripts, bodyText, breadcrumbText };
+            const headerCount = document.querySelectorAll('header').length;
+            const footerCount = document.querySelectorAll('footer').length;
+            return { scripts, bodyText, breadcrumbText, headerCount, footerCount };
           });
           break;
         } catch (err) {
@@ -245,18 +245,34 @@ async function worker() {
       if (typeCounts.FAQPage) totalFaqPages += typeCounts.FAQPage;
       if (typeCounts.LegalService) totalLegalServices += typeCounts.LegalService;
 
-      // Special assertion for /uttara-lawyer + /bn/uttara-lawyer (v11 Part 2)
+      // Hydration duplication & static chrome parity check (v11.3 Part 4)
+      const staticFile = resolveDistFile(uPath);
+      if (staticFile) {
+        const staticHtml = fs.readFileSync(staticFile, 'utf8');
+        if (!staticHtml.includes('<header') || !staticHtml.includes('<footer')) {
+          errors.push(`${uPath}: static prerendered HTML missing <header> or <footer>`);
+        }
+      }
+      if (data.footerCount !== 1) {
+        errors.push(`${uPath}: rendered DOM footer count=${data.footerCount} (expected 1, hydration duplication check)`);
+      }
+
+      // Site-wide FAQ visibility check (v11.3 Part 3): every FAQPage question must appear in rendered DOM
       let visibleFaqCount = null;
-      if (uPath === '/uttara-lawyer' || uPath === '/bn/uttara-lawyer') {
-        if ((typeCounts.FAQPage || 0) !== 1) {
-          errors.push(`${uPath}: expected FAQPage=1, got ${typeCounts.FAQPage || 0}`);
-        }
-        if (faqQuestions.length !== 6) {
-          errors.push(`${uPath}: expected 6 FAQ questions, got ${faqQuestions.length}`);
-        }
-        visibleFaqCount = faqQuestions.filter((q) => data.bodyText.includes(q.replace(/\s+/g, ' ').trim())).length;
+      if (faqQuestions.length > 0) {
+        visibleFaqCount = faqQuestions.filter((q) => data.bodyText.includes(q.replace(/\s+/g, ' ').trim().normalize('NFC'))).length;
         if (visibleFaqCount !== faqQuestions.length) {
-          errors.push(`${uPath}: only ${visibleFaqCount}/${faqQuestions.length} FAQ questions visible in rendered DOM`);
+          errors.push(`${uPath}: only ${visibleFaqCount}/${faqQuestions.length} FAQPage questions visible in rendered DOM`);
+        }
+      }
+      if (uPath === '/uttara-lawyer' || uPath === '/bn/uttara-lawyer') {
+        if ((typeCounts.FAQPage || 0) !== 1 || faqQuestions.length !== 6) {
+          errors.push(`${uPath}: expected FAQPage=1 with 6 questions, got ${typeCounts.FAQPage || 0} (${faqQuestions.length}q)`);
+        }
+      }
+      if (uPath === '/contact' || uPath === '/bn/contact') {
+        if ((typeCounts.FAQPage || 0) !== 1 || faqQuestions.length !== 4) {
+          errors.push(`${uPath}: expected FAQPage=1 with 4 questions, got ${typeCounts.FAQPage || 0} (${faqQuestions.length}q)`);
         }
       }
 

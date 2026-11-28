@@ -110,7 +110,7 @@ const FAQItem = ({ question, answer, index }) => {
             <button onClick={() => setOpen(o => !o)} aria-expanded={open}
                 style={{ width: '100%', display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', padding: '1.125rem 1.375rem', textAlign: 'left', gap: '0.875rem', background: 'transparent', border: 'none', cursor: 'pointer' }}>
                 <span style={{ fontWeight: 600, fontSize: '0.9375rem', lineHeight: 1.45, flex: 1, color: 'var(--text)' }}>
-                    <span style={{ color: 'var(--accent)', marginRight: '6px', fontWeight: 700 }}>প্র{index + 1}.</span>{question}
+                    <span style={{ color: 'var(--accent)', marginRight: '6px', fontWeight: 700 }}>প্র{index + 1}.</span>{' '}{question}
                 </span>
                 <span style={{ flexShrink: 0, width: '1.625rem', height: '1.625rem', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', background: open ? 'var(--btn-primary-bg, #163A70)' : 'var(--surface)', color: open ? '#fff' : 'var(--text-muted)', transition: 'all 0.2s' }}>
                     {open ? <ChevronUp size={13} /> : <ChevronDown size={13} />}
